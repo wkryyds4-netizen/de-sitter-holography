@@ -1,5 +1,11 @@
 # de Sitter 全息研究
 
+## 最新进展：实 principal 探针与带相位四点（2026-10-31）
+
+[六页 PDF](output/pdf/de-sitter-principal-eikonal.pdf)、[LaTeX](manuscript/principal-eikonal/main.tex)及[中文推导](notes/stage4-principal-eikonal.md)完成。保留真实principal Bessel波函数，通过原动量的相反旋转确定两侧解析延拓；Gaussian平均的各阶矩有正谱表示，但完整四点仍有相位与相消。数值扫描显示涂抹后虚部可以变号，最晚点符号未分辨，不能沿用共形全时间负号定理。
+
+144次完整scrambled积分、60项公式/独立求积检查、14项原复轮廓/改变重要性检查及727项原始算术重放完成。误差为经验估计，未认证完整引力误差。下一步回到实际制备、有限κ插入归一和Gram缝合；完整全息对偶仍开放。旧条目保存历史，当前从[NEXT](NEXT.md)继续。
+
 ## 最新进展：四时间涂抹与有限引力 eikonal 接口（2026-10-31）
 
 [六页 PDF](output/pdf/de-sitter-gaussian-eikonal.pdf)、[LaTeX](manuscript/gaussian-eikonal/main.tex)和[中文推导](notes/stage4-gaussian-eikonal.md)已完成。在已有双共形探针近似中，四个独立Gaussian涂抹化为三个时间变量，必须同时改变断开两点基准。证明重观察者条件下两条候选轮廓的非零虚部在涂抹后仍存在；有限时间分辨率本身没有解决轮廓实性问题。不是完整有限G或全息否定定理。

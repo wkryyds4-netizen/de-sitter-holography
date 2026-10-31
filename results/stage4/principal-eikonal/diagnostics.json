@@ -1,0 +1,549 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "name": "lateral kernel -100",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "conjugate -100",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "lateral kernel -2",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "conjugate -2",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "lateral kernel -1",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "conjugate -1",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "lateral kernel -0.3",
+      "error": 2.1094237467877974e-15,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "conjugate -0.3",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "lateral kernel -0.01",
+      "error": 1.6699974736411605e-12,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "conjugate -0.01",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "lateral kernel -0.0078125",
+      "error": 5.59996493620929e-13,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "conjugate -0.0078125",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "lateral kernel -0.007",
+      "error": 3.2600444683776165e-70,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "conjugate -0.007",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "lateral kernel 0.007",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "conjugate 0.007",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "lateral kernel 0.0078125",
+      "error": 1.0969003483296547e-13,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "conjugate 0.0078125",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "lateral kernel 0.01",
+      "error": 3.240741008880832e-13,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "conjugate 0.01",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "lateral kernel 0.1",
+      "error": 2.55351295663786e-14,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "conjugate 0.1",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "lateral kernel 1",
+      "error": 1.1102230246251565e-15,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "conjugate 1",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "lateral kernel 100",
+      "error": 1.6263032587282567e-19,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "conjugate 100",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "smeared moment (0, 0.6, 0.4)",
+      "error": 9.668967132843848e-12,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "two point (0.6, 0.4)",
+      "error": 4.160685291003228e-49,
+      "tolerance": 1e-45,
+      "passed": true
+    },
+    {
+      "name": "smeared moment (1, 0.6, 0.4)",
+      "error": 8.18154155833483e-16,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "smeared moment (2, 0.6, 0.4)",
+      "error": 1.1788145402075271e-15,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "smeared moment (3, 0.6, 0.4)",
+      "error": 1.3246927433724326e-15,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "smeared moment (0, 0.9, 0.4)",
+      "error": 6.1312306046754125e-12,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "two point (0.9, 0.4)",
+      "error": 1.6693320959428254e-49,
+      "tolerance": 1e-45,
+      "passed": true
+    },
+    {
+      "name": "smeared moment (1, 0.9, 0.4)",
+      "error": 1.4038931432344676e-15,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "smeared moment (2, 0.9, 0.4)",
+      "error": 1.4073105611848703e-15,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "smeared moment (3, 0.9, 0.4)",
+      "error": 1.8353428973480293e-15,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "smeared moment (0, 0.6, 0.8)",
+      "error": 1.3684273392095354e-11,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "two point (0.6, 0.8)",
+      "error": 1.3478376661493417e-49,
+      "tolerance": 1e-45,
+      "passed": true
+    },
+    {
+      "name": "smeared moment (1, 0.6, 0.8)",
+      "error": 2.447034994711067e-13,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "smeared moment (2, 0.6, 0.8)",
+      "error": 2.243470469946164e-12,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "smeared moment (3, 0.6, 0.8)",
+      "error": 1.4926127256317397e-11,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "smeared moment (0, 0.9, 0.8)",
+      "error": 1.1404066275420458e-11,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "two point (0.9, 0.8)",
+      "error": 2.461022914079906e-49,
+      "tolerance": 1e-45,
+      "passed": true
+    },
+    {
+      "name": "smeared moment (1, 0.9, 0.8)",
+      "error": 3.687250855666847e-13,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "smeared moment (2, 0.9, 0.8)",
+      "error": 3.017815755664007e-12,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "smeared moment (3, 0.9, 0.8)",
+      "error": 1.873076031748063e-11,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "positive full Bessel 0.2",
+      "error": 6.546013731068001e-13,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "positive Bessel refinement 0.2",
+      "error": 2.0122792321330962e-16,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "rapidity refinement 0.2",
+      "error": 6.779299344117362e-15,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "positive full Bessel 2.0",
+      "error": 5.881233000604169e-13,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "positive Bessel refinement 2.0",
+      "error": 9.71445146547012e-17,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "rapidity refinement 2.0",
+      "error": 4.451300439356487e-15,
+      "tolerance": 3e-08,
+      "passed": true
+    },
+    {
+      "name": "conformal normalization 0.5",
+      "error": 8.427622488760278e-09,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "conformal normalization -2.0",
+      "error": 8.443614667163953e-09,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    {
+      "name": "source Bessel arguments [0.1, -0.2, 0.4, 0.3]",
+      "error": 2.5520383234945855e-16,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "source prefactor [0.1, -0.2, 0.4, 0.3]",
+      "error": 2.535772158592562e-16,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "source phase [0.1, -0.2, 0.4, 0.3]",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "source Bessel arguments [-0.4, 0.6, 0.1, -0.2]",
+      "error": 2.4125811002519266e-16,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "source prefactor [-0.4, 0.6, 0.1, -0.2]",
+      "error": 2.535772158592562e-16,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "source phase [-0.4, 0.6, 0.1, -0.2]",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    }
+  ],
+  "details": [
+    {
+      "name": "smeared moment (0, 0.6, 0.4)",
+      "data": {
+        "spectral": 0.27405458800486404,
+        "rapidity": 0.27405458800751387
+      }
+    },
+    {
+      "name": "smeared moment (1, 0.6, 0.4)",
+      "data": {
+        "spectral": 0.20354776970376676,
+        "rapidity": 0.20354776970376692
+      }
+    },
+    {
+      "name": "smeared moment (2, 0.6, 0.4)",
+      "data": {
+        "spectral": 0.23545328521942577,
+        "rapidity": 0.23545328521942605
+      }
+    },
+    {
+      "name": "smeared moment (3, 0.6, 0.4)",
+      "data": {
+        "spectral": 0.3771443329639042,
+        "rapidity": 0.3771443329639047
+      }
+    },
+    {
+      "name": "smeared moment (0, 0.9, 0.4)",
+      "data": {
+        "spectral": 0.15372959412297965,
+        "rapidity": 0.1537295941239222
+      }
+    },
+    {
+      "name": "smeared moment (1, 0.9, 0.4)",
+      "data": {
+        "spectral": 0.13839303243676696,
+        "rapidity": 0.13839303243676715
+      }
+    },
+    {
+      "name": "smeared moment (2, 0.9, 0.4)",
+      "data": {
+        "spectral": 0.17750181618074662,
+        "rapidity": 0.17750181618074687
+      }
+    },
+    {
+      "name": "smeared moment (3, 0.9, 0.4)",
+      "data": {
+        "spectral": 0.30245656717046404,
+        "rapidity": 0.3024565671704646
+      }
+    },
+    {
+      "name": "smeared moment (0, 0.6, 0.8)",
+      "data": {
+        "spectral": 0.2348061803979272,
+        "rapidity": 0.23480618040114035
+      }
+    },
+    {
+      "name": "smeared moment (1, 0.6, 0.8)",
+      "data": {
+        "spectral": 0.16684866305073393,
+        "rapidity": 0.1668486630506931
+      }
+    },
+    {
+      "name": "smeared moment (2, 0.6, 0.8)",
+      "data": {
+        "spectral": 0.18516744740085062,
+        "rapidity": 0.1851674474004352
+      }
+    },
+    {
+      "name": "smeared moment (3, 0.6, 0.8)",
+      "data": {
+        "spectral": 0.28592127303837794,
+        "rapidity": 0.28592127303411025
+      }
+    },
+    {
+      "name": "smeared moment (0, 0.9, 0.8)",
+      "data": {
+        "spectral": 0.126087074173046,
+        "rapidity": 0.1260870741744839
+      }
+    },
+    {
+      "name": "smeared moment (1, 0.9, 0.8)",
+      "data": {
+        "spectral": 0.11038997137328883,
+        "rapidity": 0.11038997137324813
+      }
+    },
+    {
+      "name": "smeared moment (2, 0.9, 0.8)",
+      "data": {
+        "spectral": 0.13706646690520197,
+        "rapidity": 0.13706646690478833
+      }
+    },
+    {
+      "name": "smeared moment (3, 0.9, 0.8)",
+      "data": {
+        "spectral": 0.22637435447247872,
+        "rapidity": 0.22637435446823856
+      }
+    },
+    {
+      "name": "positive full Bessel 0.2",
+      "data": {
+        "bessel": [
+          0.03817421437786945,
+          0.03817421437786925
+        ],
+        "rapidity": [
+          [
+            0.03817421437851707,
+            0.0
+          ],
+          [
+            0.03817421437852385,
+            0.0
+          ]
+        ]
+      }
+    },
+    {
+      "name": "positive full Bessel 2.0",
+      "data": {
+        "bessel": [
+          0.020385870306321868,
+          0.02038587030632177
+        ],
+        "rapidity": [
+          [
+            0.020385870306914345,
+            0.0
+          ],
+          [
+            0.020385870306909894,
+            0.0
+          ]
+        ]
+      }
+    },
+    {
+      "name": "conformal normalization 0.5",
+      "data": {
+        "rapidity": [
+          0.5226769643769424,
+          0.0
+        ],
+        "exact": [
+          0.5226769728045649,
+          0.0
+        ]
+      }
+    },
+    {
+      "name": "conformal normalization -2.0",
+      "data": {
+        "rapidity": [
+          0.7985641200255649,
+          -0.4593779361767382
+        ],
+        "exact": [
+          0.7985641284691637,
+          -0.45937793616037936
+        ]
+      }
+    }
+  ],
+  "scope": "Formula, positive-coupling full Bessel integrals and conformal controls; numerical tolerances are empirical, not interval enclosures.",
+  "hashes": {
+    "code/principal_eikonal.py": "572619f01fa0995d95b538b79f60212f5b557d2096821a6d43342f7d47bb9a91",
+    "code/check_principal_eikonal.py": "6fae51963f44d37ece4538dfbc615b314388acb4efc3789671362bb4acfd28b2",
+    "results/stage4/principal-eikonal/moments.json": "f1bbb8cb220a8144ba31c82b973d80791df4ad5117bf9960307344ace2036293"
+  }
+}

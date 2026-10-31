@@ -1,5 +1,17 @@
 # 下一次从这里继续
 
+## 当前继续位置：2026-10-31 principal-eikonal
+
+先读[中文推导](notes/stage4-principal-eikonal.md)、[六页PDF](output/pdf/de-sitter-principal-eikonal.pdf)、[原文边界](literature/stage4-principal-eikonal-sources.md)。真实ν,ν′>0，ℓ=1，固定平均质量混合表示、CSTY12/14两侧与两个sector减重复断开项。原动量相反±π/4旋转固定η=+；四rapidity核K=-J′保留相位。Gaussian平均Bn为Mellin正谱积分，断开D=B₀νB₀ν′/(πα)²，各固定阶系数非负；不等于完整答案正性或Hilbert构造。
+
+144次完整scrambled积分（64主+32改变率/seed+48late），60项诊断、14项轮廓/加阶和727项独立算术重放通过。ν=.6、ν′=.9、m1000；σ=.4γ=.25时u0虚部负、u4约+.02768，提供变号数值证据。u6强相消，u8约+.000034但SE约.000024，符号未分辨；不得沿用共形全时间负号定理。未认证总求积误差，更不认证省略的引力项。完整研究未完成。
+
+六页LaTeX已本机双遍exit0、桌面success、逐页1100像素检查。初版公式溢出日志保留。56067、48240、59667、23106均exit0，无活跃计算句柄；不要重跑one-shot driver覆盖JSON/JSONL。阶段证据及唯一快照以实际evidence/ZIP为准；旧51份ZIP和科学文件必须保留。用户明确持续公开授权，私人日志/AGENTS/PROJECT/tmp/第三方全文/local分支不推送。
+
+下一主线：先复读CSTY§2.1/(2.3)固定四段平均质量的Fourier变换与CLP§3.35–3.39的物理两点/插入归一，再与已推G=0量子观察者物理包、真实质量测度和真空收缩逐项比较。优先推可证的条件化或制备映射，或给出阻止映射的具体不变量；不要把裸tetrahedron或ω=0作用量归一当完整四点归一。有限κ物理插入/Gram逆核/轮廓仍缺，若原文未给出，应明确建模额外假设并检其不唯一性。已有recoil-spectral的nλ归一不唯一性不能包装为新发现。先查前驱再确定新计算。晚时刻数值仅在需要时另建稳定表示与相对精度控制，不无限加密已明确的候选近似。
+
+以下为历史继续位置。
+
 ## 进行中的原文核查与 principal 推广（尚未形成新阶段稿）
 
 2026-10-31 再次通过 GitHub API 核实仓库 public、private=false，远端 main 与本机 b2ab04acb01a0a13217cd5e4a6abb07482a2fbc6 一致；沿用用户明确公开授权。以下 gaussian-eikonal 仍是最新已冻结科学阶段。

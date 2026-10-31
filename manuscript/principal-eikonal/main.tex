@@ -1,0 +1,346 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,microtype}
+\usepackage[margin=25mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\E}{\mathbb E}
+\newcommand{\K}{\mathcal K}
+\newcommand{\R}{\mathcal R}
+\title{Real principal probes in the dS$_3$ eikonal model:\\lateral kernels and Gaussian spectral moments}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Working research note --- 31 October 2026}
+\begin{document}\maketitle
+\begin{abstract}
+We retain the Bessel wavefunctions of real principal-series probes in
+the existing observer eikonal prescription. Opposite momentum rotations
+fix the lateral continuation. A four-rapidity representation permits
+four independent real Gaussian time smearings without discarding the
+complex phase. The averaged momentum moments have a positive Mellin
+spectral representation, even though the unaveraged integrands change
+sign. This fixes the signs of every fixed-order coefficient, but not
+the nonperturbative imaginary part. Independent momentum integrals and
+scrambled Sobol calculations test the formulas. These are results within
+the specified approximation, not a finite-$G$ Hilbert-space construction
+or a completed holographic dictionary.
+\end{abstract}
+
+\section{Scope and conventions}
+Use radius $\ell=1$, observer mass $m>0$, $\gamma=4Gm\in[0,1)$,
+and $\alpha=2\pi(1-\gamma)$. The two distinguishable scalar probes have
+$\nu,\nu'>0$ real and mass squares $1+\nu^2,1+\nu'^2$.
+The state/preparation is the fixed-average-observer-mass mixed
+representation of CSTY, with its prescribed $12/14$ contours
+\cite{csty}. It is not already identified with the preceding
+$G=0$ quantized-observer Fock vacuum. We sum the two eikonal sectors
+and subtract the duplicated disconnected term, as in CSTY (2.25).
+The original wavefunctions, shock, and sector construction are prior
+results. Our exercise applies standard integral identities to their
+four-time Gaussian smearing; no priority claim is made.
+
+Let $d_i$ be independent centered Gaussians of variance $\sigma^2$,
+with fixed $\sigma>0$, and set
+\[
+ (\theta_1,\theta_2,\theta_3,\theta_4)
+ =(-\pi/2+i(t+d_1),\,id_2,\,\pi/2+i(t+d_3),\,\pi+id_4).
+\]
+Write $X=(d_1-d_3)/2$, $Y=(d_2-d_4)/2$,
+$Z=(d_1+d_3-d_2-d_4)/2$ and $T=t+Z$.
+These are independent, of variances $\sigma^2/2,\sigma^2/2,\sigma^2$.
+Angular brackets mean $\pi^{-1}\int_0^\pi d\phi$, with
+\[
+ h(\phi)=\frac{H_\gamma(\phi)}m,
+ \qquad H_\gamma(\phi)=-\frac{\cos[(1-\gamma)(\pi-\phi)]}
+ {2\operatorname{sinc}(\pi\gamma)},\quad \operatorname{sinc}x=\frac{\sin x}x.
+\]
+
+\newpage
+\section{Momentum rotations and the lateral kernel}
+Define the unnormalized positive-coupling integral
+\begin{align}
+ S(\lambda;X,Y)&=\frac{1}{(\pi\alpha)^2}
+ \int_0^\infty x\,dx\,y\,dy\,P_\nu(x,Y)P_{\nu'}(y,X)e^{-\lambda xy},\label{eq:S}\\
+ P_\nu(x,Y)&=K_{i\nu}(xe^Y)K_{i\nu}(xe^{-Y}),\qquad \Re\lambda\geq0.\nonumber
+\end{align}
+This integral diverges on the negative real $\lambda$ axis and cannot
+be used there without continuation. Here is a direct check of that
+continuation from CSTY (2.32). Put $s_{13}=(d_1+d_3)/2$,
+$s_{24}=(d_2+d_4)/2$, and rotate its negative momenta oppositely:
+\[
+ p_+=-e^{i\pi/4-s_{24}}x,\qquad
+ p_-=-e^{-i\pi/4+t+s_{13}}y,\qquad z=e^{-i\pi/4}.
+\]
+Their product stays real. The source integral becomes
+\[
+ -\frac{1}{(\pi\alpha)^2}\int_0^\infty x\,dx\,y\,dy\,
+ P_\nu(zx,Y)P_{\nu'}(zy,X)e^{i\lambda xy},\quad \lambda=he^T.
+\]
+The minus sign is fixed by the source prefactors and Jacobians.
+For real $\lambda$ this integral is absolutely convergent. Using the
+standard representation \cite{dlmfK}
+\[
+ K_{i\nu}(w)=\int_0^\infty e^{-w\cosh r}\cos(\nu r)\,dr,
+ \quad \Re w>0,
+\]
+introduce $r_j\geq0$ and
+\[
+ A=e^Y\cosh r_1+e^{-Y}\cosh r_2,\quad
+ B=e^X\cosh r_3+e^{-X}\cosh r_4.
+\]
+\[
+ W=\cos\nu r_1\cos\nu r_2\cos\nu'r_3\cos\nu'r_4.
+\]
+Integrating $y$ first and setting $v=zAx$ leaves
+$(A^2B^2)^{-1}\int v e^{-v}(1+cv)^{-2}dv$, $c=\lambda/(AB)$,
+on the ray $\arg v=-\pi/4$. Rotation to the positive axis passes
+\emph{below} the positive pole for $c<0$. Thus
+\begin{align}
+ S_\eta(\lambda;X,Y)&=\frac{1}{(\pi\alpha)^2}
+ \int_{\mathbb R_+^4}\frac{W\,d^4r}{A^2B^2}\K_\eta\left(\frac\lambda{AB}\right),\label{eq:rapid}\\
+ J(c)&=\frac{e^{1/c}E_1(1/c)}c,\qquad
+ \K(c)=-J'(c)=\frac{(1+c)J(c)-1}{c^2},\quad \K(0)=1.\nonumber
+\end{align}
+The above rotated source is $\eta=+1$; the other boundary value is its
+conjugate. For $c=-1/a$, $a>0$,
+\[
+ J_\eta(-1/a)=ae^{-a}\operatorname{Ei}(a)-\eta i\pi ae^{-a},\qquad
+ \Im\K_\eta(-1/a)=-\eta\pi a^2(a-1)e^{-a}.
+\]
+Both this residue and $W$ change sign. The conformal sign proof does
+not extend to real principal probes by replacing their masses.
+
+\newpage
+\section{A positive spectrum for the smeared moments}
+For every integer $n\geq0$ define
+\[
+ I_{n,\nu}(X)=\int_0^\infty x^{n+1}P_\nu(x,X)\,dx,
+ \qquad B_{n,\nu}(\sigma)=\E_X I_{n,\nu}(X).
+\]
+Set $f_n(r)=e^{(n+2)r/2}K_{i\nu}(e^r)$. This is a real $L^2$
+function, and changing to logarithmic momentum gives
+\[
+ I_{n,\nu}(X)=\int_{\mathbb R}f_n(r+X)f_n(r-X)\,dr.
+\]
+With Fourier transform $\widehat f(\omega)=\int e^{-i\omega r}f(r)dr$,
+the Mellin identity \cite{dlmfM} yields
+\[
+ M_{n,\nu}(\omega)=2^{n/2-1-i\omega}
+ \Gamma\left(\frac{n+2}{4}+\frac{i(\nu-\omega)}2\right)
+ \Gamma\left(\frac{n+2}{4}-\frac{i(\nu+\omega)}2\right).
+\]
+Its Mellin convergence condition holds since $(n+2)/2>0$ and
+$\Re(i\nu)=0$. Plancherel and
+$\E e^{2i\omega X}=e^{-\sigma^2\omega^2}$ prove
+\begin{equation}
+ \boxed{\quad B_{n,\nu}(\sigma)=\frac1{2\pi}\int_{\mathbb R}
+ e^{-\sigma^2\omega^2}|M_{n,\nu}(\omega)|^2d\omega>0.\quad}\label{eq:B}
+\end{equation}
+Fubini is justified by the integrable nonnegative Fourier density.
+This positivity is a statement about these averaged moments, not
+positivity of $P_\nu$ or of a complete gravitational Hilbert space.
+The variable $\omega$ is Fourier conjugate to logarithmic momentum;
+no identification with modular energy is implied.
+
+Two normalization checks are
+\begin{align*}
+ I_{0,\nu}(X)&=\frac{\pi\sin(2\nu X)}{2\sinh(\pi\nu)\sinh(2X)},
+ &I_{0,\nu}(0)&=\frac{\pi\nu}{2\sinh\pi\nu},\\
+ I_{n,\nu}(0)&=\frac{2^{n-1}\Gamma((n+2)/2)^2
+ |\Gamma((n+2)/2+i\nu)|^2}{\Gamma(n+2)}.
+\end{align*}
+In particular, $I_{0,\nu}(X)$ can be negative, whereas its Gaussian
+average is strictly positive. The disconnected normalization is
+\begin{equation}
+ D_\sigma=\frac{B_{0,\nu}(\sigma)B_{0,\nu'}(\sigma)}{(\pi\alpha)^2}.
+\end{equation}
+The complete specified two-sector model is
+\begin{equation}
+ \R_{\eta,\sigma}(t)=\frac{\E\langle
+ S_\eta(he^{t+Z};X,Y)+S_{-\eta}(he^{-t-Z};X,Y)
+ \rangle-D_\sigma}{D_\sigma}.\label{eq:R}
+\end{equation}
+There is no pointwise division by the sign-changing two-point
+functions. The model obeys $\R_{-\eta,\sigma}=\overline{\R_{\eta,\sigma}}$
+and $\R_{\eta,\sigma}(-t)=\overline{\R_{\eta,\sigma}(t)}$.
+
+\newpage
+\section{Fixed orders, signs, and limits}
+The fixed-order expansion of the elementary kernel is
+\[
+ \K_\eta(c)\sim\sum_{n\geq0}(-1)^n(n+1)(n+1)!c^n.
+\]
+At fixed $\gamma,\sigma,t,\nu,\nu'$, therefore,
+\begin{equation}
+ \R_{\eta,\sigma}\sim1+\sum_{n\geq1}
+ \frac{(-1)^n\langle h^n\rangle}{n!}
+ e^{n^2\sigma^2/2}
+ \frac{B_{n,\nu}B_{n,\nu'}}{B_{0,\nu}B_{0,\nu'}}
+ (e^{nt}+e^{-nt}).\label{eq:series}
+\end{equation}
+The moment expansion before smearing is already present in CSTY
+(2.37)--(2.38); related momentum moments occur in MNX (5.23)--(5.28)
+\cite{mnx}. Equation \eqref{eq:B} is what fixes the sign after the
+independent Gaussian averages.
+
+For $0<\gamma<1$, every even shock moment is positive and every odd
+shock moment is negative. To see the latter, put $b=(1-\gamma)\pi$.
+The integral $\int_0^b\cos^{2k+1}v\,dv$ is positive for $0<b<\pi$:
+for $b\leq\pi/2$ this is direct; otherwise use the vanishing full
+integral on $[0,\pi]$ and the negative omitted piece. Hence every
+coefficient in \eqref{eq:series} is positive. At $\gamma=0$ the odd
+ones vanish and the even ones stay positive. This is not convergence
+of the series, monotonicity of the full answer, or a statement about
+the sign of its imaginary part.
+
+For completeness, the termwise operation is valid as a fixed-order
+asymptotic expansion. The real lateral kernel is continuous at zero,
+bounded at finite $c$, and tends to zero as $|c|\to\infty$.
+Its fixed-order small-$c$ remainder has the usual $E_1/\operatorname{Ei}$
+bound; the exponentially small cut term is flat there. Thus, for
+each $N$, a finite constant $d_N$ exists with
+\[
+ \left|\K_\eta(c)-\sum_{n=0}^{N}(-1)^n(n+1)(n+1)!c^n\right|
+ \leq d_N|c|^{N+1}\qquad(c\in\mathbb R).
+\]
+On $|c|$ bounded away from zero this follows directly by boundedness
+and polynomial growth. In \eqref{eq:rapid}, use $|\cos|\leq1$ and
+the autocorrelation bound $|I_{N+1,0}(X)|\leq I_{N+1,0}(0)$.
+The normalized remainder in \eqref{eq:series} is at most
+\[
+ \frac{2d_N\|h\|_\infty^{N+1}e^{(N+1)^2\sigma^2/2}
+ \cosh((N+1)t)}{B_{0,\nu}B_{0,\nu'}}
+ \left[\frac{I_{N+1,0}(0)}{(N+2)!}\right]^2.
+\]
+No useful uniformity as $N\to\infty$ is asserted.
+
+As a check, at the separate conformal value $\nu=i/2$,
+$I_{n,i/2}(X)=\pi n!/[2^{n+2}\cosh^{n+1}X]$. This recovers the earlier
+conformal smearing factors, without analytically continuing a
+Hilbert-space theorem. At fixed $t$, $m\to\infty$ gives $\R\to1$.
+At $t=\log m+u$ the forward sector instead keeps the argument
+$H_\gamma e^{u+Z}$; the reverse sector cancels the subtraction.
+
+\newpage
+\section{Absolute integrability and numerical evidence}
+Let $C_K=\sup_{c\in\mathbb R,\eta=\pm1}|\K_\eta(c)|<\infty$.
+We do not assign a numerically certified value to this constant.
+The exact nonoscillatory majorant is
+\[
+ \int_0^\infty\!\int_0^\infty
+ \frac{dr\,ds}{(e^X\cosh r+e^{-X}\cosh s)^2}
+ =\frac{X}{\sinh2X}\leq\frac12.
+\]
+Consequently $|S_\eta|\leq C_K/[4(\pi\alpha)^2]$, uniformly in
+real $X,Y,\lambda$. Gaussian smearing and the two limits above follow
+by domination. A cutoff at $L$ standard deviations in each of
+$X,Y,Z$ omits normalized absolute mass at most
+\[
+ \frac{3(2C_K+1)}{4B_{0,\nu}B_{0,\nu'}}\operatorname{erfc}(L/\sqrt2).
+\]
+For a rapidity cutoff $r_j\leq R$, use
+$\cosh r+\cosh s\geq(e^r+e^s)/2$ and split $s<r$, $s>r$.
+The pair union tail is at most $4(R+1)e^{-2R}e^{2|X|}$.
+Since $\E e^{2|X|}=e^{\sigma^2}\operatorname{erfc}(-\sigma)$,
+the full normalized rapidity tail is bounded by
+\[
+ \frac{4(2C_K+1)(R+1)e^{-2R}e^{\sigma^2}
+ \operatorname{erfc}(-\sigma)}{B_{0,\nu}B_{0,\nu'}}.
+\]
+These continuum bounds do not certify discretization, arithmetic,
+or terms omitted by the gravity approximation.
+
+We use $\nu=.6$, $\nu'=.9$, $m=1000$ and $t=\log m+u$.
+The denominator is integrated separately at 50 decimal digits by
+\eqref{eq:B}. Four rapidities are sampled with exponential importance
+density and three normal variables with inverse Gaussian CDFs; the
+angle is uniform. Signed cosine weights and both lateral kernels
+are retained. Eight independent scrambles at $2^{18}$ and $2^{20}$
+points are followed by eight new scrambles at $2^{21}$ points with
+importance rate $.7$ instead of $1$. Raw and control-variate estimates
+are both saved. The control variate replaces only the sampled
+disconnected term by its independently known integral.
+
+\begin{center}\begin{tabular}{ccc rr rr}
+\toprule
+$\sigma$&$\gamma$&$u$&$\Re\R_+$&$\Im\R_+$&SE$_{\Re}$&SE$_{\Im}$\\
+\midrule
+.4&0&0&1.10266&$-.04401$&$.000024$&$.000032$\\
+.4&.25&0&1.24688&$-.08601$&$.000021$&$.000052$\\
+.8&.25&0&1.19389&$-.19901$&$.000055$&$.000101$\\
+.8&.25&2&.30011&$-.81574$&$.000239$&$.000280$\\
+\bottomrule
+\end{tabular}\end{center}
+SE denotes the empirical standard error across eight scrambles,
+not a rigorous error bar. Changing rate and seeds shifts the listed
+components by at most $2.68\times10^{-4}$; refinement is not monotone.
+All 60 initial diagnostics and 14 rotation/refinement checks pass
+their stated numerical tolerances. These include two positive-coupling
+full Bessel integrals, three oppositely rotated complex momentum
+integrals, and conformal normalization controls. The largest smeared
+moment relative comparison error is $1.88\times10^{-11}$.
+
+\newpage
+\section{Physical interpretation and remaining work}
+The nonzero imaginary parts in the table are numerical evidence for
+the specified contour model. There is no principal-series analogue
+of our conformal all-time sign theorem here: already at $X=Y=0$,
+the unnormalized rapidity integral changes imaginary sign between
+$\lambda=-1$ and $-10$ in the saved deterministic quadratures.
+A separate full scan at $\sigma=.4,\gamma=.25,u=4$ gives
+$\Im\R_+=.02768$ with empirical SE $.000056$, while $u=0$ is negative.
+At $u=6$ the raw estimate is $.001038-.000388i$, with component
+SEs $.000037,.000031$ and absolute-integrand average $.1941$;
+cancellation is substantial. At $u=8$ the imaginary estimate
+$.000034$ has SE $.000024$: its sign is unresolved. All seeds are
+saved, and none of these empirical observations is a universal sign law.
+For a Hermitian equal-spacing thermal trace, whenever the requisite
+products are trace class, cyclicity and adjunction require a real
+answer. The present computation preserves rather than resolves the
+known contour issue. It does not exclude omitted gravitational
+contributions, different states, or a different physical prescription.
+
+Recent adjacent work does not currently supply the missing map.
+MNX distinguishes a graviton-mass-regulated $L=1$ double scaling from
+an unregulated leading tree result \cite{mnx}. That regulator is not
+our finite observer recoil. The horizon-edge EFT study \cite{edge}
+uses a $D\geq4$ test-observer setting and leaves quantization and the
+coupling to a physical observer open. Its corner choices cannot be
+silently substituted for a $dS_3$ massive-observer state or contour.
+The literature reading record states which sections were inspected;
+we do not claim complete reproduction of either paper.
+
+The next physical task is to compare the actual state, normalization,
+insertion and gluing data with a microscopic candidate. Agreement
+of these eikonal moments alone is insufficient. In particular,
+the finite-parameter insertion normalization and Gram inverse,
+the correspondence with the regulated $G=0$ Fock vacuum, and
+control of omitted gravity terms remain unresolved.
+
+\paragraph{Reproduction.}
+The code and immutable raw runs live under \path{code/} and
+\path{results/stage4/principal-eikonal/}. Run the one-shot drivers
+only in a clean output directory; they refuse to overwrite evidence.
+\path{study.json} records dependency versions and input hashes.
+\path{diagnostics.json} and \path{refinement.json} specify the exact
+checks and tolerances. The stage evidence binds this source, the
+compiled PDF, the independent controls and the saved outputs.
+Prior scientific stages are retained byte for byte.
+
+\begin{thebibliography}{9}
+\bibitem{csty} Y. Chen, D. Stanford, H. Tang and Z. Yang,
+\emph{Negative shocks versus static patch holography},
+\href{https://arxiv.org/abs/2607.14042v1}{arXiv:2607.14042v1},
+especially (2.25), (2.32)--(2.40) and Appendix G.
+\bibitem{dlmfK} NIST Digital Library of Mathematical Functions,
+\href{https://dlmf.nist.gov/10.32.E9}{10.32.9} (Bessel integral).
+\bibitem{dlmfM} NIST Digital Library of Mathematical Functions,
+\href{https://dlmf.nist.gov/10.43.E19}{10.43.19} (Mellin transform).
+\bibitem{mnx} A. Milekhin, V. Narovlansky and J. Xu,
+\emph{Out-of-time-ordered Correlators in de Sitter Revisited},
+\href{https://arxiv.org/abs/2607.13137v1}{arXiv:2607.13137v1},
+Sections 3--6.
+\bibitem{edge} J. Bonifacio, K. Hinterbichler, Y. T. A. Law and V. Lochab,
+\emph{De Sitter Observers and an Effective Field Theory of Horizon Edge Modes},
+\href{https://arxiv.org/abs/2610.28719v1}{arXiv:2610.28719v1},
+Sections 2--6 and Appendix A; PDF used for the truncated HTML portion.
+\end{thebibliography}
+\end{document}

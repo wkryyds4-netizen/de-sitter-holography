@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "checks": 727,
+  "errors": [],
+  "late_comparisons": [
+    {
+      "u": 4.0,
+      "component": 0,
+      "difference": 4.436664532184165e-05,
+      "combined_stderr": 7.709782031703035e-05
+    },
+    {
+      "u": 4.0,
+      "component": 1,
+      "difference": 0.00026705802628125205,
+      "combined_stderr": 0.00010458086374186717
+    },
+    {
+      "u": 6.0,
+      "component": 0,
+      "difference": 2.2423521007371508e-05,
+      "combined_stderr": 7.261145513587923e-05
+    },
+    {
+      "u": 6.0,
+      "component": 1,
+      "difference": 3.660134506305022e-06,
+      "combined_stderr": 8.39435205712324e-05
+    },
+    {
+      "u": 8.0,
+      "component": 0,
+      "difference": 5.748915431881642e-06,
+      "combined_stderr": 4.8707348838085676e-05
+    },
+    {
+      "u": 8.0,
+      "component": 1,
+      "difference": 1.087946340510886e-05,
+      "combined_stderr": 3.379228125052656e-05
+    }
+  ],
+  "scope": "Saved arithmetic, metadata and empirical consistency; not quadrature certification or new gravity evidence.",
+  "hashes": {
+    "code/audit_principal_eikonal.py": "0b17280ba3d9d01b916661174f2f6546d3d94a4c2bce376f187defcc08cb7fe1"
+  }
+}

@@ -7,10 +7,10 @@
     "Source remains a link, not an archive: dlmf-16.5",
     "Source remains a link, not an archive: dlmf-15.6"
   ],
-  "verified_at_utc": "2026-10-31T09:18:12.478068+00:00",
-  "required_files": 851,
-  "local_links_checked": 1000,
-  "code_and_input_hashes_checked": 1171,
+  "verified_at_utc": "2026-10-31T12:00:34.217040+00:00",
+  "required_files": 879,
+  "local_links_checked": 1016,
+  "code_and_input_hashes_checked": 1213,
   "scientific_checks": {
     "stage1": {
       "checks": 235,
@@ -636,6 +636,36 @@
       "recorded_hashes": 4
     },
     {
+      "file": "results/stage4/principal-eikonal/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 27
+    },
+    {
+      "file": "results/stage4/principal-eikonal/study.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 3
+    },
+    {
+      "file": "results/stage4/principal-eikonal/diagnostics.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 3
+    },
+    {
+      "file": "results/stage4/principal-eikonal/refinement.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 4
+    },
+    {
+      "file": "results/stage4/principal-eikonal/late.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 4
+    },
+    {
+      "file": "results/stage4/principal-eikonal/audit.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 1
+    },
+    {
       "file": "results/stage3/cross-limit/comparison.json",
       "kind": "projected comparison model only; not exact 6j convergence or interval certification",
       "checks": 19
@@ -871,6 +901,12 @@
       "diagnostic_checks": 52,
       "refinement_checks": 11,
       "kind": "original momentum and four-coordinate controls plus finer quadrature; empirical errors, not a full gravity or principal-Fock identification"
+    },
+    {
+      "stage": "principal-eikonal",
+      "checks": 727,
+      "full_scrambled_runs": 144,
+      "kind": "raw arithmetic replay, recorded Bessel/rotation controls; empirical quadrature, late u8 sign unresolved"
     },
     {
       "file": "results/stage3/growing-box/diagnostics.json",

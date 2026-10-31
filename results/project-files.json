@@ -115,6 +115,11 @@
     "sha256": "441a614aca9662936835a50f0608fb1c9b81c4ddcd97b30e8f26e3fdce487c2e"
   },
   {
+    "file": "code/audit_principal_eikonal.py",
+    "bytes": 3784,
+    "sha256": "0b17280ba3d9d01b916661174f2f6546d3d94a4c2bce376f187defcc08cb7fe1"
+  },
+  {
     "file": "code/build_bessel_cancellation_note.ps1",
     "bytes": 969,
     "sha256": "e99867a9d6c0578b1a1126ad2244f188106846c370c9d4019b8108f3c0404ea7"
@@ -265,6 +270,11 @@
     "sha256": "59a6b107af218348eca3f0e0da8b36bc522329f986555e1a07e6c5b5d53f9d61"
   },
   {
+    "file": "code/build_principal_eikonal.ps1",
+    "bytes": 1145,
+    "sha256": "d2b305aa0796003d4b7279c87e82656d0ec109fdd8c8b6b74f4f07f219eec0e6"
+  },
+  {
     "file": "code/build_saddle_note.ps1",
     "bytes": 909,
     "sha256": "3f8f333c2566e2c4f5ca7aba28c869ec4231459525837eee0e1c5b8d73c807de"
@@ -313,6 +323,11 @@
     "file": "code/check_gaussian_eikonal.py",
     "bytes": 5870,
     "sha256": "11688fbd28bbd3284c7dbc244e6446e4e0cefbb39744699aef138fb613412f9a"
+  },
+  {
+    "file": "code/check_principal_eikonal.py",
+    "bytes": 5849,
+    "sha256": "6fae51963f44d37ece4538dfbc615b314388acb4efc3789671362bb4acfd28b2"
   },
   {
     "file": "code/clock_model.py",
@@ -525,6 +540,11 @@
     "sha256": "39c917fb13a20c42f1cd017f70dd2319d256b0109b9ab007b605b00739b42dea"
   },
   {
+    "file": "code/late_principal_eikonal.py",
+    "bytes": 2376,
+    "sha256": "f67944b44557c5a46383b5b147c8c3435a8b45aa484d33c2ca0c6aafe0b9902e"
+  },
+  {
     "file": "code/logtime_limit.py",
     "bytes": 5771,
     "sha256": "45a83f402491c35d7fd3d63f98e9668f55d5846c333ec5c7ae2d43e69cb83220"
@@ -570,9 +590,14 @@
     "sha256": "f3b07907b5c3395dfd78a54c3065c3eda78ba3e02ecfa5acc45e31e8c6488575"
   },
   {
+    "file": "code/principal_eikonal.py",
+    "bytes": 3493,
+    "sha256": "572619f01fa0995d95b538b79f60212f5b557d2096821a6d43342f7d47bb9a91"
+  },
+  {
     "file": "code/project_audit.py",
-    "bytes": 143104,
-    "sha256": "3acd1e732f9e2d1022277986daf1856ca0bae97ca88ec64f6f8149dcc47b5e7f"
+    "bytes": 146017,
+    "sha256": "c18402a40296a21b89776b4a0e4f6a0282d0f4855162d6237afd0fe04f0e9138"
   },
   {
     "file": "code/quantized_observer.py",
@@ -700,6 +725,11 @@
     "sha256": "a553fc56a0ee4fe2e5556cdc7b1c05113b932f423859075996352394c9926b1a"
   },
   {
+    "file": "code/record_principal_eikonal.py",
+    "bytes": 4092,
+    "sha256": "22ee088bc2cacb3c23e6348d7091a23b1d26825d2d921285b5feb4720c44488a"
+  },
+  {
     "file": "code/recover_ds3_fock_vacuum.py",
     "bytes": 2605,
     "sha256": "922cffaf44764b668390694f316e308c21993bbf13a54f09a90cce7ad0e87cb2"
@@ -718,6 +748,11 @@
     "file": "code/refine_gaussian_eikonal.py",
     "bytes": 2422,
     "sha256": "036f5a29f83cf7804601ce8eac1f166cfaf3017e9b1a925f8bf702825cd6f475"
+  },
+  {
+    "file": "code/refine_principal_eikonal.py",
+    "bytes": 4001,
+    "sha256": "2917bd718ddab173119b36b9a5377722cf60f06cae849f252ae0431250e6624b"
   },
   {
     "file": "code/replay_ds3_bose.py",
@@ -823,6 +858,11 @@
     "file": "code/run_observer_fourpoint.py",
     "bytes": 10809,
     "sha256": "38ad0df557ce46ba7baf9509e2999b89cbb4fc1d631f33be697bc5db5aba5cec"
+  },
+  {
+    "file": "code/run_principal_eikonal.py",
+    "bytes": 2285,
+    "sha256": "0cf6bb70116b6748783a5a6cac1d4898f44c9dfd04c86dfe237e777e531506ee"
   },
   {
     "file": "code/run_quantized_observer.py",
@@ -1051,8 +1091,8 @@
   },
   {
     "file": "journal/2026-10-31.md",
-    "bytes": 56134,
-    "sha256": "7b32178db09e2ffd0f9057f112a4d7c0a9f5729228cfde7cfab61f00b1256a90"
+    "bytes": 60506,
+    "sha256": "dd4de57095eca916817cd281cc4c4879afda377d75cba32c2d935e5bb513702d"
   },
   {
     "file": "literature/models.md",
@@ -1263,6 +1303,11 @@
     "file": "literature/stage4-microscopic-match.md",
     "bytes": 10366,
     "sha256": "ee6ff9b9e92608a48ba10cf285d25f571a82fab8c64a5af07caa4d170802b1ec"
+  },
+  {
+    "file": "literature/stage4-principal-eikonal-sources.md",
+    "bytes": 2490,
+    "sha256": "c61b6a3cfc84a555b2f68eca8e7a29d43b43bfe1df3fa3b0825fd279e1d93e75"
   },
   {
     "file": "literature/stage4-recoil-bessel-cancellation-sources.md",
@@ -1545,6 +1590,11 @@
     "sha256": "583e3505dfdd9b4c2725620218042cc3cbcb07cc5940ba104939745bd416692a"
   },
   {
+    "file": "manuscript/principal-eikonal/main.tex",
+    "bytes": 15847,
+    "sha256": "e6474983d4fd4c699099c860f2b971de7ee72951ff43902006455e477d19b724"
+  },
+  {
     "file": "manuscript/recoil-bessel-cancellation/main.tex",
     "bytes": 14145,
     "sha256": "02d9184e02721d30a62402adf4a965514e46ea9b5a2ea545c26662448c4a4d2d"
@@ -1641,8 +1691,8 @@
   },
   {
     "file": "NEXT.md",
-    "bytes": 24136,
-    "sha256": "bd23de1c4e413882fdb178be51d121780f7ee18b4fa372cde5d511154eb3e76d"
+    "bytes": 28067,
+    "sha256": "8099bea61a9e692db7edc4bed93b80b860d343369c50bd929d9cb5219924a426"
   },
   {
     "file": "notes/math-independent.md",
@@ -1990,6 +2040,11 @@
     "sha256": "1183fc1ad670c00eb00877d0de0dfd800aa86740750f5c2300848a225f918983"
   },
   {
+    "file": "notes/stage4-principal-eikonal.md",
+    "bytes": 5523,
+    "sha256": "b320a7103cc742cebd9a27a1da21d699a4fd2560152e400e39a4b312f604beaf"
+  },
+  {
     "file": "notes/stage4-recoil-bessel-cancellation.md",
     "bytes": 7686,
     "sha256": "7a51e7b605882f66f0e9405824209ff40c9a79946c236c19b01a1e1e46b22fdc"
@@ -2165,6 +2220,11 @@
     "sha256": "da40aec8613ce630680fc51e2b0ae3029b6e176a0591e7a5c55bfabadf5912a3"
   },
   {
+    "file": "output/pdf/de-sitter-principal-eikonal.pdf",
+    "bytes": 358807,
+    "sha256": "77dabfb0c2ba05f517a35fdba37d5e85f53d1bfe56650ca7fdeff6fecbcf87c9"
+  },
+  {
     "file": "output/pdf/de-sitter-recoil-bessel-cancellation.pdf",
     "bytes": 370496,
     "sha256": "466a662a84b0a0a6de3872f63c3d0ed2b46f85349c79dc5dfaea1480730a81b2"
@@ -2241,8 +2301,8 @@
   },
   {
     "file": "PLAN.md",
-    "bytes": 41653,
-    "sha256": "dafc8b11ee6786505a8d8160c93114df459c1c28c3763e6cf003c474ef1a9bda"
+    "bytes": 42242,
+    "sha256": "131a705534bd7221e0a881e5f40fabe00990b4e6ed9044f65808af7836d501fd"
   },
   {
     "file": "PROJECT.md",
@@ -2251,8 +2311,8 @@
   },
   {
     "file": "README.md",
-    "bytes": 35663,
-    "sha256": "74c25236bcb4969fa73144108bef7dd2923648d11600c007b6703835f61d8455"
+    "bytes": 36555,
+    "sha256": "602935eaa4f2a2a7681ccb8fcf7ee9556b83dc87698621f7740c35c02cef9f01"
   },
   {
     "file": "REPOSITORY.md",
@@ -2331,8 +2391,8 @@
   },
   {
     "file": "results/project-audit.json",
-    "bytes": 32225,
-    "sha256": "fe4e559ac395d2ae31fe5dd9e4f2d4c3958bd4d611ff98aed5d19a769c56be0a"
+    "bytes": 33411,
+    "sha256": "acba58605f0af15e633aea476216aa59f9e0abcaa985f541fd6ee4835f8fce6b"
   },
   {
     "file": "results/stage2/errors.csv",
@@ -3590,6 +3650,86 @@
     "sha256": "884c71ba6a2a89ac445b3bb4215cf5c0932d632512c9c67aa1f0c6ca5b37557f"
   },
   {
+    "file": "results/stage4/principal-eikonal/audit.json",
+    "bytes": 1227,
+    "sha256": "faa108f3c3209cf44f379f870c627fa823019970269371f7ae11041e4868e6f9"
+  },
+  {
+    "file": "results/stage4/principal-eikonal/build-initial-overflow.log",
+    "bytes": 25298,
+    "sha256": "e4de981f2ba22845194d9e68e1d21b42684efd1aabff3f876c74a356c4153d15"
+  },
+  {
+    "file": "results/stage4/principal-eikonal/build-review.md",
+    "bytes": 952,
+    "sha256": "ab906d8f4d9ec32220af7c788ffd8af4feef30bf17f615f422281df854d35ecc"
+  },
+  {
+    "file": "results/stage4/principal-eikonal/diagnostics.json",
+    "bytes": 12987,
+    "sha256": "b36c86d3bee51a6eec8ba4e0f7ff7e599a78313d6af977019569c04ed52b27c5"
+  },
+  {
+    "file": "results/stage4/principal-eikonal/evidence.json",
+    "bytes": 3999,
+    "sha256": "987e3c5df256b14cc42f13f0bb893fc481b24e4c49ff7de9e4ca47c2ad1b51e2"
+  },
+  {
+    "file": "results/stage4/principal-eikonal/late-runs.jsonl",
+    "bytes": 21677,
+    "sha256": "379d94b0604f8a52efc35ca40c0edba475506290fc3e4a4da362eab9e5687874"
+  },
+  {
+    "file": "results/stage4/principal-eikonal/late.json",
+    "bytes": 36083,
+    "sha256": "6f188de154b1b2995e8a411c5c10d01b36dd8fcdab447a57d1e6e3c60ac4e05a"
+  },
+  {
+    "file": "results/stage4/principal-eikonal/main.log",
+    "bytes": 24908,
+    "sha256": "39f8f9b36b249ac643594ad4fcc1b0962fb72eeceb90884ac355e7579b11bc7e"
+  },
+  {
+    "file": "results/stage4/principal-eikonal/moments.json",
+    "bytes": 2017,
+    "sha256": "f1bbb8cb220a8144ba31c82b973d80791df4ad5117bf9960307344ace2036293"
+  },
+  {
+    "file": "results/stage4/principal-eikonal/preservation-initial-failure.txt",
+    "bytes": 592,
+    "sha256": "342acc2857153b22bd918f0aa5807a49a6beeaa253979af329be948c882f51dc"
+  },
+  {
+    "file": "results/stage4/principal-eikonal/preservation.json",
+    "bytes": 7940,
+    "sha256": "cb53795ab2b4a0d8b8fb1011618d0d1233e229013ed21446b4fd76c53c821124"
+  },
+  {
+    "file": "results/stage4/principal-eikonal/refinement-runs.jsonl",
+    "bytes": 14078,
+    "sha256": "b41fb4a77e6bcb11692d12da6ad71d8020784dd67572a16fb36b4e6b1999ad7b"
+  },
+  {
+    "file": "results/stage4/principal-eikonal/refinement.json",
+    "bytes": 27405,
+    "sha256": "9edd7f72cbb97b427696504bd824dfe2799d2da180a02ed61c7b0c7e806dc5e6"
+  },
+  {
+    "file": "results/stage4/principal-eikonal/runs.jsonl",
+    "bytes": 28166,
+    "sha256": "62442c53eca8836ccf8bc663f0becd62db9c65ed029e38053426d288c4fd640d"
+  },
+  {
+    "file": "results/stage4/principal-eikonal/source-record.json",
+    "bytes": 838,
+    "sha256": "a361b4d13b27d3bb843ae1069dbfc99e9e64515bd5ee65d54ea731d9725dadf4"
+  },
+  {
+    "file": "results/stage4/principal-eikonal/study.json",
+    "bytes": 44128,
+    "sha256": "9472ff4eae667bc41769fd0bee9be8b1a543a81b8a77c2e12b822f6c04d633a7"
+  },
+  {
     "file": "results/stage4/recoil-bessel-cancellation/build-review.md",
     "bytes": 1073,
     "sha256": "a8f9bb625c06e6d747fa115911708ee1554524310d55956cc8d51ac6df91523a"
@@ -3995,6 +4135,11 @@
     "sha256": "68026695d1cef3d2fc4c3f8acfe1322ae4c55124821b01dca71f175143baae7b"
   },
   {
+    "file": "sources/bonifacio-edge-2610.28719v1.pdf",
+    "bytes": 1851332,
+    "sha256": "ac3c436a54a06a4b50cfda88a2b441a71f02419229e4f53c2cba300710c6c7d1"
+  },
+  {
     "file": "sources/bros-et-al-0901.4223v1.html",
     "bytes": 788987,
     "sha256": "38bb6c6f7bf2b06cf1aa5703ba7b21e47b2bdedb39af79dac507434767b40c04"
@@ -4133,6 +4278,11 @@
     "file": "sources/marolf-yu-2610.24073v1.html",
     "bytes": 1229722,
     "sha256": "4b55e4b58532dc8d7483f00dd7193f362bb326e958f9137bb24387567c0eb3cc"
+  },
+  {
+    "file": "sources/milekhin-zero-2607.13137v1.html",
+    "bytes": 1208550,
+    "sha256": "d2f62b284c0eca1305c81694c6df78e3f20649712538ef63546ab97eb86bd737"
   },
   {
     "file": "sources/narovlansky-2506.02109v2.html",

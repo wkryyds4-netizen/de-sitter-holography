@@ -949,6 +949,27 @@ for file, expected in [("study.json", {"code/gaussian_eikonal.py", "code/run_gau
                        ("refinement.json", {"code/refine_gaussian_eikonal.py", "code/gaussian_eikonal.py", GAUSSIAN_EIKONAL_DIR+"study.json", GAUSSIAN_EIKONAL_DIR+"diagnostics.json"})]:
     CG_ROOT_HASH_RECORDS[GAUSSIAN_EIKONAL_DIR+file] = expected
 
+PRINCIPAL_EIKONAL_DIR = "results/stage4/principal-eikonal/"
+CG_ROOT_HASH_RECORDS[PRINCIPAL_EIKONAL_DIR+"evidence.json"] = {
+    "code/"+name for name in ["principal_eikonal.py", "run_principal_eikonal.py", "check_principal_eikonal.py",
+    "refine_principal_eikonal.py", "late_principal_eikonal.py", "audit_principal_eikonal.py",
+    "record_principal_eikonal.py", "build_principal_eikonal.ps1"]
+} | {"manuscript/principal-eikonal/main.tex", "output/pdf/de-sitter-principal-eikonal.pdf",
+     "notes/stage4-principal-eikonal.md", "literature/stage4-principal-eikonal-sources.md"} | {
+    PRINCIPAL_EIKONAL_DIR+name for name in ["study.json", "runs.jsonl", "moments.json", "diagnostics.json",
+    "refinement.json", "refinement-runs.jsonl", "late.json", "late-runs.jsonl", "audit.json",
+    "preservation.json", "source-record.json", "build-review.md", "main.log", "build-initial-overflow.log",
+    "preservation-initial-failure.txt"]}
+REQUIRED.extend(sorted(CG_ROOT_HASH_RECORDS[PRINCIPAL_EIKONAL_DIR+"evidence.json"]))
+REQUIRED.append(PRINCIPAL_EIKONAL_DIR+"evidence.json")
+for file, expected in [
+    ("study.json", {"code/principal_eikonal.py", "code/run_principal_eikonal.py", "sources/chen-stanford-tang-yang-2607.14042v1.html"}),
+    ("diagnostics.json", {"code/principal_eikonal.py", "code/check_principal_eikonal.py", PRINCIPAL_EIKONAL_DIR+"moments.json"}),
+    ("refinement.json", {"code/principal_eikonal.py", "code/check_principal_eikonal.py", "code/refine_principal_eikonal.py", PRINCIPAL_EIKONAL_DIR+"study.json"}),
+    ("late.json", {"code/principal_eikonal.py", "code/check_principal_eikonal.py", "code/late_principal_eikonal.py", PRINCIPAL_EIKONAL_DIR+"moments.json"}),
+    ("audit.json", {"code/audit_principal_eikonal.py"})]:
+    CG_ROOT_HASH_RECORDS[PRINCIPAL_EIKONAL_DIR+file] = expected
+
 def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
@@ -2078,6 +2099,22 @@ def main():
             "kind":"original momentum and four-coordinate controls plus finer quadrature; empirical errors, not a full gravity or principal-Fock identification"})
     except (KeyError, TypeError, ValueError, ArithmeticError) as exc:
         errors.append("malformed gaussian-eikonal records: "+str(exc))
+    try:
+        from audit_principal_eikonal import audit as replay_principal_eikonal
+        replay = replay_principal_eikonal(ROOT)
+        errors.extend("principal-eikonal: "+e for e in replay["errors"])
+        if replay["status"] != "passed" or replay["checks"] != 727:
+            errors.append("principal-eikonal: incomplete replay")
+        caches = read_json(ROOT/PRINCIPAL_EIKONAL_DIR/"source-record.json")["sources"]
+        if len(caches) != 3:
+            errors.append("principal-eikonal: source count")
+        for cache in caches:
+            if digest(ROOT/cache["file"]) != cache["sha256"]:
+                errors.append("principal-eikonal: source mismatch "+cache["file"])
+        supporting_records.append({"stage":"principal-eikonal", "checks":727, "full_scrambled_runs":144,
+            "kind":"raw arithmetic replay, recorded Bessel/rotation controls; empirical quadrature, late u8 sign unresolved"})
+    except (KeyError, TypeError, ValueError, ArithmeticError) as exc:
+        errors.append("malformed principal-eikonal records: "+str(exc))
     growing_checks = growing.get("checks", [])
     if (growing.get("status") != "passed" or len(growing_checks) != 290
             or any(row.get("passed") is not True for row in growing_checks)

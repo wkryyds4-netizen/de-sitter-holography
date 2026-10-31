@@ -1,0 +1,58 @@
+{
+  "created_at_utc": "2026-10-31T11:59:40.084882+00:00",
+  "status": "stage verified; project audit follows",
+  "pages": 6,
+  "full_scrambled_runs": 144,
+  "total_sampled_points": 184549376,
+  "diagnostic_counts": [
+    60,
+    14,
+    727
+  ],
+  "compilers": [
+    "pdfLaTeX twice exit 0",
+    "desktop success"
+  ],
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "longest_edge_pixels": 1100,
+    "status": "all pages inspected"
+  },
+  "scope": "Specified real-principal eikonal lateral kernel, Gaussian moment spectrum and signed full model integrals. Empirical quadrature errors; late u8 sign unresolved. Not full finite-G dynamics, physical state identification or microscopic dual.",
+  "hashes": {
+    "code/principal_eikonal.py": "572619f01fa0995d95b538b79f60212f5b557d2096821a6d43342f7d47bb9a91",
+    "code/run_principal_eikonal.py": "0cf6bb70116b6748783a5a6cac1d4898f44c9dfd04c86dfe237e777e531506ee",
+    "code/check_principal_eikonal.py": "6fae51963f44d37ece4538dfbc615b314388acb4efc3789671362bb4acfd28b2",
+    "code/refine_principal_eikonal.py": "2917bd718ddab173119b36b9a5377722cf60f06cae849f252ae0431250e6624b",
+    "code/late_principal_eikonal.py": "f67944b44557c5a46383b5b147c8c3435a8b45aa484d33c2ca0c6aafe0b9902e",
+    "code/audit_principal_eikonal.py": "0b17280ba3d9d01b916661174f2f6546d3d94a4c2bce376f187defcc08cb7fe1",
+    "code/record_principal_eikonal.py": "22ee088bc2cacb3c23e6348d7091a23b1d26825d2d921285b5feb4720c44488a",
+    "code/build_principal_eikonal.ps1": "d2b305aa0796003d4b7279c87e82656d0ec109fdd8c8b6b74f4f07f219eec0e6",
+    "manuscript/principal-eikonal/main.tex": "e6474983d4fd4c699099c860f2b971de7ee72951ff43902006455e477d19b724",
+    "output/pdf/de-sitter-principal-eikonal.pdf": "77dabfb0c2ba05f517a35fdba37d5e85f53d1bfe56650ca7fdeff6fecbcf87c9",
+    "notes/stage4-principal-eikonal.md": "b320a7103cc742cebd9a27a1da21d699a4fd2560152e400e39a4b312f604beaf",
+    "literature/stage4-principal-eikonal-sources.md": "c61b6a3cfc84a555b2f68eca8e7a29d43b43bfe1df3fa3b0825fd279e1d93e75",
+    "results/stage4/principal-eikonal/audit.json": "faa108f3c3209cf44f379f870c627fa823019970269371f7ae11041e4868e6f9",
+    "results/stage4/principal-eikonal/build-initial-overflow.log": "e4de981f2ba22845194d9e68e1d21b42684efd1aabff3f876c74a356c4153d15",
+    "results/stage4/principal-eikonal/build-review.md": "ab906d8f4d9ec32220af7c788ffd8af4feef30bf17f615f422281df854d35ecc",
+    "results/stage4/principal-eikonal/diagnostics.json": "b36c86d3bee51a6eec8ba4e0f7ff7e599a78313d6af977019569c04ed52b27c5",
+    "results/stage4/principal-eikonal/late-runs.jsonl": "379d94b0604f8a52efc35ca40c0edba475506290fc3e4a4da362eab9e5687874",
+    "results/stage4/principal-eikonal/late.json": "6f188de154b1b2995e8a411c5c10d01b36dd8fcdab447a57d1e6e3c60ac4e05a",
+    "results/stage4/principal-eikonal/main.log": "39f8f9b36b249ac643594ad4fcc1b0962fb72eeceb90884ac355e7579b11bc7e",
+    "results/stage4/principal-eikonal/moments.json": "f1bbb8cb220a8144ba31c82b973d80791df4ad5117bf9960307344ace2036293",
+    "results/stage4/principal-eikonal/preservation-initial-failure.txt": "342acc2857153b22bd918f0aa5807a49a6beeaa253979af329be948c882f51dc",
+    "results/stage4/principal-eikonal/preservation.json": "cb53795ab2b4a0d8b8fb1011618d0d1233e229013ed21446b4fd76c53c821124",
+    "results/stage4/principal-eikonal/refinement-runs.jsonl": "b41fb4a77e6bcb11692d12da6ad71d8020784dd67572a16fb36b4e6b1999ad7b",
+    "results/stage4/principal-eikonal/refinement.json": "9edd7f72cbb97b427696504bd824dfe2799d2da180a02ed61c7b0c7e806dc5e6",
+    "results/stage4/principal-eikonal/runs.jsonl": "62442c53eca8836ccf8bc663f0becd62db9c65ed029e38053426d288c4fd640d",
+    "results/stage4/principal-eikonal/source-record.json": "a361b4d13b27d3bb843ae1069dbfc99e9e64515bd5ee65d54ea731d9725dadf4",
+    "results/stage4/principal-eikonal/study.json": "9472ff4eae667bc41769fd0bee9be8b1a543a81b8a77c2e12b822f6c04d633a7"
+  }
+}

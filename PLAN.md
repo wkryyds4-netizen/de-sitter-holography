@@ -1,5 +1,7 @@
 # de Sitter 全息研究规划
 
+2026-10-31：[实principal eikonal](notes/stage4-principal-eikonal.md)完成指定模型的真实Bessel侧向核、Gaussian正谱矩及完整带相位数值。下一步优先实际态与微观字典：复读CSTY§2.1固定平均质量变换和CLP§3.35–3.39物理插入，核与G=0量子观察者包的归一/测度是否可接。理由是现在已有真实principal候选近似可比较，而继续加密同一轮廓的数值并不能补足有限κ归一、Gram逆核和物理态。晚时刻相消另列为需稳定表示/相对误差的任务，不以未分辨符号支持结论。
+
 2026-10-31：[四时间Gaussian eikonal接口](notes/stage4-gaussian-eikonal.md)已将受调节协议用于明确有限G近似，得到正确断开归一、固定阶涂抹因子及非零虚部符号。选择共形特例是为了直接核原动量积分，不将其视为上一轮principal全Fock的有限G延拓。下一步读2610.28719v1的观察者边缘模及2607.13137v1的引力零模/规约，接着保留真实principal探针、独立pair差和态，推广Bessel核。微观有限κ插入/Gram/轮廓仍是必要未决接口。
 
 

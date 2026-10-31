@@ -1,0 +1,8 @@
+Initial record_principal_eikonal.py stopped before writing preservation/evidence:
+FileNotFoundError: snapshots/2026-10-29-stage1.sha256
+Some earliest ZIPs have no individual sidecar. The initial assumption that all
+51 archives have sidecars was incorrect. No old file was changed.
+Repair: check every ZIP against its existing sidecar when present AND against
+the prior Gaussian-stage preservation inventory when present; require at least
+one authoritative recorded digest per archive. Require 50 prior inventory
+entries and 51 current ZIPs. This preserves byte verification for all archives.
