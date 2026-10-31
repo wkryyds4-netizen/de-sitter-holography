@@ -1,5 +1,7 @@
 # de Sitter 全息研究规划
 
+2026-10-31 新推进：[任意紧转移及全谱两创建极限](notes/stage4-ds3-compact-global.md)补齐。小窗口限制通过 cosh 系数界解除；全谱由实际两链乘子和质量一致 Hilbert 尾控制接上，先 M→∞ 后 K→∞。已得到指定 G=0 两创建 Bose 基准；计划转向完整 Fock 共同域、局部场下降和四场真空收缩，原因是只有两创建配对还不能定义完整四场有序积。增长时间、移动阈值、有限 G 均保留为独立任务。
+
 2026-10-31 新推进：[真实谱权重和局部物理配对](notes/stage4-ds3-physical-local.md)完成。计划下一步由“小窗口代入权重”转向“任意固定紧转移上的核渐近”，理由是原小窗口无法穷尽质量谱，不能以已有谱尾界跳过它。其后才接物理Hilbert尾控制、完整Bose自由基准、全Fock及有限G。
 
 公开研究仓库已按用户明确要求建立于GitHub的wkryyds4-netizen/de-sitter-holography；具体范围见REPOSITORY。以下旧阶段计划保留历史。

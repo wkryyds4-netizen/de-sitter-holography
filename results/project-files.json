@@ -30,6 +30,16 @@
     "sha256": "72ddaec3466b2f6a63156f3ce8688960d549f1f90ea0638f4b923a831b743670"
   },
   {
+    "file": "code/audit_ds3_compact_global.py",
+    "bytes": 6458,
+    "sha256": "fbc63fe7f0af3a5cdff6423ea914f60568e15355a83b3d1dd304940ad59fcbc2"
+  },
+  {
+    "file": "code/audit_ds3_compact_global_refined.py",
+    "bytes": 1279,
+    "sha256": "6ed96cc718112262e5b36a422717f078bcaf8eb1d49dd1ca5a8c616ce78264cf"
+  },
+  {
     "file": "code/audit_ds3_crossed_packet.py",
     "bytes": 4885,
     "sha256": "d433e5f5ec0abb22344c71541fe8142d01945f3e0ad8da84abfb893f75b2457b"
@@ -118,6 +128,11 @@
     "file": "code/build_ds3_collision.ps1",
     "bytes": 1135,
     "sha256": "5f3a474abc070afb86b637a625185fc2b2057fd7b94208ed2130f182027ba8e8"
+  },
+  {
+    "file": "code/build_ds3_compact_global.ps1",
+    "bytes": 1150,
+    "sha256": "31ad6abfb3c7183027627922254c91ce0f884deef54bd5937c0e5bef7137f371"
   },
   {
     "file": "code/build_ds3_crossed_packet.ps1",
@@ -300,6 +315,11 @@
     "sha256": "a3fbf83e0891ddfd0ec473308f4e82c8490624fb20dca21b35b1dd25e6c2adc0"
   },
   {
+    "file": "code/diagnose_ds3_compact_collision.py",
+    "bytes": 2750,
+    "sha256": "736271b01aaeace28e690cf99d5c3bfdf78ab1cf18efab8628fabc8bdce8c64f"
+  },
+  {
     "file": "code/ds3_bose_packet.py",
     "bytes": 6673,
     "sha256": "8c09521f96bed106276a4d41fea3908ed775b6eb02be9f0a71799ee0d71a304f"
@@ -313,6 +333,11 @@
     "file": "code/ds3_collision_asymptotic.py",
     "bytes": 2264,
     "sha256": "03c3c513a6b16fadcb9fed40d97253560b660118ab48a7547545b2d394d7bcf7"
+  },
+  {
+    "file": "code/ds3_compact_global.py",
+    "bytes": 5741,
+    "sha256": "dde5efac4ff6a4248909bc7c1659481fa17a593c7cdf88bf29094f1c3223a07c"
   },
   {
     "file": "code/ds3_controlled_omega.py",
@@ -491,8 +516,8 @@
   },
   {
     "file": "code/project_audit.py",
-    "bytes": 135976,
-    "sha256": "1196b8857bb0511866aaf5ed667f4fcb8526979d3f8a33f8e7f126ec564dca83"
+    "bytes": 137957,
+    "sha256": "58155c8a3e4935256bc155580e17642fd7102476ba994d09a13bc22df147e6f4"
   },
   {
     "file": "code/quantized_observer.py",
@@ -573,6 +598,11 @@
     "file": "code/recoil_vertex.py",
     "bytes": 6040,
     "sha256": "d6dd46b45f8802052a52842c2bceff0ff289f11433e203c505ea6716e7a6e766"
+  },
+  {
+    "file": "code/record_ds3_compact_global.py",
+    "bytes": 3226,
+    "sha256": "23fd7f6b9fa750d72dda07669e1089ab5f647b251a2e087132c94dd8385b9815"
   },
   {
     "file": "code/record_ds3_full_tail.py",
@@ -658,6 +688,11 @@
     "file": "code/run_ds3_collision.py",
     "bytes": 2637,
     "sha256": "3478332e7942e33c7dfe60b91f16e5566476982d9e99c842b8daee66fc5a7d6e"
+  },
+  {
+    "file": "code/run_ds3_compact_global.py",
+    "bytes": 3058,
+    "sha256": "68963334b4694ee34f46e1b84ac94564dfcfddcc702108800576098a9d9e2004"
   },
   {
     "file": "code/run_ds3_crossed_packet.py",
@@ -936,8 +971,8 @@
   },
   {
     "file": "journal/2026-10-31.md",
-    "bytes": 50360,
-    "sha256": "fd3d611914019682b3d6021669d9bffe0596364ab3789b8bfa6de1383d4bdfb8"
+    "bytes": 52328,
+    "sha256": "5bd2c8234cab97868fe57a28cc2a4b4c03ab27a2c4a679eb87564ba21b713120"
   },
   {
     "file": "literature/models.md",
@@ -1058,6 +1093,11 @@
     "file": "literature/stage4-ds3-collision-sources.md",
     "bytes": 1405,
     "sha256": "37a23cc7c33fe2056c143918fa9e0bdd413c6f0fe3abc73c72365a9aff55d689"
+  },
+  {
+    "file": "literature/stage4-ds3-compact-global-sources.md",
+    "bytes": 2164,
+    "sha256": "e32526dcc9e47bf0eff470db26706152f998ffba970133427d3dbdc64e0a8a43"
   },
   {
     "file": "literature/stage4-ds3-crossed-packet-sources.md",
@@ -1258,6 +1298,11 @@
     "file": "manuscript/ds3-collision/numerics.tex",
     "bytes": 1857,
     "sha256": "5537de033f298faedb47959d76c44005c80e5aad43123d6d86b8d20b7acc444f"
+  },
+  {
+    "file": "manuscript/ds3-compact-global/main.tex",
+    "bytes": 17927,
+    "sha256": "33580f4c27fbdddeb615b9aee2f5334666cb032d925d7d08df945ad3aea00f4d"
   },
   {
     "file": "manuscript/ds3-crossed-packet/main.tex",
@@ -1496,8 +1541,8 @@
   },
   {
     "file": "NEXT.md",
-    "bytes": 17202,
-    "sha256": "c4aacfbee47dd069036a66d8741cb7bad8b8a42d52f6afae039fa7c1d8cee598"
+    "bytes": 19454,
+    "sha256": "4cdf36302a21de48d1e30cc6a7d40d7984431d350d4ba4c4f8d5802f78191f5b"
   },
   {
     "file": "notes/math-independent.md",
@@ -1760,6 +1805,11 @@
     "sha256": "610f09bc426aa905b56547c26d536911410639c7f8648ad92c0d286f4606bbf7"
   },
   {
+    "file": "notes/stage4-ds3-compact-global.md",
+    "bytes": 7132,
+    "sha256": "739da1003616d59f6f856b47a5ccd778e5bb99aa610daa6cabf9d31b9c9eea20"
+  },
+  {
     "file": "notes/stage4-ds3-crossed-packet.md",
     "bytes": 8817,
     "sha256": "baff1cfc29084430a5a8439f7241ba0cfb8e21f08958eafbb0bd3c6301491bdf"
@@ -1915,6 +1965,11 @@
     "sha256": "06880f5f3ff7035dcd3f93c6231eed52180e728ce1fda70a004077b906f6132f"
   },
   {
+    "file": "output/pdf/de-sitter-ds3-compact-global.pdf",
+    "bytes": 379423,
+    "sha256": "3f2fb2db6bfad61304adc09790e29f7e493b76a5f76df60bc41ba760d80148fc"
+  },
+  {
     "file": "output/pdf/de-sitter-ds3-crossed-packet.pdf",
     "bytes": 335516,
     "sha256": "b5b76497b8e4dba99da2ff088a554997dc6970dffc91de41cee86cbe14d0581f"
@@ -2066,8 +2121,8 @@
   },
   {
     "file": "PLAN.md",
-    "bytes": 40108,
-    "sha256": "6f3913bacdf5a46d1cb22f3cdd51631cf0d4ad8c286bddf8d148781b201cbb01"
+    "bytes": 40615,
+    "sha256": "90515f92732fc2bdd1f01943f9fb9818549665bc560fa2b548dfec6b9404e584"
   },
   {
     "file": "PROJECT.md",
@@ -2076,8 +2131,8 @@
   },
   {
     "file": "README.md",
-    "bytes": 32890,
-    "sha256": "8956109ecef1816ed825d96125703af050f2421ff5b6e934148b1f812bb293a3"
+    "bytes": 33821,
+    "sha256": "6f51c22d568502829ff8e2e6d8c0e1dbf7fcc7aced7481be1d404a870ae31e32"
   },
   {
     "file": "REPOSITORY.md",
@@ -2156,8 +2211,8 @@
   },
   {
     "file": "results/project-audit.json",
-    "bytes": 30258,
-    "sha256": "7947161a4cede36f9b5d4849b067cb010f9447d7c61eeb099edebc248e60183c"
+    "bytes": 30683,
+    "sha256": "260a7108e6fd1f3c7371f29b184f52db8b357d6b8eca95e7ce371287ea780c61"
   },
   {
     "file": "results/stage2/errors.csv",
@@ -2718,6 +2773,51 @@
     "file": "results/stage4/ds3-collision/validation.json",
     "bytes": 17698,
     "sha256": "57fe9912e8d3da26278f913676cdec8b33cc8183cea5f29a3caa9af2658e9790"
+  },
+  {
+    "file": "results/stage4/ds3-compact-global/audit-refined.json",
+    "bytes": 813,
+    "sha256": "4605af169071278464eaa905df25ce0d779f5f3af9fa7953b2cef725aba5be4e"
+  },
+  {
+    "file": "results/stage4/ds3-compact-global/audit.json",
+    "bytes": 383,
+    "sha256": "890cea2e5c305b37431a9396eb7b85b37bdc763d45106e530a891cfb83afa25a"
+  },
+  {
+    "file": "results/stage4/ds3-compact-global/build-review.md",
+    "bytes": 1125,
+    "sha256": "d25cd464f09e4bc68ea1599ae1a075154e5affa0b795976474c5efad211c4ccb"
+  },
+  {
+    "file": "results/stage4/ds3-compact-global/collision-diagnosis.json",
+    "bytes": 6483,
+    "sha256": "481fecc6e7277fa2742d647ffe22dea68367fceb8319d1f6d154b67d3c98fbe7"
+  },
+  {
+    "file": "results/stage4/ds3-compact-global/evidence.json",
+    "bytes": 3114,
+    "sha256": "5cceca80abd6b394282b6a826326957f494331efe8bf67cfbd9cb2507df86483"
+  },
+  {
+    "file": "results/stage4/ds3-compact-global/main.log",
+    "bytes": 26334,
+    "sha256": "4a46095eff89165869c0646b4f76e1c80e0c45ece810f841592e67dc136de83a"
+  },
+  {
+    "file": "results/stage4/ds3-compact-global/preservation.json",
+    "bytes": 7562,
+    "sha256": "0b9041680245f13a546d6d4a3129fd0a57390d11827313dc558b15353f817af3"
+  },
+  {
+    "file": "results/stage4/ds3-compact-global/runs.jsonl",
+    "bytes": 127613,
+    "sha256": "c78e3beb41de09ffd72064ba8458a04a42d5053a98de6d878ab35bd12b9d09c4"
+  },
+  {
+    "file": "results/stage4/ds3-compact-global/study.json",
+    "bytes": 183106,
+    "sha256": "0896b9cb2a1d487cc441d05b5bb3a980494c01066aa833ff3d296757d4eb62a1"
   },
   {
     "file": "results/stage4/ds3-crossed-packet/accelerator-validation.json",

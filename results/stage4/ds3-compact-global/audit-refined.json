@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "checks": 444,
+  "errors": [],
+  "scope": "Independent saved arithmetic, exact rational collision and polynomial checks, tail antiderivative. Not a proof checker, interval certification or full physical quadrature.",
+  "correction": "Original checker used structural == on factored versus distributed expressions. Exact expand(lhs-rhs)==0 verifies the unchanged induction identity; no data or tolerance changed.",
+  "hashes": {
+    "code/audit_ds3_compact_global.py": "fbc63fe7f0af3a5cdff6423ea914f60568e15355a83b3d1dd304940ad59fcbc2",
+    "code/audit_ds3_compact_global_refined.py": "6ed96cc718112262e5b36a422717f078bcaf8eb1d49dd1ca5a8c616ce78264cf",
+    "results/stage4/ds3-compact-global/audit.json": "890cea2e5c305b37431a9396eb7b85b37bdc763d45106e530a891cfb83afa25a"
+  }
+}

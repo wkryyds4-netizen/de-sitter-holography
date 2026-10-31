@@ -903,6 +903,21 @@ CG_ROOT_HASH_RECORDS[PHYSICAL_LOCAL_DIR+"evidence.json"] = {
 REQUIRED.extend(sorted(CG_ROOT_HASH_RECORDS[PHYSICAL_LOCAL_DIR+"evidence.json"]))
 REQUIRED.append(PHYSICAL_LOCAL_DIR+"evidence.json")
 
+COMPACT_GLOBAL_DIR = "results/stage4/ds3-compact-global/"
+CG_ROOT_HASH_RECORDS[COMPACT_GLOBAL_DIR+"evidence.json"] = {
+    "code/ds3_compact_global.py", "code/run_ds3_compact_global.py",
+    "code/diagnose_ds3_compact_collision.py", "code/audit_ds3_compact_global.py",
+    "code/audit_ds3_compact_global_refined.py", "code/build_ds3_compact_global.ps1",
+    "manuscript/ds3-compact-global/main.tex", "output/pdf/de-sitter-ds3-compact-global.pdf",
+    "notes/stage4-ds3-compact-global.md", "literature/stage4-ds3-compact-global-sources.md",
+    COMPACT_GLOBAL_DIR+"study.json", COMPACT_GLOBAL_DIR+"collision-diagnosis.json",
+    COMPACT_GLOBAL_DIR+"audit.json", COMPACT_GLOBAL_DIR+"audit-refined.json",
+    COMPACT_GLOBAL_DIR+"runs.jsonl", COMPACT_GLOBAL_DIR+"build-review.md",
+    COMPACT_GLOBAL_DIR+"main.log",
+}
+REQUIRED.extend(sorted(CG_ROOT_HASH_RECORDS[COMPACT_GLOBAL_DIR+"evidence.json"]))
+REQUIRED.append(COMPACT_GLOBAL_DIR+"evidence.json")
+
 
 def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
@@ -1984,6 +1999,20 @@ def main():
             "status":physical_record["status"], "kind":"independent Decimal physical-weight replay on existing U nodes; local cutoff only"})
     except (KeyError, TypeError, ValueError, ArithmeticError) as exc:
         errors.append("malformed physical-local stage records: "+str(exc))
+    try:
+        from audit_ds3_compact_global import audit as audit_compact_global
+        compact_replay = audit_compact_global(ROOT)
+        compact_refined = read_json(ROOT/COMPACT_GLOBAL_DIR/"audit-refined.json")
+        if (compact_replay["errors"] != ["central coefficient induction"]
+                or compact_replay["checks"] != 442
+                or compact_refined["status"] != "passed"
+                or compact_refined["checks"] != 444 or compact_refined["errors"]):
+            errors.append("compact-global: inconsistent original/refined audit")
+        supporting_records.append({"stage":"ds3-compact-global", "checks":444,
+            "status":compact_refined["status"],
+            "kind":"compact kernel and Hilbert-tail replay; original structural-equality failure retained with exact-polynomial repair; no full physical quadrature"})
+    except (KeyError, TypeError, ValueError, ArithmeticError) as exc:
+        errors.append("malformed compact-global stage records: "+str(exc))
     growing_checks = growing.get("checks", [])
     if (growing.get("status") != "passed" or len(growing_checks) != 290
             or any(row.get("passed") is not True for row in growing_checks)

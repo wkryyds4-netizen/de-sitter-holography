@@ -7,10 +7,10 @@
     "Source remains a link, not an archive: dlmf-16.5",
     "Source remains a link, not an archive: dlmf-15.6"
   ],
-  "verified_at_utc": "2026-10-31T08:19:17.884051+00:00",
-  "required_files": 790,
-  "local_links_checked": 946,
-  "code_and_input_hashes_checked": 1100,
+  "verified_at_utc": "2026-10-31T08:34:42.281617+00:00",
+  "required_files": 808,
+  "local_links_checked": 968,
+  "code_and_input_hashes_checked": 1119,
   "scientific_checks": {
     "stage1": {
       "checks": 235,
@@ -606,6 +606,11 @@
       "recorded_hashes": 14
     },
     {
+      "file": "results/stage4/ds3-compact-global/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 19
+    },
+    {
       "file": "results/stage3/cross-limit/comparison.json",
       "kind": "projected comparison model only; not exact 6j convergence or interval certification",
       "checks": 19
@@ -817,6 +822,12 @@
       "checks": 165,
       "status": "passed",
       "kind": "independent Decimal physical-weight replay on existing U nodes; local cutoff only"
+    },
+    {
+      "stage": "ds3-compact-global",
+      "checks": 444,
+      "status": "passed",
+      "kind": "compact kernel and Hilbert-tail replay; original structural-equality failure retained with exact-polynomial repair; no full physical quadrature"
     },
     {
       "file": "results/stage3/growing-box/diagnostics.json",

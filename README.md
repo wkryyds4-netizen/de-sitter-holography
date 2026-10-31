@@ -1,5 +1,11 @@
 # de Sitter 全息研究
 
+## 最新进展：任意紧转移与两次创建的 Bose 极限（2026-10-31）
+
+[七页阶段稿 PDF](output/pdf/de-sitter-ds3-compact-global.pdf)、[LaTeX](manuscript/ds3-compact-global/main.tex)及[中文推导](notes/stage4-ds3-compact-global.md)已完成。用 cosh 乘积扩大核的紧转移窗口，再由实际两链截取的 Hilbert 范数尾控制去掉截断；在 G=0、固定观察者下界、半周期调节、紧时间的两次创建模型中得到完整 Bose 自由观察者基准。18个新完整核点、原失败参考及精确标签/加精度修复全部保留，444项独立核查通过；未做新的全物理积分数值认证。
+
+下一步是完整 Fock 共同域与四场中的真空收缩，然后继续有限 G 和微观全息比较。当前是模型内的自查推导，完整 de Sitter 全息对偶仍开放。以下旧阶段进度保留当时状态，当前以 [NEXT](NEXT.md) 首段为准。
+
 这里是 Alan Day 与澄衡的独立研究记录。我们关心：宇宙内部的有限资源观察者，如何获得自洽的量子可观测量，以及这些量如何与视界熵、反冲和引力动力学联系起来。完整 de Sitter 全息对偶仍是长期开放目标。
 
 公开仓库：[wkryyds4-netizen/de-sitter-holography](https://github.com/wkryyds4-netizen/de-sitter-holography)。这里保存工作稿及可复算证据；私人约定与过程日志留在本机，上传范围见 [REPOSITORY](REPOSITORY.md)。

@@ -1,0 +1,55 @@
+{
+  "created_at_utc": "2026-10-31T08:34:03.839948+00:00",
+  "status": "stage verified; project audit follows",
+  "pages": 7,
+  "full_kernel_points": 18,
+  "initial_references": {
+    "passed": 5,
+    "failed": 1
+  },
+  "collision_controls": {
+    "failure_reproduced": 1,
+    "successful_controls": 3
+  },
+  "independent_checks": 444,
+  "full_physical_quadratures": 0,
+  "compilers": [
+    "local pdfLaTeX twice, exit 0",
+    "desktop success"
+  ],
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "longest_edge_pixels": 1100,
+    "status": "all pages inspected"
+  },
+  "scope": "Self-checked arbitrary-compact kernel extension and two-creation Bose limit with Hilbert cutoff removal. Fixed threshold, G=0 and compact times; not full Fock or finite gravity.",
+  "hashes": {
+    "code/ds3_compact_global.py": "dde5efac4ff6a4248909bc7c1659481fa17a593c7cdf88bf29094f1c3223a07c",
+    "code/run_ds3_compact_global.py": "68963334b4694ee34f46e1b84ac94564dfcfddcc702108800576098a9d9e2004",
+    "code/diagnose_ds3_compact_collision.py": "736271b01aaeace28e690cf99d5c3bfdf78ab1cf18efab8628fabc8bdce8c64f",
+    "code/audit_ds3_compact_global.py": "fbc63fe7f0af3a5cdff6423ea914f60568e15355a83b3d1dd304940ad59fcbc2",
+    "code/audit_ds3_compact_global_refined.py": "6ed96cc718112262e5b36a422717f078bcaf8eb1d49dd1ca5a8c616ce78264cf",
+    "code/record_ds3_compact_global.py": "23fd7f6b9fa750d72dda07669e1089ab5f647b251a2e087132c94dd8385b9815",
+    "code/build_ds3_compact_global.ps1": "31ad6abfb3c7183027627922254c91ce0f884deef54bd5937c0e5bef7137f371",
+    "manuscript/ds3-compact-global/main.tex": "33580f4c27fbdddeb615b9aee2f5334666cb032d925d7d08df945ad3aea00f4d",
+    "output/pdf/de-sitter-ds3-compact-global.pdf": "3f2fb2db6bfad61304adc09790e29f7e493b76a5f76df60bc41ba760d80148fc",
+    "notes/stage4-ds3-compact-global.md": "739da1003616d59f6f856b47a5ccd778e5bb99aa610daa6cabf9d31b9c9eea20",
+    "literature/stage4-ds3-compact-global-sources.md": "e32526dcc9e47bf0eff470db26706152f998ffba970133427d3dbdc64e0a8a43",
+    "results/stage4/ds3-compact-global/audit-refined.json": "4605af169071278464eaa905df25ce0d779f5f3af9fa7953b2cef725aba5be4e",
+    "results/stage4/ds3-compact-global/audit.json": "890cea2e5c305b37431a9396eb7b85b37bdc763d45106e530a891cfb83afa25a",
+    "results/stage4/ds3-compact-global/build-review.md": "d25cd464f09e4bc68ea1599ae1a075154e5affa0b795976474c5efad211c4ccb",
+    "results/stage4/ds3-compact-global/collision-diagnosis.json": "481fecc6e7277fa2742d647ffe22dea68367fceb8319d1f6d154b67d3c98fbe7",
+    "results/stage4/ds3-compact-global/main.log": "4a46095eff89165869c0646b4f76e1c80e0c45ece810f841592e67dc136de83a",
+    "results/stage4/ds3-compact-global/preservation.json": "0b9041680245f13a546d6d4a3129fd0a57390d11827313dc558b15353f817af3",
+    "results/stage4/ds3-compact-global/runs.jsonl": "c78e3beb41de09ffd72064ba8458a04a42d5053a98de6d878ab35bd12b9d09c4",
+    "results/stage4/ds3-compact-global/study.json": "0896b9cb2a1d487cc441d05b5bb3a980494c01066aa833ff3d296757d4eb62a1"
+  }
+}

@@ -1,5 +1,17 @@
 # 下一次从这里继续
 
+## 当前继续位置：2026-10-31 ds3-compact-global
+
+先读[七页PDF](output/pdf/de-sitter-ds3-compact-global.pdf)、[中文推导](notes/stage4-ds3-compact-global.md)、[来源](literature/stage4-ds3-compact-global-sources.md)。G=0、ℓ=1、proper SO⁺(3,1)、BD/KG、半周期调节、固定s>0、条件c=M。任意固定紧转移的核有跨r0一致O(1/M)正弦近似；实际链乘子χK=ηK(u+v)²ηK(u)ηK(v+r)，配对尾≤2√(εK Nbar)，uniform M≥s及所有实时间。固定K先M→∞、再K→∞，得到两创建Bose范数/重叠→Lp(0)²+|Lp(t)|²，DB→0，紧时间一致。也覆盖质量概率逃向无穷的归一制备，不覆盖固定不移动包、移动阈值或增长时间。
+
+18个90位完整核点都通过有限M界；6个120位参考原5通过1失败，study.json必须保留failed。index16精确碰撞因90位解析/120位序列化产生10⁻¹¹⁷残差，未合并参考相消condition约3.32e110；同字符串210位、精确有理标签120/170位均与稳定值差约4.93e−88。原audit.json的442项有一个结构相等检查错误；audit-refined.json以精确多项式差修复，444项通过。不要重跑已有驱动覆盖数据。没有新全物理积分求积或总误差认证。
+
+七页已本机双遍exit0、桌面success，1100像素逐页检查。阶段19份文件绑定哈希，764份旧文件字节不变、48份旧ZIP校验通过；整体审计808必需文件、968本地链接、1119代码/输入哈希，errors空。冻结标签2026-10-31-ds3-compact-global以snapshots中的ZIP及sha256为准。所有新计算已退出，无活跃shell句柄，不新启代理。公开仓库main上次bd6e13a，本阶段完成保存后普通commit/push；私人日志、约定、第三方全文、恢复ZIP不上传，不推local/pre-public-cache-fix分支。
+
+下一任务：先核dS3完整CG分解与多粒子Fock构造前驱，读two-matter/bose及dS2的all-n、weak-descent作比较；不能假定dS2证明直接适用于SL(2,C)。具体先确定每N的物理Hilbert空间、创建块域、伴随与Bose系数，给可复查的0/1/2扇区真空收缩，然后再声明完整四场关联。有限G和完整全息仍未完成，长期goal active。
+
+以下为历史继续位置。
+
 ## 当前继续位置：2026-10-31 ds3-physical-local
 
 先读[物理权重推导](notes/stage4-ds3-physical-local.md)、[四页PDF](output/pdf/de-sitter-ds3-physical-local.pdf)及[来源](literature/stage4-ds3-physical-local-sources.md)。G=0、BD/KG、半周期创建、固定s、条件c=M。真实E/W/ρ约分后是da db dd测度，转为u/v/r的绝对Jacobian为1；能量坐标另有∏h(x)/x。固定紧集上F_M=(1+(u+v)/M)F∞+O_C²(M⁻²)，从而旧小窗口内的真实平滑截取配对有O(1/logM)+O(1/M)极限。
