@@ -1,0 +1,45 @@
+{
+  "created_at_utc": "2026-10-30T04:34:21.104211+00:00",
+  "kind": "self-reviewed action identity and uniform actual local Gamma asymptotics",
+  "pages": 5,
+  "compilers": {
+    "local": "two clean pdfLaTeX passes",
+    "desktop": "success on final source"
+  },
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "dpi": 95,
+    "clipping_or_overlap": false
+  },
+  "not_proven": [
+    "complete Barnes cycle relative asymptotic",
+    "transverse exterior contributions",
+    "physical insertions/external energy cycles/disconnected baseline",
+    "joint finite-G limit and microscopic dual"
+  ],
+  "hashes": {
+    "code/recoil_local.py": "bcf104533b6daef3c0f333f52899854ff5e7b2bbb588823bcfcfb37abedd0163",
+    "code/build_local_note.ps1": "1a7c3f619bba96d32421ecd90eebd51e02787edafdbad06a5f3c35acdc819ba5",
+    "manuscript/recoil-local/main.tex": "29225b97311ecf7fe6474e872691eaa036a38afbb23d6badfcfe8754e1f6634e",
+    "notes/stage4-recoil-local.md": "7864b73b1b4ca7e14c4b0f5a65f4578e325acb8c3251fa6b81c30df3cc61fca0",
+    "literature/stage4-recoil-local-sources.md": "20e9af4f0179efc4fb24d5411cb6668301ab68d91d11c17e40c3618639efc95f",
+    "results/stage4/recoil-local/diagnostics.json": "1fc0787e721f903a2e47412f4336fe8910f2c99f70d7923b04690db58f6e96c6",
+    "results/stage4/recoil-local/main.log": "fa487bedecf505772d72a3944d0730854a559f2222fa86926b727c206e1d4930",
+    "results/stage4/recoil-local/build-review.md": "2ba51a9c5f5264cd78d0075fc7446e411fae386800c4bb409bccbf328c0fe3ed",
+    "results/stage4/recoil-local/initial-norm-grid.json": "afb613a61780ad5b84c980dcaec227fc16f013ea275ae5df1e55cff8bc35e3da",
+    "results/stage4/recoil-local/initial-code.py.txt": "0bf169d998ef2129dad014dde45f1dda58ca9f0c25fd6d90a7366b12d94e0b32",
+    "output/pdf/de-sitter-recoil-local.pdf": "de317b48d06d5856102eb4dd8339ba39aeb76b8f7a9b68dafa95d250a66a9cb3",
+    "code/recoil_saddle.py": "835d7026b8fcd158b8bf759b62cfa6150d13a9e95e375d1f81c58141c21c9a3e",
+    "code/recoil_internal.py": "4ad536856e55b3ffc7084312a6d229067a5c7deb1e8f9667aa72982c0e4699a4",
+    "code/gram_prefactor.py": "66a76540114edd361ff51d04d962a643a60441228639a2c9d043eaa2799e0de8",
+    "manuscript/recoil-saddle/main.tex": "4b6f140e2350d9a0d071587b7a8a64accc190676e826913af163dd00227fdb8e",
+    "sources/chen-stanford-tang-yang-2607.14042v1.html": "9e352212021abf7135852f4b5dc8cd933f47334bd72e78f8def9d84d34fed5e2",
+    "sources/dlmf-5.11.html": "8f573b25a200d5ca09372ad88adbd4a621bc0bc463e088c6548ff8dddc0d2eee"
+  }
+}

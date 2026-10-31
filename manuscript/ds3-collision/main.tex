@@ -1,0 +1,276 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,microtype,booktabs}
+\usepackage[margin=25mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\dd}{\mathop{}\!\mathrm d}
+\newcommand{\Om}{\Omega}
+\newcommand{\ii}{\mathrm i}
+\title{Removable collisions in the dS$_3$ crossing kernel:\\merged series and a controlled heavy-mass factor}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Working research note --- 31 October 2026}
+\begin{document}\maketitle
+\begin{abstract}
+We reorganize the known LPRS scalar crossing formula to remove a
+numerically unstable pair of Gamma poles. A termwise merged series has
+a finite digamma-weighted limit on each real collision surface. In a
+specified transfer window we prove an explicit absolute remainder bound
+for one heavy-mass Omega factor, and a direct-sum tail bound that avoids
+an uncertified asymptotic acceleration. A pointwise logarithmic
+near-collision scaling follows for this factor. These results do not
+establish the distributional limit of the full Racah transform or the
+Bose free-observer limit. Numerical failures, including a prototype
+precision bug, remain in the record.
+\end{abstract}
+
+\section{Physical scope and the removable surfaces}
+The target remains the local $G_N=0$, radius-one model with proper
+$SO^+(3,1)$, BD scalar observers and KG-normalized matter. Observer
+labels exceed a fixed $s>0$; the two-creation sector uses the previously
+defined half-period regulator and physical mass $\sqrt{1+\nu^2}$.
+Here we study the scalar matrix element of the full crossing transform,
+not a separately unitary scalar transform. No state, operator,
+or physical spectral cutoff is changed.
+
+In the LPRS formula \cite{lprs}, use
+$h_i=(1+\ii\nu_i)/2$, $h=(1+\ii b)/2$,
+$h'=(1+\ii d)/2$ and external labels $(a,q,c,p)$.
+Both chiral weights are equal for the scalar principal series; they
+are not complex conjugates. Each Omega factor in (3.38) is a sum
+\[
+ \Om(h,h';h_i)=\Gamma(z)A(z)+\Gamma(-z)B(z),\qquad
+ z=h-h'+h_1+h_3-1.
+\]
+The full symbol contains $h$ and $1-h$, and $h'$ and $1-h'$.
+For positive real labels the possible $z=0$ surfaces are
+\[
+ a+c=b+d,\qquad d=a+c+b,\qquad b=a+c+d .
+\]
+These are removable singularities of the two-term representation.
+They are not physical poles at finite real mass.
+The original Euler product integral (3.37) is locally integrable:
+its absolute endpoint powers are $x^{-1/2}(1-x)^{-1/2}$,
+multiplied at worst by logarithmic hypergeometric endpoint factors.
+On compact parameter sets it gives continuity through these surfaces.
+
+\section{Exact merger of the two series}
+Fix $H$ and $h_i$, put $h'_0=H+h_1+h_3-1$ and $h'=h'_0-z$.
+Define four upper parameters
+\[
+ (A_1,A_2,A_3,A_4)=
+ (H+h_1+h_2-1,\ H+h_3+h_4-1,\ H+h_3-h_4,\ H+h_1-h_2).
+\]
+All have real part $1/2$ on our real-label slice.
+Let
+\[
+ C(z)=\frac{\Gamma(1+z)\Gamma(1-z)\Gamma(2h'_0-2z)\Gamma(2H)}
+ {\Gamma(A_1-z)\Gamma(A_2-z)\Gamma(A_3)\Gamma(A_4)} .
+\]
+Direct cancellation of Gamma factors in the two known $\!{}_4F_3$
+series yields
+\begin{align}
+ \Om&=C(z)\sum_{n=0}^{\infty}\frac{G_n^A(z)-G_n^B(z)}{z},\label{merged}\\
+ G_n^A(z)&=
+ \frac{\prod_{j=1}^4\Gamma(n+A_j-z)}
+ {\Gamma(n+2h'_0-2z)\Gamma(n+2H-z)
+  \Gamma(n+1-z)\Gamma(n+1)},\\
+ G_n^B(z)&=
+ \frac{\prod_{j=1}^4\Gamma(n+A_j)}
+ {\Gamma(n+2h'_0-z)\Gamma(n+2H)
+  \Gamma(n+1+z)\Gamma(n+1)}.
+\end{align}
+The individual $G$'s have the same leading $n^{-2}$ behavior.
+Their difference divided by $z$ is $2n^{-3}+O(n^{-4})$ for
+fixed parameters, with the $z=0$ value interpreted continuously.
+Thus the merged series converges absolutely and locally uniformly
+near a real collision. This is an algebraic reorganization of an
+existing formula, not a new definition of the physical kernel.
+
+At $z=0$, the two regular prefactors $A(0)$ and $B(0)$ coincide.
+Expanding $\Gamma(\pm z)$ gives
+$A'(0)-B'(0)-2\gamma A(0)$.
+Equivalently, termwise differentiation of \eqref{merged} gives
+\begin{align}
+ \Om_0&=\sum_{n=0}^{\infty}t_n\,q_n,\label{digamma}\\
+ t_n&=\frac{\prod_{j=1}^4(A_j)_n}
+ {(2h'_0)_n(2H)_n(n!)^2},\\
+ q_n&=\psi(n+2h'_0)+\psi(n+2H)+2\psi(n+1)
+       -\sum_{j=1}^4\psi(n+A_j).
+\end{align}
+The digamma bracket starts as $2/n+O(n^{-2})$.
+The local uniform convergence justifies the parameter derivative.
+No mass displacement is used to define the exact-surface value.
+
+For computation away from zero, use
+$G_n^B\operatorname{expm1}(\log G_n^A-\log G_n^B)/z$.
+Logarithmic Gamma differences and successive ratios must retain their
+branches continuously. Arbitrary precision still needs guard digits
+when $|z|$ is tiny. Gamma-ratio/Bernoulli and Hurwitz-zeta acceleration
+is available \cite{dlmf}, but its truncated large-parameter remainder
+is not automatically controlled.
+
+\section{A proved heavy-mass window}
+Now select the colliding factor $H=(1-\ii b)/2$ with
+\[
+ c=M,\quad b=M+u,\quad a=M+u+v,\quad d=M+v,\qquad
+ |u|+p\le1,\quad |v|+q\le1.
+\]
+Assume all physical observer labels remain above $s$.
+Then $h'_0=(1+\ii d)/2$ and
+\[
+ (A_1,A_2,A_3,A_4)=
+ \left(\frac{1+\ii(v+q)}2,\frac{1+\ii(p-u)}2,
+       \frac{1-\ii(u+p)}2,\frac{1+\ii(v-q)}2\right).
+\]
+Write $A_j=1/2+\ii\alpha_j$; the window ensures $|\alpha_j|\le1/2$.
+For $m=\min(b,d)>0$, the coefficient ratio obeys
+\[
+ \left|\frac{t_{n+1}}{t_n}\right|
+ \le\left(\frac{n+1}{n+2}\right)^2
+        \frac{(n+1)^2}{(n+1)^2+m^2}.
+\]
+To see this, bound each $|n+A_j|^2$ by $n^2+n+1/2$,
+and use
+$(x^2-x+1/2)(x+1)\le x^3$ for $x=n+1\ge1$.
+Consequently
+\begin{equation}
+ |t_n|\le\frac1{(n+1)^2}
+       \prod_{j=1}^n\frac{j^2}{j^2+m^2}
+ \le\frac1{(n+1)^2(1+m^2)},\qquad n\ge1. \label{coeffbound}
+\end{equation}
+
+The digamma difference series gives the uniform bound
+\[
+ |q_n|\le B_M,\qquad
+ B_M=2+\operatorname{arsinh}b+\operatorname{arsinh}d
+             +4\log2\sum_j|A_j-1|.
+\]
+For the upper parameters, use
+$\sum_{k\ge0}[(k+1/2)(k+1)]^{-1}=4\log2$.
+For a denominator parameter $1+\ii y$, the difference from $\psi(n+1)$
+is bounded by
+$\sum_{j\ge1}|y|/[j\sqrt{j^2+y^2}]\le1+\operatorname{arsinh}|y|$.
+Combining these estimates proves
+\begin{align}
+ \Om_0&=q_0+R_M,\qquad
+ |R_M|\le\frac{(\zeta(2)-1)B_M}{1+m^2},\label{leading}\\
+ q_0&=\psi(1-\ii b)+\psi(1+\ii d)+2\psi(1)-\sum_j\psi(A_j).
+\end{align}
+This is an explicit $O(\log M/M^2)$ absolute remainder for fixed
+transfers in the stated window.
+Standard digamma asymptotics then imply
+$\Om_0=2\log M+2\psi(1)-\sum_j\psi(A_j)+O(M^{-1})$.
+
+More usefully, summing \eqref{digamma} only through $n=N-1$ has
+the analytic exact-arithmetic tail bound
+\begin{equation}
+ \left|\Om_0-\sum_{n=0}^{N-1}t_nq_n\right|
+ \le \frac{B_M}{N}\prod_{j=1}^N\frac{j^2}{j^2+m^2}.
+ \label{tail}
+\end{equation}
+Here $\sum_{n=N}^{\infty}(n+1)^{-2}\le1/N$.
+Unlike a fitted zeta tail, \eqref{tail} is a proved bound on the
+omitted series in this window. It does not bound floating-point error.
+
+\section{Neighbouring masses and logarithmic scaling}
+Let $d=M+v+r$ so that $z=-\ii r/2$.
+Suppose both $|\operatorname{Im}A_j|\le1/2$ and
+$|\operatorname{Im}(A_j-z)|\le1/2$.
+The two unmerged hypergeometric series are $\!{}_4F_3$ with numerator
+sets $A_j-z$ and $A_j$, and denominator sets
+\[
+ (2h',2H-z,1-z),\qquad (2h'_0-z,2H,1+z).
+\]
+Define
+\begin{align*}
+ a_0(z)&=\frac{\Gamma(2H)\Gamma(A_3-z)\Gamma(A_4-z)}
+                {\Gamma(A_3)\Gamma(A_4)\Gamma(2H-z)},\\
+ b_0(z)&=\frac{\Gamma(2h')\Gamma(A_1)\Gamma(A_2)}
+                {\Gamma(A_1-z)\Gamma(A_2-z)\Gamma(2h'_0-z)},\\
+ m_A&=\min(|M+v+r|,|M+u-r/2|),\\
+ m_B&=\min(|M+v+r/2|,|M+u|).
+\end{align*}
+For $r\ne0$ and $m_A,m_B>0$, the same ratio proof gives
+\begin{equation}
+ \left|\Om-\Gamma(z)a_0-\Gamma(-z)b_0\right|
+ \le(\zeta(2)-1)
+ \left(\frac{|\Gamma(z)a_0|}{1+m_A^2}
+      +\frac{|\Gamma(-z)b_0|}{1+m_B^2}\right). \label{off}
+\end{equation}
+Each hypergeometric tail has bound
+$N^{-1}\prod_{j=1}^N j^2/(j^2+m_{A,B}^2)$,
+multiplied by its corresponding Gamma prefactor.
+These bounds grow as $1/|r|$ near zero;
+use \eqref{tail} at exact collision.
+
+For fixed $\lambda\ne0$, set $r=\lambda/\log M$.
+Use the strict interior of the transfer window so the shifted
+constraints eventually hold. Gamma-ratio asymptotics in the sectors
+of $1\pm\ii M$ give
+\[
+ a_0(z)=(-\ii M)^z[1+O(z)+O(M^{-1})],\qquad
+ b_0(z)=(\ii M)^{-z}[1+O(z)+O(M^{-1})].
+\]
+Since $\Gamma(\pm z)=\pm z^{-1}+O(1)$, the leading pair divided by
+$2\log M$ tends to $\sin(\lambda/2)/(\lambda/2)$.
+The error \eqref{off} is $O(\log M/M^2)$.
+Together with \eqref{leading} at $\lambda=0$ this proves the
+pointwise statement
+\begin{equation}
+ \frac{\Om\bigl(r=\lambda/\log M\bigr)}{2\log M}
+ \longrightarrow \frac{\sin(\lambda/2)}{\lambda/2},
+ \qquad \lambda\ \hbox{fixed}. \label{scaling}
+\end{equation}
+The right side is one at zero. We do not claim a uniform error in
+$\lambda$, distributional convergence of the full $6j$, or a delta
+replacement inside a physical mass integral.
+
+\section{Numerical evidence and retained failures}
+\input{numerics.tex}
+The first collision prototype accidentally used Python binary64
+division in one Bernoulli coefficient before multiplication by an
+arbitrary-precision value. At a low-mass sample it produced an
+Omega bias about $2.82\,10^{-27}$ which was shared by precision
+refinements. The old source and outputs remain unchanged.
+The corrected merged module uses arbitrary-precision coefficients;
+an independent parameter derivative reduces that sample discrepancy
+to about $9.74\,10^{-58}$.
+
+All three exact surfaces have been checked against that parameter
+derivative, including matter-flip Hermiticity. Near-surface offsets
+$10^{-8}$ and $10^{-25}$ and an independent Euler integral were also
+checked. The nine diagnostics pass their stated tolerances; none is
+an interval proof of the arbitrary-precision library.
+An additional 100-digit comparison of the direct-sum analytic bounds
+with complete hypergeometric or parameter-derivative evaluations is
+still running at this checkpoint. It is not counted as a passed test.
+No old physical wave-packet grid is overwritten.
+
+\section{What remains before the Bose free limit}
+The Bose target remains
+$N_{\rm free}(t)=L_p(0)^2+|L_p(t)|^2$ and $D_{\rm free}(t)=0$
+under an explicitly specified heavy-observer preparation protocol.
+The present analytic bound covers only one of four Omega factors in
+the complete LPRS expression. Other factors and shadow terms can
+exponentially amplify individual absolute errors and cancel among
+themselves. Their phases and physical normalization must be controlled
+jointly. Pointwise kernel values cannot justify exchanging a mass
+integral with a heavy-mass limit.
+
+The next step is a uniform analysis of the full prefactored crossing
+kernel against actual creation amplitudes, with mass tails and
+cancellation-aware absolute bounds. A different integral
+representation is preferable if the factorized representation cannot
+supply such control. Complete Fock domains, finite gravity, and a
+microscopic de Sitter holographic dual remain open.
+
+\begin{thebibliography}{9}
+\bibitem{lprs} J.~Liu, E.~Perlmutter, V.~Rosenhaus and D.~Simmons-Duffin,
+\emph{$d$-dimensional SYK, AdS Loops, and $6j$ Symbols},
+\href{https://arxiv.org/abs/1808.00612}{arXiv:1808.00612}, v3,
+Eqs.~(3.35)--(3.38).
+\bibitem{dlmf} NIST Digital Library of Mathematical Functions,
+\href{https://dlmf.nist.gov/5.11}{Sec.~5.11}
+(Gamma-ratio and digamma expansions), consulted 31 October 2026.
+\end{thebibliography}
+\end{document}

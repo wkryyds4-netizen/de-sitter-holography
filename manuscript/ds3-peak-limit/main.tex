@@ -1,0 +1,325 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,microtype,booktabs}
+\usepackage[margin=25mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\Om}{\Omega}
+\title{The complete dS$_3$ crossing kernel on its heavy-mass peak:\\
+phase normalization and an explicit remainder}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Working research note --- 31 October 2026}
+\begin{document}\maketitle
+\begin{abstract}
+After Wilson-duality stabilization, the complete scalar crossing kernel
+admits a controlled expansion on the exact collision surface.
+We retain its physical CG-period phase, bound the large-parameter
+companion series as a whole, and obtain the leading logarithm, constant,
+and inverse-mass correction with a compact-transfer uniform remainder.
+An explicit finite-mass bound is also given. This is a peak-surface
+result for a specified $G_N=0$ model; it neither establishes a
+distributional delta limit nor interchanges a physical mass integral
+with the heavy-observer limit.
+\end{abstract}
+
+\section{Statement, labels and physical scope}
+We continue with radius one, $G_N=0$, proper $SO^+(3,1)$, BD scalar
+observers and KG matter, a fixed positive observer-label lower bound,
+and half-period regulated creation blocks.
+The normalized scalar-to-scalar element $U_{00}$ retains the physical
+CG-period phase. It is not a separate unitary scalar transform.
+The external labels are $(a,q,c,p)$ and internal labels $(b,d)>0$.
+Here $M$ is a principal-series label; the static energy is
+$\sqrt{1+M^2}$. No energy Jacobian or mass integration is being suppressed.
+
+On the exact collision surface choose
+\begin{equation}
+ c=M,\quad b=M+u,\quad a=M+u+v,\quad d=M+v,
+ \qquad |u|+p\le1,\quad |v|+q\le1 .
+ \label{path}
+\end{equation}
+Define $A_j=1/2+i\alpha_j$ by
+\[
+ (\alpha_1,\alpha_2,\alpha_3,\alpha_4)
+ =\tfrac12(v+q,\ p-u,\ -u-p,\ v-q).
+\]
+For fixed positive $p,q$ and fixed $u,v$ in this window, we obtain
+\begin{equation}
+ \boxed{\displaystyle
+ U_{00}=
+ \frac{\log M}{\pi}
+ +\frac{2\psi(1)-\Re\sum_j\psi(A_j)}{2\pi}
+ +\frac{u+v}{2\pi M}
+ +O\!\left(\frac{\log M}{M^2}\right).}
+ \label{main}
+\end{equation}
+The remainder is uniform on compact admissible transfer sets with
+$p,q>0$. All observer labels exceed the fixed lower bound once $M$
+is sufficiently large. The proof below is a model calculation built
+from the known LPRS kernel and standard special-function identities
+\cite{lprs,groenevelt,dlmf}. No originality or full-duality claim is made.
+
+A logarithmically high ridge by itself determines neither the width
+nor the integrated weight of a kernel. Equation \eqref{main} is not
+used as a delta replacement in any observable.
+
+\newpage
+\section{The physical phase and the two series}
+Write $h=(1+ib)/2$, $h'=(1+id)/2$ and $h_i=(1+i\nu_i)/2$.
+The preceding Wilson reflection identity gives
+\[
+ U_{00}=C_+XY+\widehat C_-\,\overline{XY},\qquad
+ X=\Om(h,h'),\quad Y=\Om(1-h,h'),\quad |\widehat C_-|=|C_+|.
+\]
+In the present CG-period convention the stronger exact identity is
+\begin{equation}
+ \widehat C_-=\overline{C_+},\qquad U_{00}=2\Re(C_+XY).
+ \label{reality}
+\end{equation}
+This is an analytic phase identity, not a numerical real projection.
+For reproducibility, the period for three all-conjugated legs is
+\[
+ N(x,y,z)=(4\pi)^{3/2}4^{-3/2-iS/2}
+ \frac{\Gamma(\frac12-\frac{iS}{2})
+       \prod_{\nu=x,y,z}\Gamma(\frac12-\frac{i(S-2\nu)}2)}
+      {\prod_{\nu=x,y,z}\Gamma(1-i\nu)},\quad S=x+y+z .
+\]
+The physical phase is that of
+$N(a,q,b)N(c,p,-b)/[N(c,q,d)N(a,p,-d)]$.
+Substitute this and the explicit four-Gamma reflection ratios into
+$\widehat C_-C_+$. All powers of four cancel in phase; the remaining
+Gamma arguments occur in conjugate pairs with equal integer weights.
+Their product is positive. Combined with the previously proved modulus
+identity, this proves \eqref{reality}. The full argument/weight list is
+saved with an exact symbolic check for six independent real labels.
+
+On \eqref{path}, LPRS (3.38) separates $X$ into
+\[
+ X=c_A F+c_B G,\quad
+ F={}_4F_3(A_1,A_2,A_3,A_4;1+id,1,1-ib;1),
+\]
+\[
+ G={}_4F_3(A_1+ib,\ldots,A_4+ib;
+                  1+i(b+d),1+ib,1+ib;1),
+\]
+\begin{align*}
+ c_A&=\frac{\Gamma(ib)\Gamma(1+ib)\Gamma(A_3)\Gamma(A_4)}
+              {\Gamma(A_3+ib)\Gamma(A_4+ib)},\\
+ c_B&=\frac{\Gamma(-ib)\Gamma(1+id)\Gamma(A_1+ib)\Gamma(A_2+ib)}
+              {\Gamma(A_1)\Gamma(A_2)\Gamma(1+i(b+d))}.
+\end{align*}
+Set $D_0=C_+c_A$ and $E_0=C_+c_B$. Gamma modulus identities imply
+\begin{equation}
+ D_0=\frac{e^{i\theta(M)}}{4\pi},\qquad
+ \theta(M)=\frac{-p^2v+q^2u+u^2v-uv^2+u-v}{4M^2}+O(M^{-3}).
+ \label{phase}
+\end{equation}
+For the modulus, the $\sinh(\pi b)$ in $|C_+|$ cancels that in
+$|\Gamma(ib)\Gamma(1+ib)|$; the four remaining cosh factors cancel.
+For the phase, insert the displayed period and apply the shifted
+Stirling expansion to each Gamma argument $\pm iM+\eta$.
+The small-argument Gamma phases cancel in conjugate pairs.
+The $M\log M$, $M$, $\log M$, constant and $M^{-1}$ terms all cancel;
+the Bernoulli-polynomial term of order $M^{-2}$ gives \eqref{phase}.
+The asymptotic continuous phase is chosen to tend to zero.
+The shifts range over a compact set, away from the Stirling branch cut,
+so the remainder is uniform.
+
+\newpage
+\section{Bounding the entire large-parameter companion}
+It is not sufficient to keep just the first term of $G$.
+Put $A_*=\max_j|\alpha_j|\le1/2$ and write $G=\sum_{n\ge0}g_n$.
+For $k=n+1$, since $d>0$,
+\begin{align}
+ \left|\frac{g_{n+1}}{g_n}\right|
+ &\le \frac{[k^2+(b+A_*)^2]^2}
+ {k[k^2+b^2]^{3/2}}
+ \nonumber\\
+ &=\sqrt{1+\frac{b^2}{k^2}}\,
+ \left(1+\frac{2bA_*+A_*^2}{k^2+b^2}\right)^2 .
+ \label{ratio}
+\end{align}
+The upper real parts $1/2$ were enlarged to one in this bound.
+Using $\log(1+t)\le t$, the sinh product \cite{product}, and
+$\sum_{k\ge1}(k^2+b^2)^{-1}\le\pi/(2b)$ gives, for every $n$,
+\begin{equation}
+ |g_n|\le B_b,\qquad
+ B_b=\sqrt{\frac{\sinh\pi b}{\pi b}}\,
+       \exp\!\left(2\pi A_*+\frac{\pi A_*^2}{b}\right).
+ \label{B}
+\end{equation}
+
+To sum this bound, use the preceding tail-certificate polynomial with
+upper imaginary parts $b+\alpha_j$ and lower parts $(b+d,b,b)$:
+\[
+ \mathcal A(x)=\prod_j[(x+\tfrac12)^2+(b+\alpha_j)^2],
+ \quad
+ \mathcal B(x)=(x+1)^2[(x+1)^2+(b+d)^2][(x+1)^2+b^2]^2,
+\]
+\[
+ P(x)=\mathcal B(x)(x+1)^3-\mathcal A(x)(x+2)^3
+     =x^{10}+\sum_{j=0}^{9}p_jx^j.
+\]
+Let $K_*=\max_{j<10}|p_j|$ and
+$N_*=2+\lceil K_*\rceil$.
+Every normalized derivative of $P$ is monic with lower coefficients
+bounded by $K_*$. For $x>1+K_*$ its lower powers have total absolute
+value smaller than the leading power, by the geometric-series bound.
+Thus every derivative of $P$ is positive at $N_*$, and
+$P(N_*+y)$ has positive coefficients. Consequently
+\[
+ |g_{n+1}/g_n|\le((n+1)/(n+2))^{3/2}\quad(n\ge N_*).
+\]
+Split the sum before $N_*$ and use the integral-test tail:
+\begin{equation}
+ |G|\le\sum_n|g_n|\le (3N_*+3)B_b=:B_G .
+ \label{G}
+\end{equation}
+$N_*$ is an auxiliary analytic threshold, not a loop length used by
+our numerical calculation.
+
+On a compact transfer set $K_*=O(M^8)$.
+Gamma asymptotics give
+$|E_0|=O(M^{-1/2}e^{-\pi M})$ and
+$B_b=O(M^{-1/2}e^{\pi M/2})$.
+Hence
+\begin{equation}
+ |E_0G|\le |E_0|B_G
+     =O(M^8 e^{-\pi M/2}).
+ \label{suppression}
+\end{equation}
+This deliberately loose exponential estimate is sufficient for
+\eqref{main}. It retains the whole companion series rather than
+assuming it is close to one.
+
+\newpage
+\section{Finite-mass bound and proof of the expansion}
+The small-parameter series $F$ shares the coefficients of the collision
+digamma series for $Y$. Let $m=\min(b,d)$ and
+\[
+ q_0=\psi(1-ib)+\psi(1+id)+2\psi(1)-\sum_j\psi(A_j),
+\]
+\[
+ B_M=2+\operatorname{arsinh}b+\operatorname{arsinh}d
+                    +4\log2\sum_j|A_j-1|.
+\]
+The already established coefficient comparison in the window
+$|\alpha_j|\le1/2$ gives
+\begin{equation}
+ |F-1|\le R_F=\frac{\zeta(2)-1}{1+m^2},\qquad
+ |Y-q_0|\le R_Y=\frac{(\zeta(2)-1)B_M}{1+m^2}.
+ \label{small}
+\end{equation}
+For example the term estimate follows from
+$(x^2-x+1/2)(x+1)\le x^3$ for $x\ge1$; summing the resulting
+$(n+1)^{-2}$ bound gives the first inequality.
+The digamma difference-series bound supplies $B_M$ for the second.
+These are exact-arithmetic analytic bounds.
+
+Combine \eqref{reality} with $X=c_AF+c_BG$:
+\[
+ U_{00}=\frac1{2\pi}\Re(e^{i\theta}FY)+2\Re(E_0GY).
+\]
+For the exact finite-mass quantities, an explicit absolute estimate is
+\begin{equation}
+ \left|U_{00}-\frac{\Re q_0}{2\pi}\right|
+ \le \frac{R_Y}{2\pi}
+ +\left[\frac{R_F+|e^{i\theta}-1|}{2\pi}
+                +2|E_0|B_G\right](|q_0|+R_Y).
+ \label{finite}
+\end{equation}
+The implementation evaluates $|e^{i\theta}-1|=|4\pi D_0-1|$ without
+a phase-unwrapping assumption. Its numerical evaluation, unlike the
+analytic inequality, is not interval arithmetic.
+
+Uniformly on compact admissible transfers, the estimates are
+\[
+q_0=O(\log M),\quad R_F=O(M^{-2}),\quad
+R_Y=O(\log M/M^2),\quad e^{i\theta}-1=O(M^{-2}).
+\]
+Equation \eqref{suppression} then reduces \eqref{finite} to
+\[
+ U_{00}=\frac{\Re q_0}{2\pi}
+                  +O(\log M/M^2).
+\]
+Finally the standard digamma expansion gives
+\[
+ \Re[\psi(1-ib)+\psi(1+id)]
+ =\log b+\log d+O(M^{-2})
+ =2\log M+\frac{u+v}{M}+O(M^{-2}).
+\]
+This proves \eqref{main}, including the specified phase convention.
+
+The proof has not controlled a neighborhood transverse to
+$a+c=b+d$, nor an integral over that transverse direction.
+A delta limit would require its width, oscillatory tails, normalization
+against test functions and the actual physical spectral weights.
+The next calculation must supply those ingredients before using
+\eqref{main} inside a Bose four-point function.
+
+\newpage
+\section{Numerical record and limitations}
+Two transfer choices are tested:
+$(u,v,p,q)=(0.3,-0.2,0.6,0.6)$ and $(0.2,0.1,0.7,0.8)$.
+For each, six masses $M=8,16,32,64,128,256$ are evaluated with the
+reflected complete kernel, 128 terms and 100 decimal digits.
+All twelve observed discrepancies from $\Re q_0/(2\pi)$ satisfy
+\eqref{finite}, allowing separately for the saved series tail.
+
+For the first transfer choice:
+\begin{center}
+\begin{tabular}{rrr}
+\toprule
+$M$ & observed discrepancy & explicit bound \eqref{finite}\\
+\midrule
+8&$2.81\,10^{-3}$&$1.13\,10^{4}$\\
+16&$8.55\,10^{-4}$&$5.15$\\
+32&$2.53\,10^{-4}$&$3.16\,10^{-3}$\\
+64&$7.29\,10^{-5}$&$8.64\,10^{-4}$\\
+128&$2.07\,10^{-5}$&$2.35\,10^{-4}$\\
+256&$5.77\,10^{-6}$&$6.36\,10^{-5}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The very loose low-mass bounds are retained. The scaled residual
+$M^2|U-U_{\rm expansion}|/\log M$ decreases from approximately
+$0.0941$ to $0.0711$ for this sample.
+Also $M^2\theta$ approaches the analytic coefficient $0.1625$;
+the second sample approaches $0.04525$.
+These observations check the formulas but do not replace the proof.
+
+The first independent arithmetic audit failed because it imported a
+roughly 70-digit value of $\pi$ while requesting 85--90-digit comparisons.
+That audit source and failed output remain unchanged.
+A separate replay computes $\pi$ from the Machin formula at 180 digits,
+with an alternating-series truncation bound below $10^{-160}$.
+With unchanged scientific data and unchanged comparison tolerances,
+all 191 replay checks pass.
+The checks include exact rational positivity at the auxiliary threshold,
+finite-bound reconstruction, complex residuals and Gamma-phase
+conjugate pairing. This still does not certify arithmetic rounding.
+
+All code, inputs, versions, full complex outputs, failed checks and
+repairs are retained with hashes. The earlier 100-digit parameter-derivative
+job remains running at this checkpoint and is not counted as passed.
+Final project registration and freezing of the recent stages remain pending.
+
+The peak-surface result advances the complete-kernel analysis, while
+the off-surface uniform limit, physical wave-packet integration,
+Bose free-observer limit, full Fock domains, finite-$G_N$ dynamics,
+and microscopic holographic dictionary remain open.
+
+\begin{thebibliography}{9}
+\bibitem{lprs} J. Liu et al., \emph{$d$-dimensional SYK, AdS Loops, and
+$6j$ Symbols}, \href{https://arxiv.org/html/1808.00612v3}
+{arXiv:1808.00612v3}, Eqs.\ (3.35)--(3.38).
+\bibitem{groenevelt} W. Groenevelt, \emph{The Wilson function transform},
+\href{https://arxiv.org/html/math/0306424v1}{arXiv:math/0306424v1},
+Sec.\ 3 and Proposition 4.4.
+\bibitem{dlmf} NIST DLMF,
+\href{https://dlmf.nist.gov/5.11}{Sec.\ 5.11}, shifted Stirling and
+digamma asymptotics.
+\bibitem{product} NIST DLMF,
+\href{https://dlmf.nist.gov/4.36}{Sec.\ 4.36.1}, sinh infinite product.
+Consulted 31 October 2026.
+\end{thebibliography}
+\end{document}

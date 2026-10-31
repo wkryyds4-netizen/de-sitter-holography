@@ -1,0 +1,377 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,microtype,booktabs}
+\usepackage[margin=25mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\dd}{\mathop{}\!\mathrm d}
+\newcommand{\sech}{\operatorname{sech}}
+\newcommand{\HH}{\mathcal H}
+\title{Group pairing and a physical two-point form\\in a local dS$_3$ observer model}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Working research note --- 31 October 2026}
+\begin{document}\maketitle
+\begin{abstract}
+We fix the group-averaged norms of the vacuum and one-matter sectors
+in the previously specified local, zero-gravity dS$_3$ model.
+A linear left--right gluing condition selects a normalizable mass wavefunction.
+The invariant one-matter norm then gives a positive, finite-mass two-point
+spectral measure, including the full angular invariant sector.
+These are normalization-specific derivations using known group theory.
+They do not construct the full Fock algebra or establish finite-gravity holography.
+\end{abstract}
+\section{Model and the two-observer pairing}
+Set the radius $\ell=1$ and Newton's constant $G_N=0$. Use the proper group
+$\mathsf G=SO^+(3,1)$ and two distinguishable scalar BD observers
+with mass labels $\nu\ge s_*>0$. Matter is one fixed free principal-series
+scalar with label $p>0$, in its BD vacuum. The local insertion has coupling one.
+The previous spacetime normalization is
+\[
+v_{\nu lm}=\sqrt{\mu(\nu)}u_{\nu lm},\qquad
+\mu(\nu)=\frac{\nu\tanh\pi\nu}{\pi};
+\]
+matter modes remain KG-normalized. This $\mu$ is not a group density.
+
+Give $K=SO(3)$ Haar probability measure and fix the overall Haar constant by
+\begin{equation}
+ \int_{\mathsf G}F(g)\dd g=
+ \int_0^\infty\sinh^2r\,\dd r\int_K\dd k_1\dd k_2\,F(k_1a_rk_2).
+\end{equation}
+The normalized spherical function and its positive-label orthogonality are
+\begin{align}
+ \phi_\nu(r)&=\frac12\int_{-1}^1(\cosh r-x\sinh r)^{-1-i\nu}\dd x
+ =\frac{\sin\nu r}{\nu\sinh r},\\
+ \int_{\mathsf G}\phi_a\phi_b\,\dd g
+ &=\frac{\pi}{2a^2}\delta(a-b),\qquad
+ K_2(\nu)=\frac{\pi}{2\nu^2},\quad \rho_{\mathsf G}(\nu)=\frac{2\nu^2}{\pi}.
+\end{align}
+The sine-transform identity fixes the constant. The same dS$_3$ density
+already appears in Yang--Zhang--Zheng \cite{YYZ}, (2.23)--(2.25) and Appendix A.
+Our calculation is a normalization check, not a new Plancherel formula.
+Positive labels choose one reflection representative.
+
+\newpage
+\section{Rigging coefficients and the three-body norm}
+In the BD $K$ basis the invariant two-body distribution is
+\begin{equation}
+ I_\nu=\sum_{l,m}(-1)^{l+m}|\nu,lm\rangle_L|\nu,l,-m\rangle_R .
+\end{equation}
+Indeed $\Theta|lm\rangle=(-1)^{l+m}|l,-m\rangle$, with conjugation
+of coefficients, is an antiunitary intertwiner with $\Theta^2=1$.
+Rotations obey the usual singlet identity. For boosts, the real adjacent-$l$
+matrix elements and the $l$ parity give the required sign under conjugation.
+
+Start with seeds smooth and compact in both mass labels, away from zero
+and the cutoff, with finitely many $K$ types. Perform mass integration
+before group integration. Compact-mass Harish--Chandra expansions and
+integration by parts suppress the leading $e^{-2r}$ two-body term by
+arbitrary inverse powers of $r$; remaining terms decay faster.
+Thus the smeared pairing is absolutely integrable.
+Fixed-label pairings are distributions, not ordinary integrals.
+Finite $K$ type is a convenient dense test domain; its group-translate span
+may be used for an invariant domain \cite{MM,MY}.
+
+If $c_\psi(\nu)=I_\nu^\dagger\psi(\nu,\nu)$, group averaging gives
+$f=K_2c_\psi$ and
+\begin{equation}
+ \langle\eta\psi,\eta\chi\rangle
+ =\int_{s_*}^\infty K_2\overline{c_\psi}c_\chi\,\dd\nu
+ =\int_{s_*}^\infty\rho_{\mathsf G}\bar f g\,\dd\nu .
+\end{equation}
+Accordingly the coefficient of the formal invariant distribution
+$\Psi_f=\int f(\nu)I_\nu\dd\nu$ has norm $\int\rho_{\mathsf G}|f|^2$.
+This inverse relation is essential: neither a squared delta function
+nor an interchange of $K_2$ and $\rho_{\mathsf G}$ is allowed.
+
+For three fixed positive labels $(a,b,p)$, finite-$K$ matrix coefficients
+have magnitude $O((1+r)^N e^{-r})$ per particle. The product is integrable
+against $\sinh^2r\dd r$. The scalar trilinear invariant is unique in this
+generic principal-series domain \cite{DS}. Normalize its distribution
+$I_{abp}$ to have $000$ component one. Write
+\[
+ S=a+b+p,\qquad D=\cosh\frac{\pi S}{2}
+       \prod_{n=a,b,p}\cosh\frac{\pi(S-2n)}{2}.
+\]
+Then the rank-one rigging form is $K_3|I_{abp}\rangle\langle I_{abp}|$, where
+\begin{align}
+ K_3&=\int_0^\infty\sinh^2r\,\phi_a\phi_b\phi_p\,\dd r\\
+ &=\frac{\pi}{8abp}\left(\sum_{n=a,b,p}\tanh\frac{\pi(S-2n)}2
+                   -\tanh\frac{\pi S}2\right)
+ =\frac{\pi}{8D}\prod_{n=a,b,p}\frac{\sinh\pi n}{n}>0 .
+\end{align}
+Use $\int_0^\infty\sin(kr)/\sinh r\,\dd r=(\pi/2)\tanh(\pi k/2)$.
+An invariant coefficient $h(a,b)I_{abp}$ therefore has physical norm
+$\int |h|^2/K_3\,\dd a\dd b$. The $000$ component fixes normalization;
+it does not truncate the matter harmonics.
+
+\newpage
+\section{Linear gluing and a normalizable state}
+The previous local vertex, with outgoing observer $a$, incoming observer
+$b$ and emitted matter $p$, has spherical entry
+\begin{align}
+ B_*&=\frac{\pi}{4\sqrt{4\pi}\,D}
+          \sqrt{\prod_{n=a,b,p}\frac{\sinh\pi n}{n}},\\
+ E_{abp,000}&=\sqrt{\mu(a)\mu(b)}B_*\cosh\pi b .
+\end{align}
+Left emission from $\Psi_f$ has invariant coefficient $f(b)E_{abp,000}$;
+right emission has $f(a)E_{bap,000}$. Both multiply the same $I_{abp}$.
+At other angular labels the singlet phases must be retained.
+
+Equality of these two linear scalar insertions is equivalent to
+\begin{equation}
+ f(b)\cosh\pi b=f(a)\cosh\pi a,\qquad
+ f_{\rm lin}(\nu)=\sech\pi\nu
+\end{equation}
+up to an overall constant (almost everywhere on the connected mass domain).
+Kolchmeyer--Liu already obtained this function in dS$_2$ \cite{KL}.
+Here it follows again from the declared dS$_3$ vertex and norms.
+We call it the \emph{linear-gluing state}, or a candidate HH state.
+Gluing for arbitrary composites and the complete observable algebra has
+not been established by this one-particle calculation.
+
+The normalization and probability density are
+\begin{equation}
+ Z(s)=\int_s^\infty\frac{2\nu^2}{\pi}\sech^2\pi\nu\,\dd\nu,\qquad
+ \dd P(\nu)=Z(s_*)^{-1}\rho_{\mathsf G}(\nu)\sech^2\pi\nu\,\dd\nu .
+\end{equation}
+With $q=e^{-2\pi s}$, integration by parts gives
+\begin{equation}
+ Z(s)=\frac{4s^2}{\pi^2}\frac{q}{1+q}
+      +\frac{4s}{\pi^3}\log(1+q)
+      -\frac{2}{\pi^4}\operatorname{Li}_2(-q).
+\end{equation}
+The formal endpoint check is $Z(0)=1/(6\pi^2)$; the actual model retains
+$s_*>0$. At large label, the unnormalized weight is
+$(8/\pi)\nu^2e^{-2\pi\nu}(1+O(e^{-2\pi\nu}))$.
+The mass is $\sqrt{1+\nu^2}$, so finite-label Boltzmann interpretations
+must not replace mass by $\nu$ without specifying the approximation.
+
+The full one-matter norm now removes the three-body normalization:
+\begin{equation}\boxed{
+ Q(a,b;p)=\frac{|f_{\rm lin}(b)E_{abp,000}|^2}{K_3(a,b,p)}
+         =\frac{\mu(a)\mu(b)}{8D}.}
+\end{equation}
+This kernel is positive and symmetric in the two observer labels.
+Unlike a finite-mode probe sum, it represents the full angular invariant
+one-matter sector. Uniqueness of the invariant and independent
+non-spherical group integrals support the normalization.
+
+\newpage
+\section{A closed creation block and the two-point form}
+Let $\HH_0=L^2([s_*,\infty),\rho_{\mathsf G}\dd b)$ and
+$\HH_1=L^2([s_*,\infty)^2,K_3^{-1}\dd a\dd b)$ in the invariant coefficient
+representations. The zero-to-one creation block is
+\[
+ (Af)(a,b)=f(b)E_{abp,000}.
+\]
+Its norm is exactly
+\begin{align}
+ \|Af\|_1^2&=\int_{s_*}^\infty\rho_{\mathsf G}(b)|f(b)|^2
+                           {\cal S}_p(b)\dd b,\\
+ {\cal S}_p(b)&=\frac{\cosh^2\pi b}{\rho_{\mathsf G}(b)}
+                     \int_{s_*}^\infty Q(a,b;p)\dd a .
+\end{align}
+Since $D\ge e^{2\pi\max(a,b)}/16$ and
+$\mu(a)\mu(b)\le ab/\pi^2$,
+\begin{equation}
+ Q(a,b;p)\le\frac{2ab}{\pi^2}e^{-2\pi\max(a,b)},\qquad
+ {\cal S}_p(b)\le\frac{b}{2\pi}+\frac{1}{2\pi^2}
+                         +\frac{1}{4\pi^3s_*}.
+\end{equation}
+The second inequality follows by splitting the $a$ integral at $b$ and
+using $\cosh^2\pi b\le e^{2\pi b}$. A finite first mass moment is sufficient.
+The exact maximal domain is the displayed weighted integrability domain.
+Fiberwise multiplication gives a closed densely defined map: along an
+almost-everywhere convergent subsequence of a graph-convergent sequence,
+the limiting fiber is still $f(b)E_{abp,000}$. Compact mass supports are
+dense and have finite rate. The adjoint defines the reverse block.
+
+This constructs two sectors and their connecting block. It is not a proof
+of all particle sectors, a common Fock core, or self-adjointness of a full field.
+
+Take $h(\nu)=\sqrt{1+\nu^2}$ as the rest-mass clock Hamiltonian of this
+specified model. Evolving the output and input observer masses gives
+the normalized vacuum two-point quadratic form
+\begin{equation}\boxed{
+ C_p(t)=\frac1{Z(s_*)}\int_{s_*}^\infty\!\dd a\dd b\,
+ Q(a,b;p)e^{-it[h(a)-h(b)]}.}
+\end{equation}
+It is finite for every real $t$. Symmetry makes it real and even;
+the positive pushforward measure under $\Omega=h(a)-h(b)$ makes it
+positive-definite, which does not imply pointwise positivity.
+At radius $\ell$, the physical frequency is $\Omega/\ell$ and, with the
+corresponding canonical scalar normalization, $C$ has units $\ell^{-1}$.
+
+For a square cutoff $L>s_*$, the absolute unnormalized outer-tail bound is
+\begin{equation}
+ \frac{2e^{-\beta L}}{\pi^2}
+ \left[\frac{L^3-s_*^2L}{\beta}
+       +\frac{3L^2-s_*^2}{\beta^2}+\frac{6L}{\beta^3}+\frac6{\beta^4}\right],
+ \qquad \beta=2\pi .
+\end{equation}
+It is uniform in real time. Divide by $Z$ for the normalized form.
+No small tail alone certifies the interior oscillatory quadrature.
+
+\newpage
+\section{Comparison with the earlier recoil ansatz}
+This is a comparison of a derived local $G_N=0$ model with the previous
+scalar recoil ansatz. It is not a finite-$\kappa$ insertion dictionary.
+Set
+\[
+ M=(a+b)/2,\quad\omega=a-b,\quad
+ A_0=\cosh2\pi M,\quad B_0=\cosh\pi\omega,\quad C_0=\cosh\pi p.
+\]
+The product identity gives $D=(A_0+C_0)(B_0+C_0)/4$.
+Recall the earlier definitions
+\begin{align}
+ k_p(\omega)&=\frac1{8\pi(B_0+C_0)},\\
+ R_{\rm old}&=\left(1-\frac{\omega^2}{4M^2}\right)
+                   \frac{A_0-B_0}{A_0+C_0},\\
+ Q_{\rm old}(a,b;p)&=M^2e^{-2\pi M}k_p(\omega)R_{\rm old}.
+\end{align}
+Direct algebra in the present norms yields
+\begin{align}
+ \frac{Q(a,b;p)}{\rho_{\mathsf G}(M)\sech^2\pi M}
+       &=k_p(\omega)R_{\rm phys}(M,\omega;p),\\
+ R_{\rm phys}&=R_{\rm old}\frac{A_0+1}{A_0+B_0},\qquad
+                  0<R_{\rm phys}\le1 .
+\end{align}
+For fixed $(\omega,p)$, $R_{\rm phys}\to1$ as $M\to\infty$.
+With the common overall scale calibrated at large mass, an equivalent
+comparison is
+\begin{equation}\boxed{
+ \frac{\pi}{8}Q=Q_{\rm old}\,n_{\rm loc}(a,b),\qquad
+ n_{\rm loc}(a,b)=
+ \frac1{(1+e^{-2\pi a})(1+e^{-2\pi b})}.}
+\end{equation}
+Previously, leading matching allowed a family of finite-mass completions.
+The local insertion, group norms and chosen state now select this completion
+\emph{in this model}. They do not remove the missing state, inner-product
+and contour inputs of a finite-$\kappa$ proposal. In particular
+$n_{\rm loc}(M,M)\ne1$ at finite $M$: an earlier diagonal convention
+was a diagnostic choice, not a physical constraint.
+
+The label frequency is not the proper clock energy:
+\begin{equation}
+ |h(a)-h(b)-(a-b)|\le\frac{|\omega|}{2\min(a,b)^2}.
+\end{equation}
+To see this, integrate $1-h'(x)=1-x/\sqrt{1+x^2}\le1/(2x^2)$
+between the two masses. For bounded times, the phase error is at most
+$|t|$ times this bound. Fixed-label spectral convergence alone does not
+give all-time convergence of the proper-time Fourier transform.
+No such all-time relative estimate is claimed here.
+
+\newpage
+\section{Checks, reproducibility and next question}
+The saved main diagnostics contain 81 checks; a separate run contains
+16 checks of non-spherical group averaging. Main arithmetic uses
+50 decimal digits and the independent run uses 45; time quadratures use
+NumPy double precision with Gauss--Legendre orders 80 and 120.
+The code, inputs, versions and raw complex values are retained.
+
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+Main diagnostic group & Checks\\ \midrule
+Spherical angular representation &9\\
+Two-body compact mass packet and analytic tail &2\\
+Three-body direct radial integral, product and tail &9\\
+Higher-angular left--right gluing &15\\
+Vertex/group quotient, symmetry and recoil ratio &9\\
+State normalization and creation-rate bound &6\\
+Mean-label spectrum and physical energy bound &15\\
+Time quadrature refinement and imaginary part &16\\ \bottomrule
+\end{tabular}
+\end{center}
+The triple samples are $(.7,1.1,.6)$, $(1.4,.9,1.2)$ and $(3.2,.4,.5)$.
+The direct triple integral ends at 65 with tail
+$2\operatorname{atanh}(e^{-65})/(abp)$.
+The pair test uses $g(\nu)=(\nu-.4)^4(1.6-\nu)^4$ on $[.4,1.6]$,
+mass coefficient $\nu g(\nu)$, and radial cutoffs 40 and 80.
+Its Schur target is $(\pi/2)(1.2)^{17}B(9,9)$.
+Parseval applied to $g^{(4)}$ gives an $R^{-8}$ tail bound.
+
+The independent angular test uses the rotational singlet
+\[
+ S_l=(2l+1)^{-1/2}\sum_m(-1)^{l-m}|lm\rangle|l,-m\rangle|00\rangle .
+\]
+For $l=1,2$ and the first two triples it compares the actual group
+integral to $K_3 I_{abp}(S_l)$, where
+$I_{abp}(S_l)=\sqrt{2l+1}\,T_{ll0}/T_{000}$ in the previous vertex convention.
+Boosts are computed from compact-boundary angular integrals and
+independent finite polynomial primitives. The $r>70$ tail is bounded by
+\[
+ \frac{2\sqrt{2l+1}}{p(1-e^{-140})}\,e^{-70}(70^2+140+2).
+\]
+This tests non-spherical components of the rank-one form, not only its
+normalization component.
+
+\begin{center}
+\begin{tabular}{ccc}
+\toprule
+$t$ & $C_{.6}(t)$, $s_*=.2$ & $C_{1.2}(t)$, $s_*=.8$\\ \midrule
+0   & .005995878862 & .001281989885\\
+.5  & .005942866399 & .001261299720\\
+2   & .005231147771 & .001002967854\\
+5   & .002966801879 & .000418357992\\ \bottomrule
+\end{tabular}
+\end{center}
+The respective normalized outer-tail bounds at $L=s_*+8$ are
+$5.11\,10^{-20}$ and $8.94\,10^{-21}$; interior refinement errors are larger.
+These are empirical quadratures with analytic outer tails, not interval
+certificates of total error.
+
+\newpage
+\section{Scope and continuation}
+The next calculation is the two-matter sector and its physical four-point
+recoupling, including all principal-series spin channels. It must establish
+the vacuum-to-one-to-two domain, keep each observer projection and
+recover the independent-free-probe disconnected benchmark in its actual
+large-mass regime. For two independent probe labels $p,p'$ that target is
+\[
+ \frac{pp'}{16\pi^2\sinh\pi p\,\sinh\pi p'}
+\]
+in the previously declared antipodal convention; equal species have
+additional Wick terms. This benchmark has not been checked by the
+present two-point run.
+
+Three distinct open questions remain: composite gluing and a full Fock
+observable algebra; the finite-$\kappa$ inner product and sewing contour;
+and finite-$G_N$ dynamics and a complete holographic dual.
+Our derived $n_{\rm loc}$ answers none of these on its own.
+
+\paragraph{Local project record.}
+The Chinese derivation is \texttt{notes/stage4-ds3-group-pairing.md}.
+Raw diagnostics are in \texttt{results/stage4/ds3-group-pairing/}.
+The model implementation is \texttt{code/ds3\_group\_pairing.py};
+the two independent validation drivers and the build script are in
+\texttt{code/}. This is a private working note, not a published
+originality claim.
+
+\begin{thebibliography}{9}
+\bibitem{YYZ}
+Z. Yang, Y. Zhang and W. Zheng,
+\emph{Comments on the de Sitter Double Cone},
+\href{https://arxiv.org/html/2505.08647v1}{arXiv:2505.08647v1},
+Sec.\ 2.2 and Appendix A. The cached v1 title is used here.
+\bibitem{KL}
+D. Kolchmeyer and H. Liu,
+\emph{Quantum observers in de Sitter space},
+\href{https://arxiv.org/html/2411.08090v1}{arXiv:2411.08090v1},
+Secs.\ 4 and 6. The linear-gluing construction is a direct dS$_2$ predecessor.
+\bibitem{MM}
+D. Marolf and I. A. Morrison,
+\emph{Group Averaging for de Sitter free fields},
+\href{https://arxiv.org/html/0810.5163v1}{arXiv:0810.5163v1},
+Sec.\ 2.3 and boost matrix elements.
+\bibitem{MY}
+D. Marolf and Z. Yu,
+\href{https://arxiv.org/html/2610.24073v1}{arXiv:2610.24073v1},
+Secs.\ 5.1--5.2, compact-mass group averaging and positivity.
+\bibitem{DS}
+S. E. Derkachov and V. P. Spiridonov,
+\emph{The 6j-symbols for the SL(2,C) group},
+\href{https://arxiv.org/html/1711.07073v2}{arXiv:1711.07073v2},
+scalar intertwiners and reflection conventions.
+Their raw CG measure is not imported into our Haar normalization.
+\end{thebibliography}
+\end{document}

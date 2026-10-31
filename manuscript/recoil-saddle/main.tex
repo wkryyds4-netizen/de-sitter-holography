@@ -1,0 +1,275 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,microtype}
+\usepackage[margin=25mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newtheorem{lemma}{Lemma}
+\newcommand{\dd}{\mathop{}\!\mathrm d}
+\title{Reflected Barnes saddles and pole oscillations\\in the recoil graph}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Working research note --- 30 October 2026}
+\begin{document}\maketitle
+\begin{abstract}
+We analyze the ordinary-Gamma internal integral obtained after the
+fixed-mass pure-recoil limit. Reflection exposes a quadratic saddle
+equation with discriminant equal to minus nine times the squared volume
+of the dual flat tetrahedron, retaining both transverse energies.
+The local Gaussian determinant reproduces the expected geometric
+factor, conditionally on its contribution to the full contour.
+An exact oscillating pole factor need not tend pointwise to one in
+the heavy-observer window. A uniform Fourier estimate explains why this
+alone does not invalidate an integrated saddle approximation.
+We distinguish exact algebra, numerical action comparisons, and
+the global contour and uniform estimates that remain open.
+\end{abstract}
+
+\section{The exact reflected integrand}
+Set the de Sitter radius to one. First take \(\kappa\to\infty\)
+at fixed positive real masses, as in the preceding internal-integral
+note. The object is the internal chiral amplitude of the fixed-topology
+CLP graph \cite{CLP}, not yet a normalized physical OTOC.
+Let
+\[
+ \mathfrak B=\frac1{2\pi i}\int_{\mathbb R-ic}\mathcal B(z)\dd z,\qquad
+ \mathcal B(z)=e^{-i\pi z}
+ \frac{\prod_{a}\Gamma(z+ia)\prod_r\Gamma(\tfrac12-z-ir)}
+ {\Gamma(z+\tfrac12)} ,
+\]
+where there are four \(a\)'s and three \(r\)'s,
+\(\sum a=\sum r\), and \(\max a<c<\min r\).
+The equal-probe parametrization retains both transverse energies:
+\begin{align}
+m_{1,3}&=M+\omega/2\pm u,&m_{2,4}&=M-\omega/2\pm v,\\
+a&=M+\nu/2+(\pm u\pm v)/2,&
+r&=\{M+\nu+\omega/2,\,2M,\,M+\nu-\omega/2\}.
+\end{align}
+The edge labels are
+\((\mu_1,\ldots,\mu_6)=(m_1,\nu,m_2,m_3,\nu,m_4)\).
+
+Reflection of the three right Gamma factors gives the exact identity
+\begin{equation}
+ \mathcal B(z)=8\pi^3 e^{2\pi iz-\pi\sum r}
+ \frac{\prod_a\Gamma(z+ia)}
+ {\Gamma(z+\tfrac12)\prod_r\Gamma(z+\tfrac12+ir)} E(z),
+ \qquad
+ E(z)=\prod_r(1+e^{2\pi i(z+ir)})^{-1}.
+ \label{eq:reflect}
+\end{equation}
+For complex \(r\), the horizontal line requires \(c<\min\Re r\);
+the left poles must still stay above it.
+The factor \(E\) must not be discarded merely by invoking Stirling.
+In fact a principal-log expansion of the unreflected expression can
+give derivative \(-2\pi i\), rather than zero, at the desired
+exponentiated root.
+
+\section{Quadratic saddle and the local determinant}
+Write \(f(t)=t(\log t-1)\). On the branch continued through the right
+saddle, the reflected Stirling exponent is
+\begin{equation}
+ \Phi(z)=2\pi iz-\pi\sum r+
+ \sum_a f(z+ia)-\sum_r f(z+ir)-f(z).
+ \label{eq:phi}
+\end{equation}
+Exponentiating \(\Phi'=0\) gives
+\(\prod_a(z+ia)=z\prod_r(z+ir)\). In the coordinate \(s=iz\),
+\begin{equation}
+ P(s)=\prod_a(s-a)-s\prod_r(s-r)=As^2+Bs+C,\quad
+ A=e_2(a)-e_2(r),\ B=-e_3(a)+e_3(r),\ C=\prod a.
+ \label{eq:poly}
+\end{equation}
+Here \(e_k\) denotes an elementary symmetric polynomial. Balance
+cancels the cubic term; the quartic terms already cancel. In particular,
+\(A=M^2+\nu^2/2-(u^2+v^2)/2+\omega^2/4\).
+
+Let \(\mathrm{CM}\) be the Cayley--Menger matrix of the auxiliary
+flat tetrahedron. Its edges are the complementary entries of the
+face-labeled mass matrix in CSTY (2.54), not that matrix interpreted
+as vertex distances \cite{CSTY}. Direct polynomial expansion gives
+\begin{equation}
+ \Delta=B^2-4AC=-\frac{\det\mathrm{CM}}{32}
+              =-9V_{\rm dual}^2.
+ \label{eq:CM}
+\end{equation}
+This identity retains \(u,v\). On their zero slice,
+\begin{equation}
+ \Delta=-\frac{(\nu^4-4M^2\omega^2)
+                    (4M^2-2\nu^2+\omega^2)}{16}.
+ \label{eq:delta}
+\end{equation}
+For a nondegenerate real Euclidean configuration choose
+\[
+ s_+=\frac{-B+i\sqrt{-\Delta}}{2A},\qquad z_+=-is_+,
+ \qquad \sqrt{-\Delta}>0,
+\]
+and continue this branch. Calling a principal \(\sqrt{\Delta}\)
+directly is numerically unsafe on its negative-real cut:
+a rounding-size imaginary part can select the other root.
+
+Put \(N=\prod_a(z_++ia)\). Differentiating the logarithmic saddle
+equation, or differentiating \(P(iz)\), gives exactly
+\begin{equation}
+ \Phi''(z_+)=-\frac{\sqrt{-\Delta}}{N}.
+ \label{eq:curv}
+\end{equation}
+The non-exponentiated logarithmic equation must still be checked.
+An algebraic root does not determine a thimble coefficient.
+
+The half-integer shifts in \eqref{eq:reflect} give the local factor
+\(g=8\pi^3\prod_a(z+ia)^{-1/2}\). If the right saddle supplies the
+leading full-contour contribution and the pole factor may be replaced
+by its zero Fourier mode in that contribution, then for real masses
+\begin{equation}
+ |\mathfrak B_{\rm loc}|^2\sim
+ \frac{|g(z_+)|^2}{2\pi|\Phi''(z_+)|}e^{2\Re\Phi(z_+)}
+ =\frac{32\pi^5}{\sqrt{-\Delta}}e^{2\Re\Phi(z_+)}.
+ \label{eq:local}
+\end{equation}
+This is a conditional local Gaussian expression, not a theorem
+for the complete Barnes integral.
+
+\section{Comparison with the worldline action}
+CSTY's classical action is \(I=\sum_{i<j}m_{ij}d_{ij}\), with the
+angles specified by the dual flat tetrahedron in Appendix B.1
+\cite{CSTY}. Five finite-point evaluations, including nonzero \(u,v\)
+and imaginary \(\omega\), give
+\[
+ -2\Re\Phi(z_+)=I.
+\]
+Three transverse Hessian comparisons also agree with
+\[
+ \partial_{u,v}^2 I\big|_{u=v=0}=h(\omega)\mathbf1_2,\qquad
+ h(\omega)=
+ \frac{4\sqrt{(\nu^4-4M^2\omega^2)(4M^2-2\nu^2+\omega^2)}}
+ {(4M^2-\nu^2)(\nu^2-\omega^2)}.
+\]
+These are numerical consistency checks, not a supplied general
+proof of the angle identity. The imaginary-axis tests exploit the
+symmetries of this parametrization; they do not prescribe taking
+a modulus anew at arbitrary complex masses.
+
+Inside the strict mass triangles, the preceding combined-vertex
+note gives the leading four-vertex factor
+\[
+ \prod_v T_v\sim \frac{\nu^2m_1m_2m_3m_4}{64\pi^6}.
+\]
+Multiplying it with \eqref{eq:local} gives the local graph coefficient
+\begin{equation}
+ \frac{\nu^2m_1m_2m_3m_4}{2\pi\sqrt{-\Delta}}.
+ \label{eq:graphfactor}
+\end{equation}
+Thus the energy-dependent ratio is the previously found mass
+polynomial times \(\sqrt{\Delta(0)/\Delta(\omega)}\).
+This derives the geometric determinant within the same internal
+representation. No vertex factor has been multiplied onto an already
+complete \(6j\) approximation. Physical insertion normalization and
+external energy cycles remain separate questions.
+
+\section{Pole distance and a uniform oscillation estimate}
+On \(u=v=0\), write \(c=-\Im z_+\). For real \(\omega\) in the
+Euclidean region, and also on the symmetric imaginary-axis
+continuation, direct algebra gives
+\begin{equation}
+ \delta=M+\nu-c=
+ \frac{\nu(\nu^2+\omega^2)}{4M^2+2\nu^2+\omega^2}.
+ \label{eq:height}
+\end{equation}
+For real \(\omega\), the nearest right-pole row has height
+\(\delta-|\omega|/2\) relative to this line, and it need not be positive.
+One must not move the original contour to that line across poles.
+On \(\omega=iA_0y\), \(A_0=\nu^2/(2M)\), bounded \(y\), and
+\(\nu/M\to0\), both near rows instead have positive height
+\(\delta\sim\nu^3/(4M^2)\); the third is farther away.
+There
+\begin{equation}
+ |E-1|\le (1-e^{-2\pi\delta})^{-3}-1.
+\end{equation}
+Consequently \(\nu^{4/3}\ll M\ll\nu^{3/2}\) is a sufficient
+subwindow for pointwise deletion of \(E\). It is not established
+as a necessary window for an integrated asymptotic.
+At \(M\asymp\nu^{3/2}\) the pole factor remains oscillatory, and
+for faster \(M\) it can be sharply peaked.
+
+\begin{lemma}[Uniform integrated pole-factor bound]
+For \(|q_\rho|<1\), let
+\(E_q(x)=\prod_{\rho=1}^3(1+q_\rho e^{2\pi ix})^{-1}\).
+For every complex \(F\in W^{4,1}(\mathbb R)\),
+\begin{equation}
+ \left|\int_{\mathbb R} F(x)(E_q(x)-1)\dd x\right|
+ \le C_4\|F^{(4)}\|_1,\qquad
+ C_4=\frac{\zeta(2)+3\zeta(3)+2\zeta(4)}{2(2\pi)^4}.
+ \label{eq:fourier}
+\end{equation}
+The constant is independent of the distance of the \(q_\rho\)'s
+from the unit circle.
+\end{lemma}
+\begin{proof}
+For each fixed triple, expand the three geometric series:
+\[
+ E_q=1+\sum_{n\ge1}c_ne^{2\pi inx},\qquad
+ |c_n|\le\binom{n+2}{2}.
+\]
+Four integrations by parts give
+\[
+ \left|\int F(x)e^{2\pi inx}\dd x\right|
+ \le (2\pi n)^{-4}\|F^{(4)}\|_1 .
+\]
+The sum of \(\binom{n+2}{2}/n^4\) is
+\((\zeta(2)+3\zeta(3)+2\zeta(4))/2\).
+For fixed \(q_\rho\) the initial exchange is justified by absolute
+convergence; the resulting summable majorant is uniform.
+\end{proof}
+
+On \(z=x-ic\), take \(q_\rho=e^{-2\pi(r_\rho-c)}\).
+The endpoint \(|q_\rho|=1\) is excluded; the lemma does not define
+an integral through poles. Normalize the actual localized amplitude
+by its nonzero saddle prefactor \(g(z_+)\), and call the result \(F\)
+(excluding \(E\)). If it obeys
+\[
+ \|F^{(4)}\|_1\le C e^{\Re\Phi(z_+)}A_0^{-3/2},
+ \qquad
+ \left|\int F\right|\ge c_0e^{\Re\Phi(z_+)}\sqrt{A_0},
+\]
+then \eqref{eq:fourier} implies a relative \(O(A_0^{-2})\) pole
+correction, uniformly as \(\delta\downarrow0\).
+These two estimates remain to be proved for the actual localized
+Gamma quotient. They are not consequences of simply naming a
+Gaussian saddle. The global quotient has not been given such a
+derivative bound either. This distinction prevents a pointwise
+Stirling failure from being mistaken for a failure of the integral.
+
+\section{Validation and outstanding work}
+The new script \texttt{code/recoil\_saddle.py} records 57 passing checks:
+four symbolic identities; five groups of saddle, determinant, action,
+reflection and precision comparisons; nine transverse derivatives;
+eighteen scaling/precision checks; and one diagnosis of the failed
+unreflected principal-log shortcut. Calculations use 80 digits with
+specified 110-digit repeats. Nine growing-mass samples separately
+record the exact pole factor and the remaining Stirling error.
+
+The initial implementation used a square root on its cut, selecting
+the wrong root in some samples. Its failed output is retained.
+After transporting \(\sqrt{-\Delta}\), a largest-mass comparison
+also required more than 60 digits to meet the stated tolerance.
+Finite-point checks neither certify a global asymptotic nor establish
+priority. The algebraic quadratic and geometric discriminant have
+antecedents in the full \(6j\) analysis \cite{CLP}.
+
+The next tasks are a general angle-identity proof, localized uniform
+derivative and non-cancellation bounds, and a deformation of the full
+cycle that controls the other saddle and tails. The \(u,v\) exterior,
+two chiral continuations, physical insertion factors, three external
+energy cycles, and disconnected baseline remain unresolved.
+The fixed-mass \(\kappa\) limit has not been made uniform in growing
+masses. Finite-\(G\) dynamics and a complete de Sitter dual remain open.
+
+\begin{thebibliography}{9}
+\bibitem{CSTY} Y. Chen, D. Stanford, H. Tang and Z. Yang,
+\emph{Negative shocks versus static patch holography},
+\href{https://arxiv.org/html/2607.14042v1}{arXiv:2607.14042v1},
+(2.53)--(2.54), Appendix B.1.
+\bibitem{CLP} J. Chandra, D. Liska and B. Post,
+\emph{3D de Sitter from complex Virasoro TQFT: Observers and knots},
+\href{https://arxiv.org/html/2610.30247v1}{arXiv:2610.30247v1},
+(3.46), Appendix B.
+\end{thebibliography}
+\end{document}

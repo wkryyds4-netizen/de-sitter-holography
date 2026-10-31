@@ -1,0 +1,63 @@
+{
+  "created_at_utc": "2026-10-30T21:37:13.358448+00:00",
+  "pages": 5,
+  "raw_kernel_points": 1216480,
+  "original_diagnostics": {
+    "checks": 22,
+    "passed": 21,
+    "failed": 1,
+    "preserved": true
+  },
+  "selected_precision_repairs": 3,
+  "weighted_precision_points": 6,
+  "compilers": {
+    "local": "two final pdfLaTeX passes",
+    "desktop": "success on final source"
+  },
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "longest_edge_pixels": 1100,
+    "status": "all final pages inspected; no clipping, collision, missing glyphs or duplicate equation numbers"
+  },
+  "hashes": {
+    "code/audit_ds3_bose.py": "5088fb3786842e1fddc765e11b72f14a511ccffc44929f25138124eceed8877b",
+    "code/build_ds3_bose.ps1": "f14a8d0ad789ff05fa4c0f3d38e4d7ffc435a2c269e23d10e24639f23fed4f40",
+    "code/check_ds3_bose_nodes.py": "10d32b2c371af843ca9933002b97a33edefdbdb351db8530ba41d7a771593906",
+    "code/ds3_bose_packet.py": "8c09521f96bed106276a4d41fea3908ed775b6eb02be9f0a71799ee0d71a304f",
+    "code/ds3_bose_precision.py": "32c956173049612bb25a4d9c73841646fd7ae8d99e9c1084aa798848746f31e7",
+    "code/ds3_crossed_packet.py": "b93f745388dc0f3ba65aace74d1a64f1c5e69be12872447671bf36ec4f7de549",
+    "code/ds3_crossing_dictionary.py": "0dd76e7cbe336fda26bdab77a5b495261449807b6891cc85973e8c00c4d5daca",
+    "code/ds3_packet_tail.py": "39063d914e1b7f8270707d9a0b9277d4f25826d423b3f089e6574f4ce7cd0188",
+    "code/ds3_racah_fast.py": "778c07d86e011b4ca8f167d4a778ea8639b13e8085766fa6f6a3e88c7af3bd7c",
+    "code/global_racah.py": "4b9702c8c8f68b3f3901f3e392321824edf37198b70c0344298c95addd88a15c",
+    "code/replay_ds3_bose.py": "c89113d7ce81a02f2f723af1a9bca539098a4b26fea551f8183dd81dfde634c7",
+    "code/replay_ds3_crossed_packet.py": "af4bd9c61f8d655decfba3ebcdc6467bfd3a07ae1189558d876c44dc2e6b7dde",
+    "code/validate_ds3_bose.py": "e46dd93a23345f25f628d02caddab9a52923b5dba70c1ad3c00a1fa702f3f78a",
+    "literature/stage4-ds3-bose-sources.md": "30e01b42114fbf9781a13fc763a28211ff3e9c9cd06076d2618ca0bb63c3e5ac",
+    "manuscript/ds3-bose/main.tex": "b450ca98b51c6daa9d5839d0747b27a79ca15057622241a9ab4df995b106cc8a",
+    "manuscript/ds3-bose/numerics.tex": "e8c0fe9df63086d9ae350b91bb015a95e04e1d7558767bbc2488809ad30e79d4",
+    "notes/stage4-ds3-bose.md": "3d32c1e98f94346bf7b257db0cf48faa9510ba5d3c0dbc0659ef35d44690f07a",
+    "output/pdf/de-sitter-ds3-bose.pdf": "63af284c0af6ee65576b3aa6480fca37a5d1cfbb122d454c7d3db58d9f5cfc5a",
+    "results/stage4/ds3-bose/build-review.md": "0018aed9b613b11d3e459ac316aa958ab6ca8b1d84fd10a09d3c58a3cf37695c",
+    "results/stage4/ds3-bose/fixed-n4-L12.json": "bbf650f593cb6537230393b937a53d7761a122a17f3f0d616dd85b7c8a95ee95",
+    "results/stage4/ds3-bose/fixed-n4-L12.npz": "a52fcd55d120884bfecf32f42f2e35e8eb809e60140cb88427a01925d1d10c1a",
+    "results/stage4/ds3-bose/initial-tex.log": "ddbad63e905319a8616763e83516f57e1060509b9a28fb191c51ac1b616ae020",
+    "results/stage4/ds3-bose/main.log": "a22af66c17763b1ab8a44a06be0645ed5c9cc5bd6940e8cdadaf29dffec7e028",
+    "results/stage4/ds3-bose/pilot-n4-L8.json": "13c7f44bd2bf8696a9d119404ee825a7497dff1a51dee89d69af9a5755af95d8",
+    "results/stage4/ds3-bose/pilot-n4-L8.npz": "963cf6d8f7d9341ec461b1c3eede8c6510ba66e01e6d9cef7846215ce2b17192",
+    "results/stage4/ds3-bose/precision-repair.json": "2af08315bdb592a614b4a407e9c36759e059ff08f127bc87498f80fd0a1a26a7",
+    "results/stage4/ds3-bose/refined-n6-L12.json": "576d30990d002795589ea5b9cb3693e0ce670ae81f5e5d80c463b5f496fd9be2",
+    "results/stage4/ds3-bose/refined-n6-L12.npz": "b2f9923ca66e746c1336809b069a5260ce662f57ebcdfaf00c35a989a03c46a1",
+    "results/stage4/ds3-bose/summary.json": "e859b7d69db33db01146e029fbf5f2792fd0313ae20148d9b33e4729b7a95d00",
+    "results/stage4/ds3-bose/validation.json": "68c1e8990a69fac60df97dbeea04e8e01ebb82fd81b9b792e1db261aa2679e40",
+    "results/stage4/ds3-bose/weighted-node-checks.json": "0bc387553d5db9d56f12edcb25a8632b9114c3fe21fa1ab637f8c7e077514d5a",
+    "sources/kolchmeyer-liu-2411.08090v1.html": "352ef29aa89c376203271bf984bd904fb471ff313a7d420bc6a0ebc875d78065",
+    "sources/liu-et-al-1808.00612v3.html": "f2ed75383d739432535ba11f0988fa6df08aaf5020e4f61a8ca2376ae40c4494"
+  }
+}

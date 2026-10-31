@@ -1,0 +1,45 @@
+{
+  "created_at_utc": "2026-10-30T22:23:03.319629+00:00",
+  "status": "stage verified; project integration pending; unfrozen",
+  "pages": 4,
+  "independent_checks": 407,
+  "compilers": [
+    "two local pdfLaTeX passes",
+    "desktop compiler success"
+  ],
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "longest_edge_pixels": 1100,
+    "status": "all inspected without layout defects"
+  },
+  "pending_previous_stage": {
+    "session_id": 47841,
+    "output": "results/stage4/ds3-collision/controlled-validation.json",
+    "counted_as_passed": false
+  },
+  "hashes": {
+    "code/ds3_full_tail_bound.py": "a9a972f3f50bf56c6e67553d5457db386bbf128f1bf0fd79995bcb2fde1cb588",
+    "code/run_ds3_full_tail.py": "7c6eb5ef103ed410f263102b5286cf1c2fb9652abd75af2455a647aa2ce1460d",
+    "code/analyze_ds3_shadow_amplification.py": "92735dd2286f61b4d7ce9bf628163d51df5cf202d8050aaca084ef84ef8c2b91",
+    "code/audit_ds3_full_tail.py": "54122cc6f625b542c9a89a8c697a715117b43f1ffa5eb55c9b52ec892b04db91",
+    "code/record_ds3_full_tail.py": "84e6df309672ea551cd027e703987a23a834f0e2194b24bb6f60f50e69d312bb",
+    "code/build_ds3_full_tail.ps1": "27e09d07c1ae2fbe3856b533a0081d96ea5f12d75f55967ff29458df8c6b04c2",
+    "notes/stage4-ds3-full-tail.md": "a2d17c64710e2a6b03103848eb2f10c50d4a4d40ff55ae46e0140c704b13ac9d",
+    "literature/stage4-ds3-full-tail-sources.md": "4e7fadcb233521aa919fbc1daf82c67541fc551b37493607e2b1d665c5c39ade",
+    "manuscript/ds3-full-tail/main.tex": "9812352c1f536b2541b5711ab1757b1af3d5869d6a552cd009426d59b4987c2c",
+    "output/pdf/de-sitter-ds3-full-tail.pdf": "869889db016956a1b8d3a5a1c6ebf4ce38e0f2bbe791adfc5787dc66c3e369a4",
+    "sources/manifest.json": "41ba7f9a3b41725819a1bc51d14d85c174abdfc2e65cf7fb3cad25e4f054148f",
+    "results/stage4/ds3-full-tail/amplification.json": "79fd26e1545f9d1b63758f4b0a278c30c97e27fee641d7dd1336f734485a8c7d",
+    "results/stage4/ds3-full-tail/audit.json": "ab59289b97ac29da5e52f081e9a53c5e4387c56688415fc738ca4a67b0762de9",
+    "results/stage4/ds3-full-tail/build-review.md": "c06b872903173b18791a3e1932be679aa4ca07b6405b9aad73d4af596999f7b9",
+    "results/stage4/ds3-full-tail/main.log": "f90b33f5428f19d3c7eb4d8c0894cb33336d75fc6592201841b04de1056b2ca1",
+    "results/stage4/ds3-full-tail/preservation.json": "59e1eb3feddcf97681b836169af1c55c4923fd0f21b3df2be096f2ddbd3b0356",
+    "results/stage4/ds3-full-tail/runs.jsonl": "ecf9cab87057a17702d351766f1e0c6fdc44876961ee411e8eeb95f17f29b469",
+    "results/stage4/ds3-full-tail/study.json": "7376763540ed2071c6ff1902d66e23c3949f7847c2bebe7c111592addddd30a7"
+  }
+}

@@ -1,0 +1,271 @@
+\section{Assembly and the fixed-time crossed limit}
+\label{sec:assembly}
+This section completes the compact distribution step for the specified
+equal-species, strict-$G_N\to0$ model. We use the exact four terms in
+KL (B.21)--(B.24), rather than dropping the second endpoint branch of
+an individual hypergeometric function. The delta coefficient agrees with
+KL (B.46); the purpose here is to control the combined remainder and the
+finite-packet limit. No originality claim or finite-$G_N$ result is intended.
+
+\subsection{Finite parameters and the four coefficients}
+Put $s_j=\Lambda+q_j$, with real offsets in a fixed compact set, and define
+\begin{align}
+ p&=\tfrac12+\tfrac i2(q_4-q_2-2\nu),&
+ q&=\tfrac12+\tfrac i2(q_4-q_2+2\nu),\notag\\
+ e&=i(q_1-q_3),& \delta&=i(q_1-q_2+q_3-q_4),\notag\\
+ t&=(\delta-e)/2,&v&=(\delta+e)/2.
+ \label{eq:assembly-vars}
+\end{align}
+Here the scalar $q$ is distinguished from the four offsets $q_j$.
+Write
+\begin{equation}
+ c(z)=\sqrt\pi\,\frac{\Gamma((1-z)/2)}{\Gamma(z/2)}.
+ \qquad c(z)c(1-z)=\pi.
+ \label{eq:assembly-c}
+\end{equation}
+The beta-like function of KL (B.23) is exactly
+$B(u,w)=c(u)c(w)/c(u+w-1)$. Uniform gamma-ratio estimates give
+\begin{equation}
+ B(u,\pm2i\Lambda+w_0)
+ =c(u)\Lambda^{u-1}[1+O(\Lambda^{-1})]
+ \label{eq:assembly-beta-asym}
+\end{equation}
+on compact offset sets away from the indicated meromorphic poles.
+There is no arbitrary constant in the phase of this formula: the powers
+come from the principal logarithms of the two opposite large arguments.
+
+Set $D=c(1-p-t)c(q+v)c(1-q+t)c(p-v)$. Denote the exact prefactors of
+the four hypergeometric functions by $P_{j,\Lambda}$, in the order
+of the two terms of the first $G$, then the two terms of the second $G$
+in KL (B.21). Thus $\pi^3S=\sum_jP_{j,\Lambda}H_{j,\Lambda}$.
+The complete parameter and leading-prefactor table is
+\begin{center}
+\small
+\begin{tabular}{c c c c c c}
+\toprule
+$j$ & $b_j$ & $d_j$ & $g_j$ & $\delta_j$ & $W_j$\\
+\midrule
+1 & $1-p-v$ & $p-v$ & $1-e$ & $\delta$ & $-2i\Lambda$\\
+2 & $1-q+t$ & $q+t$ & $1-e$ & $-\delta$ & $2i\Lambda$\\
+3 & $1-q+v$ & $q+v$ & $1+e$ & $-\delta$ & $2i\Lambda$\\
+4 & $1-p-t$ & $p-t$ & $1+e$ & $\delta$ & $-2i\Lambda$\\
+\bottomrule
+\end{tabular}
+\end{center}
+\begin{align}
+ P_{j,\Lambda}&=\Lambda^{\delta_j-1}P_j^0[1+O(\Lambda^{-1})],\notag\\
+ (P_1^0,P_2^0,P_3^0,P_4^0)
+ &=D\left(\frac{c(p+v)}{c(p-v)c(e)},
+ \frac{c(1-q-t)}{c(1-q+t)c(e)},
+ \frac{c(q-v)}{c(q+v)c(-e)},
+ \frac{c(1-p+t)}{c(1-p-t)c(-e)}\right).
+ \label{eq:assembly-prefactors}
+\end{align}
+For example, write the original $h$ variables as
+$h_1=p$, $h_3=q$, $h_2=H$, $h_4=1-H$, $h=K$, $h'=L$.
+Then $H-K=t$, $H-L=v$, $K-L=e$. The first prefactor consists of
+$B(1+H-K-q,2-2H)$, $B(1+K-p-H,p+H-L)$,
+and $B(H+q-L,K+H-q)$. Applying \eqref{eq:assembly-beta-asym}
+to the first and third yields $P_1^0$. The second term follows by
+the other choice of $h_4$, and the second $G$ by
+$(p,q,H,K,L)\mapsto(q,p,1-H,1-K,1-L)$.
+This determines the table without choosing branches by numerical size.
+
+\subsection{Cancellation and a pole-free leading expression}
+The additional endpoint branch of term $j$, after multiplying by its
+leading prefactor, has coefficient
+\begin{equation}
+ E_j=-\frac{P_j^0\Gamma(g_j)}
+ {\delta_j\Gamma(b_j)\Gamma(d_j)}
+ (W_j/\Lambda)^{-\delta_j}
+ \label{eq:assembly-extra}
+\end{equation}
+in $\Lambda\pi^3S$. The identity $\sum_jE_j=0$ is exact as a meromorphic
+identity. To check it explicitly, put
+$P=\pi p/2$, $Q=\pi q/2$, $T=\pi t/2$, $V=\pi v/2$.
+Using $c(z)=2^z\Gamma(1-z)\sin(\pi z/2)$, their sum is
+$2D e^{i\pi\delta/2}/[\pi\delta\sin(\pi e/2)]$ times
+\begin{align}
+ &-\sin(P+V)\cos(P-V)+\cos(Q+T)\sin(Q-T)\notag\\
+ &\hspace{8mm}-\sin(Q-V)\cos(Q+V)+\cos(P-T)\sin(P+T)=0.
+ \label{eq:assembly-trig-zero}
+\end{align}
+The equality follows by writing each product as a sum of two sines.
+
+The remaining coefficients also simplify. Define
+\begin{align}
+ U_+&=2^{1-\delta}\pi\cos(\pi\delta/2)
+           \frac{c(p+v)c(q+v)}{c(p-t)c(q-t)},\notag\\
+ U_-&=2^{1+\delta}\pi\cos(\pi\delta/2)
+           \frac{c(p-v)c(q-v)}{c(p+t)c(q+t)}.
+ \label{eq:assembly-U}
+\end{align}
+They equal, respectively,
+$\sum_{j=1,4}P_j^0\Gamma(g_j)/[\Gamma(g_j-b_j)\Gamma(g_j-d_j)]$
+and the analogous sum over $j=2,3$. One way to verify the first identity
+is to factor
+$D/[c(p-v)c(p-t)\Gamma(p+t)\Gamma(p+v)]$ from the two terms.
+The remaining numerator is
+\[
+ \sin(P-T)\cos(P+T)-\sin(P-V)\cos(P+V)
+ =\cos(\pi\delta/2)\sin(\pi e/2),
+\]
+which cancels the apparent $e$ pole. The second identity follows by the
+same interchange as above. In particular,
+\begin{equation}
+ U_+|_{\delta=0}=U_-|_{\delta=0}=2\pi
+ \label{eq:assembly-residue}
+\end{equation}
+for every allowed $p,q,e$, including $e=0$.
+
+\begin{theorem}[Uniform assembled remainder]
+On compact real-offset sets, with fixed $\nu>0$, for any
+$0<\epsilon<1/4$,
+\begin{align}
+ S(\Lambda+q_1,\ldots,\Lambda+q_4,\nu,\nu)
+ &=S_\Lambda^0+O(\Lambda^{-2+\epsilon}),\notag\\
+ S_\Lambda^0&=\frac{1}{\pi^3\Lambda}
+   [\Lambda^\delta\Gamma(\delta)U_+
+       +\Lambda^{-\delta}\Gamma(-\delta)U_-].
+ \label{eq:assembled-asymptotic}
+\end{align}
+The bracket has its removable value at $\delta=0$; the estimate includes
+both opposite-label coincidence surfaces and their intersection.
+\label{thm:assembled-remainder}
+\end{theorem}
+\begin{proof}
+First stay away from $e=0$ and $\delta=0$. Multiplying the endpoint
+expansion of Proposition~\ref{prop:endpoint} by
+\eqref{eq:assembly-prefactors}, and using the exact cancellation above,
+gives the displayed remainder. To pass through the apparent poles,
+we require estimates in a small complex tube, not just continuity on
+the real labels.
+
+The Euler/Fourier proof extends to such tubes: the real parts of
+$A_0,C_0,\alpha,\beta,b,d,g-d$ remain positive, the balanced identity
+$\alpha+\beta+\delta=1$ remains exact, and the triple-corner integrability
+is unchanged under sufficiently small perturbations. On compact subsets
+of this tube separated from $\delta=0$, that proof gives a remainder
+$O(\Lambda^{-1+\eta})$ when $|\Re\delta|\le\eta$.
+The prefactors have size $O(\Lambda^{-1+\eta})$ off $e=0$, while their
+relative gamma-ratio error is $O(\Lambda^{-1})$. Thus the combined
+remainder is $O(\Lambda^{-2+2\eta})$ there. Choose $2\eta<\epsilon$.
+
+The exact $S$ is holomorphic in a mass-independent small tube about any
+compact real-offset set, by its real triple integral KL (B.10)--(B.14).
+For completeness, use signed logarithmic coordinates for its three
+integration variables. The real-label envelope is an exponential
+decay times the four hyperplane singularities
+$|u|^{-1/2}$, $|v|^{-1/2}$, $|w|^{-1/2}$, $|u+v+w|^{-1/2}$.
+A small imaginary perturbation of the labels weakens the exponential
+rate and changes each singular exponent by at most $C\eta$.
+Choose the tube so that each exponent is below one and their sum at
+the common origin is below three, while the exponential rate stays
+positive. The same envelope with these margins dominates parameter
+derivatives, proving holomorphy. The large real mass appears only in
+oscillatory phases and does not shrink this tube.
+
+The explicit $U_\pm$ are holomorphic throughout the tube: their $c$
+arguments remain near real part $1/2$. Equation~\eqref{eq:assembly-residue}
+removes the $\delta$ pole, and there is no $e$ denominator. Hence
+$S-S_\Lambda^0$ is holomorphic in $e$ and $\delta$ across the relevant
+surfaces. Apply the maximum-modulus principle on small disks in these
+variables, using a product of circles near their intersection. The
+boundary estimates just obtained transfer to the interiors. Compact
+covering gives the asserted real-parameter estimate. In this chart
+only $e=0$ is an apparent prefactor pole; the other opposite-label
+surface introduces none, so is already included.
+\end{proof}
+
+For numerical evaluation at $\delta=0$, define
+$\ell(z)=\partial_z\log c(z)
+=-[\psi((1-z)/2)+\psi(z/2)]/2$. Then
+\begin{equation}
+ S_\Lambda^0\big|_{\delta=0}
+ =\frac{4}{\pi^2\Lambda}
+ \left[\log(\Lambda/2)-\gamma_E
+ +\frac12\sum_{z=p,q}\{\ell(z+e/2)+\ell(z-e/2)\}\right].
+ \label{eq:assembly-zero-value}
+\end{equation}
+No coincident-label perturbation is needed in this formula.
+
+\subsection{The local distribution and exact-energy variables}
+Write $\chi=q_1-q_2+q_3-q_4$, so $\delta=i\chi$.
+Equation~\eqref{eq:assembly-residue} isolates the singular part of
+$\Lambda S_\Lambda^0$ as
+\begin{equation}
+ \frac{4}{\pi^2}\frac{\sin(\chi\log\Lambda)}{\chi}.
+ \label{eq:assembly-sinc}
+\end{equation}
+After subtracting this expression, the two remaining amplitudes are
+smooth through $\chi=0$ and multiply $e^{\pm i\chi\log\Lambda}$.
+Their pairing with a compact smooth test tends to zero by integration
+by parts. The sinc distribution therefore proves
+\begin{equation}
+ \Lambda S\longrightarrow\frac4\pi\delta(\chi)
+ \quad\hbox{in distributions on the four offsets}.
+ \label{eq:raw-S-delta}
+\end{equation}
+This also shows $\Lambda S=O(1+\log\Lambda)$ pointwise on compact real
+offset sets, a useful bound when changing coordinates.
+
+Return to the ordering $(a,b,c,d)$ used in our conditional kernel and
+write $\mathcal C_\nu=F_\Lambda S$. Directly from A.14 and
+Section~\ref{sec:fourpoint},
+\begin{equation}
+ F_\Lambda=
+ \frac{abc\sinh(\pi a)\tanh(\pi b)\sinh(\pi c)\cosh^2(\pi d)}
+ {1024\pi^9}\,\Gamma_{16}(a,b,c,d).
+ \label{eq:assembly-external-F}
+\end{equation}
+Here $\Gamma_{16}$ is exactly the sixteen-gamma product of A.14.
+Its eight large arguments give
+$16\pi^4\Lambda^{-2}e^{-\pi(a+b+c+d)}[1+O(\Lambda^{-1})]$;
+the remaining eight factors, denoted $\Gamma_{\rm diff}$, depend only
+on adjacent label differences. Consequently
+\begin{equation}
+ \frac{F_\Lambda}{\Lambda}
+ \longrightarrow\frac{e^{\pi(d-b)}}{1024\pi^5}\Gamma_{\rm diff}
+ \label{eq:assembly-F-limit}
+\end{equation}
+smoothly on compact offsets, with an $O(\Lambda^{-1})$ remainder in
+every fixed derivative order. The phases $\Lambda^{i\eta\nu}$ of the
+four large gamma pairs cancel because $\sum\eta=0$.
+
+On $a=d+x$, $c=d+z$, $b=d+x+z$, multiplication of
+\eqref{eq:raw-S-delta} by \eqref{eq:assembly-F-limit} gives
+\begin{equation}
+ \frac{e^{-\pi(x+z)}}{256\pi^6}
+ \prod_{u=x,z}\left|
+ \Gamma\left(\tfrac14+\tfrac i2(\nu+u)\right)
+ \Gamma\left(\tfrac14+\tfrac i2(\nu-u)\right)\right|^2
+ =v_\nu(x)v_\nu(z).
+ \label{eq:assembly-delta-weight}
+\end{equation}
+The two orderings of $\chi$ differ by a sign only, leaving the delta
+measure unchanged.
+
+Finally, the exact-energy change $s(M+\xi)-M=\xi+O(M^{-1})$ is a
+smooth diffeomorphism close to the identity on every compact set.
+In a four-variable test pairing, its Jacobian cancels the three internal
+factors in \eqref{eq:translated-cross-density}, leaving only the inverse
+external Jacobian, which tends smoothly to one. The transformed test
+differs by $O(M^{-1})$ in every fixed smooth seminorm. The compact
+$O(1+\log M)$ bound just proved makes this difference vanish even
+against the moving kernel. Thus we obtain the formerly conditional step:
+\begin{theorem}[Compact limit and finite-packet consequence]
+For the model and normalizations of Sections~\ref{sec:fourpoint} and
+\ref{sec:crosslimit}, equation~\eqref{eq:local-racah-hypothesis} holds.
+Proposition~\ref{prop:conditional-cross-limit} therefore applies without
+its extra hypothesis: both threshold protocols have their stated
+fixed-time limits, uniformly on compact sets of real times, for every
+fixed probability density $\pi_0\in L^1(\mathbb R_+)$.
+\label{thm:fixed-time-crossed}
+\end{theorem}
+The moving-threshold commutator limit is the positive static term
+\eqref{eq:comparison-boundary-floor}: the ordered norms converge by
+the one-step gamma-ratio limit and the same Gaussian domination.
+For a fixed threshold the repeated-time commutator limit is zero.
+These statements retain the fixed Gaussian width and strict $G_N\to0$.
+They do not determine the scrambling-time remainder, a Lyapunov exponent,
+or a finite-$G_N$ holographic dual.

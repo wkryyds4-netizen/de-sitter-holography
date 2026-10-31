@@ -1,0 +1,381 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,microtype,booktabs}
+\usepackage[margin=25mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newtheorem{proposition}{Proposition}
+\newcommand{\E}{\mathcal E}
+\newcommand{\dd}{\mathop{}\!\mathrm d}
+\newcommand{\B}{\mathfrak B}
+\title{Chiral pairing in the pure-recoil graph\\and the limits of a single-action inverse transform}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Working research note --- 31 October 2026}
+\begin{document}\maketitle
+\begin{abstract}
+We combine the previously controlled internal Barnes graph with
+the analytically continued vertex factors and its opposite chiral
+partner. Equal probe masses make the internal integral even in the
+energy transfer. On a specified imaginary-energy slice this implies
+an internal modulus square, but not a new modulus square for every
+factor. The complete pure-recoil topology graph retains both Bessel
+exponents. A finite energy window already obstructs identifying its
+unweighted imaginary-axis transform with the transform of a single
+reduced geometric action. This is a self-reviewed model calculation;
+the physical external kernel and its normalization remain unspecified.
+\end{abstract}
+
+\section{Source-level distinctions and the external interface}
+We use the fixed-mass \(\kappa\to\infty\) limit of the CLP
+tetrahedron-complement proposal \cite{clp}, then take large masses.
+The radius is one. No finite-\(G\) dynamical four-point function is
+identified here.
+Complex masses refer to continuation of the already obtained recoil-limit
+graph; no interchange with a growing-mass finite-\(\kappa\) limit is asserted.
+CLP (3.35)--(3.37) distinguish the physical two-point insertion
+from the complement partition function. Their normalization
+matches a fixed-angle, fixed-probe heavy-heavy-light limit.
+It does not specify a full four-point insertion rule or a uniform
+limit as the angle approaches \(2\pi\).
+
+CSTY (2.1)--(2.3) \cite{csty} distinguish an energy-domain kernel
+from a mixed representation at fixed average observer mass.
+With
+\[
+ m_{1,3}=M+\omega/2\pm u,\qquad m_{2,4}=M-\omega/2\pm v,
+\]
+the absolute Jacobian is four. The antipodal angles in (2.73) give
+\(\sum_i(\theta_i-\theta_{i-1})m_i=2\pi M-2it\omega\), hence
+\[
+ \mathcal F(t|M)=\frac4{Z_{\rm sphere}(M)}
+ \int \dd\omega\,e^{-2it\omega}\int_{\mathcal D_\omega}\dd u\,\dd v\,
+       \boldsymbol{\mathcal F}(m_i).                              \tag{1}
+\]
+The physical kernel, spectral domain and transported cycles are
+additional inputs; the complement graph does not determine them alone.
+The inverse Laplace contours for lengths \(\beta,\beta_i\)
+do not themselves prescribe imaginary contours for the masses.
+
+CLP (3.81), including footnote 12, specifies an inverse transform
+of a \emph{reduced semiclassical action}. Identifying it with the full
+finite-\(\kappa\) amplitude needs further contour information.
+The two time contours in CSTY (2.82)--(2.83) are yet another
+operation. These distinctions are part of the original papers.
+
+\newpage
+\section{Schwarz pairing and the complete topology ratio}
+For a germ continued from real masses, define
+\(f^\sharp(z)=\overline{f(\bar z)}\).
+The two chiral factors combine as \(A_+(m)A_+^\sharp(m)\).
+A fresh \(|A_+(m)|^2\) at complex \(m\) is generally incorrect.
+Branches and integration contours are transported together.
+
+For equal probes, the four numerator mass parameters in the internal
+Barnes representation are
+\(a_j=M+\nu/2+(\pm u\pm v)/2\).
+The three right parameters are \(M+\nu\pm\omega/2,2M\).
+The first set is independent of \(\omega\); the latter is invariant
+under its sign reversal. On a common continued domain,
+\[
+ \B_+(\omega,u,v)=\B_+(-\omega,u,v).
+\]
+The same parameter symmetry holds in the original internal
+double-sine expression; the numerical checks here concern its
+pure-recoil limit only.
+For real \(M,\nu,u,v\) and \(\omega=i\alpha\), it follows that
+\[
+ \B_+(i\alpha,u,v)\B_+^\sharp(i\alpha,u,v)
+       =|\B_+(i\alpha,u,v)|^2.                                    \tag{2}
+\]
+This is a consequence of Schwarz pairing and evenness,
+not a general rule for complex external labels.
+
+The previously derived combined vertex \(T\), continued from positive
+real masses, gives
+\begin{align*}
+ \mathcal V(\omega,u,v)
+ &=\frac{\prod_iT(m_i,m_{i+1},\nu)}{T(M,M,\nu)^4}
+   =P\exp\!\left(\Delta\sum_i\log\E_i\right),\\
+ P&=\frac{[(M+\omega/2)^2-u^2][(M-\omega/2)^2-v^2]}{M^4}.
+\end{align*}
+Here \(\E_i\) is the exact hyperbolic correction written with
+\(\log(1+e^{-\pi\ell})\) and \(\log(1-e^{-2\pi m})\), on a strict
+positive-real-part triangle-gap domain.
+We define the normalized \emph{topology graph}
+\[
+ \widehat Z(\omega,u,v)=\mathcal V(\omega,u,v)
+ \frac{\B_+(\omega,u,v)\B_+^\sharp(\omega,u,v)}
+ {|\B_+(0,0,0)|^2}.                                               \tag{3}
+\]
+Only mass-independent recoil normalization constants cancel here.
+This is not normalization by a disconnected physical four-point function.
+No vertex is counted twice: \(\B\) is the internal integral.
+
+Writing \(\B=C(u,v)I_{u,v}(\alpha)\), (2) gives
+\[
+ \widehat Z(i\alpha,u,v)=\mathcal V(i\alpha,u,v)
+ \left|\frac{C(u,v)I_{u,v}(\alpha)}{C(0,0)I_{0,0}(0)}\right|^2 .
+\]
+In general \(\mathcal V(i\alpha,u,v)\) is complex.
+For \(M=20,\nu=5,u=0.6,v=1.1,\omega=1.3i\), its value is
+\(0.998156494-0.000138120i\).
+Taking a fresh modulus square of the continued chiral vertex instead
+gives \(1.000916755\).
+The correct expression was checked independently against
+the Gamma representation of both chiral vertices.
+
+\newpage
+\section{Two exponents on the symmetric imaginary axis}
+Set \(u=v=0\), \(K=\nu^2/(2M)\), \(\rho=K^3/\nu^2\), and \(\alpha=Ky\).
+Take \(K\to\infty,\rho\to0\), with bounded \(y\ge0\).
+The vertex ratio is positive and tends to one; \(C(0,0)\) is independent
+of \(\alpha\). Thus
+\[
+ \widehat Z(i\alpha,0,0)=\mathcal V(i\alpha,0,0)|I(\alpha)/I(0)|^2 .
+\]
+The previous joint estimate reads \(I=e^{iS/\nu}J+e\), \(|e|\le\delta\E\),
+with \(\delta=O(\rho+e^{-cK})\).
+It gives the precise squared-error inequality
+\[
+ \big||I|^2-|J|^2\big|\le2\delta\E|J|+\delta^2\E^2.                 \tag{4}
+\]
+At a zero of \(J\) the bound is \(O(\delta^2\E^2)\); it must not
+be divided by \(J\).
+Since \(|J(K,0)|\ge\E(K,0)/\sqrt2\), the reference denominator
+remains controlled.
+
+Let \(A_K=KK_\alpha(K)\), \(A_I=KI_\alpha(K)\).
+The exact Bessel pair is
+\[
+ |J|^2=A_K^2+\pi^2A_I^2+
+                   2\pi\sin(\pi\alpha)A_KA_I.                    \tag{5}
+\]
+For \(F(y)=\sqrt{1+y^2}-y\operatorname{arsinh}y\),
+standard Bessel expansions \cite{dlmf} and (4) imply the
+envelope-absolute formula
+\begin{align*}
+ \widehat Z(iKy,0,0)
+ &=\frac{e^{-2K}}{\sqrt{1+y^2}}
+   \left[e^{2KF(y)}+e^{-2KF(y)}+2\sin(\pi Ky)\right]\\
+ &\quad+O_Y\!\left((\rho+K^{-1})e^{-2K}
+                         [e^{KF(y)}+e^{-KF(y)}]^2\right).          \tag{6}
+\end{align*}
+Near cancellation, use (4)--(5) rather than a relative Debye expansion.
+For fixed \(y\ne y_c\), where \(F(y_c)=0\),
+\[
+ \frac{1}{2K}\log\widehat Z(iKy,0,0)\longrightarrow |F(y)|-1 .
+                                                                    \tag{7}
+\]
+In contrast, the reduced geometric action is
+\(W(iKy)=2K[F(y)-1]\).
+It corresponds to the first exponential in (6).
+For \(y>y_c\), the second exponential dominates; their ratio grows
+as \(e^{-4KF(y)}\), not as a mere prefactor.
+
+Numerically \(y_c=1.50887956154\).
+The reduced saddle \(y_*=\sinh t\) crosses it at
+\(t_c=1.19967864026\).
+This is an auxiliary branch-comparison scale, not a physical critical
+time or a proof of validity below \(t_c\).
+The complete graph divided by
+\(e^{2K[F(y)-1]}/\sqrt{1+y^2}\) gives:
+\begin{center}
+\begin{tabular}{rrr}
+\toprule
+\(K\)&\(y=1\)&\(y=2\)\\
+\midrule
+8&0.976384&\(1.04233\times10^9\)\\
+16&0.990311&\(1.20309\times10^{18}\)\\
+32&0.996309&\(1.53988\times10^{36}\)\\
+64&0.998893&\(2.46605\times10^{72}\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\newpage
+\section{A finite-window obstruction to direct substitution}
+No unbounded-energy extrapolation is needed for the following statement.
+Fix \(y_c<a<b\) and \(t\ge0\).
+Use the \emph{complete} pure-recoil graph in
+\[
+ \mathcal W_{a,b}(t)=\int_a^b\dd y\,e^{2Kty}\widehat Z(iKy,0,0).
+\]
+On this compact window, the second branch dominates uniformly.
+Define
+\[
+ H_t(y)=2[-F(y)-1+ty],\qquad
+ H'_t(y)=2[\operatorname{arsinh}y+t]>0 .
+\]
+The relative graph error is \(O(\rho)\) on the window.
+The ordinary endpoint Laplace estimate therefore gives:
+\begin{proposition}
+In the joint regime above,
+\[
+ \mathcal W_{a,b}(t)=
+ \frac{e^{KH_t(b)}}{2K(\operatorname{arsinh}b+t)\sqrt{1+b^2}}
+ \left[1+O_{a,b,t}(\rho+K^{-1})\right].                            \tag{8}
+\]
+\end{proposition}
+The measure is \(\dd y\). Replacing it by \(\dd\alpha\) multiplies
+the answer by \(K\).
+For \(a=2.5,b=3\),
+\[
+ H_0(3)=2.58612343506,\qquad H_1(3)=8.58612343506.
+\]
+These exceed the reduced-action full-axis saddle rate
+\(2(\cosh t-1)\), respectively zero and approximately \(1.08616\).
+Consequently the unweighted complete topology graph on this same
+positive imaginary-axis prescription cannot simply inherit the
+single-action result.
+This does not prove divergence of the finite-mass exact graph integral,
+nor identify a physical external correlator.
+
+A separate, simpler fact concerns only the auxiliary Bessel model
+\(P_K(\alpha)=|J(K,\alpha)/J(K,0)|^2\).
+At fixed \(K>0\), large positive order gives
+\[
+ K_\alpha(K)\sim\tfrac12\Gamma(\alpha)(K/2)^{-\alpha},\qquad
+ I_\alpha(K)\sim(K/2)^\alpha/\Gamma(\alpha+1).
+\]
+Thus \(\int_{\mathbb R}\dd\alpha\,e^{2t\alpha}P_K(\alpha)\)
+diverges for every real \(t\).
+The bounded-\(\alpha/K\) joint estimate cannot be used to transfer
+this statement to the finite-\(\nu\) exact graph.
+It does prohibit integrating the complete auxiliary two-branch formula
+to infinity as a substitute for that graph.
+
+We directly integrated the auxiliary pair on \([2.5,3]\).
+Its integral divided by the endpoint leading expression in (8) is:
+\begin{center}
+\begin{tabular}{rrr}
+\toprule
+\(K\)&\(t=0\)&\(t=1\)\\
+\midrule
+8&0.988159&0.980810\\
+16&0.994575&0.990951\\
+32&0.997395&0.995596\\
+\bottomrule
+\end{tabular}
+\end{center}
+The exact-graph statement (8) follows from uniform analysis;
+this table is not a new exact Barnes multidimensional quadrature.
+
+\newpage
+\section{Transverse consequence and physical calibration}
+The previous transverse result used real \(u,v\) with
+\(|u|+|v|\le\theta\nu\), fixed \(\theta<1\).
+For fixed \(y>y_c\), define
+\[
+ q=\frac{k}{K}
+ =\sqrt{[1-(u+v)^2/\nu^2][1-(u-v)^2/\nu^2]},\quad
+ \phi_y(q)=\sqrt{q^2+y^2}-y\operatorname{arsinh}(y/q),
+\]
+and \(\Delta=\phi_y(1)-\phi_y(q)>0\) for nonzero transverse ratios.
+The analytic vertex ratio tends to one in the joint regime.
+Schwarz pairing doubles the internal growth exponent:
+\[
+ \left|\frac{\widehat Z(iKy,u,v)}{\widehat Z(iKy,0,0)}\right|
+ =\left(\frac{1+y^2}{q^2+y^2}\right)^{1/2}e^{2K\Delta}
+       [1+O_{\theta,y}(\rho+K^{-1})].                             \tag{9}
+\]
+For \(y=2,u=0.3\nu,v=0.2\nu\), \(2\Delta=0.65667292183\).
+The computed complete graph ratios have magnitudes
+approximately \(192.703\), \(37040.448\), and \(1.359471\times10^9\)
+at \(K=8,16,32\).
+Their complex values are preserved: the last has imaginary part
+approximately \(8.10344\), which is small relatively but is not zero.
+Equation (9) is not physical time growth.
+
+\subsection*{What is now determined}
+The two chiral factors of the specified topology graph can be paired
+without discarding a branch. The exact vertex continuation is available
+in the recoil limit, and the joint estimates control its internal
+energy slices. These results strengthen the earlier conclusion that
+a central real transverse Gaussian cannot describe the entire graph.
+
+\subsection*{What is still missing}
+The physical insertion legs, observer spectral weights and disconnected
+normalization must convert a complement amplitude into the
+energy-domain kernel in (1).
+The trace interpretation itself is part of the physics under
+investigation. No physical state, algebra, positivity theorem or
+finite-\(G\) microscopic model is newly established by (2)--(9).
+The original papers' contour qualifications remain applicable.
+
+The next concrete calibration is analytic pole structure.
+Starting from the original Barnes integral, locate its
+energy-transfer pinch poles and check what happens when the four
+combined vertices and the opposite chirality are included.
+Compare the result with the direct \(C_0\) factor in the known physical
+two-point prescription and with the disconnected limit.
+This can test whether a proposed external-leg conversion is necessary,
+without assuming that the complement amplitude already is a physical
+four-point kernel.
+
+If a sewing or insertion rule is proposed, list the extra spectral
+measure and inner-product assumptions explicitly. Verify the
+two-point calibration and a factorization limit before using that
+rule to choose an external energy cycle. Rotating \(u,v\) merely to
+make a growing branch decay would not supply this missing derivation.
+
+\newpage
+\section{Evidence and reproducibility}
+The final program records 37 checks:
+two symbolic external-variable identities; six original Barnes-kernel
+evenness checks; six Gamma-vertex or Schwarz identities;
+four noninteger-order Bessel interference identities;
+twelve paired-vertex precision comparisons; one crossover equation;
+and six window-quadrature refinements.
+The general algebra uses 90 digits, with vertex checks at 110 digits.
+The window computation uses orders 20 and 32 at 55 and 75 digits.
+
+Twelve symmetric and three transverse graph ratios reuse previously
+frozen complex branch evaluations. This is new composition with the
+analytic vertex factors, not a claim to have repeated exact full
+quadrature at all those points.
+At an earlier auxiliary cancellation sample,
+the recorded paired internal magnitude is
+\[
+ |I|^2/\E^2\simeq9.24402\times10^{-5}.
+\]
+No division by a vanishing leading term is used.
+
+The first 37-check run failed four window refinement checks.
+A single quadrature panel did not resolve the sharp endpoint
+well enough: the largest relative change was
+\(3.05825\times10^{-7}\), above the \(10^{-20}\) criterion.
+The initial code and JSON are retained.
+Subdividing to maximum panel width \(0.1\), without relaxing the
+criterion, gives a maximum relative change \(1.25050\times10^{-24}\).
+These are empirical diagnostics, not interval certificates.
+
+The complete-graph window proposition is a consequence of the earlier
+uniform internal theorem, the explicit vertex formula, and endpoint
+Laplace analysis. The auxiliary whole-axis divergence uses a distinct
+fixed-\(K\), large-order limit. These two claims should not be conflated.
+
+\small
+Project-relative records:
+\begin{quote}\footnotesize
+code/recoil\_pairing.py\\
+results/stage4/recoil-pairing/diagnostics.json\\
+results/stage4/recoil-pairing/initial-window-grid.json\\
+results/stage4/recoil-pairing/initial-window-grid.py\\
+notes/stage4-recoil-pairing.md\\
+literature/stage4-recoil-pairing-sources.md
+\end{quote}
+\begin{thebibliography}{9}
+\bibitem{clp} J. Chandra, D. Liska and B. Post,
+\emph{3D de Sitter from complex Virasoro TQFT: Observers and knots},
+\href{https://arxiv.org/abs/2610.30247v1}{arXiv:2610.30247v1}.
+See (3.35)--(3.37), (3.43)--(3.46), (3.77)--(3.84), and footnote 12.
+\bibitem{csty} Y. Chen, D. Stanford, H. Tang and Z. Yang,
+\emph{Negative shocks versus static patch holography},
+\href{https://arxiv.org/abs/2607.14042v1}{arXiv:2607.14042v1}.
+See Section 2.1, (2.73), (2.82)--(2.83), footnote 19,
+and the external-contour discussion in Section 2.6.
+\bibitem{dlmf} NIST DLMF,
+\href{https://dlmf.nist.gov/10.40}{Section 10.40},
+\href{https://dlmf.nist.gov/10.41}{Section 10.41}.
+The standard Bessel asymptotics are not new results.
+\end{thebibliography}
+\end{document}

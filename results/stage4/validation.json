@@ -1,0 +1,454 @@
+{
+  "status": "passed",
+  "checks": 84,
+  "failed": 0,
+  "check_details": [
+    {
+      "name": "rational kernel (0.2 + 0.1j)",
+      "passed": true,
+      "error": "9.40395480657830006374989229778e-38",
+      "tolerance": "1e-25"
+    },
+    {
+      "name": "rational kernel (-0.2 + 0.05j)",
+      "passed": true,
+      "error": "1.68223057638759723467788406257e-36",
+      "tolerance": "1e-25"
+    },
+    {
+      "name": "rational kernel (-0.7 - 0.1j)",
+      "passed": true,
+      "error": "1.68223057638759723467788406257e-36",
+      "tolerance": "1e-25"
+    },
+    {
+      "name": "rational kernel (2.0 + 0.3j)",
+      "passed": true,
+      "error": "2.35098870164457501593747307444e-38",
+      "tolerance": "1e-25"
+    },
+    {
+      "name": "subtracted PV kernel -0.1",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-25"
+    },
+    {
+      "name": "kernel cut side -0.1,-1",
+      "passed": true,
+      "error": "1.83680931440570846001220566284e-10",
+      "tolerance": "1e-7"
+    },
+    {
+      "name": "kernel cut side -0.1,1",
+      "passed": true,
+      "error": "1.83680931440570846001220566284e-10",
+      "tolerance": "1e-7"
+    },
+    {
+      "name": "subtracted PV kernel -0.5",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-25"
+    },
+    {
+      "name": "kernel cut side -0.5,-1",
+      "passed": true,
+      "error": "2.1516496170046783010266715144e-10",
+      "tolerance": "1e-7"
+    },
+    {
+      "name": "kernel cut side -0.5,1",
+      "passed": true,
+      "error": "2.1516496170046783010266715144e-10",
+      "tolerance": "1e-7"
+    },
+    {
+      "name": "subtracted PV kernel -2",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-25"
+    },
+    {
+      "name": "kernel cut side -2,-1",
+      "passed": true,
+      "error": "3.70993536373626401445676427858e-11",
+      "tolerance": "1e-7"
+    },
+    {
+      "name": "kernel cut side -2,1",
+      "passed": true,
+      "error": "3.70993536373626401445676427858e-11",
+      "tolerance": "1e-7"
+    },
+    {
+      "name": "zero-scattering kernel",
+      "passed": true
+    },
+    {
+      "name": "empty-dS normalization",
+      "passed": true
+    },
+    {
+      "name": "angular moment 1,deficit=0",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-30"
+    },
+    {
+      "name": "angular moment 2,deficit=0",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-30"
+    },
+    {
+      "name": "angular moment 1,deficit=0.001",
+      "passed": true,
+      "error": "7.17464813734306340312949546644e-43",
+      "tolerance": "1e-30"
+    },
+    {
+      "name": "angular moment 2,deficit=0.001",
+      "passed": true,
+      "error": "1.79366203433576585078237386661e-43",
+      "tolerance": "1e-30"
+    },
+    {
+      "name": "angular moment 1,deficit=0.05",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-30"
+    },
+    {
+      "name": "angular moment 2,deficit=0.05",
+      "passed": true,
+      "error": "3.58732406867153170156474773322e-43",
+      "tolerance": "1e-30"
+    },
+    {
+      "name": "angular moment 1,deficit=0.25",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-30"
+    },
+    {
+      "name": "angular moment 2,deficit=0.25",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-30"
+    },
+    {
+      "name": "angular moment 1,deficit=0.6",
+      "passed": true,
+      "error": "7.34683969263929692480460335764e-40",
+      "tolerance": "1e-30"
+    },
+    {
+      "name": "angular moment 2,deficit=0.6",
+      "passed": true,
+      "error": "7.17464813734306340312949546644e-43",
+      "tolerance": "1e-30"
+    },
+    {
+      "name": "conjugate contours deficit=0,u=-4",
+      "passed": true
+    },
+    {
+      "name": "residue imaginary integral deficit=0,u=-4",
+      "passed": true,
+      "error": "8.33119029347266991787404058909e-191",
+      "tolerance": "1e-25"
+    },
+    {
+      "name": "conjugate contours deficit=0,u=-3",
+      "passed": true
+    },
+    {
+      "name": "residue imaginary integral deficit=0,u=-3",
+      "passed": true,
+      "error": "1.7564282554861604354064064308e-71",
+      "tolerance": "1e-25"
+    },
+    {
+      "name": "conjugate contours deficit=0,u=-2",
+      "passed": true
+    },
+    {
+      "name": "residue imaginary integral deficit=0,u=-2",
+      "passed": true,
+      "error": "4.22648163919600110851665421245e-42",
+      "tolerance": "1e-25"
+    },
+    {
+      "name": "conjugate contours deficit=0,u=-1",
+      "passed": true
+    },
+    {
+      "name": "residue imaginary integral deficit=0,u=-1",
+      "passed": true,
+      "error": "2.24207754291970731347796733326e-44",
+      "tolerance": "1e-25"
+    },
+    {
+      "name": "conjugate contours deficit=0,u=0",
+      "passed": true
+    },
+    {
+      "name": "residue imaginary integral deficit=0,u=0",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-25"
+    },
+    {
+      "name": "conjugate contours deficit=0,u=1",
+      "passed": true
+    },
+    {
+      "name": "residue imaginary integral deficit=0,u=1",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-25"
+    },
+    {
+      "name": "conjugate contours deficit=0,u=2",
+      "passed": true
+    },
+    {
+      "name": "residue imaginary integral deficit=0,u=2",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-25"
+    },
+    {
+      "name": "conjugate contours deficit=0.05,u=-4",
+      "passed": true
+    },
+    {
+      "name": "residue imaginary integral deficit=0.05,u=-4",
+      "passed": true,
+      "error": "5.24571422964268756906775784929e-190",
+      "tolerance": "1e-25"
+    },
+    {
+      "name": "conjugate contours deficit=0.05,u=-3",
+      "passed": true
+    },
+    {
+      "name": "residue imaginary integral deficit=0.05,u=-3",
+      "passed": true,
+      "error": "3.53705619810174398502363698432e-71",
+      "tolerance": "1e-25"
+    },
+    {
+      "name": "conjugate contours deficit=0.05,u=-2",
+      "passed": true
+    },
+    {
+      "name": "residue imaginary integral deficit=0.05,u=-2",
+      "passed": true,
+      "error": "7.37043147239028064768531414861e-42",
+      "tolerance": "1e-25"
+    },
+    {
+      "name": "conjugate contours deficit=0.05,u=-1",
+      "passed": true
+    },
+    {
+      "name": "residue imaginary integral deficit=0.05,u=-1",
+      "passed": true,
+      "error": "2.52233723578467072766271324992e-44",
+      "tolerance": "1e-25"
+    },
+    {
+      "name": "conjugate contours deficit=0.05,u=0",
+      "passed": true
+    },
+    {
+      "name": "residue imaginary integral deficit=0.05,u=0",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-25"
+    },
+    {
+      "name": "conjugate contours deficit=0.05,u=1",
+      "passed": true
+    },
+    {
+      "name": "residue imaginary integral deficit=0.05,u=1",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-25"
+    },
+    {
+      "name": "conjugate contours deficit=0.05,u=2",
+      "passed": true
+    },
+    {
+      "name": "residue imaginary integral deficit=0.05,u=2",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-25"
+    },
+    {
+      "name": "conjugate contours deficit=0.25,u=-4",
+      "passed": true
+    },
+    {
+      "name": "residue imaginary integral deficit=0.25,u=-4",
+      "passed": true,
+      "error": "7.4260123376670963611135635338e-172",
+      "tolerance": "1e-25"
+    },
+    {
+      "name": "conjugate contours deficit=0.25,u=-3",
+      "passed": true
+    },
+    {
+      "name": "residue imaginary integral deficit=0.25,u=-3",
+      "passed": true,
+      "error": "1.44381582887046592419821630583e-64",
+      "tolerance": "1e-25"
+    },
+    {
+      "name": "conjugate contours deficit=0.25,u=-2",
+      "passed": true
+    },
+    {
+      "name": "residue imaginary integral deficit=0.25,u=-2",
+      "passed": true,
+      "error": "3.80428538466988042159022306305e-40",
+      "tolerance": "1e-25"
+    },
+    {
+      "name": "conjugate contours deficit=0.25,u=-1",
+      "passed": true
+    },
+    {
+      "name": "residue imaginary integral deficit=0.25,u=-1",
+      "passed": true,
+      "error": "2.01786978862773658213017059994e-43",
+      "tolerance": "1e-25"
+    },
+    {
+      "name": "conjugate contours deficit=0.25,u=0",
+      "passed": true
+    },
+    {
+      "name": "residue imaginary integral deficit=0.25,u=0",
+      "passed": true,
+      "error": "5.87747175411143753984368268611e-39",
+      "tolerance": "1e-25"
+    },
+    {
+      "name": "conjugate contours deficit=0.25,u=1",
+      "passed": true
+    },
+    {
+      "name": "residue imaginary integral deficit=0.25,u=1",
+      "passed": true,
+      "error": "1.88079096131566001274997845956e-37",
+      "tolerance": "1e-25"
+    },
+    {
+      "name": "conjugate contours deficit=0.25,u=2",
+      "passed": true
+    },
+    {
+      "name": "residue imaginary integral deficit=0.25,u=2",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-25"
+    },
+    {
+      "name": "regulated convergence u=0,contour=-1",
+      "passed": true
+    },
+    {
+      "name": "regulated convergence u=0,contour=1",
+      "passed": true
+    },
+    {
+      "name": "regulated convergence u=2,contour=-1",
+      "passed": true
+    },
+    {
+      "name": "regulated convergence u=2,contour=1",
+      "passed": true
+    },
+    {
+      "name": "precision increase u=0",
+      "passed": true,
+      "error": "2.72494199739205372524588454355e-31",
+      "tolerance": "1e-24"
+    },
+    {
+      "name": "cyclic exchange by time reversal u=0",
+      "passed": true
+    },
+    {
+      "name": "precision increase u=2",
+      "passed": true,
+      "error": "4.06749406089783641325974221195e-31",
+      "tolerance": "1e-24"
+    },
+    {
+      "name": "cyclic exchange by time reversal u=2",
+      "passed": true
+    },
+    {
+      "name": "small-enhancement second order t=0",
+      "passed": true,
+      "error": "8.03670336707468874722803693907e-12",
+      "tolerance": "6.4232661621053660492453538625140985e-11"
+    },
+    {
+      "name": "small-enhancement second order t=1",
+      "passed": true,
+      "error": "8.0993671431409843798323454802e-11",
+      "tolerance": "0.00000000064667272628993499974214854923036656"
+    },
+    {
+      "name": "small-enhancement second order t=2",
+      "passed": true,
+      "error": "0.00000000162733871591033782029025757245",
+      "tolerance": "0.000000012956732198729298150219351001725536"
+    },
+    {
+      "name": "fixed-m pure-recoil G limit",
+      "passed": true
+    },
+    {
+      "name": "G0 profile phi=0",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-30"
+    },
+    {
+      "name": "G0 profile phi=0.7",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-30"
+    },
+    {
+      "name": "G0 profile phi=1.8",
+      "passed": true,
+      "error": "3.67341984631964846240230167882e-40",
+      "tolerance": "1e-30"
+    },
+    {
+      "name": "G0 profile phi=3",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-30"
+    },
+    {
+      "name": "fixed-time no-scattering mass limit",
+      "passed": true
+    }
+  ],
+  "code_sha256": {
+    "conformal_shock.py": "4c71bb14118b901b8ec5c5fc898d0b0f6f6c56df9b8e2a604d6eba5d47c8991c",
+    "run_conformal_shock.py": "663d67f8b85944af20de84fbcaef41742aab87e7e50a2b8e0843329a06070bca"
+  },
+  "scope": "Two conformal probes, finite-G eikonal approximation; no finite-clock state or selected physical contour."
+}

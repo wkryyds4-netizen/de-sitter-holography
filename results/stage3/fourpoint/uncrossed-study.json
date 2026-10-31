@@ -1,0 +1,2316 @@
+{
+  "generated_utc": "2026-10-28T23:40:14.656196+00:00",
+  "code_sha256": {
+    "observer_fourpoint.py": "faad1c3f3f1b9ed7796fafa86d9ca4f50fb2848429b2bab26c23a2a558143837",
+    "run_observer_fourpoint.py": "38ad0df557ce46ba7baf9509e2999b89cbb4fc1d631f33be697bc5db5aba5cec",
+    "quantized_observer.py": "6851265b9daa9b02b2a96580d175be1d7153a13bc1e20ef9e891b8abe936583f"
+  },
+  "versions": {
+    "python": "3.14.5",
+    "numpy": "2.4.6",
+    "scipy": "1.18.0"
+  },
+  "source": "https://arxiv.org/html/2411.08090v1",
+  "source_equations": [
+    "5.13",
+    "6.10",
+    "6.23",
+    "6.24",
+    "6.25"
+  ],
+  "units": "L=1; sigma and four times proper time; p=2*pi*(m-m0)",
+  "limitations": [
+    "G->0, dS2, two independent same-mass real principal-series species",
+    "Not a same-species full four-point or the crossed ABAB OTOC",
+    "Gauss refinement and cutoff differences are empirical; no interval quadrature certification"
+  ],
+  "packet": {
+    "c1": 3,
+    "c2": 9,
+    "width": 1,
+    "mean_p": 6
+  },
+  "rows": [
+    {
+      "parameters": {
+        "m0": 0.5,
+        "nu": 0.5,
+        "sigma_proper": 0.25,
+        "projected": true,
+        "mass_lower": 0.0,
+        "mass_upper": 12.53090596088972,
+        "p_order": 48,
+        "mass_order": 28,
+        "tail_extra": 10,
+        "p_nodes": 96,
+        "mass_nodes": 364
+      },
+      "times_left_to_right": [
+        [
+          -2.0,
+          0.0,
+          -2.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          2.0,
+          0.0,
+          2.0,
+          0.0
+        ]
+      ],
+      "values": [
+        {
+          "AABB": {
+            "real": -0.00468484728058824,
+            "imag": 0.013891915365281244
+          },
+          "ABBA": {
+            "real": 0.011561815184477076,
+            "imag": 0.0011259663284761755
+          }
+        },
+        {
+          "AABB": {
+            "real": 0.015576516985978702,
+            "imag": 0.021828624119112926
+          },
+          "ABBA": {
+            "real": 0.019615933843921435,
+            "imag": 0.000535694578665376
+          }
+        },
+        {
+          "AABB": {
+            "real": 0.03244517271510487,
+            "imag": 0.0
+          },
+          "ABBA": {
+            "real": 0.0235502702425544,
+            "imag": 0.0
+          }
+        },
+        {
+          "AABB": {
+            "real": 0.015576516985978702,
+            "imag": -0.021828624119112926
+          },
+          "ABBA": {
+            "real": 0.019615933843921435,
+            "imag": -0.000535694578665376
+          }
+        },
+        {
+          "AABB": {
+            "real": -0.00468484728058824,
+            "imag": -0.013891915365281244
+          },
+          "ABBA": {
+            "real": 0.011561815184477076,
+            "imag": -0.0011259663284761755
+          }
+        }
+      ],
+      "zero": {
+        "C2": 0.17031986331807325,
+        "AABB": 0.03244517271510487,
+        "ABBA": 0.0235502702425544,
+        "C2_squared": 0.029008855840687155,
+        "adjacent_excess": 0.003436316874417717,
+        "variance_of_conditional_C2": 0.003436316874417652,
+        "nested_minus_adjacent": -0.008894902472550474,
+        "normalized_adjacent": 1.118457511502333,
+        "normalized_nested": 0.8118303724865746
+      },
+      "model": "two independent species of equal mass",
+      "scope": "each AABB/ABBA is a complete mixed-species moment; ABAB not computed here"
+    },
+    {
+      "parameters": {
+        "m0": 0.5,
+        "nu": 0.5,
+        "sigma_proper": 0.5,
+        "projected": true,
+        "mass_lower": 0.0,
+        "mass_upper": 12.53090596088972,
+        "p_order": 48,
+        "mass_order": 28,
+        "tail_extra": 10,
+        "p_nodes": 96,
+        "mass_nodes": 364
+      },
+      "times_left_to_right": [
+        [
+          -2.0,
+          0.0,
+          -2.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          2.0,
+          0.0,
+          2.0,
+          0.0
+        ]
+      ],
+      "values": [
+        {
+          "AABB": {
+            "real": -0.002441600207202438,
+            "imag": 0.013223675966043541
+          },
+          "ABBA": {
+            "real": 0.011045388769683029,
+            "imag": 0.0009425951775313658
+          }
+        },
+        {
+          "AABB": {
+            "real": 0.014912996374373296,
+            "imag": 0.018274551518761936
+          },
+          "ABBA": {
+            "real": 0.01805749298125402,
+            "imag": 0.0004632936961767467
+          }
+        },
+        {
+          "AABB": {
+            "real": 0.02822222254129937,
+            "imag": 0.0
+          },
+          "ABBA": {
+            "real": 0.021380144033200287,
+            "imag": 0.0
+          }
+        },
+        {
+          "AABB": {
+            "real": 0.014912996374373296,
+            "imag": -0.018274551518761936
+          },
+          "ABBA": {
+            "real": 0.01805749298125402,
+            "imag": -0.0004632936961767467
+          }
+        },
+        {
+          "AABB": {
+            "real": -0.002441600207202438,
+            "imag": -0.013223675966043541
+          },
+          "ABBA": {
+            "real": 0.011045388769683029,
+            "imag": -0.0009425951775313658
+          }
+        }
+      ],
+      "zero": {
+        "C2": 0.16028401669401715,
+        "AABB": 0.02822222254129937,
+        "ABBA": 0.021380144033200287,
+        "C2_squared": 0.02569096600756797,
+        "adjacent_excess": 0.002531256533731402,
+        "variance_of_conditional_C2": 0.00253125653373133,
+        "nested_minus_adjacent": -0.006842078508099085,
+        "normalized_adjacent": 1.098527106103591,
+        "normalized_nested": 0.83220475348814
+      },
+      "model": "two independent species of equal mass",
+      "scope": "each AABB/ABBA is a complete mixed-species moment; ABAB not computed here"
+    },
+    {
+      "parameters": {
+        "m0": 0.5,
+        "nu": 1.0,
+        "sigma_proper": 0.25,
+        "projected": true,
+        "mass_lower": 0.0,
+        "mass_upper": 13.03090596088972,
+        "p_order": 48,
+        "mass_order": 28,
+        "tail_extra": 10,
+        "p_nodes": 96,
+        "mass_nodes": 392
+      },
+      "times_left_to_right": [
+        [
+          -2.0,
+          0.0,
+          -2.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          2.0,
+          0.0,
+          2.0,
+          0.0
+        ]
+      ],
+      "values": [
+        {
+          "AABB": {
+            "real": -0.0027287764320768322,
+            "imag": -0.0013412510667736985
+          },
+          "ABBA": {
+            "real": 0.0004339714640585142,
+            "imag": 0.00013982023367651138
+          }
+        },
+        {
+          "AABB": {
+            "real": -0.0006717841529757157,
+            "imag": 0.004417182883284316
+          },
+          "ABBA": {
+            "real": 0.0011220912597274453,
+            "imag": 5.4080573710020745e-05
+          }
+        },
+        {
+          "AABB": {
+            "real": 0.005201914457914764,
+            "imag": 0.0
+          },
+          "ABBA": {
+            "real": 0.0015611068535464289,
+            "imag": 0.0
+          }
+        },
+        {
+          "AABB": {
+            "real": -0.0006717841529757157,
+            "imag": -0.004417182883284316
+          },
+          "ABBA": {
+            "real": 0.0011220912597274453,
+            "imag": -5.4080573710020745e-05
+          }
+        },
+        {
+          "AABB": {
+            "real": -0.0027287764320768322,
+            "imag": 0.0013412510667736985
+          },
+          "ABBA": {
+            "real": 0.0004339714640585142,
+            "imag": -0.00013982023367651138
+          }
+        }
+      ],
+      "zero": {
+        "C2": 0.05931899704747057,
+        "AABB": 0.005201914457914764,
+        "ABBA": 0.0015611068535464289,
+        "C2_squared": 0.0035187434107178217,
+        "adjacent_excess": 0.001683171047196942,
+        "variance_of_conditional_C2": 0.0016831710471969315,
+        "nested_minus_adjacent": -0.0036408076043683347,
+        "normalized_adjacent": 1.478344354996199,
+        "normalized_nested": 0.4436546435274074
+      },
+      "model": "two independent species of equal mass",
+      "scope": "each AABB/ABBA is a complete mixed-species moment; ABAB not computed here"
+    },
+    {
+      "parameters": {
+        "m0": 0.5,
+        "nu": 1.0,
+        "sigma_proper": 0.5,
+        "projected": true,
+        "mass_lower": 0.0,
+        "mass_upper": 13.03090596088972,
+        "p_order": 48,
+        "mass_order": 28,
+        "tail_extra": 10,
+        "p_nodes": 96,
+        "mass_nodes": 392
+      },
+      "times_left_to_right": [
+        [
+          -2.0,
+          0.0,
+          -2.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          2.0,
+          0.0,
+          2.0,
+          0.0
+        ]
+      ],
+      "values": [
+        {
+          "AABB": {
+            "real": -0.002022771431292629,
+            "imag": -0.000670954048278071
+          },
+          "ABBA": {
+            "real": 0.0004091175449424284,
+            "imag": 0.00011050789923994849
+          }
+        },
+        {
+          "AABB": {
+            "real": -0.00025073192624883953,
+            "imag": 0.0032302132672980726
+          },
+          "ABBA": {
+            "real": 0.0009827907030367394,
+            "imag": 4.8496656411070455e-05
+          }
+        },
+        {
+          "AABB": {
+            "real": 0.003808931794624767,
+            "imag": 0.0
+          },
+          "ABBA": {
+            "real": 0.001326275289268169,
+            "imag": 0.0
+          }
+        },
+        {
+          "AABB": {
+            "real": -0.00025073192624883953,
+            "imag": -0.0032302132672980726
+          },
+          "ABBA": {
+            "real": 0.0009827907030367394,
+            "imag": -4.8496656411070455e-05
+          }
+        },
+        {
+          "AABB": {
+            "real": -0.002022771431292629,
+            "imag": 0.000670954048278071
+          },
+          "ABBA": {
+            "real": 0.0004091175449424284,
+            "imag": -0.00011050789923994849
+          }
+        }
+      ],
+      "zero": {
+        "C2": 0.0516806132545604,
+        "AABB": 0.003808931794624767,
+        "ABBA": 0.001326275289268169,
+        "C2_squared": 0.0026708857863674443,
+        "adjacent_excess": 0.0011380460082573225,
+        "variance_of_conditional_C2": 0.0011380460082573147,
+        "nested_minus_adjacent": -0.002482656505356598,
+        "normalized_adjacent": 1.4260931014220304,
+        "normalized_nested": 0.4965675792044924
+      },
+      "model": "two independent species of equal mass",
+      "scope": "each AABB/ABBA is a complete mixed-species moment; ABAB not computed here"
+    },
+    {
+      "parameters": {
+        "m0": 2.0,
+        "nu": 0.5,
+        "sigma_proper": 0.25,
+        "projected": true,
+        "mass_lower": 1.9364916731037085,
+        "mass_upper": 14.056575222701504,
+        "p_order": 48,
+        "mass_order": 28,
+        "tail_extra": 10,
+        "p_nodes": 96,
+        "mass_nodes": 364
+      },
+      "times_left_to_right": [
+        [
+          -2.0,
+          0.0,
+          -2.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          2.0,
+          0.0,
+          2.0,
+          0.0
+        ]
+      ],
+      "values": [
+        {
+          "AABB": {
+            "real": -0.010338825653331862,
+            "imag": 0.011512984305105797
+          },
+          "ABBA": {
+            "real": 0.010396813748883937,
+            "imag": -0.00019760721741280955
+          }
+        },
+        {
+          "AABB": {
+            "real": 0.012741673284416381,
+            "imag": 0.02715712086413187
+          },
+          "ABBA": {
+            "real": 0.018954315231499864,
+            "imag": -0.00047682104662828575
+          }
+        },
+        {
+          "AABB": {
+            "real": 0.03697261119042866,
+            "imag": 0.0
+          },
+          "ABBA": {
+            "real": 0.02336766468579582,
+            "imag": 0.0
+          }
+        },
+        {
+          "AABB": {
+            "real": 0.012741673284416381,
+            "imag": -0.02715712086413187
+          },
+          "ABBA": {
+            "real": 0.018954315231499864,
+            "imag": 0.00047682104662828575
+          }
+        },
+        {
+          "AABB": {
+            "real": -0.010338825653331862,
+            "imag": -0.011512984305105797
+          },
+          "ABBA": {
+            "real": 0.010396813748883937,
+            "imag": 0.00019760721741280955
+          }
+        }
+      ],
+      "zero": {
+        "C2": 0.1743553680931135,
+        "AABB": 0.03697261119042866,
+        "ABBA": 0.02336766468579582,
+        "C2_squared": 0.0303997943828851,
+        "adjacent_excess": 0.006572816807543562,
+        "variance_of_conditional_C2": 0.006572816807543475,
+        "nested_minus_adjacent": -0.013604946504632842,
+        "normalized_adjacent": 1.216212541596795,
+        "normalized_nested": 0.7686783795798195
+      },
+      "model": "two independent species of equal mass",
+      "scope": "each AABB/ABBA is a complete mixed-species moment; ABAB not computed here"
+    },
+    {
+      "parameters": {
+        "m0": 2.0,
+        "nu": 0.5,
+        "sigma_proper": 0.25,
+        "projected": false,
+        "mass_lower": 0.0,
+        "mass_upper": 14.056575222701504,
+        "p_order": 48,
+        "mass_order": 28,
+        "tail_extra": 10,
+        "p_nodes": 96,
+        "mass_nodes": 420
+      },
+      "times_left_to_right": [
+        [
+          -2.0,
+          0.0,
+          -2.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          2.0,
+          0.0,
+          2.0,
+          0.0
+        ]
+      ],
+      "values": [
+        {
+          "AABB": {
+            "real": -0.021872700245427295,
+            "imag": 0.009485452794291884
+          },
+          "ABBA": {
+            "real": 0.02136476074260302,
+            "imag": 0.0011282348535533013
+          }
+        },
+        {
+          "AABB": {
+            "real": 0.004485871254118906,
+            "imag": 0.0584530991204289
+          },
+          "ABBA": {
+            "real": 0.049385238232041655,
+            "imag": 0.0015624306655791925
+          }
+        },
+        {
+          "AABB": {
+            "real": 0.08281794298573691,
+            "imag": 0.0
+          },
+          "ABBA": {
+            "real": 0.06837984129174145,
+            "imag": 0.0
+          }
+        },
+        {
+          "AABB": {
+            "real": 0.004485871254118906,
+            "imag": -0.0584530991204289
+          },
+          "ABBA": {
+            "real": 0.049385238232041655,
+            "imag": -0.0015624306655791925
+          }
+        },
+        {
+          "AABB": {
+            "real": -0.021872700245427295,
+            "imag": -0.009485452794291884
+          },
+          "ABBA": {
+            "real": 0.02136476074260302,
+            "imag": -0.0011282348535533013
+          }
+        }
+      ],
+      "zero": {
+        "C2": 0.2869876989999742,
+        "AABB": 0.08281794298573691,
+        "ABBA": 0.06837984129174145,
+        "C2_squared": 0.08236193937729977,
+        "adjacent_excess": 0.0004560036084371444,
+        "variance_of_conditional_C2": 0.0004560036084369221,
+        "nested_minus_adjacent": -0.014438101693995467,
+        "normalized_adjacent": 1.005536581725549,
+        "normalized_nested": 0.8302359294685088
+      },
+      "model": "two independent species of equal mass",
+      "scope": "each AABB/ABBA is a complete mixed-species moment; ABAB not computed here"
+    },
+    {
+      "parameters": {
+        "m0": 2.0,
+        "nu": 0.5,
+        "sigma_proper": 0.5,
+        "projected": true,
+        "mass_lower": 1.9364916731037085,
+        "mass_upper": 14.056575222701504,
+        "p_order": 48,
+        "mass_order": 28,
+        "tail_extra": 10,
+        "p_nodes": 96,
+        "mass_nodes": 364
+      },
+      "times_left_to_right": [
+        [
+          -2.0,
+          0.0,
+          -2.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          2.0,
+          0.0,
+          2.0,
+          0.0
+        ]
+      ],
+      "values": [
+        {
+          "AABB": {
+            "real": -0.007022472170340157,
+            "imag": 0.011565626275834915
+          },
+          "ABBA": {
+            "real": 0.009877675062806079,
+            "imag": -0.00021692751471792156
+          }
+        },
+        {
+          "AABB": {
+            "real": 0.0125881688411731,
+            "imag": 0.021985188383663264
+          },
+          "ABBA": {
+            "real": 0.01722896463928502,
+            "imag": -0.00038655036053657357
+          }
+        },
+        {
+          "AABB": {
+            "real": 0.030916282502757922,
+            "imag": 0.0
+          },
+          "ABBA": {
+            "real": 0.0208780006264873,
+            "imag": 0.0
+          }
+        },
+        {
+          "AABB": {
+            "real": 0.0125881688411731,
+            "imag": -0.021985188383663264
+          },
+          "ABBA": {
+            "real": 0.01722896463928502,
+            "imag": 0.00038655036053657357
+          }
+        },
+        {
+          "AABB": {
+            "real": -0.007022472170340157,
+            "imag": -0.011565626275834915
+          },
+          "ABBA": {
+            "real": 0.009877675062806079,
+            "imag": 0.00021692751471792156
+          }
+        }
+      ],
+      "zero": {
+        "C2": 0.16139670347527285,
+        "AABB": 0.030916282502757922,
+        "ABBA": 0.0208780006264873,
+        "C2_squared": 0.02604889589268515,
+        "adjacent_excess": 0.004867386610072771,
+        "variance_of_conditional_C2": 0.004867386610072709,
+        "nested_minus_adjacent": -0.010038281876270622,
+        "normalized_adjacent": 1.186855774238001,
+        "normalized_nested": 0.8014927278491715
+      },
+      "model": "two independent species of equal mass",
+      "scope": "each AABB/ABBA is a complete mixed-species moment; ABAB not computed here"
+    },
+    {
+      "parameters": {
+        "m0": 2.0,
+        "nu": 0.5,
+        "sigma_proper": 0.5,
+        "projected": false,
+        "mass_lower": 0.0,
+        "mass_upper": 14.056575222701504,
+        "p_order": 48,
+        "mass_order": 28,
+        "tail_extra": 10,
+        "p_nodes": 96,
+        "mass_nodes": 420
+      },
+      "times_left_to_right": [
+        [
+          -2.0,
+          0.0,
+          -2.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          2.0,
+          0.0,
+          2.0,
+          0.0
+        ]
+      ],
+      "values": [
+        {
+          "AABB": {
+            "real": -0.017668810341412974,
+            "imag": 0.013621992978469864
+          },
+          "ABBA": {
+            "real": 0.02032828369166968,
+            "imag": 0.0008931291645091659
+          }
+        },
+        {
+          "AABB": {
+            "real": 0.011971445616270575,
+            "imag": 0.044964513259262845
+          },
+          "ABBA": {
+            "real": 0.04143529759287734,
+            "imag": 0.0009755394486999783
+          }
+        },
+        {
+          "AABB": {
+            "real": 0.06086629868668467,
+            "imag": 0.0
+          },
+          "ABBA": {
+            "real": 0.0538788774696102,
+            "imag": 0.0
+          }
+        },
+        {
+          "AABB": {
+            "real": 0.011971445616270575,
+            "imag": -0.044964513259262845
+          },
+          "ABBA": {
+            "real": 0.04143529759287734,
+            "imag": -0.0009755394486999783
+          }
+        },
+        {
+          "AABB": {
+            "real": -0.017668810341412974,
+            "imag": -0.013621992978469864
+          },
+          "ABBA": {
+            "real": 0.02032828369166968,
+            "imag": -0.0008931291645091659
+          }
+        }
+      ],
+      "zero": {
+        "C2": 0.24644963276069953,
+        "AABB": 0.06086629868668467,
+        "ABBA": 0.0538788774696102,
+        "C2_squared": 0.060737421487883664,
+        "adjacent_excess": 0.0001288771988010029,
+        "variance_of_conditional_C2": 0.00012887719880083976,
+        "nested_minus_adjacent": -0.00698742121707447,
+        "normalized_adjacent": 1.0021218747132148,
+        "normalized_nested": 0.8870787753207195
+      },
+      "model": "two independent species of equal mass",
+      "scope": "each AABB/ABBA is a complete mixed-species moment; ABAB not computed here"
+    },
+    {
+      "parameters": {
+        "m0": 2.0,
+        "nu": 1.0,
+        "sigma_proper": 0.25,
+        "projected": true,
+        "mass_lower": 1.9364916731037085,
+        "mass_upper": 14.556575222701504,
+        "p_order": 48,
+        "mass_order": 28,
+        "tail_extra": 10,
+        "p_nodes": 96,
+        "mass_nodes": 364
+      },
+      "times_left_to_right": [
+        [
+          -2.0,
+          0.0,
+          -2.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          2.0,
+          0.0,
+          2.0,
+          0.0
+        ]
+      ],
+      "values": [
+        {
+          "AABB": {
+            "real": -0.0029360066954503628,
+            "imag": -0.0027720817321473974
+          },
+          "ABBA": {
+            "real": 0.00021551635555321856,
+            "imag": 2.1574107498480732e-05
+          }
+        },
+        {
+          "AABB": {
+            "real": -0.0017839512861042351,
+            "imag": 0.005489749575873282
+          },
+          "ABBA": {
+            "real": 0.000829892609179182,
+            "imag": -4.7193378675476e-05
+          }
+        },
+        {
+          "AABB": {
+            "real": 0.0066350946489318365,
+            "imag": 0.0
+          },
+          "ABBA": {
+            "real": 0.0012726841763075166,
+            "imag": 0.0
+          }
+        },
+        {
+          "AABB": {
+            "real": -0.0017839512861042351,
+            "imag": -0.005489749575873282
+          },
+          "ABBA": {
+            "real": 0.000829892609179182,
+            "imag": 4.7193378675476e-05
+          }
+        },
+        {
+          "AABB": {
+            "real": -0.0029360066954503628,
+            "imag": 0.0027720817321473974
+          },
+          "ABBA": {
+            "real": 0.00021551635555321856,
+            "imag": -2.1574107498480732e-05
+          }
+        }
+      ],
+      "zero": {
+        "C2": 0.06325768460927139,
+        "AABB": 0.0066350946489318365,
+        "ABBA": 0.0012726841763075166,
+        "C2_squared": 0.00400153466212605,
+        "adjacent_excess": 0.002633559986805786,
+        "variance_of_conditional_C2": 0.0026335599868057757,
+        "nested_minus_adjacent": -0.00536241047262432,
+        "normalized_adjacent": 1.658137492030758,
+        "normalized_nested": 0.31804901963071547
+      },
+      "model": "two independent species of equal mass",
+      "scope": "each AABB/ABBA is a complete mixed-species moment; ABAB not computed here"
+    },
+    {
+      "parameters": {
+        "m0": 2.0,
+        "nu": 1.0,
+        "sigma_proper": 0.25,
+        "projected": false,
+        "mass_lower": 0.0,
+        "mass_upper": 14.556575222701504,
+        "p_order": 48,
+        "mass_order": 28,
+        "tail_extra": 10,
+        "p_nodes": 96,
+        "mass_nodes": 420
+      },
+      "times_left_to_right": [
+        [
+          -2.0,
+          0.0,
+          -2.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          2.0,
+          0.0,
+          2.0,
+          0.0
+        ]
+      ],
+      "values": [
+        {
+          "AABB": {
+            "real": -0.0005219296820792393,
+            "imag": -0.008345247461112034
+          },
+          "ABBA": {
+            "real": 0.0047674505155963255,
+            "imag": 0.0008445687049027403
+          }
+        },
+        {
+          "AABB": {
+            "real": -0.013397567939229579,
+            "imag": 0.012741241754161615
+          },
+          "ABBA": {
+            "real": 0.010105709985042895,
+            "imag": 0.000845764947686274
+          }
+        },
+        {
+          "AABB": {
+            "real": 0.025054348522540057,
+            "imag": 0.0
+          },
+          "ABBA": {
+            "real": 0.013631530768407653,
+            "imag": 0.0
+          }
+        },
+        {
+          "AABB": {
+            "real": -0.013397567939229579,
+            "imag": -0.012741241754161615
+          },
+          "ABBA": {
+            "real": 0.010105709985042895,
+            "imag": -0.000845764947686274
+          }
+        },
+        {
+          "AABB": {
+            "real": -0.0005219296820792393,
+            "imag": 0.008345247461112034
+          },
+          "ABBA": {
+            "real": 0.0047674505155963255,
+            "imag": -0.0008445687049027403
+          }
+        }
+      ],
+      "zero": {
+        "C2": 0.1569136760357947,
+        "AABB": 0.025054348522540057,
+        "ABBA": 0.013631530768407653,
+        "C2_squared": 0.024621901727066332,
+        "adjacent_excess": 0.0004324467954737246,
+        "variance_of_conditional_C2": 0.0004324467954736687,
+        "nested_minus_adjacent": -0.011422817754132404,
+        "normalized_adjacent": 1.0175635009946589,
+        "normalized_nested": 0.5536343585281555
+      },
+      "model": "two independent species of equal mass",
+      "scope": "each AABB/ABBA is a complete mixed-species moment; ABAB not computed here"
+    },
+    {
+      "parameters": {
+        "m0": 2.0,
+        "nu": 1.0,
+        "sigma_proper": 0.5,
+        "projected": true,
+        "mass_lower": 1.9364916731037085,
+        "mass_upper": 14.556575222701504,
+        "p_order": 48,
+        "mass_order": 28,
+        "tail_extra": 10,
+        "p_nodes": 96,
+        "mass_nodes": 364
+      },
+      "times_left_to_right": [
+        [
+          -2.0,
+          0.0,
+          -2.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          2.0,
+          0.0,
+          2.0,
+          0.0
+        ]
+      ],
+      "values": [
+        {
+          "AABB": {
+            "real": -0.0022024971706586577,
+            "imag": -0.0015580089027354615
+          },
+          "ABBA": {
+            "real": 0.0002207759533589852,
+            "imag": 1.0519246992885368e-05
+          }
+        },
+        {
+          "AABB": {
+            "real": -0.0009417749513431991,
+            "imag": 0.003858284851405048
+          },
+          "ABBA": {
+            "real": 0.0007261120940111555,
+            "imag": -3.2817472312266474e-05
+          }
+        },
+        {
+          "AABB": {
+            "real": 0.004608922896022061,
+            "imag": 0.0
+          },
+          "ABBA": {
+            "real": 0.0010609804397926016,
+            "imag": 0.0
+          }
+        },
+        {
+          "AABB": {
+            "real": -0.0009417749513431991,
+            "imag": -0.003858284851405048
+          },
+          "ABBA": {
+            "real": 0.0007261120940111555,
+            "imag": 3.2817472312266474e-05
+          }
+        },
+        {
+          "AABB": {
+            "real": -0.0022024971706586577,
+            "imag": 0.0015580089027354615
+          },
+          "ABBA": {
+            "real": 0.0002207759533589852,
+            "imag": -1.0519246992885368e-05
+          }
+        }
+      ],
+      "zero": {
+        "C2": 0.053505890251689524,
+        "AABB": 0.004608922896022061,
+        "ABBA": 0.0010609804397926016,
+        "C2_squared": 0.002862880291625844,
+        "adjacent_excess": 0.0017460426043962168,
+        "variance_of_conditional_C2": 0.0017460426043962092,
+        "nested_minus_adjacent": -0.0035479424562294593,
+        "normalized_adjacent": 1.6098901897866749,
+        "normalized_nested": 0.37059895340229737
+      },
+      "model": "two independent species of equal mass",
+      "scope": "each AABB/ABBA is a complete mixed-species moment; ABAB not computed here"
+    },
+    {
+      "parameters": {
+        "m0": 2.0,
+        "nu": 1.0,
+        "sigma_proper": 0.5,
+        "projected": false,
+        "mass_lower": 0.0,
+        "mass_upper": 14.556575222701504,
+        "p_order": 48,
+        "mass_order": 28,
+        "tail_extra": 10,
+        "p_nodes": 96,
+        "mass_nodes": 420
+      },
+      "times_left_to_right": [
+        [
+          -2.0,
+          0.0,
+          -2.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          2.0,
+          0.0,
+          2.0,
+          0.0
+        ]
+      ],
+      "values": [
+        {
+          "AABB": {
+            "real": -0.0023302357181858354,
+            "imag": -0.005080272538195458
+          },
+          "ABBA": {
+            "real": 0.003501002279860634,
+            "imag": 0.0005398835552116022
+          }
+        },
+        {
+          "AABB": {
+            "real": -0.0059492836348080174,
+            "imag": 0.009102118368525246
+          },
+          "ABBA": {
+            "real": 0.006971932999351772,
+            "imag": 0.000486373247064987
+          }
+        },
+        {
+          "AABB": {
+            "real": 0.013950308499114536,
+            "imag": 0.0
+          },
+          "ABBA": {
+            "real": 0.00906449737866128,
+            "imag": 0.0
+          }
+        },
+        {
+          "AABB": {
+            "real": -0.0059492836348080174,
+            "imag": -0.009102118368525246
+          },
+          "ABBA": {
+            "real": 0.006971932999351772,
+            "imag": -0.000486373247064987
+          }
+        },
+        {
+          "AABB": {
+            "real": -0.0023302357181858354,
+            "imag": 0.005080272538195458
+          },
+          "ABBA": {
+            "real": 0.003501002279860634,
+            "imag": -0.0005398835552116022
+          }
+        }
+      ],
+      "zero": {
+        "C2": 0.11768876325408817,
+        "AABB": 0.013950308499114536,
+        "ABBA": 0.00906449737866128,
+        "C2_squared": 0.013850644996276813,
+        "adjacent_excess": 9.966350283772268e-05,
+        "variance_of_conditional_C2": 9.966350283768773e-05,
+        "nested_minus_adjacent": -0.004885811120453255,
+        "normalized_adjacent": 1.0071955856831587,
+        "normalized_nested": 0.6544458674016917
+      },
+      "model": "two independent species of equal mass",
+      "scope": "each AABB/ABBA is a complete mixed-species moment; ABAB not computed here"
+    },
+    {
+      "parameters": {
+        "m0": 5.0,
+        "nu": 0.5,
+        "sigma_proper": 0.25,
+        "projected": true,
+        "mass_lower": 4.9749371855331,
+        "mass_upper": 17.07255839839008,
+        "p_order": 48,
+        "mass_order": 28,
+        "tail_extra": 10,
+        "p_nodes": 96,
+        "mass_nodes": 364
+      },
+      "times_left_to_right": [
+        [
+          -2.0,
+          0.0,
+          -2.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          2.0,
+          0.0,
+          2.0,
+          0.0
+        ]
+      ],
+      "values": [
+        {
+          "AABB": {
+            "real": -0.012523971652361257,
+            "imag": 0.011164038284396296
+          },
+          "ABBA": {
+            "real": 0.010667534328270705,
+            "imag": -0.00027062569983303655
+          }
+        },
+        {
+          "AABB": {
+            "real": 0.012395302024071287,
+            "imag": 0.030173309141777467
+          },
+          "ABBA": {
+            "real": 0.019701342447547864,
+            "imag": -0.0005631059516095158
+          }
+        },
+        {
+          "AABB": {
+            "real": 0.040252503031169326,
+            "imag": 0.0
+          },
+          "ABBA": {
+            "real": 0.024406559681941074,
+            "imag": 0.0
+          }
+        },
+        {
+          "AABB": {
+            "real": 0.012395302024071287,
+            "imag": -0.030173309141777467
+          },
+          "ABBA": {
+            "real": 0.019701342447547864,
+            "imag": 0.0005631059516095158
+          }
+        },
+        {
+          "AABB": {
+            "real": -0.012523971652361257,
+            "imag": -0.011164038284396296
+          },
+          "ABBA": {
+            "real": 0.010667534328270705,
+            "imag": 0.00027062569983303655
+          }
+        }
+      ],
+      "zero": {
+        "C2": 0.18034097502652752,
+        "AABB": 0.040252503031169326,
+        "ABBA": 0.024406559681941074,
+        "C2_squared": 0.03252286727351862,
+        "adjacent_excess": 0.007729635757650705,
+        "variance_of_conditional_C2": 0.007729635757650623,
+        "nested_minus_adjacent": -0.01584594334922825,
+        "normalized_adjacent": 1.2376677213802878,
+        "normalized_nested": 0.7504430490916107
+      },
+      "model": "two independent species of equal mass",
+      "scope": "each AABB/ABBA is a complete mixed-species moment; ABAB not computed here"
+    },
+    {
+      "parameters": {
+        "m0": 5.0,
+        "nu": 0.5,
+        "sigma_proper": 0.25,
+        "projected": false,
+        "mass_lower": 0.0,
+        "mass_upper": 17.07255839839008,
+        "p_order": 48,
+        "mass_order": 28,
+        "tail_extra": 10,
+        "p_nodes": 96,
+        "mass_nodes": 504
+      },
+      "times_left_to_right": [
+        [
+          -2.0,
+          0.0,
+          -2.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          2.0,
+          0.0,
+          2.0,
+          0.0
+        ]
+      ],
+      "values": [
+        {
+          "AABB": {
+            "real": -0.02150258926783296,
+            "imag": 0.006328121963414083
+          },
+          "ABBA": {
+            "real": 0.022139795624085162,
+            "imag": 6.795902241254367e-05
+          }
+        },
+        {
+          "AABB": {
+            "real": -0.01658632063620865,
+            "imag": 0.06136004301209508
+          },
+          "ABBA": {
+            "real": 0.06278256829663198,
+            "imag": 0.00024057764483368066
+          }
+        },
+        {
+          "AABB": {
+            "real": 0.1297923274520088,
+            "imag": 0.0
+          },
+          "ABBA": {
+            "real": 0.1223288116892725,
+            "imag": 0.0
+          }
+        },
+        {
+          "AABB": {
+            "real": -0.01658632063620865,
+            "imag": -0.06136004301209508
+          },
+          "ABBA": {
+            "real": 0.06278256829663198,
+            "imag": -0.00024057764483368066
+          }
+        },
+        {
+          "AABB": {
+            "real": -0.02150258926783296,
+            "imag": -0.006328121963414083
+          },
+          "ABBA": {
+            "real": 0.022139795624085162,
+            "imag": -6.795902241254367e-05
+          }
+        }
+      ],
+      "zero": {
+        "C2": 0.36022105748316535,
+        "AABB": 0.1297923274520088,
+        "ABBA": 0.1223288116892725,
+        "C2_squared": 0.1297592102542899,
+        "adjacent_excess": 3.3117197718895985e-05,
+        "variance_of_conditional_C2": 3.311719771858628e-05,
+        "nested_minus_adjacent": -0.007463515762736309,
+        "normalized_adjacent": 1.0002552204013417,
+        "normalized_nested": 0.94273702382701
+      },
+      "model": "two independent species of equal mass",
+      "scope": "each AABB/ABBA is a complete mixed-species moment; ABAB not computed here"
+    },
+    {
+      "parameters": {
+        "m0": 5.0,
+        "nu": 0.5,
+        "sigma_proper": 0.5,
+        "projected": true,
+        "mass_lower": 4.9749371855331,
+        "mass_upper": 17.07255839839008,
+        "p_order": 48,
+        "mass_order": 28,
+        "tail_extra": 10,
+        "p_nodes": 96,
+        "mass_nodes": 364
+      },
+      "times_left_to_right": [
+        [
+          -2.0,
+          0.0,
+          -2.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          2.0,
+          0.0,
+          2.0,
+          0.0
+        ]
+      ],
+      "values": [
+        {
+          "AABB": {
+            "real": -0.008710330790279972,
+            "imag": 0.011507712637002641
+          },
+          "ABBA": {
+            "real": 0.010123951801726785,
+            "imag": -0.0002835046307679411
+          }
+        },
+        {
+          "AABB": {
+            "real": 0.012441729482253486,
+            "imag": 0.02423265350420807
+          },
+          "ABBA": {
+            "real": 0.017858038442975756,
+            "imag": -0.0004544541053821316
+          }
+        },
+        {
+          "AABB": {
+            "real": 0.033316194021754175,
+            "imag": 0.0
+          },
+          "ABBA": {
+            "real": 0.021729515233142954,
+            "imag": 0.0
+          }
+        },
+        {
+          "AABB": {
+            "real": 0.012441729482253486,
+            "imag": -0.02423265350420807
+          },
+          "ABBA": {
+            "real": 0.017858038442975756,
+            "imag": 0.0004544541053821316
+          }
+        },
+        {
+          "AABB": {
+            "real": -0.008710330790279972,
+            "imag": -0.011507712637002641
+          },
+          "ABBA": {
+            "real": 0.010123951801726785,
+            "imag": 0.0002835046307679411
+          }
+        }
+      ],
+      "zero": {
+        "C2": 0.16620884469359049,
+        "AABB": 0.033316194021754175,
+        "ABBA": 0.021729515233142954,
+        "C2_squared": 0.027625380054378083,
+        "adjacent_excess": 0.005690813967376092,
+        "variance_of_conditional_C2": 0.005690813967376028,
+        "nested_minus_adjacent": -0.011586678788611221,
+        "normalized_adjacent": 1.2059994814976023,
+        "normalized_nested": 0.7865779652757845
+      },
+      "model": "two independent species of equal mass",
+      "scope": "each AABB/ABBA is a complete mixed-species moment; ABAB not computed here"
+    },
+    {
+      "parameters": {
+        "m0": 5.0,
+        "nu": 0.5,
+        "sigma_proper": 0.5,
+        "projected": false,
+        "mass_lower": 0.0,
+        "mass_upper": 17.07255839839008,
+        "p_order": 48,
+        "mass_order": 28,
+        "tail_extra": 10,
+        "p_nodes": 96,
+        "mass_nodes": 504
+      },
+      "times_left_to_right": [
+        [
+          -2.0,
+          0.0,
+          -2.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          2.0,
+          0.0,
+          2.0,
+          0.0
+        ]
+      ],
+      "values": [
+        {
+          "AABB": {
+            "real": -0.01962049913749213,
+            "imag": 0.010574038434534364
+          },
+          "ABBA": {
+            "real": 0.02209033029896916,
+            "imag": 5.335187356591285e-05
+          }
+        },
+        {
+          "AABB": {
+            "real": 0.004545592901406086,
+            "imag": 0.05302944767382721
+          },
+          "ABBA": {
+            "real": 0.05251676170110614,
+            "imag": 0.00011505385894624868
+          }
+        },
+        {
+          "AABB": {
+            "real": 0.0772825842702836,
+            "imag": 0.0
+          },
+          "ABBA": {
+            "real": 0.0759783403031145,
+            "imag": 0.0
+          }
+        },
+        {
+          "AABB": {
+            "real": 0.004545592901406086,
+            "imag": -0.05302944767382721
+          },
+          "ABBA": {
+            "real": 0.05251676170110614,
+            "imag": -0.00011505385894624868
+          }
+        },
+        {
+          "AABB": {
+            "real": -0.01962049913749213,
+            "imag": -0.010574038434534364
+          },
+          "ABBA": {
+            "real": 0.02209033029896916,
+            "imag": -5.335187356591285e-05
+          }
+        }
+      ],
+      "zero": {
+        "C2": 0.2779900649085175,
+        "AABB": 0.0772825842702836,
+        "ABBA": 0.0759783403031145,
+        "C2_squared": 0.07727847618784178,
+        "adjacent_excess": 4.108082441819927e-06,
+        "variance_of_conditional_C2": 4.108082441647229e-06,
+        "nested_minus_adjacent": -0.0013042439671691053,
+        "normalized_adjacent": 1.000053159464892,
+        "normalized_nested": 0.9831759637500224
+      },
+      "model": "two independent species of equal mass",
+      "scope": "each AABB/ABBA is a complete mixed-species moment; ABAB not computed here"
+    },
+    {
+      "parameters": {
+        "m0": 5.0,
+        "nu": 1.0,
+        "sigma_proper": 0.25,
+        "projected": true,
+        "mass_lower": 4.9749371855331,
+        "mass_upper": 17.57255839839008,
+        "p_order": 48,
+        "mass_order": 28,
+        "tail_extra": 10,
+        "p_nodes": 96,
+        "mass_nodes": 364
+      },
+      "times_left_to_right": [
+        [
+          -2.0,
+          0.0,
+          -2.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          2.0,
+          0.0,
+          2.0,
+          0.0
+        ]
+      ],
+      "values": [
+        {
+          "AABB": {
+            "real": -0.0031850749006926762,
+            "imag": -0.0034145782577250073
+          },
+          "ABBA": {
+            "real": 0.0002062504140670988,
+            "imag": 1.710896161927195e-05
+          }
+        },
+        {
+          "AABB": {
+            "real": -0.002253812090057562,
+            "imag": 0.0061921936315936284
+          },
+          "ABBA": {
+            "real": 0.0008388267565237768,
+            "imag": -5.716461944201799e-05
+          }
+        },
+        {
+          "AABB": {
+            "real": 0.007534128581711278,
+            "imag": 0.0
+          },
+          "ABBA": {
+            "real": 0.00130234413812492,
+            "imag": 0.0
+          }
+        },
+        {
+          "AABB": {
+            "real": -0.002253812090057562,
+            "imag": -0.0061921936315936284
+          },
+          "ABBA": {
+            "real": 0.0008388267565237768,
+            "imag": 5.716461944201799e-05
+          }
+        },
+        {
+          "AABB": {
+            "real": -0.0031850749006926762,
+            "imag": 0.0034145782577250073
+          },
+          "ABBA": {
+            "real": 0.0002062504140670988,
+            "imag": -1.710896161927195e-05
+          }
+        }
+      ],
+      "zero": {
+        "C2": 0.06687284218546444,
+        "AABB": 0.007534128581711278,
+        "ABBA": 0.00130234413812492,
+        "C2_squared": 0.004471977021962032,
+        "adjacent_excess": 0.003062151559749246,
+        "variance_of_conditional_C2": 0.0030621515597492343,
+        "nested_minus_adjacent": -0.006231784443586358,
+        "normalized_adjacent": 1.6847422392178928,
+        "normalized_nested": 0.2912233519378707
+      },
+      "model": "two independent species of equal mass",
+      "scope": "each AABB/ABBA is a complete mixed-species moment; ABAB not computed here"
+    },
+    {
+      "parameters": {
+        "m0": 5.0,
+        "nu": 1.0,
+        "sigma_proper": 0.25,
+        "projected": false,
+        "mass_lower": 0.0,
+        "mass_upper": 17.57255839839008,
+        "p_order": 48,
+        "mass_order": 28,
+        "tail_extra": 10,
+        "p_nodes": 96,
+        "mass_nodes": 504
+      },
+      "times_left_to_right": [
+        [
+          -2.0,
+          0.0,
+          -2.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          2.0,
+          0.0,
+          2.0,
+          0.0
+        ]
+      ],
+      "values": [
+        {
+          "AABB": {
+            "real": 0.002631082116987292,
+            "imag": -0.008039756017172618
+          },
+          "ABBA": {
+            "real": 0.008176502957620728,
+            "imag": 5.219397706272741e-05
+          }
+        },
+        {
+          "AABB": {
+            "real": -0.025106932087103656,
+            "imag": 0.0060627574685105205
+          },
+          "ABBA": {
+            "real": 0.0246509596059344,
+            "imag": 0.00034542065406074614
+          }
+        },
+        {
+          "AABB": {
+            "real": 0.05203242648092091,
+            "imag": 0.0
+          },
+          "ABBA": {
+            "real": 0.045063980895048386,
+            "imag": 0.0
+          }
+        },
+        {
+          "AABB": {
+            "real": -0.025106932087103656,
+            "imag": -0.0060627574685105205
+          },
+          "ABBA": {
+            "real": 0.0246509596059344,
+            "imag": -0.00034542065406074614
+          }
+        },
+        {
+          "AABB": {
+            "real": 0.002631082116987292,
+            "imag": 0.008039756017172618
+          },
+          "ABBA": {
+            "real": 0.008176502957620728,
+            "imag": -5.219397706272741e-05
+          }
+        }
+      ],
+      "zero": {
+        "C2": 0.2280382679019458,
+        "AABB": 0.05203242648092091,
+        "ABBA": 0.045063980895048386,
+        "C2_squared": 0.05200145162771961,
+        "adjacent_excess": 3.097485320129739e-05,
+        "variance_of_conditional_C2": 3.097485320115471e-05,
+        "nested_minus_adjacent": -0.006968445585872521,
+        "normalized_adjacent": 1.0005956536256535,
+        "normalized_nested": 0.866590825534317
+      },
+      "model": "two independent species of equal mass",
+      "scope": "each AABB/ABBA is a complete mixed-species moment; ABAB not computed here"
+    },
+    {
+      "parameters": {
+        "m0": 5.0,
+        "nu": 1.0,
+        "sigma_proper": 0.5,
+        "projected": true,
+        "mass_lower": 4.9749371855331,
+        "mass_upper": 17.57255839839008,
+        "p_order": 48,
+        "mass_order": 28,
+        "tail_extra": 10,
+        "p_nodes": 96,
+        "mass_nodes": 364
+      },
+      "times_left_to_right": [
+        [
+          -2.0,
+          0.0,
+          -2.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          2.0,
+          0.0,
+          2.0,
+          0.0
+        ]
+      ],
+      "values": [
+        {
+          "AABB": {
+            "real": -0.0023971009067856887,
+            "imag": -0.001944564037240107
+          },
+          "ABBA": {
+            "real": 0.00021398975926514792,
+            "imag": 6.1772366740348314e-06
+          }
+        },
+        {
+          "AABB": {
+            "real": -0.0012194789552704543,
+            "imag": 0.004315116466332685
+          },
+          "ABBA": {
+            "real": 0.0007333714462625576,
+            "imag": -4.006714626026747e-05
+          }
+        },
+        {
+          "AABB": {
+            "real": 0.005176597327445014,
+            "imag": 0.0
+          },
+          "ABBA": {
+            "real": 0.001081975265931831,
+            "imag": 0.0
+          }
+        },
+        {
+          "AABB": {
+            "real": -0.0012194789552704543,
+            "imag": -0.004315116466332685
+          },
+          "ABBA": {
+            "real": 0.0007333714462625576,
+            "imag": 4.006714626026747e-05
+          }
+        },
+        {
+          "AABB": {
+            "real": -0.0023971009067856887,
+            "imag": 0.001944564037240107
+          },
+          "ABBA": {
+            "real": 0.00021398975926514792,
+            "imag": -6.1772366740348314e-06
+          }
+        }
+      ],
+      "zero": {
+        "C2": 0.056226553458757794,
+        "AABB": 0.005176597327445014,
+        "ABBA": 0.001081975265931831,
+        "C2_squared": 0.0031614253138505482,
+        "adjacent_excess": 0.0020151720135944654,
+        "variance_of_conditional_C2": 0.002015172013594457,
+        "nested_minus_adjacent": -0.004094622061513183,
+        "normalized_adjacent": 1.6374251527517596,
+        "normalized_nested": 0.3422428678582346
+      },
+      "model": "two independent species of equal mass",
+      "scope": "each AABB/ABBA is a complete mixed-species moment; ABAB not computed here"
+    },
+    {
+      "parameters": {
+        "m0": 5.0,
+        "nu": 1.0,
+        "sigma_proper": 0.5,
+        "projected": false,
+        "mass_lower": 0.0,
+        "mass_upper": 17.57255839839008,
+        "p_order": 48,
+        "mass_order": 28,
+        "tail_extra": 10,
+        "p_nodes": 96,
+        "mass_nodes": 504
+      },
+      "times_left_to_right": [
+        [
+          -2.0,
+          0.0,
+          -2.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          2.0,
+          0.0,
+          2.0,
+          0.0
+        ]
+      ],
+      "values": [
+        {
+          "AABB": {
+            "real": -0.0006027441448522208,
+            "imag": -0.0061998678095237115
+          },
+          "ABBA": {
+            "real": 0.0060503096992398355,
+            "imag": 5.386645249994311e-05
+          }
+        },
+        {
+          "AABB": {
+            "real": -0.010906265880820967,
+            "imag": 0.009813942815946124
+          },
+          "ABBA": {
+            "real": 0.014104054609731019,
+            "imag": 0.00010079864827891919
+          }
+        },
+        {
+          "AABB": {
+            "real": 0.020991207040648142,
+            "imag": 0.0
+          },
+          "ABBA": {
+            "real": 0.020023265668012886,
+            "imag": 0.0
+          }
+        },
+        {
+          "AABB": {
+            "real": -0.010906265880820967,
+            "imag": -0.009813942815946124
+          },
+          "ABBA": {
+            "real": 0.014104054609731019,
+            "imag": -0.00010079864827891919
+          }
+        },
+        {
+          "AABB": {
+            "real": -0.0006027441448522208,
+            "imag": 0.0061998678095237115
+          },
+          "ABBA": {
+            "real": 0.0060503096992398355,
+            "imag": -5.386645249994311e-05
+          }
+        }
+      ],
+      "zero": {
+        "C2": 0.14487334449534306,
+        "AABB": 0.020991207040648142,
+        "ABBA": 0.020023265668012886,
+        "C2_squared": 0.020988285945266347,
+        "adjacent_excess": 2.921095381795691e-06,
+        "variance_of_conditional_C2": 2.921095381745483e-06,
+        "nested_minus_adjacent": -0.0009679413726352559,
+        "normalized_adjacent": 1.0001391774149357,
+        "normalized_nested": 0.9540210058234361
+      },
+      "model": "two independent species of equal mass",
+      "scope": "each AABB/ABBA is a complete mixed-species moment; ABAB not computed here"
+    }
+  ],
+  "references": {
+    "conditional_h": [
+      {
+        "b": 2.316225446962457,
+        "m": 2.369578089271682,
+        "u": 0.7,
+        "value": {
+          "real": 0.008217247595600708,
+          "imag": -0.00034514573965133876
+        },
+        "quad_error_estimate": 1.053200409564666e-11,
+        "production": {
+          "real": 0.008217247595600677,
+          "imag": -0.0003451457396513428
+        }
+      },
+      {
+        "b": 3.380175487624991,
+        "m": 3.4169557104447295,
+        "u": 0.7,
+        "value": {
+          "real": 0.0735711508939243,
+          "imag": -0.05371369279908574
+        },
+        "quad_error_estimate": 7.75444181389773e-12,
+        "production": {
+          "real": 0.07357115089392424,
+          "imag": -0.05371369279908566
+        }
+      }
+    ],
+    "adjacent_packet_value": 0.004608922896022089,
+    "adjacent_outer_error_estimate": 7.437537037209557e-13,
+    "maximum_inner_error_estimate": 1.3609145357247236e-13,
+    "nested_fixed_exterior_mass": 2.954929658551372,
+    "nested_value": 0.000578278111660326,
+    "nested_outer_error_estimate": 1.764195138523776e-14,
+    "nested_production": 0.0005782781116603252,
+    "nested_reference_cutoff": 16.95492965855137,
+    "nested_scope": "conditional kernel; finite outer cutoff and infinite inner mass integral"
+  }
+}

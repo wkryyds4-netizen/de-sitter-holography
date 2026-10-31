@@ -1,0 +1,1006 @@
+{
+  "metadata": {
+    "created_utc": "2026-10-28T23:24:38.748871+00:00",
+    "python": "3.14.5",
+    "numpy": "2.4.6",
+    "scipy": "1.18.0",
+    "mpmath": "1.3.0",
+    "code_sha256": {
+      "code\\run_quantized_observer.py": "8f82b5849a564ae8293cb205a99f40075f4a538b480bed5bef8e9d3e6681f291",
+      "code\\quantized_observer.py": "6851265b9daa9b02b2a96580d175be1d7153a13bc1e20ef9e891b8abe936583f"
+    },
+    "source": "https://arxiv.org/html/2411.08090v1",
+    "equations": [
+      "4.31",
+      "4.35",
+      "5.8",
+      "5.6",
+      "6.4",
+      "6.17"
+    ],
+    "model": "dS2 principal-series free matter, fully quantized observers, strict G->0, L=1",
+    "gauging": "SO+(2,1); selected real packets are also T invariant",
+    "mass_cutoff": "Q_m0 at each right-field insertion; intermediate s>=sqrt(m0^2-1/4)",
+    "units": "sigma and tau are proper time in L units; p=2*pi*(m-m0)",
+    "kernel_scope": "right V is a spectral weight; LR is not assumed positive",
+    "tolerances": "recorded per check; no rigorous interval quadrature claim"
+  },
+  "total": 145,
+  "passed": 145,
+  "failed": 0,
+  "maxima": {
+    "right_refinement": 2.5447867175859907e-16,
+    "right_cutoff_extension": 1.6653345369377348e-16,
+    "lr_refinement": 1.0408340855860843e-16,
+    "independent_adaptive_difference": 9.020562075079397e-17
+  },
+  "checks": [
+    {
+      "name": "HH norm: independent 70-digit integral",
+      "passed": true,
+      "integral": "0.001283247781835541898644097908389836767728475231704782839771004434",
+      "exact": "0.001283247781835541898644097908389836767728475231704782839771004434",
+      "absolute_error": "1.7686873e-74",
+      "threshold": "1e-60"
+    },
+    {
+      "name": "Gamma8 log vs eight direct mp factors (0.5, 0.2, 0.3)",
+      "passed": true,
+      "maximum_absolute_error": 3.552713678800501e-15,
+      "tolerance": 2.137369379203237e-11,
+      "reference_scale": 6.868468960161854
+    },
+    {
+      "name": "D symmetry (0.5, 0.2, 0.3)",
+      "passed": true,
+      "maximum_absolute_error": 2.168404344971009e-19,
+      "tolerance": 2.4476633955367703e-15,
+      "reference_scale": 0.00012238316977683853
+    },
+    {
+      "name": "V from D/rho (0.5, 0.2, 0.3)",
+      "passed": true,
+      "maximum_absolute_error": 1.3877787807814457e-17,
+      "tolerance": 9.55537597181467e-13,
+      "reference_scale": 0.047776879859073355
+    },
+    {
+      "name": "LR from D (0.5, 0.2, 0.3)",
+      "passed": true,
+      "maximum_absolute_error": 8.131516293641283e-20,
+      "tolerance": 4.3555358839361545e-15,
+      "reference_scale": 0.00021777679419680775
+    },
+    {
+      "name": "Gamma8 log vs eight direct mp factors (0.5, 1.0, 2.0)",
+      "passed": true,
+      "maximum_absolute_error": 4.440892098500626e-15,
+      "tolerance": 2.0930806931879237e-11,
+      "reference_scale": 4.654034659396186
+    },
+    {
+      "name": "D symmetry (0.5, 1.0, 2.0)",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "tolerance": 1.9632891488006853e-18,
+      "reference_scale": 9.816445744003427e-08
+    },
+    {
+      "name": "V from D/rho (0.5, 1.0, 2.0)",
+      "passed": true,
+      "maximum_absolute_error": 2.220446049250313e-16,
+      "tolerance": 2.778212681947065e-12,
+      "reference_scale": 0.13891063409735327
+    },
+    {
+      "name": "LR from D (0.5, 1.0, 2.0)",
+      "passed": true,
+      "maximum_absolute_error": 8.673617379884035e-19,
+      "tolerance": 6.0934761369094004e-15,
+      "reference_scale": 0.00030467380684547004
+    },
+    {
+      "name": "Gamma8 log vs eight direct mp factors (0.5, 5.0, 8.0)",
+      "passed": true,
+      "maximum_absolute_error": 7.105427357601002e-15,
+      "tolerance": 2.9031760021752007e-11,
+      "reference_scale": 45.15880010876004
+    },
+    {
+      "name": "D symmetry (0.5, 5.0, 8.0)",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "tolerance": 1.0107487375059542e-34,
+      "reference_scale": 5.0537436875297714e-24
+    },
+    {
+      "name": "V from D/rho (0.5, 5.0, 8.0)",
+      "passed": true,
+      "maximum_absolute_error": 1.1796119636642288e-16,
+      "tolerance": 8.430913381291345e-13,
+      "reference_scale": 0.04215456690645673
+    },
+    {
+      "name": "LR from D (0.5, 5.0, 8.0)",
+      "passed": true,
+      "maximum_absolute_error": 3.705769144237564e-21,
+      "tolerance": 1.3787191763677111e-17,
+      "reference_scale": 6.893595881838556e-07
+    },
+    {
+      "name": "Gamma8 log vs eight direct mp factors (0.5, 50.0, 53.0)",
+      "passed": true,
+      "maximum_absolute_error": 5.684341886080802e-14,
+      "tolerance": 8.599467618701289e-11,
+      "reference_scale": 329.9733809350644
+    },
+    {
+      "name": "D symmetry (0.5, 50.0, 53.0)",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "tolerance": 1.356526467187501e-156,
+      "reference_scale": 6.782632335937505e-146
+    },
+    {
+      "name": "V from D/rho (0.5, 50.0, 53.0)",
+      "passed": true,
+      "maximum_absolute_error": 3.434752482434078e-15,
+      "tolerance": 1.0625408964254752e-12,
+      "reference_scale": 0.05312704482127377
+    },
+    {
+      "name": "LR from D (0.5, 50.0, 53.0)",
+      "passed": true,
+      "maximum_absolute_error": 1.8465318250143747e-19,
+      "tolerance": 1.1511521423624433e-16,
+      "reference_scale": 5.755760711812217e-06
+    },
+    {
+      "name": "Gamma8 log vs eight direct mp factors (1.0, 0.2, 0.3)",
+      "passed": true,
+      "maximum_absolute_error": 2.6645352591003757e-15,
+      "tolerance": 2.056709764997859e-11,
+      "reference_scale": 2.8354882498929603
+    },
+    {
+      "name": "D symmetry (1.0, 0.2, 0.3)",
+      "passed": true,
+      "maximum_absolute_error": 3.8116482626443515e-21,
+      "tolerance": 4.3376092361897206e-17,
+      "reference_scale": 2.1688046180948604e-06
+    },
+    {
+      "name": "V from D/rho (1.0, 0.2, 0.3)",
+      "passed": true,
+      "maximum_absolute_error": 4.336808689942018e-19,
+      "tolerance": 1.6933491404981057e-14,
+      "reference_scale": 0.0008466745702490529
+    },
+    {
+      "name": "LR from D (1.0, 0.2, 0.3)",
+      "passed": true,
+      "maximum_absolute_error": 1.6940658945086007e-21,
+      "tolerance": 7.718631864645788e-17,
+      "reference_scale": 3.859315932322894e-06
+    },
+    {
+      "name": "Gamma8 log vs eight direct mp factors (1.0, 1.0, 2.0)",
+      "passed": true,
+      "maximum_absolute_error": 6.217248937900877e-15,
+      "tolerance": 2.0956242965262e-11,
+      "reference_scale": 4.781214826310014
+    },
+    {
+      "name": "D symmetry (1.0, 1.0, 2.0)",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "tolerance": 1.7288233575638805e-18,
+      "reference_scale": 8.644116787819403e-08
+    },
+    {
+      "name": "V from D/rho (1.0, 1.0, 2.0)",
+      "passed": true,
+      "maximum_absolute_error": 2.0816681711721685e-16,
+      "tolerance": 2.4464246541393615e-12,
+      "reference_scale": 0.12232123270696808
+    },
+    {
+      "name": "LR from D (1.0, 1.0, 2.0)",
+      "passed": true,
+      "maximum_absolute_error": 7.047314121155779e-19,
+      "tolerance": 5.3657627969279675e-15,
+      "reference_scale": 0.0002682881398463984
+    },
+    {
+      "name": "Gamma8 log vs eight direct mp factors (1.0, 5.0, 8.0)",
+      "passed": true,
+      "maximum_absolute_error": 7.105427357601002e-15,
+      "tolerance": 2.9021111319440617e-11,
+      "reference_scale": 45.10555659720308
+    },
+    {
+      "name": "D symmetry (1.0, 5.0, 8.0)",
+      "passed": true,
+      "maximum_absolute_error": 3.8203566401724344e-38,
+      "tolerance": 1.0660229899073716e-34,
+      "reference_scale": 5.330114949536858e-24
+    },
+    {
+      "name": "V from D/rho (1.0, 5.0, 8.0)",
+      "passed": true,
+      "maximum_absolute_error": 1.3183898417423734e-16,
+      "tolerance": 8.891970038519347e-13,
+      "reference_scale": 0.04445985019259674
+    },
+    {
+      "name": "LR from D (1.0, 5.0, 8.0)",
+      "passed": true,
+      "maximum_absolute_error": 4.0234064994579266e-21,
+      "tolerance": 1.4541164229012625e-17,
+      "reference_scale": 7.270582114506313e-07
+    },
+    {
+      "name": "Gamma8 log vs eight direct mp factors (1.0, 50.0, 53.0)",
+      "passed": true,
+      "maximum_absolute_error": 5.684341886080802e-14,
+      "tolerance": 8.598446786889899e-11,
+      "reference_scale": 329.92233934449496
+    },
+    {
+      "name": "D symmetry (1.0, 50.0, 53.0)",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "tolerance": 1.4275632286989634e-156,
+      "reference_scale": 7.137816143494817e-146
+    },
+    {
+      "name": "V from D/rho (1.0, 50.0, 53.0)",
+      "passed": true,
+      "maximum_absolute_error": 3.615163723935666e-15,
+      "tolerance": 1.118182615242834e-12,
+      "reference_scale": 0.055909130762141705
+    },
+    {
+      "name": "LR from D (1.0, 50.0, 53.0)",
+      "passed": true,
+      "maximum_absolute_error": 1.9481757786848908e-19,
+      "tolerance": 1.2114341362478653e-16,
+      "reference_scale": 6.057170681239327e-06
+    },
+    {
+      "name": "Gamma8 log vs eight direct mp factors (1.3, 0.2, 0.3)",
+      "passed": true,
+      "maximum_absolute_error": 3.552713678800501e-15,
+      "tolerance": 2.006497637253925e-11,
+      "reference_scale": 0.32488186269625885
+    },
+    {
+      "name": "D symmetry (1.3, 0.2, 0.3)",
+      "passed": true,
+      "maximum_absolute_error": 2.9116757561866574e-22,
+      "tolerance": 3.5229617246803354e-18,
+      "reference_scale": 1.761480862340168e-07
+    },
+    {
+      "name": "V from D/rho (1.3, 0.2, 0.3)",
+      "passed": true,
+      "maximum_absolute_error": 4.0657581468206416e-20,
+      "tolerance": 1.375320800851007e-15,
+      "reference_scale": 6.876604004255036e-05
+    },
+    {
+      "name": "LR from D (1.3, 0.2, 0.3)",
+      "passed": true,
+      "maximum_absolute_error": 1.5881867761018131e-22,
+      "tolerance": 6.268993619612388e-18,
+      "reference_scale": 3.134496809806194e-07
+    },
+    {
+      "name": "Gamma8 log vs eight direct mp factors (1.3, 1.0, 2.0)",
+      "passed": true,
+      "maximum_absolute_error": 6.217248937900877e-15,
+      "tolerance": 2.112182998529893e-11,
+      "reference_scale": 5.609149926494655
+    },
+    {
+      "name": "D symmetry (1.3, 1.0, 2.0)",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "tolerance": 7.554104287407388e-19,
+      "reference_scale": 3.777052143703694e-08
+    },
+    {
+      "name": "V from D/rho (1.3, 1.0, 2.0)",
+      "passed": true,
+      "maximum_absolute_error": 9.020562075079397e-17,
+      "tolerance": 1.0689667563662833e-12,
+      "reference_scale": 0.05344833781831417
+    },
+    {
+      "name": "LR from D (1.3, 1.0, 2.0)",
+      "passed": true,
+      "maximum_absolute_error": 9.486769009248164e-20,
+      "tolerance": 2.344573352282863e-15,
+      "reference_scale": 0.00011722866761414315
+    },
+    {
+      "name": "Gamma8 log vs eight direct mp factors (1.3, 5.0, 8.0)",
+      "passed": true,
+      "maximum_absolute_error": 7.105427357601002e-15,
+      "tolerance": 2.9010168489822992e-11,
+      "reference_scale": 45.05084244911496
+    },
+    {
+      "name": "D symmetry (1.3, 5.0, 8.0)",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "tolerance": 1.1259746769939718e-34,
+      "reference_scale": 5.629873384969859e-24
+    },
+    {
+      "name": "V from D/rho (1.3, 5.0, 8.0)",
+      "passed": true,
+      "maximum_absolute_error": 1.3877787807814457e-16,
+      "tolerance": 9.39204237314989e-13,
+      "reference_scale": 0.046960211865749446
+    },
+    {
+      "name": "LR from D (1.3, 5.0, 8.0)",
+      "passed": true,
+      "maximum_absolute_error": 4.341043854678289e-21,
+      "tolerance": 1.5358939582814794e-17,
+      "reference_scale": 7.679469791407398e-07
+    },
+    {
+      "name": "Gamma8 log vs eight direct mp factors (1.3, 50.0, 53.0)",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "tolerance": 8.597393197919872e-11,
+      "reference_scale": 329.8696598959936
+    },
+    {
+      "name": "D symmetry (1.3, 50.0, 53.0)",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "tolerance": 1.5047825510017908e-156,
+      "reference_scale": 7.523912755008955e-146
+    },
+    {
+      "name": "V from D/rho (1.3, 50.0, 53.0)",
+      "passed": true,
+      "maximum_absolute_error": 3.816391647148976e-15,
+      "tolerance": 1.178667014129003e-12,
+      "reference_scale": 0.05893335070645015
+    },
+    {
+      "name": "LR from D (1.3, 50.0, 53.0)",
+      "passed": true,
+      "maximum_absolute_error": 2.0498197323554068e-19,
+      "tolerance": 1.276962668459238e-16,
+      "reference_scale": 6.384813342296191e-06
+    },
+    {
+      "name": "real signs have identical probability density",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "tolerance": 0.0,
+      "reference_scale": 0.6657955485864967
+    },
+    {
+      "name": "p-packet normalization plus",
+      "passed": true,
+      "maximum_absolute_error": 1.7763568394002505e-15,
+      "tolerance": 2.2000000000000002e-10,
+      "reference_scale": 1.0
+    },
+    {
+      "name": "p-packet normalization minus",
+      "passed": true,
+      "maximum_absolute_error": 1.7763568394002505e-15,
+      "tolerance": 2.2000000000000002e-10,
+      "reference_scale": 1.0
+    },
+    {
+      "name": "packet energy mean",
+      "passed": true,
+      "maximum_absolute_error": 1.0658141036401503e-14,
+      "tolerance": 1.22e-09,
+      "reference_scale": 6.0
+    },
+    {
+      "name": "clock derivative norm sign -1",
+      "passed": true,
+      "maximum_absolute_error": 5.773159728050814e-15,
+      "tolerance": 6.779736267392907e-10,
+      "reference_scale": 3.289868133696453
+    },
+    {
+      "name": "clock derivative norm sign 1",
+      "passed": true,
+      "maximum_absolute_error": 5.773159728050814e-15,
+      "tolerance": 6.779736267392907e-10,
+      "reference_scale": 3.289868133696453
+    },
+    {
+      "name": "physical Plancherel norm after Jacobian m0=0.5",
+      "passed": true,
+      "maximum_absolute_error": 2.220446049250313e-15,
+      "tolerance": 2.2000000000000002e-10,
+      "reference_scale": 1.0
+    },
+    {
+      "name": "physical Plancherel norm after Jacobian m0=2.0",
+      "passed": true,
+      "maximum_absolute_error": 1.7763568394002505e-15,
+      "tolerance": 2.2000000000000002e-10,
+      "reference_scale": 1.0
+    },
+    {
+      "name": "physical Plancherel norm after Jacobian m0=5.0",
+      "passed": true,
+      "maximum_absolute_error": 1.5543122344752192e-15,
+      "tolerance": 2.2000000000000002e-10,
+      "reference_scale": 1.0
+    },
+    {
+      "name": "exact mass and flat clock Hamiltonian",
+      "passed": true,
+      "maximum_absolute_error": 4.440892098500626e-16,
+      "tolerance": 7.383000027854319e-10,
+      "reference_scale": 3.591500013927159
+    },
+    {
+      "name": "right quadrature refinement m0=0.5,nu=0.5,sigma=0.25",
+      "passed": true,
+      "maximum_absolute_error": 2.5447867175859907e-16,
+      "tolerance": 5.4063972663614665e-11,
+      "reference_scale": 0.17031986331807333
+    },
+    {
+      "name": "right cutoff extension m0=0.5,nu=0.5,sigma=0.25",
+      "passed": true,
+      "maximum_absolute_error": 2.7755575615628914e-17,
+      "tolerance": 5.4063972663614665e-11,
+      "reference_scale": 0.17031986331807333
+    },
+    {
+      "name": "right conjugate symmetry m0=0.5,nu=0.5,sigma=0.25",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "tolerance": 5.4063972663614665e-11,
+      "reference_scale": 0.17031986331807333
+    },
+    {
+      "name": "right positive C0 m0=0.5,nu=0.5,sigma=0.25",
+      "passed": true,
+      "C0": 0.17031986331807333
+    },
+    {
+      "name": "right positive spectral magnitude bound m0=0.5,nu=0.5,sigma=0.25",
+      "passed": true,
+      "maximum": 0.17031986331807333,
+      "C0": 0.17031986331807333
+    },
+    {
+      "name": "right quadrature refinement m0=0.5,nu=0.5,sigma=0.5",
+      "passed": true,
+      "maximum_absolute_error": 2.2729511820139823e-16,
+      "tolerance": 5.2056803338803455e-11,
+      "reference_scale": 0.16028401669401726
+    },
+    {
+      "name": "right cutoff extension m0=0.5,nu=0.5,sigma=0.5",
+      "passed": true,
+      "maximum_absolute_error": 2.0816681711721685e-17,
+      "tolerance": 5.2056803338803455e-11,
+      "reference_scale": 0.16028401669401726
+    },
+    {
+      "name": "right conjugate symmetry m0=0.5,nu=0.5,sigma=0.5",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "tolerance": 5.2056803338803455e-11,
+      "reference_scale": 0.16028401669401726
+    },
+    {
+      "name": "right positive C0 m0=0.5,nu=0.5,sigma=0.5",
+      "passed": true,
+      "C0": 0.16028401669401726
+    },
+    {
+      "name": "right positive spectral magnitude bound m0=0.5,nu=0.5,sigma=0.5",
+      "passed": true,
+      "maximum": 0.16028401669401726,
+      "C0": 0.16028401669401726
+    },
+    {
+      "name": "right quadrature refinement m0=0.5,nu=1.0,sigma=0.25",
+      "passed": true,
+      "maximum_absolute_error": 9.71445146547012e-17,
+      "tolerance": 3.1863799409494123e-11,
+      "reference_scale": 0.059318997047470616
+    },
+    {
+      "name": "right cutoff extension m0=0.5,nu=1.0,sigma=0.25",
+      "passed": true,
+      "maximum_absolute_error": 1.962615573354719e-17,
+      "tolerance": 3.1863799409494123e-11,
+      "reference_scale": 0.059318997047470616
+    },
+    {
+      "name": "right conjugate symmetry m0=0.5,nu=1.0,sigma=0.25",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "tolerance": 3.1863799409494123e-11,
+      "reference_scale": 0.059318997047470616
+    },
+    {
+      "name": "right positive C0 m0=0.5,nu=1.0,sigma=0.25",
+      "passed": true,
+      "C0": 0.059318997047470616
+    },
+    {
+      "name": "right positive spectral magnitude bound m0=0.5,nu=1.0,sigma=0.25",
+      "passed": true,
+      "maximum": 0.059318997047470616,
+      "C0": 0.059318997047470616
+    },
+    {
+      "name": "right quadrature refinement m0=0.5,nu=1.0,sigma=0.5",
+      "passed": true,
+      "maximum_absolute_error": 8.326672684688674e-17,
+      "tolerance": 3.033612265091209e-11,
+      "reference_scale": 0.05168061325456045
+    },
+    {
+      "name": "right cutoff extension m0=0.5,nu=1.0,sigma=0.5",
+      "passed": true,
+      "maximum_absolute_error": 2.0816681711721685e-17,
+      "tolerance": 3.033612265091209e-11,
+      "reference_scale": 0.05168061325456045
+    },
+    {
+      "name": "right conjugate symmetry m0=0.5,nu=1.0,sigma=0.5",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "tolerance": 3.033612265091209e-11,
+      "reference_scale": 0.05168061325456045
+    },
+    {
+      "name": "right positive C0 m0=0.5,nu=1.0,sigma=0.5",
+      "passed": true,
+      "C0": 0.05168061325456045
+    },
+    {
+      "name": "right positive spectral magnitude bound m0=0.5,nu=1.0,sigma=0.5",
+      "passed": true,
+      "maximum": 0.05168061325456045,
+      "C0": 0.05168061325456045
+    },
+    {
+      "name": "right quadrature refinement m0=2.0,nu=0.5,sigma=0.25",
+      "passed": true,
+      "maximum_absolute_error": 1.3877787807814457e-16,
+      "tolerance": 5.4871073618622756e-11,
+      "reference_scale": 0.17435536809311375
+    },
+    {
+      "name": "right cutoff extension m0=2.0,nu=0.5,sigma=0.25",
+      "passed": true,
+      "maximum_absolute_error": 6.938893903907228e-17,
+      "tolerance": 5.4871073618622756e-11,
+      "reference_scale": 0.17435536809311375
+    },
+    {
+      "name": "right conjugate symmetry m0=2.0,nu=0.5,sigma=0.25",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "tolerance": 5.4871073618622756e-11,
+      "reference_scale": 0.17435536809311375
+    },
+    {
+      "name": "right positive C0 m0=2.0,nu=0.5,sigma=0.25",
+      "passed": true,
+      "C0": 0.17435536809311375
+    },
+    {
+      "name": "right positive spectral magnitude bound m0=2.0,nu=0.5,sigma=0.25",
+      "passed": true,
+      "maximum": 0.17435536809311375,
+      "C0": 0.17435536809311375
+    },
+    {
+      "name": "right quadrature refinement m0=2.0,nu=0.5,sigma=0.5",
+      "passed": true,
+      "maximum_absolute_error": 1.3092278833360675e-16,
+      "tolerance": 5.227934069505462e-11,
+      "reference_scale": 0.16139670347527307
+    },
+    {
+      "name": "right cutoff extension m0=2.0,nu=0.5,sigma=0.5",
+      "passed": true,
+      "maximum_absolute_error": 9.813077866773594e-17,
+      "tolerance": 5.227934069505462e-11,
+      "reference_scale": 0.16139670347527307
+    },
+    {
+      "name": "right conjugate symmetry m0=2.0,nu=0.5,sigma=0.5",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "tolerance": 5.227934069505462e-11,
+      "reference_scale": 0.16139670347527307
+    },
+    {
+      "name": "right positive C0 m0=2.0,nu=0.5,sigma=0.5",
+      "passed": true,
+      "C0": 0.16139670347527307
+    },
+    {
+      "name": "right positive spectral magnitude bound m0=2.0,nu=0.5,sigma=0.5",
+      "passed": true,
+      "maximum": 0.16139670347527307,
+      "C0": 0.16139670347527307
+    },
+    {
+      "name": "right quadrature refinement m0=2.0,nu=1.0,sigma=0.25",
+      "passed": true,
+      "maximum_absolute_error": 1.235434935934258e-16,
+      "tolerance": 3.2651536921854296e-11,
+      "reference_scale": 0.06325768460927149
+    },
+    {
+      "name": "right cutoff extension m0=2.0,nu=1.0,sigma=0.25",
+      "passed": true,
+      "maximum_absolute_error": 3.7367087251761353e-17,
+      "tolerance": 3.2651536921854296e-11,
+      "reference_scale": 0.06325768460927149
+    },
+    {
+      "name": "right conjugate symmetry m0=2.0,nu=1.0,sigma=0.25",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "tolerance": 3.2651536921854296e-11,
+      "reference_scale": 0.06325768460927149
+    },
+    {
+      "name": "right positive C0 m0=2.0,nu=1.0,sigma=0.25",
+      "passed": true,
+      "C0": 0.06325768460927149
+    },
+    {
+      "name": "right positive spectral magnitude bound m0=2.0,nu=1.0,sigma=0.25",
+      "passed": true,
+      "maximum": 0.06325768460927149,
+      "C0": 0.06325768460927149
+    },
+    {
+      "name": "right quadrature refinement m0=2.0,nu=1.0,sigma=0.5",
+      "passed": true,
+      "maximum_absolute_error": 9.699338322020184e-17,
+      "tolerance": 3.0701178050337924e-11,
+      "reference_scale": 0.053505890251689614
+    },
+    {
+      "name": "right cutoff extension m0=2.0,nu=1.0,sigma=0.5",
+      "passed": true,
+      "maximum_absolute_error": 2.6093032173288503e-17,
+      "tolerance": 3.0701178050337924e-11,
+      "reference_scale": 0.053505890251689614
+    },
+    {
+      "name": "right conjugate symmetry m0=2.0,nu=1.0,sigma=0.5",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "tolerance": 3.0701178050337924e-11,
+      "reference_scale": 0.053505890251689614
+    },
+    {
+      "name": "right positive C0 m0=2.0,nu=1.0,sigma=0.5",
+      "passed": true,
+      "C0": 0.053505890251689614
+    },
+    {
+      "name": "right positive spectral magnitude bound m0=2.0,nu=1.0,sigma=0.5",
+      "passed": true,
+      "maximum": 0.053505890251689614,
+      "C0": 0.053505890251689614
+    },
+    {
+      "name": "right quadrature refinement m0=5.0,nu=0.5,sigma=0.25",
+      "passed": true,
+      "maximum_absolute_error": 1.942890293094024e-16,
+      "tolerance": 5.606819500530553e-11,
+      "reference_scale": 0.18034097502652763
+    },
+    {
+      "name": "right cutoff extension m0=5.0,nu=0.5,sigma=0.25",
+      "passed": true,
+      "maximum_absolute_error": 1.6653345369377348e-16,
+      "tolerance": 5.606819500530553e-11,
+      "reference_scale": 0.18034097502652763
+    },
+    {
+      "name": "right conjugate symmetry m0=5.0,nu=0.5,sigma=0.25",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "tolerance": 5.606819500530553e-11,
+      "reference_scale": 0.18034097502652763
+    },
+    {
+      "name": "right positive C0 m0=5.0,nu=0.5,sigma=0.25",
+      "passed": true,
+      "C0": 0.18034097502652763
+    },
+    {
+      "name": "right positive spectral magnitude bound m0=5.0,nu=0.5,sigma=0.25",
+      "passed": true,
+      "maximum": 0.18034097502652763,
+      "C0": 0.18034097502652763
+    },
+    {
+      "name": "right quadrature refinement m0=5.0,nu=0.5,sigma=0.5",
+      "passed": true,
+      "maximum_absolute_error": 1.734723475976807e-16,
+      "tolerance": 5.324176893871811e-11,
+      "reference_scale": 0.16620884469359054
+    },
+    {
+      "name": "right cutoff extension m0=5.0,nu=0.5,sigma=0.5",
+      "passed": true,
+      "maximum_absolute_error": 1.4488835837920476e-16,
+      "tolerance": 5.324176893871811e-11,
+      "reference_scale": 0.16620884469359054
+    },
+    {
+      "name": "right conjugate symmetry m0=5.0,nu=0.5,sigma=0.5",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "tolerance": 5.324176893871811e-11,
+      "reference_scale": 0.16620884469359054
+    },
+    {
+      "name": "right positive C0 m0=5.0,nu=0.5,sigma=0.5",
+      "passed": true,
+      "C0": 0.16620884469359054
+    },
+    {
+      "name": "right positive spectral magnitude bound m0=5.0,nu=0.5,sigma=0.5",
+      "passed": true,
+      "maximum": 0.16620884469359054,
+      "C0": 0.16620884469359054
+    },
+    {
+      "name": "right quadrature refinement m0=5.0,nu=1.0,sigma=0.25",
+      "passed": true,
+      "maximum_absolute_error": 9.72064493212764e-17,
+      "tolerance": 3.337456843709288e-11,
+      "reference_scale": 0.06687284218546441
+    },
+    {
+      "name": "right cutoff extension m0=5.0,nu=1.0,sigma=0.25",
+      "passed": true,
+      "maximum_absolute_error": 4.885025661874571e-17,
+      "tolerance": 3.337456843709288e-11,
+      "reference_scale": 0.06687284218546441
+    },
+    {
+      "name": "right conjugate symmetry m0=5.0,nu=1.0,sigma=0.25",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "tolerance": 3.337456843709288e-11,
+      "reference_scale": 0.06687284218546441
+    },
+    {
+      "name": "right positive C0 m0=5.0,nu=1.0,sigma=0.25",
+      "passed": true,
+      "C0": 0.06687284218546441
+    },
+    {
+      "name": "right positive spectral magnitude bound m0=5.0,nu=1.0,sigma=0.25",
+      "passed": true,
+      "maximum": 0.06687284218546441,
+      "C0": 0.06687284218546441
+    },
+    {
+      "name": "right quadrature refinement m0=5.0,nu=1.0,sigma=0.5",
+      "passed": true,
+      "maximum_absolute_error": 7.24649457599557e-17,
+      "tolerance": 3.1245310691751555e-11,
+      "reference_scale": 0.056226553458757766
+    },
+    {
+      "name": "right cutoff extension m0=5.0,nu=1.0,sigma=0.5",
+      "passed": true,
+      "maximum_absolute_error": 4.166948782366562e-17,
+      "tolerance": 3.1245310691751555e-11,
+      "reference_scale": 0.056226553458757766
+    },
+    {
+      "name": "right conjugate symmetry m0=5.0,nu=1.0,sigma=0.5",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "tolerance": 3.1245310691751555e-11,
+      "reference_scale": 0.056226553458757766
+    },
+    {
+      "name": "right positive C0 m0=5.0,nu=1.0,sigma=0.5",
+      "passed": true,
+      "C0": 0.056226553458757766
+    },
+    {
+      "name": "right positive spectral magnitude bound m0=5.0,nu=1.0,sigma=0.5",
+      "passed": true,
+      "maximum": 0.056226553458757766,
+      "C0": 0.056226553458757766
+    },
+    {
+      "name": "LR quadrature refinement m0=0.5,nu=0.5",
+      "passed": true,
+      "maximum_absolute_error": 4.85722573273506e-17,
+      "tolerance": 6.148542986466112e-12,
+      "reference_scale": 0.02074271493233056
+    },
+    {
+      "name": "LR real symmetric lobe matrix m0=0.5,nu=0.5",
+      "passed": true,
+      "maximum_absolute_error": 4.9873299934333204e-18,
+      "tolerance": 2.414854298646611e-11,
+      "reference_scale": 0.02074271493233056
+    },
+    {
+      "name": "LR real-sign interference identity m0=0.5,nu=0.5",
+      "passed": true,
+      "maximum_absolute_error": 1.734723475976807e-18,
+      "tolerance": 2.075284585629273e-11,
+      "reference_scale": 0.00376422928146365
+    },
+    {
+      "name": "LR nonzero positive sign contrast m0=0.5,nu=0.5",
+      "passed": true,
+      "contrast": 0.003764229281463652
+    },
+    {
+      "name": "LR quadrature refinement m0=0.5,nu=1.0",
+      "passed": true,
+      "maximum_absolute_error": 8.239936510889834e-18,
+      "tolerance": 2.534424128357267e-12,
+      "reference_scale": 0.0026721206417863372
+    },
+    {
+      "name": "LR real symmetric lobe matrix m0=0.5,nu=1.0",
+      "passed": true,
+      "maximum_absolute_error": 4.553649124439119e-18,
+      "tolerance": 2.0534424128357267e-11,
+      "reference_scale": 0.0026721206417863372
+    },
+    {
+      "name": "LR real-sign interference identity m0=0.5,nu=1.0",
+      "passed": true,
+      "maximum_absolute_error": 4.7704895589362195e-18,
+      "tolerance": 2.06564726280291e-11,
+      "reference_scale": 0.00328236314014551
+    },
+    {
+      "name": "LR nonzero positive sign contrast m0=0.5,nu=1.0",
+      "passed": true,
+      "contrast": 0.003282363140145515
+    },
+    {
+      "name": "LR quadrature refinement m0=2.0,nu=0.5",
+      "passed": true,
+      "maximum_absolute_error": 4.85722573273506e-17,
+      "tolerance": 5.275877329377261e-12,
+      "reference_scale": 0.016379386646886308
+    },
+    {
+      "name": "LR real symmetric lobe matrix m0=2.0,nu=0.5",
+      "passed": true,
+      "maximum_absolute_error": 4.336808689942018e-18,
+      "tolerance": 2.327587732937726e-11,
+      "reference_scale": 0.016379386646886308
+    },
+    {
+      "name": "LR real-sign interference identity m0=2.0,nu=0.5",
+      "passed": true,
+      "maximum_absolute_error": 6.938893903907228e-18,
+      "tolerance": 2.090637497261914e-11,
+      "reference_scale": 0.004531874863095694
+    },
+    {
+      "name": "LR nonzero positive sign contrast m0=2.0,nu=0.5",
+      "passed": true,
+      "contrast": 0.004531874863095701
+    },
+    {
+      "name": "LR quadrature refinement m0=2.0,nu=1.0",
+      "passed": true,
+      "maximum_absolute_error": 8.023096076392733e-18,
+      "tolerance": 2.351507235748123e-12,
+      "reference_scale": 0.0017575361787406166
+    },
+    {
+      "name": "LR real symmetric lobe matrix m0=2.0,nu=1.0",
+      "passed": true,
+      "maximum_absolute_error": 2.8189256484623115e-18,
+      "tolerance": 2.0351507235748123e-11,
+      "reference_scale": 0.0017575361787406166
+    },
+    {
+      "name": "LR real-sign interference identity m0=2.0,nu=1.0",
+      "passed": true,
+      "maximum_absolute_error": 3.0357660829594124e-18,
+      "tolerance": 2.0657528173956497e-11,
+      "reference_scale": 0.0032876408697824935
+    },
+    {
+      "name": "LR nonzero positive sign contrast m0=2.0,nu=1.0",
+      "passed": true,
+      "contrast": 0.0032876408697824905
+    },
+    {
+      "name": "LR quadrature refinement m0=5.0,nu=0.5",
+      "passed": true,
+      "maximum_absolute_error": 1.0408340855860843e-16,
+      "tolerance": 5.194177487162693e-12,
+      "reference_scale": 0.015970887435813465
+    },
+    {
+      "name": "LR real symmetric lobe matrix m0=5.0,nu=0.5",
+      "passed": true,
+      "maximum_absolute_error": 2.168404344971009e-18,
+      "tolerance": 2.319417748716269e-11,
+      "reference_scale": 0.015970887435813465
+    },
+    {
+      "name": "LR real-sign interference identity m0=5.0,nu=0.5",
+      "passed": true,
+      "maximum_absolute_error": 3.469446951953614e-18,
+      "tolerance": 2.094034690744623e-11,
+      "reference_scale": 0.0047017345372311545
+    },
+    {
+      "name": "LR nonzero positive sign contrast m0=5.0,nu=0.5",
+      "passed": true,
+      "contrast": 0.004701734537231158
+    },
+    {
+      "name": "LR quadrature refinement m0=5.0,nu=1.0",
+      "passed": true,
+      "maximum_absolute_error": 9.107298248878237e-18,
+      "tolerance": 2.33794739307296e-12,
+      "reference_scale": 0.0016897369653648003
+    },
+    {
+      "name": "LR real symmetric lobe matrix m0=5.0,nu=1.0",
+      "passed": true,
+      "maximum_absolute_error": 2.168404344971009e-18,
+      "tolerance": 2.033794739307296e-11,
+      "reference_scale": 0.0016897369653648003
+    },
+    {
+      "name": "LR real-sign interference identity m0=5.0,nu=1.0",
+      "passed": true,
+      "maximum_absolute_error": 2.168404344971009e-18,
+      "tolerance": 2.0657874766282523e-11,
+      "reference_scale": 0.0032893738314126214
+    },
+    {
+      "name": "LR nonzero positive sign contrast m0=5.0,nu=1.0",
+      "passed": true,
+      "contrast": 0.0032893738314126236
+    },
+    {
+      "name": "independent nested adaptive quadrature to infinite a",
+      "passed": true,
+      "maximum_absolute_error": 9.020562075079397e-17,
+      "tolerance": 3.0701178050337926e-09,
+      "reference_scale": 0.05350589025168963
+    },
+    {
+      "name": "LR point-kernel indefinite diagnostic at 70 digits",
+      "passed": true,
+      "determinant": "-0.0000000000787831026342297609409197209549583616540804257",
+      "smallest_eigenvalue": "-0.000000864812624733106588621123534777809628828648633"
+    }
+  ]
+}

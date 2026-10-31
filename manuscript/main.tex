@@ -1,0 +1,184 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype,booktabs}
+\usepackage{graphicx}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\dd}{\mathop{}\!\mathrm d}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cE}{\mathcal E}
+\newcommand{\cM}{\mathcal M}
+\newcommand{\cD}{\mathcal D}
+\newcommand{\Cc}{C_c^\infty}
+\newcommand{\FP}{\mathrm{FP}}
+\newcommand{\GA}{\mathrm{GA}}
+\newcommand{\gen}{\mathrm{gen}}
+\newcommand{\spec}{\mathrm{spec}}
+\newcommand{\Sym}{\operatorname{Sym}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\sech}{\operatorname{sech}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\ip}[2]{\left\langle#1,#2\right\rangle}
+\newcommand{\rhoP}{\rho_{\mathrm{Pl}}}
+\newcommand{\KP}{K_{\mathrm P}}
+\newcommand{\one}{\mathbf 1}
+\DeclareMathOperator*{\esssup}{ess\,sup}
+\title{Physical state spaces and Gaussian observables\\
+for quantum observers in de Sitter space}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Working research draft --- 30 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We study two quantum observers and free principal-series matter on
+two-dimensional de Sitter space in the strict $G_{\!N}\to0$ limit. We specify a
+weak positive-frequency condition directly on finite gauge-fixed position
+states and identify the resulting maximal space with the closure of actual
+group-averaged observer wave packets. The analytic step is a complete
+position-test core controlled by a fractional radial moment: a low-energy
+spectral cutoff converges in the orbit norm although a first-moment estimate
+would not suffice. The identification retains both continuous
+Clebsch--Gordan channels and all internal discrete paths. With explicit
+Gaussian proper-time smearing and repeated observer mass projections,
+bounded equivariant creation blocks descend through a common group cutoff.
+Their symmetric field is essentially self-adjoint on the full finite-particle
+domain. On explicit seed tests, the creation block also admits an
+absolutely convergent position pairing for every physical input; auxiliary
+position and group cutoffs can be removed in that pairing. For annihilation,
+finite emitted-mode position integrals converge in physical dual norm at
+each seed test; on physical seed inputs, a positive Fej\'er regulator also
+gives an absolutely convergent uncut position formula.
+We also record the connection to ordered four-point functions of two
+independent matter species. These are statements about a specified
+weak-frequency realization and regulated observables, not a construction of
+a finite-$G_N$ holographic dual.
+\end{abstract}
+
+\section{Introduction and scope}
+The two-observer model of Kolchmeyer and Liu~\cite{KL} makes observer recoil
+and relational correlators accessible while the background remains fixed.
+An important distinction in this model is between a kinematical Hilbert
+space, non-normalizable invariant coefficients, and a physical Hilbert
+space defined by a gauge-fixed position norm. Statements about one of these
+spaces need not extend to the others by ordinary Hilbert-space density.
+In particular, evaluation on a continuous spectral diagonal is not a bounded
+operation on the kinematical tensor product.
+
+We work with de Sitter radius $L=1$, the proper group $G=SO^+(2,1)$, and
+real principal-series matter parameters $\nu>0$. The physical observer mass
+associated with a representation label $s$ is
+\begin{equation}
+ m(s)=\sqrt{s^2+\tfrac14}.
+\end{equation}
+Unless a zero-threshold extension is explicitly stated, each actual observer
+has a fixed lower label $s_*>0$. This restriction is never imposed on an
+internal matter or recoupling label. Parity and anti-linear time reversal are
+not gauged here. The scalar field is free; observer recoil at $G_{\!N}\to0$ is not
+finite-$G_N$ gravitational scattering.
+
+Our construction uses the complete unitary principal--principal and
+principal--discrete decompositions in Appendix E of~\cite{KL}, the group
+averaging normalization of~\cite{MY}, one-dimensional scattering
+theory~\cite{GPR,GS}, and the analytic-vector criterion~\cite{Nelson}.
+These are established inputs. This draft records the explicit chain of
+domain estimates and identifications for the chosen realization; no priority
+claim is made. A reconstructed local vertex, rather than an unannounced
+alteration of a printed formula, is used where needed; its conventions and
+source discrepancy are recorded in Appendix~\ref{app:vertex}.
+
+The central state-space statement is
+\begin{equation}
+ \cH_N^{\max,w}(s_*)=\cH_N^{\gen}(s_*)=J_N\cH_N^{\spec}(s_*).
+ \label{eq:main-space}
+\end{equation}
+The left-hand side is defined by independent position-test conditions,
+not by the generated closure. The superscript $w$ is essential: an
+unspecified formal mode sum is not assigned a convergence topology by this
+notation. Sections~\ref{sec:orbit}--\ref{sec:physical} prove the identity.
+Section~\ref{sec:fields} constructs the regulated weak field. The
+direct position interpretation of its creation block is proved in
+Section~\ref{sec:position}, and the annihilation mode limit in
+Section~\ref{sec:annihilation}. The
+four-point interpretation and its numerical limits are stated in
+Section~\ref{sec:fourpoint}.
+Sections~\ref{sec:crosslimit} and \ref{sec:endpoint} retain the successive
+reduction steps; their compact-limit hypothesis and assembly question
+are discharged in Section~\ref{sec:assembly}.
+Section~\ref{sec:logtime} then gives the logarithmic-time packet limit
+and its ordered early/late plateaux. The full holographic problem
+is not settled by these strict-$G_N\to0$ results.
+
+\tableofcontents
+\input{orbit}
+\input{spectral}
+\input{physical}
+\input{fields}
+\input{position}
+\input{annihilation}
+\input{fourpoint}
+\input{crosslimit}
+\input{endpoint}
+\input{assembly}
+\input{logtime}
+\input{preparation}
+\input{movingcurve}
+\input{densityendpoints}
+\input{twobranch}
+\input{growingbox}
+
+\section{Open questions}
+The weak realization fixes the space and the order of regulation.
+Section~\ref{sec:position} removes auxiliary position and group cutoffs
+for the creation pairing on explicit test seeds and arbitrary physical
+inputs. Section~\ref{sec:annihilation} identifies annihilation as an
+integrated mode limit on all physical inputs and as an absolute uncut
+position formula on seed inputs. Pointwise convergence and absolute
+position formulas for arbitrary physical inputs remain open. The Gaussian
+proper-time smearing and observer threshold have not been removed.
+
+Two further questions are central to the original holographic objective.
+First, Sections~\ref{sec:logtime} and \ref{sec:preparation} give the
+logarithmic-time limit and distinguish the fixed-protocol exponential
+early correction from an inverse-cubic hard-boundary correction for an
+exponential packet.
+Section~\ref{sec:twobranch} retains both oscillatory branches and
+proves uniform absolute approximation on the full time axis. Its
+mirror identity determines the fast-branch tail.
+Section~\ref{sec:growingbox} supplies their exponential-polynomial
+growth bounds and explicit asymptotic windows for packets with a
+positive exponential moment. A numerically certified onset mass and
+full exact finite-mass packet checks remain open.
+Section~\ref{sec:densityendpoints} classifies the stated integer-order
+Gamma densities and gapped exponential packets. General densities,
+degenerate real coefficients, and a uniform gap-closing crossover still
+require separate analysis. Section~\ref{sec:movingcurve} supplies a numerically
+resolved moving-protocol curve for the exponential packet, with empirical
+quadrature diagnostics rather than certified total error bars.
+The constant source
+time-origin discrepancy is now isolated algebraically, but is not an
+author-confirmed correction.
+Second, a finite-$G_N$ or microscopic comparison must
+match states, spectral weights, time conventions, external legs, and
+integration contours in a common parameter regime. The results here do not
+settle either question. The known noncrossed large-mass expansion and the
+finite-$G_N$ comparison notes remain separate parts of the research project.
+
+\appendix
+\input{normalization}
+\input{vertex}
+\input{references}
+\end{document}

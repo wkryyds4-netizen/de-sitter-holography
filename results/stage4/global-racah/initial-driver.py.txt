@@ -1,0 +1,117 @@
+"""Independent checks for the natural global-Racah identification.
+
+No frozen input or output is overwritten. Nonzero discrepancy is a result,
+not a failing tolerance: the hypothesis under test is documented explicitly.
+"""
+from pathlib import Path
+from datetime import datetime, timezone
+import hashlib,json,platform
+import mpmath as mp
+from global_racah import scalar_6j, spectral_rectangle, shadow_fourier
+from recoil_internal import parameters
+from recoil_poles import regular_left,regular_right,leg_product
+
+ROOT=Path(__file__).resolve().parents[1]
+OUT=ROOT/'results/stage4/global-racah'
+
+
+def encode(v):
+    if isinstance(v,dict):return {k:encode(x) for k,x in v.items()}
+    if isinstance(v,(tuple,list)):return [encode(x) for x in v]
+    if isinstance(v,(mp.mpf,mp.mpc)):return mp.nstr(v,55)
+    return v
+
+
+def run():
+    checks=[]
+    def check(name,x,y,tol):
+        scale=max(abs(y),mp.mpf('1e-80'));err=abs(x-y)/scale
+        checks.append(dict(name=name,observed=x,expected=y,relative_error=err,
+                           tolerance=tol,passed=bool(err<mp.mpf(tol))))
+    ext_strings=['.4','.7','.93','.6'];s_strings=['.65','.85'];t_strings=['.55','.8']
+    datasets=[]
+    for dps in [40,60]:
+        mp.mp.dps=dps
+        ext=list(map(mp.mpf,ext_strings)); rows=[]
+        for s in map(mp.mpf,s_strings):
+            for t in map(mp.mpf,t_strings):
+                sixj=scalar_6j(s,t,ext)
+                mu=[ext[0],ext[1],s,ext[2],ext[3],t]
+                a,r=parameters(mu)
+                hr,cr,_=regular_right(a,r)
+                hl,cl,_=regular_left(a,r)
+                check(f'H_left_right_dps{dps}_s{s}_t{t}',hl,hr,'1e-30')
+                z=mp.pi**6*leg_product(mu)*abs(hr)**2
+                rows.append(dict(s=s,t=t,edges=mu,sixj=sixj,H=hr,Z=z,
+                    H_left=hl,H_cancellation=max(cr,cl),a=a,r=r))
+                print(f'completed rectangle point dps={dps}, s={s}, t={t}',flush=True)
+        ratios={key:spectral_rectangle([row['sixj']['value'] if key=='J'
+                     else row[key] for row in rows]) for key in ['J','H','Z']}
+        datasets.append(dict(dps=dps,rows=rows,ratios=ratios))
+    mp.mp.dps=60
+    low,high=datasets
+    for i in range(4):
+        for key in ['J','H','Z']:
+            x=low['rows'][i]['sixj']['value'] if key=='J' else low['rows'][i][key]
+            y=high['rows'][i]['sixj']['value'] if key=='J' else high['rows'][i][key]
+            check(f'precision_{key}_point{i}',x,y,'1e-30')
+    for key in ['J','H','Z']:
+        check(f'precision_rectangle_{key}',low['ratios'][key],high['ratios'][key],'1e-30')
+    check('Z_rectangle_equals_abs_H_squared',high['ratios']['Z'],abs(high['ratios']['H'])**2,'1e-50')
+    ext=list(map(mp.mpf,ext_strings))
+    # Full first matrix element from four independent Euler integrals, at 60 dps.
+    direct=scalar_6j(mp.mpf('.65'),mp.mpf('.55'),ext,method='quad')
+    ref=high['rows'][0]['sixj']
+    check('sixj_direct_euler_vs_hyper',direct['value'],ref['value'],'1e-28')
+    for i,(q,h) in enumerate(zip(direct['omega'],ref['omega'])):
+        check(f'omega_direct_euler_{i}',q,h,'1e-28')
+    print('completed independent Euler comparison',flush=True)
+    # Shadow representatives: compare rectangle invariant, not raw matrix elements.
+    shadow_rows=[]
+    for flip in ['s','t','external1']:
+        vals=[]
+        e=ext.copy()
+        if flip=='external1':e[0]=-e[0]
+        for ss in s_strings:
+            for tt in t_strings:
+                s,t=mp.mpf(ss),mp.mpf(tt)
+                if flip=='s':s=-s
+                if flip=='t':t=-t
+                vals.append(scalar_6j(s,t,e)['value'])
+        ratio=spectral_rectangle(vals)
+        check('shadow_rectangle_'+flip,ratio,high['ratios']['J'],'1e-45')
+        shadow_rows.append(dict(flip=flip,values=vals,ratio=ratio))
+        print('completed shadow representative '+flip,flush=True)
+    shadow_norm=[]
+    for nu in map(mp.mpf,['.4','.7','1.2']):
+        N=mp.pi**2*mp.gamma(-1j*nu)*mp.gamma(1j*nu)/(mp.gamma(1+1j*nu)*mp.gamma(1-1j*nu))
+        check('shadow_square_nu'+str(nu),N,mp.pi**2/nu**2,'1e-50')
+        vals=[]
+        for p in map(mp.mpf,['.2','1','3']):
+            q=shadow_fourier(nu,p)
+            check(f'shadow_multiplier_norm_nu{nu}_p{p}',abs(q)*nu/mp.pi,1,'1e-50')
+            vals.append(dict(p=p,multiplier=q))
+        shadow_norm.append(dict(nu=nu,N=N,DS_rho=nu**2/(4*mp.pi**4),values=vals))
+    ratios=high['ratios']
+    gaps={k:abs(ratios[k]/ratios['J']-1) for k in ['H','Z']}
+    files=['code/global_racah.py','code/validate_global_racah.py','code/recoil_poles.py',
+           'code/recoil_internal.py','code/recoil_vertex.py',
+           'sources/derkachov-spiridonov-1711.07073v2.html',
+           'sources/liu-et-al-1808.00612v3.html',
+           'sources/karateev-kravchuk-simmons-duffin-1809.05111v1.html']
+    data=dict(status='passed' if all(c['passed'] for c in checks) else 'failed',
+        created_at_utc=datetime.now(timezone.utc).isoformat(),python=platform.python_version(),mpmath=mp.__version__,
+        hypothesis='Topology-preserving scalar map Delta_e=1+i*mu_e, s=edge3,t=edge6, external=(edge1,edge2,edge4,edge5); allow nonzero row/column factors.',
+        external=ext_strings,s_values=s_strings,t_values=t_strings,datasets=datasets,
+        direct=direct,shadow_rows=shadow_rows,shadow_norm=shadow_norm,checks=checks,gaps=gaps,
+        scope='Finite-point numerical exclusion under the specified map. Not an interval certificate or exclusion of all nonlocal transformations; scalar entries do not replace spin sum.',
+        hashes={p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in files})
+    OUT.mkdir(parents=True,exist_ok=True)
+    dst=OUT/'diagnostics.json'
+    if dst.exists():raise FileExistsError('Keep existing evidence; select a new output name.')
+    dst.write_text(json.dumps(encode(data),indent=2)+'\n',encoding='utf-8')
+    print(json.dumps(encode(dict(status=data['status'],checks=len(checks),
+        failed=[c['name'] for c in checks if not c['passed']],ratios=ratios,gaps=gaps))))
+
+
+if __name__=='__main__':run()

@@ -1,0 +1,37 @@
+Three full complex-kernel grids retain 1,216,480 samples in NPZ files.
+The final grid uses $L=12$, six Gauss nodes per mass segment, twelve
+initial-packet nodes, and the existing $(N,K)=(128,12)$ special-function
+series settings. The final raw values, with digits shown for comparison
+rather than accuracy certification, are
+\begin{center}
+\begin{tabular}{rrr}
+\toprule
+$t$ & $\|B_{t0}\|^2$ & $D_B(t)$\\
+\midrule
+0 & $2.23450375\,10^{-4}$ & $0$\\
+0.001 & $2.23450359\,10^{-4}$ & $3.17557610\,10^{-11}$\\
+0.01 & $2.23448793\,10^{-4}$ & $3.17553681\,10^{-9}$\\
+0.5 & $2.19598612\,10^{-4}$ & $7.70115634\,10^{-6}$\\
+1 & $2.09164392\,10^{-4}$ & $2.83756540\,10^{-5}$\\
+2 & $1.79403681\,10^{-4}$ & $8.95584228\,10^{-5}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The raw moment estimate is $Q_B\simeq3.17557649\,10^{-5}$.
+Holding $L=12$, the initial nodes, and the series settings fixed,
+mass-node refinement from four to six changes $D_B(2)$ by
+$2.26752\,10^{-8}$ and the full Bose overlap by at most
+$1.64309\,10^{-8}$ over these times. The coarser-to-finer comparison
+is empirical. In particular it exceeds the analytic mass-tail bound;
+that bound is not a total error bar.
+
+All raw grids have been replayed from the unsimplified local vertices
+$E$, inverse norms $W$, and density $\rho$, rather than the simplified
+$\widehat R$ expression. The largest replay difference is below
+$3\,10^{-17}$. The final integrated absolute flip-Hermiticity residual
+is $6.78\,10^{-18}$ or smaller; this is a diagnostic, not a bound on
+real symmetric numerical error. Six selected large weighted-condition
+proxies have 55-digit reference comparisons, with maximum observed
+relative error about $7.16\,10^{-11}$. Neither sample selection nor
+condition numbers certify all remaining nodes.
+

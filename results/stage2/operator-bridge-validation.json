@@ -1,0 +1,301 @@
+{
+  "status": "passed",
+  "checks": 24,
+  "failed": 0,
+  "scope": "Finite-matrix KMS GNS versus infinite-oscillator Wick reference; projected Weyl central differences, resolvents on one reference vector, and nonmultiplicativity. Truncated ladders do not obey exact CCR. These are supporting checks, not continuum proofs.",
+  "cutoff_moment_changes": {
+    "two": 0.0,
+    "four_equal": 0.0,
+    "four_unequal": 0.0
+  },
+  "probe": "normalized projected A acting on the thermal reference; the reference alone cancels the leading defect",
+  "parameters": {
+    "oscillator_levels": 48,
+    "omega": 1.0,
+    "projection_threshold": 1.5,
+    "clock_support": "any L2 wave amplitude within (1,2)",
+    "omitted_thermal_probability": 1.4251640827409352e-21,
+    "tail_note": "This probability tail is not a bound on unbounded field moments; separate 48-to-96 empirical moment checks are included."
+  },
+  "versions": {
+    "python": "3.14.5",
+    "numpy": "2.4.6",
+    "scipy": "1.18.0"
+  },
+  "code_sha256": {
+    "validate_operator_bridge.py": "a95f02cf7eb46f1d35999b0908c2330bbd8675aa72ed5d61793f29ea2f07d677"
+  },
+  "tasks": {
+    "two": [
+      0.3,
+      -0.2
+    ],
+    "four_equal": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "four_unequal": [
+      0.2,
+      -0.1,
+      0.5,
+      0
+    ]
+  },
+  "projected_moments": {
+    "two": [
+      0.8775825618903728,
+      -0.22155076701762333
+    ],
+    "four_equal": [
+      1.9311067092229535,
+      0.0
+    ],
+    "four_unequal": [
+      1.600717588108821,
+      -0.3878354162037183
+    ]
+  },
+  "rows": [
+    {
+      "epsilon": 0.4,
+      "moment_errors": {
+        "two": 0.1318968742960374,
+        "four_equal": 0.702358135421516,
+        "four_unequal": 0.5990103553822984
+      },
+      "resolvent_vector_error": 0.028631988912162894,
+      "compressed_Weyl_vs_exp_compressed_field": 0.09806878326956334,
+      "compressed_Weyl_norm_loss": 0.13639070416513832,
+      "leading_difference_relative_residual": 0.19871011212840015,
+      "norm_loss_coefficient_ratio": 0.7974995337583424,
+      "reference_vector_Weyl_difference": 0.013623930861134167,
+      "reference_vector_norm_loss": 0.00607361836072684
+    },
+    {
+      "epsilon": 0.2,
+      "moment_errors": {
+        "two": 0.035354211146433445,
+        "four_equal": 0.2134697274332622,
+        "four_unequal": 0.18173866952762724
+      },
+      "resolvent_vector_error": 0.007025883504393559,
+      "compressed_Weyl_vs_exp_compressed_field": 0.026500354966669266,
+      "compressed_Weyl_norm_loss": 0.04035825863719722,
+      "leading_difference_relative_residual": 0.08889917690038297,
+      "norm_loss_coefficient_ratio": 0.9439262783626009,
+      "reference_vector_Weyl_difference": 0.0017851008815611552,
+      "reference_vector_norm_loss": 0.0004148695720657125
+    },
+    {
+      "epsilon": 0.1,
+      "moment_errors": {
+        "two": 0.00899730677695941,
+        "four_equal": 0.05623547163900233,
+        "four_unequal": 0.04784935325778999
+      },
+      "resolvent_vector_error": 0.0017484100430978926,
+      "compressed_Weyl_vs_exp_compressed_field": 0.0067567254281135575,
+      "compressed_Weyl_norm_loss": 0.010535117338409505,
+      "leading_difference_relative_residual": 0.042854446052059125,
+      "norm_loss_coefficient_ratio": 0.9856098292796713,
+      "reference_vector_Weyl_difference": 0.00022581000418006779,
+      "reference_vector_norm_loss": 2.6521203021157014e-05
+    },
+    {
+      "epsilon": 0.05,
+      "moment_errors": {
+        "two": 0.002259413962257613,
+        "four_equal": 0.014247372409299963,
+        "four_unequal": 0.012120912957978184
+      },
+      "resolvent_vector_error": 0.00043660195344984485,
+      "compressed_Weyl_vs_exp_compressed_field": 0.0016975339641325123,
+      "compressed_Weyl_norm_loss": 0.002662556271233907,
+      "leading_difference_relative_residual": 0.02121673025059136,
+      "norm_loss_coefficient_ratio": 0.9963787009265729,
+      "reference_vector_Weyl_difference": 2.8310622648589967e-05,
+      "reference_vector_norm_loss": 1.6669917021205904e-06
+    },
+    {
+      "epsilon": 0.025,
+      "moment_errors": {
+        "two": 0.0005654865612979176,
+        "four_equal": 0.0035737756722049596,
+        "four_unequal": 0.003040264041004904
+      },
+      "resolvent_vector_error": 0.00010911925463938042,
+      "compressed_Weyl_vs_exp_compressed_field": 0.0004249075078691545,
+      "compressed_Weyl_norm_loss": 0.0006674524995357034,
+      "leading_difference_relative_residual": 0.010581685279132355,
+      "norm_loss_coefficient_ratio": 0.9990931821461654,
+      "reference_vector_Weyl_difference": 3.5414712335207635e-06,
+      "reference_vector_norm_loss": 1.0433478314642031e-07
+    },
+    {
+      "epsilon": 0.0125,
+      "moment_errors": {
+        "two": 0.00014141124827071934,
+        "four_equal": 0.0008941920899308009,
+        "four_unequal": 0.0007606952204801553
+      },
+      "resolvent_vector_error": 2.7277862352112516e-05,
+      "compressed_Weyl_vs_exp_compressed_field": 0.0001062596590218235,
+      "compressed_Weyl_norm_loss": 0.00016697669812704152,
+      "leading_difference_relative_residual": 0.0052874959706201,
+      "norm_loss_coefficient_ratio": 0.9997732020903564,
+      "reference_vector_Weyl_difference": 4.4276656354355e-07,
+      "reference_vector_norm_loss": 6.5232359514055815e-09
+    }
+  ],
+  "check_details": [
+    {
+      "name": "projected Wick measure two",
+      "passed": true,
+      "absolute_error": 2.7755575615628914e-17
+    },
+    {
+      "name": "projected Wick measure four_equal",
+      "passed": true,
+      "absolute_error": 6.661338147750939e-16
+    },
+    {
+      "name": "projected Wick measure four_unequal",
+      "passed": true,
+      "absolute_error": 2.2887833992611187e-16
+    },
+    {
+      "name": "48 to 96 level convergence two",
+      "passed": true,
+      "absolute_change": 0.0,
+      "scope": "Empirical cutoff convergence for this moment; not an all-observable bound."
+    },
+    {
+      "name": "48 to 96 level convergence four_equal",
+      "passed": true,
+      "absolute_change": 0.0,
+      "scope": "Empirical cutoff convergence for this moment; not an all-observable bound."
+    },
+    {
+      "name": "48 to 96 level convergence four_unequal",
+      "passed": true,
+      "absolute_change": 0.0,
+      "scope": "Empirical cutoff convergence for this moment; not an all-observable bound."
+    },
+    {
+      "name": "compressed Weyl differs at 0.4",
+      "passed": true,
+      "vector_difference": 0.09806878326956334
+    },
+    {
+      "name": "compressed Weyl loses norm at 0.4",
+      "passed": true,
+      "norm_loss": 0.13639070416513832
+    },
+    {
+      "name": "compressed Weyl differs at 0.2",
+      "passed": true,
+      "vector_difference": 0.026500354966669266
+    },
+    {
+      "name": "compressed Weyl loses norm at 0.2",
+      "passed": true,
+      "norm_loss": 0.04035825863719722
+    },
+    {
+      "name": "compressed Weyl differs at 0.1",
+      "passed": true,
+      "vector_difference": 0.0067567254281135575
+    },
+    {
+      "name": "compressed Weyl loses norm at 0.1",
+      "passed": true,
+      "norm_loss": 0.010535117338409505
+    },
+    {
+      "name": "compressed Weyl differs at 0.05",
+      "passed": true,
+      "vector_difference": 0.0016975339641325123
+    },
+    {
+      "name": "compressed Weyl loses norm at 0.05",
+      "passed": true,
+      "norm_loss": 0.002662556271233907
+    },
+    {
+      "name": "compressed Weyl differs at 0.025",
+      "passed": true,
+      "vector_difference": 0.0004249075078691545
+    },
+    {
+      "name": "compressed Weyl loses norm at 0.025",
+      "passed": true,
+      "norm_loss": 0.0006674524995357034
+    },
+    {
+      "name": "compressed Weyl differs at 0.0125",
+      "passed": true,
+      "vector_difference": 0.0001062596590218235
+    },
+    {
+      "name": "compressed Weyl loses norm at 0.0125",
+      "passed": true,
+      "norm_loss": 0.00016697669812704152
+    },
+    {
+      "name": "boundary probe second-order compression defect",
+      "passed": true,
+      "relative_residual": 0.0052874959706201
+    },
+    {
+      "name": "boundary probe norm loss coefficient",
+      "passed": true,
+      "coefficient_ratio": 0.9997732020903564
+    },
+    {
+      "name": "quadratic mixed-difference convergence two",
+      "passed": true,
+      "ratios": [
+        3.7307259876266032,
+        3.9294215505655132,
+        3.9821417974992395,
+        3.995521939675728,
+        3.9988796380281117
+      ]
+    },
+    {
+      "name": "quadratic mixed-difference convergence four_equal",
+      "passed": true,
+      "ratios": [
+        3.2902001790445756,
+        3.795997814397442,
+        3.947076697615812,
+        3.986644298943804,
+        3.996653193925619
+      ]
+    },
+    {
+      "name": "quadratic mixed-difference convergence four_unequal",
+      "passed": true,
+      "ratios": [
+        3.295998352685415,
+        3.7981426530156863,
+        3.947669076057077,
+        3.986796144841366,
+        3.9966913938092987
+      ]
+    },
+    {
+      "name": "quadratic resolvent convergence on reference vector",
+      "passed": true,
+      "ratios": [
+        4.075215436501074,
+        4.0184415161244775,
+        4.004585937563248,
+        4.001144939018655,
+        4.000286137924944
+      ]
+    }
+  ]
+}

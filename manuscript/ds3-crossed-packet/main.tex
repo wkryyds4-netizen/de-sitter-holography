@@ -1,0 +1,286 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,microtype,booktabs}
+\usepackage[margin=25mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\dd}{\mathop{}\!\mathrm d}
+\newcommand{\hh}{h_{\rm m}}
+\newcommand{\RR}{\widehat R}
+\title{Crossed wave packets in local dS$_3$:\\a spectral-cutoff witness and physical overlaps}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Working research note --- 31 October 2026}
+\begin{document}\maketitle
+\begin{abstract}
+We evaluate the crossed overlap of two regulated creation sequences
+for a specified initial observer wave packet. Internal observer masses
+retain their infinite physical spectrum; finite integration boxes have
+analytic positive-norm tail bounds. Independently, the spherical component
+of the local vertex becomes an odd convolution kernel. Removing masses
+below the observer threshold gives an exact boundary term of definite
+sign. A finite-norm group-averaged test state proves a nonzero zero-time
+order difference. Quadrature and floating-point errors remain empirical.
+The setting is $G_N=0$, not a finite-gravity Lyapunov calculation.
+\end{abstract}
+
+\section{State, regulated operators, and observable}
+Use radius one, $G_N=0$, proper $SO^+(3,1)$, scalar BD observers
+with labels at least $s=0.2$, and distinct free KG matter species
+$p=0.6$, $q=0.9$. Local couplings are one.
+The proper mass and vacuum spectral density are
+$\hh(c)=\sqrt{1+c^2}$ and $\rho(c)=2c^2/\pi$.
+The initial coefficient $f(c)$ is real and nonnegative, with
+\begin{equation}
+ \rho(c)|f(c)|^2=\pi_0(c)
+ =\frac{630}{c_1-c_0}x^4(1-x)^4\mathbf1_{[c_0,c_1]}(c),
+ \quad x=\frac{c-c_0}{c_1-c_0},\quad(c_0,c_1)=(0.4,0.8).
+ \label{packet}
+\end{equation}
+This probability integrates to one. The zero extension of $f$ is $C^1$,
+with quadratic endpoint zeros; it is not asserted to be $C^\infty$.
+Use the bounded half-period creation blocks from our two-matter note,
+$\widetilde A_p=e^{\pi H_{\rm out}/2}A_pe^{-\pi H_{\rm in}/2}$,
+and $A_p(t)=e^{-iH_{\rm out}t}A_pe^{iH_{\rm in}t}$.
+The physical states are
+\[
+ v_s(t)=\widetilde A_q(t)\widetilde A_p(0)f,\qquad
+ v_t(t)=\widetilde A_p(0)\widetilde A_q(t)f.
+\]
+The distinct species make their action on the matter vacuum lie in the
+two-particle sector. Define
+\[
+ X(t)=\langle v_s(t),v_t(t)\rangle,\quad
+ N_s=\|v_s\|^2,\quad N_t=\|v_t\|^2,\quad
+ D(t)=N_s+N_t-2\operatorname{Re}X(t)=\|v_s-v_t\|^2.
+\]
+The norms are independent of $t$. This is a regulated two-creation
+order difference; $\widetilde A$ is not identified with a self-adjoint field.
+Retain
+\[
+ g(x)=\frac{x e^{\pi/(\sqrt{1+x^2}+x)}}{1+e^{-2\pi x}},\qquad
+ \RR_p(a,b)=\frac{A-B}{8\pi(A+C)(B+C)},
+\]
+where $(A,B,C)=(\cosh\pi(a+b),\cosh\pi(a-b),\cosh\pi p)$.
+Let $U_{00}(b,d;a,q,c,p)$ be the physical Racah matrix element fixed
+in our previous note from the LPRS kernel \cite{lprs}. Then
+\begin{align}
+ X(t)&=\int_{c_0}^{c_1}\dd c\,\pi_0(c)
+ \int_s^\infty\dd a\,\dd b\,\dd d\,
+  {\cal W}(a,b,d,c) U_{00}(b,d;a,q,c,p)
+  e^{it[\hh(a)+\hh(c)-\hh(b)-\hh(d)]}, \label{X}\\
+ {\cal W}&=\frac{g(a)}{g(c)}
+ \sqrt{\RR_q(a,b)\RR_p(b,c)\RR_p(a,d)\RR_q(d,c)}. \label{weight}
+\end{align}
+There is no compact physical filter on $b$ or $d$.
+Equation \eqref{X} is interpreted by the Hilbert-space limit of compact
+restrictions, without assuming absolute convergence of the fourfold integral.
+The positive norms are
+\[
+ N_s=\int\dd c\,\pi_0(c)\int_s^\infty\dd a\,\dd b\,
+          \frac{g(a)}{g(c)}\RR_q(a,b)\RR_p(b,c),
+\]
+and $N_t$ with $p,q$ exchanged. The full Racah transform is unitary
+\cite{ds,kks}; its scalar compression is only a contraction.
+Consequently $|X|\le\sqrt{N_sN_t}$.
+
+\section{Analytic mass-tail control}
+Set $\delta(x)=(\sqrt{1+x^2}+x)^{-1}$ and
+\[
+ g_{\min}=\frac{c_0e^{\pi\delta(c_1)}}{1+e^{-2\pi c_0}},
+ \quad C_s=e^{\pi\delta(s)},\quad C_0=\frac{C_s-1}{2\delta(s)}.
+\]
+Then $g(c)\ge g_{\min}$ on the initial packet.
+Convexity of the exponential on $[0,\delta(s)]$ and
+$x\delta(x)\le1/2$ give $g(x)\le x+C_0$.
+For $x\ge L$, also $g(x)\le x e^{\pi\delta(L)}$.
+The previously established bound is
+\[
+ 0<\RR_p(a,b)\le k_p(a-b),\qquad
+ k_p(u)=\frac1{8\pi(\cosh\pi u+\cosh\pi p)}
+       \le\frac{e^{-\pi|u|}}{4\pi}.
+\]
+Let $v_{s,L}$ retain $a,b\le L$ and $v_{t,L}$ retain $a,d\le L$,
+where $L>c_1$. A union bound gives
+\begin{align}
+ \|v_s-v_{s,L}\|^2,\ \|v_t-v_{t,L}\|^2&\le T_a+T_b,\\
+ T_a&=\frac{e^{\pi\delta(L)}e^{-\pi(L-c_1)}}{16\pi^3g_{\min}}
+ \left[L^2+L(3/\pi-c_0)+3/\pi^2-c_0/\pi\right], \label{Ta}\\
+ T_b&=\frac{e^{-\pi(L-c_1)}}{8\pi^4g_{\min}}
+                 (L+C_0+2/\pi). \label{Tb}
+\end{align}
+For \eqref{Ta}, extend the intermediate mass to the real line:
+\[
+ \int_{\mathbb R}e^{-\pi|a-b|-\pi|b-c|}\dd b
+ =e^{-\pi(a-c)}(a-c+1/\pi),\qquad a>L>c.
+\]
+Use $c_0$ in the polynomial and $c_1$ in the exponential.
+For \eqref{Tb}, first bound
+\[
+ \int_s^\infty(a+C_0)e^{-\pi|a-b|}\dd a
+ \le 2(b+C_0)/\pi+2/\pi^2.
+\]
+The remaining integrals are elementary.
+Write $A_p=\int k_p=p/(4\pi\sinh\pi p)$ and
+$B=1/(2\pi^3)\ge\int |u|k_p(u)\dd u$. Extending both mass differences
+to the full plane gives
+\begin{equation}
+ N_s,N_t\le{\cal N}_{\max}
+ =\frac{(c_1+C_0)A_pA_q+(A_p+A_q)B}{g_{\min}}.
+\end{equation}
+Independently of the numerical norms,
+\begin{equation}
+ |X-X_L|\le2\sqrt{(T_a+T_b){\cal N}_{\max}}. \label{Xtail}
+\end{equation}
+Our parameters give $\mathcal N_{\max}\simeq8.42931\,10^{-4}$.
+At $L=12$, the positive norm tail is at most $1.16353\,10^{-16}$,
+and the crossed absolute tail is at most $6.26346\,10^{-10}$.
+The bound for $D-D_L$ is
+$2(T_a+T_b)+4\sqrt{(T_a+T_b){\cal N}_{\max}}$.
+These control mass truncation only, not quadrature,
+special-function truncation, or floating-point error.
+
+\section{The exact spherical convolution}
+The actual local $000$ coefficient simplifies to
+\begin{equation}
+ E_{abp}=C_p\sqrt{\frac{\cosh\pi b}{\cosh\pi a}}H_p(a,b),
+ \qquad C_p=\frac1{4\sqrt\pi}\sqrt{\frac{\sinh\pi p}{p}},
+ \label{emission}
+\end{equation}
+where
+\[
+ H_p(a,b)=r_p(a-b)-r_p(a+b),\qquad
+ r_p(x)=(\cosh\pi x+\cosh\pi p)^{-1}.
+\]
+This follows by cancellation in the fixed BD/KG vertex, with no new
+insertion convention. Since $r_p$ is even and integrable, $H_p$
+acts by convolution on an odd extension. Thus
+\begin{equation}
+ \int_0^\infty H_q(a,b)H_p(b,c)\dd b
+ =\int_0^\infty H_p(a,b)H_q(b,c)\dd b . \label{oddcommute}
+\end{equation}
+Each physical CG chain has $J_b(0000)=1$. The four-external-spherical
+component of the zero-time order difference, before the common
+$f(c)$ and half-period factor, is
+\begin{equation}
+ \Delta_{0000}(a,c)=
+ -C_pC_q\sqrt{\frac{\cosh\pi c}{\cosh\pi a}}
+ \int_0^s\!\dd b\,
+ [H_q(a,b)H_p(b,c)-H_p(a,b)H_q(b,c)]. \label{boundary}
+\end{equation}
+The regulator multiplies this by the positive real factor
+$e^{\pi[\hh(a)-\hh(c)]/2}$.
+For this component, the order difference is exactly the missing
+low-mass interval. Its disappearance at $s=0$ does not prove that
+other spherical components or the full order difference vanish there.
+
+\section{A nonzero finite-norm witness}
+Put $P=\cosh\pi p$, $Q=\cosh\pi q$, $u=\cosh\pi a$, $v=\cosh\pi b$,
+and $D_P(u,v)=u^2+v^2-1+2Puv+P^2$.
+Then $H_q/H_p=D_P/D_Q$ and
+\begin{equation}
+ \frac{\partial}{\partial u}\frac{D_P}{D_Q}
+ =\frac{2(Q-P)[vu^2+(P+Q)u+v(1+PQ-v^2)]}{D_Q^2}. \label{monotone}
+\end{equation}
+If $q>p$ and $PQ\ge\sinh^2\pi s$, this is strictly positive for
+$0<b<s$. For $a>c$, the integrand in \eqref{boundary} is strictly
+positive and $\Delta_{0000}(a,c)<0$.
+Our sign-condition margin is about $28.1211$.
+
+Take a kinematic finite-$K$ test state with all four spherical modes
+zero and $\chi(a,c)=\mathbf1_{[1.1,1.4]}(a)f(c)$.
+Its group average has finite physical squared norm
+\begin{align}
+ N_\chi&=\int_{1.1}^{1.4}\dd a\int_{0.4}^{0.8}\dd c\,
+                       |f(c)|^2K_4(a,q,c,p),\\
+ K_4(a,q,c,p)&=\int_0^\infty\dd r\,\sinh^2r
+       \prod_{n=a,q,c,p}\frac{\sin(nr)}{n\sinh r}.
+\end{align}
+Finiteness follows from the previous four-body group average for
+compact mass and finite spherical support. Its pairing with the
+actual regulated order difference is
+\begin{equation}
+ Z_\chi=\int_{1.1}^{1.4}\dd a\int_{0.4}^{0.8}\dd c\,
+ |f(c)|^2e^{\pi[\hh(a)-\hh(c)]/2}\Delta_{0000}(a,c)<0.
+\end{equation}
+The physical Cauchy inequality proves
+\begin{equation}
+ D(0)\ge |Z_\chi|^2/N_\chi>0 . \label{lower}
+\end{equation}
+This analytic witness does not depend on resolving a small difference
+of numerically integrated $6j$ overlaps.
+Quadrature gives
+\[
+ Z_\chi\simeq-1.1370592534\,10^{-5},\quad
+ N_\chi\simeq0.69678827298,\quad
+ |Z_\chi|^2/N_\chi\simeq1.85552\,10^{-10}.
+\]
+These constants are not interval-certified. The norm is also checked
+by an independent radial group integral.
+For fixed external labels,
+\[
+ H_p(a,b)=\frac{2\pi b\sinh\pi a}{(\cosh\pi a+P)^2}+O(b^3).
+\]
+Hence \eqref{boundary} is $O(s^3)$, with its coefficient obtained by
+integrating the product of the linear terms. This is not a full
+$D\sim s^6$ theorem.
+
+\section{Accelerating the known conformal kernel}
+Each $ {}_4F_3(1)$ in LPRS has parameter excess exactly one.
+Its $n$th term has the asymptotic form
+\[
+ t_n\sim C n^{-2}\exp\left(\sum_{k\ge1}\ell_kn^{-k}\right),
+ \qquad C=\frac{\prod_j\Gamma(b_j)}{\prod_i\Gamma(a_i)},
+\]
+\[
+ \ell_k=\frac{(-1)^{k+1}}{k(k+1)}
+ \left[\sum_i B_{k+1}(a_i)-\sum_j B_{k+1}(b_j)-B_{k+1}(1)\right].
+\]
+This is the standard Gamma-ratio expansion \cite{dlmfgamma};
+$B_k$ are Bernoulli polynomials.
+With $c_0=1$, $c_k=k^{-1}\sum_{j=1}^k j\ell_jc_{k-j}$, sum $n<N$
+explicitly and approximate the remaining tail by
+\[
+ C\sum_{k=0}^K c_k\zeta(k+2,N),
+\]
+using the Hurwitz zeta series \cite{dlmfzeta}.
+The code batches complex128 arithmetic and retains both Omega terms,
+both shadow terms, and the physical phases.
+The main setting is $(N,K)=(128,12)$; refinement uses $(256,16)$.
+There is no uniform complex-parameter remainder certificate.
+Forty-five-digit comparisons cover six influential packet nodes,
+one maximally ill-conditioned pilot node, and six seeded generic nodes.
+The largest influential-node relative error is about $1.96\,10^{-11}$.
+The ill-conditioned far node has about $1.97\%$ relative error,
+retained in the record. Its small weight alone does not certify the
+integral. Condition-number times machine epsilon is only a sensitivity proxy.
+
+\section{Physical quadrature and remaining uncertainty}
+\input{numerics.tex}
+The initial support is integrated in full. Other masses use piecewise
+Gauss--Legendre intervals with breaks at $s,1,2,4,6,8,10,12$.
+Raw complex kernels, coordinates, weights, conditions, dependency
+versions, and hashes are retained. A separate replay reconstructs
+the weight from the original emission amplitudes and rigging weights.
+
+Mass-tail bounds and the sign witness are analytic model statements.
+Grid changes, special-function comparisons, and whole-grid
+acceleration changes are numerical evidence, not a total error certificate.
+Complete Fock domains, identical-species Bose contributions,
+general preparations, finite gravity, and the full holographic dual
+remain open.
+
+\begin{thebibliography}{9}
+\bibitem{lprs} J.~Liu, E.~Perlmutter, V.~Rosenhaus, D.~Simmons-Duffin,
+\emph{$d$-dimensional SYK, AdS Loops, and $6j$ Symbols},
+\href{https://arxiv.org/abs/1808.00612v3}{arXiv:1808.00612v3}.
+\bibitem{ds} S.~E.~Derkachov, V.~P.~Spiridonov,
+\emph{The $6j$-symbols for the $SL(2,\mathbb C)$ group},
+\href{https://arxiv.org/abs/1711.07073v2}{arXiv:1711.07073v2}.
+\bibitem{kks} D.~Karateev, P.~Kravchuk, D.~Simmons-Duffin,
+\emph{Harmonic Analysis and Mean Field Theory},
+\href{https://arxiv.org/abs/1809.05111v1}{arXiv:1809.05111v1}.
+\bibitem{dlmfgamma} NIST DLMF,
+\href{https://dlmf.nist.gov/5.11}{Section 5.11}, especially (5.11.8).
+\bibitem{dlmfzeta} NIST DLMF,
+\href{https://dlmf.nist.gov/25.11}{Section 25.11}, especially (25.11.1).
+\end{thebibliography}
+\end{document}

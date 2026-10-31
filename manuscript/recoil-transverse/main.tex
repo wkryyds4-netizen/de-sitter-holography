@@ -1,0 +1,402 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,microtype,booktabs}
+\usepackage[margin=25mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newcommand{\E}{\mathcal E}
+\newcommand{\dd}{\mathop{}\!\mathrm d}
+\title{Transverse masses in the recoil Barnes limit\\and the limits of central localization}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Working research note --- 30 October 2026}
+\begin{document}\maketitle
+\begin{abstract}
+We restore two transverse masses in the internal chiral Barnes graph
+obtained after a fixed-mass pure-recoil limit. Their leading effect is
+an effective Bessel argument and a modified quadratic phase.
+A finite contour decomposition yields a joint estimate uniformly
+inside a strict triangle-gap region. At the natural transverse scale,
+the two Bessel branches have opposite Gaussian curvatures.
+For a specified imaginary-energy regime, even the unnormalized internal
+graph grows away from the transverse center. This does not establish
+divergence of a physical external integral. The analysis is a
+self-reviewed proof draft, with empirical numerical diagnostics.
+\end{abstract}
+\section{Object and uniform statement}
+Use radius one, \(K=\nu^2/(2M)>0\), \(\rho=K^3/\nu^2\),
+\(\omega=i\alpha\), and real \(u,v\). The fixed-mass \(\kappa\to\infty\)
+limit has already been taken. The masses are
+\(m_{1,3}=M+\omega/2\pm u\), \(m_{2,4}=M-\omega/2\pm v\).
+The edge ordering is \((m_1,\nu,m_2,m_3,\nu,m_4)\).
+The sets in CLP (3.46) \cite{clp} give
+\(a_j=M+\nu/2+(\pm u\pm v)/2\) and
+\(r_j=M+\nu\pm\omega/2,2M\).
+Define
+\begin{align}
+ w_{\epsilon\eta}&=(\nu-\epsilon u-\eta v)/2,\\
+ k&=\frac{2\sqrt{\prod_j w_j}}{M}
+ =\frac{\sqrt{[\nu^2-(u+v)^2][\nu^2-(u-v)^2]}}{2M},&
+ \lambda&=\frac18\sum_j\frac1{w_j}.
+\end{align}
+For fixed \(0\le\theta<1\), \(|u|+|v|\le\theta\nu\) implies
+\((1-\theta^2)K\le k\le K\), \(w_j\ge(1-\theta)\nu/2\),
+and \(\lambda\le[(1-\theta)\nu]^{-1}\).
+Let
+\[
+ J=-e^{i\pi\alpha}kK_\alpha(k)-i\pi kI_\alpha(k),\qquad
+ \E=kK_\alpha(k)+\pi kI_\alpha(k),\qquad S_k=k^2+\alpha^2-1.
+\]
+\begin{theorem}
+Fix \(\theta<1\) and \(Y<\infty\). For sufficiently large \(K\) and
+sufficiently small \(\rho\), the normalized internal integral defined
+below satisfies, uniformly for \(0\le\alpha\le YK\) and
+\(|u|+|v|\le\theta\nu\),
+\[
+ |I-e^{i\lambda S_k}J|\le C_{\theta,Y}
+       (\rho+e^{-c_{\theta,Y}K})\E .
+\]
+The constants are not uniform as \(\theta\to1\).
+\end{theorem}
+This includes cancellation points of \(J\); relative error requires
+\(|J|\ge\epsilon\E\). It neither specifies external states and operator
+algebras nor supplies physical insertion normalization or finite-\(G\)
+dynamics. No extra vertex is multiplied onto a full \(6j\) expression.
+
+\newpage
+\section{Exact kernel, multiplier, and positive tail}
+Set \(b=\tfrac12-i(M-\nu)\), \(c=\tfrac12-i(M+\nu)\), and
+\begin{align*}
+ C(u,v)&=e^{-\pi(M+\nu)}\prod_j\Gamma(-iw_j)\frac{\Gamma(b)}{\Gamma(c)},\\
+ Q(t)&=e^{-i\pi t}\prod_j\frac{\Gamma(t-iw_j)}{\Gamma(-iw_j)}
+ \frac{\Gamma(b-t)\Gamma(c)}{\Gamma(b)\Gamma(c+t)}
+ \Gamma\left(\frac{1+\alpha}2-t\right)
+ \Gamma\left(\frac{1-\alpha}2-t\right).
+\end{align*}
+The contour rises from \(-N-i\infty\) to \(-N+i\), then runs right.
+We use the internal analytic continuation specified by this contour,
+and \(I=(2\pi i)^{-1}\int Q\,\dd t=\mathfrak B/C\).
+This is not a new prescription for the physical external cycle.
+Let
+\[
+ G=(k/2)^{2t}\Gamma\left(\frac{1+\alpha}2-t\right)
+                 \Gamma\left(\frac{1-\alpha}2-t\right),\quad
+ V=e^{-i\pi t}(k/2)^{2t}
+       \frac{\Gamma((1+\alpha)/2-t)}{\Gamma((1+\alpha)/2+t)} .
+\]
+Then \(Q=Re^{-2\pi it}G\), where
+\[
+ R=e^{i\pi t}(k/2)^{-2t}\prod_j\frac{\Gamma(t-iw_j)}{\Gamma(-iw_j)}
+        \frac{\Gamma(b-t)\Gamma(c)}{\Gamma(b)\Gamma(c+t)} .
+\]
+Reflection gives the exact, integer-\(\alpha\) regular identity
+\[
+ e^{-2\pi it}G=-e^{i\pi\alpha}G+2\pi e^{i\pi\alpha/2}V.                 \tag{3}
+\]
+On \(|t|\le CK\), use logarithms continued from zero shift.
+The Gamma expansion \cite{gamma} yields
+\[
+ \log R=4i\lambda(t^2-t)+O_{C,\theta}(\rho).                         \tag{4}
+\]
+Indeed, the four numerator remainders are bounded by
+\(C\sum_j(|t|+|t|^3)/w_j^2\).
+The \(b,c\) powers and shifts contribute at most
+\(C|t|(\nu^2/M^2+1/M)+C(|t|+|t|^2)/M=O(\rho)\).
+Thus \(|R|\le \exp[O(\rho+K^2/\nu)]=\exp[o(K)]\) on the rectangle.
+The leading phase is not expanded in powers of \(\lambda K^2\).
+
+The exact recurrence is
+\[
+ \frac{Q(t+1)}{Q(t)}
+ =\frac{\prod_j(t-iw_j)}
+ {[(t+\tfrac12-i\nu)^2+M^2][(t+\tfrac12)^2-\alpha^2/4]} .             \tag{5}
+\]
+Put \(d_0=\max(\alpha^2/4-1,0)\), \(A=\max(2,8K,2d_0)\),
+\(L_0=M-\nu+1\), \(a=\max_j(w_j-1)\le\nu\).
+For \(\nu\ge16K\),
+\[
+ (1+1/(2A))^2(2a^2+a^4/A^2)
+ \le\frac{75}{128}\frac{\nu^4}{16K^2}\le L_0^2 .
+\]
+Factoring the denominators of (5), as in the symmetric estimate,
+gives \(|Q(x+1+i)/Q(x+i)|\le[x/(x+1)]^{3/2}\) for \(x\ge A\).
+The increased threshold \(8K\), rather than \(2K\), is essential
+to this particular bound for distinct \(w_j\).
+
+\newpage
+\section{Finite contours and centered branch moments}
+Let \(D=\max(8,Y^2/2)\) and \(\nu^2\ge32(D+1)K^3\).
+For \(R_0\ge(32+2Y)K\), the transition region
+\(R_0\le x\le A+1\), if nonempty, obeys
+\[
+ |Q(x+1+i)/Q(x+i)|
+ \le2[(A+1)/L_0+a^2/(R_0L_0)]^2\le1/8 .
+\]
+Both terms in brackets are at most \(1/8\).
+Combining this with the far tail gives
+\[
+ \int_{R_0}^{\infty}|Q(x+i)|\,\dd x
+ \le10(R_0+1)\sup_{[R_0,R_0+1]}|Q(x+i)|.
+\]
+Set \(L=\sqrt{k^2+\alpha^2}/2\), \(d=\tfrac12-L\), \(N=\lceil L\rceil\).
+For large \(K\), \(N>\alpha/2+1/2\). For every \(w>0\) and \(s\ge0\),
+the exact integer Gamma modulus gives
+\[
+ \left|\frac{\Gamma(-N-i(w+s))}{\Gamma(-N-iw)}\right|
+ \le e^{-\pi s/2}.
+\]
+Applying this separately to all four factors, and the half-integer
+product to \(b,c\), gives
+\[
+ |Q(-N-is)|\le|Q(-N)|e^{-\Lambda s},\quad
+ \Lambda=2\pi-N[(M-\nu)^{-1}+(M+\nu)^{-1}].
+\]
+The real-axis multiplier has leading modulus one, and real Stirling
+at the \(G\) saddle gives \(|Q(-N)|\le C_{\theta,Y}\E/\sqrt K\).
+
+Choose \(r\) within one unit of \((32+2Y)K\), at least \(1/8\)
+from both real pole lattices. Set \(T=H_{\theta,Y}K\), with fixed large
+\(H_{\theta,Y}\). Eventually \(T<\min w_j,M-\nu\).
+Move the \(G\) branch to the \emph{finite} line \(d+i[-T,T]\);
+close \(V\) clockwise below. Only
+\(t_n=(1+\alpha)/2+n<r\) are enclosed, with positive weights
+\[
+ \omega_n=(k/2)^{1+\alpha+2n}/[n!\Gamma(1+\alpha+n)] .
+\]
+The resulting formula is
+\[
+ I=-\frac{e^{i\pi\alpha}}{2\pi}\int_{-T}^{T}R(d+is)G(d+is)\,\dd s
+       -2\pi i\sum_{t_n<r}\omega_nR(t_n)+O(e^{-cK}\E).              \tag{6}
+\]
+For completeness, upper and lower connectors have logarithmic modulus
+at most \(-\pi HK+O_{\theta,Y}(K[1+\log(1+H)])\).
+The reflected right edge is exponentially small since \(r\gg k,\alpha\)
+and avoids both pole lattices. On the lower and right closing edges
+\(|V|\le C|G|\). The multiplier is only \(\exp[o(K)]\);
+\(\E\ge c_\theta\sqrt K e^{-K}\) absorbs all connectors and both
+original tails. No contour crosses the poles at height \(\min w_j\)
+or the distant \(b-t\) poles.
+
+Put \(A(t)=4(t^2-t)\).
+The Bessel equation at fixed \(\alpha\), with
+\(p_n=2\omega_n/[kI_\alpha(k)]\), gives
+\[
+ \mathbb E_p(A-S_k)=0,\qquad
+ \mathbb E_p(A-S_k)^2=8k^2\mathbb E_p t_n=O_{\theta,Y}(K^3).
+\]
+For the other branch, \(q(s)=A(d+is)-S_k=-4s^2-8iLs\);
+its full auxiliary complex moment \(\int qG\,\dd s\) vanishes.
+The Gamma product gives Gaussian modulus \(e^{-cs^2/K}\) on the
+finite line and \(\int|G|\,\dd s\le CkK_\alpha(k)\).
+Taylor remainder costs \(\lambda^2|q|^2e^{8\lambda L|s|}\).
+Completing the square costs \(e^{O(\lambda^2L^2K)}=e^{O(\rho)}\).
+Both branch errors are therefore \(O(\rho)\) times their own Bessel
+magnitudes. Auxiliary tails are exponentially small. Together with
+(4)--(6), this proves Theorem 1.
+
+\newpage
+\section{Natural transverse scale and normalization}
+Take \(u=\sqrt M\,\xi\), \(v=\sqrt M\,\zeta\), \(r_\perp^2=\xi^2+\zeta^2\),
+and keep \(\alpha=Ky\) fixed when changing a Bessel argument.
+Exactly,
+\[
+ k^2=K^2-Kr_\perp^2+(\xi^2-\zeta^2)^2/4 .
+\]
+For bounded \(\xi,\zeta\),
+\[
+ k=K-\frac{r_\perp^2}{2}-\frac{\xi^2\zeta^2}{2K}+O(K^{-2}).
+\]
+Define
+\[
+ \Phi(x,\alpha)=\sqrt{x^2+\alpha^2}
+       -\alpha\operatorname{arsinh}(\alpha/x),\qquad
+ \partial_x\Phi=\sqrt{1+\alpha^2/x^2}.
+\]
+The positive-axis Bessel expansions \cite{bessel} have exponent
+\(+\Phi\) for \(I_\alpha\) and \(-\Phi\) for \(K_\alpha\).
+Consequently
+\begin{align}
+ \frac{kI_\alpha(k)}{KI_\alpha(K)}
+   &\longrightarrow e^{-\sqrt{1+y^2}r_\perp^2/2},\notag\\
+ \frac{kK_\alpha(k)}{KK_\alpha(K)}
+   &\longrightarrow e^{+\sqrt{1+y^2}r_\perp^2/2}.                  \tag{7}
+\end{align}
+For bounded \(y\), \(r_\perp\le B\), \(B\ge1\) and
+\(B=o(K^{1/4})\), the logarithmic remainders in (7) are
+\(O_Y(B^4/K)\). The fixed-order large-argument expansion covers \(y=0\);
+the positive real saddle is uniformly nondegenerate on compact \(y\)
+intervals. Differentiating along \(\alpha=yx\) would give a different
+and incorrect transverse curvature.
+
+Equation (7) first describes auxiliary branch magnitudes.
+The finite analytic branches have an additional \(O(\rho)\) error.
+The full sum has no uniform relative ratio at cancellation points.
+For fixed bounded \(r_\perp\),
+\[
+ \lambda S_k-\frac{K^2+\alpha^2-1}{\nu}
+ =O_Y(Kr_\perp^2/\nu+r_\perp^4/\nu)\longrightarrow0 .
+\]
+This does not dispose of the separate normalization phase.
+
+The exact identity
+\(|\Gamma(-iw)|^2=\pi/[w\sinh(\pi w)]\) and
+\(\sum_jw_j=2\nu\) give
+\[
+ \left|\frac{C(u,v)}{C(0,0)}\right|
+ =\frac Kk\,
+ \frac{(1-e^{-\pi\nu})^2}
+ {\sqrt{\prod_j(1-e^{-2\pi w_j})}} .                              \tag{8}
+\]
+It tends to one on a bounded natural-scale box. On a fixed
+\(\theta\)-region it is \(K/k\) times
+\(1+O_\theta(e^{-\pi(1-\theta)\nu})\).
+Thus this modulus does not suppress the growing branch.
+Its \emph{complex phase} need not tend to zero: we retain the exact
+Gamma product, not an expansion of its transverse phase without
+additional scale assumptions. For complex masses the two chiral factors
+must also be analytically continued separately, not replaced by an
+unjustified modulus square.
+
+For \((\xi,\zeta)=(1,1/2)\), \(y=2\), the limiting branch ratios
+are \(e^{-5\sqrt5/8}\) and \(e^{+5\sqrt5/8}\).
+At \(K=256\), direct Bessel evaluation gives approximately
+\(0.246053\) and \(4.04631\), respectively.
+The opposite signs are a property of the full two-branch description;
+they do not invalidate the earlier result for a specified local saddle.
+
+\newpage
+\section{A failure of uniform central decay}
+Let \(F(y)=\sqrt{1+y^2}-y\operatorname{arsinh}y\), with positive root
+\(y_c\simeq1.50887956\).
+Fix \(y>y_c\), \(p=u/\nu\), \(h=v/\nu\), and
+\(0<|p|+|h|\le\theta<1\).
+Write
+\[
+ q=\frac kK=\sqrt{[1-(p+h)^2][1-(p-h)^2]}<1,\quad
+ \phi_y(q)=\sqrt{q^2+y^2}-y\operatorname{arsinh}(y/q).
+\]
+Since \(\phi'_y(q)=\sqrt{q^2+y^2}/q>0\),
+\(\Delta=\phi_y(1)-\phi_y(q)>0\) and
+\(\phi_y(q)<F(y)<0\).
+The \(K_\alpha\) branch exponentially dominates at both points.
+The envelope bound in Theorem 1 is then a relative bound.
+
+\begin{corollary}
+In the above regime, as \(K\to\infty\) and \(\rho\to0\),
+the unnormalized internal chiral graph satisfies
+\[
+ \left|\frac{\mathfrak B(u,v)}{\mathfrak B(0,0)}\right|
+ =\left(\frac{1+y^2}{q^2+y^2}\right)^{1/4}
+ e^{K\Delta}\left[1+O_{\theta,y}(\rho+K^{-1}+e^{-cK})\right].
+                                                                    \tag{9}
+\]
+\end{corollary}
+To see the prefactor, the ratio of \(kK_\alpha(k)\) to
+\(KK_\alpha(K)\) contributes
+\(q[(1+y^2)/(q^2+y^2)]^{1/4}\).
+Equation (8) cancels \(q\), while both leading quadratic phases have
+unit modulus. The subleading branch is exponentially small.
+
+Equation (9) excludes a uniform decaying central Gaussian bound on
+this real transverse region for this internal object.
+It does \emph{not} prove divergence of a physical external integral.
+An external cycle, the second chiral factor, physical external legs,
+and insertion normalization have not been included.
+
+For \(y=2,p=0.3,h=0.2\),
+\(q=0.86168439698\) and \(\Delta=0.32833646092\).
+The saved symmetric evaluations and the new transverse evaluations,
+with the exact normalization modulus (8), give:
+\begin{center}
+\begin{tabular}{rrrr}
+\toprule
+\(K\)&Numerical internal ratio&Leading expression (9)&Relative difference\\
+\midrule
+8&13.8842&14.0119&0.009114\\
+16&192.471&193.756&0.006633\\
+32&36871.8&37048.6&0.004771\\
+\bottomrule
+\end{tabular}
+\end{center}
+These computations use the finite-branch formula; the theorem controls
+omitted connectors asymptotically. The table is not a finite-\(K\)
+certified total-error statement.
+
+The immediate research implication is to settle how this branch enters
+the physical external transform before integrating a local Gaussian.
+The insertion-angle data in CSTY (2.73) \cite{csty} do not by themselves
+supply this contour prescription.
+The strict-gap theorem also leaves \(|u|+|v|\to\nu\) and beyond open.
+Those limits must not be taken inside its constants.
+
+\newpage
+\section{Validation, provenance, and next step}
+The primary program records 67 checks:
+three effective-parameter products; eighteen raw-kernel,
+recurrence and exact-split identities; three normalization-modulus
+identities; sixteen tail samples; four finite-contour and refinement
+checks; twelve joint quadrature refinements; eight precision or extent
+checks; and three natural-scale convergence comparisons.
+A separate program records sixteen higher-precision multiplier checks.
+No failed scientific run was overwritten.
+
+The joint path is \(\nu=8K^{7/4}\), so
+\(\rho=1/(64\sqrt K)\to0\) while \(K^2/\nu=K^{1/4}/8\) grows.
+We use \(K=8,16,32\), \(y=0,2\), and either
+\((u,v)=(\sqrt M,\sqrt M/2)\) or \((0.3\nu,0.2\nu)\).
+Quadrature orders are 20 and 32, with 55 and 75 decimal digits.
+The largest \(K\) is checked at 95 digits and with height
+\(8K\) enlarged to \(10K\), subject to a safe pole-height cap.
+The maximum envelope changes are:
+\[
+ 1.755\times10^{-18}\quad\hbox{(quadrature)},\qquad
+ 3.553\times10^{-70}\quad\hbox{(precision)},\qquad
+ 2.339\times10^{-45}\quad\hbox{(height)}.
+\]
+The largest negative-branch and positive-branch condition numbers are
+approximately \(1.0804\) and \(1.0263\).
+The finite-contour identity retains every connector; its maximum
+normalized residual is \(1.011\times10^{-44}\).
+Multiplier residuals on \(|t|=O(K)\) are also recorded up to \(K=1024\).
+These are empirical checks, not interval enclosures or certified
+asymptotic thresholds.
+
+The derivation uses the exact mass sets and contour from CLP,
+the standard Gamma and Bessel formulas, and the previously recorded
+symmetric contour decomposition. The present work tracks distinct
+\(w_j\), changed tail constants, and the effective transverse scale.
+It does not establish novelty of these special-function methods.
+
+The next task is the physical external interface: verify the
+two chiral continuations, their common external cycle, and the insertion
+and disconnected normalizations in the original sources.
+Only then decide whether the near-triangle boundary layer is required.
+The finite-\(\kappa\) joint limit, finite-\(G\) physical four-point
+function, and complete de Sitter holographic dual remain open.
+
+\small
+Reproducible records in the project root:
+\begin{quote}\footnotesize
+code/recoil\_transverse.py\\
+code/transverse\_consequences.py\\
+results/stage4/recoil-transverse/diagnostics.json\\
+results/stage4/recoil-transverse/consequences.json\\
+notes/stage4-recoil-transverse.md
+\end{quote}
+\begin{thebibliography}{9}
+\bibitem{clp} Chandra, Liska and Post,
+\href{https://arxiv.org/html/2610.30247v1}{arXiv:2610.30247v1},
+(3.46), (3.47), (3.58). Local archived version.
+\bibitem{csty} Chen, Stanford, Tang and Yang,
+\href{https://arxiv.org/html/2607.14042v1}{arXiv:2607.14042v1},
+(2.73) and the previously recorded external-transform dictionary.
+\bibitem{gamma} NIST DLMF,
+\href{https://dlmf.nist.gov/5.4}{5.4},
+\href{https://dlmf.nist.gov/5.8}{5.8},
+\href{https://dlmf.nist.gov/5.11}{5.11}.
+\bibitem{bessel} NIST DLMF,
+\href{https://dlmf.nist.gov/10.25}{10.25},
+\href{https://dlmf.nist.gov/10.40}{10.40},
+\href{https://dlmf.nist.gov/10.41}{10.41}.
+\end{thebibliography}
+\end{document}

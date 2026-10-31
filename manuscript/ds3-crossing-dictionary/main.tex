@@ -1,0 +1,332 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,microtype,booktabs}
+\usepackage[margin=25mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\dd}{\mathop{}\!\mathrm d}
+\newcommand{\cJ}{\mathcal J}
+\title{Crossed recoupling in the local dS$_3$ model:\\physical normalization and a Euclidean check}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Working research note --- 31 October 2026}
+\begin{document}\maketitle
+\begin{abstract}
+We match the scalar channels reached by two ordered local creations to
+standard conformal partial waves. Three-point group normalization and an
+independent partial-wave norm fix the conversion to the known conformal
+$6j$ symbol, including its phase. A direct Euclidean area integral checks
+the complex matrix element independently of its Lorentzian inversion
+formula. We give a conservative analytic bound on the three puncture
+regions and formulate the crossed overlap for physical creation states.
+The calculation concerns a declared $G_N=0$ model. The scalar block is a
+compression of the full Racah transform; it is not claimed to be unitary.
+The full physical wave-packet integral remains to be evaluated.
+\end{abstract}
+
+\section{Model, channels, and normalization}
+Set the de Sitter radius to one, $G_N=0$, and use the proper group
+$SO^+(3,1)$. Two scalar Bunch--Davies observers have labels at least
+$s_*>0$. The distinct free matter species have positive labels $p,q$;
+local couplings are one. Matter modes have Klein--Gordon normalization,
+and observer modes have the previously fixed spacetime delta normalization.
+Write
+\[
+ h_{\rm m}(x)=\sqrt{1+x^2},\qquad \rho(x)=2x^2/\pi,\qquad
+ \mu_{\rm obs}(x)=x\tanh(\pi x)/\pi .
+\]
+The compact subgroup has Haar probability, with radial push-forward
+$\sinh^2 r\,\dd r$. For $S=x+y+z$, retain
+\[
+ D_{xyz}=\cosh(\pi S/2)\prod_{n=x,y,z}\cosh[\pi(S-2n)/2],\qquad
+ K_{xyz}=\frac{\pi}{8D_{xyz}}\prod_{n=x,y,z}\frac{\sinh(\pi n)}n .
+\]
+These conventions and the physical four-body norms were derived in our
+preceding two-matter note. They are inputs here.
+
+Fix the external order $e=(a,q,c,p)$. The $s$ pairing is
+$(a,q)|(c,p)$, while the LPRS $t$ pairing is $(c,q)|(a,p)$
+\cite{lprs}. The latter is the reverse of the pair order naturally used
+by the opposite creation sequence. This reversal must be accompanied by
+an internal shadow before normalization.
+The full CG decomposition includes all integer principal-series spins
+\cite{ds,kks}. Each local scalar observer creation reaches spin zero in
+its own pairing. This does not imply that the scalar sector is complete
+after recoupling. We calculate the $00$ matrix element of the full transform.
+
+\section{From sphere periods to physical channel states}
+Let $\Delta_x=1+ix$. Denote the all-ket boundary trilinear's spherical
+$000$ component by $B(x,y,z)$. For $\nu_i=(x,y,z)$, put
+\[
+ \alpha_i=-\frac12-\frac i2(S-2\nu_i),\quad A=\sum_i\alpha_i,\qquad
+ B=(4\pi)^{3/2}4^A
+ \frac{\Gamma(A+2)\prod_i\Gamma(\alpha_i+1)}
+ {\prod_i\Gamma(A-\alpha_i+2)} .
+\]
+Its modulus is
+\begin{equation}
+ |B(x,y,z)|^2=\frac{\pi^4}{D_{xyz}}
+                 \prod_{n=x,y,z}\frac{\sinh(\pi n)}n .
+ \label{Bnorm}
+\end{equation}
+Negative labels in $B$ denote shadow representatives, not negative masses.
+Use standard shadow-integral partial waves
+\[
+ \Psi_b^s=\int\dd^2x\,
+  t_{\Delta_a\Delta_q\Delta_b}\,
+  t_{\widetilde\Delta_b\Delta_c\Delta_p},
+ \qquad
+ \Psi_d^t=\int\dd^2x\,
+  t_{\Delta_c\Delta_q\Delta_d}\,
+  t_{\widetilde\Delta_d\Delta_a\Delta_p}.
+\]
+Projection of two external spherical $l=0$ states leaves only internal
+$l=0$. The remaining normalized spherical harmonics pair to one.
+Consequently the $0000$ components are exactly
+\begin{equation}
+ N_s(b)=B(a,q,b)B(c,p,-b),\qquad
+ N_t(d)=B(c,q,d)B(a,p,-d).
+ \label{Ns}
+\end{equation}
+The plane-to-sphere unitary conformal map introduces no further constant:
+the two contracted dimensions sum to two and absorb its area Jacobian.
+In the unique scalar CG channel, the $0000=1$ states therefore are
+\begin{equation}
+ J_s(b)=\Psi_b^s/N_s(b),\qquad J_t(d)=\Psi_d^t/N_t(d).
+ \label{Jnorm}
+\end{equation}
+For conformal weights $h=(1+ib)/2$, $h_i=(1+ie_i)/2$, use
+\[
+ K_h^{ij}=\pi\frac{\Gamma(2h-1)}{\Gamma(2-2h)}
+ \frac{\Gamma(1-h-h_i+h_j)\Gamma(1-h+h_i-h_j)}
+ {\Gamma(h-h_i+h_j)\Gamma(h+h_i-h_j)} .
+\]
+The Gamma identities in $B$ and the two shadow-block coefficients give
+\begin{equation}
+ \frac{N_s(b)}{N_s(-b)}=\frac{K_{1-h}^{34}}{K_{1-h}^{12}},
+ \qquad
+ \frac{\Psi_b^s}{N_s(b)}=\frac{\Psi_{-b}^s}{N_s(-b)} .
+ \label{reflection}
+\end{equation}
+Thus the raw waves need not be equal under reflection. Exchanging the
+two trilinears also reflects the internal label; after division by
+$N$, it gives the same $J$. This connects the LPRS $t$ orientation to
+the actual $(a,p)|(c,q)$ creation channel.
+
+\section{The physical crossed kernel}
+KKS fixes the scalar three-point quotient pairing to
+$[2^d\operatorname{vol}SO(d-1)]^{-1}$, hence $1/4$ at $d=2$
+\cite[(13)--(15)]{kks}. In our group convention,
+\[
+ \|t_{xyz}\|_{\rm phys}^2=|B(x,y,z)|^2/K_{xyz}=8\pi^3 .
+\]
+The common Haar-volume ratio between our physical quotient and the
+LPRS/KKS quotient is therefore $32\pi^3$. It is fixed by the
+three-point pairing, not fitted to a four-point value.
+The previously derived scalar four-body rigging weights are
+\[
+ W_s(b)=\rho(b)K_{abq}K_{bcp},\qquad
+ W_t(d)=\rho(d)K_{cdq}K_{dap}.
+\]
+A distribution $\int F(b)J_s(b)\,\dd b$ has physical norm
+$\int |F(b)|^2/W_s(b)\,\dd b$. Equation \eqref{Bnorm} gives
+\begin{equation}
+ \frac{|N_s(b)|^2}{W_s(b)}=\frac{32\pi^7}{b^2}.
+ \label{rawn}
+\end{equation}
+Independently, the scalar shadow square is $\mathcal N_b=\pi^2/b^2$.
+KKS (74) gives $\mu_{\rm KKS}=b^2/(8\pi^3)$, distinct from
+$\mu_{\rm obs}$. Their (39) yields, with positive-label measure $\dd b$,
+\[
+ n_b=(1/4)^2\,2\pi/\mu_{\rm KKS}=\pi^4/b^2.
+\]
+This agrees with \eqref{rawn} divided by $32\pi^3$.
+One reflection representative has already been selected; no extra
+factor of two is present.
+Let $\cJ_2(b,d;e)=\langle\Psi_b^s,\Psi_d^t\rangle_{\rm LPRS}$
+be the known scalar conformal $6j$ symbol \cite[(3.4)--(3.5)]{lprs}.
+For delta-normalized states $e_b^s=\sqrt{W_s(b)}J_s(b)$,
+\begin{align}
+ \langle J_s(b),J_t(d)\rangle_{\rm phys}
+ &=\frac{32\pi^3\cJ_2(b,d;e)}{\overline{N_s(b)}N_t(d)},\\
+ U_{00}(b,d;e)&=\frac{bd}{\pi^4}
+   \frac{N_s(b)/|N_s(b)|}{N_t(d)/|N_t(d)|}\,\cJ_2(b,d;e).
+ \label{U}
+\end{align}
+The phases cannot be replaced by modulus squares.
+This dictionary follows the actual local CG chains. It does not undo
+the previously found normalization-invariant mismatch of the separate
+$H/Z$ candidate kernels.
+
+\section{An independent Euclidean overlap}
+Gauge-fix $(z_1,z_2,z_3,z_4)=(0,z,1,\infty)$ and define
+\[
+ k_h(z)=z^h\,{}_2F_1(h-h_{12},h+h_{34};2h;z).
+\]
+For scalar principal series, $\bar h=h$, not $h^*$. The full wave is
+\begin{equation}
+ F_s(z)=|z|^{-2(h_1+h_2)}
+ \left[K_{1-h}^{34} k_h(z)k_h(\bar z)
+       +K_h^{12}k_{1-h}(z)k_{1-h}(\bar z)\right].
+ \label{Fs}
+\end{equation}
+For $F_t$, replace the external order by $(3,2,1,4)$, the internal
+label by $d$, and $z$ by $1-z$. The direct check is
+\begin{equation}
+ \cJ_2=\frac14\int_{\mathbb C}\dd^2z\,
+                      \overline{F_s(z)}F_t(z).
+ \label{euclidean}
+\end{equation}
+This never calls the Lorentzian inversion's $ {}_4F_3$ or Euler-product
+evaluator. It shares only the standard three-point shadow coefficients.
+Use the base domain $|z|<1$, $|1-z|>1$ and its six images
+\[
+ z,\quad 1-z,\quad 1/z,\quad 1/(1-z),\quad z/(z-1),\quad (z-1)/z.
+\]
+They cover the plane once away from boundaries: their domains correspond
+to the six orderings of $|z|,|1-z|,1$. Their area Jacobians are
+$1,1,|z|^{-4},|1-z|^{-4},|1-z|^{-4},|z|^{-4}$.
+On the upper half put $z=r e^{i\theta}$ with
+$\arccos(r/2)<\theta<\pi$. Scalar waves are unchanged by interchanging
+$z,\bar z$, so the lower half supplies a factor two. The combined
+quotient factor is $1/2$. We use $r=t^P$, $P=4$ or $8$, and
+Gauss--Legendre nodes in $t$ and the mapped angle, retaining every
+complex chart contribution.
+
+\section{A conservative analytic puncture bound}
+The shadow integral has real part one in every dimension. Hence
+\[
+ |F_s(z)|\le\frac{I(z)}{|z|},\quad
+ |F_t(z)|\le\frac{I(z)}{|1-z|},\qquad
+ I(z)=\int_{\mathbb C}\frac{\dd^2x}{|x||x-z||x-1|}.
+\]
+For $r=|z|\le1/4$, split the $x$ plane at radii $2r,1/2,2$.
+The contributions obey
+$40\pi$, $8\pi\log(1/(4r))$, $48\pi$, $16\pi/7$, respectively, so
+\begin{equation}
+ I(z)\le 8\pi[12+\log(1/r)].
+ \label{Ibound}
+\end{equation}
+For the first region set $x=ry$ and use
+$|y|+|y-z/r|\ge1$ to bound the reciprocal product by
+$2(|y|^{-1}+|y-z/r|^{-1})$. Integrating over disks of radii two and
+three gives $40\pi$ after bounding $|x-1|^{-1}\le2$.
+In the middle annulus the integrand is at most $4/|x|^2$.
+In the third it is at most $8/|x-1|$ on a disk of radius three;
+in the last it is at most $16/(7|x|^3)$.
+
+Reflection $z\mapsto1-z$ controls the second puncture. Scaling $x=zy$
+gives $I(z)=|z|^{-1}I(1/z)$ for the third. If all six charts omit
+$r<\epsilon$, their images lie in disks of radius
+$\delta=\epsilon/(1-\epsilon)$ around zero and one, and outside
+$|z|=1/\delta$. For $\delta\le1/4$, put $V=12+\log(1/\delta)$
+and $C=128\pi^3/3$. Integration gives the raw $6j$ tail bound
+\begin{equation}
+ T(\epsilon)=C\left[
+  2\delta(V^2+2V+2)+
+  \frac{\delta^2}{2}\left(V^2+V+\frac12\right)\right].
+ \label{tail}
+\end{equation}
+This proves absolute convergence of the crossed overlap and removal of
+the puncture cutoff. It is deliberately conservative and is not a
+Gauss quadrature error bound. The same-channel delta norm is a different,
+distributional question.
+
+\section{Physical ordered states and the next integral}
+Let the initial vacuum coefficient be $f(c)$ with
+$\|f\|_0^2=\int\rho(c)|f(c)|^2\dd c$.
+Write $E_{xyk}$ for the previously fixed real local $000$ emission
+amplitude. At real times, the ordered channel amplitudes are
+\begin{align}
+ v_s(a,b,c)&=
+ \frac{f(c)E_{abq}E_{bcp}}{\sqrt{W_s(b)}}\,
+ e^{-it_p[h_{\rm m}(b)-h_{\rm m}(c)]
+   -it_q[h_{\rm m}(a)-h_{\rm m}(b)]},\\
+ v_t(a,d,c)&=
+ \frac{f(c)E_{adp}E_{dcq}}{\sqrt{W_t(d)}}\,
+ e^{-iu_q[h_{\rm m}(d)-h_{\rm m}(c)]
+   -iu_p[h_{\rm m}(a)-h_{\rm m}(d)]}.
+\end{align}
+All observer labels are at least $s_*$. Their crossed overlap is
+\begin{equation}
+ X=\int\dd a\,\dd c\,\dd b\,\dd d\,
+      \overline{v_s(a,b,c)}\,U_{00}(b,d;e)\,v_t(a,d,c),
+ \label{X}
+\end{equation}
+understood as the Hilbert-space limit of compact spectral restrictions,
+without assuming absolute convergence of the fourfold integral.
+The previously proved second-mass-moment condition
+$\int\rho(c)|f(c)|^2c^2\dd c<\infty$ is sufficient for the unregulated
+two-step states. Shifting both creations by the proper-mass half period
+multiplies either amplitude by
+$\exp\{\pi[h_{\rm m}(a)-h_{\rm m}(c)]/2\}$; those blocks are bounded
+on every initial $L^2$ state.
+
+The full Racah transform is unitary, so its scalar compression is a
+contraction. Thus $|X|\le\|v_s\|\|v_t\|$. If compact restrictions give
+$v_{s,L},v_{t,L}$, then
+\begin{equation}
+ |X-X_L|\le
+ \|v_s-v_{s,L}\|\|v_t\|+
+ \|v_{s,L}\|\|v_t-v_{t,L}\|.
+ \label{cutoff}
+\end{equation}
+These tails are positive norms, computed from the known density
+$\rho(c)|f(c)|^2R_q(a|b)R_p(b|c)$ and its exchanged counterpart
+(or the half-period rates $\widetilde R$).
+This provides a route to a controlled physical packet calculation
+without asserting scalar unitarity.
+
+\section{Evidence and limits}
+Three label sets pass 33 normalization, phase, channel-exchange, and
+shadow-reflection checks at 45 decimal digits. For
+\[
+ e=(0.4,0.7,0.93,0.6),\quad b=0.65,\quad d=0.57,
+\]
+the raw and physical matrix elements are
+\[
+ \cJ_2\simeq190.9971396918+3.7321669491i,\qquad
+ U_{00}\simeq0.7266051675149.
+\]
+The complex Euclidean relative differences at orders $8,16,24,40$
+with $P=4$ are approximately
+$1.13\,10^{-2}$, $8.93\,10^{-5}$, $5.13\,10^{-6}$, and
+$1.01\,10^{-7}$. With $P=8$, orders 24 and 40 give
+$2.81\,10^{-7}$ and $8.73\,10^{-11}$.
+Stored data retain imaginary parts, chart contributions, absolute
+contribution sums, grids, precision, and dependency versions.
+For $e=(1.1,0.43,0.82,1.3)$, $b=0.37$, $d=1.17$, the $P=8$
+relative differences at orders 24 and 40 are $3.37\,10^{-5}$ and
+$4.58\,10^{-8}$. The absolute-sum cancellation ratios are about 2.17
+and 3.66 in the two final grids. At the first point, cutting the chart
+radius at $10^{-3}$ and $10^{-4}$ gives relative differences
+$5.06\,10^{-4}$ and $9.56\,10^{-5}$; these include quadrature error
+and are not isolated tail measurements.
+The analytic tail bound at $\epsilon=10^{-12}$ is less than
+$4.38\,10^{-6}$ in absolute raw-kernel units.
+Ten further diagnostics check the chart coverage, the known area
+integral $\frac14\int(1+|z|^2)^{-2}\dd^2z=\pi/4$, and the tail
+primitive. The area relative error at 32 nodes is below $1.3\,10^{-40}$.
+An initial source comment misstated the base domain; its angular
+implementation was correct. The executed source is retained, and an
+AST comparison confirms that only the comment changed.
+These are empirical checks, not interval certificates or uniform
+statements over the spectrum.
+
+The new work is the physical normalization dictionary, its coordinate
+check, and the explicit domain and cutoff formulation.
+The conformal $6j$, CG completeness, and shadow coefficients have the
+cited predecessors. The actual fourfold physical packet integral,
+identical-species Bose interference, full Fock domains, finite-$G_N$
+dynamics, and a complete de Sitter holographic dual remain open.
+
+\begin{thebibliography}{9}
+\bibitem{lprs} J.~Liu, E.~Perlmutter, V.~Rosenhaus, D.~Simmons-Duffin,
+\emph{$d$-dimensional SYK, AdS Loops, and $6j$ Symbols},
+\href{https://arxiv.org/abs/1808.00612v3}{arXiv:1808.00612v3}.
+\bibitem{kks} D.~Karateev, P.~Kravchuk, D.~Simmons-Duffin,
+\emph{Harmonic Analysis and Mean Field Theory},
+\href{https://arxiv.org/abs/1809.05111v1}{arXiv:1809.05111v1}.
+\bibitem{ds} S.~E.~Derkachov, V.~P.~Spiridonov,
+\emph{The $6j$-symbols for the $SL(2,\mathbb C)$ group},
+\href{https://arxiv.org/abs/1711.07073v2}{arXiv:1711.07073v2}.
+\end{thebibliography}
+\end{document}

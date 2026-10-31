@@ -1,0 +1,54 @@
+{
+  "created_at_utc": "2026-10-30T03:46:28.197170+00:00",
+  "kind": "fixed-real-mass internal integral and normalized graph limit; author self-reviewed proof draft",
+  "pages": 4,
+  "compilers": {
+    "desktop": "success on final source",
+    "local": "pdfLaTeX two passes; clean final log"
+  },
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "dpi": 95,
+    "clipping_or_overlap": false
+  },
+  "results": [
+    "exact q-Gamma factorization and inherited horizontal contour",
+    "uniform fixed-mass integrable tails and integral limit",
+    "Barnes and four 4F3 representations with coalescence handling",
+    "normalized full fixed-topology graph ratio"
+  ],
+  "not_proven": [
+    "joint growing-mass finite-kappa error",
+    "complex external-energy saddle/cycle continuation",
+    "physical four-point insertion normalization and disconnected baseline",
+    "complete finite-G dynamics or microscopic dual",
+    "independent certification or priority"
+  ],
+  "hashes": {
+    "code/build_internal_note.ps1": "41ae7be4a3c2d07594133919e8e3912c9e715ea4497104e68ac82125e3f7f19e",
+    "code/recoil_internal.py": "4ad536856e55b3ffc7084312a6d229067a5c7deb1e8f9667aa72982c0e4699a4",
+    "literature/stage4-recoil-internal-sources.md": "7e6d7c26c29d9ca7340de4e16c6c0ea2f0cae8e2d48969d96e7c78889dfffe00",
+    "manuscript/recoil-internal/main.tex": "1ebc3655459da7e0426de0e47c20f5d85b95eac225644711700928d14328e0ea",
+    "manuscript/recoil-vertex/main.tex": "73dbc8befc0f2978a12b742c32530a621c8b74db17148979aa1925e211d5b218",
+    "notes/stage4-recoil-internal.md": "4635a84293456db64d226dc385b59a1500e9f66310423683f8b33d66c9eb0b0a",
+    "output/pdf/de-sitter-recoil-internal.pdf": "404a1881dc83a41a85d7b70de2b9e3856eefa6c5add46c7b652466510dd6ea09",
+    "results/stage4/recoil-internal/build-review.md": "faebebc3b665270c40ed7ace02f6949f35c4ad73a7c81f3dc61a55ecf71b282e",
+    "results/stage4/recoil-internal/diagnostics.json": "36584c31c53b1ca82b2ef48497e0b3f37d70d69f1bb2a92fb67aa9109e2b51b3",
+    "results/stage4/recoil-internal/initial-build-failure.txt": "659c04759166c8bd18397e62881542489d368a2fa2faab82119bbcf7371b3aa5",
+    "results/stage4/recoil-internal/main.log": "30788075d53a18725edc91525d0a9b9d4512f9227a002d97260c772576e5e283",
+    "results/stage4/recoil-internal/missing-package-build-failure.txt": "4887f76cc448a4cddc5b0731fac3142cd58fa7d5c2bd3ecd197ae6278e641fab",
+    "sources/chandra-liska-post-2610.30247v1.html": "fe8580884e81ba9817e292bbca7c70b7c7d494e89efef62695e94bcf07801d0f",
+    "sources/dlmf-5.11.html": "8f573b25a200d5ca09372ad88adbd4a621bc0bc463e088c6548ff8dddc0d2eee"
+  },
+  "render_sha256": {
+    "final-1.png": "634275ac816b5fe291eadf283b087633173b9535d1cf3a42b37680f8b6d7ba8d",
+    "final-2.png": "54568b13e8d0cb5d546ad53462cbf6bcbffacc7917366633939abba0548b5994",
+    "final-3.png": "a82fc3a76566e49b3394614ba84cf6d396da37cbc2deac02cba8228a0813a4b9",
+    "final-4.png": "13a62e410bcebecbbf64c51240452967ac994be81f99f97d951bf9e947ba36ef"
+  }
+}

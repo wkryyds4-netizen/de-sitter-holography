@@ -1,0 +1,265 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,microtype,booktabs}
+\usepackage[margin=25mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\dd}{\mathop{}\!\mathrm d}
+\title{Beyond the right recoil saddle:\\a two-branch Barnes--Bessel diagnostic}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Working research note --- 30 October 2026}
+\begin{document}\maketitle
+\begin{abstract}
+Exact negative-side reflection and a compact-kernel limit lead to an
+auxiliary contour with two modified-Bessel contributions. Finite-parameter
+quadrature shows a large additional contribution for some imaginary
+energy transfers. This revises the prospective global single-saddle
+strategy and preserves the preceding local result. Neither a full
+Barnes-to-Bessel limit nor a joint growing-mass theorem is proved here.
+Numerical errors quoted are empirical diagnostics.
+\end{abstract}
+\section{Object and exact negative reflection}
+The de Sitter radius is one. We retain the internal chiral graph amplitude
+obtained in the preceding fixed-mass \(\kappa\to\infty\) limit, then study
+its masses. No physical state, observable algebra, external insertion or
+energy cycle is newly identified here. This is not a finite-\(G\) OTOC.
+For \(u=v=0\), \(K=\nu^2/(2M)>0\), \(\omega=iKy\), set
+\[
+ a_j=M+\nu/2\ (j=1,\ldots,4),\qquad
+ r=(M+\nu+\omega/2,2M,M+\nu-\omega/2).
+\]
+The exact kernel and chiral integral are
+\[
+ B(z)=e^{-i\pi z}
+ \frac{\prod_a\Gamma(z+ia)\prod_r\Gamma(\tfrac12-z-ir)}
+ {\Gamma(z+\tfrac12)},\qquad
+ \mathfrak B=\frac1{2\pi i}\int_{\mathbb R-ic}B(z)\,\dd z.
+\]
+For \(w=-z\), Euler reflection \cite{gamma} gives
+\begin{align}
+ B(-w)&=H_-(w)E_-(w),\\
+ H_-(w)&=8\pi^3e^{4\pi iw+\pi\sum r}
+ \frac{\Gamma(w+\tfrac12)\prod_r\Gamma(w+\tfrac12-ir)}
+ {\prod_a\Gamma(1+w-ia)},\\
+ E_-(w)&=\frac{1+e^{2\pi iw}}
+ {\prod_a(1-e^{2\pi i(w-ia)})}.
+\end{align}
+No periodic denominator is discarded. This reflection identity also
+holds for the general real transverse labels.
+With \(f(t)=t(\log t-1)\), define
+\[
+ \Phi(z)=2\pi iz-\pi\sum r+\sum_a f(z+ia)-\sum_r f(z+ir)-f(z).
+\]
+
+\newpage
+\section{Phase comparison and a computable contour}
+For real \(a\), conjugation-invariant \(r\), and compatible
+right-half-plane logarithms, the negative phase obeys
+\[
+ \Psi(w)=4\pi iw+\pi\sum r+f(w)+\sum_r f(w-ir)-\sum_a f(w-ia)
+        =2\pi iw-\overline{\Phi(\bar w)}.
+\]
+Let \(z_+=x_+-ic_+\) be the right saddle. Write
+\(\prod(s-a)-s\prod(s-r)=A_qs^2+bs+c_0\);
+then \(s_+=(-b+i\sqrt{-\Delta})/(2A_q)\), \(z_+=-is_+\), \(\Delta<0\).
+The difference of real phase values at conjugate points is
+\[
+ D=\Re\Phi(z_+)-\Re\Psi(\bar z_+)=2\pi c_++2\Re\Phi(z_+).
+\]
+This does not determine a contour coefficient.
+For \(\epsilon=\nu/M\), \(\delta=M+\nu-c_+\), the symmetric
+small-\(\epsilon\) expansion at bounded \(y\) is
+\[
+ D/K=2F(y)-2\pi\delta/K+O(\epsilon^2),\qquad
+ F(y)=\sqrt{1+y^2}-y\,\operatorname{arsinh}y.
+\]
+
+Choose \(L=x_+>K|y|/2\), \(c=M+\nu-d\) with
+\(\max a<c<\min\Re r\). The negative tail may be deformed downward
+at \(x=-L\). The swept lower-left region has no poles:
+the \(\Gamma(z+ia)\) poles lie at height \(-a>-c\), and the other
+pole rows lie to the right of \(-L\).
+Reflection and Stirling remove distant arcs at fixed parameters.
+The orientation is upward on the left ray:
+\[
+ \int_{\mathbb R-ic}B(z)\,\dd z
+ =\int_{-L}^\infty B(x-ic)\,\dd x
+ +i\int_0^\infty B(-L-i(c+t))\,\dd t.
+\]
+This fixed-parameter deformation supplies no mass-uniform tail bound.
+
+\section{Compact-kernel limit}
+Put \(t=z+i(M+\nu)\), \(\alpha=Ky\), and
+\[
+ C_{M,\nu}=e^{-\pi(M+\nu)}
+ \frac{\Gamma(-i\nu/2)^4\Gamma(\tfrac12-i(M-\nu))}
+ {\Gamma(\tfrac12-i(M+\nu))}.
+\]
+At fixed \(K,\alpha\), \(M=\nu^2/(2K)\), \(\nu\to\infty\),
+Gamma-ratio asymptotics \cite{stirling} give locally away from poles
+\begin{align}
+ \frac{B(t-i(M+\nu))}{C_{M,\nu}}&\longrightarrow U_{K,\alpha}(t),\\
+ U_{K,\alpha}(t)&=e^{-2\pi it}(K/2)^{2t}
+ \Gamma(\tfrac12-t+\alpha/2)\Gamma(\tfrac12-t-\alpha/2).
+\end{align}
+The leading powers are
+\(( -i\nu/2)^{4t}[-i(M-\nu)]^{-t}[-i(M+\nu)]^{-t}e^{-i\pi t}\);
+on these branches they tend to \(e^{-2\pi it}(K/2)^{2t}\).
+This is compact convergence, not an exchanged full integral limit.
+
+\newpage
+\section{Exact auxiliary Bessel integral}
+For real \(\alpha\), \(K>0\), choose \(\mathcal C\) from
+\(d_0-i\infty\) to \(d_0+i\eta\), then right to \(+\infty+i\eta\),
+where \(d_0<\tfrac12-|\alpha|/2\), \(\eta>0\).
+Set \(J=(2\pi i)^{-1}\int_{\mathcal C}U\,\dd t\).
+Its downward tail is a power times \(e^{-3\pi|\Im t|}\);
+reflection on the right tail gives reciprocal Gamma factors and
+factorial decay. Close clockwise below the horizontal segment,
+with boundaries avoiding the real poles.
+
+For noninteger \(\alpha\), summing the two pole families
+\(t=\tfrac12\pm\alpha/2+n\) gives
+\begin{align}
+ J={}&-e^{-i\pi\alpha}\Gamma(-\alpha)(K/2)^{1+\alpha}
+ {}_0F_1(1+\alpha;K^2/4)\nonumber\\
+ &-e^{i\pi\alpha}\Gamma(\alpha)(K/2)^{1-\alpha}
+ {}_0F_1(1-\alpha;K^2/4).
+\end{align}
+The residue sign includes both the derivative of the Gamma argument
+and the clockwise closure. Using the \(I\) series and the standard
+\(I_{-\alpha}-I_\alpha\) connection \cite{iseries,connection},
+\begin{align}
+ J&=\frac{\pi K}{2\sin(\pi\alpha)}
+ \left(e^{-i\pi\alpha}I_\alpha(K)-e^{i\pi\alpha}I_{-\alpha}(K)\right)\\
+ &=-K\left[e^{i\pi\alpha}K_\alpha(K)+i\pi I_\alpha(K)\right]
+ =-K K_\alpha(Ke^{-i\pi}). \label{eq:J}
+\end{align}
+The last expression denotes continuation below the negative axis
+\cite{continuation}. At integer order continue the \emph{complete sum};
+the separate residue coefficients are singular.
+This is an exact auxiliary identity, not yet the full Barnes limit,
+and not a claim of a new special-function identity.
+
+\subsection*{Two exponential scales}
+For fixed \(y>0\), \(K\to\infty\), large-order expansions \cite{largeorder}
+give
+\[
+ I_{Ky}(K)\sim\frac{e^{KF(y)}}{\sqrt{2\pi K\sqrt{1+y^2}}},
+ \qquad
+ K_{Ky}(K)\sim\sqrt{\frac{\pi}{2K\sqrt{1+y^2}}}e^{-KF(y)}.
+\]
+Thus \(K_{Ky}(K)/(\pi I_{Ky}(K))\sim e^{-2KF(y)}\).
+Since \(F'(y)=-\operatorname{arsinh}y<0\), its positive zero is unique:
+\[
+ y_c\simeq1.5088795615383199289.
+\]
+This is an auxiliary exponential-magnitude crossover, not a proved
+physical critical point or a Stokes transition of the full graph.
+Phase cancellation of the complete sum must still be controlled.
+
+\newpage
+\section{A first correction and finite-parameter evidence}
+At fixed \(K,\alpha,t\), the compact Gamma expansion gives
+\[
+ B/C_{M,\nu}=U_{K,\alpha}(t)
+ \left[1+\frac{4i}{\nu}(t^2-t)+O_{K,\alpha,t}(\nu^{-2})\right].
+\]
+The four large arguments \(-i\nu/2\) supply
+\(4t(t-1)/(2(-i\nu/2))=4i(t^2-t)/\nu\);
+the remaining arguments and power corrections enter at order \(\nu^{-2}\).
+Let \(\mathcal D=(K/2)\partial_K\), \emph{holding \(\alpha\) fixed}.
+Then \(\mathcal DU=tU\), and the Bessel equation yields exactly
+\[
+ (\mathcal D^2-\mathcal D)J=(K^2+\alpha^2-1)J/4.
+\]
+Formal integration therefore predicts the normalized first-order phase
+\(e^{i\alpha^2/\nu}\). This exponential completes a first-order term;
+it is not a derived all-orders resummation or an integrated error theorem.
+
+For \(u=v=0\), \(\nu=4K^3\), \(M=\nu^2/(2K)\), define
+\[
+ g_+=8\pi^3\prod_a(z_++ia)^{-1/2},\qquad
+ \mathfrak B_{\rm loc,lead}=\frac{g_+e^{\Phi_+}}
+ {i\sqrt{2\pi(-\Phi''_+)}}.
+\]
+The numerical full-contour to local-leading ratios are
+\begin{center}\begin{tabular}{rrr}\toprule
+\(K\)&\(y\)&\(\mathfrak B/\mathfrak B_{\rm loc,lead}\) (approximate)\\\midrule
+4&0&\(1.0377303-0.0016775i\)\\
+4&2&\(0.7574552-182.4665112i\)\\
+8&0&\(1.0169041-0.0001656i\)\\
+8&1&\(1.0014509-0.0003609i\)\\
+8&2&\(-4.4614748-33541.8312194i\)\\
+16&0&\(1.0081070-0.0000205i\)\\
+16&2&\(-22852.0717-1.1232773362\,10^9i\)\\\bottomrule
+\end{tabular}\end{center}
+These finite values motivate a second contribution; they do not prove
+an asymptotic counterexample along the entire sequence.
+For \(R=\mathfrak B(K,Ky)/\mathfrak B(K,0)\),
+\(R_J=J(K,Ky)/J(K,0)\), we find
+\begin{center}\begin{tabular}{rrrr}\toprule
+\(K\)&\(y\)&\(|R/R_J-1|\)&\(|R/(R_Je^{i(Ky)^2/\nu})-1|\)\\\midrule
+4&2&0.24889358&0.00389292\\
+8&1&0.03124995&0.00007430\\
+8&2&0.12488755&0.00049349\\
+16&2&0.06248789&0.00006189\\\bottomrule
+\end{tabular}\end{center}
+There is no fitted phase parameter. Its integrated validity is open.
+
+\newpage
+\section{Controls, limitations, and next steps}
+We use 20/36 Gauss nodes per segment, 50/65 decimal digits, \(d=1\),
+\(X=\max(32,8K)\), and downward extent \(T=18\).
+For \(y=2\), additional runs use \(d=0.75\),
+\(X=\max(32,10K)\), \(T=24\), and 90 digits.
+The segment cancellation ratio reaches about \(60.5\);
+all relative comparisons use the complete complex sum.
+Extent changes test truncation empirically, without certifying
+the omitted infinite tails.
+
+All 34 checks pass: 12 reflection/phase identities,
+6 auxiliary Bessel/differential identities, 7 quadrature refinements,
+and 9 contour/extent/precision comparisons.
+Parameters, segment values, refinement changes, Python and mpmath
+versions, and code/input hashes are stored in
+\path{results/stage4/recoil-global/diagnostics.json}.
+The executable is \path{code/recoil_global_probe.py}.
+
+The preceding local result is retained. The next objective is a
+\emph{two-branch} analysis rather than a presupposed right-saddle
+dominance for all bounded imaginary transfers.
+First prove a full fixed-\(K,\alpha\) Barnes-to-Bessel limit.
+The unresolved requirement is a mass-uniform integrable tail bound,
+especially on the positive horizontal segment. A useful partition is
+\(x\ll\nu\), \(\nu\lesssim x\lesssim M\), and \(x\gtrsim M\),
+with overlap estimates and all exact periodic factors retained.
+Compact convergence cannot replace this bound.
+
+Only afterwards let \(K\) grow, specify its relation to \(\nu\),
+and establish integrated correction estimates. Near comparable
+branch magnitudes, control absolute errors before dividing by a
+potentially small sum. Transverse \(u,v\) directions and exterior
+tails require separate estimates.
+
+The external energy cycles, insertion normalization, disconnected
+baseline, and microscopic dictionary remain open.
+Taking the fixed-mass \(\kappa\) limit before mass growth does not
+establish a joint finite-\(G\) limit. Complex energies require analytic
+continuation of the chiral factors, not a newly imposed modulus square.
+This is an author self-reviewed research draft.
+
+\begin{thebibliography}{9}
+\bibitem{gamma} NIST DLMF, \S5.5, functional relations,
+\url{https://dlmf.nist.gov/5.5}.
+\bibitem{stirling} NIST DLMF, \S5.11, asymptotic expansions,
+\url{https://dlmf.nist.gov/5.11}.
+\bibitem{iseries} NIST DLMF, \S10.25, modified Bessel definitions,
+\url{https://dlmf.nist.gov/10.25}.
+\bibitem{connection} NIST DLMF, \S10.27, connection formulas,
+\url{https://dlmf.nist.gov/10.27}.
+\bibitem{continuation} NIST DLMF, \S10.34, especially 10.34.2,
+\url{https://dlmf.nist.gov/10.34}.
+\bibitem{largeorder} NIST DLMF, \S10.41(ii), large-order expansions,
+\url{https://dlmf.nist.gov/10.41}.
+\end{thebibliography}
+\end{document}

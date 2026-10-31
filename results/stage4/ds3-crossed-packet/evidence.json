@@ -1,0 +1,63 @@
+{
+  "created_at_utc": "2026-10-30T21:12:41.647393+00:00",
+  "pages": 5,
+  "checks": 24,
+  "precision_reference_points": 13,
+  "raw_kernel_points": 3442832,
+  "compilers": {
+    "local": "two final pdfLaTeX passes",
+    "desktop": "success on final source"
+  },
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "longest_edge_pixels": 1100,
+    "status": "all pages inspected; no clipping, collisions or missing glyphs"
+  },
+  "hashes": {
+    "code/audit_ds3_crossed_packet.py": "d433e5f5ec0abb22344c71541fe8142d01945f3e0ad8da84abfb893f75b2457b",
+    "code/build_ds3_crossed_packet.ps1": "188428dae8d0206e391bc727d395506c580613deff7793b13a7b564890dec8c0",
+    "code/ds3_crossed_packet.py": "b93f745388dc0f3ba65aace74d1a64f1c5e69be12872447671bf36ec4f7de549",
+    "code/ds3_crossing_dictionary.py": "0dd76e7cbe336fda26bdab77a5b495261449807b6891cc85973e8c00c4d5daca",
+    "code/ds3_cutoff_witness.py": "006a9c3ff20dff27b5fd45d74bbfce5ecdd60bc01e0cb0bd4a3b29cc7c520132",
+    "code/ds3_group_pairing.py": "0ef676a1590157d49e62875698ab676cf06a58f942e8b655cbeced8c7e0efbb2",
+    "code/ds3_local_vertex.py": "3228a87c7f5571dcca98125499f7bf28d7cf7f357b41a6130b3ef88a03f23687",
+    "code/ds3_mass_spectrum.py": "6cc3ff6b981f45e51a6f9f47b0052f1a9c28e5d4d4d82015e6d0b5626f35e8a2",
+    "code/ds3_packet_tail.py": "39063d914e1b7f8270707d9a0b9277d4f25826d423b3f089e6574f4ce7cd0188",
+    "code/ds3_racah_fast.py": "778c07d86e011b4ca8f167d4a778ea8639b13e8085766fa6f6a3e88c7af3bd7c",
+    "code/ds3_two_matter.py": "636f5b9bb79623e2cae493734e6ba5cf4c0cce8be7427d3f413d00b01fd3de5e",
+    "code/global_racah.py": "4b9702c8c8f68b3f3901f3e392321824edf37198b70c0344298c95addd88a15c",
+    "code/replay_ds3_crossed_packet.py": "af4bd9c61f8d655decfba3ebcdc6467bfd3a07ae1189558d876c44dc2e6b7dde",
+    "code/run_ds3_crossed_packet.py": "b4db8f917a3235234e2374060040b155e8104951b5866e9f4cc9f71ebdac1414",
+    "code/validate_ds3_packet_bounds.py": "abc733d586202a50ed310ab1442e4451c7899d7171dc5fb7578fc8c9a72a803b",
+    "code/validate_ds3_racah_fast.py": "3313f9343688cda548672bf3f2d5f3917b4f5af8e9495cc162f55397e2a783b1",
+    "literature/stage4-ds3-crossed-packet-sources.md": "a1aa1be2e791c9b5d1a8125f1aba5f6e7c5bfec4398d106f23aa95a18a58be7c",
+    "manuscript/ds3-crossed-packet/main.tex": "366045c728523c14d82d2be1096acb7b10da8f0fbeddbd3cc5ac03faba7c48d0",
+    "manuscript/ds3-crossed-packet/numerics.tex": "16e6c3731cd801056ac87dcf3de07207126eec219ae251c4604902f3ee168ab6",
+    "notes/stage4-ds3-crossed-packet.md": "baff1cfc29084430a5a8439f7241ba0cfb8e21f08958eafbb0bd3c6301491bdf",
+    "output/pdf/de-sitter-ds3-crossed-packet.pdf": "b5b76497b8e4dba99da2ff088a554997dc6970dffc91de41cee86cbe14d0581f",
+    "results/stage4/ds3-crossed-packet/accelerator-validation.json": "4edb4f21b281a284636496ae699a3ff4459a660d5c6abe41fb5c642f7f5f41e1",
+    "results/stage4/ds3-crossed-packet/bounds-validation.json": "8aebd91e3fc16994dc2d113ba346cff119abdd655bea605ddeb1c48ee6f343fc",
+    "results/stage4/ds3-crossed-packet/build-review.md": "0e734d2131a7ec91152876d36c5d2fb58aace50fc0a292562d338be0453b415a",
+    "results/stage4/ds3-crossed-packet/main.log": "7146ded58f04796ff3530820711b7525f6e4523bdfce9ae0430eed4283b2fa3a",
+    "results/stage4/ds3-crossed-packet/pilot-n4-L8.json": "81272d7d5c54fb3b57326974f2cdc258daf90c0354f838fe74e5ec5e788176c0",
+    "results/stage4/ds3-crossed-packet/pilot-n4-L8.npz": "d22d766442b22a3a3c77cf8b4ecb7c3f33aae7b8405c721561e0ffa07a9eeaa6",
+    "results/stage4/ds3-crossed-packet/pilot-precision-n4-L8.json": "274200ef3bf8c78a41c90e5132d586c098102a34213f3a8e457d0b0ad2851929",
+    "results/stage4/ds3-crossed-packet/pilot-precision-n4-L8.npz": "c7e07d0d50fb99922a6f834616e6be4a3c712bc7355a230a72e1db390d3198a9",
+    "results/stage4/ds3-crossed-packet/precision-n6-L12.json": "26dbba25934045811fa766dcf3660e3010f9a64993434911a779c1aabb52cd0e",
+    "results/stage4/ds3-crossed-packet/precision-n6-L12.npz": "4d637b2f858ee98d04c59fbb4cbe160c2d15190e1c88e47b8602c17de159ef9a",
+    "results/stage4/ds3-crossed-packet/refined-n6-L10.json": "497c2f492190c0a0bb4d503fd408af5898cbb4aa5348c02f89dd63366d7b7e11",
+    "results/stage4/ds3-crossed-packet/refined-n6-L10.npz": "e2655c458fd885b4c1887acde6a693dec29d674b9f80f93e24f0e557d9779dd6",
+    "results/stage4/ds3-crossed-packet/refined-n8-L12.json": "11a040460a5e8605fc914d94301d77553b582955a1b118ba840d9f5873202f9d",
+    "results/stage4/ds3-crossed-packet/refined-n8-L12.npz": "2172dd994325da438951a6e9ffdee895cd94de016cb0d7831a0c68cbb4abcb32",
+    "results/stage4/ds3-crossed-packet/summary.json": "590362064574606738eeccbb8931ad788ecce2da56681e95f14ca63026f52e3d",
+    "sources/derkachov-spiridonov-1711.07073v2.html": "a4f305acd8eded3330309df70e570e28b1eb704f1083c49dfeb310072b33a367",
+    "sources/karateev-kravchuk-simmons-duffin-1809.05111v1.html": "4f16f5d8d3048611f1786d4cc414aaf175719539b8e33e0097bb57e22ebc4a48",
+    "sources/liu-et-al-1808.00612v3.html": "f2ed75383d739432535ba11f0988fa6df08aaf5020e4f61a8ca2376ae40c4494"
+  }
+}

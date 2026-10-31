@@ -1,0 +1,48 @@
+{
+  "created_at_utc": "2026-10-30T23:00:36.097778+00:00",
+  "status": "stage checks completed; project integration and freeze pending",
+  "pages": 5,
+  "study_runs": 12,
+  "independent_audit_checks": 191,
+  "initial_failed_audit_preserved": true,
+  "compilers": [
+    "local pdfLaTeX twice",
+    "desktop success"
+  ],
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "longest_edge_pixels": 1100,
+    "status": "all inspected, no layout defects"
+  },
+  "pending_prior_job": {
+    "session_id": 47841,
+    "counted_as_passed": false
+  },
+  "hashes": {
+    "code/ds3_peak_normalization.py": "bc7ae75203b29582e3caa8f6965e533495872eea660128a79333bd367bcc39b2",
+    "code/run_ds3_peak_limit.py": "05c887ac7df6e6a11196ba204ff20d8eb7e0fc2fcf5f4a9ccf52c1a3688026f2",
+    "code/audit_ds3_peak_limit.py": "93daee187475bfc9bdd3e3aaa5ae741dca59421d2b89b5af1b566bee5b0ecd99",
+    "code/audit_ds3_peak_limit_refined.py": "ce13bb1d98a619fa46e2450ea38bc7baae86c5a545adf9e934b34c6195ef6cfb",
+    "code/record_ds3_peak_limit.py": "11712bd8eedd7848ec8339550d4ca2ba1491259bf40d7c3f1a671a631ff7017a",
+    "code/build_ds3_peak_limit.ps1": "c2c749fb73c61181b565ef48f360af2bdb89c9f19e4a7321116a1184df704939",
+    "notes/stage4-ds3-peak-limit.md": "0fab0d65d9addd301090202d9717320ba8dcf0eaf84071808e8c54fcf91fa4f4",
+    "literature/stage4-ds3-peak-limit-sources.md": "ec03cfef570b975e97efc15e3acbfd166e509544ee6aac3226bb1b6bbcc445d4",
+    "manuscript/ds3-peak-limit/main.tex": "3ae735d29ab885a2214580f6273c8faf158e4c6dbeb33968574c2830458d7253",
+    "output/pdf/de-sitter-ds3-peak-limit.pdf": "ab5bdb875d143e78ff3ad5cf2d5565ace0585b73142c5271aa699e50cc63d8de",
+    "sources/manifest.json": "41ba7f9a3b41725819a1bc51d14d85c174abdfc2e65cf7fb3cad25e4f054148f",
+    "results/stage4/ds3-peak-limit/audit-refined.json": "08cc8612321eecf3df81671bad66fbca38485adf40bd7c1eb8919e43ac7dbccf",
+    "results/stage4/ds3-peak-limit/audit.json": "d9b11d5994d414a8529fdf9c1d7dbeec4c1fcc8a95c04ede35a58cea58b40bc8",
+    "results/stage4/ds3-peak-limit/build-review.md": "d6f45b7f166e80919a6ac25b14a70292484b0e636726d02dfa70c627023252a6",
+    "results/stage4/ds3-peak-limit/initial-tex.log": "7b2be0bc1b81989df4614ce37f6a1a8990ae62197d97d79344805744a0014acc",
+    "results/stage4/ds3-peak-limit/main.log": "d876c57812bf14fda557046a83b479ec52fbfdd188fd478d178cc5cc21f9c586",
+    "results/stage4/ds3-peak-limit/preservation.json": "645cefaa1f163fd17b8b93b4bcbe6a7c15782f1fabb8753f0ce887adaf70214d",
+    "results/stage4/ds3-peak-limit/runs.jsonl": "a66b9d08547df7ed759b9b52e2ae055358e40bc62647e93f855dbd58c72f79b5",
+    "results/stage4/ds3-peak-limit/study.json": "13187cffe8e50ed7e5dfc9aa530ca491c82d05ca95395cfa480581c2c36f51b2"
+  }
+}

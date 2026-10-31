@@ -1,0 +1,242 @@
+{
+  "status": "failed",
+  "checks": 19,
+  "failed": 6,
+  "scope": "Finite thermal oscillator GNS; projected Weyl central differences, resolvents on one reference vector, and nonmultiplicativity. These are supporting checks, not continuum proofs.",
+  "parameters": {
+    "oscillator_levels": 48,
+    "omega": 1.0,
+    "projection_threshold": 1.5,
+    "clock_support": "any L2 wave amplitude within (1,2)",
+    "omitted_thermal_probability": 1.4251640827409352e-21
+  },
+  "versions": {
+    "python": "3.14.5",
+    "numpy": "2.4.6",
+    "scipy": "1.18.0"
+  },
+  "code_sha256": {
+    "validate_operator_bridge.py": "6fb12b2febac00f57810df6d9df5d5c592abf1a649b4a25f7dc544e452756157"
+  },
+  "tasks": {
+    "two": [
+      0.3,
+      -0.2
+    ],
+    "four_equal": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "four_unequal": [
+      0.2,
+      -0.1,
+      0.5,
+      0
+    ]
+  },
+  "projected_moments": {
+    "two": [
+      0.8775825618903728,
+      -0.22155076701762333
+    ],
+    "four_equal": [
+      1.9311067092229535,
+      0.0
+    ],
+    "four_unequal": [
+      1.600717588108821,
+      -0.3878354162037183
+    ]
+  },
+  "rows": [
+    {
+      "epsilon": 0.4,
+      "moment_errors": {
+        "two": 0.1318968742960374,
+        "four_equal": 0.702358135421516,
+        "four_unequal": 0.5990103553822984
+      },
+      "resolvent_vector_error": 0.028631988912162894,
+      "compressed_Weyl_vs_exp_compressed_field": 0.013623930861134167,
+      "compressed_Weyl_norm_loss": 0.00607361836072684
+    },
+    {
+      "epsilon": 0.2,
+      "moment_errors": {
+        "two": 0.035354211146433445,
+        "four_equal": 0.2134697274332622,
+        "four_unequal": 0.18173866952762724
+      },
+      "resolvent_vector_error": 0.007025883504393559,
+      "compressed_Weyl_vs_exp_compressed_field": 0.0017851008815611552,
+      "compressed_Weyl_norm_loss": 0.0004148695720657125
+    },
+    {
+      "epsilon": 0.1,
+      "moment_errors": {
+        "two": 0.00899730677695941,
+        "four_equal": 0.05623547163900233,
+        "four_unequal": 0.04784935325778999
+      },
+      "resolvent_vector_error": 0.0017484100430978926,
+      "compressed_Weyl_vs_exp_compressed_field": 0.00022581000418006779,
+      "compressed_Weyl_norm_loss": 2.6521203021157014e-05
+    },
+    {
+      "epsilon": 0.05,
+      "moment_errors": {
+        "two": 0.002259413962257613,
+        "four_equal": 0.014247372409299963,
+        "four_unequal": 0.012120912957978184
+      },
+      "resolvent_vector_error": 0.00043660195344984485,
+      "compressed_Weyl_vs_exp_compressed_field": 2.8310622648589967e-05,
+      "compressed_Weyl_norm_loss": 1.6669917021205904e-06
+    },
+    {
+      "epsilon": 0.025,
+      "moment_errors": {
+        "two": 0.0005654865612979176,
+        "four_equal": 0.0035737756722049596,
+        "four_unequal": 0.003040264041004904
+      },
+      "resolvent_vector_error": 0.00010911925463938042,
+      "compressed_Weyl_vs_exp_compressed_field": 3.5414712335207635e-06,
+      "compressed_Weyl_norm_loss": 1.0433478314642031e-07
+    },
+    {
+      "epsilon": 0.0125,
+      "moment_errors": {
+        "two": 0.00014141124827071934,
+        "four_equal": 0.0008941920899308009,
+        "four_unequal": 0.0007606952204801553
+      },
+      "resolvent_vector_error": 2.7277862352112516e-05,
+      "compressed_Weyl_vs_exp_compressed_field": 4.4276656354355e-07,
+      "compressed_Weyl_norm_loss": 6.5232359514055815e-09
+    }
+  ],
+  "check_details": [
+    {
+      "name": "projected Wick measure two",
+      "passed": true,
+      "absolute_error": 2.7755575615628914e-17
+    },
+    {
+      "name": "projected Wick measure four_equal",
+      "passed": true,
+      "absolute_error": 6.661338147750939e-16
+    },
+    {
+      "name": "projected Wick measure four_unequal",
+      "passed": true,
+      "absolute_error": 2.2887833992611187e-16
+    },
+    {
+      "name": "compressed Weyl differs at 0.4",
+      "passed": true,
+      "vector_difference": 0.013623930861134167
+    },
+    {
+      "name": "compressed Weyl loses norm at 0.4",
+      "passed": true,
+      "norm_loss": 0.00607361836072684
+    },
+    {
+      "name": "compressed Weyl differs at 0.2",
+      "passed": true,
+      "vector_difference": 0.0017851008815611552
+    },
+    {
+      "name": "compressed Weyl loses norm at 0.2",
+      "passed": true,
+      "norm_loss": 0.0004148695720657125
+    },
+    {
+      "name": "compressed Weyl differs at 0.1",
+      "passed": true,
+      "vector_difference": 0.00022581000418006779
+    },
+    {
+      "name": "compressed Weyl loses norm at 0.1",
+      "passed": false,
+      "norm_loss": 2.6521203021157014e-05
+    },
+    {
+      "name": "compressed Weyl differs at 0.05",
+      "passed": true,
+      "vector_difference": 2.8310622648589967e-05
+    },
+    {
+      "name": "compressed Weyl loses norm at 0.05",
+      "passed": false,
+      "norm_loss": 1.6669917021205904e-06
+    },
+    {
+      "name": "compressed Weyl differs at 0.025",
+      "passed": false,
+      "vector_difference": 3.5414712335207635e-06
+    },
+    {
+      "name": "compressed Weyl loses norm at 0.025",
+      "passed": false,
+      "norm_loss": 1.0433478314642031e-07
+    },
+    {
+      "name": "compressed Weyl differs at 0.0125",
+      "passed": false,
+      "vector_difference": 4.4276656354355e-07
+    },
+    {
+      "name": "compressed Weyl loses norm at 0.0125",
+      "passed": false,
+      "norm_loss": 6.5232359514055815e-09
+    },
+    {
+      "name": "quadratic mixed-difference convergence two",
+      "passed": true,
+      "ratios": [
+        3.7307259876266032,
+        3.9294215505655132,
+        3.9821417974992395,
+        3.995521939675728,
+        3.9988796380281117
+      ]
+    },
+    {
+      "name": "quadratic mixed-difference convergence four_equal",
+      "passed": true,
+      "ratios": [
+        3.2902001790445756,
+        3.795997814397442,
+        3.947076697615812,
+        3.986644298943804,
+        3.996653193925619
+      ]
+    },
+    {
+      "name": "quadratic mixed-difference convergence four_unequal",
+      "passed": true,
+      "ratios": [
+        3.295998352685415,
+        3.7981426530156863,
+        3.947669076057077,
+        3.986796144841366,
+        3.9966913938092987
+      ]
+    },
+    {
+      "name": "quadratic resolvent convergence on reference vector",
+      "passed": true,
+      "ratios": [
+        4.075215436501074,
+        4.0184415161244775,
+        4.004585937563248,
+        4.001144939018655,
+        4.000286137924944
+      ]
+    }
+  ]
+}

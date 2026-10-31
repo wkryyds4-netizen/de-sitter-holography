@@ -1,0 +1,42 @@
+{
+  "created_at_utc": "2026-10-29T17:47:08.085104+00:00",
+  "kind": "analytic proof draft and dependency record; author self-review, not independent certification",
+  "result": "Theorems 13.1/13.2: fixed Gaussian exponential early asymptotic and exponential-packet hard-boundary inverse-cubic tail",
+  "conditions": [
+    "dS2 L=1; proper SO+(2,1); strict G_N -> 0; BD free equal independent principal-series species nu>0",
+    "fixed proper Gaussian sigma>0; normalized vacuum packet",
+    "F: repeated fixed threshold m_*>1/2, any fixed L1 external density",
+    "Q rate: repeated moving threshold M, specifically pi0(r)=beta exp(-beta r), beta>0",
+    "first M->infinity with t_M=log(2M)+T, then T->-/+infinity; no joint limit asserted"
+  ],
+  "proof_chain": [
+    "external Gamma cancellation and chi,u,v change factorize transverse amplitude",
+    "F: strip holomorphy via Euler Gamma/log-moment bounds and Gaussian; remove odd poles; clockwise contour residues give positive C",
+    "Q: exact half-line-square minus triangular domain",
+    "Q: scaled endpoint integral yields beta f0(0)^2 (-chi)_+^3/6 with one-sided derivative control",
+    "Gamma pole lowers smoothness to a second derivative jump; global Gaussian and exponential-density moments justify Fourier inverse-cubic asymptotic"
+  ],
+  "numerical_scope": "37 finite diagnostics. Actual F limiting curves with empirical quadrature; Q local corner only, not complete Q time curve. Separate analytic tail formulas evaluated without outward rounding.",
+  "not_proven": [
+    "full Q time curve numerical verification",
+    "other external density endpoints or support gaps",
+    "uniform finite-M growing window",
+    "monotonicity of Q dynamics",
+    "interval-certified total quadrature error",
+    "finite-G dynamics or full holographic dual",
+    "originality or independent certification"
+  ],
+  "source_relation": "Exponent two already in KL; Gaussian coefficient and hard-threshold endpoint calculation recorded separately. Narrow search does not establish priority.",
+  "hashes": {
+    "manuscript/preparation.tex": "583e3505dfdd9b4c2725620218042cc3cbcb07cc5940ba104939745bd416692a",
+    "manuscript/logtime.tex": "c33549cac95393718b1e8adc3353062bfee5a1e1ca0f2c971b31ae642de1eef0",
+    "manuscript/assembly.tex": "c12611bd24506d6427093ac3636e3cbb43011dabe2e95f6b6c195d60717fbbc5",
+    "notes/stage3-preparation-asymptotics.md": "ffc4e6e3e5b9edb852e300b4ef1d5a98b8fa41a5a97157154ece098f22ee5efe",
+    "literature/stage3-preparation-sources.md": "9bde3e69ae97f2d7a0f4be6908b1a8c386e77a516f0b71d9ffcdb45365512540",
+    "results/stage3/preparation/diagnostics.json": "8b719d730b4eee5b4c7e13a55a2334bd9cc5adaaac994a244064e28990623ad7",
+    "results/stage3/preparation/fixed-curve.pdf": "48a202bd8bd9ee394ca6f7e74d2d0cb5614a5f1de5cd4a32fa84cdce73f32578",
+    "results/stage3/preparation/fixed-curve.png": "6dc3fd4979d92efc9f6f38e11b7640beef34e2a795d80a49fb5e196341fec8fd",
+    "sources/kolchmeyer-liu-2411.08090v1.html": "352ef29aa89c376203271bf984bd904fb471ff313a7d420bc6a0ebc875d78065",
+    "sources/dlmf-5.11.html": "8f573b25a200d5ca09372ad88adbd4a621bc0bc463e088c6548ff8dddc0d2eee"
+  }
+}

@@ -1,0 +1,275 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,microtype,booktabs}
+\usepackage[margin=25mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\title{Transverse phase of the complete dS$_3$ crossing kernel:\\
+a punctured-window expansion and logarithmic scaling}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Working research note --- 31 October 2026}
+\begin{document}\maketitle
+\begin{abstract}
+The physical normalization phase changes the logarithmic transverse
+scaling inferred from one Omega factor alone. Using the established
+Wilson reflection and the two-series LPRS formula, we obtain a
+phase-shifted sine kernel away from the collision surface and a
+pointwise sinc limit for the complete scalar matrix element.
+An explicit finite-mass bound retains the whole companion series.
+Neither result establishes a distributional limit or the heavy-mass
+limit of a physical wave packet.
+\end{abstract}
+
+\section{Model, coordinates and claims}
+The radius is one and $G_N=0$. We keep proper $SO^+(3,1)$, BD scalar
+observers, KG matter, a fixed positive observer-label lower bound,
+and half-period regulated creation blocks. $U_{00}$ is the scalar
+matrix element in the physical CG-period convention, not a separate
+unitary scalar transform. The principal-series label $M$ corresponds
+to static energy $\sqrt{1+M^2}$.
+
+Fix real $u,v$, positive $p,q$, and put
+\[
+ c=M,\quad b=M+u,\quad a=M+u+v,\quad d=M+v+r,\qquad z=-ir/2,
+\]
+\[
+ A_j=\tfrac12+i\alpha_j,\qquad
+ (\alpha_1,\alpha_2,\alpha_3,\alpha_4)
+ =\tfrac12(v+q,p-u,-u-p,v-q).
+\]
+Our real transfer window requires
+$|\alpha_j|\le1/2$ and $|\alpha_j+r/2|\le1/2$.
+Define a continuous phase, with $\delta(0)=0$, by
+\begin{equation}
+ \delta(r)=\Im\left[
+ 2\log\Gamma(1-ir/2)+
+ \sum_{j=1}^4\{\log\Gamma(A_j+ir/2)-\log\Gamma(A_j)\}\right].
+ \label{delta}
+\end{equation}
+For fixed $r\ne0$, uniformly on compact subsets of this punctured window,
+\begin{equation}
+ U_{00}=\frac{\sin(r\log M-\delta(r))}{\pi r}+O(M^{-1}).
+ \label{sine}
+\end{equation}
+For transfers strictly inside the $r=0$ window, each fixed real
+$\lambda$ instead gives
+\begin{equation}
+ \lim_{M\to\infty}\frac{\pi U_{00}(r=\lambda/\log M)}{\log M}
+ =\frac{\sin\lambda}{\lambda},
+ \qquad \left.\frac{\sin\lambda}{\lambda}\right|_{\lambda=0}=1.
+ \label{sinc}
+\end{equation}
+This is a pointwise scaling statement. The normalization phase must
+be included: the single collision factor had the different profile
+$\sin(\lambda/2)/(\lambda/2)$.
+
+\newpage
+\section{The two oscillatory branches and the physical phase}
+The established reflection identity yields
+$U_{00}=2\Re(C_+XY)$, where $X=\Omega(h,h')$ and
+$Y=\Omega(1-h,h')$, $h=(1+ib)/2$, $h'=(1+id)/2$.
+The two-series formula \cite{lprs}, with the Wilson reflection
+\cite{wilson}, has the useful exact structure
+\[
+ X=c_AF+c_BG,\qquad Y=y_AF+y_BH .
+\]
+Here $F$ is the same series in both expressions:
+\[
+ F={}_4F_3(A-z;\,1+id,\,1-ib-z,\,1-z;\,1),
+\]
+\[
+ H={}_4F_3(A;\,1+i(M+v)-z,\,1-ib,\,1+z;\,1),
+\]
+where $A-z$ denotes all four numerator parameters.
+The large-parameter series is
+\[
+ G={}_4F_3(A+ib;\,1+i(b+M+v+r/2),\,1+ib,\,1+i(b-r/2);\,1).
+\]
+The coefficients of $Y$ are
+\begin{align*}
+ y_A&=\Gamma(z)\frac{\Gamma(1-ib)}{\Gamma(1-ib-z)}
+             \frac{\Gamma(A_3-z)\Gamma(A_4-z)}
+                  {\Gamma(A_3)\Gamma(A_4)},\\
+ y_B&=\Gamma(-z)\frac{\Gamma(1+id)}{\Gamma(1+i(M+v)-z)}
+             \frac{\Gamma(A_1)\Gamma(A_2)}
+                  {\Gamma(A_1-z)\Gamma(A_2-z)}.
+\end{align*}
+Let $D_0=C_+c_A$, $E_0=C_+c_B$ and define
+\[
+ B_s=\frac{\Gamma(A_1)\Gamma(A_2)}
+            {\Gamma(A_1-z)\Gamma(A_2-z)},\quad
+ A_s=\frac{\Gamma(A_3-z)\Gamma(A_4-z)}
+            {\Gamma(A_3)\Gamma(A_4)}.
+\]
+Substitution of the physical three-sphere periods gives
+\begin{align}
+ D_0&=D_\infty M^z[1+O(M^{-1})],\nonumber\\
+ |D_\infty|&=\frac{e^{\pi r/4}}{4\pi|\Gamma(1-z)|}
+ \sqrt{\prod_{j=3,4}
+ \frac{\cosh\pi(\alpha_j+r/2)}{\cosh\pi\alpha_j}},\nonumber\\
+ \arg D_\infty&=-\arg B_s+\arg\Gamma(1+z).
+ \label{D}
+\end{align}
+The phases here are continuous, not principal-value fits. The Gamma
+argument/weight certificate is saved in the audit. Shifted Stirling
+expansion \cite{dlmf} gives the large-argument phase explicitly as
+$-r\log M/2-r(3r+4v)/(8M)+O(M^{-2})$; the remaining terms give
+the phase in \eqref{D}. The modulus follows from
+$|\Gamma(1/2+ix)|^2=\pi/\cosh\pi x$ and
+$|\Gamma(1+ix)|^2=\pi x/\sinh\pi x$.
+
+Gamma ratios imply $y_A\sim\Gamma(z)A_s(-iM)^z$ and
+$y_B\sim\Gamma(-z)B_s(iM)^{-z}$. Thus
+\[
+ D_0(y_A+y_B)=T(r)e^{-ir\log M}+J(r)+O(M^{-1}),
+\]
+\[
+ T=D_\infty\Gamma(z)e^{-i\pi z/2}A_s
+   =\frac{i\,e^{i\delta(r)}}{2\pi r},\qquad
+ J=D_\infty\Gamma(-z)e^{-i\pi z/2}B_s\in i\mathbb R .
+\]
+The nonoscillating branch has zero real part at leading order.
+Its cancellation is algebraic: $\Gamma(-z)\Gamma(1+z)
+=z|\Gamma(z)|^2$ is imaginary. The cosh factors cancel in $|T|$,
+leaving $1/(2\pi|r|)$. Taking twice the real part proves the
+leading expression in \eqref{sine}, once the series errors are controlled.
+
+\newpage
+\section{A finite-mass bound and the limits it supports}
+Put $S=y_A+y_B$, $m_A=\min(d,b-r/2)>0$,
+$m_B=\min(M+v+r/2,b)>0$. The small-numerator coefficient
+comparison used in the collision analysis gives
+\[
+ |F-1|\le R_F=\frac{\zeta(2)-1}{1+m_A^2},\qquad
+ |Y-S|\le R_Y=(\zeta(2)-1)
+ \left(\frac{|y_A|}{1+m_A^2}+\frac{|y_B|}{1+m_B^2}\right).
+\]
+These are exact-arithmetic analytic inequalities; the finite numerical
+evaluation of their right-hand sides is not interval certified.
+
+For completeness the whole $G$ series, not merely its first term,
+is bounded as follows. Let
+\[
+ B=b-|r|/2>0,\qquad A_*=\max_j|\alpha_j|+|r|/2,
+ \qquad b+M+v+r/2\ge B .
+\]
+For $k=n+1$ its term ratio obeys
+\[
+ |g_{n+1}/g_n|\le
+ \sqrt{1+B^2/k^2}
+ \left(1+\frac{2BA_*+A_*^2}{k^2+B^2}\right)^2.
+\]
+The sinh product \cite{product} bounds every term by
+\[
+ B_b=\sqrt{\frac{\sinh\pi B}{\pi B}}\,
+       e^{2\pi A_*+\pi A_*^2/B}.
+\]
+The exact squared-ratio comparison gives a monic polynomial
+$P(x)=x^{10}+\sum_{j<10}p_jx^j$. Set
+$N_*=2+\lceil\max_{j<10}|p_j|\rceil$.
+All translated coefficients at $N_*$ are positive by the monic
+polynomial root bound, also applied to its normalized derivatives.
+Consequently the term ratio is at most
+$((n+1)/(n+2))^{3/2}$ for $n\ge N_*$, and
+\[
+ |G|\le B_G=(3N_*+3)B_b .
+\]
+Here $N_*=O(M^8)$ is an analytic threshold, not a numerical loop length.
+The Gamma prefactors give $|E_0|=O(M^{-1/2}e^{-\pi M})$ on
+compact transfers, so $|E_0|B_G=O(M^8e^{-\pi M/2})$ suffices.
+
+Combining these estimates yields the explicit bound
+\begin{equation}
+ \left|U_{00}-2\Re(D_0S)\right|
+ \le 2|D_0|\{R_Y+R_F(|S|+R_Y)\}
+       +2|E_0|B_G(|S|+R_Y).
+ \label{finite}
+\end{equation}
+At fixed nonzero $r$, this error is $O(M^{-2})$ plus an exponentially
+small term. The Gamma coefficient expansion then proves \eqref{sine}.
+
+For fixed $\lambda\ne0$, $r=\lambda/\log M$ gives
+$|y_A|+|y_B|=O(\log M)$, while the coefficient-ratio expansions
+remain uniform for the small shifts. Their errors are
+$O(\log M/M)$, and \eqref{finite} contributes
+$O(\log M/M^2)$ plus an exponential term.
+Also $\delta(r)=O(r)$; division by $\log M$ proves \eqref{sinc}.
+The $\lambda=0$ case uses the preceding peak theorem separately.
+
+In fact
+\[
+ \delta'(0)=-\tfrac12\Re\{2\psi(1)-\sum_j\psi(A_j)\}.
+\]
+The removable $r=0$ value of the leading sine expression therefore
+agrees with the logarithm and constant of the peak theorem.
+This matching is not a proof of uniform error across $r=0$:
+the separate-branch bound contains $1/|r|$.
+
+\newpage
+\section{Numerical checks, preserved failures and next task}
+We use $(u,v,p,q)=(0.1,-0.1,0.4,0.4)$,
+$M=16,64,256,1024$, and both signs of either $r=0.08$ or
+$r=1/\log M$. Sixteen complete reflected-kernel evaluations use
+90 decimal digits and at least 128 terms per series.
+All obey \eqref{finite}, allowing separately for the saved truncation tail.
+For positive $r=0.08$:
+\begin{center}
+\begin{tabular}{rrrr}
+\toprule
+$M$ & error vs.\ $2\Re(D_0S)$ & bound \eqref{finite}
+ & error vs.\ sine form\\
+\midrule
+16 & $8.41\,10^{-4}$ & $9.22\,10^{-1}$ & $5.58\,10^{-3}$\\
+64 & $6.74\,10^{-5}$ & $1.59\,10^{-3}$ & $1.47\,10^{-3}$\\
+256 & $5.06\,10^{-6}$ & $1.03\,10^{-4}$ & $4.09\,10^{-4}$\\
+1024 & $3.64\,10^{-7}$ & $6.69\,10^{-6}$ & $1.14\,10^{-4}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The explicit finite-mass bound controls a Gamma-exact approximation,
+not the final sine expression. These errors must not be conflated.
+
+The sinc convergence is slow and not monotone in this range.
+For $\lambda=1$, $\pi U_{00}/\log M$ is approximately
+$0.9225,0.9975,0.9977,0.9853$; the limiting value is
+$\sin1\simeq0.84147$. The phase correction explains why peak-shape
+plots at moderate mass would be misleading.
+
+An independent Decimal/Fraction replay and symbolic Gamma-phase
+check passes 203 checks. Four selected points were recomputed at
+120 digits and doubled cutoff. At $M=16$ the relative changes are
+about $1.63\,10^{-23}$ and $9.29\,10^{-24}$; at the two $M=1024$
+scaled points they are about $1.52\,10^{-86}$ and $1.42\,10^{-86}$.
+These checks do not establish interval rounding bounds or accuracy
+at unsampled parameters.
+
+The earlier collision parameter-derivative job has now exited normally.
+Its twelve 100-digit comparisons and subsequent saved-arithmetic audit
+pass. The earlier prototype coefficient bug, failed large-mass
+acceleration, shadow amplification, and insufficient-pi audit are all
+retained. Their old PDFs describe their historical checkpoints;
+new completion records give the current verification status.
+
+The next analytic task is a bound uniform through the transverse
+collision, followed by oscillatory-tail control against the actual
+creation amplitudes and spectral measures. Neither \eqref{sine} nor
+\eqref{sinc} alone permits a delta replacement in a Bose four-point
+function. Full Fock domains, finite-$G_N$ dynamics and a microscopic
+de Sitter holographic dictionary remain open. The results here use
+known special-function formulas in a specified model; no priority
+claim is made.
+
+\begin{thebibliography}{9}
+\bibitem{lprs} J. Liu et al., \emph{$d$-dimensional SYK, AdS Loops, and
+$6j$ Symbols}, \href{https://arxiv.org/html/1808.00612v3}{arXiv:1808.00612v3},
+Eqs.\ (3.35)--(3.38).
+\bibitem{wilson} W. Groenevelt, \emph{The Wilson function transform},
+\href{https://arxiv.org/html/math/0306424v1}{arXiv:math/0306424v1},
+Proposition 4.4 and Remark 4.5. No Wilson-measure unitarity is assumed.
+\bibitem{dlmf} NIST DLMF,
+\href{https://dlmf.nist.gov/5.11}{Section 5.11}, shifted Stirling and
+Gamma-ratio asymptotics with sector restrictions.
+\bibitem{product} NIST DLMF,
+\href{https://dlmf.nist.gov/4.36}{Section 4.36.1}, sinh infinite product.
+Sources checked 31 October 2026.
+\end{thebibliography}
+\end{document}

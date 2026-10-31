@@ -1,0 +1,331 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,microtype,booktabs}
+\usepackage[margin=27mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newtheorem{proposition}{Proposition}
+\newcommand{\dd}{\mathop{}\!\mathrm d}
+\title{Gram factors and transverse energy fluctuations\\in the recoil comparison}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Working research note --- 30 October 2026}
+\begin{document}\maketitle
+\begin{abstract}
+A symmetric energy slice is not the energy kernel of an antipodal
+time correlator: two other energy differences must be integrated.
+We factor the exact angle-Gram determinant in the CLP configuration,
+then compute the transverse Hessian of the CSTY classical pure-recoil
+action for equal probe masses. Conditionally using the geometric
+one-loop factor, these two contributions supply the energy dependence
+required by the previous recoil prefactor test. The full continued
+Virasoro amplitude, its physical insertions and outer contour are not
+computed. The analysis is an author self-reviewed draft, with no claim
+of independent certification or priority.
+\end{abstract}
+
+\section{What the existing definitions provide}
+Use de Sitter radius one, observer proper time \(t\), and
+\(\kappa>0\). CLP~\cite{CLP}, (3.43)--(3.47), defines a fixed-topology
+graph amplitude of the form
+\begin{equation}
+ Z_{\mathrm{tet}}
+ =\left|\frac{\{6j\}_{b_+}}
+ {\sqrt{C_{123}^+C_{156}^+C_{246}^+C_{345}^+}}\right|^2,
+ \qquad b_+^2=i/\kappa. \label{eq:graph}
+\end{equation}
+The internal \(6j\) contour is specified by continuation. This is
+not yet a complete identification with the canonically normalized,
+fixed-average-mass mixed-representation correlator of CSTY~\cite{CSTY}.
+In particular, cancellation of the order-\(\kappa\) vertex exponent
+does not cancel the order-one vertex factors.
+
+Following (3.64), CLP invokes a chiral one-loop Gram factor,
+\[
+ (\det G)^{-1/4},
+\]
+together with vertex corrections.
+The cited Meng--Yang theorem~\cite{MY}, Theorem 1.3, is for fixed
+hyperideal hyperbolic dihedral angles (with its stated conditions on
+\(\arg b\)). Its \(O(b^2)\) remainder is not a uniform theorem for the
+degenerating spherical configuration below. Our Gram identities are
+exact algebra; using them as the whole continued \(6j\) one-loop
+asymptotics remains conditional.
+
+\section{An exact factorization and two different limits}
+Use CLP's vertex triples \(123,156,246,345\). The angle Gram matrix
+with face indices opposite these four vertices is
+\begin{equation}
+ G=\begin{pmatrix}
+ 1&-\cos\theta_4&-\cos\theta_5&-\cos\theta_6\\
+ -\cos\theta_4&1&-\cos\theta_3&-\cos\theta_2\\
+ -\cos\theta_5&-\cos\theta_3&1&-\cos\theta_1\\
+ -\cos\theta_6&-\cos\theta_2&-\cos\theta_1&1
+ \end{pmatrix}. \label{eq:gram}
+\end{equation}
+This labeling satisfies CLP Appendix B's discriminant identity
+\(q_1^2-4q_0q_2=16\det G\).
+Set
+\[
+ \theta_1=\theta_4=H+d,\quad \theta_3=\theta_6=H-d,\quad
+ \theta_2=\pi-\beta',\quad\theta_5=\pi-\beta,
+ \quad d=\frac{\pi\omega}{2\kappa},\quad
+ (\beta,\beta')=\frac{\pi}{\kappa}(\nu,\nu').
+\]
+Here \(H\) is a cone half-angle, not the limiting special function
+used in the previous note.
+
+\begin{proposition}
+Writing \(D(\omega)=\det G\), one has exactly, also for complex angles,
+\begin{align}
+ D(\omega)=16&
+ \left[\cos^2\frac\beta2\cos^2\frac{\beta'}2-\cos^2H\cos^2d\right]
+ \nonumber\\[-2pt]
+ &\times
+ \left[\sin^2\frac\beta2\sin^2\frac{\beta'}2-\sin^2H\sin^2d\right].
+ \label{eq:factor}
+\end{align}
+\end{proposition}
+\begin{proof}
+Put \(a=\cos(H+d)\), \(b=\cos(H-d)\), \(u=-\cos\beta'\),
+\(v=-\cos\beta\). Splitting the matrix into the two eigenspaces of
+the exchange of its first and third, and second and fourth indices gives
+\[
+ D=\big[(1-u)(1-v)-(a+b)^2\big]
+    \big[(1+u)(1+v)-(a-b)^2\big].
+\]
+The sum and difference formulas for \(a,b\) give \eqref{eq:factor}.
+\end{proof}
+
+At fixed \(H\) away from \(0,\pi\), let
+\[
+ A=\frac{\pi\nu\nu'}{2\kappa\sin H},\qquad \omega=A z.
+\]
+As \(\nu/\kappa,\nu'/\kappa\to0\), Taylor expansion of the two
+factors gives
+\begin{equation}
+ \frac{D(Az)}{D(0)}=1-z^2+o(1), \label{eq:fixed}
+\end{equation}
+uniformly for bounded \(z\). Relative use excludes \(z=\pm1\).
+For example, the unnormalized leading expression is
+\(4\pi^2\sin^4H\,(A^2-\omega^2)/\kappa^2\).
+This statement concerns the exact determinant, not the \(6j\) remainder.
+
+A different limit takes \(H=\pi(1-M/\kappa)\) at fixed
+\(M,\nu,\nu',\omega\). Direct expansion of \eqref{eq:factor} gives
+\begin{equation}
+ D(\omega)=\frac{\pi^6}{4\kappa^6}
+ (4M^2-\nu^2-\nu'^2+\omega^2)
+ (\nu^2\nu'^2-4M^2\omega^2)+O(\kappa^{-8}).
+ \label{eq:recoil}
+\end{equation}
+If \(B=4M^2-\nu^2-\nu'^2>0\), \(A_0=\nu\nu'/(2M)\), then
+\begin{equation}
+ \lim_{\kappa\to\infty}\frac{D(\omega)}{D(0)}
+ =\left(1+\frac{\omega^2}{B}\right)
+  \left(1-\frac{\omega^2}{A_0^2}\right). \label{eq:recoilratio}
+\end{equation}
+Only in a further heavy-observer limit
+\(\nu/M,\nu'/M\to0\), at bounded \(\omega/A_0\), may the first
+factor be replaced by one. Thus \eqref{eq:fixed} is not simply a
+uniform fixed-angle formula evaluated at \(H=\pi\).
+
+If the chiral Gram factor is valid, its product with the other chirality,
+on the real Euclidean germ, has normalized factor
+\begin{equation}
+ R_G(\omega)=\left(\frac{D(0)}{D(\omega)}\right)^{1/2}.
+ \label{eq:RG}
+\end{equation}
+Its continuation uses that germ and the root equal to one at zero.
+It is not defined by taking a fresh pointwise modulus at complex
+\(\omega\). In the simplified limit,
+\(R_G(iA_0 y)\to(1+y^2)^{-1/2}\). At the outer saddle
+\(y=\sinh t\) this supplies only \((\cosh t)^{-1}\).
+The previous total prefactor test required \((\cosh t)^{-2}\).
+
+\section{The antipodal observable integrates two more energies}
+CSTY (2.3) fixes the average of four observer segment masses.
+Choose coordinates
+\begin{equation}
+ \begin{aligned}
+ m_1&=\bar M+\omega/2+u,&m_3&=\bar M+\omega/2-u,\\
+ m_2&=\bar M-\omega/2+v,&m_4&=\bar M-\omega/2-v.
+ \end{aligned} \label{eq:coords}
+\end{equation}
+The absolute Jacobian is four, and the average is \(\bar M\).
+For the antipodal times of CSTY (2.73), the four cyclic Euclidean
+gaps are \(\pi/2-it,\pi/2+it,\pi/2-it,\pi/2+it\). Consequently
+\begin{equation}
+ \sum_i(\theta_i-\theta_{i-1})m_i=2\pi\bar M-2it\omega.
+\end{equation}
+Performing the average-mass delta integration in the defined transform
+therefore gives
+\begin{equation}
+ \mathcal F(t\mid M)=\frac4{Z_{\mathrm{sphere}}(M)}
+ \int\dd\omega\,e^{-2it\omega}
+ \int_{\mathcal D_\omega}\dd u\,\dd v\,
+ \boldsymbol{\mathcal F}(m_1,m_2,m_3,m_4).
+ \label{eq:push}
+\end{equation}
+Domains and continued contours are inherited from the original
+definition, not chosen anew. The thermal \(e^{-2\pi M}\) cancels
+the constant phase above. Any Fourier convention constant is
+independent of \(t\). CSTY footnote 19 explicitly notes the integration
+over energy variables orthogonal to \(\omega\).
+
+The restricted slice \(u=v=0\) cannot replace the inner integral.
+For example the smooth local kernels
+\(K(\omega)e^{-a(\omega)(u^2+v^2)/2}\), for different positive even
+\(a\), have the same slice and different marginals \(2\pi K/a\).
+This is an information-loss example, not a family of proposed physical
+theories. At a nondegenerate local saddle of an action \(I\), the
+missing factor is \(2\pi/\sqrt{\det I_{\perp}''}\), with its branch
+and phase fixed by the transverse steepest-descent cycle.
+This transverse integration is separate from the internal \(6j\)
+Gaussian already included in a chiral one-loop determinant.
+
+\section{Equal-probe transverse Hessian from the classical action}
+Now specialize to \(\nu'=\nu>0\). This section uses the classical
+opposite-side pure-recoil saddle of CSTY (2.54), (B.5)--(B.7):
+\[
+ I=\sum_{i<j}\mathbf m_{ij}d_{ij},\qquad
+ \mathbf m=\begin{pmatrix}
+ 0&m_2&\nu&m_1\\m_2&0&m_3&\nu\\
+ \nu&m_3&0&m_4\\m_1&\nu&m_4&0
+ \end{pmatrix}.
+\]
+The angles \(d_{ij}\) follow from the dual flat tetrahedron, and are
+continued from its nondegenerate real branch.
+Assume \(B=4M^2-2\nu^2>0\) and \(|\omega|<A_0=\nu^2/(2M)\).
+The transverse saddle is \(u=v=0\).
+
+\begin{proposition}
+On this Euclidean branch,
+\begin{equation}
+ I_{\perp}''=h(\omega)\mathbf1_2,\qquad
+ h(\omega)=
+ \frac{4\sqrt{(\nu^4-4M^2\omega^2)(4M^2-2\nu^2+\omega^2)}}
+ {(4M^2-\nu^2)(\nu^2-\omega^2)}.
+ \label{eq:h}
+\end{equation}
+The root is positive at zero. The formula extends analytically until
+a root, pole or branch obstruction is reached.
+\end{proposition}
+\begin{proof}
+Stationarity of the vertex positions implies
+\(\dd I=\sum d_{ij}\dd\mathbf m_{ij}\), equivalently the flat-dual
+Schl\"afli identity cancels the mass-weighted angle variations.
+Thus \(I_u=d_{14}-d_{23}\), \(I_v=d_{12}-d_{34}\), both zero
+on the symmetric slice. Let
+\(D_*=(4M^2-\nu^2)(\nu^2-\omega^2)\).
+Differentiating CSTY's explicit formula for \(C=\cos d_{14}\) gives
+\begin{align}
+ C&=\frac{8M^3\omega+4M^2\omega^2-4M\nu^2\omega
+              +2M\omega^3-\nu^4}{D_*},\\
+ \left.\partial_u C\right|_0
+ &=\frac{2(2M+\omega)(4M^2\omega^2-\nu^4)
+                   (4M^2-2\nu^2+\omega^2)}{D_*^2},
+ \qquad \left.\partial_v C\right|_0=0,\\
+ 1-C^2&=\frac{(2M+\omega)^2(\nu^4-4M^2\omega^2)
+                   (4M^2-2\nu^2+\omega^2)}{D_*^2}.
+\end{align}
+Exchange of the opposite masses reverses the \(u\) derivative of
+\(d_{23}\). Hence \(I_{uu}=-2\partial_u C/\sqrt{1-C^2}\),
+giving \eqref{eq:h}. The other diagonal entry follows with
+\(\omega\to-\omega\), and the mixed derivative vanishes.
+\end{proof}
+
+The normalized transverse Gaussian factor is therefore
+\begin{equation}
+ R_\perp(\omega)=\frac{h(0)}{h(\omega)}
+ =\frac{1-\omega^2/\nu^2}
+ {\sqrt{1-\omega^2/A_0^2}\sqrt{1+\omega^2/B}}.
+ \label{eq:RT}
+\end{equation}
+Combining it with the pure-recoil Gram ratio in
+\eqref{eq:recoilratio} yields
+\begin{equation}
+ R_G R_\perp=
+ \frac{1-\omega^2/\nu^2}
+ {(1-\omega^2/A_0^2)(1+\omega^2/B)}.
+ \label{eq:combined}
+\end{equation}
+For \(\nu/M\to0\), at \(\omega=iA_0 y\) with \(y\) in a fixed
+bounded interval, this tends uniformly to \((1+y^2)^{-1}\).
+This is precisely the energy dependence required by the previous
+prefactor diagnostic. It comes from geometry and marginalization,
+not fitting a function to a target correlator.
+
+This is a \emph{conditional reconciliation of two local one-loop
+pieces}. We have not proved that these pieces exhaust the physical
+amplitude. Vertex factors, physical insertions, the other saddle and
+the outer contour remain. In particular, positivity of the Euclidean
+local Hessian is not a proof that its continued cycle contributes to the
+desired Lorentzian observable.
+
+The transverse Gaussian width is of order \(\sqrt M\), since
+\(h(0)\sim2/M\). Resolving it well within the probe scale suggests
+\(\sqrt M\ll\nu\ll M\). Together with the previous reduced-function
+window \(A_0\cosh t\ll\nu^{2/3}\), for bounded \(t\), a compatible
+power hierarchy is \(\nu^{4/3}\ll M\ll\nu^2\), with large \(\nu\).
+This is a compatibility check of necessary scales, not a uniform
+remainder theorem for the full integral or its finite-\(\kappa\)
+degeneration.
+
+\section{What remains unspecified or uncomputed}
+The exact \(C_{ijk}\) functions in \eqref{eq:graph} are available;
+their joint-limit contribution is a calculation still to do.
+The physical two-point insertion normalization in CLP (3.37),
+however, is prescribed only to leading order at fixed probe data.
+It does not alone determine a joint growing-probe limit. For example,
+multiplying that leading prescription by
+\[
+ 1+c\,\frac{\nu^2}{\kappa+\nu^2}\,
+             \frac{\omega^2}{1+\omega^2},\qquad c>0,
+\]
+preserves its fixed-\(\nu,\omega\) relative \(O(\kappa^{-1})\)
+accuracy and real-label exchange symmetry, but can change a joint
+limit by order one. This demonstrates insufficiency of that asymptotic
+input alone; no full consistency of such an arbitrary completion is
+claimed.
+
+Likewise, the specified internal \(6j\) contour is not the complete
+external three-energy integration cycle. CLP footnote 12 restricts
+the \(i\mathbb R\) prescription to the reduced action.
+A continued Euclidean modulus square also cannot be evaluated as a
+new modulus square of complex energies; the two chiral analytic factors
+must be continued with their original branches.
+
+The next calculable step is the vertex/leg contribution in the same
+equal-probe hierarchy, retaining the two transverse energies before
+reduction. It must be accompanied by a justified physical insertion
+normalization and an outer cycle. If these definitions are not fixed,
+the output must remain a conditional graph calculation rather than a
+physical finite-\(G\) OTOC.
+
+\section{Evidence and reproducibility}
+The script \texttt{code/gram\_prefactor.py} saves 83 checks:
+symbolic Gram factorization, the mass Jacobian and phase;
+five discriminant checks (including complex angles);
+nine growing-probe fixed-angle cases; six pure-recoil cases;
+six Gram-weighted inverse integrals; and nine transverse Hessians.
+The last are differentiated directly from the six-angle action and
+compared with \eqref{eq:h}. Working precision is 65 decimal digits;
+the indicated determinant ratios and inverse integrals are repeated
+at 95 and 90 digits. This is arithmetic evidence, not interval
+certification, a proof of a full \(6j\) asymptotic, or a finite-\(G\)
+calculation. Existing frozen calculations were not altered.
+
+\begin{thebibliography}{9}
+\bibitem{CLP} J. Chandra, D. Liska and B. Post,
+\emph{3D de Sitter from complex Virasoro TQFT: Observers and knots},
+\href{https://arxiv.org/html/2610.30247v1}{arXiv:2610.30247v1},
+Sections 3.2--3.3, footnote 12, Appendices B--C.
+\bibitem{CSTY} Y. Chen, D. Stanford, H. Tang and Z. Yang,
+\emph{Negative shocks versus static patch holography},
+\href{https://arxiv.org/html/2607.14042v1}{arXiv:2607.14042v1},
+(2.3), (2.54), Section 2.6, footnote 19 and Appendix B.1.
+\bibitem{MY} Y. Meng and T. Yang,
+\emph{Asymptotics of complex \(b\)-\(6j\) symbols},
+\href{https://arxiv.org/html/2606.03653v1}{arXiv:2606.03653v1},
+Theorem 1.3. Read online 30 October 2026; not locally cached.
+\end{thebibliography}
+\end{document}

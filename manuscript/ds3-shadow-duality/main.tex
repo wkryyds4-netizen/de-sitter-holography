@@ -1,0 +1,251 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,microtype,booktabs}
+\usepackage[margin=25mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\Om}{\Omega}
+\newcommand{\CC}{\mathcal C}
+\title{Wilson-duality stabilization of the dS$_3$ crossing kernel}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Working research note --- 31 October 2026}
+\begin{document}\maketitle
+\begin{abstract}
+Groenevelt's Wilson-function duality converts the exponentially small
+Omega factor in one shadow term into the complex conjugate of its
+oppositely reflected partner, multiplied by an explicit Gamma ratio.
+After combining coefficients, the two terms of the complete physical
+scalar kernel have equal coefficient moduli. This removes the exponential
+error amplification identified in our preceding note without discarding
+phases. For one $M=32$ sample, a 128-term direct sum changes from an
+absolute error near $5\,10^{43}$ to a discrepancy near $1.7\,10^{-42}$
+against the saved reference. The new exact-arithmetic tail bound is
+$1.1\,10^{-40}$. This is a stable representation and a pointwise
+error bound, not a proof of a heavy-mass integral limit.
+\end{abstract}
+
+\section{The standard Wilson identity and our parameter dictionary}
+The physical setting remains radius one, $G_N=0$, proper $SO^+(3,1)$,
+BD scalar observers, KG matter, a fixed positive observer-label lower
+bound, and half-period regulated local creation blocks.
+External labels are $(a,q,c,p)$, internal labels $(b,d)>0$.
+Write $h_i=(1+i\nu_i)/2$, $h=(1+ib)/2$, $h'=(1+id)/2$.
+The scalar convention is $\bar h_i=h_i$, not conjugation.
+We do not identify the scalar subblock with a complete unitary transform.
+
+We use Groenevelt's meromorphic Wilson identities \cite{groenevelt},
+rather than the positivity assumptions of his Hilbert-space transforms.
+For $T=(T_1,\ldots,T_4)$ and $S=\sum_jT_j$, define the symmetric
+$c$-function expansion
+\begin{align}
+ F(T;\lambda,x)
+ &=\sum_{\epsilon=\pm1}
+ \frac{\Gamma(-2i\epsilon\lambda)}
+ {\prod_j\Gamma(T_j-i\epsilon\lambda)
+  \Gamma(S/2+i\epsilon\lambda+ix)
+  \Gamma(S/2+i\epsilon\lambda-ix)}
+ \nonumber\\
+ &\quad\times {}_4F_3\left(
+ \begin{matrix}T_1+i\epsilon\lambda,\ldots,T_4+i\epsilon\lambda\\
+ S/2+i\epsilon\lambda+ix,\ S/2+i\epsilon\lambda-ix,\
+ 1+2i\epsilon\lambda\end{matrix};1\right).
+ \label{F}
+\end{align}
+Apparent coincident poles are evaluated by their analytic limit.
+This is Proposition 4.4 in the symmetric dual-parameter notation.
+With $D(T)_j=S/2-T_j$, his duality and parameter permutation symmetry give
+\begin{equation}
+ F(T;\lambda,x)=F(DT;x,\lambda),\qquad D^2T=T.
+ \label{duality}
+\end{equation}
+The reversal of the four entries in the usual dual-parameter formula is
+irrelevant because \eqref{F} is symmetric in those entries. The function
+is even in each spectral variable. No new Wilson-function identity
+or unitarity theorem is being claimed.
+
+\newpage
+\section{An exact simultaneous-reflection formula for Omega}
+For $H\in\{h,1-h\}$ and $Q\in\{h',1-h'\}$ set
+\[
+ Q_0=H+h_1+h_3-1,\qquad z=Q_0-Q,
+\]
+\[
+ A=(H+h_1+h_2-1,\ H+h_3+h_4-1,\ H+h_3-h_4,\ H+h_1-h_2),
+\]
+\[
+ T_j=A_j-z/2,\qquad \lambda=\frac{z}{2i},\qquad
+ x=\frac{Q_0-H-z/2}{i}.
+\]
+Direct matching of the two LPRS series \cite{lprs} with \eqref{F} yields
+\begin{equation}
+ \Om(H,Q)=K(H,Q)F(T;\lambda,x),
+ \quad
+ K=\Gamma(2H)\Gamma(2Q)\Gamma(A_1)\Gamma(A_2)
+                    \Gamma(A_3-z)\Gamma(A_4-z).
+ \label{dictionary}
+\end{equation}
+Indeed $S/2+i\lambda+ix=2Q_0-z$,
+$S/2+i\lambda-ix=2H$, and $2i\lambda=z$.
+The positive-$\lambda$ term gives the LPRS $\Gamma(-z)$ term,
+and the negative term gives its $\Gamma(z)$ partner with the same $K$.
+This verifies both coefficients, not merely the hypergeometric parameters.
+
+Use a subscript $s$ for the data at $(1-H,1-Q)$, keeping the external
+weights fixed. On the real scalar slice, exact algebra gives
+\[
+ \lambda_s=x,\qquad x_s=\lambda,\qquad DT=\overline{T_s}.
+\]
+Both $x$ and $\lambda$ are real. Evenness, conjugation and \eqref{duality}
+therefore imply
+\begin{equation}
+ \boxed{\Om(H,Q)=R(H,Q)\,
+             \overline{\Om(1-H,1-Q)}} ,
+ \qquad R(H,Q)=\frac{K(H,Q)}{\overline{K(1-H,1-Q)}} .
+ \label{reflection}
+\end{equation}
+Canceling the two common Gamma factors reduces this ratio to
+\begin{align}
+ R(H,Q)
+ &=\frac{\Gamma(H+h_1+h_2-1)\Gamma(H+h_3+h_4-1)}
+ {\Gamma(H+1-h_1-h_2)\Gamma(H+1-h_3-h_4)}
+ \nonumber\\
+ &\quad\times
+ \frac{\Gamma(Q+1-h_1-h_4)\Gamma(Q+1-h_2-h_3)}
+ {\Gamma(Q+h_1+h_4-1)\Gamma(Q+h_2+h_3-1)} .
+ \label{R}
+\end{align}
+Every argument in \eqref{R} has real part $1/2$, so this ratio is finite
+and nonzero on the slice. The derivation first avoids the apparent
+Gamma-pair collisions and extends to them by continuity.
+
+This uses analytic continuation of known special-function identities.
+The complex parameter quadruples need not satisfy the positive-measure
+domain of the Wilson transform; no Wilson spectral measure is substituted
+for the physical $dS_3$ measure.
+
+\newpage
+\section{Complete-kernel stabilization and an absolute tail}
+Retain the two physical coefficients $C_+$ and $C_-$, including the
+phase of the earlier CG-period normalization, and put
+\[
+ X=\Om(h,h'),\qquad Y=\Om(1-h,h'),\qquad P=XY.
+\]
+Applying \eqref{reflection} to both factors of the negative-shadow term gives
+\begin{equation}
+ U_{00}=C_+P+\widehat C_-\,\overline P,\qquad
+ \widehat C_-=C_-R(h,1-h')R(1-h,1-h').
+ \label{stable}
+\end{equation}
+We evaluate the combined coefficient using logarithmic Gamma ratios.
+There is no projection onto real values and no empirical symmetrization.
+
+The modulus identity $|\Gamma(1/2+it)|^2=\pi/\cosh(\pi t)$ implies
+\begin{equation}
+ |R(h,1-h')R(1-h,1-h')|=
+ \frac{\cosh\frac{\pi(d-a-p)}2\,\cosh\frac{\pi(d-q-c)}2}
+ {\cosh\frac{\pi(d+a+p)}2\,\cosh\frac{\pi(d+q+c)}2}.
+ \label{Rmod}
+\end{equation}
+In the product the two $H$-dependent Gamma ratios have combined
+modulus one. The remaining two repeated $Q$ ratios give \eqref{Rmod}.
+The preceding note's exact coefficient formula has precisely the
+inverse ratio. Hence, for all positive labels,
+\begin{equation}
+ \boxed{|\widehat C_-|=|C_+|.}
+ \label{balance}
+\end{equation}
+The old $e^{2\pi M}$ amplification is thus canceled analytically,
+before a small numerical factor has to be computed.
+
+Let $\widehat X,\widehat Y$ denote finite sums with exact-arithmetic
+tail bounds $e_X,e_Y$ as in our preceding polynomial-certificate note.
+Then
+\begin{equation}
+ |U_{00}-\widehat U_{00}|
+ \le (|C_+|+|\widehat C_-|)
+ (|\widehat X|e_Y+|\widehat Y|e_X+e_Xe_Y).
+ \label{error}
+\end{equation}
+This is a bound for the complete scalar matrix element. It still excludes
+rounding of finite sums, Gamma functions and coefficients.
+It is an absolute bound; dividing by a nearly canceled final value is
+not justified.
+
+For the fixed-transfer collision path
+\[
+ c=M,\quad b=M+u,\quad a=M+u+v,\quad d=M+v,
+\]
+the coefficient modulus stays finite and nonzero:
+\[
+ |C_+|\longrightarrow
+ \frac{e^{\pi(u-v+p+q)/4}}{4\pi^2}
+ \sqrt{\cosh\frac{\pi(u+p)}2\cosh\frac{\pi(v-q)}2}.
+\]
+This removes one obstruction to the heavy-mass limit.
+It does not supply uniform control of $X,Y$ or the physical mass
+integrals. Low-mass direct sums can still converge slowly, and final
+phase cancellation remains a separate source of relative sensitivity.
+
+\newpage
+\section{Checks, retained failures, and the next limit}
+The exact symbolic dictionary is verified for six independent real labels.
+Twenty-four checks use the previously saved four original Omega factors
+at $M=2,4,8,16$ and offsets $r=0,0.1,0.4$.
+Four fresh generic-label comparisons use the original LPRS formula,
+and four compare \eqref{R} to the unsimplified $K/\overline K_s$.
+Two independent Euler product integrals give a relative reflection
+residual $4.75\,10^{-19}$ at 35 decimal digits.
+
+The initial 33 checks retain two failures: the old $M=16$ negative-shadow
+values at $r=0.1,0.4$ differ from their reflected counterparts by
+$2.04\,10^{-60}$ and $7.42\,10^{-60}$, exceeding the preset $10^{-60}$
+threshold. We did not relax that threshold or overwrite those values.
+Fresh original-formula calculations at 100 and 130 digits reduce the
+discrepancies to about $10^{-80}$ and $10^{-110}$, respectively.
+The old exact-collision prototype bias is also retained and explicitly
+separated from these checks.
+
+For $p=q=0.6$, $u=0.3$, $v=-0.2$, we perform 18 complete-kernel runs:
+six masses through $M=128$, cutoffs 64 and 128, and 70/110-digit refinement.
+For $N=128$ the comparison with saved independent original-formula
+references is:
+\begin{center}
+\begin{tabular}{rrrr}
+\toprule
+$M$ & $U_{00}$ (displayed real part) & reference discrepancy & tail bound\\
+\midrule
+8  &1.36981861885&$1.44\,10^{-13}$&$9.01\,10^{-12}$\\
+16 &1.58731944205&$2.80\,10^{-23}$&$1.11\,10^{-21}$\\
+32 &1.80680784696&$1.66\,10^{-42}$&$1.13\,10^{-40}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Full complex values are saved. The references themselves are not interval
+enclosures. At $M=64,128$, no independent original-formula reference is
+asserted. In particular, the $M=128$ analytic tail is $2.99\,10^{-127}$,
+whereas changing arithmetic from 70 to 110 digits changes the value by
+$5.35\,10^{-68}$. The tail is not the total numerical error.
+
+Independent rational-polynomial and Decimal replay passes 365 checks,
+including the original two failures, their four refinements, complex
+residuals, coefficient moduli and propagated tails. Source/input hashes,
+versions, and per-run checkpoints are saved.
+The earlier collision stage's separate 100-digit parameter-derivative
+job is still running and is not counted as passed here.
+
+The next task is a uniform asymptotic analysis of the two remaining
+positive-shadow factors, retaining their phases and fixed-versus-moving
+preparation boundaries, followed by integration against the actual
+creation amplitudes. Pointwise stabilization alone proves neither a
+delta kernel nor the Bose free-observer limit. Full Fock domains,
+finite-$G_N$ dynamics and the microscopic holographic dictionary remain open.
+
+\begin{thebibliography}{9}
+\bibitem{groenevelt} W. Groenevelt, \emph{The Wilson function transform},
+\href{https://arxiv.org/html/math/0306424v1}{arXiv:math/0306424v1},
+Sec.\ 3, Proposition 4.4 and Remark 4.5(iii).
+\bibitem{lprs} J. Liu, E. Perlmutter, V. Rosenhaus and D. Simmons-Duffin,
+\emph{$d$-dimensional SYK, AdS Loops, and $6j$ Symbols},
+\href{https://arxiv.org/html/1808.00612v3}{arXiv:1808.00612v3},
+Eqs.\ (3.35)--(3.38).
+\end{thebibliography}
+\end{document}

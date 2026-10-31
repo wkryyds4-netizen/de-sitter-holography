@@ -1,0 +1,365 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,microtype,booktabs}
+\usepackage[margin=25mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\dd}{\mathop{}\!\mathrm d}
+\newcommand{\sech}{\operatorname{sech}}
+\newcommand{\cD}{\mathcal D}
+\newcommand{\cS}{\mathcal S}
+\title{Local scalar insertions in dS$_3$:\\from normalized BD modes to global CG coefficients}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Working research note --- 31 October 2026}
+\begin{document}\maketitle
+\begin{abstract}
+For an explicitly chosen $G=0$ local multiplication insertion, we
+compute the scalar trilinear coefficient using Klein--Gordon normalized
+Bunch--Davies modes in global dS$_3$. A finite Beta sum evaluates
+arbitrary finite angular-mode entries. Future boundary data fix the
+unitary shadow phases, and a normalized spherical period fixes the
+full complex global Clebsch--Gordan coefficient. Its norm differs from
+the previously extracted paired $C_0$ factor by explicit leg factors.
+This is a local dictionary in a declared model, not a construction of
+the physical observer mass measure or finite-gravity sewing.
+\end{abstract}
+
+\section{The vacuum and its normalized modes}
+Set the radius to one and take
+\begin{equation}
+ ds^2=-dt^2+\cosh^2t\,d\Omega_2^2,\qquad
+ m_{\rm eff}^2=1+\nu^2,\quad \nu>0.
+\end{equation}
+Use $\int|Y_{lm}|^2\dd\Omega=1$ and $Y_{00}=1/\sqrt{4\pi}$.
+The angular momentum $l$ is an SO(3) $K$-type label.
+A single scalar principal-series representation, with global spin
+$J=0$, contains \emph{every} $l\geq0$.
+
+For $u_{\nu lm}=f_{\nu l}Y_{lm}$ and $\chi_{\nu l}=\cosh t\,f_{\nu l}$,
+\begin{equation}
+ \chi''+[\nu^2+l(l+1)\sech^2t]\chi=0,\qquad
+ i(\chi^*\chi'-\chi'^*\chi)=1.
+ \label{eq:ode}
+\end{equation}
+LMW \cite{lmw} distinguish the reflectionless in/out modes from the
+Euclidean or BD modes. Regularity on the lower Euclidean hemisphere
+and KG normalization give
+\begin{equation}
+ \chi_{\nu0}=\frac{\sinh(\pi\nu/2-i\nu t)}{\sqrt{\nu\sinh\pi\nu}}
+ =N_\nu(e^{-i\nu t}-q_\nu e^{i\nu t}),\quad
+ q_\nu=e^{-\pi\nu},\quad N_\nu=[2\nu(1-q_\nu^2)]^{-1/2}.
+ \label{eq:bd}
+\end{equation}
+The numerator vanishes at $t=-i\pi/2$, making $f_{\nu0}$ regular.
+Omitting the second exponential changes the vacuum and the vertex.
+
+\newpage
+\section{An actual local insertion and a convergent mode integral}
+Define $D_j=\partial_t-j\tanh t$ and
+$d_l(\nu)=\prod_{j=1}^l\sqrt{\nu^2+j^2}$. The normalized modes are
+\begin{equation}
+ f_{\nu l}=\frac{i^l}{d_l(\nu)\cosh t}
+ D_l\cdots D_1\chi_{\nu0}.
+ \label{eq:darboux}
+\end{equation}
+Each Darboux step maps the previous equation into \eqref{eq:ode},
+multiplies its Wronskian by $\nu^2+j^2$ and preserves the regular
+Euclidean branch. The phase $i^l$ agrees with MM (16)--(17)
+\cite{mm}:
+\begin{equation}
+ f_{\nu l}=
+ \sqrt{\frac{\Gamma(l+1-i\nu)\Gamma(l+1+i\nu)}2}\,
+ (\cosh t)^{-1/2}P_{-1/2+i\nu}^{-l-1/2}(i\sinh t).
+ \label{eq:legendre}
+\end{equation}
+The type-2 Legendre branch is intended.
+
+Following the structure of KL (5.4) \cite{kl}, we \emph{define}
+the present dS$_3$ model by
+\begin{equation}
+ \langle o|\mathcal O_\phi|i\rangle
+ :=\int_{\mathrm{dS}_3}\dd V\,u_o^*(X)\phi(X)u_i(X).
+ \label{eq:insertion}
+\end{equation}
+Here $\phi=\sum(a_pu_p+a_p^\dagger u_p^*)$ is a canonically
+normalized free BD scalar. The local coupling is chosen to be one.
+Thus the annihilation and emission coefficients are
+$\int u_o^*u_i u_p\,\dd V$ and $\int u_o^*u_i u_p^*\,\dd V$.
+The construction is currently at fixed representation labels; a
+physical mass direct integral and operator domain are additional tasks.
+
+Write $T_\eta=\int\dd V\,\prod_j u_j^{(\eta_j)}$, where $\eta_j=+1$
+means $u_j$ and $\eta_j=-1$ means $u_j^*$. For finite angular modes,
+$u_j=O(e^{-|t|})$, so the integrand with volume is $O(e^{-|t|})$.
+The integral converges absolutely. Killing derivatives give a
+total divergence with vanishing boundary flux, establishing
+invariance. Finite group translates retain this decay because the
+induced conformal factors on the compact boundary sphere are bounded.
+
+For explicit evaluation, set $y=\tanh t$ and
+\begin{equation}
+ P_{0,\sigma}=1,\quad
+ P_{l,\sigma}=(1-y^2)P'_{l-1,\sigma}
+ +(i\sigma\nu-ly)P_{l-1,\sigma},\qquad \sigma=\pm1.
+\end{equation}
+There are eight exponential branches in a triple product.
+The saved evaluator uses $m_j=0$; general magnetic labels enter through
+the usual conjugated Gaunt coefficient. Every radial term uses
+\begin{equation}
+ I_n(\omega)=\int_{\mathbb R}\sech t\,\tanh^nt\,e^{i\omega t}\dd t
+ =\sum_{k=0}^n{n\choose k}2^k(-1)^{n-k}
+ B\left(k+\frac{1+i\omega}{2},\frac{1-i\omega}{2}\right).
+ \label{eq:beta}
+\end{equation}
+This follows by $x=(1+\tanh t)/2$; $I_0=\pi/\cosh(\pi\omega/2)$.
+If $b_j$ sums the absolute polynomial coefficients of both
+normalized branches, truncation to $|t|\leq T$ has
+\begin{equation}
+ |E_T|\leq4e^{-T}|\mathcal G|\prod_j b_j.
+ \label{eq:tail}
+\end{equation}
+This bounds the tail, not the numerical integration error inside it.
+
+\newpage
+\section{The spherical entry, future data and shadow phases}
+For $S=\nu_1+\nu_2+\nu_3$, introduce
+\begin{equation}
+ \cD=\cosh\frac{\pi S}{2}\prod_j\cosh\frac{\pi(S-2\nu_j)}2,
+ \qquad
+ B_*=\frac{\pi}{4\sqrt{4\pi}\cD}
+       \sqrt{\prod_j\frac{\sinh\pi\nu_j}{\nu_j}}.
+\end{equation}
+Expanding \eqref{eq:bd} into eight terms and using $I_0$ gives
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+Conjugated legs & $T_{\eta,000}$\\
+\midrule
+Zero or three & $-B_*$\\
+One, with conjugated leg $r$ & $B_*\cosh(\pi\nu_r)$\\
+Two, with unconjugated leg $r$ & $B_*\cosh(\pi\nu_r)$\\
+\bottomrule
+\end{tabular}
+\end{center}
+For annihilation $r$ is the outgoing observer; for emission it is
+the incoming observer. Reversing the observer legs relates the two
+by Hermitian conjugation. These hyperbolic factors originate in the
+BD frequency mixture.
+
+Define the unit-modulus coefficients
+\begin{equation}
+ c_l(\nu)=i^l\prod_{j=1}^l\frac{-i\nu-j}{\sqrt{\nu^2+j^2}}
+ =(-i)^l\frac{(1+i\nu)_l}{d_l(\nu)}.
+\end{equation}
+Normalized future data for a finite mode combination are
+$A_\nu=\sum a_{lm}c_l(\nu)Y_{lm}$. This map preserves the KG
+coefficient norm as an $L^2(S^2)$ norm. The late-time expansion is
+\begin{equation}
+ u(t,n)=2N_\nu e^{-t}
+ \left[e^{-i\nu t}A_\nu(n)
+       -q_\nu e^{i\nu t}\cS_\nu A_\nu(n)\right]+O(e^{-3t}),
+\end{equation}
+where
+\begin{equation}
+ \cS_\nu Y_{lm}=\frac{(1-i\nu)_l}{(1+i\nu)_l}Y_{lm},
+ \qquad \cS_{-\nu}\cS_\nu=1.
+\end{equation}
+The normalized spherical shadow kernel is
+$i\nu(\pi4^{i\nu})^{-1}|n-n'|^{-2+2i\nu}$, defined by distributional
+analytic continuation. Its ordinary integral is not absolutely
+convergent at these parameters. The two future branches are related
+data in one BD space.
+
+Put $w_j=1+i\eta_j\nu_j$ and
+\begin{equation}
+ a_i=-\frac12+\frac i2(\eta_j\nu_j+\eta_k\nu_k-\eta_i\nu_i),\qquad
+ \mathcal K_\eta=\prod_{\rm cyc}|n_j-n_k|^{2a_i}.
+ \label{eq:kernel}
+\end{equation}
+The trilinear kernel has weights $2-w_j$, not $w_j$.
+Under stereographic projection with $\Omega(z)=2/(1+|z|^2)$,
+$\dd\Omega_2=\Omega^2\dd^2z$,
+$|n_i-n_j|^2=\Omega_i\Omega_j|z_i-z_j|^2$, and
+$A_{\rm plane}=\Omega^w A_{\rm sphere}$.
+All factors cancel since $2-w_i+a_j+a_k=0$.
+For annihilation the resulting plane kernel is exactly DS (17)
+\cite{ds}, with inputs $(i,p)$, output $o$, and $a_{\rm DS}=-i\nu$.
+Emission uses the conjugate reverse kernel.
+
+\newpage
+\section{The normalized spherical period fixes the coefficient}
+Let $A=a_1+a_2+a_3$ and normalize the spherical average by
+\begin{equation}
+ J(a_1,a_2,a_3)=\frac{1}{(4\pi)^3}\int(\dd\Omega)^3
+ \prod_{\rm cyc}|n_j-n_k|^{2a_i}
+ =4^A\frac{\Gamma(A+2)\prod_i\Gamma(a_i+1)}
+             {\prod_i\Gamma(A-a_i+2)}.
+ \label{eq:period}
+\end{equation}
+The domain $\operatorname{Re}a_i>-1$, $\operatorname{Re}A>-2$
+ensures absolute convergence; our principal labels have
+$\operatorname{Re}a_i=-1/2$, $\operatorname{Re}A=-3/2$.
+
+For an independent normalization check, the spherical convolution
+with $(2-2x)^a$ has eigenvalue
+\begin{equation}
+ \lambda_l(a)=\frac{4\pi\,4^a}{a+1}\frac{(-a)_l}{(a+2)_l}.
+\end{equation}
+Taking the trace of three such convolutions reduces $J$ to
+\begin{equation}
+ \frac{4^A}{\prod_i(a_i+1)}
+ \sum_{l=0}^{\infty}(2l+1)
+       \prod_i\frac{(-a_i)_l}{(a_i+2)_l}.
+\end{equation}
+The Rogers--Dougall sum, DLMF 16.4.9 \cite{dlmf}, yields
+\eqref{eq:period}. Establish the trace identity for smooth kernels
+first and continue analytically to the convergence domain.
+The summand is $O(l^{-2\operatorname{Re}A-5})$, hence $O(l^{-2})$
+here. Direct checks give $J(0,0,0)=1$ and
+$J(a,0,0)=4^a/(a+1)$. This rederives a standard triangular integral
+\cite{begmp}, not a new summation identity.
+
+Define
+$\mathcal B_\eta=\int\prod_j\dd\Omega_j\,A_j^{(\eta_j)}
+\mathcal K_\eta$.
+For generic principal-series labels the standard conformal
+three-point covariance fixes this kernel up to one overall
+coefficient, as in DS (17)--(19).
+The actual integral fixes that coefficient without fitting:
+\begin{equation}
+ \boxed{\quad T_\eta=C_\eta\mathcal B_\eta,\qquad
+ C_\eta=\frac{T_{\eta,000}}{(4\pi)^{3/2}J(a_1,a_2,a_3)}.\quad}
+ \label{eq:coefficient}
+\end{equation}
+All normalized $l=0$ boundary data are $Y_{00}$, explaining the
+factor $(4\pi)^{3/2}$. Equation \eqref{eq:coefficient} retains the
+complex phase. Gamma reflection simplifies its norm to
+\begin{equation}
+ |C_\eta|^2=\frac{F_\eta}{64\pi^3\cD},\qquad
+ F_\eta=
+ \begin{cases}
+ 1,&\text{zero or three conjugated legs},\\
+ \cosh^2(\pi\nu_r),&\text{one or two conjugated legs, $r$ as above}.
+ \end{cases}
+ \label{eq:norm}
+\end{equation}
+
+For the nontrivial $(l,l,0)$ entries, rotational averaging produces
+$P_l(n_1\cdot n_2)$; expanding $P_l(1-|n_1-n_2|^2/2)$ gives a
+finite sum of \eqref{eq:period} with integer shifts of $a_3$.
+The two $c_l$ phases must also be included.
+Independent bulk Beta sums match these boundary entries at
+$l=1,2,3$, and separate boost Ward tests check higher angular
+couplings. These tests support the normalization and conjugation
+conventions, not an extension to a complete physical operator algebra.
+
+\newpage
+\section{Comparison with the paired vertex and its remaining scope}
+The frozen fixed-mass paired $C_0$ factor extracted from CLP
+\cite{clp}, up to its common convention-dependent constant, is
+\begin{equation}
+ D_{\rm CLP}=\frac{\pi e^{\pi S}}{\cD}
+             \prod_j\frac{\sinh\pi\nu_j}{\nu_j}.
+\end{equation}
+Equations \eqref{eq:coefficient}--\eqref{eq:norm} imply
+\begin{equation}
+ \frac{|C_\eta|^2}{D_{\rm CLP}}
+ =\frac{F_\eta}{64\pi^4}
+       \prod_j\frac{\nu_j e^{-\pi\nu_j}}{\sinh\pi\nu_j}.
+ \label{eq:comparison}
+\end{equation}
+The ratio consists of explicit leg factors, with the distinguished
+$\cosh^2$ factor fixed by the annihilation/emission orientation.
+This provides a local $G=0$ normalization interface. It does not
+repair the earlier normalization-independent mismatch between the
+recoil graph $H$ (or $Z_{\rm rec}$) and the proposed global $6j$.
+
+Nor can \eqref{eq:comparison} simply be substituted for the unknown
+two-point insertion $n$. That spectrum also involved the observer
+weight $z$, a mass integration protocol, state preparation and
+sewing norms. Choosing \eqref{eq:insertion} fixes a coupling in
+this model; symmetry alone would still allow mass-dependent
+couplings in other models.
+
+Restoring the radius gives each KG-normalized scalar mode a factor
+$\ell^{-1/2}$ and the three-mode volume integral a factor
+$\ell^{3/2}$. A physical observable additionally requires the
+dimensions and normalization of its chosen local coupling.
+No finite-$G$ four-point dynamics is inferred from this free-field
+calculation.
+
+The immediate next task is to distinguish fixed-mass KG
+normalization from spacetime $L^2$ or mass-delta normalization
+of an observer. The global radial spectrum has two continuum
+branches; its discrete sector and any imposed mass threshold must
+also be identified before projecting to a BD observer space.
+Only then should the coefficient, DS reflection term and spectral
+measure be assembled into a physical two-point object.
+
+The independent free-probe, large-observer-mass benchmark remains
+\begin{equation}
+ g_\nu(0)g_{\nu'}(0)=
+ \frac{\nu\nu'}{16\pi^2\sinh\pi\nu\,\sinh\pi\nu'}.
+\end{equation}
+It is a disconnected antipodal product, not a zero-energy graph
+value. Defining an actual mass-space operator, its group-averaged
+domain, physical four-point sewing and finite-$G$ corrections
+remains necessary for the full holographic objective.
+
+\newpage
+\section{Verification and source cautions}
+The saved mode/vertex diagnostics contain 249 passed checks:
+108 KG, ODE and independent Legendre checks; 48 spherical-entry
+and coefficient-norm checks; 27 higher-angular boundary matches;
+27 boost Ward checks; eight direct-integration/refinement checks;
+six spherical-period checks; 16 shadow checks; and nine precision
+comparisons. A separate record contains 24 checks of
+\eqref{eq:comparison}. These counts are implementation checks,
+not independent physical predictions.
+
+Mass triples were $(.7,1.1,.6)$, $(1.4,.9,1.2)$ and $(3.2,2.7,.5)$.
+Calculations used 60 digits, with selected nontrivial entries
+repeated at 40 digits. The maximum recorded scaled error was
+$6.34\times10^{-38}$. Four direct time integrals used $T=96$,
+with subdivisions of width three and two; the largest relative
+difference from the Beta result was $1.55\times10^{-41}$.
+The corresponding analytic tail-to-signal bound was at most
+$2.46\times10^{-40}$. The largest higher-angular cancellation
+ratio was $632.41$. Interior quadratures are not interval-certified.
+Python 3.14.5, mpmath 1.3.0, and SymPy 1.14.0, along
+with full complex values and source hashes, are saved.
+
+Two source inconsistencies are explicitly isolated.
+MM HTML (14) prints a $\cosh^2t$ angular coefficient; the metric
+(4), LMW (3) and the normalized modes instead require $\sech^2t$.
+We derived the equation from the metric.
+Also, combining BEGMP HTML (93), (127), (128) at $d=3$ gives
+$J(0,0,0)=16$, inconsistent with their normalized definition.
+The same constant appears in the cached PDF's (74), (101), (102).
+We use the independent derivation \eqref{eq:period}, with its
+zero- and single-edge checks. Neither observation is presented
+as an author-confirmed erratum; source files remain unchanged.
+
+\begin{thebibliography}{9}
+\bibitem{lmw} P. Lagogiannis, A. Maloney and Y. Wang,
+\emph{Odd-dimensional de Sitter Space is Transparent},
+\href{https://arxiv.org/html/1106.2846v1}{arXiv:1106.2846v1}.
+\bibitem{mm} D. Marolf and I. A. Morrison,
+\emph{Group Averaging for de Sitter free fields},
+\href{https://arxiv.org/html/0810.5163v1}{arXiv:0810.5163v1}.
+\bibitem{ds} S. E. Derkachov and V. P. Spiridonov,
+\emph{On the 6j-symbols for SL(2,C) group},
+\href{https://arxiv.org/html/1711.07073v2}{arXiv:1711.07073v2}.
+\bibitem{kl} D. Kolchmeyer and H. Liu,
+\emph{Chaos and the Emergence of the Cosmological Horizon},
+\href{https://arxiv.org/html/2411.08090v1}{arXiv:2411.08090v1}.
+\bibitem{begmp} J. Bros, H. Epstein, M. Gaudin, U. Moschella and V. Pasquier,
+\emph{Triangular invariants, three-point functions and particle stability
+on the de Sitter universe},
+\href{https://arxiv.org/html/0901.4223v1}{arXiv:0901.4223v1}.
+\bibitem{dlmf} NIST Digital Library of Mathematical Functions,
+\href{https://dlmf.nist.gov/16.4.E9}{Eq.\ 16.4.9, Rogers--Dougall sum}.
+\bibitem{clp} J. Chandra, D. Liska and B. Post,
+\emph{3D de Sitter from complex Virasoro TQFT: Observers and knots},
+\href{https://arxiv.org/html/2610.30247v1}{arXiv:2610.30247v1}.
+\end{thebibliography}
+\end{document}

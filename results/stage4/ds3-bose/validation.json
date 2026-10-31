@@ -1,0 +1,228 @@
+{
+  "status": "failed",
+  "checks": [
+    {
+      "name": "fock_matrix_0_0",
+      "residual": 5.9390811332834206e-15,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "direct_exchange_norm_0_0",
+      "residual": 1.1368683772161603e-13,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "fock_matrix_0.7_0",
+      "residual": 4.795056850165719e-15,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "direct_exchange_norm_0.7_0",
+      "residual": 2.929642751054232e-14,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "fock_matrix_0_0.7",
+      "residual": 6.23656805896738e-15,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "direct_exchange_norm_0_0.7",
+      "residual": 1.1403325463066973e-13,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "fock_matrix_1.1_-0.3",
+      "residual": 6.283374371144901e-15,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "direct_exchange_norm_1.1_-0.3",
+      "residual": 1.7053025658242404e-13,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "order_difference_direct_fock",
+      "residual": 1.1457157353758233e-13,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "equal_time_zero",
+      "residual": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "finite_group_descent",
+      "residual": 2.847716647714797e-14,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "finite_group_flip_commutation",
+      "residual": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "free_two_particle_permanent",
+      "residual": 0.0,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "free_equal_vector_factor_two",
+      "residual": 5.684341886080802e-14,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "diagonal_pairing_0.4",
+      "residual": 0.0,
+      "tolerance": 1e-40,
+      "passed": true
+    },
+    {
+      "name": "diagonal_strict_positive_0.4",
+      "residual": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "diagonal_pairing_0.6",
+      "residual": 1.3684555315672042e-48,
+      "tolerance": 1e-40,
+      "passed": true
+    },
+    {
+      "name": "diagonal_strict_positive_0.6",
+      "residual": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "diagonal_pairing_0.8",
+      "residual": 0.0,
+      "tolerance": 1e-40,
+      "passed": true
+    },
+    {
+      "name": "diagonal_strict_positive_0.8",
+      "residual": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "name": "physical_flip_hermiticity_regular",
+      "residual": 0.9261729592577443,
+      "tolerance": 1e-10,
+      "passed": false
+    },
+    {
+      "name": "physical_flip_hermiticity_equal_labels",
+      "residual": 6.791104197468995e-16,
+      "tolerance": 1e-10,
+      "passed": true
+    }
+  ],
+  "finite_model": "3 observer levels, 4 matter modes, 0/1/2 occupations; C3 group test is not dS group averaging",
+  "seed": 20261031,
+  "versions": {
+    "python": "3.14.5",
+    "numpy": "2.4.6",
+    "mpmath": "1.3.0"
+  },
+  "dps": 45,
+  "spherical_derivatives": [
+    {
+      "c": "0.4",
+      "integral": "0.00796279463812691745315371053943023940339796548",
+      "paired_integral": "0.00796279463812691745315371053943023940339796548"
+    },
+    {
+      "c": "0.6",
+      "integral": "0.011275575692864247572872847975597057246807406",
+      "paired_integral": "0.011275575692864247572872847975597057246807406"
+    },
+    {
+      "c": "0.8",
+      "integral": "0.0109405809219680940188880899321838613561654526",
+      "paired_integral": "0.0109405809219680940188880899321838613561654526"
+    }
+  ],
+  "kernel_references": [
+    {
+      "a": 0.7,
+      "b": 0.5,
+      "c": 0.6,
+      "d": 0.8,
+      "kind": "regular",
+      "value": [
+        2.091369258000826,
+        0.20288734207977488
+      ],
+      "reference": [
+        "0.810044136269714960734295970537913834753843132",
+        "9.46171412954992848145896252996200005633714849e-31"
+      ],
+      "absolute_error": "1.29728845718885579105595092956807121900015382",
+      "relative_error": "1.60150342321212279987229318899493963077010646",
+      "condition": 1176141681558906.8,
+      "hermiticity_residual": 0.9261729592577443
+    },
+    {
+      "a": 0.6,
+      "b": 0.7,
+      "c": 0.6,
+      "d": 0.7,
+      "kind": "equal_labels",
+      "value": [
+        0.981184832469797,
+        -3.3955520987344976e-16
+      ],
+      "reference": [
+        "0.981184832469793284782867269596369417123931545",
+        "1.41615084792335693661507783213795280227352418e-46"
+      ],
+      "absolute_error": "3.77190854401947932372868702593258769513263118e-15",
+      "relative_error": "3.8442385361023211112626499556552558467668619e-15",
+      "condition": 5.538137810970707,
+      "hermiticity_residual": 6.791104197468995e-16
+    },
+    {
+      "a": 0.255545475362379,
+      "b": 0.4640075825660575,
+      "c": 0.7593332954827254,
+      "d": 7.861136311594052,
+      "kind": "max_condition",
+      "value": [
+        8.188246910312185e-05,
+        8.829080502843073e-09
+      ],
+      "reference": [
+        "0.0000817780371476731206821724392841635073673387663",
+        "-4.60924325448238019472638311148645317572279414e-38"
+      ],
+      "absolute_error": "0.00000010480451317272376197221314069338663596797789",
+      "relative_error": "0.00128157286269258209214308062233266080282752643",
+      "condition": 28531872421346.45,
+      "hermiticity_residual": 1.0480451325161992e-07
+    }
+  ],
+  "hashes": {
+    "code/validate_ds3_bose.py": "e46dd93a23345f25f628d02caddab9a52923b5dba70c1ad3c00a1fa702f3f78a",
+    "code/ds3_racah_fast.py": "778c07d86e011b4ca8f167d4a778ea8639b13e8085766fa6f6a3e88c7af3bd7c",
+    "code/ds3_crossing_dictionary.py": "0dd76e7cbe336fda26bdab77a5b495261449807b6891cc85973e8c00c4d5daca",
+    "code/global_racah.py": "4b9702c8c8f68b3f3901f3e392321824edf37198b70c0344298c95addd88a15c",
+    "results/stage4/ds3-bose/pilot-n4-L8.npz": "963cf6d8f7d9341ec461b1c3eede8c6510ba66e01e6d9cef7846215ce2b17192"
+  }
+}

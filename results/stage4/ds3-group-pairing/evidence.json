@@ -1,0 +1,47 @@
+{
+  "created_at_utc": "2026-10-30T19:51:44.747039+00:00",
+  "pages": 7,
+  "checks": 81,
+  "independent_checks": 16,
+  "compilers": {
+    "local": "two successful final pdfLaTeX passes",
+    "desktop": "success on final source"
+  },
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "status": "all final pages visually reviewed at 1100 pixels; no clipping, collision or missing glyphs"
+  },
+  "scope": "Declared G=0 local observer vacuum and one-matter sectors; linear-gluing state and two-point quadratic form. Not full Fock, finite kappa, finite gravity or interval certification.",
+  "hashes": {
+    "code/audit_ds3_group_pairing.py": "88ee2d247cf875accbb7f466789d8844fb5e8c4c7df8a808c8bfe13560c6b097",
+    "code/build_ds3_group_pairing_note.ps1": "35a568b095d74f13703e780b9d3dbc60536579071d94d1e765e596252ae02470",
+    "code/ds3_group_pairing.py": "0ef676a1590157d49e62875698ab676cf06a58f942e8b655cbeced8c7e0efbb2",
+    "code/ds3_local_vertex.py": "3228a87c7f5571dcca98125499f7bf28d7cf7f357b41a6130b3ef88a03f23687",
+    "code/ds3_mass_spectrum.py": "6cc3ff6b981f45e51a6f9f47b0052f1a9c28e5d4d4d82015e6d0b5626f35e8a2",
+    "code/recoil_poles.py": "fae71be3302fe219f0af2df4f53467c1319db5db1e7386e60c919165b8611ccc",
+    "code/recoil_spectral.py": "7c8b6ba87d12bf2395070a5cf4f1b04b544fb660dba815f2b9469504a071b23e",
+    "code/validate_ds3_group_offdiagonal.py": "4c98e33a2dcf6908d5a892413618626e5bbbac84a1f1ac302353d78608a52ed9",
+    "code/validate_ds3_group_pairing.py": "43185280f6b0ee8a81f2cf56859e8c641e080ccf904f0206e08f5ffb8c257d18",
+    "literature/stage4-ds3-group-pairing-sources.md": "935c0f6bd501f611a65cee80a35f0e8b7d0a6f485ee482e702eec2df5a8e536d",
+    "manuscript/ds3-group-pairing/main.tex": "9aaf41d5e573cf82ce1115eb84123348e7c2861d940739e37b08c171b07eac83",
+    "notes/stage4-ds3-group-pairing.md": "93c64d60e4ca8c15b9619e70246785302d1ef51136a9fec8cee1a6b2e350bac5",
+    "output/pdf/de-sitter-ds3-group-pairing.pdf": "e55329ce0540b9aa6899a56b1d15b7631a6a0acb7b9e5908d9dbd9b849c101b3",
+    "results/stage4/ds3-group-pairing/build-review.md": "e0b1764da0f493eccd363de350f7eb442e8fc3005ea71b9468137cf0bdc2663e",
+    "results/stage4/ds3-group-pairing/diagnostics.json": "068e21ae35d3f37eae9b38bd94356ecf2fcc592e16880092ac718fc900bf2428",
+    "results/stage4/ds3-group-pairing/main.log": "84aac5b1cbe6d2ce2e11f2a95874c46be56bbd7e462c7f18cd6c88fd1ff9325f",
+    "results/stage4/ds3-group-pairing/offdiagonal.json": "081807a69a597f3c9b316b493c1f6d8e6ddfdef5ee1d9a56fb7e2202f6d8d6a9",
+    "sources/derkachov-spiridonov-1711.07073v2.html": "a4f305acd8eded3330309df70e570e28b1eb704f1083c49dfeb310072b33a367",
+    "sources/kolchmeyer-liu-2411.08090v1.html": "352ef29aa89c376203271bf984bd904fb471ff313a7d420bc6a0ebc875d78065",
+    "sources/marolf-morrison-0810.5163v1.html": "dc4f5eec7b88c8632913c7b1532574755622118599f0d4b7eab184a1cfebe3e7",
+    "sources/marolf-yu-2610.24073v1.html": "4b55e4b58532dc8d7483f00dd7193f362bb326e958f9137bb24387567c0eb3cc",
+    "sources/yang-zhang-zheng-2505.08647v1.html": "69a223a0c1171a8728197188c1e3a68dff5ddd4009691bd58da7e852ea32a23e"
+  }
+}

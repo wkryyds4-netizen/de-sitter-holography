@@ -1,0 +1,46 @@
+{
+  "created_at_utc": "2026-10-30T20:15:02.493619+00:00",
+  "pages": 6,
+  "checks": 56,
+  "independent_checks": 10,
+  "compilers": {
+    "local": "two successful final pdfLaTeX passes",
+    "desktop": "success on final source"
+  },
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "status": "all final pages reviewed at 1100 pixels; no clipping, collision or missing glyphs"
+  },
+  "scope": "Two distinct species, G=0 local model, physical ordered channel and proper-mass half-period-shifted uncrossed limit. Crossed recoupling/full Fock/finite gravity open. Empirical interior quadrature.",
+  "hashes": {
+    "code/audit_ds3_two_matter.py": "f25804ebbf07ac0c7a9da2f7c5c58c69d918fe608ac4673ad2ca9a94ede67cea",
+    "code/build_ds3_two_matter_note.ps1": "768c0ef9c41355f719877125b5d89531b24f0519513f5c5bed2d67cd59c398ce",
+    "code/ds3_group_pairing.py": "0ef676a1590157d49e62875698ab676cf06a58f942e8b655cbeced8c7e0efbb2",
+    "code/ds3_local_vertex.py": "3228a87c7f5571dcca98125499f7bf28d7cf7f357b41a6130b3ef88a03f23687",
+    "code/ds3_mass_spectrum.py": "6cc3ff6b981f45e51a6f9f47b0052f1a9c28e5d4d4d82015e6d0b5626f35e8a2",
+    "code/ds3_two_matter.py": "636f5b9bb79623e2cae493734e6ba5cf4c0cce8be7427d3f413d00b01fd3de5e",
+    "code/validate_ds3_group_offdiagonal.py": "4c98e33a2dcf6908d5a892413618626e5bbbac84a1f1ac302353d78608a52ed9",
+    "code/validate_ds3_two_matter.py": "b65344a511ee0a53cdf1d15f02561314a21bade04b50c2b5687a6f0b6b779e99",
+    "code/validate_ds3_two_matter_angular.py": "25ce56468caa8fefc37e58659b30105d278b9c19e8d4731d5cb7b3349a64bb22",
+    "literature/stage4-ds3-two-matter-sources.md": "4edf3d7c344ebec48b73b8e1fae21769042bb842a7d0add739abc9c0fc2d2683",
+    "manuscript/ds3-two-matter/main.tex": "269694d4276f29e1b2d82b71003b0f0263d4208fd632252541e584967fcc78c5",
+    "notes/stage4-ds3-two-matter.md": "e4016a3dcf2dd356e7e92f866315fa5bf87232af00d493079a7e79540f8e1b8b",
+    "output/pdf/de-sitter-ds3-two-matter.pdf": "032e386ee98cdf4193f2f7e1008defd58c443a00ee02507896a6314aec0f4c02",
+    "results/stage4/ds3-two-matter/angular.json": "597817024c316418183a753576af79834d964ba1141e9b6676dc6512f02bb4b8",
+    "results/stage4/ds3-two-matter/build-review.md": "693589609c292d6aa525ed40ae2ec18fd92a72dc58d88f88437d78f821f24881",
+    "results/stage4/ds3-two-matter/diagnostics.json": "3f7c7ea58ee3cdef439bc7b7786bcba01bc66456ef21f994447841ff217a6e06",
+    "results/stage4/ds3-two-matter/initial-tex.log": "b2534d5e21421ae8a329f49d43e9d2a82420155d4ae87816c73e2cc57bad92ab",
+    "results/stage4/ds3-two-matter/main.log": "f877c53e1b3f6fc0d1cf01a1912c9d776ae21410c6eb7d3d42b46677e2a7e461",
+    "sources/derkachov-spiridonov-1711.07073v2.html": "a4f305acd8eded3330309df70e570e28b1eb704f1083c49dfeb310072b33a367",
+    "sources/kolchmeyer-liu-2411.08090v1.html": "352ef29aa89c376203271bf984bd904fb471ff313a7d420bc6a0ebc875d78065",
+    "sources/marolf-morrison-0810.5163v1.html": "dc4f5eec7b88c8632913c7b1532574755622118599f0d4b7eab184a1cfebe3e7",
+    "sources/marolf-yu-2610.24073v1.html": "4b55e4b58532dc8d7483f00dd7193f362bb326e958f9137bb24387567c0eb3cc"
+  }
+}

@@ -1,0 +1,122 @@
+\section{Local vertex conventions and the crossed prefactor}
+\label{app:vertex}
+We distinguish the vertex reconstructed from the mode integral from the
+literal expression in (A.7) of~\cite{KL}. This appendix fixes the convention
+used in \eqref{eq:local-mode}; it is not an author-confirmed erratum.
+Set $r_j=s_j\tanh\pi s_j$, $c_j=\cosh\pi s_j$, and define
+\begin{align}
+ G_4(s_1,s_2,s_3)
+ &=\Gamma\!\left(\tfrac14+\tfrac i2(-s_1+s_2+s_3)\right)
+   \Gamma\!\left(\tfrac14+\tfrac i2(-s_1-s_2+s_3)\right)\notag\\
+ &\quad\times
+   \Gamma\!\left(\tfrac14+\tfrac i2(-s_1+s_2-s_3)\right)
+   \Gamma\!\left(\tfrac14+\tfrac i2(s_1+s_2+s_3)\right),\\
+ D(s_1,s_2,s_3)
+ &=\Gamma(1/2-is_1)\Gamma(1/2+is_2)\Gamma(1/2+is_3).
+\end{align}
+Then the reconstructed vertex is
+\begin{equation}
+ \mathcal V^{s_1}_{s_2,s_3,\mathrm{rec}}
+ =e^{-i\pi/4}\frac{c_1\sqrt{r_1r_2r_3}}
+                    {8\pi\sqrt{c_1c_2c_3}}\frac{G_4}{D}
+ =\frac{\mathcal V^{s_1}_{s_2,s_3,\mathrm{literal}}}
+        {\Gamma(1/2+is_3)^2}.
+ \label{eq:reconstructed-vertex}
+\end{equation}
+The second equality states the discrepancy explicitly.
+
+Here is its analytic normalization check. Write
+\[
+ P_j(z)=P_{-1/2+is_j}(z),\qquad
+ \Psi_0^{s_j}(t)=\frac{\sqrt{r_j}\,P_j(i\sinh t)}{2\sqrt{\pi c_j}}.
+\]
+Closing the vertical contour to the right and using the Legendre jump
+relation gives
+\begin{equation}
+ \int_{\mathbb R}\cosh t\,P_1(-i\sinh t)P_2(i\sinh t)P_3(i\sinh t)\dd t
+ =2c_1\int_1^\infty P_1(u)P_2(u)P_3(u)\dd u.
+\end{equation}
+The endpoint circle is $O(\epsilon|\log\epsilon|)$ and the large
+semicircle is $O(R^{-1/2})$, for fixed positive labels. The triple-Legendre
+identity of~\cite{Bros} is
+\begin{equation}
+ \int_1^\infty P_1P_2P_3\dd u
+ =\frac{\Gamma_8\,c_1c_2c_3}{4\pi^5},\qquad
+ \Gamma_8=\prod_{\epsilon_j=\pm1}
+ \Gamma\!\left(\tfrac14+\tfrac i2\sum_{j=1}^3\epsilon_js_j\right).
+\end{equation}
+Including the angular integral yields
+\begin{equation}
+ T_{000}=\frac{c_1\sqrt{r_1r_2r_3}\sqrt{c_1c_2c_3}}
+                     {8\pi^{11/2}}\Gamma_8.
+\end{equation}
+The circle three-point integral in the same convention gives
+$C_{S,000}^{\mathrm{phys}}=e^{-i\pi/4}G_4/(\pi^{3/2}D)$.
+Dividing by its conjugate proves \eqref{eq:reconstructed-vertex} at zero
+magnetic labels. It fixes all finite-mode vertices as follows: the complete
+principal three-leg invariant has $S$ and $A$ channels; the position integral
+is even under simultaneous angular reflection, while the explicit
+$A$-channel sign product is odd. The $A$ coefficient vanishes and the
+nonzero $S,000$ coefficient fixes the remaining scalar. This uses the
+stated reflection and half-phase conventions; the wording of footnote 33
+in~\cite{KL} should not be used to override its explicit antisymmetric
+kernel. Continuity on compact positive label sets extends the
+almost-everywhere decomposition identity to fixed positive labels.
+
+For the crossing graph put $(s_1,s_2,s_3,s_4)=(d,a,b,c)$ and let
+$A=\nu_A$, $B=\nu_B$. The four scalar factors in (B.2) of~\cite{KL} are
+\begin{equation}
+ P_{\mathcal V}=
+ \overline{\mathcal V^d_{A,a,\mathrm{rec}}}\,
+ \overline{\mathcal V^a_{B,b,\mathrm{rec}}}\,
+ \mathcal V^c_{A,b,\mathrm{rec}}\,
+ \mathcal V^d_{B,c,\mathrm{rec}}.
+\end{equation}
+Their half phases cancel. Define the sixteen-gamma numerator explicitly by
+\begin{equation}
+ \Gamma_{16}^{B}
+ =\overline{G_4(d,A,a)}\,\overline{G_4(a,B,b)}
+                    G_4(c,A,b)G_4(d,B,c).
+\end{equation}
+The six pairs of denominator gamma functions give
+$\prod_{s=d,a,b,c,A,B}c_s/\pi^6$. Thus
+\begin{equation}
+ P_{\mathcal V}
+ =\frac{r_dr_ar_br_cr_Ar_B\,c_d^2c_ac_c}{4096\pi^{10}}
+                         \Gamma_{16}^{B}.
+ \label{eq:four-vertex-product}
+\end{equation}
+The numerator is exactly the collection of arguments in (B.27).
+
+Let $S(d,a,b,c,A,B)$ denote the raw recoupling function in (B.17),
+with its stated conjugation orientation. In normalized trees the $S/S$
+subkernel acquires $\sqrt{w(a)w(c)}$. It is a subkernel of the complete
+unitary Racah transform, not by itself a unitary transform.
+The scalar local factors contribute the inverse
+$w(d)\sqrt{w(a)w(c)}$, together with $\pi^2/(r_Ar_B)$.
+Using the physical measure $\rhoP(d)$ and the Hartle--Hawking weight
+$\sech^2(\pi d)$, \eqref{eq:four-vertex-product} gives
+\begin{equation}
+ \frac{r_dr_ar_br_c\,c_ac_c}{4096\pi^{11}}
+              \Gamma_{16}^{B}S(d,a,b,c,A,B).
+ \label{eq:HH-prefactor}
+\end{equation}
+This is (B.25)--(B.27), with $a,c$ carrying $\sinh$ and $b,d$
+carrying $\tanh$. The calculation uses normalized tree inner products,
+not an uncancelled $\delta(0)$ or group volume.
+
+Conjugation orientation can be checked independently. The original modes
+are fixed by the antiunitary map
+$f(t,\theta)\mapsto\overline{f(-t,-\theta)}$. Applying it to the
+absolutely convergent integral \eqref{eq:local-mode} shows that each
+zero-time finite-mode local matrix element is real. The complete
+zero-time contracted spectral kernel is therefore real as well, by
+normalized spectral limits. Reversing bra and ket conjugates both the four
+vertex factors and the Racah kernel and gives the same zero-time result.
+It does not justify conjugating a nonzero-time phase independently.
+
+For equal matter labels, the assembled symmetric function
+$\mathcal S^\nu$ in (A.14) can be cyclically relabeled to $(a,b,c,d)$.
+The raw $S$ or its gamma factor alone cannot be relabeled this way.
+This distinction is necessary when comparing the local construction with
+the archived implementation of the crossed kernel.

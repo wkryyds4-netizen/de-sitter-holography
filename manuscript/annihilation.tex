@@ -1,0 +1,229 @@
+\section{Annihilation as an integrated mode limit}
+\label{sec:annihilation}
+We retain all assumptions and seed classes of Section~\ref{sec:position}.
+The obstruction noted there is a point-field obstruction, not yet an
+obstruction to convergence after integration. The following construction
+resolves the integrated question for every physical input. A stronger
+absolute position formula will then be obtained on physical seed images.
+
+\subsection{Finite emitted-mode filters}
+Choose finite-support real diagonal contractions on $P_\nu$,
+\begin{equation}
+ F_M|n\rangle=f_M(n)|n\rangle,\qquad
+ 0\le f_M(n)\le1,\qquad f_M(n)\longrightarrow1\quad(n\in\mathbb Z).
+ \label{eq:mode-filter}
+\end{equation}
+Set $\mathfrak a_M(x)=\sum_n f_M(n)\psi_n^\nu(x)a_n$.
+On each fixed particle sector both this finite sum and its adjoint are
+bounded operators, uniformly in $x$ for fixed $M$. The bound may grow with
+$M$. In particular, for $\phi\in\mathcal P_N$,
+\begin{equation}
+ \zeta^-_{M,\phi,u}(y)=\mathfrak a_M^\dagger(x_R)[E_R(u)\phi](y),
+ \qquad
+ \norm{a_{\zeta^-_{M,\phi,u}}}_2\le C_{M,\phi}(1+|u|)^2.
+ \label{eq:ann-test-bound}
+\end{equation}
+Indeed $\|\mathfrak a_M^\dagger(x)v\|\le
+\sqrt{N+1}\big(\sum_n f_M(n)^2|\psi_n^\nu(x)|^2\big)^{1/2}\|v\|$;
+the finite-mode envelope and the packet estimate of the previous section
+apply. This defines, independently of a physical field operator,
+\begin{equation}
+ \mathcal I^-_{N,M}(\phi,k)=
+ \int_{\mathbb R}g_{\sigma,\tau}(u)\dd u\int_Y
+ \ip{\zeta^-_{M,\phi,u}(y)}{[R\mathsf U_{N+1}(u)k](y)}\dd y,
+ \quad k\in\cH_{N+1}^{\max,w}(s_*).
+ \label{eq:ann-cut-integral}
+\end{equation}
+Equation~\eqref{eq:position-pairing} proves absolute convergence and
+continuity in $k$ at each fixed $M$. It does not supply an $M$-independent
+absolute majorant for arbitrary $k$.
+
+On the kinematical right system define
+\begin{equation}
+ C_{N,M}=\sqrt{N+1}(1_R\otimes P_{\Sym^{N+1}})
+ (1_R\otimes F_M\otimes1_{\rm spectators})(T\otimes1).
+ \label{eq:filtered-creation}
+\end{equation}
+The filter acts on the newly emitted leg before Bose symmetrization.
+It is not a filter on all output particles. Thus
+\begin{equation}
+ \norm{C_{N,M}}\le b_N:=\sqrt{(N+1)\mathfrak M},\qquad
+ C_{N,M}v\longrightarrow C_Nv\quad(v\in W_N).
+ \label{eq:filtered-strong}
+\end{equation}
+Strong convergence follows from $F_M\to1$ strongly and boundedness of $T$.
+Since $F_M$ commutes with rotations, $C_{N,M}$ preserves right total $K$.
+It generally fails to intertwine boosts. No physical operator descended
+from $C_{N,M}$, and no preservation of physical null seeds at finite $M$,
+is assumed.
+
+\subsection{Fixed-left continuity transfers the limit}
+On the expanded class $\cE_N^0$ of Section~\ref{sec:fields} write
+$\mathcal G_N=J_N\mathcal A_N$. This agrees with $B$ on actual seeds and
+satisfies
+\begin{equation}
+ \norm{\mathcal G_N(|f,0\rangle_L\otimes v)}_{\FP}
+ \le B_f\norm v,\qquad v\in W_N^{(0)}.
+ \label{eq:expanded-physical-map}
+\end{equation}
+This bound concerns arbitrary right vectors of total $K=0$; it does not
+require any map producing $v$ to intertwine $G$.
+
+\begin{theorem}[Integrated annihilation limit]
+For every fixed $\phi\in\mathcal P_N$, the directly defined functionals
+\eqref{eq:ann-cut-integral} satisfy
+\begin{equation}
+ \sup_{\norm k_{\FP}\le1}
+ \left|\mathcal I^-_{N,M}(\phi,k)
+       -\ip{B\phi}{\mathsf C_N^*k}_{\FP}\right|
+ \longrightarrow0.
+ \label{eq:ann-dual-limit}
+\end{equation}
+The limit is independent of every filter sequence obeying
+\eqref{eq:mode-filter}. In particular it is the same for sharp symmetric
+cutoffs and Fej\'er weights. It is independent of physically null changes
+of the test seed, although an individual finite-$M$ functional need not be.
+\label{thm:ann-integrated}
+\end{theorem}
+\begin{proof}
+First let $k=B\psi$, $\psi\in\mathcal P_{N+1}$. The joint absolute bound
+\eqref{eq:triple-fubini-bound}, now with $\zeta^-_{M,\phi,u}$, is at most
+$C_{M,\phi}C_\psi(1+|u|)^4$. Hence the Gaussian permits the interchange
+of $u$, $g$, and $y$. At fixed $g$ the emitted sum is finite. Angular
+integration selects only finitely many observer modes of the transformed
+input; its mass supports remain compact. The original local matrix
+element~\eqref{eq:local-mode} therefore gives
+\begin{equation}
+ \mathcal I^-_{N,M}(\phi,B\psi)
+ =\int_G\ip{(1_L\otimes C_{N,M})\phi}{U_{N+1}(g)\psi}_{\rm kin}\dd g.
+ \label{eq:ann-finite-ga}
+\end{equation}
+To check the phase, the time factors on the two sides of the local
+pairing give $e^{-iu(m_{\rm out}-m_{\rm in})}$. In
+\eqref{eq:ann-finite-ga} the creation coefficient is in the first,
+conjugate-linear entry, so its Gaussian phase is conjugated exactly as
+required for annihilation. The real Gaussian center is still $\tau$.
+No time reversal or change to $-\tau$ has been made.
+
+The first vector in \eqref{eq:ann-finite-ga} lies in $\cE_{N+1}^0$:
+the left packet is unchanged and the right total magnetic label is zero.
+Absolute scalar group averaging on that class gives
+\begin{equation}
+ \mathcal I^-_{N,M}(\phi,k)=\ip{\kappa_M(\phi)}k_{\FP},\qquad
+ \kappa_M(\phi)=\mathcal G_{N+1}[(1_L\otimes C_{N,M})\phi].
+ \label{eq:ann-riesz}
+\end{equation}
+Initially this identity holds on seed inputs. At fixed $M$, the left side
+is continuous in the physical input by \eqref{eq:ann-test-bound}; the
+right side is continuous by Hilbert duality. Physical density extends it
+to every $k$. In particular we have not commuted $C_{N,M}$ through a
+group average.
+
+Write $\phi=\sum_{j=1}^r |f_j,0\rangle_L\otimes v_j$.
+For the unfiltered intertwiner the existing descent gives
+$\mathcal G_{N+1}[(1_L\otimes C_N)\phi]=\mathsf C_NB\phi$.
+Consequently
+\begin{equation}
+ \norm{\kappa_M(\phi)-\mathsf C_NB\phi}_{\FP}
+ \le\sum_{j=1}^r B_{f_j}\norm{(C_{N,M}-C_N)v_j}
+ \longrightarrow0.
+ \label{eq:ann-error}
+\end{equation}
+Equations~\eqref{eq:ann-riesz} and \eqref{eq:ann-error} prove
+\eqref{eq:ann-dual-limit}. Only the limiting intertwiner is used for
+physical descent. The bound in \eqref{eq:ann-error} is a fixed-test bound,
+not a uniform bound over all representatives with unit $\norm{B\phi}$.
+\end{proof}
+
+\subsection{An absolute uncut formula on seed inputs}
+For this stronger statement use specifically
+\begin{equation}
+ f_M(n)=\left(1-\frac{|n|}{M+1}\right)_+,\qquad
+ K_M(\theta)=\frac1{M+1}\left|\sum_{j=0}^M e^{ij\theta}\right|^2.
+ \label{eq:fejer-filter}
+\end{equation}
+The standard positive-kernel argument~\cite[Appendix B]{VasyFourier}
+extends to Hilbert-valued continuous functions. For completeness,
+$K_M\ge0$, $\int K_M\dd\theta/(2\pi)=1$, and outside any fixed
+neighborhood of zero its integral tends to zero, since
+$K_M(\theta)\le[(M+1)\sin^2(\theta/2)]^{-1}$.
+Uniform continuity and this bound prove uniform convergence of the
+convolution to a continuous periodic Hilbert-valued function. The same
+positivity bounds the norm of every convolution by its supremum norm.
+
+For a finite occupation-mode vector $v\in\mathcal K_{N+1}$ define
+\begin{equation}
+ A_{g,v}(x)=V_N(g)\mathfrak a_\nu(g^{-1}x)v.
+ \label{eq:covariant-ann-orbit}
+\end{equation}
+This is a finite sum of smooth transformed scalar modes times fixed
+Hilbert vectors, with $\sup_{g,x}\norm{A_{g,v}(x)}\le c_v$.
+Covariance of the positive-frequency one-particle representation implies
+that its angular Fourier coefficients are those of
+$\sum_n\psi_n^\nu(x)a_nV_{N+1}(g)v$. This equality can first be read
+after smearing in $x$, where the annihilation operator is defined on
+every fixed particle sector; smoothness of \eqref{eq:covariant-ann-orbit}
+then identifies the Fourier coefficients. No point evaluation on an
+arbitrary one-particle Hilbert vector is needed. Fej\'er convolution gives
+\begin{equation}
+ \mathfrak a_M(x)V_{N+1}(g)v\longrightarrow A_{g,v}(x),\qquad
+ \norm{\mathfrak a_M(x)V_{N+1}(g)v}\le c_v.
+ \label{eq:ann-fejer-domination}
+\end{equation}
+Convergence is uniform in the angle for fixed $g$ and time coordinate;
+no uniform convergence in $g$ is claimed.
+
+For a product seed $\psi(y)=u_L(x_L)u_R(x_R)v$ put
+$u_{R,u}=E_R(u)u_R$ and define
+\begin{equation}
+ D_\psi(u;y)=\int_G u_L(g^{-1}x_L)u_{R,u}(g^{-1}x_R)
+                    A_{g,v}(x_R)\dd g.
+ \label{eq:uncut-seed-ann}
+\end{equation}
+Extend this definition by linearity to $\mathcal P_{N+1}$.
+The scalar absolute orbit integral of the observer product is finite
+almost everywhere, by the seed orbit bound. Thus
+\eqref{eq:uncut-seed-ann} is a Bochner integral almost everywhere in
+$(u,y)$. For finite $M$, boundedness of $\mathfrak a_M(x_R)$ lets it
+pass through the seed's Bochner group average. Equation
+\eqref{eq:ann-fejer-domination} and dominated convergence then show
+\begin{equation}
+ D_\psi(u;y)=\lim_{M\to\infty}
+ \mathfrak a_M(x_R)[R\mathsf U_{N+1}(u)B\psi](y)
+ \quad\text{almost everywhere}.
+ \label{eq:point-fejer-limit}
+\end{equation}
+Joint representatives can be chosen by the local $L^1$ construction in
+Section~\ref{sec:position}. Coarea and the two seed orbit bounds give
+\begin{equation}
+ \int_{\mathbb R}g_{\sigma,\tau}(u)\dd u\int_Y
+ \norm{[E_R(u)\phi](y)}\norm{D_\psi(u;y)}\dd y<\infty.
+ \label{eq:uncut-ann-absolute}
+\end{equation}
+Indeed, before the $g$ integral, the upper bound is a constant times
+the product of the observer seed envelopes. Its $g,y$ integral is at
+most $C_{\phi,\psi}(1+|u|)^4$. This same majorant is independent of $M$
+in \eqref{eq:ann-fejer-domination}. We may therefore take the limit
+inside the direct integral and apply Theorem~\ref{thm:ann-integrated}:
+\begin{equation}
+ \int_{\mathbb R}g_{\sigma,\tau}(u)\dd u\int_Y
+ \ip{[E_R(u)\phi](y)}{D_\psi(u;y)}\dd y
+ =\ip{B\phi}{\mathsf C_N^*B\psi}_{\FP}.
+ \label{eq:uncut-ann-identified}
+\end{equation}
+The pointwise Fej\'er limit depends only on $B\psi$: if $B\psi=0$,
+every finite-$M$ expression in \eqref{eq:point-fejer-limit} vanishes
+almost everywhere, and hence so does its limit.
+
+\subsection{Scope of the two conclusions}
+For arbitrary physical inputs the proved statement is convergence of
+integrated functionals in physical dual norm at each fixed seed test.
+For the dense physical seed images, \eqref{eq:uncut-ann-absolute} gives
+the stronger absolute uncut formula with the pointwise Fej\'er meaning
+\eqref{eq:point-fejer-limit}. Neither assertion proves pointwise
+convergence or an absolute norm majorant for every physical input.
+Sharp cutoffs share the integrated limit but have not been assigned the
+positive majorant used for the seed formula. These distinctions complete
+the specified weak position interpretation of both field blocks while
+leaving unrestricted point multiplication, zero threshold, and removal
+of Gaussian smearing open.

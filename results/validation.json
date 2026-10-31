@@ -1,0 +1,2417 @@
+{
+  "status": "passed",
+  "code_sha256": {
+    "clock_model.py": "ad875a25e10931b78363c3128e4fb9ed972f1663ffe91fe8ac66302f34d93fe8",
+    "validate_clock.py": "93d83c84d1ecf0e938d00058b1f2faf2e1b9a96b442c3e47e5936751a881fa49"
+  },
+  "python": "3.14.5",
+  "numpy": "2.4.6",
+  "scipy": "1.18.0",
+  "checks": 235,
+  "failed": 0,
+  "failures": [],
+  "primal": {
+    "trace": [
+      {
+        "bins": 30,
+        "success": true,
+        "message": "Optimization terminated successfully",
+        "iterations": 1,
+        "objective": 1.1253518099177552e-07,
+        "analytic": 0.0,
+        "gap": 1.1253518099177552e-07,
+        "mean": 0.9999981994370016,
+        "tail": 0.1353351859314068,
+        "constraint_violation": 2.220446049250313e-16,
+        "dual_success": true,
+        "dual_lower_bound": 1.1253518117371186e-07,
+        "primal_dual_gap": -1.819363375580091e-16,
+        "warnings": []
+      },
+      {
+        "bins": 60,
+        "success": true,
+        "message": "Optimization terminated successfully",
+        "iterations": 1,
+        "objective": 1.1253518090727824e-07,
+        "analytic": 0.0,
+        "gap": 1.1253518090727824e-07,
+        "mean": 0.9999981994370019,
+        "tail": 0.13533518593140678,
+        "constraint_violation": 0.0,
+        "dual_success": true,
+        "dual_lower_bound": 1.1253518117371186e-07,
+        "primal_dual_gap": -2.6643361798879913e-16,
+        "warnings": []
+      },
+      {
+        "bins": 120,
+        "success": true,
+        "message": "Optimization terminated successfully",
+        "iterations": 1,
+        "objective": 1.1253518117974474e-07,
+        "analytic": 0.0,
+        "gap": 1.1253518117974474e-07,
+        "mean": 0.9999981994370019,
+        "tail": 0.13533518593140678,
+        "constraint_violation": 0.0,
+        "dual_success": true,
+        "dual_lower_bound": 1.1253518117371186e-07,
+        "primal_dual_gap": 6.0328730528105465e-18,
+        "warnings": []
+      },
+      {
+        "bins": 240,
+        "success": true,
+        "message": "Optimization terminated successfully",
+        "iterations": 1,
+        "objective": 1.1253518100008415e-07,
+        "analytic": 0.0,
+        "gap": 1.1253518100008415e-07,
+        "mean": 0.9999981994370017,
+        "tail": 0.13533518593140678,
+        "constraint_violation": 0.0,
+        "dual_success": true,
+        "dual_lower_bound": 1.1253518117371186e-07,
+        "primal_dual_gap": -1.7362771196905287e-16,
+        "warnings": []
+      }
+    ],
+    "tail": [
+      {
+        "bins": 30,
+        "success": true,
+        "message": "Optimization terminated successfully",
+        "iterations": 1,
+        "objective": 1.1286809332601146,
+        "analytic": 1.128680268035584,
+        "gap": 6.652245305716065e-07,
+        "mean": 2.5373836297716488,
+        "tail": 0.8000000000003946,
+        "constraint_violation": 0.0,
+        "dual_success": true,
+        "dual_lower_bound": 1.128680933258836,
+        "primal_dual_gap": 1.2787548797632553e-12,
+        "warnings": []
+      },
+      {
+        "bins": 60,
+        "success": true,
+        "message": "Optimization terminated successfully",
+        "iterations": 1,
+        "objective": 1.1286809332601153,
+        "analytic": 1.128680268035584,
+        "gap": 6.652245312377403e-07,
+        "mean": 2.5373836297716488,
+        "tail": 0.800000000000395,
+        "constraint_violation": 2.220446049250313e-16,
+        "dual_success": true,
+        "dual_lower_bound": 1.1286809332588361,
+        "primal_dual_gap": 1.2791989689731054e-12,
+        "warnings": []
+      },
+      {
+        "bins": 120,
+        "success": true,
+        "message": "Optimization terminated successfully",
+        "iterations": 1,
+        "objective": 1.1286809332601153,
+        "analytic": 1.128680268035584,
+        "gap": 6.652245312377403e-07,
+        "mean": 2.5373836297716488,
+        "tail": 0.800000000000395,
+        "constraint_violation": 1.1102230246251565e-16,
+        "dual_success": true,
+        "dual_lower_bound": 1.1286809332588357,
+        "primal_dual_gap": 1.2796430581829554e-12,
+        "warnings": []
+      },
+      {
+        "bins": 240,
+        "success": true,
+        "message": "Optimization terminated successfully",
+        "iterations": 1,
+        "objective": 1.1286809332601142,
+        "analytic": 1.128680268035584,
+        "gap": 6.652245301275173e-07,
+        "mean": 2.537383629771648,
+        "tail": 0.8000000000003944,
+        "constraint_violation": 0.0,
+        "dual_success": true,
+        "dual_lower_bound": 1.1286809332588357,
+        "primal_dual_gap": 1.2785328351583303e-12,
+        "warnings": []
+      }
+    ],
+    "mean": [
+      {
+        "bins": 30,
+        "success": true,
+        "message": "Optimization terminated successfully",
+        "iterations": 1,
+        "objective": 0.11306808969099905,
+        "analytic": 0.1108256237659907,
+        "gap": 0.0022424659250083467,
+        "mean": 0.600000000000055,
+        "tail": 0.03426967728739344,
+        "constraint_violation": 5.5067062021407764e-14,
+        "dual_success": true,
+        "dual_lower_bound": 0.11306808969103638,
+        "primal_dual_gap": -3.733124920302089e-14,
+        "warnings": []
+      },
+      {
+        "bins": 60,
+        "success": true,
+        "message": "Optimization terminated successfully",
+        "iterations": 1,
+        "objective": 0.11137993067351887,
+        "analytic": 0.1108256237659907,
+        "gap": 0.0005543069075281681,
+        "mean": 0.6000000000000238,
+        "tail": 0.03532384324656558,
+        "constraint_violation": 2.3869795029440866e-14,
+        "dual_success": true,
+        "dual_lower_bound": 0.11137993067353447,
+        "primal_dual_gap": -1.559863349598345e-14,
+        "warnings": []
+      },
+      {
+        "bins": 120,
+        "success": false,
+        "message": "Positive directional derivative for linesearch",
+        "iterations": 29,
+        "objective": 0.11096381277134998,
+        "analytic": 0.1108256237659907,
+        "gap": 0.00013818900535927936,
+        "mean": 0.6000000027726653,
+        "tail": 0.035586513345755036,
+        "constraint_violation": 2.7726653195614404e-09,
+        "dual_success": true,
+        "dual_lower_bound": 0.11096381462266064,
+        "primal_dual_gap": -1.8513106603279539e-09,
+        "warnings": []
+      },
+      {
+        "bins": 240,
+        "success": true,
+        "message": "Optimization terminated successfully",
+        "iterations": 1,
+        "objective": 0.11086014749424308,
+        "analytic": 0.1108256237659907,
+        "gap": 3.452372825238359e-05,
+        "mean": 0.6000000000000179,
+        "tail": 0.035652126765526135,
+        "constraint_violation": 1.787459069646502e-14,
+        "dual_success": true,
+        "dual_lower_bound": 0.11086014749425538,
+        "primal_dual_gap": -1.2295719997723609e-14,
+        "warnings": []
+      }
+    ],
+    "both-high-k": [
+      {
+        "bins": 30,
+        "success": true,
+        "message": "Optimization terminated successfully",
+        "iterations": 1,
+        "objective": 1.4480646024283388,
+        "analytic": 1.4172641757463351,
+        "gap": 0.030800426682003668,
+        "mean": 2.0000000000066214,
+        "tail": 0.8000000000014812,
+        "constraint_violation": 6.621370118864434e-12,
+        "dual_success": true,
+        "dual_lower_bound": 1.448064602427996,
+        "primal_dual_gap": 3.4283687000424834e-13,
+        "warnings": []
+      },
+      {
+        "bins": 60,
+        "success": true,
+        "message": "Optimization terminated successfully",
+        "iterations": 57,
+        "objective": 1.4242140381867643,
+        "analytic": 1.4172641757463351,
+        "gap": 0.0069498624404291665,
+        "mean": 2.0000000001536495,
+        "tail": 0.7999999999846452,
+        "constraint_violation": 1.5364953753760346e-10,
+        "dual_success": true,
+        "dual_lower_bound": 1.4242140383971176,
+        "primal_dual_gap": -2.1035329034191363e-10,
+        "warnings": []
+      },
+      {
+        "bins": 120,
+        "success": true,
+        "message": "Optimization terminated successfully",
+        "iterations": 3,
+        "objective": 1.4189621712836322,
+        "analytic": 1.4172641757463351,
+        "gap": 0.0016979955372971034,
+        "mean": 1.9999999998233116,
+        "tail": 0.8000000000041947,
+        "constraint_violation": 2.0577095583007576e-11,
+        "dual_success": true,
+        "dual_lower_bound": 1.4189621707208602,
+        "primal_dual_gap": 5.627720511824919e-10,
+        "warnings": []
+      },
+      {
+        "bins": 240,
+        "success": true,
+        "message": "Optimization terminated successfully",
+        "iterations": 5,
+        "objective": 1.4176863011381646,
+        "analytic": 1.4172641757463351,
+        "gap": 0.0004221253918295087,
+        "mean": 2.0000000000416938,
+        "tail": 0.8000000000015818,
+        "constraint_violation": 4.169375955598298e-11,
+        "dual_success": true,
+        "dual_lower_bound": 1.417686301180522,
+        "primal_dual_gap": -4.23574508801039e-11,
+        "warnings": []
+      }
+    ],
+    "both-low-k": [
+      {
+        "bins": 30,
+        "success": true,
+        "message": "Optimization terminated successfully",
+        "iterations": 1,
+        "objective": 0.4132323340393318,
+        "analytic": 0.3800665859851933,
+        "gap": 0.03316574805413852,
+        "mean": 0.5000000000698397,
+        "tail": 0.09999999998078389,
+        "constraint_violation": 6.98396895870701e-11,
+        "dual_success": true,
+        "dual_lower_bound": 0.4132323343142349,
+        "primal_dual_gap": -2.7490310028355225e-10,
+        "warnings": []
+      },
+      {
+        "bins": 60,
+        "success": true,
+        "message": "Optimization terminated successfully",
+        "iterations": 5,
+        "objective": 0.3876871295693838,
+        "analytic": 0.3800665859851933,
+        "gap": 0.007620543584190509,
+        "mean": 0.500000000027594,
+        "tail": 0.10000000000331348,
+        "constraint_violation": 2.7594038165545953e-11,
+        "dual_success": true,
+        "dual_lower_bound": 0.3876871296021871,
+        "primal_dual_gap": -3.280331561938965e-11,
+        "warnings": []
+      },
+      {
+        "bins": 120,
+        "success": true,
+        "message": "Optimization terminated successfully",
+        "iterations": 1,
+        "objective": 0.38193537691191787,
+        "analytic": 0.3800665859851933,
+        "gap": 0.001868790926724595,
+        "mean": 0.5000000000815726,
+        "tail": 0.10000000001833825,
+        "constraint_violation": 8.157263753361121e-11,
+        "dual_success": true,
+        "dual_lower_bound": 0.3819353769839742,
+        "primal_dual_gap": -7.205630536688545e-11,
+        "warnings": []
+      },
+      {
+        "bins": 240,
+        "success": true,
+        "message": "Optimization terminated successfully",
+        "iterations": 5,
+        "objective": 0.38053158483293764,
+        "analytic": 0.3800665859851933,
+        "gap": 0.00046499884774436895,
+        "mean": 0.5000000001475695,
+        "tail": 0.10000000002857515,
+        "constraint_violation": 1.4756951216554626e-10,
+        "dual_success": true,
+        "dual_lower_bound": 0.38053158497145917,
+        "primal_dual_gap": -1.3852152758175862e-10,
+        "warnings": []
+      }
+    ]
+  },
+  "records": [
+    {
+      "name": "branches/0-trace/classification",
+      "passed": true,
+      "got": "trace",
+      "expected": "trace"
+    },
+    {
+      "name": "branches/0-trace/normalization",
+      "passed": true,
+      "got": 0.9999999999999999,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/0-trace/mean",
+      "passed": true,
+      "got": 1.0,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/0-trace/kl",
+      "passed": true,
+      "got": 7.605057532300908e-18,
+      "expected": 0.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/0-trace/kernel-0",
+      "passed": true,
+      "got": 0.9999999999999999,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/0-trace/kernel-1",
+      "passed": true,
+      "got": 0.9999999999999999,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/0-trace/kernel-2",
+      "passed": true,
+      "got": 0.6703200460356393,
+      "expected": 0.6703200460356393,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/0-trace/kernel-3",
+      "passed": true,
+      "got": 0.1353352832366127,
+      "expected": 0.1353352832366127,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/0-trace/kernel-4",
+      "passed": true,
+      "got": 0.10025884372280373,
+      "expected": 0.10025884372280376,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/0-trace/kernel-5",
+      "passed": true,
+      "got": 0.006737946999085468,
+      "expected": 0.006737946999085468,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/0-trace/dual-feasibility",
+      "passed": true,
+      "eta": 0.0,
+      "theta": 2.220446049250313e-16
+    },
+    {
+      "name": "branches/0-trace/mean-complementarity",
+      "passed": true,
+      "got": 0.0,
+      "expected": 0.0,
+      "atol": 3e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/0-trace/tail-complementarity",
+      "passed": true,
+      "got": 7.846009006187748e-18,
+      "expected": 0.0,
+      "atol": 3e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/0-trace/stationarity",
+      "passed": true,
+      "got": 2.914335439641036e-16,
+      "expected": 0.0,
+      "atol": 3e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/1-tail_only/classification",
+      "passed": true,
+      "got": "tail_only",
+      "expected": "tail_only"
+    },
+    {
+      "name": "branches/1-tail_only/normalization",
+      "passed": true,
+      "got": 1.0,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/1-tail_only/mean",
+      "passed": true,
+      "got": 2.5373929429001336,
+      "expected": 2.537392942900134,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/1-tail_only/kl",
+      "passed": true,
+      "got": 1.1286802680355836,
+      "expected": 1.128680268035584,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/1-tail_only/kernel-0",
+      "passed": true,
+      "got": 1.0,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/1-tail_only/kernel-1",
+      "passed": true,
+      "got": 1.0,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/1-tail_only/kernel-2",
+      "passed": true,
+      "got": 0.9237438633558639,
+      "expected": 0.9237438633558639,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/1-tail_only/kernel-3",
+      "passed": true,
+      "got": 0.8,
+      "expected": 0.8,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/1-tail_only/kernel-4",
+      "passed": true,
+      "got": 0.5926545765453743,
+      "expected": 0.5926545765453745,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/1-tail_only/kernel-5",
+      "passed": true,
+      "got": 0.03982965469429116,
+      "expected": 0.03982965469429116,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/1-tail_only/dual-feasibility",
+      "passed": true,
+      "eta": 0.0,
+      "theta": 3.240880903251032
+    },
+    {
+      "name": "branches/1-tail_only/mean-complementarity",
+      "passed": true,
+      "got": 0.0,
+      "expected": 0.0,
+      "atol": 3e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/1-tail_only/tail-complementarity",
+      "passed": true,
+      "got": 0.0,
+      "expected": 0.0,
+      "atol": 3e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/1-tail_only/stationarity",
+      "passed": true,
+      "got": 2.220446049250313e-16,
+      "expected": 0.0,
+      "atol": 3e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/2-mean_only/classification",
+      "passed": true,
+      "got": "mean_only",
+      "expected": "mean_only"
+    },
+    {
+      "name": "branches/2-mean_only/normalization",
+      "passed": true,
+      "got": 1.0,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/2-mean_only/mean",
+      "passed": true,
+      "got": 0.5999999999999999,
+      "expected": 0.6,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/2-mean_only/kl",
+      "passed": true,
+      "got": 0.11082562376599057,
+      "expected": 0.1108256237659907,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/2-mean_only/kernel-0",
+      "passed": true,
+      "got": 1.0,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/2-mean_only/kernel-1",
+      "passed": true,
+      "got": 1.0,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/2-mean_only/kernel-2",
+      "passed": true,
+      "got": 0.513417119032592,
+      "expected": 0.513417119032592,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/2-mean_only/kernel-3",
+      "passed": true,
+      "got": 0.03567399334725239,
+      "expected": 0.035673993347252395,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/2-mean_only/kernel-4",
+      "passed": true,
+      "got": 0.021637370719493097,
+      "expected": 0.0216373707194931,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/2-mean_only/kernel-5",
+      "passed": true,
+      "got": 0.00024036947641951445,
+      "expected": 0.00024036947641951418,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/2-mean_only/dual-feasibility",
+      "passed": true,
+      "eta": 0.6666666666666667,
+      "theta": 0.0
+    },
+    {
+      "name": "branches/2-mean_only/mean-complementarity",
+      "passed": true,
+      "got": 0.0,
+      "expected": 0.0,
+      "atol": 3e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/2-mean_only/tail-complementarity",
+      "passed": true,
+      "got": 0.0,
+      "expected": 0.0,
+      "atol": 3e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/2-mean_only/stationarity",
+      "passed": true,
+      "got": 8.881784197001252e-16,
+      "expected": 0.0,
+      "atol": 3e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/3-both/classification",
+      "passed": true,
+      "got": "both",
+      "expected": "both"
+    },
+    {
+      "name": "branches/3-both/normalization",
+      "passed": true,
+      "got": 0.9999999999999998,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/3-both/mean",
+      "passed": true,
+      "got": 1.9999999999999993,
+      "expected": 2.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/3-both/kl",
+      "passed": true,
+      "got": 1.4172641757463351,
+      "expected": 1.4172641757463351,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/3-both/kernel-0",
+      "passed": true,
+      "got": 0.9999999999999998,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/3-both/kernel-1",
+      "passed": true,
+      "got": 0.9999999999999998,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/3-both/kernel-2",
+      "passed": true,
+      "got": 0.8732063749416962,
+      "expected": 0.8732063749416963,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/3-both/kernel-3",
+      "passed": true,
+      "got": 0.7999999999999998,
+      "expected": 0.8,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/3-both/kernel-4",
+      "passed": true,
+      "got": 0.37987588954267765,
+      "expected": 0.37987588954267776,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/3-both/kernel-5",
+      "passed": true,
+      "got": 0.0004662377322266529,
+      "expected": 0.000466237732226653,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/3-both/dual-feasibility",
+      "passed": true,
+      "eta": 1.4825571158721398,
+      "theta": 6.3444069850632
+    },
+    {
+      "name": "branches/3-both/mean-complementarity",
+      "passed": true,
+      "got": 0.0,
+      "expected": 0.0,
+      "atol": 3e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/3-both/tail-complementarity",
+      "passed": true,
+      "got": 0.0,
+      "expected": 0.0,
+      "atol": 3e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/3-both/stationarity",
+      "passed": true,
+      "got": 8.881784197001252e-16,
+      "expected": 0.0,
+      "atol": 3e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/4-both/classification",
+      "passed": true,
+      "got": "both",
+      "expected": "both"
+    },
+    {
+      "name": "branches/4-both/normalization",
+      "passed": true,
+      "got": 1.0,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/4-both/mean",
+      "passed": true,
+      "got": 0.4999999999999994,
+      "expected": 0.4999999999999994,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/4-both/kl",
+      "passed": true,
+      "got": 0.38006658598519333,
+      "expected": 0.3800665859851933,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/4-both/kernel-0",
+      "passed": true,
+      "got": 1.0,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/4-both/kernel-1",
+      "passed": true,
+      "got": 1.0,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/4-both/kernel-2",
+      "passed": true,
+      "got": 0.3388941996152153,
+      "expected": 0.33889419961521516,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/4-both/kernel-3",
+      "passed": true,
+      "got": 0.1,
+      "expected": 0.1,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/4-both/kernel-4",
+      "passed": true,
+      "got": 0.03708344386442043,
+      "expected": 0.03708344386442044,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/4-both/kernel-5",
+      "passed": true,
+      "got": 4.918136678869066e-06,
+      "expected": 4.918136678869028e-06,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/4-both/dual-feasibility",
+      "passed": true,
+      "eta": 2.3066652433356976,
+      "theta": 4.4147626535667275
+    },
+    {
+      "name": "branches/4-both/mean-complementarity",
+      "passed": true,
+      "got": 1.4085020747896344e-15,
+      "expected": 0.0,
+      "atol": 3e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/4-both/tail-complementarity",
+      "passed": true,
+      "got": 0.0,
+      "expected": 0.0,
+      "atol": 3e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "branches/4-both/stationarity",
+      "passed": true,
+      "got": 8.881784197001252e-16,
+      "expected": 0.0,
+      "atol": 3e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "tiny-threshold/normalization",
+      "passed": true,
+      "got": 1.0,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "tiny-threshold/mean",
+      "passed": true,
+      "got": 18.25000864999991,
+      "expected": 18.25000864999991,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "tiny-threshold/kl",
+      "passed": true,
+      "got": 17.69546033325949,
+      "expected": 17.69546033325949,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "tiny-threshold/kernel-0",
+      "passed": true,
+      "got": 1.0,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "tiny-threshold/kernel-1",
+      "passed": true,
+      "got": 1.0,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "tiny-threshold/kernel-2",
+      "passed": true,
+      "got": 0.9459999913599997,
+      "expected": 0.9459999913599997,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "tiny-threshold/kernel-3",
+      "passed": true,
+      "got": 0.73,
+      "expected": 0.73,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "tiny-threshold/kernel-4",
+      "passed": true,
+      "got": 0.7212923503892094,
+      "expected": 0.7212923503892092,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "tiny-threshold/kernel-5",
+      "passed": true,
+      "got": 0.6474519188035248,
+      "expected": 0.6474519188035249,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "infeasible",
+      "passed": true,
+      "Q": 2,
+      "k": 0.8,
+      "B": 0
+    },
+    {
+      "name": "infeasible",
+      "passed": true,
+      "Q": 2,
+      "k": 0.8,
+      "B": 1.584
+    },
+    {
+      "name": "infeasible",
+      "passed": true,
+      "Q": 2,
+      "k": 0.8,
+      "B": 1.6
+    },
+    {
+      "name": "infeasible",
+      "passed": true,
+      "Q": 0.4,
+      "k": 0.2,
+      "B": 0
+    },
+    {
+      "name": "infeasible",
+      "passed": true,
+      "Q": 0.4,
+      "k": 0.2,
+      "B": 0.07920000000000002
+    },
+    {
+      "name": "infeasible",
+      "passed": true,
+      "Q": 0.4,
+      "k": 0.2,
+      "B": 0.08000000000000002
+    },
+    {
+      "name": "boundary-continuity",
+      "passed": true,
+      "got": 1.1286802680356218,
+      "expected": 1.128680268035584,
+      "atol": 1e-06,
+      "rtol": 1e-06
+    },
+    {
+      "name": "boundary-continuity",
+      "passed": true,
+      "got": 0.11082566376599917,
+      "expected": 0.1108255837659956,
+      "atol": 1e-06,
+      "rtol": 1e-06
+    },
+    {
+      "name": "trace-mean-boundary",
+      "passed": true,
+      "got": 6.994953257508927e-17,
+      "expected": 0.0,
+      "atol": 1e-12,
+      "rtol": 2e-08
+    },
+    {
+      "name": "trace-mean-boundary",
+      "passed": true,
+      "got": 0.0,
+      "expected": 0.0,
+      "atol": 1e-12,
+      "rtol": 2e-08
+    },
+    {
+      "name": "trace-mean-boundary",
+      "passed": true,
+      "got": 0.0,
+      "expected": 0.0,
+      "atol": 1e-12,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=0.3/normalization",
+      "passed": true,
+      "got": 1.0,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=0.3/mean",
+      "passed": true,
+      "got": 3.5,
+      "expected": 3.5,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=0.3/kl",
+      "passed": true,
+      "got": 2.5503896477051846,
+      "expected": 2.5503896477051917,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=0.3/kernel-0",
+      "passed": true,
+      "got": 1.0,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=0.3/kernel-1",
+      "passed": true,
+      "got": 1.0,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=0.3/kernel-2",
+      "passed": true,
+      "got": 1.0,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=0.3/kernel-3",
+      "passed": true,
+      "got": 1.0,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=0.3/kernel-4",
+      "passed": true,
+      "got": 0.9963401531726563,
+      "expected": 0.9963401531726563,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=0.3/kernel-5",
+      "passed": true,
+      "got": 0.029252688076961065,
+      "expected": 0.029252688076961124,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=0.3/derivative-variance",
+      "passed": true,
+      "got": 0.9259259259259244,
+      "expected": 0.9259259259259258,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=0.3/fourier-0",
+      "passed": true,
+      "got": 0.5092958178936583,
+      "expected": 0.5092958178940653,
+      "atol": 1e-10,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=0.3/fourier-0.2",
+      "passed": true,
+      "got": 0.326284273836351,
+      "expected": 0.32628427383635117,
+      "atol": 1e-10,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=0.3/fourier-0.5",
+      "passed": true,
+      "got": 0.06366197723675814,
+      "expected": 0.06366197723675816,
+      "atol": 1e-10,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=0.3/fourier-1",
+      "passed": true,
+      "got": 0.004074366543152514,
+      "expected": 0.004074366543152522,
+      "atol": 1e-10,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=0.3/fourier-3",
+      "passed": true,
+      "got": 1.0054603238950156e-05,
+      "expected": 1.005460323957249e-05,
+      "atol": 1e-10,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=0.3/time-normalization",
+      "passed": true,
+      "got": 1.0000000000000004,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=0.3/time-variance",
+      "passed": true,
+      "got": 0.9259259259259264,
+      "expected": 0.9259259259259258,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=1.0/normalization",
+      "passed": true,
+      "got": 0.9999999999999999,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=1.0/mean",
+      "passed": true,
+      "got": 6.999999999999998,
+      "expected": 7.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=1.0/kl",
+      "passed": true,
+      "got": 4.846416843379256,
+      "expected": 4.846416843379256,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=1.0/kernel-0",
+      "passed": true,
+      "got": 0.9999999999999999,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=1.0/kernel-1",
+      "passed": true,
+      "got": 0.9999999999999999,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=1.0/kernel-2",
+      "passed": true,
+      "got": 0.9999999999999999,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=1.0/kernel-3",
+      "passed": true,
+      "got": 0.9999999999999999,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=1.0/kernel-4",
+      "passed": true,
+      "got": 0.9999842149594586,
+      "expected": 0.9999842149594583,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=1.0/kernel-5",
+      "passed": true,
+      "got": 0.815263244523772,
+      "expected": 0.8152632445237722,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=1.0/derivative-variance",
+      "passed": true,
+      "got": 0.08333333333333336,
+      "expected": 0.08333333333333333,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=1.0/fourier-0",
+      "passed": true,
+      "got": 1.6976527263135501,
+      "expected": 1.6976527263135504,
+      "atol": 1e-10,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=1.0/fourier-0.2",
+      "passed": true,
+      "got": 1.0876142461211704,
+      "expected": 1.08761424612117,
+      "atol": 1e-10,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=1.0/fourier-0.5",
+      "passed": true,
+      "got": 0.2122065907891929,
+      "expected": 0.2122065907891938,
+      "atol": 1e-10,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=1.0/fourier-1",
+      "passed": true,
+      "got": 0.013581221810443654,
+      "expected": 0.013581221810508403,
+      "atol": 1e-10,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=1.0/fourier-3",
+      "passed": true,
+      "got": 3.351534408021755e-05,
+      "expected": 3.351534413190828e-05,
+      "atol": 1e-10,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=1.0/time-normalization",
+      "passed": true,
+      "got": 0.9999999999999999,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=1.0/time-variance",
+      "passed": true,
+      "got": 0.08333333333333333,
+      "expected": 0.08333333333333333,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=3.0/normalization",
+      "passed": true,
+      "got": 0.9999999999999991,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=3.0/mean",
+      "passed": true,
+      "got": 16.999999999999986,
+      "expected": 17.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=3.0/kl",
+      "passed": true,
+      "got": 13.747804554711132,
+      "expected": 13.747804554711145,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=3.0/kernel-0",
+      "passed": true,
+      "got": 0.9999999999999991,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=3.0/kernel-1",
+      "passed": true,
+      "got": 0.9999999999999991,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=3.0/kernel-2",
+      "passed": true,
+      "got": 0.9999999999999991,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=3.0/kernel-3",
+      "passed": true,
+      "got": 0.9999999999999991,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=3.0/kernel-4",
+      "passed": true,
+      "got": 0.9999999233219822,
+      "expected": 0.9999999233219832,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=3.0/kernel-5",
+      "passed": true,
+      "got": 0.9963401531726556,
+      "expected": 0.9963401531726563,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=3.0/derivative-variance",
+      "passed": true,
+      "got": 0.009259259259259276,
+      "expected": 0.009259259259259259,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=3.0/fourier-0",
+      "passed": true,
+      "got": 5.092958178940652,
+      "expected": 5.092958178940652,
+      "atol": 1e-10,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=3.0/fourier-0.2",
+      "passed": true,
+      "got": 3.2628427383635112,
+      "expected": 3.2628427383635117,
+      "atol": 1e-10,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=3.0/fourier-0.5",
+      "passed": true,
+      "got": 0.6366197723675805,
+      "expected": 0.6366197723675815,
+      "atol": 1e-10,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=3.0/fourier-1",
+      "passed": true,
+      "got": 0.04074366543152525,
+      "expected": 0.0407436654315252,
+      "atol": 1e-10,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=3.0/fourier-3",
+      "passed": true,
+      "got": 0.00010054603239523058,
+      "expected": 0.00010054603239572488,
+      "atol": 1e-10,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=3.0/time-normalization",
+      "passed": true,
+      "got": 1.0000000000000002,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "gamma5/w=3.0/time-variance",
+      "passed": true,
+      "got": 0.009259259259259262,
+      "expected": 0.009259259259259259,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=0.7/normalization",
+      "passed": true,
+      "got": 0.9999999999999987,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=0.7/mean",
+      "passed": true,
+      "got": 2.349999999999997,
+      "expected": 2.35,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=0.7/kl",
+      "passed": true,
+      "got": 3.248248808043737,
+      "expected": 3.248248808044011,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=0.7/kernel-0",
+      "passed": true,
+      "got": 0.9999999999999987,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=0.7/kernel-1",
+      "passed": true,
+      "got": 0.9999999999999987,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=0.7/kernel-2",
+      "passed": true,
+      "got": 0.9999999999999987,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=0.7/kernel-3",
+      "passed": true,
+      "got": 0.9999999999999987,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=0.7/kernel-4",
+      "passed": true,
+      "got": 0.6842402846888523,
+      "expected": 0.6842402846888522,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=0.7/kernel-5",
+      "passed": true,
+      "got": 0.0,
+      "expected": 0.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=0.7/kernel-6",
+      "passed": true,
+      "got": 0.0,
+      "expected": 0.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=0.7/kernel-7",
+      "passed": true,
+      "got": 0.0,
+      "expected": 0.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=0.7/derivative-variance",
+      "passed": true,
+      "got": 26.856066397522067,
+      "expected": 26.856066397522067,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=0.7/entropy-closed-form",
+      "passed": true,
+      "got": -0.8982488080350741,
+      "expected": -0.898248808044011,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=0.7/fourier-0",
+      "passed": true,
+      "got": 0.07427230677621786,
+      "expected": 0.07427230677621782,
+      "atol": 1e-11,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=0.7/fourier-0.4",
+      "passed": true,
+      "got": 0.07388495112892639,
+      "expected": 0.07388495112892636,
+      "atol": 1e-11,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=0.7/fourier-6.283185307179586",
+      "passed": true,
+      "got": 0.018568076694054466,
+      "expected": 0.018568076694054456,
+      "atol": 1e-11,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=0.7/fourier-12.566370614359172",
+      "passed": true,
+      "got": 2.2751280553495706e-33,
+      "expected": 0.0,
+      "atol": 1e-11,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=0.7/fourier-7.5",
+      "passed": true,
+      "got": 0.009560077863724167,
+      "expected": 0.009560077863724164,
+      "atol": 1e-11,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=0.7/fourier-35",
+      "passed": true,
+      "got": 2.559871087379798e-07,
+      "expected": 2.559871087380437e-07,
+      "atol": 1e-11,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=0.7/fourier-normalization-with-tail",
+      "passed": true,
+      "finite_integral": 0.9999999999958767,
+      "tail_bound": 8.248116368388466e-12
+    },
+    {
+      "name": "compact/W=0.7/fourier-variance-with-tail",
+      "passed": true,
+      "finite_integral": 26.856062853942063,
+      "expected": 26.856066397522067,
+      "tail_bound": 7.088382747005735e-06
+    },
+    {
+      "name": "compact/W=2.0/normalization",
+      "passed": true,
+      "got": 1.0,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=2.0/mean",
+      "passed": true,
+      "got": 3.0,
+      "expected": 3.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=2.0/kl",
+      "passed": true,
+      "got": 2.8484266835450534,
+      "expected": 2.848426683545333,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=2.0/kernel-0",
+      "passed": true,
+      "got": 1.0,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=2.0/kernel-1",
+      "passed": true,
+      "got": 1.0,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=2.0/kernel-2",
+      "passed": true,
+      "got": 1.0,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=2.0/kernel-3",
+      "passed": true,
+      "got": 1.0,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=2.0/kernel-4",
+      "passed": true,
+      "got": 0.9964511806454727,
+      "expected": 0.9964511806454728,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=2.0/kernel-5",
+      "passed": true,
+      "got": 0.0,
+      "expected": 0.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=2.0/kernel-6",
+      "passed": true,
+      "got": 0.0,
+      "expected": 0.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=2.0/kernel-7",
+      "passed": true,
+      "got": 0.0,
+      "expected": 0.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=2.0/derivative-variance",
+      "passed": true,
+      "got": 3.2898681336964524,
+      "expected": 3.289868133696453,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=2.0/entropy-closed-form",
+      "passed": true,
+      "got": 0.15157331646360428,
+      "expected": 0.15157331645466687,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=2.0/fourier-0",
+      "passed": true,
+      "got": 0.21220659078919377,
+      "expected": 0.2122065907891938,
+      "atol": 1e-11,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=2.0/fourier-0.4",
+      "passed": true,
+      "got": 0.21109986036836093,
+      "expected": 0.21109986036836104,
+      "atol": 1e-11,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=2.0/fourier-6.283185307179586",
+      "passed": true,
+      "got": 0.05305164769729844,
+      "expected": 0.05305164769729845,
+      "atol": 1e-11,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=2.0/fourier-12.566370614359172",
+      "passed": true,
+      "got": 4.0627988262325395e-33,
+      "expected": 0.0,
+      "atol": 1e-11,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=2.0/fourier-7.5",
+      "passed": true,
+      "got": 0.027314508182069038,
+      "expected": 0.027314508182069038,
+      "atol": 1e-11,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=2.0/fourier-35",
+      "passed": true,
+      "got": 7.313917392515743e-07,
+      "expected": 7.313917392515534e-07,
+      "atol": 1e-11,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=2.0/fourier-normalization-with-tail",
+      "passed": true,
+      "finite_integral": 0.9999999999958767,
+      "tail_bound": 8.248116368388466e-12
+    },
+    {
+      "name": "compact/W=2.0/fourier-variance-with-tail",
+      "passed": true,
+      "finite_integral": 3.289867699607903,
+      "expected": 3.289868133696453,
+      "tail_bound": 8.683268865082023e-07
+    },
+    {
+      "name": "compact/W=7.0/normalization",
+      "passed": true,
+      "got": 1.0000000000000004,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=7.0/mean",
+      "passed": true,
+      "got": 5.500000000000001,
+      "expected": 5.5,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=7.0/kl",
+      "passed": true,
+      "got": 4.095663715049685,
+      "expected": 4.095663715049965,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=7.0/kernel-0",
+      "passed": true,
+      "got": 1.0000000000000004,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=7.0/kernel-1",
+      "passed": true,
+      "got": 1.0000000000000004,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=7.0/kernel-2",
+      "passed": true,
+      "got": 1.0000000000000004,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=7.0/kernel-3",
+      "passed": true,
+      "got": 1.0000000000000004,
+      "expected": 1.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=7.0/kernel-4",
+      "passed": true,
+      "got": 0.9999925532803038,
+      "expected": 0.999992553280304,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=7.0/kernel-5",
+      "passed": true,
+      "got": 0.6842402846888517,
+      "expected": 0.6842402846888518,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=7.0/kernel-6",
+      "passed": true,
+      "got": 0.0,
+      "expected": 0.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=7.0/kernel-7",
+      "passed": true,
+      "got": 0.0,
+      "expected": 0.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=7.0/derivative-variance",
+      "passed": true,
+      "got": 0.26856066397522066,
+      "expected": 0.2685606639752206,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=7.0/entropy-closed-form",
+      "passed": true,
+      "got": 1.4043362849589722,
+      "expected": 1.404336284950035,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=7.0/fourier-0",
+      "passed": true,
+      "got": 0.7427230677621788,
+      "expected": 0.7427230677621782,
+      "atol": 1e-11,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=7.0/fourier-0.4",
+      "passed": true,
+      "got": 0.7388495112892637,
+      "expected": 0.7388495112892636,
+      "atol": 1e-11,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=7.0/fourier-6.283185307179586",
+      "passed": true,
+      "got": 0.1856807669405446,
+      "expected": 0.18568076694054456,
+      "atol": 1e-11,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=7.0/fourier-12.566370614359172",
+      "passed": true,
+      "got": 2.2165174671571803e-32,
+      "expected": 0.0,
+      "atol": 1e-11,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=7.0/fourier-7.5",
+      "passed": true,
+      "got": 0.09560077863724159,
+      "expected": 0.09560077863724163,
+      "atol": 1e-11,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=7.0/fourier-35",
+      "passed": true,
+      "got": 2.5598710873802764e-06,
+      "expected": 2.559871087380437e-06,
+      "atol": 1e-11,
+      "rtol": 2e-08
+    },
+    {
+      "name": "compact/W=7.0/fourier-normalization-with-tail",
+      "passed": true,
+      "finite_integral": 0.9999999999958767,
+      "tail_bound": 8.248116368388466e-12
+    },
+    {
+      "name": "compact/W=7.0/fourier-variance-with-tail",
+      "passed": true,
+      "finite_integral": 0.2685606285394206,
+      "expected": 0.2685606639752206,
+      "tail_bound": 7.088382747005733e-08
+    },
+    {
+      "name": "n4/projector-max",
+      "passed": true,
+      "got": 0.8011021007006397,
+      "expected": 0.8011021007006397,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "n4/max-is-not-sum",
+      "passed": true,
+      "max_kernel": 0.8011021007006397,
+      "sum_kernel": 0.05376441019179985
+    },
+    {
+      "name": "relative-error-counterexample",
+      "passed": true,
+      "bulk": 0.0,
+      "dressed": 0.19999999999999996,
+      "L1": 2.0
+    },
+    {
+      "name": "fixed-spectrum/L1",
+      "passed": true,
+      "got": 2.220446049250313e-16,
+      "expected": 0.0,
+      "atol": 2e-09,
+      "rtol": 2e-08
+    },
+    {
+      "name": "fixed-spectrum/uniform-real-time-absolute-bound",
+      "passed": true,
+      "largest_error": 0.034019283283285844,
+      "bound": 0.19999999999999996,
+      "samples": 250,
+      "note": "Numerical stress test; all-real-time uniformity follows from the proof."
+    },
+    {
+      "name": "spectral-tail-bound",
+      "passed": true,
+      "error": 0.11776712421761984,
+      "bound": 0.2799999999999999,
+      "spectral_tail": 0.1
+    },
+    {
+      "name": "primal/trace/30",
+      "passed": true,
+      "acceptance": "Feasibility and primal-dual certificate; solver exit flag retained, not used as proof.",
+      "bins": 30,
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 1,
+      "objective": 1.1253518099177552e-07,
+      "analytic": 0.0,
+      "gap": 1.1253518099177552e-07,
+      "mean": 0.9999981994370016,
+      "tail": 0.1353351859314068,
+      "constraint_violation": 2.220446049250313e-16,
+      "dual_success": true,
+      "dual_lower_bound": 1.1253518117371186e-07,
+      "primal_dual_gap": -1.819363375580091e-16,
+      "warnings": []
+    },
+    {
+      "name": "primal/trace/60",
+      "passed": true,
+      "acceptance": "Feasibility and primal-dual certificate; solver exit flag retained, not used as proof.",
+      "bins": 60,
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 1,
+      "objective": 1.1253518090727824e-07,
+      "analytic": 0.0,
+      "gap": 1.1253518090727824e-07,
+      "mean": 0.9999981994370019,
+      "tail": 0.13533518593140678,
+      "constraint_violation": 0.0,
+      "dual_success": true,
+      "dual_lower_bound": 1.1253518117371186e-07,
+      "primal_dual_gap": -2.6643361798879913e-16,
+      "warnings": []
+    },
+    {
+      "name": "primal/trace/120",
+      "passed": true,
+      "acceptance": "Feasibility and primal-dual certificate; solver exit flag retained, not used as proof.",
+      "bins": 120,
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 1,
+      "objective": 1.1253518117974474e-07,
+      "analytic": 0.0,
+      "gap": 1.1253518117974474e-07,
+      "mean": 0.9999981994370019,
+      "tail": 0.13533518593140678,
+      "constraint_violation": 0.0,
+      "dual_success": true,
+      "dual_lower_bound": 1.1253518117371186e-07,
+      "primal_dual_gap": 6.0328730528105465e-18,
+      "warnings": []
+    },
+    {
+      "name": "primal/trace/240",
+      "passed": true,
+      "acceptance": "Feasibility and primal-dual certificate; solver exit flag retained, not used as proof.",
+      "bins": 240,
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 1,
+      "objective": 1.1253518100008415e-07,
+      "analytic": 0.0,
+      "gap": 1.1253518100008415e-07,
+      "mean": 0.9999981994370017,
+      "tail": 0.13533518593140678,
+      "constraint_violation": 0.0,
+      "dual_success": true,
+      "dual_lower_bound": 1.1253518117371186e-07,
+      "primal_dual_gap": -1.7362771196905287e-16,
+      "warnings": []
+    },
+    {
+      "name": "primal/trace/refinement",
+      "passed": true,
+      "initial_gap": 1.1253518099177552e-07,
+      "final_gap": 1.1253518100008415e-07,
+      "note": "Truncated conditional-reference grid; continuum feasibility is exact."
+    },
+    {
+      "name": "primal/tail/30",
+      "passed": true,
+      "acceptance": "Feasibility and primal-dual certificate; solver exit flag retained, not used as proof.",
+      "bins": 30,
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 1,
+      "objective": 1.1286809332601146,
+      "analytic": 1.128680268035584,
+      "gap": 6.652245305716065e-07,
+      "mean": 2.5373836297716488,
+      "tail": 0.8000000000003946,
+      "constraint_violation": 0.0,
+      "dual_success": true,
+      "dual_lower_bound": 1.128680933258836,
+      "primal_dual_gap": 1.2787548797632553e-12,
+      "warnings": []
+    },
+    {
+      "name": "primal/tail/60",
+      "passed": true,
+      "acceptance": "Feasibility and primal-dual certificate; solver exit flag retained, not used as proof.",
+      "bins": 60,
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 1,
+      "objective": 1.1286809332601153,
+      "analytic": 1.128680268035584,
+      "gap": 6.652245312377403e-07,
+      "mean": 2.5373836297716488,
+      "tail": 0.800000000000395,
+      "constraint_violation": 2.220446049250313e-16,
+      "dual_success": true,
+      "dual_lower_bound": 1.1286809332588361,
+      "primal_dual_gap": 1.2791989689731054e-12,
+      "warnings": []
+    },
+    {
+      "name": "primal/tail/120",
+      "passed": true,
+      "acceptance": "Feasibility and primal-dual certificate; solver exit flag retained, not used as proof.",
+      "bins": 120,
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 1,
+      "objective": 1.1286809332601153,
+      "analytic": 1.128680268035584,
+      "gap": 6.652245312377403e-07,
+      "mean": 2.5373836297716488,
+      "tail": 0.800000000000395,
+      "constraint_violation": 1.1102230246251565e-16,
+      "dual_success": true,
+      "dual_lower_bound": 1.1286809332588357,
+      "primal_dual_gap": 1.2796430581829554e-12,
+      "warnings": []
+    },
+    {
+      "name": "primal/tail/240",
+      "passed": true,
+      "acceptance": "Feasibility and primal-dual certificate; solver exit flag retained, not used as proof.",
+      "bins": 240,
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 1,
+      "objective": 1.1286809332601142,
+      "analytic": 1.128680268035584,
+      "gap": 6.652245301275173e-07,
+      "mean": 2.537383629771648,
+      "tail": 0.8000000000003944,
+      "constraint_violation": 0.0,
+      "dual_success": true,
+      "dual_lower_bound": 1.1286809332588357,
+      "primal_dual_gap": 1.2785328351583303e-12,
+      "warnings": []
+    },
+    {
+      "name": "primal/tail/refinement",
+      "passed": true,
+      "initial_gap": 6.652245305716065e-07,
+      "final_gap": 6.652245301275173e-07,
+      "note": "Truncated conditional-reference grid; continuum feasibility is exact."
+    },
+    {
+      "name": "primal/mean/30",
+      "passed": true,
+      "acceptance": "Feasibility and primal-dual certificate; solver exit flag retained, not used as proof.",
+      "bins": 30,
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 1,
+      "objective": 0.11306808969099905,
+      "analytic": 0.1108256237659907,
+      "gap": 0.0022424659250083467,
+      "mean": 0.600000000000055,
+      "tail": 0.03426967728739344,
+      "constraint_violation": 5.5067062021407764e-14,
+      "dual_success": true,
+      "dual_lower_bound": 0.11306808969103638,
+      "primal_dual_gap": -3.733124920302089e-14,
+      "warnings": []
+    },
+    {
+      "name": "primal/mean/60",
+      "passed": true,
+      "acceptance": "Feasibility and primal-dual certificate; solver exit flag retained, not used as proof.",
+      "bins": 60,
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 1,
+      "objective": 0.11137993067351887,
+      "analytic": 0.1108256237659907,
+      "gap": 0.0005543069075281681,
+      "mean": 0.6000000000000238,
+      "tail": 0.03532384324656558,
+      "constraint_violation": 2.3869795029440866e-14,
+      "dual_success": true,
+      "dual_lower_bound": 0.11137993067353447,
+      "primal_dual_gap": -1.559863349598345e-14,
+      "warnings": []
+    },
+    {
+      "name": "primal/mean/120",
+      "passed": true,
+      "acceptance": "Feasibility and primal-dual certificate; solver exit flag retained, not used as proof.",
+      "bins": 120,
+      "success": false,
+      "message": "Positive directional derivative for linesearch",
+      "iterations": 29,
+      "objective": 0.11096381277134998,
+      "analytic": 0.1108256237659907,
+      "gap": 0.00013818900535927936,
+      "mean": 0.6000000027726653,
+      "tail": 0.035586513345755036,
+      "constraint_violation": 2.7726653195614404e-09,
+      "dual_success": true,
+      "dual_lower_bound": 0.11096381462266064,
+      "primal_dual_gap": -1.8513106603279539e-09,
+      "warnings": []
+    },
+    {
+      "name": "primal/mean/240",
+      "passed": true,
+      "acceptance": "Feasibility and primal-dual certificate; solver exit flag retained, not used as proof.",
+      "bins": 240,
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 1,
+      "objective": 0.11086014749424308,
+      "analytic": 0.1108256237659907,
+      "gap": 3.452372825238359e-05,
+      "mean": 0.6000000000000179,
+      "tail": 0.035652126765526135,
+      "constraint_violation": 1.787459069646502e-14,
+      "dual_success": true,
+      "dual_lower_bound": 0.11086014749425538,
+      "primal_dual_gap": -1.2295719997723609e-14,
+      "warnings": []
+    },
+    {
+      "name": "primal/mean/refinement",
+      "passed": true,
+      "initial_gap": 0.0022424659250083467,
+      "final_gap": 3.452372825238359e-05,
+      "note": "Truncated conditional-reference grid; continuum feasibility is exact."
+    },
+    {
+      "name": "primal/both-high-k/30",
+      "passed": true,
+      "acceptance": "Feasibility and primal-dual certificate; solver exit flag retained, not used as proof.",
+      "bins": 30,
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 1,
+      "objective": 1.4480646024283388,
+      "analytic": 1.4172641757463351,
+      "gap": 0.030800426682003668,
+      "mean": 2.0000000000066214,
+      "tail": 0.8000000000014812,
+      "constraint_violation": 6.621370118864434e-12,
+      "dual_success": true,
+      "dual_lower_bound": 1.448064602427996,
+      "primal_dual_gap": 3.4283687000424834e-13,
+      "warnings": []
+    },
+    {
+      "name": "primal/both-high-k/60",
+      "passed": true,
+      "acceptance": "Feasibility and primal-dual certificate; solver exit flag retained, not used as proof.",
+      "bins": 60,
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 57,
+      "objective": 1.4242140381867643,
+      "analytic": 1.4172641757463351,
+      "gap": 0.0069498624404291665,
+      "mean": 2.0000000001536495,
+      "tail": 0.7999999999846452,
+      "constraint_violation": 1.5364953753760346e-10,
+      "dual_success": true,
+      "dual_lower_bound": 1.4242140383971176,
+      "primal_dual_gap": -2.1035329034191363e-10,
+      "warnings": []
+    },
+    {
+      "name": "primal/both-high-k/120",
+      "passed": true,
+      "acceptance": "Feasibility and primal-dual certificate; solver exit flag retained, not used as proof.",
+      "bins": 120,
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 3,
+      "objective": 1.4189621712836322,
+      "analytic": 1.4172641757463351,
+      "gap": 0.0016979955372971034,
+      "mean": 1.9999999998233116,
+      "tail": 0.8000000000041947,
+      "constraint_violation": 2.0577095583007576e-11,
+      "dual_success": true,
+      "dual_lower_bound": 1.4189621707208602,
+      "primal_dual_gap": 5.627720511824919e-10,
+      "warnings": []
+    },
+    {
+      "name": "primal/both-high-k/240",
+      "passed": true,
+      "acceptance": "Feasibility and primal-dual certificate; solver exit flag retained, not used as proof.",
+      "bins": 240,
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 5,
+      "objective": 1.4176863011381646,
+      "analytic": 1.4172641757463351,
+      "gap": 0.0004221253918295087,
+      "mean": 2.0000000000416938,
+      "tail": 0.8000000000015818,
+      "constraint_violation": 4.169375955598298e-11,
+      "dual_success": true,
+      "dual_lower_bound": 1.417686301180522,
+      "primal_dual_gap": -4.23574508801039e-11,
+      "warnings": []
+    },
+    {
+      "name": "primal/both-high-k/refinement",
+      "passed": true,
+      "initial_gap": 0.030800426682003668,
+      "final_gap": 0.0004221253918295087,
+      "note": "Truncated conditional-reference grid; continuum feasibility is exact."
+    },
+    {
+      "name": "primal/both-low-k/30",
+      "passed": true,
+      "acceptance": "Feasibility and primal-dual certificate; solver exit flag retained, not used as proof.",
+      "bins": 30,
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 1,
+      "objective": 0.4132323340393318,
+      "analytic": 0.3800665859851933,
+      "gap": 0.03316574805413852,
+      "mean": 0.5000000000698397,
+      "tail": 0.09999999998078389,
+      "constraint_violation": 6.98396895870701e-11,
+      "dual_success": true,
+      "dual_lower_bound": 0.4132323343142349,
+      "primal_dual_gap": -2.7490310028355225e-10,
+      "warnings": []
+    },
+    {
+      "name": "primal/both-low-k/60",
+      "passed": true,
+      "acceptance": "Feasibility and primal-dual certificate; solver exit flag retained, not used as proof.",
+      "bins": 60,
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 5,
+      "objective": 0.3876871295693838,
+      "analytic": 0.3800665859851933,
+      "gap": 0.007620543584190509,
+      "mean": 0.500000000027594,
+      "tail": 0.10000000000331348,
+      "constraint_violation": 2.7594038165545953e-11,
+      "dual_success": true,
+      "dual_lower_bound": 0.3876871296021871,
+      "primal_dual_gap": -3.280331561938965e-11,
+      "warnings": []
+    },
+    {
+      "name": "primal/both-low-k/120",
+      "passed": true,
+      "acceptance": "Feasibility and primal-dual certificate; solver exit flag retained, not used as proof.",
+      "bins": 120,
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 1,
+      "objective": 0.38193537691191787,
+      "analytic": 0.3800665859851933,
+      "gap": 0.001868790926724595,
+      "mean": 0.5000000000815726,
+      "tail": 0.10000000001833825,
+      "constraint_violation": 8.157263753361121e-11,
+      "dual_success": true,
+      "dual_lower_bound": 0.3819353769839742,
+      "primal_dual_gap": -7.205630536688545e-11,
+      "warnings": []
+    },
+    {
+      "name": "primal/both-low-k/240",
+      "passed": true,
+      "acceptance": "Feasibility and primal-dual certificate; solver exit flag retained, not used as proof.",
+      "bins": 240,
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 5,
+      "objective": 0.38053158483293764,
+      "analytic": 0.3800665859851933,
+      "gap": 0.00046499884774436895,
+      "mean": 0.5000000001475695,
+      "tail": 0.10000000002857515,
+      "constraint_violation": 1.4756951216554626e-10,
+      "dual_success": true,
+      "dual_lower_bound": 0.38053158497145917,
+      "primal_dual_gap": -1.3852152758175862e-10,
+      "warnings": []
+    },
+    {
+      "name": "primal/both-low-k/refinement",
+      "passed": true,
+      "initial_gap": 0.03316574805413852,
+      "final_gap": 0.00046499884774436895,
+      "note": "Truncated conditional-reference grid; continuum feasibility is exact."
+    }
+  ],
+  "coverage": [
+    "All four KL branches, including k<exp(-Q), boundaries and infeasibility",
+    "Independent quadrature: normalization, mean, KL and tail kernels",
+    "Independent SLSQP primal on reference-conditional grids with refinement and discrete dual certificate",
+    "KKT stationarity, multiplier signs and complementary slackness",
+    "Gamma5 and compact Fourier transforms, normalization and time variance",
+    "Compact entropy and hard energy support",
+    "n=4 max versus sum, cancellation, spectral tails and real-time phases"
+  ],
+  "limitations": [
+    "Finite-grid numerical global checks supplement, not replace, the analytic proof.",
+    "Mathematical spectral probes are not reconstructed QFT observables.",
+    "No finite-G gravity, observer recoil, spatial localization or anti-scrambling amplitude."
+  ]
+}

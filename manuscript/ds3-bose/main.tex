@@ -1,0 +1,323 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,microtype,booktabs}
+\usepackage[margin=25mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\dd}{\mathop{}\!\mathrm d}
+\newcommand{\HH}{\mathcal H}
+\newcommand{\PP}{P_+}
+\newcommand{\FF}{\mathsf F}
+\newcommand{\hh}{h_{\rm m}}
+\title{Identical matter in local dS$_3$:\\Bose normalization and a short-time witness}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Working research note --- 31 October 2026}
+\begin{document}\maketitle
+\begin{abstract}
+We construct the two-identical-particle sector of the previously specified
+zero-gravity observer model by descending the matter permutation through
+group averaging. Canonical Fock normalization gives a direct term plus
+an exchange term, rather than a universal factor of two. The exchange
+matrix element is the existing physical scalar Racah element within the
+full channel space. The regulated two-creation order difference vanishes
+exactly at coincident times. A spherical test proves that its quadratic
+small-time coefficient is strictly positive for the compact real packet
+considered here. Raw quadrature and precision failures are retained;
+no finite-gravity or complete-Fock construction is claimed.
+\end{abstract}
+
+\section{Model and labelled Hilbert space}
+Use radius $\ell=1$, Newton constant $G_N=0$, proper $SO^+(3,1)$,
+two distinguishable scalar BD observers with mass labels at least
+$s>0$, and a single free KG-normalized scalar matter species $p>0$.
+Couplings are one, $\rho(c)=2c^2/\pi$, and
+$\hh(c)=\sqrt{1+c^2}$. Keep the same real nonnegative initial packet:
+\[
+ \rho(c)|f(c)|^2=\frac{630}{0.4}x^4(1-x)^4
+ \mathbf1_{[0.4,0.8]}(c),\qquad x=(c-0.4)/0.4 .
+\]
+It has unit norm and its zero extension is $C^1$.
+Numerical examples take $s=0.2$, $p=0.6$.
+Every creation block carries the already defined half-period regulator
+$e^{\pi H_{\rm out}/2}A e^{-\pi H_{\rm in}/2}$.
+At real time $t$ the convention is
+$A(t)=e^{-iH_{\rm out}t}A e^{iH_{\rm in}t}$.
+These are creation blocks, not self-adjoint unsmeared fields.
+
+First temporarily label the two equal-mass matter slots.
+In the completed physical four-body space $\HH_{\rm lab}$ the slot
+permutation $\FF$ obeys
+\[
+ \FF^\dagger=\FF,\qquad \FF^2=1,\qquad
+ \PP=(1+\FF)/2 .
+\]
+Indeed, on finite-$K$, compact-mass tests it commutes with the diagonal
+group action. The convergent four-body group average therefore satisfies
+$\eta(\FF u,\FF v)=\eta(u,v)$ and
+$\eta(u,\FF v)=\eta(\FF u,v)$.
+It preserves the null space, descends to the quotient, and extends by
+continuity as a unitary involution. The Bose space is $\PP\HH_{\rm lab}$.
+This argument concerns the full four-body space, including all internal
+spins, rather than the scalar subblock in a selected pairing.
+
+\section{Fock normalization and the exchange form}
+For orthonormal matter modes, let $M_j(t)$ be the observer operator
+multiplying $a_j^\dagger$. On a finite-mode core a labelled chain has
+coefficients
+\[
+ C_{jk}=M_j(t_2)M_k(t_1)f .
+\]
+Direct use of
+$a_j^\dagger|n_j\rangle=\sqrt{n_j+1}|n_j+1\rangle$
+gives the symmetric tensor
+\begin{equation}
+ B(t_2,t_1)=\sqrt2\,\PP C
+           =\frac{C+\FF C}{\sqrt2}.
+ \label{focknorm}
+\end{equation}
+The factor $\sqrt2$ is the usual Fock factor \cite{dg}.
+It is not an additional choice of rigging-map or Haar normalization.
+The group-average argument above and the bounded regulated labelled
+$1\to2$ block extend \eqref{focknorm} to the physical completion. In particular
+$\|A^+_{B,1\to2}\|\le\sqrt2\|A^+_{{\rm lab},1\to2}\|$.
+This does not construct the whole Fock tower or a common self-adjoint
+field domain.
+
+For any two labelled chain states $k,l$,
+\begin{equation}
+ \langle B_k,B_l\rangle
+ =\langle k,l\rangle+\langle k,\FF l\rangle,\qquad
+ 0\le\|B_k\|^2\le2\|k\|^2 .
+ \label{boseform}
+\end{equation}
+The exchange expectation may have either sign for general $k$.
+Equality to $2\|k\|^2$ requires $\FF k=k$.
+Noncommuting observer coefficients do not ensure this.
+Setting two distinguishable species labels equal only constructs
+$\HH_{\rm lab}$; it does not apply the Bose projection.
+
+Use the previous $0000=1$ scalar intertwiners $J_b$ in the pairing
+$(a,p)|(c,p)$ and
+\[
+ W_b=\rho(b)K_{abp}K_{bcp},\qquad e_b=\sqrt{W_b}J_b .
+\]
+The flip maps $J_d$ to the opposite pairing, with the same spherical
+normalization. Thus
+\[
+ U_{00}(b,d;a,p,c,p)=\langle e_b,\FF e_d\rangle .
+\]
+This is Hermitian as a kernel in $b,d$. Its full-space origin implies
+contraction bounds; one must not require its scalar restriction to
+square to one. The physical normalization and shadow phases are those
+fixed in the earlier LPRS dictionary \cite{lprs}.
+No further factorial or shadow-reflection factor is inserted.
+The direct/crossed decomposition also has clear precedents in the
+two-dimensional observer calculation \cite{kl}.
+
+\section{Two times and a stable order difference}
+Define the real base amplitude, supported at $a,b,c\ge s$,
+\[
+ T_b(a,c)=\frac{f(c)E_{abp}E_{bcp}}{\sqrt{W_b}}\,
+       e^{\pi[\hh(a)-\hh(c)]/2},
+ \qquad
+ \alpha_b=e^{-it[\hh(a)-\hh(b)]},\quad
+ \beta_b=e^{-it[\hh(b)-\hh(c)]}.
+\]
+Let $k=\int T_b\alpha_b e_b\,\dd b$ and
+$l=\int T_b\beta_b e_b\,\dd b$, with the outer direct integrals in
+$a,c$ understood. The physical Bose states are
+$B_{t0}=\sqrt2\PP k$ and $B_{0t}=\sqrt2\PP l$.
+Put
+\[
+ N=\langle k,k\rangle=\langle l,l\rangle,\quad
+ Y=\langle k,l\rangle,\quad
+ E_1=\langle k,\FF k\rangle,\quad E_2=\langle l,\FF l\rangle,\quad
+ Z=\langle k,\FF l\rangle .
+\]
+Then
+\begin{align}
+ \|B_{t0}\|^2&=N+E_1,&
+ \|B_{0t}\|^2&=N+E_2,\\
+ \langle B_{t0},B_{0t}\rangle&=Y+Z,&
+ D_B(t)&=2N+E_1+E_2-2\operatorname{Re}(Y+Z).
+ \label{expanded}
+\end{align}
+All exchange terms use the same unsymmetrized, complex $U_{00}$.
+For example their common weight is
+\[
+ \pi_0(c)\frac{g(a)}{g(c)}
+ \sqrt{\widehat R_p(a,b)\widehat R_p(b,c)
+       \widehat R_p(a,d)\widehat R_p(d,c)}\,U_{00}(b,d;a,p,c,p),
+\]
+and the phases for $E_1,E_2,Z$ are respectively
+\[
+ e^{it[\hh(d)-\hh(b)]},\quad e^{it[\hh(b)-\hh(d)]},\quad
+ e^{it[\hh(a)+\hh(c)-\hh(b)-\hh(d)]}.
+\]
+The direct terms use the positive density
+$\pi_0(c)g(a)\widehat R_p(a,b)\widehat R_p(b,c)/g(c)$.
+Here
+\[
+ g(x)=\frac{x e^{\pi/(\sqrt{1+x^2}+x)}}{1+e^{-2\pi x}},\quad
+ \widehat R_p(a,b)=
+ \frac{A-B}{8\pi(A+\cosh\pi p)(B+\cosh\pi p)},
+\]
+with $A=\cosh\pi(a+b)$ and $B=\cosh\pi(a-b)$.
+
+For computation set $e_b^{\rm en}=2\hh(b)-\hh(a)-\hh(c)$ and
+\[
+ \delta_b=\alpha_b-\beta_b
+ =2i e^{-it[\hh(a)-\hh(c)]/2}
+       \sin(te_b^{\rm en}/2).
+\]
+The stable formula is
+\begin{equation}
+ D_B=\|\delta T\|^2+\langle\delta T,\FF\,\delta T\rangle .
+ \label{stable}
+\end{equation}
+It gives $D_B(0)=0$ algebraically, without subtracting large nearly
+equal overlaps. Equal masses alone do not justify deleting the exchange
+term. A four-\emph{field} vacuum correlator would also include the
+intermediate vacuum contraction; it is not computed by this
+two-creation sector.
+
+\section{A strict small-time result}
+All polynomial mass moments of $T$ are finite. For instance the compact
+initial support, $g(a)\le a+C_0$, and
+$\widehat R_p(a,b)\le e^{-\pi|a-b|}/(4\pi)$
+give an exponentially integrable majorant in the two mass differences.
+Consequently $j_b=e_b^{\rm en}T_b$ is in the labelled physical space.
+Multiplication by the common outer phase in $\delta_b$ is unitary and
+commutes with $\FF$. Using
+$|\sin y-y|\le |y|^3/6$ gives
+\begin{equation}
+ D_B(t)=t^2 Q_B+O(t^4),\qquad
+ Q_B=\|j\|^2+\langle j,\FF j\rangle
+     =\|\sqrt2\PP j\|^2\ge0 .
+ \label{short}
+\end{equation}
+This follows in Hilbert norm, with the sixth mass moment controlling
+the remainder. Equation \eqref{stable} is even in real $t$.
+
+We now show $Q_B>0$ for the stated packet.
+The exact local vertex from the preceding note is
+\[
+ E_{abp}=C_p\sqrt{\frac{\cosh\pi b}{\cosh\pi a}}H_p(a,b),\quad
+ C_p=\frac1{4\sqrt\pi}\sqrt{\frac{\sinh\pi p}{p}}.
+\]
+\[
+ H_p(a,b)=r_p(a-b)-r_p(a+b),\qquad
+ r_p(x)=\frac1{\cosh\pi x+\cosh\pi p}.
+\]
+The all-spherical component is invariant under the matter flip.
+The derivative of the Bose order difference at zero has this component
+equal to $i\sqrt2 f(c)$ times a positive common leg factor times
+\[
+ J(a,c)=\int_s^\infty H_p(a,b)H_p(b,c)
+           [2\hh(b)-\hh(a)-\hh(c)]\,\dd b .
+\]
+For $a=c>s$ this becomes
+$2\int_s^\infty H_p(c,b)^2[\hh(b)-\hh(c)]\,\dd b$.
+Pair $b=c-x$ with $b=c+x$, for $0<x<c-s$. Since $r_p$ strictly
+decreases on the positive axis,
+\[
+ H_p(c,c+x)>H_p(c,c-x)>0 .
+\]
+Strict convexity and monotonicity of $\hh$ also imply
+\[
+ \hh(c+x)-\hh(c)>\hh(c)-\hh(c-x)>0 .
+\]
+The paired contribution is therefore strictly positive, and the
+remaining $b>2c-s$ contribution is positive. Thus $J(c,c)>0$.
+
+Continuity, with exponential domination, implies positivity in some
+uniform strip $|a-c|<\varepsilon$ for $c$ in any compact interval
+$I\subset(0.4,0.8)$, with $\varepsilon$ sufficiently small to keep
+$a>s$. Choose an all-spherical compact-mass test with coefficient
+$f(c)\mathbf1_I(c)\mathbf1_{|a-c|<\varepsilon}$.
+Its four-body group-average norm is finite, and its pairing with
+$\sqrt2\PP j$ is strictly positive.
+Physical Cauchy--Schwarz proves $Q_B>0$.
+Hence $D_B(t)>0$ for sufficiently small nonzero $t$.
+The proof establishes existence of the strip and time neighborhood;
+no numerical size for either is certified. This effect is a finite-mass
+observer result at $G_N=0$, not a gravitational chaos exponent.
+
+\section{Mass tails and a free benchmark}
+Let $T_L$ restrict $a,b\le L$ and retain the whole initial packet.
+The preceding compact-packet bounds apply at $q=p$:
+\[
+ \|T-T_L\|^2\le\epsilon_L,\qquad \|T\|^2\le N_{\max}.
+\]
+Time phases do not change these norms.
+The direct inner-product tail is at most $\epsilon_L$, since the
+cutoff commutes with the phase multipliers.
+The exchange tail is at most $2\sqrt{\epsilon_LN_{\max}}$.
+For \eqref{stable}, the direct tail is at most $4\epsilon_L$ and the
+exchange tail at most $8\sqrt{\epsilon_LN_{\max}}$. Thus
+\begin{equation}
+ |D_B-D_{B,L}|
+ \le4\epsilon_L+8\sqrt{\epsilon_LN_{\max}} .
+\end{equation}
+This bound is not optimized for $t\to0$ and does not certify tiny
+numerical differences at short times.
+For $L=12$,
+$\epsilon_L\le1.16353\,10^{-16}$,
+$N_{\max}\le1.36456\,10^{-3}$, and the right side is
+$3.18767\,10^{-9}$. The internal physical spectrum remains infinite.
+
+In a fixed-observer free benchmark, let $u_t$ be a one-particle vector
+with $\langle u_t,u_0\rangle=L_p(t)$, where
+\[
+ L_p(t)=\frac{\sin(pt)}{4\pi\sinh(\pi p)\sinh t},\qquad
+ L_p(0)=\frac{p}{4\pi\sinh(\pi p)}.
+\]
+The Fock identity gives
+\[
+ \|a^\dagger(u_t)a^\dagger(u_0)\Omega\|^2
+ =L_p(0)^2+|L_p(t)|^2,\qquad D_{\rm free}(t)=0.
+\]
+At $t=0$ the norm is $2L_p(0)^2$.
+This is the required free target. We have not yet established convergence
+of the complete Bose exchange term to it as observer mass tends to
+infinity; the earlier noncrossed limit alone is insufficient.
+
+\section{Numerics, independent checks, and limitations}
+\input{numerics.tex}
+The occupation-basis tests independently construct finite Fock matrices
+with three observer levels and four matter modes, including
+noncommuting observer coefficients. A separate finite cyclic-group
+average tests permutation descent algebraically; it is not a numerical
+replacement for noncompact de Sitter group averaging.
+High-precision one-dimensional integrals check the positive diagonal
+pairing argument.
+
+A sample initially intended as regular, $(a,b,c,d)=(0.7,0.5,0.6,0.8)$, lies
+extremely close to $a+c=b+d$ at binary64 precision.
+The old vectorized formula loses about $160\%$ relative accuracy there
+and fails flip Hermiticity. The original failed diagnostic is retained.
+Selected-point reevaluation at 55 and 75 decimal digits restores
+consistency; it does not certify the whole vectorized grid.
+Another retained far-tail point has roughly $0.128\%$ relative error.
+No raw kernel is silently made real, symmetrized, or replaced.
+The scientific proof of \eqref{short} does not depend on this
+special-function numerical representation.
+
+Next work must establish stable large-mass crossed limits and their
+free Bose benchmark, then address the full Fock domain and finite
+gravity. The present note does not complete de Sitter holography.
+
+\begin{thebibliography}{9}
+\bibitem{dg} J.~Derezi\'nski and C.~G\'erard,
+\emph{Asymptotic completeness in quantum field theory.
+Massive Pauli--Fierz Hamiltonians}, June 1997 manuscript,
+Secs.~2.2--2.3,
+\href{https://www.imo.universite-paris-saclay.fr/~christian.gerard/publis/pauli-f.pdf}{author-hosted manuscript}.
+\bibitem{lprs} J.~Liu, E.~Perlmutter, V.~Rosenhaus and D.~Simmons-Duffin,
+\emph{$d$-dimensional SYK, AdS Loops, and $6j$ Symbols},
+\href{https://arxiv.org/abs/1808.00612}{arXiv:1808.00612}, v3.
+\bibitem{kl} D.~K.~Kolchmeyer and H.~Liu,
+\emph{Chaos and the Emergence of the Cosmological Horizon},
+\href{https://arxiv.org/abs/2411.08090}{arXiv:2411.08090}, v1,
+Sec.~6.3.
+\end{thebibliography}
+\end{document}

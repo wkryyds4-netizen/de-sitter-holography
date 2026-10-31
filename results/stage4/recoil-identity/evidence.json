@@ -1,0 +1,45 @@
+{
+  "created_at_utc": "2026-10-30T17:22:40.085522+00:00",
+  "pages": 5,
+  "diagnostics": 106,
+  "kind": "source-checked sewing conventions, common-angle vacuum obstruction, reduced spectral endpoint",
+  "compilers": {
+    "local": "two final pdfLaTeX passes",
+    "desktop": "success on final source"
+  },
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "maximum_pixel_dimension": 1050,
+    "clipping_or_overlap": false
+  },
+  "limitations": [
+    "identity test does not fix insertion",
+    "paired common-angle endpoint is not double vacuum",
+    "reduced pole continuation is not finite-kappa continuation",
+    "no physical dS Gram kernel",
+    "repeated vacuum checks included in diagnostic count",
+    "no interval quadrature certificate",
+    "finite G and complete dual remain open"
+  ],
+  "hashes": {
+    "code/build_identity_note.ps1": "e2695c1c69438f1b9651efd874ef6aae13234d3b2d607bd858e74662bdfbedaa",
+    "code/recoil_identity.py": "4b0bfdc7fe72a300cd86c7b2ef580fa27559d31ad111393174ff0c6c33817f25",
+    "literature/stage4-recoil-identity-sources.md": "8c5921de99d6e924aa278934cf193e90c27d3ed82fd91bca815606e23a05bb94",
+    "manuscript/recoil-identity/main.tex": "c1a98bedc49de7789a59d79f76228556b22563d4d839de25425d81c2fe726c73",
+    "notes/stage4-recoil-identity.md": "a40ce640eb58634a1e140f9a11d24a9f3ff97198e1975681720645ae83b8efbc",
+    "notes/stage4-recoil-spectral.md": "18599b167bad12c5b18e7d82493a59eab17dd045396d065a86f5ffa27a057a6c",
+    "output/pdf/de-sitter-recoil-identity.pdf": "173c5e74257bd872d9231ad802a5c3f700e280ef8fffa63402c31f261acaabcc",
+    "results/stage4/recoil-identity/build-review.md": "3f7317b8e8652ac66fda5c19efcc74b7d205a92e2a659020e07e979ba9d94c11",
+    "results/stage4/recoil-identity/diagnostics.json": "25ecfec3716a30db5747c0b9d44789224fbf7fc016ae0127edb11752076b84fd",
+    "results/stage4/recoil-identity/main.log": "e60f6294b46fbd72a22d64f946403dcfc84abba448a4811baa1eb17201979a28",
+    "sources/chandra-liska-post-2610.30247v1.html": "fe8580884e81ba9817e292bbca7c70b7c7d494e89efef62695e94bcf07801d0f",
+    "sources/collier-eberhardt-zhang-2304.13650v3.html": "452afad1e7e980c44b799cc02746812171afcd728252eb4d8556912d4bab2c4e",
+    "sources/collier-et-al-2501.01486v1.html": "dfabbfd5df8af47baecf15f988633d88e34e0f94becaf96b903835936f64fb8d"
+  }
+}

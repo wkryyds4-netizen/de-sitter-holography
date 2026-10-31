@@ -1,0 +1,106 @@
+{
+  "status": "passed",
+  "checks": 203,
+  "errors": [],
+  "symbolic": {
+    "shared_top": true,
+    "shared_bottom": true,
+    "large_phase_correct": true,
+    "small_phase_correct": true,
+    "large_phase": "-r*(4*L*M + 3*r + 4*v)/(8*M)",
+    "small_terms": [
+      {
+        "argument": "-I*p/2 - I*r/2 + I*u/2 + 1/2",
+        "weight": -1
+      },
+      {
+        "argument": "I*q/2 - I*v/2 + 1/2",
+        "weight": 1
+      },
+      {
+        "argument": "-I*p/2 - I*u/2 + 1/2",
+        "weight": 1
+      },
+      {
+        "argument": "I*r/2 + 1",
+        "weight": -1
+      },
+      {
+        "argument": "-I*q/2 + I*v/2 + 1/2",
+        "weight": 1
+      },
+      {
+        "argument": "-I*q/2 - I*v/2 + 1/2",
+        "weight": 1
+      },
+      {
+        "argument": "-I*p/2 + I*u/2 + 1/2",
+        "weight": 1
+      },
+      {
+        "argument": "I*p/2 + I*u/2 + 1/2",
+        "weight": 1
+      },
+      {
+        "argument": "-I*q/2 - I*r/2 - I*v/2 + 1/2",
+        "weight": -1
+      }
+    ],
+    "large_terms": [
+      {
+        "argument": "-I*M - I*r - I*v",
+        "weight": 1
+      },
+      {
+        "argument": "-I*M + I*p/2 - I*r/2 - I*u/2 - I*v + 1/2",
+        "weight": -1
+      },
+      {
+        "argument": "-I*M + I*p/2 - I*u/2 + 1/2",
+        "weight": 1
+      },
+      {
+        "argument": "I*M + I*u + 1",
+        "weight": -1
+      },
+      {
+        "argument": "-I*M - I*u + 1",
+        "weight": -2
+      },
+      {
+        "argument": "I*M - I*r/2 + I*u",
+        "weight": 1
+      },
+      {
+        "argument": "-I*M - I*q/2 - I*u - I*v/2 + 1/2",
+        "weight": 1
+      },
+      {
+        "argument": "-I*M + I*q/2 - I*u - I*v/2 + 1/2",
+        "weight": 1
+      },
+      {
+        "argument": "-I*M - I*p/2 - I*u/2 + 1/2",
+        "weight": 1
+      },
+      {
+        "argument": "-I*M - I*q/2 - I*r/2 - I*v/2 + 1/2",
+        "weight": -1
+      },
+      {
+        "argument": "-I*M + I*q/2 - I*r/2 - I*v/2 + 1/2",
+        "weight": -1
+      },
+      {
+        "argument": "-I*M - I*r - I*v + 1",
+        "weight": 1
+      },
+      {
+        "argument": "-I*M - I*p/2 - I*r/2 - I*u/2 - I*v + 1/2",
+        "weight": -1
+      }
+    ]
+  },
+  "scope": "Independent Decimal bound/residual replay, exact rational threshold and symbolic Gamma phase; not a uniform transverse or interval arithmetic certification.",
+  "audit_source_sha256": "994a4f1ec276150919c2e9c29c93a3b3927067e8bf9846f13feb4fbfac8ab262"
+}

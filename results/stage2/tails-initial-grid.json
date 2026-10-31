@@ -1,0 +1,65 @@
+{
+  "tasks": [
+    {
+      "field_family": "gaussian",
+      "field_sigma": 0.3,
+      "clock": "compact",
+      "mean": 10,
+      "Q": 6.372401271531564,
+      "delta_Q": 0.0,
+      "CDF_T2": 0.017638768211962752,
+      "CDF_T4_over_3": 0.15023808442202538,
+      "CDF_T4_pieces": [
+        0.034966410279890114,
+        0.20869951221338834,
+        0.20704833077279772
+      ],
+      "actual_C2_error": 0.0003061257238420515,
+      "actual_C4_error_over_3": 0.017613819321872226,
+      "window_C2_bound": 0.017638768211962752,
+      "window_C4_bound": 0.15023808442202538,
+      "raw_indicator_grid": {
+        "T2_normalized": 0.016602177073888048,
+        "T4_normalized": 0.1500435980004182,
+        "T4_pieces": [
+          0.03292872186418336,
+          0.2093343254862799,
+          0.20786774665079136
+        ]
+      },
+      "indicator_C2_signed_error": -0.0010365911380747043,
+      "indicator_C4_signed_error": -0.00019448642160718732
+    },
+    {
+      "field_family": "cosine",
+      "field_sigma": 0.3,
+      "clock": "compact",
+      "mean": 10,
+      "Q": 6.372401271531564,
+      "delta_Q": 0.0,
+      "CDF_T2": 0.004003485419675656,
+      "CDF_T4_over_3": 0.09811371611507362,
+      "CDF_T4_pieces": [
+        0.007990942943845725,
+        0.14333153953748656,
+        0.14301866586388856
+      ],
+      "actual_C2_error": 0.0007195913029258265,
+      "actual_C4_error_over_3": 0.007727866868870149,
+      "window_C2_bound": 0.004003485419675656,
+      "window_C4_bound": 0.09811371611507362,
+      "raw_indicator_grid": {
+        "T2_normalized": 0.004831000013758246,
+        "T4_normalized": 0.09998831224628797,
+        "T4_pieces": [
+          0.00963866146638356,
+          0.14538962071485034,
+          0.14493665455763002
+        ]
+      },
+      "indicator_C2_signed_error": 0.0008275145940825892,
+      "indicator_C4_signed_error": 0.001874596131214351
+    }
+  ],
+  "source_validation": "validation.json"
+}

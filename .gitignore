@@ -1,0 +1,24 @@
+__pycache__/
+sources/*.html
+
+# Local research context and recovery archives are not publication inputs.
+/AGENTS.md
+/PROJECT.md
+/journal/
+/tmp/
+/snapshots/
+/.codex/
+/.agents/
+/.env
+/.env.*
+sources/*.pdf
+# Historical paper caches stored beside source-audit records.
+/results/stage3/cg-domain-source-audit/kolchmeyer-liu-2411.08090v1.pdf
+/results/stage3/cg-domain-source-audit/v1-page26.png
+/results/stage3/cg-domain-source-audit/v1-page76.png
+
+# LaTeX compiler products; reading PDFs live in output/pdf.
+*.aux
+*.out
+*.toc
+*.synctex.gz

@@ -1,0 +1,307 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,microtype,booktabs}
+\usepackage[margin=25mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\dd}{\mathop{}\!\mathrm d}
+\newcommand{\sech}{\operatorname{sech}}
+\newcommand{\csch}{\operatorname{csch}}
+\newcommand{\HH}{\mathcal H}
+\title{The observer mass spectrum in dS$_3$:\\spacetime normalization and the BD projector}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Working research note --- 31 October 2026}
+\begin{document}\maketitle
+\begin{abstract}
+We distinguish fixed-mass Klein--Gordon normalization from the mass-delta
+normalization induced by spacetime $L^2$ in a specified $G=0$ observer model.
+A Darboux polar decomposition gives the full radial spectrum, including
+its two continuum channels and bound states. The Bunch--Davies line and
+its antipodal image have a nonzero spacetime overlap in dS$_3$.
+We obtain the orthogonal observer projector and the resulting two-leg
+rescaling of the previously computed local vertex. Bounded compressed
+insertions provide a controlled intermediate-state identity.
+Group averaging, the physical state, and finite-gravity sewing remain open.
+\end{abstract}
+
+\section{Spacetime $L^2$ and a complete radial resolution}
+Set the radius to one, use $G=0$, and normalize $\int |Y_{lm}|^2\dd\Omega=1$.
+For
+\[
+ ds^2=-\dd t^2+\cosh^2t\,\dd\Omega_2^2,\qquad
+ F=\sum_{lm}f_{lm}(t)Y_{lm},\qquad \chi_{lm}=\cosh t\,f_{lm},
+\]
+the map $R:F\mapsto(\chi_{lm})$ is unitary from spacetime $L^2$
+to $\bigoplus_{lm}L^2(\mathbb R,\dd t)$ and
+\begin{equation}
+ R\Box R^{-1}=\bigoplus_{lm}(1+H_l),\qquad
+ H_l=-\partial_t^2-l(l+1)\sech^2t .
+\end{equation}
+Each $H_l$ is self-adjoint on $H^2(\mathbb R)$ with core
+$C_c^\infty(\mathbb R)$, since its potential is real and bounded.
+The full direct-sum domain additionally requires
+$\sum_{lm}\|(1+H_l)\chi_{lm}\|^2<\infty$.
+The finite angular-mode core fixes the closure; the larger invariant
+symmetric domain $C_c^\infty(\mathrm{dS}_3)$ has the same closure.
+It follows that the Casimir spectral projections commute with proper,
+orthochronous isometries.
+
+The reflectionless potential and its bound states are standard
+\cite{LMW}. To fix completeness and normalization explicitly, let
+$D_j=\partial_t-j\tanh t$. Then
+\begin{equation}
+ D_j^\dagger D_j=H_{j-1}+j^2,\quad
+ D_jD_j^\dagger=H_j+j^2,\quad
+ W_j=D_j(H_{j-1}+j^2)^{-1/2}.
+\end{equation}
+Inductively $H_{j-1}\geq-(j-1)^2$, so the inverse square root is bounded.
+$W_j$ is an isometry onto $(\ker D_j^\dagger)^\perp$, intertwines the two
+Hamiltonians, and the omitted kernel is spanned by $\sech^jt$ at energy
+$-j^2$. Starting with the ordinary Fourier transform of $H_0$ proves:
+\begin{itemize}
+\item the positive spectrum $\nu^2>0$ is purely absolutely continuous
+with two channels;
+\item each radial $H_l$ has the simple eigenvalues $-k^2$, $1\leq k\leq l$;
+\item the bounded zero-energy solution $P_l(\tanh t)$ is a resonance,
+not an $L^2$ eigenvector or a spectral atom.
+\end{itemize}
+Thus the full $\Box$ has point eigenvalues $1-k^2$, each with infinitely
+many angular modes $l\geq k$. We do not identify these with a group
+discrete series without a separate representation analysis.
+
+Let $d_l(\nu)=\prod_{j=1}^l\sqrt{\nu^2+j^2}$. A delta-normalized
+continuum basis, with $\nu>0$ for each sign, is
+\begin{equation}
+ e_{\nu l}^{\mp}(t)=
+ \frac{i^lD_l\cdots D_1e^{\mp i\nu t}}{\sqrt{2\pi}\,d_l(\nu)}.
+\end{equation}
+A real normalized bound basis is
+\begin{equation}
+ b_{lk}(t)=
+ \frac{D_l\cdots D_{k+1}\sech^kt}
+ {\sqrt{B(1/2,k)}\prod_{j=k+1}^l\sqrt{j^2-k^2}}.
+\end{equation}
+For $a_\pm(\nu)=\langle e^\pm_{\nu l},\chi\rangle$ and
+$c_k=\langle b_{lk},\chi\rangle$, the exact resolution is
+\begin{align}
+ \|\chi\|^2&=\int_0^\infty(|a_-|^2+|a_+|^2)\dd\nu+
+                 \sum_{k=1}^l|c_k|^2,\\
+ \chi&=\int_0^\infty(e^-a_-+e^+a_+)\dd\nu+\sum_{k=1}^lb_{lk}c_k .
+\end{align}
+The inverse is an $L^2$ limit. A single continuum channel is not a
+resolution of the full position delta function.
+
+\section{The BD and antipodal Gram matrix}
+Use the KG-normalized BD mode $u_{\nu lm}=f_{\nu l}Y_{lm}$ from the
+preceding note \cite{local}, consistent with \cite{MM}. Set
+\[
+ q=e^{-\pi\nu},\qquad N=[2\nu(1-q^2)]^{-1/2},\qquad
+ \chi_B=\cosh t\,f_{\nu l}=\sqrt{2\pi}N(e^- -qe^+).
+\]
+The antipodal pullback $A:(t,n)\mapsto(-t,-n)$ is a self-adjoint
+unitary on spacetime $L^2$, commuting with the proper isometry group.
+Keeping the angular harmonic $Y_{lm}$ fixed, its radial mode is
+\begin{equation}
+ \chi_A(t)=(-1)^l\chi_B(-t)=(-1)^l\chi_B(t)^*
+             =\sqrt{2\pi}N(e^+ -qe^-).
+\end{equation}
+Complex conjugation of the full spherical harmonic also reverses $m$;
+the radial and full conjugations must be distinguished.
+
+The continuum resolution now gives
+\begin{equation}
+ \langle u_{\nu lm}^{r},u_{\nu'l'm'}^{s}\rangle_{L^2}
+ =G_{rs}(\nu)\delta(\nu-\nu')\delta_{ll'}\delta_{mm'},\qquad
+ G=\frac{\pi}{\nu}
+ \begin{pmatrix}\coth\pi\nu&-\csch\pi\nu\\
+                 -\csch\pi\nu&\coth\pi\nu\end{pmatrix}.
+ \label{eq:gram}
+\end{equation}
+Its eigenvalues are $(\pi/\nu)\tanh(\pi\nu/2)$ and
+$(\pi/\nu)\coth(\pi\nu/2)$, with $\det G=(\pi/\nu)^2$.
+This positive spacetime Gram matrix is different from the fixed-mass
+KG signature $(+1,-1)$. In a basis using $\chi_B^*$ as the second radial
+mode, the off-diagonal entry acquires $(-1)^l$.
+
+KL's dS$_2$ construction \cite[eqs.\ (4.9)--(4.11)]{KL} has an
+orthogonal antipodal pair. Equation \eqref{eq:gram} is a fresh
+dS$_3$ derivation; that cross-channel orthogonality must not be
+transplanted between dimensions. The agreement of the diagonal
+normalizing function below does not imply agreement of the two Gram
+matrices, and is not a claim of an error in the dS$_2$ result.
+
+If both nonorthogonal channels are used, the full continuous projector
+requires their inverse Gram matrix:
+\[
+ P_{\mathrm{ac}}=\sum_{lm}\int_0^\infty
+ |u^r_{\nu lm}\rangle (G^{-1})_{rs}
+ \langle u^s_{\nu lm}|\dd\nu .
+\]
+Separately normalizing each vector and adding its rank-one projector
+does not give the identity.
+
+\section{An explicit observer subspace and its measure}
+Choose and retain a mass cutoff $\nu_*>0$. Define
+\begin{equation}
+ \mu(\nu)=\frac{\nu\tanh\pi\nu}{\pi},\qquad
+ v_{\nu lm}=\sqrt{\mu(\nu)}\,u_{\nu lm},\qquad
+ (Ja)(X)=\sum_{lm}\int_{\nu_*}^\infty v_{\nu lm}(X)a_{lm}(\nu)\dd\nu.
+ \label{eq:J}
+\end{equation}
+Then $J$ is an isometric embedding of
+$\HH_{\mathrm{obs}}=\int_{\nu_*}^\infty{}^\oplus\ell^2(l,m)\dd\nu$
+into spacetime $L^2$:
+$\|Ja\|^2=\int_{\nu_*}^\infty\sum_{lm}|a_{lm}|^2\dd\nu$.
+In the ordered $(e^-,e^+)$ continuum basis,
+\begin{equation}
+ v_B=\frac{(1,-q)^T}{\sqrt{1+q^2}},\quad
+ v_\perp=\frac{(q,1)^T}{\sqrt{1+q^2}},\quad
+ P_B=\frac1{1+q^2}\begin{pmatrix}1&-q\\-q&q^2\end{pmatrix}.
+\end{equation}
+The observer projector is $1_{\nu\geq\nu_*}P_B$ on the continuum and
+zero on every bound mode. Consequently $J^\dagger J=1$ and
+$JJ^\dagger=P_{\mathrm{obs}}$, a norm-one orthogonal projection.
+
+Both continuum channels have the same adjacent-angular-momentum
+boost coefficient
+\begin{equation}
+ \beta_{j,m}(\nu)=
+ \sqrt{\frac{(j^2-m^2)(j^2+\nu^2)}{(2j-1)(2j+1)}} .
+\end{equation}
+This follows from the Darboux and spherical-harmonic recurrences, and
+agrees with \cite[eqs.\ (20)--(21)]{MM} at $d=2$, $\sigma=-1+i\nu$.
+Rotations also act identically. The matrix $P_B$ depends on $\nu$ only;
+hence the projection commutes with proper isometries. Equivalently, the
+BD space is invariant, its antipodal image is invariant, and these two
+lines span the continuum multiplicity space for $\nu>0$.
+
+In contrast to an orthogonal complement, the antipodal unit vector obeys
+\begin{equation}
+ \langle v_B,Av_B\rangle=-\sech\pi\nu,\qquad
+ v_\perp=\frac{Av_B+\sech(\pi\nu)v_B}{\tanh\pi\nu}.
+ \label{eq:antipode}
+\end{equation}
+The condition number of the double Gram is $\coth^2(\pi\nu/2)$.
+It diverges at zero, while $P_B$ remains bounded and $\mu\sim\nu^2$.
+At large $\nu$, $\mu\sim\nu/\pi$ and the antipodal overlap is
+exponentially small. These limits do not remove the declared cutoff.
+
+Restoring the radius, $u_\ell=\ell^{-1/2}u_1$,
+$G_\ell=\ell^2G$, and $v_\ell=\ell^{-3/2}v_1$.
+For physical effective mass $m=\sqrt{1+\nu^2}/\ell$,
+\begin{equation}
+ \frac{\dd\nu}{\dd m}=\frac{\ell^2m}{\nu},\qquad
+ v_m=\sqrt{\frac{\ell^2m}{\nu}}\,v_\nu .
+\end{equation}
+For $\lambda=1+\nu^2$, the delta-normalized mode is
+$v_\lambda=v_\nu/\sqrt{2\nu}$ instead.
+These are changes of spectral variable, not extra group Plancherel
+densities to multiply into $\dd\nu$.
+
+\section{What this fixes in the local insertion}
+For observer slots $(o,i)$ and a KG-normalized free-field probe $p$, the
+local coefficient of the preceding note becomes
+\begin{equation}
+ \boxed{\ C_\eta^{\mathrm{obs}}(\nu_o,\nu_i,\nu_p)
+ =\sqrt{\mu(\nu_o)\mu(\nu_i)}\,C_\eta^{\mathrm{KG}}(\nu_o,\nu_i,\nu_p)\ } .
+\end{equation}
+Only the observer legs change normalization; the field's creation and
+annihilation operators retain their KG convention.
+The coefficient has dimension $\ell^{-1/2}$ with the chosen unit local
+coupling. This fixes the legs of this kinematic realization. It does
+not yet fix the earlier unknown physical two-point factor $n$, which
+also involved a state, group reduction and sewing norms.
+
+A bounded version makes the intermediate projector unambiguous.
+For $g\in L^\infty(\mathrm{dS}_3)$, define
+\begin{equation}
+ A_g=J^\dagger M_gJ,\qquad \|A_g\|\leq\|g\|_\infty,\qquad
+ A_g^\dagger=A_{\bar g}.
+\end{equation}
+This assignment is isometry-covariant, and
+\begin{equation}
+ A_gA_h=J^\dagger M_gP_{\mathrm{obs}}M_hJ,\qquad
+ A_{gh}-A_gA_h=J^\dagger M_g(1-P_{\mathrm{obs}})M_hJ.
+ \label{eq:leakage}
+\end{equation}
+For real $g=h$ the last expression is positive, being $B^\dagger B$
+with $B=(1-P_{\mathrm{obs}})M_gJ$.
+Replacing the intermediate spectral resolution by the full position
+delta would therefore change even this bounded two-point quantity.
+
+Each fixed free-field angular mode $u_p$ is bounded. Keeping a finite
+set $S$ of such probe modes, let
+\[
+ O_S=\sum_{p\in S}\big(A_{u_p}\otimes a_p+
+                         A_{u_p}^\dagger\otimes a_p^\dagger\big).
+\]
+Finite-particle vectors are analytic for this finite sum with bounded
+coefficients, so it is essentially self-adjoint on that core.
+Its vacuum two-point identity is
+\begin{equation}
+ \langle\psi,0|O_S^2|\psi,0\rangle
+ =\sum_{p\in S}\|A_{u_p}^\dagger\psi\|^2
+ =\sum_{p\in S,lm}\int_{\nu_*}^\infty
+ |\langle\nu lm|A_{u_p}^\dagger|\psi\rangle|^2\dd\nu .
+\end{equation}
+A finite probe-mode truncation breaks full de Sitter invariance.
+Removing it requires independent ultraviolet and domain estimates.
+This kinematic identity is not a group-averaged Hartle--Hawking
+two-point function or a finite-$G$ result.
+
+\section{Independent checks and the next physical step}
+The saved diagnostics contain 150 passed checks, with the two failed
+initial finite-box targets retained separately. Matrix, mode and bound
+state calculations use 50 decimal digits. Four $\sech^p t$ test functions
+check Parseval by actually integrating the continuous spectral weight
+and adding bound-state overlaps; independent time integrals check their
+Fourier transforms. The angular sectors include $l=0,1,2,3$, so deleting
+bound states produces a substantial, visible norm deficit.
+
+A compact packet with support $0.6\leq\nu\leq1.8$ and normalized amplitude
+$h(\nu)\propto(\nu-0.6)^4(1.8-\nu)^4$ independently checks
+\eqref{eq:J} and \eqref{eq:antipode}. Mass quadrature uses 140/220 nodes
+and time quadrature 360/540 nodes. At $T=20$, the finite-box norm deficit
+is $3.67314\times10^{-6}$, exceeding the initial $2\times10^{-7}$
+target; this failure was preserved. At $T=40,80$ the deficits are
+$5.46933\times10^{-9}$ and $1.37811\times10^{-11}$.
+The predicted antipodal overlap is approximately $-0.05055152806$;
+it is not zero.
+
+The missing tail estimate follows from Fourier Plancherel.
+For $b_\pm=h(1,-q)_\pm/\sqrt{1+q^2}$, the first three endpoint derivatives
+vanish, so
+\begin{equation}
+ \int_{|t|>T}|\chi(t)|^2\dd t
+ \leq T^{-8}\int_{0.6}^{1.8}
+       (|b_-^{(4)}|^2+|b_+^{(4)}|^2)\dd\nu .
+\end{equation}
+Cauchy--Schwarz bounds the omitted cross overlaps by the same coefficient.
+Its 64/96-node evaluations give approximately $3.26727\times10^6$,
+hence a conservative $T=20$ estimate $1.27628\times10^{-4}$.
+The inequality is analytic; the evaluated coefficient and all finite
+quadratures are empirical, not interval certificates.
+The failed short-box tests were not erased or relabeled as a
+high-precision delta-normalization test.
+
+The next task is the two-observer group-averaged inner product and its
+state, with an explicit Haar convention and reflection terms.
+Only then can this fixed local normalization be tested against the
+physical two-point spectrum. Independent free-probe disconnected
+four-point limits, removal of matter truncations, finite-$G$ dynamics
+and the full holographic objective remain required.
+
+\begin{thebibliography}{9}
+\bibitem{LMW} P.~Lagogiannis, A.~Maloney and Y.~Wang,
+\emph{Odd-dimensional de Sitter Space is Transparent},
+\href{https://arxiv.org/html/1106.2846v1}{arXiv:1106.2846v1}.
+\bibitem{MM} D.~Marolf and I.~A.~Morrison,
+\emph{Group Averaging for de Sitter free fields},
+\href{https://arxiv.org/html/0810.5163v1}{arXiv:0810.5163v1}.
+\bibitem{KL} D.~Kolchmeyer and H.~Liu,
+\emph{Chaos and the Emergence of the Cosmological Horizon},
+\href{https://arxiv.org/html/2411.08090v1}{arXiv:2411.08090v1}.
+\bibitem{local} Alan Day and Chengheng,
+\emph{Local scalar insertions in dS$_3$: from normalized BD modes
+to global CG coefficients}, internal research note, 31 October 2026.
+\end{thebibliography}
+\end{document}

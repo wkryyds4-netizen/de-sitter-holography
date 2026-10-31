@@ -1,0 +1,43 @@
+{
+  "created_at_utc": "2026-10-29T15:47:17.914127+00:00",
+  "kind": "analytic dependency and scope record; author self-review, not independent certification",
+  "assumptions": [
+    "dS2, L=1, strict G_N -> 0, proper SO+(2,1)",
+    "BD free matter, two independent equal principal species nu > 0",
+    "fixed proper Gaussian sigma > 0",
+    "exact energy m(s)=sqrt(s^2+1/4)",
+    "translated normalized external density pi0 in L1 on r>=0",
+    "F: fixed lower mass m*>1/2; Q: per-insertion lower mass M>=1"
+  ],
+  "proven_in_manuscript": [
+    "mass-independent Gaussian positive-kernel envelope",
+    "ordered-tree norm tail and crossed-pairing bound uniform in all real times",
+    "L1 external tail and moving-threshold layer estimates"
+  ],
+  "conditional": [
+    "Proposition 9.2: fixed-time packet limit and compact-time uniform convergence, assuming local distribution convergence (9.8)"
+  ],
+  "comparison_model_only": [
+    "positive static boundary commutator contribution",
+    "vanishing under far-from-boundary packet translation; no monotonicity assertion",
+    "19 numerical diagnostics for six preparations; empirical refinements, not interval certification"
+  ],
+  "open": [
+    "proof of (9.8) for exact combined Racah branches",
+    "uniform hypergeometric/Barnes remainder near delta and coincident-label surfaces",
+    "rate and logarithmically growing time regime",
+    "finite-G identification and full holographic dual"
+  ],
+  "source_reading": "KL v1 B.33-B.57; JKMS v3 C.30-C.38 partly read online and uncached; different representations prevent direct substitution",
+  "hashes": {
+    "manuscript/crosslimit.tex": "bee1c6d072dd895037d51312649b9dc0b59c45c4de9aec7e3e92d1203f39571f",
+    "notes/stage3-crossed-limit-reduction.md": "5728fa6c6f4ecc11438a56f7fbbb099001b4007c5ab9e428f12e00bcc3ba9d86",
+    "literature/stage3-crossed-large-mass-sources.md": "e0b4bddf0cc93d7427b579623b4ddd07277cb50158c15add27606d7fab23e763",
+    "notes/stage3-crossing-integral-audit.md": "cfad0399e94c86b48f5f519b94d0646d310687de46c75a4f5e5001ad83bae576",
+    "notes/stage3-clock-rate.md": "e4200c34592fffd27a47223237f073c844d0b6d146987049323e2719d3cea0df",
+    "manuscript/fields.tex": "e7721d3199378711786d18e479766bec13b2192bf4f5fc152c9b9a5decac6906",
+    "manuscript/fourpoint.tex": "f651fb3a74532d096efa691529050191b56ade2300d9a46b6c97c17b4da3d407",
+    "results/stage3/cross-limit/comparison.json": "b28907781cfcca4023a162f18a0488c13da5dcf381e381124877b87cac2d98c6",
+    "sources/kolchmeyer-liu-2411.08090v1.html": "352ef29aa89c376203271bf984bd904fb471ff313a7d420bc6a0ebc875d78065"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "checks": 191,
+  "errors": [],
+  "scope": "Saved arithmetic, exact rational polynomial thresholds and Gamma-phase certificate. No interval rounding or mass-integral convergence certification.",
+  "pi_refinement": {
+    "pi": "3.14159265358979323846264338327950288419716939937510582097494459230781640628620899862803482534211706798214808651328230664709384460955058223172535940812848111745028409403528446160356",
+    "series_truncation_bound": "9.92935648421317375176053304066049332098889584053448413332390010960905747277900782670781252311833392594404131452340838687064859096659912779590063346257443500708555417329135215249415E-165",
+    "terms": {
+      "atan5_terms": 116,
+      "atan239_terms": 34
+    },
+    "reason": "Initial imported pi had only about 70 decimal places; the unchanged audit demanded 85-90 decimal places.",
+    "scope": "Alternating-series truncation bound only; Decimal rounding separately limited by 180-digit evaluation."
+  },
+  "hashes": {
+    "code/audit_ds3_peak_limit.py": "93daee187475bfc9bdd3e3aaa5ae741dca59421d2b89b5af1b566bee5b0ecd99",
+    "code/audit_ds3_peak_limit_refined.py": "ce13bb1d98a619fa46e2450ea38bc7baae86c5a545adf9e934b34c6195ef6cfb",
+    "results/stage4/ds3-peak-limit/audit.json": "d9b11d5994d414a8529fdf9c1d7dbeec4c1fcc8a95c04ede35a58cea58b40bc8"
+  }
+}

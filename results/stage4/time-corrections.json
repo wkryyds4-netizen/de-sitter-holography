@@ -1,0 +1,419 @@
+{
+  "generated_utc": "2026-10-28T23:41:56.116851+00:00",
+  "status": "passed",
+  "checks": 41,
+  "failed": 0,
+  "check_details": [
+    {
+      "name": "direct Barnes integral n=0",
+      "error": "2.672764710092195646140536467151481878815e-51",
+      "tolerance": "1e-35",
+      "passed": true
+    },
+    {
+      "name": "direct digamma-weighted integral n=0",
+      "error": "5.34552942018439129228107293430296375763e-51",
+      "tolerance": "1e-35",
+      "passed": true
+    },
+    {
+      "name": "derivative of Barnes expression n=0",
+      "error": "0.0",
+      "tolerance": "1e-35",
+      "passed": true
+    },
+    {
+      "name": "direct Barnes integral n=1",
+      "error": "0.0",
+      "tolerance": "1e-35",
+      "passed": true
+    },
+    {
+      "name": "direct digamma-weighted integral n=1",
+      "error": "0.0",
+      "tolerance": "1e-35",
+      "passed": true
+    },
+    {
+      "name": "derivative of Barnes expression n=1",
+      "error": "0.0",
+      "tolerance": "1e-35",
+      "passed": true
+    },
+    {
+      "name": "direct Barnes integral n=2",
+      "error": "1.336382355046097823070268233575740939408e-51",
+      "tolerance": "1e-35",
+      "passed": true
+    },
+    {
+      "name": "direct digamma-weighted integral n=2",
+      "error": "1.336382355046097823070268233575740939408e-51",
+      "tolerance": "1e-35",
+      "passed": true
+    },
+    {
+      "name": "derivative of Barnes expression n=2",
+      "error": "1.336382355046097823070268233575740939408e-51",
+      "tolerance": "1e-35",
+      "passed": true
+    },
+    {
+      "name": "direct Barnes integral n=4",
+      "error": "1.336382355046097823070268233575740939408e-51",
+      "tolerance": "1e-35",
+      "passed": true
+    },
+    {
+      "name": "direct digamma-weighted integral n=4",
+      "error": "2.672764710092195646140536467151481878815e-51",
+      "tolerance": "1e-35",
+      "passed": true
+    },
+    {
+      "name": "derivative of Barnes expression n=4",
+      "error": "2.672764710092195646140536467151481878815e-51",
+      "tolerance": "1e-35",
+      "passed": true
+    },
+    {
+      "name": "C.39 bracket and phases n=0",
+      "error": "0.0",
+      "tolerance": "1e-35",
+      "passed": true
+    },
+    {
+      "name": "odd-harmonic shift n=0",
+      "error": "0.0",
+      "tolerance": "1e-35",
+      "passed": true
+    },
+    {
+      "name": "C.39 bracket and phases n=1",
+      "error": "2.119510614221923999488638132010603196353e-53",
+      "tolerance": "1e-35",
+      "passed": true
+    },
+    {
+      "name": "odd-harmonic shift n=1",
+      "error": "0.0",
+      "tolerance": "1e-35",
+      "passed": true
+    },
+    {
+      "name": "C.39 bracket and phases n=2",
+      "error": "4.122079551906787480156856490682501282579e-55",
+      "tolerance": "1e-35",
+      "passed": true
+    },
+    {
+      "name": "odd-harmonic shift n=2",
+      "error": "2.672764710092195646140536467151481878815e-50",
+      "tolerance": "1e-35",
+      "passed": true
+    },
+    {
+      "name": "C.39 bracket and phases n=3",
+      "error": "1.181367380103297420093776803924620115009e-55",
+      "tolerance": "1e-35",
+      "passed": true
+    },
+    {
+      "name": "odd-harmonic shift n=3",
+      "error": "4.276423536147513033824858347442371006104e-50",
+      "tolerance": "1e-35",
+      "passed": true
+    },
+    {
+      "name": "C.39 bracket and phases n=4",
+      "error": "1.378376073026587806151912216268108757214e-56",
+      "tolerance": "1e-35",
+      "passed": true
+    },
+    {
+      "name": "odd-harmonic shift n=4",
+      "error": "5.34552942018439129228107293430296375763e-51",
+      "tolerance": "1e-35",
+      "passed": true
+    },
+    {
+      "name": "C.39 bracket and phases n=5",
+      "error": "6.375858697233856254455266203754912764246e-57",
+      "tolerance": "1e-35",
+      "passed": true
+    },
+    {
+      "name": "odd-harmonic shift n=5",
+      "error": "4.276423536147513033824858347442371006104e-50",
+      "tolerance": "1e-35",
+      "passed": true
+    },
+    {
+      "name": "C.39 bracket and phases n=6",
+      "error": "6.527620863870472772204811935192001110742e-57",
+      "tolerance": "1e-35",
+      "passed": true
+    },
+    {
+      "name": "odd-harmonic shift n=6",
+      "error": "5.34552942018439129228107293430296375763e-51",
+      "tolerance": "1e-35",
+      "passed": true
+    },
+    {
+      "name": "C.39 bracket and phases n=7",
+      "error": "2.770061228366518758492093955875585531038e-57",
+      "tolerance": "1e-35",
+      "passed": true
+    },
+    {
+      "name": "odd-harmonic shift n=7",
+      "error": "3.207317652110634775368643760581778254578e-50",
+      "tolerance": "1e-35",
+      "passed": true
+    },
+    {
+      "name": "C.39 bracket and phases n=8",
+      "error": "1.850776587287492392577438241444470906883e-57",
+      "tolerance": "1e-35",
+      "passed": true
+    },
+    {
+      "name": "odd-harmonic shift n=8",
+      "error": "2.138211768073756516912429173721185503052e-50",
+      "tolerance": "1e-35",
+      "passed": true
+    },
+    {
+      "name": "four-sector kernel reduction w=0.01",
+      "error": "4.084827635609433742205655667406265280105e-51",
+      "tolerance": "1e-35",
+      "passed": true
+    },
+    {
+      "name": "four-sector kernel reduction w=0.1",
+      "error": "1.957746234890829157576595972628568286685e-50",
+      "tolerance": "1e-35",
+      "passed": true
+    },
+    {
+      "name": "four-sector kernel reduction w=0.7",
+      "error": "3.253178156302298226255936308810453338033e-50",
+      "tolerance": "1e-35",
+      "passed": true
+    },
+    {
+      "name": "four-sector kernel reduction w=2",
+      "error": "1.141928281899741792174301469119895822248e-53",
+      "tolerance": "1e-35",
+      "passed": true
+    },
+    {
+      "name": "direct mixed Barnes factor w=0.1",
+      "error": "2.733478681297984011508854397144198527427e-52",
+      "tolerance": "1e-35",
+      "passed": true
+    },
+    {
+      "name": "direct mixed Barnes factor w=0.7",
+      "error": "1.775619765448952253630255681149545439626e-51",
+      "tolerance": "1e-35",
+      "passed": true
+    },
+    {
+      "name": "negative-strip convergence epsilon=0.002",
+      "error": "0.00002434464210692474044901096652048601515631",
+      "tolerance": "1e-3",
+      "passed": true
+    },
+    {
+      "name": "negative-strip convergence epsilon=0.0002",
+      "error": "0.0000002434786721317249998124043283956091001329",
+      "tolerance": "1e-3",
+      "passed": true
+    },
+    {
+      "name": "full kernel precision and subdivision log_s=20,t=5",
+      "error": "3.200414582419467707524552520723925100513e-42",
+      "tolerance": "1e-28",
+      "passed": true
+    },
+    {
+      "name": "full kernel precision and subdivision log_s=20,t=10",
+      "error": "6.361244272637732739520494771809074828235e-42",
+      "tolerance": "1e-28",
+      "passed": true
+    },
+    {
+      "name": "full kernel precision and subdivision log_s=50,t=6",
+      "error": "4.443148373686443046478229600266671542096e-42",
+      "tolerance": "1e-28",
+      "passed": true
+    }
+  ],
+  "precision_dps": 50,
+  "source": "https://arxiv.org/html/2506.02109v2",
+  "source_equations": [
+    "C.6",
+    "C.9",
+    "C.13",
+    "C.18",
+    "C.21",
+    "C.39",
+    "C.40"
+  ],
+  "normalization": "R_micro/C0; C0=mathfrak_J log(s0)/(4*pi^2*T), fixed same mathfrak_J; t=2*pi*T*t_phys",
+  "scope": "Exact reduction of the already-semiclassical C.6 integral at two conformal antipodal probes; C.39 coefficient corrections remain an early-time asymptotic block. No finite-lambda, finite-G or observer-mass match.",
+  "coefficient_test_parameters": {
+    "log_s0": "50",
+    "t": "6"
+  },
+  "direct_barnes": [
+    {
+      "n": 0,
+      "I_integral": "9.869604401089358618834490999876151135314",
+      "I_closed": "9.869604401089358618834490999876151135314",
+      "K_over_I": "-3.927020052042846958881952665997511134386",
+      "D_closed": "-3.927020052042846958881952665997511134386"
+    },
+    {
+      "n": 1,
+      "I_integral": "1.233700550136169827354311374984518891914",
+      "I_closed": "1.233700550136169827354311374984518891914",
+      "K_over_I": "-0.9270200520428469588819526659975111343863",
+      "D_closed": "-0.9270200520428469588819526659975111343863"
+    },
+    {
+      "n": 2,
+      "I_integral": "0.9252754126021273705157335312383891689357",
+      "I_closed": "0.9252754126021273705157335312383891689357",
+      "K_over_I": "0.2396466146238197077847140006691555322803",
+      "D_closed": "0.2396466146238197077847140006691555322803"
+    },
+    {
+      "n": 4,
+      "I_integral": "6.07211989520146086900950129875192892114",
+      "I_closed": "6.07211989520146086900950129875192892114",
+      "K_over_I": "1.508694233671438755403761619716774579899",
+      "D_closed": "1.508694233671438755403761619716774579899"
+    }
+  ],
+  "C39_coefficients": [
+    {
+      "n": 0,
+      "coefficient_after_factoring_exp2nt_over_s02n": "0.9608590313540251881538534539474657054284",
+      "B_n": "48.04295156770125940769267269737328527142",
+      "shift_from_B0": "0"
+    },
+    {
+      "n": 1,
+      "coefficient_after_factoring_exp2nt_over_s02n": "0.00359710559122666089122599005448228791183",
+      "B_n": "46.04295156770125940769267269737328527142",
+      "shift_from_B0": "2.0"
+    },
+    {
+      "n": 2,
+      "coefficient_after_factoring_exp2nt_over_s02n": "0.0001246296887540622969571637128528929344003",
+      "B_n": "45.37628490103459274102600603070661860475",
+      "shift_from_B0": "2.666666666666666666666666666666666666667"
+    },
+    {
+      "n": 3,
+      "coefficient_after_factoring_exp2nt_over_s02n": "0.00001206357968179319306222301883329032562503",
+      "B_n": "44.97628490103459274102600603070661860475",
+      "shift_from_B0": "3.066666666666666666666666666666666666667"
+    },
+    {
+      "n": 4,
+      "coefficient_after_factoring_exp2nt_over_s02n": "0.000002294376217918034572945030948559476389165",
+      "B_n": "44.69057061532030702674029174499233289047",
+      "shift_from_B0": "3.352380952380952380952380952380952380952"
+    },
+    {
+      "n": 5,
+      "coefficient_after_factoring_exp2nt_over_s02n": "0.0000007223451907292913744196039085285843262593",
+      "B_n": "44.46834839309808480451806952277011066825",
+      "shift_from_B0": "3.574603174603174603174603174603174603175"
+    },
+    {
+      "n": 6,
+      "coefficient_after_factoring_exp2nt_over_s02n": "0.0000003400249977171168665598432762425449842866",
+      "B_n": "44.28653021127990298633625134095192885006",
+      "shift_from_B0": "3.756421356421356421356421356421356421356"
+    },
+    {
+      "n": 7,
+      "coefficient_after_factoring_exp2nt_over_s02n": "0.0000002236898465343113664899504963802255003002",
+      "B_n": "44.13268405743374914018240518710577500391",
+      "shift_from_B0": "3.91026751026751026751026751026751026751"
+    },
+    {
+      "n": 8,
+      "coefficient_after_factoring_exp2nt_over_s02n": "0.0000001960084304748774991992163421970943578356",
+      "B_n": "43.99935072410041580684907185377244167058",
+      "shift_from_B0": "4.043600843600843600843600843600843600844"
+    }
+  ],
+  "negative_strip_limit": [
+    {
+      "epsilon": "0.02",
+      "coefficient_real": "0.003597473105023270363357680870246136674212",
+      "coefficient_imag": "0.00007117741616024538809695686851838928686025",
+      "error_to_boundary": "0.00007117836495480533047789760446023448171979"
+    },
+    {
+      "epsilon": "0.002",
+      "coefficient_real": "0.003597109266456326513654587696303549087507",
+      "coefficient_imag": "0.000007116102734593258141100119020623775334729",
+      "error_to_boundary": "0.000007116103683659952237641206801774537851861"
+    },
+    {
+      "epsilon": "0.0002",
+      "coefficient_real": "0.003597105627978966710932822723978845495696",
+      "coefficient_imag": "0.0000007116086347974501590757348060491962026319",
+      "error_to_boundary": "0.0000007116086357465195745620938807110504511352"
+    }
+  ],
+  "full_C6_examples": [
+    {
+      "log_s0": 20,
+      "t": "5",
+      "full_C6_over_C0": "0.9478470262335477715288623118742430023885",
+      "C39_n0": "0.952147578385062970384633634868664263571",
+      "C39_n1": "3.114873340756874357342658182784954950754e-16",
+      "C39_n2": "9.846435813141215408034061848505760751946e-31",
+      "full_minus_C39_through_n2": "-0.004300552151515510343105398682841639029575",
+      "precision_difference": "3.200414582419467707524552520723925100513e-42"
+    },
+    {
+      "log_s0": 20,
+      "t": "10",
+      "full_C6_over_C0": "0.7020897728889141713758087461162605401777",
+      "C39_n0": "0.702147578385062970384633634868664263571",
+      "C39_n1": "0.000000000004848119775121007758585431234288272881969",
+      "C39_n2": "3.318591272876570809369017734499793359354e-22",
+      "full_minus_C39_through_n2": "-0.00005780550099691878427775563827681170850215",
+      "precision_difference": "6.361244272637732739520494771809074828235e-42"
+    },
+    {
+      "log_s0": 50,
+      "t": "6",
+      "full_C6_over_C0": "0.9601009734806610451173843816621885795757",
+      "C39_n0": "0.9608590313540251881538534539474657054284",
+      "C39_n1": "2.177904233059914439491003735105724351438e-41",
+      "C39_n2": "4.568700568735976412872658362092764758281e-81",
+      "full_minus_C39_through_n2": "-0.0007580578733641430364690722852771258527478",
+      "precision_difference": "4.443148373686443046478229600266671542096e-42"
+    }
+  ],
+  "code_sha256": {
+    "microscopic_time_corrections.py": "ad799381e1d7a3e2abea0b3101335c33722ca00d4d7310f3ab5e7aed051d35c4"
+  },
+  "input_sha256": {
+    "sources/narovlansky-2506.02109v2.html": "b392e1da77d34bb762de42f8ac41f5ff774c774bf14f6b3978ecab7a2c1a4cca"
+  },
+  "environment": {
+    "python": "3.14.5",
+    "mpmath": "1.3.0"
+  }
+}

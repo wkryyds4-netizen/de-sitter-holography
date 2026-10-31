@@ -1,0 +1,48 @@
+{
+  "created_at_utc": "2026-10-30T17:52:56.421746+00:00",
+  "pages": 5,
+  "diagnostics": 44,
+  "kind": "global principal-series dictionary and normalization-independent finite-point comparison",
+  "compilers": {
+    "local": "two final pdfLaTeX passes",
+    "desktop": "success on final source"
+  },
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "maximum_pixel_dimension": 1050,
+    "clipping_or_overlap": false
+  },
+  "limitations": [
+    "specific scalar topology-preserving map only",
+    "not interval certification",
+    "three specified shadow checks, not exhaustive transformations",
+    "positive-kernel obstruction applies only to complete scalar-only transform",
+    "physical local insertion and finite G remain open"
+  ],
+  "hashes": {
+    "code/build_global_racah_note.ps1": "6126510468d444239739c34781a3463ba692dd87843e9c11f036191176af01f1",
+    "code/global_racah.py": "4b9702c8c8f68b3f3901f3e392321824edf37198b70c0344298c95addd88a15c",
+    "code/recoil_internal.py": "4ad536856e55b3ffc7084312a6d229067a5c7deb1e8f9667aa72982c0e4699a4",
+    "code/recoil_poles.py": "fae71be3302fe219f0af2df4f53467c1319db5db1e7386e60c919165b8611ccc",
+    "code/recoil_vertex.py": "d6dd46b45f8802052a52842c2bceff0ff289f11433e203c505ea6716e7a6e766",
+    "code/validate_global_racah.py": "7386d2209350404e7a3e440a5d77ee91b203b3012cda61ee05c376564bba5800",
+    "literature/stage4-global-racah-sources.md": "0511aeec4db852fc0a1393db1552cadc576de53b069f5871457ee2f41682df97",
+    "manuscript/global-racah/main.tex": "26ddcf8523095b8391e2cb10f0e1a2945b04eb8191a2c0f1cf767c4d6725e006",
+    "notes/stage4-global-racah.md": "abd5bab8cccde5dbac5c604a0d09afd30396ac7076138c4a0b451d9e2674290a",
+    "output/pdf/de-sitter-global-racah.pdf": "53e2940a0c94d0794c4a7dffb146561c372817dad47f0875b611625f2e155540",
+    "results/stage4/global-racah/build-review.md": "5f8c14886a5176092e7f76b05b04b937a01200898c63af933c7f9daefb31b53a",
+    "results/stage4/global-racah/diagnostics.json": "f26354a7d8d507f0a36b8315dd3903c326230134a3efa020b64af5eb08d27fdd",
+    "results/stage4/global-racah/initial-driver.py.txt": "a88f114268bdc096249b153403cf61299b6a98b9ac780117509578463c50294f",
+    "results/stage4/global-racah/initial-exception.txt": "a51deab997b11d469d8033e23d30c4ac0700b0cbdd1ca43bb9115efefcb1a35c",
+    "results/stage4/global-racah/main.log": "82109af62ee591d4e5d0581e3a537a36a79cb082ef54d29ed473bd8bd6b8b02b",
+    "sources/derkachov-spiridonov-1711.07073v2.html": "a4f305acd8eded3330309df70e570e28b1eb704f1083c49dfeb310072b33a367",
+    "sources/karateev-kravchuk-simmons-duffin-1809.05111v1.html": "4f16f5d8d3048611f1786d4cc414aaf175719539b8e33e0097bb57e22ebc4a48",
+    "sources/liu-et-al-1808.00612v3.html": "f2ed75383d739432535ba11f0988fa6df08aaf5020e4f61a8ca2376ae40c4494"
+  }
+}

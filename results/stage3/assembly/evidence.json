@@ -1,0 +1,43 @@
+{
+  "created_at_utc": "2026-10-29T17:11:01.314102+00:00",
+  "kind": "analytic proof draft and dependency record; author self-review, not independent certification",
+  "result": "Theorems 11.1 and 11.2: uniform assembled raw-S remainder and fixed-time compact distribution/finite-packet limits",
+  "conditions": [
+    "dS2 radius L=1; proper SO+(2,1); strict G_N -> 0",
+    "BD free matter; two independent equal principal-series species nu>0",
+    "fixed proper Gaussian sigma>0",
+    "normalized vacuum packet, exact m=M+r, fixed probability density pi0 in L1(R+)",
+    "F: fixed threshold m_*>1/2 at each insertion; Q: moving threshold M>=1 at each insertion",
+    "fixed compact real offsets including opposite-label coincidences; 0<epsilon<1/4",
+    "fixed compact real-time sets"
+  ],
+  "proof_chain": [
+    "explicit cancellation of four additional leading endpoint branches",
+    "pole-free U+ and U- with common value 2pi at delta=0",
+    "small complex-tube Euler estimates and exact-S holomorphy; maximum modulus across removable poles",
+    "uniform O(Lambda^(-2+epsilon)) remainder",
+    "Lambda S -> (4/pi) delta with compact O(log Lambda) bound",
+    "external gamma factors and exact-energy Jacobians recover (9.8)",
+    "Section 9 uniform positive-norm tails transfer to fixed-time normalized packets"
+  ],
+  "numerical_scope": "21 finite-point algebra checks; 8 exact-kernel rows; 4 leading-expression-only bump integrals. No interval certification or exact-6j distribution quadrature.",
+  "not_proven": [
+    "growing/logarithmic-time packet limit",
+    "constant scrambling-time origin reconciliation",
+    "Lyapunov exponent",
+    "finite-G dynamics or full holographic dual",
+    "general initial states or unsmeared fields",
+    "priority or originality"
+  ],
+  "hashes": {
+    "manuscript/assembly.tex": "c12611bd24506d6427093ac3636e3cbb43011dabe2e95f6b6c195d60717fbbc5",
+    "manuscript/endpoint.tex": "253e70585fafc51ad10cc608f12a917916e8cc4dfa2a6d015f7031f3910b767a",
+    "manuscript/crosslimit.tex": "bee1c6d072dd895037d51312649b9dc0b59c45c4de9aec7e3e92d1203f39571f",
+    "notes/stage3-assembled-fixed-time.md": "390ae817536a65c64efe20d60f4cbace8277bca018862c4dae4baad963901381",
+    "literature/stage3-assembly-sources.md": "3023031d9c22c552caacc0b77e05d28087d4a25bc4fdae6314940e4fbfa38578",
+    "notes/stage3-crossing-integral-audit.md": "cfad0399e94c86b48f5f519b94d0646d310687de46c75a4f5e5001ad83bae576",
+    "notes/stage3-clock-rate.md": "e4200c34592fffd27a47223237f073c844d0b6d146987049323e2719d3cea0df",
+    "results/stage3/assembly/diagnostics.json": "233a2b48b6d4255a3dab47c9a2119dce3745af186eef030c7ba09d7f60efd3e8",
+    "sources/kolchmeyer-liu-2411.08090v1.html": "352ef29aa89c376203271bf984bd904fb471ff313a7d420bc6a0ebc875d78065"
+  }
+}

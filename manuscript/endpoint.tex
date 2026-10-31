@@ -1,0 +1,160 @@
+\section{Resolving the hypergeometric endpoint before assembling the kernel}
+\label{sec:endpoint}
+We now give an exact integral representation and a two-term asymptotic
+for each balanced hypergeometric factor. This is a special-function step
+towards \eqref{eq:local-racah-hypothesis}, not a proof of that hypothesis.
+The four beta-like prefactors in (B.21)--(B.24) of~\cite{KL} still have
+to be combined, particularly on their removable-pole surfaces.
+
+\subsection{An exact Euler representation}
+Write a factor, after permuting its parameters, as
+\begin{equation}
+ H_\Lambda={}_4F_3(A,C,b,d;E,F,g;1),\quad
+ A=W+A_0,\quad C=W+C_0,\quad W=\pm2i\Lambda,
+ \label{eq:endpoint-H}
+\end{equation}
+where $E=A+\alpha$, $F=C+\beta$, $g=b+d+\delta$, and
+$\alpha+\beta+\delta=1$. All of $A_0,C_0,b,d,\alpha,\beta$
+have real part $1/2$ in the real-label problem; $\delta$ is purely
+imaginary. The offsets range over a fixed compact set and $\Lambda>0$.
+Let $\mathrm B$ denote Euler's beta function, not the function in KL (B.23).
+Twice applying the Euler transform~\cite[16.5.2]{DLMF} gives
+\begin{align}
+ H_\Lambda&=\mathcal N_\Lambda\int_0^1\!\int_0^1
+ u^{A-1}(1-u)^{\alpha-1}v^{C-1}(1-v)^{\beta-1}
+ {}_2F_1(b,d;g;uv)\,\dd u\dd v,\notag\\
+ \mathcal N_\Lambda&=
+ \frac{\Gamma(E)\Gamma(F)}
+ {\Gamma(A)\Gamma(C)\Gamma(\alpha)\Gamma(\beta)}.
+ \label{eq:endpoint-exact-euler}
+\end{align}
+The identity includes the argument one. One may first insert an argument
+$0<z<1$ and pass to $z=1$. The Euler representation of the Gauss function
+has a third weight with real exponents $-1/2$, and an additional factor
+$(1-zuvt)^{-b}$. Near $u=v=t=1$ its modulus is bounded by a constant times
+$[\xi\eta\zeta(\xi+\eta+\zeta)]^{-1/2}$, where
+$\xi=1-u$, $\eta=1-v$, $\zeta=1-t$. This is integrable in three dimensions.
+All other faces are integrable beta endpoints. Dominated convergence
+therefore justifies the endpoint identity without using a divergent
+Gauss series at one.
+
+For $\delta\ne0$, the ordinary, unregularized connection formula is
+\begin{align}
+ {}_2F_1(b,d;g;z)
+ &=G_+\,{}_2F_1(b,d;1-\delta;1-z)\notag\\
+ &\quad+G_- (1-z)^\delta
+ {}_2F_1(g-b,g-d;1+\delta;1-z),\notag\\
+ G_+&=\frac{\Gamma(g)\Gamma(\delta)}
+ {\Gamma(g-b)\Gamma(g-d)},\qquad
+ G_-=\frac{\Gamma(g)\Gamma(-\delta)}{\Gamma(b)\Gamma(d)}.
+ \label{eq:endpoint-connection}
+\end{align}
+This follows from~\cite[15.8.4]{DLMF} after restoring $\Gamma(g)$.
+All powers here use the real logarithm for $0<z<1$.
+
+\subsection{A uniform two-branch expansion}
+\begin{proposition}
+For the compact real-offset families specified above, and any fixed
+$0<\epsilon<1/4$,
+\begin{equation}
+ H_\Lambda=G_++\frac{G_-}{\Gamma(1-\delta)}W^{-\delta}
+                 +O(\Lambda^{-1+\epsilon}).
+ \label{eq:endpoint-two-branch}
+\end{equation}
+The error is uniform, including at $\delta=0$, where the sum is interpreted
+by its removable limit. With $\log W=\log(2\Lambda)\pm i\pi/2$, that limit is
+\begin{equation}
+ \frac{\Gamma(b+d)}{\Gamma(b)\Gamma(d)}
+       [\log W+\psi(1)-\psi(b)-\psi(d)].
+ \label{eq:endpoint-zero}
+\end{equation}
+No uniform estimate for the complete Racah kernel is asserted here.
+\label{prop:endpoint}
+\end{proposition}
+\begin{proof}
+Set $u=e^{-p}$, $v=e^{-q}$, $w=p+q$, $t=p/w$, and
+$a=\alpha+\beta=1-\delta$. Equation~\eqref{eq:endpoint-exact-euler} becomes
+\begin{equation}
+ H_\Lambda=\mathcal N_\Lambda\int_0^\infty e^{-Ww}
+        w^{a-1}J(w)\,{}_2F_1(b,d;g;e^{-w})\,\dd w,
+ \label{eq:endpoint-fourier}
+\end{equation}
+where, putting $h(z)=(1-e^{-z})/z$ with $h(0)=1$,
+\begin{align}
+ J(w)=\int_0^1 &t^{\alpha-1}(1-t)^{\beta-1}
+ e^{-w[A_0t+C_0(1-t)]}\notag\\
+ &\times h(wt)^{\alpha-1}h(w(1-t))^{\beta-1}\dd t.
+ \label{eq:endpoint-J}
+\end{align}
+This is smooth near zero, uniformly on the compact parameter sets, and
+$J(0)=\mathrm B(\alpha,\beta)$. At large $w$ the integrand amplitude
+and all its derivatives decay exponentially times a polynomial. This
+follows from $\Re A_0,\Re C_0>0$, the behavior $h(z)\sim z^{-1}$,
+and the convergent Gauss series at $e^{-w}=0$.
+
+Away from $\delta=0$, the connection formula splits the amplitude at zero
+into $G_+w^{a-1}$ and $G_-w^{a+\delta-1}=G_-$, each multiplied by a smooth
+factor with value $\mathrm B(\alpha,\beta)$. A smooth cutoff at zero and
+the Abel boundary value of the Laplace integral give the leading Fourier
+integrals $\Gamma(a)W^{-a}$ and $W^{-1}$. The remainders have powers
+$w^a$ and $w$ with bounded differentiated amplitudes. Splitting at
+$w=|W|^{-1}$ and integrating by parts on dyadic annuli (more than three
+times if needed) bounds their transforms by
+$O(|W|^{-\Re a-1})$ and $O(|W|^{-2})$, respectively. The part away from
+zero is rapidly decreasing by integration by parts.
+
+Uniform gamma-ratio asymptotics give
+\[
+ \mathcal N_\Lambda\mathrm B(\alpha,\beta)
+ =\frac{W^a}{\Gamma(a)}[1+O(\Lambda^{-1})].
+\]
+Consequently the two leading terms are those in
+\eqref{eq:endpoint-two-branch}. On compact complex parameter sets with
+$|\Re\delta|\le\epsilon$ and separated from zero, the error is
+$O(\Lambda^{-1+\epsilon})$; the second term's modulus is at most a constant
+times $\Lambda^\epsilon$.
+
+To cover coalescence, keep $A_0,C_0,b,d,\alpha$ fixed and vary $\delta$
+holomorphically, setting $\beta=1-\alpha-\delta$ and $g=b+d+\delta$.
+On $|\delta|=\epsilon$ all Euler endpoint real parts remain positive.
+Both $H_\Lambda$ and the combined leading expression are holomorphic
+inside this circle. Indeed $\Gamma(-\delta)/\Gamma(1-\delta)=-1/\delta$
+makes the cancellation explicit:
+\begin{equation}
+ G_++\frac{G_-W^{-\delta}}{\Gamma(1-\delta)}
+ =\frac{\Gamma(g)}{\Gamma(b)\Gamma(d)}
+ \frac{\displaystyle
+  \frac{\Gamma(1+\delta)\Gamma(b)\Gamma(d)}
+       {\Gamma(b+\delta)\Gamma(d+\delta)}-e^{-\delta\log W}}
+ {\delta}.
+ \label{eq:endpoint-stable}
+\end{equation}
+The maximum-modulus principle transfers the boundary error estimate
+to the disk. Expanding its numerator at zero gives
+\eqref{eq:endpoint-zero}. A finite compact covering completes uniformity.
+\end{proof}
+
+For KL (B.33), with $s_i=\Lambda+q_i$ and $s_A=s_B=\nu$, one choice is
+\begin{align}
+ A_0&=\tfrac12-i(q_3+q_4+\nu),&
+ C_0&=\tfrac12-i(q_2+q_3-\nu),\notag\\
+ b&=\tfrac12+i(q_4-q_3-\nu),&
+ d&=\tfrac12+i(q_2-q_3+\nu),\notag\\
+ \alpha&=\tfrac12+i(q_4-q_3+\nu),&
+ \beta&=\tfrac12+i(q_2-q_1-\nu),\notag\\
+ \delta&=i(q_1-q_2+q_3-q_4),&W&=-2i\Lambda.
+ \label{eq:endpoint-B33-map}
+\end{align}
+The other three factors in (B.21)--(B.24) have the same structure after
+permutations, with either sign of $W$. For a fixed nonzero
+$\delta=i\chi$, $|W^{-\delta}|=e^{\pm\pi\chi/2}$ is independent of
+$\Lambda$. Thus a single hypergeometric factor cannot generally be
+replaced pointwise by $G_+$ alone.
+
+This does not refute the assembled distributional asymptotic in KL:
+the extra terms may cancel between the four branches. Our finite-point
+diagnostics show substantial cancellation at one generic offset tuple,
+but do not prove it or cover the opposite-label coincidence surfaces.
+The next step is to multiply by the exact beta-like prefactors, prove the
+cancellation of the additional leading terms, and bound the combined
+remainder across those surfaces before applying the spectral-tail result.

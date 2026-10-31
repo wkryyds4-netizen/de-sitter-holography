@@ -1,0 +1,42 @@
+{
+  "created_at_utc": "2026-10-30T05:19:38.225794+00:00",
+  "kind": "self-reviewed full fixed-K Barnes-to-Bessel theorem and integrated first correction",
+  "pages": 5,
+  "compilers": {
+    "local": "two clean pdfLaTeX passes",
+    "desktop": "success on final 69-check source"
+  },
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "dpi": 95,
+    "clipping_or_overlap": false
+  },
+  "diagnostics": 69,
+  "not_proven": [
+    "uniform joint K growth with alpha=Ky",
+    "transverse energy integrals/exterior",
+    "physical insertions/external cycles/disconnected baseline",
+    "joint finite-G microscopic dual"
+  ],
+  "hashes": {
+    "code/recoil_bessel_limit.py": "db108ba306fd4c8e9d3b062a833b5e56a02f7f8da2d0ddb3c48a1850cc13c5a2",
+    "code/build_bessel_limit_note.ps1": "266261e54dee5635b1d87510732650d2fb92d4c4a43930fc843027f2489e85a4",
+    "manuscript/recoil-bessel-limit/main.tex": "5c76f85ef549d2a5644a86aabece3bbb34183e5fcd0712656157a8e24a99b2e3",
+    "notes/stage4-recoil-bessel-limit.md": "535107462ed023077b0eda118f394fe24967ce5d6f8e423d0f4c7469b09a5794",
+    "literature/stage4-recoil-bessel-limit-sources.md": "807fe630a1af903d1375fedeb47d4a15808fa2c33794c0c7c348d448eca8cd5f",
+    "results/stage4/recoil-bessel-limit/diagnostics.json": "fcd9655f7f58dd7069130ba9f42df7bf9dbc7ab0871b71d8ef97f28637b9f288",
+    "results/stage4/recoil-bessel-limit/main.log": "2b674a7836746e53d48693658b86892f7c04fa916df28a6aacf0beb2308f4b2d",
+    "results/stage4/recoil-bessel-limit/build-review.md": "4e2564b801a8e2253e7b2ddf56c81f2ef0972470d42e1325348f0164c767cc07",
+    "output/pdf/de-sitter-recoil-bessel-limit.pdf": "3bec60200bfc64c751117e151d5e8a2c2085d19daf5676112d33a26c4e13dc37",
+    "code/recoil_global_probe.py": "7e0aeeac72ccbbf17402df74428331cfca2a6cc46abde49c21836f1401911a91",
+    "results/stage4/recoil-global/diagnostics.json": "ce7d4f37b40f7f8614a1434be2747613748c69385fab0200da902df3b7c20fb1",
+    "notes/stage4-recoil-global.md": "a5c09574b03849b57bc8225fd5a424ecad8dc951e1a40c6ebd51a0657056e992",
+    "sources/dlmf-5.11.html": "8f573b25a200d5ca09372ad88adbd4a621bc0bc463e088c6548ff8dddc0d2eee"
+  }
+}

@@ -1,0 +1,235 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,microtype,booktabs}
+\usepackage[margin=27mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newtheorem{proposition}{Proposition}
+\newcommand{\dd}{\mathop{}\!\mathrm d}
+\title{A quantitative recoil calibration\\for finite-gravity comparisons}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Working research note --- 30 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We bound the finite-principal-series correction to the confluent
+pure-recoil kernel of Chen, Stanford, Tang and Yang. A positive integral
+gives a relative window and a nontrivial crossover. We then compare the
+limiting function with the inverse transform of the reduced semiclassical
+action used by Chandra, Liska and Post. Their leading actions agree along
+the pure-recoil route, but their normalized prefactors differ.
+These are reduced-model calculations, not a finite-gravity correlator.
+The arguments are author self-reviewed drafts; no priority or independent
+certification is claimed.
+\end{abstract}
+\section{Objects and order of limits}
+Set the de Sitter radius to one and use observer proper time \(t\).
+CSTY~\cite{CSTY}, Section 2.6, first takes pure recoil,
+\(Gm_i,G\nu,G\nu'\to0\), with \(m,\nu'\gg1\), \(\nu'/m\ll1\).
+Its fixed-average-mass mixed representation and antipodal insertions
+differ from the finite vacuum packet of our two-dimensional notes.
+After the small-kink approximation, equation (2.78) defines
+\begin{equation}
+ F_\nu(Q)={}_3F_2\left(\begin{matrix}1,1-i\nu,1+i\nu\\3/2,3/2\end{matrix};
+ \frac{Q^2}{\nu^2}\right),\quad
+ Q=A\cosh t,\quad A=\frac{\nu\nu'}{2m}. \label{eq:F}
+\end{equation}
+We take \(\nu>0\), \(0\le Q<\nu\), on the real branch below the first
+branch point. Finite \(\nu\) here refers to this reduced expression;
+it does not restore the errors omitted before (2.78).
+Equation (2.79) takes \(\nu\to\infty\) at fixed \(Q\), giving
+\begin{equation}
+ H(Q)={}_1F_2(1;3/2,3/2;Q^2). \label{eq:H}
+\end{equation}
+Only this limit is quantified below. No finite-\(\kappa\) Virasoro
+\(6j\), continuation through \(Q=\nu\), or microscopic dictionary is assumed.
+
+\section{Positive integral and explicit error}
+\begin{proposition}
+For \(0<Q<\nu\), write \(r=Q/\nu\). Then
+\begin{align}
+ F_\nu(Q)&=\frac1{2Q}\int_0^{\pi/2}
+ \frac{\sinh(2\nu\arcsin(r\cos\theta))}
+ {\sqrt{1-r^2\cos^2\theta}}\,\dd\theta, \label{eq:int}\\
+ H(Q)&=\frac1{2Q}\int_0^{\pi/2}\sinh(2Q\cos\theta)\,\dd\theta,\\
+ 1\le\frac{F_\nu(Q)}{H(Q)}
+ &\le \frac{\arcsin r}{r\sqrt{1-r^2}}\,
+ e^{2\nu(\arcsin r-r)}. \label{eq:bound}
+\end{align}
+Both functions equal one at \(Q=0\).
+\end{proposition}
+\begin{proof}
+The beta integral with parameters \(1,1/2\) inserts
+\((1)_n/(3/2)_n\) into the Gauss series, with weight
+\(\dd u/(2\sqrt{1-u})\). Substitute \(u=\cos^2\theta\) and use the
+elementary identity already present in CSTY (2.76):
+\[
+ {}_2F_1(1-i\nu,1+i\nu;3/2;z^2)
+ =\frac{\sinh(2\nu\arcsin z)}{2\nu z\sqrt{1-z^2}}.
+\]
+Absolute convergence for \(r<1\) justifies termwise integration.
+The limiting integral follows at fixed \(Q\) by dominated convergence,
+or by its hyperbolic-sine series. These are standard beta-integral
+operations~\cite{DLMF}.
+
+For \(x\ge0,c\ge1\), \(\sinh(cx)\le c e^{(c-1)x}\sinh x\).
+Indeed, use \(\sinh x/x=\int_0^1\cosh(xu)\dd u\) and
+\(\cosh(cxu)\le e^{(c-1)x}\cosh(xu)\).
+For each \(\theta\), put \(z=r\cos\theta\), \(x=2\nu z\),
+\(c=\arcsin z/z\). Both \(\arcsin z/z\) and \(\arcsin z-z\)
+increase on \([0,r]\). Bound the remaining factor by
+\((1-r^2)^{-1/2}\). Positive integrands give the upper bound;
+\(\arcsin z\ge z\) gives the lower bound.
+\end{proof}
+Let \(B(Q,\nu)\) be the logarithm of the right-hand side of
+\eqref{eq:bound}. For \(r\to0\),
+\begin{equation}
+ B=\frac{Q^3}{3\nu^2}+\frac{2Q^2}{3\nu^2}
+   +O\left(\frac{Q^5+Q^4}{\nu^4}\right).
+\end{equation}
+Thus \(0\le F_\nu/H-1\le e^B-1\) is a computable analytic bound
+for these reduced functions, and
+\begin{equation}
+ Q=o(\nu^{2/3})\ \Longrightarrow\ F_\nu(Q)/H(Q)\to1.
+ \label{eq:window}
+\end{equation}
+This controls relative error of a possibly exponentially large function.
+
+\section{Crossover before the branch point}
+\begin{proposition}
+Fix \(r_0<1\). As \(Q\to\infty\), uniformly for \(0<r=Q/\nu\le r_0\),
+\begin{align}
+ F_\nu(Q)&=\frac{\sqrt\pi}{8Q^{3/2}}(1-r^2)^{-1/4}
+ e^{2\nu\arcsin r}\,[1+O_{r_0}(Q^{-1})],\label{eq:saddle}\\
+ H(Q)&=\frac{\sqrt\pi}{8Q^{3/2}}e^{2Q}[1+O(Q^{-1})].
+\end{align}
+For any fixed \(c>0\), \(Q=c\nu^{2/3}\) consequently gives
+\begin{equation}
+ F_\nu(Q)/H(Q)\longrightarrow e^{c^3/3}. \label{eq:cross}
+\end{equation}
+\end{proposition}
+\begin{proof}
+The positive exponential in \eqref{eq:int} is \(e^{Q f_r(\theta)}\),
+where \(f_r=2\arcsin(r\cos\theta)/r\), continuously extended at \(r=0\).
+Its unique maximum is at zero, with \(f_r''(0)=-2/\sqrt{1-r^2}\).
+The amplitude and fixed derivatives of \(f_r\) are uniformly bounded
+near zero for \(r\le r_0\). Also
+\(f_r(0)-f_r(\theta)\ge2(1-\cos\theta)\), giving a uniform exponential
+gap outside a fixed neighbourhood. On the scale \(\theta=O(Q^{-1/2})\),
+the even Taylor expansion, Gaussian domination and that tail bound yield
+relative remainder \(O_{r_0}(Q^{-1})\). The negative exponential in
+the hyperbolic sine is \(O(Q^{-1})\) absolutely and exponentially smaller
+than the positive saddle. The half-Gaussian factor is
+\[
+ \frac{1}{4Q\sqrt{1-r^2}}\,
+ \frac{\sqrt\pi(1-r^2)^{1/4}}{2\sqrt Q},
+\]
+giving \eqref{eq:saddle}. Its \(r=0\) version gives \(H\).
+At the crossover \(r=c\nu^{-1/3}\),
+\(2\nu(\arcsin r-r)\to c^3/3\), and the amplitude ratio tends to one.
+\end{proof}
+The resulting growing-time overlap inside the reduced model is
+\begin{equation}
+ 1\ll A\cosh t\ll\nu^{2/3}.
+\end{equation}
+The lower inequality permits the saddle approximation; the upper one
+controls confluence at the function level. At large positive \(t\),
+the upper condition is \(Ae^t/(2\nu^{2/3})\to0\), stronger than
+\(Q/\nu\to0\). The latter can preserve only the leading logarithmic
+action while losing relative accuracy.
+
+The earlier heavy-background and small-kink limits require separate
+control for simultaneous scalings of \(m,\nu',\nu,t\).
+Even holding the leading kink relation fixed, replacing
+\(\sin(\gamma/2)\) by \(\gamma/2\) changes an enhanced exponent on the
+scale \(Q(\nu'/m)^2\). This is a Taylor sensitivity estimate, not a
+bound on all omitted gravitational effects.
+
+\section{A prefactor test of the action-only inverse transform}
+CLP~\cite{CLP}, (3.77)--(3.83) and footnote 12, distinguish their reduced
+action transform from the full finite-\(\kappa\) amplitude.
+For \(A=\omega_c>0\), the former is
+\begin{equation}
+ I_A(t)=\int_{\mathbb R}\dd y\,
+ \exp\left\{2\left[-y\,\operatorname{arsinh}(y/A)
+ +\sqrt{A^2+y^2}-A+yt\right]\right\}. \label{eq:I}
+\end{equation}
+Its unique maximum is \(y_*=A\sinh t\).
+Setting \(y=Az\), the exponent is \(A\) times a strictly concave
+function, with second derivative \(-2/\cosh t\) at the saddle.
+Laplace's method, uniformly on bounded real \(t\)-intervals, gives
+\[
+ I_A(t)=\sqrt{\pi A\cosh t}\,
+ e^{2A(\cosh t-1)}[1+O(A^{-1})]\qquad(A\to\infty).
+\]
+The tails decay uniformly on these intervals. Thus
+\begin{align}
+ \frac{I_A(t)}{I_A(0)}
+ &= (\cosh t)^{1/2} e^{2A(\cosh t-1)}[1+O(A^{-1})],\\
+ \frac{H(A\cosh t)}{H(A)}
+ &= (\cosh t)^{-3/2} e^{2A(\cosh t-1)}[1+O(A^{-1})].
+\end{align}
+Their ratio tends to \((\cosh t)^2\), not one.
+These \(t=0\) divisions are diagnostic normalizations, not
+identifications with physical disconnected correlators.
+
+A conditional necessary test follows. Suppose a missing reduced-energy
+prefactor has smooth leading form \(p(y/A)\), is nonzero at the saddle,
+and preserves the dominant contour. To reproduce the normalized recoil
+prefactor one would need, on the tested saddle interval,
+\begin{equation}
+ \frac{p(\sinh t)}{p(0)}=(\cosh t)^{-2},
+ \qquad \frac{p(z)}{p(0)}=\frac1{1+z^2}. \label{eq:test}
+\end{equation}
+This is not a derivation or fitted prescription for a Virasoro measure.
+External legs, spectral weights, determinants and other saddles may
+change the premise. It gives a concrete test for a later calculation.
+
+CLP has \(A=\pi\nu\nu'/(2\kappa\sin\theta_H)\). Along the pure-recoil
+route \(\theta_H=\pi(1-m/\kappa)\), \(A\to\nu\nu'/(2m)\).
+This degeneration differs from fixed nondegenerate cone angle.
+No uniform finite-\(\kappa\) error in that degeneration has been
+established here, so this is not a finite-\(G\) match.
+
+\section{Numerical checks and next calculation}
+The script \texttt{code/wkb\_overlap.py} uses positive integrals with
+their leading exponent subtracted. Six finite-\(\nu\) integrals are
+compared with the defining hypergeometric function and the explicit
+bound; nine crossover points and six inverse-transform comparisons
+are also evaluated. All 42 checks pass at 60-digit working precision;
+crossover and inverse integrals are repeated at 85 and 80 digits.
+These are empirical arithmetic checks, not interval certification.
+
+For \(Q=\nu^{2/3}\), the computed \(\log(F_\nu/H)\) is
+\[
+\begin{array}{c|ccc}
+\nu&10^3&10^4&10^6\\ \hline
+\log(F_\nu/H)&0.337345509&0.334195668&0.333373335
+\end{array}
+\]
+and its predicted limit is \(1/3\).
+At \(t=1,A=160\), the normalized \(I/H\) ratio is \(2.380635626\);
+its predicted limit is \(\cosh^2(1)=2.381097846\).
+No finite list of samples proves the uniform statements.
+
+Next derive the leading prefactor from the continued \(6j\), its vertex
+factors and physical observer insertions, while following the external
+energy contour. Use \eqref{eq:test} as a diagnostic, not an input.
+The pure-recoil degeneration must also be controlled, or a common
+finite-deficit regime chosen. The two-dimensional finite-packet theorem
+does not supply that missing bridge.
+
+\begin{thebibliography}{9}
+\bibitem{CSTY} Y. Chen, D. Stanford, H. Tang and Z. Yang,
+\emph{Negative shocks versus static patch holography},
+\href{https://arxiv.org/html/2607.14042v1}{arXiv:2607.14042v1},
+Section 2.6, (2.76)--(2.84).
+\bibitem{CLP} J. Chandra, D. Liska and B. Post,
+\emph{3D de Sitter from complex Virasoro TQFT: Observers and knots},
+\href{https://arxiv.org/html/2610.30247v1}{arXiv:2610.30247v1},
+Section 3.3, footnote 12 and Appendix C.
+\bibitem{DLMF} NIST Digital Library of Mathematical Functions,
+\href{https://dlmf.nist.gov/16.5}{Section 16.5},
+beta-integral reductions; \href{https://dlmf.nist.gov/15.4}{Section 15.4},
+elementary Gauss functions. Online formulas checked 30 October 2026.
+\end{thebibliography}
+\end{document}

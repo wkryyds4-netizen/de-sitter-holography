@@ -1,0 +1,330 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,microtype,booktabs}
+\usepackage[margin=25mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\ga}{\mathfrak a}
+\newcommand{\gb}{\mathfrak b}
+\title{A uniform transverse limit of the dS$_3$ crossing kernel\\
+and its local action on test functions}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Working research note --- 31 October 2026}
+\begin{document}\maketitle
+\begin{abstract}
+Combining the two removable Gamma poles before estimation gives a
+bound uniform through the collision surface. The physical scalar
+kernel has a phase-shifted sine approximation with uniform $O(M^{-1})$
+error on a fixed transverse interval. It converges to a unit delta
+distribution there with respect to Lebesgue transverse measure.
+This local statement does not yet control the physical mass measures,
+creation amplitudes or noncompact spectral tails of a Bose observable.
+\end{abstract}
+
+\section{Scope and the local theorem}
+We retain $\ell=1$, $G_N=0$, proper $SO^+(3,1)$, BD scalar observers,
+KG matter, a fixed positive observer-label lower bound, and half-period
+regulated creation blocks. The scalar matrix element $U_{00}$ keeps
+its physical CG-period phase; it is not a separately unitary scalar
+transform. The label $M$ has static energy $\sqrt{1+M^2}$.
+
+Use $c=M$, $b=M+u$, $a=M+u+v$, $d=M+v+r$, $p,q>0$, and
+\[
+ A_j=\tfrac12+i\alpha_j,\qquad
+ \alpha=\tfrac12(v+q,p-u,-u-p,v-q),\qquad z=-ir/2 .
+\]
+Choose $R>0$ with $\max_j|\alpha_j|+R/2\le1/2$.
+All assertions are uniform for $|r|\le R$ and compact transfer
+families satisfying these conditions, once $M$ is sufficiently large.
+Let $L=\log M$ and
+\[
+ \delta(r)=\Im\left[2\log\Gamma(1-ir/2)
+       +\sum_j\{\log\Gamma(A_j+ir/2)-\log\Gamma(A_j)\}\right],
+\]
+continuously from $\delta(0)=0$. Define
+\begin{equation}
+ K_M(r)=\frac{\sin(Lr-\delta(r))}{\pi r},\quad r\ne0,
+ \qquad K_M(0)=\frac{L-\delta'(0)}{\pi}.
+ \label{K}
+\end{equation}
+We prove the model statement
+\begin{equation}
+ \sup_{|r|\le R}|U_{00}(M,r)-K_M(r)|=O(M^{-1}).
+ \label{uniform}
+\end{equation}
+Consequently, for $f\in C_c^2(\mathbb R)$ supported in $[-R,R]$,
+\begin{equation}
+ \int_{-R}^{R}f(r)U_{00}(M,r)\,dr
+ =f(0)+O_f(1/\log M)+O(\|f\|_1/M).
+ \label{local}
+\end{equation}
+The coefficient one is with respect to $dr$. No mass Jacobian or
+physical spectral weight has been incorporated into \eqref{local}.
+
+\newpage
+\section{Merging before bounding}
+The preceding LPRS/Wilson decomposition \cite{lprs,wilson} is
+\[
+ X=c_AF+c_BG,\quad Y=y_AF+y_BH,\quad U_{00}=2\Re(C_+XY).
+\]
+Set $\ga=zy_A$, $\gb=-zy_B$ and $d_0=M+v$. The Gamma poles disappear:
+\begin{align*}
+ \ga&=\Gamma(1+z)\frac{\Gamma(1-ib)}{\Gamma(1-ib-z)}
+       \frac{\Gamma(A_3-z)\Gamma(A_4-z)}{\Gamma(A_3)\Gamma(A_4)},\\
+ \gb&=\Gamma(1-z)\frac{\Gamma(1+i(d_0+r))}{\Gamma(1+id_0-z)}
+       \frac{\Gamma(A_1)\Gamma(A_2)}{\Gamma(A_1-z)\Gamma(A_2-z)}.
+\end{align*}
+Both equal one at $r=0$. Also $F(0)=H(0)$, and
+\begin{equation}
+ Y=\frac{\ga F-\gb H}{z},\qquad S=\frac{\ga-\gb}{z}.
+ \label{merged}
+\end{equation}
+Both expressions take their continuous derivative values at zero.
+
+Here are explicit real constants, not sampled maxima. Put
+$m=M-\max(|u|,|v|)-R>0$, $B=\max(|u|,|v|)+R$, and
+\begin{align*}
+ C_0&=\cosh(\pi/2)\sqrt{1+R/(2m)}\,
+       e^{\pi R/4}(1-e^{-2\pi m})^{-1/2},\\
+ P_1(t)&=\gamma+1+\operatorname{arsinh}t,\qquad
+ P_{1/2}=\gamma+2\log2+2+\operatorname{arsinh}1,\\
+ Q&=P_1(R/2)+2P_1(M+B)+2P_{1/2}.
+\end{align*}
+Gamma moduli give $|\ga|,|\gb|\le C_0$.
+The digamma difference series \cite{digamma}, compared with its
+decreasing integral, gives for $\sigma>0$
+\[
+ |\psi(\sigma+it)|\le|\psi(\sigma)|+\sigma^{-1}
+                         +\operatorname{arsinh}(|t|/\sigma).
+\]
+For example the extra sum is bounded by its first term plus
+$\int_\sigma^\infty |t|/[x\sqrt{x^2+t^2}]\,dx$.
+Differentiating the displayed regular coefficients therefore gives
+$|\ga'|+|\gb'|\le C_0Q$ and $|S|\le2C_0Q$.
+
+Write $F=\sum f_n$, $H=\sum h_n$. On the whole interval,
+\[
+ |f_n|,|h_n|\le\frac{1}{(n+1)^2}
+              \prod_{j=1}^{n}\frac{j^2}{j^2+m^2},
+ \qquad |f_n'|\le6H_n|f_n|,\quad |h_n'|\le H_n|h_n|.
+\]
+Here $H_n=\sum_{j=1}^n j^{-1}$. The derivative bounds follow by
+logarithmic differentiation of the Pochhammer products; the numerator
+real parts are $1/2$ and denominator real parts are one.
+The sequences $H_n/(n+1)^2$ are summable, justifying termwise
+differentiation. Since $\ga(f_n)-\gb(h_n)$ vanishes at zero,
+the fundamental theorem of calculus removes the apparent $1/r$.
+Using $\sum_{n\ge1}H_n/(n+1)^2\le2$ gives
+\begin{equation}
+ |Y-S|\le R_Y=
+ \frac{2C_0\{(\zeta(2)-1)Q+14\}}{1+m^2}
+ =O(\log M/M^2).
+ \label{RY}
+\end{equation}
+For the merged sum through $n=N-1$, its exact-arithmetic tail is
+\begin{equation}
+ T_Y(N)=\frac{2C_0}{N}
+ \prod_{j=1}^{N}\frac{j^2}{j^2+m^2}
+ \{Q+7(2+\log N)\}.
+ \label{tail}
+\end{equation}
+
+\newpage
+\section{Complete-kernel and coefficient errors}
+Let $D_0=C_+c_A$, $E_0=C_+c_B$,
+$R_F=(\zeta(2)-1)/(1+m^2)$, $Y_*=2C_0Q+R_Y$, and
+\[
+ D_*=\frac{C_0}{4\pi}
+       \sqrt{\frac{\sinh(\pi R/2)}{\pi R/2}}.
+\]
+The exact Gamma modulus formula implies $|D_0|\le D_*$.
+The preceding whole-series bound $|G|\le B_G$ uses a sinh product
+and a monic degree-ten ratio polynomial; it is uniform on the
+present compact window, with
+$|E_0|B_G=O(M^8e^{-\pi M/2})$.
+We obtain the finite-$M$ estimate
+\begin{equation}
+ |U_{00}-2\Re(D_0S)|
+ \le2D_*\{R_Y+R_FY_*\}+2|E_0|B_GY_*.
+ \label{fullbound}
+\end{equation}
+Thus the complete series error is uniformly $O(\log M/M^2)$
+plus an exponential term, including $r=0$. Bound \eqref{fullbound}
+is for the Gamma-exact approximation, not directly for \eqref{K}.
+
+It remains to make the Gamma expansion uniform. Define
+\[
+ \widetilde D=D_0M^{-z},\quad
+ \widetilde a=\ga M^{-z},\quad \widetilde b=\gb M^{z},
+\]
+\[
+ a_\infty=\Gamma(1+z)e^{-i\pi z/2}
+   \frac{\Gamma(A_3-z)\Gamma(A_4-z)}{\Gamma(A_3)\Gamma(A_4)},
+\]
+\[
+ b_\infty=\Gamma(1-z)e^{-i\pi z/2}
+   \frac{\Gamma(A_1)\Gamma(A_2)}{\Gamma(A_1-z)\Gamma(A_2-z)}.
+\]
+The previous physical phase calculation gives $D_\infty$ and
+\[
+ \widetilde D=D_\infty\left[
+ 1+\frac{r}{4M}-\frac{ir(3r+4v)}{8M}+O_{C^1}(M^{-2})\right].
+\]
+Its modulus follows directly from
+\[
+ \left|\frac{\widetilde D}{D_\infty}\right|^2
+ =\frac{b}{b-r/2}
+   \frac{1-e^{-2\pi b}}{1-e^{-2\pi(b-r/2)}}.
+\]
+For the phase and the two other coefficients, shifted Stirling and
+the digamma expansion \cite{stirling} give, uniformly in real $r$,
+\[
+ \|\widetilde D-D_\infty\|_{C^1}
+ +\|\widetilde a-a_\infty\|_{C^1}
+ +\|\widetilde b-b_\infty\|_{C^1}=O(M^{-1}).
+\]
+The derivative estimate uses the digamma remainder on the same
+sector; it does not follow merely by formally differentiating an
+unspecified pointwise big-$O$ term. All small Gamma arguments stay
+away from poles, and large arguments stay away from the negative
+real cut.
+
+Put $E_A=\widetilde D\widetilde a-D_\infty a_\infty$ and
+$E_B=\widetilde D\widetilde b-D_\infty b_\infty$.
+At zero both equal
+\[
+ \epsilon_0=D_0(M,0)-(4\pi)^{-1}=O(M^{-2}),
+\]
+by the preceding peak-phase identity, while
+$|E_A(r)-\epsilon_0|+|E_B(r)-\epsilon_0|=O(|r|/M)$.
+Since $|e^{-irL}-1|\le |r|L$,
+\[
+ \left|\frac{E_A(r)e^{-irL}-E_B(r)}{z}\right|
+       =O(M^{-1}+L/M^2)
+\]
+uniformly through zero. The limiting coefficients reproduce
+$K_M$ by the previously proved phase and purely imaginary
+nonoscillating branch. Together with \eqref{fullbound}, this proves
+\eqref{uniform}.
+
+\newpage
+\section{Local distributional action and its precise boundary}
+We give the short Fourier argument to fix the limiting normalization.
+For real or complex $f\in C_c^2(\mathbb R)$ supported in $[-R,R]$, set
+\[
+ g(r)=f(r)\cos\delta(r),\qquad
+ q(r)=\frac{g(r)-g(0)}r,\qquad
+ h(r)=f(r)\frac{\sin\delta(r)}r .
+\]
+The removable values at zero make $q,h$ continuously differentiable;
+$\delta$ is smooth. Then
+\[
+ \int_{-R}^{R} fK_M\,dr
+ =\frac{2f(0)}{\pi}\operatorname{Si}(LR)
+  +\frac1\pi\int_{-R}^{R}\{q(r)\sin Lr-h(r)\cos Lr\}\,dr .
+\]
+Integration by parts and the Dirichlet integral give
+\begin{equation}
+ \left|\int fK_M\,dr-f(0)\right|
+ \le \frac{6|f(0)|/R+\|q'\|_1+\|h'\|_1}{\pi L}.
+ \label{testbound}
+\end{equation}
+For example
+$|\int_x^\infty\sin t/t\,dt|\le2/x$ supplies the sine-integral
+tail; the endpoint values of $q$ contribute $2|f(0)|/R$,
+and $h$ vanishes at both endpoints.
+This is the same standard removable-pole/Dirichlet mechanism used
+in the Wilson analysis \cite{wilson}; the physical kernel and its
+uniform error have been controlled separately here.
+
+Adding \eqref{uniform} proves \eqref{local}. The constant in the
+$O(1/M)$ kernel estimate depends on the compact transfer family.
+We have not produced an optimized numerical value for that constant.
+The explicit estimates \eqref{RY}--\eqref{fullbound} remain available
+for the series part, with no arithmetic-rounding certification.
+
+There is also a useful conditional extension. If $f_M$ are all
+supported in this fixed interval, their $C^2$ norms are uniformly
+bounded, and $f_M(0)\to f_*(0)$, then
+\[
+ \int f_M(r)U_{00}(M,r)\,dr\longrightarrow f_*(0).
+\]
+Indeed the quantities in \eqref{testbound} and $\|f_M\|_1$ are then
+uniformly bounded. This states what would suffice for one local
+piece of a physical wave packet; it does not assert that the actual
+creation amplitudes satisfy these hypotheses.
+
+The conclusions do not include integration over the other transfer
+variables, the observer spectral Jacobians, a moving lower bound,
+noncompact mass tails, or growing-time factors.
+The full Bose free-observer limit therefore remains open.
+In particular a sharp moving cutoff or a test family with uncontrolled
+derivatives cannot be substituted into this theorem without further
+estimates. Full Fock domains, finite-$G_N$ dynamics and a microscopic
+de Sitter holographic dictionary remain later objectives.
+
+\newpage
+\section{Numerical evidence and reproducibility}
+The interval tests use $(u,v,p,q)=(0.1,-0.1,0.4,0.4)$, $R=0.25$,
+$M=16,64,256$, and
+$r=-0.2,-10^{-12},-10^{-24},0,10^{-24},10^{-12},0.2$.
+All 21 complete kernels, evaluated at 100 digits, satisfy
+\eqref{fullbound} after separately allowing for saved truncation tails.
+The merger uses \texttt{expm1} on the logarithmic ratio for $r\ne0$
+and the exact digamma series at zero.
+
+Eleven points were compared with the unmerged representation at
+140 digits and doubled cutoff. Their absolute differences range
+from about $3.14\,10^{-23}$ at low mass to about $10^{-75}$ at tiny
+nonzero offsets; the $M=256,r=0$ change is about $3.71\,10^{-98}$.
+The explicit allowance $10^{-65}$ concerns empirical rounding only.
+All values, including imaginary residuals, are retained.
+
+For a direct local-integral diagnostic, take
+$f_k(r)=r^k(1-(r/R)^2)^3$ on $[-R,R]$, zero outside, $k=0,1,2$.
+These functions are $C^2$ and their target values are $(1,0,0)$.
+The full kernel gives:
+\begin{center}
+\begin{tabular}{rrrr}
+\toprule
+$M$ & $\int f_0 U\,dr$ & $\int f_1 U\,dr$ & $\int f_2 U\,dr$\\
+\midrule
+64 & $0.4758802344$ & $7.45120\,10^{-5}$ & $0.0030419739$\\
+256 & $0.5580727442$ & $4.52997\,10^{-5}$ & $0.0034353921$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The 24/48-point Gauss refinements use 144 complete complex kernel
+evaluations. The largest refinement change is about $3.11\,10^{-39}$,
+well above some propagated series tails (as small as $10^{-191}$).
+Neither the tail nor the refinement difference certifies total
+quadrature/rounding accuracy. These finite masses are visibly far
+from the limiting delta action.
+
+Separately, evaluating only the proved sine approximation for
+$L=4,8,16,32,64,128$ gives $f_0$ integrals approximately
+$0.46605,0.68713,0.94635,1.00246,0.999651,1.000026$.
+These are not full-kernel computations at $M=e^L$.
+The distinction is recorded in the data schema.
+
+An independent Decimal/Fraction replay passes 446 checks, including
+the elementary constants, exact companion polynomials, all saved
+quadrature nodes and input hashes. Numerical checks support the
+implementation; the uniform and distributional statements rest on
+the arguments above. All prior scientific files and frozen snapshots
+are retained. These are model calculations built from established
+formulas, not a claim of a new complete holographic dual.
+
+\begin{thebibliography}{9}
+\bibitem{lprs} J. Liu et al.,
+\href{https://arxiv.org/html/1808.00612v3}{arXiv:1808.00612v3},
+Eqs.\ (3.35)--(3.38), the two-series crossing kernel.
+\bibitem{wilson} W. Groenevelt,
+\href{https://arxiv.org/html/math/0306424v1}{arXiv:math/0306424v1},
+Propositions 4.4 and 4.7; removable terms and Dirichlet integrals.
+\bibitem{digamma} NIST DLMF,
+\href{https://dlmf.nist.gov/5.7}{Section 5.7.6}, digamma difference series.
+\bibitem{stirling} NIST DLMF,
+\href{https://dlmf.nist.gov/5.11}{Section 5.11}, log-Gamma, digamma
+and Gamma-ratio asymptotics. Checked 31 October 2026.
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,49 @@
+{
+  "created_at_utc": "2026-10-30T06:49:03.179209+00:00",
+  "kind": "self-reviewed phase-preserving joint leading estimate in the symmetric internal chiral graph",
+  "pages": 6,
+  "diagnostics": 64,
+  "retained_initial_failed_checks": 2,
+  "compilers": {
+    "local": "two clean pdfLaTeX passes",
+    "desktop": "success on final six-page source"
+  },
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "dpi": 95,
+    "clipping_or_overlap": false
+  },
+  "established_scope": "K->infinity, K^3/nu^2->0, bounded alpha/K, u=v=0, imaginary omega, after fixed-mass kappa limit",
+  "not_proven": [
+    "numerical minimal-mass threshold or interval quadrature certificate",
+    "joint higher coefficients and exact finite-mass zeros",
+    "transverse variables and their tails",
+    "physical external contours and normalization",
+    "finite-kappa or finite-G microscopic holographic dual"
+  ],
+  "hashes": {
+    "code/recoil_bessel_joint.py": "8270fc8de084201f4ebf81a4a21f575667fa6317285f15394dbaf1902219cae3",
+    "code/build_bessel_joint_note.ps1": "5ae055c507e9fe6000a6eb781fa4844be289dd59ce15dc64f49a5315b1bfb748",
+    "manuscript/recoil-bessel-joint/main.tex": "bab86fe98076826fa2a7eead329dd9073a12a89e6c0f6ecc87177b87ff7f81ce",
+    "notes/stage4-recoil-bessel-joint.md": "fa83be838fd853e71ed33e58582eaadc97c71e92b79968172f2617886990e768",
+    "literature/stage4-recoil-bessel-joint-sources.md": "9b9f4e6fa92c65b69b1f866fe351e4546408c06a81157b72b3f9371324eb06ff",
+    "results/stage4/recoil-bessel-joint/diagnostics.json": "b74aa2ab1116d037c6fb72823c60ad46ea806941a3c978dbd72d4c50e404a0cf",
+    "results/stage4/recoil-bessel-joint/initial-contour-grid.json": "77a290751b4510e2fbf7adad65e4ee3879d1a9211c283a7d37218be8feb151fb",
+    "results/stage4/recoil-bessel-joint/initial-contour-grid.py": "a21fafcf81727c29358bb1729cda2fba148f05758525edd2464238ee4b537397",
+    "results/stage4/recoil-bessel-joint/main.log": "cac94524470b772becf271c2e60824045be3a48da2389a41f185818dfbab8631",
+    "results/stage4/recoil-bessel-joint/build-review.md": "dd6eaad3d3feb0f0614b257e205d403d35bad6952a33ae8baaaf40d0b0db1907",
+    "output/pdf/de-sitter-recoil-bessel-joint.pdf": "7152a00a4f79a96711690ffabd0a6115eb6c2920e261832869f42ce4a31a1928",
+    "code/recoil_bessel_limit.py": "db108ba306fd4c8e9d3b062a833b5e56a02f7f8da2d0ddb3c48a1850cc13c5a2",
+    "code/recoil_bessel_cancellation.py": "b2f89ead69e0d0cfb140fcac26067629dc912af8a10cf9de5f12873a80282e5a",
+    "results/stage4/recoil-bessel-limit/diagnostics.json": "fcd9655f7f58dd7069130ba9f42df7bf9dbc7ab0871b71d8ef97f28637b9f288",
+    "notes/stage4-recoil-bessel-endpoints.md": "cb41dc1cfd02418953303e7f10bca90e84ba20c2e8424112128e484fc806a368",
+    "sources/dlmf-5.11.html": "8f573b25a200d5ca09372ad88adbd4a621bc0bc463e088c6548ff8dddc0d2eee"
+  }
+}

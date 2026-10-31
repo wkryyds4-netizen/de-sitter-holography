@@ -1,0 +1,416 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,microtype,booktabs}
+\usepackage[margin=25mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newcommand{\dd}{\mathop{}\!\mathrm d}
+\newcommand{\E}{\mathcal E}
+\newcommand{\D}{\mathcal D}
+\title{A phase-preserving two-branch estimate\\for the joint recoil Barnes limit}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Working research note --- 30 October 2026}
+\begin{document}\maketitle
+\begin{abstract}
+An exact reflection identity separates the problematic Barnes
+contour into a negative vertical branch and a positive-weight residue
+branch, with exponentially small connectors in the joint regime.
+The Bessel equation centers the quadratic phase exactly on both
+branches. This gives an absolute error of order
+\(K^3/\nu^2+e^{-cK}\), measured against the sum of Bessel branch
+magnitudes, uniformly for bounded \(\alpha/K\).
+The phase \(e^{i(K^2+\alpha^2-1)/\nu}\) is retained even when it is large.
+The result concerns a symmetric internal chiral graph after the
+fixed-mass pure-recoil limit. It is a self-reviewed proof draft,
+not an identification of a finite-\(G\) physical correlator.
+\end{abstract}
+
+\section{Statement and scope}
+Use radius one, \(K,\nu>0\), \(u=v=0\), \(\omega=i\alpha\), \(M=\nu^2/(2K)\).
+The fixed-mass \(\kappa\to\infty\) limit has already been taken.
+No external state, operator algebra or physical normalization is
+newly specified here. Let \(a_\pm=(1\pm\alpha)/2\),
+\(b=\tfrac12-i(M-\nu)\), \(c=\tfrac12-i(M+\nu)\), and
+\[
+ Q_\nu(t)=e^{-i\pi t}
+ \frac{\Gamma(t-i\nu/2)^4}{\Gamma(-i\nu/2)^4}
+ \frac{\Gamma(b-t)\Gamma(c)}{\Gamma(b)\Gamma(c+t)}
+ \Gamma(a_+-t)\Gamma(a_--t).
+\]
+The contour \(C\) goes upward from \(-N-i\infty\) to \(-N+i\),
+then right; \(N\) is an integer with \(N>\alpha/2+1/2\).
+Write
+\[
+ \mathcal I_\nu=\frac1{2\pi i}\int_C Q_\nu(t)\,\dd t,\qquad
+ J=-e^{i\pi\alpha}A_K-i\pi A_I,
+\]
+\[
+ A_K=K K_\alpha(K),\qquad A_I=K I_\alpha(K),\qquad \E=A_K+\pi A_I.
+\]
+For real negative \(\alpha\), use evenness and replace it by
+\(|\alpha|\) throughout the positive scales.
+\begin{theorem}\label{thm:main}
+For each finite \(Y\ge0\), there are positive constants
+\(K_Y,\rho_Y,C_Y,c_Y\) such that, for
+\[
+ K\ge K_Y,\qquad 0\le\alpha\le YK,\qquad
+ \rho:=K^3/\nu^2\le\rho_Y,
+\]
+one has, with \(S=K^2+\alpha^2-1\),
+\begin{equation}\label{eq:main}
+ \left|\mathcal I_\nu-e^{iS/\nu}J\right|
+ \le C_Y\bigl(\rho+e^{-c_YK}\bigr)\E.
+\end{equation}
+In particular the envelope-normalized error tends to zero when
+\(K\to\infty\) and \(\rho\to0\), with no assumption that \(K^2/\nu\to0\).
+\end{theorem}
+This includes zeros of \(J\), but supplies a relative error only on
+regions where \(|J|\ge\epsilon\E\).
+The constants are not numerically certified thresholds.
+Equation \eqref{eq:main} is a leading joint estimate, not a uniform
+version of all previously computed fixed-parameter coefficients.
+
+\section{An exact analytic splitting}
+Introduce
+\begin{align*}
+ G(t)&=(K/2)^{2t}\Gamma(a_+-t)\Gamma(a_--t),\\
+ V(t)&=e^{-i\pi t}(K/2)^{2t}
+       \frac{\Gamma(a_+-t)}{\Gamma(\tfrac12+t+\alpha/2)},\\
+ R_\nu(t)&=e^{i\pi t}(K/2)^{-2t}
+ \frac{\Gamma(t-i\nu/2)^4}{\Gamma(-i\nu/2)^4}
+ \frac{\Gamma(b-t)\Gamma(c)}{\Gamma(b)\Gamma(c+t)}.
+\end{align*}
+Thus \(Q_\nu=R_\nu e^{-2\pi it}G\). Reflection gives the exact identity
+\begin{equation}\label{eq:split}
+ e^{-2\pi it}G(t)=-e^{i\pi\alpha}G(t)
+                   +2\pi e^{i\pi\alpha/2}V(t).
+\end{equation}
+Indeed
+\[
+ e^{-2\pi it}+e^{i\pi\alpha}
+ =2e^{-i\pi(t-\alpha/2)}\cos\pi(t+\alpha/2),
+ \qquad
+ \Gamma(a_--t)\cos\pi(t+\alpha/2)
+ =\frac{\pi}{\Gamma(\tfrac12+t+\alpha/2)}.
+\]
+This removes one pole family from the residue branch without
+discarding its phase. Integer \(\alpha\) causes no singular
+connection coefficient in \eqref{eq:split}.
+
+The preceding endpoint estimate implies, on every growing rectangle
+\(|t|\le CK\), after canceling the common small Gamma factors,
+\begin{equation}\label{eq:mult}
+ R_\nu(t)=e^{iA(t)/\nu}\bigl(1+\epsilon_\nu(t)\bigr),\quad
+ A(t)=4(t^2-t),\quad
+ |\epsilon_\nu(t)|\le C_C\rho e^{C_C\rho}.
+\end{equation}
+It follows from sectorial Stirling and Taylor expansion of shifts
+\(O(K)\), not a fixed-shift formula. The large Gamma arguments remain
+in a uniform safe sector since \(K/\nu\to0\).
+The quotient is analytic before reaching the poles at height \(\nu/2\)
+or \(-(M-\nu)\). On \(|\Re t|,|\Im t|\le CK\),
+\[
+ |R_\nu(t)|\le\exp[C_C\rho+C_CK^2/\nu]=e^{o(K)}
+\]
+uniformly for bounded small \(\rho\). On the real axis its leading
+factor has unit modulus. We never extend the exact \(R_\nu G\)
+vertical integral through its distant poles.
+
+\section{Finite contours and exponentially small connectors}
+Put
+\[
+ L=\tfrac12\sqrt{K^2+\alpha^2},\quad d=\tfrac12-L,\quad
+ N=\lceil L\rceil,\quad r_0=8+2Y.
+\]
+Choose \(r\in[r_0K,r_0K+1]\) at distance at least \(1/8\)
+from both real pole lattices \(a_\pm+\mathbb Z\).
+Such a choice exists: the two forbidden sets occupy at most
+half of a unit interval. Fix a sufficiently large constant \(H=H_Y\)
+and set \(T=HK\). Increase \(K_Y\) if necessary so that
+\[
+ T<\nu/2,\qquad T<M-\nu,\qquad N>\alpha/2+1/2.
+\]
+The old positive-tail lemma and optimized negative vertical estimate
+then truncate \(C\) to
+\[
+ C_0:\quad A=-N-iT\ \longrightarrow\
+ B=-N+i\ \longrightarrow\ C_r=r+i
+\]
+with error \(O_Y(e^{-cK}\E)\).
+Here the old positive-tail hypothesis
+\(\nu^2\ge32[\max(2,Y^2/2)+1]K^3\) is included in \(\rho_Y\).
+
+For \(R_\nu G\), replace \(C_0\) by
+\[
+ A\longrightarrow d-iT\longrightarrow d+iT
+ \longrightarrow r+iT\longrightarrow C_r.
+\]
+No pole is crossed. The small-Gamma poles lie on the real axis to
+the right of \(d\), the numerator poles lie at height \(\nu/2>T\),
+and the \(b-t\) poles lie below \(-T\).
+
+For \(R_\nu V\), append the two sides
+\(C_r\to r-iT\to A\). The resulting rectangle is clockwise.
+Its only poles are \(t_n=a_++n<r\), \(n\ge0\), with
+\[
+ \operatorname*{Res}_{t=t_n}(R_\nu V)
+ =-e^{-i\pi a_+}w_nR_\nu(t_n),\qquad
+ w_n=\frac{(K/2)^{1+\alpha+2n}}{n!\Gamma(1+\alpha+n)}>0.
+\]
+There are no residues from the distant \(b-t\) family.
+Keeping the signs of the clockwise contour gives
+\begin{equation}\label{eq:branches}
+ \mathcal I_\nu=
+ -\frac{e^{i\pi\alpha}}{2\pi}
+      \int_{-T}^{T}R_\nu(d+is)G(d+is)\,\dd s
+ -2\pi i\sum_{t_n<r}w_nR_\nu(t_n)
+ +O_Y(e^{-cK}\E).
+\end{equation}
+
+Here are bounds for every connector in this construction.
+At \(t=x\pm iHK\), \(-N\le x\le r\), sectorial Stirling gives
+\[
+ \log|G(t)|
+ \le K\{-\pi H+C_Y[1+\log(1+H)]\}+O_Y(\log K).
+\]
+The powers of \(K\) cancel between \((K/2)^{2t}\) and the two
+Gamma factors. For \(H\) larger than twice the bounded scaled real
+arguments, the sector and \(C_Y\) can be chosen independently of \(H\).
+Choosing \(H\) large makes the right side less than
+\(-3K\). Multiplication by \(R_\nu=e^{o(K)}\) and integration over
+length \(O_Y(K)\) preserve exponential smallness relative to
+\(\E\ge c_Y\sqrt K e^{-K}\).
+
+On the right vertical side, reflection and the pole gap give
+\[
+ |G(r)|\le C_Ye^{-Kh_y(r/K)},\qquad
+ h_y(q)=(q+y/2)\log[2(q+y/2)]
+       +(q-y/2)\log[2(q-y/2)]-2q.
+\]
+Moreover \(|G(r+is)|\le|G(r)|\): shift the real Gamma arguments
+to positive values and use
+\(|\Gamma(a+is)|\le\Gamma(a)\) together with the finite recurrence
+factors. Since \(h_y(q)\ge2q[\log(2q)-1]\), this side is small
+even after the multiplier and its length are included.
+Finally \eqref{eq:split} bounds \(|V|\le C|G|\) on the lower
+horizontal side and on \(-T\le\Im t\le1\).
+This also covers the short bottom segment from \(-N-iT\) to \(d-iT\).
+Thus no central absolute-norm estimate on the original height-one
+contour is used.
+
+\section{The positive residue branch}
+The standard Bessel series \cite{Bessel} gives
+\[
+ 2\sum_{n=0}^\infty w_n=A_I.
+\]
+Let \(\D=(K/2)\partial_K\), differentiating at fixed \(\alpha\).
+It acts on \(w_n\) by multiplication by \(t_n\).
+The Bessel equation gives \(4(\D^2-\D)A_I=SA_I\).
+With the normalized positive weights \(p_n=2w_n/A_I\), this implies
+the exact centered moments
+\begin{equation}\label{eq:moments}
+ \mathbb E[A(t_n)-S]=0,\qquad
+ \mathbb E[(A(t_n)-S)^2]=8K^2\mathbb E[t_n].
+\end{equation}
+For the second identity, commute \(4(\D^2-\D)\) through \(S\),
+using \(\D S=\D^2S=K^2\). Also the series shift gives
+\[
+ \mathbb E[n(n+\alpha)]=K^2/4,\qquad
+ \mathbb E[n]\le K/2,\qquad
+ \mathbb E[t_n]\le(1+\alpha+K)/2.
+\]
+Consequently the second moment in \eqref{eq:moments} is \(O_Y(K^3)\).
+Because \(A(t_n)-S\) is real, \(|e^{ix}-1-ix|\le x^2/2\)
+and the first moment cancels exactly. Therefore
+\begin{equation}\label{eq:Iphase}
+ \left|2\sum_{n=0}^\infty w_ne^{iA(t_n)/\nu}
+       -e^{iS/\nu}A_I\right|\le C_Y\rho A_I.
+\end{equation}
+To use \eqref{eq:mult}, truncate only the exact multiplier sum at
+\(t_n<r\). The omitted \emph{auxiliary} weights have ratio
+\[
+ \frac{w_{n+1}}{w_n}=\frac{K^2}{4(n+1)(n+\alpha+1)}
+\]
+uniformly bounded below one once \(t_n\ge r_0K\).
+Stirling at the first omitted index gives a bound
+\(C_Ye^{-cK}\E\); polynomially weighted tails obey the same type of
+bound. Thus the second term of \eqref{eq:branches} equals
+\(-i\pi e^{iS/\nu}A_I+
+O_Y(\rho A_I+e^{-cK}\E)\).
+No infinite sum of the exact \(R_\nu\) is invoked.
+
+\section{The negative vertical branch}
+On \(t=d+is\), the two Gamma real parts are
+\(A_\pm=L\pm\alpha/2\), both between \(c_YK\) and \(C_YK\).
+Real Stirling gives
+\[
+ G(d)=2\pi e^{-KF(y)+O_Y(K^{-1})},\qquad
+ F(y)=\sqrt{1+y^2}-y\operatorname{arsinh}y.
+\]
+The exact Gamma product identity, for \(a>0\), is
+\[
+ \log\frac{|\Gamma(a+is)|}{\Gamma(a)}
+ =-\frac12\sum_{j=0}^\infty
+       \log\!\left(1+\frac{s^2}{(a+j)^2}\right).
+\]
+In particular, for fixed \(H\) and \(|s|\le HK\),
+\begin{equation}\label{eq:gauss}
+ |G(d+is)|\le G(d)e^{-c_{Y,H}s^2/K}.
+\end{equation}
+For example, use \(\log(1+z)\ge z/(1+z)\) and retain the first
+\(O(K)\) terms of the sum. The full product also bounds the
+\(|s|>HK\) tail and any fixed polynomial moment exponentially in
+\(K\). Bound its logarithm by the integral of the decreasing
+summand; its negative derivative is bounded away from zero
+for \(|s|\ge HK\). These estimates and the positive \(K_\alpha\)
+integral give
+\[
+ \frac1{2\pi}\int_{\mathbb R}|G(d+is)|\,\dd s\le C_Y A_K,
+\]
+\[
+ \int_{|s|>HK}(1+|s|^m)|G(d+is)|\,\dd s
+ \le C_{Y,H,m}e^{-cK}A_K,
+\]
+after absorbing fixed powers of \(K\) into a smaller exponent.
+
+The Mellin--Barnes formula \cite{MB} supplies
+\[
+ \frac1{2\pi}\int_{\mathbb R}G(d+is)\,\dd s=A_K.
+\]
+Derivatives may be taken at fixed \(\alpha\) and a locally fixed
+vertical line, before moving it back to \(d\). Its exponential tails
+justify differentiation. The same Bessel equation therefore gives
+\begin{equation}\label{eq:Kcenter}
+ \frac1{2\pi}\int_{\mathbb R}[A(d+is)-S]G(d+is)\,\dd s=0.
+\end{equation}
+This is an exact complex moment, not a positivity assertion.
+Our choice of \(d\) is crucial:
+\[
+ q(s):=A(d+is)-S=-4s^2-8iLs.
+\]
+The elementary complex Taylor remainder obeys
+\[
+ |e^{iq/\nu}-1-iq/\nu|
+ \le\frac{|q|^2}{2\nu^2}e^{8L|s|/\nu}.
+\]
+On \(|s|\le HK\), complete the square in \eqref{eq:gauss}:
+\[
+ \frac1{2\pi}\int_{-HK}^{HK}
+ |G(d+is)|\,|q(s)|^2 e^{8L|s|/\nu}\,\dd s
+ \le C_Y K^3 A_K e^{C_Y\rho}.
+\]
+Gaussian moments give the power \(K^3\), while the displaced center
+costs \(L^2K/\nu^2=O_Y(\rho)\).
+Using \eqref{eq:Kcenter} and its auxiliary polynomial tails,
+\[
+ \frac1{2\pi}\int_{-T}^{T}e^{iA(d+is)/\nu}G(d+is)\,\dd s
+ =e^{iS/\nu}A_K+O_Y[(\rho+e^{-cK})A_K].
+\]
+Equation \eqref{eq:mult} contributes the same \(O_Y(\rho A_K)\)
+after integration, because its leading modulus is \(e^{8Ls/\nu}\).
+Combining this with \eqref{eq:Iphase} and the connector bounds proves
+Theorem~\ref{thm:main}.
+
+\section{Mass window and limits of the result}
+Since \(K=\nu^2/(2M)\) and \(\rho=\nu^4/(8M^3)\),
+the sufficient joint limit is
+\[
+ \nu\to\infty,\qquad \nu^{4/3}\ll M\ll\nu^2,
+ \qquad |\alpha|/K\le Y.
+\]
+This previously motivated window is now supported by a joint
+leading-error proof for the specified symmetric internal integral.
+It is not a finite-\(\kappa\) or finite-\(G\) theorem.
+
+At \(\alpha=0\), the two leading terms are in quadrature, so
+\(|J(K,0)|\ge\E(K,0)/\sqrt2\). Hence, once the error is small,
+\[
+ \frac{\mathcal I_\nu(K,\alpha)}{\mathcal I_\nu(K,0)}
+ =e^{i\alpha^2/\nu}\frac{J(K,\alpha)}{J(K,0)}
+ +O_Y\!\left[
+   (\rho+e^{-cK})\frac{\E(K,\alpha)}{\E(K,0)}
+ \right].
+\]
+The amplitude convention \(C\) cancels because it is independent
+of \(\alpha\). This remains an internal chiral graph ratio, not a
+normalized physical four-point function. Near an auxiliary zero
+the absolute estimate does not locate exact finite-mass zeros or
+provide a relative error for their small lift.
+
+\section{Numerical evidence and reproducibility}
+The exact splitting, finite-contour orientation and all connectors
+are checked separately. Three small finite contours deliberately
+retain non-negligible boundary corrections; omitting them changes
+the normalized answer by roughly \(0.00180\), \(0.0390\), and \(0.0111\).
+The branch representation is also compared with six frozen full
+contour values from the fixed-\(K\) study.
+
+For the joint experiment use
+\[
+ \nu=8K^{7/4},\qquad \rho=(64\sqrt K)^{-1},\qquad
+ K^2/\nu=K^{1/4}/8.
+\]
+Thus \(\rho\to0\) while the unexpanded phase grows.
+The three bounded ratios \(y=0,1,2\) use \(K=8,16,32,64\).
+Integrate the negative branch with 20/32 Gauss--Legendre nodes
+at 55/75 decimal digits, retain the positive residue sum up to
+a pole-safe \(r\) near \(12K\), and use \(T=\min(8K,\nu/4)\).
+The largest \(K\) is checked at 95 digits and with \(T=10K\)
+when permitted by the pole strip.
+These finite truncations are numerical diagnostics, not certified
+applications of a known minimal \(K_Y\).
+
+\begin{center}
+\begin{tabular}{rrrr}
+\toprule
+\(K\)&error/\(\rho\), \(y=0\)&error/\(\rho\), \(y=1\)&error/\(\rho\), \(y=2\)\\
+\midrule
+8&0.392828&1.002373&3.615498\\
+16&0.364228&0.974595&3.665900\\
+32&0.349064&0.959404&3.691384\\
+64&0.341276&0.951441&3.705275\\
+\bottomrule
+\end{tabular}
+\end{center}
+Here error means the full complex difference from
+\(e^{iS/\nu}J\), divided by \(\E\), not a relative difference
+dividing by \(J\). An auxiliary-zero sample at \(\alpha=15.5\)
+is retained with the same normalization.
+The initial coarse connector grid missed its strict tolerance in
+two cases; the original code and output are preserved and the grid
+was refined, without relaxing that tolerance.
+The final 64 checks passed: 12 splitting/multiplier identities,
+12 positive moments, nine vertical moments, six finite-contour
+checks, six legacy comparisons, 12 joint quadrature comparisons,
+six precision/extent checks and one auxiliary-zero refinement.
+
+The next tasks are the transverse \(u,v\) variables and their tails,
+followed by external energy contours and insertion normalization.
+The complete microscopic de Sitter dual remains open.
+This argument uses standard reflection, Mellin--Barnes inversion
+and Bessel identities; no priority claim is made.
+
+\begin{thebibliography}{9}
+\bibitem{Gamma} NIST DLMF,
+\href{https://dlmf.nist.gov/5.5}{Sec.\ 5.5},
+\href{https://dlmf.nist.gov/5.8.E3}{Eq.\ 5.8.3} and
+\href{https://dlmf.nist.gov/5.11}{Sec.\ 5.11}:
+Gamma reflection, modulus products and sectorial asymptotics.
+\bibitem{Bessel} NIST DLMF,
+\href{https://dlmf.nist.gov/10.25}{Eqs.\ 10.25.1--2}:
+the modified-Bessel equation and positive \(I_\alpha\) series.
+\bibitem{MB} NIST DLMF,
+\href{https://dlmf.nist.gov/10.32.E13}{Eq.\ 10.32.13}
+and \href{https://dlmf.nist.gov/10.32.E9}{Eq.\ 10.32.9}:
+positive-argument Mellin--Barnes and real-integral representations.
+\bibitem{Temme} N. M. Temme,
+\href{https://arxiv.org/abs/1308.1547}{Uniform Asymptotic Methods
+for Integrals}, arXiv:1308.1547, Sec.\ 2.5.
+General contour context only; no joint theorem is imported.
+\end{thebibliography}
+{\small\noindent Code and numerical records:\par
+\noindent\path{code/recoil_bessel_joint.py}\par
+\noindent\path{results/stage4/recoil-bessel-joint/diagnostics.json}\par
+\noindent Prior endpoint proof:\par
+\noindent\path{notes/stage4-recoil-bessel-endpoints.md}\par}
+\end{document}

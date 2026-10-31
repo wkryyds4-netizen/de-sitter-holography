@@ -1,0 +1,241 @@
+\section{Preparing the crossed large-mass limit}
+\label{sec:crosslimit}
+The large-mass limit must specify whether an observer threshold moves
+with the prepared state. We first obtain estimates independent of the
+large mass, then isolate the remaining local Racah limit. The latter is
+stated as a hypothesis, not inferred from a pointwise asymptotic formula.
+
+\subsection{Two distinct preparation protocols}
+Use exact observer energy $m(s)=\sqrt{s^2+1/4}$, its inverse
+$s(m)=\sqrt{m^2-1/4}$, and $j(m)=m/s(m)$. Let $\pi_0(r)$ be a fixed
+probability density on $r\ge0$. A translated normalized vacuum packet is
+specified by
+\begin{equation}
+ \rhoP(d)|f_M(d)|^2\dd d=\pi_0(r)\dd r,
+ \qquad m(d)=M+r.
+ \label{eq:translated-energy-packet}
+\end{equation}
+The phase of $f_M$ is immaterial to these pure-right vacuum correlators.
+The earlier flat clock variable is $p=2\pi r$; if its density is $P(p)$,
+then $\pi_0(r)=2\pi P(2\pi r)$.
+We distinguish two compressions applied at every insertion:
+\begin{equation}
+ Q^{\rm fixed}=\one_{H_R\ge m_*},\quad m_*>1/2;
+ \qquad Q^{\rm moving}_M=\one_{H_R\ge M},\quad M\ge1.
+ \label{eq:two-thresholds}
+\end{equation}
+The left observer is already in the support of the packet. Its matching
+threshold projection acts trivially throughout a pure-right correlator.
+In excess energy the first boundary retreats to $m_*-M$, whereas the
+second remains at zero. The fixed-threshold problem retains our positive
+$s_*$ assumption and does not assert the $s_*=0$ field extension.
+
+The microcanonical preparation of~\cite[(6.29), (B.43)]{KL} has a window
+on the external state, without a moving threshold at every intermediate
+insertion. Its variables $s_i=\Lambda+q_i$ are representation labels;
+our $M+r_i$ are exact energies. On bounded offsets, differences of the
+two labels agree with energy differences up to $O(M^{-2})$.
+The paper's fixed-time delta limit and its scrambling-time limit are
+different distributional limits. Its two time origins are
+$\log(2\Lambda)$ in (6.32) and $\log(2\Lambda/e)$ in (B.45).
+Neither distinction is removed by a normalization convention for our
+packet.
+
+\subsection{Uniform tails without an absolute bound on the Racah kernel}
+The one-step positive density in exact energy is
+\begin{equation}
+ K(m'|m)=j(m')V_\nu(s(m')|s(m))
+                  e^{-\sigma^2(m'-m)^2}.
+ \label{eq:energy-positive-kernel}
+\end{equation}
+Fix $\nu,\sigma>0$ and a common lower mass $m_*>1/2$ for all states
+under consideration. Equation~\eqref{eq:gamma-envelope} and
+$j(m')\le j(m_*)$ give a constant $C$ such that
+\begin{equation}
+ 0\le K(m'|m)\le B(m'-m):=C e^{-\sigma^2(m'-m)^2}.
+ \quad A:=\int_{\mathbb R}B(u)\dd u<\infty.
+ \label{eq:uniform-energy-envelope}
+\end{equation}
+Additional intermediate projections only reduce positive norms.
+For a vacuum fiber at energy $m_0$, the squared norm of either ordered
+one-of-each state is the integral of
+$K(m_1|m_0)K(m_2|m_1)$ and is at most $A^2$.
+This uses the normalized ordered CG tree, not orthogonality of arbitrary
+noncommuting projection histories.
+
+\begin{proposition}[Mass-independent spectral-tail control]
+In each ordered tree retain only
+$|m_1-m_0|\le R$ and $|m_2-m_0|\le R$. Let $X_{M,R}$ pair the two
+retained trees, and let $X_M$ be the uncut crossed pairing. Define
+$b(R)=\int_{|u|>R}B(u)\dd u$. For either protocol in
+\eqref{eq:two-thresholds}, any normalized packet, and all real times,
+\begin{equation}
+ |X_M-X_{M,R}|\le 2A\sqrt{2A\,b(R/2)}.
+ \label{eq:uniform-cross-tail}
+\end{equation}
+Discarding additionally the external packet tail $r>L$ changes the
+crossed pairing by at most
+$A^2\int_L^\infty\pi_0(r)\dd r$.
+\label{prop:uniform-cross-tail}
+\end{proposition}
+\begin{proof}
+Write $u=m_1-m_0$, $v=m_2-m_1$. Leaving the retained path implies
+$|u|>R/2$ or $|v|>R/2$. Ordered-channel orthogonality identifies its
+squared norm with the positive excluded path integral. Thus it is at
+most $2A b(R/2)$, uniformly in $m_0$ and time. Subtract the two pairings
+and apply Cauchy--Schwarz, using norm at most $A$ for each tree.
+The fiber bound $|X_{m_0}|\le A^2$ gives the external-tail assertion.
+\end{proof}
+The cutoff in this proposition is a numerical path restriction centered
+on the external energy. It is not an additional fixed experimental mass
+window. In particular, the old box $[0.2,3]$ cannot follow $M\to\infty$.
+The constants are analytic finite constants; no certified numerical
+value of $C$ is claimed.
+
+\subsection{The unresolved compact distribution limit}
+Let $\mathcal C_\nu(a,b,c;d)=X_H(a,b,c,d)/\rho_H(d)$ with exactly the
+normalization in Section~\ref{sec:fourpoint}. In the variables
+\begin{equation}
+ d=s(M+r),\quad a=s(M+r+x),\quad
+ b=s(M+r+y),\quad c=s(M+r+z),
+\end{equation}
+define the density relative to $\dd x\,\dd y\,\dd z$ by
+\begin{equation}
+ \widetilde{\mathcal C}_M(r;x,y,z)
+ =j(M+r+x)j(M+r+y)j(M+r+z)\mathcal C_\nu(a,b,c;d).
+ \label{eq:translated-cross-density}
+\end{equation}
+All masses in a compact set of offsets are positive for sufficiently
+large $M$. The natural local hypothesis is
+\begin{equation}
+ \widetilde{\mathcal C}_M
+ \longrightarrow v_\nu(x)v_\nu(z)\delta(y-x-z)
+ \quad\text{in }\cD'(\mathbb R^4_{r,x,y,z}),
+ \label{eq:local-racah-hypothesis}
+\end{equation}
+where
+\begin{equation}
+ v_\nu(u)=\frac{e^{-\pi u}}{16\pi^3}
+ \left|\Gamma\left(\tfrac14+\tfrac i2(\nu+u)\right)
+        \Gamma\left(\tfrac14+\tfrac i2(\nu-u)\right)\right|^2,
+ \qquad k(u)=v_\nu(u)e^{-\sigma^2u^2}.
+ \label{eq:limit-step-weight}
+\end{equation}
+The normalization is consistent with the assembled factors (B.41),
+(B.42), (B.46) of~\cite{KL}: their conditional density on the delta
+surface has coefficient
+$e^{-\pi(x+z)}\Gamma_4(\nu,x)\Gamma_4(\nu,z)/(256\pi^6)$.
+This coefficient check is not a proof of
+\eqref{eq:local-racah-hypothesis}.
+
+There is a specific unresolved analytic step. The exact ${}_4F_3(1)$
+series has excess one. The ${}_2F_1(1)$ appearing in (B.33) has
+excess $i(s_1-s_2+s_3-s_4)$, with zero real part. Its gamma expression
+therefore involves continuation, not ordinary absolute summation at
+one. Uniform control of the four combined branches near that excess
+being zero is required. The fixed-label simplification alone does not
+bound the remainder against a compact smooth test, especially near the
+delta surface and coincident-label charts.
+
+\begin{proposition}[Conditional reduction to a finite-energy problem]
+If \eqref{eq:local-racah-hypothesis} holds, the exact crossed correlators
+of both protocols converge for every fixed probability density $\pi_0$.
+The convergence is uniform on compact sets of the four real times. For
+the moving threshold the limit is
+\begin{align}
+ X_\infty(\mathbf t)
+ &=\int_{\mathbb R^2}k(x)k(z)
+      K_0((-x)_++(-z)_+)
+      e^{ix(t_1-t_3)+iz(t_2-t_4)}\dd x\dd z,\notag\\
+ K_0(q)&=\int_q^\infty\pi_0(r)\dd r,\qquad q\ge0.
+ \label{eq:moving-cross-candidate}
+\end{align}
+For the fixed threshold, $K_0$ in this expression is replaced by one.
+No rate or logarithmically growing time interval follows from this
+proposition.
+\label{prop:conditional-cross-limit}
+\end{proposition}
+\begin{proof}
+First truncate external $r$ and path offsets by
+Proposition~\ref{prop:uniform-cross-tail}. Approximate $\pi_0$ in $L^1$
+by smooth compact densities; the fiber norm bound controls the error by
+$A^2$ times that $L^1$ error. For the moving boundary, replace each
+intermediate hard step by a smooth step differing only in an energy
+layer of width $\eta$. The excluded norm squared is at most
+$2\eta A\sup B$ per tree, because either the first or the final energy
+is in the layer. Thus the pairing error is $O(\sqrt\eta)$ uniformly in
+$M$. External layers are controlled by the mass of $\pi_0$ in them.
+Smooth cutoffs on the retained offsets can similarly be chosen, or the
+outer cutoff can be enlarged. We now have a compact smooth test for
+\eqref{eq:local-racah-hypothesis}.
+
+The exact Gaussian and time factors in these coordinates are
+\begin{align}
+ \mathcal Q&=x^2+(y-x)^2+(y-z)^2+z^2,\notag\\
+ \mathcal T&=-xt_1+(x-y)t_2+(y-z)t_3+zt_4.
+\end{align}
+On $y=x+z$ they give $k(x)k(z)$ and the phase in
+\eqref{eq:moving-cross-candidate}. The four surviving moving-threshold
+conditions are $r,r+x,r+z,r+x+z\ge0$, equivalent to
+$r\ge(-x)_++(-z)_+$. The fixed boundary eventually leaves any compact
+set of offsets, and gives no such condition. Remove the smooth layers,
+then the truncations, using the uniform bounds and their limiting
+positive-weight counterparts.
+
+Finally, differentiating a tree's time phase introduces one of its
+energy increments. Equation~\eqref{eq:uniform-energy-envelope} has a
+finite second increment moment, so the tree derivatives and hence the
+four-point Lipschitz constants are bounded independently of $M$.
+A finite time net upgrades pointwise convergence to uniform convergence
+on compact time sets. This argument supplies no growing time net with
+controlled convergence rate.
+\end{proof}
+
+\subsection{A boundary contribution in the comparison model}
+Independently of the unproved hypothesis, define a flat-energy comparison
+model with a clock on $L^2(\mathbb R_+)$ and two independent particle
+species labelled by increments $x\in\mathbb R$. An emission has amplitude
+$\sqrt{k(x)}$, changes clock energy from $r$ to $r+x$, and is projected
+onto $r+x\ge0$. Negative particle labels here encode frequencies; they
+are not an assumed physical Hamiltonian spectrum of de Sitter matter.
+On the vacuum and one-particle sectors this construction is bounded
+since $k\in L^1$. Smearing times multiply each emission by $e^{-ixt}$.
+It is a comparison of ordered amplitudes, not a constructed full
+de Sitter dual.
+
+For equal species parameters the two ordered norms and their crossed
+overlap at $(t,0,t,0)$ are, respectively,
+\begin{align}
+ N_\infty&=\int k(x)k(z)
+       K_0(\max(0,-x,-x-z))\dd x\dd z,\notag\\
+ X_\infty&=\int k(x)k(z)K_0((-x)_++(-z)_+)\dd x\dd z.
+ \label{eq:comparison-norms}
+\end{align}
+These are direct formulas in this explicitly defined model.
+The second formula is also the conditional prediction of
+Proposition~\ref{prop:conditional-cross-limit} for the exact problem.
+Both are independent of $t$ at this repeated-time configuration.
+Subtracting the two ordering indicators gives the positive identity
+\begin{equation}
+ \mathcal D_{\rm edge}:=2(N_\infty-X_\infty)
+ =2\int_0^\infty\pi_0(r)\dd r\int_0^\infty k(x)\dd x
+                                  \int_r^{r+x}k(-u)\dd u>0.
+ \label{eq:comparison-boundary-floor}
+\end{equation}
+Indeed the only unequal region is an energy gain $x>0$ followed by a
+loss $u>r$, while $u\le r+x$ allows the final clock state. The reverse
+order is removed at its first step. Since $k$ is strictly positive at
+all finite real increments, the inner integrals are positive for every
+finite $r$, proving strict positivity for any probability density.
+This is the commutator norm squared in the comparison model; its
+identification with a large-mass limit of the exact commutator remains
+conditional on \eqref{eq:local-racah-hypothesis}.
+
+If a fixed packet is shifted by an additional excess energy $h\to\infty$,
+dominated convergence in \eqref{eq:comparison-boundary-floor} gives
+$\mathcal D_{\rm edge}\to0$. Removing the clock boundary altogether
+gives $N_\infty=X_\infty=(\int k)^2$. A nonzero repeated-time
+commutator for a moving threshold can therefore include a static
+projection contribution. It cannot by itself diagnose recoil growth or
+a Lyapunov exponent. Establishing the local distribution limit and then
+its time-dependent remainder is the next exact-model task.

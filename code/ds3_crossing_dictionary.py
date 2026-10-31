@@ -1,0 +1,85 @@
+"""G=0 dS3 scalar channel dictionary and independent Euclidean overlap.
+
+Uses the full two-shadow partial wave, not its absolute square.  This is
+a scalar-to-scalar matrix element of the full Racah transform, not a
+claim that its scalar restriction is unitary. All labels are radius-one.
+"""
+import mpmath as mp
+from ds3_local_vertex import boundary_ll0
+from ds3_two_matter import four_weight
+from global_racah import scalar_6j, shadow_coefficient
+
+
+def period(x, y, z):
+    return boundary_ll0([x, y, z], 0, (True, True, True))
+
+
+def channel_data(b, d, external):
+    a, q, c, p = external
+    ns = period(a, q, b)*period(c, p, -b)
+    nt = period(c, q, d)*period(a, p, -d)
+    ws = four_weight(a, b, c, p, q)
+    wt = four_weight(c, d, a, p, q)
+    return ns, nt, ws, wt
+
+
+def physical_scalar(b, d, external):
+    ns, nt, _, _ = channel_data(b, d, external)
+    raw = scalar_6j(b, d, external)['value']
+    return b*d/mp.pi**4*(ns/abs(ns))/(nt/abs(nt))*raw
+
+
+def partial_wave(nu, external):
+    """Callable for points (0,z,1,infinity); hbar=h, NOT conj(h)."""
+    hs = [(1+1j*x)/2 for x in external]
+    h1, h2, h3, h4 = hs
+    h = (1+1j*nu)/2
+    coeff = [shadow_coefficient(1-h, h3, h4),
+             shadow_coefficient(h, h1, h2)]
+    def block(v, z):
+        return z**v*mp.hyp2f1(v-h1+h2, v+h3-h4, 2*v, z)
+    def value(z):
+        zb = mp.conj(z)
+        terms = [k*block(v, z)*block(v, zb)
+                 for k, v in zip(coeff, [h, 1-h])]
+        return abs(z)**(-2*(h1+h2))*mp.fsum(terms)
+    return value
+
+
+def six_charts(z):
+    """Images of |z|<1, |1-z|>1, and their area Jacobians."""
+    return [(z, 1), (1-z, 1), (1/z, abs(z)**-4),
+            (1/(1-z), abs(1-z)**-4),
+            (z/(z-1), abs(1-z)**-4), ((z-1)/z, abs(z)**-4)]
+
+
+def euclidean_overlap(b, d, external, order=12, power=4, lower=0):
+    """1/4 int_C conj(Psi_s) Psi_t d^2z, with six Mobius charts.
+
+    Gauss quadrature is empirical, not interval-certified. lower excludes
+    r<lower in every chart and is for a separate puncture-tail diagnostic.
+    Scalar integrands are equal in the two half planes, giving 2/4.
+    """
+    fs = partial_wave(b, external)
+    ft = partial_wave(d, [external[2], external[1], external[0], external[3]])
+    nodes, weights = mp.gauss_quadrature(order, 'legendre')
+    lo = mp.mpf(lower)**(mp.mpf(1)/power)
+    parts = [mp.mpc(0) for _ in range(6)]
+    absolute = mp.mpf(0)
+    for x, wx in zip(nodes, weights):
+        t = lo+(1-lo)*(x+1)/2
+        r = t**power
+        th0 = mp.acos(r/2)
+        radial = wx*(1-lo)/2*power*t**(2*power-1)
+        for y, wy in zip(nodes, weights):
+            th = th0+(mp.pi-th0)*(y+1)/2
+            z = r*mp.exp(1j*th)
+            weight = radial*wy*(mp.pi-th0)/4
+            for j, (w, jac) in enumerate(six_charts(z)):
+                term = weight*jac*mp.conj(fs(w))*ft(1-w)
+                parts[j] += term
+                absolute += abs(term)
+    value = mp.fsum(parts)
+    return dict(value=value, charts=parts, absolute=absolute,
+                cancellation=absolute/abs(value), order=order,
+                power=power, lower=str(lower))

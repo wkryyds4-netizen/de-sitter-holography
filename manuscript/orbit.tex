@@ -1,0 +1,109 @@
+\section{Position norms and a controlled group average}
+\label{sec:orbit}
+Let $X=\mathrm{dS}_2$ with global coordinates $(t,\theta)$ and
+\begin{equation}
+ \dd x=\cosh t\,\dd t\,\dd\theta,\qquad \theta\in[0,2\pi).
+\end{equation}
+Let $\mathcal K$ be a separable Hilbert space carrying a strongly continuous
+unitary representation $V$ of $G$. It will subsequently be a fixed
+matter-particle sector. On $Y=X\times X$ the diagonal action is
+$(U(g)\psi)(y)=V(g)\psi(g^{-1}y)$.
+
+Outside the null set where the two embedding vectors have inner product
+$\pm1$, the position pairs form six free orbit families. Take the left point
+to be $(0,0)$ and the right point to be one of
+\begin{equation}
+ (\pm\tau,0),\ (\pm\tau,\pi),\quad \tau>0;
+ \qquad (0,\pm\alpha),\quad 0<\alpha<\pi.
+\end{equation}
+Writing this disjoint set of sections as $Z$ and its section map as $s(z)$,
+the measure decomposition is
+\begin{equation}
+ \dd y=\dd g\,\dd\mu(z),\qquad
+ \dd\mu=\sinh\tau\,\dd\tau\quad\text{or}\quad\sin\alpha\,\dd\alpha.
+ \label{eq:coarea}
+\end{equation}
+The normalization agrees with $\dd g=\dd\theta_1\dd\theta_2
+\sinh\lambda\dd\lambda$. Near the identity the two-boost/rotation
+Jacobian for the first type of section has absolute value $\tanh\tau$;
+multiplication by the position density $\cosh\tau$ gives $\sinh\tau$.
+The spacelike section gives $|\sin\alpha|$. This fixes the constant
+without dividing by an infinite group volume.
+
+Define the ambient gauge-fixed space $\cF(\mathcal K)=L^2(Z,\dd\mu;\mathcal K)$.
+For $\psi\in L^2(Y;\mathcal K)$ set
+\begin{align}
+ F_\psi(g,z)&=V(g^{-1})\psi(gs(z)),\\
+ a_\psi(z)&=\int_G\norm{F_\psi(g,z)}\dd g,\\
+ \cD_{\mathrm{orb}}&=\{\psi\in L^2(Y;\mathcal K):a_\psi\in L^2(Z)\}.
+\end{align}
+On this domain define $B\psi(z)=\int_GF_\psi(g,z)\dd g$ as a Bochner
+integral and its invariant extension by $(\eta\psi)(gs(z))=V(g)B\psi(z)$.
+
+\begin{proposition}[Orbit Fubini identity]
+For $\phi,\psi\in\cD_{\mathrm{orb}}$, the group average is absolutely
+convergent and
+\begin{equation}
+ \int_G\ip{\phi}{U(g)\psi}\dd g=\ip{B\phi}{B\psi}_{\cF(\mathcal K)}.
+ \label{eq:fp-ga}
+\end{equation}
+For inverse-symmetric compact cutoffs $0\le\chi_R\le1$ tending to one,
+the orbit integrals $B_R\psi$ converge to $B\psi$ in $\cF(\mathcal K)$.
+\end{proposition}
+\begin{proof}
+Unimodularity and a Haar change of variables give
+\begin{equation}
+ \int_G\bigl|\ip{\phi}{U(g)\psi}\bigr|\dd g
+ \le\int_Za_\phi(z)a_\psi(z)\dd\mu(z)
+ \le\norm{a_\phi}_2\norm{a_\psi}_2.
+\end{equation}
+Fubini separates the two Bochner integrals and gives \eqref{eq:fp-ga}.
+The cutoff error is bounded by
+$\norm{\int_G(1-\chi_R(g))\norm{F_\psi(g,\cdot)}\dd g}_2$,
+which tends to zero by dominated convergence. A finite-cutoff group average
+is generally not invariant. An invariant extension of its section values is
+a different object and is not presumed to retain positive frequency.
+\end{proof}
+
+For single angular modes $u_L,u_R$ and $v\in\mathcal K$, let
+$f_i=|u_i|$ and $A_{f_i}(g)=\ip{f_i}{U_X(g)f_i}$.
+Nonnegative Tonelli and \eqref{eq:coarea} give the exact identity
+\begin{equation}
+ \norm{a_{u_Lu_Rv}}_2^2
+ =\norm v^2\int_G A_{f_L}(g)A_{f_R}(g)\dd g.
+ \label{eq:orbit-autocorrelation}
+\end{equation}
+No decay assumption on a matter matrix coefficient is used.
+
+\begin{lemma}[Finite position states are distributions]
+For every $k\in\cF(\mathcal K)$, the extension
+$Rk(gs(z))=V(g)k(z)$ lies in $L^1_{\mathrm{loc}}(Y;\mathcal K)$.
+The map $R$ is continuous and injective. For every $\phi\in\cD_{\mathrm{orb}}$,
+\begin{equation}
+ T_k(\phi):=\int_Y\ip{Rk(y)}{\phi(y)}\dd y
+ =\ip{k}{B\phi},\qquad |T_k(\phi)|\le\norm k_2\norm{a_\phi}_2.
+ \label{eq:position-pairing}
+\end{equation}
+\label{lem:position-distribution}
+\end{lemma}
+\begin{proof}
+The radial bound below implies that a compact smooth position test belongs
+to $\cD_{\mathrm{orb}}$, with $\norm{a_\phi}_2\le C_C\sup_C\norm\phi$
+on a fixed compact set $C$: dominate its norm by two compact radial
+envelopes and apply \eqref{eq:orbit-autocorrelation}.
+Tonelli gives
+\begin{equation}
+ \int_Y\norm{Rk(y)}\norm{\phi(y)}\dd y
+ =\int_Z\norm{k(z)}a_\phi(z)\dd\mu(z).
+\end{equation}
+A compact cutoff equal to one on $C$ proves the local $L^1$ bound and
+\eqref{eq:position-pairing}. If $Rk=0$ almost everywhere, integrate over
+the image of a finite positive Haar-measure set times $Z$ in
+\eqref{eq:coarea}; then $k=0$ almost everywhere. No trace of an arbitrary
+$L^1$ function on a section is taken.
+\end{proof}
+
+For a smooth noncompact orbit test, \eqref{eq:position-pairing} is also the
+limit of compact smooth position cutoffs. The orbit norm of
+$(1-\xi_j)\phi$ tends to zero when $0\le\xi_j\le1$ tend to one.
+Thus these pairings are determined by the position distribution.

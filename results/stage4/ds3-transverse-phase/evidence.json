@@ -1,0 +1,45 @@
+{
+  "created_at_utc": "2026-10-30T23:11:51.512302+00:00",
+  "status": "stage checks complete; final project audit next",
+  "pages": 4,
+  "study_runs": 16,
+  "independent_audit_checks": 203,
+  "precision_refinements": 4,
+  "compilers": [
+    "local pdfLaTeX twice",
+    "desktop success"
+  ],
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "longest_edge_pixels": 1100,
+    "status": "all inspected; no layout defects"
+  },
+  "active_old_jobs": [],
+  "hashes": {
+    "code/ds3_transverse_phase.py": "26199916d3de470020b19591458ce985b5015136f6fcfea5ed73027b22d211e0",
+    "code/run_ds3_transverse_phase.py": "18f74cf6622529f05082f917d8f346d48cb5b20f46fbc67fc7e11fe7589add09",
+    "code/audit_ds3_transverse_phase.py": "994a4f1ec276150919c2e9c29c93a3b3927067e8bf9846f13feb4fbfac8ab262",
+    "code/refine_ds3_transverse_phase.py": "6c34f5aa2753ecf7355aef4ac2ecb26a5f8a8c3df43bbcd18b13db1793cc496c",
+    "code/record_ds3_transverse_phase.py": "207127a5eb618fee00230b50eb9348569e3a1f9008cb7ca2c03bdbb38b7194a3",
+    "code/audit_ds3_recent_stages.py": "8406fa44969f60aaacf8e0b5b0f1a622b4fbdfaf02646c7124b77d38014711cd",
+    "code/build_ds3_transverse_phase.ps1": "2d44487551685a51fbbbc5510d6759c0c4332611b97c4af54c311e5338eecd72",
+    "notes/stage4-ds3-transverse-phase.md": "88fb1cae68ccf632e71925a4425f48de28438596cda7410d536ff1b7e0deeec0",
+    "literature/stage4-ds3-transverse-phase-sources.md": "475f5a60e92a115576932dd4543612d210fe04d1b8e7a8ab40cf309aa3bddbea",
+    "manuscript/ds3-transverse-phase/main.tex": "c73c1653d172482bb1f816e582911b49b21bd58c7d2a369b6865aae5a5cf7d4e",
+    "output/pdf/de-sitter-ds3-transverse-phase.pdf": "97c9f3dced84448b1cfca219b7ac7f08edb206cb973293549077980a2a1b0e30",
+    "sources/manifest.json": "41ba7f9a3b41725819a1bc51d14d85c174abdfc2e65cf7fb3cad25e4f054148f",
+    "results/stage4/ds3-collision/evidence.json": "1db97822746c7393fd561947d6f0f4b8f3340f6ef5e6ca6f0583da2fc9a08093",
+    "results/stage4/ds3-transverse-phase/audit.json": "b149d32521db6039704dc3164de838907fb21d49cd657e621901e99b27f8e0b2",
+    "results/stage4/ds3-transverse-phase/build-review.md": "763fc8590b87e2367f845b2645e5b49b25e2aad9af0f27737fd8eef58644bff2",
+    "results/stage4/ds3-transverse-phase/main.log": "c1d6913942103c9bb669b46c9197bc4e945277935751f7c485a55d0e74f99ae3",
+    "results/stage4/ds3-transverse-phase/preservation.json": "fbfbdd6b750fc77670ecf68fb0d228a3b388753fbf65c37729364db85d52b27c",
+    "results/stage4/ds3-transverse-phase/refinement.json": "424ea12626820f02887cfdb0aecd29562155f4491681f23a9d1e9f5af5d9a728",
+    "results/stage4/ds3-transverse-phase/runs.jsonl": "49d8f48726c441aeb1bd1a15c10915372c83869c751295fd4fc627f5425e02b4",
+    "results/stage4/ds3-transverse-phase/study.json": "52b2b8714dacd3bad4e7d13f7e1f35f7dc823bbdc01f6eb34a59dcc8bc10bd0f"
+  }
+}

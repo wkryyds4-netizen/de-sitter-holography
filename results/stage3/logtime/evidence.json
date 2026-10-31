@@ -1,0 +1,42 @@
+{
+  "created_at_utc": "2026-10-29T17:27:22.334033+00:00",
+  "kind": "analytic proof draft and dependency record; author self-review, not independent certification",
+  "result": "Theorems 12.1/12.2: local logarithmic-time PV+delta limit, finite-packet extension for F/Q, ordered early/late plateaux",
+  "conditions": [
+    "dS2 L=1; proper SO+(2,1); strict G_N -> 0",
+    "BD free fields; independent equal principal-series species nu>0",
+    "fixed proper Gaussian sigma>0; normalized vacuum mass packet m=M+r with fixed L1 probability density pi0",
+    "F fixed positive mass threshold m_*>1/2 or Q moving threshold M>=1 at every insertion",
+    "positive repeated-time phase; t_M=log(2M)+T",
+    "compact T convergence; for plateaux first M->infinity then T->-/+infinity"
+  ],
+  "proof_chain": [
+    "split removable branch sum into common symmetric PV distributions",
+    "fast branch gives 2/pi delta, slow branch retains Gamma(-i chi)Vminus",
+    "uniform assembled remainder survives unit-modulus time phase",
+    "external factors and exact-energy phase/Jacobian errors vanish on compact tests",
+    "all-real-time positive norm tails and threshold layers define canonical extension to arbitrary fixed L1 packets",
+    "uniform approximation bounds permit ordered early/late plateau limits"
+  ],
+  "source_relation": "PV/delta structure and unsmeared OTOC plateaux already in KL; our derivation retains Gaussian preparation and two repeated-threshold protocols. No novelty claim.",
+  "time_origin": "Exact coefficient matches B.50 at log(2M); printed appendix variable differs by one. Recorded source-convention/asymptotic discrepancy, not author-confirmed erratum.",
+  "numerical_scope": "25 finite diagnostics; 12 leading-expression compact slice rows and 4 plateau slice rows, not physical packet or exact 6j quadrature; no interval certification",
+  "not_proven": [
+    "early-time rate or Lyapunov exponent for these preparations",
+    "monotonicity or positivity of D_Q(T)-D_edge",
+    "global finite-M error rate or arbitrary joint limits",
+    "ordinary unsmoothed PV multiplication for arbitrary L1 threshold weights",
+    "finite-G dynamics or full holographic dual",
+    "priority or independent certification"
+  ],
+  "hashes": {
+    "manuscript/logtime.tex": "c33549cac95393718b1e8adc3353062bfee5a1e1ca0f2c971b31ae642de1eef0",
+    "manuscript/assembly.tex": "c12611bd24506d6427093ac3636e3cbb43011dabe2e95f6b6c195d60717fbbc5",
+    "manuscript/crosslimit.tex": "bee1c6d072dd895037d51312649b9dc0b59c45c4de9aec7e3e92d1203f39571f",
+    "manuscript/fourpoint.tex": "f651fb3a74532d096efa691529050191b56ade2300d9a46b6c97c17b4da3d407",
+    "notes/stage3-logarithmic-time.md": "bed3fd17921f42321024d3e3c0b96e8196f6a7f67e4882f7fd9ff6d8bb8c7c6a",
+    "literature/stage3-logtime-sources.md": "8cd467f6ae25e5031a0d2165c5992f6e3f33b8ce1b88b7216f6b27f043244c69",
+    "results/stage3/logtime/diagnostics.json": "aa72cff1fe6fb8e6ab4eba23ba40fce3044a0954415017fcf9efdc076dc25e4d",
+    "sources/kolchmeyer-liu-2411.08090v1.html": "352ef29aa89c376203271bf984bd904fb471ff313a7d420bc6a0ebc875d78065"
+  }
+}

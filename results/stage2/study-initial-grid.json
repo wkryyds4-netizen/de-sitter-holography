@@ -1,0 +1,2889 @@
+{
+  "scope": "Normalized absolute error, not pointwise relative OTOC error. Fixed dS4 free field, no recoil or finite G.",
+  "normalization": "A=phi_f/sqrt(Z), C2_bulk(0)=1, C4_bulk(0,0,0,0)=3",
+  "spectra": [
+    {
+      "family": "gaussian",
+      "sigma_modular": 0.1,
+      "physical_smearing_rms_over_L": 0.6283185307179586,
+      "half_duration_modular": null,
+      "frequency_radius": 80.0,
+      "quadrature_nodes": 1600,
+      "mass_truncated": 53.17076016627186,
+      "physical_variance_L1": 0.03411563002093899,
+      "discarded_fraction_bound": 1.5081699843422522e-28
+    },
+    {
+      "family": "gaussian",
+      "sigma_modular": 0.2,
+      "physical_smearing_rms_over_L": 1.2566370614359172,
+      "half_duration_modular": null,
+      "frequency_radius": 40.0,
+      "quadrature_nodes": 800,
+      "mass_truncated": 15.400523558442789,
+      "physical_variance_L1": 0.009881343847738859,
+      "discarded_fraction_bound": 1.301750298019418e-28
+    },
+    {
+      "family": "gaussian",
+      "sigma_modular": 0.3,
+      "physical_smearing_rms_over_L": 1.8849555921538759,
+      "half_duration_modular": null,
+      "frequency_radius": 36.0,
+      "quadrature_nodes": 720,
+      "mass_truncated": 8.155730641983483,
+      "physical_variance_L1": 0.005232911627786734,
+      "discarded_fraction_bound": 1.5036828681807088e-51
+    },
+    {
+      "family": "gaussian",
+      "sigma_modular": 0.5,
+      "physical_smearing_rms_over_L": 3.141592653589793,
+      "half_duration_modular": null,
+      "frequency_radius": 36.0,
+      "quadrature_nodes": 720,
+      "mass_truncated": 4.0872566202644025,
+      "physical_variance_L1": 0.0026224814958734645,
+      "discarded_fraction_bound": 9.510119038836219e-142
+    },
+    {
+      "family": "cosine",
+      "sigma_modular": 0.1,
+      "physical_smearing_rms_over_L": 0.6283185307179586,
+      "half_duration_modular": 0.27661594838677134,
+      "frequency_radius": 567.8618083866119,
+      "quadrature_nodes": 2000,
+      "mass_truncated": 48.21193280632547,
+      "physical_variance_L1": 0.030933927915860682,
+      "discarded_fraction_bound": 1.085171856619475e-08
+    },
+    {
+      "family": "cosine",
+      "sigma_modular": 0.2,
+      "physical_smearing_rms_over_L": 1.2566370614359172,
+      "half_duration_modular": 0.5532318967735427,
+      "frequency_radius": 283.93090419330593,
+      "quadrature_nodes": 2000,
+      "mass_truncated": 14.154315302109366,
+      "physical_variance_L1": 0.009081746857416358,
+      "discarded_fraction_bound": 9.240685882357163e-09
+    },
+    {
+      "family": "cosine",
+      "sigma_modular": 0.3,
+      "physical_smearing_rms_over_L": 1.8849555921538759,
+      "half_duration_modular": 0.829847845160314,
+      "frequency_radius": 189.28726946220397,
+      "quadrature_nodes": 2000,
+      "mass_truncated": 7.589621606839177,
+      "physical_variance_L1": 0.004869682545973739,
+      "discarded_fraction_bound": 7.65932382474458e-09
+    },
+    {
+      "family": "cosine",
+      "sigma_modular": 0.5,
+      "physical_smearing_rms_over_L": 3.141592653589793,
+      "half_duration_modular": 1.3830797419338565,
+      "frequency_radius": 113.57236167732239,
+      "quadrature_nodes": 2000,
+      "mass_truncated": 3.861708822007645,
+      "physical_variance_L1": 0.0024777646399680277,
+      "discarded_fraction_bound": 5.419179440613971e-09
+    }
+  ],
+  "cases": [
+    {
+      "field_family": "gaussian",
+      "field_sigma": 0.1,
+      "clock_mean": 5.0,
+      "clock_family": "compact",
+      "clock": {
+        "family": "compact",
+        "mean": 5.0,
+        "threshold": 1.3724012715315643,
+        "width": 7.255197456936871,
+        "kl_nats": 3.5598557614700423,
+        "max_energy": 8.627598728468435,
+        "time_rms": 0.5,
+        "worst_kernel_error": 0.0,
+        "time_tail_abs_gt_1": 0.04137682019433057,
+        "time_tail_note": "Numerical integral to |t|=200; residual checked in validation."
+      },
+      "spectrum": {
+        "family": "gaussian",
+        "sigma_modular": 0.1,
+        "physical_smearing_rms_over_L": 0.6283185307179586,
+        "half_duration_modular": null,
+        "frequency_radius": 80.0,
+        "quadrature_nodes": 1600,
+        "mass_truncated": 53.17076016627186,
+        "physical_variance_L1": 0.03411563002093899,
+        "discarded_fraction_bound": 1.5081699843422522e-28
+      },
+      "sup_C2_absolute": 0.7293061119079174,
+      "sup_C4_absolute_over_3": 0.95000852086203,
+      "C4_pairing_deficits": [
+        0.9211960349997569,
+        0.9659759215190494,
+        0.9628536060672839
+      ],
+      "C2_at_zero": 0.2706938880920826,
+      "C4_at_zero": 0.1499744374139098,
+      "dressed_fourth_cumulant": -0.06985110573731704,
+      "spectral_truncation_C2_bound": 3.0163399686845043e-28,
+      "spectral_truncation_C4_over_3_bound": 6.032679937369009e-28
+    },
+    {
+      "field_family": "gaussian",
+      "field_sigma": 0.1,
+      "clock_mean": 5.0,
+      "clock_family": "gamma5",
+      "clock": {
+        "family": "gamma5",
+        "mean": 5.0,
+        "threshold": 2.113248654051871,
+        "scale": 0.5773502691896258,
+        "kl_nats": 3.3957229877133095,
+        "time_rms": 0.49999999999999994,
+        "worst_kernel_error": 0.0,
+        "time_tail_abs_gt_1": 0.04931308767313576,
+        "time_tail_note": "Numerical integral to |t|=200; residual checked in validation."
+      },
+      "spectrum": {
+        "family": "gaussian",
+        "sigma_modular": 0.1,
+        "physical_smearing_rms_over_L": 0.6283185307179586,
+        "half_duration_modular": null,
+        "frequency_radius": 80.0,
+        "quadrature_nodes": 1600,
+        "mass_truncated": 53.17076016627186,
+        "physical_variance_L1": 0.03411563002093899,
+        "discarded_fraction_bound": 1.5081699843422522e-28
+      },
+      "sup_C2_absolute": 0.7282534308997315,
+      "sup_C4_absolute_over_3": 0.9476080514701973,
+      "C4_pairing_deficits": [
+        0.9170121650008591,
+        0.9644493214511143,
+        0.9613626679586189
+      ],
+      "C2_at_zero": 0.2717465691002685,
+      "C4_at_zero": 0.1571758455894079,
+      "dressed_fourth_cumulant": -0.06436274786389312,
+      "spectral_truncation_C2_bound": 3.0163399686845043e-28,
+      "spectral_truncation_C4_over_3_bound": 6.032679937369009e-28
+    },
+    {
+      "field_family": "gaussian",
+      "field_sigma": 0.1,
+      "clock_mean": 5.0,
+      "clock_family": "exponential_energy_only",
+      "clock": {
+        "family": "exponential_energy_only",
+        "mean": 5.0,
+        "time_rms": null,
+        "time_note": "Sharp positive-energy endpoint; not a matched finite-RMS clock."
+      },
+      "spectrum": {
+        "family": "gaussian",
+        "sigma_modular": 0.1,
+        "physical_smearing_rms_over_L": 0.6283185307179586,
+        "half_duration_modular": null,
+        "frequency_radius": 80.0,
+        "quadrature_nodes": 1600,
+        "mass_truncated": 53.17076016627186,
+        "physical_variance_L1": 0.03411563002093899,
+        "discarded_fraction_bound": 1.5081699843422522e-28
+      },
+      "sup_C2_absolute": 0.719233027713951,
+      "sup_C4_absolute_over_3": 0.8954900594793206,
+      "C4_pairing_deficits": [
+        0.8464434438843336,
+        0.9211699072733248,
+        0.9188568272803033
+      ],
+      "C2_at_zero": 0.28076697228604897,
+      "C4_at_zero": 0.31352982156203835,
+      "dressed_fourth_cumulant": 0.07703954338201338,
+      "spectral_truncation_C2_bound": 3.0163399686845043e-28,
+      "spectral_truncation_C4_over_3_bound": 6.032679937369009e-28
+    },
+    {
+      "field_family": "gaussian",
+      "field_sigma": 0.1,
+      "clock_mean": 10.0,
+      "clock_family": "compact",
+      "clock": {
+        "family": "compact",
+        "mean": 10.0,
+        "threshold": 6.372401271531564,
+        "width": 7.255197456936871,
+        "kl_nats": 8.559855761470043,
+        "max_energy": 13.627598728468435,
+        "time_rms": 0.5,
+        "worst_kernel_error": 0.0,
+        "time_tail_abs_gt_1": 0.04137682019433057,
+        "time_tail_note": "Numerical integral to |t|=200; residual checked in validation."
+      },
+      "spectrum": {
+        "family": "gaussian",
+        "sigma_modular": 0.1,
+        "physical_smearing_rms_over_L": 0.6283185307179586,
+        "half_duration_modular": null,
+        "frequency_radius": 80.0,
+        "quadrature_nodes": 1600,
+        "mass_truncated": 53.17076016627186,
+        "physical_variance_L1": 0.03411563002093899,
+        "discarded_fraction_bound": 1.5081699843422522e-28
+      },
+      "sup_C2_absolute": 0.34950724947758577,
+      "sup_C4_absolute_over_3": 0.7424097588686857,
+      "C4_pairing_deficits": [
+        0.5718833181850977,
+        0.8288888663864897,
+        0.8264570920344695
+      ],
+      "C2_at_zero": 0.6504927505224143,
+      "C4_at_zero": 0.7727707233939429,
+      "dressed_fourth_cumulant": -0.49665173205270485,
+      "spectral_truncation_C2_bound": 3.0163399686845043e-28,
+      "spectral_truncation_C4_over_3_bound": 6.032679937369009e-28
+    },
+    {
+      "field_family": "gaussian",
+      "field_sigma": 0.1,
+      "clock_mean": 10.0,
+      "clock_family": "gamma5",
+      "clock": {
+        "family": "gamma5",
+        "mean": 10.0,
+        "threshold": 7.113248654051871,
+        "scale": 0.5773502691896258,
+        "kl_nats": 8.39572298771331,
+        "time_rms": 0.49999999999999994,
+        "worst_kernel_error": 0.0,
+        "time_tail_abs_gt_1": 0.04931308767313576,
+        "time_tail_note": "Numerical integral to |t|=200; residual checked in validation."
+      },
+      "spectrum": {
+        "family": "gaussian",
+        "sigma_modular": 0.1,
+        "physical_smearing_rms_over_L": 0.6283185307179586,
+        "half_duration_modular": null,
+        "frequency_radius": 80.0,
+        "quadrature_nodes": 1600,
+        "mass_truncated": 53.17076016627186,
+        "physical_variance_L1": 0.03411563002093899,
+        "discarded_fraction_bound": 1.5081699843422522e-28
+      },
+      "sup_C2_absolute": 0.3518442008071217,
+      "sup_C4_absolute_over_3": 0.7418374374671884,
+      "C4_pairing_deficits": [
+        0.5729270540311684,
+        0.8275076939992085,
+        0.8250775643711882
+      ],
+      "C2_at_zero": 0.6481557991928784,
+      "C4_at_zero": 0.7744876875984348,
+      "dressed_fourth_cumulant": -0.4858301324836418,
+      "spectral_truncation_C2_bound": 3.0163399686845043e-28,
+      "spectral_truncation_C4_over_3_bound": 6.032679937369009e-28
+    },
+    {
+      "field_family": "gaussian",
+      "field_sigma": 0.1,
+      "clock_mean": 10.0,
+      "clock_family": "exponential_energy_only",
+      "clock": {
+        "family": "exponential_energy_only",
+        "mean": 10.0,
+        "time_rms": null,
+        "time_note": "Sharp positive-energy endpoint; not a matched finite-RMS clock."
+      },
+      "spectrum": {
+        "family": "gaussian",
+        "sigma_modular": 0.1,
+        "physical_smearing_rms_over_L": 0.6283185307179586,
+        "half_duration_modular": null,
+        "frequency_radius": 80.0,
+        "quadrature_nodes": 1600,
+        "mass_truncated": 53.17076016627186,
+        "physical_variance_L1": 0.03411563002093899,
+        "discarded_fraction_bound": 1.5081699843422522e-28
+      },
+      "sup_C2_absolute": 0.5167531338245914,
+      "sup_C4_absolute_over_3": 0.72341786424711,
+      "C4_pairing_deficits": [
+        0.6392527029037308,
+        0.7664724663316467,
+        0.7645284235059526
+      ],
+      "C2_at_zero": 0.4832468661754086,
+      "C4_at_zero": 0.82974640725867,
+      "dressed_fourth_cumulant": 0.12916380625361024,
+      "spectral_truncation_C2_bound": 3.0163399686845043e-28,
+      "spectral_truncation_C4_over_3_bound": 6.032679937369009e-28
+    },
+    {
+      "field_family": "gaussian",
+      "field_sigma": 0.1,
+      "clock_mean": 20.0,
+      "clock_family": "compact",
+      "clock": {
+        "family": "compact",
+        "mean": 20.0,
+        "threshold": 16.372401271531565,
+        "width": 7.255197456936871,
+        "kl_nats": 18.55985576147004,
+        "max_energy": 23.627598728468435,
+        "time_rms": 0.5,
+        "worst_kernel_error": 0.0,
+        "time_tail_abs_gt_1": 0.04137682019433057,
+        "time_tail_note": "Numerical integral to |t|=200; residual checked in validation."
+      },
+      "spectrum": {
+        "family": "gaussian",
+        "sigma_modular": 0.1,
+        "physical_smearing_rms_over_L": 0.6283185307179586,
+        "half_duration_modular": null,
+        "frequency_radius": 80.0,
+        "quadrature_nodes": 1600,
+        "mass_truncated": 53.17076016627186,
+        "physical_variance_L1": 0.03411563002093899,
+        "discarded_fraction_bound": 1.5081699843422522e-28
+      },
+      "sup_C2_absolute": 0.018508748724486778,
+      "sup_C4_absolute_over_3": 0.21714324482406558,
+      "C4_pairing_deficits": [
+        0.036617389746718604,
+        0.3075081144950691,
+        0.3073042302304091
+      ],
+      "C2_at_zero": 0.9814912512755132,
+      "C4_at_zero": 2.3485702655278033,
+      "dressed_fourth_cumulant": -0.5414049634633145,
+      "spectral_truncation_C2_bound": 3.0163399686845043e-28,
+      "spectral_truncation_C4_over_3_bound": 6.032679937369009e-28
+    },
+    {
+      "field_family": "gaussian",
+      "field_sigma": 0.1,
+      "clock_mean": 20.0,
+      "clock_family": "gamma5",
+      "clock": {
+        "family": "gamma5",
+        "mean": 20.0,
+        "threshold": 17.113248654051873,
+        "scale": 0.5773502691896258,
+        "kl_nats": 18.39572298771331,
+        "time_rms": 0.49999999999999994,
+        "worst_kernel_error": 0.0,
+        "time_tail_abs_gt_1": 0.04931308767313576,
+        "time_tail_note": "Numerical integral to |t|=200; residual checked in validation."
+      },
+      "spectrum": {
+        "family": "gaussian",
+        "sigma_modular": 0.1,
+        "physical_smearing_rms_over_L": 0.6283185307179586,
+        "half_duration_modular": null,
+        "frequency_radius": 80.0,
+        "quadrature_nodes": 1600,
+        "mass_truncated": 53.17076016627186,
+        "physical_variance_L1": 0.03411563002093899,
+        "discarded_fraction_bound": 1.5081699843422522e-28
+      },
+      "sup_C2_absolute": 0.0190733011851453,
+      "sup_C4_absolute_over_3": 0.2183520903028335,
+      "C4_pairing_deficits": [
+        0.03771317068466072,
+        0.3087761703139082,
+        0.30856692990993156
+      ],
+      "C2_at_zero": 0.9809266988148547,
+      "C4_at_zero": 2.3449437290914994,
+      "dressed_fourth_cumulant": -0.5417078362519265,
+      "spectral_truncation_C2_bound": 3.0163399686845043e-28,
+      "spectral_truncation_C4_over_3_bound": 6.032679937369009e-28
+    },
+    {
+      "field_family": "gaussian",
+      "field_sigma": 0.1,
+      "clock_mean": 20.0,
+      "clock_family": "exponential_energy_only",
+      "clock": {
+        "family": "exponential_energy_only",
+        "mean": 20.0,
+        "time_rms": null,
+        "time_note": "Sharp positive-energy endpoint; not a matched finite-RMS clock."
+      },
+      "spectrum": {
+        "family": "gaussian",
+        "sigma_modular": 0.1,
+        "physical_smearing_rms_over_L": 0.6283185307179586,
+        "half_duration_modular": null,
+        "frequency_radius": 80.0,
+        "quadrature_nodes": 1600,
+        "mass_truncated": 53.17076016627186,
+        "physical_variance_L1": 0.03411563002093899,
+        "discarded_fraction_bound": 1.5081699843422522e-28
+      },
+      "sup_C2_absolute": 0.32292895935274823,
+      "sup_C4_absolute_over_3": 0.4982200581802809,
+      "C4_pairing_deficits": [
+        0.4128429469079478,
+        0.5415748059168477,
+        0.5402424217160472
+      ],
+      "C2_at_zero": 0.6770710406472518,
+      "C4_at_zero": 1.5053398254591572,
+      "dressed_fourth_cumulant": 0.1300642432096999,
+      "spectral_truncation_C2_bound": 3.0163399686845043e-28,
+      "spectral_truncation_C4_over_3_bound": 6.032679937369009e-28
+    },
+    {
+      "field_family": "gaussian",
+      "field_sigma": 0.2,
+      "clock_mean": 5.0,
+      "clock_family": "compact",
+      "clock": {
+        "family": "compact",
+        "mean": 5.0,
+        "threshold": 1.3724012715315643,
+        "width": 7.255197456936871,
+        "kl_nats": 3.5598557614700423,
+        "max_energy": 8.627598728468435,
+        "time_rms": 0.5,
+        "worst_kernel_error": 0.0,
+        "time_tail_abs_gt_1": 0.04137682019433057,
+        "time_tail_note": "Numerical integral to |t|=200; residual checked in validation."
+      },
+      "spectrum": {
+        "family": "gaussian",
+        "sigma_modular": 0.2,
+        "physical_smearing_rms_over_L": 1.2566370614359172,
+        "half_duration_modular": null,
+        "frequency_radius": 40.0,
+        "quadrature_nodes": 800,
+        "mass_truncated": 15.400523558442789,
+        "physical_variance_L1": 0.009881343847738859,
+        "discarded_fraction_bound": 1.301750298019418e-28
+      },
+      "sup_C2_absolute": 0.3113554372476329,
+      "sup_C4_absolute_over_3": 0.6473045529929058,
+      "C4_pairing_deficits": [
+        0.5112647576327032,
+        0.7204753658403377,
+        0.7101735355056764
+      ],
+      "C2_at_zero": 0.6886445627523671,
+      "C4_at_zero": 1.0580863410212826,
+      "dressed_fourth_cumulant": -0.3646076604039139,
+      "spectral_truncation_C2_bound": 2.603500596038836e-28,
+      "spectral_truncation_C4_over_3_bound": 5.207001192077672e-28
+    },
+    {
+      "field_family": "gaussian",
+      "field_sigma": 0.2,
+      "clock_mean": 5.0,
+      "clock_family": "gamma5",
+      "clock": {
+        "family": "gamma5",
+        "mean": 5.0,
+        "threshold": 2.113248654051871,
+        "scale": 0.5773502691896258,
+        "kl_nats": 3.3957229877133095,
+        "time_rms": 0.49999999999999994,
+        "worst_kernel_error": 0.0,
+        "time_tail_abs_gt_1": 0.04931308767313576,
+        "time_tail_note": "Numerical integral to |t|=200; residual checked in validation."
+      },
+      "spectrum": {
+        "family": "gaussian",
+        "sigma_modular": 0.2,
+        "physical_smearing_rms_over_L": 1.2566370614359172,
+        "half_duration_modular": null,
+        "frequency_radius": 40.0,
+        "quadrature_nodes": 800,
+        "mass_truncated": 15.400523558442789,
+        "physical_variance_L1": 0.009881343847738859,
+        "discarded_fraction_bound": 1.301750298019418e-28
+      },
+      "sup_C2_absolute": 0.3192113271309984,
+      "sup_C4_absolute_over_3": 0.6485406866503879,
+      "C4_pairing_deficits": [
+        0.518074715019506,
+        0.7189640006630982,
+        0.7085833442685594
+      ],
+      "C2_at_zero": 0.6807886728690016,
+      "C4_at_zero": 1.0543779400488364,
+      "dressed_fourth_cumulant": -0.33604171127137294,
+      "spectral_truncation_C2_bound": 2.603500596038836e-28,
+      "spectral_truncation_C4_over_3_bound": 5.207001192077672e-28
+    },
+    {
+      "field_family": "gaussian",
+      "field_sigma": 0.2,
+      "clock_mean": 5.0,
+      "clock_family": "exponential_energy_only",
+      "clock": {
+        "family": "exponential_energy_only",
+        "mean": 5.0,
+        "time_rms": null,
+        "time_note": "Sharp positive-energy endpoint; not a matched finite-RMS clock."
+      },
+      "spectrum": {
+        "family": "gaussian",
+        "sigma_modular": 0.2,
+        "physical_smearing_rms_over_L": 1.2566370614359172,
+        "half_duration_modular": null,
+        "frequency_radius": 40.0,
+        "quadrature_nodes": 800,
+        "mass_truncated": 15.400523558442789,
+        "physical_variance_L1": 0.009881343847738859,
+        "discarded_fraction_bound": 1.301750298019418e-28
+      },
+      "sup_C2_absolute": 0.4615886811814068,
+      "sup_C4_absolute_over_3": 0.6716588835373748,
+      "C4_pairing_deficits": [
+        0.6047143525560624,
+        0.7101132517680231,
+        0.7001490462880389
+      ],
+      "C2_at_zero": 0.5384113188185933,
+      "C4_at_zero": 0.9850233493878755,
+      "dressed_fourth_cumulant": 0.11536310469194477,
+      "spectral_truncation_C2_bound": 2.603500596038836e-28,
+      "spectral_truncation_C4_over_3_bound": 5.207001192077672e-28
+    },
+    {
+      "field_family": "gaussian",
+      "field_sigma": 0.2,
+      "clock_mean": 10.0,
+      "clock_family": "compact",
+      "clock": {
+        "family": "compact",
+        "mean": 10.0,
+        "threshold": 6.372401271531564,
+        "width": 7.255197456936871,
+        "kl_nats": 8.559855761470043,
+        "max_energy": 13.627598728468435,
+        "time_rms": 0.5,
+        "worst_kernel_error": 0.0,
+        "time_tail_abs_gt_1": 0.04137682019433057,
+        "time_tail_note": "Numerical integral to |t|=200; residual checked in validation."
+      },
+      "spectrum": {
+        "family": "gaussian",
+        "sigma_modular": 0.2,
+        "physical_smearing_rms_over_L": 1.2566370614359172,
+        "half_duration_modular": null,
+        "frequency_radius": 40.0,
+        "quadrature_nodes": 800,
+        "mass_truncated": 15.400523558442789,
+        "physical_variance_L1": 0.009881343847738859,
+        "discarded_fraction_bound": 1.301750298019418e-28
+      },
+      "sup_C2_absolute": 0.01945692647102835,
+      "sup_C4_absolute_over_3": 0.17555894341698963,
+      "C4_pairing_deficits": [
+        0.03828770402555109,
+        0.24465733984192622,
+        0.24373178638349155
+      ],
+      "C2_at_zero": 0.9805430735289716,
+      "C4_at_zero": 2.473323169749031,
+      "dressed_fourth_cumulant": -0.41107098738789594,
+      "spectral_truncation_C2_bound": 2.603500596038836e-28,
+      "spectral_truncation_C4_over_3_bound": 5.207001192077672e-28
+    },
+    {
+      "field_family": "gaussian",
+      "field_sigma": 0.2,
+      "clock_mean": 10.0,
+      "clock_family": "gamma5",
+      "clock": {
+        "family": "gamma5",
+        "mean": 10.0,
+        "threshold": 7.113248654051871,
+        "scale": 0.5773502691896258,
+        "kl_nats": 8.39572298771331,
+        "time_rms": 0.49999999999999994,
+        "worst_kernel_error": 0.0,
+        "time_tail_abs_gt_1": 0.04931308767313576,
+        "time_tail_note": "Numerical integral to |t|=200; residual checked in validation."
+      },
+      "spectrum": {
+        "family": "gaussian",
+        "sigma_modular": 0.2,
+        "physical_smearing_rms_over_L": 1.2566370614359172,
+        "half_duration_modular": null,
+        "frequency_radius": 40.0,
+        "quadrature_nodes": 800,
+        "mass_truncated": 15.400523558442789,
+        "physical_variance_L1": 0.009881343847738859,
+        "discarded_fraction_bound": 1.301750298019418e-28
+      },
+      "sup_C2_absolute": 0.021057227874720016,
+      "sup_C4_absolute_over_3": 0.17951411313437324,
+      "C4_pairing_deficits": [
+        0.04140478786697474,
+        0.2490667388430315,
+        0.24807081269311346
+      ],
+      "C2_at_zero": 0.97894277212528,
+      "C4_at_zero": 2.4614576605968805,
+      "dressed_fourth_cumulant": -0.41352919269210364,
+      "spectral_truncation_C2_bound": 2.603500596038836e-28,
+      "spectral_truncation_C4_over_3_bound": 5.207001192077672e-28
+    },
+    {
+      "field_family": "gaussian",
+      "field_sigma": 0.2,
+      "clock_mean": 10.0,
+      "clock_family": "exponential_energy_only",
+      "clock": {
+        "family": "exponential_energy_only",
+        "mean": 10.0,
+        "time_rms": null,
+        "time_note": "Sharp positive-energy endpoint; not a matched finite-RMS clock."
+      },
+      "spectrum": {
+        "family": "gaussian",
+        "sigma_modular": 0.2,
+        "physical_smearing_rms_over_L": 1.2566370614359172,
+        "half_duration_modular": null,
+        "frequency_radius": 40.0,
+        "quadrature_nodes": 800,
+        "mass_truncated": 15.400523558442789,
+        "physical_variance_L1": 0.009881343847738859,
+        "discarded_fraction_bound": 1.301750298019418e-28
+      },
+      "sup_C2_absolute": 0.2873424371842477,
+      "sup_C4_absolute_over_3": 0.4550562028688756,
+      "C4_pairing_deficits": [
+        0.3875387525411831,
+        0.492119198161512,
+        0.4855106579039317
+      ],
+      "C2_at_zero": 0.7126575628157523,
+      "C4_at_zero": 1.6348313913933732,
+      "dressed_fourth_cumulant": 0.11118898587790937,
+      "spectral_truncation_C2_bound": 2.603500596038836e-28,
+      "spectral_truncation_C4_over_3_bound": 5.207001192077672e-28
+    },
+    {
+      "field_family": "gaussian",
+      "field_sigma": 0.2,
+      "clock_mean": 20.0,
+      "clock_family": "compact",
+      "clock": {
+        "family": "compact",
+        "mean": 20.0,
+        "threshold": 16.372401271531565,
+        "width": 7.255197456936871,
+        "kl_nats": 18.55985576147004,
+        "max_energy": 23.627598728468435,
+        "time_rms": 0.5,
+        "worst_kernel_error": 0.0,
+        "time_tail_abs_gt_1": 0.04137682019433057,
+        "time_tail_note": "Numerical integral to |t|=200; residual checked in validation."
+      },
+      "spectrum": {
+        "family": "gaussian",
+        "sigma_modular": 0.2,
+        "physical_smearing_rms_over_L": 1.2566370614359172,
+        "half_duration_modular": null,
+        "frequency_radius": 40.0,
+        "quadrature_nodes": 800,
+        "mass_truncated": 15.400523558442789,
+        "physical_variance_L1": 0.009881343847738859,
+        "discarded_fraction_bound": 1.301750298019418e-28
+      },
+      "sup_C2_absolute": 2.8613317427284367e-07,
+      "sup_C4_absolute_over_3": 0.0009583698942876509,
+      "C4_pairing_deficits": [
+        5.722659431376967e-07,
+        0.0014372777504991544,
+        0.0014372596664206604
+      ],
+      "C2_at_zero": 0.9999997138668257,
+      "C4_at_zero": 2.9971248903171372,
+      "dressed_fourth_cumulant": -0.002873392884062742,
+      "spectral_truncation_C2_bound": 2.603500596038836e-28,
+      "spectral_truncation_C4_over_3_bound": 5.207001192077672e-28
+    },
+    {
+      "field_family": "gaussian",
+      "field_sigma": 0.2,
+      "clock_mean": 20.0,
+      "clock_family": "gamma5",
+      "clock": {
+        "family": "gamma5",
+        "mean": 20.0,
+        "threshold": 17.113248654051873,
+        "scale": 0.5773502691896258,
+        "kl_nats": 18.39572298771331,
+        "time_rms": 0.49999999999999994,
+        "worst_kernel_error": 0.0,
+        "time_tail_abs_gt_1": 0.04931308767313576,
+        "time_tail_note": "Numerical integral to |t|=200; residual checked in validation."
+      },
+      "spectrum": {
+        "family": "gaussian",
+        "sigma_modular": 0.2,
+        "physical_smearing_rms_over_L": 1.2566370614359172,
+        "half_duration_modular": null,
+        "frequency_radius": 40.0,
+        "quadrature_nodes": 800,
+        "mass_truncated": 15.400523558442789,
+        "physical_variance_L1": 0.009881343847738859,
+        "discarded_fraction_bound": 1.301750298019418e-28
+      },
+      "sup_C2_absolute": 3.202755088469673e-07,
+      "sup_C4_absolute_over_3": 0.0010322309565405873,
+      "C4_pairing_deficits": [
+        6.405506740828457e-07,
+        0.0015480362901487568,
+        0.0015480160287989217
+      ],
+      "C2_at_zero": 0.9999996797244911,
+      "C4_at_zero": 2.996903307130378,
+      "dressed_fourth_cumulant": -0.003094771216876513,
+      "spectral_truncation_C2_bound": 2.603500596038836e-28,
+      "spectral_truncation_C4_over_3_bound": 5.207001192077672e-28
+    },
+    {
+      "field_family": "gaussian",
+      "field_sigma": 0.2,
+      "clock_mean": 20.0,
+      "clock_family": "exponential_energy_only",
+      "clock": {
+        "family": "exponential_energy_only",
+        "mean": 20.0,
+        "time_rms": null,
+        "time_note": "Sharp positive-energy endpoint; not a matched finite-RMS clock."
+      },
+      "spectrum": {
+        "family": "gaussian",
+        "sigma_modular": 0.2,
+        "physical_smearing_rms_over_L": 1.2566370614359172,
+        "half_duration_modular": null,
+        "frequency_radius": 40.0,
+        "quadrature_nodes": 800,
+        "mass_truncated": 15.400523558442789,
+        "physical_variance_L1": 0.009881343847738859,
+        "discarded_fraction_bound": 1.301750298019418e-28
+      },
+      "sup_C2_absolute": 0.16243526058735794,
+      "sup_C4_absolute_over_3": 0.2719401394608127,
+      "C4_pairing_deficits": [
+        0.22271804579275592,
+        0.29848530729263295,
+        0.29461706529704923
+      ],
+      "C2_at_zero": 0.8375647394126421,
+      "C4_at_zero": 2.184179581617562,
+      "dressed_fourth_cumulant": 0.07963550349546056,
+      "spectral_truncation_C2_bound": 2.603500596038836e-28,
+      "spectral_truncation_C4_over_3_bound": 5.207001192077672e-28
+    },
+    {
+      "field_family": "gaussian",
+      "field_sigma": 0.3,
+      "clock_mean": 5.0,
+      "clock_family": "compact",
+      "clock": {
+        "family": "compact",
+        "mean": 5.0,
+        "threshold": 1.3724012715315643,
+        "width": 7.255197456936871,
+        "kl_nats": 3.5598557614700423,
+        "max_energy": 8.627598728468435,
+        "time_rms": 0.5,
+        "worst_kernel_error": 0.0,
+        "time_tail_abs_gt_1": 0.04137682019433057,
+        "time_tail_note": "Numerical integral to |t|=200; residual checked in validation."
+      },
+      "spectrum": {
+        "family": "gaussian",
+        "sigma_modular": 0.3,
+        "physical_smearing_rms_over_L": 1.8849555921538759,
+        "half_duration_modular": null,
+        "frequency_radius": 36.0,
+        "quadrature_nodes": 720,
+        "mass_truncated": 8.155730641983483,
+        "physical_variance_L1": 0.005232911627786734,
+        "discarded_fraction_bound": 1.5036828681807088e-51
+      },
+      "sup_C2_absolute": 0.09529223999536016,
+      "sup_C4_absolute_over_3": 0.31384705900981597,
+      "C4_pairing_deficits": [
+        0.175189719177034,
+        0.38689271990872554,
+        0.3794587379436884
+      ],
+      "C2_at_zero": 0.9047077600046398,
+      "C4_at_zero": 2.058458822970552,
+      "dressed_fourth_cumulant": -0.397029570067287,
+      "spectral_truncation_C2_bound": 3.0073657363614177e-51,
+      "spectral_truncation_C4_over_3_bound": 6.014731472722835e-51
+    },
+    {
+      "field_family": "gaussian",
+      "field_sigma": 0.3,
+      "clock_mean": 5.0,
+      "clock_family": "gamma5",
+      "clock": {
+        "family": "gamma5",
+        "mean": 5.0,
+        "threshold": 2.113248654051871,
+        "scale": 0.5773502691896258,
+        "kl_nats": 3.3957229877133095,
+        "time_rms": 0.49999999999999994,
+        "worst_kernel_error": 0.0,
+        "time_tail_abs_gt_1": 0.04931308767313576,
+        "time_tail_note": "Numerical integral to |t|=200; residual checked in validation."
+      },
+      "spectrum": {
+        "family": "gaussian",
+        "sigma_modular": 0.3,
+        "physical_smearing_rms_over_L": 1.8849555921538759,
+        "half_duration_modular": null,
+        "frequency_radius": 36.0,
+        "quadrature_nodes": 720,
+        "mass_truncated": 8.155730641983483,
+        "physical_variance_L1": 0.005232911627786734,
+        "discarded_fraction_bound": 1.5036828681807088e-51
+      },
+      "sup_C2_absolute": 0.10410793675239302,
+      "sup_C4_absolute_over_3": 0.3241199355770917,
+      "C4_pairing_deficits": [
+        0.1904313340656648,
+        0.39497887977828744,
+        0.3869495928873228
+      ],
+      "C2_at_zero": 0.895892063247607,
+      "C4_at_zero": 2.027640193268725,
+      "dressed_fourth_cumulant": -0.38022757370143756,
+      "spectral_truncation_C2_bound": 3.0073657363614177e-51,
+      "spectral_truncation_C4_over_3_bound": 6.014731472722835e-51
+    },
+    {
+      "field_family": "gaussian",
+      "field_sigma": 0.3,
+      "clock_mean": 5.0,
+      "clock_family": "exponential_energy_only",
+      "clock": {
+        "family": "exponential_energy_only",
+        "mean": 5.0,
+        "time_rms": null,
+        "time_note": "Sharp positive-energy endpoint; not a matched finite-RMS clock."
+      },
+      "spectrum": {
+        "family": "gaussian",
+        "sigma_modular": 0.3,
+        "physical_smearing_rms_over_L": 1.8849555921538759,
+        "half_duration_modular": null,
+        "frequency_radius": 36.0,
+        "quadrature_nodes": 720,
+        "mass_truncated": 8.155730641983483,
+        "physical_variance_L1": 0.005232911627786734,
+        "discarded_fraction_bound": 1.5036828681807088e-51
+      },
+      "sup_C2_absolute": 0.31473025243272823,
+      "sup_C4_absolute_over_3": 0.49519376165504553,
+      "C4_pairing_deficits": [
+        0.4403451604719535,
+        0.5304053730690879,
+        0.5148307514240952
+      ],
+      "C2_at_zero": 0.6852697475672718,
+      "C4_at_zero": 1.5144187150348634,
+      "dressed_fourth_cumulant": 0.10563483424212627,
+      "spectral_truncation_C2_bound": 3.0073657363614177e-51,
+      "spectral_truncation_C4_over_3_bound": 6.014731472722835e-51
+    },
+    {
+      "field_family": "gaussian",
+      "field_sigma": 0.3,
+      "clock_mean": 10.0,
+      "clock_family": "compact",
+      "clock": {
+        "family": "compact",
+        "mean": 10.0,
+        "threshold": 6.372401271531564,
+        "width": 7.255197456936871,
+        "kl_nats": 8.559855761470043,
+        "max_energy": 13.627598728468435,
+        "time_rms": 0.5,
+        "worst_kernel_error": 0.0,
+        "time_tail_abs_gt_1": 0.04137682019433057,
+        "time_tail_note": "Numerical integral to |t|=200; residual checked in validation."
+      },
+      "spectrum": {
+        "family": "gaussian",
+        "sigma_modular": 0.3,
+        "physical_smearing_rms_over_L": 1.8849555921538759,
+        "half_duration_modular": null,
+        "frequency_radius": 36.0,
+        "quadrature_nodes": 720,
+        "mass_truncated": 8.155730641983483,
+        "physical_variance_L1": 0.005232911627786734,
+        "discarded_fraction_bound": 1.5036828681807088e-51
+      },
+      "sup_C2_absolute": 0.00030612572338322303,
+      "sup_C4_absolute_over_3": 0.01761381892900801,
+      "C4_pairing_deficits": [
+        0.0006117574963645859,
+        0.02613078810484629,
+        0.02609891118581315
+      ],
+      "C2_at_zero": 0.9996938742766168,
+      "C4_at_zero": 2.947158543212976,
+      "dressed_fourth_cumulant": -0.05100498358560035,
+      "spectral_truncation_C2_bound": 3.0073657363614177e-51,
+      "spectral_truncation_C4_over_3_bound": 6.014731472722835e-51
+    },
+    {
+      "field_family": "gaussian",
+      "field_sigma": 0.3,
+      "clock_mean": 10.0,
+      "clock_family": "gamma5",
+      "clock": {
+        "family": "gamma5",
+        "mean": 10.0,
+        "threshold": 7.113248654051871,
+        "scale": 0.5773502691896258,
+        "kl_nats": 8.39572298771331,
+        "time_rms": 0.49999999999999994,
+        "worst_kernel_error": 0.0,
+        "time_tail_abs_gt_1": 0.04931308767313576,
+        "time_tail_note": "Numerical integral to |t|=200; residual checked in validation."
+      },
+      "spectrum": {
+        "family": "gaussian",
+        "sigma_modular": 0.3,
+        "physical_smearing_rms_over_L": 1.8849555921538759,
+        "half_duration_modular": null,
+        "frequency_radius": 36.0,
+        "quadrature_nodes": 720,
+        "mass_truncated": 8.155730641983483,
+        "physical_variance_L1": 0.005232911627786734,
+        "discarded_fraction_bound": 1.5036828681807088e-51
+      },
+      "sup_C2_absolute": 0.0003453948480505986,
+      "sup_C4_absolute_over_3": 0.019093692808493483,
+      "C4_pairing_deficits": [
+        0.0006903656910883867,
+        0.02831339132990881,
+        0.02827732140448325
+      ],
+      "C2_at_zero": 0.9996546051519494,
+      "C4_at_zero": 2.9427189215745195,
+      "dressed_fourth_cumulant": -0.05520906722997987,
+      "spectral_truncation_C2_bound": 3.0073657363614177e-51,
+      "spectral_truncation_C4_over_3_bound": 6.014731472722835e-51
+    },
+    {
+      "field_family": "gaussian",
+      "field_sigma": 0.3,
+      "clock_mean": 10.0,
+      "clock_family": "exponential_energy_only",
+      "clock": {
+        "family": "exponential_energy_only",
+        "mean": 10.0,
+        "time_rms": null,
+        "time_note": "Sharp positive-energy endpoint; not a matched finite-RMS clock."
+      },
+      "spectrum": {
+        "family": "gaussian",
+        "sigma_modular": 0.3,
+        "physical_smearing_rms_over_L": 1.8849555921538759,
+        "half_duration_modular": null,
+        "frequency_radius": 36.0,
+        "quadrature_nodes": 720,
+        "mass_truncated": 8.155730641983483,
+        "physical_variance_L1": 0.005232911627786734,
+        "discarded_fraction_bound": 1.5036828681807088e-51
+      },
+      "sup_C2_absolute": 0.1835704972835141,
+      "sup_C4_absolute_over_3": 0.30638257828306587,
+      "C4_pairing_deficits": [
+        0.2616653078109602,
+        0.3334428670941115,
+        0.3240395599441259
+      ],
+      "C2_at_zero": 0.8164295027164858,
+      "C4_at_zero": 2.0808522651508023,
+      "dressed_fourth_cumulant": 0.08118086643313727,
+      "spectral_truncation_C2_bound": 3.0073657363614177e-51,
+      "spectral_truncation_C4_over_3_bound": 6.014731472722835e-51
+    },
+    {
+      "field_family": "gaussian",
+      "field_sigma": 0.3,
+      "clock_mean": 20.0,
+      "clock_family": "compact",
+      "clock": {
+        "family": "compact",
+        "mean": 20.0,
+        "threshold": 16.372401271531565,
+        "width": 7.255197456936871,
+        "kl_nats": 18.55985576147004,
+        "max_energy": 23.627598728468435,
+        "time_rms": 0.5,
+        "worst_kernel_error": 0.0,
+        "time_tail_abs_gt_1": 0.04137682019433057,
+        "time_tail_note": "Numerical integral to |t|=200; residual checked in validation."
+      },
+      "spectrum": {
+        "family": "gaussian",
+        "sigma_modular": 0.3,
+        "physical_smearing_rms_over_L": 1.8849555921538759,
+        "half_duration_modular": null,
+        "frequency_radius": 36.0,
+        "quadrature_nodes": 720,
+        "mass_truncated": 8.155730641983483,
+        "physical_variance_L1": 0.005232911627786734,
+        "discarded_fraction_bound": 1.5036828681807088e-51
+      },
+      "sup_C2_absolute": 1.7533441409376954e-14,
+      "sup_C4_absolute_over_3": 1.3541314981982475e-07,
+      "C4_pairing_deficits": [
+        3.506688281873594e-14,
+        2.0311970831120883e-07,
+        2.0311970608138256e-07
+      ],
+      "C2_at_zero": 0.9999999999999825,
+      "C4_at_zero": 2.9999995937605504,
+      "dressed_fourth_cumulant": -4.0623934438599463e-07,
+      "spectral_truncation_C2_bound": 3.0073657363614177e-51,
+      "spectral_truncation_C4_over_3_bound": 6.014731472722835e-51
+    },
+    {
+      "field_family": "gaussian",
+      "field_sigma": 0.3,
+      "clock_mean": 20.0,
+      "clock_family": "gamma5",
+      "clock": {
+        "family": "gamma5",
+        "mean": 20.0,
+        "threshold": 17.113248654051873,
+        "scale": 0.5773502691896258,
+        "kl_nats": 18.39572298771331,
+        "time_rms": 0.49999999999999994,
+        "worst_kernel_error": 0.0,
+        "time_tail_abs_gt_1": 0.04931308767313576,
+        "time_tail_note": "Numerical integral to |t|=200; residual checked in validation."
+      },
+      "spectrum": {
+        "family": "gaussian",
+        "sigma_modular": 0.3,
+        "physical_smearing_rms_over_L": 1.8849555921538759,
+        "half_duration_modular": null,
+        "frequency_radius": 36.0,
+        "quadrature_nodes": 720,
+        "mass_truncated": 8.155730641983483,
+        "physical_variance_L1": 0.005232911627786734,
+        "discarded_fraction_bound": 1.5036828681807088e-51
+      },
+      "sup_C2_absolute": 1.3151090418686836e-14,
+      "sup_C4_absolute_over_3": 1.505759157721797e-07,
+      "C4_pairing_deficits": [
+        2.630218083737088e-14,
+        2.2586386134700578e-07,
+        2.2586385966735252e-07
+      ],
+      "C2_at_zero": 0.9999999999999869,
+      "C4_at_zero": 2.999999548272253,
+      "dressed_fourth_cumulant": -4.5172766860446245e-07,
+      "spectral_truncation_C2_bound": 3.0073657363614177e-51,
+      "spectral_truncation_C4_over_3_bound": 6.014731472722835e-51
+    },
+    {
+      "field_family": "gaussian",
+      "field_sigma": 0.3,
+      "clock_mean": 20.0,
+      "clock_family": "exponential_energy_only",
+      "clock": {
+        "family": "exponential_energy_only",
+        "mean": 20.0,
+        "time_rms": null,
+        "time_note": "Sharp positive-energy endpoint; not a matched finite-RMS clock."
+      },
+      "spectrum": {
+        "family": "gaussian",
+        "sigma_modular": 0.3,
+        "physical_smearing_rms_over_L": 1.8849555921538759,
+        "half_duration_modular": null,
+        "frequency_radius": 36.0,
+        "quadrature_nodes": 720,
+        "mass_truncated": 8.155730641983483,
+        "physical_variance_L1": 0.005232911627786734,
+        "discarded_fraction_bound": 1.5036828681807088e-51
+      },
+      "sup_C2_absolute": 0.09975561977043694,
+      "sup_C4_absolute_over_3": 0.1725168447841534,
+      "C4_pairing_deficits": [
+        0.14363586543496618,
+        0.18956005586508995,
+        0.18435461305240414
+      ],
+      "C2_at_zero": 0.9002443802295631,
+      "C4_at_zero": 2.48244946564754,
+      "dressed_fourth_cumulant": 0.051129633242809724,
+      "spectral_truncation_C2_bound": 3.0073657363614177e-51,
+      "spectral_truncation_C4_over_3_bound": 6.014731472722835e-51
+    },
+    {
+      "field_family": "gaussian",
+      "field_sigma": 0.5,
+      "clock_mean": 5.0,
+      "clock_family": "compact",
+      "clock": {
+        "family": "compact",
+        "mean": 5.0,
+        "threshold": 1.3724012715315643,
+        "width": 7.255197456936871,
+        "kl_nats": 3.5598557614700423,
+        "max_energy": 8.627598728468435,
+        "time_rms": 0.5,
+        "worst_kernel_error": 0.0,
+        "time_tail_abs_gt_1": 0.04137682019433057,
+        "time_tail_note": "Numerical integral to |t|=200; residual checked in validation."
+      },
+      "spectrum": {
+        "family": "gaussian",
+        "sigma_modular": 0.5,
+        "physical_smearing_rms_over_L": 3.141592653589793,
+        "half_duration_modular": null,
+        "frequency_radius": 36.0,
+        "quadrature_nodes": 720,
+        "mass_truncated": 4.0872566202644025,
+        "physical_variance_L1": 0.0026224814958734645,
+        "discarded_fraction_bound": 9.510119038836219e-142
+      },
+      "sup_C2_absolute": 0.006474984660986411,
+      "sup_C4_absolute_over_3": 0.047085574699640226,
+      "C4_pairing_deficits": [
+        0.012665279845184335,
+        0.06481302116601845,
+        0.0637784230877179
+      ],
+      "C2_at_zero": 0.9935250153390136,
+      "C4_at_zero": 2.8587432759010794,
+      "dressed_fourth_cumulant": -0.10253259241208257,
+      "spectral_truncation_C2_bound": 1.9020238077672438e-141,
+      "spectral_truncation_C4_over_3_bound": 3.8040476155344876e-141
+    },
+    {
+      "field_family": "gaussian",
+      "field_sigma": 0.5,
+      "clock_mean": 5.0,
+      "clock_family": "gamma5",
+      "clock": {
+        "family": "gamma5",
+        "mean": 5.0,
+        "threshold": 2.113248654051871,
+        "scale": 0.5773502691896258,
+        "kl_nats": 3.3957229877133095,
+        "time_rms": 0.49999999999999994,
+        "worst_kernel_error": 0.0,
+        "time_tail_abs_gt_1": 0.04931308767313576,
+        "time_tail_note": "Numerical integral to |t|=200; residual checked in validation."
+      },
+      "spectrum": {
+        "family": "gaussian",
+        "sigma_modular": 0.5,
+        "physical_smearing_rms_over_L": 3.141592653589793,
+        "half_duration_modular": null,
+        "frequency_radius": 36.0,
+        "quadrature_nodes": 720,
+        "mass_truncated": 4.0872566202644025,
+        "physical_variance_L1": 0.0026224814958734645,
+        "discarded_fraction_bound": 9.510119038836219e-142
+      },
+      "sup_C2_absolute": 0.007377397245850446,
+      "sup_C4_absolute_over_3": 0.05284105680023615,
+      "C4_pairing_deficits": [
+        0.014514357727937265,
+        0.07260086728705736,
+        0.07140794538571384
+      ],
+      "C2_at_zero": 0.9926226027541496,
+      "C4_at_zero": 2.8414768295992916,
+      "dressed_fourth_cumulant": -0.11442206489597506,
+      "spectral_truncation_C2_bound": 1.9020238077672438e-141,
+      "spectral_truncation_C4_over_3_bound": 3.8040476155344876e-141
+    },
+    {
+      "field_family": "gaussian",
+      "field_sigma": 0.5,
+      "clock_mean": 5.0,
+      "clock_family": "exponential_energy_only",
+      "clock": {
+        "family": "exponential_energy_only",
+        "mean": 5.0,
+        "time_rms": null,
+        "time_note": "Sharp positive-energy endpoint; not a matched finite-RMS clock."
+      },
+      "spectrum": {
+        "family": "gaussian",
+        "sigma_modular": 0.5,
+        "physical_smearing_rms_over_L": 3.141592653589793,
+        "half_duration_modular": null,
+        "frequency_radius": 36.0,
+        "quadrature_nodes": 720,
+        "mass_truncated": 4.0872566202644025,
+        "physical_variance_L1": 0.0026224814958734645,
+        "discarded_fraction_bound": 9.510119038836219e-142
+      },
+      "sup_C2_absolute": 0.17586848594398305,
+      "sup_C4_absolute_over_3": 0.29596933809074705,
+      "C4_pairing_deficits": [
+        0.26435317630278155,
+        0.32080724753973716,
+        0.3027475904297224
+      ],
+      "C2_at_zero": 0.8241315140560169,
+      "C4_at_zero": 2.112091985727759,
+      "dressed_fourth_cumulant": 0.07451372834697034,
+      "spectral_truncation_C2_bound": 1.9020238077672438e-141,
+      "spectral_truncation_C4_over_3_bound": 3.8040476155344876e-141
+    },
+    {
+      "field_family": "gaussian",
+      "field_sigma": 0.5,
+      "clock_mean": 10.0,
+      "clock_family": "compact",
+      "clock": {
+        "family": "compact",
+        "mean": 10.0,
+        "threshold": 6.372401271531564,
+        "width": 7.255197456936871,
+        "kl_nats": 8.559855761470043,
+        "max_energy": 13.627598728468435,
+        "time_rms": 0.5,
+        "worst_kernel_error": 0.0,
+        "time_tail_abs_gt_1": 0.04137682019433057,
+        "time_tail_note": "Numerical integral to |t|=200; residual checked in validation."
+      },
+      "spectrum": {
+        "family": "gaussian",
+        "sigma_modular": 0.5,
+        "physical_smearing_rms_over_L": 3.141592653589793,
+        "half_duration_modular": null,
+        "frequency_radius": 36.0,
+        "quadrature_nodes": 720,
+        "mass_truncated": 4.0872566202644025,
+        "physical_variance_L1": 0.0026224814958734645,
+        "discarded_fraction_bound": 9.510119038836219e-142
+      },
+      "sup_C2_absolute": 8.065275682232425e-09,
+      "sup_C4_absolute_over_3": 3.2374676668464525e-05,
+      "C4_pairing_deficits": [
+        1.6130543933080428e-08,
+        4.855475999481471e-05,
+        4.8553139466645786e-05
+      ],
+      "C2_at_zero": 0.9999999919347243,
+      "C4_at_zero": 2.9999028759699944,
+      "dressed_fourth_cumulant": -9.707563835181787e-05,
+      "spectral_truncation_C2_bound": 1.9020238077672438e-141,
+      "spectral_truncation_C4_over_3_bound": 3.8040476155344876e-141
+    },
+    {
+      "field_family": "gaussian",
+      "field_sigma": 0.5,
+      "clock_mean": 10.0,
+      "clock_family": "gamma5",
+      "clock": {
+        "family": "gamma5",
+        "mean": 10.0,
+        "threshold": 7.113248654051871,
+        "scale": 0.5773502691896258,
+        "kl_nats": 8.39572298771331,
+        "time_rms": 0.49999999999999994,
+        "worst_kernel_error": 0.0,
+        "time_tail_abs_gt_1": 0.04931308767313576,
+        "time_tail_note": "Numerical integral to |t|=200; residual checked in validation."
+      },
+      "spectrum": {
+        "family": "gaussian",
+        "sigma_modular": 0.5,
+        "physical_smearing_rms_over_L": 3.141592653589793,
+        "half_duration_modular": null,
+        "frequency_radius": 36.0,
+        "quadrature_nodes": 720,
+        "mass_truncated": 4.0872566202644025,
+        "physical_variance_L1": 0.0026224814958734645,
+        "discarded_fraction_bound": 9.510119038836219e-142
+      },
+      "sup_C2_absolute": 4.645350617034016e-09,
+      "sup_C4_absolute_over_3": 3.49147339348968e-05,
+      "C4_pairing_deficits": [
+        9.290700629848094e-09,
+        5.236792776277758e-05,
+        5.236698334128297e-05
+      ],
+      "C2_at_zero": 0.9999999953546493,
+      "C4_at_zero": 2.9998952557981955,
+      "dressed_fourth_cumulant": -0.00010471632970077138,
+      "spectral_truncation_C2_bound": 1.9020238077672438e-141,
+      "spectral_truncation_C4_over_3_bound": 3.8040476155344876e-141
+    },
+    {
+      "field_family": "gaussian",
+      "field_sigma": 0.5,
+      "clock_mean": 10.0,
+      "clock_family": "exponential_energy_only",
+      "clock": {
+        "family": "exponential_energy_only",
+        "mean": 10.0,
+        "time_rms": null,
+        "time_note": "Sharp positive-energy endpoint; not a matched finite-RMS clock."
+      },
+      "spectrum": {
+        "family": "gaussian",
+        "sigma_modular": 0.5,
+        "physical_smearing_rms_over_L": 3.141592653589793,
+        "half_duration_modular": null,
+        "frequency_radius": 36.0,
+        "quadrature_nodes": 720,
+        "mass_truncated": 4.0872566202644025,
+        "physical_variance_L1": 0.0026224814958734645,
+        "discarded_fraction_bound": 9.510119038836219e-142
+      },
+      "sup_C2_absolute": 0.09664525822157304,
+      "sup_C4_absolute_over_3": 0.16817422555098396,
+      "C4_pairing_deficits": [
+        0.14670367878327997,
+        0.18395021050643154,
+        0.17386878736324043
+      ],
+      "C2_at_zero": 0.903354741778427,
+      "C4_at_zero": 2.495477323347048,
+      "dressed_fourth_cumulant": 0.04732795486634256,
+      "spectral_truncation_C2_bound": 1.9020238077672438e-141,
+      "spectral_truncation_C4_over_3_bound": 3.8040476155344876e-141
+    },
+    {
+      "field_family": "gaussian",
+      "field_sigma": 0.5,
+      "clock_mean": 20.0,
+      "clock_family": "compact",
+      "clock": {
+        "family": "compact",
+        "mean": 20.0,
+        "threshold": 16.372401271531565,
+        "width": 7.255197456936871,
+        "kl_nats": 18.55985576147004,
+        "max_energy": 23.627598728468435,
+        "time_rms": 0.5,
+        "worst_kernel_error": 0.0,
+        "time_tail_abs_gt_1": 0.04137682019433057,
+        "time_tail_note": "Numerical integral to |t|=200; residual checked in validation."
+      },
+      "spectrum": {
+        "family": "gaussian",
+        "sigma_modular": 0.5,
+        "physical_smearing_rms_over_L": 3.141592653589793,
+        "half_duration_modular": null,
+        "frequency_radius": 36.0,
+        "quadrature_nodes": 720,
+        "mass_truncated": 4.0872566202644025,
+        "physical_variance_L1": 0.0026224814958734645,
+        "discarded_fraction_bound": 9.510119038836219e-142
+      },
+      "sup_C2_absolute": 2.7775295833878873e-35,
+      "sup_C4_absolute_over_3": 8.999044235877022e-19,
+      "C4_pairing_deficits": [
+        5.555059166775774e-35,
+        1.3498566353815532e-18,
+        1.3498566353815532e-18
+      ],
+      "C2_at_zero": 1.0,
+      "C4_at_zero": 3.0,
+      "dressed_fourth_cumulant": 0.0,
+      "spectral_truncation_C2_bound": 1.9020238077672438e-141,
+      "spectral_truncation_C4_over_3_bound": 3.8040476155344876e-141
+    },
+    {
+      "field_family": "gaussian",
+      "field_sigma": 0.5,
+      "clock_mean": 20.0,
+      "clock_family": "gamma5",
+      "clock": {
+        "family": "gamma5",
+        "mean": 20.0,
+        "threshold": 17.113248654051873,
+        "scale": 0.5773502691896258,
+        "kl_nats": 18.39572298771331,
+        "time_rms": 0.49999999999999994,
+        "worst_kernel_error": 0.0,
+        "time_tail_abs_gt_1": 0.04931308767313576,
+        "time_tail_note": "Numerical integral to |t|=200; residual checked in validation."
+      },
+      "spectrum": {
+        "family": "gaussian",
+        "sigma_modular": 0.5,
+        "physical_smearing_rms_over_L": 3.141592653589793,
+        "half_duration_modular": null,
+        "frequency_radius": 36.0,
+        "quadrature_nodes": 720,
+        "mass_truncated": 4.0872566202644025,
+        "physical_variance_L1": 0.0026224814958734645,
+        "discarded_fraction_bound": 9.510119038836219e-142
+      },
+      "sup_C2_absolute": 9.84802169345133e-37,
+      "sup_C4_absolute_over_3": 4.0734537327478103e-19,
+      "C4_pairing_deficits": [
+        1.969604338690266e-36,
+        6.110180599121716e-19,
+        6.110180599121716e-19
+      ],
+      "C2_at_zero": 1.0,
+      "C4_at_zero": 3.0,
+      "dressed_fourth_cumulant": 0.0,
+      "spectral_truncation_C2_bound": 1.9020238077672438e-141,
+      "spectral_truncation_C4_over_3_bound": 3.8040476155344876e-141
+    },
+    {
+      "field_family": "gaussian",
+      "field_sigma": 0.5,
+      "clock_mean": 20.0,
+      "clock_family": "exponential_energy_only",
+      "clock": {
+        "family": "exponential_energy_only",
+        "mean": 20.0,
+        "time_rms": null,
+        "time_note": "Sharp positive-energy endpoint; not a matched finite-RMS clock."
+      },
+      "spectrum": {
+        "family": "gaussian",
+        "sigma_modular": 0.5,
+        "physical_smearing_rms_over_L": 3.141592653589793,
+        "half_duration_modular": null,
+        "frequency_radius": 36.0,
+        "quadrature_nodes": 720,
+        "mass_truncated": 4.0872566202644025,
+        "physical_variance_L1": 0.0026224814958734645,
+        "discarded_fraction_bound": 9.510119038836219e-142
+      },
+      "sup_C2_absolute": 0.05077691776751536,
+      "sup_C4_absolute_over_3": 0.09002840799840432,
+      "C4_pairing_deficits": [
+        0.07747463165872104,
+        0.0989755401570617,
+        0.0936350521794302
+      ],
+      "C2_at_zero": 0.9492230822324846,
+      "C4_at_zero": 2.729914776004787,
+      "dressed_fourth_cumulant": 0.026841396475972168,
+      "spectral_truncation_C2_bound": 1.9020238077672438e-141,
+      "spectral_truncation_C4_over_3_bound": 3.8040476155344876e-141
+    },
+    {
+      "field_family": "cosine",
+      "field_sigma": 0.1,
+      "clock_mean": 5.0,
+      "clock_family": "compact",
+      "clock": {
+        "family": "compact",
+        "mean": 5.0,
+        "threshold": 1.3724012715315643,
+        "width": 7.255197456936871,
+        "kl_nats": 3.5598557614700423,
+        "max_energy": 8.627598728468435,
+        "time_rms": 0.5,
+        "worst_kernel_error": 0.0,
+        "time_tail_abs_gt_1": 0.04137682019433057,
+        "time_tail_note": "Numerical integral to |t|=200; residual checked in validation."
+      },
+      "spectrum": {
+        "family": "cosine",
+        "sigma_modular": 0.1,
+        "physical_smearing_rms_over_L": 0.6283185307179586,
+        "half_duration_modular": 0.27661594838677134,
+        "frequency_radius": 567.8618083866119,
+        "quadrature_nodes": 2000,
+        "mass_truncated": 48.21193280632547,
+        "physical_variance_L1": 0.030933927915860682,
+        "discarded_fraction_bound": 1.085171856619475e-08
+      },
+      "sup_C2_absolute": 0.7018335730141145,
+      "sup_C4_absolute_over_3": 0.9392113004775764,
+      "C4_pairing_deficits": [
+        0.9040528272498775,
+        0.9586659694546671,
+        0.9549151047281844
+      ],
+      "C2_at_zero": 0.29816642698588547,
+      "C4_at_zero": 0.18236609856727082,
+      "dressed_fourth_cumulant": -0.0843435559773173,
+      "spectral_truncation_C2_bound": 2.17034371323895e-08,
+      "spectral_truncation_C4_over_3_bound": 4.3406874264779e-08
+    },
+    {
+      "field_family": "cosine",
+      "field_sigma": 0.1,
+      "clock_mean": 5.0,
+      "clock_family": "gamma5",
+      "clock": {
+        "family": "gamma5",
+        "mean": 5.0,
+        "threshold": 2.113248654051871,
+        "scale": 0.5773502691896258,
+        "kl_nats": 3.3957229877133095,
+        "time_rms": 0.49999999999999994,
+        "worst_kernel_error": 0.0,
+        "time_tail_abs_gt_1": 0.04931308767313576,
+        "time_tail_note": "Numerical integral to |t|=200; residual checked in validation."
+      },
+      "spectrum": {
+        "family": "cosine",
+        "sigma_modular": 0.1,
+        "physical_smearing_rms_over_L": 0.6283185307179586,
+        "half_duration_modular": 0.27661594838677134,
+        "frequency_radius": 567.8618083866119,
+        "quadrature_nodes": 2000,
+        "mass_truncated": 48.21193280632547,
+        "physical_variance_L1": 0.030933927915860682,
+        "discarded_fraction_bound": 1.085171856619475e-08
+      },
+      "sup_C2_absolute": 0.7008081630723318,
+      "sup_C4_absolute_over_3": 0.9363812825460262,
+      "C4_pairing_deficits": [
+        0.8991783677547285,
+        0.9568350084157748,
+        0.953130471467575
+      ],
+      "C2_at_zero": 0.29919183692766815,
+      "C4_at_zero": 0.19085615236192144,
+      "dressed_fourth_cumulant": -0.0776911134905357,
+      "spectral_truncation_C2_bound": 2.17034371323895e-08,
+      "spectral_truncation_C4_over_3_bound": 4.3406874264779e-08
+    },
+    {
+      "field_family": "cosine",
+      "field_sigma": 0.1,
+      "clock_mean": 5.0,
+      "clock_family": "exponential_energy_only",
+      "clock": {
+        "family": "exponential_energy_only",
+        "mean": 5.0,
+        "time_rms": null,
+        "time_note": "Sharp positive-energy endpoint; not a matched finite-RMS clock."
+      },
+      "spectrum": {
+        "family": "cosine",
+        "sigma_modular": 0.1,
+        "physical_smearing_rms_over_L": 0.6283185307179586,
+        "half_duration_modular": 0.27661594838677134,
+        "frequency_radius": 567.8618083866119,
+        "quadrature_nodes": 2000,
+        "mass_truncated": 48.21193280632547,
+        "physical_variance_L1": 0.030933927915860682,
+        "discarded_fraction_bound": 1.085171856619475e-08
+      },
+      "sup_C2_absolute": 0.6965880924779758,
+      "sup_C4_absolute_over_3": 0.8793220581312481,
+      "C4_pairing_deficits": [
+        0.8248267058986521,
+        0.9079412143738467,
+        0.9051982541212457
+      ],
+      "C2_at_zero": 0.3034119075220242,
+      "C4_at_zero": 0.36203382560625563,
+      "dressed_fourth_cumulant": 0.08585746872779554,
+      "spectral_truncation_C2_bound": 2.17034371323895e-08,
+      "spectral_truncation_C4_over_3_bound": 4.3406874264779e-08
+    },
+    {
+      "field_family": "cosine",
+      "field_sigma": 0.1,
+      "clock_mean": 10.0,
+      "clock_family": "compact",
+      "clock": {
+        "family": "compact",
+        "mean": 10.0,
+        "threshold": 6.372401271531564,
+        "width": 7.255197456936871,
+        "kl_nats": 8.559855761470043,
+        "max_energy": 13.627598728468435,
+        "time_rms": 0.5,
+        "worst_kernel_error": 0.0,
+        "time_tail_abs_gt_1": 0.04137682019433057,
+        "time_tail_note": "Numerical integral to |t|=200; residual checked in validation."
+      },
+      "spectrum": {
+        "family": "cosine",
+        "sigma_modular": 0.1,
+        "physical_smearing_rms_over_L": 0.6283185307179586,
+        "half_duration_modular": 0.27661594838677134,
+        "frequency_radius": 567.8618083866119,
+        "quadrature_nodes": 2000,
+        "mass_truncated": 48.21193280632547,
+        "physical_variance_L1": 0.030933927915860682,
+        "discarded_fraction_bound": 1.085171856619475e-08
+      },
+      "sup_C2_absolute": 0.2921120750609575,
+      "sup_C4_absolute_over_3": 0.692775803170603,
+      "C4_pairing_deficits": [
+        0.493336615611488,
+        0.7938435884398788,
+        0.7911472054604424
+      ],
+      "C2_at_zero": 0.7078879249390425,
+      "C4_at_zero": 0.9216725904881908,
+      "dressed_fourth_cumulant": -0.5816433523353195,
+      "spectral_truncation_C2_bound": 2.17034371323895e-08,
+      "spectral_truncation_C4_over_3_bound": 4.3406874264779e-08
+    },
+    {
+      "field_family": "cosine",
+      "field_sigma": 0.1,
+      "clock_mean": 10.0,
+      "clock_family": "gamma5",
+      "clock": {
+        "family": "gamma5",
+        "mean": 10.0,
+        "threshold": 7.113248654051871,
+        "scale": 0.5773502691896258,
+        "kl_nats": 8.39572298771331,
+        "time_rms": 0.49999999999999994,
+        "worst_kernel_error": 0.0,
+        "time_tail_abs_gt_1": 0.04931308767313576,
+        "time_tail_note": "Numerical integral to |t|=200; residual checked in validation."
+      },
+      "spectrum": {
+        "family": "cosine",
+        "sigma_modular": 0.1,
+        "physical_smearing_rms_over_L": 0.6283185307179586,
+        "half_duration_modular": 0.27661594838677134,
+        "frequency_radius": 567.8618083866119,
+        "quadrature_nodes": 2000,
+        "mass_truncated": 48.21193280632547,
+        "physical_variance_L1": 0.030933927915860682,
+        "discarded_fraction_bound": 1.085171856619475e-08
+      },
+      "sup_C2_absolute": 0.29506727958319856,
+      "sup_C4_absolute_over_3": 0.6925187386352113,
+      "C4_pairing_deficits": [
+        0.49552163684635303,
+        0.792365363036248,
+        0.7896692160230326
+      ],
+      "C2_at_zero": 0.7049327204168014,
+      "C4_at_zero": 0.9224437840943662,
+      "dressed_fourth_cumulant": -0.5683466368483308,
+      "spectral_truncation_C2_bound": 2.17034371323895e-08,
+      "spectral_truncation_C4_over_3_bound": 4.3406874264779e-08
+    },
+    {
+      "field_family": "cosine",
+      "field_sigma": 0.1,
+      "clock_mean": 10.0,
+      "clock_family": "exponential_energy_only",
+      "clock": {
+        "family": "exponential_energy_only",
+        "mean": 10.0,
+        "time_rms": null,
+        "time_note": "Sharp positive-energy endpoint; not a matched finite-RMS clock."
+      },
+      "spectrum": {
+        "family": "cosine",
+        "sigma_modular": 0.1,
+        "physical_smearing_rms_over_L": 0.6283185307179586,
+        "half_duration_modular": 0.27661594838677134,
+        "frequency_radius": 567.8618083866119,
+        "quadrature_nodes": 2000,
+        "mass_truncated": 48.21193280632547,
+        "physical_variance_L1": 0.030933927915860682,
+        "discarded_fraction_bound": 1.085171856619475e-08
+      },
+      "sup_C2_absolute": 0.4904662544852982,
+      "sup_C4_absolute_over_3": 0.695553609332444,
+      "C4_pairing_deficits": [
+        0.6081548387077895,
+        0.7403753621817591,
+        0.7381306271077835
+      ],
+      "C2_at_zero": 0.5095337455147018,
+      "C4_at_zero": 0.9133391720026678,
+      "dressed_fourth_cumulant": 0.13446525854794522,
+      "spectral_truncation_C2_bound": 2.17034371323895e-08,
+      "spectral_truncation_C4_over_3_bound": 4.3406874264779e-08
+    },
+    {
+      "field_family": "cosine",
+      "field_sigma": 0.1,
+      "clock_mean": 20.0,
+      "clock_family": "compact",
+      "clock": {
+        "family": "compact",
+        "mean": 20.0,
+        "threshold": 16.372401271531565,
+        "width": 7.255197456936871,
+        "kl_nats": 18.55985576147004,
+        "max_energy": 23.627598728468435,
+        "time_rms": 0.5,
+        "worst_kernel_error": 0.0,
+        "time_tail_abs_gt_1": 0.04137682019433057,
+        "time_tail_note": "Numerical integral to |t|=200; residual checked in validation."
+      },
+      "spectrum": {
+        "family": "cosine",
+        "sigma_modular": 0.1,
+        "physical_smearing_rms_over_L": 0.6283185307179586,
+        "half_duration_modular": 0.27661594838677134,
+        "frequency_radius": 567.8618083866119,
+        "quadrature_nodes": 2000,
+        "mass_truncated": 48.21193280632547,
+        "physical_variance_L1": 0.030933927915860682,
+        "discarded_fraction_bound": 1.085171856619475e-08
+      },
+      "sup_C2_absolute": 0.004519696745682403,
+      "sup_C4_absolute_over_3": 0.14961287303172746,
+      "C4_pairing_deficits": [
+        0.009014145834407974,
+        0.21993180876280674,
+        0.21989266449796768
+      ],
+      "C2_at_zero": 0.9954803032543176,
+      "C4_at_zero": 2.5511613809048175,
+      "dressed_fourth_cumulant": -0.4217817215971067,
+      "spectral_truncation_C2_bound": 2.17034371323895e-08,
+      "spectral_truncation_C4_over_3_bound": 4.3406874264779e-08
+    },
+    {
+      "field_family": "cosine",
+      "field_sigma": 0.1,
+      "clock_mean": 20.0,
+      "clock_family": "gamma5",
+      "clock": {
+        "family": "gamma5",
+        "mean": 20.0,
+        "threshold": 17.113248654051873,
+        "scale": 0.5773502691896258,
+        "kl_nats": 18.39572298771331,
+        "time_rms": 0.49999999999999994,
+        "worst_kernel_error": 0.0,
+        "time_tail_abs_gt_1": 0.04931308767313576,
+        "time_tail_note": "Numerical integral to |t|=200; residual checked in validation."
+      },
+      "spectrum": {
+        "family": "cosine",
+        "sigma_modular": 0.1,
+        "physical_smearing_rms_over_L": 0.6283185307179586,
+        "half_duration_modular": 0.27661594838677134,
+        "frequency_radius": 567.8618083866119,
+        "quadrature_nodes": 2000,
+        "mass_truncated": 48.21193280632547,
+        "physical_variance_L1": 0.030933927915860682,
+        "discarded_fraction_bound": 1.085171856619475e-08
+      },
+      "sup_C2_absolute": 0.004755149770142987,
+      "sup_C4_absolute_over_3": 0.15093685503658333,
+      "C4_pairing_deficits": [
+        0.009482695243549373,
+        0.2216859084641198,
+        0.2216419614020808
+      ],
+      "C2_at_zero": 0.995244850229857,
+      "C4_at_zero": 2.54718943489025,
+      "dressed_fourth_cumulant": -0.4243475008369013,
+      "spectral_truncation_C2_bound": 2.17034371323895e-08,
+      "spectral_truncation_C4_over_3_bound": 4.3406874264779e-08
+    },
+    {
+      "field_family": "cosine",
+      "field_sigma": 0.1,
+      "clock_mean": 20.0,
+      "clock_family": "exponential_energy_only",
+      "clock": {
+        "family": "exponential_energy_only",
+        "mean": 20.0,
+        "time_rms": null,
+        "time_note": "Sharp positive-energy endpoint; not a matched finite-RMS clock."
+      },
+      "spectrum": {
+        "family": "cosine",
+        "sigma_modular": 0.1,
+        "physical_smearing_rms_over_L": 0.6283185307179586,
+        "half_duration_modular": 0.27661594838677134,
+        "frequency_radius": 567.8618083866119,
+        "quadrature_nodes": 2000,
+        "mass_truncated": 48.21193280632547,
+        "physical_variance_L1": 0.030933927915860682,
+        "discarded_fraction_bound": 1.085171856619475e-08
+      },
+      "sup_C2_absolute": 0.30145073689240676,
+      "sup_C4_absolute_over_3": 0.4691760479670386,
+      "C4_pairing_deficits": [
+        0.38497479342609664,
+        0.5120289270118386,
+        0.5105244234631806
+      ],
+      "C2_at_zero": 0.6985492631075932,
+      "C4_at_zero": 1.5924718560988842,
+      "dressed_fourth_cumulant": 0.12855863713439963,
+      "spectral_truncation_C2_bound": 2.17034371323895e-08,
+      "spectral_truncation_C4_over_3_bound": 4.3406874264779e-08
+    },
+    {
+      "field_family": "cosine",
+      "field_sigma": 0.2,
+      "clock_mean": 5.0,
+      "clock_family": "compact",
+      "clock": {
+        "family": "compact",
+        "mean": 5.0,
+        "threshold": 1.3724012715315643,
+        "width": 7.255197456936871,
+        "kl_nats": 3.5598557614700423,
+        "max_energy": 8.627598728468435,
+        "time_rms": 0.5,
+        "worst_kernel_error": 0.0,
+        "time_tail_abs_gt_1": 0.04137682019433057,
+        "time_tail_note": "Numerical integral to |t|=200; residual checked in validation."
+      },
+      "spectrum": {
+        "family": "cosine",
+        "sigma_modular": 0.2,
+        "physical_smearing_rms_over_L": 1.2566370614359172,
+        "half_duration_modular": 0.5532318967735427,
+        "frequency_radius": 283.93090419330593,
+        "quadrature_nodes": 2000,
+        "mass_truncated": 14.154315302109366,
+        "physical_variance_L1": 0.009081746857416358,
+        "discarded_fraction_bound": 9.240685882357163e-09
+      },
+      "sup_C2_absolute": 0.2607978588783381,
+      "sup_C4_absolute_over_3": 0.5914618673866182,
+      "C4_pairing_deficits": [
+        0.43811161725496756,
+        0.6735417743420886,
+        0.6627322105627986
+      ],
+      "C2_at_zero": 0.7392021411216618,
+      "C4_at_zero": 1.2256143978401453,
+      "dressed_fourth_cumulant": -0.41364501847640267,
+      "spectral_truncation_C2_bound": 1.8481371764714326e-08,
+      "spectral_truncation_C4_over_3_bound": 3.696274352942865e-08
+    },
+    {
+      "field_family": "cosine",
+      "field_sigma": 0.2,
+      "clock_mean": 5.0,
+      "clock_family": "gamma5",
+      "clock": {
+        "family": "gamma5",
+        "mean": 5.0,
+        "threshold": 2.113248654051871,
+        "scale": 0.5773502691896258,
+        "kl_nats": 3.3957229877133095,
+        "time_rms": 0.49999999999999994,
+        "worst_kernel_error": 0.0,
+        "time_tail_abs_gt_1": 0.04931308767313576,
+        "time_tail_note": "Numerical integral to |t|=200; residual checked in validation."
+      },
+      "spectrum": {
+        "family": "cosine",
+        "sigma_modular": 0.2,
+        "physical_smearing_rms_over_L": 1.2566370614359172,
+        "half_duration_modular": 0.5532318967735427,
+        "frequency_radius": 283.93090419330593,
+        "quadrature_nodes": 2000,
+        "mass_truncated": 14.154315302109366,
+        "physical_variance_L1": 0.009081746857416358,
+        "discarded_fraction_bound": 9.240685882357163e-09
+      },
+      "sup_C2_absolute": 0.2703864873159601,
+      "sup_C4_absolute_over_3": 0.5944109284195156,
+      "C4_pairing_deficits": [
+        0.44864689243368977,
+        0.6727742653243493,
+        0.6618116275005077
+      ],
+      "C2_at_zero": 0.72961351268404,
+      "C4_at_zero": 1.2167672147414532,
+      "dressed_fourth_cumulant": -0.38024041893197813,
+      "spectral_truncation_C2_bound": 1.8481371764714326e-08,
+      "spectral_truncation_C4_over_3_bound": 3.696274352942865e-08
+    },
+    {
+      "field_family": "cosine",
+      "field_sigma": 0.2,
+      "clock_mean": 5.0,
+      "clock_family": "exponential_energy_only",
+      "clock": {
+        "family": "exponential_energy_only",
+        "mean": 5.0,
+        "time_rms": null,
+        "time_note": "Sharp positive-energy endpoint; not a matched finite-RMS clock."
+      },
+      "spectrum": {
+        "family": "cosine",
+        "sigma_modular": 0.2,
+        "physical_smearing_rms_over_L": 1.2566370614359172,
+        "half_duration_modular": 0.5532318967735427,
+        "frequency_radius": 283.93090419330593,
+        "quadrature_nodes": 2000,
+        "mass_truncated": 14.154315302109366,
+        "physical_variance_L1": 0.009081746857416358,
+        "discarded_fraction_bound": 9.240685882357163e-09
+      },
+      "sup_C2_absolute": 0.43445575675431675,
+      "sup_C4_absolute_over_3": 0.640546488647148,
+      "C4_pairing_deficits": [
+        0.572434570012667,
+        0.6801597089316673,
+        0.6690451869971097
+      ],
+      "C2_at_zero": 0.5655442432456832,
+      "C4_at_zero": 1.078360534058556,
+      "dressed_fourth_cumulant": 0.11883966085355846,
+      "spectral_truncation_C2_bound": 1.8481371764714326e-08,
+      "spectral_truncation_C4_over_3_bound": 3.696274352942865e-08
+    },
+    {
+      "field_family": "cosine",
+      "field_sigma": 0.2,
+      "clock_mean": 10.0,
+      "clock_family": "compact",
+      "clock": {
+        "family": "compact",
+        "mean": 10.0,
+        "threshold": 6.372401271531564,
+        "width": 7.255197456936871,
+        "kl_nats": 8.559855761470043,
+        "max_energy": 13.627598728468435,
+        "time_rms": 0.5,
+        "worst_kernel_error": 0.0,
+        "time_tail_abs_gt_1": 0.04137682019433057,
+        "time_tail_note": "Numerical integral to |t|=200; residual checked in validation."
+      },
+      "spectrum": {
+        "family": "cosine",
+        "sigma_modular": 0.2,
+        "physical_smearing_rms_over_L": 1.2566370614359172,
+        "half_duration_modular": 0.5532318967735427,
+        "frequency_radius": 283.93090419330593,
+        "quadrature_nodes": 2000,
+        "mass_truncated": 14.154315302109366,
+        "physical_variance_L1": 0.009081746857416358,
+        "discarded_fraction_bound": 9.240685882357163e-09
+      },
+      "sup_C2_absolute": 0.00604354647317855,
+      "sup_C4_absolute_over_3": 0.11837462619891347,
+      "C4_pairing_deficits": [
+        0.012003120745880863,
+        0.17169977581323584,
+        0.17142098203762368
+      ],
+      "C2_at_zero": 0.9939564535268215,
+      "C4_at_zero": 2.6448761214032595,
+      "dressed_fourth_cumulant": -0.3189721731195898,
+      "spectral_truncation_C2_bound": 1.8481371764714326e-08,
+      "spectral_truncation_C4_over_3_bound": 3.696274352942865e-08
+    },
+    {
+      "field_family": "cosine",
+      "field_sigma": 0.2,
+      "clock_mean": 10.0,
+      "clock_family": "gamma5",
+      "clock": {
+        "family": "gamma5",
+        "mean": 10.0,
+        "threshold": 7.113248654051871,
+        "scale": 0.5773502691896258,
+        "kl_nats": 8.39572298771331,
+        "time_rms": 0.49999999999999994,
+        "worst_kernel_error": 0.0,
+        "time_tail_abs_gt_1": 0.04931308767313576,
+        "time_tail_note": "Numerical integral to |t|=200; residual checked in validation."
+      },
+      "spectrum": {
+        "family": "cosine",
+        "sigma_modular": 0.2,
+        "physical_smearing_rms_over_L": 1.2566370614359172,
+        "half_duration_modular": 0.5532318967735427,
+        "frequency_radius": 283.93090419330593,
+        "quadrature_nodes": 2000,
+        "mass_truncated": 14.154315302109366,
+        "physical_variance_L1": 0.009081746857416358,
+        "discarded_fraction_bound": 9.240685882357163e-09
+      },
+      "sup_C2_absolute": 0.006664771451415278,
+      "sup_C4_absolute_over_3": 0.12227078409804885,
+      "C4_pairing_deficits": [
+        0.013240789350648902,
+        0.17694875260881293,
+        0.17662281033468474
+      ],
+      "C2_at_zero": 0.9933352285485847,
+      "C4_at_zero": 2.6331876477058533,
+      "dressed_fourth_cumulant": -0.3269569811211537,
+      "spectral_truncation_C2_bound": 1.8481371764714326e-08,
+      "spectral_truncation_C4_over_3_bound": 3.696274352942865e-08
+    },
+    {
+      "field_family": "cosine",
+      "field_sigma": 0.2,
+      "clock_mean": 10.0,
+      "clock_family": "exponential_energy_only",
+      "clock": {
+        "family": "exponential_energy_only",
+        "mean": 10.0,
+        "time_rms": null,
+        "time_note": "Sharp positive-energy endpoint; not a matched finite-RMS clock."
+      },
+      "spectrum": {
+        "family": "cosine",
+        "sigma_modular": 0.2,
+        "physical_smearing_rms_over_L": 1.2566370614359172,
+        "half_duration_modular": 0.5532318967735427,
+        "frequency_radius": 283.93090419330593,
+        "quadrature_nodes": 2000,
+        "mass_truncated": 14.154315302109366,
+        "physical_variance_L1": 0.009081746857416358,
+        "discarded_fraction_bound": 9.240685882357163e-09
+      },
+      "sup_C2_absolute": 0.26598864304784353,
+      "sup_C4_absolute_over_3": 0.4249620390379007,
+      "C4_pairing_deficits": [
+        0.3596478634412928,
+        0.46122732786525394,
+        0.4540109258071553
+      ],
+      "C2_at_zero": 0.7340113569521565,
+      "C4_at_zero": 1.725113882886298,
+      "dressed_fourth_cumulant": 0.10879586648205963,
+      "spectral_truncation_C2_bound": 1.8481371764714326e-08,
+      "spectral_truncation_C4_over_3_bound": 3.696274352942865e-08
+    },
+    {
+      "field_family": "cosine",
+      "field_sigma": 0.2,
+      "clock_mean": 20.0,
+      "clock_family": "compact",
+      "clock": {
+        "family": "compact",
+        "mean": 20.0,
+        "threshold": 16.372401271531565,
+        "width": 7.255197456936871,
+        "kl_nats": 18.55985576147004,
+        "max_energy": 23.627598728468435,
+        "time_rms": 0.5,
+        "worst_kernel_error": 0.0,
+        "time_tail_abs_gt_1": 0.04137682019433057,
+        "time_tail_note": "Numerical integral to |t|=200; residual checked in validation."
+      },
+      "spectrum": {
+        "family": "cosine",
+        "sigma_modular": 0.2,
+        "physical_smearing_rms_over_L": 1.2566370614359172,
+        "half_duration_modular": 0.5532318967735427,
+        "frequency_radius": 283.93090419330593,
+        "quadrature_nodes": 2000,
+        "mass_truncated": 14.154315302109366,
+        "physical_variance_L1": 0.009081746857416358,
+        "discarded_fraction_bound": 9.240685882357163e-09
+      },
+      "sup_C2_absolute": 0.00022471857744131492,
+      "sup_C4_absolute_over_3": 0.0010054175390284213,
+      "C4_pairing_deficits": [
+        0.0004493809245321743,
+        0.0012863400592411575,
+        0.0012805316333119319
+      ],
+      "C2_at_zero": 0.9997752814225587,
+      "C4_at_zero": 2.996983747382915,
+      "dressed_fourth_cumulant": -0.00166809264775436,
+      "spectral_truncation_C2_bound": 1.8481371764714326e-08,
+      "spectral_truncation_C4_over_3_bound": 3.696274352942865e-08
+    },
+    {
+      "field_family": "cosine",
+      "field_sigma": 0.2,
+      "clock_mean": 20.0,
+      "clock_family": "gamma5",
+      "clock": {
+        "family": "gamma5",
+        "mean": 20.0,
+        "threshold": 17.113248654051873,
+        "scale": 0.5773502691896258,
+        "kl_nats": 18.39572298771331,
+        "time_rms": 0.49999999999999994,
+        "worst_kernel_error": 0.0,
+        "time_tail_abs_gt_1": 0.04931308767313576,
+        "time_tail_note": "Numerical integral to |t|=200; residual checked in validation."
+      },
+      "spectrum": {
+        "family": "cosine",
+        "sigma_modular": 0.2,
+        "physical_smearing_rms_over_L": 1.2566370614359172,
+        "half_duration_modular": 0.5532318967735427,
+        "frequency_radius": 283.93090419330593,
+        "quadrature_nodes": 2000,
+        "mass_truncated": 14.154315302109366,
+        "physical_variance_L1": 0.009081746857416358,
+        "discarded_fraction_bound": 9.240685882357163e-09
+      },
+      "sup_C2_absolute": 0.00023335790528485298,
+      "sup_C4_absolute_over_3": 0.0010301154853808532,
+      "C4_pairing_deficits": [
+        0.00046665466615905044,
+        0.0013149131235853076,
+        0.0013087786663982014
+      ],
+      "C2_at_zero": 0.9997666420947151,
+      "C4_at_zero": 2.9969096535438573,
+      "dressed_fourth_cumulant": -0.0016903623921691313,
+      "spectral_truncation_C2_bound": 1.8481371764714326e-08,
+      "spectral_truncation_C4_over_3_bound": 3.696274352942865e-08
+    },
+    {
+      "field_family": "cosine",
+      "field_sigma": 0.2,
+      "clock_mean": 20.0,
+      "clock_family": "exponential_energy_only",
+      "clock": {
+        "family": "exponential_energy_only",
+        "mean": 20.0,
+        "time_rms": null,
+        "time_note": "Sharp positive-energy endpoint; not a matched finite-RMS clock."
+      },
+      "spectrum": {
+        "family": "cosine",
+        "sigma_modular": 0.2,
+        "physical_smearing_rms_over_L": 1.2566370614359172,
+        "half_duration_modular": 0.5532318967735427,
+        "frequency_radius": 283.93090419330593,
+        "quadrature_nodes": 2000,
+        "mass_truncated": 14.154315302109366,
+        "physical_variance_L1": 0.009081746857416358,
+        "discarded_fraction_bound": 9.240685882357163e-09
+      },
+      "sup_C2_absolute": 0.14877862256809843,
+      "sup_C4_absolute_over_3": 0.25026285174486534,
+      "C4_pairing_deficits": [
+        0.2041103709459392,
+        0.2754221666029361,
+        0.27125601768572083
+      ],
+      "C2_at_zero": 0.8512213774319015,
+      "C4_at_zero": 2.249211444765404,
+      "dressed_fourth_cumulant": 0.07547794457421286,
+      "spectral_truncation_C2_bound": 1.8481371764714326e-08,
+      "spectral_truncation_C4_over_3_bound": 3.696274352942865e-08
+    },
+    {
+      "field_family": "cosine",
+      "field_sigma": 0.3,
+      "clock_mean": 5.0,
+      "clock_family": "compact",
+      "clock": {
+        "family": "compact",
+        "mean": 5.0,
+        "threshold": 1.3724012715315643,
+        "width": 7.255197456936871,
+        "kl_nats": 3.5598557614700423,
+        "max_energy": 8.627598728468435,
+        "time_rms": 0.5,
+        "worst_kernel_error": 0.0,
+        "time_tail_abs_gt_1": 0.04137682019433057,
+        "time_tail_note": "Numerical integral to |t|=200; residual checked in validation."
+      },
+      "spectrum": {
+        "family": "cosine",
+        "sigma_modular": 0.3,
+        "physical_smearing_rms_over_L": 1.8849555921538759,
+        "half_duration_modular": 0.829847845160314,
+        "frequency_radius": 189.28726946220397,
+        "quadrature_nodes": 2000,
+        "mass_truncated": 7.589621606839177,
+        "physical_variance_L1": 0.004869682545973739,
+        "discarded_fraction_bound": 7.65932382474458e-09
+      },
+      "sup_C2_absolute": 0.0622521914345227,
+      "sup_C4_absolute_over_3": 0.25046693056995806,
+      "C4_pairing_deficits": [
+        0.1157260434154345,
+        0.3207788818307686,
+        0.31489586646367107
+      ],
+      "C2_at_zero": 0.9377478085654773,
+      "C4_at_zero": 2.248599208290126,
+      "dressed_fourth_cumulant": -0.3895136491179394,
+      "spectral_truncation_C2_bound": 1.531864764948916e-08,
+      "spectral_truncation_C4_over_3_bound": 3.063729529897832e-08
+    },
+    {
+      "field_family": "cosine",
+      "field_sigma": 0.3,
+      "clock_mean": 5.0,
+      "clock_family": "gamma5",
+      "clock": {
+        "family": "gamma5",
+        "mean": 5.0,
+        "threshold": 2.113248654051871,
+        "scale": 0.5773502691896258,
+        "kl_nats": 3.3957229877133095,
+        "time_rms": 0.49999999999999994,
+        "worst_kernel_error": 0.0,
+        "time_tail_abs_gt_1": 0.04931308767313576,
+        "time_tail_note": "Numerical integral to |t|=200; residual checked in validation."
+      },
+      "spectrum": {
+        "family": "cosine",
+        "sigma_modular": 0.3,
+        "physical_smearing_rms_over_L": 1.8849555921538759,
+        "half_duration_modular": 0.829847845160314,
+        "frequency_radius": 189.28726946220397,
+        "quadrature_nodes": 2000,
+        "mass_truncated": 7.589621606839177,
+        "physical_variance_L1": 0.004869682545973739,
+        "discarded_fraction_bound": 7.65932382474458e-09
+      },
+      "sup_C2_absolute": 0.07076087341787828,
+      "sup_C4_absolute_over_3": 0.26244791083955393,
+      "C4_pairing_deficits": [
+        0.13133485780605017,
+        0.3313268058223642,
+        0.32468206889024737
+      ],
+      "C2_at_zero": 0.9292391265821217,
+      "C4_at_zero": 2.2126562674813384,
+      "dressed_fourth_cumulant": -0.37779979563197497,
+      "spectral_truncation_C2_bound": 1.531864764948916e-08,
+      "spectral_truncation_C4_over_3_bound": 3.063729529897832e-08
+    },
+    {
+      "field_family": "cosine",
+      "field_sigma": 0.3,
+      "clock_mean": 5.0,
+      "clock_family": "exponential_energy_only",
+      "clock": {
+        "family": "exponential_energy_only",
+        "mean": 5.0,
+        "time_rms": null,
+        "time_note": "Sharp positive-energy endpoint; not a matched finite-RMS clock."
+      },
+      "spectrum": {
+        "family": "cosine",
+        "sigma_modular": 0.3,
+        "physical_smearing_rms_over_L": 1.8849555921538759,
+        "half_duration_modular": 0.829847845160314,
+        "frequency_radius": 189.28726946220397,
+        "quadrature_nodes": 2000,
+        "mass_truncated": 7.589621606839177,
+        "physical_variance_L1": 0.004869682545973739,
+        "discarded_fraction_bound": 7.65932382474458e-09
+      },
+      "sup_C2_absolute": 0.2917379624870951,
+      "sup_C4_absolute_over_3": 0.4634474470253251,
+      "C4_pairing_deficits": [
+        0.41021114300919076,
+        0.49836488621806846,
+        0.48176631184871593
+      ],
+      "C2_at_zero": 0.708262037512905,
+      "C4_at_zero": 1.6096576589240248,
+      "dressed_fourth_cumulant": 0.10475231757823011,
+      "spectral_truncation_C2_bound": 1.531864764948916e-08,
+      "spectral_truncation_C4_over_3_bound": 3.063729529897832e-08
+    },
+    {
+      "field_family": "cosine",
+      "field_sigma": 0.3,
+      "clock_mean": 10.0,
+      "clock_family": "compact",
+      "clock": {
+        "family": "compact",
+        "mean": 10.0,
+        "threshold": 6.372401271531564,
+        "width": 7.255197456936871,
+        "kl_nats": 8.559855761470043,
+        "max_energy": 13.627598728468435,
+        "time_rms": 0.5,
+        "worst_kernel_error": 0.0,
+        "time_tail_abs_gt_1": 0.04137682019433057,
+        "time_tail_note": "Numerical integral to |t|=200; residual checked in validation."
+      },
+      "spectrum": {
+        "family": "cosine",
+        "sigma_modular": 0.3,
+        "physical_smearing_rms_over_L": 1.8849555921538759,
+        "half_duration_modular": 0.829847845160314,
+        "frequency_radius": 189.28726946220397,
+        "quadrature_nodes": 2000,
+        "mass_truncated": 7.589621606839177,
+        "physical_variance_L1": 0.004869682545973739,
+        "discarded_fraction_bound": 7.65932382474458e-09
+      },
+      "sup_C2_absolute": 0.0007195912912495129,
+      "sup_C4_absolute_over_3": 0.007727866332136515,
+      "C4_pairing_deficits": [
+        0.001438454028507634,
+        0.010894073360746397,
+        0.010851071607155515
+      ],
+      "C2_at_zero": 0.9992804087087505,
+      "C4_at_zero": 2.9768164010035902,
+      "dressed_fourth_cumulant": -0.018867604683791672,
+      "spectral_truncation_C2_bound": 1.531864764948916e-08,
+      "spectral_truncation_C4_over_3_bound": 3.063729529897832e-08
+    },
+    {
+      "field_family": "cosine",
+      "field_sigma": 0.3,
+      "clock_mean": 10.0,
+      "clock_family": "gamma5",
+      "clock": {
+        "family": "gamma5",
+        "mean": 10.0,
+        "threshold": 7.113248654051871,
+        "scale": 0.5773502691896258,
+        "kl_nats": 8.39572298771331,
+        "time_rms": 0.49999999999999994,
+        "worst_kernel_error": 0.0,
+        "time_tail_abs_gt_1": 0.04931308767313576,
+        "time_tail_note": "Numerical integral to |t|=200; residual checked in validation."
+      },
+      "spectrum": {
+        "family": "cosine",
+        "sigma_modular": 0.3,
+        "physical_smearing_rms_over_L": 1.8849555921538759,
+        "half_duration_modular": 0.829847845160314,
+        "frequency_radius": 189.28726946220397,
+        "quadrature_nodes": 2000,
+        "mass_truncated": 7.589621606839177,
+        "physical_variance_L1": 0.004869682545973739,
+        "discarded_fraction_bound": 7.65932382474458e-09
+      },
+      "sup_C2_absolute": 0.0007855514401293123,
+      "sup_C4_absolute_over_3": 0.00851228718355654,
+      "C4_pairing_deficits": [
+        0.0015702393847008324,
+        0.012008109483510308,
+        0.011958512682458478
+      ],
+      "C2_at_zero": 0.9992144485598707,
+      "C4_at_zero": 2.9744631384493303,
+      "dressed_fourth_cumulant": -0.020825404183089535,
+      "spectral_truncation_C2_bound": 1.531864764948916e-08,
+      "spectral_truncation_C4_over_3_bound": 3.063729529897832e-08
+    },
+    {
+      "field_family": "cosine",
+      "field_sigma": 0.3,
+      "clock_mean": 10.0,
+      "clock_family": "exponential_energy_only",
+      "clock": {
+        "family": "exponential_energy_only",
+        "mean": 10.0,
+        "time_rms": null,
+        "time_note": "Sharp positive-energy endpoint; not a matched finite-RMS clock."
+      },
+      "spectrum": {
+        "family": "cosine",
+        "sigma_modular": 0.3,
+        "physical_smearing_rms_over_L": 1.8849555921538759,
+        "half_duration_modular": 0.829847845160314,
+        "frequency_radius": 189.28726946220397,
+        "quadrature_nodes": 2000,
+        "mass_truncated": 7.589621606839177,
+        "physical_variance_L1": 0.004869682545973739,
+        "discarded_fraction_bound": 7.65932382474458e-09
+      },
+      "sup_C2_absolute": 0.16798195662028592,
+      "sup_C4_absolute_over_3": 0.28190900869591223,
+      "C4_pairing_deficits": [
+        0.24009939164568928,
+        0.3077459754905921,
+        0.2978816589514554
+      ],
+      "C2_at_zero": 0.8320180433797141,
+      "C4_at_zero": 2.1542729739122635,
+      "dressed_fourth_cumulant": 0.0775109003840404,
+      "spectral_truncation_C2_bound": 1.531864764948916e-08,
+      "spectral_truncation_C4_over_3_bound": 3.063729529897832e-08
+    },
+    {
+      "field_family": "cosine",
+      "field_sigma": 0.3,
+      "clock_mean": 20.0,
+      "clock_family": "compact",
+      "clock": {
+        "family": "compact",
+        "mean": 20.0,
+        "threshold": 16.372401271531565,
+        "width": 7.255197456936871,
+        "kl_nats": 18.55985576147004,
+        "max_energy": 23.627598728468435,
+        "time_rms": 0.5,
+        "worst_kernel_error": 0.0,
+        "time_tail_abs_gt_1": 0.04137682019433057,
+        "time_tail_note": "Numerical integral to |t|=200; residual checked in validation."
+      },
+      "spectrum": {
+        "family": "cosine",
+        "sigma_modular": 0.3,
+        "physical_smearing_rms_over_L": 1.8849555921538759,
+        "half_duration_modular": 0.829847845160314,
+        "frequency_radius": 189.28726946220397,
+        "quadrature_nodes": 2000,
+        "mass_truncated": 7.589621606839177,
+        "physical_variance_L1": 0.004869682545973739,
+        "discarded_fraction_bound": 7.65932382474458e-09
+      },
+      "sup_C2_absolute": 3.3840691899144255e-05,
+      "sup_C4_absolute_over_3": 9.74963605386528e-05,
+      "C4_pairing_deficits": [
+        6.768019108352536e-05,
+        0.0001129299355393985,
+        0.00011187895499303454
+      ],
+      "C2_at_zero": 0.9999661593081008,
+      "C4_at_zero": 2.999707510918384,
+      "dressed_fourth_cumulant": -8.944836579827253e-05,
+      "spectral_truncation_C2_bound": 1.531864764948916e-08,
+      "spectral_truncation_C4_over_3_bound": 3.063729529897832e-08
+    },
+    {
+      "field_family": "cosine",
+      "field_sigma": 0.3,
+      "clock_mean": 20.0,
+      "clock_family": "gamma5",
+      "clock": {
+        "family": "gamma5",
+        "mean": 20.0,
+        "threshold": 17.113248654051873,
+        "scale": 0.5773502691896258,
+        "kl_nats": 18.39572298771331,
+        "time_rms": 0.49999999999999994,
+        "worst_kernel_error": 0.0,
+        "time_tail_abs_gt_1": 0.04931308767313576,
+        "time_tail_note": "Numerical integral to |t|=200; residual checked in validation."
+      },
+      "spectrum": {
+        "family": "cosine",
+        "sigma_modular": 0.3,
+        "physical_smearing_rms_over_L": 1.8849555921538759,
+        "half_duration_modular": 0.829847845160314,
+        "frequency_radius": 189.28726946220397,
+        "quadrature_nodes": 2000,
+        "mass_truncated": 7.589621606839177,
+        "physical_variance_L1": 0.004869682545973739,
+        "discarded_fraction_bound": 7.65932382474458e-09
+      },
+      "sup_C2_absolute": 3.3853385882394116e-05,
+      "sup_C4_absolute_over_3": 9.860177209896834e-05,
+      "C4_pairing_deficits": [
+        6.770556835244725e-05,
+        0.000114535962448883,
+        0.00011356378549557476
+      ],
+      "C2_at_zero": 0.9999661466141176,
+      "C4_at_zero": 2.9997041946837033,
+      "dressed_fourth_cumulant": -9.268843915766212e-05,
+      "spectral_truncation_C2_bound": 1.531864764948916e-08,
+      "spectral_truncation_C4_over_3_bound": 3.063729529897832e-08
+    },
+    {
+      "field_family": "cosine",
+      "field_sigma": 0.3,
+      "clock_mean": 20.0,
+      "clock_family": "exponential_energy_only",
+      "clock": {
+        "family": "exponential_energy_only",
+        "mean": 20.0,
+        "time_rms": null,
+        "time_note": "Sharp positive-energy endpoint; not a matched finite-RMS clock."
+      },
+      "spectrum": {
+        "family": "cosine",
+        "sigma_modular": 0.3,
+        "physical_smearing_rms_over_L": 1.8849555921538759,
+        "half_duration_modular": 0.829847845160314,
+        "frequency_radius": 189.28726946220397,
+        "quadrature_nodes": 2000,
+        "mass_truncated": 7.589621606839177,
+        "physical_variance_L1": 0.004869682545973739,
+        "discarded_fraction_bound": 7.65932382474458e-09
+      },
+      "sup_C2_absolute": 0.09060007376163641,
+      "sup_C4_absolute_over_3": 0.15707342122239779,
+      "C4_pairing_deficits": [
+        0.1306461488284594,
+        0.1729917741576589,
+        0.16758234068107508
+      ],
+      "C2_at_zero": 0.9093999262383636,
+      "C4_at_zero": 2.5287797363328064,
+      "dressed_fourth_cumulant": 0.0477550588057829,
+      "spectral_truncation_C2_bound": 1.531864764948916e-08,
+      "spectral_truncation_C4_over_3_bound": 3.063729529897832e-08
+    },
+    {
+      "field_family": "cosine",
+      "field_sigma": 0.5,
+      "clock_mean": 5.0,
+      "clock_family": "compact",
+      "clock": {
+        "family": "compact",
+        "mean": 5.0,
+        "threshold": 1.3724012715315643,
+        "width": 7.255197456936871,
+        "kl_nats": 3.5598557614700423,
+        "max_energy": 8.627598728468435,
+        "time_rms": 0.5,
+        "worst_kernel_error": 0.0,
+        "time_tail_abs_gt_1": 0.04137682019433057,
+        "time_tail_note": "Numerical integral to |t|=200; residual checked in validation."
+      },
+      "spectrum": {
+        "family": "cosine",
+        "sigma_modular": 0.5,
+        "physical_smearing_rms_over_L": 3.141592653589793,
+        "half_duration_modular": 1.3830797419338565,
+        "frequency_radius": 113.57236167732239,
+        "quadrature_nodes": 2000,
+        "mass_truncated": 3.861708822007645,
+        "physical_variance_L1": 0.0024777646399680277,
+        "discarded_fraction_bound": 5.419179440613971e-09
+      },
+      "sup_C2_absolute": 0.0030752233172503217,
+      "sup_C4_absolute_over_3": 0.02884209035781848,
+      "C4_pairing_deficits": [
+        0.006051347132786355,
+        0.04047653689219098,
+        0.0399983870484781
+      ],
+      "C2_at_zero": 0.9969247766827497,
+      "C4_at_zero": 2.9134737289265447,
+      "dressed_fourth_cumulant": -0.0681033021653068,
+      "spectral_truncation_C2_bound": 1.0838358881227943e-08,
+      "spectral_truncation_C4_over_3_bound": 2.1676717762455886e-08
+    },
+    {
+      "field_family": "cosine",
+      "field_sigma": 0.5,
+      "clock_mean": 5.0,
+      "clock_family": "gamma5",
+      "clock": {
+        "family": "gamma5",
+        "mean": 5.0,
+        "threshold": 2.113248654051871,
+        "scale": 0.5773502691896258,
+        "kl_nats": 3.3957229877133095,
+        "time_rms": 0.49999999999999994,
+        "worst_kernel_error": 0.0,
+        "time_tail_abs_gt_1": 0.04931308767313576,
+        "time_tail_note": "Numerical integral to |t|=200; residual checked in validation."
+      },
+      "spectrum": {
+        "family": "cosine",
+        "sigma_modular": 0.5,
+        "physical_smearing_rms_over_L": 3.141592653589793,
+        "half_duration_modular": 1.3830797419338565,
+        "frequency_radius": 113.57236167732239,
+        "quadrature_nodes": 2000,
+        "mass_truncated": 3.861708822007645,
+        "physical_variance_L1": 0.0024777646399680277,
+        "discarded_fraction_bound": 5.419179440613971e-09
+      },
+      "sup_C2_absolute": 0.003070798100413066,
+      "sup_C4_absolute_over_3": 0.032746719658204256,
+      "C4_pairing_deficits": [
+        0.006084393042682918,
+        0.04631975848309409,
+        0.04583600744883576
+      ],
+      "C2_at_zero": 0.9969292018995869,
+      "C4_at_zero": 2.9017598410253873,
+      "dressed_fourth_cumulant": -0.07984365977505448,
+      "spectral_truncation_C2_bound": 1.0838358881227943e-08,
+      "spectral_truncation_C4_over_3_bound": 2.1676717762455886e-08
+    },
+    {
+      "field_family": "cosine",
+      "field_sigma": 0.5,
+      "clock_mean": 5.0,
+      "clock_family": "exponential_energy_only",
+      "clock": {
+        "family": "exponential_energy_only",
+        "mean": 5.0,
+        "time_rms": null,
+        "time_note": "Sharp positive-energy endpoint; not a matched finite-RMS clock."
+      },
+      "spectrum": {
+        "family": "cosine",
+        "sigma_modular": 0.5,
+        "physical_smearing_rms_over_L": 3.141592653589793,
+        "half_duration_modular": 1.3830797419338565,
+        "frequency_radius": 113.57236167732239,
+        "quadrature_nodes": 2000,
+        "mass_truncated": 3.861708822007645,
+        "physical_variance_L1": 0.0024777646399680277,
+        "discarded_fraction_bound": 5.419179440613971e-09
+      },
+      "sup_C2_absolute": 0.1613634445712371,
+      "sup_C4_absolute_over_3": 0.27280298603670733,
+      "C4_pairing_deficits": [
+        0.24330880334017876,
+        0.2966887278985795,
+        0.2784114268713638
+      ],
+      "C2_at_zero": 0.8386365554287629,
+      "C4_at_zero": 2.181591041889878,
+      "dressed_fourth_cumulant": 0.07165722558561649,
+      "spectral_truncation_C2_bound": 1.0838358881227943e-08,
+      "spectral_truncation_C4_over_3_bound": 2.1676717762455886e-08
+    },
+    {
+      "field_family": "cosine",
+      "field_sigma": 0.5,
+      "clock_mean": 10.0,
+      "clock_family": "compact",
+      "clock": {
+        "family": "compact",
+        "mean": 10.0,
+        "threshold": 6.372401271531564,
+        "width": 7.255197456936871,
+        "kl_nats": 8.559855761470043,
+        "max_energy": 13.627598728468435,
+        "time_rms": 0.5,
+        "worst_kernel_error": 0.0,
+        "time_tail_abs_gt_1": 0.04137682019433057,
+        "time_tail_note": "Numerical integral to |t|=200; residual checked in validation."
+      },
+      "spectrum": {
+        "family": "cosine",
+        "sigma_modular": 0.5,
+        "physical_smearing_rms_over_L": 3.141592653589793,
+        "half_duration_modular": 1.3830797419338565,
+        "frequency_radius": 113.57236167732239,
+        "quadrature_nodes": 2000,
+        "mass_truncated": 3.861708822007645,
+        "physical_variance_L1": 0.0024777646399680277,
+        "discarded_fraction_bound": 5.419179440613971e-09
+      },
+      "sup_C2_absolute": 5.436410318010019e-05,
+      "sup_C4_absolute_over_3": 0.00017223532990081353,
+      "C4_pairing_deficits": [
+        0.00010872455369488445,
+        0.0002057979790391642,
+        0.00020218345696839188
+      ],
+      "C2_at_zero": 0.99994563589682,
+      "C4_at_zero": 2.9994832940102976,
+      "dressed_fourth_cumulant": -0.00019053023698933913,
+      "spectral_truncation_C2_bound": 1.0838358881227943e-08,
+      "spectral_truncation_C4_over_3_bound": 2.1676717762455886e-08
+    },
+    {
+      "field_family": "cosine",
+      "field_sigma": 0.5,
+      "clock_mean": 10.0,
+      "clock_family": "gamma5",
+      "clock": {
+        "family": "gamma5",
+        "mean": 10.0,
+        "threshold": 7.113248654051871,
+        "scale": 0.5773502691896258,
+        "kl_nats": 8.39572298771331,
+        "time_rms": 0.49999999999999994,
+        "worst_kernel_error": 0.0,
+        "time_tail_abs_gt_1": 0.04931308767313576,
+        "time_tail_note": "Numerical integral to |t|=200; residual checked in validation."
+      },
+      "spectrum": {
+        "family": "cosine",
+        "sigma_modular": 0.5,
+        "physical_smearing_rms_over_L": 3.141592653589793,
+        "half_duration_modular": 1.3830797419338565,
+        "frequency_radius": 113.57236167732239,
+        "quadrature_nodes": 2000,
+        "mass_truncated": 3.861708822007645,
+        "physical_variance_L1": 0.0024777646399680277,
+        "discarded_fraction_bound": 5.419179440613971e-09
+      },
+      "sup_C2_absolute": 5.57174265811802e-05,
+      "sup_C4_absolute_over_3": 0.00017981661466126618,
+      "C4_pairing_deficits": [
+        0.00011143106558908264,
+        0.0002158133235074879,
+        0.00021220545488722804
+      ],
+      "C2_at_zero": 0.9999442825734188,
+      "C4_at_zero": 2.9994605501560163,
+      "dressed_fourth_cumulant": -0.00020515459779124612,
+      "spectral_truncation_C2_bound": 1.0838358881227943e-08,
+      "spectral_truncation_C4_over_3_bound": 2.1676717762455886e-08
+    },
+    {
+      "field_family": "cosine",
+      "field_sigma": 0.5,
+      "clock_mean": 10.0,
+      "clock_family": "exponential_energy_only",
+      "clock": {
+        "family": "exponential_energy_only",
+        "mean": 10.0,
+        "time_rms": null,
+        "time_note": "Sharp positive-energy endpoint; not a matched finite-RMS clock."
+      },
+      "spectrum": {
+        "family": "cosine",
+        "sigma_modular": 0.5,
+        "physical_smearing_rms_over_L": 3.141592653589793,
+        "half_duration_modular": 1.3830797419338565,
+        "frequency_radius": 113.57236167732239,
+        "quadrature_nodes": 2000,
+        "mass_truncated": 3.861708822007645,
+        "physical_variance_L1": 0.0024777646399680277,
+        "discarded_fraction_bound": 5.419179440613971e-09
+      },
+      "sup_C2_absolute": 0.08793769873272228,
+      "sup_C4_absolute_over_3": 0.1533063999179633,
+      "C4_pairing_deficits": [
+        0.13373932044508668,
+        0.16814235860703752,
+        0.1580375207017657
+      ],
+      "C2_at_zero": 0.9120623012672777,
+      "C4_at_zero": 2.54008080024611,
+      "dressed_fourth_cumulant": 0.04450787606722262,
+      "spectral_truncation_C2_bound": 1.0838358881227943e-08,
+      "spectral_truncation_C4_over_3_bound": 2.1676717762455886e-08
+    },
+    {
+      "field_family": "cosine",
+      "field_sigma": 0.5,
+      "clock_mean": 20.0,
+      "clock_family": "compact",
+      "clock": {
+        "family": "compact",
+        "mean": 20.0,
+        "threshold": 16.372401271531565,
+        "width": 7.255197456936871,
+        "kl_nats": 18.55985576147004,
+        "max_energy": 23.627598728468435,
+        "time_rms": 0.5,
+        "worst_kernel_error": 0.0,
+        "time_tail_abs_gt_1": 0.04137682019433057,
+        "time_tail_note": "Numerical integral to |t|=200; residual checked in validation."
+      },
+      "spectrum": {
+        "family": "cosine",
+        "sigma_modular": 0.5,
+        "physical_smearing_rms_over_L": 3.141592653589793,
+        "half_duration_modular": 1.3830797419338565,
+        "frequency_radius": 113.57236167732239,
+        "quadrature_nodes": 2000,
+        "mass_truncated": 3.861708822007645,
+        "physical_variance_L1": 0.0024777646399680277,
+        "discarded_fraction_bound": 5.419179440613971e-09
+      },
+      "sup_C2_absolute": 2.942189422504294e-06,
+      "sup_C4_absolute_over_3": 6.867714169569699e-06,
+      "C4_pairing_deficits": [
+        5.884369764114007e-06,
+        7.412661976148022e-06,
+        7.306110768447068e-06
+      ],
+      "C2_at_zero": 0.9999970578105775,
+      "C4_at_zero": 2.9999793968574915,
+      "dressed_fourth_cumulant": -2.9500319427278043e-06,
+      "spectral_truncation_C2_bound": 1.0838358881227943e-08,
+      "spectral_truncation_C4_over_3_bound": 2.1676717762455886e-08
+    },
+    {
+      "field_family": "cosine",
+      "field_sigma": 0.5,
+      "clock_mean": 20.0,
+      "clock_family": "gamma5",
+      "clock": {
+        "family": "gamma5",
+        "mean": 20.0,
+        "threshold": 17.113248654051873,
+        "scale": 0.5773502691896258,
+        "kl_nats": 18.39572298771331,
+        "time_rms": 0.49999999999999994,
+        "worst_kernel_error": 0.0,
+        "time_tail_abs_gt_1": 0.04931308767313576,
+        "time_tail_note": "Numerical integral to |t|=200; residual checked in validation."
+      },
+      "spectrum": {
+        "family": "cosine",
+        "sigma_modular": 0.5,
+        "physical_smearing_rms_over_L": 3.141592653589793,
+        "half_duration_modular": 1.3830797419338565,
+        "frequency_radius": 113.57236167732239,
+        "quadrature_nodes": 2000,
+        "mass_truncated": 3.861708822007645,
+        "physical_variance_L1": 0.0024777646399680277,
+        "discarded_fraction_bound": 5.419179440613971e-09
+      },
+      "sup_C2_absolute": 2.9900385900784575e-06,
+      "sup_C4_absolute_over_3": 6.967758291271991e-06,
+      "C4_pairing_deficits": [
+        5.980067672587483e-06,
+        7.5173354996752455e-06,
+        7.405871701553245e-06
+      ],
+      "C2_at_zero": 0.9999970099614099,
+      "C4_at_zero": 2.9999790967251263,
+      "dressed_fourth_cumulant": -2.963070154127223e-06,
+      "spectral_truncation_C2_bound": 1.0838358881227943e-08,
+      "spectral_truncation_C4_over_3_bound": 2.1676717762455886e-08
+    },
+    {
+      "field_family": "cosine",
+      "field_sigma": 0.5,
+      "clock_mean": 20.0,
+      "clock_family": "exponential_energy_only",
+      "clock": {
+        "family": "exponential_energy_only",
+        "mean": 20.0,
+        "time_rms": null,
+        "time_note": "Sharp positive-energy endpoint; not a matched finite-RMS clock."
+      },
+      "spectrum": {
+        "family": "cosine",
+        "sigma_modular": 0.5,
+        "physical_smearing_rms_over_L": 3.141592653589793,
+        "half_duration_modular": 1.3830797419338565,
+        "frequency_radius": 113.57236167732239,
+        "quadrature_nodes": 2000,
+        "mass_truncated": 3.861708822007645,
+        "physical_variance_L1": 0.0024777646399680277,
+        "discarded_fraction_bound": 5.419179440613971e-09
+      },
+      "sup_C2_absolute": 0.04599173026519066,
+      "sup_C4_absolute_over_3": 0.08155786688299595,
+      "C4_pairing_deficits": [
+        0.07026134287110151,
+        0.08986822127759526,
+        0.08454403650029106
+      ],
+      "C2_at_zero": 0.9540082697348093,
+      "C4_at_zero": 2.755326399351012,
+      "dressed_fourth_cumulant": 0.024931063183797786,
+      "spectral_truncation_C2_bound": 1.0838358881227943e-08,
+      "spectral_truncation_C4_over_3_bound": 2.1676717762455886e-08
+    }
+  ],
+  "versions": {
+    "numpy": "2.4.6",
+    "scipy": "1.18.0"
+  },
+  "code_sha256": {
+    "run_field_study.py": "8ebd1f4086a64940d9712471ef6b8f41a245a652634fda1f972114e84c4ed0c4",
+    "field_model.py": "8ff79644de75b3cfb1893d88ddd9357d2280ac9f91f968bbfdc090d4624a67be",
+    "clock_model.py": "ad875a25e10931b78363c3128e4fb9ed972f1663ffe91fe8ac66302f34d93fe8"
+  }
+}

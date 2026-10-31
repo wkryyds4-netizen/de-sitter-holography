@@ -1,0 +1,342 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,microtype,booktabs}
+\usepackage[margin=25mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newtheorem{proposition}{Proposition}
+\newcommand{\dd}{\mathop{}\!\mathrm d}
+\newcommand{\E}{\mathcal E}
+\title{Joint endpoint control and central cancellation\\in the recoil Barnes integral}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Working research note --- 30 October 2026}
+\begin{document}\maketitle
+\begin{abstract}
+An optimized left endpoint and the exact Gamma modulus identities
+control the negative vertical ray in a joint large-mass regime.
+Reflection and Stirling estimates control the positive tail relative
+to the sum of the two Bessel branch magnitudes. However, a central
+fixed-height window has an exponentially larger absolute norm than
+this envelope. Thus endpoint control does not complete the joint
+asymptotic theorem: the remaining estimate must preserve phase.
+These are self-reviewed analytic estimates and finite-point numerical
+checks, not a finite-\(G\) holographic dictionary.
+\end{abstract}
+
+\section{Object, scale and remaining question}
+Set the de Sitter radius to one, \(u=v=0\), \(\omega=i\alpha\),
+\(K\ge1\), \(\alpha=Ky\), \(0\le y\le Y<\infty\), and
+\(M=\nu^2/(2K)\). The fixed-mass \(\kappa\to\infty\) limit has already
+been taken. This note concerns an internal chiral graph integral;
+no physical external state, operator algebra, insertion normalization
+or finite-\(G\) OTOC is assigned to it. Define
+\[
+ b=\tfrac12-i(M-\nu),\qquad c=\tfrac12-i(M+\nu),
+\]
+\begin{align}
+ Q_\nu(t)&=e^{-i\pi t}
+ \frac{\Gamma(t-i\nu/2)^4}{\Gamma(-i\nu/2)^4}
+ \frac{\Gamma(b-t)\Gamma(c)}{\Gamma(b)\Gamma(c+t)}
+ \Gamma(\tfrac12-t+\alpha/2)\Gamma(\tfrac12-t-\alpha/2),\\
+ U(t)&=e^{-2\pi it}(K/2)^{2t}
+ \Gamma(\tfrac12-t+\alpha/2)\Gamma(\tfrac12-t-\alpha/2).
+\end{align}
+The contour runs upward from \(-N-i\infty\) to \(-N+i\),
+then right. Its integral includes \(1/(2\pi i)\). Previously,
+the auxiliary integral was evaluated as
+\[
+ J=-K[e^{i\pi\alpha}K_\alpha(K)+i\pi I_\alpha(K)].
+\]
+Use the positive scale
+\[
+ \E=K[K_\alpha(K)+\pi I_\alpha(K)],\qquad
+ F(y)=\sqrt{1+y^2}-y\operatorname{arsinh}y.
+\]
+For negative \(\alpha\), evenness of the complete expression permits
+using \(|\alpha|\) in this envelope. No estimate below divides by \(J\).
+Its zeros are genuine obstructions to that error convention.
+Our hierarchy is \(K\to\infty\), \(\rho=K^3/\nu^2\le\rho_Y\),
+with a sufficiently small fixed positive \(\rho_Y\).
+Statements about convergence of corrections would additionally need
+\(\rho\to0\); this note does not prove the full joint expansion.
+
+\section{A multiplier estimate on growing compact regions}
+Fix \(C<\infty\). On \(|t|\le CK\), the quotient obtained by canceling
+the two small Gamma factors admits a continuous logarithm, with
+\begin{equation}\label{eq:mult}
+ \log(Q_\nu/U)=\frac{4i(t^2-t)}{\nu}+O_C(\rho).
+\end{equation}
+This is a growing-region estimate, not the direct use of a fixed-shift
+Gamma asymptotic. Here and below constants may depend on \(Y,C\).
+
+For completeness, apply sectorial Stirling to each large argument and
+Taylor expand its shift, using
+\[
+ \log\Gamma(z+w)-\log\Gamma(z)
+ =w\log z+\frac{w(w-1)}{2z}
+ +O\!\left(\frac{|w|+|w|^2+|w|^3}{|z|^2}\right).
+\]
+The segments \(z+\theta w\) stay in a common closed sector away from
+the negative real axis, since \(K/\nu\to0\).
+The four numerator factors give \(4i(t^2-t)/\nu\).
+The leading logarithms combine to
+\(2t\log(K/2)-2\pi it\); the remaining \(b,c\) terms are bounded
+by a constant times
+\[
+ \frac{K^2|t|+K|t|^2+|t|^3+K}{\nu^2}.
+\]
+This proves \eqref{eq:mult}, with the logarithm fixed continuously
+from zero shift after the small factors have been canceled.
+The first phase must be retained: \(K^2/\nu\) need not tend to zero.
+
+At a real \(t=-N=O(K)\) this leading term is purely imaginary.
+At \(t=x+i\) its real part is \(-4(2x-1)/\nu\).
+Consequently the left real base and the positive base satisfy
+\[
+ |Q_\nu(-N)|\le e^{C_Y\rho}|U(-N)|,\qquad
+ |Q_\nu(x+i)|\le e^{C_Y\rho}|U(x+i)|\quad (x\ge\tfrac12,\ x=O_Y(K)).
+\]
+On any fixed-height central strip, the modulus comparison is two-sided
+with factors \(\exp[\pm C_Y(\rho+K/\nu)]\).
+
+\section{The optimized left base and its vertical ray}
+Choose
+\[
+ L=\frac K2\sqrt{1+y^2},\qquad N=\lceil L\rceil.
+\]
+For sufficiently large \(K\) depending only on \(Y\),
+\(N>\alpha/2+1/2\), and both small Gamma real parts are bounded below
+by \(c_YK>0\). Moving the left corner to this integer crosses no poles:
+the small-Gamma pole families start to its right, the numerator poles
+are at height \(\nu/2>1\), and the \(b-t\) poles have positive real part.
+The lower closure vanishes by the fixed-parameter vertical decay.
+Stirling on the positive real axis yields
+\begin{equation}\label{eq:base}
+ |U(-N)|=2\pi\exp[-KF(y)+O_Y(K^{-1})].
+\end{equation}
+Indeed, the leading exponent as a function of \(n\) is
+\[
+ g(n)=(n+\alpha/2)\log\frac{2(n+\alpha/2)}K
+ +(n-\alpha/2)\log\frac{2(n-\alpha/2)}K-2n.
+\]
+At \(n=L\), \(g=-KF\), \(g'=0\), and \(g''=O_Y(K^{-1})\).
+Thus rounding to \(N\) changes the exponent by only \(O_Y(K^{-1})\).
+
+A lower bound for \(\E\) valid even when \(y\to0\) follows directly from
+the standard positive integral \cite{Kint}:
+\[
+ K_\alpha(K)=\int_0^\infty e^{-K\cosh u}\cosh(\alpha u)\,\dd u.
+\]
+Put \(u_*=\operatorname{arsinh}y\).
+On \([u_*,u_*+K^{-1/2}]\), the exponent
+\(-\cosh u+yu\) is at least \(-F(y)-C_Y/K\).
+Using \(\cosh(\alpha u)\ge e^{\alpha u}/2\) gives
+\begin{equation}\label{eq:env}
+ \E\ge K K_\alpha(K)\ge c_Y\sqrt K\,e^{-KF(y)},\qquad
+ \frac{|Q_\nu(-N)|}{\E}\le C_YK^{-1/2}e^{C_Y\rho}.
+\end{equation}
+
+\begin{proposition}
+Let \(B=M-\nu>0\), \(C_0=M+\nu\), and
+\(\lambda=2\pi-N(B^{-1}+C_0^{-1})\).
+For every \(s\ge0\), with \(N>\alpha/2+1/2\),
+\begin{equation}\label{eq:vertical}
+ |Q_\nu(-N-is)|\le |Q_\nu(-N)|e^{-\lambda s}.
+\end{equation}
+In the hierarchy above, \(\lambda\ge\pi\) eventually, uniformly in
+\(y\in[0,Y]\), and
+\[
+ \frac1{\E}\int_{s_0}^\infty |Q_\nu(-N-is)|\,\dd s
+ \le C_YK^{-1/2}e^{C_Y\rho-\pi s_0}.
+\]
+\end{proposition}
+
+\begin{proof}
+Gamma recurrence and the standard moduli \cite{Gamma} give
+\begin{align*}
+ |\Gamma(-N-iw)|^2
+ &=\frac{\pi}{w\sinh(\pi w)\prod_{j=1}^N(j^2+w^2)},\quad w>0,\\
+ |\Gamma(N+\tfrac12+iw)|^2
+ &=\frac{\pi\prod_{j=0}^{N-1}[(j+\tfrac12)^2+w^2]}{\cosh(\pi w)}.
+\end{align*}
+The reciprocal negative half-integer formula follows by recurrence.
+In the ratio to the base \(s=0\), the explicit exponential gives
+\(e^{-\pi s}\). The four negative-integer Gamma factors give at most
+\(e^{-2\pi s}\), since their rational factors decrease and
+\(\sinh(a+b)\ge e^b\sinh a\) for \(a,b>0\).
+The two large half-integer hyperbolic factors contribute at most
+\(e^{\pi s}\), because \(\log\cosh\) has derivative bounded by one.
+
+Each polynomial ratio is bounded using
+\(\sqrt{a^2+(B-s)^2}\le(1+s/B)\sqrt{a^2+B^2}\), and likewise
+with \(C_0+s\). Their combined contribution is at most
+\[
+ (1+s/B)^N(1+s/C_0)^N\le e^{Ns(B^{-1}+C_0^{-1})}.
+\]
+The remaining small Gamma ratios are at most one, by
+\(|\Gamma(a+is)|\le\Gamma(a)\) for \(a>0\), a consequence of Euler's
+integral and the triangle inequality. This proves
+\eqref{eq:vertical}. Finally \(N(B^{-1}+C_0^{-1})=O_Y(K^2/\nu^2)\),
+and integration gives the stated bound.
+\end{proof}
+
+The short connector from \(-N\) to \(-N+i\) has the same
+\(O_Y(K^{-1/2})\) envelope bound, with factor
+\(e^{C_Y(\rho+K/\nu)}\): use
+\(|\Gamma(a-i\tau)|\le\Gamma(a)\), \(0\le\tau\le1\),
+and \(|e^{-2\pi i(-N+i\tau)}|\le e^{2\pi}\).
+These statements control the vertical pieces only. The negative
+horizontal part of the central segment is not included.
+
+\section{The positive base and the entire positive tail}
+Set \(c_Y=8+2Y\), \(R=c_YK\). Reflect both small Gamma factors:
+\[
+ U(t)=\frac{\pi^2e^{-2\pi it}(K/2)^{2t}}
+ {\cos\pi(t-\alpha/2)\cos\pi(t+\alpha/2)
+ \Gamma(\tfrac12+t-\alpha/2)\Gamma(\tfrac12+t+\alpha/2)}.
+\]
+On \(t=x+i\), the cosines are bounded away from zero.
+For \(x\in[R,R+1]\), let \(r=x/K\). Uniform Stirling gives
+\[
+ |U(x+i)|\le C_Ye^{-Kh_y(r)},\qquad
+ h_y(r)=(r+y/2)\log[2(r+y/2)]
+ +(r-y/2)\log[2(r-y/2)]-2r.
+\]
+The function is even and convex in \(y\) on \(|y|<2r\), hence
+\(h_y(r)\ge h_0(r)=2r[\log(2r)-1]\).
+Since \(h_0\) increases for \(r\ge c_Y\), the true supremum obeys
+\[
+ H_R:=\sup_{x\in[R,R+1]}|Q_\nu(x+i)|
+ \le C_Ye^{C_Y\rho-Kh_0(c_Y)}.
+\]
+Use the previously established exact-recurrence tail lemma:
+for \(D_Y=\max(2,Y^2/2)\) and
+\(\nu^2\ge32(D_Y+1)K^3\),
+\[
+ \int_R^\infty|Q_\nu(x+i)|\,\dd x\le10(R+1)H_R.
+\]
+Together with \eqref{eq:env} and \(F(y)\le1\), it follows that
+\begin{equation}\label{eq:positive}
+ \frac1{\E}\int_R^\infty|Q_\nu(x+i)|\,\dd x
+ \le C_Y\sqrt K\exp\{-[h_0(c_Y)-1]K+C_Y\rho\}.
+\end{equation}
+The positive endpoint is therefore exponentially small in this
+normalization. Sampling \(H_R\) numerically is not used as proof
+of its supremum bound.
+
+\section{An exponential obstruction to central absolute bounds}
+Fix \(y>1\). For \(t=Kx+i\), \(-y/2<x<y/2\), reflect just the
+Gamma factor with negative real argument. Uniformly on compact
+subintervals of this interval, positive-real Stirling then gives
+\[
+ |U(Kx+i)|\asymp_y e^{KA_y(x)},\qquad
+ A_y(x)=u[\log(2u)-1]-v[\log(2v)-1],
+ \quad u=y/2-x,\quad v=y/2+x.
+\]
+The periodic reflection prefactor is bounded above and below by
+positive constants at height one; it cannot be discarded in the
+complex integral. Direct differentiation gives
+\[
+ A_y'=-\log(y^2-4x^2),\qquad
+ x_*=-\tfrac12\sqrt{y^2-1},\qquad A_y''(x_*)=-4\sqrt{y^2-1}.
+\]
+At this maximum,
+\[
+ A_y(x_*)=B(y):=y\operatorname{arcosh}y-\sqrt{y^2-1}.
+\]
+For any fixed small \(a>0\), the window
+\(W_K=\{t=q+i:|q-Kx_*|\le a\sqrt K\}\) therefore satisfies
+\[
+ \int_{W_K}|U(t)|\,|\dd t|\ge c_{y,a}\sqrt K\,e^{KB(y)}.
+\]
+Let \(y_c=1.5088795615\ldots\) be the zero of \(F\).
+For fixed \(y\ge y_c\), the standard large-order Bessel formulas
+\cite{Bessel} give
+\(\E\le C_y\sqrt K e^{-KF(y)}\).
+Thus
+\begin{equation}\label{eq:condition}
+ \frac{\int_{W_K}|U|\,|\dd t|}{\E}
+ \ge c_{y,a}e^{K\Delta(y)},\qquad \Delta(y)=B(y)+F(y)>0.
+\end{equation}
+Indeed \(\Delta'=\operatorname{arcosh}y-\operatorname{arsinh}y<0\)
+and \(\Delta(y)\to0\) at infinity (its leading term is \(1/(2y)\)).
+This proves positivity on \(y>1\), in particular on \(y\ge y_c\).
+The two-sided multiplier estimate transfers \eqref{eq:condition}
+to \(Q_\nu\), at cost \(e^{-C_Y(\rho+K/\nu)}\).
+
+This does not refute a joint signed-amplitude asymptotic.
+It shows that the fixed-height absolute norm can be exponentially
+ill-conditioned relative even to the positive branch envelope.
+Multiplying a pointwise polynomial remainder bound by this norm
+does not yield the desired polynomial envelope error.
+The same obstruction applies to the retained quadratic phase:
+its modulus on this strip changes by only \(e^{O_Y(K/\nu)}\).
+
+\section{Numerical checks and continuation}
+All data use the exact inherited kernel and
+\(\nu=32K^{3/2}\), so \(\rho=1/1024\) is fixed.
+This tests bounds in a joint hierarchy, not convergence as
+\(\rho\to0\).
+For \(K=8,32,128,512\) and \(y=0,1,2\), we check the real-product
+vertical identity against complex log-Gamma evaluation at ten
+values of \(s\), including \(M-\nu,M,M+\nu,2M\).
+We also check the reflection identity on three positive base
+points per parameter pair. These are finite-point checks; the
+proofs above provide the continuum estimates.
+
+The central computation integrates absolute values only, over
+\(|q+\sqrt3K/2|\le\sqrt K/4\), at height one.
+Unit-or-shorter cells use 20/32 Gauss--Legendre nodes and 55/75
+decimal digits; the last row is also checked at 95 digits.
+The largest relative order change is below \(7.4\,10^{-27}\).
+No signed full integral or cancellation-resolved relative error
+is computed in this experiment.
+
+\begin{center}
+\begin{tabular}{rrrr}
+\toprule
+\(K\)&\(\int_{W_K}|U|/\E\)&\(\int_{W_K}|Q_\nu|/\E\)&
+\(K^{-1}\log(\int_{W_K}|U|/\E)\)\\
+\midrule
+8&\(9.33072\,10^2\)&\(1.00797\,10^3\)&0.854810\\
+16&\(5.65331\,10^3\)&\(5.94872\,10^3\)&0.540000\\
+32&\(2.77261\,10^5\)&\(2.86796\,10^5\)&0.391647\\
+64&\(7.95113\,10^8\)&\(8.12952\,10^8\)&0.320219\\
+128&\(7.15645\,10^{15}\)&\(7.25825\,10^{15}\)&0.285209\\
+\bottomrule
+\end{tabular}
+\end{center}
+The analytic rate is \(\Delta(2)=0.2506620134229251\ldots\);
+the finite-\(K\) rates include large constant-prefactor effects.
+The 300 checks consist of 120 vertical identities, 120 vertical
+inequalities, 12 decay-rate checks, 36 reflection identities,
+10 order refinements and two precision refinements.
+Base and local-multiplier samples are recorded separately,
+without invented universal numerical constants.
+
+The next task is a phase-preserving estimate of the central
+integral, for example by a justified analytic branch decomposition
+or contour deformation with explicit pole bookkeeping.
+Only after a complete two-branch joint estimate should one restore
+\(u,v\), transverse tails and the physical external interfaces.
+Finite \(G\), state identification and a microscopic holographic
+dual remain open. No priority claim is made.
+
+\begin{thebibliography}{9}
+\bibitem{Gamma} NIST DLMF,
+\href{https://dlmf.nist.gov/5.4}{Sec.\ 5.4},
+\href{https://dlmf.nist.gov/5.5}{Sec.\ 5.5},
+\href{https://dlmf.nist.gov/5.11}{Sec.\ 5.11}:
+Gamma moduli, recurrence, reflection and sectorial Stirling.
+\bibitem{Kint} NIST DLMF,
+\href{https://dlmf.nist.gov/10.32.E9}{Eq.\ 10.32.9}:
+the positive real integral for \(K_\alpha\).
+\bibitem{Bessel} NIST DLMF,
+\href{https://dlmf.nist.gov/10.41}{Eqs.\ 10.41.3--4}:
+large-order modified-Bessel expansions, used here only at fixed \(y>0\).
+\end{thebibliography}
+{\small\noindent Reproducible files:\par
+\noindent\path{code/recoil_bessel_endpoints.py}\par
+\noindent\path{results/stage4/recoil-bessel-endpoints/diagnostics.json}\par
+\noindent Previous analytic input:\par
+\noindent\path{notes/stage4-recoil-bessel-cancellation.md}\par}
+\end{document}

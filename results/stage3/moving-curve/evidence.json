@@ -1,0 +1,35 @@
+{
+  "created_at_utc": "2026-10-29T18:09:45.810856+00:00",
+  "kind": "model integral reduction and empirical numerical support; not independent certification",
+  "result": "Full complex Q limiting curve for exponential density with transverse and Fourier refinements",
+  "conditions": [
+    "dS2 L=1; proper SO+(2,1); strict G_N -> 0; BD free equal independent principal-series species",
+    "normalized vacuum packet, pi0(r)=beta exp(-beta r), repeated moving threshold Q_M",
+    "fixed proper Gaussian; numerical nu=.6, sigma=beta=1",
+    "first M->infinity with t_M=log(2M)+T; no joint finite-M limit"
+  ],
+  "numerical_scope": "Actual integral, 3 separately refined runs, 25 detailed times and 257 central points each, 122 empirical diagnostics. Full complex spectra retained.",
+  "not_proven": [
+    "certified total quadrature errors",
+    "global monotonicity",
+    "general density endpoint laws",
+    "finite-M growing window",
+    "finite-G dynamics",
+    "full holographic dual",
+    "original priority"
+  ],
+  "hashes": {
+    "literature/stage3-moving-curve-sources.md": "97f4ee3b1e826e456b511f963aa08920c3fd73010f307c66cc41a20d44f98bc2",
+    "manuscript/crosslimit.tex": "bee1c6d072dd895037d51312649b9dc0b59c45c4de9aec7e3e92d1203f39571f",
+    "manuscript/logtime.tex": "c33549cac95393718b1e8adc3353062bfee5a1e1ca0f2c971b31ae642de1eef0",
+    "manuscript/movingcurve.tex": "3bc276cc6aea0ade817185ac7f2ff67e5bf84335ce51e43429f14abbec5c9ce2",
+    "manuscript/preparation.tex": "583e3505dfdd9b4c2725620218042cc3cbcb07cc5940ba104939745bd416692a",
+    "notes/stage3-moving-threshold-curve.md": "90a0486dd8f0dbc481f0f55591dc5852bdee8711818fc0678d72356c71dbecbd",
+    "results/stage3/moving-curve/diagnostics.json": "40f6ff470db9b7b8ca162e5b2c747d0216744366df4bfa98f70d22819adadd98",
+    "results/stage3/moving-curve/moving-curve.pdf": "d39d57dd9f14a5118ed59dfe222841f886e811420d3f1e16b64db8dee703f363",
+    "results/stage3/moving-curve/moving-curve.png": "c1fde9f0b8977a5e75de815c629a7513c0f35ff8f404d9138200a5932bafa9f1",
+    "results/stage3/moving-curve/run-w24-chi40-R10.json": "df0b6a444bbe17d6818bb9af9a1ebc4c2c8c5cf92824b59aca25e67c81048057",
+    "results/stage3/moving-curve/run-w24-chi64-R10.json": "f68543c8ca8e4f45ed76a4489356759149ddfcf6ea6116895ae931822c6b1ae2",
+    "results/stage3/moving-curve/run-w32-chi40-R10.json": "f78f0a69de318554ee60418486b05d12ec41e93d71a3d0e537b020c53a89f0ba"
+  }
+}

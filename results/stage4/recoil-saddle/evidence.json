@@ -1,0 +1,45 @@
+{
+  "created_at_utc": "2026-10-30T04:11:35.411955+00:00",
+  "kind": "exact reflected saddle algebra, Fourier lemma, local conditional prefactor and finite-point action checks",
+  "pages": 4,
+  "compilers": {
+    "desktop": "success on final source",
+    "local": "pdfLaTeX two passes; clean final log"
+  },
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "dpi": 95,
+    "clipping_or_overlap": false
+  },
+  "not_proven": [
+    "general classical action identity",
+    "actual local derivative bounds and non-cancellation",
+    "full Barnes cycle asymptotic and transverse tails",
+    "physical OTOC insertion normalization and external cycles",
+    "joint finite-kappa and growing-mass limit",
+    "complete holographic dual"
+  ],
+  "hashes": {
+    "code/recoil_saddle.py": "835d7026b8fcd158b8bf759b62cfa6150d13a9e95e375d1f81c58141c21c9a3e",
+    "code/build_saddle_note.ps1": "3f8f333c2566e2c4f5ca7aba28c869ec4231459525837eee0e1c5b8d73c807de",
+    "manuscript/recoil-saddle/main.tex": "4b6f140e2350d9a0d071587b7a8a64accc190676e826913af163dd00227fdb8e",
+    "notes/stage4-recoil-saddle.md": "03778fd88924fe7fefc95e286c0b868c520a056796176b811e0793dc818d3d14",
+    "literature/stage4-recoil-saddle-sources.md": "177739c34c770760422fbe5970e3ab2d3485ac6577bca20e74a47c14978a90f1",
+    "results/stage4/recoil-saddle/diagnostics.json": "4704068d585c82075a58f7d07c0c07034438935d1656243bffde32cef5db7406",
+    "results/stage4/recoil-saddle/main.log": "f89d28dc526edf00beab5ac61665051765c32000aaa3252733a0fa34994004b7",
+    "results/stage4/recoil-saddle/build-review.md": "2dfde01195930810a0ef042cc35b8b3b60fa31415a14ab96bfae64d21f3ef46b",
+    "results/stage4/recoil-saddle/initial-branch-diagnostics.json": "586cb5d2d16b9b73c6573898daf6c1801e5c20e9f2653c8e7b1910eaa025718f",
+    "results/stage4/recoil-saddle/initial-overfull.log": "509e5d42e3e4522d411eb09a5d57b193c72ba59fccb57adc789f713fd6bd7972",
+    "output/pdf/de-sitter-recoil-saddle.pdf": "7c18a7f641af604b17150efb71a4ea560b9c9b5491c7044e14ffa18c65d8783b",
+    "code/recoil_internal.py": "4ad536856e55b3ffc7084312a6d229067a5c7deb1e8f9667aa72982c0e4699a4",
+    "code/gram_prefactor.py": "66a76540114edd361ff51d04d962a643a60441228639a2c9d043eaa2799e0de8",
+    "manuscript/recoil-vertex/main.tex": "73dbc8befc0f2978a12b742c32530a621c8b74db17148979aa1925e211d5b218",
+    "sources/chen-stanford-tang-yang-2607.14042v1.html": "9e352212021abf7135852f4b5dc8cd933f47334bd72e78f8def9d84d34fed5e2",
+    "sources/chandra-liska-post-2610.30247v1.html": "fe8580884e81ba9817e292bbca7c70b7c7d494e89efef62695e94bcf07801d0f"
+  }
+}

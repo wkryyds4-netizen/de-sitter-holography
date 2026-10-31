@@ -1,0 +1,40 @@
+The final grid uses eight Gauss nodes per mass interval, 12 initial-mass
+nodes, and $L=12$, for 2,107,392 complex kernel evaluations.
+Five preserved runs contain 3,442,832 kernel points in total.
+The positive norms, computed separately with 32 nodes per interval,
+16 initial nodes, and $L=20$, are
+\[
+ N_s\simeq6.0532837979\,10^{-5},\qquad
+ N_t\simeq6.0662442257\,10^{-5}.
+\]
+The table reports approximate values, not certified error intervals.
+\begin{center}
+\begin{tabular}{rrrrr}
+\toprule
+$t$ & $\operatorname{Re}X$ & $\operatorname{Im}X$ & $D(t)$ & $|X|/\sqrt{N_sN_t}$\\
+\midrule
+0 & $6.02722782\,10^{-5}$ & $-6.9\,10^{-19}$ & $6.50724\,10^{-7}$ & .994631\\
+.5 & $5.88726863\,10^{-5}$ & $-5.61586481\,10^{-6}$ & $3.44991\,10^{-6}$ & .975945\\
+1 & $5.46710732\,10^{-5}$ & $-1.11360698\,10^{-5}$ & $1.18531\,10^{-5}$ & .920725\\
+2 & $3.85245427\,10^{-5}$ & $-1.98191785\,10^{-5}$ & $4.41462\,10^{-5}$ & .714940\\
+\bottomrule
+\end{tabular}
+\end{center}
+The tiny imaginary entry at zero is retained as a floating-point residual.
+Changing from six to eight mass nodes at $L=12$ (also changing the
+initial grid from 10 to 12 nodes and the series setting) changes the
+four complex overlaps by at most $1.02\,10^{-11}$.
+Changing the series setting on the identical pilot grid changes its
+integrated overlaps by at most $2.04\,10^{-20}$.
+The $L=10$ to $12$ six-node comparison, also changing the series setting,
+differs by at most $8.53\,10^{-15}$.
+These mixed refinements are stated explicitly; they are not independent
+one-variable error estimates.
+
+Twenty-four vertex, cutoff-identity, positive-norm, tail-primitive, and
+witness checks pass. The independent emission/rigging replay of all
+five raw grids agrees with their stored overlap sums within
+$2\,10^{-17}$ absolute (the verifier's threshold).
+The table obeys the physical Cauchy bound and the independent lower
+bound \eqref{lower}. A nonzero value is proved by the witness; its
+full magnitude in the table remains a numerical estimate.

@@ -1,0 +1,545 @@
+{
+  "generated_utc": "2026-10-29T00:49:36.155454+00:00",
+  "status": "passed",
+  "checks": 27,
+  "failed": 0,
+  "check_details": [
+    {
+      "name": "Cartesian order refinement 0",
+      "passed": true,
+      "error": 1.110938272991767e-06,
+      "tolerance": 2e-06
+    },
+    {
+      "name": "Independent triangle versus Cartesian 0",
+      "passed": true,
+      "error": 4.0975229390928514e-07,
+      "tolerance": 2e-06
+    },
+    {
+      "name": "Cartesian order refinement 1",
+      "passed": true,
+      "error": 1.0937438288122347e-06,
+      "tolerance": 2e-06
+    },
+    {
+      "name": "Independent triangle versus Cartesian 1",
+      "passed": true,
+      "error": 4.047894301638033e-07,
+      "tolerance": 2e-06
+    },
+    {
+      "name": "Cartesian order refinement 2",
+      "passed": true,
+      "error": 1.0443927122110486e-06,
+      "tolerance": 2e-06
+    },
+    {
+      "name": "Independent triangle versus Cartesian 2",
+      "passed": true,
+      "error": 3.8947496256589123e-07,
+      "tolerance": 2e-06
+    },
+    {
+      "name": "Cartesian order refinement 3",
+      "passed": true,
+      "error": 8.786817135711257e-07,
+      "tolerance": 2e-06
+    },
+    {
+      "name": "Independent triangle versus Cartesian 3",
+      "passed": true,
+      "error": 3.20156577347612e-07,
+      "tolerance": 2e-06
+    },
+    {
+      "name": "Finite-cutoff Cauchy Schwarz 0",
+      "passed": true,
+      "absolute_value": 0.0032731825862107843,
+      "N_cut": 0.0033924727843077577,
+      "tolerance": 2e-06
+    },
+    {
+      "name": "Finite-cutoff Cauchy Schwarz 1",
+      "passed": true,
+      "absolute_value": 0.003239978666638398,
+      "N_cut": 0.0033924727843077577,
+      "tolerance": 2e-06
+    },
+    {
+      "name": "Finite-cutoff Cauchy Schwarz 2",
+      "passed": true,
+      "absolute_value": 0.0031406111290451224,
+      "N_cut": 0.0033924727843077577,
+      "tolerance": 2e-06
+    },
+    {
+      "name": "Finite-cutoff Cauchy Schwarz 3",
+      "passed": true,
+      "absolute_value": 0.0027504482503913474,
+      "N_cut": 0.0033924727843077577,
+      "tolerance": 2e-06
+    },
+    {
+      "name": "Zero-time reality",
+      "passed": true,
+      "error": 2.1864090983011074e-28,
+      "tolerance": 1e-16
+    },
+    {
+      "name": "Equal-time two-species commutator norm nonnegative",
+      "passed": true,
+      "norm_squared": 0.00023858039619394696,
+      "tolerance": 4e-06
+    },
+    {
+      "name": "Same-species four-order positive form bound",
+      "passed": true,
+      "D_cut": 0.004534261996916511,
+      "M4_cut": 0.011199917367435053,
+      "upper": 0.011319207565532025,
+      "tolerance": 2e-06
+    },
+    {
+      "name": "Positive norm cap 12 to 16 N_cut",
+      "passed": true,
+      "error": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "Positive norm cap 12 to 16 N_to_cap",
+      "passed": true,
+      "error": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "Positive norm cap 12 to 16 epsilon_to_cap",
+      "passed": true,
+      "error": 3.101927297073854e-25,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "Positive norm cap 12 to 16 cross_tail_bound_estimate",
+      "passed": true,
+      "error": 8.470329472543003e-22,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "Positive tails nonnegative",
+      "passed": true,
+      "outer_tail": 1.914397405829053e-11,
+      "inner_tail": 8.01942979892079e-10
+    },
+    {
+      "name": "Actual quadrature node precision 0",
+      "passed": true,
+      "error": 3.231671676833438e-27,
+      "tolerance": 2e-22
+    },
+    {
+      "name": "Opposite triangle reflection 0",
+      "passed": true,
+      "error": 4.223866063942979e-57,
+      "tolerance": 2e-33
+    },
+    {
+      "name": "Actual quadrature node precision 1",
+      "passed": true,
+      "error": 2.584972094118272e-26,
+      "tolerance": 2e-22
+    },
+    {
+      "name": "Opposite triangle reflection 1",
+      "passed": true,
+      "error": 3.7951426490725586e-57,
+      "tolerance": 2e-33
+    },
+    {
+      "name": "Actual quadrature node precision 2",
+      "passed": true,
+      "error": 8.145682032350063e-28,
+      "tolerance": 2e-22
+    },
+    {
+      "name": "Opposite triangle reflection 2",
+      "passed": true,
+      "error": 6.974166392624358e-58,
+      "tolerance": 2e-33
+    },
+    {
+      "name": "Cartesian difficult node precision",
+      "passed": true,
+      "error": 6.462348535570529e-27,
+      "tolerance": 2e-22
+    }
+  ],
+  "diagnostics": {
+    "parameters": {
+      "nu": 0.6,
+      "d": 0.8,
+      "lower": 0.2,
+      "upper": 3.0,
+      "sigma_proper": 1.0
+    },
+    "times_left_to_right": [
+      [
+        0.0,
+        0,
+        0.0,
+        0
+      ],
+      [
+        0.5,
+        0,
+        0.5,
+        0
+      ],
+      [
+        1.0,
+        0,
+        1.0,
+        0
+      ],
+      [
+        2.0,
+        0,
+        2.0,
+        0
+      ]
+    ],
+    "values": [
+      {
+        "real": 0.0032731825862107843,
+        "imag": -2.1864090983011074e-28
+      },
+      {
+        "real": 0.003235676569607288,
+        "imag": 0.0001669098474217277
+      },
+      {
+        "real": 0.0031231972336643273,
+        "imag": 0.0003302685324301598
+      },
+      {
+        "real": 0.0026797384679008557,
+        "imag": 0.0006196509676690573
+      }
+    ],
+    "conditional_C2_cut": 0.06733692892400507,
+    "conditional_C2_adaptive_error": 7.086141942338659e-15,
+    "D_cut": 0.004534261996916511,
+    "N_cut": 0.0033924727843077577,
+    "M4_cut": 0.011199917367435053,
+    "crossing_to_nested_ratio": 0.9648368002688885,
+    "commutator_norm_squared_cut": 0.00023858039619394696,
+    "commutator_form_by_time": [
+      {
+        "t": 0.0,
+        "norm_squared": 0.00023858039619394696
+      },
+      {
+        "t": 0.5,
+        "norm_squared": 0.00031359242940093984
+      },
+      {
+        "t": 1.0,
+        "norm_squared": 0.0005385511012868608
+      },
+      {
+        "t": 2.0,
+        "norm_squared": 0.001425468632813804
+      }
+    ],
+    "positive_norms": {
+      "N_cut": 0.0033924727843077577,
+      "N_to_cap": 0.003392473605394712,
+      "epsilon_to_cap": 8.210869539503696e-10,
+      "outer_tail": 1.914397405829053e-11,
+      "inner_tail": 8.01942979892079e-10,
+      "cap": 12.0,
+      "cross_tail_bound_estimate": 3.3379727272215206e-06,
+      "scope": "Positive quadrature estimate to finite cap; not a certified infinite-tail bound."
+    },
+    "positive_norms_extended": {
+      "N_cut": 0.0033924727843077577,
+      "N_to_cap": 0.003392473605394712,
+      "epsilon_to_cap": 8.210869539503699e-10,
+      "outer_tail": 1.9143974058290514e-11,
+      "inner_tail": 8.019429798920795e-10,
+      "cap": 16.0,
+      "cross_tail_bound_estimate": 3.3379727272215215e-06,
+      "scope": "Positive quadrature estimate to finite cap; not a certified infinite-tail bound."
+    },
+    "point_precision": [
+      {
+        "labels": [
+          "0.2555942009034492",
+          "2.9444057990965509",
+          "0.31008457495900799",
+          "0.80000000000000004"
+        ],
+        "old": {
+          "real": -1.6027362377286917e-11,
+          "imag": 5.669813091987315e-29
+        },
+        "high_precision": {
+          "real": -1.602736237728692e-11,
+          "imag": -1.8854626597016104e-57
+        },
+        "mirror": {
+          "real": -1.602736237728692e-11,
+          "imag": 2.3384034042413684e-57
+        },
+        "requested_dps": 35,
+        "guard_digits": 15
+      },
+      {
+        "labels": [
+          "0.2555942009034492",
+          "2.7153330683790773",
+          "0.31008457495900799",
+          "0.80000000000000004"
+        ],
+        "old": {
+          "real": -1.049489921119297e-10,
+          "imag": 1.2998159089443313e-28
+        },
+        "high_precision": {
+          "real": -1.0494899211192972e-10,
+          "imag": 2.283965860201864e-56
+        },
+        "mirror": {
+          "real": -1.0494899211192972e-10,
+          "imag": 2.6634801251091197e-56
+        },
+        "requested_dps": 35,
+        "guard_digits": 15
+      },
+      {
+        "labels": [
+          "0.22581511205459306",
+          "2.9741848879454067",
+          "0.25139221696261782",
+          "0.80000000000000004"
+        ],
+        "old": {
+          "real": -5.063955032438054e-12,
+          "imag": 1.0483754538167188e-28
+        },
+        "high_precision": {
+          "real": -5.063955032438055e-12,
+          "imag": -3.8505943224294945e-56
+        },
+        "mirror": {
+          "real": -5.063955032438055e-12,
+          "imag": -3.920335986355738e-56
+        },
+        "requested_dps": 35,
+        "guard_digits": 15
+      },
+      {
+        "labels": [
+          "2.6575661716970043",
+          "0.38811631665703555",
+          "2.8118836833429648",
+          "0.80000000000000004"
+        ],
+        "old": {
+          "real": 4.399390633808109e-11,
+          "imag": -8.03688121694938e-44
+        },
+        "high_precision": {
+          "real": 4.39939063380811e-11,
+          "imag": 7.755264570263473e-56
+        },
+        "method": "cyclic_chart",
+        "requested_dps": 35,
+        "guard_digits": 15
+      }
+    ],
+    "order_history": [
+      {
+        "method": "triangle",
+        "order": 4,
+        "values": [
+          {
+            "real": 0.0028776055977514396,
+            "imag": -5.1160090067642585e-28
+          },
+          {
+            "real": 0.0028549702343036694,
+            "imag": 3.232555855647457e-05
+          },
+          {
+            "real": 0.002783834541398649,
+            "imag": 7.396407588815284e-05
+          },
+          {
+            "real": 0.0024646758045834796,
+            "imag": 0.00018999773501222517
+          }
+        ]
+      },
+      {
+        "method": "triangle",
+        "order": 6,
+        "values": [
+          {
+            "real": 0.0032261338885653623,
+            "imag": -2.2414835467269024e-26
+          },
+          {
+            "real": 0.003197457975611795,
+            "imag": 0.00015037515236695692
+          },
+          {
+            "real": 0.003109004207423386,
+            "imag": 0.0003066658325017971
+          },
+          {
+            "real": 0.0027310826797587472,
+            "imag": 0.0006333144938947364
+          }
+        ]
+      },
+      {
+        "method": "triangle",
+        "order": 8,
+        "values": [
+          {
+            "real": 0.0032857776832518493,
+            "imag": -5.45968956563141e-26
+          },
+          {
+            "real": 0.003247546808480345,
+            "imag": 0.0001702096618332694
+          },
+          {
+            "real": 0.003132599901528478,
+            "imag": 0.0003368715269178631
+          },
+          {
+            "real": 0.002676469926841134,
+            "imag": 0.0006303181521788589
+          }
+        ]
+      },
+      {
+        "method": "triangle",
+        "order": 10,
+        "values": [
+          {
+            "real": 0.003273691477790757,
+            "imag": -2.5016132179841075e-26
+          },
+          {
+            "real": 0.0032357476729060084,
+            "imag": 0.00016817411586643585
+          },
+          {
+            "real": 0.0031220782120120233,
+            "imag": 0.00033226628973891695
+          },
+          {
+            "real": 0.002675731615024048,
+            "imag": 0.0006198752275701377
+          }
+        ]
+      },
+      {
+        "method": "triangle",
+        "order": 12,
+        "values": [
+          {
+            "real": 0.0032735923385046935,
+            "imag": -8.20207481257293e-27
+          },
+          {
+            "real": 0.003235977993003502,
+            "imag": 0.0001671800296176382
+          },
+          {
+            "real": 0.0031232310383642573,
+            "imag": 0.0003306565375702396
+          },
+          {
+            "real": 0.0026794222878620227,
+            "imag": 0.0006196006644180441
+          }
+        ]
+      },
+      {
+        "method": "Cartesian",
+        "order": 12,
+        "values": [
+          {
+            "real": 0.0032720716479377925,
+            "imag": 1.6945411031079667e-28
+          },
+          {
+            "real": 0.0032346015193498367,
+            "imag": 0.00016670849572191076
+          },
+          {
+            "real": 0.0031222218945364576,
+            "imag": 0.00032989507597625136
+          },
+          {
+            "real": 0.0026790599674772837,
+            "imag": 0.0006190926499020313
+          }
+        ]
+      },
+      {
+        "method": "Cartesian",
+        "order": 16,
+        "values": [
+          {
+            "real": 0.0032731825862107843,
+            "imag": -2.1864090983011074e-28
+          },
+          {
+            "real": 0.003235676569607288,
+            "imag": 0.0001669098474217277
+          },
+          {
+            "real": 0.0031231972336643273,
+            "imag": 0.0003302685324301598
+          },
+          {
+            "real": 0.0026797384679008557,
+            "imag": 0.0006196509676690573
+          }
+        ]
+      }
+    ],
+    "coarse_grid_differences": [
+      {
+        "order": 4,
+        "max_difference_from_final": 0.0004804725272954001
+      },
+      {
+        "order": 6,
+        "max_difference_from_final": 5.313115884514347e-05
+      },
+      {
+        "order": 8,
+        "max_difference_from_final": 1.2595097041065081e-05
+      }
+    ],
+    "finite_domain_tolerance": 2e-06,
+    "scope": "Conditional fiber d, not a normalized external wavepacket. Finite-domain quadrature tolerance is empirical. Tail is a positive finite-cap estimate inserted into a proved inequality; infinite-tail certification was not performed."
+  },
+  "code_sha256": {
+    "validate_crossing_conditional.py": "b7f52c7261a21618765e6631392d88276fca2bced7fc8a7e874408bb6e9e3efb",
+    "observer_crossing.py": "30a91db5fd97e90e3521ea82b253fc5f1cdad95cf033d4d63a701035f185883e",
+    "observer_crossing_regular.py": "2396f0987e964d3e9e507c8d76edb9babba2a5daf0cef27a2cc820c4cda3f64e",
+    "run_crossing_conditional.py": "5c83446be953c32c331e045e49c25cb8e9851cf1814ebe432333d1cbaf62a8d6",
+    "quantized_observer.py": "6851265b9daa9b02b2a96580d175be1d7153a13bc1e20ef9e891b8abe936583f"
+  },
+  "input_sha256": {
+    "results/stage3/fourpoint/conditional-crossing-pilot.json": "49a3eb9d1440c66db202d0157dde0ea9fc8db412293a2243d2a305a7a2b946bf",
+    "results/stage3/fourpoint/conditional-crossing-refined.json": "ee835ab22d822a6c5c2056509b9b4d28579e4bf4211f289b77f498224aa86521",
+    "results/stage3/fourpoint/conditional-crossing-cartesian.json": "5d962147c8aecffc33c7cb1b368c57998bf7669fda5327e78c29ee6ee7bed97c"
+  }
+}

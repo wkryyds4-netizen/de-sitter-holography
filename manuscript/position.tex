@@ -1,0 +1,238 @@
+\section{A direct position integral for the creation block}
+\label{sec:position}
+We now remove the auxiliary spacetime and group cutoffs from a specific
+position pairing. The proper-time Gaussian and the actual observer
+threshold remain fixed. The output is tested by an original seed, not
+by a second invariant wavefunction integrated over the full gauge orbit.
+This distinction avoids the group-volume divergence noted after
+(5.8) of~\cite{KL}. Transposition to test vectors is standard; the
+domain estimates below supply the additional input needed here.
+In particular, the invariant-domain requirements in
+refined algebraic quantization~\cite[Section II]{GM} cannot be replaced
+by formal commutation with the constraints. The distinction between
+operators on invariants and co-invariants is also discussed
+in~\cite[Section 5.1]{HM}.
+
+\subsection{Test vectors and observer time}
+Let $\mathcal P_N$ be the finite span of actual product seeds
+\begin{equation}
+ \phi(y)=u_{0,f_L}(x_L)\,u_{n_R,f_R}(x_R)\,v_N,
+ \qquad f_L,f_R\in\Cc((s_*,\infty)),
+ \label{eq:position-seeds}
+\end{equation}
+where $v_N$ is a finite linear combination of normalized matter occupation
+vectors and $n_R+J_{\mathrm m}=0$ term by term. These are the small
+total-$K=0$ seeds used in Section~\ref{sec:physical}; $B\mathcal P_N$
+is dense in the physical sector. The case $N=0$ has $n_R=0$.
+
+Write $E_R(u)=e^{iuH_R}$ on the kinematical observer space. It induces
+a strongly continuous physical unitary $\mathsf U_N(u)$:
+in the identified spectrum it multiplies by $e^{iu m(a)}$, where
+$a$ is the actual right-observer label, with $a=d$ for $N=0$.
+Thus, on these seeds,
+\begin{equation}
+ \mathsf U_N(u)B\psi=B E_R(u)\psi,\qquad
+ \norm{\mathsf U_N(u)k}_{\FP}=\norm k_{\FP}.
+ \label{eq:physical-observer-time}
+\end{equation}
+This construction uses the already identified state space and does not
+assume a local field. Since the mass phase preserves compact spectral
+support, $E_R(u)\mathcal P_N\subset\mathcal P_N$ for every finite $u$.
+
+For a finite-mode matter vector define the ordinary, finite sum
+\begin{equation}
+ \mathfrak a_\nu(x)v=\sum_n\psi^\nu_n(x)a_n v.
+ \label{eq:finite-annihilation}
+\end{equation}
+The sum is finite on this domain. Fixed-$n$ mode asymptotics give
+$\sup_x|\psi_n^\nu(x)|<\infty$; more precisely
+$|\psi_n^\nu(t,\theta)|\le c_{n,\nu}(\cosh t)^{-1/2}$.
+Consequently
+\begin{equation}
+ \norm{\mathfrak a_\nu(x)v}\le
+ \sum_{n\in F_v}c_{n,\nu}\norm{a_nv}=:c_v.
+ \label{eq:finite-annihilation-bound}
+\end{equation}
+No uniform estimate as the occupied mode set $F_v$ grows is asserted.
+
+For $\phi\in\mathcal P_{N+1}$ set
+\begin{equation}
+ \zeta_{\phi,u}(y)=
+ \mathfrak a_\nu(x_R)\,[E_R(u)\phi](y)\in\mathcal K_N.
+ \label{eq:transposed-test}
+\end{equation}
+Although $\zeta_{\phi,u}$ need not obey the observer positive-frequency
+condition, it is an ambient orbit test. For a single product in
+\eqref{eq:position-seeds}, its pointwise norm is at most
+$c_v|u_{0,f_L}(x_L)u_{n_R,e^{ium}f_R}(x_R)|$.
+The norm inequality survives untwisting because the matter representation
+is unitary.
+
+\begin{lemma}[Polynomial orbit bound for the transposed test]
+For every fixed $\phi\in\mathcal P_{N+1}$ there is a constant $C_\phi$
+such that
+\begin{equation}
+ \zeta_{\phi,u}\in\cD_{\mathrm{orb}},\qquad
+ \norm{a_{\zeta_{\phi,u}}}_2\le C_\phi(1+|u|)^2.
+ \label{eq:transposed-orbit-bound}
+\end{equation}
+For every fixed seed $\psi\in\mathcal P_N$,
+$\norm{a_{E_R(u)\psi}}_2\le C_\psi(1+|u|)^2$ as well.
+\end{lemma}
+\begin{proof}
+Fix $\alpha=1/2$ in \eqref{eq:product-orbit-bound}. The two-ended packet
+expansion used in Section~\ref{sec:spectral}, with two integrations by
+parts in its compact mass variable, yields
+\[
+ \sup_t(1+|t|)^2
+ \left|\sqrt{2\pi\cosh t}\,u_{n,e^{ium}f}(t,0)\right|
+ \le C_{n,\supp f}\sum_{j=0}^2\norm{\partial_s^j(e^{ium(s)}f(s))}_1
+ \le C_f(1+|u|)^2.
+\]
+The same estimate on the bounded-$t$ part follows from smoothness of
+the modes. The exponent $2$ is enough because
+$\int(1+|t|)^{-3/2}\dd t<\infty$; the radial $L^2$ norm is unchanged
+by the mass phase. Apply \eqref{eq:product-orbit-bound} and the
+pointwise domination following \eqref{eq:transposed-test}.
+Finite sums satisfy the triangle inequality for the orbit seminorm.
+\end{proof}
+
+\subsection{The uncut integral and its identification}
+Let
+\begin{equation}
+ g_{\sigma,\tau}(u)=
+ \frac{1}{\sqrt{2\pi}\sigma}e^{-(u-\tau)^2/(2\sigma^2)}.
+\end{equation}
+For an arbitrary physical input $k\in\cH_N^{\max,w}(s_*)$ and
+$\phi\in\mathcal P_{N+1}$, define directly
+\begin{equation}
+ \mathcal I_N^+(\phi,k)=
+ \int_{\mathbb R}g_{\sigma,\tau}(u)\dd u
+ \int_Y
+ \ip{\zeta_{\phi,u}(y)}
+    {[R\mathsf U_N(u)k](y)}\dd y.
+ \label{eq:direct-position-creation}
+\end{equation}
+Inner products are conjugate-linear in the first entry. Both observer
+legs of the test and the physical input already obey the threshold.
+The two factors $E_R(u)$ and $\mathsf U_N(u)$ therefore produce
+$e^{-iu[m(a)-m(b)]}$ in a finite-mode matrix element, with precisely
+the sign in \eqref{eq:gaussian-time}.
+
+\begin{theorem}[Direct creation pairing]
+Integral \eqref{eq:direct-position-creation} is absolutely convergent
+after taking the norm of each pointwise Hilbert pairing. It satisfies
+\begin{equation}
+ \mathcal I_N^+(\phi,k)
+ =\ip{B\phi}{\mathsf C_N k}_{\FP},
+ \qquad
+ |\mathcal I_N^+(\phi,k)|
+ \le\sqrt{(N+1)\mathfrak M}\,
+       \norm{B\phi}_{\FP}\norm k_{\FP}.
+ \label{eq:direct-position-identified}
+\end{equation}
+Here $\mathsf C_N$ is the previously constructed Gaussian creation
+block at the same $\sigma,\tau,s_*$. Thus the direct formula determines
+the same physical output for every physical input.
+\label{thm:direct-position}
+\end{theorem}
+\begin{proof}
+First use \eqref{eq:position-pairing} and
+\eqref{eq:transposed-orbit-bound}, before invoking any field:
+\begin{align}
+ &\int_{\mathbb R}g_{\sigma,\tau}(u)\dd u
+ \int_Y\norm{\zeta_{\phi,u}(y)}
+          \norm{[R\mathsf U_N(u)k](y)}\dd y\notag\\
+ &\hspace{12mm}\le C_\phi\norm k_{\FP}
+       \int_{\mathbb R}g_{\sigma,\tau}(u)(1+|u|)^2\dd u<\infty.
+ \label{eq:direct-absolute-bound}
+\end{align}
+Jointly measurable representatives can be chosen: approximate $k$
+by physical seed images, use strong continuity of $\mathsf U_N$,
+and use the continuity of $R$ into local $L^1$ on each compact
+time interval and compact subset of $Y$. The resulting pairing is
+independent of representatives. This also proves continuity in $k$.
+
+It remains to identify this independently defined integral.
+Take first $k=B\psi$, $\psi\in\mathcal P_N$, and put
+$\psi_u=E_R(u)\psi$. The stronger, pre-cancellation estimate is
+\begin{align}
+ &\int_G\dd g\int_Y\dd y\,
+     \norm{\zeta_{\phi,u}(y)}\norm{[U_N(g)\psi_u](y)}
+   =\int_Z a_{\zeta_{\phi,u}}a_{\psi_u}\dd\mu\notag\\
+ &\hspace{12mm}\le C_\phi C_\psi(1+|u|)^4 .
+ \label{eq:triple-fubini-bound}
+\end{align}
+The equality follows by the same nonnegative coarea and Haar changes of
+variables as \eqref{eq:fp-ga}. Its Gaussian integral is finite, so
+the $u$, $g$, and $y$ integrals may now be interchanged.
+In particular the group-first integral is
+$R\mathsf U_N(u)B\psi$, not a finite-cutoff non-invariant state.
+
+For fixed $g$, the $u,y$ integral equals
+$\ip{\phi}{(1_L\otimes C_N)U_N(g)\psi}_{\rm kin}$.
+Here is a finite-mode justification that does not assume an infinite
+mode interchange. The test-side annihilation in
+\eqref{eq:finite-annihilation} leaves finitely many matter vectors.
+Only their overlaps with the transformed input matter vector contribute.
+Integration in $\theta_L$ selects the test's left mode, and integration
+in $\theta_R$ selects finitely many input observer modes by
+$n_b=n_a+n$. At fixed $g$ their mass coefficients are the original
+compact packets times smooth principal-series matrix coefficients.
+Each surviving radial matrix element is therefore the absolutely
+convergent triple-mode integral \eqref{eq:local-mode}.
+The Gaussian integral supplies \eqref{eq:gaussian-time}.
+The same finite selection follows for the bounded $C_N$ by
+approximating the transformed input in its original-mode Hilbert basis;
+the forbidden components have identically zero matrix elements.
+Thus no uniform large-angular-label bound has been assumed.
+
+Integrating over $g$ now gives the previously defined form
+\eqref{eq:weak-local-definition}, hence
+$\ip{B\phi}{\mathsf C_NB\psi}_{\FP}$.
+Finally $B\mathcal P_N$ is dense, \eqref{eq:direct-absolute-bound}
+is continuous in its physical input, and $\mathsf C_N$ is bounded.
+Approximation extends the identity to all $k$ and proves the physical
+norm bound in \eqref{eq:direct-position-identified}.
+\end{proof}
+
+The identification also proves that \eqref{eq:direct-position-creation}
+vanishes for a physically null test seed. Representative independence
+and the bound by $\norm{B\phi}$ follow from the identity; they do not
+follow from a bound involving $C_\phi$ alone.
+
+There is a useful cutoff consequence. Let $0\le\xi_j\le1$ be compact
+position cutoffs tending pointwise to one. For each fixed test $\phi$,
+the error from inserting $\xi_j(y)$ in
+\eqref{eq:direct-position-creation} is at most
+\begin{equation}
+ \norm k_{\FP}
+ \int_{\mathbb R}g_{\sigma,\tau}(u)
+       \norm{a_{(1-\xi_j)\zeta_{\phi,u}}}_2\dd u
+ \longrightarrow0.
+ \label{eq:position-cutoff-error}
+\end{equation}
+At fixed $u$ this is dominated convergence in the orbit norm; the
+polynomial bound supplies the Gaussian majorant. A proper-time cutoff
+has the analogous tail bound from \eqref{eq:direct-absolute-bound}.
+Hence removal of these cutoffs converges uniformly on the physical
+input unit ball for a fixed test, with no exchange of conditionally
+convergent integrals.
+
+\subsection{What is still not a direct position theorem}
+Theorem~\ref{thm:direct-position} identifies the projected, time-smeared
+creation pairing on an explicit dense physical test family and arbitrary
+physical inputs. It does not assert that the raw product
+$\varphi^+(x_R)Rk(y)$ is a pointwise $\mathcal K_{N+1}$ vector,
+or that raw multiplication preserves observer positive frequency.
+The test-side finite sum is the essential domain choice.
+
+The annihilation block is already the physical adjoint
+$\mathsf C_N^*$, but its unrestricted direct position formula requires
+an additional argument. Transposing it would put
+$\mathfrak a_\nu^\dagger(x_R)$ on the test: even for the matter vacuum
+this is an infinite-mode point-field expression, so
+\eqref{eq:finite-annihilation-bound} is unavailable.
+Nor does the present proof remove the Gaussian, establish the
+$s_*=0$ field extension, or justify integrating two physical invariant
+states over the full unreduced position space.

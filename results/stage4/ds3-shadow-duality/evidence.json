@@ -1,0 +1,56 @@
+{
+  "created_at_utc": "2026-10-30T22:41:47.108022+00:00",
+  "status": "stage checks completed; project integration and freeze pending",
+  "pages": 4,
+  "initial_checks": {
+    "total": 33,
+    "passed": 31,
+    "failed": 2,
+    "preserved": true
+  },
+  "fresh_refinements": 4,
+  "independent_audit_checks": 365,
+  "study_runs": 18,
+  "compilers": [
+    "local pdfLaTeX twice",
+    "desktop success"
+  ],
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "longest_edge_pixels": 1100,
+    "status": "all inspected, no layout defects"
+  },
+  "pending_prior_job": {
+    "session_id": 47841,
+    "counted_as_passed": false
+  },
+  "hashes": {
+    "code/ds3_shadow_duality.py": "7ead3d94009739d66e2425bf1090a510073741a56eb315560305fd8dcd0ad4b5",
+    "code/validate_ds3_shadow_duality.py": "631b767f8bed3d0c83454732b05f6d01a098ee612a34f3d9b7971d080974cd6d",
+    "code/run_ds3_shadow_duality.py": "dde99134df72160b93175b098b376027cb1e7f3c6aa379d8d5d3e5051faecebd",
+    "code/refine_ds3_shadow_identity.py": "4277f31cb328d65c709cfaf2d950d41aee0cbbdf136299248af601c3db4edf76",
+    "code/audit_ds3_shadow_duality.py": "cb3052317231a73080b34bec45c0b256323d1dcd867119cacd2e1d1da0ccbbeb",
+    "code/record_ds3_shadow_duality.py": "94ff73bd77ef215222f02870ac1ca70c3496718e07438c2ccbc7e72a5c87067f",
+    "code/build_ds3_shadow_duality.ps1": "12bb0f65bca534b467c5ce0fdc6549ae7119a0b9e1cb2ad9edcf56066e221443",
+    "notes/stage4-ds3-shadow-duality.md": "d632eb3866f8756114850bb5b4d57f67c2496fdb8bf4c1b4494a47593e9127d1",
+    "literature/stage4-ds3-shadow-duality-sources.md": "9955aa64c67ce350a927969c783a2a96442c255251b2a5d19a4bbaf42a01adaa",
+    "manuscript/ds3-shadow-duality/main.tex": "169afc15dc4e0f885e660d3d2547d87185f8172db2a0e1d0cdccb1af453c008e",
+    "output/pdf/de-sitter-ds3-shadow-duality.pdf": "97fd9fcc1242ae84308078785d2de4d75dfffa6d695e732ee5bffb6c7d23168d",
+    "sources/manifest.json": "41ba7f9a3b41725819a1bc51d14d85c174abdfc2e65cf7fb3cad25e4f054148f",
+    "results/stage4/ds3-shadow-duality/audit.json": "56ea8c66bd16c83db11e2d150d15b806f488380db91fec5aebcee974452ebfba",
+    "results/stage4/ds3-shadow-duality/build-review.md": "b78be6c64c1487469ff64e5df3be2fc56a81e1fdf09be71a28fb6a03805dd1ba",
+    "results/stage4/ds3-shadow-duality/main.log": "cd5a467088edde93a743af32f0f40fc3a5b3880081f140a580037445e36dcdd8",
+    "results/stage4/ds3-shadow-duality/preservation.json": "8d262e2d5618413c345e1bf9e017cd92103437f315bcb082aa0a3eb87b55ae76",
+    "results/stage4/ds3-shadow-duality/refinement.json": "68c39bf84b36497be3f9973df48c45d93661cedffd1f37944dc314372dd7f587",
+    "results/stage4/ds3-shadow-duality/refinement.jsonl": "5756bf04a514542df57b40e97d98c04f806ff422e5d6efe81b86c727af764a89",
+    "results/stage4/ds3-shadow-duality/runs.jsonl": "524e233ea8cc5b15b5c8b26fa57d3abcbeb6a074faad0bb2b4ea1a3e4cb7a642",
+    "results/stage4/ds3-shadow-duality/study.json": "c820ceec4cafbcd128b23dc20fe36501efe222eb88d397d2810f4c3cf6fb06f4",
+    "results/stage4/ds3-shadow-duality/validation.json": "d37e2310229e89964ed87c79a7dad9109a0c1661c4bf71a055d7ca6ce74c7c62",
+    "results/stage4/ds3-shadow-duality/validation.jsonl": "6fc3393a138bfe1c21c7d430788759ef5199dd07616f09efa89f8f8913179cfd"
+  }
+}

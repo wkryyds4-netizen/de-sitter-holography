@@ -1,0 +1,336 @@
+{
+  "created_at_utc": "2026-10-29T15:22:02.334677+00:00",
+  "kind": "comparison-model numerical study; no exact finite-M 6j convergence claim",
+  "status": "passed",
+  "parameters": {
+    "nu": 0.6,
+    "sigma": 1.0,
+    "packet_width": 0.2,
+    "packet": "8/(3w) sin^4(pi(r-r0)/w)",
+    "variable": "exact proper-energy excess r=m-M; not modular p=2*pi*r"
+  },
+  "versions": {
+    "python": "3.14.5 (tags/v3.14.5:5607950, May 10 2026, 10:43:50) [MSC v.1944 64 bit (AMD64)]",
+    "numpy": "2.4.6",
+    "scipy": "1.18.0",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "rows": [
+    {
+      "packet_start": 0.0,
+      "runs": [
+        {
+          "N": 0.0005626655635318478,
+          "X": 0.0003003132781945736,
+          "floor_survival": 0.0005247045706745419,
+          "floor_subtracted": 0.0005247045706745484,
+          "gain_integral": 0.012172373656090255,
+          "order": 12,
+          "radius": 6.0
+        },
+        {
+          "N": 0.0005626655635199183,
+          "X": 0.0003003132781923604,
+          "floor_survival": 0.000524704570655116,
+          "floor_subtracted": 0.0005247045706551158,
+          "gain_integral": 0.012172373656027705,
+          "order": 20,
+          "radius": 6.0
+        },
+        {
+          "N": 0.0005626655635199183,
+          "X": 0.0003003132781923599,
+          "floor_survival": 0.0005247045706551167,
+          "floor_subtracted": 0.0005247045706551168,
+          "gain_integral": 0.012172373656027694,
+          "order": 28,
+          "radius": 8.0
+        }
+      ],
+      "direct_path_floor": 0.0005247045706551151,
+      "relative_comparison": 2.8928336560601465e-15
+    },
+    {
+      "packet_start": 0.25,
+      "runs": [
+        {
+          "N": 0.0014905408203211993,
+          "X": 0.0011279158560663248,
+          "floor_survival": 0.0007252499285097355,
+          "floor_subtracted": 0.000725249928509749,
+          "gain_integral": 0.012172373656027725,
+          "order": 12,
+          "radius": 6.0
+        },
+        {
+          "N": 0.0014905408203212177,
+          "X": 0.0011279158560663603,
+          "floor_survival": 0.0007252499285097143,
+          "floor_subtracted": 0.0007252499285097147,
+          "gain_integral": 0.0121723736560277,
+          "order": 20,
+          "radius": 6.0
+        },
+        {
+          "N": 0.0014905408203212164,
+          "X": 0.0011279158560663595,
+          "floor_survival": 0.0007252499285097136,
+          "floor_subtracted": 0.0007252499285097139,
+          "gain_integral": 0.012172373656027689,
+          "order": 28,
+          "radius": 8.0
+        }
+      ],
+      "direct_path_floor": 0.0007252499285097124,
+      "relative_comparison": 1.644429517124845e-15
+    },
+    {
+      "packet_start": 0.5,
+      "runs": [
+        {
+          "N": 0.0033424419817277475,
+          "X": 0.003011204610880054,
+          "floor_survival": 0.0006624747416953884,
+          "floor_subtracted": 0.0006624747416953871,
+          "gain_integral": 0.012172373656027724,
+          "order": 12,
+          "radius": 6.0
+        },
+        {
+          "N": 0.0033424419817277683,
+          "X": 0.0030112046108800783,
+          "floor_survival": 0.0006624747416953799,
+          "floor_subtracted": 0.0006624747416953802,
+          "gain_integral": 0.012172373656027689,
+          "order": 20,
+          "radius": 6.0
+        },
+        {
+          "N": 0.003342441981727771,
+          "X": 0.00301120461088008,
+          "floor_survival": 0.0006624747416953812,
+          "floor_subtracted": 0.0006624747416953819,
+          "gain_integral": 0.01217237365602769,
+          "order": 28,
+          "radius": 8.0
+        }
+      ],
+      "direct_path_floor": 0.0006624747416953798,
+      "relative_comparison": 2.1275721707126715e-15
+    },
+    {
+      "packet_start": 1.0,
+      "runs": [
+        {
+          "N": 0.009958595221344322,
+          "X": 0.009870453840286682,
+          "floor_survival": 0.00017628276211528428,
+          "floor_subtracted": 0.00017628276211528043,
+          "gain_integral": 0.012172373652874087,
+          "order": 12,
+          "radius": 6.0
+        },
+        {
+          "N": 0.009958595217038017,
+          "X": 0.009870453835929993,
+          "floor_survival": 0.00017628276221604624,
+          "floor_subtracted": 0.00017628276221604705,
+          "gain_integral": 0.012172373656027712,
+          "order": 20,
+          "radius": 6.0
+        },
+        {
+          "N": 0.009958595217038,
+          "X": 0.009870453835929978,
+          "floor_survival": 0.0001762827622160463,
+          "floor_subtracted": 0.00017628276221604358,
+          "gain_integral": 0.012172373656027675,
+          "order": 28,
+          "radius": 8.0
+        }
+      ],
+      "direct_path_floor": 0.00017628276221604618,
+      "relative_comparison": 6.150358429014987e-16
+    },
+    {
+      "packet_start": 2.0,
+      "runs": [
+        {
+          "N": 0.020734525750271442,
+          "X": 0.02073318579495046,
+          "floor_survival": 2.679910641963939e-06,
+          "floor_subtracted": 2.6799106419631014e-06,
+          "gain_integral": 0.012172373652874099,
+          "order": 12,
+          "radius": 6.0
+        },
+        {
+          "N": 0.020734525712899708,
+          "X": 0.02073318575757807,
+          "floor_survival": 2.6799106432753096e-06,
+          "floor_subtracted": 2.6799106432745523e-06,
+          "gain_integral": 0.012172373656027712,
+          "order": 20,
+          "radius": 6.0
+        },
+        {
+          "N": 0.0207345257128997,
+          "X": 0.020733185757578064,
+          "floor_survival": 2.6799106432753104e-06,
+          "floor_subtracted": 2.6799106432745523e-06,
+          "gain_integral": 0.012172373656027673,
+          "order": 28,
+          "radius": 8.0
+        }
+      ],
+      "direct_path_floor": 2.679910643275311e-06,
+      "relative_comparison": 1.5803380410831175e-16
+    },
+    {
+      "packet_start": 3.0,
+      "runs": [
+        {
+          "N": 0.02205150869035818,
+          "X": 0.022051504644956307,
+          "floor_survival": 8.09080374491358e-09,
+          "floor_subtracted": 8.090803749194464e-09,
+          "gain_integral": 0.012172373652874099,
+          "order": 12,
+          "radius": 6.0
+        },
+        {
+          "N": 0.022051508650668416,
+          "X": 0.02205150460526654,
+          "floor_survival": 8.090803748322592e-09,
+          "floor_subtracted": 8.090803749194464e-09,
+          "gain_integral": 0.012172373656027713,
+          "order": 20,
+          "radius": 6.0
+        },
+        {
+          "N": 0.0220515086506684,
+          "X": 0.022051504605266524,
+          "floor_survival": 8.090803748322597e-09,
+          "floor_subtracted": 8.090803749194464e-09,
+          "gain_integral": 0.012172373656027673,
+          "order": 28,
+          "radius": 8.0
+        }
+      ],
+      "direct_path_floor": 8.090803748322597e-09,
+      "relative_comparison": 0.0
+    }
+  ],
+  "checks": [
+    {
+      "name": "independent_path_vs_survival_0.0",
+      "value": 2.8928336560601465e-15,
+      "limit": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "quadrature_refinement_0.0",
+      "value": 1.239785852597202e-15,
+      "limit": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "positive_floor_below_twice_norm_0.0",
+      "passed": true
+    },
+    {
+      "name": "independent_path_vs_survival_0.25",
+      "value": 1.644429517124845e-15,
+      "limit": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "quadrature_refinement_0.25",
+      "value": 8.969615547953685e-16,
+      "limit": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "positive_floor_below_twice_norm_0.25",
+      "passed": true
+    },
+    {
+      "name": "independent_path_vs_survival_0.5",
+      "value": 2.1275721707126715e-15,
+      "limit": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "quadrature_refinement_0.5",
+      "value": 1.963912772965539e-15,
+      "limit": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "positive_floor_below_twice_norm_0.5",
+      "passed": true
+    },
+    {
+      "name": "independent_path_vs_survival_1.0",
+      "value": 6.150358429014987e-16,
+      "limit": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "quadrature_refinement_1.0",
+      "value": 3.0751792145074917e-16,
+      "limit": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "positive_floor_below_twice_norm_1.0",
+      "passed": true
+    },
+    {
+      "name": "independent_path_vs_survival_2.0",
+      "value": 1.5803380410831175e-16,
+      "limit": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "quadrature_refinement_2.0",
+      "value": 3.1606760821662354e-16,
+      "limit": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "positive_floor_below_twice_norm_2.0",
+      "passed": true
+    },
+    {
+      "name": "independent_path_vs_survival_3.0",
+      "value": 0.0,
+      "limit": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "quadrature_refinement_3.0",
+      "value": 6.134228229608367e-16,
+      "limit": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "positive_floor_below_twice_norm_3.0",
+      "passed": true
+    },
+    {
+      "name": "packet_normalization",
+      "value": 2.220446049250313e-15,
+      "limit": 1e-13,
+      "passed": true
+    }
+  ],
+  "error_scope": "Gauss order and finite-radius comparisons are empirical, not a certified total error. Positive formula avoids cancellation in N-X.",
+  "hashes": {
+    "code/cross_limit_comparison.py": "33f07a80913ffd1c5b9668708b92d2ff815a1dc99c893160c509d7b0f03d3630",
+    "code/semiclassical_clock.py": "f9746be11cba312817942ea5069c96664906acdbd9a433b05e7630372d2624bc",
+    "code/quantized_observer.py": "6851265b9daa9b02b2a96580d175be1d7153a13bc1e20ef9e891b8abe936583f",
+    "manuscript/crosslimit.tex": "bee1c6d072dd895037d51312649b9dc0b59c45c4de9aec7e3e92d1203f39571f",
+    "sources/kolchmeyer-liu-2411.08090v1.html": "352ef29aa89c376203271bf984bd904fb471ff313a7d420bc6a0ebc875d78065"
+  }
+}

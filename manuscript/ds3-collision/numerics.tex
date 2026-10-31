@@ -1,0 +1,37 @@
+For $p=q=0.6$, $u=0.3$, $v=-0.2$, the complete physical kernel
+on $a+c=b+d$ has the following pointwise reference values:
+\begin{center}
+\begin{tabular}{rrrrr}\toprule
+$M$ & 2 & 4 & 8 & 16\\\midrule
+$U_{00}$ & 0.96379723 & 1.15801422 & 1.36981862 & 1.58731944\\
+\bottomrule\end{tabular}
+\end{center}
+A separate $M=32$ reference gives $1.80680785$.
+These are point values, not a mass-integrated Bose observable.
+The initial study also retains offsets $r=0.1,0.4$ at $M=2,4,8,16$.
+No full-kernel limiting profile is inferred from these samples.
+
+For the complete $M=32$ kernel, merely increasing arithmetic precision
+does not repair an inadequate asymptotic tail. At 110 decimal digits,
+the merged evaluator with $(N,K)=(512,24)$ has relative error about
+$2.42\,10^{24}$ against the separate LPRS reference. The successive
+settings $(1024,32)$, $(2048,40)$, $(4096,48)$ and $(8192,56)$ give
+approximately $5.78\,10^6$, $1.74\,10^{-13}$, $5.39\,10^{-19}$ and
+$8.60\,10^{-25}$. All attempts are retained. These are sample-specific
+empirical errors, not a uniform accuracy claim for the algorithm.
+
+For the single controlled Omega factor, the rigorous direct-sum
+tail at $M=32$, $r=0$, $N=128$ is about $2.62\,10^{-39}$ in
+exact arithmetic. At much larger $M$ this tail becomes far smaller
+than the available rounding precision; it must not be reported as
+the total numerical error. Computations at 70 and 100 decimal digits
+are stored separately for the same series cutoff.
+
+Convergence in \eqref{scaling} is slow: at $M=1024$ the complex scaled
+value for $\lambda=0$ is approximately $1.31857+0.08411i$,
+whose absolute difference from one is $0.32949$.
+For $\lambda=1$ it is approximately $1.27753+0.09388i$,
+with absolute difference $0.33222$ from $\sin(1/2)/(1/2)$.
+The existence of the asymptotic limit does not imply these masses
+are already close to it.
+

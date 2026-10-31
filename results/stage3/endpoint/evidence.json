@@ -1,0 +1,40 @@
+{
+  "created_at_utc": "2026-10-29T16:45:00.112516+00:00",
+  "kind": "analytic proof and dependency record; author self-review, not independent certification",
+  "result": "Proposition 10.1, uniform two-branch expansion of an individual balanced 4F3 factor, including delta=0",
+  "conditions": [
+    "W=+/-2i Lambda, Lambda -> +infinity",
+    "A=W+A0, C=W+C0, E=A+alpha, F=C+beta, g=b+d+delta",
+    "Re(A0,C0,b,d,alpha,beta)=1/2 for real-label family",
+    "alpha+beta+delta=1, delta purely imaginary",
+    "offsets in fixed compact sets",
+    "principal Log W; any fixed 0<epsilon<1/4"
+  ],
+  "proof_chain": [
+    "Euler double integral extended to z=1 by integrable triple-corner envelope",
+    "Gauss connection formula retains both endpoint branches",
+    "logarithmic variables reduce large phase to one Fourier variable",
+    "J smooth at zero with Euler-beta constant and exponential tail",
+    "dyadic integration by parts bounds the differentiated endpoint remainders",
+    "uniform gamma ratio and holomorphic delta disk give O(Lambda^(-1+epsilon)) through coalescence"
+  ],
+  "numerical_scope": "15 finite-point connection/precision diagnostics; nine one-factor parameter/mass rows and three generic four-factor rows",
+  "not_proven": [
+    "cancellation of additional leading branches after all beta-like prefactors",
+    "combined remainder uniform across opposite-label coincidences",
+    "exact local 6j distribution limit (9.8)",
+    "logarithmically growing time convergence",
+    "finite-G dynamics or full holographic dual",
+    "priority or originality"
+  ],
+  "hashes": {
+    "manuscript/endpoint.tex": "253e70585fafc51ad10cc608f12a917916e8cc4dfa2a6d015f7031f3910b767a",
+    "notes/stage3-hypergeometric-endpoint.md": "7539473a97da2bcd423b89f1125d1965ac6d257368a35a13d199ff6d7d617d74",
+    "literature/stage3-endpoint-sources.md": "2baf9d3bf1ae9b7b63135bd92d38beb19c40c6ff788d0f4e67d4e2040947ba7b",
+    "results/stage3/endpoint/diagnostics.json": "ebbb1dd6e862cad5245af2361e5e9e708bee6bb31cc5a2d514fb22b8a27c479f",
+    "manuscript/crosslimit.tex": "bee1c6d072dd895037d51312649b9dc0b59c45c4de9aec7e3e92d1203f39571f",
+    "code/hyper_endpoint.py": "6515cdb06b74c908815f5e1ebc85cfbffc4b90bd2787c67e9aa09d8b3b88511d",
+    "sources/kolchmeyer-liu-2411.08090v1.html": "352ef29aa89c376203271bf984bd904fb471ff313a7d420bc6a0ebc875d78065",
+    "sources/dlmf-15.8.html": "b29aafa28811d454c2bed0332623d3f88e560a5e366ec5aad7c9e341dcba3227"
+  }
+}

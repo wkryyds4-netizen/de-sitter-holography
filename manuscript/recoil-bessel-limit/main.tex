@@ -1,0 +1,299 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,microtype,booktabs}
+\usepackage[margin=25mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newcommand{\dd}{\mathop{}\!\mathrm d}
+\newcommand{\Q}{Q_\nu}
+\title{A full fixed-\(K\) Barnes--Bessel limit\\with an integrated first correction}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Working research note --- 30 October 2026}
+\begin{document}\maketitle
+\begin{abstract}
+An exact unit-shift recurrence controls the positive horizontal tail
+of the recoil Barnes kernel uniformly in the mass. A complementary
+vertical-tail estimate permits a full fixed-\(K,\alpha\) limit to the
+two-branch Bessel integral. A logarithmically growing truncation then
+justifies the first integrated correction with an absolute
+\(O(\nu^{-2})\) remainder. Constants depend on \(K,\alpha\).
+This addresses the global gap in the preceding note, without asserting
+a joint growing-\(K\) limit or a physical finite-\(G\) four-point function.
+\end{abstract}
+\section{Object and fixed-parameter statement}
+Set the de Sitter radius to one, \(u=v=0\), \(K>0\), real \(\alpha\),
+\(\omega=i\alpha\), and \(M=\nu^2/(2K)\).
+Our object is the internal chiral Barnes amplitude after the earlier
+fixed-mass \(\kappa\to\infty\) limit. Physical state, algebra,
+external insertions and normalization remain as yet unidentified.
+Define \(t=z+i(M+\nu)\), \(v_0=\nu/2\), and
+\[
+ b=\tfrac12-i(M-\nu),\quad c=\tfrac12-i(M+\nu),\quad
+ C_{M,\nu}=e^{-\pi(M+\nu)}\frac{\Gamma(-iv_0)^4\Gamma(b)}{\Gamma(c)}.
+\]
+The normalized exact kernel is
+\[
+ \Q(t)=e^{-i\pi t}\frac{\Gamma(t-iv_0)^4}{\Gamma(-iv_0)^4}
+ \frac{\Gamma(b-t)}{\Gamma(b)}\frac{\Gamma(c)}{\Gamma(c+t)}
+ \Gamma(\tfrac12-t+\alpha/2)\Gamma(\tfrac12-t-\alpha/2).
+ \tag{1}
+\]
+Fix \(\eta>0\), and an integer \(N>|\alpha|/2+1/2\).
+Let \(\mathcal C\) run from \(-N-i\infty\) upward to \(-N+i\eta\),
+then right to \(+\infty+i\eta\). For sufficiently large \(\nu\),
+this is the pole-free deformation of the original Barnes contour.
+Its left ray points upward. Put
+\[
+ I_\nu=\frac1{2\pi i}\int_{\mathcal C}\Q(t)\,\dd t
+       =\frac{\mathfrak B}{C_{M,\nu}},\qquad
+ J=-K\bigl[e^{i\pi\alpha}K_\alpha(K)+i\pi I_\alpha(K)\bigr].
+\]
+\begin{theorem}
+For fixed \(K>0\), real \(\alpha\), as \(\nu\to\infty\),
+\[
+ I_\nu=J\left[1+\frac{i}{\nu}(K^2+\alpha^2-1)\right]
+       +O_{K,\alpha}(\nu^{-2}).
+ \tag{2}
+\]
+The error is absolute, including when \(J=0\).
+\end{theorem}
+
+\newpage
+\section{The exact recurrence gives a uniform horizontal tail}
+Gamma recurrence \cite{gamma}, applied directly to (1), yields
+\[
+ \frac{\Q(t+1)}{\Q(t)}
+ =R_\nu(t):=
+ \frac{(t-i\nu/2)^4}
+ {[(t+\tfrac12-i\nu)^2+M^2][(t+\tfrac12)^2-\alpha^2/4]} .
+ \tag{3}
+\]
+The minus sign from \(e^{-i\pi(t+1)}\) cancels the sign from
+\(\Gamma(b-t-1)/\Gamma(b-t)\). This avoids using a fixed-mass
+Stirling constant as though it were mass-uniform.
+
+Set
+\[
+ d=\max(\alpha^2/4-\eta^2,0),\quad A=\max(2,2K,2d),\quad
+ a=\nu/2-\eta,\quad L_\nu=M-\nu+\eta .
+\]
+For \(\nu\ge\max(8K,4\eta,2)\), \(a\ge0\), \(L_\nu\ge M/2\).
+For \(t=x+i\eta\), \(q=x+\tfrac12\), \(x\ge A\),
+\begin{align*}
+ |(t+\tfrac12-i\nu)^2+M^2|&\ge q^2+L_\nu^2,\\
+ |(t+\tfrac12)^2-\alpha^2/4|&\ge q^2-d.
+\end{align*}
+The first inequality factors the expression into
+\(q+i(\eta-\nu+M)\) and \(q+i(\eta-\nu-M)\);
+the second is the reverse triangle inequality.
+Furthermore,
+\[
+ (1+\tfrac1{2A})^2(2a^2+a^4/A^2)
+ \le\frac{75}{128}\frac{\nu^4}{16K^2}
+ \le L_\nu^2. \tag{4}
+\]
+Indeed, after division by \(\nu^4/(16K^2)\), the upper bound is
+\((5/4)^2(8K^2/\nu^2+K^2/A^2)\le75/128\).
+Since \(q/x\le1+1/(2A)\), (4) implies
+\[
+ (x^2+a^2)^2q^2\le x^4(q^2+L_\nu^2).
+\]
+Using \(x\ge2d\), we conclude
+\begin{align}
+ |R_\nu(x+i\eta)|
+ &\le\frac{x^4}{q^2(q^2-d)}
+ \le\frac1{(1+1/x)(1+1/(2x))}
+ \le\left(\frac{x}{x+1}\right)^{3/2}. \tag{5}
+\end{align}
+The last inequality follows from \((1+u/2)^2\ge1+u\).
+
+For any real \(R\ge A\), define
+\(H_R=\sup_{R\le x\le R+1}|\Q(x+i\eta)|\).
+Iteration on each unit lattice, starting at \(x_0\in[R,R+1)\), gives
+\[
+ |\Q(x+i\eta)|\le H_R\left(\frac{R+1}{x}\right)^{3/2}
+ \quad(x\ge R),\qquad
+ \int_R^\infty|\Q(x+i\eta)|\,\dd x\le6RH_R. \tag{6}
+\]
+At fixed \(R=A\), compact convergence below bounds \(H_A\)
+uniformly for all sufficiently large \(\nu\). This supplies an
+integrable, mass-independent positive-tail majorant.
+
+\newpage
+\section{The downward tail and dominated convergence}
+Let \(s\ge0\) on \(t=-N-is\). Fixed-real-part two-sided Gamma
+bounds follow from Stirling asymptotics and compactness
+\cite{stirling}. Write \(B_0=M-\nu\), \(C_0=M+\nu\).
+The four large numerator factors, the two large-argument ratios,
+and the two remaining Gamma factors bound (1) by a constant times
+\[
+ \frac{v_0^2}{(v_0+s)^{4N+2}}
+ (1+|B_0-s|)^N(C_0+s)^N(1+s)^{2N}
+ \exp\!\left[-\frac{7\pi s}{2}
+ -\frac{\pi}{2}(|B_0-s|-B_0)\right]. \tag{7}
+\]
+This remains valid across \(s=B_0\), where the real part of the
+potentially small Gamma argument is \(N+1/2>0\).
+The exponential is \(e^{-3\pi s}\) for \(s\le B_0\), and
+\(e^{-4\pi s+\pi B_0}\le e^{-3\pi s}\) afterwards.
+
+For \(v_0\ge1\), \(M\ge4\nu\), use
+\[
+ \frac{M+s+1}{(v_0+s)^2}\le\frac{M}{v_0^2}+1=\frac2K+1,
+ \qquad \frac{v_0^2}{(v_0+s)^2}\le1.
+\]
+Also \(1+|B_0-s|\le M+s+1\) and \(C_0+s\le2(M+s+1)\).
+Consequently
+\[
+ |\Q(-N-is)|\le C_{K,\alpha,N}(1+s)^{2N}e^{-3\pi s}.
+ \tag{8}
+\]
+No \(\nu\)-dependent polynomial prefactor remains.
+The short segment \(s\in[-\eta,0]\) is compact and harmless.
+
+At fixed \(t\) on \(\mathcal C\), Gamma-ratio asymptotics give
+\[
+ \Q(t)\longrightarrow
+ U(t):=e^{-2\pi it}(K/2)^{2t}
+ \Gamma(\tfrac12-t+\alpha/2)\Gamma(\tfrac12-t-\alpha/2).
+ \tag{9}
+\]
+The segment from \(-N+i\eta\) to \(A+i\eta\) is compact;
+(6) and (8) dominate the two tails. Thus
+\[
+ I_\nu\longrightarrow\frac1{2\pi i}\int_{\mathcal C}U(t)\,\dd t=J.
+ \tag{10}
+\]
+The last equality is the exact auxiliary identity derived in the
+preceding note using both pole families and the standard Bessel
+connection \cite{bessel,continuation}. At integer \(\alpha\),
+continue their complete sum, not the separate singular coefficients.
+Equation (10) now concerns the full normalized Barnes integral.
+It is not merely compact-kernel convergence.
+
+\newpage
+\section{A growing cutoff justifies the integrated correction}
+Take \(R=\log\nu\), eventually larger than \(A,N,\eta\).
+On the truncated contour with \(x\le R+1\), \(s\le R\), the
+large Gamma arguments remain in fixed safe sectors. A uniform
+Gamma-ratio expansion for shifts \(h=O(\log\nu)\) follows by
+Taylor expansion of \(\log\Gamma\), using Stirling derivative
+bounds on discs of radius \(O(\log\nu)\):
+\[
+ \log\frac{\Gamma(z+h)}{\Gamma(z)}
+ =h\log z+\frac{h(h-1)}{2z}
+   +O\!\left(\frac{|h|+|h|^3}{|z|^2}\right).
+ \tag{11}
+\]
+Log ratios are continued from zero shift. The discs remain a fixed
+angular distance from the negative-real cut.
+Applying (11) at \(-i\nu/2,b,c\), with shifts \(t,-t,t\),
+respectively, gives
+\[
+ \log\frac{\Q(t)}{U(t)}
+ =\frac{4i}{\nu}(t^2-t)
+ +O_{K,\alpha}\!\left(\frac{(1+|t|)^3}{\nu^2}\right). \tag{12}
+\]
+The leading powers contribute only \(O(|t|/\nu^2)\) beyond (9):
+\(\log b+\log c=2\log M-i\pi+O(\nu^2/M^2+1/M)\).
+The \(b,c\) quadratic terms are \(O(|t|^2/M)\).
+Exponentiating (12), uniformly on this growing truncation,
+\[
+ \left|\Q(t)-U(t)\left[1+\frac{4i}{\nu}(t^2-t)\right]\right|
+ \le \frac{C_{K,\alpha}}{\nu^2}(1+|t|)^4|U(t)|. \tag{13}
+\]
+All polynomial moments of \(|U|\) are integrable on \(\mathcal C\).
+
+It remains to verify that the discarded exact tails are small at
+this \emph{moving} cutoff. Equation (8) gives
+\[
+ \int_R^\infty|\Q(-N-is)|\,\dd s
+ \le C(1+R)^{2N}e^{-3\pi R}=o(\nu^{-2}).
+\]
+On \([R,R+1]+i\eta\), (12) bounds \(|\Q|\le C|U|\).
+Reflection and Stirling for \(U\) give
+\[
+ H_R\le C\exp[-2R\log R+C_KR+O(\log R)] .
+\]
+Together with (6), the horizontal exact tail is \(o(\nu^{-m})\)
+for every fixed \(m>0\). The auxiliary tails with the polynomial
+correction enjoy the same required estimates.
+Thus integration of (13) yields
+\[
+ I_\nu=J+\frac{4i}{\nu}\frac1{2\pi i}
+ \int_{\mathcal C}(t^2-t)U(t)\,\dd t+O_{K,\alpha}(\nu^{-2}).
+\]
+For \(\mathcal D=(K/2)\partial_K\) at \emph{fixed \(\alpha\)},
+the auxiliary Bessel equation gives
+\[
+ (\mathcal D^2-\mathcal D)J
+ =\frac{K^2+\alpha^2-1}{4}J.
+\]
+This proves (2). The moving cutoff is essential: the exact kernel
+need not have finite polynomially weighted moments on its full
+horizontal tail.
+
+\newpage
+\section{Normalized ratio and finite numerical checks}
+At \(\alpha=0\), \(J(K,0)=-K[K_0(K)+i\pi I_0(K)]\ne0\) for \(K>0\).
+Since \(C_{M,\nu}\) is independent of \(\alpha\), the theorem implies
+\[
+ \frac{\mathfrak B(K,\alpha)}{\mathfrak B(K,0)}
+ =\frac{J(K,\alpha)}{J(K,0)}e^{i\alpha^2/\nu}
+ +O_{K,\alpha}(\nu^{-2}). \tag{14}
+\]
+This is an absolute normalized-ratio error. A relative formulation
+also needs \(J(K,\alpha)\ne0\).
+The exponential agrees with the proved first-order term;
+no all-orders resummation is asserted.
+
+We independently integrate (1) on the fixed corner contour.
+For \(I_\nu^{(1)}=J[1+i(K^2+\alpha^2-1)/\nu]\), the results are
+\begin{center}\begin{tabular}{rrrrr}\toprule
+\(K\)&\(\alpha\)&\(\nu\)&\(|I_\nu/I_\nu^{(1)}-1|\)&
+\(\nu^2|I_\nu-I_\nu^{(1)}|\)\\\midrule
+2&0.7&64&\(3.97586\,10^{-4}\)&19.59115\\
+2&0.7&128&\(9.56063\,10^{-5}\)&18.82311\\
+2&0.7&256&\(2.37028\,10^{-5}\)&18.66140\\
+4&8&128&0.17119939&75063.29\\
+4&8&256&0.04863051&75956.09\\
+4&8&512&0.01261136&76178.45\\\bottomrule
+\end{tabular}\end{center}
+The large difference between the last-column scales illustrates why
+a fixed-parameter theorem cannot silently become a joint-\(K\) estimate.
+
+The 69 diagnostics comprise 12 exact recurrence checks, 6 mass
+inequality checks, 36 rational tail-step samples, 6 quadrature
+refinements, 4 precision/combined contour-extent comparisons,
+4 empirical decreases of the first-correction error, and
+one normalization comparison with the previous original-\(z\) contour.
+Six compact-expansion residuals are also recorded as data.
+Quadrature uses 18/30 Gauss nodes per segment and 50/65 digits;
+the largest mass in each family is checked at 85 digits and
+with \((X,T,\eta)=(36,18,1)\) changed to \((44,24,0.75)\).
+These are empirical finite-point checks, not interval certification.
+The tail proof is the analytic argument (3)--(8).
+
+\section{What remains}
+The previous full-integral gap is closed for fixed \(K,\alpha\) on
+the symmetric \(u=v=0\), imaginary-\(\omega\) slice.
+The constants in this proof depend on \(K,\alpha\);
+in particular \(A\) grows like \(\alpha^2\) and \(N\) like \(|\alpha|\).
+The next task is explicit uniform control when \(\alpha=Ky\) and
+\(K\to\infty\), including branch cancellation and the transverse
+variables. The physical external cycles, normalization, disconnected
+baseline, finite-\(G\) limit and microscopic holographic dictionary
+remain open. This is an author self-reviewed proof draft.
+
+\begin{thebibliography}{9}
+\bibitem{gamma} NIST DLMF, \S5.5, Gamma recurrence and reflection,
+\url{https://dlmf.nist.gov/5.5}.
+\bibitem{stirling} NIST DLMF, \S5.11, asymptotic expansions and remainders,
+\url{https://dlmf.nist.gov/5.11}.
+\bibitem{bessel} NIST DLMF, \S10.25 and \S10.27,
+\url{https://dlmf.nist.gov/10.27}.
+\bibitem{continuation} NIST DLMF, 10.34.2, continuation below the cut,
+\url{https://dlmf.nist.gov/10.34}.
+\end{thebibliography}
+\end{document}

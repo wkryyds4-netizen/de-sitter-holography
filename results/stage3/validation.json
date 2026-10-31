@@ -1,0 +1,1407 @@
+{
+  "precision_dps": 70,
+  "status": "passed",
+  "checks": 275,
+  "check_details": [
+    {
+      "name": "series tail nu=0,q=0.01",
+      "passed": true,
+      "error": "6.68334454668969879358395797332e-46",
+      "tolerance": "6.683397949000208788451700697361953124470087390583224197e-46"
+    },
+    {
+      "name": "geometric integral nu=0,q=0.01",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "real correlator nu=0,q=0.01",
+      "passed": true
+    },
+    {
+      "name": "series tail nu=0,q=0.1",
+      "passed": true,
+      "error": "3.48547920227186573535863792591e-46",
+      "tolerance": "3.486961849961213136909017937343673773905196579545695862e-46"
+    },
+    {
+      "name": "geometric integral nu=0,q=0.1",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "real correlator nu=0,q=0.1",
+      "passed": true
+    },
+    {
+      "name": "series tail nu=0,q=0.3",
+      "passed": true,
+      "error": "2.41163633484254271668243751289e-46",
+      "tolerance": "2.417077193807945602676777885851215808939038366073391688e-46"
+    },
+    {
+      "name": "geometric integral nu=0,q=0.3",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "real correlator nu=0,q=0.3",
+      "passed": true
+    },
+    {
+      "name": "series tail nu=0,q=0.6",
+      "passed": true,
+      "error": "4.06993614797755924907152184257e-46",
+      "tolerance": "4.092762962524144821534825939322967147592259907399172366e-46"
+    },
+    {
+      "name": "geometric integral nu=0,q=0.6",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "real correlator nu=0,q=0.6",
+      "passed": true
+    },
+    {
+      "name": "series tail nu=0,q=0.8",
+      "passed": true,
+      "error": "9.10988660599181007239763330641e-46",
+      "tolerance": "9.181711996371215344237331374131625455069668342929579899e-46"
+    },
+    {
+      "name": "geometric integral nu=0,q=0.8",
+      "passed": true,
+      "error": "1.55575381946528542678601601345e-61",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "real correlator nu=0,q=0.8",
+      "passed": true
+    },
+    {
+      "name": "series tail nu=0,q=0.95",
+      "passed": true,
+      "error": "9.30415761038631471768192499712e-46",
+      "tolerance": "9.392506558271499322548316218069510737161412688976758449e-46"
+    },
+    {
+      "name": "geometric integral nu=0,q=0.95",
+      "passed": true,
+      "error": "3.11150763893057085357203202689e-61",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "real correlator nu=0,q=0.95",
+      "passed": true
+    },
+    {
+      "name": "series tail nu=0.5,q=0.01",
+      "passed": true,
+      "error": "9.58108700227936518832468168536e-46",
+      "tolerance": "9.581161591902681693567199594267145046615305640197489686e-46"
+    },
+    {
+      "name": "geometric integral nu=0.5,q=0.01",
+      "passed": true,
+      "error": "1.26157150252819647087643828012e-73",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "real correlator nu=0.5,q=0.01",
+      "passed": true
+    },
+    {
+      "name": "series tail nu=0.5,q=0.1",
+      "passed": true,
+      "error": "5.05002268156483961755551286098e-46",
+      "tolerance": "5.052147328840034975670834151152612707347828638763035746e-46"
+    },
+    {
+      "name": "geometric integral nu=0.5,q=0.1",
+      "passed": true,
+      "error": "9.56058403723175397808770696619e-73",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "real correlator nu=0.5,q=0.1",
+      "passed": true
+    },
+    {
+      "name": "series tail nu=0.5,q=0.3",
+      "passed": true,
+      "error": "3.51249822418594728165974579133e-46",
+      "tolerance": "3.520376562344829277451292397565984234482763343438025276e-46"
+    },
+    {
+      "name": "geometric integral nu=0.5,q=0.3",
+      "passed": true,
+      "error": "6.21292874788338421905994462091e-72",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "real correlator nu=0.5,q=0.3",
+      "passed": true
+    },
+    {
+      "name": "series tail nu=0.5,q=0.6",
+      "passed": true,
+      "error": "5.94763846822414702522946479669e-46",
+      "tolerance": "5.980912604753978501944821854182903417856006116975399165e-46"
+    },
+    {
+      "name": "geometric integral nu=0.5,q=0.6",
+      "passed": true,
+      "error": "7.87167418779295216048005106866e-71",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "real correlator nu=0.5,q=0.6",
+      "passed": true
+    },
+    {
+      "name": "series tail nu=0.5,q=0.8",
+      "passed": true,
+      "error": "8.4944199576592078833107144861e-46",
+      "tolerance": "8.561023341468800379981951280976805410846101847237155277e-46"
+    },
+    {
+      "name": "geometric integral nu=0.5,q=0.8",
+      "passed": true,
+      "error": "1.5557538194652854543600364922e-61",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "real correlator nu=0.5,q=0.8",
+      "passed": true
+    },
+    {
+      "name": "series tail nu=0.5,q=0.95",
+      "passed": true,
+      "error": "9.00383978190885563099391379391e-46",
+      "tolerance": "9.088965837550294802892276558054162399890673327679554209e-46"
+    },
+    {
+      "name": "geometric integral nu=0.5,q=0.95",
+      "passed": true,
+      "error": "3.11150763893065671812654710419e-61",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "real correlator nu=0.5,q=0.95",
+      "passed": true
+    },
+    {
+      "name": "series tail nu=1,q=0.01",
+      "passed": true,
+      "error": "2.09041873039450043477659414037e-49",
+      "tolerance": "2.091432782543998620737727275391914411935333702093460509e-49"
+    },
+    {
+      "name": "geometric integral nu=1,q=0.01",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "real correlator nu=1,q=0.01",
+      "passed": true
+    },
+    {
+      "name": "series tail nu=1,q=0.1",
+      "passed": true,
+      "error": "1.17627709764363240775173046666e-47",
+      "tolerance": "1.176747151363130965412993350321011285771088176601275853e-47"
+    },
+    {
+      "name": "geometric integral nu=1,q=0.1",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "real correlator nu=1,q=0.1",
+      "passed": true
+    },
+    {
+      "name": "series tail nu=1,q=0.3",
+      "passed": true,
+      "error": "8.65967910614672075197573005791e-46",
+      "tolerance": "8.678762789889640403562046115377386828731342036972490374e-46"
+    },
+    {
+      "name": "geometric integral nu=1,q=0.3",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "real correlator nu=1,q=0.3",
+      "passed": true
+    },
+    {
+      "name": "series tail nu=1,q=0.6",
+      "passed": true,
+      "error": "5.27936984034828137428817646823e-46",
+      "tolerance": "5.308396395226964304808910250113168280604920631894335766e-46"
+    },
+    {
+      "name": "geometric integral nu=1,q=0.6",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "real correlator nu=1,q=0.6",
+      "passed": true
+    },
+    {
+      "name": "series tail nu=1,q=0.8",
+      "passed": true,
+      "error": "8.62503724931634279376104781778e-46",
+      "tolerance": "8.691852553378988772244523342522673693231686282189516715e-46"
+    },
+    {
+      "name": "geometric integral nu=1,q=0.8",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "real correlator nu=1,q=0.8",
+      "passed": true
+    },
+    {
+      "name": "series tail nu=1,q=0.95",
+      "passed": true,
+      "error": "9.85527381041618423485331943867e-46",
+      "tolerance": "9.94762397431926845505960557484268023061186056067495956e-46"
+    },
+    {
+      "name": "geometric integral nu=1,q=0.95",
+      "passed": true,
+      "error": "6.22301527786114170714406405378e-61",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "real correlator nu=1,q=0.95",
+      "passed": true
+    },
+    {
+      "name": "series tail nu=2,q=0.01",
+      "passed": true,
+      "error": "1.90881436112768741111034763842e-48",
+      "tolerance": "1.90892405014417419513335743893649435512668726723199523e-48"
+    },
+    {
+      "name": "geometric integral nu=2,q=0.01",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "real correlator nu=2,q=0.01",
+      "passed": true
+    },
+    {
+      "name": "series tail nu=2,q=0.1",
+      "passed": true,
+      "error": "1.20043322754185753015205074113e-46",
+      "tolerance": "1.200843170806215615130592816679064988660676824375107694e-46"
+    },
+    {
+      "name": "geometric integral nu=2,q=0.1",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "real correlator nu=2,q=0.1",
+      "passed": true
+    },
+    {
+      "name": "series tail nu=2,q=0.3",
+      "passed": true,
+      "error": "8.24598918816299521753162598592e-46",
+      "tolerance": "8.262535093161478347572087554788229889110923771852503589e-46"
+    },
+    {
+      "name": "geometric integral nu=2,q=0.3",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "real correlator nu=2,q=0.3",
+      "passed": true
+    },
+    {
+      "name": "series tail nu=2,q=0.6",
+      "passed": true,
+      "error": "7.55244024353269429491039183861e-46",
+      "tolerance": "7.591967402633787570432954488740135433618090091084196817e-46"
+    },
+    {
+      "name": "geometric integral nu=2,q=0.6",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "real correlator nu=2,q=0.6",
+      "passed": true
+    },
+    {
+      "name": "series tail nu=2,q=0.8",
+      "passed": true,
+      "error": "6.6092848033792082575384692947e-46",
+      "tolerance": "6.658537751814480282516213280875280622185695659824552401e-46"
+    },
+    {
+      "name": "geometric integral nu=2,q=0.8",
+      "passed": true,
+      "error": "6.22301527786114170714406405378e-61",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "real correlator nu=2,q=0.8",
+      "passed": true
+    },
+    {
+      "name": "series tail nu=2,q=0.95",
+      "passed": true,
+      "error": "9.48051639575540377609182961193e-46",
+      "tolerance": "9.566989494913064299687491214898653925288984274133862515e-46"
+    },
+    {
+      "name": "geometric integral nu=2,q=0.95",
+      "passed": true,
+      "error": "4.97841222228891336571525124302e-60",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "real correlator nu=2,q=0.95",
+      "passed": true
+    },
+    {
+      "name": "series tail nu=i/2,q=0.01",
+      "passed": true,
+      "error": "4.34822612399700689271082896681e-46",
+      "tolerance": "4.34826191304782652178261304391308696087000004348260913e-46"
+    },
+    {
+      "name": "geometric integral nu=i/2,q=0.01",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "real correlator nu=i/2,q=0.01",
+      "passed": true
+    },
+    {
+      "name": "conformal independent closed form nu=i/2,q=0.01",
+      "passed": true,
+      "error": "1.65449264822483658337223017748e-55",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "series tail nu=i/2,q=0.1",
+      "passed": true,
+      "error": "2.24370487943538740130803959057e-46",
+      "tolerance": "2.244669911335578002244668911335578002244668911335578002e-46"
+    },
+    {
+      "name": "geometric integral nu=i/2,q=0.1",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "real correlator nu=i/2,q=0.1",
+      "passed": true
+    },
+    {
+      "name": "conformal independent closed form nu=i/2,q=0.1",
+      "passed": true,
+      "error": "2.54104790722074818372561575402e-55",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "series tail nu=i/2,q=0.3",
+      "passed": true,
+      "error": "1.54433287949064531700900226542e-46",
+      "tolerance": "1.547837481262058149787038141786302146823658694246929541e-46"
+    },
+    {
+      "name": "geometric integral nu=i/2,q=0.3",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "real correlator nu=i/2,q=0.3",
+      "passed": true
+    },
+    {
+      "name": "conformal independent closed form nu=i/2,q=0.3",
+      "passed": true,
+      "error": "2.66092267876474667227718276609e-55",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "series tail nu=i/2,q=0.6",
+      "passed": true,
+      "error": "7.28900940597715100552938569211e-46",
+      "tolerance": "7.330406325682054950420241857458451566796805364483197627e-46"
+    },
+    {
+      "name": "geometric integral nu=i/2,q=0.6",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "real correlator nu=i/2,q=0.6",
+      "passed": true
+    },
+    {
+      "name": "conformal independent closed form nu=i/2,q=0.6",
+      "passed": true,
+      "error": "4.65533317511010635355422938785e-55",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "series tail nu=i/2,q=0.8",
+      "passed": true,
+      "error": "9.11251865312458573116338158989e-46",
+      "tolerance": "9.184765459804516307282268149309323144992881824721813419e-46"
+    },
+    {
+      "name": "geometric integral nu=i/2,q=0.8",
+      "passed": true,
+      "error": "1.55575381946528542678601601345e-61",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "real correlator nu=i/2,q=0.8",
+      "passed": true
+    },
+    {
+      "name": "conformal independent closed form nu=i/2,q=0.8",
+      "passed": true,
+      "error": "3.31632082953132110727051449197e-55",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "series tail nu=i/2,q=0.95",
+      "passed": true,
+      "error": "8.96742763230376817602249906906e-46",
+      "tolerance": "9.052952089901412641957841141272406484057491040577167745e-46"
+    },
+    {
+      "name": "geometric integral nu=i/2,q=0.95",
+      "passed": true,
+      "error": "1.55575381946528542678601601345e-61",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "real correlator nu=i/2,q=0.95",
+      "passed": true
+    },
+    {
+      "name": "conformal independent closed form nu=i/2,q=0.95",
+      "passed": true,
+      "error": "4.98031660894232131187777189246e-55",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "regulated elementary continuation q=1.05,t_sign=-1,F14_lower_t,eps=1e-3",
+      "passed": true,
+      "error": "3.11150763893057085357203202689e-61",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=1.05,t_sign=-1,F14_lower_t,eps=1e-3",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=1.05,t_sign=-1,F14_lower_t,eps=1e-5",
+      "passed": true,
+      "error": "1.55575381946528542678601601345e-61",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=1.05,t_sign=-1,F14_lower_t,eps=1e-5",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=1.05,t_sign=-1,F14_lower_t,eps=1e-7",
+      "passed": true,
+      "error": "3.47877129657931373511895582303e-61",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=1.05,t_sign=-1,F14_lower_t,eps=1e-7",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=1.05,t_sign=-1,F14_lower_t,eps=1e-9",
+      "passed": true,
+      "error": "3.47877129657931373511895582303e-61",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=1.05,t_sign=-1,F14_lower_t,eps=1e-9",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=1.05,t_sign=-1,F12_upper_t,eps=1e-3",
+      "passed": true,
+      "error": "3.11150763893057085357203202689e-61",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=1.05,t_sign=-1,F12_upper_t,eps=1e-3",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=1.05,t_sign=-1,F12_upper_t,eps=1e-5",
+      "passed": true,
+      "error": "1.55575381946528542678601601345e-61",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=1.05,t_sign=-1,F12_upper_t,eps=1e-5",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=1.05,t_sign=-1,F12_upper_t,eps=1e-7",
+      "passed": true,
+      "error": "3.47877129657931373511895582303e-61",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=1.05,t_sign=-1,F12_upper_t,eps=1e-7",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=1.05,t_sign=-1,F12_upper_t,eps=1e-9",
+      "passed": true,
+      "error": "3.47877129657931373511895582303e-61",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=1.05,t_sign=-1,F12_upper_t,eps=1e-9",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=1.05,t_sign=1,F14_lower_t,eps=1e-3",
+      "passed": true,
+      "error": "3.11150763893057085357203202689e-61",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=1.05,t_sign=1,F14_lower_t,eps=1e-3",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=1.05,t_sign=1,F14_lower_t,eps=1e-5",
+      "passed": true,
+      "error": "1.55575381946528542678601601345e-61",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=1.05,t_sign=1,F14_lower_t,eps=1e-5",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=1.05,t_sign=1,F14_lower_t,eps=1e-7",
+      "passed": true,
+      "error": "3.47877129657931373511895582303e-61",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=1.05,t_sign=1,F14_lower_t,eps=1e-7",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=1.05,t_sign=1,F14_lower_t,eps=1e-9",
+      "passed": true,
+      "error": "3.47877129657931373511895582303e-61",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=1.05,t_sign=1,F14_lower_t,eps=1e-9",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=1.05,t_sign=1,F12_upper_t,eps=1e-3",
+      "passed": true,
+      "error": "3.11150763893057085357203202689e-61",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=1.05,t_sign=1,F12_upper_t,eps=1e-3",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=1.05,t_sign=1,F12_upper_t,eps=1e-5",
+      "passed": true,
+      "error": "1.55575381946528542678601601345e-61",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=1.05,t_sign=1,F12_upper_t,eps=1e-5",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=1.05,t_sign=1,F12_upper_t,eps=1e-7",
+      "passed": true,
+      "error": "3.47877129657931373511895582303e-61",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=1.05,t_sign=1,F12_upper_t,eps=1e-7",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=1.05,t_sign=1,F12_upper_t,eps=1e-9",
+      "passed": true,
+      "error": "3.47877129657931373511895582303e-61",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=1.05,t_sign=1,F12_upper_t,eps=1e-9",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=1.2,t_sign=-1,F14_lower_t,eps=1e-3",
+      "passed": true,
+      "error": "1.55575381946528542678601601345e-61",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=1.2,t_sign=-1,F14_lower_t,eps=1e-3",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=1.2,t_sign=-1,F14_lower_t,eps=1e-5",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=1.2,t_sign=-1,F14_lower_t,eps=1e-5",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=1.2,t_sign=-1,F14_lower_t,eps=1e-7",
+      "passed": true,
+      "error": "7.77876909732642713393008006723e-62",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=1.2,t_sign=-1,F14_lower_t,eps=1e-7",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=1.2,t_sign=-1,F14_lower_t,eps=1e-9",
+      "passed": true,
+      "error": "7.77876909732642713393008006723e-62",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=1.2,t_sign=-1,F14_lower_t,eps=1e-9",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=1.2,t_sign=-1,F12_upper_t,eps=1e-3",
+      "passed": true,
+      "error": "1.55575381946528542678601601345e-61",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=1.2,t_sign=-1,F12_upper_t,eps=1e-3",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=1.2,t_sign=-1,F12_upper_t,eps=1e-5",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=1.2,t_sign=-1,F12_upper_t,eps=1e-5",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=1.2,t_sign=-1,F12_upper_t,eps=1e-7",
+      "passed": true,
+      "error": "7.77876909732642713393008006723e-62",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=1.2,t_sign=-1,F12_upper_t,eps=1e-7",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=1.2,t_sign=-1,F12_upper_t,eps=1e-9",
+      "passed": true,
+      "error": "7.77876909732642713393008006723e-62",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=1.2,t_sign=-1,F12_upper_t,eps=1e-9",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=1.2,t_sign=1,F14_lower_t,eps=1e-3",
+      "passed": true,
+      "error": "1.55575381946528542678601601345e-61",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=1.2,t_sign=1,F14_lower_t,eps=1e-3",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=1.2,t_sign=1,F14_lower_t,eps=1e-5",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=1.2,t_sign=1,F14_lower_t,eps=1e-5",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=1.2,t_sign=1,F14_lower_t,eps=1e-7",
+      "passed": true,
+      "error": "7.77876909732642713393008006723e-62",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=1.2,t_sign=1,F14_lower_t,eps=1e-7",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=1.2,t_sign=1,F14_lower_t,eps=1e-9",
+      "passed": true,
+      "error": "7.77876909732642713393008006723e-62",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=1.2,t_sign=1,F14_lower_t,eps=1e-9",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=1.2,t_sign=1,F12_upper_t,eps=1e-3",
+      "passed": true,
+      "error": "1.55575381946528542678601601345e-61",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=1.2,t_sign=1,F12_upper_t,eps=1e-3",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=1.2,t_sign=1,F12_upper_t,eps=1e-5",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=1.2,t_sign=1,F12_upper_t,eps=1e-5",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=1.2,t_sign=1,F12_upper_t,eps=1e-7",
+      "passed": true,
+      "error": "7.77876909732642713393008006723e-62",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=1.2,t_sign=1,F12_upper_t,eps=1e-7",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=1.2,t_sign=1,F12_upper_t,eps=1e-9",
+      "passed": true,
+      "error": "7.77876909732642713393008006723e-62",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=1.2,t_sign=1,F12_upper_t,eps=1e-9",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=2,t_sign=-1,F14_lower_t,eps=1e-3",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=2,t_sign=-1,F14_lower_t,eps=1e-3",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=2,t_sign=-1,F14_lower_t,eps=1e-5",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=2,t_sign=-1,F14_lower_t,eps=1e-5",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=2,t_sign=-1,F14_lower_t,eps=1e-7",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=2,t_sign=-1,F14_lower_t,eps=1e-7",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=2,t_sign=-1,F14_lower_t,eps=1e-9",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=2,t_sign=-1,F14_lower_t,eps=1e-9",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=2,t_sign=-1,F12_upper_t,eps=1e-3",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=2,t_sign=-1,F12_upper_t,eps=1e-3",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=2,t_sign=-1,F12_upper_t,eps=1e-5",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=2,t_sign=-1,F12_upper_t,eps=1e-5",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=2,t_sign=-1,F12_upper_t,eps=1e-7",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=2,t_sign=-1,F12_upper_t,eps=1e-7",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=2,t_sign=-1,F12_upper_t,eps=1e-9",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=2,t_sign=-1,F12_upper_t,eps=1e-9",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=2,t_sign=1,F14_lower_t,eps=1e-3",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=2,t_sign=1,F14_lower_t,eps=1e-3",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=2,t_sign=1,F14_lower_t,eps=1e-5",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=2,t_sign=1,F14_lower_t,eps=1e-5",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=2,t_sign=1,F14_lower_t,eps=1e-7",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=2,t_sign=1,F14_lower_t,eps=1e-7",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=2,t_sign=1,F14_lower_t,eps=1e-9",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=2,t_sign=1,F14_lower_t,eps=1e-9",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=2,t_sign=1,F12_upper_t,eps=1e-3",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=2,t_sign=1,F12_upper_t,eps=1e-3",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=2,t_sign=1,F12_upper_t,eps=1e-5",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=2,t_sign=1,F12_upper_t,eps=1e-5",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=2,t_sign=1,F12_upper_t,eps=1e-7",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=2,t_sign=1,F12_upper_t,eps=1e-7",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=2,t_sign=1,F12_upper_t,eps=1e-9",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=2,t_sign=1,F12_upper_t,eps=1e-9",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=5,t_sign=-1,F14_lower_t,eps=1e-3",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=5,t_sign=-1,F14_lower_t,eps=1e-3",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=5,t_sign=-1,F14_lower_t,eps=1e-5",
+      "passed": true,
+      "error": "4.86173068582901695870630004202e-63",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=5,t_sign=-1,F14_lower_t,eps=1e-5",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=5,t_sign=-1,F14_lower_t,eps=1e-7",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=5,t_sign=-1,F14_lower_t,eps=1e-7",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=5,t_sign=-1,F14_lower_t,eps=1e-9",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=5,t_sign=-1,F14_lower_t,eps=1e-9",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=5,t_sign=-1,F12_upper_t,eps=1e-3",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=5,t_sign=-1,F12_upper_t,eps=1e-3",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=5,t_sign=-1,F12_upper_t,eps=1e-5",
+      "passed": true,
+      "error": "4.86173068582901695870630004202e-63",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=5,t_sign=-1,F12_upper_t,eps=1e-5",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=5,t_sign=-1,F12_upper_t,eps=1e-7",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=5,t_sign=-1,F12_upper_t,eps=1e-7",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=5,t_sign=-1,F12_upper_t,eps=1e-9",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=5,t_sign=-1,F12_upper_t,eps=1e-9",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=5,t_sign=1,F14_lower_t,eps=1e-3",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=5,t_sign=1,F14_lower_t,eps=1e-3",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=5,t_sign=1,F14_lower_t,eps=1e-5",
+      "passed": true,
+      "error": "4.86173068582901695870630004202e-63",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=5,t_sign=1,F14_lower_t,eps=1e-5",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=5,t_sign=1,F14_lower_t,eps=1e-7",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=5,t_sign=1,F14_lower_t,eps=1e-7",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=5,t_sign=1,F14_lower_t,eps=1e-9",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=5,t_sign=1,F14_lower_t,eps=1e-9",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=5,t_sign=1,F12_upper_t,eps=1e-3",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=5,t_sign=1,F12_upper_t,eps=1e-3",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=5,t_sign=1,F12_upper_t,eps=1e-5",
+      "passed": true,
+      "error": "4.86173068582901695870630004202e-63",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=5,t_sign=1,F12_upper_t,eps=1e-5",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=5,t_sign=1,F12_upper_t,eps=1e-7",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=5,t_sign=1,F12_upper_t,eps=1e-7",
+      "passed": true
+    },
+    {
+      "name": "regulated elementary continuation q=5,t_sign=1,F12_upper_t,eps=1e-9",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-48"
+    },
+    {
+      "name": "time-to-q side q=5,t_sign=1,F12_upper_t,eps=1e-9",
+      "passed": true
+    },
+    {
+      "name": "linear regulator convergence q=1.05,t_sign=-1,F12_upper_t",
+      "passed": true
+    },
+    {
+      "name": "linear regulator convergence q=1.05,t_sign=-1,F14_lower_t",
+      "passed": true
+    },
+    {
+      "name": "linear regulator convergence q=1.05,t_sign=1,F12_upper_t",
+      "passed": true
+    },
+    {
+      "name": "linear regulator convergence q=1.05,t_sign=1,F14_lower_t",
+      "passed": true
+    },
+    {
+      "name": "linear regulator convergence q=1.2,t_sign=-1,F12_upper_t",
+      "passed": true
+    },
+    {
+      "name": "linear regulator convergence q=1.2,t_sign=-1,F14_lower_t",
+      "passed": true
+    },
+    {
+      "name": "linear regulator convergence q=1.2,t_sign=1,F12_upper_t",
+      "passed": true
+    },
+    {
+      "name": "linear regulator convergence q=1.2,t_sign=1,F14_lower_t",
+      "passed": true
+    },
+    {
+      "name": "linear regulator convergence q=2,t_sign=-1,F12_upper_t",
+      "passed": true
+    },
+    {
+      "name": "linear regulator convergence q=2,t_sign=-1,F14_lower_t",
+      "passed": true
+    },
+    {
+      "name": "linear regulator convergence q=2,t_sign=1,F12_upper_t",
+      "passed": true
+    },
+    {
+      "name": "linear regulator convergence q=2,t_sign=1,F14_lower_t",
+      "passed": true
+    },
+    {
+      "name": "linear regulator convergence q=5,t_sign=-1,F12_upper_t",
+      "passed": true
+    },
+    {
+      "name": "linear regulator convergence q=5,t_sign=-1,F14_lower_t",
+      "passed": true
+    },
+    {
+      "name": "linear regulator convergence q=5,t_sign=1,F12_upper_t",
+      "passed": true
+    },
+    {
+      "name": "linear regulator convergence q=5,t_sign=1,F14_lower_t",
+      "passed": true
+    },
+    {
+      "name": "zero recoil 0",
+      "passed": true
+    },
+    {
+      "name": "leading small-q coefficient 0",
+      "passed": true,
+      "error": "2.84444444444444465342403628118e-17",
+      "tolerance": "1e-13"
+    },
+    {
+      "name": "zero recoil 0.5",
+      "passed": true
+    },
+    {
+      "name": "leading small-q coefficient 0.5",
+      "passed": true,
+      "error": "3.77777777777777806303854875283e-17",
+      "tolerance": "1e-13"
+    },
+    {
+      "name": "zero recoil 1",
+      "passed": true
+    },
+    {
+      "name": "leading small-q coefficient 1",
+      "passed": true,
+      "error": "7.11111111111111169160997732426e-17",
+      "tolerance": "1e-13"
+    },
+    {
+      "name": "zero recoil 2",
+      "passed": true
+    },
+    {
+      "name": "leading small-q coefficient 2",
+      "passed": true,
+      "error": "2.84444444444444474630385487528e-16",
+      "tolerance": "1e-13"
+    },
+    {
+      "name": "zero recoil i/2",
+      "passed": true
+    },
+    {
+      "name": "leading small-q coefficient i/2",
+      "passed": true,
+      "error": "2.00000000000000014285714285714e-17",
+      "tolerance": "1e-13"
+    },
+    {
+      "name": "fixed-time mass limit",
+      "passed": true
+    },
+    {
+      "name": "leading 1/m^2 scaling",
+      "passed": true
+    },
+    {
+      "name": "principal-series conjugate branches t_sign=-1",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-55"
+    },
+    {
+      "name": "principal-series conjugate branches t_sign=1",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-55"
+    },
+    {
+      "name": "conditional F4 insertion ('0.4', '-0.7', '0.1', '0.2'),kappa=-1",
+      "passed": true,
+      "error": "7.07474928033336903711649944601e-74",
+      "tolerance": "1e-55"
+    },
+    {
+      "name": "conditional F5 normalization ('0.4', '-0.7', '0.1', '0.2'),kappa=-1",
+      "passed": true
+    },
+    {
+      "name": "conditional F4 insertion ('0.4', '-0.7', '0.1', '0.2'),kappa=0.3",
+      "passed": true,
+      "error": "7.07474928033336903711649944601e-74",
+      "tolerance": "1e-55"
+    },
+    {
+      "name": "conditional F5 normalization ('0.4', '-0.7', '0.1', '0.2'),kappa=0.3",
+      "passed": true
+    },
+    {
+      "name": "conditional F4 insertion ('0.4', '-0.7', '0.1', '0.2'),kappa=2",
+      "passed": true,
+      "error": "8.84343660041671129639562430751e-75",
+      "tolerance": "1e-55"
+    },
+    {
+      "name": "conditional F5 normalization ('0.4', '-0.7', '0.1', '0.2'),kappa=2",
+      "passed": true
+    },
+    {
+      "name": "conditional F4 insertion ('-0.5', '0.2', '0.1', '0.2'),kappa=-1",
+      "passed": true,
+      "error": "1.4149498560666738074232998892e-73",
+      "tolerance": "1e-55"
+    },
+    {
+      "name": "conditional F5 normalization ('-0.5', '0.2', '0.1', '0.2'),kappa=-1",
+      "passed": true
+    },
+    {
+      "name": "conditional F4 insertion ('-0.5', '0.2', '0.1', '0.2'),kappa=0.3",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-55"
+    },
+    {
+      "name": "conditional F5 normalization ('-0.5', '0.2', '0.1', '0.2'),kappa=0.3",
+      "passed": true
+    },
+    {
+      "name": "conditional F4 insertion ('-0.5', '0.2', '0.1', '0.2'),kappa=2",
+      "passed": true,
+      "error": "7.07474928033336903711649944601e-74",
+      "tolerance": "1e-55"
+    },
+    {
+      "name": "conditional F5 normalization ('-0.5', '0.2', '0.1', '0.2'),kappa=2",
+      "passed": true
+    },
+    {
+      "name": "conditional F4 insertion ('0', '0', '0', '0'),kappa=-1",
+      "passed": true,
+      "error": "2.26391976970667809187727982272e-72",
+      "tolerance": "1e-55"
+    },
+    {
+      "name": "conditional F5 normalization ('0', '0', '0', '0'),kappa=-1",
+      "passed": true
+    },
+    {
+      "name": "conditional F4 insertion ('0', '0', '0', '0'),kappa=0.3",
+      "passed": true,
+      "error": "0.0",
+      "tolerance": "1e-55"
+    },
+    {
+      "name": "conditional F5 normalization ('0', '0', '0', '0'),kappa=0.3",
+      "passed": true
+    },
+    {
+      "name": "conditional F4 insertion ('0', '0', '0', '0'),kappa=2",
+      "passed": true,
+      "error": "1.13195988485333904593863991136e-72",
+      "tolerance": "1e-55"
+    },
+    {
+      "name": "conditional F5 normalization ('0', '0', '0', '0'),kappa=2",
+      "passed": true
+    },
+    {
+      "name": "code hash recoil_model.py",
+      "passed": true
+    },
+    {
+      "name": "code hash run_recoil_study.py",
+      "passed": true
+    },
+    {
+      "name": "code hash validate_recoil.py",
+      "passed": true
+    }
+  ],
+  "passed": 275,
+  "failed": 0,
+  "code_sha256": {
+    "recoil_model.py": "dfbad0865ddd06a88329a75c9f9e99f0aad42793fe9ab283a4261126a56bea8c",
+    "run_recoil_study.py": "39608763a3e5b7abba6325f013e60ced322730eb8a0afc41f1f9c837352fdfd0",
+    "validate_recoil.py": "74a30fbe57a25354daaf0013d3d930e1ca82e0ec631f9557c1de69ffc7e2f4d9"
+  },
+  "scope": "Formula reproduction, regulator diagnostics, limiting cases, conditional diagonal insertion; no finite-clock dictionary validation."
+}

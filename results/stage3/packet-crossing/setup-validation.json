@@ -1,0 +1,228 @@
+{
+  "status": "passed",
+  "checks": 28,
+  "failed": 0,
+  "check_details": [
+    {
+      "name": "Positive normalized rule 2",
+      "passed": true
+    },
+    {
+      "name": "Independent centered moment n=2 k=0",
+      "passed": true,
+      "error": 0.0,
+      "tolerance": 3e-15
+    },
+    {
+      "name": "Independent centered moment n=2 k=1",
+      "passed": true,
+      "error": 0.0,
+      "tolerance": 3e-15
+    },
+    {
+      "name": "Independent centered moment n=2 k=2",
+      "passed": true,
+      "error": 0.0,
+      "tolerance": 3e-15
+    },
+    {
+      "name": "Independent centered moment n=2 k=3",
+      "passed": true,
+      "error": 0.0,
+      "tolerance": 3e-15
+    },
+    {
+      "name": "Analytic G2 displacement",
+      "passed": true,
+      "error": 3.469446951953614e-18,
+      "tolerance": 2e-16
+    },
+    {
+      "name": "Positive normalized rule 3",
+      "passed": true
+    },
+    {
+      "name": "Independent centered moment n=3 k=0",
+      "passed": true,
+      "error": 0.0,
+      "tolerance": 3e-15
+    },
+    {
+      "name": "Independent centered moment n=3 k=1",
+      "passed": true,
+      "error": 4.243830605668097e-18,
+      "tolerance": 3e-15
+    },
+    {
+      "name": "Independent centered moment n=3 k=2",
+      "passed": true,
+      "error": 0.0,
+      "tolerance": 3e-15
+    },
+    {
+      "name": "Independent centered moment n=3 k=3",
+      "passed": true,
+      "error": 4.7857738564893964e-20,
+      "tolerance": 3e-15
+    },
+    {
+      "name": "Independent centered moment n=3 k=4",
+      "passed": true,
+      "error": 6.938893903907228e-18,
+      "tolerance": 3e-15
+    },
+    {
+      "name": "Independent centered moment n=3 k=5",
+      "passed": true,
+      "error": 1.3566365014127267e-19,
+      "tolerance": 3e-15
+    },
+    {
+      "name": "Analytic G3 displacement",
+      "passed": true,
+      "error": 1.1102230246251565e-16,
+      "tolerance": 3e-16
+    },
+    {
+      "name": "Independent packet normalization",
+      "passed": true,
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-15
+    },
+    {
+      "name": "Cached raw point versus old high precision formula",
+      "passed": true,
+      "error": 8.510553839446447e-28,
+      "tolerance": 2e-16
+    },
+    {
+      "name": "Initial miss",
+      "passed": true
+    },
+    {
+      "name": "Raw record round trip",
+      "passed": true
+    },
+    {
+      "name": "Cache invalidation dps",
+      "passed": true
+    },
+    {
+      "name": "Cache invalidation guard_digits",
+      "passed": true
+    },
+    {
+      "name": "Cache invalidation source_sha256",
+      "passed": true
+    },
+    {
+      "name": "Corrupted payload rejected",
+      "passed": true
+    },
+    {
+      "name": "Full cube versus folded phase 0",
+      "passed": true,
+      "error": 1.1102230246251565e-16,
+      "tolerance": 3e-14
+    },
+    {
+      "name": "Full cube versus folded phase 1",
+      "passed": true,
+      "error": 1.1102230246251565e-16,
+      "tolerance": 3e-14
+    },
+    {
+      "name": "Full cube versus folded phase 2",
+      "passed": true,
+      "error": 1.1443916996305594e-16,
+      "tolerance": 3e-14
+    },
+    {
+      "name": "Full cube versus folded phase 3",
+      "passed": true,
+      "error": 1.4752290795525882e-16,
+      "tolerance": 3e-14
+    },
+    {
+      "name": "Full cube versus folded phase 4",
+      "passed": true,
+      "error": 1.4752290795525882e-16,
+      "tolerance": 3e-14
+    },
+    {
+      "name": "Time reversal synthetic kernel",
+      "passed": true,
+      "error": 0.0,
+      "tolerance": 1e-14
+    }
+  ],
+  "generated_utc": "2026-10-29T01:07:32.764890+00:00",
+  "actual_point": {
+    "identity": {
+      "configuration": {
+        "schema": "crossing-point-v1",
+        "dps": 15,
+        "guard_digits": 8,
+        "max_working_dps": 180,
+        "sum_method": "r+s+e",
+        "mpmath": "1.3.0",
+        "python": "3.14.5",
+        "code_sha256": {
+          "crossing_point_cache.py": "b35c824b16c13430b69d69099e922fd7e5805aeac958cc1d0c4afac9f221cd42",
+          "observer_crossing_regular.py": "2396f0987e964d3e9e507c8d76edb9babba2a5daf0cef27a2cc820c4cda3f64e",
+          "observer_crossing.py": "30a91db5fd97e90e3521ea82b253fc5f1cdad95cf033d4d63a701035f185883e"
+        },
+        "source_sha256": "352ef29aa89c376203271bf984bd904fb471ff313a7d420bc6a0ebc875d78065"
+      },
+      "nu": "0.6",
+      "labels": [
+        "0.61",
+        "0.71",
+        "0.83",
+        "0.8"
+      ]
+    },
+    "key": "6af5d30e65414267f6c2c9723ae40e4d052b14166fd80dc53a9e757b22c3b02f",
+    "conditional": {
+      "real": "0.00347448614102225227313199",
+      "imag": "-8.51055383944644809432213e-28"
+    },
+    "hh_cross": {
+      "real": "0.00000180010915004791365608755",
+      "imag": "-4.40926376349153431773349e-31"
+    },
+    "symmetric_s": {
+      "real": "0.000000289404247828771350446616",
+      "imag": "-7.08879049316515099579327e-32"
+    },
+    "method": "direct_chart",
+    "chart_labels": [
+      "0.61",
+      "0.71",
+      "0.83",
+      "0.8"
+    ],
+    "chart_rotation": 0,
+    "requested_dps": 15,
+    "working_dps": 24,
+    "max_observed_formula_dps": 24,
+    "cancellation_ratio": "6.68208134203345010719504",
+    "reality_relative_error": "2.44944244818386294779123e-25",
+    "residue_relative_error": "0.0",
+    "refinement_count": 0,
+    "hyper_calls": 4,
+    "elapsed_seconds": 0.21185520000290126,
+    "generated_utc": "2026-10-29T01:07:32.158613+00:00"
+  },
+  "code_sha256": {
+    "validate_packet_setup.py": "d9201fcac9bbb46a88e7b4b4ce6120952bb0b4c0885ed02e35cbbc38a0a9dd8d",
+    "packet_quadrature.py": "7f62a2156c5c0dbd169adacd8a00a6007a22ca13a03e8ffeab7de2b931a4567e",
+    "crossing_point_cache.py": "b35c824b16c13430b69d69099e922fd7e5805aeac958cc1d0c4afac9f221cd42",
+    "observer_crossing_regular.py": "2396f0987e964d3e9e507c8d76edb9babba2a5daf0cef27a2cc820c4cda3f64e",
+    "observer_crossing.py": "30a91db5fd97e90e3521ea82b253fc5f1cdad95cf033d4d63a701035f185883e",
+    "quantized_observer.py": "6851265b9daa9b02b2a96580d175be1d7153a13bc1e20ef9e891b8abe936583f"
+  },
+  "input_sha256": {
+    "sources/kolchmeyer-liu-2411.08090v1.html": "352ef29aa89c376203271bf984bd904fb471ff313a7d420bc6a0ebc875d78065"
+  }
+}

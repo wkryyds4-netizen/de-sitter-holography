@@ -1,0 +1,235 @@
+\section{The logarithmic-time limit with finite preparation}
+\label{sec:logtime}
+We keep the state, group, equal independent matter species, exact energy,
+fixed proper Gaussian width and the two threshold protocols of
+Section~\ref{sec:crosslimit}. The limit is still strictly $G_N\to0$.
+The result below is a distribution and packet limit in this model, not
+a finite-gravity scrambling theorem. Throughout this section the repeated
+times are $(t_M,0,t_M,0)$, with
+\begin{equation}
+ t_M=\log(2M)+T,\qquad T\in\mathbb R.
+ \label{eq:logtime-scaling}
+\end{equation}
+The order of limits in the early and late plateaux below is first
+$M\to\infty$ at fixed $T$, and only then $T\to\mp\infty$.
+
+\subsection{Phase orientation and the surviving distribution}
+For representation-label offsets write
+$\chi=q_1-q_2+q_3-q_4$, $\delta=i\chi$, and use $p,q,e,t,v,U_\pm$
+from Section~\ref{sec:assembly}; the auxiliary scalar $t$ there is not
+the physical time $t_M$. Define
+\begin{equation}
+ V_+=2^{-\delta}U_+,\qquad V_-=2^{\delta}U_-.
+ \label{eq:logtime-V}
+\end{equation}
+Both have value $2\pi$ on $\chi=0$. The leading expression (11.9) becomes
+\begin{equation}
+ \Lambda S^0_\Lambda=\frac{1}{\pi^3}
+ \left[(2\Lambda)^{i\chi}\Gamma(i\chi)V_+
+       +(2\Lambda)^{-i\chi}\Gamma(-i\chi)V_-\right].
+ \label{eq:logtime-leading}
+\end{equation}
+Each summand on the right is assigned its symmetric principal value in
+$\chi$; their sum is the original removable, ordinary function. This is
+an algebraic decomposition, not an arbitrary choice of contact term.
+
+In our ordering $(a,b,c,d)$ the repeated-time phase is
+$e^{it_M\chi_m}$, where $\chi_m=m_a-m_b+m_c-m_d$; see
+\eqref{eq:cross-time}. The minus branch, rather than the plus branch,
+therefore survives positive logarithmic time. Set
+\begin{equation}
+ \mathcal L_T(q_1,q_2,q_3,q_4)
+ =\frac{2}{\pi}\delta_D(\chi)
+ +\frac{1}{\pi^3}\operatorname{PV}_{\chi}
+      \left[e^{iT\chi}\Gamma(-i\chi)V_-\right].
+ \label{eq:logtime-local-distribution}
+\end{equation}
+Here $\operatorname{PV}_\chi$ means symmetric exclusion of $|\chi|<h$
+followed by $h\downarrow0$, at fixed three transverse linear coordinates.
+The transverse choice does not alter this linear-hyperplane distribution.
+
+\begin{theorem}[Local logarithmic-time limit]
+On compact real-offset tests, for fixed $\nu>0$,
+\begin{equation}
+ \Lambda e^{i[\log(2\Lambda)+T]\chi}
+ S(\Lambda+q_1,\ldots,\Lambda+q_4,\nu,\nu)
+ \longrightarrow\mathcal L_T.
+ \label{eq:logtime-raw-limit}
+\end{equation}
+Convergence is uniform for $T$ in compact real intervals.
+\label{thm:logtime-local}
+\end{theorem}
+\begin{proof}
+The remainder in Theorem~11.1, after multiplication by $\Lambda$ and a
+unit-modulus phase, is $O(\Lambda^{-1+\epsilon})$ on each compact set.
+Thus it remains to handle \eqref{eq:logtime-leading}. Locally,
+\[
+ \Gamma(i\chi)V_+=-\frac{2\pi i}{\chi}+R_+,
+ \qquad
+ \Gamma(-i\chi)V_-=\frac{2\pi i}{\chi}+R_-,
+\]
+with smooth $R_\pm$. Multiplication of the plus branch by the time phase
+gives frequency $2\log(2\Lambda)+T$. The Fourier identity
+\[
+ e^{ik\chi}\operatorname{PV}\frac1\chi
+ \longrightarrow i\pi\operatorname{sgn}(k)\delta_D(\chi),
+ \qquad |k|\to\infty,
+\]
+and integration by parts for the smooth remainder give the positive
+$2\delta_D(\chi)/\pi$ term. The minus branch has only the finite phase
+$e^{iT\chi}$. These arguments are uniform on compact $T$ intervals:
+the large frequency remains positive and the finite-phase test seminorms
+are bounded there. Smooth compact transverse integrations cause no change.
+\end{proof}
+
+\subsection{Restoring external factors and exact energy}
+Let $\xi=(x,y,z,0)$, $\chi=x-y+z$, and define the smooth factor
+\begin{equation}
+ H_\nu(x,y,z)=\frac{e^{-\pi y}}{1024\pi^5}
+ \prod_{j=1}^{4}\prod_{\varepsilon=\pm1}
+ \Gamma\left(\frac14+\frac i2
+       [\xi_j-\xi_{j+1}+\varepsilon\nu]\right),
+ \quad \xi_5=\xi_1.
+ \label{eq:logtime-H}
+\end{equation}
+It is the $F_\Lambda/\Lambda$ limit of (11.14), with its complex phase
+retained. In particular
+$4H_\nu(x,x+z,z)/\pi=v_\nu(x)v_\nu(z)$.
+Let $\mathcal L_T(x,y,z,0)$ denote the pullback of
+\eqref{eq:logtime-local-distribution}. Translation of all four labels
+does not change it. Then in the exact-energy variables of (9.7),
+\begin{equation}
+ e^{it_M(x-y+z)}\widetilde{\mathcal C}_M(r;x,y,z)
+ \longrightarrow H_\nu(x,y,z)\mathcal L_T(x,y,z,0)
+ \quad\hbox{in }\cD'(\mathbb R^4).
+ \label{eq:logtime-energy-limit}
+\end{equation}
+To verify that the changing time introduces no missing constant, change
+the four energy variables to their exact representation labels as in
+Theorem~11.2. The smooth test and external-factor errors are $O(M^{-1})$
+on a compact set. The difference between the two linear phase arguments
+is at worst $O(M^{-1})$, so their exponentials differ by
+$O(M^{-1}\log M)$, uniformly for compact $T$. The pointwise compact
+bound $\Lambda S=O(1+\log\Lambda)$ bounds the resulting pairing error
+by $O(M^{-1}\log^2M)$. The three internal Jacobians cancel in the change
+of variables; the external inverse Jacobian tends to one. For energy
+differences alone the sharper error is $O(M^{-2})$, but it is not needed.
+These estimates also justify replacing $\Lambda$ by $M$ in the logarithm.
+
+\subsection{Hard thresholds and arbitrary fixed packets}
+Put $Q=x^2+(y-x)^2+(y-z)^2+z^2$, and let $K_0$ be (9.9). The two
+limiting threshold weights after integrating the external energy are
+\begin{equation}
+ W_F(x,y,z)=1,\qquad
+ W_Q(x,y,z)=K_0\bigl(\max(0,-x,-y,-z)\bigr).
+ \label{eq:logtime-threshold-weights}
+\end{equation}
+Define
+\begin{equation}
+ \mathcal X_P(T)=
+ \int_{\mathbb R^3}^{\rm reg}
+  W_P(x,y,z)e^{-\sigma^2 Q/2}H_\nu(x,y,z)
+           \mathcal L_T(x,y,z,0)\,\dd x\dd y\dd z,
+ \qquad P=F,Q.
+ \label{eq:logtime-packet}
+\end{equation}
+The superscript specifies the following definition: use smooth compact
+external densities and path cutoffs, smooth every intermediate threshold,
+pair the resulting smooth test with the displayed distribution, and then
+remove these approximations with the bounds below. It does not silently
+multiply a general distribution by a discontinuous function. For a general
+$L^1$ density this definition is retained; no ordinary absolutely convergent
+three-dimensional integral or unsmoothed pointwise principal value is asserted.
+
+\begin{theorem}[Finite-packet limit and ordered plateaux]
+For every fixed probability density $\pi_0\in L^1(\mathbb R_+)$ and either
+protocol, the regularized expression \eqref{eq:logtime-packet} exists,
+is independent of the allowed approximations, and
+\begin{equation}
+ X^P_M(t_M,0,t_M,0)\longrightarrow\mathcal X_P(T)
+ \label{eq:logtime-packet-convergence}
+\end{equation}
+uniformly on compact $T$ intervals. It obeys
+\begin{equation}
+ \lim_{T\to-\infty}\mathcal X_P(T)=X^P_\infty,
+ \qquad \lim_{T\to+\infty}\mathcal X_P(T)=0,
+ \label{eq:logtime-plateaux}
+\end{equation}
+where $X^P_\infty$ is the repeated-time fixed-time limit in Section~9.
+The limiting commutator norm squared is
+\begin{equation}
+ \mathcal D_P(T)=2\bigl(N^P_\infty-\operatorname{Re}\mathcal X_P(T)\bigr).
+ \label{eq:logtime-commutator}
+\end{equation}
+Consequently $\mathcal D_F(-\infty)=0$,
+$\mathcal D_Q(-\infty)=\mathcal D_{\rm edge}$, and
+$\mathcal D_P(+\infty)=2N^P_\infty$.
+\label{thm:logtime-packet}
+\end{theorem}
+\begin{proof}
+All truncation estimates of Proposition~9.1 hold for every real time,
+so also for $t_M$. Each threshold layer of width $\eta$ excludes a
+tree norm squared at most $2\eta A\sup B$, giving a pairing error
+$O(\sqrt\eta)$. Smooth path cutoffs have the same positive tail control.
+Changing the external density in $L^1$ costs at most $A^2$ times its
+$L^1$ distance. These bounds are independent of $M$ and $T$.
+For each fixed smooth approximation, \eqref{eq:logtime-energy-limit}
+gives convergence. The approximation estimates pass to its limit and
+make the family of limiting pairings uniformly Cauchy for all $T$.
+This proves existence, approximation independence and compact-$T$
+uniform convergence. It also derives \eqref{eq:logtime-threshold-weights}
+from $r,r+x,r+y,r+z\ge0$, rather than assuming the fixed-time delta
+constraint away from its support.
+
+For a fixed compact smooth test, use the same Fourier identity on the
+minus branch of \eqref{eq:logtime-local-distribution}. Its singular part
+contributes $-2\operatorname{sgn}(T)\delta_D(\chi)/\pi$, while its
+smooth remainder vanishes. Thus $\mathcal L_T\to4\delta_D(\chi)/\pi$
+as $T\to-\infty$ and $\mathcal L_T\to0$ as $T\to+\infty$.
+The approximation bounds just proved are uniform in $T$, allowing their
+removal after either limit. On $y=x+z$, the Gaussian, external factor
+and threshold weight recover exactly the fixed-time expression (9.9).
+The ordered norms are time independent and converge by the one-step
+positive-kernel limit and its Gaussian envelope. Equation~\eqref{eq:commutator-norm}, or
+direct expansion of the two-state norm, gives
+\eqref{eq:logtime-commutator}.
+\end{proof}
+Neither monotonicity nor an early-time exponential rate follows. In
+particular $\mathcal D_Q(T)-\mathcal D_{\rm edge}$ need not be positive
+from this argument. A hard moving boundary changes the analytic test
+class needed for contour shifts and cannot be ignored when extracting
+an exponent. The fixed-protocol limit is independent of $\pi_0$;
+the moving-protocol limit generally is not.
+
+\subsection{The constant time origin in the source}
+There is a useful direct coefficient check against KL (B.50), using
+the same raw ordering for this comparison. Let
+$a_\pm=q_1-q_2\pm\nu$ and define $R(z)=\Gamma(1-z)\sin(\pi z/2)$.
+The duplication and reflection identities give $c(z)=2^zR(z)$, so
+\begin{equation}
+ V_+=2\pi\cosh(\pi\chi/2)
+ \frac{R(p+v)R(q+v)}{R(p-t)R(q-t)}.
+ \label{eq:logtime-origin-identity}
+\end{equation}
+Here $p+v=1/2+ia_-$, $q+v=1/2+ia_+$,
+$p-t=1/2+i(a_--\chi)$ and $q-t=1/2+i(a_+-\chi)$.
+Reflecting the minus-$\nu$ Gamma factors in this expression gives
+exactly the coefficient multiplying $\Gamma(i\chi)$ in KL (B.50),
+after division by $\pi^3$. This is an algebraic identity off the pole,
+extended by meromorphy. For the source's negative phase convention,
+the exact assembled limit therefore has the surviving factor
+$e^{-iT\chi}\Gamma(i\chi)V_+/\pi^3$ at
+$\tau=\log(2\Lambda)+T$.
+
+KL (6.32) uses that time origin, but (B.45) uses
+$\log(2\Lambda/e)$ with the same printed coefficient in (B.50).
+At one and the same physical time, write
+$T_{\rm app}=\tau-\log(2\Lambda/e)=T+1$.
+Our surviving factor is then $e^{-i(T_{\rm app}-1)\chi}$, whereas the
+printed (B.51) uses $e^{-iT_{\rm app}\chi}$. The difference is a finite
+$e^{i\chi}$ phase. Source footnote 73 acknowledges an additive shift;
+the calculation here fixes our convention from the exact Gamma ratios.
+Exact-energy corrections vanish and cannot supply this constant. We
+record this as a source-convention/asymptotic discrepancy, not an
+author-confirmed erratum. It does not affect the fixed-time delta or
+the two plateaux, but must be kept in any quantitative curve comparison.

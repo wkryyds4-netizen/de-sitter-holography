@@ -1,0 +1,47 @@
+{
+  "created_at_utc": "2026-10-31T07:38:06.936996+00:00",
+  "status": "stage verification complete; project audit follows",
+  "pages": 5,
+  "study_points": 21,
+  "independent_representation_checks": 11,
+  "quadrature_nodes": 144,
+  "audit_checks": 446,
+  "compilers": [
+    "local pdfLaTeX twice",
+    "desktop success"
+  ],
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "longest_edge_pixels": 1100,
+    "status": "all inspected; final page 2 condition update rechecked"
+  },
+  "hashes": {
+    "code/ds3_uniform_local.py": "b801fffb32f59fa0e1fb6366111b54e0e999129aba3fc7c5b9b9957901dee02b",
+    "code/run_ds3_uniform_local.py": "4ca058f42c37d15ab51cc9c0bafc5738e71a540cef8aba4ff9a7b0ec89e5e54b",
+    "code/validate_ds3_uniform_local.py": "7e23f1bc27790fdd06308e8b38486d0a3a0163bb1895a64333f42a0281ec4f44",
+    "code/integrate_ds3_uniform_local.py": "39c917fb13a20c42f1cd017f70dd2319d256b0109b9ab007b605b00739b42dea",
+    "code/audit_ds3_uniform_local.py": "441a614aca9662936835a50f0608fb1c9b81c4ddcd97b30e8f26e3fdce487c2e",
+    "code/record_ds3_uniform_local.py": "91b4a6da29aaf944f38ca09f354256faef92546a1eeeae67da95d85299fdb2e4",
+    "code/build_ds3_uniform_local.ps1": "3ab16561842474d381b3e4a667da62af874b967232c62a5aba8c3e8ed3f70ea7",
+    "notes/stage4-ds3-uniform-local.md": "c87fd3f110b78147f2c29e420e573ba9c3e97dfebfe7763cd0a48577d6a95260",
+    "literature/stage4-ds3-uniform-local-sources.md": "0d98bd2ae40212f7c339db2553bf6f16428cc4294af5ebb45b8299a331148b7b",
+    "manuscript/ds3-uniform-local/main.tex": "6483a690ca643107d2f7754d85641a4a30be15e2f4124c4de6e6eef35a4c9d08",
+    "output/pdf/de-sitter-ds3-uniform-local.pdf": "956d1fba4a298c97898e3809d009bc2cdde5f32c739959e573265be882b718ad",
+    "sources/manifest.json": "41ba7f9a3b41725819a1bc51d14d85c174abdfc2e65cf7fb3cad25e4f054148f",
+    "results/stage4/ds3-uniform-local/audit.json": "74f11028079856ef1e559e2625a8ac1a8336131841255b698bea9c8be4ef158f",
+    "results/stage4/ds3-uniform-local/build-review.md": "5a63a6a8c2c4d0fd8023978599c1c4d1ecdc9313818a6cd839dc80baf5661836",
+    "results/stage4/ds3-uniform-local/integral-nodes.jsonl": "9eaeda7b9ee83f856e92f8cf83f9fbba736397c181b08c4d9152befc1cdd0707",
+    "results/stage4/ds3-uniform-local/integrals.json": "3f85a7dbfd456e4fb3b9db5172420753583ff72a0f2a4dc460588e3c8d4f15a2",
+    "results/stage4/ds3-uniform-local/main.log": "5ec8f3c0a86618e5660aeea9a4e7be75758893381f7a94fb8b0721a2f81900f5",
+    "results/stage4/ds3-uniform-local/preservation.json": "87335e59b6dfa2cab50de79de1d7a298754be0e67b4b91ef96186abcc6528b31",
+    "results/stage4/ds3-uniform-local/runs.jsonl": "4f96ed787a40e9d3c319e0ffdff4911187f648a9744e3aaa02ca1b0e566865f2",
+    "results/stage4/ds3-uniform-local/study.json": "7c4b949e49d2f556c50420daf3923df8b8786fdbfad99c80b6dc1d90e1994fb6",
+    "results/stage4/ds3-uniform-local/validation.json": "cd0e108b5875d21ae2513148d4d23243aecc93c63b1bd72a968402341369f562"
+  }
+}

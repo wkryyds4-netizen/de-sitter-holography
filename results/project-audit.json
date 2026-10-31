@@ -1,0 +1,849 @@
+{
+  "status": "passed",
+  "errors": [],
+  "warnings": [
+    "Source remains a link, not an archive: held-maxfield-2509.05412v1",
+    "Source remains a link, not an archive: vasy-math172-fourier",
+    "Source remains a link, not an archive: dlmf-16.5",
+    "Source remains a link, not an archive: dlmf-15.6"
+  ],
+  "verified_at_utc": "2026-10-31T07:42:00.667224+00:00",
+  "required_files": 777,
+  "local_links_checked": 925,
+  "code_and_input_hashes_checked": 1086,
+  "scientific_checks": {
+    "stage1": {
+      "checks": 235,
+      "failed": 0,
+      "status": "passed"
+    },
+    "stage2": {
+      "checks": 328,
+      "failed": 0,
+      "status": "passed"
+    },
+    "operator-bridge": {
+      "checks": 24,
+      "failed": 0,
+      "status": "passed"
+    },
+    "stage3-recoil": {
+      "checks": 275,
+      "failed": 0,
+      "status": "passed"
+    },
+    "stage3-packets": {
+      "checks": 145,
+      "failed": 0,
+      "status": "passed"
+    },
+    "stage3-fourpoint": {
+      "checks": 308,
+      "failed": 0,
+      "status": "passed"
+    },
+    "stage3-clock-limit": {
+      "checks": 36,
+      "failed": 0,
+      "status": "passed"
+    },
+    "stage3-crossing": {
+      "checks": 76,
+      "failed": 0,
+      "status": "passed",
+      "evaluation_exceptions": 0,
+      "exception_records": 0
+    },
+    "stage3-clock-rate": {
+      "checks": 58,
+      "failed": 0,
+      "status": "passed"
+    },
+    "stage3-crossing-regular": {
+      "checks": 231,
+      "failed": 0,
+      "status": "passed",
+      "evaluation_exceptions": 0,
+      "exception_records": 0
+    },
+    "conditional-crossing": {
+      "checks": 27,
+      "failed": 0,
+      "status": "passed"
+    },
+    "packet-crossing-setup": {
+      "checks": 28,
+      "failed": 0,
+      "status": "passed"
+    },
+    "packet-crossing-positive": {
+      "checks": 34,
+      "failed": 0,
+      "status": "passed"
+    },
+    "packet-crossing-tail": {
+      "checks": 29,
+      "failed": 0,
+      "status": "passed"
+    },
+    "packet-crossing": {
+      "checks": 93,
+      "failed": 0,
+      "status": "passed"
+    },
+    "stage4": {
+      "checks": 84,
+      "failed": 0,
+      "status": "passed"
+    },
+    "microscopic-comparison": {
+      "checks": 28,
+      "failed": 0,
+      "status": "passed"
+    },
+    "microscopic-time-corrections": {
+      "checks": 41,
+      "failed": 0,
+      "status": "passed"
+    }
+  },
+  "completed_studies": {
+    "conditional-crossing-pilot": {
+      "status": "completed",
+      "rows": 3
+    },
+    "conditional-crossing-refined": {
+      "status": "completed",
+      "rows": 2
+    },
+    "conditional-crossing-cartesian": {
+      "status": "completed",
+      "rows": 2
+    },
+    "packet-crossing-study": {
+      "status": "completed",
+      "rows": 4
+    }
+  },
+  "historical_records_retained": [
+    {
+      "file": "results/stage2/validation-initial-grid.json",
+      "recorded_status": "failed",
+      "recorded_failed": 38,
+      "hash_policy": "retained historical bytes; old code hashes not compared to current code"
+    },
+    {
+      "file": "results/stage2/tails-initial-grid.json",
+      "recorded_status": null,
+      "recorded_failed": null,
+      "hash_policy": "retained historical bytes; old code hashes not compared to current code"
+    },
+    {
+      "file": "results/stage2/study-initial-grid.json",
+      "recorded_status": null,
+      "recorded_failed": null,
+      "hash_policy": "retained historical bytes; old code hashes not compared to current code"
+    },
+    {
+      "file": "results/stage2/operator-bridge-initial-diagnostic.json",
+      "recorded_status": "failed",
+      "recorded_failed": 6,
+      "hash_policy": "retained historical bytes; old code hashes not compared to current code"
+    },
+    {
+      "file": "results/stage3/fourpoint/clock-limit-initial-unsplit-study.json",
+      "recorded_status": null,
+      "recorded_failed": null,
+      "hash_policy": "retained historical bytes; old code hashes not compared to current code"
+    },
+    {
+      "file": "results/stage3/fourpoint/clock-limit-initial-unsplit-validation.json",
+      "recorded_status": "failed",
+      "recorded_failed": 2,
+      "hash_policy": "retained historical bytes; old code hashes not compared to current code"
+    },
+    {
+      "file": "results/stage3/fourpoint/crossing-regular-initial-validation.json",
+      "recorded_status": "failed",
+      "recorded_failed": 1,
+      "hash_policy": "retained historical bytes; old code hashes not compared to current code"
+    }
+  ],
+  "supporting_data_and_provenance": [
+    {
+      "file": "results/stage3/cg-domain-source-audit/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 3
+    },
+    {
+      "file": "results/stage3/cg-domain-source-audit/vertex-analytic-reference.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 3
+    },
+    {
+      "file": "results/stage3/orbit-core/orbit-core-identity-70dps.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 4
+    },
+    {
+      "file": "results/manuscript/build-record.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 29
+    },
+    {
+      "file": "results/stage3/position-action/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 10
+    },
+    {
+      "file": "results/stage3/annihilation/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 9
+    },
+    {
+      "file": "results/stage3/cross-limit/comparison.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 5
+    },
+    {
+      "file": "results/stage3/cross-limit/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 9
+    },
+    {
+      "file": "results/stage3/endpoint/diagnostics.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 5
+    },
+    {
+      "file": "results/stage3/endpoint/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 8
+    },
+    {
+      "file": "results/stage3/assembly/diagnostics.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 6
+    },
+    {
+      "file": "results/stage3/assembly/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 9
+    },
+    {
+      "file": "results/stage3/logtime/diagnostics.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 6
+    },
+    {
+      "file": "results/stage3/logtime/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 8
+    },
+    {
+      "file": "results/stage3/preparation/diagnostics.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 7
+    },
+    {
+      "file": "results/stage3/preparation/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 10
+    },
+    {
+      "file": "results/stage3/moving-curve/run-w24-chi40-R10.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 6
+    },
+    {
+      "file": "results/stage3/moving-curve/run-w32-chi40-R10.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 6
+    },
+    {
+      "file": "results/stage3/moving-curve/run-w24-chi64-R10.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 6
+    },
+    {
+      "file": "results/stage3/moving-curve/diagnostics.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 7
+    },
+    {
+      "file": "results/stage3/moving-curve/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 12
+    },
+    {
+      "file": "results/stage3/density-endpoints/run-w24-chi40.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 6
+    },
+    {
+      "file": "results/stage3/density-endpoints/run-w32-chi40.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 6
+    },
+    {
+      "file": "results/stage3/density-endpoints/run-w24-chi64.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 6
+    },
+    {
+      "file": "results/stage3/density-endpoints/diagnostics.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 8
+    },
+    {
+      "file": "results/stage3/density-endpoints/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 12
+    },
+    {
+      "file": "results/stage3/two-branch/diagnostics.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 13
+    },
+    {
+      "file": "results/stage3/two-branch/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 13
+    },
+    {
+      "file": "results/stage3/growing-box/diagnostics.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 7
+    },
+    {
+      "file": "results/stage3/growing-box/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 14
+    },
+    {
+      "file": "results/stage4/wkb-overlap/diagnostics.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 3
+    },
+    {
+      "file": "results/stage4/wkb-overlap/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 10
+    },
+    {
+      "file": "results/stage4/gram-prefactor/diagnostics.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 4
+    },
+    {
+      "file": "results/stage4/gram-prefactor/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 12
+    },
+    {
+      "file": "results/stage4/recoil-vertex/diagnostics.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 3
+    },
+    {
+      "file": "results/stage4/recoil-vertex/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 11
+    },
+    {
+      "file": "results/stage4/recoil-internal/diagnostics.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 3
+    },
+    {
+      "file": "results/stage4/recoil-internal/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 14
+    },
+    {
+      "file": "results/stage4/recoil-saddle/diagnostics.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 5
+    },
+    {
+      "file": "results/stage4/recoil-saddle/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 16
+    },
+    {
+      "file": "results/stage4/recoil-local/diagnostics.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 6
+    },
+    {
+      "file": "results/stage4/recoil-local/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 17
+    },
+    {
+      "file": "results/stage4/recoil-global/diagnostics.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 5
+    },
+    {
+      "file": "results/stage4/recoil-global/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 13
+    },
+    {
+      "file": "results/stage4/recoil-bessel-limit/diagnostics.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 4
+    },
+    {
+      "file": "results/stage4/recoil-bessel-limit/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 13
+    },
+    {
+      "file": "results/stage4/recoil-bessel-cancellation/diagnostics.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 5
+    },
+    {
+      "file": "results/stage4/recoil-bessel-cancellation/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 14
+    },
+    {
+      "file": "results/stage4/recoil-bessel-endpoints/diagnostics.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 4
+    },
+    {
+      "file": "results/stage4/recoil-bessel-endpoints/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 12
+    },
+    {
+      "file": "results/stage4/recoil-bessel-joint/diagnostics.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 6
+    },
+    {
+      "file": "results/stage4/recoil-bessel-joint/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 16
+    },
+    {
+      "file": "results/stage4/recoil-transverse/diagnostics.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 6
+    },
+    {
+      "file": "results/stage4/recoil-transverse/consequences.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 5
+    },
+    {
+      "file": "results/stage4/recoil-transverse/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 17
+    },
+    {
+      "file": "results/stage4/recoil-pairing/diagnostics.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 10
+    },
+    {
+      "file": "results/stage4/recoil-pairing/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 20
+    },
+    {
+      "file": "results/stage4/recoil-poles/diagnostics.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 6
+    },
+    {
+      "file": "results/stage4/recoil-poles/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 14
+    },
+    {
+      "file": "results/stage4/recoil-spectral/diagnostics.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 6
+    },
+    {
+      "file": "results/stage4/recoil-spectral/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 16
+    },
+    {
+      "file": "results/stage4/recoil-identity/diagnostics.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 5
+    },
+    {
+      "file": "results/stage4/recoil-identity/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 13
+    },
+    {
+      "file": "results/stage4/global-racah/diagnostics.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 8
+    },
+    {
+      "file": "results/stage4/global-racah/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 18
+    },
+    {
+      "file": "results/stage4/ds3-local-vertex/diagnostics.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 9
+    },
+    {
+      "file": "results/stage4/ds3-local-vertex/clp-comparison.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 5
+    },
+    {
+      "file": "results/stage4/ds3-local-vertex/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 23
+    },
+    {
+      "file": "results/stage4/ds3-mass-spectrum/initial-diagnostics.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 7
+    },
+    {
+      "file": "results/stage4/ds3-mass-spectrum/diagnostics.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 9
+    },
+    {
+      "file": "results/stage4/ds3-mass-spectrum/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 17
+    },
+    {
+      "file": "results/stage4/ds3-group-pairing/diagnostics.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 10
+    },
+    {
+      "file": "results/stage4/ds3-group-pairing/offdiagonal.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 3
+    },
+    {
+      "file": "results/stage4/ds3-group-pairing/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 22
+    },
+    {
+      "file": "results/stage4/ds3-two-matter/diagnostics.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 9
+    },
+    {
+      "file": "results/stage4/ds3-two-matter/angular.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 5
+    },
+    {
+      "file": "results/stage4/ds3-two-matter/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 22
+    },
+    {
+      "file": "results/stage4/ds3-crossing-dictionary/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 27
+    },
+    {
+      "file": "results/stage4/ds3-crossed-packet/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 39
+    },
+    {
+      "file": "results/stage4/ds3-bose/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 33
+    },
+    {
+      "file": "results/stage4/ds3-collision/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 22
+    },
+    {
+      "file": "results/stage4/ds3-full-tail/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 18
+    },
+    {
+      "file": "results/stage4/ds3-shadow-duality/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 22
+    },
+    {
+      "file": "results/stage4/ds3-peak-limit/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 19
+    },
+    {
+      "file": "results/stage4/ds3-transverse-phase/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 20
+    },
+    {
+      "file": "results/stage4/ds3-uniform-local/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 21
+    },
+    {
+      "file": "results/stage3/cross-limit/comparison.json",
+      "kind": "projected comparison model only; not exact 6j convergence or interval certification",
+      "checks": 19
+    },
+    {
+      "file": "results/stage3/endpoint/diagnostics.json",
+      "kind": "finite-point endpoint diagnostics, not distribution-limit certification",
+      "checks": 15
+    },
+    {
+      "file": "results/stage3/assembly/diagnostics.json",
+      "kind": "finite-point algebra and asymptotic diagnostics; leading-kernel test only, not exact distribution quadrature",
+      "checks": 21
+    },
+    {
+      "file": "results/stage3/logtime/diagnostics.json",
+      "kind": "coefficient and compact leading-expression PV diagnostics; not exact 6j or physical packet quadrature",
+      "checks": 25
+    },
+    {
+      "file": "results/stage3/preparation/diagnostics.json",
+      "kind": "empirical F limiting curve and Q local corner; not full Q curve, finite-mass or interval certification",
+      "checks": 37
+    },
+    {
+      "file": "results/stage3/moving-curve/diagnostics.json",
+      "kind": "actual complex limiting Q curves; empirical transverse/Fourier refinements, no finite-M or total interval certification",
+      "checks": 122
+    },
+    {
+      "file": "results/stage4/wkb-overlap/diagnostics.json",
+      "kind": "reduced recoil and action-only integral checks; not finite-G amplitude certification",
+      "checks": 42
+    },
+    {
+      "file": "results/stage4/gram-prefactor/diagnostics.json",
+      "kind": "exact Gram algebra and classical Hessian checks; conditional local prefactor only, not full finite-G amplitude",
+      "checks": 83
+    },
+    {
+      "file": "results/stage4/recoil-vertex/diagnostics.json",
+      "kind": "balanced Barnes moments, limiting vertices and local bounds; not full 6j or physical four-point normalization",
+      "checks": 42
+    },
+    {
+      "file": "results/stage4/recoil-internal/diagnostics.json",
+      "kind": "exact finite-kappa shifts and fixed-mass Barnes limit diagnostics; not physical external-energy integration",
+      "checks": 34
+    },
+    {
+      "file": "results/stage4/recoil-saddle/diagnostics.json",
+      "kind": "saddle algebra and local numerical comparisons; not full contour or physical OTOC certification",
+      "checks": 57
+    },
+    {
+      "file": "results/stage4/recoil-local/diagnostics.json",
+      "kind": "general angle algebra and actual localized Gamma integrals; not the full Barnes cycle",
+      "checks": 50
+    },
+    {
+      "file": "results/stage4/recoil-global/diagnostics.json",
+      "kind": "finite-parameter complete contour diagnostics and auxiliary Bessel identities; not a uniform full Barnes limit",
+      "checks": 34
+    },
+    {
+      "file": "results/stage4/recoil-bessel-limit/diagnostics.json",
+      "kind": "recurrence/tail samples and fixed-K full contour correction checks accompanying a self-reviewed proof; not joint growing-K or interval certification",
+      "checks": 69
+    },
+    {
+      "file": "results/stage4/recoil-bessel-cancellation/diagnostics.json",
+      "kind": "fixed-parameter coefficient and zero-lifting proof diagnostics plus joint positive-tail samples; not a complete joint asymptotic or physical critical point",
+      "checks": 65
+    },
+    {
+      "file": "results/stage4/recoil-bessel-endpoints/diagnostics.json",
+      "kind": "joint endpoint identity/bound diagnostics and central absolute norms; not full signed-amplitude or interval certification",
+      "checks": 300
+    },
+    {
+      "file": "results/stage4/recoil-bessel-joint/diagnostics.json",
+      "kind": "exact contour-split and moment checks supporting a self-reviewed joint leading estimate; no numerical threshold or finite-G certification",
+      "checks": 64,
+      "retained_initial_failed_checks": 2
+    },
+    {
+      "file": "results/stage4/recoil-transverse/diagnostics.json",
+      "checks": 83,
+      "kind": "strict-gap transverse internal-graph estimate and branch-growth diagnostics; no physical outer-integral or interval certification"
+    },
+    {
+      "file": "results/stage4/recoil-pairing/diagnostics.json",
+      "checks": 37,
+      "kind": "Schwarz pairing and topology graph; reused finite-branch data and auxiliary-window quadrature, not physical OTOC certification"
+    },
+    {
+      "file": "results/stage4/recoil-poles/diagnostics.json",
+      "checks": 74,
+      "kind": "regularized recoil graph and bare direct-C0 factors; includes merged pinches, not physical sewing or finite-G certification"
+    },
+    {
+      "file": "results/stage4/recoil-spectral/diagnostics.json",
+      "checks": 71,
+      "kind": "two-point calibration and declared n=1 spectral trace model; insertion freedom retained, no physical four-point or interval certification"
+    },
+    {
+      "file": "results/stage4/recoil-identity/diagnostics.json",
+      "checks": 106,
+      "kind": "reduced spectral identity limit and label algebra, including repeated vacuum checks; not physical sewing or interval certification"
+    },
+    {
+      "file": "results/stage4/global-racah/diagnostics.json",
+      "checks": 44,
+      "kind": "specified scalar dictionary comparison; raw rectangles and gaps independently reconstructed with Decimal; not an interval certificate or full physical recoupling"
+    },
+    {
+      "file": "results/stage4/ds3-local-vertex/diagnostics.json",
+      "checks": 249,
+      "kind": "fixed-mass KG local vertex; saved errors and raw identities reconstructed with Decimal; not observer spectral normalization or interval quadrature"
+    },
+    {
+      "file": "results/stage4/ds3-local-vertex/clp-comparison.json",
+      "checks": 24,
+      "kind": "separable local leg factors reconstructed with Decimal; not physical two-point normalization"
+    },
+    {
+      "file": "results/stage4/ds3-mass-spectrum/diagnostics.json",
+      "checks": 150,
+      "kind": "spacetime L2/BD projector and packet checks; raw Gram, Parseval and overlaps reconstructed with Decimal; two initial short-box failures retained; not physical group averaging or interval certification"
+    },
+    {
+      "file": "results/stage4/ds3-group-pairing/diagnostics.json",
+      "checks": 81,
+      "kind": "G=0 group norms, linear gluing and physical two-point; saved errors and raw algebra independently replayed with Decimal; not full Fock or finite gravity"
+    },
+    {
+      "file": "results/stage4/ds3-group-pairing/offdiagonal.json",
+      "checks": 16,
+      "kind": "independent non-spherical group integrals; saved rank-one products and tails replayed; not interval quadrature"
+    },
+    {
+      "file": "results/stage4/ds3-two-matter/diagnostics.json",
+      "checks": 56,
+      "kind": "two-species scalar observer channel; DS/group norms, shifted uncrossed proper-time limit and residuals replayed with Decimal; not crossed spin completeness or interval certification"
+    },
+    {
+      "file": "results/stage4/ds3-two-matter/angular.json",
+      "checks": 10,
+      "kind": "non-spherical four-body group integrals; l1 polynomial and tails independently replayed"
+    },
+    {
+      "file": "results/stage4/ds3-crossing-dictionary/diagnostics.json",
+      "checks": 33,
+      "kind": "physical G=0 scalar recoupling dictionary; independent Euclidean complex overlap, phase/reflection norms and analytic puncture tail; Decimal replay and source AST check, not interval quadrature or full scalar unitarity"
+    },
+    {
+      "file": "results/stage4/ds3-crossing-dictionary/geometry.json",
+      "checks": 10,
+      "kind": "six-chart coverage and analytic tail primitive; does not certify the hypergeometric quadrature remainder"
+    },
+    {
+      "file": "results/stage4/ds3-crossed-packet/summary.json",
+      "kernel_points": 3442832,
+      "kind": "actual regulated compact initial packet, five complete complex 6j grids and independent E/W/rho replay; analytic mass-tail and finite-K nonzero witness; numerical magnitude not total interval certified"
+    },
+    {
+      "file": "results/stage4/ds3-crossed-packet/bounds-validation.json",
+      "checks": 24,
+      "kind": "vertex, missing-interval commutator, positive norms, tail primitive, and independently group-averaged witness"
+    },
+    {
+      "file": "results/stage4/ds3-bose/summary.json",
+      "kernel_points": 1216480,
+      "kind": "Bose direct/exchange forms and short-time model witness; three raw grids independently replayed; initial 160% pointwise error retained and selected high-precision fallback checked; no total accuracy certification"
+    },
+    {
+      "stage": "ds3-full-tail",
+      "checks": 407,
+      "status": "passed"
+    },
+    {
+      "stage": "ds3-shadow-duality",
+      "checks": 365,
+      "status": "passed"
+    },
+    {
+      "stage": "ds3-transverse-phase",
+      "checks": 203,
+      "status": "passed"
+    },
+    {
+      "stage": "ds3-peak-limit",
+      "checks": 191,
+      "status": "passed"
+    },
+    {
+      "stage": "ds3-collision",
+      "independent_100_digit_comparisons": 12,
+      "scope": "saved arithmetic and recorded empirical allowances"
+    },
+    {
+      "stage": "ds3-uniform-local",
+      "checks": 446,
+      "status": "passed",
+      "kind": "uniform merged tails and local dr test integrals; no full physical mass integral"
+    },
+    {
+      "file": "results/stage3/growing-box/diagnostics.json",
+      "kind": "finite-point Gamma/Euler/energy/tail ingredient checks; not uniform constants or exact finite-M packet certification",
+      "checks": 290
+    },
+    {
+      "file": "results/stage3/two-branch/diagnostics.json",
+      "kind": "leading two-branch physical packet identities and empirical small-real refinements; not exact finite-M certification",
+      "checks": 300
+    },
+    {
+      "file": "results/stage3/density-endpoints/diagnostics.json",
+      "kind": "Gamma/gapped packet endpoint and full-curve diagnostics; empirical small-real precision limits retained",
+      "checks": 384
+    },
+    {
+      "file": "results/stage3/orbit-core/orbit-core-identity-70dps.json",
+      "kind": "finite-point special-function diagnostics; not interval or proof certification",
+      "checks": 51,
+      "failed": 0
+    },
+    {
+      "file": "results/stage3/cg-domain-source-audit/vertex-check.json",
+      "kind": "raw numerical data; no passed-check claim",
+      "runs": 2
+    },
+    {
+      "file": "results/stage3/cg-domain-source-audit/vertex-check-pilot.json",
+      "kind": "raw numerical data; no passed-check claim",
+      "runs": 1
+    },
+    {
+      "file": "results/stage3/cg-domain-source-audit/analytic-sources.json",
+      "kind": "versioned source archives",
+      "source_archives": 3
+    }
+  ],
+  "source_archives_checked": 34,
+  "scope": "File and link checks, source cache hashes and recorded code/input hashes. A fresh inventory is built on each run, not compared against a prior inventory; unbound CSV/image/result content is not independently certified. Snapshot mode verifies archived bytes against this inventory. Historical initial/failed outputs retain their old hashes. Scientific checks retain their own assumptions and tolerances; this audit does not certify a full holographic dual."
+}

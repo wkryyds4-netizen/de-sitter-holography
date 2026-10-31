@@ -1,0 +1,318 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,microtype}
+\usepackage[margin=25mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newtheorem{proposition}{Proposition}
+\newcommand{\dd}{\mathop{}\!\mathrm d}
+\title{A Barnes integral for the fixed-mass recoil graph}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Working research note --- 30 October 2026}
+\begin{document}\maketitle
+\begin{abstract}
+We reduce the full internal double-sine integral of the continued
+tetrahedron graph to a Barnes integral, at fixed positive edge masses
+in the pure-recoil limit. The transported contour becomes a horizontal
+line separating two pole families. Exact \(q\)-Gamma factorization and
+a uniform integrable tail bound justify passage of the limit through
+this integral. Its vertical-contour representation yields four
+convergent \({}_4F_3(1)\) terms for distinct pole families, while the
+integral remains regular when they coalesce. Combining this result
+with the previous vertex limit gives normalized fixed-topology graph
+ratios. Physical external-energy cycles, insertion normalization and
+the joint heavy-mass saddle limit remain uncomputed. This is an
+author self-reviewed draft, without independent certification or a
+claim of priority.
+\end{abstract}
+
+\section{Labels, contour and the exact change of variable}
+Take the de Sitter radius to be one and use CLP~\cite{CLP}, (3.46).
+The six edge masses are \(\mu_j>0\). Put
+\[
+ b^2=i/\kappa,\quad L=b^{-2}=-i\kappa,\quad Q=b+b^{-1},
+ \qquad iP_j=-\frac1{2b}-\frac{ib\mu_j}{2}.
+\]
+Let
+\[
+ \mathcal V=\{123,156,246,345\},\qquad
+ \mathcal R=\{1245,1346,2356\},\qquad
+ a_v=\frac12\sum_{j\in v}\mu_j,\quad
+ r_\rho=\frac12\sum_{j\in\rho}\mu_j .
+\]
+Each edge occurs twice in both collections, so \(\sum_v a_v=\sum_\rho r_\rho\).
+Assume the strict separation
+\begin{equation}
+ a_{\max}<r_{\min},\qquad c=(a_{\max}+r_{\min})/2. \label{eq:gap}
+\end{equation}
+All masses and this gap are fixed as \(\kappa\to\infty\).
+
+In the internal integral set
+\begin{equation}
+ iP=-\frac3{2b}+bz,\qquad \dd P=-ib\,\dd z. \label{eq:var}
+\end{equation}
+Its exact integrand, before the measure, is
+\begin{equation}
+ K_\kappa(z)=
+ \frac{\prod_v S_b(b(z+ia_v))}
+ {\prod_\rho S_b(b(z+\frac12+ir_\rho+L))\,
+  S_b(b(z+\frac12-L))}. \label{eq:K}
+\end{equation}
+The original numerator pole families and denominator-zero families
+become, with \(n,m\ge0\),
+\begin{align}
+ z&=-n+i\kappa m-ia_v,\\
+ z&=\tfrac12+n-i\kappa m-ir_\rho,\qquad
+ z=\tfrac12+n-i\kappa(m+2). \label{eq:poles}
+\end{align}
+Cancellations may remove poles; these lists contain all possible poles.
+
+CLP (3.58), at the endpoint, gives
+\(s=\mathbb R+\pi/\kappa-8\pi i+2\pi i(a_{\max}+r_{\min})/\kappa\).
+Using \(s=-8\pi i-4\pi(z-\frac12)/\kappa\), its image is exactly
+\begin{equation}
+ \mathcal C_z=\mathbb R-ic. \label{eq:horizontal}
+\end{equation}
+For sufficiently large \(\kappa\), \eqref{eq:gap} puts the first
+families above and the latter families below this line.
+We orient \(\mathcal C_z\) left to right and use the corresponding
+transported orientation in \eqref{eq:var}; reversing both changes only
+an overall sign. This is an internal contour, not an external
+three-energy contour for a physical correlator.
+
+\section{Exact \texorpdfstring{\(q\)}{q}-Gamma factorization}
+Write \(q=e^{-2\pi/\kappa}\), \(\tau=e^{-2\pi\kappa}\), and define
+\[
+ A_v=z+ia_v,\quad D_\rho=z+\tfrac12+ir_\rho,\quad D_0=z+\tfrac12,
+ \qquad
+ \Delta_2=\sum_v(A_v^2-A_v)-\sum_{\rho,0}(D_\rho^2-D_\rho).
+\]
+The last sum includes all four \(D\)'s. Then
+\[
+ \sum_v A_v-\sum_{\rho,0}D_\rho=-2,\qquad
+ \Delta_2=-4z+\sum_\rho r_\rho^2-\sum_v a_v^2+1-i\sum_\rho r_\rho .
+\]
+CLP (A.5) and the \(q\)-Gamma definition~\cite{DLMFq} give exactly
+\begin{equation}
+ S_b(bw)=C_\kappa(1-q)^{w-1}
+ e^{i\pi w/2+\pi(w^2-w)/(2\kappa)}
+ \Gamma_q(w)(\tau e^{2\pi iw};\tau)_\infty, \label{eq:sb}
+\end{equation}
+where \(C_\kappa=(q;q)_\infty^{-1}e^{-i\pi(Q^2+1)/12}\)
+is independent of \(w\).
+The inverse-\(b\) shift is
+\(S_b(bw+b^{-1})=2\sin(\pi w)S_b(bw)\).
+Apply it once to each of the three shifted denominators and inversely
+to the fourth. The normalized exact integrand is
+\begin{align}
+ \mathcal B_\kappa(z)&=-8\pi^3 e^{-\pi\kappa}(1-q)^2K_\kappa(z),\\
+ &=\frac{\pi^3e^{-i\pi z+\pi\Delta_2/(2\kappa)}
+                  (1+\tau e^{2\pi iz})}
+              {\prod_\rho\sin(\pi D_\rho)}
+ \frac{\prod_v\Gamma_q(A_v)}{\prod_{\rho,0}\Gamma_q(D_\rho)}
+ \frac{\prod_v(\tau e^{2\pi iA_v};\tau)_\infty}
+      {\prod_{\rho,0}(\tau e^{2\pi iD_\rho};\tau)_\infty}.
+ \label{eq:Bq}
+\end{align}
+No small-\(b\) approximation has been made in this formula.
+On compact subsets avoiding poles, the ordinary \(q\to1^-\) limit,
+reflection formula and the small-\(\tau\) products yield
+\begin{equation}
+ \mathcal B_\kappa(z)\longrightarrow
+ \mathcal B(z):=e^{-i\pi z}
+ \frac{\prod_v\Gamma(z+ia_v)
+       \prod_\rho\Gamma(\frac12-z-ir_\rho)}
+      {\Gamma(z+\frac12)}. \label{eq:B}
+\end{equation}
+
+\section{An integrable bound for both tails}
+Compact convergence alone would not establish the integral limit.
+Here the mass balance supplies the missing tail control.
+
+For \(q=e^{-h}\), put \(f_q(x)=\log\Gamma_q(x)\) at real \(x>0\).
+Differentiating the absolutely convergent product and comparing its
+positive sum with an integral gives
+\begin{align}
+ \log\frac{1-q^x}{1-q}-\frac{h}{e^{hx}-1}
+ &\le f_q'(x)\le\log\frac{1-q^x}{1-q},\\
+ |f_q''(x+s)|
+ &\le \frac{h}{e^{h(x-A)}-1}
+       +\frac{h^2e^{h(x-A)}}{(e^{h(x-A)}-1)^2}
+ \le\frac1{x-A}+\frac1{(x-A)^2},
+ \label{eq:qbounds}
+\end{align}
+provided \(\operatorname{Re}s\ge-A\) and \(x>A\). The complex bound
+uses \(|1-q^{x+s+n}|\ge1-q^{x-A+n}\).
+
+Thus, for any two fixed collections of four shifts with difference of
+sums \(-2\), Taylor expansion along the shifts gives, uniformly for
+large \(x\) and \(0<h\le h_0\),
+\begin{equation}
+ \left|\frac{\prod_{j=1}^4\Gamma_q(x+\alpha_j)}
+                  {\prod_{j=1}^4\Gamma_q(x+\delta_j)}\right|
+ \le C\left(\frac{1-q}{1-e^{-hx}}\right)^2. \label{eq:qratio}
+\end{equation}
+The constant depends on the shifts. In \eqref{eq:Bq}, on
+\(z=x-ic\), all sine denominators stay away from zero, and the modular
+products and their inverses are bounded for sufficiently large
+\(\kappa\). The quadratic exponential contributes \(e^{-hx}\).
+Consequently its positive tail is bounded by a constant times
+\[
+ e^{-hx}\left(\frac{1-e^{-h}}{1-e^{-hx}}\right)^2
+ \le\left(\frac{h}{2\sinh(hx/2)}\right)^2\le x^{-2}.
+\]
+
+For clarity the negative tail is not inferred from the positive one.
+Reflect all eight original double sines via \(S_b(Q-x)=1/S_b(x)\)
+and put \(w=-z\). The exact integrand becomes
+\begin{equation}
+ K_\kappa(-w)=
+ \frac{\prod_\rho S_b(b(w+\frac12-ir_\rho))\,
+       S_b(b(w+\frac12+2L))}
+      {\prod_v S_b(b(w+1-ia_v+L))}. \label{eq:negative}
+\end{equation}
+After inverse-\(b\) shifts its four small numerator arguments have
+offsets \(\frac12-ir_\rho,\frac12\), and its four denominator
+offsets are \(1-ia_v\). Their sum difference is again \(-2\).
+The shift factors are
+\[
+ \frac{[2\sin\pi(w+\frac12+L)][2\sin\pi(w+\frac12)]}
+      {\prod_v2\sin\pi(w+1-ia_v)}.
+\]
+On \(w=x+ic\), the denominator imaginary parts are \(c-a_v>0\).
+Removing \(e^{\pi\kappa}\) leaves a bounded trigonometric factor,
+and the same argument proves the negative-tail bound. Hence
+\begin{equation}
+ |\mathcal B_\kappa(x-ic)|\le\frac{C}{1+x^2}
+ \quad(\kappa\ge\kappa_0,\ x\in\mathbb R). \label{eq:dom}
+\end{equation}
+On the remaining compact interval use \eqref{eq:Bq} and compact
+convergence. The constants here depend on the fixed masses and gap;
+no joint growing-mass bound is claimed.
+
+\begin{proposition}
+Under \eqref{eq:gap}, the normalized internal integral satisfies
+\begin{equation}
+ -\frac{4\pi^2(1-q)^2e^{-\pi\kappa}}{b}\,\mathcal J_b
+ \longrightarrow
+ \mathfrak B(\boldsymbol\mu):=
+ \frac1{2\pi i}\int_{\mathbb R-ic}\mathcal B(z)\,\dd z
+ =\frac1{2\pi i}\int_{d-i\infty}^{d+i\infty}\mathcal B(z)\,\dd z,
+ \quad 0<d<\tfrac12. \label{eq:limit}
+\end{equation}
+\end{proposition}
+\begin{proof}
+Dominated convergence follows from \eqref{eq:dom}; the normalization
+uses \(\dd P=-ib\,\dd z\) and the definition of \(\mathcal B_\kappa\).
+For the second equality rotate the positive horizontal tail upwards
+and the negative tail downwards about \(d-ic\). No poles enter either
+swept quadrant. Gamma reflection and fixed-shift asymptotics give
+\(O(|z|^{-2})\) on the connecting arcs, with exponential improvement
+away from their horizontal ends, so the arc contributions vanish.
+The vertical contour separates \(z=-n-ia_v\) from
+\(z=\frac12+n-ir_\rho\). Its two tails decay as
+\(e^{-2\pi y}\) for \(y\to+\infty\) and \(e^{-4\pi|y|}\) for
+\(y\to-\infty\), times powers of \(|y|\).
+\end{proof}
+
+\section{A hypergeometric evaluation and coincident families}
+For distinct \(a_v\), close the vertical contour to the left and
+sum the four pole families. Standard Barnes residue calculus
+\cite{DLMFb} gives
+\begin{align}
+ \mathfrak B&=\sum_{k=1}^4 c_k\,
+ {}_4F_3\left(
+ \begin{matrix}
+ \frac12+ia_k,\ \{\frac12+i(a_k-r_\rho)\}_{\rho=1}^3\\
+ \{1+i(a_k-a_j)\}_{j\ne k}
+ \end{matrix};1\right), \label{eq:hyper}\\
+ c_k&=e^{-\pi a_k}
+ \frac{\prod_{j\ne k}\Gamma(i(a_j-a_k))
+       \prod_\rho\Gamma(\frac12+i(a_k-r_\rho))}
+      {\Gamma(\frac12-ia_k)}.
+\end{align}
+The sum of lower parameters minus the sum of upper parameters is one,
+so each series converges. For example
+\(\Gamma(A-n)=(-1)^n\Gamma(A)/(1-A)_n\);
+all six signs from the residue, phase, other left factors and
+reciprocal denominator cancel. Closing arcs can be chosen away from
+the pole rows, where the balanced quotient is \(O(|z|^{-2})\).
+
+Individual coefficients become singular when some \(a_j=a_k\).
+The integral \eqref{eq:limit} is regular there and is the definition
+to use, or one may take the limit of the complete sum.
+Assigning values to the divergent summands separately is invalid.
+Barnes/Racah representations have substantial antecedents; we make
+no novelty claim or identification with a particular unitary group
+\(6j\) without its representation and measure dictionary.
+
+\section{What this now determines, and what it does not}
+Let \(T(\mu_i,\mu_j,\mu_k)\) be the limiting combined vertex from
+the preceding note. For a reference six-mass configuration
+\(\boldsymbol\mu^\star\) satisfying \eqref{eq:gap} and
+\(\mathfrak B(\boldsymbol\mu^\star)\ne0\), we obtain the full
+fixed-topology graph ratio
+\begin{equation}
+ \lim_{\kappa\to\infty}
+ \frac{Z_{\rm tet}(\boldsymbol\mu;\kappa)}
+      {Z_{\rm tet}(\boldsymbol\mu^\star;\kappa)}
+ =
+ \prod_{v\in\mathcal V}\frac{T(\boldsymbol\mu_v)}
+                            {T(\boldsymbol\mu^\star_v)}
+ \left|\frac{\mathfrak B(\boldsymbol\mu)}
+              {\mathfrak B(\boldsymbol\mu^\star)}\right|^2.
+ \label{eq:graph}
+\end{equation}
+This is a graph result at fixed real masses, not a physical
+four-point normalization prescription.
+
+To connect to the prior transverse coordinates, choose explicitly
+\[
+ (\mu_1,\mu_2,\mu_3,\mu_4,\mu_5,\mu_6)
+ =(m_1,\nu,m_2,m_3,\nu,m_4).
+\]
+Then the four \(a_v\)'s are the four values
+\(M+\nu/2+(\pm u\pm v)/2\), independent of \(\omega\); the three
+\(r_\rho\)'s are \(M+\nu+\omega/2,\,2M,\,M+\nu-\omega/2\).
+At \(u=v=0\) all four left pole families coalesce, so
+\eqref{eq:hyper} is not a stable termwise formula.
+This explicit labeling may reverse the sign of \(\omega\) relative
+to CLP's symmetric diagram; the earlier Gram expressions are even
+in that sign.
+
+The next calculable step is the large-\(M,\nu\) saddle analysis of
+\eqref{eq:limit}, retaining \(u,v\), with the full vertex factor.
+Its internal determinant must be derived in this representation
+before comparison with the previous full-\(6j\) Gram hypothesis.
+The tail constant in \eqref{eq:dom} has not been made uniform in
+growing masses or complex external energies. Analytic continuation
+of \eqref{eq:graph} requires separate chiral continuation, not a new
+modulus at complex masses. The physical insertion factors, external
+energy cycles and disconnected baseline remain undetermined.
+Finite-\(G\) dynamics and a complete de Sitter dual remain open.
+
+\section{Numerical checks}
+The script \texttt{code/recoil\_internal.py} records 34 passing checks:
+four symbolic balances, nine exact shift identities and precision
+refinements, three limiting integrals at 45/65 digits, one
+hypergeometric comparison, and eight two-sided tail refinements.
+The four-term sum has cancellation ratio \(2.68\times10^5\) in its
+sample; coalesced families are evaluated by the integral.
+Relative convergence errors are saved separately from arithmetic
+agreement. These are not interval certificates or direct full
+finite-\(\kappa\) quadratures. The uniform tail result uses the
+analytic argument above.
+
+\begin{thebibliography}{9}
+\bibitem{CLP} J. Chandra, D. Liska and B. Post,
+\emph{3D de Sitter from complex Virasoro TQFT: Observers and knots},
+\href{https://arxiv.org/html/2610.30247v1}{arXiv:2610.30247v1},
+(3.46), (3.48), (3.52), (3.58), Appendix A.
+\bibitem{DLMFq} NIST DLMF,
+\href{https://dlmf.nist.gov/5.18}{Section 5.18},
+\(q\)-Gamma product and classical limit; read online.
+\bibitem{DLMFb} NIST DLMF,
+\href{https://dlmf.nist.gov/16.5}{Section 16.5},
+Barnes representations and residue continuation; read online.
+\end{thebibliography}
+\end{document}
+

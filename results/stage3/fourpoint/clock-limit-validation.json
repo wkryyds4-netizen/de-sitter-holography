@@ -1,0 +1,271 @@
+{
+  "generated_utc": "2026-10-28T23:46:15.194014+00:00",
+  "code_sha256": {
+    "semiclassical_clock.py": "f9746be11cba312817942ea5069c96664906acdbd9a433b05e7630372d2624bc",
+    "run_semiclassical_clock.py": "1593cb6e48e52fc10193164398edc9c1f1e7c02b1d014247baae172c42e25ae0",
+    "observer_fourpoint.py": "faad1c3f3f1b9ed7796fafa86d9ca4f50fb2848429b2bab26c23a2a558143837",
+    "quantized_observer.py": "6851265b9daa9b02b2a96580d175be1d7153a13bc1e20ef9e891b8abe936583f"
+  },
+  "versions": {
+    "python": "3.14.5",
+    "numpy": "2.4.6",
+    "scipy": "1.18.0"
+  },
+  "source": "https://arxiv.org/html/2411.08090v1",
+  "equations": [
+    "6.18",
+    "6.21",
+    "6.23",
+    "6.24"
+  ],
+  "scope": "Fixed proper-time Gaussian, fixed compact flat-clock packet, two noncrossing flavor tasks in dS2. Does not establish finite-time-recoil ABAB or cross-dimensional equivalence.",
+  "numerical_limits": "Quadrature refinement and truncation comparisons, not interval certification.",
+  "status": "passed",
+  "checks": 36,
+  "failed": 0,
+  "check_details": [
+    {
+      "name": "survival vs independent packet integral 0.0",
+      "passed": true,
+      "error": 5.551115123125783e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "survival vs independent packet integral 2.0",
+      "passed": true,
+      "error": 5.551115123125783e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "survival vs independent packet integral 2.5",
+      "passed": true,
+      "error": 5.551115123125783e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "survival vs independent packet integral 3.7",
+      "passed": true,
+      "error": 4.440892098500626e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "survival vs independent packet integral 5.0",
+      "passed": true,
+      "error": 4.440892098500626e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "survival vs independent packet integral 8.5",
+      "passed": true,
+      "error": 1.1102230246251565e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "survival vs independent packet integral 10.0",
+      "passed": true,
+      "error": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "survival vs independent packet integral 12.0",
+      "passed": true,
+      "error": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "limiting detailed balance 0.2",
+      "passed": true,
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "limiting detailed balance 1.0",
+      "passed": true,
+      "error": 1.6263032587282567e-19,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "limiting detailed balance 2.0",
+      "passed": true,
+      "error": 1.5881867761018131e-22,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "limit quadrature (0, 'C2')",
+      "passed": true,
+      "error": 4.163336342344337e-17,
+      "tolerance": 2e-11
+    },
+    {
+      "name": "limit quadrature (0, 'AABB')",
+      "passed": true,
+      "error": 6.071532165918825e-18,
+      "tolerance": 2e-11
+    },
+    {
+      "name": "limit quadrature (0, 'ABBA')",
+      "passed": true,
+      "error": 0.0,
+      "tolerance": 2e-11
+    },
+    {
+      "name": "limit quadrature (1, 'C2')",
+      "passed": true,
+      "error": 4.163336342344337e-17,
+      "tolerance": 2e-11
+    },
+    {
+      "name": "limit quadrature (1, 'AABB')",
+      "passed": true,
+      "error": 5.222209201006512e-18,
+      "tolerance": 2e-11
+    },
+    {
+      "name": "limit quadrature (1, 'ABBA')",
+      "passed": true,
+      "error": 1.3157123935640853e-19,
+      "tolerance": 2e-11
+    },
+    {
+      "name": "limit quadrature (2, 'C2')",
+      "passed": true,
+      "error": 4.163336342344337e-17,
+      "tolerance": 2e-11
+    },
+    {
+      "name": "limit quadrature (2, 'AABB')",
+      "passed": true,
+      "error": 5.834579367856216e-18,
+      "tolerance": 2e-11
+    },
+    {
+      "name": "limit quadrature (2, 'ABBA')",
+      "passed": true,
+      "error": 4.953194906778134e-19,
+      "tolerance": 2e-11
+    },
+    {
+      "name": "energy-tail refinement C2",
+      "passed": true,
+      "error": 6.938893903907228e-18,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "energy-tail cutoff extension C2",
+      "passed": true,
+      "error": 0.0,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "independent common-clock survival formula C2",
+      "passed": true,
+      "error": 1.0408340855860843e-16,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "energy-tail refinement AABB",
+      "passed": true,
+      "error": 1.734723475976807e-18,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "energy-tail cutoff extension AABB",
+      "passed": true,
+      "error": 0.0,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "independent common-clock survival formula AABB",
+      "passed": true,
+      "error": 1.0408340855860843e-17,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "energy-tail refinement ABBA",
+      "passed": true,
+      "error": 2.168404344971009e-19,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "energy-tail cutoff extension ABBA",
+      "passed": true,
+      "error": 0.0,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "independent common-clock survival formula ABBA",
+      "passed": true,
+      "error": 4.119968255444917e-18,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "observed zero-time convergence C2",
+      "passed": true,
+      "errors": [
+        0.006497064163793809,
+        0.003776400956725552,
+        0.0011845880560570204,
+        0.00031551388988256684
+      ],
+      "scope": "empirical sampled monotonicity, not a uniform rate theorem"
+    },
+    {
+      "name": "observed zero-time convergence AABB",
+      "passed": true,
+      "errors": [
+        0.001355967845918092,
+        0.0007882934144951455,
+        0.0002510739992011629,
+        6.728342531497032e-05
+      ],
+      "scope": "empirical sampled monotonicity, not a uniform rate theorem"
+    },
+    {
+      "name": "observed zero-time convergence ABBA",
+      "passed": true,
+      "errors": [
+        9.366993048943095e-05,
+        7.267510435020243e-05,
+        2.5503954498262617e-05,
+        6.981126711751422e-06
+      ],
+      "scope": "empirical sampled monotonicity, not a uniform rate theorem"
+    },
+    {
+      "name": "pointwise mass-kernel convergence -1.0",
+      "passed": true,
+      "errors": [
+        0.015459388695613252,
+        0.0041574570093372565,
+        0.0010552979914447702
+      ]
+    },
+    {
+      "name": "pointwise mass-kernel convergence -0.2",
+      "passed": true,
+      "errors": [
+        7.832467827868957e-05,
+        6.173842349383937e-05,
+        1.7952987150229513e-05
+      ]
+    },
+    {
+      "name": "pointwise mass-kernel convergence 0.7",
+      "passed": true,
+      "errors": [
+        6.712091308903596e-05,
+        1.756315587279401e-05,
+        4.443282345597665e-06
+      ]
+    },
+    {
+      "name": "pointwise mass-kernel convergence 1.5",
+      "passed": true,
+      "errors": [
+        1.157541406701583e-06,
+        4.15510653464269e-07,
+        1.129269872880979e-07
+      ]
+    }
+  ]
+}

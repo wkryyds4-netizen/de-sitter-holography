@@ -1,0 +1,42 @@
+{
+  "created_at_utc": "2026-10-29T18:44:18.619457+00:00",
+  "kind": "author self-reviewed analytic proof drafts and empirical model calculations; not independent certification",
+  "result": "Gamma endpoint two-term complex expansion, real-part parity selection, and gapped exponential oscillatory fourth-power tail",
+  "conditions": [
+    "dS2 L=1; proper SO+(2,1); strict G_N -> 0; BD free equal independent principal-series species",
+    "normalized vacuum external packet; repeated Q_M fixed across these changes of external state",
+    "fixed nu,sigma,beta>0; Gamma integer p>=0, or shifted exponential with fixed g>0",
+    "M->infinity first at t_M=log(2M)+T, then T->+/-infinity; numerical nu=.6 sigma=beta=1 p=1,2 or g=1"
+  ],
+  "proof_chain": [
+    "exact square-minus-triangle reference difference",
+    "fixed simplex rescaling and differentiated Taylor expansion",
+    "Gamma zero-frequency pole and two-term prefactor",
+    "smooth cutoff plus one-sided Fourier integration by parts and global Gaussian/moment bounds",
+    "real-part parity selection; moving gap separates corner from PV pole"
+  ],
+  "numerical_scope": "384 empirical diagnostics; three actual integral runs for three models; diminished small-real precision at |T|=96,128 explicitly retained",
+  "not_proven": [
+    "independent proof certification or original priority",
+    "critical odd-p next nonzero real coefficient",
+    "general/noninteger density classification",
+    "uniform g->0 crossover",
+    "total interval-certified quadrature error",
+    "finite-M growing window",
+    "finite-G dynamics or full holographic dual"
+  ],
+  "hashes": {
+    "literature/stage3-density-endpoint-sources.md": "eefc67983e9c619002722c5c728c499b08fdd9aadddb32a863d1ea344c46589f",
+    "manuscript/densityendpoints.tex": "dc7f8ce41e33349f465cdc81b6c1fe05f6c142b875d676ea5382106ad16a5b11",
+    "manuscript/logtime.tex": "c33549cac95393718b1e8adc3353062bfee5a1e1ca0f2c971b31ae642de1eef0",
+    "manuscript/movingcurve.tex": "3bc276cc6aea0ade817185ac7f2ff67e5bf84335ce51e43429f14abbec5c9ce2",
+    "manuscript/preparation.tex": "583e3505dfdd9b4c2725620218042cc3cbcb07cc5940ba104939745bd416692a",
+    "notes/stage3-density-endpoints.md": "93f5c451fb8aaf22ba8e84fbc54a2bf65efe30dbed79bd072532f65efda72eec",
+    "results/stage3/density-endpoints/diagnostics.json": "db595c8e359ca70ebdcdb4690bf27f276445d03ebd262ccedcc135c10a8733ae",
+    "results/stage3/density-endpoints/endpoint-curves.pdf": "59de4a0618f4a14ac9d631ecb086e6c8c2e2a212437f07c0ce7e0379d0f60426",
+    "results/stage3/density-endpoints/endpoint-curves.png": "f05970a28966b2b8a1778f4d55b4d1d85d519e59ede0224c243b432d880cdf35",
+    "results/stage3/density-endpoints/run-w24-chi40.json": "eb1271d08ca29995de0d6277c2a8d5a041666b55ffc5b5e6b362b92c401ab963",
+    "results/stage3/density-endpoints/run-w24-chi64.json": "f6b57400ae42eda0049a441e5b9598a41b83bd41152c51aaf2ee8cb013e05dd3",
+    "results/stage3/density-endpoints/run-w32-chi40.json": "51c8332d1620b150f6cf1999bf2734a461a92e8ce9d10d85bbc22367060741b6"
+  }
+}

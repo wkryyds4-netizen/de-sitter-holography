@@ -1,0 +1,177 @@
+\section{Gaussian local kernels and their weak descent}
+\label{sec:fields}
+We now keep $s_*>0$, a real matter label $\nu>0$, and a proper-time width
+$\sigma>0$ fixed. Start with the original finite-mode local matrix element
+of~\cite[(5.4)]{KL}, not an assumed unregulated physical field:
+\begin{equation}
+ t^{b n_b}_{a n_a;\nu n}
+ =\int_X\overline{\Psi^a_{n_a}(x)}
+       \,\overline{\psi^\nu_n(x)}\,\Psi^b_{n_b}(x)\dd x.
+ \label{eq:local-mode}
+\end{equation}
+Here $b$ is the observer label before creation and $a$ after creation.
+The fixed-mode integral is absolutely convergent on positive compact
+spectral sets. With the conventions of Appendix~\ref{app:vertex},
+\begin{equation}
+ t^{b n_b}_{a n_a;\nu n}
+ =\sqrt{\frac{\pi}{r(\nu)}}\,
+   \overline{\mathcal V^{\,b}_{\nu,a,\mathrm{rec}}}
+   C^{b n_b,S}_{a n_a|\nu n},\qquad r(s)=s\tanh\pi s.
+\end{equation}
+The coefficient $C$ is a CG synthesis coefficient; its analysis adjoint
+uses the conjugate. Interchanging them would reverse the local kernel.
+
+\subsection{A bounded kinematical creation map}
+The negative-sign time convention of~\cite{KL} and a normalized real
+Gaussian centered at $\tau$ give
+\begin{equation}
+ h_{\sigma,\tau}(a,b)
+ =\exp\!\left[-\frac{\sigma^2}{2}(m(a)-m(b))^2
+               -i(m(a)-m(b))\tau\right].
+ \label{eq:gaussian-time}
+\end{equation}
+Set $w(b)=\pi r(b)/4=\pi^3\rhoP(b)$. At fixed $a$ the normalized
+$S$-channel synthesis $J_a$ is an isometry from
+$\int^\oplus_{b>0}P_b\dd b$ into $P_a\otimes P_\nu$.
+Its coefficients are $\sqrt{w(b)}C^{b n_b,S}_{a n_a|\nu n}$.
+Define
+\begin{align}
+ F_{\nu,\sigma,\tau}(a,b)
+ &=\sqrt{\frac{\pi}{r(\nu)}}\,
+ \frac{\overline{\mathcal V^{\,b}_{\nu,a,\mathrm{rec}}}}{\sqrt{w(b)}}
+ h_{\sigma,\tau}(a,b),\label{eq:scalar-creation}\\
+ (T_{\nu,\sigma,\tau}u)(a)
+ &=J_a[F_{\nu,\sigma,\tau}(a,\cdot)u(\cdot)],\qquad a,b\ge s_*.
+\end{align}
+The full CG transform has other channels; $J_a$ selects just the one
+local creation vertex. The scalar modulus is
+\begin{align}
+ |F_{\nu,\sigma,\tau}(a,b)|^2
+ &=V_\nu(a|b)e^{-\sigma^2[m(a)-m(b)]^2},\\
+ V_\nu(a|b)&=\frac{a\tanh(\pi a)\cosh^2(\pi b)}{16\pi^5}
+ \prod_{\epsilon_1,\epsilon_2,\epsilon_3=\pm1}
+ \Gamma\!\left(\frac14+
+  \frac i2(\epsilon_1\nu+\epsilon_2a+\epsilon_3b)\right).
+ \label{eq:positive-kernel}
+\end{align}
+The gamma factors form four conjugate pairs, so the weight is positive.
+Synthesis isometry and nonnegative Tonelli imply
+\begin{align}
+ T^*T&=A_\sigma(\hat s_R),\\
+ A_\sigma(b)&=\int_{s_*}^\infty
+       V_\nu(a|b)e^{-\sigma^2[m(a)-m(b)]^2}\dd a,\notag\\
+ \norm T^2&=\esssup_{b\ge s_*}A_\sigma(b)=:\mathfrak M<\infty.
+ \label{eq:T-bound}
+\end{align}
+One sufficient uniform estimate is
+\begin{equation}
+ V_\nu(a|b)\le C_\nu
+ \frac{e^{-2\pi(a-b)_+}}{1+|a-b|}.
+ \label{eq:gamma-envelope}
+\end{equation}
+To obtain it, apply the global bound
+$|\Gamma(1/4+ix)|^2\le C(1+|x|)^{-1/2}e^{-\pi|x|}$
+to the four conjugate pairs. The sum of absolute gamma arguments gives
+exponential suppression at least $e^{-2\pi(a-b)_+}$ after the
+$\cosh^2(\pi b)$ factor. The two large sum arguments supply the factor
+$(1+a+b)^{-1}$ that controls the prefactor $a$; the two difference
+arguments give $(1+|a-b|)^{-1}$, with constants depending on fixed $\nu$.
+Bounded regions are absorbed into the constant. On $|a-b|\ge1$,
+$|m(a)-m(b)|\ge|a-b|/2$; splitting there proves the uniform integral
+bound in \eqref{eq:T-bound}.
+
+The map $T$ is a bounded $G$ intertwiner. For
+$W_N=H_{R,\ge s_*}\otimes\Sym^NP_\nu$ set
+\begin{equation}
+ C_N=\sqrt{N+1}\,(1_R\otimes P_{\Sym^{N+1}})(T\otimes1),
+ \qquad \norm{C_N}\le\sqrt{(N+1)\mathfrak M}.
+ \label{eq:bose-block}
+\end{equation}
+This gives the standard normalized Fock creation factor. There is no
+general identity $C_N^*C_N=(N+1)A_\sigma(\hat s_R)$ after symmetrization.
+In particular $\hat s_R$ is not the total representation label $d$.
+
+\subsection{A common group cutoff defines the physical weak kernel}
+The complete right-system decomposition makes $C_N$ decomposable:
+$C_N=\int^\oplus(1_{P_d}\otimes c_N(d))\dd d$ on the principal part,
+with $\norm{c_N(d)}\le\sqrt{(N+1)\mathfrak M}$ almost everywhere.
+Let
+\begin{equation}
+ \cE_N^0=\operatorname{span}\{|f,0\rangle_L\otimes v:
+           f\in\Cc((s_*,\infty)),\ v\in W_N^{(0)}\}.
+\end{equation}
+The right vector may have infinite magnetic support and noncompact total
+spectrum. The left-packet argument leading to \eqref{eq:fixed-left-bound}
+still gives absolute scalar group averaging on this space, with
+$\mathcal A_N(f\otimes v)=\KP f v$ and
+$Q_{\GA}(S_1,S_2)=\ip{\mathcal A_NS_1}{\mathcal A_NS_2}$.
+Both $C_N$ and $C_N^*$ preserve the corresponding total-$K=0$ test classes.
+They need not preserve $\cD_{\mathrm{orb}}$.
+
+Take $\eta_{N,R}=\int_G\chi_R(g)U_N(g)\dd g$, with the inverse-symmetric
+compact cutoffs used previously. The local weak creation form is
+\begin{equation}
+ \mathcal B_N^{\mathrm{loc}}(\Phi,\Psi)
+ :=\lim_{R\to\infty}
+ \ip{\Phi}{(1_L\otimes C_N)\eta_{N,R}\Psi}_{\mathrm{kin}}.
+ \label{eq:weak-local-definition}
+\end{equation}
+Its origin in the local mode integral can be retained explicitly. Choose
+finite-rank orthogonal projections $P_j,Q_j$ from finite original magnetic
+modes and compact mass packets in the input and output spaces. Then
+$Q_jC_NP_j\to C_N$ strongly and uniformly boundedly. Each finite matrix
+element comes from \eqref{eq:local-mode} with
+\eqref{eq:gaussian-time}. At fixed $R$ take $j\to\infty$ first, and only
+then take $R\to\infty$. A finite-rank approximation is not assumed to
+intertwine $G$.
+
+For the restored bounded intertwiner, finite-$R$ Bochner integration gives
+$(1\otimes C_N)\eta_{N,R}=\eta_{N+1,R}(1\otimes C_N)$.
+Absolute scalar group averaging now proves existence and cutoff
+independence of \eqref{eq:weak-local-definition}. Computing it yields
+\begin{equation}
+ \mathcal B_N^{\mathrm{loc}}(\Phi,\Psi)
+ =\int_{d\ge s_*}\rhoP(d)
+   \ip{\mathcal A_{N+1}\Phi(d)}{c_N(d)\mathcal A_N\Psi(d)}\dd d.
+ \label{eq:weak-local-identified}
+\end{equation}
+This is an identification of the previously defined form, not its
+definition by a spectral right-hand side.
+
+The bound on $c_N$ makes the form zero on either physical null space and
+bounded in the two physical norms. Riesz representation and the isometries
+$J_N$ therefore produce a unique bounded physical creation block
+\begin{equation}
+ \mathsf C_N=J_{N+1}c_NJ_N^{-1},\qquad
+ \norm{\mathsf C_N}\le\sqrt{(N+1)\mathfrak M}.
+ \label{eq:physical-creation}
+\end{equation}
+The same cutoff applied to $C_N^*$ gives its physical adjoint.
+An output can also be constructed in position norm: for fixed $f$,
+approximate $C_Nv$ in the right Hilbert norm by actual original product
+packets $w_j$. Equation \eqref{eq:fixed-left-bound} bounds the physical
+error by $B_f\norm{w_j-C_Nv}$. Their true orbit averages converge to
+the Riesz output independently of the approximation.
+
+\begin{theorem}[Essential self-adjointness of the regulated weak field]
+On $\cH=\bigoplus_{N\ge0}\cH_N^{\gen}(s_*)$, let $\cD_{\mathrm{fin}}$
+contain every vector with finitely many nonzero particle sectors, with
+arbitrary Hilbert vectors in each such sector. The symmetric field
+$\Phi_{\sigma,\tau}=\mathsf C+\mathsf C^*$ is essentially self-adjoint
+on this dense invariant domain.
+\label{thm:field}
+\end{theorem}
+\begin{proof}
+For $\psi$ supported in $N\le r$, the block bound gives
+\begin{equation}
+ \norm{\Phi_{\sigma,\tau}^{\,j}\psi}
+ \le(2\sqrt{\mathfrak M})^j
+      \sqrt{\frac{(r+j)!}{r!}}\,\norm\psi.
+\end{equation}
+The analytic-vector series converges for every positive radius. Nelson's
+criterion~\cite{Nelson} proves essential self-adjointness.
+\end{proof}
+
+By Theorem~\ref{thm:maximal-space}, this is also the field on the specified
+maximal weak-frequency space. The theorem concerns the common-cutoff weak
+realization; it does not identify unrestricted position multiplication.

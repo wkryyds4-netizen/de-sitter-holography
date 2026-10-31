@@ -1,0 +1,353 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,microtype,booktabs}
+\usepackage[margin=25mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newtheorem{proposition}{Proposition}
+\newcommand{\B}{\mathfrak B}
+\newcommand{\dd}{\mathop{}\!\mathrm d}
+\title{Removable energy pinches in the recoil graph\\and a direct two-point calibration}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Working research note --- 31 October 2026}
+\begin{document}\maketitle
+\begin{abstract}
+The internal Barnes integral of the pure-recoil tetrahedron-complement
+graph has energy-transfer pinch poles, including fourth-order poles
+on its symmetric slice. We regularize all twelve left--right Gamma
+pairs and prove that the resulting function is entire in the energy
+transfer. The complete vertex product cancels the pinch factors
+exactly after Schwarz pairing. A separate fixed-mass derivation of
+the direct \(C_0\) two-point factor retains energy poles.
+These are statements about specified recoil-limit functions, not
+a physical four-point insertion prescription or a finite-\(G\) result.
+\end{abstract}
+
+\section{Object and pinch divisors}
+We use the CLP graph \cite{clp}, at radius one, taking
+\(\kappa\to\infty\) at fixed real masses first. Complex masses below
+mean continuation of that limiting function. No interchange with a
+finite-\(\kappa\) growing-mass limit is asserted.
+Set
+\begin{align}
+\boldsymbol\mu&=(m_1,\nu,m_2,m_3,\nu,m_4),&
+m_{1,3}&=M+\omega/2\pm u,&
+m_{2,4}&=M-\omega/2\pm v .
+\end{align}
+The vertex sets are \(123,156,246,345\), and the quadrilateral sets
+are \(1245,1346,2356\). Their half-sums are \(a_j\) and \(r_l\);
+\(\sum_j a_j=\sum_l r_l\). The previously derived recoil integral is
+\begin{equation}
+\B=\frac1{2\pi i}\int_{d-i\infty}^{d+i\infty}
+e^{-i\pi z}
+\frac{\prod_{j=1}^4\Gamma(z+ia_j)
+\prod_{l=1}^3\Gamma(\tfrac12-z-ir_l)}
+{\Gamma(z+\tfrac12)}\,\dd z,\qquad 0<d<\tfrac12.
+\label{eq:barnes}
+\end{equation}
+This line applies to the real starting data. Thereafter the contour
+must separate the transported pole families.
+A left pole \(-ia_j-n\) and a right pole
+\(\tfrac12-ir_l+m\) meet when
+\begin{equation}
+p_{jl}:=\tfrac12+i(a_j-r_l)=-N,\qquad N=n+m\geq0.
+\label{eq:pinch}
+\end{equation}
+For equal probes,
+\[
+a_j=M+\nu/2+(\pm u\pm v)/2,\quad
+r_s=M+\nu+s\omega/2\ (s=\pm1),\quad r_0=2M.
+\]
+Writing \(w_j=M+\nu-a_j\), the moving divisors are
+\begin{equation}
+p_{js}=\tfrac12-iw_j-is\omega/2,\qquad
+\omega_{jsN}=-s[\,2w_j+i(2N+1)\,].
+\label{eq:locations}
+\end{equation}
+The signs are correlated. For \(w_j>0\), the positive-real-part
+upper-half-plane poles belong to \(s=-1\); the opposite chirality
+has the conjugate families. The \(r_0\) divisors are fixed and
+nonsingular for real parameters. If \(q\) of the \(a_j\)'s coincide,
+the corresponding pole order is at most \(q\), and is \(q\) when
+its leading coefficient does not vanish.
+
+\section{An entire regularized function}
+Define
+\begin{equation}
+G=\prod_{j,l}\Gamma(p_{jl}),\qquad H=\B/G .
+\end{equation}
+For distinct real \(a_j\), closing \eqref{eq:barnes} to the left gives
+\begin{align}
+H={}&\sum_j A_j
+\prod_{\substack{k\ne j\\l=1,2,3}}\frac1{\Gamma(p_{kl})}\,
+{}_4F_3\left(\begin{matrix}
+\tfrac12+ia_j,p_{j1},p_{j2},p_{j3}\\
+(1+i(a_j-a_k))_{k\ne j}
+\end{matrix};1\right),\label{eq:left}\\
+A_j={}&
+\frac{e^{-\pi a_j}\prod_{k\ne j}\Gamma(i(a_k-a_j))}
+{\Gamma(\tfrac12-ia_j)} .
+\end{align}
+Parenthesized subscript lists in the hypergeometric denominator
+denote the listed parameters, not shifted factorials.
+The excess (sum of lower parameters minus sum of upper parameters)
+is exactly one in every term.
+
+\begin{proposition}
+For fixed real \(M,\nu,u,v\), the continuation of \(H\) from real
+\(\omega\) is entire in \(\omega\), including coincident \(a_j\)'s.
+\end{proposition}
+\begin{proof}
+For distinct real \(a_j\), the lower parameters in \eqref{eq:left}
+have real part one and are independent of \(\omega\).
+The two varying upper parameters have constant sum.
+Gamma-ratio estimates give a uniform \(O(n^{-2})\) bound for the
+series terms on every compact \(\omega\) set. Finite terms are
+polynomials in the upper parameters, including their terminating
+values. Thus the series is entire in \(\omega\), as are the reciprocal
+Gamma factors. This uses ordinary hypergeometric convergence and
+Gamma properties \cite{dlmf16,dlmf5}.
+
+For coincident \(a_j\), perturb real \(u,v\) in a generic direction.
+Near zero perturbation the expression has only finite-order
+Laurent singularities: the lower hypergeometric parameters remain
+near one, while only the Gamma differences can have poles.
+Each Laurent coefficient is entire in \(\omega\).
+Near real \(\omega\), the original vertical integral and \(G^{-1}\)
+are holomorphic in the perturbation, with a common exponential
+tail bound. Hence all negative Laurent coefficients vanish there.
+The identity theorem makes them vanish for every \(\omega\).
+The coincident limit is therefore removable.
+\end{proof}
+
+For computation near coincident \(a_j\), right residues provide
+a better representation:
+\begin{align}
+H={}&\sum_l D_l
+\prod_{\substack{j=1,2,3,4\\h\ne l}}\frac1{\Gamma(p_{jh})}\,
+{}_4F_3\left(\begin{matrix}p_{1l},p_{2l},p_{3l},p_{4l}\\
+1-ir_l,(1+i(r_h-r_l))_{h\ne l}
+\end{matrix};1\right),\label{eq:right}\\
+D_l={}&\frac{-i e^{-\pi r_l}
+\prod_{h\ne l}\Gamma(i(r_l-r_h))}{\Gamma(1-ir_l)} .
+\end{align}
+This formula is used away from collisions of the right families;
+one takes the full continued sum at any apparent singularity.
+The \(-i\) includes \(e^{-i\pi/2}\); the clockwise closing sign
+cancels the sign of the right Gamma residue.
+Reflection of the three right Gamma factors leaves a \(z^{-2}\)
+Gamma ratio. On closing lines chosen away from poles the sine
+factors give exponential decay in both imaginary directions.
+The remote line therefore vanishes. The excess is again one.
+At a pinch, one or more upper parameters are nonpositive integers,
+making the relevant term terminate.
+
+For a generic simple pole, \(\partial_\omega p_{js}=-is/2\).
+Its residue is explicitly
+\begin{equation}
+\mathop{\rm Res}_{\omega_{jsN}}\B
+=\frac{2is(-1)^N}{N!}\,
+ A_j\!\prod_{h\ne s}\Gamma(p_{jh})\,
+{}_4F_3\left(\begin{matrix}\tfrac12+ia_j,(p_{jl})_{l=1,2,3}\\
+(1+i(a_j-a_k))_{k\ne j}\end{matrix};1\right)_{\!p_{js}=-N}.
+\label{eq:residue}
+\end{equation}
+There is no division by a vanishing leading value in our general
+entireness argument.
+
+\section{Exact cancellation in the complete graph}
+The continued product of the four recoil vertices is built from
+\begin{equation}
+T(\mu_1,\mu_2,\mu_3)=
+\pi^{-3/2}\sqrt{\prod_{e=1}^3\frac{\mu_e}{\sinh\pi\mu_e}}\,
+\prod_{e=1}^3\cosh\frac{\pi(S-2\mu_e)}2,\qquad S=\sum_e\mu_e.
+\end{equation}
+The twelve quantities \(r_l-a_j\) are precisely the twelve
+half triangle deficits \((S_v-2\mu_e)/2\).
+Each edge occurs twice, so the square roots disappear from the
+full vertex product. With
+\begin{equation}
+L(\boldsymbol\mu)=\prod_{e=1}^6\frac{\mu_e}{\sinh\pi\mu_e},
+\end{equation}
+we obtain
+\begin{equation}
+\prod_v T_v=\pi^{-6}L\prod_{j,l}\sin(\pi p_{jl}).
+\label{eq:vertex}
+\end{equation}
+Schwarz continuation is \(f^\sharp(z)=\overline{f(\bar z)}\);
+at fixed real transverse data \(p^\sharp=1-p\).
+The reflection formula then gives the exact identity
+\begin{equation}
+\boxed{\quad
+\mathcal Z_{\rm rec}:=(\prod_v T_v)\B\B^\sharp
+=\pi^6 L\,H H^\sharp .
+\quad}\label{eq:regulargraph}
+\end{equation}
+Indeed \(GG^\sharp=\pi^{12}/\prod\sin(\pi p_{jl})\).
+All the internal pinch Gamma factors cancel, with their full
+multiplicities. A normalized graph is obtained by dividing both
+sides by the same nonzero reference value. This does not introduce
+a physical disconnected normalization.
+
+The regular value at a former pinch need not vanish.
+Cancellation of poles also does not remove either large-mass
+Bessel branch found in the earlier paired-graph analysis.
+It reorganizes the same function, rather than changing it.
+
+For fixed positive \(\nu\), the only remaining \emph{possible}
+energy poles are those of the four observer-edge factors:
+\begin{equation}
+\omega=-2(M\pm u)+2in,\qquad
+\omega=2(M\pm v)-2in,\qquad n\in\mathbb Z\setminus\{0\}.
+\end{equation}
+The ratio \(\mu/\sinh\pi\mu\) is regular at \(\mu=0\).
+Some of the displayed poles may be removed by zeros of \(H H^\sharp\);
+we do not classify them here.
+In particular the graph is holomorphic throughout
+\begin{equation}
+|\mathop{\rm Re}\omega|<2[\,M-\max(|u|,|v|)\,],
+\qquad M>\max(|u|,|v|).
+\label{eq:strip}
+\end{equation}
+If \(M>2\nu\) and \(|u|+|v|<\nu\), all internal pinch columns
+lie in this strip. Holomorphy alone does not equate infinite
+integration cycles: their ends and the external weights still
+require control.
+
+\section{A fixed-mass direct-\(C_0\) calibration}
+CLP (3.35) uses a direct \(C_0 C_0^\sharp\) factor, observer
+weights and an insertion normalization \(\mathcal N\) \cite{clp}.
+Its fixed-angle heavy-heavy-light prescription is not uniform
+in the fixed-mass recoil limit. We instead derive the
+mass-dependent ratio directly from the same small-\(b\) limit.
+
+For a triple of masses write
+\[
+\bar z_0=(1-iS)/2,\quad
+\bar z_a=(1+i(S-2\mu_a))/2,\quad z_a=1-\bar z_a,\quad L_\kappa=-i\kappa .
+\]
+The four double-sine arguments in \(V^2\) are
+\(b\bar z_0-1/b\) and \(b\bar z_a+1/b\).
+Using the exact shift relation and its fixed-parameter limit,
+\[
+S_b(bz+1/b)=2\sin(\pi z)S_b(bz),\qquad
+[2\sin\pi(z-L_\kappa)]^{-1}\sim-i e^{-\pi\kappa+i\pi z},
+\]
+gives the mass-dependent recoil factor
+\begin{equation}
+v(\boldsymbol\mu)=
+e^{\pi S/2}\Gamma(\bar z_0)\prod_a\Gamma(z_a)^{-1}.
+\end{equation}
+Here \(\bar z_0+\sum_a\bar z_a=2\), so the other small-\(b\)
+powers cancel in reference-mass ratios.
+The previously established \(U=V^2/C_0\) factor tends, in the
+same ratio sense, to
+\[
+F(\boldsymbol\mu)=
+\frac{\prod_a\Gamma(1-i\mu_a)}{\prod_a\Gamma(z_a)^2}.
+\]
+Consequently
+\begin{align}
+c(\boldsymbol\mu)&=
+e^{\pi S/2}
+\frac{\Gamma(\tfrac12-\tfrac{iS}{2})
+ \prod_a\Gamma(\tfrac12-\tfrac i2(S-2\mu_a))}
+{\prod_a\Gamma(1-i\mu_a)},\label{eq:c}\\
+D(\boldsymbol\mu):=c c^\sharp&=
+\frac{\pi e^{\pi S}\prod_a[\sinh(\pi\mu_a)/\mu_a]}
+{\cosh(\pi S/2)\prod_a\cosh(\pi(S-2\mu_a)/2)}.\label{eq:d}
+\end{align}
+Only reference ratios of \(v,c,D\) are fixed by the limiting
+derivation; common mass-independent factors have been removed.
+This is not an absolute normalization of physical insertions.
+
+For \(\mu_{1,2}=M\pm\delta/2,\ \mu_3=\nu,\ M>2\nu>0\),
+the direct factor \(D\) has simple poles at
+\(\delta=\pm\nu+i(2N+1)\), \(N\in\mathbb Z\).
+At \(\delta_0=\nu+i(2N+1)\) its nonzero residue is
+\begin{equation}
+\mathop{\rm Res}_{\delta_0}D
+=-\frac{2e^{\pi(2M+\nu)}
+ \sinh(\pi\mu_1)\sinh(\pi\mu_2)}
+{\mu_1\mu_2\nu\cosh(\pi(2M+\nu)/2)\cosh(\pi(2M-\nu)/2)}
+\bigg|_{\delta=\delta_0}.
+\label{eq:cres}
+\end{equation}
+Here \(\delta\) is a two-point mass difference and must be mapped
+explicitly before comparison with a four-point global transfer.
+
+This contrast supplies a calibration condition, not a unique
+sewing rule. The complex continuation of \(\mathcal N\), the
+physical inner product, the spectral measure and disconnected
+factorization remain to be specified. One cannot restore desired
+poles by arbitrarily multiplying a graph by \(D\) or its square root.
+The mixed representation and contour issues of CSTY \cite{csty}
+therefore remain relevant.
+
+\section{Numerical evidence and continuation}
+The saved driver performs 74 checks at 40 decimal digits, with
+selected 60-digit comparisons. It compares the two residue
+representations, the unregularized four-term sum, an original
+vertical integral, and the complete vertex identity.
+Three examples have left-sum condition numbers up to
+\(3.68\times10^4\), while the corresponding right sums have
+condition numbers at most \(1.0675\).
+
+For \(M=3,\nu=1\), the transverse pairs
+\((1/8,1/4),(0,1/4),(0,0)\) give simple, double and quadruple
+pinches. Both \(N=0,1\) are tested.
+Approaches \(\omega=\omega_0+\epsilon\), with
+\(\epsilon=10^{-3},10^{-5},10^{-7}\), verify the predicted
+\(\epsilon^{-q}\) behavior of \(\B\) and a finite full graph.
+The largest final relative approach errors are approximately
+\(8.12\times10^{-7}\) for the pole coefficient and
+\(5.31\times10^{-7}\) for the full graph.
+These are finite-\(\epsilon\) effects, not quadrature error bars.
+For example, at the symmetric fourth-order pinch \(\omega_0=1+i\),
+\[
+\mathcal Z_{\rm rec}(\omega_0)=
+-4.38134684304\times10^{-10}
++1.73872354359\times10^{-10}i .
+\]
+The exact-pinch value is evaluated using the terminating
+regularized representation, not inferred solely by extrapolation.
+
+Two mass samples also test the exact double-sine \(V^2\)
+factor at \(\kappa=40,160,640\) against \(v\).
+This tests a constituent of the \(C_0\) derivation, not the
+complete finite-\(\kappa\) \(C_0\) or four-point graph.
+No interval certificate or finite-\(G\) dynamical claim is made.
+
+The next task is to calibrate observer weights and disconnected
+limits against \eqref{eq:d}, then seek an actual sewing/inner-product
+prescription. Identification with a known Racah function requires
+a parameter, measure and normalization dictionary, not just a
+similar Barnes integral. Internal pinch locations alone no longer
+select a physical external cycle; growth at infinity and physical
+insertions must do that work.
+
+\paragraph{Reproducible records.}
+Chinese derivation: notes/stage4-recoil-poles.md.
+Implementation: code/recoil\_poles.py and code/validate\_recoil\_poles.py.
+Raw values, precision, condition numbers and input hashes:
+results/stage4/recoil-poles/diagnostics.json.
+
+\begin{thebibliography}{9}
+\bibitem{clp}
+J.~Chandra, D.~Liska and B.~Post,
+\emph{3D de Sitter from complex Virasoro TQFT: Observers and knots},
+\href{https://arxiv.org/abs/2610.30247v1}{arXiv:2610.30247v1},
+especially (3.17), (3.35)--(3.37), (3.43), (3.46)--(3.47) and Appendix A.
+\bibitem{csty}
+Y.~Chen, D.~Stanford, H.~Tang and Z.~Yang,
+\emph{Negative shocks versus static patch holography},
+\href{https://arxiv.org/abs/2607.14042v1}{arXiv:2607.14042v1}.
+\bibitem{dlmf5}
+NIST Digital Library of Mathematical Functions,
+\href{https://dlmf.nist.gov/5.2}{\S5.2} and
+\href{https://dlmf.nist.gov/5.5}{\S5.5}.
+\bibitem{dlmf16}
+NIST Digital Library of Mathematical Functions,
+\href{https://dlmf.nist.gov/16.2}{\S16.2} and
+\href{https://dlmf.nist.gov/16.5}{\S16.5}.
+\end{thebibliography}
+\end{document}

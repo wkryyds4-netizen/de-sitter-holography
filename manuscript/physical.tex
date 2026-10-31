@@ -1,0 +1,184 @@
+\section{Weak frequency constraints and the physical space}
+\label{sec:physical}
+\subsection{The single-observer frequency split}
+Let $\Psi_n^s$ be the normalized positive-frequency modes of~\cite{KL},
+and $\widetilde\Psi_n^s(t,\theta)=(-1)^n\Psi_n^s(-t,\theta)$.
+Appendix~\ref{app:normalization} proves their wave-packet normalization
+and mutual orthogonality by radial unitary evolution. They span the full
+continuous multiplicity-two spectrum at each angular label. Together with
+the bound modes of \eqref{eq:darboux-spectrum}, they form the core of
+Theorem~\ref{thm:ambient-core}.
+
+Let $H_+\subset L^2(X)$ be the original positive-frequency subspace and
+$H_\perp=H_+^\perp$. Both are $G$-invariant. Write $\cS_+$ for the finite
+span of positive-frequency packets with coefficients in $\Cc((0,\infty))$
+and $\cS_\perp$ for the negative-frequency packets and bound modes. For
+$\mathcal K_N=\Sym^N P_\nu$ define
+\begin{equation}
+ \cE_{\epsilon\delta}=\operatorname{span}\{u_Lu_Rv:
+ u_L\in\cS_\epsilon,\ u_R\in\cS_\delta,\ v\in\mathcal K_N\},
+ \quad \epsilon,\delta\in\{+,\perp\}.
+\end{equation}
+Their $B$ images are mutually orthogonal: between distinct sectors one
+observer factor in each group matrix coefficient is zero. Absolute group
+averaging and Theorem~\ref{thm:ambient-core} give
+\begin{equation}
+ \cF(\mathcal K_N)=\cF_{++}\oplus\cF_{+\perp}
+ \oplus\cF_{\perp+}\oplus\cF_{\perp\perp},\quad
+ \cF_{\epsilon\delta}=\overline{B\cE_{\epsilon\delta}}.
+ \label{eq:four-sectors}
+\end{equation}
+This constructs a bounded physical frequency projection. It does not
+evaluate a kinematical projection at a measure-zero trivial representation
+in a regular Plancherel decomposition.
+
+\begin{definition}[Weak positive frequency]
+A state $k\in\cF(\mathcal K_N)$ is weakly positive frequency in both
+observers if
+\begin{equation}
+ T_k(\phi)=0\quad\text{for every }\phi\in
+ \cE_{+\perp}+\cE_{\perp+}+\cE_{\perp\perp}.
+ \label{eq:weak-positive}
+\end{equation}
+The pairings are the absolute position integrals \eqref{eq:position-pairing}.
+\end{definition}
+This definition uses only single-observer frequency and position tests.
+By \eqref{eq:four-sectors}, its solution space is exactly $\cF_{++}$.
+
+\subsection{Actual product amplitudes and all multiplicities}
+For $N\ge1$, complete normalized CG analysis gives at fixed actual
+right-observer label $a$
+\begin{equation}
+ (P_a\otimes\Sym^NP_\nu)^{\mathrm P}
+ \simeq\int_{d>0}^{\oplus}\dd d\,(P_d\otimes\cM_{N,d,a}).
+ \label{eq:cg-multiplicity}
+\end{equation}
+Inductively add one principal-series particle at a time. Only
+principal--principal and principal--discrete decompositions are needed.
+The final discrete summands are retained separately; internal discrete
+paths remain in $\cM$. Bose symmetrization is a decomposable orthogonal
+projection on multiplicity, creating no new spectral type. The original
+magnetic basis trivializes the measurable field in $a$; explicit CG
+coefficients and their removable limits give jointly measurable transforms.
+
+Each $P_d$ has one unit $K=0$ vector, while a final discrete representation
+has none. Hence
+\begin{equation}
+ U_{N,a}:(P_a\otimes\Sym^NP_\nu)^{(0)}
+ \longrightarrow\int_{d>0}^{\oplus}\dd d\,\cM_{N,d,a}
+\end{equation}
+is unitary. Take a countable original finite-mode Bose basis $e_i(a)$ and
+write $u_i(a,d)=U_{N,a}e_i(a)$, so $\int\norm{u_i(a,d)}^2\dd d=1$.
+
+For a compact smooth left packet $f$ of magnetic label zero and an
+arbitrary right total-$K=0$ vector $v$, the group-averaged amplitude obeys
+\begin{equation}
+ g_{f,v}(d)=\KP(d)f(d)v(d),\qquad
+ \norm{g_{f,v}}_{\spec}\le B_f\norm v,\qquad
+ B_f^2=\esssup_{d>0}\KP(d)|f(d)|^2.
+ \label{eq:fixed-left-bound}
+\end{equation}
+The left mass integration must be performed first. Indeed
+\begin{equation}
+ |D^s_{00}(g)|\le\Xi_0(\lambda):=P_{-1/2}(\cosh\lambda)
+ \le C(1+\lambda)e^{-\lambda/2}
+\end{equation}
+uniformly in $s>0$, by the circle integral of the Legendre function.
+Compact left spectral integration gives the left coefficient $L(g)$
+decay $e^{-\lambda/2}(1+\lambda)^{-r}$ up to exponentially smaller terms.
+For $r\ge3$, $\int_G|L|\Xi_0\dd g<\infty$. The right cross-spectral
+density is in $L^1(\dd d)$ by Cauchy--Schwarz, so Fubini is absolute.
+The wave-packet Schur relation gives \eqref{eq:fixed-left-bound};
+no absolute integration at two fixed masses is asserted.
+
+For the actual original product $v(a)=k_R(a)e_i(a)$,
+\begin{equation}
+ g_{i;f,k_R}(d,a)=\KP(d)f(d)k_R(a)u_i(a,d).
+ \label{eq:actual-amplitude}
+\end{equation}
+These amplitudes are dense in
+\begin{equation}
+ \cH_N^{\spec,0}=\int_{d>0}^{\oplus}\rhoP(d)\dd d
+                  \int_{a>0}^{\oplus}\dd a\,\cM_{N,d,a}.
+ \label{eq:full-physical-spectrum}
+\end{equation}
+To prove this, take $h$ orthogonal to all \eqref{eq:actual-amplitude}.
+Since $\rhoP\KP=1$, we have
+\[
+ \int f(d)k_R(a)\ip{h(d,a)}{u_i(a,d)}\dd a\dd d=0.
+\]
+On compact $A\times D$ the absolute integral is bounded by
+$\norm h_{\spec}\sqrt{|A|\sup_D\rhoP^{-1}}$.
+Product-test totality implies that the pairing vanishes almost everywhere
+for all countably many $i$ simultaneously. Restrict $h$ to $A\times D$
+and apply $U_{N,a}^{-1}$; every original basis coefficient vanishes.
+Compact exhaustion gives $h=0$, without a bounded diagonal-trace map.
+
+For all finite left magnetic labels the amplitude is
+\begin{equation}
+ g_\psi(d)=\KP(d)\sum_j(-1)^{m_j}f_j(d)v^{\mathrm P}_{j,-m_j}(d).
+ \label{eq:finite-magnetic-amplitude}
+\end{equation}
+These terms add coherently. In the compact picture every unit
+magnetic-basis matrix coefficient is bounded by $\Xi_0$, so the same
+left-packet estimate applies. At fixed right total magnetic label only
+finitely many final discrete representations occur; exponential decay
+makes their mixed integrals absolute, and cross-series Schur terms vanish.
+Both norms and cross-pairings of the full product class therefore equal
+the spectral inner product. The dense small class
+\eqref{eq:actual-amplitude} has the same FP closure as $B\cE_{++}$.
+
+For $N=0$ the right total label is $d=a$. The spectral space is
+$L^2(\rhoP(d)\dd d)$ and $g_{f,k_R}=\KP f k_R$ has dense image.
+There is no independent $\dd a$ integral. We obtain a concrete
+surjective isometry $J_N^0:\cH_N^{\spec,0}\to\cF_{++}$ for every finite
+$N$, specified on actual seeds by $J_N^0g_\psi=B\psi$.
+
+\subsection{Observer thresholds and maximality}
+Let $\cS_{+,<}$ contain positive-frequency packets supported in
+$(0,s_*)$. In addition to \eqref{eq:weak-positive}, require
+\begin{equation}
+ T_k(u_Lu_Rv)=0
+ \label{eq:weak-threshold}
+\end{equation}
+when either $u_L\in\cS_{+,<}$ and $u_R\in\cS_+$ or conversely.
+Define $\cH_N^{\max,w}(s_*)$ to contain all finite FP states satisfying
+these two independent test conditions.
+
+\begin{theorem}[Maximal weak-frequency realization]
+Identity \eqref{eq:main-space} holds as an equality of concrete subspaces
+of $\cF(\mathcal K_N)$. For $N\ge1$, its spectral space is
+\eqref{eq:full-physical-spectrum} restricted to $a,d\ge s_*$. For $N=0$
+only $d\ge s_*$ remains.
+\label{thm:maximal-space}
+\end{theorem}
+\begin{proof}
+Equation \eqref{eq:four-sectors} first puts the state in
+$\cF_{++}=J_N^0\cH_N^{\spec,0}$. Use \eqref{eq:actual-amplitude} with
+$f$ supported below $s_*$ and repeat the local $L^1$/inverse-CG argument
+to obtain $g=0$ on $d<s_*$. Taking instead $k_R$ below $s_*$ gives
+$g=0$ on $a<s_*$. Conversely, \eqref{eq:finite-magnetic-amplitude}
+retains left support as $d$ support and right support as $a$ support,
+since CG analysis is at fixed $a$. Every low-observer-spectrum test is
+therefore orthogonal to a high-supported $g$. The fixed-threshold actual
+product construction has dense image in exactly that spectral subspace.
+The vacuum follows from $\KP f k_R$. Threshold atoms are not additional
+vectors in this identified $L^2$ space.
+\end{proof}
+
+The topology qualification is substantive. Equation (4.40) of~\cite{KL}
+does not prescribe a test topology for an arbitrary non-normalizable
+coefficient sum. If it admits the absolute test pairings here with the
+stated positive-frequency support, Theorem~\ref{thm:maximal-space}
+applies. It is not a theorem about every formal summation prescription.
+
+There is also a sufficient limit criterion. Suppose
+$k_j\in\cH_N^{\gen}(s_*)$, $\sup_j\norm{k_j}_{\FP}<\infty$, and
+$Rk_j\to F$ locally as distributions. Hilbert weak compactness gives a
+weakly convergent subsequence. Lemma~\ref{lem:position-distribution}
+identifies its limit as $F=Rk$. The generated space is weakly closed,
+so $k$ belongs to it; injectivity makes every weak cluster point the same.
+The full sequence converges weakly and
+$\norm k\le\liminf_j\norm{k_j}$. Convergence of the norms to $\norm k$
+gives strong convergence. A local distributional limit without a uniform
+FP bound is not covered.

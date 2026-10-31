@@ -1,0 +1,47 @@
+{
+  "created_at_utc": "2026-10-30T17:05:12.909923+00:00",
+  "pages": 5,
+  "diagnostics": 71,
+  "kind": "two-point factor calibration, normalization nonuniqueness and a declared n=1 spectral model",
+  "compilers": {
+    "local": "two final pdfLaTeX passes",
+    "desktop": "success on final source"
+  },
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "maximum_pixel_dimension": 1050,
+    "clipping_or_overlap": false
+  },
+  "limits": [
+    "unknown physical insertion n and absolute normalization",
+    "no gravitational Hilbert-space trace realization",
+    "Wightman quadrature only inside analytic strip",
+    "trace series requires m0>nu/2",
+    "no total interval quadrature certificate",
+    "no four-point sewing rule, finite-G dynamics or complete de Sitter dual"
+  ],
+  "hashes": {
+    "code/build_spectral_note.ps1": "f1343b776fb9d2484eb77c9d895064812fc3d56925ca1e7c898674ac190520aa",
+    "code/recoil_internal.py": "4ad536856e55b3ffc7084312a6d229067a5c7deb1e8f9667aa72982c0e4699a4",
+    "code/recoil_poles.py": "fae71be3302fe219f0af2df4f53467c1319db5db1e7386e60c919165b8611ccc",
+    "code/recoil_spectral.py": "7c8b6ba87d12bf2395070a5cf4f1b04b544fb660dba815f2b9469504a071b23e",
+    "code/recoil_vertex.py": "d6dd46b45f8802052a52842c2bceff0ff289f11433e203c505ea6716e7a6e766",
+    "literature/stage4-recoil-spectral-sources.md": "ec14723ffbbc3edd5ef54c7282444a641d0733d7420accb3a9df2f8ffcaff54f",
+    "manuscript/recoil-spectral/main.tex": "c5169a7cb2b9f00e37333d7e7c213bcbe985e085d4b09e20edac63c5fe2e81c7",
+    "notes/stage4-recoil-spectral.md": "18599b167bad12c5b18e7d82493a59eab17dd045396d065a86f5ffa27a057a6c",
+    "output/pdf/de-sitter-recoil-spectral.pdf": "1ae2ec8b708485d2408ad19c5c5e636c60d30b26382f785543aead1bb90ffef9",
+    "results/stage4/recoil-spectral/build-review.md": "c5a4e017155487c623ec2ce7c676fb45414b0c4bb95a860b6bff4b8c9a9c4093",
+    "results/stage4/recoil-spectral/diagnostics.json": "113aaed2c207db82d03803b3873260fa4b40affd144836b07786ac834bb5d785",
+    "results/stage4/recoil-spectral/initial-diagnostics.json": "d20dbff17a7aa572c72281fc8d82b5ba3191d3fe9aadb428a7e97d1857299cf9",
+    "results/stage4/recoil-spectral/initial-recoil-spectral.py": "e526d41e029c7f0e770f00d1c2e86ced7edc4e576cd1d72a435682cdf689624e",
+    "results/stage4/recoil-spectral/main.log": "da6d1134cfd4af7b34abaaf2863e0d927c1c7037256683b5e73f2d82646b287b",
+    "sources/chandra-liska-post-2610.30247v1.html": "fe8580884e81ba9817e292bbca7c70b7c7d494e89efef62695e94bcf07801d0f",
+    "sources/chen-stanford-tang-yang-2607.14042v1.html": "9e352212021abf7135852f4b5dc8cd933f47334bd72e78f8def9d84d34fed5e2"
+  }
+}

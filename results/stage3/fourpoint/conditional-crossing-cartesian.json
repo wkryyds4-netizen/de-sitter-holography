@@ -1,0 +1,191 @@
+{
+  "generated_utc": "2026-10-29T00:22:24.707451+00:00",
+  "status": "completed",
+  "scope": "Conditional fixed d=.8 exact finite-mass crossed task, finite cutoff, no normalized external packet.",
+  "numerical_limits": "Gauss refinement and positive-tail estimates, no interval certification.",
+  "source": "https://arxiv.org/html/2411.08090v1",
+  "versions": {
+    "python": "3.14.5",
+    "numpy": "2.4.6",
+    "scipy": "1.18.0"
+  },
+  "code_sha256": {
+    "run_crossing_cartesian.py": "be34455a1293988ce26590d30f322ae678d181b06b18fe828b2e888f9cf30d18",
+    "run_crossing_conditional.py": "5c83446be953c32c331e045e49c25cb8e9851cf1814ebe432333d1cbaf62a8d6",
+    "observer_crossing_regular.py": "2396f0987e964d3e9e507c8d76edb9babba2a5daf0cef27a2cc820c4cda3f64e",
+    "observer_crossing.py": "30a91db5fd97e90e3521ea82b253fc5f1cdad95cf033d4d63a701035f185883e",
+    "quantized_observer.py": "6851265b9daa9b02b2a96580d175be1d7153a13bc1e20ef9e891b8abe936583f"
+  },
+  "input_sha256": {
+    "sources/kolchmeyer-liu-2411.08090v1.html": "352ef29aa89c376203271bf984bd904fb471ff313a7d420bc6a0ebc875d78065"
+  },
+  "coordinate_rule": "Cartesian product Gauss with a/c symmetry, diagonal weight 1",
+  "rows": [
+    {
+      "order": 12,
+      "upper": 3.0,
+      "lower": 0.2,
+      "nu": 0.6,
+      "d": 0.8,
+      "sigma_proper": 1.0,
+      "dps": 15,
+      "guard_digits": 8,
+      "points": 936,
+      "workers": 4,
+      "values": [
+        {
+          "real": 0.0032720716479377925,
+          "imag": 1.6945411031079667e-28
+        },
+        {
+          "real": 0.0032346015193498367,
+          "imag": 0.00016670849572191076
+        },
+        {
+          "real": 0.0031222218945364576,
+          "imag": 0.00032989507597625136
+        },
+        {
+          "real": 0.0026790599674772837,
+          "imag": 0.0006190926499020313
+        }
+      ],
+      "times_left_to_right": [
+        [
+          0.0,
+          0,
+          0.0,
+          0
+        ],
+        [
+          0.5,
+          0,
+          0.5,
+          0
+        ],
+        [
+          1.0,
+          0,
+          1.0,
+          0
+        ],
+        [
+          2.0,
+          0,
+          2.0,
+          0
+        ]
+      ],
+      "quadrature_absolute_sum": 0.003392330189650399,
+      "maximum_cancellation": 9515293.866817966,
+      "maximum_raw_imaginary": 3.943079023575612e-27,
+      "worst_point": {
+        "labels": [
+          "2.8657641589186649",
+          "0.7777548639987355",
+          "2.8657641589186649",
+          "0.80000000000000004"
+        ],
+        "conditional": {
+          "real": 9.280928979470655e-10,
+          "imag": -7.429724366563328e-45
+        },
+        "cancellation": 9515293.866817966
+      },
+      "elapsed_seconds": 469.7498673000373,
+      "positive_norms": {
+        "N_cut": 0.0033924727843077577,
+        "N_to_cap": 0.003392473605394712,
+        "epsilon_to_cap": 8.210869539503696e-10,
+        "outer_tail": 1.914397405829053e-11,
+        "inner_tail": 8.01942979892079e-10,
+        "cap": 12.0,
+        "cross_tail_bound_estimate": 3.3379727272215206e-06,
+        "scope": "Positive quadrature estimate to finite cap; not a certified infinite-tail bound."
+      }
+    },
+    {
+      "order": 16,
+      "upper": 3.0,
+      "lower": 0.2,
+      "nu": 0.6,
+      "d": 0.8,
+      "sigma_proper": 1.0,
+      "dps": 15,
+      "guard_digits": 8,
+      "points": 2176,
+      "workers": 4,
+      "values": [
+        {
+          "real": 0.0032731825862107843,
+          "imag": -2.1864090983011074e-28
+        },
+        {
+          "real": 0.003235676569607288,
+          "imag": 0.0001669098474217277
+        },
+        {
+          "real": 0.0031231972336643273,
+          "imag": 0.0003302685324301598
+        },
+        {
+          "real": 0.0026797384679008557,
+          "imag": 0.0006196509676690573
+        }
+      ],
+      "times_left_to_right": [
+        [
+          0.0,
+          0,
+          0.0,
+          0
+        ],
+        [
+          0.5,
+          0,
+          0.5,
+          0
+        ],
+        [
+          1.0,
+          0,
+          1.0,
+          0
+        ],
+        [
+          2.0,
+          0,
+          2.0,
+          0
+        ]
+      ],
+      "quadrature_absolute_sum": 0.003395955064032052,
+      "maximum_cancellation": 21806612.41056446,
+      "maximum_raw_imaginary": 9.185714282104737e-27,
+      "worst_point": {
+        "labels": [
+          "2.6575661716970043",
+          "0.38811631665703555",
+          "2.8118836833429648",
+          "0.80000000000000004"
+        ],
+        "conditional": {
+          "real": 4.399390633808109e-11,
+          "imag": -8.03688121694938e-44
+        },
+        "cancellation": 21806612.41056446
+      },
+      "elapsed_seconds": 966.033802500111,
+      "positive_norms": {
+        "N_cut": 0.0033924727843077577,
+        "N_to_cap": 0.003392473605394712,
+        "epsilon_to_cap": 8.210869539503696e-10,
+        "outer_tail": 1.914397405829053e-11,
+        "inner_tail": 8.01942979892079e-10,
+        "cap": 12.0,
+        "cross_tail_bound_estimate": 3.3379727272215206e-06,
+        "scope": "Positive quadrature estimate to finite cap; not a certified infinite-tail bound."
+      }
+    }
+  ]
+}

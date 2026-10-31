@@ -1,0 +1,45 @@
+{
+  "created_at_utc": "2026-10-30T16:41:46.887881+00:00",
+  "pages": 5,
+  "diagnostics": 74,
+  "kind": "self-reviewed exact Gamma-pinch cancellation and fixed-mass bare direct-C0 calibration",
+  "compilers": {
+    "local": "two successful pdfLaTeX passes",
+    "desktop": "success on final source"
+  },
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "maximum_pixel_dimension": 1050,
+    "clipping_or_overlap": false
+  },
+  "limits": [
+    "fixed-mass kappa limit before complex continuation",
+    "no physical insertion normalization, Hilbert space or sewing rule",
+    "no classification of which remaining external-leg poles survive",
+    "no infinity-arc control or physical contour identification",
+    "finite-kappa numerical checks evaluate V^2 only, not full C0 or graph",
+    "no interval certificate or complete de Sitter dual"
+  ],
+  "hashes": {
+    "code/build_poles_note.ps1": "59a6b107af218348eca3f0e0da8b36bc522329f986555e1a07e6c5b5d53f9d61",
+    "code/recoil_internal.py": "4ad536856e55b3ffc7084312a6d229067a5c7deb1e8f9667aa72982c0e4699a4",
+    "code/recoil_poles.py": "fae71be3302fe219f0af2df4f53467c1319db5db1e7386e60c919165b8611ccc",
+    "code/recoil_vertex.py": "d6dd46b45f8802052a52842c2bceff0ff289f11433e203c505ea6716e7a6e766",
+    "code/validate_recoil_poles.py": "9933cd765a0d98a5f6f35d15f627e9606abe58c23ba57f901d0d45945772f8ef",
+    "literature/stage4-recoil-poles-sources.md": "7bb760bc9263761f634f5aa0f7a88b3a18392043b4be688ed53db3cbc3cd9ac1",
+    "manuscript/recoil-poles/main.tex": "2df13449a7e69f4e885265cadcc6bbfa012c7d023efc4f857ae9e2f10988c960",
+    "notes/stage4-recoil-poles.md": "584bca54ead69de575e82e0595b0303d037df49f9161c90dc819ce824745bb4a",
+    "output/pdf/de-sitter-recoil-poles.pdf": "2945576b173dd829a118fabc10d7b837757500553b494d2dde434a1245342e79",
+    "results/stage4/recoil-poles/build-review.md": "d90f9c8846c49d3d3a9df8757ca47ce404af3142e69272b92c75674a5663e6f2",
+    "results/stage4/recoil-poles/diagnostics.json": "bd2dee8121aba4e828d6b1612c34b08ab77a1d7def2f49d22c00577c9c57f841",
+    "results/stage4/recoil-poles/main.log": "bb9f241b412ae47964018f21a363d61ba17392e18cafcd89d7a9b145f375897f",
+    "sources/chandra-liska-post-2610.30247v1.html": "fe8580884e81ba9817e292bbca7c70b7c7d494e89efef62695e94bcf07801d0f",
+    "sources/chen-stanford-tang-yang-2607.14042v1.html": "9e352212021abf7135852f4b5dc8cd933f47334bd72e78f8def9d84d34fed5e2"
+  }
+}

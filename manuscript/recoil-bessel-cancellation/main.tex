@@ -1,0 +1,364 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,microtype,booktabs}
+\usepackage[margin=25mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newcommand{\dd}{\mathop{}\!\mathrm d}
+\newcommand{\D}{\mathcal D}
+\title{Cancellation zeros and the next recoil terms\\in the full Barnes amplitude}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Working research note --- 30 October 2026}
+\begin{document}\maketitle
+\begin{abstract}
+The two-branch Bessel leading term has infinitely many simple zeros
+on the positive real parameter plane. We compute the next integrated
+coefficients of the exact Barnes kernel and show that these auxiliary
+zeros are lifted at order \(\nu^{-2}\). Thus a uniform relative error
+dividing by the leading sum cannot include this set. Away from
+cancellation, the second coefficient explains the previously observed
+\(K^3/\nu^2\) scale. The integrated expansion is proved at fixed
+parameters; a joint growing-\(K\) remainder remains open.
+\end{abstract}
+
+\section{Object and a fixed-parameter expansion}
+Use radius one, \(u=v=0\), \(\omega=i\alpha\), \(K>0\),
+real \(\alpha\), \(M=\nu^2/(2K)\). The object is the internal chiral
+graph amplitude after the fixed-mass \(\kappa\to\infty\) limit.
+No finite-\(G\) state, physical external insertion or normalized OTOC
+is identified here. Set \(t=z+i(M+\nu)\),
+\[
+ b=\tfrac12-i(M-\nu),\quad c=\tfrac12-i(M+\nu),\quad
+ C=e^{-\pi(M+\nu)}\frac{\Gamma(-i\nu/2)^4\Gamma(b)}{\Gamma(c)}.
+\]
+The normalized kernel, inherited from the preceding full-limit note, is
+\[
+ Q_\nu(t)=e^{-i\pi t}\frac{\Gamma(t-i\nu/2)^4}{\Gamma(-i\nu/2)^4}
+ \frac{\Gamma(b-t)\Gamma(c)}{\Gamma(b)\Gamma(c+t)}
+ \Gamma(\tfrac12-t+\alpha/2)\Gamma(\tfrac12-t-\alpha/2).
+\]
+Its contour runs upward from \(-N-i\infty\) to \(-N+i\eta\),
+then right, with \(\eta>0\), integer \(N>|\alpha|/2+1/2\).
+Write \(\mathcal I_\nu=(2\pi i)^{-1}\int Q_\nu\,\dd t=\mathfrak B/C\).
+Define, with \(\D=(K/2)\partial_K\) at fixed \(\alpha\),
+\begin{align*}
+ J&=-K[e^{i\pi\alpha}K_\alpha(K)+i\pi I_\alpha(K)],\qquad
+ S=K^2+\alpha^2-1,\\
+ T&=\tfrac13[2S\D J+(K^2-\alpha^2+1)J],\qquad
+ P=\tfrac16[9K^4-(\alpha^2-1)^2].
+\end{align*}
+\begin{theorem}
+For fixed \(K,\alpha\), as \(\nu\to\infty\),
+\[
+ \mathcal I_\nu
+ =e^{i(S/\nu+P/\nu^3)}\left(J+\frac{T}{\nu^2}\right)
+  +O_{K,\alpha}(\nu^{-4}). \tag{1}
+\]
+The error is absolute, including at \(J=0\).
+\end{theorem}
+
+\newpage
+\section{Derivation of the integrated coefficients}
+Let
+\[
+ U(t)=e^{-2\pi it}(K/2)^{2t}
+ \Gamma(\tfrac12-t+\alpha/2)\Gamma(\tfrac12-t-\alpha/2).
+\]
+On the logarithmically growing truncation \(R=\log\nu\),
+Gamma-ratio expansions \cite{gamma} on safe sectors give
+\[
+ \log(Q_\nu/U)=\frac{L_1}{\nu}+\frac{L_2}{\nu^2}
+ +\frac{L_3}{\nu^3}
+ +O_{K,\alpha}((1+|t|)^5/\nu^4), \tag{2}
+\]
+where log ratios are continued from zero shift, and
+\begin{align*}
+ L_1&=4i(t^2-t),\\
+ L_2&=\tfrac83 B_3(t)+4K^2t
+     =\tfrac83t^3-4t^2+(\tfrac43+4K^2)t,\\
+ L_3&=4iK^2t^2-\tfrac{8i}{3}(t^2-t)^2.
+\end{align*}
+For the four arguments \(-i\nu/2\), the Bernoulli terms through
+\(B_4\) give the displayed cubic and quartic polynomials.
+The leading \(b,c\) powers contribute
+\((4K^2-2iK)t/\nu^2\); their quadratic shifts supply
+\(2iKt/\nu^2+4iK^2t^2/\nu^3\). This explicitly cancels the imaginary
+second-order term.
+
+Exponentiating (2), the coefficient polynomials are
+\[
+ A_2=L_2+\tfrac12L_1^2
+ =-8t^4+\tfrac{56}3t^3-12t^2+(\tfrac43+4K^2)t,
+ \quad
+ A_3=L_3+L_1L_2+\tfrac16L_1^3. \tag{3}
+\]
+Replace \(t^n\) under the auxiliary integral by \(\D^n\), keeping
+the displayed coefficient powers of \(K\) to the left.
+Since \(\D^2J=\D J+(S/4)J\), every result reduces to \(J,\D J\).
+For a direct algebraic verification, if \(q=S/4\), then
+\[
+ \D(FJ+G\D J)=(\D F+qG)J+(F+\D G+G)\D J,\qquad
+ \D q=K^2/4.
+\]
+This gives
+\[
+ A_2(\D)J=T-\tfrac12S^2J,\qquad
+ A_3(\D)J-iS A_2(\D)J-\tfrac{i}{3}S^3J=iPJ. \tag{4}
+\]
+The third term after removal of the first phase is thus proportional
+to \(J\), while the second contains its derivative.
+
+For completeness, the preceding tail proof supplies, uniformly in
+large \(\nu\) at fixed \(K,\alpha\),
+\[
+ |Q_\nu(-N-is)|\le C(1+s)^{2N}e^{-3\pi s},\quad
+ \int_R^\infty|Q_\nu(x+i\eta)|\dd x\le6RH_R,
+\]
+with \(H_R=\sup_{[R,R+1]}|Q_\nu(x+i\eta)|\) once
+\(R\ge\max(2,2K,2\max(\alpha^2/4-\eta^2,0))\).
+At \(R=\log\nu\), (2) implies
+\(H_R\le C\exp[-2R\log R+O_K(R)]\).
+The vertical tail is \(o(\nu^{-4})\), the horizontal tail is smaller
+than every fixed inverse power, and all polynomial moments of
+\(|U|\) are integrable. The truncated exponentiation error is
+bounded by \(C\nu^{-4}(1+|t|)^8|U|\).
+Integration and (4) prove (1). The constants are not joint-\(K\) bounds.
+
+\newpage
+\section{The leading sum has simple real cancellation zeros}
+It suffices to take \(\alpha\ge0\), since the complete \(J\) is even
+in \(\alpha\). For \(K>0\), \(I_\alpha(K)\) and \(K_\alpha(K)\) are
+positive \cite{limits}. Hence
+\[
+ \Re J=-K\cos(\pi\alpha)K_\alpha(K).
+\]
+A zero requires \(\cos(\pi\alpha)=0\). If \(\sin(\pi\alpha)=+1\),
+the imaginary terms add. Therefore all positive-order zeros occur at
+\[
+ \alpha_n=2n+\tfrac32,\quad n=0,1,\ldots,\qquad
+ K_{\alpha_n}(K_n)=\pi I_{\alpha_n}(K_n). \tag{5}
+\]
+There is exactly one \(K_n>0\) for each such \(\alpha_n\).
+Indeed the ratio \(r(K)=K_\alpha(K)/I_\alpha(K)\) runs from infinity
+to zero, and the standard Wronskian \cite{wronskian} gives
+\[
+ r'(K)=-\frac1{K I_\alpha(K)^2}<0.
+\]
+At the zero,
+\[
+ J'(K_n,\alpha_n)=-\frac{i}{I_{\alpha_n}(K_n)},\qquad
+ T(K_n,\alpha_n)=-\frac{iK_nS_n}{3I_{\alpha_n}(K_n)}\ne0,
+ \quad S_n=K_n^2+\alpha_n^2-1. \tag{6}
+\]
+Equation (1) then implies, at each fixed zero,
+\[
+ \mathcal I_\nu(K_n,\alpha_n)
+ =-\frac{iK_nS_n}{3I_{\alpha_n}(K_n)\nu^2}
+ e^{iS_n/\nu}+O_{K_n,\alpha_n}(\nu^{-4}). \tag{7}
+\]
+The exact integral therefore does not retain that auxiliary zero for
+all sufficiently large \(\nu\). This is not a claim locating all
+zeros of the finite-mass integral or excluding displaced zeros.
+
+The zeros accumulate near the previously found magnitude crossover.
+Let \(F(y)=\sqrt{1+y^2}-y\operatorname{arsinh}y\), with
+positive root \(y_c\simeq1.50887956\).
+Uniform Bessel asymptotics \cite{order} give, near \(y_c\),
+\[
+\log\frac{K_\alpha(K)}{\pi I_\alpha(K)}
+=-2KF(\alpha/K)+O(K^{-1}).
+\]
+Monotonicity first traps the root there, and then
+\[
+ \alpha_n/K_n=y_c+O(\alpha_n^{-2}). \tag{8}
+\]
+These are auxiliary interference zeros, not physical critical points.
+
+\begin{center}\begin{tabular}{rrr}\toprule
+\(\alpha_n\)&\(K_n\) (approximate)&
+\(\alpha_n^2(\alpha_n/K_n-y_c)\)\\\midrule
+1.5&1.00000000&\(-0.0199790\)\\
+3.5&2.32218535&\(-0.0205628\)\\
+7.5&4.97178686&\(-0.0206769\)\\
+15.5&10.27310967&\(-0.0207018\)\\
+31.5&20.87670645&\(-0.0207076\)\\
+63.5&42.08435037&\(-0.0207089\)\\\bottomrule
+\end{tabular}\end{center}
+
+\newpage
+\section{Consequences for the joint recoil window}
+Any relative error divided by \(J\) is undefined on (5), and (7)
+shows that this is not just a harmless shared zero. A prospective
+uniform result should instead control the complete complex amplitude,
+for example against the positive branch envelope
+\[
+ \mathcal E(K,\alpha)=K[K_\alpha(K)+\pi I_\alpha(K)].
+ \tag{9}
+\]
+A bound relative to \(\mathcal E\) has not yet been proved for the
+joint limit. It would preserve absolute control near interference
+and imply a relative estimate only where \(|J|\) is bounded below
+by a suitable fraction of \(\mathcal E\).
+
+Away from cancellation, set
+\[
+ c_2(K,\alpha)=T(K,\alpha)/J(K,\alpha)-T(K,0)/J(K,0).
+\]
+For \(\alpha=Ky\), fixed \(y>0\) separated from \(y_c\), Bessel
+derivative asymptotics at \emph{fixed order when differentiating}
+give the coefficient limits
+\[
+ \frac{c_2(K,Ky)}{K^3}\longrightarrow
+ \begin{cases}
+ ((1+y^2)^{3/2}-1)/3,&0<y<y_c,\\
+ -((1+y^2)^{3/2}+1)/3,&y>y_c.
+ \end{cases} \tag{10}
+\]
+The reference \(y=0\) contributes \(+1/3\).
+Equation (10) is an asymptotic of an explicitly known coefficient,
+not of the unbounded remainder in (1).
+It identifies the candidate small scale
+\[
+ K^3/\nu^2=\nu^4/(8M^3).
+\]
+Thus \(M\gg\nu^{4/3}\) suppresses this coefficient, while
+\(M\ll\nu^2\) ensures \(K\gg1\).
+This agrees with the earlier candidate recoil window but does not
+prove its sufficiency. The first phase \(K^2/\nu\) can be large in
+that window, so a joint analysis must retain it rather than truncate it.
+
+At fixed parameters, since \(J(K,0)\ne0\), (1) also yields the
+absolute normalized-ratio approximation
+\[
+ \frac{\mathfrak B(K,\alpha)}{\mathfrak B(K,0)}
+ =
+ e^{i[\alpha^2/\nu-(\alpha^4-2\alpha^2)/(6\nu^3)]}
+ \frac{J(K,\alpha)+T(K,\alpha)/\nu^2}
+ {J(K,0)+T(K,0)/\nu^2}+O_{K,\alpha}(\nu^{-4}). \tag{11}
+\]
+This form retains the derivative term even when the numerator's
+leading \(J\) vanishes.
+
+Reusing the frozen full-integral data at \(\nu=4K^3\) gives:
+\begin{center}\begin{tabular}{rrrrr}\toprule
+\(K\)&\(y\)&first phase only&plus \(c_2/\nu^2\)&formula (11)\\\midrule
+4&2&\(3.89\,10^{-3}\)&\(4.02\,10^{-5}\)&\(6.35\,10^{-6}\)\\
+8&1&\(7.43\,10^{-5}\)&\(7.71\,10^{-8}\)&\(6.64\,10^{-9}\)\\
+8&2&\(4.93\,10^{-4}\)&\(1.27\,10^{-6}\)&\(1.02\,10^{-7}\)\\
+16&2&\(6.19\,10^{-5}\)&\(3.97\,10^{-8}\)&\(1.60\,10^{-9}\)\\\bottomrule
+\end{tabular}\end{center}
+Entries are relative numerical differences; no coefficient was fitted.
+
+\newpage
+\section{A joint positive-tail ingredient at an \(O(K)\) cutoff}
+The earlier recurrence bound began at \(A=O(\alpha^2)\). This
+threshold can be bridged under the same candidate hierarchy,
+without raising the contour height. Fix \(Y\ge0\), \(K\ge1\),
+\(|\alpha|\le KY\), and \(\eta=1\). Set
+\[
+ D_Y=\max(2,Y^2/2),\quad c_Y=8+2Y,\quad
+ A=\max(2,2K,2d),\quad d=\max(\alpha^2/4-1,0).
+\]
+Assume
+\[
+ \nu^2\ge32(D_Y+1)K^3,\qquad R\ge c_YK. \tag{12}
+\]
+The exact recurrence from the preceding note is
+\[
+ \mathcal R_\nu(t)=\frac{Q_\nu(t+1)}{Q_\nu(t)}
+ =\frac{(t-i\nu/2)^4}
+ {[(t+\tfrac12-i\nu)^2+M^2][(t+\tfrac12)^2-\alpha^2/4]}.
+\]
+If \(R\le A+1\), write \(a=\nu/2-1\), \(L=M-\nu+1\).
+The earlier denominator bounds, \(L\ge\nu^2/(4K)\), and
+\(x^2-d\ge x^2/2\) give, for \(R\le x\le A+1\),
+\begin{align*}
+ |\mathcal R_\nu(x+i)|
+ &\le \frac{2(x^2+a^2)^2}{L^2x^2}\\
+ &\le2\left(\frac{A+1}{L}+\frac{a^2}{RL}\right)^2
+ \le2\left(\frac18+\frac18\right)^2=\frac18 .
+\end{align*}
+Here \(A+1\le(D_Y+1)K^2\), so the first fraction is at most
+\(4(D_Y+1)K^3/\nu^2\); the second is at most \(K/R\).
+Assumption (12) also implies the earlier condition \(\nu\ge8K\).
+For \(x\ge A\), the already proved step bound
+\(|\mathcal R_\nu(x+i)|\le[x/(x+1)]^{3/2}\) applies.
+
+Thus the geometrically contracting transition reaches the
+polynomially bounded far tail. If
+\(n_0=\max(0,\lceil A-R\rceil)\), the first \(n_0\) unit steps
+cost at most \(8^{-n_0}\), and the remaining tail is bounded by
+\(6(R+n_0)H_R8^{-n_0}\). Summing the finite transition gives the
+convenient universal estimate
+\[
+ \int_R^\infty |Q_\nu(x+i)|\,\dd x
+ \le10(R+1)H_R,\qquad
+ H_R=\sup_{R\le x\le R+1}|Q_\nu(x+i)| . \tag{13}
+\]
+If \(R\ge A\), the original far-tail bound immediately implies (13).
+
+This is a joint-\(K\) positive-tail lemma: the base cutoff need only
+be \(O_Y(K)\), rather than \(O_Y(K^2)\).
+It does not bound \(H_R\) relative to the branch envelope, nor the
+negative contour with \(N=O(K)\). Those two tasks, together with
+the integrated local remainder after phase retention, remain
+necessary for a full joint asymptotic theorem.
+Eighteen finite samples check the new contraction inequality,
+including masses at the threshold in (12).
+
+\newpage
+\section{Direct checks at zeros and next proof requirements}
+At the first two auxiliary zeros we directly integrate the exact
+\(Q_\nu\), retaining both complex contour segments.
+For the leading nonzero prediction in (7), we find
+\begin{center}\begin{tabular}{rrr}\toprule
+\(\alpha\)&\(\nu\)&relative error against (7)'s leading term\\\midrule
+1.5&64&\(3.97013\,10^{-4}\)\\
+1.5&128&\(9.91999\,10^{-5}\)\\
+1.5&256&\(2.47966\,10^{-5}\)\\
+3.5&64&\(9.38078\,10^{-4}\)\\
+3.5&128&\(2.32015\,10^{-4}\)\\
+3.5&256&\(5.78474\,10^{-5}\)\\\bottomrule
+\end{tabular}\end{center}
+The segment cancellation ratio reaches about \(1.70\,10^7\).
+We use 20/32 Gauss nodes per segment and 60/80 digits, with a
+100-digit comparison at the largest \(\nu\).
+The latter also changes \((X,T,\eta)=(36,18,1)\) to
+\((44,24,0.75)\). Refinements compare the complete complex sum.
+These are empirical diagnostics, not interval certification.
+
+All 65 checks pass: 3 symbolic operator identities, 4 compact
+remainder-decrease checks, 18 zero/Wronskian/lifting identities,
+6 quadrature refinements, 4 precision/contour comparisons,
+4 zero-lifting error decreases, 8 improvements in reused joint
+samples, and 18 joint-tail samples.
+Six compact residuals and six reused fixed-parameter
+second-order residuals are also stored.
+Code, versions, parameters, complex segments, and input SHA256
+hashes are in the accompanying project records.
+
+The next uniform theorem must use an absolute or branch-envelope
+error and keep the derivative correction through cancellation.
+A promising route is to split the two analytic contributions before
+bounding their sum, then prove contour estimates with explicit
+\(K,\alpha\) dependence after retaining the first phase.
+The positive-tail transition is now controlled by (13); the base
+size and the negative contour still require estimates with explicit
+parameter dependence.
+The joint remainder, transverse variables, physical external energy
+cycles and normalization, disconnected baseline, finite-\(G\) limit,
+and microscopic dictionary all remain open.
+This is an author self-reviewed proof draft.
+
+\begin{thebibliography}{9}
+\bibitem{gamma} NIST DLMF, \S5.11, Gamma asymptotics,
+\url{https://dlmf.nist.gov/5.11}.
+\bibitem{wronskian} NIST DLMF, 10.28.2, Bessel Wronskian,
+\url{https://dlmf.nist.gov/10.28}.
+\bibitem{limits} NIST DLMF, \S10.30, \S10.32, and \S10.40,
+positivity and limiting forms,
+\url{https://dlmf.nist.gov/10.32}.
+\bibitem{order} NIST DLMF, \S10.41(ii), including derivative expansions,
+\url{https://dlmf.nist.gov/10.41}.
+\end{thebibliography}
+\end{document}

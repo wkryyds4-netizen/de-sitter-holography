@@ -1,0 +1,54 @@
+{
+  "created_at_utc": "2026-10-30T02:59:59.451182+00:00",
+  "kind": "exact algebra and classical Hessian; conditional local one-loop reconciliation, author self-reviewed draft",
+  "pages": 5,
+  "compilers": {
+    "desktop": "success after alignment repair",
+    "local": "pdfLaTeX two passes; clean final log"
+  },
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "dpi": 95,
+    "clipping_or_overlap": false
+  },
+  "results": [
+    "exact Gram factorization and distinct limit routes",
+    "external-energy marginalization Jacobian and phase",
+    "equal-probe classical transverse Hessian",
+    "conditional Gram times transverse ratio tends to 1/(1+y^2)"
+  ],
+  "not_proven": [
+    "full vertex and physical leg joint asymptotics",
+    "uniform Gaussian and degenerating spherical 6j remainders",
+    "external integration cycles and other saddles",
+    "complete finite-G amplitude, microscopic dictionary or full dual",
+    "independent certification or priority"
+  ],
+  "hashes": {
+    "code/build_gram_note.ps1": "2109aabd30b22542019dbf2560b356ed7b59f92d50c3130278099bc7e950f296",
+    "code/gram_prefactor.py": "66a76540114edd361ff51d04d962a643a60441228639a2c9d043eaa2799e0de8",
+    "code/wkb_overlap.py": "7772b0282ddc1935d7057119a60e6d4612ce9bf328a545651ead5c51502e0feb",
+    "literature/stage4-gram-prefactor-sources.md": "66a45fc9f3fa77d8f516f01da05dbe6ce09196bc3d9106580c24455f92bdf84d",
+    "manuscript/gram-prefactor/main.tex": "f4ec01f931a4fffb1b68eedb32a68a4687a539a35071b9fb0848a4e2e795058f",
+    "notes/stage4-gram-prefactor.md": "1183fc1ad670c00eb00877d0de0dfd800aa86740750f5c2300848a225f918983",
+    "output/pdf/de-sitter-gram-prefactor.pdf": "be944b8bc86892ff8011dbeeab1b78cc2e10a34f4e5cc7e9f5f37ac2ad6acc8a",
+    "results/stage4/gram-prefactor/build-review.md": "9f44ba267dfe60eb385c646b6d81a02e3afe6de4b00bbb9c53beb4e71489c56e",
+    "results/stage4/gram-prefactor/diagnostics.json": "a31666f6a5a839e247ae61f88c70c91b441db51f442308f6e2089c00962eee63",
+    "results/stage4/gram-prefactor/main.log": "0320eb1d1883cb71c8d2ed8d7a61eb0d332c877ac81a22c6c783c2a59a5aded0",
+    "sources/chandra-liska-post-2610.30247v1.html": "fe8580884e81ba9817e292bbca7c70b7c7d494e89efef62695e94bcf07801d0f",
+    "sources/chen-stanford-tang-yang-2607.14042v1.html": "9e352212021abf7135852f4b5dc8cd933f47334bd72e78f8def9d84d34fed5e2"
+  },
+  "render_sha256": {
+    "page-1.png": "d59e4d33cf1208f9aa0998d2f6a4c9eaa2e86c8956f0b7a837879f18dd399fff",
+    "page-2.png": "b7a7b1ca288545cc05be71d1818d715d530bbfa88d1bfb82f7b1a923b5a7dcd0",
+    "page-3.png": "cd207b1f49da0b59e5526e50e4df4f80bd9f92e0cadcbca46ae0c188295911e8",
+    "page-4.png": "fb4a6bda419d9e5761bc455b2f9176d521e7915b27454ef2d3345e0c6329fb69",
+    "page-5.png": "c2b71d52c5f8126bdf7925b3c562c3c9995dcd2a486f1b3c20c0d13e793b00e7"
+  }
+}

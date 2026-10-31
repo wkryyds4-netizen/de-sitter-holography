@@ -1,0 +1,55 @@
+{
+  "created_at_utc": "2026-10-29T15:05:47.205555+00:00",
+  "kind": "analytic proof and dependency record; author self-review, not independent certification",
+  "result": "Theorem 7.1: integrated annihilation limit on every physical input; Section 7.3: absolute uncut Fejer realization on dense seed inputs",
+  "assumptions": [
+    "dS2, L=1, strict G_N -> 0",
+    "proper SO+(2,1)",
+    "BD free principal matter nu > 0",
+    "Gaussian sigma > 0, real center tau",
+    "actual observer lower label s* > 0",
+    "fixed output test in P_N",
+    "all input vectors in identified maximal weak-frequency FP sector for integrated limit",
+    "input in B P_{N+1} for absolute uncut and pointwise Fejer statements"
+  ],
+  "proof_chain": [
+    "finite-mode transposed creation is a bounded Hilbert vector; quadratic orbit bound at fixed M",
+    "independent absolute position-time functional for every physical input",
+    "cutoff acts on emitted particle before symmetrization; uniform kinematic bound and strong convergence",
+    "K preservation puts output in expanded fixed-left GA class; full G equivariance is not used at finite M",
+    "quartic time majorant permits finite-M time/group/position Fubini on seed inputs",
+    "absolute scalar GA identifies kappa_M; physical density extends finite-M functional",
+    "fixed-left B_f continuity gives convergence in physical dual norm for fixed test",
+    "Fejer positivity and covariance of smooth finite-mode group orbits provide uniform norm envelope",
+    "dominated seed group integral and quartic Gaussian majorant give absolute uncut seed formula"
+  ],
+  "phase_review": "conjugating the creation coefficient in the first inner-product slot yields the annihilation phase at unchanged tau",
+  "limits_not_claimed": [
+    "finite-M physical descent or null-seed preservation",
+    "uniform convergence over all unit physical test representatives",
+    "arbitrary-input pointwise convergence or absolute uncut norm majorant",
+    "Gaussian removal",
+    "s*=0 field extension",
+    "finite-G dynamics or complete holographic dual",
+    "priority or novelty certification"
+  ],
+  "numerical_runs": [],
+  "external_read_not_cached": {
+    "url": "https://math.stanford.edu/~andras/172-3.pdf",
+    "sections": [
+      "Appendix B, printed pages 13-14"
+    ],
+    "reason": "local DNS resolution failure"
+  },
+  "hashes": {
+    "manuscript/annihilation.tex": "a2aa3c84feaad9219f00416673e556ab32f58139bc6ad5b5991d00186e0a7b3f",
+    "notes/stage3-integrated-annihilation.md": "a8bc985c3c3f3c5644b74d2d6397a690fec1cdabf3b8bb170de13332667ba4f9",
+    "literature/stage3-annihilation-sources.md": "ea908eb344ababe31d232f1f9d2f874cc239d2aaba976326cc2a9bff4aa7e402",
+    "manuscript/position.tex": "ec024887164f0d403e0e971b6899e29c6529ad418aa7825db2fa34f2a9f7903b",
+    "manuscript/physical.tex": "e4a6ed8a83ee92c1e74def3662acf25f7c5467a3b0a0eae5c3ba905fb9b37134",
+    "manuscript/fields.tex": "e7721d3199378711786d18e479766bec13b2192bf4f5fc152c9b9a5decac6906",
+    "notes/stage3-regulated-local-descent.md": "926667a3e5b5ddf55a781330976874287ff894a0e2c5ad53776a309de12d10e4",
+    "notes/stage3-product-seed-ga-density.md": "f1cc6ffb7d280cb7b77a834fdfdb58f0fd6d9ea9d8543b2e4c19e55b1e07b89c",
+    "sources/kolchmeyer-liu-2411.08090v1.html": "352ef29aa89c376203271bf984bd904fb471ff313a7d420bc6a0ebc875d78065"
+  }
+}

@@ -1,0 +1,297 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,microtype,booktabs}
+\usepackage[margin=25mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\dd}{\mathop{}\!\mathrm d}
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\newcommand{\J}{\mathcal J_2}
+\newcommand{\CR}{\mathfrak C}
+\newtheorem{proposition}{Proposition}
+\title{Global SL(2,C) recoupling and a\\normalization-independent recoil test}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Working research note --- 31 October 2026}
+\begin{document}\maketitle
+\begin{abstract}
+We fix principal-series conventions, shadow equivalence and the spectral
+measure needed for a proposed $G=0$ recoil dictionary. A spectral rectangle
+removes arbitrary local channel normalizations. For one explicit
+topology-preserving scalar identification, its value for the known global
+conformal $6j$ differs from both the recoil function $H$ and the paired
+graph $Z_{\rm rec}$. High precision and an independent Euler representation
+support the mismatch; no interval certificate is claimed. A separate
+positivity argument rules out a continuous nonnegative kernel as a
+complete scalar-only unitary transform. Neither result excludes nonlocal
+dictionaries or constructs finite-gravity de Sitter dynamics.
+\end{abstract}
+
+\section{Principal series and the meaning of a barred weight}
+The reference harmonic analysis is on a Euclidean two-dimensional
+boundary. We set the de Sitter radius to one when comparing labels;
+no physical gravitational inner product is inferred from this choice.
+For bosonic single-valued representations,
+\begin{equation}
+ \Delta=1+i\nu,\quad J\in\mathbb Z,\qquad
+ h=\frac{1+J+i\nu}{2},\quad \bar h=\frac{1-J+i\nu}{2}.
+ \label{eq:weights}
+\end{equation}
+Here $\bar h$ is an antiholomorphic label, \emph{not} complex
+conjugation. Unitarity obeys $h^*+\bar h=1$; a scalar has
+$h=\bar h=(1+i\nu)/2$. The single-representation space has inner
+product $\int_{\C}\dd^2z\,f(z)^*g(z)$ \cite{kks}.
+This is not yet the Hilbert space of the paired Virasoro theory.
+
+Use equation (5) of Derkachov--Spiridonov (DS) \cite{ds} to fix
+their integer convention:
+\begin{equation}
+ a=m/2+i\sigma,\quad\bar a=-m/2+i\sigma,\quad
+ h=(1-a)/2,\quad\bar h=(1-\bar a)/2.
+\end{equation}
+Thus $J=-m/2$ and $\nu=-\sigma$. We restrict to even $m$.
+Distinct scalar external legs still permit every integer internal
+spin. Identical-field symmetry restrictions require a separate
+exchange-parity analysis.
+
+\newpage
+\section{Reflection, measure and the two-factor obstruction}
+DS equations (22), (28)--(30) contain a direct
+$\delta_R(a-a')$ contribution and a reflected $\delta_R(a+a')$
+contribution multiplied by a shadow kernel. In their CG convention,
+\begin{equation}
+ \rho_{\rm DS}(a)=-\frac{a\bar a}{4\pi^4}
+ =\frac{m^2/4+\sigma^2}{4\pi^4},\qquad
+ \int\frac{\rho_{\rm DS}(a)}2D_Ra
+ =\frac12\sum_{m\in2\mathbb Z}\int_{\R}\dd\sigma\,\rho_{\rm DS}(a).
+\end{equation}
+The factor $1/2$ accounts for reflected equivalent representations.
+Choosing a fundamental domain also changes basis bookkeeping;
+one cannot simply discard the reflection term. The Racah transform
+in DS (32) uses this measure. Their Barnes formula (45) contains
+an integer sum and an integral. Scalar external legs alone do not
+remove the sum.
+
+In the distinct KKS normalization, equations (73)--(74) give
+\begin{equation}
+ \mathcal N(\Delta,0)=
+ \frac{\pi^2\Gamma(1-\Delta)\Gamma(\Delta-1)}
+ {\Gamma(\Delta)\Gamma(2-\Delta)}
+ =\frac{\pi^2}{\nu^2},\qquad
+ \mu_{\rm KKS}=\frac{1}{4\mathcal N\,\operatorname{vol}SO(2)}.
+\end{equation}
+Their partial-wave norm also includes two three-point pairings,
+equation (39). Raw DS density, KKS measure and a four-point inverse
+norm are not interchangeable.
+
+For $\widehat f(p)=\int\dd^2x\,e^{-ip\cdot x}f(x)$, the
+distributionally continued scalar shadow kernel
+$|x-y|^{-2(2-\Delta)}$ has multiplier
+\begin{equation}
+ \widehat S_\Delta(p)=
+ \pi\,2^{2i\nu}\frac{\Gamma(i\nu)}{\Gamma(1-i\nu)}|p|^{-2i\nu}.
+\end{equation}
+Its modulus is $\pi/\nu$ for $\nu>0$. Multiplication by $\nu/\pi$
+defines a unitary Fourier multiplier on $L^2(\C)$; $p=0$
+has measure zero. The endpoint $\nu=0$ is excluded.
+
+The algebraic relation
+$z(M)=M^2e^{-2\pi M}=4\pi^4e^{-2\pi M}\rho_{\rm DS}(iM)$
+does not derive the physical observer measure. The exponential
+weight is additional state or preparation information.
+
+The common-angle, fixed-mass limit of the two CLP factors
+\cite{clp}, checked in our preceding note, is
+\begin{equation}
+ h_+=(1-i\mu)/2,\qquad h_-=(1+i\mu)/2.
+\end{equation}
+Identifying these directly with $(h,\bar h)$ gives
+$J=-i\mu$, incompatible with \eqref{eq:weights} for generic real
+$\mu$. Formally replacing a factor by a dual label is not a
+constructed physical shadow transform. We instead test a separately
+defined global scalar dictionary below.
+
+\newpage
+\section{The global matrix element and the candidate map}
+The LPRS conformal $6j$ \cite{lprs} is defined by the bilinear
+overlap of a shadow partial wave and a partial wave, their (3.5).
+It is not itself a unit-normalized matrix. Changing channel norms
+only produces row and column factors.
+
+All weights below are scalar: $h_i=\bar h_i$, $h=\bar h$ and
+$h'=\bar h'$. Set $h_{ij}=h_i-h_j$, $p=h_2+h_3$. LPRS
+(3.17), (3.35)--(3.37) give
+\begin{align}
+ K_q^{ab}
+ &=\pi\frac{\Gamma(2q-1)}{\Gamma(2-2q)}
+ \frac{\Gamma(1-q-h_{ab})\Gamma(1-q+h_{ab})}
+ {\Gamma(q-h_{ab})\Gamma(q+h_{ab})},\\
+ \Omega_{x,y}
+ &=\int_0^1\dd u\,u^{x+p+h_{13}-2}(1-u)^{y-p}\nonumber\\
+ &\quad{}\times{}_2F_1(x+h_{12},x-h_{34};2x;u)
+ {}_2F_1(y-h_{32},y+h_{14};2y;1-u),\label{eq:euler}\\
+ B(h,q)
+ &=\frac{\Gamma(h+h_{12})\Gamma(h-h_{12})
+ \Gamma(1-h+h_{43})\Gamma(1-h+h_{34})}
+ {4\Gamma(2h)\Gamma(2-2h)}\nonumber\\
+ &\quad{}\times\sin\pi(q-h_1-h_4)\sin\pi(q-h_2-h_3)
+ \Omega_{h,q}\Omega_{1-h,q},\\
+ \J(h,h')&=K_{1-h'}^{14}B(h,h')+K_{h'}^{32}B(h,1-h').
+ \label{eq:J}
+\end{align}
+The implementation retains both shadow terms in \eqref{eq:J}
+and both \({}_4F_3\) terms in each LPRS (3.38) expression for
+$\Omega$. Equation \eqref{eq:euler} is an independent check.
+For our samples its endpoint real powers are $-1/2$, with at
+most logarithmic factors, so the integral converges.
+
+The frozen recoil graph has vertices $V=\{123,156,246,345\}$.
+Its opposite internal edges are $\mu_3=s$ and $\mu_6=t$.
+The explicit assignment is
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+Global role & Recoil labels & Representation\\
+\midrule
+External $1,2,3,4$ & $\mu_1,\mu_2,\mu_4,\mu_5$ & $\Delta_e=1+i\mu_e,\ J_e=0$\\
+$s$ channel & $\mu_3=s$ & $\Delta_s=1+is,\ J_s=0$\\
+$t$ channel & $\mu_6=t$ & $\Delta_t=1+it,\ J_t=0$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The $s$ vertices join $(12),(34)$; the $t$ vertices join
+$(14),(23)$, preserving all four recoil vertices.
+These are representation labels, not newly identified bare masses.
+
+The hypothesis is $K(s,t)=A(s)B(t)\J(s,t)$ with arbitrary
+nonzero complex $A,B$, for $K=H$ or
+\begin{equation}
+ Z_{\rm rec}=\pi^6\prod_{e=1}^6\frac{\mu_e}{\sinh\pi\mu_e}|H|^2
+ \quad(\mu_e>0).\label{eq:Z}
+\end{equation}
+Every local vertex normalization depends on only $s$ or $t$
+with external labels fixed. These factors and absorbed channel
+measures are included; arbitrary joint factors are not.
+
+\newpage
+\section{A normalization-independent numerical test}
+For four nonzero matrix elements, define
+\begin{equation}
+ \CR[K]=\frac{K(s_1,t_1)K(s_2,t_2)}
+ {K(s_1,t_2)K(s_2,t_1)}.
+\end{equation}
+Substitution proves $\CR[ABK]=\CR[K]$. Use
+\begin{equation}
+ \begin{gathered}
+ (\mu_1,\mu_2,\mu_4,\mu_5)=(.4,.7,.93,.6),\\
+ (s_1,s_2)=(.65,.85),\qquad(t_1,t_2)=(.57,.81).
+ \end{gathered}
+\end{equation}
+All vertices satisfy strict triangle inequalities and the left
+and right recoil residue families are nondegenerate.
+At 60 decimal digits,
+\begin{align}
+ \CR[\J]&=0.97254633802865920965+O(10^{-60})i,\\
+ \CR[H]&=1.00800263623569531689-0.03406416860860421339i,\\
+ \CR[Z_{\rm rec}]&=1.01722968224110691421.
+\end{align}
+The relative discrepancies $|\CR[K]/\CR[\J]-1|$ are
+$0.05055620141488165$ and $0.04594469431967669$.
+Equation \eqref{eq:Z} implies $\CR[Z_{\rm rec}]=|\CR[H]|^2$:
+the six leg factors cancel.
+
+These differences survive local leg, vertex and channel
+renormalizations under the stated map. They are
+\emph{finite-point numerical counterexample evidence}, not an
+interval-certified inequality. They do not exclude every physical
+dictionary or the CLP fixed-topology proposal.
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+Independent diagnostic & Relative discrepancy\\
+\midrule
+40 to 60 digits, points and rectangles (maximum) & $2.34\times10^{-39}$\\
+First complete $\J$: direct Euler vs.\ hypergeometric & $4.36\times10^{-33}$\\
+Four Euler $\Omega$ checks (maximum) & $5.75\times10^{-33}$\\
+Three shadow-representative checks (maximum) & $1.52\times10^{-60}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The maximum recoil residue cancellation ratio is about $220.22$;
+the two-shadow ratio in $\J$ is at most $1.108$.
+The shadow checks separately flip $s$, $t$, or external $\mu_1$;
+they do not exhaust all permutations or transformations.
+
+There are 44 passed diagnostics: eight left/right recoil checks,
+12 pointwise precision comparisons, three rectangle refinements,
+one $Z/H$ identity, five direct Euler comparisons, three shadow
+checks and 12 shadow-norm/multiplier checks.
+Python 3.14.5 and mpmath 1.3.0 were used. Full complex values,
+parameters, dependency versions and source hashes are retained.
+
+An initial parameter choice met merged residue families and raised
+a Gamma-pole exception in the separated formula. The initial driver
+and failure record were saved. We moved to the generic rectangle
+without changing frozen recoil code or weakening tolerances.
+This formula-domain failure is not a demonstrated singularity of $H$.
+
+\newpage
+\section{An exact obstruction and the next physical task}
+\begin{proposition}
+Let two continuous label spaces carry locally finite positive Borel
+measures with full support on open intervals. A continuous,
+everywhere nonnegative kernel cannot define a complete unitary
+integral transform between their $L^2$ spaces.
+\end{proposition}
+\begin{proof}
+A nonzero kernel is strictly positive on some open rectangle.
+Choose two nonnegative, nonzero input test functions with disjoint
+compact supports within its input interval. Their inner product
+vanishes, while both outputs are strictly positive on the output
+interval. Nonnegativity elsewhere prevents cancellation, so their
+output inner product is positive. If either output fails to lie
+in $L^2$, unitarity already fails. The zero kernel is not unitary.
+\end{proof}
+Thus the nonnegative real-mass $Z_{\rm rec}$ cannot be a
+\emph{complete scalar-only} unitary recoupling kernel repaired
+solely by positive weights. Separable basis phases can be removed
+by unitary rephasings. This does not apply to complex $H$, a scalar
+subblock of a spin-summed unitary transform, a Euclidean amplitude,
+a probability kernel, or a physical correlator. Missing spin
+channels matter for orthogonality.
+
+The next task should derive a physical insertion: start with
+$G=0$ dS$_3$ Bunch--Davies positive-frequency modes, Klein--Gordon
+normalization and observer representations. Define the local-field
+matrix element and its invariant or group-averaged three-point
+integral; match its full three-label coefficient and reflection
+factors to the DS CG kernel. Covariance alone leaves coupling
+coefficients and does not fix dynamics. This comparison can test
+whether the undetermined two-point normalization $n$ is fixed.
+
+A restriction to spin zero must specify actual projectors and
+the resulting incompleteness. Retain the independent free-probe,
+large-observer-mass benchmark
+\begin{equation}
+ g_\nu(0)g_{\nu'}(0)=
+ \frac{\nu\nu'}{16\pi^2\sinh\pi\nu\,\sinh\pi\nu'}.
+\end{equation}
+This is a disconnected antipodal product, not a zero-energy graph
+value. Physical finite-$\kappa$ sewing, finite-$G$ dynamics and
+complete de Sitter holography remain open. This note narrows a
+candidate dictionary; it does not supply a new holographic dual.
+
+\begin{thebibliography}{9}
+\bibitem{ds} S. E. Derkachov and V. P. Spiridonov,
+\emph{On the 6j-symbols for SL(2,C) group},
+\href{https://arxiv.org/html/1711.07073v2}{arXiv:1711.07073v2}.
+\bibitem{kks} D. Karateev, P. Kravchuk and D. Simmons-Duffin,
+\emph{Harmonic Analysis and Mean Field Theory},
+\href{https://arxiv.org/html/1809.05111v1}{arXiv:1809.05111v1}.
+\bibitem{lprs} J. Liu, E. Perlmutter, V. Rosenhaus and D. Simmons-Duffin,
+\emph{d-dimensional SYK, AdS Loops, and 6j Symbols},
+\href{https://arxiv.org/html/1808.00612v3}{arXiv:1808.00612v3}.
+\bibitem{clp} J. Chandra, D. Liska and B. Post,
+\emph{3D de Sitter from complex Virasoro TQFT: Observers and knots},
+\href{https://arxiv.org/html/2610.30247v1}{arXiv:2610.30247v1}.
+\end{thebibliography}
+\end{document}

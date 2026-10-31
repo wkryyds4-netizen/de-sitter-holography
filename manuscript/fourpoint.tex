@@ -1,0 +1,179 @@
+\section{Two species and ordered four-point functions}
+\label{sec:fourpoint}
+\subsection{Species grading and the common domain}
+For two independent real scalar species use
+\begin{equation}
+ \mathcal K_{p,q}=\Sym^pP_{\nu_A}\otimes\Sym^qP_{\nu_B}.
+\end{equation}
+The state-space proof is unchanged: add one principal representation at a
+time and symmetrize only within a species. The creation bounds are
+$\sqrt{(p+1)\mathfrak M_A}$ for $A$ and
+$\sqrt{(q+1)\mathfrak M_B}$ for $B$. There is no interspecies Bose
+projection or extra $\sqrt2$ in a vacuum-to-one-of-each process.
+The full finite-total-particle domain is invariant and consists of analytic
+vectors for each regulated field. Products of a finite number of these
+fields are therefore defined on every vector in that domain.
+
+Bounded equivariant maps, their adjoints, and their finite compositions
+descend compatibly: the amplitude map satisfies
+$\mathcal A_{\mathrm{out}}C=c(d)\mathcal A_{\mathrm{in}}$.
+This also applies to actual observer spectral projections and to the
+time factors in \eqref{eq:gaussian-time}. The same fixed-group-cutoff,
+mode-limit-first construction supplies the local weak interpretation.
+
+Let $I=[s_*,\Lambda]$ and let $E_I$ be the spectral projection of the
+actual right observer. Define the compressed field first on the common
+finite-particle domain by $E_I\Phi_\alpha E_I$ and then take its unique
+self-adjoint closure, denoted $\Phi_{\alpha,I}$. The block bounds and
+analytic-vector proof persist after this compression. This is more precise
+than assuming that an arbitrary compression of an unbounded self-adjoint
+operator is self-adjoint.
+
+For a normalized matter-vacuum packet $\Omega_f$,
+\begin{equation}
+ \norm{\Omega_f}^2=\int\rhoP(d)|f(d)|^2\dd d=1,\qquad
+ P(d)=\rhoP(d)|f(d)|^2,
+\end{equation}
+assume $\supp P\subset I$. Products of the compressed fields then insert
+$E_I$ at every intermediate actual right-observer edge. A label restriction
+in one ordered CG tree is an orthogonal spectral restriction in that tree;
+it is not automatically the same history projection in another tree.
+If the external packet lies outside $I$, the compressed-field expression
+also truncates the external state and cannot be identified with an
+internal-only cutoff.
+
+\subsection{Noncrossed contractions}
+For a common width $\sigma$ define
+\begin{equation}
+ H_{\alpha,I}(d;u)=\int_I V_{\nu_\alpha}(a|d)
+ e^{-\sigma^2[m(a)-m(d)]^2}e^{iu[m(a)-m(d)]}\dd a.
+\end{equation}
+Complete normalized CG orthogonality and the local scalar modulus give,
+with times listed from left to right,
+\begin{align}
+ \langle A_1A_2B_3B_4\rangle_f
+ &=\int P(d)H_{A,I}(d;t_1-t_2)
+                    H_{B,I}(d;t_3-t_4)\dd d,\label{eq:aabb}\\
+ \langle A_1B_2B_3A_4\rangle_f
+ &=\int P(d)\dd d\int_I V_{\nu_A}(a|d)
+ e^{-\sigma^2[m(a)-m(d)]^2}
+ e^{i(t_1-t_4)[m(a)-m(d)]}
+ H_{B,I}(a;t_2-t_3)\dd a.
+ \label{eq:abba}
+\end{align}
+Here $A_j=\Phi_{A,I}(t_j)$ and $B_j=\Phi_{B,I}(t_j)$.
+These are complete correlators for independent species. An adjacent pair
+of the same species must return to the vacuum in \eqref{eq:aabb};
+a nested pair yields the two successive positive weights in
+\eqref{eq:abba}. They are not obtained by replacing a packet average of a
+product by a product of packet averages.
+
+\subsection{Crossing and its time orientation}
+The two ordered one-of-each states are synthesized by two different
+normalized CG trees. Their inner product is the corresponding $S/S$
+Racah matrix element, with the four scalar local factors.
+Appendix~\ref{app:vertex} checks its gamma normalization against the
+reconstructed mode vertex. Thus the zero-time crossed density agrees with
+(B.25)--(B.27) of~\cite{KL}; for equal species labels it agrees with the
+assembled function (A.14).
+
+Write that equal-label Hartle--Hawking density as
+\begin{equation}
+ X_H(a,b,c,d)=
+ a\sinh(\pi a)\,b\tanh(\pi b)\,
+ c\sinh(\pi c)\,d\tanh(\pi d)\,\mathcal S^\nu(a,b,c,d).
+\end{equation}
+The outer conditional density uses
+$\rho_H(d)=\rhoP(d)\sech^2(\pi d)$, and the normalized external packet
+measure is $P(d)\dd d$, not an additional Plancherel measure.
+For the operator order $A_1B_2A_3B_4$, the right-to-left observer path is
+\begin{equation}
+ d\xrightarrow{B_4}c\xrightarrow{A_3}b
+   \xrightarrow{B_2}a\xrightarrow{A_1}d.
+\end{equation}
+Let $m_x=m(x)$. The exact crossed correlator of the compressed fields is
+\begin{align}
+ X_{P,I}(t_1,t_2,t_3,t_4)
+ &=\int P(d)\dd d\int_{I^3}\dd a\,\dd b\,\dd c\,
+       \frac{X_H(a,b,c,d)}{\rho_H(d)}
+       e^{-\frac{\sigma^2}{2}\mathcal Q}\,e^{-i\mathcal T},\\
+ \mathcal Q&=(m_d-m_a)^2+(m_a-m_b)^2+
+             (m_b-m_c)^2+(m_c-m_d)^2,\\
+ \mathcal T&=(m_d-m_a)t_1+(m_a-m_b)t_2+
+             (m_b-m_c)t_3+(m_c-m_d)t_4.
+ \label{eq:cross-time}
+\end{align}
+At $(t,0,t,0)$ this is the archived phase
+$\exp[-it(m_d-m_c+m_b-m_a)]$. The half factor in each of the four
+Gaussian exponents is required. Coincident spectral labels are taken by
+the removable limits of the assembled kernel, not by evaluating divergent
+individual hypergeometric terms.
+
+The operator identification follows first for compact spectral tests and
+finite original modes with their normalized CG transforms. Bounded
+creation blocks on each particle sector and the isometries $J_{p,q}$
+extend it to arbitrary vacuum packets. This is sufficient for the
+$C^1$ packet below; it need not be a smooth core vector. The original
+unregulated spacetime-integral action on every physical distribution is
+not used in this argument.
+
+For equal matter parameters and widths, set
+\[
+ u=\Phi_{A,I}(t)\Phi_{B,I}(0)\Omega_f,\qquad
+ v=\Phi_{B,I}(0)\Phi_{A,I}(t)\Omega_f.
+\]
+The ordered-tree norm is time independent and both norms equal $N_{P,I}$.
+Since $\langle v,u\rangle=X_{P,I}(t,0,t,0)$,
+\begin{equation}
+ \norm{[\Phi_{A,I}(t),\Phi_{B,I}(0)]\Omega_f}^2
+ =2\bigl(N_{P,I}-\operatorname{Re}X_{P,I}(t,0,t,0)\bigr).
+ \label{eq:commutator-norm}
+\end{equation}
+This concerns the specified regulated and compressed fields. No operator
+norm bound for a full unbounded commutator, nor a Lyapunov exponent,
+follows from four sampled times.
+
+\subsection{The archived finite-packet calculation}
+The existing calculation uses $\nu=0.6$, $\sigma=1$, $I=[0.2,3]$, and
+\begin{equation}
+ P(d)=\frac{8}{3w}\sin^4\!\left(\frac{\pi(d-0.7)}{w}\right)
+             \one_{[0.7,0.9]}(d),\qquad w=0.2.
+\end{equation}
+The corresponding $f=\sqrt{P/\rhoP}$ is a normalized vacuum vector.
+Table~\ref{tab:fourpoint} retains numerical digits for traceability rather
+than claiming that many digits of integral accuracy.
+\begin{table}[htbp]
+\centering
+\begin{tabular}{rrrr}
+\toprule
+$t$ & $\operatorname{Re}X_{P,I}$ & $\operatorname{Im}X_{P,I}$
+    & $2(N_{P,I}-\operatorname{Re}X_{P,I})$\\
+\midrule
+0   & 0.003277669823 & $5.05\,10^{-29}$ & 0.000237967563\\
+0.5 & 0.003240097524 & 0.000166440545 & 0.000313112161\\
+1   & 0.003127420450 & 0.000329368340 & 0.000538466309\\
+2   & 0.002683193016 & 0.000618126682 & 0.001426921178\\
+\bottomrule
+\end{tabular}
+\caption{Archived finite-packet values at $(t,0,t,0)$ for the fixed
+internal interval $[0.2,3]$. They have empirical quadrature errors.}
+\label{tab:fourpoint}
+\end{table}
+
+The positive quantities are
+\begin{equation}
+ C_{2,P,I}=0.06733672557,\qquad
+ D_{P,I}=0.004543308000,\qquad N_{P,I}=0.003396653605.
+\end{equation}
+In particular $D_{P,I}-C_{2,P,I}^2\simeq9.07339\,10^{-6}$.
+For the single-species fourth moment at zero time, Bose symmetrization
+gives $D_{P,I}+N_{P,I}+\operatorname{Re}X_{P,I}(0)$.
+
+The maximum internal quadrature refinement change was about
+$1.17\,10^{-6}$. The external quadrature change was smaller than that
+internal empirical scale and is not an independently certified error.
+The separate analytic bound on the crossing tail beyond spectral cap 20
+is $2\,10^{-11}$, but neither the finite interval between caps 3 and 20 nor
+the original box quadrature has a certified total error. The operator
+identification does not improve those numerical error statements or turn
+the values in Table~\ref{tab:fourpoint} into rigorous intervals.

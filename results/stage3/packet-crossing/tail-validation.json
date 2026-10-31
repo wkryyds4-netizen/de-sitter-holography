@@ -1,0 +1,251 @@
+{
+  "status": "passed",
+  "checks": 29,
+  "failed": 0,
+  "check_details": [
+    {
+      "name": "C0 coarse rational bound",
+      "passed": true
+    },
+    {
+      "name": "Q rational bound",
+      "passed": true
+    },
+    {
+      "name": "Chernoff exponent at R20",
+      "passed": true
+    },
+    {
+      "name": "Elementary e lower bound",
+      "passed": true
+    },
+    {
+      "name": "Exact integer exponential comparison",
+      "passed": true
+    },
+    {
+      "name": "Exact norm prefactor bound",
+      "passed": true
+    },
+    {
+      "name": "Squared conservative pairing bound",
+      "passed": true
+    },
+    {
+      "name": "70 to 90 digit envelope 16/0.7",
+      "passed": true
+    },
+    {
+      "name": "Sample monotonicity 16/0.7",
+      "passed": true
+    },
+    {
+      "name": "70 to 90 digit envelope 16/0.8",
+      "passed": true
+    },
+    {
+      "name": "Sample monotonicity 16/0.8",
+      "passed": true
+    },
+    {
+      "name": "70 to 90 digit envelope 16/0.9",
+      "passed": true
+    },
+    {
+      "name": "Sample monotonicity 16/0.9",
+      "passed": true
+    },
+    {
+      "name": "70 to 90 digit envelope 20/0.7",
+      "passed": true
+    },
+    {
+      "name": "Sample monotonicity 20/0.7",
+      "passed": true
+    },
+    {
+      "name": "70 to 90 digit envelope 20/0.8",
+      "passed": true
+    },
+    {
+      "name": "Sample monotonicity 20/0.8",
+      "passed": true
+    },
+    {
+      "name": "70 to 90 digit envelope 20/0.9",
+      "passed": true
+    },
+    {
+      "name": "Sample monotonicity 20/0.9",
+      "passed": true
+    },
+    {
+      "name": "Cap20 positive quadrature refinement C2_cut",
+      "passed": true,
+      "error": 2.220446049250313e-16,
+      "tolerance": 5e-12
+    },
+    {
+      "name": "Cap16 to cap20 positive baseline C2_cut",
+      "passed": true,
+      "error": 1.942890293094024e-16,
+      "tolerance": 5e-12
+    },
+    {
+      "name": "Cap20 positive quadrature refinement D_cut",
+      "passed": true,
+      "error": 3.122502256758253e-17,
+      "tolerance": 5e-12
+    },
+    {
+      "name": "Cap16 to cap20 positive baseline D_cut",
+      "passed": true,
+      "error": 2.7755575615628914e-17,
+      "tolerance": 5e-12
+    },
+    {
+      "name": "Cap20 positive quadrature refinement N_cut",
+      "passed": true,
+      "error": 3.469446951953614e-17,
+      "tolerance": 5e-12
+    },
+    {
+      "name": "Cap16 to cap20 positive baseline N_cut",
+      "passed": true,
+      "error": 3.5561831257524545e-17,
+      "tolerance": 5e-12
+    },
+    {
+      "name": "Cap20 positive quadrature refinement epsilon_to_cap",
+      "passed": true,
+      "error": 2.394687873341015e-22,
+      "tolerance": 5e-12
+    },
+    {
+      "name": "Cap16 to cap20 positive baseline epsilon_to_cap",
+      "passed": true,
+      "error": 2.3957218491067064e-22,
+      "tolerance": 5e-12
+    },
+    {
+      "name": "Cap20 positive quadrature refinement cross_tail_bound_estimate",
+      "passed": true,
+      "error": 4.637505386217294e-19,
+      "tolerance": 5e-12
+    },
+    {
+      "name": "Cap16 to cap20 positive baseline cross_tail_bound_estimate",
+      "passed": true,
+      "error": 4.637505386217294e-19,
+      "tolerance": 5e-12
+    }
+  ],
+  "generated_utc": "2026-10-29T01:31:29.317556+00:00",
+  "sharp_expression_evaluations": [
+    {
+      "B_R": "9.37848139799043042789948302622852728746184286e-20",
+      "full_norm_envelope": "175494240051.131021999388910072908377262369306",
+      "mu": "4.00182518029405591563559073678447424739992296",
+      "K": "16.0078105935821217162205441865545331613010503",
+      "C0": "6.09788534362667575987394552293279396321860146",
+      "spectral_cutoff": 16,
+      "d": "0.7",
+      "sigma": 1
+    },
+    {
+      "B_R": "7.94610418132528397778873685020340333208174636e-19",
+      "full_norm_envelope": "570455137075.633711666960095815108735383290296",
+      "mu": "4.08499076679545361959470942104176695589553166",
+      "K": "16.0078105935821217162205441865545331613010503",
+      "C0": "6.09788534362667575987394552293279396321860146",
+      "spectral_cutoff": 16,
+      "d": "0.8",
+      "sigma": 1
+    },
+    {
+      "B_R": "7.0975240400500896646207909548319546549653573e-18",
+      "full_norm_envelope": "1900816690023.93426896866718174188270959401252",
+      "mu": "4.17115566768849327004238032969925788206704954",
+      "K": "16.0078105935821217162205441865545331613010503",
+      "C0": "6.09788534362667575987394552293279396321860146",
+      "spectral_cutoff": 16,
+      "d": "0.9",
+      "sigma": 1
+    },
+    {
+      "B_R": "6.84656064529879620159632274068373563238172276e-44",
+      "full_norm_envelope": "175494240051.131021999388910072908377262369306",
+      "mu": "4.00182518029405591563559073678447424739992296",
+      "K": "20.0062490237425566240900781788699208457112599",
+      "C0": "6.09788534362667575987394552293279396321860146",
+      "spectral_cutoff": 20,
+      "d": "0.7",
+      "sigma": 1
+    },
+    {
+      "B_R": "8.08528674504993318643223479849381707098632135e-43",
+      "full_norm_envelope": "570455137075.633711666960095815108735383290296",
+      "mu": "4.08499076679545361959470942104176695589553166",
+      "K": "20.0062490237425566240900781788699208457112599",
+      "C0": "6.09788534362667575987394552293279396321860146",
+      "spectral_cutoff": 20,
+      "d": "0.8",
+      "sigma": 1
+    },
+    {
+      "B_R": "1.01870686617260239719639998979922881860367877e-41",
+      "full_norm_envelope": "1900816690023.93426896866718174188270959401252",
+      "mu": "4.17115566768849327004238032969925788206704954",
+      "K": "20.0062490237425566240900781788699208457112599",
+      "C0": "6.09788534362667575987394552293279396321860146",
+      "spectral_cutoff": 20,
+      "d": "0.9",
+      "sigma": 1
+    }
+  ],
+  "strict_coarse_bounds": {
+    "sigma": 1,
+    "external_d_max": 0.9,
+    "spectral_cutoff": 20,
+    "epsilon_beyond_cap_upper": "1e-38",
+    "full_N_upper": "3e15",
+    "all_real_time_cross_pairing_tail_upper": "2e-11"
+  },
+  "cap20_positive_estimate": {
+    "C2_cut": 0.06733672556878834,
+    "D_cut": 0.004543308000353139,
+    "N_cut": 0.0033966536047579186,
+    "epsilon_to_cap": 8.435277233271031e-10,
+    "N_to_cap": 0.003396654448285642,
+    "inner_tail": 8.23573906977957e-10,
+    "outer_tail": 1.9953816349145995e-11,
+    "external_quadrature_mass": 0.9999999999999979,
+    "conditional_two_point_variance": 9.073390026826007e-06,
+    "cross_tail_bound_estimate": 3.3853636956296105e-06,
+    "scope": "Direct positive finite-cap estimates, no certified infinite remainder"
+  },
+  "cap20_refined_positive_estimate": {
+    "C2_cut": 0.06733672556878856,
+    "D_cut": 0.00454330800035317,
+    "N_cut": 0.003396653604757884,
+    "epsilon_to_cap": 8.435277233273426e-10,
+    "N_to_cap": 0.0033966544482856077,
+    "inner_tail": 8.235739069781888e-10,
+    "outer_tail": 1.9953816349153775e-11,
+    "external_quadrature_mass": 0.9999999999999981,
+    "conditional_two_point_variance": 9.073390026826875e-06,
+    "cross_tail_bound_estimate": 3.3853636956300743e-06,
+    "scope": "Direct positive finite-cap estimates, no certified infinite remainder"
+  },
+  "scope": "The analytic far-tail bound is strict; positive finite-cap quadrature and its differences are empirical. No strict total error for the Lambda=3 computation is claimed.",
+  "code_sha256": {
+    "validate_packet_tail.py": "f8d014f40bd557b902eb5b88fc0dfe88bae4743255840b484e5ea04a0938a357",
+    "packet_positive.py": "73146d2ddf5e74cfdf8887d6d2b4d67a47b59ea25d1f832668b2adfb55869385",
+    "packet_quadrature.py": "7f62a2156c5c0dbd169adacd8a00a6007a22ca13a03e8ffeab7de2b931a4567e",
+    "quantized_observer.py": "6851265b9daa9b02b2a96580d175be1d7153a13bc1e20ef9e891b8abe936583f"
+  },
+  "input_sha256": {
+    "results/stage3/packet-crossing/positive-validation.json": "0de49f12947a640a69356ffe273134b9b5324b837853db2f131d60d12ac8816c",
+    "notes/stage3-packet-tail-envelope.md": "15d8ac0d293aaec2d5f62cf7f1d8109841af4caa7cdb90ea8488d16deaa6153b"
+  }
+}

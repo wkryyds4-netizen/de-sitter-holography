@@ -1,0 +1,57 @@
+{
+  "python": "3.14.5",
+  "numpy": "2.4.6",
+  "scipy": "1.18.0",
+  "matplotlib": "3.11.0",
+  "code_sha256": {
+    "clock_model.py": "ad875a25e10931b78363c3128e4fb9ed972f1663ffe91fe8ac66302f34d93fe8",
+    "run_study.py": "96e553acd9e01bc7ad40c78f3679f4bb518ab30424499af1fd0d2d4563694421"
+  },
+  "sample": {
+    "Q": 5.0,
+    "k": 0.99,
+    "exponential": {
+      "alpha": 0.00201006717070029,
+      "mean": 497.4958123671104,
+      "kl_nats": 490.2862252278997,
+      "tail": 0.99
+    },
+    "entropy_optimal": {
+      "threshold": 5.0,
+      "tail": 0.99,
+      "rate": 1.0,
+      "regime": "tail_only",
+      "mean": 5.949660817254684,
+      "kl_nats": 4.894066073139648,
+      "worst_kernel_error": 0.010000000000000009
+    },
+    "mean_cap_5_2": {
+      "threshold": 5.0,
+      "tail": 0.99,
+      "rate": 3.9999999983510506,
+      "regime": "both",
+      "mean": 5.200000000000001,
+      "kl_nats": 5.530292826785654,
+      "worst_kernel_error": 0.010000000000000009
+    },
+    "gamma": {
+      "threshold": 5,
+      "scale": 1,
+      "mean": 10,
+      "kl_nats": 7.846416843379256,
+      "time_rms": 0.28867513459481287,
+      "worst_kernel_error": 0.0
+    },
+    "compact": {
+      "threshold": 5,
+      "width": 10,
+      "mean": 10.0,
+      "kl_nats": 8.238988771111233,
+      "max_energy": 15,
+      "time_rms": 0.3627598728468435,
+      "worst_kernel_error": 0.0
+    },
+    "scope": "Fixed vacuum spectral kernels; no finite-G simulation; timing uses a Fourier POVM."
+  },
+  "comparison_cases": 30
+}

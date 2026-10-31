@@ -1,0 +1,47 @@
+{
+  "created_at_utc": "2026-10-29T19:07:38.143856+00:00",
+  "kind": "author self-reviewed proof drafts and leading-kernel empirical diagnostics; not independent certification",
+  "results": [
+    "same-real-domain conjugacy of the two complete amplitudes",
+    "exact mirror identity for the leading two-branch packet",
+    "uniform compact density comparison without a physical-time factor",
+    "full-time uniform absolute exact-to-two-branch approximation",
+    "power-tail and exponential-tail criteria for discarding the fast branch; nonconstructive slowly growing relative windows"
+  ],
+  "assumptions": [
+    "dS2 L=1 proper SO+(2,1), strict G_N->0, BD free independent equal principal-series species",
+    "fixed nu,sigma>0, normalized external exact-energy density, F/Q repeated projections",
+    "general fixed L1 density for absolute approximation; specified Gamma/noncritical or gapped density for relative tail formulas"
+  ],
+  "proof_dependencies": [
+    "Section11 compact assembled remainder",
+    "Section12 packet limit and all-time positive norm tails",
+    "Section13 complete external-leg factorization",
+    "Section15 endpoint tails"
+  ],
+  "numerical_scope": "300 checks; 60-digit coefficient identities and reused physical leading spectra, three quadrature rules, 72 model/parameter combinations",
+  "not_proven": [
+    "independent proof certification or priority",
+    "growth of compact constants with cutoff boxes",
+    "computable relative finite-M window or a rate for the uniform error",
+    "exact finite-M full 6j packet numerical certification",
+    "uniform relative bounds at zeros of gapped oscillations",
+    "critical odd-p next coefficient",
+    "finite-G dynamics or full holographic dual"
+  ],
+  "hashes": {
+    "code/two_branch_window.py": "f346b94d535167151c9809b080d0be4b2b65273021de15e9aa0feebe74718e04",
+    "literature/stage3-two-branch-sources.md": "9a33d871169da888306d473f8f08e17bc2489a49397f619cec059f14b2330ae9",
+    "manuscript/assembly.tex": "c12611bd24506d6427093ac3636e3cbb43011dabe2e95f6b6c195d60717fbbc5",
+    "manuscript/crosslimit.tex": "bee1c6d072dd895037d51312649b9dc0b59c45c4de9aec7e3e92d1203f39571f",
+    "manuscript/densityendpoints.tex": "dc7f8ce41e33349f465cdc81b6c1fe05f6c142b875d676ea5382106ad16a5b11",
+    "manuscript/logtime.tex": "c33549cac95393718b1e8adc3353062bfee5a1e1ca0f2c971b31ae642de1eef0",
+    "manuscript/preparation.tex": "583e3505dfdd9b4c2725620218042cc3cbcb07cc5940ba104939745bd416692a",
+    "manuscript/twobranch.tex": "a45bd590f4c0a7ef4c5928c3cec48f39f61c8588ec0da4ae0eaf9f878c9ff833",
+    "notes/stage3-two-branch-window.md": "c23a2293c76b1b9eb94990c48405d6b8d7d13e01f21bedc4a9357a623897600a",
+    "results/stage3/two-branch/branch-window.pdf": "755cfd21265a4b0cdb24ba51d59b3d33968bc2567aa4f99b37410988b4499f76",
+    "results/stage3/two-branch/branch-window.png": "33da7f64f9da26e95d8d6ca12950e1d6ba0cc534bf97515db9569ff34e669410",
+    "results/stage3/two-branch/diagnostics.json": "0c6a89b298ae4e364a19be9468d96527238b078c54481fe80e73b4fbc71888a1",
+    "sources/kolchmeyer-liu-2411.08090v1.html": "352ef29aa89c376203271bf984bd904fb471ff313a7d420bc6a0ebc875d78065"
+  }
+}

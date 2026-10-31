@@ -1,0 +1,45 @@
+{
+  "created_at_utc": "2026-10-30T05:43:17.920109+00:00",
+  "kind": "self-reviewed auxiliary-zero lifting and fixed-parameter higher expansion; joint positive-tail ingredient",
+  "pages": 6,
+  "diagnostics": 65,
+  "compilers": {
+    "local": "two clean pdfLaTeX passes",
+    "desktop": "success on final six-page source"
+  },
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "dpi": 95,
+    "clipping_or_overlap": false
+  },
+  "not_proven": [
+    "full joint K/alpha remainder against the branch envelope",
+    "positive-tail base and negative N=O(K) contour uniform bounds",
+    "finite-mass zero locations",
+    "transverse variables and physical external dictionary",
+    "finite-G microscopic holographic dual"
+  ],
+  "hashes": {
+    "code/recoil_bessel_cancellation.py": "b2f89ead69e0d0cfb140fcac26067629dc912af8a10cf9de5f12873a80282e5a",
+    "code/build_bessel_cancellation_note.ps1": "e99867a9d6c0578b1a1126ad2244f188106846c370c9d4019b8108f3c0404ea7",
+    "manuscript/recoil-bessel-cancellation/main.tex": "02d9184e02721d30a62402adf4a965514e46ea9b5a2ea545c26662448c4a4d2d",
+    "notes/stage4-recoil-bessel-cancellation.md": "7a51e7b605882f66f0e9405824209ff40c9a79946c236c19b01a1e1e46b22fdc",
+    "literature/stage4-recoil-bessel-cancellation-sources.md": "4ed5fd36152f328e9e5eb39961db50a523dd210ed95b5e197bb7b87ba5ba9308",
+    "results/stage4/recoil-bessel-cancellation/diagnostics.json": "e14e5864393f330acd49209f484aeae506753d83a3acc10a67fd2f3f31dd79d0",
+    "results/stage4/recoil-bessel-cancellation/main.log": "0728cf50343d2eab899fc0d6108b1fe1e2ea49ccf2007fc942e98a29968bbea2",
+    "results/stage4/recoil-bessel-cancellation/build-review.md": "a8f9bb625c06e6d747fa115911708ee1554524310d55956cc8d51ac6df91523a",
+    "output/pdf/de-sitter-recoil-bessel-cancellation.pdf": "466a662a84b0a0a6de3872f63c3d0ed2b46f85349c79dc5dfaea1480730a81b2",
+    "code/recoil_bessel_limit.py": "db108ba306fd4c8e9d3b062a833b5e56a02f7f8da2d0ddb3c48a1850cc13c5a2",
+    "results/stage4/recoil-bessel-limit/diagnostics.json": "fcd9655f7f58dd7069130ba9f42df7bf9dbc7ab0871b71d8ef97f28637b9f288",
+    "results/stage4/recoil-global/diagnostics.json": "ce7d4f37b40f7f8614a1434be2747613748c69385fab0200da902df3b7c20fb1",
+    "notes/stage4-recoil-bessel-limit.md": "535107462ed023077b0eda118f394fe24967ce5d6f8e423d0f4c7469b09a5794",
+    "sources/dlmf-5.11.html": "8f573b25a200d5ca09372ad88adbd4a621bc0bc463e088c6548ff8dddc0d2eee"
+  }
+}

@@ -1,0 +1,303 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,microtype}
+\usepackage[margin=25mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newtheorem{proposition}{Proposition}
+\newcommand{\dd}{\mathop{}\!\mathrm d}
+\title{Combined vertices in the pure-recoil limit}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Working research note --- 30 October 2026}
+\begin{document}\maketitle
+\begin{abstract}
+We isolate the combined vertex \(V/\sqrt C\) in the internal integral
+representation of the continued tetrahedron graph. An exact cancellation,
+followed by two inverse-\(b\) shifts, gives its normalized pure-recoil
+limit as an ordinary Gamma quotient. The doubled vertex has a simple
+hyperbolic form. Away from mass-triangle degeneration, four such vertices
+reduce to a mass polynomial, uniformly on a specified transverse box.
+This does not identify the physical four-point normalization or complete
+the internal integral. In particular this vertex must not be multiplied
+onto a full-\(6j\) Gram asymptotic without redoing the prefactor bookkeeping.
+All results are author self-reviewed drafts, without a priority claim.
+\end{abstract}
+
+\section{Which factors are being computed}
+Set the de Sitter radius to one. In CLP~\cite{CLP}, (3.17) and
+(3.43)--(3.47), write \(Q=b+b^{-1}\), \(p_a=iP_a\), and
+\(x_\sigma=Q/2+\sum_{a=1}^3\sigma_a p_a\). Let
+\(\mathcal E=\{\sigma:\sigma_1\sigma_2\sigma_3=+1\}\) and
+\(\mathcal O=-\mathcal E\). Then
+\begin{align}
+ C&=K_b\,\frac{\prod_{\sigma\in\mathcal E\cup\mathcal O}
+                   \Gamma_b(x_\sigma)}
+                 {\prod_a\Gamma_b(Q+2p_a)\Gamma_b(Q-2p_a)},&
+ K_b&=\frac{\Gamma_b(2Q)}{\sqrt2\,\Gamma_b(Q)^3},\\
+ V^2&=\prod_{\sigma\in\mathcal E}S_b(x_\sigma),&
+ S_b(x)&=\frac{\Gamma_b(x)}{\Gamma_b(Q-x)}.
+\end{align}
+Consequently, as a meromorphic identity,
+\begin{equation}
+ U_b:=\frac{V^2}{C}
+ =K_b^{-1}\frac{\prod_a\Gamma_b(Q+2p_a)\Gamma_b(Q-2p_a)}
+                   {\prod_{\sigma\in\mathcal O}\Gamma_b(x_\sigma)^2}.
+ \label{eq:exact}
+\end{equation}
+Square-root branches belong to the original continued graph.
+On the real Euclidean germ the doubled combined vertex is
+\(T_b=|V/\sqrt C|^2=|U_b|\).
+
+The whole graph can thus be written as
+\begin{equation}
+ Z_{\rm tet}=\left(\prod_{\text{four vertices}}T_b\right)
+              |\mathcal J_b|^2, \qquad
+ \{6j\}_b=\left(\prod_{\text{four vertices}}V_b\right)\mathcal J_b.
+ \label{eq:book}
+\end{equation}
+Here \(\mathcal J_b\) is precisely the internal double-sine integral
+in CLP (3.46), with its specified contour. This rearrangement does not
+supply physical insertion legs or external energy cycles.
+
+\section{A normalized pure-recoil vertex}
+Use \(b^2=i/\kappa\) and the pure-recoil parametrization
+\[
+ p_a=-\frac1{2b}-\frac{ibm_a}{2},\quad m_a>0,\qquad
+ L=b^{-2}=-i\kappa,\quad S=m_1+m_2+m_3 .
+\]
+Define
+\[
+ z_0=\frac{1+iS}{2},\qquad
+ z_a=\frac{1-i(S-2m_a)}2\quad(a=1,2,3).
+\]
+The four odd arguments in \eqref{eq:exact} are \(2/b+bz_0,bz_1,bz_2,bz_3\).
+The six leg arguments are \(b(1-im_a),2/b+b(1+im_a)\).
+The exact shift relation gives
+\begin{equation}
+ \Gamma_b(2/b+bz)=
+ \frac{2\pi\,b^{1-L-2z}}{\Gamma(z)\Gamma(L+z)}\Gamma_b(bz).
+ \label{eq:shift}
+\end{equation}
+All powers of \(b\) generated in \eqref{eq:exact} have mass-independent
+net exponent. Up to a factor depending only on \(b\), one obtains
+\begin{equation}
+ U_b(\mathbf m)=
+ E_b(\mathbf m)
+ \frac{\Gamma(z_0)^2\Gamma(L+z_0)^2}
+      {\prod_a\Gamma(1+im_a)\Gamma(L+1+im_a)},\qquad
+ E_b=\frac{\prod_{a,\pm}\Gamma_b(b(1\pm im_a))}
+                 {\prod_{j=0}^3\Gamma_b(bz_j)^2}.
+ \label{eq:shifted}
+\end{equation}
+
+\begin{proposition}
+For fixed positive real masses \(\mathbf m\) and a fixed positive
+reference triple \(\mathbf r\), with the branches inherited from CLP,
+\begin{equation}
+ \lim_{\kappa\to\infty}\frac{U_b(\mathbf m)}{U_b(\mathbf r)}
+ =\frac{F(\mathbf m)}{F(\mathbf r)},\qquad
+ F(\mathbf m)=
+ \frac{\prod_a\Gamma(1-im_a)}
+      {\prod_a\Gamma(\frac12-\frac i2(S-2m_a))^2}.
+ \label{eq:F}
+\end{equation}
+In particular \(T_b(\mathbf m)/T_b(\mathbf r)\to T(\mathbf m)/T(\mathbf r)\),
+where
+\begin{equation}
+ T(\mathbf m)=
+ \frac1{\pi^{3/2}}\sqrt{\frac{m_1m_2m_3}
+                   {\prod_a\sinh(\pi m_a)}}
+ \prod_a\cosh\!\left(\frac{\pi(S-2m_a)}2\right).
+ \label{eq:T}
+\end{equation}
+Only a mass-independent normalization has been suppressed.
+\end{proposition}
+
+\begin{proof}
+The usual small-\(b\) reduction to Gamma functions is familiar from
+the Schwarzian limit~\cite{MTV}. To control this particular balanced
+quotient on \(b^2=i/\kappa\), a direct argument avoids assuming a
+uniform continuation of that real-\(b\) formula.
+
+Put \(f_\kappa(z)=\log\Gamma_b(bz)-\log\Gamma(z)\).
+The third logarithmic derivative of the canonical Barnes product is
+absolutely convergent and gives, on the pole-free domain in use,
+\begin{equation}
+ f_\kappa'''(z)=-2\sum_{q=1}^{\infty}\sum_{n=0}^{\infty}
+                         (z+n-iq\kappa)^{-3}. \label{eq:lattice}
+\end{equation}
+This also follows by differentiating the Barnes double-zeta definition
+three times; quadratic normalization terms disappear. For
+\(\operatorname{Re}z\ge1/2\), \(|\operatorname{Im}z|\le R\), and
+\(\kappa\ge2R\), comparison of the \(n\)-sum with an integral gives
+\begin{equation}
+ |f_\kappa'''(z)|\le
+ K_\kappa:=\frac{16\zeta(3)}{\kappa^3}
+                +\frac{8\zeta(2)}{\kappa^2}. \label{eq:bound}
+\end{equation}
+Indeed, with \(A=q\kappa/2\), the sum of
+\(((n+1/2)^2+A^2)^{-3/2}\) is at most \(A^{-3}+A^{-2}\).
+
+The signed arguments in \(E_b\), with coefficients \(+1\) for each
+\(1\pm im_a\) and \(-2\) for each \(z_j\), satisfy
+\begin{equation}
+ \sum c= -2,\qquad \sum c z=2,\qquad \sum c z^2=4.
+ \label{eq:moments}
+\end{equation}
+All three are independent of the masses. Taylor-expand \(f_\kappa\)
+about \(z=1\) along line segments in the domain above. The quadratic
+polynomial cancels between a triple and its reference. The remaining
+logarithmic error is at most
+\begin{equation}
+ \frac{K_\kappa}{6}
+ \left(\sum_{\mathbf m}|c|\,|z-1|^3+
+       \sum_{\mathbf r}|c|\,|z-1|^3\right). \label{eq:remainder}
+\end{equation}
+Thus \(E_b(\mathbf m)/E_b(\mathbf r)\) has the corresponding ordinary
+Gamma quotient as its limit. This establishes the needed normalized
+reduction on this ray without choosing an absolute Barnes normalization.
+
+Finally put \(B_L(\mathbf m)=\Gamma(L+z_0)^2/
+\prod_a\Gamma(L+1+im_a)\). The fixed-shift Gamma ratio
+asymptotics~\cite{DLMF} give
+\[
+ B_L(\mathbf m)\sim\Gamma(L)^{-1}L^{-2},
+\]
+since \(2z_0-\sum_a(1+im_a)=-2\). Its ratio to the reference tends to
+one. Substitution into \eqref{eq:shifted} proves \eqref{eq:F}.
+The identities
+\(|\Gamma(1-im)|^2=\pi m/\sinh(\pi m)\) and
+\(|\Gamma(1/2-ix/2)|^2=\pi/\cosh(\pi x/2)\) give \eqref{eq:T}.
+\end{proof}
+
+Equation \eqref{eq:remainder} controls the balanced Barnes part only.
+The fixed-shift estimate for \(B_L\) has not here been replaced by a
+fully quantified joint growing-mass bound. We therefore use the
+sequential limit: first \(\kappa\to\infty\) at fixed masses, then the
+large-mass regime below. No finite-\(G\) error estimate follows.
+
+\section{A local transverse box, with an explicit vertex remainder}
+For real positive masses satisfying strict triangle inequalities, set
+\(\ell_a=S-2m_a>0\). Equation \eqref{eq:T} factors exactly as
+\begin{equation}
+ T(\mathbf m)=\frac{\sqrt{m_1m_2m_3}}{2\sqrt2\,\pi^{3/2}}
+ \mathcal E(\mathbf m),\qquad
+ \mathcal E=
+ \frac{\prod_a(1+e^{-\pi\ell_a})}
+      {\prod_a(1-e^{-2\pi m_a})^{1/2}}. \label{eq:E}
+\end{equation}
+The exponentials cancel because \(\sum_a\ell_a=S\).
+Continue this expression from that real germ. In a domain with
+\(\operatorname{Re}\ell_a\ge d>0\) and
+\(\operatorname{Re}m_a\ge a>0\), the square root and logarithm fixed
+there obey
+\begin{equation}
+ |\log\mathcal E|\le
+ \frac{3e^{-\pi d}}{1-e^{-\pi d}}
+ +\frac{3e^{-2\pi a}}{2(1-e^{-2\pi a})}. \label{eq:Ebound}
+\end{equation}
+This is an analytic continuation, not a new pointwise modulus at
+complex masses.
+
+For equal probes \(\nu\), write the cyclic observer masses
+\[
+ m_1=M+\omega/2+u,\quad m_3=M+\omega/2-u,\qquad
+ m_2=M-\omega/2+v,\quad m_4=M-\omega/2-v.
+\]
+The four vertex triples are \((m_i,m_{i+1},\nu)\), cyclically.
+Every graph edge occurs twice. Their product, normalized at
+\(\omega=u=v=0\), is therefore
+\begin{align}
+ \mathcal R_V&=P\,\exp\{\Delta\log\mathcal E_{\rm four}\},\\
+ P&=\frac{[(M+\omega/2)^2-u^2][(M-\omega/2)^2-v^2]}{M^4}.
+ \label{eq:poly}
+\end{align}
+The logarithmic remainder is bounded by the sum of eight bounds
+\eqref{eq:Ebound}, four at each configuration.
+
+Take \(\omega=iA_0y\), \(A_0=\nu^2/(2M)\), \(|y|\le Y\), and
+real \(|u|,|v|\le L_{\rm box}\sqrt M\). If
+\[
+ \nu/M\to0,\qquad L_{\rm box}\sqrt M=o(\nu),\qquad \nu\to\infty,
+\]
+then all the real parts of the triangle gaps are at least
+\(\nu-2L_{\rm box}\sqrt M\), except for the much larger gaps
+\(m_i+m_{i+1}-\nu\). The exponentials are uniformly small.
+Moreover, with \(a=\omega/(2M),r=u/M,s=v/M\),
+\[
+ P-1=-2a^2+a^4-(r^2+s^2)(1+a^2)+2a(r^2-s^2)+r^2s^2 .
+\]
+It follows uniformly on this box that
+\begin{equation}
+ \mathcal R_V=1+
+ O_Y\!\left(\frac{\nu^4}{M^4}+\frac{L_{\rm box}^2}{M}\right)
+ +O\!\left(e^{-\pi(\nu-2L_{\rm box}\sqrt M)}\right). \label{eq:flat}
+\end{equation}
+For example the earlier hierarchy \(\nu^{4/3}\ll M\ll\nu^2\)
+allows such boxes, with a slowly growing \(L_{\rm box}\).
+This controls the limiting vertex on a local box; it does not bound
+the full integration tail or prove the action's Gaussian approximation.
+
+\section{Known observer factors and the remaining physical gap}
+CLP (3.10) gives the observer factor
+\(Z_{\rm obs}(\alpha)=32\sin^2(\alpha/2)\sinh^2(\kappa\alpha/2)\).
+For \(\alpha_i=2\pi(1-m_i/\kappa)\) and \(\sum_i m_i=4M\), it implies
+\begin{equation}
+ \lim_{\kappa\to\infty}
+ \frac{\prod_{i=1}^4Z_{\rm obs}(\alpha_i)}
+      {Z_{\rm obs}(2\pi(1-M/\kappa))^4}=P^2. \label{eq:obs}
+\end{equation}
+The common entropy and Boltzmann exponent cancel at fixed total mass.
+This is a check of a known building block, not a prescription that
+the physical four-point function contains precisely this product.
+
+The two-point insertion factor in CLP (3.37) is only a leading
+fixed-probe prescription. Its displayed \((\alpha_1\alpha_2)^{-3/2}\)
+dependence becomes constant in the sequential pure-recoil limit,
+but its unspecified correction and the four-point insertion rule
+are not determined by this observation. We do not impose them.
+
+There is also a bookkeeping correction to guard against. The
+previous Gram/transverse calculation used a \emph{full-\(6j\)}
+geometric one-loop hypothesis. The \(V\)'s in \eqref{eq:book} are
+already part of that \(6j\). Hence \(\mathcal R_V\) is not a new factor
+to multiply into the previous Gram answer. It tells us that in the
+\emph{internal-integral representation} the combined vertices are
+locally flat after the specified limits. The determinant and order-one
+factor of \(\mathcal J_b\) must be computed in that same representation
+before the two organizations can be compared.
+
+The next step is therefore the pure-recoil degeneration of the full
+internal double-sine integral, retaining \(u,v\), followed by its
+contour and saddle analysis. The physical external-energy cycle,
+normalization, possible additional saddles and finite-\(\kappa\)
+uniformity remain independent requirements. No full OTOC, microscopic
+dictionary, or de Sitter dual has been established.
+
+\section{Reproducibility}
+The script \texttt{code/recoil\_vertex.py} records 42 checks at 65
+decimal digits: three exact signed-moment identities, four
+Gamma/hyperbolic identities and their remainder bounds, six
+large-Gamma shift ratios, four lattice-derivative bounds, nine
+complex transverse-box factorizations and bounds, and three observer
+ratios. The six shift ratios and three observer ratios are repeated
+at 95 digits. For the lattice derivative the \(n\)-sum is a polygamma
+function and the \(q\)-sum is truncated at 40 with the explicit
+absolute tail bound from \eqref{eq:bound}. No direct numerical
+evaluation of the entire double-Gamma quotient or \(6j\) is claimed.
+Finite samples do not certify the uniform statements or a physical
+finite-\(G\) amplitude.
+
+\begin{thebibliography}{9}
+\bibitem{CLP} J. Chandra, D. Liska and B. Post,
+\emph{3D de Sitter from complex Virasoro TQFT: Observers and knots},
+\href{https://arxiv.org/html/2610.30247v1}{arXiv:2610.30247v1},
+(3.10), (3.17), (3.35)--(3.47) and Appendix A.
+\bibitem{MTV} T. G. Mertens, G. J. Turiaci and H. L. Verlinde,
+\emph{Solving the Schwarzian via the conformal bootstrap},
+\href{https://doi.org/10.1007/JHEP08(2017)136}{JHEP 08 (2017) 136},
+Appendix B.1. Online reading only; no new local archive.
+\bibitem{DLMF} NIST Digital Library of Mathematical Functions,
+\href{https://dlmf.nist.gov/5.11}{Section 5.11},
+fixed-shift Gamma asymptotics.
+\end{thebibliography}
+\end{document}

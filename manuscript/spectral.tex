@@ -1,0 +1,230 @@
+\section{A complete spectral core in the orbit norm}
+\label{sec:spectral}
+For a single angular mode use the unitary radial variable
+\begin{equation}
+ u(t,\theta)=\frac{e^{in\theta}}{\sqrt{2\pi\cosh t}}Q(t),\qquad
+ b_\alpha(u)=\norm Q_2+
+ \int_{\mathbb R}(1+|t|)^\alpha|Q(t)|\dd t.
+ \label{eq:fractional-norm}
+\end{equation}
+Write the last integral as $M_\alpha(Q)$. The Casimir minus $1/4$ becomes
+\begin{equation}
+ H_k=-\partial_t^2+(1/4-k^2)\sech^2t,\qquad
+ k=|n|,\quad D(H_k)=H^2(\mathbb R).
+\end{equation}
+All scattering estimates below are at fixed $k$ unless stated otherwise.
+
+\subsection{The radial estimate for absolute orbit integration}
+The repulsive operator $H_0$ has no bound states and no zero resonance.
+For the latter, a bounded solution of $H_0h=0$ has
+$h'(\pm\infty)=0$ and $h'=O(e^{-2|t|})$ by integration of the equation.
+Integration by parts then gives
+$\int(|h'|^2+\tfrac14\sech^2t|h|^2)\dd t=0$, so $h=0$.
+
+Choose Jost solutions $F_{0,+}\sim e^{ist}$ at $+\infty$ and
+$F_{0,-}(t,s)=F_{0,+}(-t,s)$:
+\begin{align}
+ F_{0,+}(t,s)&=e^{ist}{}_2F_1\left(\tfrac12,\tfrac12;1-is;
+                         \tfrac{1-\tanh t}{2}\right),\\
+ T_0(s)&=\frac{\Gamma(1/2-is)^2}{\Gamma(1-is)\Gamma(-is)},
+ \qquad |T_0(s)|^2=\tanh^2\pi s,\\
+ e_{0,\pm}(t,s)&=(2\pi)^{-1/2}T_0(s)F_{0,\pm}(t,s).
+\end{align}
+The distorted Fourier transform is unitary with two channels and measure
+$\dd s$, by~\cite[Theorem 2.3]{GPR}. Volterra estimates on the good
+half-axis and the scattering relation on the other half-axis give
+\begin{equation}
+ |e_{0,\pm}(t,s)|\le C\min\{1,s(1+|t|)\}.
+ \label{eq:threshold-bound}
+\end{equation}
+For example $|F_{0,+}|\le C$ on $t\ge0$ and
+$|F_{0,+}|\le C(1+|t|)$ at low energy on $t\le0$;
+$T_0(s)=O(s)$ yields the second bound. The identity
+$T_0F_{0,+}=\overline{F_{0,-}}+R_0F_{0,-}$, with $|R_0|\le1$,
+yields the uniform bound on the other half-axis.
+
+Let $f=|u|$, which is rotation invariant. Its radial transform is $|Q|$,
+and let $q_f$ be the sum of the squares of its two spectral coefficients.
+For $0<\alpha\le1$, \eqref{eq:threshold-bound} gives
+\begin{equation}
+ q_f(s)\le C M_\alpha(Q)^2\min(s^{2\alpha},1),\qquad
+ \int_0^\infty q_f(s)\dd s=\norm Q_2^2.
+\end{equation}
+The spherical subrepresentation of $L^2(X)$ has principal spectrum of
+multiplicity two: the radial Casimir is purely absolutely continuous above
+$1/4$, while a final discrete representation has no $K=SO(2)$ fixed vector.
+Its unit spherical matrix coefficient is
+$P_{-1/2+is}(\cosh\lambda)$, with group Schur weight~\cite{MY,DLMF}
+\begin{equation}
+ \KP(s)=\frac{4\pi^2}{s\tanh\pi s}=\rhoP(s)^{-1}.
+\end{equation}
+The radial and group multiplicity bases differ by a measurable unitary
+matrix, leaving $q_f$ unchanged. Consequently
+\begin{equation}
+ \norm{A_f}_{L^2(G)}^2=\int_0^\infty\KP(s)q_f(s)^2\dd s
+ \le C_\alpha b_\alpha(u)^4,\qquad \tfrac14<\alpha\le1.
+ \label{eq:autocorrelation-bound}
+\end{equation}
+At zero the integrable power is $s^{4\alpha-2}$; above one use the
+boundedness of $\KP$, the bound on $q_f$, and Parseval. The equality is
+first applied to smooth compact spectral densities and then extended by
+simultaneous $L^1(\dd s)$ and $L^2(\KP\dd s)$ approximation. This does
+not exchange arbitrary distributional Schur kernels.
+
+Combining \eqref{eq:orbit-autocorrelation} and
+\eqref{eq:autocorrelation-bound} yields
+\begin{equation}
+ \norm{a_{u_Lu_Rv}}_2
+ \le C_\alpha b_\alpha(u_L)b_\alpha(u_R)\norm v.
+ \label{eq:product-orbit-bound}
+\end{equation}
+This constant is independent of the angular labels, since it uses the
+radial operator of the absolute values. It proves the compact-test
+estimate used in Lemma~\ref{lem:position-distribution}.
+
+\subsection{All angular sectors, including bound states}
+Set $\ell_k=k-1/2$ and $A_k=\partial_t+\ell_k\tanh t$. Then
+\begin{equation}
+ A_k^*A_k=H_k+\ell_k^2,\qquad
+ A_kA_k^*=H_{k-1}+\ell_k^2.
+\end{equation}
+The second operator is strictly positive, with lower bound $1/4$ for
+$k=1$ and $2k-2$ for $k\ge2$. Polar decomposition gives an isometry onto
+$(\ker A_k)^\perp$,
+\begin{equation}
+ V_k=A_k^*(H_{k-1}+\ell_k^2)^{-1/2},\qquad
+ \ker A_k=\operatorname{span}\{\sech^{\ell_k}t\}.
+\end{equation}
+It intertwines $H_{k-1}$ and $H_k$. Induction proves the full decomposition
+\begin{equation}
+ H_k\simeq H_0\oplus\bigoplus_{\Delta=1}^k\{-(\Delta-1/2)^2\}.
+ \label{eq:darboux-spectrum}
+\end{equation}
+The bound states $b_{k,\Delta}$ are exponentially decreasing and follow
+from the same intertwiners. Their Casimir is $\Delta(1-\Delta)$.
+The no-bound-state hypothesis of~\cite{GPR} was used only for $H_0$.
+
+The Jost solutions and scattering coefficients are
+\begin{align}
+ F_{k,+}(t,s)&=e^{ist}{}_2F_1\left(\tfrac12-k,\tfrac12+k;1-is;
+                         \tfrac{1-\tanh t}{2}\right),\\
+ T_k(s)&=T_0(s)(-1)^k\prod_{j=1}^k\frac{j-1/2-is}{j-1/2+is},\\
+ R_k(s)&=-\frac{i(-1)^k}{\sinh\pi s}T_k(s).
+ \label{eq:full-scattering}
+\end{align}
+Thus $T_k(s)=-i(-1)^k\pi s+O(s^2)$ and $R_k(0)=-1$.
+With $W_k=F_{k,-}F'_{k,+}-F'_{k,-}F_{k,+}$,
+$W_k(0)=2(-1)^{k+1}/\pi\ne0$, excluding a zero resonance.
+The normalized modes $e_{k,\pm}=(2\pi)^{-1/2}T_kF_{k,\pm}$ are the
+unitary continuous basis: applying $V_k$ to the preceding modes multiplies
+them by the unit phases $\mp(\ell_k-is)/\sqrt{\ell_k^2+s^2}$.
+
+\subsection{Spectral cutoff in a stronger position topology}
+For $Q\in\Cc(\mathbb R)$ its continuous coefficients satisfy
+\begin{equation}
+ \begin{gathered}
+ a_\pm(s)=\int\overline{e_{k,\pm}(t,s)}Q(t)\dd t
+          =s\beta_\pm(s)\quad\text{near }0,\qquad \beta_\pm\in C^\infty,\\
+ \sup_{s\ge1}s^L|\partial_s^ja_\pm(s)|<\infty
+       \quad\text{for every }j,L.
+ \end{gathered}
+ \label{eq:spectral-endpoints}
+\end{equation}
+The zero follows from $T_k=O(s)$ on compact position sets. For high
+energy, integrate $H_k^M$ onto $Q$ and use compact-position bounds on the
+spectral derivatives of $e_{k,\pm}$.
+
+These derivative bounds follow from a uniform Volterra estimate. On
+$t\ge0$ write $F_{k,+}=e^{ist}m_+$; the kernel for $m_+$ is
+$D_s(v)=\int_0^ve^{2isr}\dd r$. Since
+$|\partial_s^jD_s(v)|\le2^jv^{j+1}/(j+1)$ and the potential has all
+polynomial moments with an exponential tail, successive parameter
+differentiation yields
+\begin{equation}
+ \sup_{s\ge0}|\partial_s^j(m_+(t,s)-1)|\le C_{k,j}e^{-2t}.
+ \label{eq:jost-remainder}
+\end{equation}
+The other good half-axis is identical. Gamma-ratio asymptotics in
+\eqref{eq:full-scattering} give bounded derivatives of $T_k,R_k$ on
+$[0,\infty)$. On the bad half-axis the scattering relation implies that
+derivatives of the full modes grow only polynomially in $|t|$.
+
+Choose $\chi=1$ on $[0,1]$, $\chi=0$ on $[2,\infty)$, smooth in between.
+The low-spectral part is
+\begin{equation}
+ L_\epsilon Q(t)=\sum_\pm\int_0^\infty
+ e_{k,\pm}(t,s)\chi(s/\epsilon)a_\pm(s)\dd s.
+\end{equation}
+On each half-axis its plane-wave amplitudes have the form
+$c_\epsilon(s)=s\chi(s/\epsilon)B(s)$ with the first two derivatives of
+$B$ bounded. Hence
+\begin{equation}
+ c_\epsilon(0)=0,\quad \norm{c_\epsilon}_1=O(\epsilon^2),\quad
+ |c_\epsilon'(0)|+\norm{c_\epsilon''}_1=O(1).
+\end{equation}
+Two integrations by parts retain the second endpoint term and give
+\begin{equation}
+ |L_\epsilon Q(t)|\le C\min(\epsilon^2,|t|^{-2})+
+ C\epsilon^2e^{-2|t|}
+ \le\frac{C'\epsilon^2}{(1+\epsilon|t|)^2}.
+\end{equation}
+For $0\le\alpha<1$,
+\begin{equation}
+ M_\alpha(L_\epsilon Q)=O(\epsilon^{1-\alpha}),\qquad
+ \norm{L_\epsilon Q}_2=O(\epsilon^{3/2}).
+ \label{eq:low-cutoff}
+\end{equation}
+This controls the linked large-position/low-energy region.
+
+At high energy \eqref{eq:spectral-endpoints} permits arbitrarily many
+integrations by parts without endpoint terms. The tail beyond a smooth
+cutoff at $R$ is bounded by
+$C_{L,M}R^{-L}(1+|t|)^{-M}+C_LR^{-L}e^{-2|t|}$.
+Retaining all bound states, define
+\begin{align}
+ Q_{\epsilon,R}(t)
+ &=\sum_{\Delta=1}^k\ip{b_{k,\Delta}}Q\,b_{k,\Delta}(t)\notag\\
+ &\quad+\sum_\pm\int_0^\infty e_{k,\pm}(t,s)
+ (1-\chi(s/\epsilon))\chi(s/R)a_\pm(s)\dd s.
+\end{align}
+For $R>2\epsilon$ its error is exactly the low plus high tail. Thus
+\begin{equation}
+ \norm{Q-Q_{\epsilon,R}}_2+M_\alpha(Q-Q_{\epsilon,R})\longrightarrow0,
+ \quad \epsilon\downarrow0,\ R\uparrow\infty,\quad \alpha<1.
+ \label{eq:weighted-spectral-core}
+\end{equation}
+We henceforth take $1/4<\alpha<1$, for example $\alpha=1/2$.
+
+\begin{theorem}[Completeness of the orbit-test core]
+Let $\cS_{\mathrm{all}}$ be the span of products of two fixed-angular-mode
+compact smooth continuous-spectral packets or bound modes, with arbitrary
+$v\in\mathcal K$. It is contained in $\cD_{\mathrm{orb}}$. Every
+$\phi\in\Cc(Y;\mathcal K)$ has approximants $\psi_j\in\cS_{\mathrm{all}}$
+such that
+\begin{equation}
+ \norm{\phi-\psi_j}_{L^2(Y;\mathcal K)}+
+ \norm{a_{\phi-\psi_j}}_2\longrightarrow0.
+\end{equation}
+In particular, $\overline{B\cS_{\mathrm{all}}}=\cF(\mathcal K)$.
+\label{thm:ambient-core}
+\end{theorem}
+\begin{proof}
+On a common compact position set, approximate $\phi$ uniformly by finite
+matter-rank, finite angular-Fourier, smooth radial tensor sums. Fixed radial
+cutoffs retain compact support. Lemma~\ref{lem:position-distribution}
+controls this orbit error. For each of the finitely many factors use
+\eqref{eq:weighted-spectral-core} and \eqref{eq:product-orbit-bound}.
+A diagonal choice gives the limit. If $k$ is orthogonal to
+$B\cS_{\mathrm{all}}$, it is orthogonal to all $B\phi$ with $\phi$ compact
+smooth. Equation \eqref{eq:position-pairing} gives $Rk=0$ as a
+distribution; injectivity gives $k=0$.
+\end{proof}
+
+\begin{remark}[A hard interior cutoff is different]
+Deleting a narrow band around $s_*>0$ need not converge in this topology.
+An amplitude nonzero at $s_*$ gives a packet of scale
+$\epsilon f(\epsilon t)e^{is_*t}$, whose $M_\alpha$ generally scales as
+$\epsilon^{-\alpha}$. The zero in \eqref{eq:spectral-endpoints} was
+essential. The actual threshold will be imposed after identifying the
+physical spectral Hilbert space.
+\end{remark}

@@ -1,0 +1,50 @@
+{
+  "created_at_utc": "2026-10-30T13:54:07.115175+00:00",
+  "kind": "self-reviewed transverse internal-graph estimate and failure of universal real transverse central decay",
+  "pages": 6,
+  "diagnostics": 83,
+  "compilers": {
+    "local": "two final successful pdfLaTeX passes",
+    "desktop": "success on final source; initial monospaced-font failure repaired"
+  },
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "dpi": 95,
+    "clipping_or_overlap": false,
+    "duplicate_equation_numbers": false
+  },
+  "established_scope": "fixed theta<1, imaginary omega, real u/v, K->infinity and K^3/nu^2->0 after fixed-mass kappa limit",
+  "not_proven": [
+    "theta->1 boundary layer and more distant transverse domain",
+    "physical external contours, states, algebra and normalization",
+    "finite-kappa joint limit and finite-G four-point function",
+    "interval quadrature certificate or certified numerical threshold",
+    "complete de Sitter holographic dual"
+  ],
+  "hashes": {
+    "code/build_transverse_note.ps1": "ffcde9b1182e0064c6aabd7fcc7d68a2891b75fed2506788d001266b43e9e169",
+    "code/recoil_bessel_joint.py": "8270fc8de084201f4ebf81a4a21f575667fa6317285f15394dbaf1902219cae3",
+    "code/recoil_bessel_limit.py": "db108ba306fd4c8e9d3b062a833b5e56a02f7f8da2d0ddb3c48a1850cc13c5a2",
+    "code/recoil_internal.py": "4ad536856e55b3ffc7084312a6d229067a5c7deb1e8f9667aa72982c0e4699a4",
+    "code/recoil_transverse.py": "0cf28741bc918cef4b7828ca95aca4fe70b524c8ac7cc59e5cb74aaa303cd874",
+    "code/transverse_consequences.py": "d0aea8921c5238cf959a99dd809996af1daa90d4434bb7a9c5167ab8c7f08edd",
+    "literature/stage4-recoil-transverse-sources.md": "ba46e3fd053c56314fef0bf621cd3c789d91469f632585b9300605f6875cc15b",
+    "manuscript/recoil-transverse/main.tex": "030a301328c8945b5c70de46d7f37fa688d16065cfec8d6e24c39c160f513b75",
+    "notes/stage4-recoil-transverse.md": "caab8bc3c7a67ff5399fd941115cb98617d6a1d0a8d6e247d99c888967ca7719",
+    "output/pdf/de-sitter-recoil-transverse.pdf": "898ecbe3c5149e3d09fa59910dcaed33e8388acf259cb791521a4b9c742b7fa4",
+    "results/stage4/recoil-bessel-joint/diagnostics.json": "b74aa2ab1116d037c6fb72823c60ad46ea806941a3c978dbd72d4c50e404a0cf",
+    "results/stage4/recoil-transverse/build-review.md": "b38738a9e6d78d0f53e83fc2bfd0de651a4dd88e81db5744827f653daf915e3d",
+    "results/stage4/recoil-transverse/consequences.json": "477ca57b5f5e7511425fd9fae10920563e4863fa90b4d8daa6569ae735809f7d",
+    "results/stage4/recoil-transverse/diagnostics.json": "b5862a26fc7c82a7035452b457b4456f315aed6c8921201ac0355ca4198d1211",
+    "results/stage4/recoil-transverse/main.log": "983c13a1405d053a9b6d3e63abc489daa289beaf76b107caff879375bbede6ea",
+    "sources/chandra-liska-post-2610.30247v1.html": "fe8580884e81ba9817e292bbca7c70b7c7d494e89efef62695e94bcf07801d0f",
+    "sources/dlmf-5.11.html": "8f573b25a200d5ca09372ad88adbd4a621bc0bc463e088c6548ff8dddc0d2eee"
+  }
+}

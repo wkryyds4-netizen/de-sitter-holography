@@ -1,0 +1,1081 @@
+{
+  "created_at_utc": "2026-10-29T18:02:55.833792+00:00",
+  "status": "passed",
+  "checks": [
+    {
+      "name": "independent-half-plane-chi-3.0",
+      "value": 9.485749680535094e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "radius-10-vs-12-chi-3.0",
+      "value": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "independent-half-plane-chi-1.0",
+      "value": 3.7723225095656485e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "radius-10-vs-12-chi-1.0",
+      "value": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "independent-half-plane-chi-0.1",
+      "value": 2.766866716163693e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "radius-10-vs-12-chi-0.1",
+      "value": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "independent-half-plane-chi0.0",
+      "value": 1.2088348665221391e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "radius-10-vs-12-chi0.0",
+      "value": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "independent-half-plane-chi0.1",
+      "value": 1.3505230308731528e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "radius-10-vs-12-chi0.1",
+      "value": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "independent-half-plane-chi1.0",
+      "value": 1.5040048181568338e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "radius-10-vs-12-chi1.0",
+      "value": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "independent-half-plane-chi3.0",
+      "value": 1.5709584495215392e-15,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "radius-10-vs-12-chi3.0",
+      "value": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "zero-spectrum-vs-independent-plateau",
+      "value": 8.703448235773324e-19,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "positive-edge-vs-N-X",
+      "value": 4.336808689942018e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "plateau-refinement-N",
+      "value": 1.734723475976807e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "plateau-refinement-Xinf",
+      "value": 5.204170427930421e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "plateau-refinement-Dedge",
+      "value": 7.047314121155779e-19,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "transverse-complete-spectrum-refinement",
+      "value": 3.611523282574138e-15,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "transverse-X-T-128",
+      "value": 4.372805848372548e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "fourier-X-T-128",
+      "value": 1.0321570089155922e-17,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "subtraction-X-T-128",
+      "value": 6.776263174137619e-21,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "small-signal-relative-T-128",
+      "value": 1.8931033326409943e-07,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "transverse-X-T-96",
+      "value": 5.4620128990912315e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "fourier-X-T-96",
+      "value": 1.1048201142700285e-17,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "subtraction-X-T-96",
+      "value": 7.623296929185487e-21,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "small-signal-relative-T-96",
+      "value": 8.65909041620743e-08,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "transverse-X-T-64",
+      "value": 5.5356167625151365e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "fourier-X-T-64",
+      "value": 1.7003156118142286e-17,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "subtraction-X-T-64",
+      "value": 1.7347267846929464e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "small-signal-relative-T-64",
+      "value": 4.050487764129002e-08,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "transverse-X-T-48",
+      "value": 6.134075445439866e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "fourier-X-T-48",
+      "value": 1.9712924403851177e-17,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "subtraction-X-T-48",
+      "value": 1.734730313119012e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "small-signal-relative-T-48",
+      "value": 2.0317954238331135e-08,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "transverse-X-T-32",
+      "value": 3.3816255778335987e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "fourier-X-T-32",
+      "value": 5.436074172655404e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "subtraction-X-T-32",
+      "value": 1.8211208365967457e-20,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "small-signal-relative-T-32",
+      "value": 1.744636171235733e-09,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "transverse-X-T-24",
+      "value": 3.6102630510774135e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "fourier-X-T-24",
+      "value": 2.073388952323952e-17,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "subtraction-X-T-24",
+      "value": 8.681620795713514e-19,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "small-signal-relative-T-24",
+      "value": 2.9463333978617956e-09,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "transverse-X-T-16",
+      "value": 3.742733012080003e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "fourier-X-T-16",
+      "value": 5.053174164303889e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "subtraction-X-T-16",
+      "value": 3.3881317890172014e-21,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "small-signal-relative-T-16",
+      "value": 2.3333068213425273e-10,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "transverse-X-T-12",
+      "value": 3.686242134884445e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "fourier-X-T-12",
+      "value": 1.4079907977992692e-17,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "subtraction-X-T-12",
+      "value": 1.736324159142703e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "small-signal-relative-T-12",
+      "value": 2.9890564984956517e-10,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "transverse-X-T-8",
+      "value": 3.997455840210853e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "fourier-X-T-8",
+      "value": 4.970506794135217e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "subtraction-X-T-8",
+      "value": 8.75430576845164e-19,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "small-signal-relative-T-8",
+      "value": 3.6293128742901656e-11,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "transverse-X-T-6",
+      "value": 3.544355194306139e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "fourier-X-T-6",
+      "value": 5.079652549738349e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "subtraction-X-T-6",
+      "value": 8.674676106452505e-19,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "small-signal-relative-T-6",
+      "value": 1.6459672601652383e-11,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "transverse-X-T-4",
+      "value": 3.379365515778197e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "fourier-X-T-4",
+      "value": 4.913391747322049e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "subtraction-X-T-4",
+      "value": 8.871536966676093e-19,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "small-signal-relative-T-4",
+      "value": 2.4125537639965814e-12,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "transverse-X-T-2",
+      "value": 3.590984966345654e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "fourier-X-T-2",
+      "value": 5.5192371108725925e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "subtraction-X-T-2",
+      "value": 1.4907779871675686e-19,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "small-signal-relative-T-2",
+      "value": 1.100533163957332e-13,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "transverse-X-T0",
+      "value": 3.366268786345923e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "fourier-X-T0",
+      "value": 5.5242634247723406e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "subtraction-X-T0",
+      "value": 2.303929616531697e-19,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "small-signal-relative-T0",
+      "value": 7.990845073027558e-16,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "transverse-X-T2",
+      "value": 3.686287386450715e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "fourier-X-T2",
+      "value": 5.2918063241641735e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "subtraction-X-T2",
+      "value": 8.824766327896538e-19,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "small-signal-relative-T2",
+      "value": 1.3046621752978443e-15,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "transverse-X-T4",
+      "value": 3.992547818263356e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "fourier-X-T4",
+      "value": 4.655209237121156e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "subtraction-X-T4",
+      "value": 2.1852793414608445e-19,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "small-signal-relative-T4",
+      "value": 5.118948145709581e-15,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "transverse-X-T6",
+      "value": 3.615543044834892e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "fourier-X-T6",
+      "value": 5.0721407928711265e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "subtraction-X-T6",
+      "value": 1.2874900798265365e-19,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "small-signal-relative-T6",
+      "value": 1.2549154661365784e-13,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "transverse-X-T8",
+      "value": 3.200336302136601e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "fourier-X-T8",
+      "value": 5.1447491266771885e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "subtraction-X-T8",
+      "value": 1.6351246522454772e-19,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "small-signal-relative-T8",
+      "value": 6.793101772193544e-13,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "transverse-X-T12",
+      "value": 3.133166557280692e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "fourier-X-T12",
+      "value": 1.2405335957334898e-17,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "subtraction-X-T12",
+      "value": 8.404916918482713e-19,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "small-signal-relative-T12",
+      "value": 8.140533090856981e-11,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "transverse-X-T16",
+      "value": 3.368018219318837e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "fourier-X-T16",
+      "value": 1.0168783491468219e-17,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "subtraction-X-T16",
+      "value": 6.418088144687738e-19,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "small-signal-relative-T16",
+      "value": 1.9931803063973443e-10,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "transverse-X-T24",
+      "value": 3.398722611490764e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "fourier-X-T24",
+      "value": 1.0398927377276253e-17,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "subtraction-X-T24",
+      "value": 1.4420481566115496e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "small-signal-relative-T24",
+      "value": 9.757280642844917e-10,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "transverse-X-T32",
+      "value": 3.2060844953800258e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "fourier-X-T32",
+      "value": 4.6183524344982915e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "subtraction-X-T32",
+      "value": 9.220217230595923e-20,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "small-signal-relative-T32",
+      "value": 1.0926230678094615e-09,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "transverse-X-T48",
+      "value": 4.201275467827529e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "fourier-X-T48",
+      "value": 4.596945878087791e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "subtraction-X-T48",
+      "value": 1.4609446308088557e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "small-signal-relative-T48",
+      "value": 3.858184043086428e-09,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "transverse-X-T64",
+      "value": 4.946114552262012e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "fourier-X-T64",
+      "value": 1.5356641322219895e-17,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "subtraction-X-T64",
+      "value": 1.8848608271691438e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "small-signal-relative-T64",
+      "value": 3.1342731040658986e-08,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "transverse-X-T96",
+      "value": 5.744007537434112e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "fourier-X-T96",
+      "value": 7.592952526716139e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "subtraction-X-T96",
+      "value": 2.711577245544418e-19,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "small-signal-relative-T96",
+      "value": 5.366946033183916e-08,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "transverse-X-T128",
+      "value": 3.946066183653549e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "fourier-X-T128",
+      "value": 8.498523155905662e-18,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "subtraction-X-T128",
+      "value": 5.658573257172709e-19,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "small-signal-relative-T128",
+      "value": 1.4424349654172037e-07,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "sampled-Cauchy-Schwarz",
+      "value": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "sampled-positive-commutator",
+      "value": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    }
+  ],
+  "geometry_rows": [
+    {
+      "chi": -3.0,
+      "slice": [
+        0.009181299873883275,
+        0.6472621053987153
+      ],
+      "ordered": [
+        0.009181299873882942,
+        0.6472621053987144
+      ],
+      "R8": [
+        0.009181299873883275,
+        0.6472621053987153
+      ],
+      "R12": [
+        0.009181299873883275,
+        0.6472621053987153
+      ],
+      "relative_representation_difference": 9.485749680535094e-16
+    },
+    {
+      "chi": -1.0,
+      "slice": [
+        -419.0610279437984,
+        -345.7850406724495
+      ],
+      "ordered": [
+        -419.0610279437983,
+        -345.7850406724493
+      ],
+      "R8": [
+        -419.0610279437984,
+        -345.78504067244955
+      ],
+      "R12": [
+        -419.0610279437984,
+        -345.7850406724495
+      ],
+      "relative_representation_difference": 3.7723225095656485e-16
+    },
+    {
+      "chi": -0.1,
+      "slice": [
+        1687.7718894492139,
+        726.6233773735153
+      ],
+      "ordered": [
+        1687.7718894492143,
+        726.6233773735155
+      ],
+      "R8": [
+        1687.7718894492134,
+        726.623377373515
+      ],
+      "R12": [
+        1687.7718894492139,
+        726.6233773735153
+      ],
+      "relative_representation_difference": 2.766866716163693e-16
+    },
+    {
+      "chi": 0.0,
+      "slice": [
+        1882.6049565234296,
+        -1.771985970201161e-14
+      ],
+      "ordered": [
+        1882.6049565234298,
+        -8.129253126932747e-15
+      ],
+      "R8": [
+        1882.60495652343,
+        -1.771985970201161e-14
+      ],
+      "R12": [
+        1882.6049565234296,
+        -1.771985970201161e-14
+      ],
+      "relative_representation_difference": 1.2088348665221391e-16
+    },
+    {
+      "chi": 0.1,
+      "slice": [
+        1728.9696392990154,
+        -744.1695237082331
+      ],
+      "ordered": [
+        1728.9696392990156,
+        -744.1695237082332
+      ],
+      "R8": [
+        1728.9696392990152,
+        -744.1695237082331
+      ],
+      "R12": [
+        1728.9696392990154,
+        -744.1695237082331
+      ],
+      "relative_representation_difference": 1.3505230308731528e-16
+    },
+    {
+      "chi": 1.0,
+      "slice": [
+        -565.8163086071933,
+        501.22630036173905
+      ],
+      "ordered": [
+        -565.8163086071933,
+        501.22630036173894
+      ],
+      "R8": [
+        -565.8163086071932,
+        501.226300361739
+      ],
+      "R12": [
+        -565.8163086071933,
+        501.22630036173905
+      ],
+      "relative_representation_difference": 1.5040048181568338e-16
+    },
+    {
+      "chi": 3.0,
+      "slice": [
+        -0.8048533275231209,
+        -1.9163622108000768
+      ],
+      "ordered": [
+        -0.8048533275231228,
+        -1.9163622108000742
+      ],
+      "R8": [
+        -0.8048533275231207,
+        -1.9163622108000764
+      ],
+      "R12": [
+        -0.8048533275231209,
+        -1.9163622108000768
+      ],
+      "relative_representation_difference": 1.5709584495215392e-15
+    }
+  ],
+  "independent_plateau": {
+    "N": 0.007843474197607964,
+    "Xinf": 0.0076492700984823634,
+    "Dedge": 0.0003884081982511974,
+    "difference_identity_error": 4.336808689942018e-18
+  },
+  "curve_refinement_rows": [
+    {
+      "T": -128,
+      "transverse_absolute_difference": 4.372805848372548e-18,
+      "fourier_absolute_difference": 1.0321570089155922e-17,
+      "relative_to_real_plateau_difference_or_late_X": 1.8931033326409943e-07
+    },
+    {
+      "T": -96,
+      "transverse_absolute_difference": 5.4620128990912315e-18,
+      "fourier_absolute_difference": 1.1048201142700285e-17,
+      "relative_to_real_plateau_difference_or_late_X": 8.65909041620743e-08
+    },
+    {
+      "T": -64,
+      "transverse_absolute_difference": 5.5356167625151365e-18,
+      "fourier_absolute_difference": 1.7003156118142286e-17,
+      "relative_to_real_plateau_difference_or_late_X": 4.050487764129002e-08
+    },
+    {
+      "T": -48,
+      "transverse_absolute_difference": 6.134075445439866e-18,
+      "fourier_absolute_difference": 1.9712924403851177e-17,
+      "relative_to_real_plateau_difference_or_late_X": 2.0317954238331135e-08
+    },
+    {
+      "T": -32,
+      "transverse_absolute_difference": 3.3816255778335987e-18,
+      "fourier_absolute_difference": 5.436074172655404e-18,
+      "relative_to_real_plateau_difference_or_late_X": 1.744636171235733e-09
+    },
+    {
+      "T": -24,
+      "transverse_absolute_difference": 3.6102630510774135e-18,
+      "fourier_absolute_difference": 2.073388952323952e-17,
+      "relative_to_real_plateau_difference_or_late_X": 2.9463333978617956e-09
+    },
+    {
+      "T": -16,
+      "transverse_absolute_difference": 3.742733012080003e-18,
+      "fourier_absolute_difference": 5.053174164303889e-18,
+      "relative_to_real_plateau_difference_or_late_X": 2.3333068213425273e-10
+    },
+    {
+      "T": -12,
+      "transverse_absolute_difference": 3.686242134884445e-18,
+      "fourier_absolute_difference": 1.4079907977992692e-17,
+      "relative_to_real_plateau_difference_or_late_X": 2.9890564984956517e-10
+    },
+    {
+      "T": -8,
+      "transverse_absolute_difference": 3.997455840210853e-18,
+      "fourier_absolute_difference": 4.970506794135217e-18,
+      "relative_to_real_plateau_difference_or_late_X": 3.6293128742901656e-11
+    },
+    {
+      "T": -6,
+      "transverse_absolute_difference": 3.544355194306139e-18,
+      "fourier_absolute_difference": 5.079652549738349e-18,
+      "relative_to_real_plateau_difference_or_late_X": 1.6459672601652383e-11
+    },
+    {
+      "T": -4,
+      "transverse_absolute_difference": 3.379365515778197e-18,
+      "fourier_absolute_difference": 4.913391747322049e-18,
+      "relative_to_real_plateau_difference_or_late_X": 2.4125537639965814e-12
+    },
+    {
+      "T": -2,
+      "transverse_absolute_difference": 3.590984966345654e-18,
+      "fourier_absolute_difference": 5.5192371108725925e-18,
+      "relative_to_real_plateau_difference_or_late_X": 1.100533163957332e-13
+    },
+    {
+      "T": 0,
+      "transverse_absolute_difference": 3.366268786345923e-18,
+      "fourier_absolute_difference": 5.5242634247723406e-18,
+      "relative_to_real_plateau_difference_or_late_X": 7.990845073027558e-16
+    },
+    {
+      "T": 2,
+      "transverse_absolute_difference": 3.686287386450715e-18,
+      "fourier_absolute_difference": 5.2918063241641735e-18,
+      "relative_to_real_plateau_difference_or_late_X": 1.3046621752978443e-15
+    },
+    {
+      "T": 4,
+      "transverse_absolute_difference": 3.992547818263356e-18,
+      "fourier_absolute_difference": 4.655209237121156e-18,
+      "relative_to_real_plateau_difference_or_late_X": 5.118948145709581e-15
+    },
+    {
+      "T": 6,
+      "transverse_absolute_difference": 3.615543044834892e-18,
+      "fourier_absolute_difference": 5.0721407928711265e-18,
+      "relative_to_real_plateau_difference_or_late_X": 1.2549154661365784e-13
+    },
+    {
+      "T": 8,
+      "transverse_absolute_difference": 3.200336302136601e-18,
+      "fourier_absolute_difference": 5.1447491266771885e-18,
+      "relative_to_real_plateau_difference_or_late_X": 6.793101772193544e-13
+    },
+    {
+      "T": 12,
+      "transverse_absolute_difference": 3.133166557280692e-18,
+      "fourier_absolute_difference": 1.2405335957334898e-17,
+      "relative_to_real_plateau_difference_or_late_X": 8.140533090856981e-11
+    },
+    {
+      "T": 16,
+      "transverse_absolute_difference": 3.368018219318837e-18,
+      "fourier_absolute_difference": 1.0168783491468219e-17,
+      "relative_to_real_plateau_difference_or_late_X": 1.9931803063973443e-10
+    },
+    {
+      "T": 24,
+      "transverse_absolute_difference": 3.398722611490764e-18,
+      "fourier_absolute_difference": 1.0398927377276253e-17,
+      "relative_to_real_plateau_difference_or_late_X": 9.757280642844917e-10
+    },
+    {
+      "T": 32,
+      "transverse_absolute_difference": 3.2060844953800258e-18,
+      "fourier_absolute_difference": 4.6183524344982915e-18,
+      "relative_to_real_plateau_difference_or_late_X": 1.0926230678094615e-09
+    },
+    {
+      "T": 48,
+      "transverse_absolute_difference": 4.201275467827529e-18,
+      "fourier_absolute_difference": 4.596945878087791e-18,
+      "relative_to_real_plateau_difference_or_late_X": 3.858184043086428e-09
+    },
+    {
+      "T": 64,
+      "transverse_absolute_difference": 4.946114552262012e-18,
+      "fourier_absolute_difference": 1.5356641322219895e-17,
+      "relative_to_real_plateau_difference_or_late_X": 3.1342731040658986e-08
+    },
+    {
+      "T": 96,
+      "transverse_absolute_difference": 5.744007537434112e-18,
+      "fourier_absolute_difference": 7.592952526716139e-18,
+      "relative_to_real_plateau_difference_or_late_X": 5.366946033183916e-08
+    },
+    {
+      "T": 128,
+      "transverse_absolute_difference": 3.946066183653549e-18,
+      "fourier_absolute_difference": 8.498523155905662e-18,
+      "relative_to_real_plateau_difference_or_late_X": 1.4424349654172037e-07
+    }
+  ],
+  "complete_spectrum_max_relative_change": 3.611523282574138e-15,
+  "tail_expressions_evaluated": {
+    "transverse": {
+      "8.0": {
+        "J_scalar_tail": 1.7514503979844015e-16,
+        "JQ_box_tail": 1.2650443667481645e-12
+      },
+      "10.0": {
+        "J_scalar_tail": 1.6673197621266966e-29,
+        "JQ_box_tail": 1.2042781657268788e-25
+      },
+      "12.0": {
+        "J_scalar_tail": 5.628336138897052e-46,
+        "JQ_box_tail": 4.06525639257084e-42
+      }
+    },
+    "outer_A_at_12": 2.717608250334083e-32,
+    "outer_subtracted_pole_at_12": 2.4388053888397313e-68,
+    "scope": "separate analytic bounds, evaluated without outward rounding; no total PV quadrature error bound"
+  },
+  "versions": {
+    "python": "3.14.5 (tags/v3.14.5:5607950, May 10 2026, 10:43:50) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.4.6",
+    "scipy": "1.18.0",
+    "matplotlib": "3.11.0"
+  },
+  "limitations": [
+    "empirical quadrature only; no certified total error",
+    "complex X retained; D uses real part",
+    "ordered M limit; no finite-M or finite-G claim",
+    "sampled positivity is not a proof of global monotonicity",
+    "same f implementation used by both region representations; this is not independent special-function certification"
+  ],
+  "hashes": {
+    "code/validate_moving_curve.py": "eac83659e0286ef16b47dbd2463fc5b0e3841319fd9f4d8e312c7055d72fa9b9",
+    "code/run_moving_curve.py": "c3c9a3233b64140fd47fdad2f3325028d100cfa3802763bd763d2b0ae5d1f4a6",
+    "code/moving_threshold_curve.py": "ca35983239f4c6b14f36f7bff596f53f2a6d07a2fb15fcdb51692e246f7eea28",
+    "code/preparation_asymptotics.py": "f3b07907b5c3395dfd78a54c3065c3eda78ba3e02ecfa5acc45e31e8c6488575",
+    "results/stage3/moving-curve/run-w24-chi40-R10.json": "df0b6a444bbe17d6818bb9af9a1ebc4c2c8c5cf92824b59aca25e67c81048057",
+    "results/stage3/moving-curve/run-w32-chi40-R10.json": "f78f0a69de318554ee60418486b05d12ec41e93d71a3d0e537b020c53a89f0ba",
+    "results/stage3/moving-curve/run-w24-chi64-R10.json": "f68543c8ca8e4f45ed76a4489356759149ddfcf6ea6116895ae931822c6b1ae2"
+  }
+}

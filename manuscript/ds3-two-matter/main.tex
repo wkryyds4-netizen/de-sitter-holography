@@ -1,0 +1,331 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,microtype,booktabs}
+\usepackage[margin=25mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\dd}{\mathop{}\!\mathrm d}
+\newcommand{\sech}{\operatorname{sech}}
+\newcommand{\HH}{\mathcal H}
+\title{Two matter particles in the local dS$_3$ model:\\physical norms and an uncrossed limit}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Working research note --- 31 October 2026}
+\begin{document}\maketitle
+\begin{abstract}
+We derive the physical norm of the scalar observer channel reached by two
+ordered creations of distinguishable matter species. The full tensor
+product contains spinning channels; these are not discarded in completeness.
+A proper-mass half-period shift gives bounded creation blocks.
+At large conditioned observer mass, the uncrossed four-point form converges
+to the independent-probe antipodal product, with an absolute error bound
+and a first phase correction. Crossed recoupling remains open.
+\end{abstract}
+\section{Conventions and the reached channel}
+Set $\ell=1$, $G_N=0$, $\mathsf G=SO^+(3,1)$. Two scalar BD observers
+have labels at least $s>0$. Two distinct free BD matter species have
+labels $p,q>0$; local couplings are one. Retain
+\[
+ \rho(b)=2b^2/\pi,\quad \mu(b)=b\tanh(\pi b)/\pi,\quad
+ \sigma(b)=\rho(b)\sech^2\pi b,\quad h(b)=\sqrt{1+b^2}.
+\]
+For $S=x+y+z$ define
+\begin{align}
+ D_{xyz}&=\cosh(\pi S/2)\prod_{n=x,y,z}\cosh[\pi(S-2n)/2],\\
+ K_{xyz}&=\frac{\pi}{8D_{xyz}}\prod_{n=x,y,z}\frac{\sinh\pi n}{n},
+ &Q_p(a,b)&=\frac{\mu(a)\mu(b)}{8D_{abp}}.
+\end{align}
+$K$ is the rigging coefficient of the invariant distribution whose $000$
+component is one; its coefficient norm is $K^{-1}$.
+Emission obeys $|E_{abp}|^2/K_{abp}=\cosh^2(\pi b)Q_p(a,b)$.
+
+The full scalar-pair decomposition contains $(J,\nu)$ with $J\in\mathbb Z$,
+not just $J=0$ \cite{DS}. A local emission maps the scalar observer $b$
+to observer $a$ plus matter $q$, so its range has $J=0$ in this pairing.
+Changing the pairing generally requires all spins.
+This reached range is not the whole four-body space.
+
+\newpage
+\section{Clebsch normalization and the physical four-body norm}
+Normalize the scalar Clebsch transform
+$C_{aq;b}:\HH_a\otimes\HH_q\to\HH_b$ to have $000$ entry one.
+Its scalar-channel measure is
+\begin{equation}
+ w_{aq}(b)=\rho(b)K_{aqb},\qquad b>0 .
+\end{equation}
+Comparing group averaging with the two-body Schur constant $K_2=1/\rho$
+gives $K_{aqb}=w_{aq}(b)K_2(b)$. Independently, DS (22), (28), (29)
+give raw scalar measure $b^2/(4\pi^4)$ on one reflection representative.
+The boundary kernel in our unitary sphere basis satisfies
+\[
+ |B_{000}|^2=\frac{\pi^4}{D_{aqb}}
+                  \prod_{n=a,q,b}\frac{\sinh\pi n}{n}.
+\]
+The measure of $C=B/B_{000}$ is therefore $\rho K$.
+The reflected full-line factor $1/2$ is already removed.
+Do not impose the observer cutoff on this mathematical completeness relation.
+
+Let $I_{bcp}$ denote the normalized three-body invariant and put
+\[
+ J_b=(C_{aq;b}^{\dagger}\otimes1_c\otimes1_p)I_{bcp}.
+\]
+Its all-spherical component is one. Four-body group averaging converges
+on finite $K$ tests: the product decays as $e^{-4r}$ times a polynomial,
+and Haar grows as $e^{2r}$ \cite{MM,MY}. The scalar part is
+\begin{equation}
+ \eta_4^{(0)}=\int_0^\infty \dd b\,W|J_b\rangle\langle J_b|,
+ \qquad W(a,b,c;p,q)=\rho(b)K_{abq}K_{bcp}.
+\end{equation}
+Other spin channels remain in the full rigging form.
+The distribution $\int F(b)J_b\dd b$ has norm $\int |F|^2/W\,\dd b$.
+Compact spectral tests and unitary direct-integral completion justify
+this statement; no squared delta function is used.
+
+A second creation on a one-matter coefficient $f_1(b,c)$ gives
+$F(a,b,c)=E_{abq}f_1(b,c)$ with $a,b,c\ge s$, hence
+\begin{align}
+ \|A_qf_1\|_2^2&=\int_s^\infty\dd b\dd c\,
+       \frac{|f_1(b,c)|^2}{K_{bcp}}{\cal S}_q(b),\\
+ {\cal S}_q(b)&=\int_s^\infty R_q(a|b)\dd a,\qquad
+ R_p(a|b)=Q_p(a,b)/\sigma(b).
+\end{align}
+This fiber multiplication map is closed. Compact external mass supports
+give a dense domain in $\HH_1$; its adjoint annihilates the orthogonal
+complement of the closure of the reached range.
+
+For vacuum coefficient $f(c)$, two creations give
+$f(c)E_{bcp}E_{abq}$. In the linear-gluing state $f(c)=\sech\pi c$,
+the squared-norm density is
+\begin{equation}
+ {\cal W}_{pq}(a,b,c)=Q_q(a,b)Q_p(b,c)/\sigma(b).
+\end{equation}
+The chord-kernel structure has a direct dS$_2$ predecessor,
+KL (6.23)--(6.25) \cite{KL}; our dS$_3$ factors follow from the fixed local model.
+
+\newpage
+\section{Domains and a proper-time half-period shift}
+The unshifted rate obeys
+\[
+ {\cal S}_q(b)\le b/(2\pi)+c_s,\qquad
+ c_s=1/(2\pi^2)+1/(4\pi^3s).
+\]
+From $R_p(b|c)\le b e^{-2\pi(b-c)_+}/(\pi c)$, with $\beta=2\pi$,
+\begin{equation}
+ \int_s^\infty bR_p(b|c)\dd b\le
+ \frac{c^2}{3\pi}+\frac{c}{\pi\beta}
+ +\frac2{\pi\beta^2}+\frac2{\pi\beta^3s}.
+\end{equation}
+Thus a finite second mass moment of $\rho(c)|f(c)|^2\dd c$ is sufficient
+for $A_qA_pf$; the linear-gluing state meets it.
+This does not establish a common full-Fock core.
+Its ordered two-particle overlap is
+\[
+ Z^{-1}\int_{a,b,c\ge s}\dd a\dd b\dd c\,{\cal W}_{pq}
+ e^{-it_p[h(b)-h(c)]-it_q[h(a)-h(b)]}.
+\]
+Unshifted conditional rates have a broad downward-energy region at large
+mass. Their coincidence norms are not the finite antipodal benchmark.
+
+On compact mass tests define
+\[
+ \widetilde A_p=e^{\pi H_{\rm out}/2}A_p e^{-\pi H_{\rm in}/2}.
+\]
+For $A_p(t)=e^{-iH_{\rm out}t}A_pe^{iH_{\rm in}t}$ this is $t=i\pi/2$.
+Its conditional norm kernel has the exact factorization
+\begin{align}
+ \widetilde R_p(a|b)&=e^{\pi[h(a)-h(b)]}R_p(a|b)
+                  =\frac{g(a)}{g(b)}\widehat R_p(a,b),\\
+ g(x)&=\frac{x e^{\pi[h(x)-x]}}{1+e^{-2\pi x}},\\
+ \widehat R_p(a,b)&=
+ \frac{\cosh\pi(a+b)-\cosh\pi(a-b)}
+ {8\pi[\cosh\pi(a+b)+\cosh\pi p][\cosh\pi(a-b)+\cosh\pi p]}.
+\end{align}
+This does not identify the label with proper energy or prove
+geometric antipodality at finite mass.
+Set
+\[
+ k_p(u)=\frac1{8\pi(\cosh\pi u+\cosh\pi p)},\qquad
+ B_s=2e^{\pi(\sqrt{1+s^2}-s)}.
+\]
+Then $0<\widehat R_p(a,b)\le k_p(a-b)$ and
+$g(a)/g(b)\le B_s(1+|a-b|/s)$. Using
+$k_p(u)\le e^{-\pi|u|}/(4\pi)$ gives
+\begin{equation}
+ \sup_{b\ge s}\int_s^\infty\widetilde R_p(a|b)\dd a
+ \le B_s\left(\frac1{2\pi^2}+\frac1{2s\pi^3}\right).
+\end{equation}
+Each shifted creation block therefore extends boundedly on the sectors
+treated here. The exponentials in its definition need not act
+separately on arbitrary states.
+
+\newpage
+\section{A conditioned four-point form and its limit}
+Condition on initial observer mass $c=M$. More precisely, normalized
+smooth vacuum packets whose mass probability tends to $\delta(c-M)$
+give the continuous fiber form
+\begin{equation}
+ F_M(t_p,t_q)=\int_{a,b\ge s}\dd a\dd b\,
+ \widetilde R_q(a|b)\widetilde R_p(b|M)
+ e^{-it_p[h(b)-h(M)]-it_q[h(a)-h(b)]}.
+\end{equation}
+The creation-state overlap fixes the ordering.
+This is an uncrossed form, not the unconditioned HH expectation
+or a crossed OTOC. Write $u=b-M$, $v=a-b$.
+The $g$ ratios telescope to $g(M+u+v)/g(M)$, which tends to one.
+The balanced factors tend to $k_p(u)k_q(v)$ and the proper energy
+differences tend to $u,v$. An integrable dominating function is
+\[
+ B_s\left(1+\frac{|u|+|v|}{s}\right)k_p(u)k_q(v).
+\]
+With $s$ fixed, the cutoff region vanishes pointwise. Uniformly on
+compact real time sets,
+\begin{equation}\boxed{
+ F_M(t_p,t_q)\longrightarrow L_p(t_p)L_q(t_q),\qquad
+ L_p(t)=\frac{\sin pt}{4\pi\sinh\pi p\,\sinh t}.}
+\end{equation}
+The continuous value is $L_p(0)=p/(4\pi\sinh\pi p)$. Thus
+\[
+ F_M(0,0)\longrightarrow \frac{pq}{16\pi^2\sinh\pi p\,\sinh\pi q}.
+\]
+This recovers the independent-probe antipodal benchmark.
+The half-period continuation is part of the specified observable;
+a moving cutoff, identical species or removal of the shift is a different limit.
+
+For an explicit bound let $M\ge2s$, $T=\max(|t_p|,|t_q|)$ and
+\[
+ d_M=\frac2M+\frac{2\pi}{M^2}+2\pi e^{-\pi M},\quad
+ C_M=e^{Md_M/2},\quad
+ \epsilon_M=2(2+\cosh\pi p+\cosh\pi q)e^{-\pi M}.
+\]
+Define
+\begin{equation}
+ {\cal T}_s(R)=\frac{e^{-\pi R}}{4\pi^2}
+ \left[(1+B_s)\left(\frac R\pi+\frac1{\pi^2}\right)
+ +\frac{B_s}{s}\left(\frac{R^2}\pi+\frac{2R}{\pi^2}+\frac2{\pi^3}\right)\right].
+\end{equation}
+Then
+\begin{equation}
+ |F_M-L_pL_q|\le
+ \frac{C_M(d_M+2T/M^2)}{2\pi^5}
+ +\epsilon_M L_p(0)L_q(0)+{\cal T}_s(M/2).
+\end{equation}
+This is a conservative absolute estimate, not a small finite-mass
+percentage guarantee. Relative estimates divide by $|L_pL_q|$
+only away from its zeros.
+
+\newpage
+\section{Error control and the first finite-mass phase}
+Split the difference plane at $r=|u|+|v|=M/2$.
+Inside, all masses are at least $M/2$:
+\[
+ |(\log g)'|\le d_M,\qquad
+ |g(M+u+v)/g(M)-1|\le C_Md_Mr.
+\]
+The balanced-factor deficits sum to at most $\epsilon_M$.
+Since $1-h'(x)\le1/(2x^2)$, the phase error is at most $2Tr/M^2$.
+Use $\int r k_p(u)k_q(v)\dd u\dd v\le1/(2\pi^5)$.
+Outside, actual plus limiting kernels are bounded by
+$[1+B_s(1+r/s)]e^{-\pi r}/(16\pi^2)$; four-quadrant integration gives
+$ {\cal T}_s$. This proves the previous $O_T(M^{-1})$ estimate.
+
+There is also a sharper asymptotic:
+\begin{equation}
+ F_M=L_pL_q+\frac{i}{M}
+  \big[L_p'(t_p)L_q(t_q)+L_p(t_p)L_q'(t_q)\big]+O_T(M^{-2}).
+\end{equation}
+On the inner diamond,
+$g(M+u+v)/g(M)=1+(u+v)/M+O((r+r^2)/M^2)$;
+the balanced deficits are exponential, and the proper-energy phase error
+is $O_T(r/M^2)$. All polynomial moments of $k_pk_q$ are finite;
+the outer tail, including the subtracted linear term, is exponentially small.
+Finally $\int u k_p(u)e^{-itu}\dd u=iL_p'(t)$.
+The first finite-mass correction is imaginary.
+The saved second-order numerical expression is exploratory and
+is not used as a proved remainder or a pass criterion.
+
+\section{Independent group-normalization checks}
+The main run has 56 checks; a separate angular run has 10. All pass.
+DS sphere normalization is compared to $\rho K$ in three samples.
+Six spherical-product reconstructions test
+$\phi_a(r)\phi_q(r)=\int_0^\infty w_{aq}(b)\phi_b(r)\dd b$, including $r=0$.
+
+Three four-body samples compare direct radial and spectral integrals with
+\begin{equation}
+ \int_0^\infty\sinh^2r\prod_{j=1}^4\phi_{n_j}(r)\dd r
+ =\frac1{16\prod_j n_j}\sum_{\varepsilon_j=\pm1}
+ \left(\prod_j\varepsilon_j\right)f\left(\sum_j\varepsilon_j n_j\right),
+\end{equation}
+where $f(k)=1-(\pi k/2)\coth(\pi k/2)$ and $f(0)=0$.
+Expand four sines and use
+$\int(\cos kr-1)/\sinh^2r\,\dd r=f(k)$.
+The sample $(1,1,1,1)$ checks zero frequencies.
+The $l=1$ pair singlet has overlap
+\[
+ I_{aqb}(S_1)=\frac{\sqrt3(1+a^2+q^2-b^2)}
+                      {2\sqrt{(1+a^2)(1+q^2)}}.
+\]
+Six local-vertex checks and two independent non-spherical group integrals
+test this component. Radial cutoff 40 and spectral cutoff 18 have
+analytic outer tails. This does not numerically test every spinning channel.
+
+\newpage
+\section{Numerical benchmark and continuation}
+The proper-time run uses $s=.2$, $p=.6$, $q=1.2$, box
+$|u|,|v|\le14$, Gauss orders 64/96, and the exact moving cutoff.
+The outside-box error is at most $ {\cal T}_{.2}(14)<1.75\,10^{-17}$.
+The interior quadrature is empirical, not interval-certified.
+\begin{center}
+\begin{tabular}{rcc}
+\toprule
+$M$ & $F_M(0,0)$ & Relative difference from limit\\ \midrule
+4 & .00006571136262 & $5.0433\,10^{-3}$\\
+8 & .00006540451475 & $3.5012\,10^{-4}$\\
+16 & .00006538310306 & $2.2634\,10^{-5}$\\
+32 & .00006538171794 & $1.4491\,10^{-6}$\\ \bottomrule
+\end{tabular}
+\end{center}
+The limit is $.00006538162320$. At $(t_p,t_q)=(.5,1)$,
+the complex relative differences are $16.7\%$, $10.8\%$, $6.04\%$ and $3.18\%$.
+Subtracting the first phase term leaves absolute residuals
+\[
+4.44\,10^{-6},\quad1.11\,10^{-6},\quad2.79\,10^{-7},\quad6.98\,10^{-8}.
+\]
+Small zero-time errors do not certify the full finite-time correlator.
+
+The crossed problem is next: transform between the $(a,q)$ and $(a,p)$
+pairings with the principal spin channels, reflection representative,
+and exact leg phases. A scalar range in one pairing cannot be treated as
+a complete scalar range in another. The prior normalization-invariant
+mismatch with the candidate recoil graph is not removed by this norm identity.
+Identical species require Bose interference between pairings.
+A common full-Fock domain, composite gluing, finite-$\kappa$ sewing
+and finite-$G_N$ dynamics remain open; no full holographic dual is claimed.
+
+Implementation and two validation drivers are in \texttt{code/}.
+Raw values, parameters, dependency versions and source hashes are in
+\texttt{results/stage4/ds3-two-matter/}; the Chinese derivation is
+\texttt{notes/stage4-ds3-two-matter.md}.
+Group and vertex checks use 50-digit arithmetic; time integrals use
+NumPy double precision. The first-correction remainder above is an
+analytic asymptotic statement, not an interval-certified numerical error.
+
+\begin{thebibliography}{9}\small
+\bibitem{DS}
+S. E. Derkachov and V. P. Spiridonov,
+\emph{On the 6j-symbols for SL(2,C) group},
+\href{https://arxiv.org/html/1711.07073v2}{arXiv:1711.07073v2},
+(17), (22), (28)--(30), and Sec.\ 4.
+\bibitem{KL}
+D. K. Kolchmeyer and H. Liu,
+\emph{Chaos and the Emergence of the Cosmological Horizon},
+\href{https://arxiv.org/html/2411.08090v1}{arXiv:2411.08090v1},
+Secs.\ 6.2--6.3, especially (6.23)--(6.25).
+\bibitem{MM}
+D. Marolf and I. A. Morrison,
+\emph{Group Averaging for de Sitter free fields},
+\href{https://arxiv.org/html/0810.5163v1}{arXiv:0810.5163v1}.
+\bibitem{MY}
+D. Marolf and Z. Yu,
+\emph{On the Positivity of de Sitter Group Averaging},
+\href{https://arxiv.org/html/2610.24073v1}{arXiv:2610.24073v1},
+Secs.\ 5.1--5.2.
+\end{thebibliography}
+\end{document}

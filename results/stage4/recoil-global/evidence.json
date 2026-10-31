@@ -1,0 +1,43 @@
+{
+  "created_at_utc": "2026-10-30T05:04:56.425975+00:00",
+  "kind": "exact reflection and auxiliary Bessel identity with finite-parameter complete-contour diagnostics",
+  "pages": 5,
+  "compilers": {
+    "local": "two clean pdfLaTeX passes",
+    "desktop": "success on final source"
+  },
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "dpi": 95,
+    "clipping_or_overlap": false
+  },
+  "not_proven": [
+    "full fixed-K Barnes-to-Bessel limit",
+    "integrated first-correction error",
+    "joint growing-K two-branch asymptotics",
+    "transverse exterior contributions",
+    "physical insertions/external cycles/disconnected baseline",
+    "finite-G microscopic dual"
+  ],
+  "hashes": {
+    "code/recoil_global_probe.py": "7e0aeeac72ccbbf17402df74428331cfca2a6cc46abde49c21836f1401911a91",
+    "code/build_global_note.ps1": "053390293fd9ce77bbf12e0dd74c579a95c90e051054c280e9abc78b82f9a799",
+    "manuscript/recoil-global/main.tex": "bce808de6d728453c791d0c501598fd9b925a60f9a98ebb6cdabde2e507eb712",
+    "notes/stage4-recoil-global.md": "a5c09574b03849b57bc8225fd5a424ecad8dc951e1a40c6ebd51a0657056e992",
+    "literature/stage4-recoil-global-sources.md": "6e0141ce0b0ee2e1d2af8a6230c11f169167ce9416c941ed823ecfc8bac7e2d5",
+    "results/stage4/recoil-global/diagnostics.json": "ce7d4f37b40f7f8614a1434be2747613748c69385fab0200da902df3b7c20fb1",
+    "results/stage4/recoil-global/main.log": "43f504248edc22e7bb669f2a3987e64c1b3a7f3c4423b62d761d7c38901aaad8",
+    "results/stage4/recoil-global/build-review.md": "00569b4f8103465fc0a6f5f84ad4e1ac611f5caad130ef43906c839d893ebd67",
+    "output/pdf/de-sitter-recoil-global.pdf": "810476181a82e45ec9e99425e84d98001b23142d576101d7c43889aad2a5953e",
+    "code/recoil_saddle.py": "835d7026b8fcd158b8bf759b62cfa6150d13a9e95e375d1f81c58141c21c9a3e",
+    "code/recoil_local.py": "bcf104533b6daef3c0f333f52899854ff5e7b2bbb588823bcfcfb37abedd0163",
+    "code/recoil_internal.py": "4ad536856e55b3ffc7084312a6d229067a5c7deb1e8f9667aa72982c0e4699a4",
+    "sources/dlmf-5.11.html": "8f573b25a200d5ca09372ad88adbd4a621bc0bc463e088c6548ff8dddc0d2eee"
+  }
+}

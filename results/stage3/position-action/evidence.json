@@ -1,0 +1,51 @@
+{
+  "created_at_utc": "2026-10-29T14:26:48.594338+00:00",
+  "kind": "analytic argument and dependency record; not numerical or independent proof certification",
+  "result": "Theorem 6.2: direct creation pairing on explicit seed tests, for all physical inputs",
+  "assumptions": [
+    "dS2, L=1, strict G_N=0",
+    "proper SO+(2,1)",
+    "principal matter nu>0",
+    "Gaussian width sigma>0",
+    "actual observer threshold s*>0",
+    "test: finite original observer modes and compact smooth mass packets; finite matter occupation modes; left K=0 and right total K=0",
+    "physical input: any vector in the identified maximal weak-frequency FP sector"
+  ],
+  "proof_chain": [
+    "finite test annihilation has bounded global matter-mode envelope",
+    "two mass integrations by parts give quadratic growth in observer time of the transposed-test orbit seminorm",
+    "FP distribution pairing gives absolute position-time integral for any physical input",
+    "seed inputs give quartic time growth of the joint group-position absolute integral; Gaussian makes it integrable",
+    "fixed-g angular selection reduces to finitely many original local mode integrals",
+    "existing bounded descent and physical density identify the output",
+    "dominated orbit convergence removes compact position/time cutoffs uniformly on input unit balls for a fixed test"
+  ],
+  "open": [
+    "direct annihilation position integral on a specified domain",
+    "pointwise Hilbert-valued multiplication",
+    "removal of Gaussian",
+    "zero-threshold field extension",
+    "finite G and complete holographic dual"
+  ],
+  "numerical_runs": [],
+  "review": "author self-check of phase, threshold, absolute bounds, finite selection and density; no independent review claimed",
+  "external_read_not_cached": {
+    "url": "https://arxiv.org/html/2509.05412v1",
+    "sections": [
+      "5.1"
+    ],
+    "reason": "download timeout followed by connection reset; online primary text read"
+  },
+  "hashes": {
+    "manuscript/position.tex": "ec024887164f0d403e0e971b6899e29c6529ad418aa7825db2fa34f2a9f7903b",
+    "notes/stage3-direct-position-creation.md": "97c8161532cfebbb63e2386b397880171a5cfb3098830d800f493acab8bdf44c",
+    "literature/stage3-position-action-sources.md": "ca03a1e6e31b216de7672aea51891e551d729458e8b615a15bc2d0566653a0ca",
+    "notes/stage3-positive-frequency-orbit-core.md": "667422cad22c4ba579e5aa5f1db357b6e8959da13f1c63840c858ace6b5109b7",
+    "notes/stage3-ambient-spectral-test-core.md": "9f39d3273ffaa6331cc16fcb06d2284f4de48952bc5b323558b3df7df6c944ca",
+    "notes/stage3-maximal-weak-frequency-space.md": "a6e562fc07ae9267cd26a2e9a984a7cc774b90f0808e6286c75d9ad9257d9004",
+    "notes/stage3-all-n-generated-space.md": "bf545b8b1292ddc724d4635338cbe2ce4c0988cd95c001b7ae550e3276ffafec",
+    "notes/stage3-regulated-local-descent.md": "926667a3e5b5ddf55a781330976874287ff894a0e2c5ad53776a309de12d10e4",
+    "sources/kolchmeyer-liu-2411.08090v1.html": "352ef29aa89c376203271bf984bd904fb471ff313a7d420bc6a0ebc875d78065",
+    "sources/giulini-marolf-gr-qc9902045v2.html": "de95d09a1427180971a0b7c6e93ff821f2779971065e20a8a36e82966ac3ced8"
+  }
+}

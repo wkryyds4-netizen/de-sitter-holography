@@ -1,0 +1,320 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,microtype,booktabs}
+\usepackage[margin=25mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\dd}{\mathop{}\!\mathrm d}
+\newcommand{\Q}{\mathcal Q}
+\title{Two-point spectral calibration\\and the remaining insertion freedom}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Working research note --- 31 October 2026}
+\begin{document}\maketitle
+\begin{abstract}
+We combine the fixed-mass recoil limit of the direct \(C_0\)
+factor with the observer density and isolate an exact finite-mass
+spectral factor. Large-mass matching leaves a family of positive,
+symmetric insertion normalizations unfixed. Fixed mean mass,
+fixed initial mass and a thresholded trace integral give different
+spectra. We derive their relations and compute a declared
+normalization model, including its threshold-induced \(t^{-2}\)
+tail. Neither that model nor its finite-mass corrections are
+identified as a unique gravitational correlator.
+\end{abstract}
+
+\section{The established QFT calibration}
+We work in \(dS_3\), with radius one and principal-series scalar
+parameter \(\nu>0\), so that the field mass squared is \(1+\nu^2\).
+The no-defect limit of CLP (3.38)--(3.40) agrees with CSTY
+(1.16)--(1.17) \cite{clp,csty}:
+\begin{align}
+k_\nu(\omega)&=\frac1{8\pi[\cosh(\pi\omega)+\cosh(\pi\nu)]},\\
+g_\nu(t)&=\int_{\mathbb R}\dd\omega\,e^{-i\omega t}k_\nu(\omega)
+=\frac{\sin(\nu t)}{4\pi\sinh(\pi\nu)\sinh t},&
+g_\nu(0)&=\frac{\nu}{4\pi\sinh(\pi\nu)}.\label{eq:lr}
+\end{align}
+There is no additional \(1/(2\pi)\) in this forward transform.
+This is the antipodal, two-sided function at Euclidean separation
+\(\theta=\pi+it\), not a same-side Wightman function.
+Its spectral evenness is therefore expected.
+
+Our order of limits remains fixed-mass \(\kappa\to\infty\),
+followed by any large-mass limit of the resulting function.
+The fixed-cone-angle heavy-heavy-light prescription for the
+insertion normalization \(\mathcal N\) in CLP (3.37) does not
+supply its full fixed-mass recoil limit.
+We do not assume a gravitational Hilbert space or physical
+four-point sewing rule.
+
+\section{Assembling the known factors}
+After removing a common mass-independent factor, the recoil
+limit of the observer weight CLP (3.10) is
+\begin{equation}
+z(m)=m^2e^{-2\pi m},\qquad m>0.
+\end{equation}
+The previous fixed-mass derivation gave the paired direct-\(C_0\)
+factor, up to a common constant,
+\begin{equation}
+D(\boldsymbol\mu)=
+\frac{\pi e^{\pi S}\prod_a[\sinh(\pi\mu_a)/\mu_a]}
+{\cosh(\pi S/2)\prod_a\cosh(\pi(S-2\mu_a)/2)},\qquad S=\sum_a\mu_a .
+\end{equation}
+Set \(m_{1,2}=M\pm\omega/2\), and abbreviate
+\[
+A=\cosh(2\pi M),\qquad B=\cosh(\pi\omega),\qquad C=\cosh(\pi\nu).
+\]
+Direct hyperbolic product identities yield
+\begin{align}
+\frac{z(m_1)z(m_2)D(m_1,m_2,\nu)}{z(M)}
+&=16\pi^2\frac{e^{\pi\nu}\sinh(\pi\nu)}{\nu}\,
+k_\nu(\omega)R_M(\omega),\\
+R_M(\omega)&=\left(1-\frac{\omega^2}{4M^2}\right)\frac{A-B}{A+C}.
+\label{eq:R}
+\end{align}
+In this convention the constant
+\begin{equation}
+n_0(\nu)=\frac{\nu e^{-\pi\nu}}{16\pi^2\sinh(\pi\nu)}
+\end{equation}
+aligns the bounded-\(\omega\), large-\(M\) limit with \(k_\nu\).
+It is not an absolute determination of the original
+\(\mathcal N\): common constants in \(z,D\) have already been removed.
+
+Write the remaining unknown insertion function as \(n(M,\omega)\).
+A candidate energy kernel then has the form
+\begin{equation}
+\Q_n(m_1,m_2)=z(M)k_\nu(\omega)R_M(\omega)n(M,\omega).
+\label{eq:Q}
+\end{equation}
+Positive, even \(n\) gives a positive, label-symmetric real kernel.
+These properties do not establish an operator or gravitational
+inner-product realization. Below \(n=1\) is a declared diagnostic
+completion, not an identified physical prescription.
+
+For a fixed lower mass \(m_*>0\), let \(D_M=2(M-m_*)\).
+For \(n=1\), \(0\le R_M\le1\) on the integration interval, and
+\begin{align}
+\sup_{t\in\mathbb R}\left|
+\int_{-D_M}^{D_M}\dd\omega\,e^{-i\omega t}k_\nu R_M-g_\nu(t)\right|
+\le{}&
+\frac{g_\nu(0)(1+\nu^2)}{12M^2}
++\frac{D_M}{4\pi(A+C)}
++\frac{e^{-\pi D_M}}{2\pi^2}.\label{eq:uniform}
+\end{align}
+Indeed \(1-R_M\le\omega^2/(4M^2)+(B+C)/(A+C)\),
+\(\int\omega^2k_\nu=g_\nu(0)(1+\nu^2)/3\), and
+\(k_\nu\le e^{-\pi|\omega|}/(4\pi)\).
+This is an absolute bound, including zeros of \(g_\nu\).
+At fixed finite \(M\) the hard endpoints instead give a late-time
+term \(2k_\nu(D_M)R_M(D_M)\sin(D_Mt)/t\).
+Thus \eqref{eq:uniform} is not a uniform relative late-time claim.
+
+\section{Normalization freedom survives calibration}
+For any \(\lambda\ge0\), consider
+\begin{equation}
+n_\lambda(M,\omega)=1+\lambda\frac{\omega^2}{4M^2}.
+\end{equation}
+It is positive and even on the real domain, agrees at \(\omega=0\)
+for every \(M\), and tends to one at fixed \(\omega\).
+Nevertheless,
+\begin{equation}
+R_M n_\lambda
+=1+(\lambda-1)\frac{\omega^2}{4M^2}
++O_{\nu,\omega}(M^{-4}+e^{-2\pi M}).
+\label{eq:freedom}
+\end{equation}
+The leading finite-mass correction can therefore be changed or
+removed while retaining all these calibration conditions.
+The \(n=1\) correction cannot yet be advertised as a unique
+physical prediction. Determining \(n\) needs additional physical
+normalization or sewing information.
+
+\section{Fixed initial mass and the thermal factor}
+Adopt the energy convention \(E=-m\) of CSTY, but explicitly
+choose \(m_1=m\) as the initial mass and \(m_2=m-\omega\) as the
+final mass. Then \(\omega=E_f-E_i\) and the phase for
+\(W(t)W(0)\) is \(e^{-i\omega t}\).
+The conditional candidate spectrum is
+\begin{equation}
+w_{m,n}(\omega)=\frac{\Q_n(m,m-\omega)}{z(m)},
+\qquad \omega\le m-m_* .
+\end{equation}
+Label symmetry implies the exact reversed-transition identity
+\begin{equation}
+z(m)w_{m,n}(\omega)
+=z(m-\omega)w_{m-\omega,n}(-\omega).
+\label{eq:reverse}
+\end{equation}
+It relates different initial states and is not the KMS condition
+for one finite-\(m\) state.
+For \(n=1\), the two polynomial factors combine to \(1-\omega/m\):
+\begin{equation}
+w_{m,1}(\omega)=e^{\pi\omega}k_\nu(\omega)
+\left(1-\frac{\omega}{m}\right)
+\frac{\cosh\pi(2m-\omega)-\cosh\pi\omega}
+{\cosh\pi(2m-\omega)+\cosh\pi\nu}.\label{eq:initial}
+\end{equation}
+If \(n\to1\) at fixed transfer and large mass, then
+\begin{equation}
+w_\infty(\omega)=e^{\pi\omega}k_\nu(\omega),\qquad
+\frac{w_\infty(-\omega)}{w_\infty(\omega)}=e^{-2\pi\omega}.
+\label{eq:kms}
+\end{equation}
+This recovers the standard inverse temperature \(2\pi\).
+The exact density ratio in \eqref{eq:reverse} is
+\((1-\omega/m)^2e^{2\pi\omega}\); its local entropy slope
+\(2\pi-2/m\) must not be mistaken for exact same-state thermality.
+
+The time-domain statement is best made inside the analytic strip:
+\begin{equation}
+g_\nu(t+i(\pi-\epsilon))
+=\int_{\mathbb R}\dd\omega\,
+e^{-i\omega t}e^{(\pi-\epsilon)\omega}k_\nu(\omega),
+\qquad0<\epsilon<2\pi .
+\end{equation}
+The \(\epsilon\downarrow0\) boundary is the same-side Wightman
+distribution, with short-distance singularity
+\(-i/[4\pi(t-i0)]\).
+Its positive-frequency spectrum approaches a constant.
+Consequently the two-sided \(L^1\) tail argument cannot be applied
+to an unregulated Wightman integral.
+
+\section{A thresholded trace model}
+Now explicitly set \(n=1\) and integrate both masses above \(m_0>0\).
+This defines a spectral trace model; no gravitational operator
+trace is established by this definition.
+With \(\beta=2\pi\),
+\begin{align}
+Z_0&=\int_{m_0}^\infty z(m)\,\dd m
+=e^{-\beta m_0}\left(\frac{m_0^2}{\beta}
++\frac{2m_0}{\beta^2}+\frac2{\beta^3}\right),\\
+s_{m_0}(\omega)&=
+\frac{k_\nu(\omega)}{Z_0}
+\int_{m_0+|\omega|/2}^\infty
+z(M)R_M(\omega)\,\dd M .\label{eq:trace}
+\end{align}
+The spectrum is positive and even, as expected for a tracial
+protocol. This is distinct from \eqref{eq:kms}.
+The threshold mechanism and its Cauchy convolution already
+appear in CSTY (1.12)--(1.14); here we retain the \(m^2\) weight
+and the full factor \(R_M\).
+
+Let
+\begin{equation}
+c_0=\frac{m_0+1/\beta}{m_0^2+2m_0/\beta+2/\beta^2}.
+\end{equation}
+Dropping only the exponentially small part of \(R_M\) gives an
+exact elementary mass integral,
+\begin{align}
+s^{(0)}_{m_0}(\omega)&=
+k_\nu(\omega)e^{-\pi|\omega|}(1+c_0|\omega|),\\
+0\le1-\frac{s_{m_0}(\omega)}{s^{(0)}_{m_0}(\omega)}
+&\le2(1+\cosh\pi\nu)e^{-2\pi m_0}.\label{eq:tracebound}
+\end{align}
+The relative bound is uniform on the whole real frequency axis.
+
+For an exact convergent correction assume \(m_0>\nu/2\), and set
+\[
+b_j=(j+2)\beta,\quad L=m_0+|\omega|/2,\quad
+q_j=(-1)^j\frac{\sinh((j+1)\pi\nu)}{\sinh(\pi\nu)}.
+\]
+Expanding the quadratic denominator in \(e^{-\beta M}\) gives
+\begin{equation}
+s_{m_0}=s^{(0)}_{m_0}
+-\frac1{4\pi Z_0}\sum_{j=0}^\infty q_j e^{-b_jL}
+\left[\frac{m_0^2+m_0|\omega|}{b_j}
++\frac{2m_0+|\omega|}{b_j^2}+\frac2{b_j^3}\right].
+\label{eq:series}
+\end{equation}
+For \(m_0\le\nu/2\) one must instead use \eqref{eq:trace}
+or another valid representation.
+
+The moving lower limit produces a zero-frequency cusp:
+\[
+s'_{m_0}(0+)=-\frac{k_\nu(0)z(m_0)R_{m_0}(0)}{2Z_0}.
+\]
+The one-sided derivatives through fourth order are integrable.
+Integration by parts therefore yields
+\begin{equation}
+T_{m_0}(t):=\int_{\mathbb R}e^{-i\omega t}s_{m_0}(\omega)\,\dd\omega
+=\frac{k_\nu(0)z(m_0)R_{m_0}(0)}{Z_0t^2}+O(t^{-4}).
+\label{eq:tail}
+\end{equation}
+It is a threshold effect in this model, not a finite-\(G\)
+chaos exponent. A general smooth even insertion \(n\) changes
+the cusp coefficient by \(n(m_0,0)\), provided the required
+integrability holds.
+
+\section{Checks and the four-point target}
+The final record contains 71 checks. Algebraic factor assembly,
+the reversed-transition relation, the interior-strip Fourier
+transform and detailed balance are checked directly.
+The normalization family \eqref{eq:freedom} is also evaluated:
+the scaled first correction tends to \(-1,0,+1\) for
+\(\lambda=0,1,2\).
+
+For \(\nu=0.6\), \(m_0=1,3\), we compute the actual Fourier
+integral of \(s^{(0)}\), and transform each exponential-polynomial
+term of \eqref{eq:series} analytically into a rational function
+of time. The curves are not generated from \eqref{eq:tail}.
+At \(t=128\), the ratios to the leading tail are
+\(1.00028507\) and \(0.99994557\), respectively.
+
+Frequency quadrature uses orders 28/40, precisions 45/65 digits,
+step \(0.1\), and cutoff 12, extended to 14 at the largest time.
+The mass integral is independently compared with the 20/24-term
+series. The omitted series contributes, uniformly in time, at most
+\begin{equation}
+\frac{e^{-2\beta m_0}\rho^N}
+{2\pi Z_0(1-e^{-2\pi\nu})(1-\rho)}
+\left[\frac{2m_0^2}{b_N^2}+\frac{8m_0}{b_N^3}+\frac8{b_N^4}\right],
+\qquad \rho=e^{\pi\nu-\beta m_0}<1.
+\end{equation}
+The baseline frequency tail has a separate elementary exponential
+bound. Their combined bound relative to the computed signal is
+at most \(2.05\times10^{-28}\) in this sample.
+The largest quadrature refinement is \(2.61\times10^{-43}\);
+this much smaller number is not a total error bar.
+Roundoff and quadrature errors are not interval-certified.
+The initial 59-check version is retained; 12 additional checks
+cover truncation bounds and cutoff extension.
+
+For two independent free probe fields, the fixed-mean,
+large-observer-mass, \(G=0\) antipodal disconnected target is
+\begin{equation}
+F_{\rm disc}=g_\nu(0)g_{\nu'}(0)
+=\frac{\nu\nu'}{16\pi^2\sinh(\pi\nu)\sinh(\pi\nu')}.
+\end{equation}
+This is a Wick-contraction calibration, not a graph value at zero
+energy transfer. Identical fields have additional Wick pairings,
+and a shared finite-mass constraint need not factorize.
+
+The next step is to obtain an actual insertion/sewing rule,
+including its spectral measure, and test this disconnected target.
+Two-point matching is necessary but does not determine crossing
+dynamics. An identity-leg limit must also be treated correctly:
+\(\nu=0\) still has field mass squared one; an identity dimension
+requires a non-principal continuation toward \(\nu=\pm i\) and
+possibly a distributional limit. Finite \(G\) and the complete
+de Sitter dual remain open.
+
+\paragraph{Reproducible records.}
+Chinese derivation, code and raw diagnostics are saved at:
+\begin{flushleft}\small
+notes/stage4-recoil-spectral.md\\
+code/recoil\_spectral.py\\
+results/stage4/recoil-spectral/diagnostics.json
+\end{flushleft}
+The diagnostic record includes normalization variants, precision
+comparisons and input hashes.
+\begin{thebibliography}{9}
+\bibitem{clp}
+J.~Chandra, D.~Liska and B.~Post,
+\emph{3D de Sitter from complex Virasoro TQFT: Observers and knots},
+\href{https://arxiv.org/abs/2610.30247v1}{arXiv:2610.30247v1},
+(3.10), (3.14), (3.35)--(3.40).
+\bibitem{csty}
+Y.~Chen, D.~Stanford, H.~Tang and Z.~Yang,
+\emph{Negative shocks versus static patch holography},
+\href{https://arxiv.org/abs/2607.14042v1}{arXiv:2607.14042v1},
+(1.4)--(1.17) and (2.1)--(2.3).
+\end{thebibliography}
+\end{document}

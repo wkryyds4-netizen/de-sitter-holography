@@ -1,0 +1,181 @@
+"""General real tetrahedron action identity and actual localized Gamma amplitude.
+
+Finite-point/finite-order diagnostics support the note's analytic estimates.
+No complete Barnes cycle, external OTOC, or interval certificate is computed.
+"""
+from pathlib import Path
+from datetime import datetime, timezone
+import sys, platform, json, hashlib, math
+import mpmath as mp
+import sympy as sp
+from recoil_saddle import labels, saddle, phase, phase_prime, phase_second
+from recoil_internal import parameters, VERT, QUAD
+from gram_prefactor import area
+ROOT=Path(__file__).resolve().parents[1]
+mp.mp.dps=65
+HALF=mp.mpf('.5')
+EDGE_FACES=[tuple(i for i,v in enumerate(VERT) if j in v) for j in range(6)]
+CP=[1,0,0,0,0,-126,420,-540,315,-70]
+
+def face_matrix(mu):
+    m=mp.zeros(4)
+    for x,(i,j) in zip(mu,EDGE_FACES):m[i,j]=m[j,i]=x
+    return m
+
+def worldline(mu):
+    m=face_matrix(mu);out=[]
+    for x,(i,j) in zip(mu,EDGE_FACES):
+        k,l=[t for t in range(4) if t not in (i,j)]
+        b,c,d,e,f=m[i,k],m[i,l],m[j,k],m[j,l],m[k,l]
+        H=(x*x+b*b-c*c)*(x*x+d*d-e*e)-2*x*x*(b*b+d*d-f*f)
+        out.append(mp.acos(H/(16*area(x,b,c)*area(x,d,e))))
+    return sum(x*t for x,t in zip(mu,out)),out
+
+def on_shell(mu):
+    a,r=parameters(mu);z,_=saddle(a,r)
+    return phase(z,a,r)
+
+def continued_action(mu):
+    return -on_shell(mu)-mp.conj(on_shell([mp.conj(x) for x in mu]))
+
+def vertex_masses(points):
+    out=[]
+    for i,j in EDGE_FACES:
+        k,l=[t for t in range(4) if t not in (i,j)]
+        out.append(mp.sqrt(sum((points[k][q]-points[l][q])**2 for q in range(3))))
+    return out
+
+def gamma_log(z,a,r):
+    return (mp.log(8*mp.pi**3)+2j*mp.pi*z-mp.pi*sum(r)
+            +sum(mp.loggamma(z+1j*t) for t in a)
+            -sum(mp.loggamma(z+HALF+1j*t) for t in r)-mp.loggamma(z+HALF))
+
+def log_prefactor(z,a):
+    return mp.log(8*mp.pi**3)-sum(mp.log(z+1j*t) for t in a)/2
+
+def log_derivatives(z,a,r):
+    out=[]
+    for k in range(1,5):
+        f=lambda t:mp.polygamma(k-1,t)
+        out.append((2j*mp.pi if k==1 else 0)+sum(f(z+1j*t) for t in a)
+                   -sum(f(z+HALF+1j*t) for t in r)-f(z+HALF))
+    return out
+
+def cutoff_derivatives(h,width):
+    t=abs(h)/width
+    if t>=1:return [mp.mpf(0)]*5
+    if t<=HALF:return [mp.mpf(1)]+[mp.mpf(0)]*4
+    s=2*t-1;sg=mp.sign(h)
+    return [(2*sg/width)**k*sum(mp.mpf(CP[j])*math.factorial(j)/math.factorial(j-k)*s**(j-k)
+                              for j in range(k,len(CP))) for k in range(5)]
+
+def localized(A0,y,ucoeff,vcoeff,order=48,dps=45,with_derivative=True):
+    with mp.workdps(dps):
+        A0,y,uc,vc=map(mp.mpf,(A0,y,ucoeff,vcoeff))
+        eps=A0**(-mp.mpf('1.5'));nu=2*A0/eps;M=nu/eps
+        u,v=uc*mp.sqrt(M),vc*mp.sqrt(M);w=1j*A0*y
+        a,r=labels(M,nu,w,u,v);z,D=saddle(a,r)
+        q=-A0*phase_second(z,a,r)
+        logbase=phase(z,a,r)+log_prefactor(z,a)
+        width=mp.mpf('.1')*A0;rootA=mp.sqrt(A0);limit=width/rootA
+        nodes,weights=mp.gauss_quadrature(order,'legendre')
+        intervals=[-limit,-limit/2,mp.mpf(0),limit/2,limit]
+        val=0;norm4=0
+        for lo,hi in zip(intervals[:-1],intervals[1:]):
+            for nd,wt in zip(nodes,weights):
+                t=(lo+hi)/2+(hi-lo)*nd/2;h=rootA*t;zz=z+h
+                chis=cutoff_derivatives(h,width)
+                H=mp.exp(gamma_log(zz,a,r)-logbase)
+                measure=wt*(hi-lo)/2
+                val+=measure*H*chis[0]
+                if with_derivative:
+                    d1,d2,d3,d4=log_derivatives(zz,a,r)
+                    bell=[1,d1,d1*d1+d2,d1**3+3*d1*d2+d3,
+                          d1**4+6*d1*d1*d2+3*d2*d2+4*d1*d3+d4]
+                    derivative=H*sum(math.comb(4,k)*chis[k]*bell[4-k] for k in range(5))
+                    norm4+=measure*abs(derivative)*A0*A0
+        # val is integral / (g*exp(Phi*)*sqrt(A0)).
+        # norm4 is ||F''''||_1 * A0^(3/2), F=chi*H.
+        target=mp.sqrt(2*mp.pi/q)
+        C4=(mp.zeta(2)+3*mp.zeta(3)+2*mp.zeta(4))/(2*(2*mp.pi)**4)
+        return dict(A0=str(A0),nu=str(nu),M=str(M),epsilon=str(eps),y=str(y),
+                    u=str(u),v=str(v),z=str(z),q=str(q),order=order,dps=dps,
+                    pole_height=str(min(mp.im(z+1j*t) for t in r)),
+                    normalized_integral=str(val),gaussian=str(target),
+                    relative_gaussian_error=str(abs(val/target-1)),
+                    scaled_fourth_norm=str(norm4),
+                    relative_fourier_bound=str(C4*norm4/(abs(val)*A0*A0)),
+                    _val=val,_norm=norm4)
+
+def run():
+    checks=[];angle_rows=[];local_rows=[]
+    def check(name,err,tol):
+        checks.append(dict(name=name,error=str(abs(err)),tolerance=str(tol),passed=bool(abs(err)<=tol)))
+    l,b,c,f,d,e,s=sp.symbols('l b c f d e s')
+    aa,rr=parameters([l,b,c,f,d,e])
+    P=sp.Poly(sp.prod(s-t for t in aa)-s*sp.prod(s-t for t in rr),s)
+    A,B,C=P.all_coeffs();Delta=sp.discriminant(P.as_expr(),s)
+    H=(l*l+b*b-c*c)*(l*l+e*e-d*d)-2*l*l*(b*b+e*e-f*f)
+    D=(l*l-(b-c)**2)*(l*l-(d-e)**2)
+    ident=sp.expand(D*(s-aa[0])*(s-aa[1])-(H+8*l*(2*A*s+B))*(s-rr[0])*(s-rr[1]))
+    check('general-angle-rational-identity',int(sp.cancel(sp.rem(ident,P.as_expr(),s))!=0),0)
+    heron=lambda x,y,z:(x+y+z)*(x+y-z)*(x-y+z)*(-x+y+z)
+    check('general-angle-modulus',int(sp.expand(H*H-64*l*l*Delta-heron(l,b,c)*heron(l,d,e))!=0),0)
+    check('positive-quadratic-leading-coefficient',int(sp.expand(A-(l*f+b*d+c*e)/2)!=0),0)
+    tt=sp.symbols('tt');cp=sum(v*tt**i for i,v in enumerate(CP))
+    for k in range(5):
+        check('cutoff-left-jet-'+str(k),sp.diff(cp,tt,k).subs(tt,0)-(1 if k==0 else 0),0)
+        check('cutoff-right-jet-'+str(k),sp.diff(cp,tt,k).subs(tt,1),0)
+    configs=[
+        [[0,0,0],[1,0,0],[0,1,0],[0,0,1]],
+        [[0,0,0],[2,0,0],['.3','1.4',0],['.2','-.1','1.8']],
+        [[0,0,0],[3,0,0],['1.2','.7',0],['.6','.3','.5']],
+    ]
+    for ci,pts in enumerate(configs):
+        pts=[list(map(mp.mpf,p)) for p in pts];mu=vertex_masses(pts)
+        a,r=parameters(mu);z,dd=saddle(a,r);I,angles=worldline(mu)
+        check('general-stationary-'+str(ci),phase_prime(z,a,r),mp.mpf('1e-55'))
+        lifted=[]
+        for j in range(6):
+            ell=sum(mp.log(z+1j*a[k]) for k,vs in enumerate(VERT) if j in vs)-sum(
+                mp.log(z+1j*r[k]) for k,rs in enumerate(QUAD) if j in rs)
+            theta=2*mp.pi+mp.im(ell);lifted.append(theta)
+            check('angle-'+str(ci)+'-'+str(j),theta-angles[j],mp.mpf('1e-55'))
+        S=-2*mp.re(phase(z,a,r));check('Euler-action-'+str(ci),S-I,mp.mpf('1e-54'))
+        angle_rows.append(dict(masses=list(map(str,mu)),geometric_angles=list(map(str,angles)),
+                               logarithmic_angles=list(map(str,lifted)),worldline=str(I),phase_action=str(S)))
+        if ci>0:
+            muc=[x+mp.mpc(0,mp.mpf('.01')*(j+1)) for j,x in enumerate(mu)]
+            Ih,_=worldline(muc);Sh=continued_action(muc)
+            check('two-chiral-continuation-'+str(ci),Sh-Ih,mp.mpf('1e-53'))
+            angle_rows[-1].update(complex_masses=list(map(str,muc)),continued_action=str(Sh),complex_worldline=str(Ih))
+    # Actual localized Gamma quotient: separately refine quadrature and precision.
+    for A0,y in [('400','0'),('1600','1'),('6400','1')]:
+        row=localized(A0,y,'.3','-.2',48,45,True)
+        refined=localized(A0,y,'.3','-.2',96,60,True)
+        check('local-quadrature-'+A0,abs(row['_val']/refined['_val']-1),mp.mpf('1e-15'))
+        # L1 norm contains an absolute value and converges less rapidly than the complex integral.
+        check('fourth-norm-quadrature-'+A0,abs(row['_norm']/refined['_norm']-1),mp.mpf('2e-5'))
+        precision=localized(A0,y,'.3','-.2',96,80,False)
+        check('local-precision-'+A0,abs(precision['_val']/refined['_val']-1),mp.mpf('1e-40'))
+        refined.update(coarse_order=48,coarse_dps=45,
+                       quadrature_relative_change=str(abs(row['_val']/refined['_val']-1)),
+                       fourth_norm_relative_change=str(abs(row['_norm']/refined['_norm']-1)),
+                       precision_relative_change=str(abs(precision['_val']/refined['_val']-1)))
+        for k in ['_val','_norm']:refined.pop(k)
+        local_rows.append(refined)
+        print('completed local row A0='+A0,flush=True)
+    inputs=['code/recoil_local.py','code/recoil_saddle.py','code/recoil_internal.py','code/gram_prefactor.py',
+            'sources/chen-stanford-tang-yang-2607.14042v1.html','sources/dlmf-5.11.html']
+    data=dict(created_at_utc=datetime.now(timezone.utc).isoformat(),status='passed' if all(x['passed'] for x in checks) else 'failed',
+              scope='general symbolic angle identity, chiral continuation and actual localized Gamma quotient; no global Barnes integral',
+              environment=dict(python=sys.version,platform=platform.platform(),mpmath=mp.__version__,sympy=sp.__version__,
+                               algebra_dps=65,local_dps=[45,60,80],local_orders=[48,96]),
+              checks=checks,angle_rows=angle_rows,local_rows=local_rows,
+              hashes={p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in inputs})
+    out=ROOT/'results/stage4/recoil-local';out.mkdir(parents=True,exist_ok=True)
+    (out/'diagnostics.json').write_text(json.dumps(data,indent=2)+'\n',encoding='utf-8')
+    print(json.dumps(dict(status=data['status'],checks=len(checks),failed=[x['name'] for x in checks if not x['passed']])))
+    if data['status']!='passed':raise SystemExit(1)
+
+if __name__=='__main__':run()

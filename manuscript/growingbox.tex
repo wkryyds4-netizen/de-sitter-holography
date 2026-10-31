@@ -1,0 +1,357 @@
+\section{Growing cutoffs and explicit asymptotic time windows}
+\label{sec:growingbox}
+We keep the states, projected Gaussian operators, exact-energy convention,
+proper group and strict-$G_N\to0$ assumptions of Section~16. The issue is
+the dependence of its compact constants on the offsets. We give deliberately
+coarse analytic bounds, sufficient for explicit asymptotic windows. They
+do not provide a certified numerical minimum mass for a prescribed accuracy.
+The proofs below are author self-reviewed drafts, using the Euler and
+Stirling estimates of DLMF~\cite[5.11, 15.6, 15.8, 2.3]{DLMF} and the
+exact KL kernel~\cite{KL}; no priority claim is made.
+
+\subsection{Constants in the Euler endpoint argument}
+Let $Q_0\ge1$ bound the absolute values of the four real representation
+offsets, with fixed $\nu>0$. The symbol $Q_0$ is unrelated to either
+projection $Q_M$ or the Gaussian quadratic form $\mathcal Q$.
+All the small parameters in Sections~10--11 then have imaginary parts
+bounded by $c_0(1+Q_0)$, where $c_0$ is independent of $M,Q_0$.
+Fix $0<\epsilon<1/4$. A complex tube of radius $\rho_\epsilon>0$
+can be chosen independently of $Q_0$ so that every Euler endpoint real
+part is between $1/4$ and $3/4$, the Gauss denominator real parts stay
+near one, and $|\operatorname{Re}\delta|<\epsilon/4$.
+The balanced identity remains exact. We take smaller nested disks when
+removing the apparent $e=0$ and $\delta=0$ poles.
+
+We will use an envelope
+\begin{equation}
+ \mathcal K(Q_0)=C e^{c Q_0}(1+Q_0)^d.
+ \label{eq:gb-envelope}
+\end{equation}
+The fixed constants may be enlarged a finite number of times below;
+they depend on $\nu,\epsilon$ and the tube margins, not on $Q_0$ or $M$.
+Products and finite sums of such envelopes have the same form.
+
+\begin{lemma}[Parameter-dependent endpoint bounds]
+For the four KL hypergeometric factors in Section~11, the endpoint
+remainder in \eqref{eq:endpoint-two-branch}, away from the small pole
+disks, is bounded by
+\begin{equation}
+ \mathcal K(Q_0) M^{-1+\epsilon/4},
+ \qquad M\ge C_0(1+Q_0)^2.
+ \label{eq:gb-endpoint-bound}
+\end{equation}
+The same envelope class controls the required finite derivative norms
+of the endpoint amplitudes. The constants and the large-mass threshold
+are uniform over the indicated growing offset boxes.
+\label{lem:gb-endpoint}
+\end{lemma}
+\begin{proof}
+There are four separate estimates, with fixed differentiation order.
+
+First, Gamma functions and their reciprocals on fixed vertical strips,
+away from the finitely many poles in those strips, are bounded by an
+exponential in the imaginary part times a polynomial. Stirling's formula
+on the tails and compactness on the bounded part give this bound; fixed
+derivatives obey it as well. Thus every small-parameter Gamma product,
+connection coefficient $G_\pm$, and $c$ ratio off the pole disks is
+bounded by \eqref{eq:gb-envelope}. The pole distance is fixed by
+$\rho_\epsilon$, not by $Q_0$.
+
+Second, for $Z=\pm i\lambda$, $\lambda$ proportional to $M$, and shifts
+$|a|,|b|\le c_1(1+Q_0)$ with bounded real parts, the sectorial Stirling
+remainder gives
+\begin{align}
+ \frac{\Gamma(Z+a)}{\Gamma(Z+b)}Z^{b-a}&=e^{E(Z;a,b)},\notag\\
+ |E(Z;a,b)|&\le C_1(1+Q_0)^2/M,
+ \qquad M\ge C_0(1+Q_0)^2.
+ \label{eq:gb-gamma-ratio}
+\end{align}
+Here $E$ is defined using the analytic log-Gamma branch in the fixed
+sector about $\pm i\mathbb R_+$, rather than the principal logarithm
+of the final ratio. To see the bound directly, write
+\[
+ E=\int_b^a[\psi(Z+z)-\log Z]\dd z.
+\]
+On the joining segment $|Z+z|\asymp M$ and its argument stays away
+from the negative real axis. The digamma expansion with sectorial
+remainder bounds its integrand by $C(1+Q_0)/M$; the segment length is
+$O(1+Q_0)$. Exponentiating gives a relative error bounded by
+$C(1+Q_0)^2/M$ after increasing $C_0$. This derives a growing-shift
+estimate, rather than substituting growing parameters into a fixed-shift
+ratio formula. Factors such as $Z^{i y}$ cost at most $e^{C Q_0}$.
+
+Third, all Gauss functions needed near either endpoint have an Euler
+integral with real positive bases. For $0\le z\le z_*<1$,
+$\operatorname{Re}B,\operatorname{Re}(C-B)>0$, and fixed $j\le5$,
+the ordinary Gauss function obeys
+\begin{align}
+ |\partial_z^j{}_2F_1(A,B;C;z)|
+ &\le |(A)_j|\left|\frac{\Gamma(C)}{\Gamma(B)\Gamma(C-B)}\right|
+ \mathrm B(\operatorname{Re}B+j,\operatorname{Re}(C-B))\notag\\
+ &\hspace{12mm}\times
+ (1-z_*)^{-\max(\operatorname{Re}A+j,0)}.
+ \label{eq:gb-euler-derivative}
+\end{align}
+This follows by differentiating Euler's integral: $t,1-t,1-zt$ are
+positive, so their imaginary exponents have modulus one. It uses the
+ordinary function, with the $\Gamma(C)$ restored from DLMF 15.6.1.
+On the tube, the needed $(A,B;C)$ are $(b,d;g)$,
+$(b,d;1-\delta)$ and $(g-b,g-d;1+\delta)$; all satisfy the stated
+real-part conditions with fixed margins. Their derivative bounds have
+form \eqref{eq:gb-envelope}. Near $w=0$ apply the latter two to
+$z=1-e^{-w}$ on $0\le w\le1$; for $w$ away from zero apply the first
+to $z=e^{-w}$.
+
+Fourth, in \eqref{eq:endpoint-J}, $h(z)=(1-e^{-z})/z$ is positive
+on the real half-line, $h(z)\asymp(1+z)^{-1}$, and its logarithmic
+derivatives of any fixed positive order are bounded there. Direct
+differentiation of $J$ therefore gives, for $j\le5$,
+\begin{equation}
+ |J^{(j)}(w)|\le C_j(1+Q_0)^{d_j}(1+w)^{d_j}e^{-w/4}.
+ \label{eq:gb-J-bound}
+\end{equation}
+The $t$ weights remain integrable with fixed endpoint margins.
+For $w\le1$, the same bounds apply to the smooth factors multiplying
+$w^{a-1}$ and $w^0$ in the connection expansion, with
+$a=1-\delta$. Their first Taylor remainders have respective forms
+$w^a R_1(w)$ and $wR_2(w)$, with derivatives through order four bounded by
+$\mathcal K(Q_0)$. Choose a smooth cutoff at zero once and for all,
+independent of the parameters. Splitting at $w=1/|Z|$ and integrating
+by parts four times on dyadic intervals gives transform bounds
+$\mathcal K(Q_0)|Z|^{-\operatorname{Re}a-1}$ and
+$\mathcal K(Q_0)|Z|^{-2}$. Differentiating $w^a$ only introduces
+fixed-degree polynomials in $a$; the dyadic sums are uniform because
+$\operatorname{Re}a$ stays near one. The exponentially decreasing
+part away from zero has four integrable derivatives, with the same
+envelope. The leading transforms are the Abel boundary values
+$\Gamma(a)Z^{-a}$ and $Z^{-1}$, with their cutoff errors handled by
+the same integrations by parts.
+
+Finally, \eqref{eq:gb-gamma-ratio} controls the normalization
+$\mathcal N_M\mathrm B(\alpha,\beta)$ in Section~10. Multiplying
+the transform estimates by it, including its relative error, gives
+\eqref{eq:gb-endpoint-bound}. No derivative order grows with $Q_0$.
+\end{proof}
+
+\subsection{Assembly and the growth of the compact constants}
+\begin{proposition}[Growing-box density control]
+There are $C,c,d,C_0>0$, for each fixed $\nu,\sigma,\epsilon$, such
+that the compact constants in \eqref{eq:tb-cutoff-bound} may be chosen as
+\begin{equation}
+ C'_{L,R,\epsilon}+C''_{L,R}
+ \le C e^{c(L+R)}(1+L+R)^d,
+ \qquad M\ge C_0(1+L+R)^2.
+ \label{eq:gb-compact-growth}
+\end{equation}
+The estimate retains the hard moving threshold. For $F$ one also
+requires $M-R>m_*$, which holds eventually for the choices below.
+\label{prop:gb-growth}
+\end{proposition}
+\begin{proof}
+For representation offsets bounded by $Q_0$, the exact beta-like
+prefactors have relative Gamma-ratio error
+$\mathcal K(Q_0)/M$, and size
+$\mathcal K(Q_0)M^{-1+\epsilon/4}$ off the apparent poles.
+Lemma~\ref{lem:gb-endpoint}, the exact cancellation (11.6), and the
+leading coefficients (11.7) consequently give
+\begin{equation}
+ |S-S_M^0|\le\mathcal K(Q_0)M^{-2+\epsilon}
+ \label{eq:gb-raw-bound}
+\end{equation}
+there, leaving room in $\epsilon$ for the fixed tube margins.
+The exact triple-integral holomorphy argument of Section~11 uses
+real parts of exponents only. Those margins are independent of the
+real offsets; hence its complex tube need not shrink with $Q_0$.
+Use fixed-radius disks in $e,\delta$ at their intersections. Their
+boundary stays in a box enlarged by a constant, on which the envelope
+has the same form. Maximum modulus transfers \eqref{eq:gb-raw-bound}
+inside. A pointwise choice of these disks has uniformly bounded overlap;
+one does not multiply the bound by an uncontrolled covering constant.
+Other Gamma arguments stay near real part $1/2$, so no new poles are
+encountered on enlarging the real offsets.
+
+The eight large external Gamma factors satisfy the same growing-shift
+Stirling estimates. Their exponentially large mass factors cancel
+the hyperbolic prefactor exactly at leading order, as in (11.14).
+The remaining small Gamma factors and fixed offset derivatives have
+envelope \eqref{eq:gb-envelope}. Thus $F_M/M-H_\nu$ is bounded by
+$\mathcal K(Q_0)/M$; the same type of bound applies to the one-step
+positive-kernel error. Hyperbolic errors are exponentially small for
+$M\ge C_0(1+Q_0)^2$ and are absorbed in these estimates.
+
+In exact-energy coordinates $|\xi|\le L+R$, Taylor expansion gives
+\[
+ s(M+\xi)=M+\xi-\frac1{8M}
+                   +O((1+L+R)M^{-2}).
+\]
+The Jacobians have uniform $O(M^{-2})$ error when $M>2(L+R+1)$.
+After removal of the pole, the first derivatives of the leading bracket
+are bounded by $\mathcal K(Q_0)(1+\log(2M))^2$; this follows either
+by its explicit sinc subtraction or the small-Gamma bounds above.
+The argument of Lemma~16.2 now proves its density bound with an
+envelope of the stated form, taking $Q_0=1+L+R$ and enlarging the
+constants for fixed $\nu$. Compact volume factors add only a polynomial.
+The external density contributes its mass, at most one, rather than
+its supremum or derivatives. The Gaussian has modulus at most one.
+For the ordered norms, apply the same positive one-step estimate twice.
+No growing time seminorm or threshold smoothing constant is introduced.
+\end{proof}
+
+\subsection{An explicit cutoff choice for exponential-moment packets}
+We now assume a fixed positive exponential moment:
+\begin{equation}
+ B_0:=\int_0^\infty e^{\beta_0r}\pi_0(r)\dd r<\infty,
+ \qquad \beta_0>0.
+ \label{eq:gb-moment}
+\end{equation}
+All fixed Gamma and shifted-exponential packets used above satisfy this,
+for example with $\beta_0=\beta/2$; their $B_0$ are respectively
+$2^{p+1}$ and $2e^{\beta g/2}$. This extra assumption is not made for
+the arbitrary $L^1$ packets of Theorem~16.3.
+
+\begin{theorem}[Rate and asymptotic cutoffs]
+For a packet satisfying \eqref{eq:gb-moment}, both protocols obey,
+for every fixed $q>0$,
+\begin{equation}
+ \delta_M^P:=\sup_{t\in\mathbb R}|D_M^P(t)-D_M^{(2),P}(t)|
+ =O_q\bigl(\ell^{-q}\bigr),\qquad \ell=\log(2M).
+ \label{eq:gb-log-rate}
+\end{equation}
+The same statement holds separately for the crossed error and the norm
+error. An explicit admissible cutoff choice, for sufficiently large $M$, is
+\begin{equation}
+ L_M=\frac{q+2}{\beta_0}\log\ell,
+ \qquad R_M=\sqrt{\frac{8(q+2)}{\sigma^2}\log\ell}.
+ \label{eq:gb-explicit-cutoffs}
+\end{equation}
+There is also a positive mass-power rate $\delta_M^P=O(M^{-\kappa})$
+for some $\kappa>0$ depending on the envelope constants and the packet.
+We do not evaluate a numerical value of $\kappa$ here.
+\label{thm:gb-rate}
+\end{theorem}
+\begin{proof}
+Markov's inequality gives $\Pr(r>L)\le B_0e^{-\beta_0L}$.
+For $R\ge1$, the Gaussian envelope of Section~9 gives
+\[
+ b(R/2)\le C e^{-\sigma^2R^2/4},\quad
+ \tau_X+\tau_N\le C\{e^{-\sigma^2R^2/8}+e^{-\beta_0L}\}.
+\]
+With \eqref{eq:gb-explicit-cutoffs}, both tails are
+$O(\ell^{-q-2})$. Write $Q_0=1+L_M+R_M=O_q(\log\ell)$.
+The compact term in Theorem~16.3 and
+Proposition~\ref{prop:gb-growth} is then at most
+\[
+ C_q\ell^{a_q+o(1)}
+ \left[M^{-1+\epsilon}+\frac{1+\ell}{M}
+                        +\frac{(1+\ell)^2}{M^2}\right],
+\]
+for a finite constant $a_q$. For each fixed $q$ this is smaller than
+every inverse power of $\ell$, and $M\ge C_0Q_0^2$ holds eventually.
+This proves \eqref{eq:gb-log-rate}, with no exchange of a fixed-box
+limit and a growing box.
+
+For the last assertion set $\epsilon=1/8$, let $c$ be the enlarged
+coefficient in \eqref{eq:gb-compact-growth}, and put
+\[
+ \kappa=\frac{\beta_0}{8(c+\beta_0)},\quad
+ L_M=\frac{\log M}{4(c+\beta_0)},\quad
+ R_M=\sqrt{\frac{16\kappa}{\sigma^2}\log M}.
+\]
+Both tails are $O(M^{-2\kappa})$. The compact term is
+$M^{-7/8+c/[4(c+\beta_0)]+o(1)}$, which is $O(M^{-\kappa})$
+since $\kappa\le1/8$. The other terms are smaller; the required
+large-mass condition still holds. The constants $c,C_0$ have analytic
+existence bounds above but have not been numerically certified.
+\end{proof}
+
+\subsection{Consequences for the exact finite-mass observable}
+Let $c_p\ne0$ be the real coefficient in \eqref{eq:dep-real-tail},
+and $n=p+3$ for even $p$, $n=p+4$ for odd $p$. All density, field,
+Gaussian and projection parameters are fixed in the following limits.
+For every fixed $0<\alpha<1$, the \emph{exact} commutator satisfies
+\begin{equation}
+ D_M^p(\ell-\ell^\alpha)-\mathcal D_{{\rm edge},p}
+ =c_p\ell^{-\alpha n}
+  \left[1+O\left(\ell^{-\alpha}
+                         +\ell^{-n(1-\alpha)}\right)\right].
+ \label{eq:gb-gamma-window}
+\end{equation}
+In particular $s=\sqrt\ell$, which was not justified by Section~16
+alone, is now an explicit asymptotic window. The signed coefficient
+remains negative for $p=1,2$, $\beta=1$.
+For a fixed fraction $0<a<2$ one instead obtains
+\begin{equation}
+ D_M^p((1-a)\ell)-\mathcal D_{{\rm edge},p}
+ =c_p\ell^{-n}\{a^{-n}+(2-a)^{-n}\}
+                         +O(\ell^{-n-1}).
+ \label{eq:gb-gamma-fraction}
+\end{equation}
+This estimate is uniform on closed subintervals of $0<a<2$.
+It retains both tails, including for positive physical time $a<1$.
+For fixed physical $t$ in a bounded interval, it implies
+\begin{equation}
+ D_M^p(t)-\mathcal D_{{\rm edge},p}
+ =2c_p\ell^{-n}+O(\ell^{-n-1}).
+ \label{eq:gb-fixed-time-rate}
+\end{equation}
+For bounded $T$ at the positive logarithmic-time transition, it also gives
+\begin{equation}
+ D_M^p(\ell+T)-\mathcal D_p(T)
+ =c_p(2\ell+T)^{-n}+O(\ell^{-n-1}).
+ \label{eq:gb-fixed-T-rate}
+\end{equation}
+The critical odd-$p$ case with $c_p=0$ is excluded from these leading
+coefficient statements.
+
+For $F$, every fixed $b>0$ and $2<h<4$ give a different explicit window:
+\begin{equation}
+ D_M^F(\ell-b\log\ell)
+ =2C_{\nu,\sigma}\ell^{-2b}
+                  [1+O_h(\ell^{-(h-2)b})].
+ \label{eq:gb-F-window}
+\end{equation}
+These formulas follow by inserting the Section~13--15 tails in the
+mirror identity and choosing $q$ in \eqref{eq:gb-log-rate} larger than
+the power being resolved. For \eqref{eq:gb-gamma-window}, the fast tail
+relative to the slow one is $O(\ell^{-n(1-\alpha)})$; for
+\eqref{eq:gb-F-window} it is exponentially small in $\ell$.
+No unknown $\delta_M$ appears in the time choices.
+
+For a fixed gap $g>0$, \eqref{eq:tb-gap-window} transfers to the exact
+$D_M^g$ with its displayed $O(s^{-5}+k^{-5})$ error whenever $s,k$
+are fixed positive powers of $\ell$ or fixed fractions away from zero.
+This is an absolute envelope result. A relative statement still requires
+separation from zeros of the relevant oscillatory combination, and the
+estimate is not uniform as $g\downarrow0$.
+
+The asymptotic window shapes are explicit, but these theorems do not
+give a numerical mass at which a chosen percentage accuracy begins.
+They are restricted to the stated free-matter, $G_N\to0$ model and do
+not identify a finite-gravity chaos exponent. In particular the
+$M^{-4}$ mirror correction for $F$ at fixed $T$ need not be the leading
+exact correction; the above error bound need not resolve that power.
+
+\subsection{Diagnostic scope and next physical comparison}
+The new diagnostics check the shifted Gamma ratios on growing-parameter
+fixtures, the explicit Euler derivative inequality and exact-energy
+coordinate estimates. These probe the ingredients and conventions of
+the proof. They do not certify its supremum constants, perform a full
+finite-$M$ 6j packet integration, or independently validate the proof.
+Previously frozen limiting spectra are not recomputed.
+
+The saved run contains 290 checks at 80 decimal digits, with 110-digit
+Gamma-ratio cross-checks. On the recorded shifts up to $Q_0=64$, the
+largest $M|E|/(1+Q_0)^2$ is about $0.080004$; this is a sampled
+quantity, not the universal constant in \eqref{eq:gb-gamma-ratio}.
+The largest sampled ratio of a Gauss derivative to its Euler-integral
+bound is about $0.883322$. The energy-coordinate and normalized tail
+inequalities are checked separately. No finite collection of these
+values proves the growing-box supremum estimate.
+
+With the explicit asymptotic window established at this level, the next
+physical step is a matched finite-$G_N$ comparison. The external state,
+projection, proper time, normalization, matter representation and contour
+must agree before the current preparation effects can be compared with
+a genuine gravitational interaction or a microscopic candidate.
+Numerically useful error constants and exact finite-mass packet checks
+remain a separate validation task.

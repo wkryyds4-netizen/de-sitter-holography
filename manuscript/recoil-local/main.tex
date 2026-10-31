@@ -1,0 +1,374 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,microtype,booktabs}
+\usepackage[margin=25mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newtheorem{proposition}{Proposition}
+\newtheorem{theorem}{Theorem}
+\newcommand{\dd}{\mathop{}\!\mathrm d}
+\title{The worldline action and uniform local\\Barnes asymptotics in the recoil limit}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Working research note --- 30 October 2026}
+\begin{document}\maketitle
+\begin{abstract}
+We supply an analytic action identity for the reflected recoil
+Barnes saddle at general positive Euclidean tetrahedron masses.
+An elementary quadratic-field identity identifies each logarithmic
+mass derivative with the corresponding exterior dihedral angle;
+homogeneity then gives the worldline action. We also establish
+uniform estimates for the actual localized Gamma quotient,
+retaining the transverse energies. These estimates justify the
+integrated removal of its exact periodic pole factor even when the
+pole-row separation tends to zero. The result concerns a specified
+local contribution. Dominance in the full Barnes cycle, transverse
+tails, and the physical four-point dictionary remain open.
+\end{abstract}
+
+\section{Definitions and the order of limits}
+The de Sitter radius is one. We first take the fixed-mass
+\(\kappa\to\infty\) limit, and only afterwards increase the masses.
+This does not assert a joint finite-\(G\) limit. The object remains
+the internal chiral amplitude of the fixed-topology CLP graph
+\cite{CLP}; no new physical state or external energy cycle is specified.
+
+For edge labels \(\mu_1,\ldots,\mu_6\), let \(a\) be the four
+half-sums on \(123,156,246,345\), and \(r\) the three half-sums on
+\(1245,1346,2356\). The exact reflected kernel is
+\begin{align}
+ \mathcal B(z)&=H(z)E(z),\\
+ H(z)&=8\pi^3e^{2\pi iz-\pi\sum r}
+ \frac{\prod_a\Gamma(z+ia)}
+ {\Gamma(z+\tfrac12)\prod_r\Gamma(z+\tfrac12+ir)},&
+ E(z)&=\prod_r(1+e^{2\pi i(z+ir)})^{-1}.
+ \label{eq:exact}
+\end{align}
+Use \(f(t)=t(\log t-1)\) and
+\begin{align}
+ \Phi(z)&=2\pi iz-\pi\sum r+
+ \sum_a f(z+ia)-\sum_r f(z+ir)-f(z),\\
+ g(z)&=8\pi^3\prod_a(z+ia)^{-1/2}.
+\end{align}
+The branches below are fixed by the right saddle. With \(s=iz\),
+\[
+ P(s)=\prod_a(s-a)-s\prod_r(s-r)=A_qs^2+Bs+C,\qquad
+ \Delta=B^2-4A_qC=-9V_{\rm dual}^2.
+\]
+Here \(A_q\) is a quadratic coefficient, distinct from the large
+parameter \(K\) used later.
+
+\section{An action identity for all six real masses}
+\begin{proposition}
+For a positive, nondegenerate Euclidean dual tetrahedron, set
+\(T=\sqrt{-\Delta}=3V_{\rm dual}>0\),
+\(s_+=(-B+iT)/(2A_q)\), and \(z_+=-is_+\).
+Then, with the indicated logarithm branches,
+\begin{equation}
+ -2\Re\Phi(z_+)=\sum_{j=1}^6\mu_jd_j=I_{\rm CSTY},
+ \label{eq:action}
+\end{equation}
+where \(d_j\in(0,\pi)\) are the exterior dihedral angles in
+CSTY Appendix B.1 \cite{CSTY}.
+\end{proposition}
+
+\begin{proof}
+Write \(\boldsymbol\mu=(l,b,c,f,d,e)\).
+The four faces are \((l,b,c),(l,d,e),(b,f,e),(c,f,d)\).
+The edge opposite \(l\) is \(f\), and
+\(A_q=(lf+bd+ce)/2>0\), so \(\Re z_+>0\).
+Define
+\begin{align}
+ D_l&=[l^2-(b-c)^2][l^2-(d-e)^2]>0,\\
+ H_l&=(l^2+b^2-c^2)(l^2+e^2-d^2)
+       -2l^2(b^2+e^2-f^2).
+\end{align}
+Let
+\[
+ a_1=\frac{l+b+c}{2},\quad a_2=\frac{l+d+e}{2},\quad
+ r_1=\frac{l+b+f+d}{2},\quad r_2=\frac{l+c+f+e}{2}.
+\]
+The quadratic relation gives
+\begin{equation}
+ R_l:=\frac{(z_++ia_1)(z_++ia_2)}
+              {(z_++ir_1)(z_++ir_2)}
+       =\frac{H_l+8ilT}{D_l}.
+ \label{eq:angle-ratio}
+\end{equation}
+This can be checked without radicals: replace \(iT\) by \(2A_qs+B\)
+and cross-multiply; the resulting polynomial is divisible by \(P(s)\).
+The new code verifies the zero remainder with all six masses symbolic.
+The further polynomial identity
+\[
+ H_l^2+64l^2T^2=
+ [16\,\mathcal A(l,b,c)\mathcal A(l,d,e)]^2
+\]
+uses the Heron area \(\mathcal A\).
+Since \(D_l,l,T>0\), \(R_l\) lies in the upper half-plane.
+Its argument has exactly the cosine specified by CSTY (B.6),
+hence \(\arg R_l=d_l\).
+
+All arguments \(z_++ia,z_++ir,z_+\) lie in the right half-plane.
+The exponentiated saddle equation therefore makes \(\Phi'(z_+)\)
+a continuous integer multiple of \(2\pi i\). The domain of
+nondegenerate Euclidean edge lengths is connected: squared edge
+lengths are linear functions of the positive definite Gram matrix
+of the three edges at a chosen vertex.
+At the regular tetrahedron the integer is zero, so \(\Phi'(z_+)=0\)
+throughout this domain.
+
+Differentiating on shell now gives
+\begin{equation}
+ \partial_l[-2\Re\Phi(z_+)]
+ =2\pi+\Im\left[
+ \log(z_++ia_1)+\log(z_++ia_2)
+ -\log(z_++ir_1)-\log(z_++ir_2)\right]=d_l .
+\end{equation}
+The last branch integer is again fixed at the regular tetrahedron
+and cannot jump on the connected domain.
+The other five edges follow by symmetry.
+Finally, \(\sum a=\sum r\) cancels every scaling term
+\(\lambda\log\lambda\); the on-shell potential is homogeneous of
+degree one. Euler's identity gives \eqref{eq:action}.
+\end{proof}
+
+At complex masses, continue the two chiral functions separately:
+\[
+ \Phi^\dagger(\boldsymbol\mu)
+ =\overline{\Phi(\overline{\boldsymbol\mu})},\qquad
+ I=-\Phi-\Phi^\dagger .
+\]
+The equality extends in any common analytic continuation domain
+with the transported angle and saddle branches. It does not mean
+taking a new modulus at arbitrary complex masses, and it does not
+determine which saddle contributes to an integration cycle.
+
+\section{Uniform estimates for the actual local amplitude}
+Use the equal-probe labels
+\[
+ (\mu_1,\ldots,\mu_6)=(m_1,\nu,m_2,m_3,\nu,m_4),\quad
+ m_{1,3}=M+\omega/2\pm u,\quad m_{2,4}=M-\omega/2\pm v.
+\]
+We take the joint large-mass regime
+\begin{equation}
+ K=\frac{\nu^2}{2M}\to\infty,\quad \epsilon=\frac{\nu}{M}\to0,\quad
+ \omega=iKy,\quad |y|\le Y,\quad
+ \rho=\frac{|u|+|v|}{\nu}\to0,\qquad u,v\in\mathbb R.
+ \label{eq:regime}
+\end{equation}
+This includes transverse boxes
+\(|u|,|v|\le L\sqrt M\), \(L=o(\sqrt K)\).
+One can impose the earlier WKB window
+\(\nu^{4/3}\ll M\ll\nu^2\) in addition.
+The local result below does not extend that separate WKB theorem.
+
+Write \(z_+=x_+-ic\). Direct quadratic algebra gives
+\begin{equation}
+ \delta:=M+\nu-c=
+ \frac{\nu(\nu^2-u^2-v^2+\omega^2)}
+ {4M^2+2\nu^2-2u^2-2v^2+\omega^2}
+ \sim\frac{\nu^3}{4M^2}>0,\qquad
+ \frac{x_+}{K}=\frac{\sqrt{1+y^2}}2+O(\epsilon^2+\rho^2).
+ \label{eq:gap}
+\end{equation}
+Choose a fixed
+\[
+ 0<\eta<\frac{\sqrt{1+Y^2}-Y}{4}.
+\]
+For real \(|h|\le\eta K\), the two near denominator parameters are
+\[
+ z_++h+i(M+\nu\pm\omega/2)
+ =x_++h\mp Ky/2+i\delta,
+\]
+whose real parts exceed \(c_YK\).
+The four numerator arguments have modulus comparable to \(\nu\);
+the two other denominator arguments have modulus comparable to \(M\).
+All stay in a fixed sector away from the negative real axis.
+The left pole rows remain above the line and the right rows below.
+Thus the horizontal contour can follow this imaginary-energy path
+without pole crossing. This finite-parameter statement is not a
+global asymptotic estimate.
+
+Let \(\chi\) be a fixed even \(C^4\) cutoff, \(0\le\chi\le1\),
+equal to one for \(|t|\le1/2\) and zero for \(|t|\ge1\), and define
+\begin{equation}
+ F_K(x)=\chi\left(\frac{x-x_+}{\eta K}\right)
+ \frac{H(x-ic)}{g(z_+)e^{\Phi(z_+)}} .
+ \label{eq:F}
+\end{equation}
+
+\begin{theorem}[Localized Gamma quotient]
+In \eqref{eq:regime}, uniformly in the stated parameter sets,
+\begin{align}
+ \|F_K^{(4)}\|_1&\le CK^{-3/2},\label{eq:derivative}\\
+ \int_{\mathbb R}F_K(x)\dd x
+ &=\sqrt{\frac{2\pi K}{q_*}}\,[1+O(K^{-1})],
+ &q_*&=-K\Phi''(z_+)
+   =4\sqrt{1+y^2}+O(\epsilon+\rho^2).
+ \label{eq:gaussian}
+\end{align}
+The square root is chosen with \(\Re q_*>0\).
+In particular the integral has modulus at least \(c\sqrt K\).
+\end{theorem}
+
+\begin{proof}
+The sector and modulus bounds permit the fixed-shift Stirling
+expansion with remainder \cite{DLMF}:
+\[
+ H(z)=g(z)e^{\Phi(z)+R(z)},\qquad
+ R^{(j)}(z)=O(K^{-1-j})\quad(0\le j\le4).
+\]
+For each local point, a complex disk of radius \(c'K\) stays in
+a safe sector for all Gamma arguments. The scalar \(O(K^{-1})\)
+remainder and Cauchy's estimates give the derivative bounds.
+The half-integer shifts in \eqref{eq:exact} are already included
+in \(g\), and
+\[
+ (\log g)^{(j)}=O(\nu^{-j})\quad(1\le j\le4).
+\]
+Direct differentiation also gives
+\(\Phi^{(j)}=O(K^{1-j})\), \(2\le j\le6\).
+The two near denominators contribute
+\(-1/(z+ir_+)-1/(z+ir_-)\) to \(\Phi''\).
+Their real part is at most \(-c/K\);
+all other terms are \(O(\nu^{-1})=o(K^{-1})\).
+Consequently throughout the local segment
+\[
+ \Re[\Phi(z_++h)-\Phi(z_+)]\le -ch^2/(2K).
+\]
+Here stationarity is exact, by continuation of \(\Phi'=0\).
+
+Apply the fourth exponential derivative formula to
+\(\Phi+\log g+R\), then differentiate the cutoff.
+With constants adjusted as necessary, the result is bounded by
+\[
+ CK^{-2}(1+|h|/\sqrt K)^4e^{-c'h^2/K}
+ +CK^{-4}e^{-c''K}
+   \mathbf1_{\{\eta K/2\le|h|\le\eta K\}} .
+\]
+Integration proves \eqref{eq:derivative}.
+The cutoff terms have not been dropped; their support is
+exponentially suppressed.
+
+For the integral, put \(h=\sqrt K\,t\).
+The quadratic exponent is \(-q_*t^2/2\).
+The cubic phase and the linear amplitude correction are odd
+polynomials of size \(O(K^{-1/2})\), so their integrals against
+the even complex Gaussian and even cutoff vanish.
+Fourth-order terms, the remainder \(R\), and squares of the odd
+corrections give \(O(K^{-1})\).
+For a uniform justification first expand on \(|t|\le K^{1/12}\);
+the preceding concavity estimate controls its exterior.
+Finally \(q_*\) lies in a fixed compact subset of the right
+half-plane and has the displayed limit, as follows from
+\(\Phi''=-\sqrt{-\Delta}/\prod_a(z_++ia)\).
+The Gaussian integral is bounded away from zero, proving the
+relative estimate and lower bound.
+\end{proof}
+
+\section{The pole factor is now controlled inside the local integral}
+The preceding note proved the following elementary estimate:
+for \(|q_r|<1\), \(E_q(x)=\prod_{r=1}^3(1+q_re^{2\pi ix})^{-1}\)
+and \(F\in W^{4,1}(\mathbb R)\),
+\begin{equation}
+ \left|\int F(E_q-1)\right|\le
+ C_4\|F^{(4)}\|_1,\qquad
+ C_4=\frac{\zeta(2)+3\zeta(3)+2\zeta(4)}{2(2\pi)^4}.
+ \label{eq:fourier}
+\end{equation}
+Indeed the \(n\)-th Fourier coefficient is bounded by
+\(\binom{n+2}{2}\); four integrations by parts give a summable bound.
+The constant is independent of how close the \(q_r\)'s are to the
+unit circle, although the endpoint itself is excluded.
+
+On our line \(q_r=e^{-2\pi(r-c)}\) and \(|q_r|<1\).
+The theorem verifies both hypotheses needed to turn
+\eqref{eq:fourier} into the relative estimate
+\begin{equation}
+ \frac{\left|\int F_K(E-1)\right|}
+ {\left|\int F_K\right|}=O(K^{-2}),
+ \label{eq:poleerror}
+\end{equation}
+uniformly even when \(\delta\downarrow0\).
+Thus the actual local contribution
+\[
+ \mathfrak B_{\rm loc}=\frac1{2\pi i}\int_{\mathbb R}
+ \chi\left(\frac{x-x_+}{\eta K}\right)
+ \mathcal B(x-ic)\dd x
+\]
+obeys
+\begin{equation}
+ \mathfrak B_{\rm loc}=
+ \frac{g(z_+)e^{\Phi(z_+)}}
+ {i\sqrt{2\pi[-\Phi''(z_+)]}}\,[1+O(K^{-1})].
+ \label{eq:localresult}
+\end{equation}
+The orientation is left to right; the Gaussian branch is fixed by
+\(\Re[-\Phi'']>0\).
+This establishes the local expression using the actual Gamma
+quotient and pole factor. It does not replace
+\(\mathfrak B_{\rm loc}\) by the full \(\mathfrak B\).
+Real \(\omega\) away from zero is also outside the uniform regime
+of this theorem: its proposed saddle line can cross pole rows.
+
+\section{Diagnostics and the remaining global problem}
+The script \texttt{code/recoil\_local.py} records 50 passing checks:
+general symbolic angle, modulus and Cayley--Menger identities, the
+positive quadratic coefficient and transverse pole height, ten cutoff jets,
+all six angles on three unequal tetrahedra, two separate-chiral
+complex continuations, and refined local quadratures.
+The proofs above, rather than finite-point sampling, support
+the uniform claims.
+
+For the local calculation take \(\epsilon=K^{-3/2}\),
+\(u=.3\sqrt M\), \(v=-.2\sqrt M\), and \(\eta=.1\).
+The cutoff transition is the degree-nine polynomial
+\(1-126s^5+420s^6-540s^7+315s^8-70s^9\), with
+\(s=2|h|/(\eta K)-1\) on its transition interval.
+It has the required four vanishing endpoint jets.
+The actual Gamma quotient, rather than its Gaussian approximation,
+is integrated.
+\begin{center}
+\begin{tabular}{rrrr}
+\toprule
+\(K\)&\(y\)&pole height \(\delta\)&relative Gaussian error\\
+\midrule
+400&0&\(2.4996\times10^{-2}\)&\(3.7970\times10^{-3}\)\\
+1600&1&\(1.2499\times10^{-2}\)&\(9.1941\times10^{-6}\)\\
+6400&1&\(6.2499\times10^{-3}\)&\(2.3011\times10^{-6}\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+Quadrature is refined from 48 to 96 nodes per segment at 45/60 digits.
+The complex integral is separately repeated at 80 digits on the
+same 96-node segmentation.
+The fourth-derivative \(L^1\) norm has nearly sharp absolute-value
+corners. The initial unsplit grid failed its fixed tolerance;
+splitting at zeros of the actual derivative's real part resolved it.
+Both the initial code and failed output are retained.
+These are empirical diagnostics, not certified interval errors.
+We have not directly quadrature-tested the complete large-mass
+integral with \(E\); its local control follows from
+\eqref{eq:fourier}--\eqref{eq:poleerror}.
+
+The next required result is a relative bound on
+\(\mathfrak B-\mathfrak B_{\rm loc}\), including the other saddle,
+the negative-real direction and both remote tails.
+Transverse exterior regions, physical insertion factors, the three
+external energy cycles and disconnected baseline remain separate
+requirements. The work does not establish finite-\(G\) dynamics,
+a microscopic state dictionary, or a complete de Sitter dual.
+This is an author self-reviewed proof draft without independent
+certification or a priority claim.
+
+\begin{thebibliography}{9}
+\bibitem{CSTY} Y. Chen, D. Stanford, H. Tang and Z. Yang,
+\emph{Negative shocks versus static patch holography},
+\href{https://arxiv.org/html/2607.14042v1}{arXiv:2607.14042v1},
+Appendix B.1.
+\bibitem{CLP} J. Chandra, D. Liska and B. Post,
+\emph{3D de Sitter from complex Virasoro TQFT: Observers and knots},
+\href{https://arxiv.org/html/2610.30247v1}{arXiv:2610.30247v1}.
+\bibitem{DLMF} NIST DLMF,
+\href{https://dlmf.nist.gov/5.11}{Section 5.11},
+fixed-sector Stirling expansions, shifted forms and remainder bounds.
+\end{thebibliography}
+\end{document}

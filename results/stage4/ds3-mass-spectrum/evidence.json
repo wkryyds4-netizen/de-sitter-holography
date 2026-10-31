@@ -1,0 +1,41 @@
+{
+  "created_at_utc": "2026-10-30T19:27:29.670414+00:00",
+  "pages": 5,
+  "checks": 150,
+  "initial_checks": 146,
+  "initial_failed": 2,
+  "compilers": {
+    "local": "two successful final pdfLaTeX passes",
+    "desktop": "success on final source"
+  },
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "status": "all final rendered pages reviewed; no clipping, collision or missing glyphs"
+  },
+  "scope": "Spacetime L2 spectral normalization and BD observer projection; not physical group averaging or finite G. Empirical quadrature and tail coefficient.",
+  "hashes": {
+    "code/build_ds3_mass_spectrum_note.ps1": "39e94a4d14e00af566c1cb7454349dd6ef47dfcd5870b64cc9ad4b077da55729",
+    "code/complete_ds3_mass_diagnostics.py": "a6a7b82092ba2d3a923449853b97722fb16a79c539c310deb8e2462a8362620b",
+    "code/ds3_local_vertex.py": "3228a87c7f5571dcca98125499f7bf28d7cf7f357b41a6130b3ef88a03f23687",
+    "code/ds3_mass_spectrum.py": "6cc3ff6b981f45e51a6f9f47b0052f1a9c28e5d4d4d82015e6d0b5626f35e8a2",
+    "code/validate_ds3_mass_spectrum.py": "ca18f1a3f7f10eff0ff5d32b7e5e70cd23b8cec9010fc7cf3c6a465376387602",
+    "literature/stage4-ds3-mass-spectrum-sources.md": "4f773a6aa493151f1713a532c2e6ba58848877cab4ebcae868196e145a4edfe2",
+    "manuscript/ds3-mass-spectrum/main.tex": "f55119ad052f7efc9080d3b90795136a289a08c49c96b41b393dc133709f65f8",
+    "notes/stage4-ds3-local-vertex.md": "39bd4cf26fd32f3701df3c7c87abde976b2ef9029cfc5f44aaddcc5a8d7d2cd9",
+    "notes/stage4-ds3-mass-spectrum.md": "35e4bd975173559c2d01d985c1ded41d8c7604583232b505c885955fc71ab2fe",
+    "output/pdf/de-sitter-ds3-mass-spectrum.pdf": "e9bf70300ab525f6d8e5cf1fc72c5f175b74cc5e2fde7a4bb444bb0e8cb79824",
+    "results/stage4/ds3-mass-spectrum/build-review.md": "470b94ebd4321a42856bafbc30e451cc3d4c2f3d6b380ce3756e72caa1813c8d",
+    "results/stage4/ds3-mass-spectrum/diagnostics.json": "3c9464368abe4f9bbda610b3cdab0fc00548478a1686f679b0016b5686c24bd3",
+    "results/stage4/ds3-mass-spectrum/initial-diagnostics.json": "f7328c31eed30c5c1a9372999b4f581342d14d0239f22f59cb6b04867293fdd8",
+    "results/stage4/ds3-mass-spectrum/main.log": "73d69afe682a4ef04fd7526922f0d025f48dbafe8cceadc5de161f188ad2cc9e",
+    "sources/kolchmeyer-liu-2411.08090v1.html": "352ef29aa89c376203271bf984bd904fb471ff313a7d420bc6a0ebc875d78065",
+    "sources/lagogiannis-maloney-wang-1106.2846v1.html": "4b1e50a049fcfdaf8c1070fbc351ec9ed81b286c61e7e70b5615015c4e096942",
+    "sources/marolf-morrison-0810.5163v1.html": "dc4f5eec7b88c8632913c7b1532574755622118599f0d4b7eab184a1cfebe3e7"
+  }
+}

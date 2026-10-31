@@ -1,0 +1,53 @@
+{
+  "created_at_utc": "2026-10-30T03:19:42.209170+00:00",
+  "kind": "exact combined-vertex cancellation and sequential pure-recoil limit; author self-reviewed proof draft",
+  "pages": 4,
+  "compilers": {
+    "desktop": "success on final source",
+    "local": "pdfLaTeX two passes; clean final log"
+  },
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "dpi": 95,
+    "clipping_or_overlap": false,
+    "layout_revision": "27mm to 25mm margins; all final pages rechecked"
+  },
+  "results": [
+    "exact V^2/C cancellation",
+    "balanced Barnes quotient derivative bound and normalized fixed-mass limit",
+    "limiting combined vertex local transverse-box uniform bound",
+    "known observer building-block ratio"
+  ],
+  "not_proven": [
+    "full internal double-sine integral degeneration and contour",
+    "joint growing-mass finite-kappa error",
+    "physical four-point normalization or external cycle",
+    "global tails or complete Gaussian remainder",
+    "full finite-G amplitude, microscopic dictionary or dual",
+    "independent certification or priority"
+  ],
+  "hashes": {
+    "code/build_vertex_note.ps1": "c4f7e8103a7c9f66ab860b23dff49ca492b8a02c304c769dd0784215268f5260",
+    "code/recoil_vertex.py": "d6dd46b45f8802052a52842c2bceff0ff289f11433e203c505ea6716e7a6e766",
+    "literature/stage4-recoil-vertex-sources.md": "728fefadb0c84398aa2b468068ab9444d0a8330e5282dda009fcf7dad9862209",
+    "manuscript/recoil-vertex/main.tex": "73dbc8befc0f2978a12b742c32530a621c8b74db17148979aa1925e211d5b218",
+    "notes/stage4-recoil-vertex.md": "96b0fc6bc686a4a76d60205f305cd62d823b5c0074c28e379ddadbfce70865b6",
+    "output/pdf/de-sitter-recoil-vertex.pdf": "b572c695d567aa26c671bddc6937f8819b91a36870a6148bb3a632dad3d045bc",
+    "results/stage4/recoil-vertex/build-review.md": "e9b0bb3b2c13a0b309cd1073d2b68752fde219c5f70a0ed804e50fddff6364d1",
+    "results/stage4/recoil-vertex/diagnostics.json": "d0057da313d6ef8d9f075e93da170d2d8ea84248091a9e04782262406f374fd3",
+    "results/stage4/recoil-vertex/main.log": "3a34c8d7e90e0c5e2b9d3d634c5601b219c7a4faafd06c086ba0e7cb2a14c922",
+    "sources/chandra-liska-post-2610.30247v1.html": "fe8580884e81ba9817e292bbca7c70b7c7d494e89efef62695e94bcf07801d0f",
+    "sources/dlmf-5.11.html": "8f573b25a200d5ca09372ad88adbd4a621bc0bc463e088c6548ff8dddc0d2eee"
+  },
+  "render_sha256": {
+    "final-1.png": "b9a06cbf4b75bd0e6848cd094cb8c86abf160fdf5750d960cf9e9fef1daabb7f",
+    "final-2.png": "6c430897d69680811c7c617feed4088ee566fc7e1d1ed7b1d6f15bd6273baf38",
+    "final-3.png": "81b5ccb26ff8f5919668305f4d517eeba9cbb93d55f94c23513f5194c34dcec3",
+    "final-4.png": "5e06e8f83fbffcdf78ee50f3d92c9159d1200e40bc2957e5e0c98be45ea7ea21"
+  }
+}

@@ -1,0 +1,382 @@
+{
+  "status": "passed",
+  "checks": 34,
+  "failed": 0,
+  "check_details": [
+    {
+      "name": "Positive grid 24/64/12.0 C2_cut",
+      "passed": true,
+      "error": 1.6653345369377348e-16,
+      "tolerance": 5e-12
+    },
+    {
+      "name": "Positive grid 24/64/12.0 D_cut",
+      "passed": true,
+      "error": 1.474514954580286e-17,
+      "tolerance": 5e-12
+    },
+    {
+      "name": "Positive grid 24/64/12.0 N_cut",
+      "passed": true,
+      "error": 2.6020852139652106e-18,
+      "tolerance": 5e-12
+    },
+    {
+      "name": "Positive grid 24/64/12.0 epsilon_to_cap",
+      "passed": true,
+      "error": 3.898088636656143e-23,
+      "tolerance": 5e-12
+    },
+    {
+      "name": "Positive grid 24/64/12.0 cross_tail_bound_estimate",
+      "passed": true,
+      "error": 7.750351467376848e-20,
+      "tolerance": 5e-12
+    },
+    {
+      "name": "Positive grid 32/64/12.0 C2_cut",
+      "passed": true,
+      "error": 6.938893903907228e-17,
+      "tolerance": 5e-12
+    },
+    {
+      "name": "Positive grid 32/64/12.0 D_cut",
+      "passed": true,
+      "error": 9.540979117872439e-18,
+      "tolerance": 5e-12
+    },
+    {
+      "name": "Positive grid 32/64/12.0 N_cut",
+      "passed": true,
+      "error": 6.071532165918825e-18,
+      "tolerance": 5e-12
+    },
+    {
+      "name": "Positive grid 32/64/12.0 epsilon_to_cap",
+      "passed": true,
+      "error": 3.753332029459363e-23,
+      "tolerance": 5e-12
+    },
+    {
+      "name": "Positive grid 32/64/12.0 cross_tail_bound_estimate",
+      "passed": true,
+      "error": 7.242131699024268e-20,
+      "tolerance": 5e-12
+    },
+    {
+      "name": "Positive grid 32/96/12.0 C2_cut",
+      "passed": true,
+      "error": 2.7755575615628914e-17,
+      "tolerance": 5e-12
+    },
+    {
+      "name": "Positive grid 32/96/12.0 D_cut",
+      "passed": true,
+      "error": 3.469446951953614e-18,
+      "tolerance": 5e-12
+    },
+    {
+      "name": "Positive grid 32/96/12.0 N_cut",
+      "passed": true,
+      "error": 8.673617379884035e-19,
+      "tolerance": 5e-12
+    },
+    {
+      "name": "Positive grid 32/96/12.0 epsilon_to_cap",
+      "passed": true,
+      "error": 0.0,
+      "tolerance": 5e-12
+    },
+    {
+      "name": "Positive grid 32/96/12.0 cross_tail_bound_estimate",
+      "passed": true,
+      "error": 4.235164736271502e-22,
+      "tolerance": 5e-12
+    },
+    {
+      "name": "Independent adaptive at d=0.7 N_cut",
+      "passed": true,
+      "error": 1.1275702593849246e-17,
+      "tolerance": 5e-12
+    },
+    {
+      "name": "Independent adaptive at d=0.7 epsilon_to_cap",
+      "passed": true,
+      "error": 2.0632986404369584e-22,
+      "tolerance": 5e-12
+    },
+    {
+      "name": "Independent adaptive at d=0.7 inner_tail",
+      "passed": true,
+      "error": 2.065366591968341e-22,
+      "tolerance": 5e-12
+    },
+    {
+      "name": "Independent adaptive at d=0.7 outer_tail",
+      "passed": true,
+      "error": 1.7448341046040428e-25,
+      "tolerance": 5e-12
+    },
+    {
+      "name": "Independent physical mass C2 at d=0.7",
+      "passed": true,
+      "error": 1.249000902703301e-16,
+      "tolerance": 5e-13
+    },
+    {
+      "name": "Independent adaptive at d=0.8 N_cut",
+      "passed": true,
+      "error": 9.107298248878237e-18,
+      "tolerance": 5e-12
+    },
+    {
+      "name": "Independent adaptive at d=0.8 epsilon_to_cap",
+      "passed": true,
+      "error": 3.32423208669748e-22,
+      "tolerance": 5e-12
+    },
+    {
+      "name": "Independent adaptive at d=0.8 inner_tail",
+      "passed": true,
+      "error": 3.3294019655259364e-22,
+      "tolerance": 5e-12
+    },
+    {
+      "name": "Independent adaptive at d=0.8 outer_tail",
+      "passed": true,
+      "error": 4.588267460255075e-25,
+      "tolerance": 5e-12
+    },
+    {
+      "name": "Independent physical mass C2 at d=0.8",
+      "passed": true,
+      "error": 9.71445146547012e-17,
+      "tolerance": 5e-13
+    },
+    {
+      "name": "Independent adaptive at d=0.9 N_cut",
+      "passed": true,
+      "error": 1.734723475976807e-18,
+      "tolerance": 5e-12
+    },
+    {
+      "name": "Independent adaptive at d=0.9 epsilon_to_cap",
+      "passed": true,
+      "error": 8.470329472543003e-22,
+      "tolerance": 5e-12
+    },
+    {
+      "name": "Independent adaptive at d=0.9 inner_tail",
+      "passed": true,
+      "error": 8.488941036325447e-22,
+      "tolerance": 5e-12
+    },
+    {
+      "name": "Independent adaptive at d=0.9 outer_tail",
+      "passed": true,
+      "error": 1.5186519058590742e-24,
+      "tolerance": 5e-12
+    },
+    {
+      "name": "Independent physical mass C2 at d=0.9",
+      "passed": true,
+      "error": 2.7755575615628914e-17,
+      "tolerance": 5e-13
+    },
+    {
+      "name": "Stable external conditional variance",
+      "passed": true,
+      "error": 9.378348791999613e-18,
+      "tolerance": 5e-14
+    },
+    {
+      "name": "Finite packet normalization",
+      "passed": true
+    },
+    {
+      "name": "Positive packet direct tails",
+      "passed": true
+    },
+    {
+      "name": "Common external mass prevents factorization",
+      "passed": true,
+      "variance": 9.073390026816629e-06
+    }
+  ],
+  "generated_utc": "2026-10-29T01:13:55.280800+00:00",
+  "parameters": {
+    "nu": 0.6,
+    "packet": [
+      0.7,
+      0.9
+    ],
+    "lower": 0.2,
+    "upper": 3.0,
+    "sigma_proper": 1.0
+  },
+  "rows": [
+    {
+      "outer_order": 24,
+      "inner_order": 64,
+      "cap": 12.0,
+      "values": {
+        "C2_cut": 0.06733672556878853,
+        "D_cut": 0.004543308000353157,
+        "N_cut": 0.003396653604757917,
+        "epsilon_to_cap": 8.43527723327142e-10,
+        "N_to_cap": 0.00339665444828564,
+        "inner_tail": 8.235739069779948e-10,
+        "outer_tail": 1.99538163491472e-11,
+        "external_quadrature_mass": 0.9999999999999993,
+        "conditional_two_point_variance": 9.073390026818201e-06,
+        "cross_tail_bound_estimate": 3.385363695629688e-06,
+        "scope": "Direct positive finite-cap estimates, no certified infinite remainder"
+      }
+    },
+    {
+      "outer_order": 32,
+      "inner_order": 64,
+      "cap": 12.0,
+      "values": {
+        "C2_cut": 0.06733672556878843,
+        "D_cut": 0.004543308000353152,
+        "N_cut": 0.0033966536047579134,
+        "epsilon_to_cap": 8.435277233271405e-10,
+        "N_to_cap": 0.0033966544482856363,
+        "inner_tail": 8.235739069779934e-10,
+        "outer_tail": 1.9953816349147174e-11,
+        "external_quadrature_mass": 0.9999999999999979,
+        "conditional_two_point_variance": 9.073390026826007e-06,
+        "cross_tail_bound_estimate": 3.385363695629683e-06,
+        "scope": "Direct positive finite-cap estimates, no certified infinite remainder"
+      }
+    },
+    {
+      "outer_order": 32,
+      "inner_order": 96,
+      "cap": 12.0,
+      "values": {
+        "C2_cut": 0.06733672556878834,
+        "D_cut": 0.004543308000353139,
+        "N_cut": 0.0033966536047579186,
+        "epsilon_to_cap": 8.43527723327103e-10,
+        "N_to_cap": 0.003396654448285642,
+        "inner_tail": 8.23573906977957e-10,
+        "outer_tail": 1.995381634914599e-11,
+        "external_quadrature_mass": 0.9999999999999979,
+        "conditional_two_point_variance": 9.073390026826007e-06,
+        "cross_tail_bound_estimate": 3.38536369562961e-06,
+        "scope": "Direct positive finite-cap estimates, no certified infinite remainder"
+      }
+    },
+    {
+      "outer_order": 48,
+      "inner_order": 96,
+      "cap": 16.0,
+      "values": {
+        "C2_cut": 0.06733672556878836,
+        "D_cut": 0.004543308000353142,
+        "N_cut": 0.0033966536047579194,
+        "epsilon_to_cap": 8.43527723327103e-10,
+        "N_to_cap": 0.0033966544482856424,
+        "inner_tail": 8.23573906977957e-10,
+        "outer_tail": 1.9953816349145982e-11,
+        "external_quadrature_mass": 0.9999999999999981,
+        "conditional_two_point_variance": 9.073390026826007e-06,
+        "cross_tail_bound_estimate": 3.3853636956296105e-06,
+        "scope": "Direct positive finite-cap estimates, no certified infinite remainder"
+      }
+    }
+  ],
+  "weighted_gauss_baselines": [
+    {
+      "order": 2,
+      "rule": {
+        "order": 2,
+        "lo": "0.7",
+        "hi": "0.9",
+        "nodes": [
+          "0.771710359806549517600555227770444396592",
+          "0.828289640193450482399444772229555603408"
+        ],
+        "weights": [
+          "0.5",
+          "0.5"
+        ],
+        "construction_dps": 70,
+        "polynomial_exact_degree": 3,
+        "density": "8/(3w)*sin(pi*(d-lo)/w)^4 on [lo,hi]",
+        "normalization": "integral P(d) dd = 1"
+      },
+      "values": {
+        "C2_cut": 0.06733672355516324,
+        "D_cut": 0.004543335146368505,
+        "N_cut": 0.003396656541008813,
+        "epsilon_to_cap": 8.43366681166527e-10,
+        "N_to_cap": 0.003396657384375494,
+        "inner_tail": 8.234219411055842e-10,
+        "outer_tail": 1.9944740060942823e-11,
+        "external_quadrature_mass": 1.0,
+        "conditional_two_point_variance": 9.10080722402954e-06,
+        "cross_tail_bound_estimate": 3.3850419847835546e-06,
+        "scope": "Direct positive finite-cap estimates, no certified infinite remainder"
+      }
+    },
+    {
+      "order": 3,
+      "rule": {
+        "order": 3,
+        "lo": "0.7",
+        "hi": "0.9",
+        "nodes": [
+          "0.7542204233957641814834912335568650679698",
+          "0.8",
+          "0.8457795766042358185165087664431349320302"
+        ],
+        "weights": [
+          "0.1909331372273320659765612631420096414888",
+          "0.6181337255453358680468774737159807170223",
+          "0.1909331372273320659765612631420096414888"
+        ],
+        "construction_dps": 70,
+        "polynomial_exact_degree": 5,
+        "density": "8/(3w)*sin(pi*(d-lo)/w)^4 on [lo,hi]",
+        "normalization": "integral P(d) dd = 1"
+      },
+      "values": {
+        "C2_cut": 0.06733672557438257,
+        "D_cut": 0.00454330788749776,
+        "N_cut": 0.0033966536015698997,
+        "epsilon_to_cap": 8.435271867502505e-10,
+        "N_to_cap": 0.0033966544450970866,
+        "inner_tail": 8.235734198062475e-10,
+        "outer_tail": 1.9953766944003016e-11,
+        "external_quadrature_mass": 1.0,
+        "conditional_two_point_variance": 9.073276418052577e-06,
+        "cross_tail_bound_estimate": 3.385362617307877e-06,
+        "scope": "Direct positive finite-cap estimates, no certified infinite remainder"
+      }
+    }
+  ],
+  "final": {
+    "C2_cut": 0.06733672556878836,
+    "D_cut": 0.004543308000353142,
+    "N_cut": 0.0033966536047579194,
+    "epsilon_to_cap": 8.43527723327103e-10,
+    "N_to_cap": 0.0033966544482856424,
+    "inner_tail": 8.23573906977957e-10,
+    "outer_tail": 1.9953816349145982e-11,
+    "external_quadrature_mass": 0.9999999999999981,
+    "conditional_two_point_variance": 9.073390026826007e-06,
+    "cross_tail_bound_estimate": 3.3853636956296105e-06,
+    "scope": "Direct positive finite-cap estimates, no certified infinite remainder"
+  },
+  "scope": "Actual normalized finite packet; independent positive finite-cap baselines. Not an infinite-tail certification.",
+  "code_sha256": {
+    "validate_packet_positive.py": "eafcbbb4660e8ea7e258160b6b4dc2c3b81b9dbe946e07966a7ac06d1519ae6c",
+    "packet_positive.py": "73146d2ddf5e74cfdf8887d6d2b4d67a47b59ea25d1f832668b2adfb55869385",
+    "packet_quadrature.py": "7f62a2156c5c0dbd169adacd8a00a6007a22ca13a03e8ffeab7de2b931a4567e",
+    "run_crossing_conditional.py": "5c83446be953c32c331e045e49c25cb8e9851cf1814ebe432333d1cbaf62a8d6",
+    "quantized_observer.py": "6851265b9daa9b02b2a96580d175be1d7153a13bc1e20ef9e891b8abe936583f"
+  }
+}

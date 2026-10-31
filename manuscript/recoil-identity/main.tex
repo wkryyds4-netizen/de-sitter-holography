@@ -1,0 +1,299 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,microtype,booktabs}
+\usepackage[margin=25mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\dd}{\mathop{}\!\mathrm d}
+\newcommand{\Id}{\mathbf 1}
+\title{Sewing measures and identity limits\\of the recoil two-point spectrum}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Working research note --- 31 October 2026}
+\begin{document}\maketitle
+\begin{abstract}
+We distinguish the identity representation in real-parameter Virasoro
+TQFT from a normalized massless endpoint of the recoil two-point
+spectrum. The common cone-angle continuation used in the paired
+amplitude cannot reach the vacuum of both Virasoro factors.
+The reduced spectrum nevertheless admits a controlled delta-function
+limit. We determine its pole-crossing correction and a finite-mass
+error bound. The previously exhibited insertion freedom survives
+this endpoint test. These statements do not construct a de Sitter
+sewing inner product or a physical finite-gravity four-point function.
+\end{abstract}
+
+\section{What the known sewing rule fixes}
+We use CEZ \cite{cez}, version 3, whose HTML equations have continuous
+numbering. In the standard block normalization, for real \(b>0\)
+and positive real internal momenta, equations (23)--(25) give
+\begin{align}
+ \langle s|s'\rangle&=\frac{\delta(s-s')}{\rho_s(s)},\\
+ \rho_s(s)&=\rho_0(s)C_0(P_1,P_2,s)C_0(P_3,P_4,s),\\
+ \rho_0(P)&=4\sqrt2\sinh(2\pi bP)\sinh(2\pi P/b).
+\end{align}
+Thus the four-punctured-sphere resolution is
+\(\Id=\int_0^\infty\dd s\,\rho_s(s)|s\rangle\langle s|\).
+Multiplying each block by the square roots of its vertex
+\(C_0\) factors changes the measure to \(\rho_0\), as in CEZ
+(27)--(28). Dropping the vertices without this basis change is
+inconsistent.
+
+With the convention \(|s\rangle=\int_0^\infty\dd t\,F_{st}|t\rangle\),
+preservation of the inner product requires
+\begin{equation}
+ \int_0^\infty\dd t\,\frac{F_{st}\overline{F_{s't}}}{\rho_t(t)}
+ =\frac{\delta(s-s')}{\rho_s(s)}. \label{eq:unitarity}
+\end{equation}
+This follows from the displayed block metric; CEZ (55) and (122)
+supply the corresponding exchange and fusion-inverse relations.
+The bilinear inverse relation and the sesquilinear isometry
+must not be confused. We have not evaluated the full fusion kernel
+numerically in this note.
+
+A change \(|s\rangle\mapsto a_s|s\rangle\), with nonzero \(a_s\),
+leaves \eqref{eq:unitarity} covariant if
+\begin{equation}
+ \rho'_s=\rho_s/|a_s|^2,\qquad F'_{st}=a_sF_{st}/a_t.
+\end{equation}
+This is basis freedom. It does not show that an arbitrary change
+of a physical operator insertion preserves crossing with a fixed
+fusion kernel.
+
+The identity limit in CEZ (29) is distributional:
+\begin{equation}
+ \lim_{P_3\to iQ/2}C_0(P_1,P_2,P_3)
+ =\frac{\delta(P_1-P_2)}{\rho_0(P_1)},\qquad Q=b+b^{-1}.
+ \label{eq:cezidentity}
+\end{equation}
+The momenta \(P_1,P_2>0\) remove reflection redundancy; the
+full-line convention has an additional reflected delta.
+The vacuum is outside the normalizable continuum. CEZ (46)
+distinguishes an incoming or external identity from an outgoing
+continuum label. In particular, squaring
+\eqref{eq:cezidentity} pointwise is not a definition of a paired
+amplitude: \(\delta^2\) is undefined.
+
+\section{Why this is not yet the de Sitter measure}
+CLP \cite{clp}, section 6, distinguishes analytic continuation of
+fixed-topology amplitudes from a de Sitter theory with arbitrary
+sewing. CEM \cite{cem}, equations (20), (24) and section 5,
+uses a late-time Teichm\"uller/moduli-space inner product which
+ordinary conformal blocks do not diagonalize.
+These are statements about the versions inspected here, not an
+exhaustive claim about all subsequent literature.
+
+For a nonorthogonal basis, the required formal resolution is instead
+\begin{equation}
+ \Id=\iint\dd a\,\dd b\ |a\rangle(G^{-1})_{ab}\langle b|,
+ \qquad G_{ab}=\langle a|b\rangle. \label{eq:gram}
+\end{equation}
+Existence of the inverse on a suitable test space, treatment of
+null directions, positivity and convergence are additional tasks.
+Neither the analytically continued Cardy factor nor the observer
+weight \(z(m)=m^2e^{-2\pi m}\) has thereby been identified with the
+physical Plancherel measure.
+
+\section{The common-angle path cannot reach two vacua}
+Use exactly the two factors in CLP (3.2), (3.4), (3.6) and (3.44):
+\begin{equation}
+ b_\pm^2=\pm i/\kappa,\qquad
+ P_\pm=\pm\frac{i\alpha}{4\pi b_\pm},\qquad
+ h_\pm=\frac{(b_\pm+b_\pm^{-1})^2}{4}+P_\pm^2.
+\end{equation}
+For a common angle \(\alpha=2\pi(1-\nu/\kappa)\), direct algebra gives
+\begin{align}
+ h_+&=\frac{1-i\nu}{2}+\frac{i(1+\nu^2)}{4\kappa},\\
+ h_-&=\frac{1+i\nu}{2}-\frac{i(1+\nu^2)}{4\kappa},&
+ h_++h_-&=1. \label{eq:weights}
+\end{align}
+This exact label identity is consistent with CLP's framing discussion.
+At \(\nu=i\), the pair is \((1,0)\); at \(\nu=-i\), it is \((0,1)\).
+At \(\nu=0\) neither factor is the vacuum.
+Here \(h_\pm\) label the two continued factors; their sum is not
+being identified with the physical scalar dimension.
+
+On the positive-angle branch, the separate vacuum conditions require
+\begin{equation}
+ \alpha^{\rm vac}_\pm=2\pi(1+b_\pm^2)
+ =2\pi(1\pm i/\kappa). \label{eq:vacangles}
+\end{equation}
+They are distinct at finite \(\kappa\).
+The reflected negative-angle solutions do not restore a common angle.
+Although these angles approach each other as \(\kappa\to\infty\),
+their difference is of the order retained by the fixed-mass
+scaling. It cannot be discarded when testing a vacuum limit.
+
+Consequently, the scalar relation \(m_{\rm field}^2=1+\nu^2\)
+does not justify identifying \(\nu=\pm i\) with a double-vacuum
+leg of the paired TQFT graph. Continuing the real-\(\nu\) paired
+expression meromorphically with a common complex \(\nu\) is also
+different from taking a fresh modulus square at each complex \(\nu\).
+A double-vacuum calculation needs independently specified labels
+and a pairing prescription.
+
+\section{A controlled endpoint of the reduced spectrum}
+We now change the question explicitly. Work at radius one,
+after the fixed-mass \(\kappa\to\infty\) limit, and continue only
+the established reduced two-sided spectrum
+\begin{equation}
+ k_\nu(\omega)=\frac1{8\pi[\cosh\pi\omega+\cosh\pi\nu]},
+ \qquad g_\nu(0)=\frac{\nu}{4\pi\sinh\pi\nu}.
+\end{equation}
+Set \(\nu=i(1-\epsilon)\), \(0<\epsilon<1\).
+Dividing by the divergent
+\(g_\nu(0)=(1-\epsilon)/(4\pi\sin\pi\epsilon)\) gives
+\begin{align}
+ p_\epsilon(\omega)&=
+ \frac{\sin\pi\epsilon}
+ {2(1-\epsilon)[\cosh\pi\omega-\cos\pi\epsilon]},\\
+ \chi_\epsilon(t)&=\int_{\mathbb R}\dd\omega\,
+ e^{-i\omega t}p_\epsilon(\omega)
+ =\frac{\sinh((1-\epsilon)t)}{(1-\epsilon)\sinh t}.
+ \label{eq:char}
+\end{align}
+At \(t=0\) the continuous value is one. No \(1/(2\pi)\) occurs
+in this forward transform. The identity follows by analytic
+continuation inside \(0<\operatorname{Im}\nu<1\), where compact
+subsets admit integrable spectral domination, or by residues.
+
+The density is nonnegative and integrates to one. Differentiating
+\eqref{eq:char} at zero gives
+\begin{equation}
+ v_\epsilon:=\int_{\mathbb R}\omega^2p_\epsilon(\omega)\dd\omega
+ =\frac{2\epsilon-\epsilon^2}{3},\qquad
+ \int_{|\omega|>D}p_\epsilon(\omega)\dd\omega\le\frac{v_\epsilon}{D^2}.
+ \label{eq:moment}
+\end{equation}
+Hence \(p_\epsilon\rightharpoonup\delta\).
+For a \(C^2\) test function with bounded second derivative,
+Taylor's formula and evenness give the explicit error
+\(\|f''\|_\infty v_\epsilon/2\).
+Concentration and normalization also prove weak convergence for
+bounded continuous tests. This is a normalized infrared endpoint,
+not a finite unnormalized massless-field correlator or a
+construction of the identity operator on a gravitational Hilbert space.
+
+\subsection*{The pole crossing is visible}
+The poles are \(\omega=i(2n\pm\epsilon)\).
+The nearest two, \(\pm i\epsilon\), pinch the real axis at zero.
+Their residues are respectively
+\(\pm[2\pi i(1-\epsilon)]^{-1}\).
+No pole crosses before the endpoint on the positive-\(\epsilon\)
+path. Continuing through it is a different matter.
+
+For \(\epsilon=-\delta\), \(0<\delta<1\), the same real-axis integral is
+\begin{equation}
+ \int_{\mathbb R}\dd\omega\,e^{-i\omega t}p_{-\delta}(\omega)
+ =-\frac{\sinh((1-\delta)t)}{(1+\delta)\sinh t}.
+\end{equation}
+It differs from the continued right side of \eqref{eq:char} by
+\begin{equation}
+ \chi_{-\delta}(t)
+ -\int_{\mathbb R}\dd\omega\,e^{-i\omega t}p_{-\delta}(\omega)
+ =\frac{2\cosh(\delta t)}{1+\delta}. \label{eq:residues}
+\end{equation}
+This is precisely the sum of the two crossing-pole contributions;
+it also follows from the hyperbolic addition formula.
+The difference survives at \(t=0\).
+We have tracked this reduced two-pole problem, not all poles of
+the finite-\(\kappa\) double-sine kernel.
+
+\section{Finite observer mass does not remove the freedom}
+Fix \(M>m_*>0\), \(D=2(M-m_*)\), \(A=\cosh(2\pi M)\). Define
+\begin{align}
+ R_{M,\epsilon}(\omega)&=
+ \left(1-\frac{\omega^2}{4M^2}\right)
+ \frac{A-\cosh\pi\omega}{A-\cos\pi\epsilon},\\
+ q_{M,\epsilon,\lambda}(\omega)&=
+ \Id_{[-D,D]}(\omega)p_\epsilon(\omega)R_{M,\epsilon}(\omega)
+ \left(1+\frac{\lambda\omega^2}{4M^2}\right),\quad\lambda\ge0 .
+ \label{eq:q}
+\end{align}
+This is a declared spectral model, with \(0\le R\le1\) on its support.
+Let \(T_D=\int_{|\omega|>D}p_\epsilon\) and
+\(v_D=\int_{-D}^D\omega^2p_\epsilon\). The exact mass loss is
+\begin{equation}
+ 1-\int q_{M,\epsilon,0}
+ =T_D+\frac{v_D}{4M^2}
+ +\frac{\sin\pi\epsilon}{(1-\epsilon)(A-\cos\pi\epsilon)}
+ \left(D-\frac{D^3}{12M^2}\right). \label{eq:loss}
+\end{equation}
+To prove it, expand \(1-R\). In its second term,
+\(\cosh\pi\omega-\cos\pi\epsilon\) cancels the spectral denominator,
+leaving a quadratic polynomial to integrate.
+Using \eqref{eq:moment}, set
+\begin{equation}
+ B_{M,\epsilon}=
+ \frac{v_\epsilon}{D^2}+\frac{v_\epsilon}{4M^2}
+ +\frac{\sin\pi\epsilon}{(1-\epsilon)(A-\cos\pi\epsilon)}
+ \left(D-\frac{D^3}{12M^2}\right)=O_{M,m_*}(\epsilon).
+\end{equation}
+For all real \(t\), the triangle inequality gives
+\begin{equation}
+ |\widehat q_{M,\epsilon,\lambda}(t)-\chi_\epsilon(t)|
+ \le B_{M,\epsilon}+\frac{\lambda v_\epsilon}{4M^2}.
+ \label{eq:bound}
+\end{equation}
+The same bound controls \(\|q_{M,\epsilon,\lambda}-p_\epsilon\|_1\).
+Therefore every fixed \(\lambda\ge0\) yields the same weak limit
+\(q\rightharpoonup\delta\); restoring the common factor gives
+\(z(M)\delta\). Yet these same choices change the first finite-mass
+correction on the real principal series. Leading QFT matching plus
+this normalized endpoint test thus fails to fix the insertion.
+
+More generally, a fixed bounded continuous even factor, or a family
+converging uniformly to one on this finite interval, is tested only
+through its limiting diagonal value \(n(M,0)\). This is a necessary
+normalization condition in the chosen spectral convention, not
+a proof that all such factors extend to a crossing-consistent
+physical four-point function.
+
+\section{Limits, verification and the next physical task}
+The identity limit is not uniform over time:
+\begin{equation}
+ \lim_{\epsilon\downarrow0}\chi_\epsilon(t)=1
+ \quad(t\ {\rm fixed}),\qquad
+ \lim_{|t|\to\infty}\chi_\epsilon(t)=0
+ \quad(\epsilon>0),
+\end{equation}
+and for fixed \(\tau\ne0\),
+\begin{equation}
+ \lim_{\epsilon\downarrow0}\chi_\epsilon(\tau/\epsilon)
+ =e^{-|\tau|}.
+\end{equation}
+Bound \eqref{eq:bound} transfers the latter result to \(q\) at fixed
+\(M,m_*,\lambda\). This is an infrared model timescale, not a
+finite-gravity chaos exponent.
+
+The saved diagnostics contain 106 passed checks: 16 real-axis
+Fourier/moment checks, 18 crossing checks, 36 finite-mass identity,
+bound and precision comparisons, and 36 label-algebra checks.
+The last group includes repeated vacuum checks across different
+probe-label loops; it is not 36 independent physical tests.
+Calculations used 50 decimal digits and selected finite-mass
+integrals were repeated at 65 digits; the largest change was
+\(6.41\times10^{-52}\). This is an empirical refinement, not
+interval certification. Parameters, versions, outputs and hashes
+are stored with the code. Large-time scaling entries evaluate
+the exact transform; they are not claimed as oscillatory quadratures.
+
+The next concrete task is the global \(\mathrm{SL}(2,\mathbb C)\)
+partial-wave inner product in the \(G=0\) limit, including reflection
+and spectral measure, followed by an explicit comparison with the
+regularized recoil graph \(H\). A Barnes-integral resemblance is
+insufficient. Any double-vacuum study must instead keep independent
+labels and track the continuation of already-sewn expressions.
+Physical finite-\(\kappa\) sewing, finite-\(G\) four-point dynamics
+and a complete de Sitter dual remain open.
+
+\begin{thebibliography}{9}
+\bibitem{cez} S. Collier, L. Eberhardt and M. Zhang,
+\emph{Solving 3d Gravity with Virasoro TQFT},
+\href{https://arxiv.org/html/2304.13650v3}{arXiv:2304.13650v3}.
+\bibitem{clp} J. Chandra, D. Liska and B. Post,
+\emph{3D de Sitter from complex Virasoro TQFT: Observers and knots},
+\href{https://arxiv.org/html/2610.30247v1}{arXiv:2610.30247v1}.
+\bibitem{cem} S. Collier, L. Eberhardt and B. M\"uhlmann,
+\emph{A microscopic realization of dS$_3$},
+\href{https://arxiv.org/html/2501.01486v1}{arXiv:2501.01486v1}.
+\end{thebibliography}
+\end{document}

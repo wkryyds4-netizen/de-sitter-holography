@@ -1,0 +1,49 @@
+{
+  "created_at_utc": "2026-10-30T01:20:02.138359+00:00",
+  "kind": "author self-reviewed reduced-model proof and empirical diagnostics; not finite-G or independent certification",
+  "pages": 4,
+  "compilers": {
+    "desktop": "success on final source",
+    "local": "pdfLaTeX two passes, clean final log"
+  },
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "dpi": 95,
+    "clipping_or_overlap": false,
+    "final_page2_rechecked": true
+  },
+  "results": [
+    "explicit positive confluence bound",
+    "Q=o(nu^(2/3)) relative window and critical exp(c^3/3) ratio",
+    "cosh(t)^2 normalized prefactor mismatch for action-only inverse transform"
+  ],
+  "not_proven": [
+    "full finite-kappa amplitude and external contour",
+    "uniform physical heavy-background or pure-recoil degeneration errors",
+    "microscopic dictionary or full dual",
+    "independent certification or priority"
+  ],
+  "hashes": {
+    "code/build_wkb_note.ps1": "8688cdddd20364adec33cc9a3cab3c9d0ea0958a8ca1fe2197bb1da44e9ccfe3",
+    "code/wkb_overlap.py": "7772b0282ddc1935d7057119a60e6d4612ce9bf328a545651ead5c51502e0feb",
+    "literature/stage4-wkb-overlap-sources.md": "a8815e124bb99a1290b59b9deae079c9e64c31882ea71d1f0972b5fda03670c9",
+    "manuscript/finite-g-bridge/main.tex": "0634866cd3ff9949a4a8f82aca8f1056db3a6161faa5b86c948b06a8cebdd101",
+    "notes/stage4-wkb-overlap.md": "d7446310209409f4118cbc573ab3f6e8e659439316e433ea05a5adca5eb12c1e",
+    "output/pdf/de-sitter-wkb-overlap.pdf": "800d906ccb714ad9b6da1db3be90ceac2b2d67d4a903d02fe45c4e0b3df30d92",
+    "results/stage4/wkb-overlap/diagnostics.json": "f98bdbdebc3c3e9e94c0dfc2374e813b3c7e797bd3be75d8687a4b457ceed058",
+    "results/stage4/wkb-overlap/main.log": "969e8c2aed73673d23fb3f60ed3e56156f426e14f30f3d89282349ada2c5b731",
+    "sources/chandra-liska-post-2610.30247v1.html": "fe8580884e81ba9817e292bbca7c70b7c7d494e89efef62695e94bcf07801d0f",
+    "sources/chen-stanford-tang-yang-2607.14042v1.html": "9e352212021abf7135852f4b5dc8cd933f47334bd72e78f8def9d84d34fed5e2"
+  },
+  "render_sha256": {
+    "page-1.png": "e83a2a5eb8f8a073425a8c987f0fcf90cfe122ad273e02dced41a2f577387beb",
+    "page-2.png": "785ae7765de2a5e0509a36d24a7cf435180cadae6beeb6b2f07d574ef6381e65",
+    "page-3.png": "05964ffe5a966c206c6c3fd70746f5128e0e6b7af85fc754b440f34185a0879b",
+    "page-4.png": "0c62c17bdd62db30ba48398b298775fb426a679a307b1c0f304fde27aa709c2c"
+  }
+}

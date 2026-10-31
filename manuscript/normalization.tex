@@ -1,0 +1,96 @@
+\section{Observer wave packets and spectral normalization}
+\label{app:normalization}
+This appendix supplies the positive/negative frequency normalization without
+formally multiplying generalized eigenfunctions and delta functions.
+Fix $k=|n|$, $h=k+1/2$, and $r(s)=s\tanh\pi s$. In the phase convention
+of~\cite[(3.11), (4.9), (A.5)--(A.6)]{KL},
+\begin{align}
+ v_s(t)&:=\sqrt{\cosh t}\,\Psi_n^s(t,0)
+ =N_k(s)\cosh^h t\,
+ \mathbf F(h-is,h+is;k+1;z(t)),\\
+ z(t)&=\frac{1-i\sinh t}{2},\\
+ N_k(s)&=\sqrt{\frac{r(s)}{\pi}}\,
+ e^{i\phi_{-k,s}/2}
+ \frac{(1-i)(2i)^{-k}\Gamma(1/2-is)}
+      {2\sqrt{2\cosh\pi s}\,\Gamma(1/2-k-is)}.
+\end{align}
+Here $\mathbf F={}_2F_1/\Gamma(c)$ and the half phase is chosen smoothly
+and compatibly with the $n\leftrightarrow-n$ relation. Gamma recurrence
+gives
+\begin{equation}
+ |N_k(s)|^2=\frac{r(s)2^{-2k}}{4\pi^2}
+                         |\Gamma(h+is)|^2.
+\end{equation}
+For $t=\epsilon\tau$, $\epsilon=\pm1$, $\tau>0$, set $x=e^{-\tau}$.
+The identity $-z(\epsilon\tau)=i\epsilon(1+i\epsilon x)^2/(4x)$ and
+the hypergeometric connection formula~\cite[15.8.2]{DLMF} give
+\begin{align}
+ v_s(\epsilon\tau)&=\sum_{\sigma=\pm1}
+       A_{\epsilon\sigma}(s)e^{i\sigma s\tau}
+       M_{\epsilon\sigma}(x,s),\\
+ A_{\epsilon\sigma}(s)&=B_\sigma(s)
+          e^{-i\epsilon\pi h/2}e^{-\epsilon\sigma\pi s/2},\\
+ B_\sigma(s)&=
+ N_k(s)2^{h-2i\sigma s}
+ \frac{\Gamma(2i\sigma s)}
+      {\Gamma(h+i\sigma s)\Gamma(1/2+i\sigma s)},\\
+ M_{\epsilon\sigma}(x,s)&=(1+x^2)^h
+ (1+i\epsilon x)^{-2q_\sigma}
+ {}_2F_1\left(q_\sigma,\tfrac12-i\sigma s;1-2i\sigma s;
+       \frac{4i\epsilon x}{(1+i\epsilon x)^2}\right),\\
+ q_\sigma&=h-i\sigma s.
+\end{align}
+The linear terms in the last expression cancel, so $M=1+x^2Q$ with
+$Q$ analytic near $x=0$ on every compact positive spectral interval.
+For fixed spectral and time derivative orders,
+$|\partial_s^j\partial_\tau^l(M-1)|\le Ce^{-2\tau}$ for
+$\tau\ge\log32$. Including the phase in the differentiated remainder
+adds a factor $(1+\tau)^j$.
+Thus $\int f(s)v_s(t)\dd s$ is Schwartz for $f\in\Cc((0,\infty))$.
+
+The standard gamma moduli give
+\begin{equation}
+ |\Gamma(2is)|^2=\frac{\pi}{2s\sinh2\pi s},\qquad
+ |\Gamma(1/2+is)|^2=\frac{\pi}{\cosh\pi s},\qquad
+ |B_\sigma(s)|^2=\frac{1}{8\pi^2\cosh\pi s}.
+ \label{eq:B-modulus}
+\end{equation}
+Now use the unitary radial variable $r_s(t)=\sqrt{2\pi}\,v_s(t)$ and
+write $W_f=\int r_s f(s)\dd s$. Its Schwartz property and differential
+equation imply
+\begin{equation}
+ e^{-iTH_k}W_f=W_{e^{-iTs^2}f}.
+\end{equation}
+As $T\to+\infty$, on each half-axis only the $\sigma=+$ outgoing
+free packet remains. The $\sigma=-$ phase has no stationary point there,
+and repeated spectral integration by parts bounds its $L^2$ norm by a
+quantity tending to zero. The exponentially small Jost remainder tends
+to zero on compact positions by nonstationary phase, and its tail is
+uniformly $L^2$ dominated. The outgoing packet restricted to that half-axis
+has the full-line Fourier norm in the limit; its omitted half-line is
+again nonstationary. Plancherel therefore gives the packet Gram density
+\begin{equation}
+ 4\pi^2\sum_{\epsilon=\pm1}
+       \overline{A_{\epsilon,+}(s)}A'_{\epsilon,+}(s).
+ \label{eq:packet-gram}
+\end{equation}
+For two positive columns, \eqref{eq:B-modulus} makes this density one.
+For the negative-frequency column,
+$A'_{\epsilon,+}=(-1)^nA_{-\epsilon,+}$. Its cross density is
+\begin{equation}
+ 8\pi^2(-1)^n|B_+(s)|^2\cos(\pi h)=0.
+\end{equation}
+The negative column has the same unit norm. Different $n$ are already
+orthogonal in $\theta$.
+
+Finally the two asymptotic coefficient columns at $+\infty$ have determinant
+\[
+ -2(-1)^nB_+B_-\sinh\pi s\ne0.
+\]
+They span the two-dimensional
+continuous solution space and are a smooth invertible change of basis
+from the scattering modes on every compact positive interval. The bound
+modes are orthogonal to these packets by the self-adjoint radial spectral
+decomposition. This proves the full continuous normalization and
+completeness needed in Section~\ref{sec:physical}; it makes no assertion
+that the entire position representation lacks discrete series.

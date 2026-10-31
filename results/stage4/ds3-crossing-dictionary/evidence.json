@@ -1,0 +1,51 @@
+{
+  "created_at_utc": "2026-10-30T20:44:16.057737+00:00",
+  "pages": 5,
+  "checks": 33,
+  "independent_checks": 10,
+  "euclidean_grids": 10,
+  "compilers": {
+    "local": "two successful final pdfLaTeX passes",
+    "desktop": "success on final source"
+  },
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "longest_edge_pixels": 1100,
+    "status": "all pages inspected; no clipping, collisions or missing glyphs"
+  },
+  "hashes": {
+    "code/audit_ds3_crossing_dictionary.py": "ae8e18f40e6255608c618f771029bfe1427d4791d208a84654e30bb79eb62147",
+    "code/build_ds3_crossing_dictionary.ps1": "4b6d248158fd364303374b6f3c63b67a8f272d99db6a1b27ea31f67c68bd1e17",
+    "code/ds3_crossing_dictionary.py": "0dd76e7cbe336fda26bdab77a5b495261449807b6891cc85973e8c00c4d5daca",
+    "code/ds3_crossing_tail.py": "e96b140e6ef85733490e31f669afa990e930d95f448eb1c60fd2c6cccf6cbf14",
+    "code/ds3_group_pairing.py": "0ef676a1590157d49e62875698ab676cf06a58f942e8b655cbeced8c7e0efbb2",
+    "code/ds3_local_vertex.py": "3228a87c7f5571dcca98125499f7bf28d7cf7f357b41a6130b3ef88a03f23687",
+    "code/ds3_mass_spectrum.py": "6cc3ff6b981f45e51a6f9f47b0052f1a9c28e5d4d4d82015e6d0b5626f35e8a2",
+    "code/ds3_two_matter.py": "636f5b9bb79623e2cae493734e6ba5cf4c0cce8be7427d3f413d00b01fd3de5e",
+    "code/global_racah.py": "4b9702c8c8f68b3f3901f3e392321824edf37198b70c0344298c95addd88a15c",
+    "code/run_ds3_crossing_euclidean.py": "dec7a605f07cdfe9fe79a036d96154618ab9a854d303cc3f99fd3793d29d06d3",
+    "code/validate_ds3_crossing_dictionary.py": "d3da27ee0828df08086028ece87f8ff0a5911f8c17ba45584a2aad59193c7636",
+    "code/validate_ds3_crossing_geometry.py": "c3cec740bfd3fec4a0ae110e38581c572c53b80cd53f56a5428aee19e38dfbc3",
+    "literature/stage4-ds3-crossing-dictionary-sources.md": "872dc43715749230b17c15c906fad8dfcd903a8b58e8b0d3053763b3034f3ef6",
+    "manuscript/ds3-crossing-dictionary/main.tex": "2d66e202a745bd32a8c538c184eca3e58260ca620f9c7324fc346196bd51c58d",
+    "notes/stage4-ds3-crossing-dictionary.md": "f0787b69fe8f51ab980d7f48c9d500ba4c4a12ee7aac6b846d3ca3255686e1b8",
+    "output/pdf/de-sitter-ds3-crossing-dictionary.pdf": "fe0e43f390b19148539950d5b8a89504107d0df55e54e6ed9ea54bf9e5ec82ac",
+    "results/stage4/ds3-crossing-dictionary/build-review.md": "fc670933696ae7d2f997bc219cc70b89b781f13e93d4bcaa3d93371160d8843f",
+    "results/stage4/ds3-crossing-dictionary/diagnostics.json": "f3cb2871137a895c0a66483feee0a48abf01664d8c16966b5ab537becd6e651b",
+    "results/stage4/ds3-crossing-dictionary/euclidean-refined.json": "817aa1fddab7d20900fbd508b7ac7ca37340bc3eee00a8ecfe36c9b16ce9b4fd",
+    "results/stage4/ds3-crossing-dictionary/euclidean.json": "129be16a45a4dd3aa8835c27619b9333ea8c6fc193c163278d25dacbf8997667",
+    "results/stage4/ds3-crossing-dictionary/executed-kernel.py.txt": "116192cb20adf3556b9bbbccf89c9ee20b61f036bfa1e3c9261e9463b3e8b047",
+    "results/stage4/ds3-crossing-dictionary/geometry.json": "00437623dfe8919829e384e0adcaf5d8dfebdb079c5d5935198c5b767e012f2f",
+    "results/stage4/ds3-crossing-dictionary/main.log": "cbd9c15290c9749d7cc3c91b1e7a5da2253acd44a27ca2f9f19e4bb6ba9b5830",
+    "results/stage4/ds3-crossing-dictionary/source-correction.json": "1e386db702db75e39a9f8e87822f2f0b14d66d9647ba4d79e3b27f5183bb6841",
+    "sources/derkachov-spiridonov-1711.07073v2.html": "a4f305acd8eded3330309df70e570e28b1eb704f1083c49dfeb310072b33a367",
+    "sources/karateev-kravchuk-simmons-duffin-1809.05111v1.html": "4f16f5d8d3048611f1786d4cc414aaf175719539b8e33e0097bb57e22ebc4a48",
+    "sources/liu-et-al-1808.00612v3.html": "f2ed75383d739432535ba11f0988fa6df08aaf5020e4f61a8ca2376ae40c4494"
+  }
+}
