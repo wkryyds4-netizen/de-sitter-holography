@@ -1,0 +1,590 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "label": "J mpmath -8",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "label": "J mpmath -1",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "label": "J mpmath -0.1",
+      "error": 2.2204555783505224e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "label": "J mpmath -0.0078125",
+      "error": 1.1591269220898192e-69,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "label": "J mpmath -0.005",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "label": "J mpmath -1e-06",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "label": "J mpmath 0",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "label": "J mpmath 1e-06",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "label": "J mpmath 0.005",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "label": "J mpmath 0.0078125",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "label": "J mpmath 0.1",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "label": "J mpmath 1",
+      "error": 5.551115123125783e-16,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "label": "J mpmath 8",
+      "error": 0.0,
+      "tolerance": 3e-14,
+      "passed": true
+    },
+    {
+      "label": "original G.2 momentum integral",
+      "error": 9.111552200034412e-76,
+      "tolerance": 1e-60,
+      "passed": true
+    },
+    {
+      "label": "original G.2 momentum integral",
+      "error": 7.076277628455546e-74,
+      "tolerance": 1e-60,
+      "passed": true
+    },
+    {
+      "label": "original G.2 momentum integral",
+      "error": 3.574933873257124e-74,
+      "tolerance": 1e-60,
+      "passed": true
+    },
+    {
+      "label": "moment coefficient",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "label": "moment coefficient",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "label": "moment coefficient",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "label": "moment coefficient",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "label": "moment coefficient",
+      "error": 2.220446049250313e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "label": "moment coefficient",
+      "error": 0.0,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "label": "moment coefficient",
+      "error": 6.661338147750939e-16,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "label": "moment coefficient",
+      "error": 2.6645352591003757e-14,
+      "tolerance": 3e-11,
+      "passed": true
+    },
+    {
+      "label": "direct four Gaussian/source coordinates",
+      "error": 2.022492258392335e-14,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "label": "direct four Gaussian/source coordinates",
+      "error": 2.151552297031276e-09,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "label": "coarse/fine full integral",
+      "error": 6.697711421964611e-13,
+      "tolerance": 0.0002,
+      "passed": true
+    },
+    {
+      "label": "residue imaginary integral",
+      "error": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "label": "negative imaginary part",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "label": "coarse/fine full integral",
+      "error": 1.3548787801588753e-09,
+      "tolerance": 0.0002,
+      "passed": true
+    },
+    {
+      "label": "residue imaginary integral",
+      "error": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "label": "negative imaginary part",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "label": "coarse/fine full integral",
+      "error": 1.4164185818197675e-07,
+      "tolerance": 0.0002,
+      "passed": true
+    },
+    {
+      "label": "residue imaginary integral",
+      "error": 3.469446951953614e-18,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "label": "negative imaginary part",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "label": "coarse/fine full integral",
+      "error": 1.8071930353002187e-08,
+      "tolerance": 0.0002,
+      "passed": true
+    },
+    {
+      "label": "residue imaginary integral",
+      "error": 5.551115123125783e-17,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "label": "negative imaginary part",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "label": "coarse/fine full integral",
+      "error": 7.251803301535452e-13,
+      "tolerance": 0.0002,
+      "passed": true
+    },
+    {
+      "label": "residue imaginary integral",
+      "error": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "label": "negative imaginary part",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "label": "coarse/fine full integral",
+      "error": 3.2931708989465665e-09,
+      "tolerance": 0.0002,
+      "passed": true
+    },
+    {
+      "label": "residue imaginary integral",
+      "error": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "label": "negative imaginary part",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "label": "coarse/fine full integral",
+      "error": 1.8826702063602303e-07,
+      "tolerance": 0.0002,
+      "passed": true
+    },
+    {
+      "label": "residue imaginary integral",
+      "error": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "label": "negative imaginary part",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "label": "coarse/fine full integral",
+      "error": 2.305608347505418e-08,
+      "tolerance": 0.0002,
+      "passed": true
+    },
+    {
+      "label": "residue imaginary integral",
+      "error": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "label": "negative imaginary part",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "passed": true
+    },
+    {
+      "label": "zero-time imaginary",
+      "error": 3.398025302436914e-38,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "label": "time reversal",
+      "error": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    }
+  ],
+  "references": [
+    {
+      "c": -8,
+      "value": [
+        "-0.1514815337331179891395377642096237205501612747896514276550716124511366",
+        "-0.3465557232469390418408175941408534741487796738605403771095233648816526"
+      ],
+      "error": 0.0
+    },
+    {
+      "c": -1,
+      "value": [
+        "0.6971748832350660687654786819195515953171754309543695173200548077894541",
+        "-1.155727349790921717910093183312696299120851023164415820499706535327289"
+      ],
+      "error": 1.1102230246251565e-16
+    },
+    {
+      "c": -0.1,
+      "value": [
+        "1.131470204734107790511927338882314745725665886677219132902678671522916",
+        "-0.001426280858153150874656457355822087566578481752389959170666150418814417"
+      ],
+      "error": 2.2204555783505224e-16
+    },
+    {
+      "c": -0.0078125,
+      "value": [
+        "1.007937524408140182817768216930038927687207098766663061250889113646401",
+        "-1.034346760779292327945228052083512771344206074952519330978381578119654e-53"
+      ],
+      "error": 1.1591269220898192e-69
+    },
+    {
+      "c": -0.005,
+      "value": [
+        "1.005050765386660246367896289563338401450928640678491114913148516526831",
+        "-8.695278323449167031714458685461496648847843684669180458045160075467905e-85"
+      ],
+      "error": 2.220446049250313e-16
+    },
+    {
+      "c": -1e-06,
+      "value": [
+        "1.000001000002000005999978748050818239028939350633658983135246323110721",
+        "-1.035730155121790804627183539905556522676243499677647529997618813599489e-434288"
+      ],
+      "error": 2.220446049250313e-16
+    },
+    {
+      "c": 0,
+      "value": [
+        "1.0",
+        "0.0"
+      ],
+      "error": 0.0
+    },
+    {
+      "c": 1e-06,
+      "value": [
+        "0.9999990000019999940000692515871680955694624451523652531453919864741602",
+        "0.0"
+      ],
+      "error": 1.1102230246251565e-16
+    },
+    {
+      "c": 0.005,
+      "value": [
+        "0.9950492646358713247462276701657830005284435548953619124723880686625646",
+        "0.0"
+      ],
+      "error": 0.0
+    },
+    {
+      "c": 0.0078125,
+      "value": [
+        "0.9923067953593375383134913552851455056997276352355346158169585779255134",
+        "0.0"
+      ],
+      "error": 1.1102230246251565e-16
+    },
+    {
+      "c": 0.1,
+      "value": [
+        "0.9156333393978808147657419375713908319581906899260648202411667688204868",
+        "0.0"
+      ],
+      "error": 1.1102230246251565e-16
+    },
+    {
+      "c": 1,
+      "value": [
+        "0.5963473623231940743410784993692793760741778601525487815734849104823272",
+        "0.0"
+      ],
+      "error": 5.551115123125783e-16
+    },
+    {
+      "c": 8,
+      "value": [
+        "0.2299477816621215548169506858557251506789818564332699169467541785579019",
+        "0.0"
+      ],
+      "error": 0.0
+    }
+  ],
+  "original_momentum_integrals": [
+    {
+      "shifts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "raw": [
+        "0.002824502905449285581027969551320064162590463708327929566680716264677055",
+        "9.111552200034411872696967007546064322208881817962246513206391390496018e-76"
+      ],
+      "closed": "0.002824502905449285581027969551320064162590463708327929566680716264677055"
+    },
+    {
+      "shifts": [
+        0.2,
+        -0.3,
+        0.6,
+        -0.1
+      ],
+      "raw": [
+        "0.002601925241678835566462656155473680332591585133394386558297374038611689",
+        "-1.470635760578619539875055076936486432832673232590490376094292755682911e-75"
+      ],
+      "closed": "0.002601925241678835566462656155473680332591585133394386558297374038611689"
+    },
+    {
+      "shifts": [
+        -0.8,
+        0.5,
+        -0.2,
+        0.9
+      ],
+      "raw": [
+        "0.002816475216004933708909715360651617396427936822850074498816463371860745",
+        "-5.168489656241990333481572355795477518420330472404735103859286941164456e-75"
+      ],
+      "closed": "0.002816475216004933708909715360651617396427936822850074498816463371860745"
+    }
+  ],
+  "moments": [
+    {
+      "sigma": 0.1,
+      "n": 1,
+      "value": "1.000049265658665400569281123087182649961914715342997326584874854928482"
+    },
+    {
+      "sigma": 0.1,
+      "n": 2,
+      "value": "1.010174209446790430560391060781754067251846254627232420882093657609293"
+    },
+    {
+      "sigma": 0.2,
+      "n": 1,
+      "value": "1.000755743816309394923182103626564827621130189578781863083352310025744"
+    },
+    {
+      "sigma": 0.2,
+      "n": 2,
+      "value": "1.042756820029924796963961837272593932724388972083517040381679084047712"
+    },
+    {
+      "sigma": 0.4,
+      "n": 1,
+      "value": "1.01049126231951505322469391195916605608737255743176310508723875569849"
+    },
+    {
+      "sigma": 0.4,
+      "n": 2,
+      "value": "1.203430512779714799278887440608809076438734263768710997818790979215409"
+    },
+    {
+      "sigma": 0.8,
+      "n": 1,
+      "value": "1.118495287441984044285153715665343291325061569331985644691864997026955"
+    },
+    {
+      "sigma": 0.8,
+      "n": 2,
+      "value": "2.451587360003064282214054754919285764048653000008709129401578745044292"
+    }
+  ],
+  "direct_four": [
+    {
+      "sigma": 0.4,
+      "coarse": {
+        "value": [
+          1.0697480417140244,
+          -0.012302819753315961
+        ],
+        "baseline": 0.002612579766162229,
+        "n": 16,
+        "na": 48
+      },
+      "fine": {
+        "value": [
+          1.069748041712744,
+          -0.012302819751540333
+        ],
+        "baseline": 0.0026125797661622286,
+        "n": 24,
+        "na": 72
+      },
+      "reduced": {
+        "value": [
+          1.0697480417127632,
+          -0.01230281975153367
+        ],
+        "residue_imag": -0.01230281975153367,
+        "baseline": 0.002612579766162229,
+        "A1_squared": 0.9282646352992228,
+        "n": 32,
+        "angular_order": 40,
+        "nodes": 2621440,
+        "boosted": false,
+        "center_only": false
+      },
+      "difference": 2.022492258392335e-14
+    },
+    {
+      "sigma": 0.8,
+      "coarse": {
+        "value": [
+          1.068176864394174,
+          -0.037578753853754254
+        ],
+        "baseline": 0.0021838737677835262,
+        "n": 16,
+        "na": 48
+      },
+      "fine": {
+        "value": [
+          1.0681768845114434,
+          -0.03757875506259019
+        ],
+        "baseline": 0.0021838737677595033,
+        "n": 24,
+        "na": 72
+      },
+      "reduced": {
+        "value": [
+          1.068176882628156,
+          -0.03757875402220306
+        ],
+        "residue_imag": -0.03757875402220306,
+        "baseline": 0.002183873767732453,
+        "A1_squared": 0.7759429253796893,
+        "n": 32,
+        "angular_order": 40,
+        "nodes": 2621440,
+        "boosted": false,
+        "center_only": false
+      },
+      "difference": 2.151552297031276e-09
+    }
+  ],
+  "scope": "Independent original four-coordinate quadrature, momentum integrals, and high-precision special-function/moment checks. Empirical quadrature tolerances, not certified total error.",
+  "dependencies": {
+    "python": "3.14.5",
+    "mpmath": "1.3.0"
+  },
+  "hashes": {
+    "code/gaussian_eikonal.py": "29d1122d1b56d3ca52e9ee887d3d02add37b3366be4b2bdc59910fb307f7afd2",
+    "code/check_gaussian_eikonal.py": "11688fbd28bbd3284c7dbc244e6446e4e0cefbb39744699aef138fb613412f9a",
+    "results/stage4/gaussian-eikonal/study.json": "9d31c566a9b2bbf1ad7cc1c5ef86aa4f68b2f9449470a3b53a3aa8821de2bb03"
+  }
+}

@@ -215,6 +215,11 @@
     "sha256": "3ab16561842474d381b3e4a667da62af874b967232c62a5aba8c3e8ed3f70ea7"
   },
   {
+    "file": "code/build_gaussian_eikonal.ps1",
+    "bytes": 1161,
+    "sha256": "46d9984674e57d09115840f2298e96770c4035e044b675ce11c7c9b01c0a1481"
+  },
+  {
     "file": "code/build_global_note.ps1",
     "bytes": 913,
     "sha256": "053390293fd9ce77bbf12e0dd74c579a95c90e051054c280e9abc78b82f9a799"
@@ -303,6 +308,11 @@
     "file": "code/check_ds3_physical_local.py",
     "bytes": 5241,
     "sha256": "b6c422241a45464593bbf6e5b36e486fccaee7721d85bc52b8968ecdab23f4d7"
+  },
+  {
+    "file": "code/check_gaussian_eikonal.py",
+    "bytes": 5870,
+    "sha256": "11688fbd28bbd3284c7dbc244e6446e4e0cefbb39744699aef138fb613412f9a"
   },
   {
     "file": "code/clock_model.py",
@@ -485,6 +495,11 @@
     "sha256": "08e65999983770db4144f530503fae690cc98b1b38d4c01675d608cc43010465"
   },
   {
+    "file": "code/gaussian_eikonal.py",
+    "bytes": 2718,
+    "sha256": "29d1122d1b56d3ca52e9ee887d3d02add37b3366be4b2bdc59910fb307f7afd2"
+  },
+  {
     "file": "code/global_racah.py",
     "bytes": 2860,
     "sha256": "4b9702c8c8f68b3f3901f3e392321824edf37198b70c0344298c95addd88a15c"
@@ -556,8 +571,8 @@
   },
   {
     "file": "code/project_audit.py",
-    "bytes": 139981,
-    "sha256": "7304a04a07e7e60cefaecd0dfbebcbab571c8c2fbb66df44c62326469ee1731d"
+    "bytes": 143104,
+    "sha256": "3acd1e732f9e2d1022277986daf1856ca0bae97ca88ec64f6f8149dcc47b5e7f"
   },
   {
     "file": "code/quantized_observer.py",
@@ -680,6 +695,11 @@
     "sha256": "91b4a6da29aaf944f38ca09f354256faef92546a1eeeae67da95d85299fdb2e4"
   },
   {
+    "file": "code/record_gaussian_eikonal.py",
+    "bytes": 3569,
+    "sha256": "a553fc56a0ee4fe2e5556cdc7b1c05113b932f423859075996352394c9926b1a"
+  },
+  {
     "file": "code/recover_ds3_fock_vacuum.py",
     "bytes": 2605,
     "sha256": "922cffaf44764b668390694f316e308c21993bbf13a54f09a90cce7ad0e87cb2"
@@ -693,6 +713,11 @@
     "file": "code/refine_ds3_transverse_phase.py",
     "bytes": 1579,
     "sha256": "6c34f5aa2753ecf7355aef4ac2ecb26a5f8a8c3df43bbcd18b13db1793cc496c"
+  },
+  {
+    "file": "code/refine_gaussian_eikonal.py",
+    "bytes": 2422,
+    "sha256": "036f5a29f83cf7804601ce8eac1f166cfaf3017e9b1a925f8bf702825cd6f475"
   },
   {
     "file": "code/replay_ds3_bose.py",
@@ -783,6 +808,11 @@
     "file": "code/run_field_study.py",
     "bytes": 6015,
     "sha256": "e4642c28985f51713b402e24493c3288285c3e6f565d5d5d900a008ebcffab44"
+  },
+  {
+    "file": "code/run_gaussian_eikonal.py",
+    "bytes": 2213,
+    "sha256": "e0220c0ad99d97e4bc50b8b023dff757c9aa7d98837ac35bd63abadb1abfa29f"
   },
   {
     "file": "code/run_moving_curve.py",
@@ -1021,8 +1051,8 @@
   },
   {
     "file": "journal/2026-10-31.md",
-    "bytes": 54338,
-    "sha256": "65b164edbe112fe7b78105069cb27609d5f82a5f126f744400102a9689fdb9d8"
+    "bytes": 56134,
+    "sha256": "7b32178db09e2ffd0f9057f112a4d7c0a9f5729228cfde7cfab61f00b1256a90"
   },
   {
     "file": "literature/models.md",
@@ -1213,6 +1243,11 @@
     "file": "literature/stage4-ds3-uniform-local-sources.md",
     "bytes": 1303,
     "sha256": "0d98bd2ae40212f7c339db2553bf6f16428cc4294af5ebb45b8299a331148b7b"
+  },
+  {
+    "file": "literature/stage4-gaussian-eikonal-sources.md",
+    "bytes": 1912,
+    "sha256": "353c84735f675ca575d416aa11ff763d60e1b87528c6c0c862499ed98ea0510f"
   },
   {
     "file": "literature/stage4-global-racah-sources.md",
@@ -1450,6 +1485,11 @@
     "sha256": "f651fb3a74532d096efa691529050191b56ade2300d9a46b6c97c17b4da3d407"
   },
   {
+    "file": "manuscript/gaussian-eikonal/main.tex",
+    "bytes": 15111,
+    "sha256": "c2d896fe379facda1139d3491034393fa266b222d757ddcbf96df95f5c88f87a"
+  },
+  {
     "file": "manuscript/global-racah/main.tex",
     "bytes": 12907,
     "sha256": "26ddcf8523095b8391e2cb10f0e1a2945b04eb8191a2c0f1cf767c4d6725e006"
@@ -1601,8 +1641,8 @@
   },
   {
     "file": "NEXT.md",
-    "bytes": 21762,
-    "sha256": "87ed78c820a08ae8f9530032b27880714e1c92eaea56f4fc699f68076310e10a"
+    "bytes": 24136,
+    "sha256": "bd23de1c4e413882fdb178be51d121780f7ee18b4fa372cde5d511154eb3e76d"
   },
   {
     "file": "notes/math-independent.md",
@@ -1935,6 +1975,11 @@
     "sha256": "c87fd3f110b78147f2c29e420e573ba9c3e97dfebfe7763cd0a48577d6a95260"
   },
   {
+    "file": "notes/stage4-gaussian-eikonal.md",
+    "bytes": 6081,
+    "sha256": "a5de3511ce19733ea015237719ec9b0da635811cfb5007024cad9cf8069e356b"
+  },
+  {
     "file": "notes/stage4-global-racah.md",
     "bytes": 10052,
     "sha256": "abd5bab8cccde5dbac5c604a0d09afd30396ac7076138c4a0b451d9e2674290a"
@@ -2100,6 +2145,11 @@
     "sha256": "956d1fba4a298c97898e3809d009bc2cdde5f32c739959e573265be882b718ad"
   },
   {
+    "file": "output/pdf/de-sitter-gaussian-eikonal.pdf",
+    "bytes": 345182,
+    "sha256": "877f9f97a687915a0df53544f0ac1eaa2cca02d7e0fe09ded066d839e5912e53"
+  },
+  {
     "file": "output/pdf/de-sitter-global-racah.pdf",
     "bytes": 344437,
     "sha256": "53e2940a0c94d0794c4a7dffb146561c372817dad47f0875b611625f2e155540"
@@ -2191,8 +2241,8 @@
   },
   {
     "file": "PLAN.md",
-    "bytes": 41113,
-    "sha256": "63a42821f3dc4cb0741ff49f28b82339e70dd17a8deda0383ec436342f51d95a"
+    "bytes": 41653,
+    "sha256": "dafc8b11ee6786505a8d8160c93114df459c1c28c3763e6cf003c474ef1a9bda"
   },
   {
     "file": "PROJECT.md",
@@ -2201,8 +2251,8 @@
   },
   {
     "file": "README.md",
-    "bytes": 34782,
-    "sha256": "cedd9a0adbf7b6a36252f2380cb4294908822955cf35b865a6be23f9f52f508d"
+    "bytes": 35663,
+    "sha256": "74c25236bcb4969fa73144108bef7dd2923648d11600c007b6703835f61d8455"
   },
   {
     "file": "REPOSITORY.md",
@@ -2281,8 +2331,8 @@
   },
   {
     "file": "results/project-audit.json",
-    "bytes": 31313,
-    "sha256": "99f0d26413cbc56c0a018529ba3e7b81a8ff387468e1ad6d745a66b05ebfdaa2"
+    "bytes": 32225,
+    "sha256": "fe4e559ac395d2ae31fe5dd9e4f2d4c3958bd4d611ff98aed5d19a769c56be0a"
   },
   {
     "file": "results/stage2/errors.csv",
@@ -3438,6 +3488,46 @@
     "file": "results/stage4/ds3-uniform-local/validation.json",
     "bytes": 28987,
     "sha256": "cd0e108b5875d21ae2513148d4d23243aecc93c63b1bd72a968402341369f562"
+  },
+  {
+    "file": "results/stage4/gaussian-eikonal/build-review.md",
+    "bytes": 1019,
+    "sha256": "c268cbc89d3bcc05000ac48de60ec0ab61293f6fa56da5d858606549b695b9a5"
+  },
+  {
+    "file": "results/stage4/gaussian-eikonal/diagnostics.json",
+    "bytes": 14825,
+    "sha256": "ded758f48d8dcd26411094ad159a6ad324c229695885bf8b431b85fd4c150959"
+  },
+  {
+    "file": "results/stage4/gaussian-eikonal/evidence.json",
+    "bytes": 2872,
+    "sha256": "1ec8287a26dbfe7c527ee58d8574ef420d115d914a3bab73c613f6da0eeb99de"
+  },
+  {
+    "file": "results/stage4/gaussian-eikonal/main.log",
+    "bytes": 24973,
+    "sha256": "ef9cd3e34b6ca62443dec25507a29db9a7277a8144a2f967b72406f3c0bfbc7d"
+  },
+  {
+    "file": "results/stage4/gaussian-eikonal/preservation.json",
+    "bytes": 7791,
+    "sha256": "fc6d04bf6389c472df036f7f523c8998c9f07994cc9a3438b60ef97ddad02b46"
+  },
+  {
+    "file": "results/stage4/gaussian-eikonal/refinement.json",
+    "bytes": 6127,
+    "sha256": "ff794b80f398607928da77d5f5c3dfd594dbe9c6d9f9dfe6f6b19a30e7d18294"
+  },
+  {
+    "file": "results/stage4/gaussian-eikonal/runs.jsonl",
+    "bytes": 9171,
+    "sha256": "012be2882eb90e6ae75924f712e2a8d82cc7e2a4e5417e4b9bdbbc23de9a2b75"
+  },
+  {
+    "file": "results/stage4/gaussian-eikonal/study.json",
+    "bytes": 16353,
+    "sha256": "9d31c566a9b2bbf1ad7cc1c5ef86aa4f68b2f9449470a3b53a3aa8821de2bb03"
   },
   {
     "file": "results/stage4/global-racah/build-review.md",

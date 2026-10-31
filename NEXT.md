@@ -1,5 +1,22 @@
 # 下一次从这里继续
 
+## 当前继续位置：2026-10-31 gaussian-eikonal
+
+先读[中文推导](notes/stage4-gaussian-eikonal.md)、[六页PDF](output/pdf/de-sitter-gaussian-eikonal.pdf)、[来源](literature/stage4-gaussian-eikonal-sources.md)。ℓ=1、m>0、γ=4Gm∈[0,1)、α=2π(1−γ)、两种conformal probes ν=ν′=i/2，固定平均质量混合表示与指定12/14轮廓。与此前real principal p>0全Fock空间不可默认等同。
+
+四独立d_i∼N(0,σ²)，X/Y方差σ²/2、Z方差σ²，C=coshXcoshY，T=t+Z。Rσ=E[C⁻¹〈Jη(he^T/4C)+J−η(he^(−T)/4C)−1〉]/A1²，A_r=E sech^rX。断开基准A1²/(16α²)。不能只卷积旧归一R(t)。若∥h∥∞≤4，则t>0有ImR₊σ<0，实涂抹不解决单轮廓热迹实性；不排除遗漏引力项或其他态。
+
+固定阶因子Q_n=exp(n²σ²/2)(A_(n+1)/A1)²；logQ_n=n(n−1)σ²/2+n(n+3)σ⁴/8+O(σ⁶)。固定t,m→∞与t=logm+u不同。Gaussian连续尾≤39erfc(L/√2)/A1²，但不认证Gauss–Hermite误差或省略的引力贡献。
+
+8组20/32/48求积；原4坐标16/24阶独立检查两组、3组原动量积分；52+11检查通过。最大32/48差1.38e−9，原4坐标与32阶差最多2.16e−9。六页双遍编译exit0、桌面success、全页1100像素核查；最终仅页6作者首字母修正后重查。所有计算29474/62730/30718均exit0，不重启driver或覆盖输出。本阶段17文件绑定，811旧文件及50旧ZIP保持；整体审计851必需文件、1000链接、1171代码/输入哈希通过。新检查点标签2026-10-31-gaussian-eikonal，冻结看实际ZIP/SHA。
+
+下一研究：先完整读本轮新定位但仅初读摘要/引言的2610.28719v1（§§2–4、观察者frame/edge action）与2607.13137v1（§§3–5、零模、IR规约、dressing），核是否改变候选态或轮廓选择；不要把不同IR规约下的eikonal相位混同。随后从CSTY(2.32)推实principal探针、独立pair时间差的Bessel积分与涂抹，并与受调节G=0真空基准比较。CLP有限κ物理插入和Gram逆核仍未给定，不能宣称完整字典完成。
+
+上轮Fock已冻结a327d50460f271bc718e63950a1a2388be94633a60ae4c0ad9c9752615a3842b，公开main=9f952a756e06a5f34150b1b4dab2dea9cb6d0164。继续公开授权，私人记录/第三方全文/ZIP/local分支不推送，未新建代理。长期goal active。
+
+以下为历史继续位置。
+
+
 ## 当前继续位置：2026-10-31 ds3-fock-vacuum
 
 先读[中文推导](notes/stage4-ds3-fock-vacuum.md)、[九页 PDF](output/pdf/de-sitter-ds3-fock-vacuum.pdf)和[来源](literature/stage4-ds3-fock-vacuum-sources.md)。固定 s,p,σ>0、ℓ=1、G=0、BD/KG、proper SO⁺(3,1)。全内部自旋重数与 Bose 投影保留；以明确质量包种子的绝对群平均证明受调节块弱下降，√N 界给有限粒子数共同域上的本质自伴。不是最大位置分布空间、去调节或代数 type 定理。

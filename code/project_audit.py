@@ -934,6 +934,21 @@ CG_ROOT_HASH_RECORDS[FOCK_VACUUM_DIR+"evidence.json"] = {
 REQUIRED.extend(sorted(CG_ROOT_HASH_RECORDS[FOCK_VACUUM_DIR+"evidence.json"]))
 REQUIRED.append(FOCK_VACUUM_DIR+"evidence.json")
 
+GAUSSIAN_EIKONAL_DIR = "results/stage4/gaussian-eikonal/"
+CG_ROOT_HASH_RECORDS[GAUSSIAN_EIKONAL_DIR+"evidence.json"] = {
+    "code/"+name for name in ["gaussian_eikonal.py", "run_gaussian_eikonal.py", "check_gaussian_eikonal.py",
+    "refine_gaussian_eikonal.py", "record_gaussian_eikonal.py", "build_gaussian_eikonal.ps1"]
+} | {"manuscript/gaussian-eikonal/main.tex", "output/pdf/de-sitter-gaussian-eikonal.pdf",
+     "notes/stage4-gaussian-eikonal.md", "literature/stage4-gaussian-eikonal-sources.md"} | {
+    GAUSSIAN_EIKONAL_DIR+name for name in ["study.json", "runs.jsonl", "diagnostics.json",
+    "refinement.json", "preservation.json", "build-review.md", "main.log"]}
+REQUIRED.extend(sorted(CG_ROOT_HASH_RECORDS[GAUSSIAN_EIKONAL_DIR+"evidence.json"]))
+REQUIRED.append(GAUSSIAN_EIKONAL_DIR+"evidence.json")
+for file, expected in [("study.json", {"code/gaussian_eikonal.py", "code/run_gaussian_eikonal.py", "code/conformal_shock.py", "sources/chen-stanford-tang-yang-2607.14042v1.html"}),
+                       ("diagnostics.json", {"code/gaussian_eikonal.py", "code/check_gaussian_eikonal.py", GAUSSIAN_EIKONAL_DIR+"study.json"}),
+                       ("refinement.json", {"code/refine_gaussian_eikonal.py", "code/gaussian_eikonal.py", GAUSSIAN_EIKONAL_DIR+"study.json", GAUSSIAN_EIKONAL_DIR+"diagnostics.json"})]:
+    CG_ROOT_HASH_RECORDS[GAUSSIAN_EIKONAL_DIR+file] = expected
+
 def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
@@ -2041,6 +2056,28 @@ def main():
                 "kind":"regulated vacuum-return arithmetic and independent quadratures; no full fourfield or all-spin numerical certification"})
     except (KeyError, TypeError, ValueError, ArithmeticError, AssertionError) as exc:
         errors.append("malformed fock-vacuum stage records: "+str(exc))
+    try:
+        for name, count in [("diagnostics.json",52),("refinement.json",11)]:
+            result = read_json(ROOT/GAUSSIAN_EIKONAL_DIR/name)
+            if result["status"] != "passed" or len(result["checks"]) != count or not all(x["passed"] for x in result["checks"]):
+                errors.append("gaussian-eikonal: invalid saved diagnostics "+name)
+            for item in result["checks"]:
+                if "error" in item and item["error"] > item["tolerance"]:
+                    errors.append("gaussian-eikonal: criterion mismatch")
+        study = read_json(ROOT/GAUSSIAN_EIKONAL_DIR/"study.json")
+        refinement = read_json(ROOT/GAUSSIAN_EIKONAL_DIR/"refinement.json")
+        if len(study["rows"]) != 8 or len(refinement["rows"]) != 8:
+            errors.append("gaussian-eikonal: incomplete parameter rows")
+        for old,new in zip(study["rows"],refinement["rows"]):
+            if (old["gamma"],old["sigma"],old["u"]) != (new["gamma"],new["sigma"],new["u"]):
+                errors.append("gaussian-eikonal: parameter mismatch")
+            diff = abs(complex(*old["fine"]["value"])-complex(*new["value"]["value"]))
+            if abs(diff-new["difference"]) > 1e-15 or diff >= 2e-7:
+                errors.append("gaussian-eikonal: refinement replay")
+        supporting_records.append({"stage":"gaussian-eikonal", "diagnostic_checks":52, "refinement_checks":11,
+            "kind":"original momentum and four-coordinate controls plus finer quadrature; empirical errors, not a full gravity or principal-Fock identification"})
+    except (KeyError, TypeError, ValueError, ArithmeticError) as exc:
+        errors.append("malformed gaussian-eikonal records: "+str(exc))
     growing_checks = growing.get("checks", [])
     if (growing.get("status") != "passed" or len(growing_checks) != 290
             or any(row.get("passed") is not True for row in growing_checks)

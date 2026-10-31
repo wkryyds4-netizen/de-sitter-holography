@@ -1,0 +1,354 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,microtype}
+\usepackage[margin=25mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\E}{\mathbb E}
+\title{Four-time Gaussian smearing of the\\dS$_3$ eikonal observer correlator}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Working research note --- 31 October 2026}
+\begin{document}\maketitle
+\begin{abstract}
+We apply four independent real Gaussian time smearings to the existing
+two-conformal-probe eikonal formula. An exact change of Gaussian variables
+reduces the calculation to three time variables and an impact angle.
+The disconnected normalization changes along with the numerator.
+We derive the fixed-order smearing factors and show that equal real
+smearing does not remove the imaginary difference between the two
+specified lateral contours. Numerical quadratures check the reduction
+against the original four insertion coordinates. All statements concern
+the specified eikonal approximation, not a completed quantum-gravity
+state or a finite-$G$ holographic dual.
+\end{abstract}
+\section{The comparison target}
+Set the de Sitter radius to one, $m>0$, $\gamma=4Gm\in[0,1)$,
+and $\alpha=2\pi(1-\gamma)$. Retain the CSTY fixed-average-mass
+mixed representation and its two contour prescriptions \cite{csty}.
+There are two distinguishable conformally coupled probes,
+$\nu=\nu'=i/2$, with mass squared $3/4$. This is a complementary-series
+special case. The preceding all-particle construction assumed real
+principal-series $p>0$; we do not silently analytically continue that
+Hilbert-space theorem to the present model.
+
+The four independent real displacements $d_i$ are centered Gaussians
+of variance $\sigma^2$, with fixed finite $\sigma>0$:
+\[
+ (\theta_1,\theta_2,\theta_3,\theta_4)
+ =(-\pi/2+i(t+d_1),\,id_2,\,\pi/2+i(t+d_3),\,\pi+id_4).
+\]
+Each operator is smeared with the normalized kernel
+$(2\pi\sigma^2)^{-1/2}\exp[-d^2/(2\sigma^2)]$.
+Imaginary separations stay fixed. This is not the mass-threshold
+tracial convolution in CSTY Appendix F, nor a replacement of all
+four shifts by a single shift of $t$.
+
+CLP's proposed finite-parameter insertions retain an undetermined
+normalization beyond the leading probe limit \cite{clp}.
+Consequently, the present calculable target is the semiclassical
+eikonal correlator, not the bare tetrahedron amplitude or its
+unfixed physical completion.
+
+\newpage
+\section{Reduction from the momentum integral}
+For $0\le\phi\le\pi$ the existing shock profile is
+\[
+ h(\phi)=\frac{H_\gamma(\phi)}m,\qquad
+ H_\gamma(\phi)=-\frac{\cos[(1-\gamma)(\pi-\phi)]}
+                         {2\,\operatorname{sinc}(\pi\gamma)} ,
+ \quad \operatorname{sinc}x=\frac{\sin x}x .
+\]
+Angle brackets below mean $\pi^{-1}\int_0^\pi d\phi$.
+Define
+\[
+ X=\frac{d_1-d_3}{2},\quad Y=\frac{d_2-d_4}{2},\quad
+ Z=\frac{d_1+d_3-d_2-d_4}{2},\quad T=t+Z,\quad C=\cosh X\cosh Y.
+\]
+Joint Gaussian covariance gives independent
+$X,Y\sim N(0,\sigma^2/2)$ and $Z\sim N(0,\sigma^2)$.
+The unused common center integrates to one.
+
+In CSTY (G.2), let $A=e^{-i\theta_4}-e^{-i\theta_2}$,
+$B=e^{i\theta_1}-e^{i\theta_3}$ and
+$P=\exp[i(\theta_1+\theta_3-\theta_2-\theta_4)/2]$.
+Writing $s_W=(d_1+d_3)/2$ and $s_V=(d_2+d_4)/2$ gives
+\[
+ A=-2e^{s_V}\cosh Y,\quad
+ B=-2ie^{-t-s_W}\cosh X,\quad P=-ie^{-T}.
+\]
+The sector integral after $p_-=-v$ is
+\[
+ \frac{P}{4\alpha^2}
+ \left\langle\int_0^\infty\frac{e^{-iBv}}{i(A-hv)}\,dv\right\rangle .
+\]
+Rescaling $v$ by $iB=2e^{-t-s_W}\cosh X$ gives a disconnected factor
+$F_{\rm disc}(X,Y)=1/(16\alpha^2C)$ and the argument $he^T/(4C)$.
+With the sector sum and lateral prescriptions of CSTY
+(2.25)--(2.26), (2.33)--(2.35), define
+\begin{align}
+ R_\eta(T,C)&=\left\langle
+ J_\eta\left(\frac{he^T}{4C}\right)
+ +J_{-\eta}\left(\frac{he^{-T}}{4C}\right)-1\right\rangle,\label{R}\\
+ J(c)&=\int_0^\infty\frac{e^{-x}}{1+cx}\,dx
+      =\frac{e^{1/c}E_1(1/c)}c,\quad c>0,\nonumber\\
+ J_\eta(-1/a)&=ae^{-a}\operatorname{Ei}(a)-\eta i\pi ae^{-a},
+ \quad a>0,\quad J_\eta(0)=1.\nonumber
+\end{align}
+Here $\eta=+1$ denotes the earlier $12$ convention; $-1$ is its
+conjugate. The signs are boundary data, not a real-part projection.
+
+Put $A_r(\sigma)=\E[\operatorname{sech}^rX]$. The correctly normalized
+four-time result is
+\begin{equation}
+ F_{{\rm disc},\sigma}=\frac{A_1^2}{16\alpha^2},\qquad
+ {\cal R}_{\eta,\sigma}(t)
+  =\frac{\E[C^{-1}R_\eta(t+Z,C)]}{A_1^2}.
+ \label{smear}
+\end{equation}
+Both the random $C$ and its weight are necessary.
+
+\newpage
+\section{Convergence and a surviving contour difference}
+The real-axis boundary kernels have a uniform bound $|J_\eta(c)|<6$.
+For $c>0$ this follows from $0<J(c)\le1$.
+For $c<0$ use $a=-1/c$.
+If $a\le1$, the series
+$\operatorname{Ei}(a)=\gamma_E+\log a+\sum_{k\ge1}a^k/(k\,k!)$
+bounds the real part by $\gamma_E+1/e+e-1$.
+If $a\ge1$, write
+\[
+ ae^{-a}\operatorname{Ei}(a)
+ =ae^{-a}\operatorname{Ei}(1)
+   +a\int_0^{a-1}\frac{e^{-v}}{a-v}\,dv .
+\]
+Splitting at $a/2$ bounds this by
+$\operatorname{Ei}(1)/e+2+2/e$; the second interval is absent when
+$a<2$. The imaginary magnitude is at most $\pi/e$.
+Thus $|R_\eta|<13$ and Gaussian integration is absolutely convergent.
+
+For standardized truncations $|X|,|Y|\le L\sigma/\sqrt2$,
+$|Z|\le L\sigma$, the deleted contribution to the normalized numerator
+is at most
+\[
+ \frac{39}{A_1^2}\operatorname{erfc}(L/\sqrt2).
+ \label{tail}
+\]
+This is a continuum Gaussian-tail bound, not a Gauss--Hermite
+quadrature error bound. Also
+$A_1\ge e^{\sigma^2/4}\operatorname{erfc}(\sigma/2)>0$,
+using $\operatorname{sech}x\ge e^{-|x|}$.
+
+Suppose $\|h\|_\infty\le4$, a sufficient heavy-observer condition.
+On the negative-$h$ interval let $a=4C/|h|\ge1$. Its imaginary
+contribution to $R_+$ is
+\[
+ f_a(T)=\pi\left[ae^T e^{-ae^T}-ae^{-T}e^{-ae^{-T}}\right].
+\]
+It is odd, and strictly negative for $T>0$, since the ratio of
+the first positive term to the second is
+$\exp[2T-2a\sinh T]<1$.
+Convolution with the centered Gaussian preserves this strict sign:
+for $t>0$, pair $T>0$ and $-T$ and use
+$p_\sigma(T-t)>p_\sigma(T+t)$.
+The negative-$h$ angle set has positive measure for every
+$\gamma\in[0,1)$. Averaging with $C^{-1}>0$ therefore proves
+\begin{equation}
+ \Im{\cal R}_{+,\sigma}(t)<0\quad(t>0),\qquad
+ {\cal R}_{-,\sigma}(t)=\overline{{\cal R}_{+,\sigma}(t)},\qquad
+ {\cal R}_{+,\sigma}(-t)=\overline{{\cal R}_{+,\sigma}(t)} .
+ \label{sign}
+\end{equation}
+The unsmeared $\sigma=0$ limit has the same sign.
+
+For Hermitian $W_\sigma,V_\sigma$, a genuine trace expression
+$\operatorname{Tr}(yW_\sigma(t)yV_\sigma yW_\sigma(t)yV_\sigma)$
+with $y=e^{-\beta H/4}$ is real whenever the products are trace class:
+take its adjoint and use cyclicity. Equation \eqref{sign} shows that
+real smearing alone does not turn either specified eikonal contour
+into that expression. It does not exclude missing gravitational
+contributions or alternative physical state prescriptions.
+
+\newpage
+\section{Fixed-order response and noncommuting limits}
+Using the usual fixed-order asymptotic expansion
+$J(c)\sim\sum_{n\ge0}n!(-c)^n$ \cite{dlmf}, \eqref{smear} gives
+\begin{equation}
+ {\cal R}_{\eta,\sigma}(t)\sim
+ 1+\sum_{n\ge1}\frac{n!(-1)^n\langle h^n\rangle}{4^n}
+ Q_n(\sigma)(e^{nt}+e^{-nt}),\qquad
+ Q_n=e^{n^2\sigma^2/2}\left(\frac{A_{n+1}}{A_1}\right)^2 .
+ \label{pert}
+\end{equation}
+All coefficients are real; the two boundary values agree to every
+fixed perturbative order. This is not a convergent series.
+
+For fixed $\gamma,\sigma,t$ and $m\to\infty$, the fixed-order expansion
+is justified by splitting $|Z|\le\tfrac12\log m$ from its complement.
+On the inner region $|c_\pm|=O(m^{-1/2})$, the fixed-order $E_1/Ei$
+remainder is bounded by a constant times $|c_\pm|^{N+1}$.
+Its Gaussian expectation is $O(m^{-N-1})$.
+The outer exact integrand is uniformly bounded; its Gaussian
+probability, and the tails of any fixed polynomial approximation,
+decay faster than every inverse power of $m$.
+This argument is not uniform in $\sigma$, $t$ or expansion order.
+
+A small-width expansion yields
+\[
+ A_r=1-\frac r4\sigma^2+\frac{r(3r+2)}{32}\sigma^4+O(\sigma^6),
+ \quad
+ \log Q_n=\frac{n(n-1)}2\sigma^2+\frac{n(n+3)}8\sigma^4+O(\sigma^6).
+\]
+In particular $Q_1=1+\sigma^4/2+O(\sigma^6)$: there is no
+order-$\sigma^2$ change of the first gravitational coefficient.
+For $Q_2$, the order-$\sigma^2$ term survives.
+The first two terms are
+\[
+ 1-\frac{\langle h\rangle}{4}Q_1(e^t+e^{-t})
+   +\frac{\langle h^2\rangle}{8}Q_2(e^{2t}+e^{-2t}),
+\]
+where the existing shock moments are
+\[
+ \langle h\rangle=-\frac{4\pi G}{\alpha},\qquad
+ \langle h^2\rangle=\frac{1+\sin\alpha/\alpha}
+                     {8m^2\operatorname{sinc}^2(\pi\gamma)} .
+\]
+For pure recoil $\gamma=0$, the odd moments vanish. Neither
+Gaussian smearing nor omission of this recoil term is a change of
+the actual gravitational coupling.
+
+If instead $t=\log m+u$ with fixed $u$, bounded convergence gives
+\[
+ {\cal R}_{\eta,\sigma}^{\rm boost}(u)
+ =\frac1{A_1^2}\E\left[C^{-1}
+  \left\langle J_\eta\left(\frac{H_\gamma e^{u+Z}}{4C}\right)
+  \right\rangle\right].
+\]
+The opposite sector tends to one and cancels the subtraction.
+The fixed-time limit is one; the boosted limit remains nontrivial.
+
+These are statements about the smeared eikonal formula. Gaussian
+tails sample arbitrarily large relative times. Without a uniform
+bound on the omitted gravitational terms, the continuum-tail estimate
+does not certify the difference from the true gravity correlator.
+
+\newpage
+\section{Numerical checks}
+The main computation uses $m=1000$, $\gamma=0,0.25$,
+$\sigma=0.4,0.8$, and $t=\log1000+u$, $u=0,2$.
+We retain complex values of both prescriptions through conjugation,
+without averaging them. Gauss--Hermite orders 20 and 32 use
+24 and 40 Gauss--Legendre nodes per shock-sign interval.
+A fresh order-48/64 run checks all eight points.
+The maximum 20/32 change is $1.89\,10^{-7}$; the maximum
+32/48 change is $1.38\,10^{-9}$. These are empirical changes,
+not interval-certified errors.
+\begin{center}
+\begin{tabular}{rrrrr}
+\toprule
+$\gamma$ & $\sigma$ & $u$ & $\Re{\cal R}_{+,\sigma}$ &
+ $\Im{\cal R}_{+,\sigma}$\\
+\midrule
+0 & .4 & 0 & 1.02238240 & -.00609498\\
+0 & .8 & 0 & 1.02340116 & -.02263423\\
+.25 & .4 & 0 & 1.06974804 & -.01230282\\
+.25 & .8 & 0 & 1.06817688 & -.03757875\\
+.25 & .8 & 2 & .94334065 & -.41973792\\
+\bottomrule
+\end{tabular}
+\end{center}
+At $(\gamma,\sigma,u)=(.25,.8,0)$, the incorrect center-only
+convolution gives approximately $1.08131888-.05542995i$.
+This is a measurable change in both parts, not just a choice of
+notation for the smearing width.
+
+An independent implementation retains the original four $d_i$,
+constructs $A,B,P$ from the complex insertion coordinates, and uses
+16/24-order four-dimensional Gaussian quadrature with 48/72 angular
+nodes. At $u=0,\gamma=.25$, its fine values differ from the reduced
+order-32 result by $2.03\,10^{-14}$ for $\sigma=.4$ and
+$2.16\,10^{-9}$ for $\sigma=.8$.
+This tests the change of variables and disconnected weight.
+
+Additional controls compare the original one-dimensional (G.2)
+momentum integral with the reduced expression at three positive-$h$
+configurations using 70 decimal digits; check 13 positive, negative
+and small-$c$ values against mpmath; and independently integrate
+the $A_r$ moments. The 52 diagnostic criteria all pass.
+A further 11 checks cover the eight refinements, exact Gaussian
+covariance, the small-width polynomial, and retained diagnostics.
+\begin{center}
+\begin{tabular}{rrr}
+\toprule
+$\sigma$ & $Q_1$ & $Q_2$\\
+\midrule
+.1 & 1.00004927 & 1.01017421\\
+.2 & 1.00075574 & 1.04275682\\
+.4 & 1.01049126 & 1.20343051\\
+.8 & 1.11849529 & 2.45158736\\
+\bottomrule
+\end{tabular}
+\end{center}
+SciPy double precision uses explicit lateral imaginary parts and a
+24-term small-$c$ expansion for $|c|<1/128$ to avoid overflow.
+No tolerance or saved reference was changed after the checks.
+Parameters, dependency versions, raw runs, source hashes and
+compilation evidence are in \path{results/stage4/gaussian-eikonal/}.
+
+\newpage
+\section{What this resolves, and what remains}
+The independent insertions now have an explicit finite-width
+eikonal comparison formula, a correctly smeared disconnected
+baseline, and a sign test for the remaining contour difference.
+This is a self-checked consequence of established formulas, with
+no claim of priority for the smearing method or the underlying
+reality obstruction.
+
+The conformal free antipodal two-point function is
+$[4\alpha\cosh(\tau/2)]^{-1}$. Smearing a pair gives
+$A_1/(4\alpha)$, explaining the disconnected baseline directly.
+The same real time-smearing prescription may be applied to the
+Gaussian-regulated free field before the antipodal continuation.
+This matches the \emph{protocol}; it does not identify the fixed-mass
+eikonal state with the preceding principal-series Fock vacuum,
+or extend that theorem to complementary-series matter.
+
+A substantive next comparison must keep the actual real-principal-series
+probe masses, the quantum observer preparation, and all vacuum
+contractions. For general probes the Bessel functions in CSTY (2.32)
+replace the conformal exponential. Their two-point factors depend on
+the independent pair differences. A direct smearing of a normalized
+symmetric-time curve will again discard this information.
+
+For a microscopic comparison, one also needs the physical finite-parameter
+insertion normalization and the appropriate inner product/Gram inverse,
+with its analytic-continuation contour. A positive Euclidean graph
+amplitude alone does not fix either. The sign result here isolates
+a question for such a construction; it is not resolved by taking the
+real part of one of the two candidate contours.
+
+New adjacent sources located during the targeted literature check are
+the observer horizon-edge-mode EFT \cite{edge} and the graviton
+eikonal analysis \cite{mnx}. Only their abstracts and introductory
+scope were read this round. They should next be examined for their
+treatment of lifted observer modes, zero modes and state preparation;
+they are not inputs to the derivation above.
+
+\begin{thebibliography}{9}
+\bibitem{csty} Y. Chen, D. Stanford, H. Tang and Z. Yang,
+\href{https://arxiv.org/html/2607.14042v1}
+{Negative shocks versus static patch holography},
+Eqs.\ (2.25)--(2.26), (2.32)--(2.42), Appendix F and (G.2).
+\bibitem{clp} J. Chandra, D. Liska and B. Post,
+\href{https://arxiv.org/html/2610.30247v1}
+{3D de Sitter from complex Virasoro TQFT: Observers and knots},
+Eqs.\ (3.35)--(3.38) and Section 6.
+\bibitem{dlmf} NIST Digital Library of Mathematical Functions,
+\href{https://dlmf.nist.gov/6.12}{Section 6.12(i)},
+exponential-integral asymptotics and fixed-order remainder bounds.
+\bibitem{edge} J. Bonifacio, K. Hinterbichler, Y. T. A. Law and V. Lochab,
+\href{https://arxiv.org/html/2610.28719v1}
+{De Sitter Observers and an Effective Field Theory of Horizon Edge Modes}.
+\bibitem{mnx} A. Milekhin, V. Narovlansky and J. Xu,
+\href{https://arxiv.org/html/2607.13137v1}
+{Out-of-time-ordered Correlators in de Sitter Revisited}.
+\end{thebibliography}
+\end{document}

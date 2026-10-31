@@ -1,0 +1,48 @@
+{
+  "created_at_utc": "2026-10-31T09:17:40.247946+00:00",
+  "status": "stage verified; project audit follows",
+  "pages": 6,
+  "eikonal_parameter_points": 8,
+  "diagnostic_counts": [
+    52,
+    11
+  ],
+  "original_four_coordinate_controls": 2,
+  "original_momentum_integrals": 3,
+  "compilers": [
+    "local pdfLaTeX twice, exit 0",
+    "desktop success"
+  ],
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "longest_edge_pixels": 1100,
+    "status": "all pages inspected; final bibliography correction rechecked on page 6"
+  },
+  "scope": "Four independent Gaussian smearings of the specified two-conformal-probe eikonal contours, normalization and surviving imaginary sign. Not full finite-G correlators, principal-series Fock continuation or a microscopic dual. Gaussian tails do not bound omitted gravity terms.",
+  "hashes": {
+    "code/gaussian_eikonal.py": "29d1122d1b56d3ca52e9ee887d3d02add37b3366be4b2bdc59910fb307f7afd2",
+    "code/run_gaussian_eikonal.py": "e0220c0ad99d97e4bc50b8b023dff757c9aa7d98837ac35bd63abadb1abfa29f",
+    "code/check_gaussian_eikonal.py": "11688fbd28bbd3284c7dbc244e6446e4e0cefbb39744699aef138fb613412f9a",
+    "code/refine_gaussian_eikonal.py": "036f5a29f83cf7804601ce8eac1f166cfaf3017e9b1a925f8bf702825cd6f475",
+    "code/record_gaussian_eikonal.py": "a553fc56a0ee4fe2e5556cdc7b1c05113b932f423859075996352394c9926b1a",
+    "code/build_gaussian_eikonal.ps1": "46d9984674e57d09115840f2298e96770c4035e044b675ce11c7c9b01c0a1481",
+    "manuscript/gaussian-eikonal/main.tex": "c2d896fe379facda1139d3491034393fa266b222d757ddcbf96df95f5c88f87a",
+    "output/pdf/de-sitter-gaussian-eikonal.pdf": "877f9f97a687915a0df53544f0ac1eaa2cca02d7e0fe09ded066d839e5912e53",
+    "notes/stage4-gaussian-eikonal.md": "a5de3511ce19733ea015237719ec9b0da635811cfb5007024cad9cf8069e356b",
+    "literature/stage4-gaussian-eikonal-sources.md": "353c84735f675ca575d416aa11ff763d60e1b87528c6c0c862499ed98ea0510f",
+    "results/stage4/gaussian-eikonal/build-review.md": "c268cbc89d3bcc05000ac48de60ec0ab61293f6fa56da5d858606549b695b9a5",
+    "results/stage4/gaussian-eikonal/diagnostics.json": "ded758f48d8dcd26411094ad159a6ad324c229695885bf8b431b85fd4c150959",
+    "results/stage4/gaussian-eikonal/main.log": "ef9cd3e34b6ca62443dec25507a29db9a7277a8144a2f967b72406f3c0bfbc7d",
+    "results/stage4/gaussian-eikonal/preservation.json": "fc6d04bf6389c472df036f7f523c8998c9f07994cc9a3438b60ef97ddad02b46",
+    "results/stage4/gaussian-eikonal/refinement.json": "ff794b80f398607928da77d5f5c3dfd594dbe9c6d9f9dfe6f6b19a30e7d18294",
+    "results/stage4/gaussian-eikonal/runs.jsonl": "012be2882eb90e6ae75924f712e2a8d82cc7e2a4e5417e4b9bdbbc23de9a2b75",
+    "results/stage4/gaussian-eikonal/study.json": "9d31c566a9b2bbf1ad7cc1c5ef86aa4f68b2f9449470a3b53a3aa8821de2bb03"
+  }
+}

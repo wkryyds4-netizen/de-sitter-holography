@@ -7,10 +7,10 @@
     "Source remains a link, not an archive: dlmf-16.5",
     "Source remains a link, not an archive: dlmf-15.6"
   ],
-  "verified_at_utc": "2026-10-31T09:02:59.265899+00:00",
-  "required_files": 833,
-  "local_links_checked": 988,
-  "code_and_input_hashes_checked": 1143,
+  "verified_at_utc": "2026-10-31T09:18:12.478068+00:00",
+  "required_files": 851,
+  "local_links_checked": 1000,
+  "code_and_input_hashes_checked": 1171,
   "scientific_checks": {
     "stage1": {
       "checks": 235,
@@ -616,6 +616,26 @@
       "recorded_hashes": 24
     },
     {
+      "file": "results/stage4/gaussian-eikonal/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 17
+    },
+    {
+      "file": "results/stage4/gaussian-eikonal/study.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 4
+    },
+    {
+      "file": "results/stage4/gaussian-eikonal/diagnostics.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 3
+    },
+    {
+      "file": "results/stage4/gaussian-eikonal/refinement.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 4
+    },
+    {
       "file": "results/stage3/cross-limit/comparison.json",
       "kind": "projected comparison model only; not exact 6j convergence or interval certification",
       "checks": 19
@@ -845,6 +865,12 @@
       "checks": 115,
       "status": "passed",
       "kind": "regulated vacuum-return arithmetic and independent quadratures; no full fourfield or all-spin numerical certification"
+    },
+    {
+      "stage": "gaussian-eikonal",
+      "diagnostic_checks": 52,
+      "refinement_checks": 11,
+      "kind": "original momentum and four-coordinate controls plus finer quadrature; empirical errors, not a full gravity or principal-Fock identification"
     },
     {
       "file": "results/stage3/growing-box/diagnostics.json",

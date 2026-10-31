@@ -1,5 +1,12 @@
 # de Sitter 全息研究
 
+## 最新进展：四时间涂抹与有限引力 eikonal 接口（2026-10-31）
+
+[六页 PDF](output/pdf/de-sitter-gaussian-eikonal.pdf)、[LaTeX](manuscript/gaussian-eikonal/main.tex)和[中文推导](notes/stage4-gaussian-eikonal.md)已完成。在已有双共形探针近似中，四个独立Gaussian涂抹化为三个时间变量，必须同时改变断开两点基准。证明重观察者条件下两条候选轮廓的非零虚部在涂抹后仍存在；有限时间分辨率本身没有解决轮廓实性问题。不是完整有限G或全息否定定理。
+
+8组主求积及加阶，原四坐标独立计算，52项诊断和11项进一步检查通过；最大32/48阶差约1.38e−9。下一步精读观察者边缘模/引力零模来源，并推进真实principal探针的Bessel核；本轮共形complementary特例不替代上一轮全Fock模型或最终目标。
+
+
 ## 最新进展：受调节 Fock 场与完整四点（2026-10-31）
 
 [九页阶段稿 PDF](output/pdf/de-sitter-ds3-fock-vacuum.pdf)、[LaTeX](manuscript/ds3-fock-vacuum/main.tex)及[中文推导](notes/stage4-ds3-fock-vacuum.md)已完成。固定 s,p,σ>0、G=0，完整 CG 重数空间上的受调节创建块给全有限粒子数共同域与本质自伴场；补上真空返回后得到完整四点基准。真实 Gaussian 时间涂抹保留重质量极限的热详细平衡与非零自由场对易子；半周期创建加伴随是另一种 observable，不能混同。

@@ -1,0 +1,234 @@
+{
+  "status": "passed",
+  "rows": [
+    {
+      "gamma": 0,
+      "sigma": 0.4,
+      "u": 0,
+      "value": {
+        "value": [
+          1.0223823955343725,
+          -0.0060949784349695665
+        ],
+        "residue_imag": -0.006094978434969566,
+        "baseline": 0.0014695761184662537,
+        "A1_squared": 0.9282646352992227,
+        "n": 48,
+        "angular_order": 64,
+        "nodes": 14155776,
+        "boosted": false,
+        "center_only": false
+      },
+      "difference": 2.237726045655905e-16
+    },
+    {
+      "gamma": 0,
+      "sigma": 0.4,
+      "u": 2,
+      "value": {
+        "value": [
+          0.909262710938365,
+          -0.36643594256374373
+        ],
+        "residue_imag": -0.36643594256374373,
+        "baseline": 0.0014695761184662537,
+        "A1_squared": 0.9282646352992227,
+        "n": 48,
+        "angular_order": 64,
+        "nodes": 14155776,
+        "boosted": false,
+        "center_only": false
+      },
+      "difference": 5.507969607405424e-13
+    },
+    {
+      "gamma": 0,
+      "sigma": 0.8,
+      "u": 0,
+      "value": {
+        "value": [
+          1.0234011565718812,
+          -0.022634229253198912
+        ],
+        "residue_imag": -0.022634229253198912,
+        "baseline": 0.0012284289943646927,
+        "A1_squared": 0.7759429253892829,
+        "n": 48,
+        "angular_order": 64,
+        "nodes": 14155776,
+        "boosted": false,
+        "center_only": false
+      },
+      "difference": 1.0774447193508478e-09
+    },
+    {
+      "gamma": 0,
+      "sigma": 0.8,
+      "u": 2,
+      "value": {
+        "value": [
+          0.8940997430138351,
+          -0.2982380928124483
+        ],
+        "residue_imag": -0.2982380928124483,
+        "baseline": 0.0012284289943646927,
+        "A1_squared": 0.7759429253892829,
+        "n": 48,
+        "angular_order": 64,
+        "nodes": 14155776,
+        "boosted": false,
+        "center_only": false
+      },
+      "difference": 5.319814654885124e-11
+    },
+    {
+      "gamma": 0.25,
+      "sigma": 0.4,
+      "u": 0,
+      "value": {
+        "value": [
+          1.0697480417127625,
+          -0.01230281975153367
+        ],
+        "residue_imag": -0.01230281975153367,
+        "baseline": 0.002612579766162229,
+        "A1_squared": 0.9282646352992227,
+        "n": 48,
+        "angular_order": 64,
+        "nodes": 14155776,
+        "boosted": false,
+        "center_only": false
+      },
+      "difference": 6.661338147750939e-16
+    },
+    {
+      "gamma": 0.25,
+      "sigma": 0.4,
+      "u": 2,
+      "value": {
+        "value": [
+          0.9569290549299277,
+          -0.5157674108554683
+        ],
+        "residue_imag": -0.5157674108554683,
+        "baseline": 0.002612579766162229,
+        "A1_squared": 0.9282646352992227,
+        "n": 48,
+        "angular_order": 64,
+        "nodes": 14155776,
+        "boosted": false,
+        "center_only": false
+      },
+      "difference": 1.6562352515747874e-12
+    },
+    {
+      "gamma": 0.25,
+      "sigma": 0.8,
+      "u": 0,
+      "value": {
+        "value": [
+          1.0681768836591867,
+          -0.03757875492649022
+        ],
+        "residue_imag": -0.03757875492649021,
+        "baseline": 0.0021838737677594535,
+        "A1_squared": 0.7759429253892829,
+        "n": 48,
+        "angular_order": 64,
+        "nodes": 14155776,
+        "boosted": false,
+        "center_only": false
+      },
+      "difference": 1.3714079663344064e-09
+    },
+    {
+      "gamma": 0.25,
+      "sigma": 0.8,
+      "u": 2,
+      "value": {
+        "value": [
+          0.9433406529066977,
+          -0.4197379168258952
+        ],
+        "residue_imag": -0.4197379168258952,
+        "baseline": 0.0021838737677594535,
+        "A1_squared": 0.7759429253892829,
+        "n": 48,
+        "angular_order": 64,
+        "nodes": 14155776,
+        "boosted": false,
+        "center_only": false
+      },
+      "difference": 1.2448543506400877e-10
+    }
+  ],
+  "checks": [
+    {
+      "label": "32/48 quadrature",
+      "passed": true,
+      "difference": 2.237726045655905e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "label": "32/48 quadrature",
+      "passed": true,
+      "difference": 5.507969607405424e-13,
+      "tolerance": 2e-07
+    },
+    {
+      "label": "32/48 quadrature",
+      "passed": true,
+      "difference": 1.0774447193508478e-09,
+      "tolerance": 2e-07
+    },
+    {
+      "label": "32/48 quadrature",
+      "passed": true,
+      "difference": 5.319814654885124e-11,
+      "tolerance": 2e-07
+    },
+    {
+      "label": "32/48 quadrature",
+      "passed": true,
+      "difference": 6.661338147750939e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "label": "32/48 quadrature",
+      "passed": true,
+      "difference": 1.6562352515747874e-12,
+      "tolerance": 2e-07
+    },
+    {
+      "label": "32/48 quadrature",
+      "passed": true,
+      "difference": 1.3714079663344064e-09,
+      "tolerance": 2e-07
+    },
+    {
+      "label": "32/48 quadrature",
+      "passed": true,
+      "difference": 1.2448543506400877e-10,
+      "tolerance": 2e-07
+    },
+    {
+      "label": "Gaussian covariance and independence",
+      "passed": true
+    },
+    {
+      "label": "small-width coefficient",
+      "passed": true
+    },
+    {
+      "label": "52 independent diagnostics retained",
+      "passed": true
+    }
+  ],
+  "scope": "Higher quadrature order and exact covariance/small-width algebra. No interval or omitted-eikonal error certification.",
+  "hashes": {
+    "code/refine_gaussian_eikonal.py": "036f5a29f83cf7804601ce8eac1f166cfaf3017e9b1a925f8bf702825cd6f475",
+    "code/gaussian_eikonal.py": "29d1122d1b56d3ca52e9ee887d3d02add37b3366be4b2bdc59910fb307f7afd2",
+    "results/stage4/gaussian-eikonal/study.json": "9d31c566a9b2bbf1ad7cc1c5ef86aa4f68b2f9449470a3b53a3aa8821de2bb03",
+    "results/stage4/gaussian-eikonal/diagnostics.json": "ded758f48d8dcd26411094ad159a6ad324c229695885bf8b431b85fd4c150959"
+  }
+}
