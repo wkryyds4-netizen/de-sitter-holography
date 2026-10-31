@@ -1,5 +1,20 @@
 # 下一次从这里继续
 
+## 当前继续位置：2026-10-31 ds3-fock-vacuum
+
+先读[中文推导](notes/stage4-ds3-fock-vacuum.md)、[九页 PDF](output/pdf/de-sitter-ds3-fock-vacuum.pdf)和[来源](literature/stage4-ds3-fock-vacuum-sources.md)。固定 s,p,σ>0、ℓ=1、G=0、BD/KG、proper SO⁺(3,1)。全内部自旋重数与 Bose 投影保留；以明确质量包种子的绝对群平均证明受调节块弱下降，√N 界给有限粒子数共同域上的本质自伴。不是最大位置分布空间、去调节或代数 type 定理。
+
+两个不同场：半周期创建加伴随的极限谱偶；原场实 Gaussian 时间涂抹的极限谱满足 kσ(−u)=exp(2πu)kσ(u)。完整四点须加共享 spectator 质量的真空返回；DΦ=DB+4∫ρ|f|²(Im q)²。两种 DB→0，但 Gaussian 完整场一般保留非零自由对易子。有限质量精确 KMS 未证明，不能把 G=0 全 Fock 构造当有限 G 动力学。
+
+36+24项诊断、154+115项独立核查通过；20+16组60位 D24/32 双截取、原序列化与符号结构失败保持。无新 U 求值或完整四场数值求积。九页已实际双遍编译、桌面 success、逐页1100像素核查。Gaussian 后加115项只在附属记录，不冒称已写入 PDF。新 evidence 绑定24文件，786旧文件与49旧ZIP保持；整体审计833必需文件、988链接、1143代码/输入哈希通过。检查点标签2026-10-31-ds3-fock-vacuum，冻结以实际ZIP与SHA旁文件为准；不重跑原 driver，不覆盖旧结果。
+
+下一任务：先读 literature/tqft-recoil-dictionary.md、literature/stage4-microscopic-match.md、literature/october-tqft-update.md 及相关 finite-g notes，核有限 G 插入的态、双手征配对、Gram 逆核/轮廓、测度与两点归一。明确哪个四点可与本轮 Gaussian 受调节基准比较，然后确定最小可计算问题；不可无推导把模能量换成近视界碰撞能量。保留 finite-G 与重质量的极限次序，完整目标 active。
+
+上轮 compact-global 已冻结并发布 main=e3898f79c294d52de763f0dd91af44bc1f6a22d9。本轮重新核 GitHub private=false，用户公开授权继续有效。私人文件、第三方全文、ZIP及 local/pre-public-cache-fix 分支不推送。当前没有活跃 shell，不新建代理。
+
+以下为历史继续位置。
+
+
 ## 当前继续位置：2026-10-31 ds3-compact-global
 
 先读[七页PDF](output/pdf/de-sitter-ds3-compact-global.pdf)、[中文推导](notes/stage4-ds3-compact-global.md)、[来源](literature/stage4-ds3-compact-global-sources.md)。G=0、ℓ=1、proper SO⁺(3,1)、BD/KG、半周期调节、固定s>0、条件c=M。任意固定紧转移的核有跨r0一致O(1/M)正弦近似；实际链乘子χK=ηK(u+v)²ηK(u)ηK(v+r)，配对尾≤2√(εK Nbar)，uniform M≥s及所有实时间。固定K先M→∞、再K→∞，得到两创建Bose范数/重叠→Lp(0)²+|Lp(t)|²，DB→0，紧时间一致。也覆盖质量概率逃向无穷的归一制备，不覆盖固定不移动包、移动阈值或增长时间。

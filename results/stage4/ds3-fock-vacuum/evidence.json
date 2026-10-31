@@ -1,0 +1,67 @@
+{
+  "created_at_utc": "2026-10-31T09:02:15.408928+00:00",
+  "status": "stage verified; project audit follows",
+  "pages": 9,
+  "balanced_return_pairs": 20,
+  "gaussian_return_pairs": 16,
+  "diagnostic_counts": [
+    36,
+    24
+  ],
+  "independent_check_counts": [
+    154,
+    115
+  ],
+  "full_crossed_kernel_evaluations": 0,
+  "full_fourfield_quadratures": 0,
+  "compilers": [
+    "local pdfLaTeX twice, exit 0",
+    "desktop success"
+  ],
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "longest_edge_pixels": 1100,
+    "status": "all pages inspected"
+  },
+  "failures_retained": [
+    "NumPy Boolean JSON serialization after raw quadrature completion",
+    "SymPy structural equality; exact difference repair retained separately"
+  ],
+  "scope": "Self-checked regulated G=0 full multiplicity Fock completion, weak descent and vacuum fourpoint limit. Gaussian thermal spectrum differs from balanced completion. No unregulated field, finite-gravity dynamics, factor type or full holographic dual claim.",
+  "hashes": {
+    "code/ds3_fock_vacuum.py": "518ef4160cf9d8cc039ae714de0765eaa2414f2e3d8947d6421c0d5b60fd3f9e",
+    "code/check_ds3_fock_vacuum.py": "919f19680cc6fd3a016b5191cf3eedbe67b6192c1409c6605b3ed409274a4f2b",
+    "code/recover_ds3_fock_vacuum.py": "922cffaf44764b668390694f316e308c21993bbf13a54f09a90cce7ad0e87cb2",
+    "code/audit_ds3_fock_vacuum.py": "ffc4068f701a6e41a47bb2861d625a87663de6e1362f632d89b1361c6badb52a",
+    "code/audit_ds3_fock_vacuum_refined.py": "64196618172aeafdc10ccb2afe57c75a18d7179aa2ab469fee6947f8e8aea9e9",
+    "code/ds3_gaussian_field.py": "4bb2cd340b9c422f8679386181393c310116335c653b9dd4cf9e395a35dda444",
+    "code/check_ds3_gaussian_field.py": "59428ae3cd9d118e92b391f11b2360bfbb24be36a938a4fe74ace0d1553c3245",
+    "code/audit_ds3_gaussian_field.py": "e1a4b723da7d5e92dccf32e02e889d807d29c23421a7a3c87e16f0d7f43251eb",
+    "code/record_ds3_fock_vacuum.py": "10a4edda3fe1656cae7146de735edb081086e25d0fd4749b8094b3ed36d815d7",
+    "code/build_ds3_fock_vacuum.ps1": "0ee99e63b256ae2cd04dd8c01b3164ed983bf66c387130af0daa6ab23c3ebdf7",
+    "manuscript/ds3-fock-vacuum/main.tex": "3904716b433b5edab99017ab3a0675ffd2b19b6facc754c179b1edb27f379f8a",
+    "output/pdf/de-sitter-ds3-fock-vacuum.pdf": "56391972b5e0038ca3a7728aca12c7646803f3a9ab5cb57f08603734ac9ed167",
+    "notes/stage4-ds3-fock-vacuum.md": "1c66167211e1a9cca9ac37bdfda670766a99cac1d3526a8c3921df40865005e3",
+    "literature/stage4-ds3-fock-vacuum-sources.md": "71bf044b25eef3b77064935ea8881aa47a820d66d0c16f2e6357f6313d60213c",
+    "results/stage4/ds3-fock-vacuum/audit-refined.json": "9cc42d6373094148200a82ce8e16bc07333a4ca30d6c16e6a1e4c0d5a399fd27",
+    "results/stage4/ds3-fock-vacuum/audit.json": "83662b0b081e141ab95fa1d14387f618c07dc69b88ccf7d164a1577d152090ca",
+    "results/stage4/ds3-fock-vacuum/build-review.md": "006e4e755c09d0d5ef31f7d6eccc7fc353602ebcf898185c48f231cfd5c7e242",
+    "results/stage4/ds3-fock-vacuum/diagnostics-recovered.json": "ce554565086e9d569ea29b92eb928b636802262ffcbe11b7b6e7eee804fe4cf5",
+    "results/stage4/ds3-fock-vacuum/gaussian-audit.json": "3574f0435ec981582c7c84c083eca9915fdf1497ac639a5cc661bbb2582143b2",
+    "results/stage4/ds3-fock-vacuum/gaussian-runs.jsonl": "d973e8dec4c5142c9141741db0cca15da0cccd0a2ea154edb7890783e1a09799",
+    "results/stage4/ds3-fock-vacuum/gaussian.json": "f8503a99188dbabc4b260442cbe231dbffe21e93bade2342019a5a06ff5dfff3",
+    "results/stage4/ds3-fock-vacuum/main.log": "f563310a5e9c6c194594988bd657d2dca23b01829e71b5885c458d2d03f4233b",
+    "results/stage4/ds3-fock-vacuum/preservation.json": "598febd13de7adf652df86019c8a71aeba0bae86a11b8cf9754f5ecb24fb62a0",
+    "results/stage4/ds3-fock-vacuum/vacuum-runs.jsonl": "d086bfc22fea5efc2c74dd3dffb4042b08b86eee2533facf8fa7c7ec1b70e3c0"
+  }
+}

@@ -1,0 +1,499 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,microtype,booktabs}
+\usepackage[margin=25mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\HH}{\mathcal H}\newcommand{\MM}{\mathcal M}
+\title{Regulated Fock fields and vacuum returns\\in the dS$_3$ observer model}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Working research note --- 31 October 2026}
+\begin{document}\maketitle
+\begin{abstract}
+We construct all finite-particle creation blocks from normalized
+$\mathrm{SL}(2,\mathbb C)$ Clebsch--Gordan synthesis and identify their
+weak group-averaged action on the compatible full multiplicity spaces.
+Uniform one-step bounds imply square-root particle-number bounds and
+essential self-adjointness on the finite-particle domain.
+We distinguish the adjoint completion of half-period creation from
+real Gaussian smearing of the original local field. Restoring the
+vacuum-return path completes the four-field vacuum pairing. The
+Gaussian heavy-observer limit has thermal detailed balance and a
+generally nonzero free-field commutator, even though the two-creation
+ordering difference vanishes. These are regulated $G_N=0$ results,
+not a finite-gravity holographic dual.
+\end{abstract}
+\section{Two regulators with different meanings}
+Take $\ell=1$, $G_N=0$, proper $SO^+(3,1)$, two distinguishable BD
+scalar observers with labels at least $s>0$, and one free KG matter
+species $p>0$. The local coupling is one; clock energy is
+$h(a)=\sqrt{1+a^2}$. Keep the previously derived emission coefficient
+$E_{abp}$ and its full angular CG tensor \cite{prior,kl}.
+The finite-mode kernel is the spacetime integral of observer modes
+and the matter creation mode.
+
+Consider two emission multipliers:
+\begin{align}
+ m_h(a,b;t)&=e^{\pi[h(a)-h(b)]/2}e^{-it[h(a)-h(b)]},\nonumber\\
+ m_\sigma(a,b;t)&=
+ e^{-\sigma^2[h(a)-h(b)]^2/2}e^{-it[h(a)-h(b)]},\quad \sigma>0.
+ \label{reg}
+\end{align}
+For each choice complete creation by its Hilbert adjoint:
+$\Phi_j(t)=C_j(t)+C_j(t)^*$, $j=h,\sigma$.
+The Gaussian choice is real time smearing of both parts of the original
+Hermitian local field, initially understood on finite-mode weak kernels.
+The $h$ choice completes the preceding half-period creation block.
+Its annihilation factor is the adjoint factor; it is not obtained by
+shifting the entire unregulated field to the same complex time.
+We do not identify these observables.
+
+Full representations and all internal spins are retained. A scalar
+principal series contains all its $SO(3)$ angular modes.
+No angular zero-mode truncation is made.
+
+\newpage
+\section{The bounded one-step local intertwiner}
+Let $P_a$ be the scalar principal series and
+$\HH_O=\int_{a\ge s}^{\oplus}da\,P_a$. The preceding normalization gives
+\[
+ \rho(b)=\frac{2b^2}{\pi},\quad
+ K_3(a,p,b)=\frac{\pi}{8D_{apb}}
+ \prod_{\nu=a,p,b}\frac{\sinh\pi\nu}{\nu},\quad
+ w_a(b)=\rho(b)K_3(a,p,b).
+\]
+Here $D_{apb}$ is the vertex note's product of four cosh factors.
+Normalized scalar-channel CG synthesis \cite{ds} is an isometry
+\[
+ J_a:\int_{b>0}^{\oplus}db\,P_b\longrightarrow P_a\otimes P_p .
+\]
+Normalize the unscaled CG tensor to have $000$ coefficient one.
+The synthesis kernel is then $\sqrt{w_a(b)}C^\dagger_{a,p;b}$.
+The actual emission kernel determines
+\begin{equation}
+ (T_j(t)\xi)(a)=
+ J_a\!\left[\frac{E_{abp}m_j(a,b;t)}{\sqrt{w_a(b)}}\xi(b)\right],
+ \qquad \xi(b)=0\quad(b<s).
+ \label{T}
+\end{equation}
+This is $L^2$ spectral synthesis, not a statement that a fixed-$b$
+CG column is square summable. Its finite-mode weak matrix elements
+are the original local ones, with multiplier \eqref{reg}.
+
+For the balanced choice the squared coefficient is
+\[
+ R_h(a|b)=\frac{|E_{abp}|^2e^{\pi[h(a)-h(b)]}}{\rho(b)K_3(a,p,b)}
+         =\frac{g(a)}{g(b)}\widehat R_p(a,b),
+\]
+\[
+ g(x)=\frac{x e^{\pi[h(x)-x]}}{1+e^{-2\pi x}},\quad
+ 0\le\widehat R_p(a,b)\le k_p(a-b),\quad
+ k_p(u)=\frac1{8\pi(\cosh\pi u+\cosh\pi p)} .
+\]
+The bound $g(a)/g(b)\le B_s(1+|a-b|/s)$,
+$B_s=2e^{\pi/(\sqrt{1+s^2}+s)}$, gives
+\begin{equation}
+ \sup_{b\ge s}\int_s^\infty R_h(a|b)\,da
+ \le {\cal B}_h=B_s\left(\frac1{2\pi^2}+\frac1{2s\pi^3}\right).
+ \label{B}
+\end{equation}
+CG isometry proves $\|T_h(t)\|^2\le\mathcal B_h$.
+For Gaussian smearing, completing the square gives
+\begin{equation}
+ R_\sigma=e^{-\sigma^2\Delta h^2-\pi\Delta h}R_h
+ \le\Lambda_\sigma R_h,\qquad
+ \Lambda_\sigma=e^{\pi^2/(4\sigma^2)},\quad
+ \mathcal B_\sigma=\Lambda_\sigma\mathcal B_h ,
+ \label{GaussianB}
+\end{equation}
+where $\Delta h=h(a)-h(b)$. Thus $\|T_\sigma(t)\|^2\le\mathcal B_\sigma$.
+These are bounded intertwiners: coefficients depend only on
+representation labels. Normalization comes from the local vertex,
+not covariance alone. Bounds are not uniform as $s\downarrow0$
+or $\sigma\downarrow0$.
+
+\newpage
+\section{All particle numbers and their physical completion}
+Put $W_N=\HH_O\otimes\operatorname{Sym}^N P_p$; the other observer is
+the spectator. The full principal-series tensor-product theorem
+\cite{ds,my} includes allowed integer spins and continuous parameters.
+In this dimension no discrete tempered series is added.
+Iterating the full unitary CG transform puts all previous internal
+paths into multiplicity spaces. Bose symmetrization commutes with
+the group and projects these multiplicities; it can mix paths and
+does not discard nonzero-spin internal channels.
+
+Only a scalar total representation pairs with the scalar spectator.
+It contains one $K=SO(3)$ invariant vector, while nonzero-spin
+principal series contain none. Thus
+\begin{equation}
+ W_N^K\simeq\int_{c>0}^{\oplus}dc\,\MM_{N,c}.
+ \label{WN}
+\end{equation}
+All internal spins remain in $\MM_{N,c}$.
+For $N=0$, $\MM_{0,c}=\mathbb C$ for $c\ge s$ and zero otherwise;
+a fixed single observer has no extra independent total spectral label.
+Use seeds
+\[
+ {\cal E}_N=\operatorname{span}\{|f,0\rangle_L\otimes v:
+       f\in C_c^\infty((s,\infty)),\ v\in W_N^K\}.
+\]
+The spherical function, radial Haar measure and uniform bound are
+\[
+ \phi_c(r)=\frac{\sin cr}{c\sinh r},\qquad
+ \sinh^2r\,dr,\qquad |\phi_c(r)|\le\frac r{\sinh r}.
+\]
+For $F=\overline{f_1}f_2$, integrate the left mass first.
+The factor $\int F(c)\sin(cr)/c\,dc$ decreases faster than any
+inverse power of $r$ by integration by parts.
+The right coefficient is bounded by $(r/\sinh r)\|v\|\|w\|$.
+After the Haar density the product is bounded at infinity by
+$C_n r(1+r)^{-n}$, integrable for $n>2$.
+It is regular at zero. Absolute group-average convergence follows
+for every $\mathcal E_N$, including mass-smeared $N=0$.
+
+Sine-transform inversion, initially for compact smooth spectral data,
+then extended with the uniform majorant, yields
+\begin{align}
+ Q_N(f\otimes v,k\otimes w)
+ &=\int_{c\ge s}\frac{dc}{\rho(c)}
+      \overline{f(c)}k(c)\langle v(c),w(c)\rangle,\nonumber\\
+ A_N(f\otimes v)(c)&=\rho(c)^{-1}f(c)v(c),&
+ \HH_N&=\int_{c\ge s}^{\oplus}\rho(c)\,dc\,\MM_{N,c}.
+ \label{GA}
+\end{align}
+This does not take the absolute Haar integral of two fixed-label
+spherical functions. Fubini is used after left mass integration,
+with the right spectral $L^1$ pairing and uniform spherical bound.
+The image is dense: for compact $c$-supported $F(c)\in\HH_N$,
+choose $f=1$ on its support and $v=\rho F$ there. Then $v\in W_N^K$.
+In addition
+\[
+ \|A_N(f\otimes v)\|\le
+ \left(\operatorname*{ess\,sup}|f|^2/\rho\right)^{1/2}\|v\|.
+\]
+Finite-angular-mode, compact actual observer-mass approximations
+to $v$, projected onto total $K$ invariance, give the same completion.
+
+\newpage
+\section{Weak descent and self-adjoint fields}
+Ordinary Fock symmetrization defines the kinematic maps
+\[
+ {\cal C}_{j,N}(t)=\sqrt{N+1}
+ (1_O\otimes P_{\mathrm{Sym}^{N+1}})
+ (T_j(t)\otimes1),\qquad
+ \|{\cal C}_{j,N}(t)\|\le\sqrt{(N+1)\mathcal B_j}.
+\]
+They are intertwiners. In the full irreducible decomposition their
+fiber maps $c_{j,N}(c;t)$ have the same essential uniform bound.
+The maps and their adjoints preserve total $K$-invariant subspaces.
+
+Take a common compact group cutoff $0\le\chi_R\le1$, inverse symmetric,
+tending to one, and $\eta_R=\int\chi_R(g)U(g)\,dg$.
+At finite $R$, bounded intertwining commutes with this Bochner integral.
+The local weak creation matrix element is consequently
+\begin{align}
+ \lim_R\langle\Phi,(1_L\otimes{\cal C}_{j,N})\eta_R\Psi\rangle_{\rm kin}
+ &=Q_{N+1}(\Phi,(1_L\otimes{\cal C}_{j,N})\Psi)\nonumber\\
+ &=\int_{c\ge s}\rho(c)\,dc\,
+ \langle A_{N+1}\Phi,c_{j,N}(c;t)A_N\Psi\rangle .
+ \label{weak}
+\end{align}
+The enlarged seed spaces are preserved, so the absolute-convergence
+estimate applies and makes the limit cutoff independent.
+The expression descends through both null spaces; density gives a
+unique bounded physical block $C_{j,N}(t)$.
+Using the same inverse-symmetric cutoff identifies the reverse weak
+block with its adjoint. This is the test-domain step needed for descent
+\cite{raq}, rather than a presumption based on covariance.
+
+The initial finite-mode kernels can also be approximated by finite-rank
+matrices before group averaging. At each fixed group cutoff, strong
+convergence and the uniform block bound recover the intertwiner.
+Only then is the group cutoff removed. No exchange of these two
+limits, or action on arbitrary unsmeared invariant distributions,
+is needed for \eqref{weak}.
+
+Let $\HH=\bigoplus_{N\ge0}\HH_N$ and
+$\mathcal D_{\rm fin}=\bigoplus_{N\ge0}^{\rm alg}\HH_N$.
+Each $\Phi_j(t)=C_j(t)+C_j(t)^*$ is symmetric on this invariant dense
+domain. For $\psi$ supported through particle number $r$,
+\[
+ \|\Phi_j(t)^k\psi\|\le
+ (2\sqrt{\mathcal B_j})^k\sqrt{\frac{(r+k)!}{r!}}\,\|\psi\|.
+\]
+The analytic-vector series converges for every argument by the ratio
+test. Nelson's theorem \cite{nelson} proves essential self-adjointness.
+Finite products at different real times also exist on this common
+domain. The closed fields are unbounded, though each sector block
+has the stated square-root bound.
+
+This realizes the full compatible scalar multiplicity space, including
+all internal channels. It does not establish maximality among
+unspecified invariant-distribution domains, or a pointwise
+position-space formula for every completed vector.
+No unregulated point-field conclusion follows.
+
+\newpage
+\section{Vacuum returns and the exact four-field identity}
+Let $\Omega_f$ have zero matter particles and
+$\int_s^\infty\rho(c)|f(c)|^2dc=1$.
+Define
+\begin{equation}
+ q_{j,c}(\tau)=\int_s^\infty da\,R_j(a|c)
+             e^{-i\tau[h(a)-h(c)]},\qquad j=h,\sigma .
+ \label{return}
+\end{equation}
+On the one-dimensional vacuum multiplicity fiber,
+$C_{j,0}(t_1)^*C_{j,0}(t_2)=q_{j,c}(t_2-t_1)$.
+This is diagonal in the conserved spectator label $c$, not in the
+actual right observer label in higher particle sectors.
+The exact vacuum four-field expectation is
+\begin{align}
+ &\langle\Omega_f,\Phi_j(t_1)\Phi_j(t_2)
+                        \Phi_j(t_3)\Phi_j(t_4)\Omega_f\rangle\nonumber\\
+ &\quad=\int_s^\infty\rho(c)|f(c)|^2
+       q_{j,c}(t_2-t_1)q_{j,c}(t_4-t_3)\,dc\nonumber\\
+ &\qquad+
+ \langle C_{j,1}(t_2)C_{j,0}(t_1)\Omega_f,\,
+         C_{j,1}(t_3)C_{j,0}(t_4)\Omega_f\rangle .
+ \label{four}
+\end{align}
+Read from right to left, exactly two particle-number paths survive:
+$0\to1\to0\to1\to0$ and $0\to1\to2\to1\to0$.
+The second term contains direct and exchange contractions from Bose
+symmetrization. The first integral is not a product of separately
+mass-averaged two-point functions: both returns share the same $c$.
+
+The squared commutator norm decomposes exactly as
+\begin{equation}
+ \|[\Phi_j(t),\Phi_j(0)]\Omega_f\|^2
+ =D_{B,j,f}(t)+4\int_s^\infty\rho(c)|f(c)|^2
+                           [\Im q_{j,c}(t)]^2\,dc .
+ \label{comm}
+\end{equation}
+The terms occupy orthogonal two-particle and vacuum sectors.
+The vacuum contribution was absent from the creation-only observable.
+At $t=0$ both vanish exactly.
+
+Truncating the balanced transfer $u=a-c$ at $|u|\le D$ gives
+\begin{equation}
+ \epsilon_1(D)=\frac{B_se^{-\pi D}}{2\pi}
+ \left[\frac1\pi+\frac1s\left(\frac D\pi+\frac1{\pi^2}\right)\right],
+ \label{onetail}
+\end{equation}
+uniformly for $c\ge s$ and real $\tau$.
+For Gaussian smearing multiply by $\Lambda_\sigma$.
+This integrates the one-step exponential majorant on both tails,
+including its harmless extension beyond the physical threshold.
+The return functions are bounded by $\mathcal B_j$, controlling the
+mass averages in \eqref{four} and \eqref{comm}.
+Analytic tails exclude quadrature and arithmetic errors.
+
+\newpage
+\section{Heavy-observer spectra and thermal detailed balance}
+Fix $s,p,\sigma>0$ and condition $c=M\to\infty$.
+The limiting densities and transforms are
+\begin{align}
+ k_h(u)&=k_p(u),&
+ L_h(\tau)&=\frac{\sin(p\tau)}
+                    {4\pi\sinh(\pi p)\sinh\tau},\nonumber\\
+ k_\sigma(u)&=e^{-\sigma^2u^2-\pi u}k_p(u),&
+ L_\sigma(\tau)&=\int_{\mathbb R}k_\sigma(u)e^{-i\tau u}\,du .
+ \label{limits}
+\end{align}
+Here $L_h(0)=p/[4\pi\sinh(\pi p)]$.
+Dominated convergence follows from the one-step majorant and
+\eqref{GaussianB}, uniformly on compact real times. In either case
+\[
+ q_{j,M}(\tau)=L_j(\tau)+\frac{iL_j'(\tau)}M+O_T(M^{-2}).
+\]
+On $|u|\le M/2$ use $g(M+u)/g(M)=1+u/M+
+O((|u|+u^2)/M^2)$ and
+$h(M+u)-h(M)=u+O(|u|/M^2)$.
+The balanced-kernel error is exponential; the omitted region has an
+exponentially decreasing polynomial majorant.
+The Gaussian multiplier and its derivatives are bounded after
+completing the square, so the same argument applies.
+
+The limiting observables differ: $k_h$ is even and $L_h$ is real and
+even, with no finite-temperature detailed balance at nonzero frequency.
+The Gaussian local field instead has
+\begin{equation}
+ k_\sigma(-u)=e^{2\pi u}k_\sigma(u),\qquad
+ L_\sigma(\tau+2\pi i)=L_\sigma(-\tau).
+ \label{KMS}
+\end{equation}
+The Gaussian Fourier integral is entire; changing the integration
+variable proves the identity. Our convention is $\tau=t_2-t_1$.
+Thus $W(t)=\langle\Phi(t)\Phi(0)\rangle=L_\sigma(-t)$ has the usual
+lower-strip KMS convention. Exact finite-mass thermality is not claimed.
+
+The previous compact crossing theorem applies to arbitrary four times
+in a fixed compact set. For $h$, the $C_r^2$ physical weight simply
+acquires a general linear combination of energy phases.
+For $\sigma$, each emission differs from the balanced one by a smooth
+multiplier of modulus at most $\sqrt{\Lambda_\sigma}$.
+A two-emission chain is bounded by $\Lambda_\sigma$ times its
+balanced counterpart. Its norm and deleted squared norm bounds,
+and the crossed Hilbert tail, gain $\Lambda_\sigma^2$.
+Thus the fixed-compact limit followed by cutoff removal still applies.
+
+At the ridge $r=0$, the direct phase is
+$e^{-iv(t_3-t_2)-iu(t_4-t_1)}$ and the exchange phase is
+$e^{-iu(t_3-t_1)-iv(t_4-t_2)}$.
+The ridge spectral weight is $k_j(u)k_j(v)$.
+These fix the two contractions and their time order, without assuming
+finite-mass Wick factorization of the observer matrices.
+
+\newpage
+\section{Full four-point limit and its commutator}
+Both two-creation contractions and the vacuum return combine to give
+\begin{align}
+ G_{4,j}^{\infty}(t_1,t_2,t_3,t_4)
+ &=L_j(t_2-t_1)L_j(t_4-t_3)\nonumber\\
+ &\quad+L_j(t_3-t_2)L_j(t_4-t_1)\nonumber\\
+ &\quad+L_j(t_3-t_1)L_j(t_4-t_2).
+ \label{Wick}
+\end{align}
+This is the standard three-contraction Gaussian four-point baseline,
+derived here from the specified observer construction.
+Convergence is uniform for all four times in a fixed compact set.
+It also holds for normalized probabilities on $[s,\infty)$ whose mass
+escapes every fixed compact interval: split the average at $c=C$ and
+use the uniform block bounds. A fixed nonmoving packet does not meet
+this preparation hypothesis.
+
+The two-creation difference obeys $D_{B,j,M}(t)\to0$ in both cases,
+whereas the complete field gives
+\begin{equation}
+ \|[\Phi_j(t),\Phi_j(0)]\Omega_M\|^2
+       \longrightarrow4[\Im L_j(t)]^2.
+ \label{commfree}
+\end{equation}
+The balanced limit vanishes, consistently with its even spectrum.
+The Gaussian local-field limit is generally nonzero: it is the
+free-field commutator contribution.
+Thus the earlier $D_B\to0$ cannot be promoted to unequal-time
+commutativity of the thermal local field.
+
+As an additional balanced-return diagnostic, second-order expansion gives
+\begin{equation}
+ q_{h,M}(t)=L_h(t)+\frac{iL_h'(t)}M
+                -\frac{(t+i\pi)L_h'(t)}{2M^2}+O_T(M^{-3}).
+ \label{second}
+\end{equation}
+The weight ratio contributes $-\pi u/(2M^2)$ and the energy phase
+contributes $itu/(2M^2)$. The same inner/outer split controls the
+integrated remainder. Its vacuum term starts as
+$4L_h'(t)^2/M^2+O_T(M^{-3})$.
+This is not a leading-rate claim for the total commutator, because
+an optimized global mass-rate estimate for its two-creation part
+is still unavailable.
+
+The result is a regulated weak self-adjoint field on the stated full
+multiplicity completion and its vacuum four-point limit.
+We have not removed regulators, proved uniqueness among arbitrary
+larger distributional spaces, or determined the observer algebra's
+factor type. All-$N$ existence is not an all-correlation Gaussian-limit
+theorem. Growing times, finite-$G_N$ dynamics and a microscopic
+holographic identification require further work.
+
+\newpage
+\section{Numerical evidence and retained failures}
+Balanced returns use 60 decimal digits, $p=0.6$, $s=0.2$,
+$M=0.7,4,16,64,256$ and $t=0,0.5,1,2$.
+All 20 cases retain $D=24$ and $D=32$ cutoffs, complex values and tails.
+The previously omitted vacuum contribution at $t=1$ is:
+\begin{center}
+\begin{tabular}{rr}
+\toprule
+$M$ & $4[\Im q_{h,M}(1)]^2$\\
+\midrule
+0.7 & $2.4737552\,10^{-5}$\\
+4 & $2.6287536\,10^{-6}$\\
+16 & $3.4149846\,10^{-7}$\\
+64 & $2.4951661\,10^{-8}$\\
+256 & $1.6188726\,10^{-9}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+These are empirical quadratures, not certified intervals.
+Five direct $|E|^2/w$ assemblies match the simplified rate with maximum
+relative difference about $2.02\,10^{-58}$.
+An auxiliary model uses three observer levels and two oscillator modes,
+with noncommuting complex observer matrices. Four block-norm checks,
+four full four-field path decompositions and three orthogonal-sector
+commutator checks pass. This tests finite Fock bookkeeping, not the
+noncompact group-average theorem.
+
+The driver saved all quadratures, then failed on JSON serialization
+of a NumPy Boolean in the matrix results. A separate recovery reused
+those quadratures unchanged and converted NumPy scalars explicitly.
+The original script and raw outputs remain. The recovered diagnostic
+set has 36 passing criteria.
+An independent Decimal and vectorized 96/160-order Gauss audit does
+not import the production return kernel. The largest reference
+difference is about $4.34\,10^{-17}$; the largest order change is
+about $8.25\,10^{-17}$. An initial structural SymPy equality rejected
+equal algebraic expressions; the failure is retained. An exact
+zero-polynomial check repairs it, giving 154 passing checks with no
+data or tolerance changes. These checks do not certify total error.
+
+Gaussian data use $p=0.6$, $s=0.2$, $\sigma=0.8$,
+$M=4,16,64,256$ and the same four times.
+Both cutoffs, limiting Fourier integrals and detailed-balance/KMS
+comparisons are saved separately; all 24 criteria pass.
+At $t=1$, the limiting vacuum contribution is approximately
+$0.00411327832$, compared with $0.0040762936$ at $M=256$.
+The largest KMS comparison residual is about $1.09\,10^{-62}$;
+it is an empirical check of the analytic identity, not finite-mass KMS.
+No new crossed $U$ or complete
+four-field quadrature is claimed; \eqref{Wick} rests on the compact
+and Hilbert-tail argument.
+Dependencies, hashes and compilation records are under
+\path{results/stage4/ds3-fock-vacuum/}.
+
+\newpage
+\section*{Sources and next research step}
+The ingredients are established CG theory, group averaging,
+bosonic symmetrization and the analytic-vector theorem.
+This self-checked application connects them to the project's fixed
+vertex, measure and regulators; no exhaustive priority claim is made.
+Next compare these $G_N=0$ observables with finite-gravity insertions,
+preserving the regulator and vacuum-return dictionary.
+Free-limit correlations alone do not identify a factor type or
+an entropy-counting dual.
+
+\begin{thebibliography}{9}
+\bibitem{prior} Alan Day and Chengheng, project notes
+\emph{dS$_3$ local vertex}, \emph{Group pairing},
+\emph{Two-matter sector}, \emph{Bose normalization},
+\emph{Physical local weights} and \emph{Compact-transfer extension},
+31 October 2026. The dS$_2$ all-$N$ and weak-descent notes are
+comparisons, not substitutes for this dimension's proof.
+\bibitem{ds} S. E. Derkachov and V. P. Spiridonov,
+\href{https://arxiv.org/html/1711.07073v2}{arXiv:1711.07073v2},
+Section 3.1, Eqs.\ (22), (29), (30), and Section 4.
+Full spin sums and reflection representatives are essential.
+\bibitem{my} D. Marolf and X. Yu,
+\href{https://arxiv.org/html/2610.24073v1}
+{On the Positivity of de Sitter Group Averaging},
+Sections 5.1--5.2 and footnote 29.
+Two observers without matter require mass packets, not a convergent
+fixed-label two-particle Haar integral.
+\bibitem{kl} D. K. Kolchmeyer and H. Liu,
+\href{https://arxiv.org/html/2411.08090v1}
+{Chaos and the Emergence of the Cosmological Horizon},
+Sections 4--6, the observer and Wick-contraction framework in dS$_2$.
+\bibitem{raq} D. Giulini and D. Marolf,
+\href{https://arxiv.org/html/gr-qc/9902045v2}
+{A Uniqueness Theorem for Constraint Quantization},
+Section II. The weak-domain argument does not presume that an
+unregulated local field preserves a rigging test domain.
+\bibitem{nelson} E. Nelson, \emph{Analytic vectors},
+Annals of Mathematics 70 (1959), 572--615.
+The criterion was checked in the saved K.-H. Neeb,
+\emph{On analytic vectors for unitary representations of infinite
+dimensional Lie groups}, Ann.\ Inst.\ Fourier 61 (2011), Theorem 4.8.
+\end{thebibliography}
+\end{document}

@@ -50,9 +50,24 @@
     "sha256": "ae8e18f40e6255608c618f771029bfe1427d4791d208a84654e30bb79eb62147"
   },
   {
+    "file": "code/audit_ds3_fock_vacuum.py",
+    "bytes": 5756,
+    "sha256": "ffc4068f701a6e41a47bb2861d625a87663de6e1362f632d89b1361c6badb52a"
+  },
+  {
+    "file": "code/audit_ds3_fock_vacuum_refined.py",
+    "bytes": 1284,
+    "sha256": "64196618172aeafdc10ccb2afe57c75a18d7179aa2ab469fee6947f8e8aea9e9"
+  },
+  {
     "file": "code/audit_ds3_full_tail.py",
     "bytes": 6162,
     "sha256": "54122cc6f625b542c9a89a8c697a715117b43f1ffa5eb55c9b52ec892b04db91"
+  },
+  {
+    "file": "code/audit_ds3_gaussian_field.py",
+    "bytes": 4274,
+    "sha256": "e1a4b723da7d5e92dccf32e02e889d807d29c23421a7a3c87e16f0d7f43251eb"
   },
   {
     "file": "code/audit_ds3_group_pairing.py",
@@ -143,6 +158,11 @@
     "file": "code/build_ds3_crossing_dictionary.ps1",
     "bytes": 1174,
     "sha256": "4b6d248158fd364303374b6f3c63b67a8f272d99db6a1b27ea31f67c68bd1e17"
+  },
+  {
+    "file": "code/build_ds3_fock_vacuum.ps1",
+    "bytes": 1135,
+    "sha256": "0ee99e63b256ae2cd04dd8c01b3164ed983bf66c387130af0daa6ab23c3ebdf7"
   },
   {
     "file": "code/build_ds3_full_tail.ps1",
@@ -270,6 +290,16 @@
     "sha256": "10d32b2c371af843ca9933002b97a33edefdbdb351db8530ba41d7a771593906"
   },
   {
+    "file": "code/check_ds3_fock_vacuum.py",
+    "bytes": 4909,
+    "sha256": "919f19680cc6fd3a016b5191cf3eedbe67b6192c1409c6605b3ed409274a4f2b"
+  },
+  {
+    "file": "code/check_ds3_gaussian_field.py",
+    "bytes": 2869,
+    "sha256": "59428ae3cd9d118e92b391f11b2360bfbb24be36a938a4fe74ace0d1553c3245"
+  },
+  {
     "file": "code/check_ds3_physical_local.py",
     "bytes": 5241,
     "sha256": "b6c422241a45464593bbf6e5b36e486fccaee7721d85bc52b8968ecdab23f4d7"
@@ -365,9 +395,19 @@
     "sha256": "006a9c3ff20dff27b5fd45d74bbfce5ecdd60bc01e0cb0bd4a3b29cc7c520132"
   },
   {
+    "file": "code/ds3_fock_vacuum.py",
+    "bytes": 1537,
+    "sha256": "518ef4160cf9d8cc039ae714de0765eaa2414f2e3d8947d6421c0d5b60fd3f9e"
+  },
+  {
     "file": "code/ds3_full_tail_bound.py",
     "bytes": 5803,
     "sha256": "a9a972f3f50bf56c6e67553d5457db386bbf128f1bf0fd79995bcb2fde1cb588"
+  },
+  {
+    "file": "code/ds3_gaussian_field.py",
+    "bytes": 1103,
+    "sha256": "4bb2cd340b9c422f8679386181393c310116335c653b9dd4cf9e395a35dda444"
   },
   {
     "file": "code/ds3_group_pairing.py",
@@ -516,8 +556,8 @@
   },
   {
     "file": "code/project_audit.py",
-    "bytes": 137957,
-    "sha256": "58155c8a3e4935256bc155580e17642fd7102476ba994d09a13bc22df147e6f4"
+    "bytes": 139981,
+    "sha256": "7304a04a07e7e60cefaecd0dfbebcbab571c8c2fbb66df44c62326469ee1731d"
   },
   {
     "file": "code/quantized_observer.py",
@@ -605,6 +645,11 @@
     "sha256": "23fd7f6b9fa750d72dda07669e1089ab5f647b251a2e087132c94dd8385b9815"
   },
   {
+    "file": "code/record_ds3_fock_vacuum.py",
+    "bytes": 3811,
+    "sha256": "10a4edda3fe1656cae7146de735edb081086e25d0fd4749b8094b3ed36d815d7"
+  },
+  {
     "file": "code/record_ds3_full_tail.py",
     "bytes": 3357,
     "sha256": "84e6df309672ea551cd027e703987a23a834f0e2194b24bb6f60f50e69d312bb"
@@ -633,6 +678,11 @@
     "file": "code/record_ds3_uniform_local.py",
     "bytes": 3560,
     "sha256": "91b4a6da29aaf944f38ca09f354256faef92546a1eeeae67da95d85299fdb2e4"
+  },
+  {
+    "file": "code/recover_ds3_fock_vacuum.py",
+    "bytes": 2605,
+    "sha256": "922cffaf44764b668390694f316e308c21993bbf13a54f09a90cce7ad0e87cb2"
   },
   {
     "file": "code/refine_ds3_shadow_identity.py",
@@ -971,8 +1021,8 @@
   },
   {
     "file": "journal/2026-10-31.md",
-    "bytes": 52328,
-    "sha256": "5bd2c8234cab97868fe57a28cc2a4b4c03ab27a2c4a679eb87564ba21b713120"
+    "bytes": 54338,
+    "sha256": "65b164edbe112fe7b78105069cb27609d5f82a5f126f744400102a9689fdb9d8"
   },
   {
     "file": "literature/models.md",
@@ -1108,6 +1158,11 @@
     "file": "literature/stage4-ds3-crossing-dictionary-sources.md",
     "bytes": 2210,
     "sha256": "872dc43715749230b17c15c906fad8dfcd903a8b58e8b0d3053763b3034f3ef6"
+  },
+  {
+    "file": "literature/stage4-ds3-fock-vacuum-sources.md",
+    "bytes": 2721,
+    "sha256": "71bf044b25eef3b77064935ea8881aa47a820d66d0c16f2e6357f6313d60213c"
   },
   {
     "file": "literature/stage4-ds3-full-tail-sources.md",
@@ -1318,6 +1373,11 @@
     "file": "manuscript/ds3-crossing-dictionary/main.tex",
     "bytes": 14549,
     "sha256": "2d66e202a745bd32a8c538c184eca3e58260ca620f9c7324fc346196bd51c58d"
+  },
+  {
+    "file": "manuscript/ds3-fock-vacuum/main.tex",
+    "bytes": 21831,
+    "sha256": "3904716b433b5edab99017ab3a0675ffd2b19b6facc754c179b1edb27f379f8a"
   },
   {
     "file": "manuscript/ds3-full-tail/main.tex",
@@ -1541,8 +1601,8 @@
   },
   {
     "file": "NEXT.md",
-    "bytes": 19454,
-    "sha256": "4cdf36302a21de48d1e30cc6a7d40d7984431d350d4ba4c4f8d5802f78191f5b"
+    "bytes": 21762,
+    "sha256": "87ed78c820a08ae8f9530032b27880714e1c92eaea56f4fc699f68076310e10a"
   },
   {
     "file": "notes/math-independent.md",
@@ -1820,6 +1880,11 @@
     "sha256": "f0787b69fe8f51ab980d7f48c9d500ba4c4a12ee7aac6b846d3ca3255686e1b8"
   },
   {
+    "file": "notes/stage4-ds3-fock-vacuum.md",
+    "bytes": 7793,
+    "sha256": "1c66167211e1a9cca9ac37bdfda670766a99cac1d3526a8c3921df40865005e3"
+  },
+  {
     "file": "notes/stage4-ds3-full-tail.md",
     "bytes": 4938,
     "sha256": "a2d17c64710e2a6b03103848eb2f10c50d4a4d40ff55ae46e0140c704b13ac9d"
@@ -1980,6 +2045,11 @@
     "sha256": "fe0e43f390b19148539950d5b8a89504107d0df55e54e6ed9ea54bf9e5ec82ac"
   },
   {
+    "file": "output/pdf/de-sitter-ds3-fock-vacuum.pdf",
+    "bytes": 380912,
+    "sha256": "56391972b5e0038ca3a7728aca12c7646803f3a9ab5cb57f08603734ac9ed167"
+  },
+  {
     "file": "output/pdf/de-sitter-ds3-full-tail.pdf",
     "bytes": 287001,
     "sha256": "869889db016956a1b8d3a5a1c6ebf4ce38e0f2bbe791adfc5787dc66c3e369a4"
@@ -2121,8 +2191,8 @@
   },
   {
     "file": "PLAN.md",
-    "bytes": 40615,
-    "sha256": "90515f92732fc2bdd1f01943f9fb9818549665bc560fa2b548dfec6b9404e584"
+    "bytes": 41113,
+    "sha256": "63a42821f3dc4cb0741ff49f28b82339e70dd17a8deda0383ec436342f51d95a"
   },
   {
     "file": "PROJECT.md",
@@ -2131,8 +2201,8 @@
   },
   {
     "file": "README.md",
-    "bytes": 33821,
-    "sha256": "6f51c22d568502829ff8e2e6d8c0e1dbf7fcc7aced7481be1d404a870ae31e32"
+    "bytes": 34782,
+    "sha256": "cedd9a0adbf7b6a36252f2380cb4294908822955cf35b865a6be23f9f52f508d"
   },
   {
     "file": "REPOSITORY.md",
@@ -2211,8 +2281,8 @@
   },
   {
     "file": "results/project-audit.json",
-    "bytes": 30683,
-    "sha256": "260a7108e6fd1f3c7371f29b184f52db8b357d6b8eca95e7ce371287ea780c61"
+    "bytes": 31313,
+    "sha256": "99f0d26413cbc56c0a018529ba3e7b81a8ff387468e1ad6d745a66b05ebfdaa2"
   },
   {
     "file": "results/stage2/errors.csv",
@@ -2943,6 +3013,61 @@
     "file": "results/stage4/ds3-crossing-dictionary/source-correction.json",
     "bytes": 519,
     "sha256": "1e386db702db75e39a9f8e87822f2f0b14d66d9647ba4d79e3b27f5183bb6841"
+  },
+  {
+    "file": "results/stage4/ds3-fock-vacuum/audit-refined.json",
+    "bytes": 13667,
+    "sha256": "9cc42d6373094148200a82ce8e16bc07333a4ca30d6c16e6a1e4c0d5a399fd27"
+  },
+  {
+    "file": "results/stage4/ds3-fock-vacuum/audit.json",
+    "bytes": 13309,
+    "sha256": "83662b0b081e141ab95fa1d14387f618c07dc69b88ccf7d164a1577d152090ca"
+  },
+  {
+    "file": "results/stage4/ds3-fock-vacuum/build-review.md",
+    "bytes": 1520,
+    "sha256": "006e4e755c09d0d5ef31f7d6eccc7fc353602ebcf898185c48f231cfd5c7e242"
+  },
+  {
+    "file": "results/stage4/ds3-fock-vacuum/diagnostics-recovered.json",
+    "bytes": 50095,
+    "sha256": "ce554565086e9d569ea29b92eb928b636802262ffcbe11b7b6e7eee804fe4cf5"
+  },
+  {
+    "file": "results/stage4/ds3-fock-vacuum/evidence.json",
+    "bytes": 3914,
+    "sha256": "2d29b20129c2133567d23f0bf3efd7d7365aca98af4577662f053f1ec882ffed"
+  },
+  {
+    "file": "results/stage4/ds3-fock-vacuum/gaussian-audit.json",
+    "bytes": 4300,
+    "sha256": "3574f0435ec981582c7c84c083eca9915fdf1497ac639a5cc661bbb2582143b2"
+  },
+  {
+    "file": "results/stage4/ds3-fock-vacuum/gaussian-runs.jsonl",
+    "bytes": 15340,
+    "sha256": "d973e8dec4c5142c9141741db0cca15da0cccd0a2ea154edb7890783e1a09799"
+  },
+  {
+    "file": "results/stage4/ds3-fock-vacuum/gaussian.json",
+    "bytes": 25669,
+    "sha256": "f8503a99188dbabc4b260442cbe231dbffe21e93bade2342019a5a06ff5dfff3"
+  },
+  {
+    "file": "results/stage4/ds3-fock-vacuum/main.log",
+    "bytes": 24980,
+    "sha256": "f563310a5e9c6c194594988bd657d2dca23b01829e71b5885c458d2d03f4233b"
+  },
+  {
+    "file": "results/stage4/ds3-fock-vacuum/preservation.json",
+    "bytes": 7643,
+    "sha256": "598febd13de7adf652df86019c8a71aeba0bae86a11b8cf9754f5ecb24fb62a0"
+  },
+  {
+    "file": "results/stage4/ds3-fock-vacuum/vacuum-runs.jsonl",
+    "bytes": 32423,
+    "sha256": "d086bfc22fea5efc2c74dd3dffb4042b08b86eee2533facf8fa7c7ec1b70e3c0"
   },
   {
     "file": "results/stage4/ds3-full-tail/amplification.json",

@@ -919,6 +919,21 @@ REQUIRED.extend(sorted(CG_ROOT_HASH_RECORDS[COMPACT_GLOBAL_DIR+"evidence.json"])
 REQUIRED.append(COMPACT_GLOBAL_DIR+"evidence.json")
 
 
+FOCK_VACUUM_DIR = "results/stage4/ds3-fock-vacuum/"
+CG_ROOT_HASH_RECORDS[FOCK_VACUUM_DIR+"evidence.json"] = {
+    "code/"+name for name in ["ds3_fock_vacuum.py", "check_ds3_fock_vacuum.py",
+    "recover_ds3_fock_vacuum.py", "audit_ds3_fock_vacuum.py", "audit_ds3_fock_vacuum_refined.py",
+    "ds3_gaussian_field.py", "check_ds3_gaussian_field.py", "audit_ds3_gaussian_field.py",
+    "record_ds3_fock_vacuum.py", "build_ds3_fock_vacuum.ps1"]
+} | {"manuscript/ds3-fock-vacuum/main.tex", "output/pdf/de-sitter-ds3-fock-vacuum.pdf",
+     "notes/stage4-ds3-fock-vacuum.md", "literature/stage4-ds3-fock-vacuum-sources.md"} | {
+    FOCK_VACUUM_DIR+name for name in ["vacuum-runs.jsonl", "diagnostics-recovered.json",
+    "audit.json", "audit-refined.json", "gaussian-runs.jsonl", "gaussian.json",
+    "gaussian-audit.json", "preservation.json", "build-review.md", "main.log"]
+}
+REQUIRED.extend(sorted(CG_ROOT_HASH_RECORDS[FOCK_VACUUM_DIR+"evidence.json"]))
+REQUIRED.append(FOCK_VACUUM_DIR+"evidence.json")
+
 def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
@@ -2013,6 +2028,19 @@ def main():
             "kind":"compact kernel and Hilbert-tail replay; original structural-equality failure retained with exact-polynomial repair; no full physical quadrature"})
     except (KeyError, TypeError, ValueError, ArithmeticError) as exc:
         errors.append("malformed compact-global stage records: "+str(exc))
+    try:
+        from audit_ds3_fock_vacuum_refined import refined as replay_fock_vacuum
+        from audit_ds3_gaussian_field import audit as replay_gaussian_field
+        for stage, replay, count in [("ds3-fock-vacuum", replay_fock_vacuum, 154),
+                                      ("ds3-gaussian-field", replay_gaussian_field, 115)]:
+            record = replay(ROOT)
+            errors.extend(stage+": "+e for e in record["errors"])
+            if record["status"] != "passed" or record["checks"] != count:
+                errors.append(stage+": unexpected replay status/count")
+            supporting_records.append({"stage":stage, "checks":record["checks"], "status":record["status"],
+                "kind":"regulated vacuum-return arithmetic and independent quadratures; no full fourfield or all-spin numerical certification"})
+    except (KeyError, TypeError, ValueError, ArithmeticError, AssertionError) as exc:
+        errors.append("malformed fock-vacuum stage records: "+str(exc))
     growing_checks = growing.get("checks", [])
     if (growing.get("status") != "passed" or len(growing_checks) != 290
             or any(row.get("passed") is not True for row in growing_checks)

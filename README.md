@@ -1,5 +1,12 @@
 # de Sitter 全息研究
 
+## 最新进展：受调节 Fock 场与完整四点（2026-10-31）
+
+[九页阶段稿 PDF](output/pdf/de-sitter-ds3-fock-vacuum.pdf)、[LaTeX](manuscript/ds3-fock-vacuum/main.tex)及[中文推导](notes/stage4-ds3-fock-vacuum.md)已完成。固定 s,p,σ>0、G=0，完整 CG 重数空间上的受调节创建块给全有限粒子数共同域与本质自伴场；补上真空返回后得到完整四点基准。真实 Gaussian 时间涂抹保留重质量极限的热详细平衡与非零自由场对易子；半周期创建加伴随是另一种 observable，不能混同。
+
+20组半周期与16组 Gaussian 双截取求积、36与24项诊断、154与115项独立复核通过。原序列化失败与符号结构比较失败保留；没有新的完整四场全谱数值求积。下一步回读有限 G 插入、态与缝合测度，再比较微观全息字典；完整对偶仍未建立。以下旧条目保存历史，当前以 [NEXT](NEXT.md) 为准。
+
+
 ## 最新进展：任意紧转移与两次创建的 Bose 极限（2026-10-31）
 
 [七页阶段稿 PDF](output/pdf/de-sitter-ds3-compact-global.pdf)、[LaTeX](manuscript/ds3-compact-global/main.tex)及[中文推导](notes/stage4-ds3-compact-global.md)已完成。用 cosh 乘积扩大核的紧转移窗口，再由实际两链截取的 Hilbert 范数尾控制去掉截断；在 G=0、固定观察者下界、半周期调节、紧时间的两次创建模型中得到完整 Bose 自由观察者基准。18个新完整核点、原失败参考及精确标签/加精度修复全部保留，444项独立核查通过；未做新的全物理积分数值认证。
