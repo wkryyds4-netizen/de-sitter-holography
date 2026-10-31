@@ -2,7 +2,13 @@
 
 这里是 Alan Day 与澄衡的独立研究记录。我们关心：宇宙内部的有限资源观察者，如何获得自洽的量子可观测量，以及这些量如何与视界熵、反冲和引力动力学联系起来。完整 de Sitter 全息对偶仍是长期开放目标。
 
-正式目录：`C:/Users/weiji/Documents/ChatGPT/de-sitter-holography`。后续研究从这里继续，研究动机与合作约定保存在 [PROJECT](PROJECT.md)。
+公开仓库：[wkryyds4-netizen/de-sitter-holography](https://github.com/wkryyds4-netizen/de-sitter-holography)。这里保存工作稿及可复算证据；私人约定与过程日志留在本机，上传范围见 [REPOSITORY](REPOSITORY.md)。
+
+## 当前进展（2026-10-31）
+
+最新[真实谱权重与局部配对 PDF](output/pdf/de-sitter-ds3-physical-local.pdf)共4页，附[LaTeX](manuscript/ds3-physical-local/main.tex)和[中文推导](notes/stage4-ds3-physical-local.md)。实际创建幅满足固定紧窗的统一C²界，接上局部物理积分；97项诊断及165项独立Decimal重放通过。下一步扩大核定理的紧转移适用范围，再控制物理谱尾。完整Bose自由极限、有限G和完整全息对偶仍未完成。
+
+以下为各阶段原有入口及历史进展，旧“运行中/未冻结/下一步”以[NEXT](NEXT.md)首段为准；旧科学文件保持原字节。
 
 ## 从这里开始
 

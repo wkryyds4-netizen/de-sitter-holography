@@ -891,6 +891,18 @@ REQUIRED.extend(["code/audit_ds3_recent_stages.py", "results/stage4/ds3-collisio
                  "results/stage4/ds3-collision/controlled-validation.json",
                  "results/stage4/ds3-transverse-phase/refinement.json"])
 
+PHYSICAL_LOCAL_DIR = "results/stage4/ds3-physical-local/"
+CG_ROOT_HASH_RECORDS[PHYSICAL_LOCAL_DIR+"evidence.json"] = {
+    "code/ds3_physical_local.py", "code/check_ds3_physical_local.py",
+    "code/audit_ds3_physical_local.py", "code/build_ds3_physical_local.ps1",
+    "manuscript/ds3-physical-local/main.tex", "output/pdf/de-sitter-ds3-physical-local.pdf",
+    "notes/stage4-ds3-physical-local.md", "literature/stage4-ds3-physical-local-sources.md",
+    PHYSICAL_LOCAL_DIR+"diagnostics.json", PHYSICAL_LOCAL_DIR+"audit.json",
+    PHYSICAL_LOCAL_DIR+"build-review.md", PHYSICAL_LOCAL_DIR+"main.log",
+}
+REQUIRED.extend(sorted(CG_ROOT_HASH_RECORDS[PHYSICAL_LOCAL_DIR+"evidence.json"]))
+REQUIRED.append(PHYSICAL_LOCAL_DIR+"evidence.json")
+
 
 def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
@@ -1964,6 +1976,14 @@ def main():
             "status":uniform_record["status"], "kind":"uniform merged tails and local dr test integrals; no full physical mass integral"})
     except (KeyError, TypeError, ValueError, ArithmeticError) as exc:
         errors.append("malformed uniform-local stage records: "+str(exc))
+    try:
+        from audit_ds3_physical_local import audit as audit_physical_local
+        physical_record = audit_physical_local(ROOT)
+        errors.extend("physical-local: "+e for e in physical_record["errors"])
+        supporting_records.append({"stage":"ds3-physical-local", "checks":physical_record["checks"],
+            "status":physical_record["status"], "kind":"independent Decimal physical-weight replay on existing U nodes; local cutoff only"})
+    except (KeyError, TypeError, ValueError, ArithmeticError) as exc:
+        errors.append("malformed physical-local stage records: "+str(exc))
     growing_checks = growing.get("checks", [])
     if (growing.get("status") != "passed" or len(growing_checks) != 290
             or any(row.get("passed") is not True for row in growing_checks)

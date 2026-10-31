@@ -1,0 +1,40 @@
+{
+  "created_at_utc": "2026-10-31T08:15:54.919859+00:00",
+  "status": "stage verified; project audit follows",
+  "pages": 4,
+  "diagnostic_checks": 97,
+  "independent_decimal_checks": 165,
+  "reused_full_kernel_nodes": 144,
+  "new_full_kernel_evaluations": 0,
+  "compilers": [
+    "local pdfLaTeX twice, exit 0",
+    "desktop success"
+  ],
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "longest_edge_pixels": 1100,
+    "status": "all pages inspected"
+  },
+  "scope": "Compact physical weights and cutoff pairing; full Bose/free limit remains open",
+  "hashes": {
+    "code/ds3_physical_local.py": "d5b14b1162c995cd07aace4b28d62f4e2280c807b026eebd866256508ad016bf",
+    "code/check_ds3_physical_local.py": "b6c422241a45464593bbf6e5b36e486fccaee7721d85bc52b8968ecdab23f4d7",
+    "code/audit_ds3_physical_local.py": "e296b749f2e5ba06bd365f24c8fdbe6c45b9c8ac31b9b7c542dd87669e4a0843",
+    "code/record_ds3_physical_local.py": "35276bb0fe85260a3cbb64d3df53a13bcbe0ca60596c3d4ff453f10459c63d91",
+    "code/build_ds3_physical_local.ps1": "97874af63689f9570e4a1a1daed3184d7fe85d158e9a348c217aa7de9e5734d2",
+    "manuscript/ds3-physical-local/main.tex": "2a29dd84e940c2585b11ac9e8675c8fbcb0522749e79090a38741c40bb54518b",
+    "output/pdf/de-sitter-ds3-physical-local.pdf": "85176772df073c35092ee29abc3b851c6c220eff9f0d566d529c82a7dba9d16a",
+    "notes/stage4-ds3-physical-local.md": "089f82f3fadd0b925d077a0ab0d2a4a14c0fd2d36af30aea7e61a4575f101f58",
+    "literature/stage4-ds3-physical-local-sources.md": "c0caf7c0cdce0187db63b418617508d42f627fc2859685f9f94dfdfbd5235b5e",
+    "results/stage4/ds3-physical-local/audit.json": "7883c0bcdaf52bfab2644a1a54da6a60e95a9d01657f74b5e058e272eef091a7",
+    "results/stage4/ds3-physical-local/build-review.md": "909625373d18fc70d4e0c2d54da7bd8169d4436922eb0749ca9829c91d81cda6",
+    "results/stage4/ds3-physical-local/diagnostics.json": "1b1edacf8569df7454c7376323faf5a78134a7e32cb8d1ca83eb36218172b0f7",
+    "results/stage4/ds3-physical-local/main.log": "d0fee33e482f9d27bfaf6a95d19183afcea93ca9d5e0be30da1ac99f80b12e6c",
+    "results/stage4/ds3-physical-local/preservation.json": "954a5e823b8fdcf931fc2221e1881686edcecd5682b19c85fab74c69c23d5285"
+  }
+}

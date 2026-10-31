@@ -1,5 +1,15 @@
 # 下一次从这里继续
 
+## 当前继续位置：2026-10-31 ds3-physical-local
+
+先读[物理权重推导](notes/stage4-ds3-physical-local.md)、[四页PDF](output/pdf/de-sitter-ds3-physical-local.pdf)及[来源](literature/stage4-ds3-physical-local-sources.md)。G=0、BD/KG、半周期创建、固定s、条件c=M。真实E/W/ρ约分后是da db dd测度，转为u/v/r的绝对Jacobian为1；能量坐标另有∏h(x)/x。固定紧集上F_M=(1+(u+v)/M)F∞+O_C²(M⁻²)，从而旧小窗口内的真实平滑截取配对有O(1/logM)+O(1/M)极限。
+
+下一任务：将完整核渐近推广到任意固定紧转移和固定正p/q，先核新的Pochhammer系数界及导数可和性，再处理其余Gamma项及伴随级数。原max|α|+R/2≤1/2窗口不能穷尽谱，不能直接删去补集。随后用物理Hilbert范数裁剪两条链、证明非紧尾；一般χ不是独立链乘子。保留真实相位；同species交叉相位和自交换相位在峰面分别给1与exp[it(v−u)]。
+
+97项权重诊断及165项独立Decimal核查通过，复用144个旧完整核节点，无新U求值。M64/256零时局部积分比仅约.471/.553，未到极限。四页实际双遍编译、桌面success、逐页渲染核查完成；阶段14份文件绑定哈希，项目审计通过：790必需文件、946本地链接、1100代码/输入哈希。47份旧ZIP与748份旧文件保持；新检查点2026-10-31-ds3-physical-local已成功冻结并逐文件校验，ZIP和sha256位于snapshots。所有旧计算已退出，不重跑旧证据。全Fock、有限G、完整全息仍开放，goal active。
+
+用户明确要求公开GitHub，已建立https://github.com/wkryyds4-netizen/de-sitter-holography，main初始提交已发布；排除results下遗漏的第三方原文后修正为ceba22d，并与远端哈希核对。新阶段随后同步；私人约定、日志、第三方全文和ZIP不上传。上一轮uniform-local已冻结，现有47份旧ZIP。以下保留历史继续位置。
+
 ## 当前继续位置：2026-10-31 ds3-uniform-local
 
 先读[跨零局部推导](notes/stage4-ds3-uniform-local.md)、[五页PDF](output/pdf/de-sitter-ds3-uniform-local.pdf)、[来源](literature/stage4-ds3-uniform-local-sources.md)。先合并𝔞F−𝔟H再除z，得到跨r=0的显式级数余项；完整归一两支在零点有共同O(M⁻²)误差，最终U−K_M在固定小转移窗口一致O(1/M)。C²紧测试的dr积分趋于f(0)，速率O_f(1/logM)+O(||f||₁/M)。

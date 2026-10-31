@@ -1,8 +1,13 @@
 [
   {
+    "file": ".gitattributes",
+    "bytes": 85,
+    "sha256": "49a87c043d1255f52c726a5554940bbcf43231ee674ce729c33f17aafd2c30f3"
+  },
+  {
     "file": ".gitignore",
-    "bytes": 294,
-    "sha256": "9b96875ea935c5a5ebab485e66fe74e4277f126258e893ddd569a2cc14e00634"
+    "bytes": 533,
+    "sha256": "3eade91bff850a128354c4bf3fadcd3971a53c7a0dcfe1b406704e288e6034fc"
   },
   {
     "file": "AGENTS.md",
@@ -53,6 +58,11 @@
     "file": "code/audit_ds3_peak_limit_refined.py",
     "bytes": 1947,
     "sha256": "ce13bb1d98a619fa46e2450ea38bc7baae86c5a545adf9e934b34c6195ef6cfb"
+  },
+  {
+    "file": "code/audit_ds3_physical_local.py",
+    "bytes": 5071,
+    "sha256": "e296b749f2e5ba06bd365f24c8fdbe6c45b9c8ac31b9b7c542dd87669e4a0843"
   },
   {
     "file": "code/audit_ds3_recent_stages.py",
@@ -143,6 +153,11 @@
     "file": "code/build_ds3_peak_limit.ps1",
     "bytes": 1146,
     "sha256": "c2c749fb73c61181b565ef48f360af2bdb89c9f19e4a7321116a1184df704939"
+  },
+  {
+    "file": "code/build_ds3_physical_local.ps1",
+    "bytes": 1148,
+    "sha256": "97874af63689f9570e4a1a1daed3184d7fe85d158e9a348c217aa7de9e5734d2"
   },
   {
     "file": "code/build_ds3_shadow_duality.ps1",
@@ -238,6 +253,11 @@
     "file": "code/check_ds3_bose_nodes.py",
     "bytes": 1470,
     "sha256": "10d32b2c371af843ca9933002b97a33edefdbdb351db8530ba41d7a771593906"
+  },
+  {
+    "file": "code/check_ds3_physical_local.py",
+    "bytes": 5241,
+    "sha256": "b6c422241a45464593bbf6e5b36e486fccaee7721d85bc52b8968ecdab23f4d7"
   },
   {
     "file": "code/clock_model.py",
@@ -348,6 +368,11 @@
     "file": "code/ds3_peak_normalization.py",
     "bytes": 2886,
     "sha256": "bc7ae75203b29582e3caa8f6965e533495872eea660128a79333bd367bcc39b2"
+  },
+  {
+    "file": "code/ds3_physical_local.py",
+    "bytes": 2124,
+    "sha256": "d5b14b1162c995cd07aace4b28d62f4e2280c807b026eebd866256508ad016bf"
   },
   {
     "file": "code/ds3_racah_collision.py",
@@ -466,8 +491,8 @@
   },
   {
     "file": "code/project_audit.py",
-    "bytes": 134615,
-    "sha256": "ceb76a9d9b78833557bd5fe135104f79686cf504cfed08296867383fc03b5481"
+    "bytes": 135976,
+    "sha256": "1196b8857bb0511866aaf5ed667f4fcb8526979d3f8a33f8e7f126ec564dca83"
   },
   {
     "file": "code/quantized_observer.py",
@@ -558,6 +583,11 @@
     "file": "code/record_ds3_peak_limit.py",
     "bytes": 4280,
     "sha256": "11712bd8eedd7848ec8339550d4ca2ba1491259bf40d7c3f1a671a631ff7017a"
+  },
+  {
+    "file": "code/record_ds3_physical_local.py",
+    "bytes": 3010,
+    "sha256": "35276bb0fe85260a3cbb64d3df53a13bcbe0ca60596c3d4ff453f10459c63d91"
   },
   {
     "file": "code/record_ds3_shadow_duality.py",
@@ -906,8 +936,8 @@
   },
   {
     "file": "journal/2026-10-31.md",
-    "bytes": 47172,
-    "sha256": "7411e32e2f8f55954dd7683b6c2cfcf5c1a985f22efe3ce957fcf342f96cdf22"
+    "bytes": 50360,
+    "sha256": "fd3d611914019682b3d6021669d9bffe0596364ab3789b8bfa6de1383d4bdfb8"
   },
   {
     "file": "literature/models.md",
@@ -1063,6 +1093,11 @@
     "file": "literature/stage4-ds3-peak-limit-sources.md",
     "bytes": 1558,
     "sha256": "ec03cfef570b975e97efc15e3acbfd166e509544ee6aac3226bb1b6bbcc445d4"
+  },
+  {
+    "file": "literature/stage4-ds3-physical-local-sources.md",
+    "bytes": 1589,
+    "sha256": "c0caf7c0cdce0187db63b418617508d42f627fc2859685f9f94dfdfbd5235b5e"
   },
   {
     "file": "literature/stage4-ds3-shadow-duality-sources.md",
@@ -1265,6 +1300,11 @@
     "sha256": "3ae735d29ab885a2214580f6273c8faf158e4c6dbeb33968574c2830458d7253"
   },
   {
+    "file": "manuscript/ds3-physical-local/main.tex",
+    "bytes": 11180,
+    "sha256": "2a29dd84e940c2585b11ac9e8675c8fbcb0522749e79090a38741c40bb54518b"
+  },
+  {
     "file": "manuscript/ds3-shadow-duality/main.tex",
     "bytes": 10567,
     "sha256": "169afc15dc4e0f885e660d3d2547d87185f8172db2a0e1d0cdccb1af453c008e"
@@ -1456,8 +1496,8 @@
   },
   {
     "file": "NEXT.md",
-    "bytes": 15132,
-    "sha256": "212db0a84ccadf590823effdef4b6ac3a3bea4b293119284257aa7af94f92bd8"
+    "bytes": 17202,
+    "sha256": "c4aacfbee47dd069036a66d8741cb7bad8b8a42d52f6afae039fa7c1d8cee598"
   },
   {
     "file": "notes/math-independent.md",
@@ -1755,6 +1795,11 @@
     "sha256": "0fab0d65d9addd301090202d9717320ba8dcf0eaf84071808e8c54fcf91fa4f4"
   },
   {
+    "file": "notes/stage4-ds3-physical-local.md",
+    "bytes": 4093,
+    "sha256": "089f82f3fadd0b925d077a0ab0d2a4a14c0fd2d36af30aea7e61a4575f101f58"
+  },
+  {
     "file": "notes/stage4-ds3-shadow-duality.md",
     "bytes": 5410,
     "sha256": "d632eb3866f8756114850bb5b4d57f67c2496fdb8bf4c1b4494a47593e9127d1"
@@ -1905,6 +1950,11 @@
     "sha256": "ab5bdb875d143e78ff3ad5cf2d5565ace0585b73142c5271aa699e50cc63d8de"
   },
   {
+    "file": "output/pdf/de-sitter-ds3-physical-local.pdf",
+    "bytes": 344139,
+    "sha256": "85176772df073c35092ee29abc3b851c6c220eff9f0d566d529c82a7dba9d16a"
+  },
+  {
     "file": "output/pdf/de-sitter-ds3-shadow-duality.pdf",
     "bytes": 303748,
     "sha256": "97fd9fcc1242ae84308078785d2de4d75dfffa6d695e732ee5bffb6c7d23168d"
@@ -2016,8 +2066,8 @@
   },
   {
     "file": "PLAN.md",
-    "bytes": 39555,
-    "sha256": "8e9aab91800d7537a974d934c7b43a4e4acdb20d1a5c4e3953f96754e38b01a2"
+    "bytes": 40108,
+    "sha256": "6f3913bacdf5a46d1cb22f3cdd51631cf0d4ad8c286bddf8d148781b201cbb01"
   },
   {
     "file": "PROJECT.md",
@@ -2026,13 +2076,13 @@
   },
   {
     "file": "README.md",
-    "bytes": 32142,
-    "sha256": "949853b597d8ec69f0675192be36ff58c99db03ae6b55fd28c06ac3b26c28605"
+    "bytes": 32890,
+    "sha256": "8956109ecef1816ed825d96125703af050f2421ff5b6e934148b1f812bb293a3"
   },
   {
     "file": "REPOSITORY.md",
-    "bytes": 1353,
-    "sha256": "a3b06f81ab20a95c828c7ca28a9e7f20ccaaa13f0359d4f7e9cffc0eff83d95c"
+    "bytes": 2153,
+    "sha256": "65f1dbcbfd563aee9f105d9cab2007510fe52ace6a7c037546b3fd1e5a6d2ea5"
   },
   {
     "file": "requirements.txt",
@@ -2075,6 +2125,11 @@
     "sha256": "81305c99c3d574a4dcfacbb2a88361648a3f4374d2b389db638388d86cbdfbb1"
   },
   {
+    "file": "results/github-publication.json",
+    "bytes": 187,
+    "sha256": "881c8efbd05b10e51921e27fd64e16b3979bbede60481bb09b4e3c2b11263654"
+  },
+  {
     "file": "results/manuscript/build-record.json",
     "bytes": 10532,
     "sha256": "0307566f094ac484711a08fbc201b40cc06fe51613a4cab60fd16fa675275148"
@@ -2101,8 +2156,8 @@
   },
   {
     "file": "results/project-audit.json",
-    "bytes": 29895,
-    "sha256": "a12fe1f7e2ec680ef61e7dc59869ac7d80878698ac316b18c14a58df8666e6b4"
+    "bytes": 30258,
+    "sha256": "7947161a4cede36f9b5d4849b067cb010f9447d7c61eeb099edebc248e60183c"
   },
   {
     "file": "results/stage2/errors.csv",
@@ -2953,6 +3008,36 @@
     "file": "results/stage4/ds3-peak-limit/study.json",
     "bytes": 156741,
     "sha256": "13187cffe8e50ed7e5dfc9aa530ca491c82d05ca95395cfa480581c2c36f51b2"
+  },
+  {
+    "file": "results/stage4/ds3-physical-local/audit.json",
+    "bytes": 5900,
+    "sha256": "7883c0bcdaf52bfab2644a1a54da6a60e95a9d01657f74b5e058e272eef091a7"
+  },
+  {
+    "file": "results/stage4/ds3-physical-local/build-review.md",
+    "bytes": 944,
+    "sha256": "909625373d18fc70d4e0c2d54da7bd8169d4436922eb0749ca9829c91d81cda6"
+  },
+  {
+    "file": "results/stage4/ds3-physical-local/diagnostics.json",
+    "bytes": 101421,
+    "sha256": "1b1edacf8569df7454c7376323faf5a78134a7e32cb8d1ca83eb36218172b0f7"
+  },
+  {
+    "file": "results/stage4/ds3-physical-local/evidence.json",
+    "bytes": 2260,
+    "sha256": "e7ae6af017b12022ad7a492a8fa985666d618129b3599975ae5d4b8e5dc98ded"
+  },
+  {
+    "file": "results/stage4/ds3-physical-local/main.log",
+    "bytes": 24889,
+    "sha256": "d0fee33e482f9d27bfaf6a95d19183afcea93ca9d5e0be30da1ac99f80b12e6c"
+  },
+  {
+    "file": "results/stage4/ds3-physical-local/preservation.json",
+    "bytes": 7363,
+    "sha256": "954a5e823b8fdcf931fc2221e1881686edcecd5682b19c85fab74c69c23d5285"
   },
   {
     "file": "results/stage4/ds3-shadow-duality/audit.json",

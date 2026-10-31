@@ -7,10 +7,10 @@
     "Source remains a link, not an archive: dlmf-16.5",
     "Source remains a link, not an archive: dlmf-15.6"
   ],
-  "verified_at_utc": "2026-10-31T07:42:00.667224+00:00",
-  "required_files": 777,
-  "local_links_checked": 925,
-  "code_and_input_hashes_checked": 1086,
+  "verified_at_utc": "2026-10-31T08:19:17.884051+00:00",
+  "required_files": 790,
+  "local_links_checked": 946,
+  "code_and_input_hashes_checked": 1100,
   "scientific_checks": {
     "stage1": {
       "checks": 235,
@@ -601,6 +601,11 @@
       "recorded_hashes": 21
     },
     {
+      "file": "results/stage4/ds3-physical-local/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 14
+    },
+    {
       "file": "results/stage3/cross-limit/comparison.json",
       "kind": "projected comparison model only; not exact 6j convergence or interval certification",
       "checks": 19
@@ -806,6 +811,12 @@
       "checks": 446,
       "status": "passed",
       "kind": "uniform merged tails and local dr test integrals; no full physical mass integral"
+    },
+    {
+      "stage": "ds3-physical-local",
+      "checks": 165,
+      "status": "passed",
+      "kind": "independent Decimal physical-weight replay on existing U nodes; local cutoff only"
     },
     {
       "file": "results/stage3/growing-box/diagnostics.json",
