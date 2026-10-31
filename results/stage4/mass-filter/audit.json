@@ -1,0 +1,53 @@
+{
+  "status": "passed",
+  "checks": 444,
+  "errors": [],
+  "previous_protocol_comparisons": [
+    {
+      "delta": 0.4,
+      "u": 0.0,
+      "component": 0,
+      "difference": 1.0678222186477626e-06,
+      "combined_se": 2.209950180683081e-05
+    },
+    {
+      "delta": 0.4,
+      "u": 0.0,
+      "component": 1,
+      "difference": 3.7539131675617954e-05,
+      "combined_se": 5.5198520974469954e-05
+    },
+    {
+      "delta": 0.8,
+      "u": 0.0,
+      "component": 0,
+      "difference": 1.0454476801369239e-05,
+      "combined_se": 6.0411634678958716e-05
+    },
+    {
+      "delta": 0.8,
+      "u": 0.0,
+      "component": 1,
+      "difference": 1.338028687258852e-05,
+      "combined_se": 0.00010343070411002004
+    },
+    {
+      "delta": 0.8,
+      "u": 2.0,
+      "component": 0,
+      "difference": 2.0754993721006088e-05,
+      "combined_se": 0.00024520927710123283
+    },
+    {
+      "delta": 0.8,
+      "u": 2.0,
+      "component": 1,
+      "difference": 0.00019906803614200275,
+      "combined_se": 0.0003224822533623722
+    }
+  ],
+  "scope": "Raw arithmetic, protocol metadata and empirical controls; not a physical trace proof or total numerical error certificate.",
+  "hashes": {
+    "code/audit_mass_filter.py": "372e587d8a291d99dd5a496ca8d2430aed5a625ef008e136311cd47623ac5dc5"
+  }
+}

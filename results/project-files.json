@@ -115,6 +115,11 @@
     "sha256": "441a614aca9662936835a50f0608fb1c9b81c4ddcd97b30e8f26e3fdce487c2e"
   },
   {
+    "file": "code/audit_mass_filter.py",
+    "bytes": 3751,
+    "sha256": "372e587d8a291d99dd5a496ca8d2430aed5a625ef008e136311cd47623ac5dc5"
+  },
+  {
     "file": "code/audit_principal_eikonal.py",
     "bytes": 3784,
     "sha256": "0b17280ba3d9d01b916661174f2f6546d3d94a4c2bce376f187defcc08cb7fe1"
@@ -260,6 +265,11 @@
     "sha256": "e29332dc1e6983a57979d02e16609d7bde9820b8ae2df3888a1b65a2e0c3958d"
   },
   {
+    "file": "code/build_mass_filter.ps1",
+    "bytes": 1115,
+    "sha256": "2188ef5d43db18cbedb8c2b3f36003d36f3751e4d49bbc51c5d25c40b31f06e1"
+  },
+  {
     "file": "code/build_pairing_note.ps1",
     "bytes": 1144,
     "sha256": "872995de04a8556e1c2e3f539901bda4bea0e968e6b12c45b49d268d4b1f2e07"
@@ -323,6 +333,11 @@
     "file": "code/check_gaussian_eikonal.py",
     "bytes": 5870,
     "sha256": "11688fbd28bbd3284c7dbc244e6446e4e0cefbb39744699aef138fb613412f9a"
+  },
+  {
+    "file": "code/check_mass_filter.py",
+    "bytes": 4631,
+    "sha256": "b76be45bf8cfe8da28ae19868fa02f36974e39e3b663701c3865dc763ae99dd4"
   },
   {
     "file": "code/check_principal_eikonal.py",
@@ -550,6 +565,11 @@
     "sha256": "45a83f402491c35d7fd3d63f98e9668f55d5846c333ec5c7ae2d43e69cb83220"
   },
   {
+    "file": "code/mass_filter.py",
+    "bytes": 2046,
+    "sha256": "8ace50717d4b837bdfd15b2d67ba15bf681a84491ad5dbc96cd315d6374a72e0"
+  },
+  {
     "file": "code/microscopic_time_corrections.py",
     "bytes": 8400,
     "sha256": "ad799381e1d7a3e2abea0b3101335c33722ca00d4d7310f3ab5e7aed051d35c4"
@@ -575,6 +595,11 @@
     "sha256": "faad1c3f3f1b9ed7796fafa86d9ca4f50fb2848429b2bab26c23a2a558143837"
   },
   {
+    "file": "code/packet_mass_filter.py",
+    "bytes": 4100,
+    "sha256": "55b5086093831737c2f17faca1b263b4131daa1d475fafcfb7c11f5b1340a5f5"
+  },
+  {
     "file": "code/packet_positive.py",
     "bytes": 2027,
     "sha256": "73146d2ddf5e74cfdf8887d6d2b4d67a47b59ea25d1f832668b2adfb55869385"
@@ -596,8 +621,8 @@
   },
   {
     "file": "code/project_audit.py",
-    "bytes": 146017,
-    "sha256": "c18402a40296a21b89776b4a0e4f6a0282d0f4855162d6237afd0fe04f0e9138"
+    "bytes": 148799,
+    "sha256": "c6edf34f642b4dffb129357463e78404943c3360e28895615fbdae0bb5ca8249"
   },
   {
     "file": "code/quantized_observer.py",
@@ -725,6 +750,11 @@
     "sha256": "a553fc56a0ee4fe2e5556cdc7b1c05113b932f423859075996352394c9926b1a"
   },
   {
+    "file": "code/record_mass_filter.py",
+    "bytes": 4020,
+    "sha256": "6dee2b62bf23c359eb63fe9857a1f8b919eaf453735dec71069e9d37c25eec05"
+  },
+  {
     "file": "code/record_principal_eikonal.py",
     "bytes": 4092,
     "sha256": "22ee088bc2cacb3c23e6348d7091a23b1d26825d2d921285b5feb4720c44488a"
@@ -848,6 +878,11 @@
     "file": "code/run_gaussian_eikonal.py",
     "bytes": 2213,
     "sha256": "e0220c0ad99d97e4bc50b8b023dff757c9aa7d98837ac35bd63abadb1abfa29f"
+  },
+  {
+    "file": "code/run_mass_filter.py",
+    "bytes": 1903,
+    "sha256": "b6019f7a8bba1d7ced660393a00cdd407f4a24aa626295e17603c4ece3f5d431"
   },
   {
     "file": "code/run_moving_curve.py",
@@ -1091,8 +1126,8 @@
   },
   {
     "file": "journal/2026-10-31.md",
-    "bytes": 60506,
-    "sha256": "dd4de57095eca916817cd281cc4c4879afda377d75cba32c2d935e5bb513702d"
+    "bytes": 62423,
+    "sha256": "34bff8b515db2937d48f6b800529dad4ea9893cd38f294a5aec73d5d42c000e7"
   },
   {
     "file": "literature/models.md",
@@ -1298,6 +1333,11 @@
     "file": "literature/stage4-gram-prefactor-sources.md",
     "bytes": 3236,
     "sha256": "66a45fc9f3fa77d8f516f01da05dbe6ce09196bc3d9106580c24455f92bdf84d"
+  },
+  {
+    "file": "literature/stage4-mass-filter-sources.md",
+    "bytes": 1730,
+    "sha256": "b1c2bf198839c32986b9f5229fa24d06632c9863b6d737034cb4d0163c13981b"
   },
   {
     "file": "literature/stage4-microscopic-match.md",
@@ -1560,6 +1600,11 @@
     "sha256": "4412a30d4e9df3b67f91f938a35b628087efa432870b8352f27f514124dea893"
   },
   {
+    "file": "manuscript/mass-filter/main.tex",
+    "bytes": 12754,
+    "sha256": "d262cd24551511ee8d32115925244007e4e649210b2f0b5006432fcbc7eb4a64"
+  },
+  {
     "file": "manuscript/movingcurve.tex",
     "bytes": 7171,
     "sha256": "3bc276cc6aea0ade817185ac7f2ff67e5bf84335ce51e43429f14abbec5c9ce2"
@@ -1691,8 +1736,8 @@
   },
   {
     "file": "NEXT.md",
-    "bytes": 28067,
-    "sha256": "8099bea61a9e692db7edc4bed93b80b860d343369c50bd929d9cb5219924a426"
+    "bytes": 30011,
+    "sha256": "8c727c2c46e9aa4883c86aa0368f56af5a08f2afe8abb571db03b60274fc8320"
   },
   {
     "file": "notes/math-independent.md",
@@ -2040,6 +2085,11 @@
     "sha256": "1183fc1ad670c00eb00877d0de0dfd800aa86740750f5c2300848a225f918983"
   },
   {
+    "file": "notes/stage4-mass-filter.md",
+    "bytes": 4966,
+    "sha256": "b1de8b888ed83e4e109aa45cd4d9731c6053d88807e824413da11b01dd030053"
+  },
+  {
     "file": "notes/stage4-principal-eikonal.md",
     "bytes": 5523,
     "sha256": "b320a7103cc742cebd9a27a1da21d699a4fd2560152e400e39a4b312f604beaf"
@@ -2215,6 +2265,11 @@
     "sha256": "be944b8bc86892ff8011dbeeab1b78cc2e10a34f4e5cc7e9f5f37ac2ad6acc8a"
   },
   {
+    "file": "output/pdf/de-sitter-mass-filter.pdf",
+    "bytes": 357907,
+    "sha256": "e8280b6634b6c43802f3d0268e5f10a74083a70ad7ca4272671d4245e5304383"
+  },
+  {
     "file": "output/pdf/de-sitter-observer-foundations.pdf",
     "bytes": 941425,
     "sha256": "da40aec8613ce630680fc51e2b0ae3029b6e176a0591e7a5c55bfabadf5912a3"
@@ -2301,8 +2356,8 @@
   },
   {
     "file": "PLAN.md",
-    "bytes": 42242,
-    "sha256": "131a705534bd7221e0a881e5f40fabe00990b4e6ed9044f65808af7836d501fd"
+    "bytes": 42883,
+    "sha256": "49a99961891fea2039e851c79422a88357f27360216ec871b755e2111c7a11a7"
   },
   {
     "file": "PROJECT.md",
@@ -2311,8 +2366,8 @@
   },
   {
     "file": "README.md",
-    "bytes": 36555,
-    "sha256": "602935eaa4f2a2a7681ccb8fcf7ee9556b83dc87698621f7740c35c02cef9f01"
+    "bytes": 37334,
+    "sha256": "5435e98843d529f57627bd7869f581fc0b06cd6011d2320bd7c05591a663311b"
   },
   {
     "file": "REPOSITORY.md",
@@ -2391,8 +2446,8 @@
   },
   {
     "file": "results/project-audit.json",
-    "bytes": 33411,
-    "sha256": "acba58605f0af15e633aea476216aa59f9e0abcaa985f541fd6ee4835f8fce6b"
+    "bytes": 34417,
+    "sha256": "95f2985bf3ea472e93cbe14bed9d9b90042815fefc548f8cbfbcc8455cea2f52"
   },
   {
     "file": "results/stage2/errors.csv",
@@ -3643,6 +3698,61 @@
     "file": "results/stage4/gram-prefactor/main.log",
     "bytes": 24924,
     "sha256": "0320eb1d1883cb71c8d2ed8d7a61eb0d332c877ac81a22c6c783c2a59a5aded0"
+  },
+  {
+    "file": "results/stage4/mass-filter/audit.json",
+    "bytes": 1357,
+    "sha256": "d56c247813a50b887dcaa8c4ab0fb1ca94a49846ed3cbbb42611a46a36f0c2b4"
+  },
+  {
+    "file": "results/stage4/mass-filter/build-review.md",
+    "bytes": 1240,
+    "sha256": "dc4f9712a3398d3ff42ff603cdd55ff55ce396d9eff833c4cfff60a3885a6c30"
+  },
+  {
+    "file": "results/stage4/mass-filter/diagnostics.json",
+    "bytes": 7100,
+    "sha256": "0a2de26ec8b33e537404f5c5d521d11a87efaf12756db1ed7533919ca4aad961"
+  },
+  {
+    "file": "results/stage4/mass-filter/evidence.json",
+    "bytes": 3079,
+    "sha256": "79d0783c0a0e5315b9f9c3acf3f06ae86270689a9e5bf494bbfdb2a34d207d10"
+  },
+  {
+    "file": "results/stage4/mass-filter/main.log",
+    "bytes": 25018,
+    "sha256": "bb8bda151d4717f571d41344506d0090e0fdfaebf77073157f19d525aba6d6b3"
+  },
+  {
+    "file": "results/stage4/mass-filter/packet-runs.jsonl",
+    "bytes": 4862,
+    "sha256": "176eecd1bfb0c15a188fb0fa05eff782ac881d7cfe26e4369ac07998135c2011"
+  },
+  {
+    "file": "results/stage4/mass-filter/packet.json",
+    "bytes": 9158,
+    "sha256": "02fcaa70bfe0fec595c9518eb4519fedee19f962fddb24632f23ee6915343ce8"
+  },
+  {
+    "file": "results/stage4/mass-filter/preservation.json",
+    "bytes": 8090,
+    "sha256": "52d38a64fa8a0289506d04c75d6fa216e4fd4f82bbd3c1d4132ac7d1e264bc50"
+  },
+  {
+    "file": "results/stage4/mass-filter/runs.jsonl",
+    "bytes": 32023,
+    "sha256": "91c10f00725ac38691f4f122ec0f4d609092775ee219745d5e3c679a5a3d9adf"
+  },
+  {
+    "file": "results/stage4/mass-filter/source-record.json",
+    "bytes": 798,
+    "sha256": "4185d2f2c5b9e8eae3b2d7581e28baa687e347c13984c44de2905337f3939d47"
+  },
+  {
+    "file": "results/stage4/mass-filter/study.json",
+    "bytes": 53422,
+    "sha256": "ed628493117b1332c17e181ce6680e97e10dcd699d0a8636f556b48bf0ab580f"
   },
   {
     "file": "results/stage4/microscopic-comparison.json",

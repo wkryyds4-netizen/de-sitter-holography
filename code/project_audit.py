@@ -970,6 +970,15 @@ for file, expected in [
     ("audit.json", {"code/audit_principal_eikonal.py"})]:
     CG_ROOT_HASH_RECORDS[PRINCIPAL_EIKONAL_DIR+file] = expected
 
+MASS_FILTER_DIR = 'results/stage4/mass-filter/'
+CG_ROOT_HASH_RECORDS[MASS_FILTER_DIR+"evidence.json"] = {'results/stage4/mass-filter/source-record.json', 'results/stage4/mass-filter/audit.json', 'manuscript/mass-filter/main.tex', 'results/stage4/mass-filter/main.log', 'results/stage4/mass-filter/packet.json', 'code/record_mass_filter.py', 'results/stage4/mass-filter/study.json', 'literature/stage4-mass-filter-sources.md', 'code/run_mass_filter.py', 'code/audit_mass_filter.py', 'results/stage4/mass-filter/preservation.json', 'results/stage4/mass-filter/build-review.md', 'code/packet_mass_filter.py', 'results/stage4/mass-filter/runs.jsonl', 'code/build_mass_filter.ps1', 'notes/stage4-mass-filter.md', 'code/mass_filter.py', 'code/check_mass_filter.py', 'output/pdf/de-sitter-mass-filter.pdf', 'results/stage4/mass-filter/packet-runs.jsonl', 'results/stage4/mass-filter/diagnostics.json'}
+REQUIRED.extend(sorted(CG_ROOT_HASH_RECORDS[MASS_FILTER_DIR+"evidence.json"]))
+REQUIRED.append(MASS_FILTER_DIR+"evidence.json")
+CG_ROOT_HASH_RECORDS[MASS_FILTER_DIR+'study.json'] = {'code/mass_filter.py', 'code/principal_eikonal.py', 'code/run_mass_filter.py'}
+CG_ROOT_HASH_RECORDS[MASS_FILTER_DIR+'diagnostics.json'] = {'code/check_mass_filter.py', 'code/mass_filter.py', 'code/principal_eikonal.py'}
+CG_ROOT_HASH_RECORDS[MASS_FILTER_DIR+'packet.json'] = {'code/packet_mass_filter.py', 'code/principal_eikonal.py'}
+CG_ROOT_HASH_RECORDS[MASS_FILTER_DIR+'audit.json'] = {'code/audit_mass_filter.py'}
+
 def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
@@ -2115,6 +2124,25 @@ def main():
             "kind":"raw arithmetic replay, recorded Bessel/rotation controls; empirical quadrature, late u8 sign unresolved"})
     except (KeyError, TypeError, ValueError, ArithmeticError) as exc:
         errors.append("malformed principal-eikonal records: "+str(exc))
+    try:
+        from audit_mass_filter import audit as replay_mass_filter
+        replay = replay_mass_filter(ROOT)
+        errors.extend('mass-filter: '+e for e in replay['errors'])
+        if replay['status'] != 'passed' or replay['checks'] != 444:
+            errors.append('mass-filter: incomplete replay')
+        sources = read_json(ROOT/MASS_FILTER_DIR/'source-record.json')
+        if len(sources['sources']) != 2 or len(sources['prior_evidence']) != 2:
+            errors.append('mass-filter: source count')
+        for cache in sources['sources']:
+            if digest(ROOT/cache['file']) != cache['sha256']:
+                errors.append('mass-filter: source mismatch '+cache['file'])
+        for file, expected in sources['prior_evidence'].items():
+            if digest(ROOT/file) != expected:
+                errors.append('mass-filter: prior evidence mismatch '+file)
+        supporting_records.append(dict(stage='mass-filter', checks=444, full_scrambled_runs=80,
+            kind='Exact filter transform, conditional and assumed mass-average comparisons; not an established finite-kappa physical trace'))
+    except (KeyError, TypeError, ValueError, ArithmeticError) as exc:
+        errors.append('malformed mass-filter records: '+str(exc))
     growing_checks = growing.get("checks", [])
     if (growing.get("status") != "passed" or len(growing_checks) != 290
             or any(row.get("passed") is not True for row in growing_checks)

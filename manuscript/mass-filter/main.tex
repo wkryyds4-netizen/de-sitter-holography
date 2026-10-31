@@ -1,0 +1,298 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,microtype}
+\usepackage[margin=25mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\E}{\mathbb E}
+\newcommand{\R}{\mathcal R}
+\title{From four-leg mass filters to\\correlated time smearing in dS$_3$}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Working research note --- 31 October 2026}
+\begin{document}\maketitle
+\begin{abstract}
+The Gaussian mass regulator used in the existing static-patch trace
+argument is not four independent time smearings. We decompose it exactly
+into a mean-mass window and a correlated Gaussian time convolution.
+For four legs the relative pair differences retain their variance,
+while the pair-center variance is halved. We apply this identity to
+the real-principal eikonal model, derive its small-filter correction,
+and test a separately stipulated mass-averaging model.
+This refines the comparison target; it neither constructs a physical
+finite-$G$ state nor resolves the known trace obstruction.
+\end{abstract}
+
+\section{The source quantity and the exact filter identity}
+Set $\ell=1$. CSTY (2.3) defines the mixed representation
+\begin{equation}
+ F(\theta_i\mid\mu)=\frac{e^{-2\pi\mu}}{Z_{\rm sphere}(\mu)}
+ \int d^4m_i\,\delta\left(\mu-\frac14\sum_i m_i\right)
+ e^{\sum_i(\theta_i-\theta_{i-1})m_i}\boldsymbol F(m_i).
+ \label{eq:mixed}
+\end{equation}
+Its proposed spectral trace identification and four-leg Gaussian
+regulator occur explicitly in CSTY Section 3.1 \cite{csty}.
+They are prior constructions, not new states introduced here.
+At equal Euclidean spacings $\pi/2$, the positive mass filter is
+$s_\delta(m_i)=\exp[-\delta^2(m_i-M)^2]$.
+Write $\mu=\frac14\sum_i m_i$ and $s_i=m_i-\mu$. Then exactly
+\begin{equation}
+ \prod_i s_\delta(m_i)
+ =e^{-4\delta^2(\mu-M)^2}\,e^{-\delta^2\sum_i s_i^2}. \label{eq:split}
+\end{equation}
+Restricting only $\mu$ drops the second factor.
+
+Define the cyclic difference matrix by $(Dm)_i=m_i-m_{i+1}$, with
+$m_5=m_1$, and $P=I-\boldsymbol1\boldsymbol1^T/4$. If
+\[
+ C=\frac{\delta^2}{8}
+ \begin{pmatrix}5&-1&-3&-1\\-1&5&-1&-3\\-3&-1&5&-1\\-1&-3&-1&5\end{pmatrix},
+\]
+then $C=2\delta^2(DD^T)^+$ and $D^TCD=2\delta^2P$.
+For a centered Gaussian $d$ of covariance $C$ on $\sum d_i=0$,
+\begin{equation}
+ \E_d e^{i(Dm)\cdot d}=e^{-\delta^2\sum_i s_i^2}. \label{eq:char}
+\end{equation}
+The common-time zero mode is immaterial. This is the exact
+quadratic transfer factor left as an order estimate in the source
+argument. It is an application of elementary Gaussian Fourier algebra,
+not a priority claim.
+
+\newpage
+\section{Correlations, normalization, and the remaining mass average}
+Use the same insertion ordering as the preceding real-principal
+eikonal calculation:
+\[
+ \theta=(-\pi/2+i(t+d_1),\,id_2,\,\pi/2+i(t+d_3),\,\pi+id_4).
+\]
+The combinations
+\[
+ X=(d_1-d_3)/2,\qquad Y=(d_2-d_4)/2,\qquad
+ Z=(d_1+d_3-d_2-d_4)/2
+\]
+are independent with
+\begin{equation}
+ \operatorname{Var}X=\operatorname{Var}Y=\operatorname{Var}Z
+ =\delta^2/2. \label{eq:variance}
+\end{equation}
+For four independent insertion shifts of variance $\delta^2$,
+the first two variances agree but $\operatorname{Var}Z=\delta^2$.
+Thus the two protocols cannot be interchanged.
+
+Denote this correlated convolution by $\mathcal C_\delta$.
+Inserting \eqref{eq:char} into the spectral integral gives the
+unnormalized filtered quantity, under the same spectral trace
+hypothesis as the source:
+\begin{equation}
+ {\cal T}_{M,\delta}=
+ \int d\mu\, e^{2\pi\mu} Z_{\rm sphere}(\mu)
+ e^{-4\delta^2(\mu-M)^2}
+ \mathcal C_\delta F(\theta_i\mid\mu). \label{eq:average}
+\end{equation}
+All spectral support restrictions must be retained in $F$.
+Equation \eqref{eq:average} is also a formal transform identity if
+that hypothesis is not assumed. In that case it is not established
+as a positive trace or a state preparation.
+
+For the specified eikonal model, take real principal labels
+$\nu,\nu'>0$, probe masses squared $1+\nu^2,1+\nu'^2$,
+$\gamma(\mu)=4G\mu$, and $\alpha(\mu)=2\pi(1-\gamma(\mu))$.
+Let
+\[
+ I_{n,\nu}(X)=\int_0^\infty x^{n+1}
+ K_{i\nu}(xe^X)K_{i\nu}(xe^{-X})\,dx,\qquad
+ B_{n,\nu}(\delta)=\E_X I_{n,\nu}(X).
+\]
+The disconnected term is still
+$D_\delta(\mu)=B_{0,\nu}B_{0,\nu'}/[\pi\alpha(\mu)]^2$.
+If the numerator in \eqref{eq:average} is divided by the corresponding
+disconnected integral, its normalized version is
+\begin{equation}
+ \overline\R=
+ \frac{\int d\mu\,a(\mu)D_\delta(\mu)\R^{\rm corr}_\delta(t\mid\mu)}
+ {\int d\mu\,a(\mu)D_\delta(\mu)},\qquad
+ a(\mu)=e^{2\pi\mu}Z_{\rm sphere}(\mu)e^{-4\delta^2(\mu-M)^2}.
+ \label{eq:ratio}
+\end{equation}
+It is a positive average only if $aD_\delta$ is positive and integrable.
+The source normalization constant and actual time-ordered
+factorization remain separate questions. In particular, \eqref{eq:ratio}
+does not identify an arbitrary $G=0$ observer wavepacket with the
+mixed representation. At fixed theory $G$ stays fixed during the
+$\mu$ integral; holding $\gamma$ fixed would average different theories.
+
+\newpage
+\section{A calculable change in the real-principal coefficients}
+The previous lateral kernel representation remains valid with
+\eqref{eq:variance}. In detail, put
+\[
+ A=e^Y\cosh r_1+e^{-Y}\cosh r_2,\quad
+ B=e^X\cosh r_3+e^{-X}\cosh r_4,\quad T=t+Z,
+\]
+and $W=\cos\nu r_1\cos\nu r_2\cos\nu'r_3\cos\nu'r_4$.
+For $\eta=+1$ the continued kernel is
+\[
+ {\cal K}_\eta(c)=-J_\eta'(c),\quad
+ J_\eta(-1/a)=ae^{-a}\operatorname{Ei}(a)-\eta i\pi ae^{-a}.
+\]
+The conditional normalized model is
+\[
+ \R^{\rm corr}_\eta=
+ \frac{\E\left\langle\int_{\mathbb R_+^4}
+ \frac{W}{A^2B^2}
+ \left[{\cal K}_\eta(he^T/(AB))+{\cal K}_{-\eta}(he^{-T}/(AB))-1\right]
+ d^4r\right\rangle_\phi}{B_{0,\nu}B_{0,\nu'}}.
+\]
+Here $h=-\cos[(1-\gamma)(\pi-\phi)]/[2\mu\,\operatorname{sinc}(\pi\gamma)]$.
+It retains both phases. At each fixed perturbative order the factor is
+\begin{equation}
+ \frac{(-1)^n\langle h^n\rangle}{n!}
+ e^{n^2\delta^2/4}\frac{B_{n,\nu}B_{n,\nu'}}{B_{0,\nu}B_{0,\nu'}}
+ (e^{nt}+e^{-nt}). \label{eq:coeff}
+\end{equation}
+The independent-time prescription instead has $e^{n^2\delta^2/2}$.
+Moment positivity still follows from its established Mellin spectrum;
+it does not prove positivity of the full gravitational theory.
+
+The small-width change is explicit. With $a=(n+2)/2$ and
+$f_n(r)=e^{ar}K_{i\nu}(e^r)$, integration by parts in the Bessel
+equation gives
+\[
+ \frac{\|f_n'\|_2^2}{\|f_n\|_2^2}
+ =a^2+\nu^2-\frac{I_{n+2,\nu}(0)}{I_{n,\nu}(0)}
+ =q_{n,\nu}:=\frac{(n+2)^2/4+\nu^2}{n+3}.
+\]
+Boundary terms vanish for $n\geq0$ and real $\nu$.
+The Mellin transform and Gaussian multiplier then imply
+\[
+ B_{n,\nu}(\delta)=I_{n,\nu}(0)
+ [1-q_{n,\nu}\delta^2+O(\delta^4)].
+\]
+The coefficient in \eqref{eq:coeff}, relative to zero width, changes by
+$1+c_n\delta^2+O(\delta^4)$, where
+\[
+ c_n=\frac{n^2}{4}-q_{n,\nu}+q_{0,\nu}
+                  -q_{n,\nu'}+q_{0,\nu'},\qquad
+ c_1=\frac{2(\nu^2+\nu'^2)-5}{24}.
+\]
+For $(\nu,\nu')=(.6,.9)$, $c_1=-.110833\ldots$; independent
+time smearing gives $+.139167\ldots$. The sign of this width
+correction differs, while the first gravitational growing term itself
+still has the positive sign of the existing eikonal model.
+
+\newpage
+\section{Endpoint control and an explicitly stipulated comparison}
+The mass integral is not harmless merely because the Gaussian is
+small far from $M$. Combining the large-mass approximation
+$Z_{\rm sphere}(\mu)\propto\mu^2e^{-2\pi\mu}$ with
+$D_\delta\propto\alpha^{-2}$ over $0<\mu<\kappa=1/(4G)$
+would give a weight proportional to
+\[
+ \frac{\mu^2e^{-4\delta^2(\mu-M)^2}}{(\kappa-\mu)^2},
+\]
+whose integral diverges at $\mu=\kappa$ for every finite $\delta$.
+This is failure of an extrapolated approximation, not a physical
+prediction of divergent trace normalization.
+
+For a concrete finite comparison, we separately stipulate the
+semiclassical relation $\alpha=2\pi(1-\mu/\kappa)$ at finite $\kappa$
+and use the CLP proposal
+$Z_{\rm obs}(\alpha)=32\sin^2(\alpha/2)\sinh^2(\kappa\alpha/2)$
+\cite{clp}. This finite-$\kappa$ map and the insertion completion
+are not established. After removing a common positive constant,
+the weight in \eqref{eq:ratio} is exactly
+\begin{equation}
+ A_\kappa(\mu)e^{-4\delta^2(\mu-M)^2},\qquad
+ A_\kappa(\mu)=
+ \left[\frac{\sin(\alpha/2)}{\alpha}
+ (1-e^{-\kappa\alpha})\right]^2,\quad0<\mu<\kappa.
+ \label{eq:A}
+\end{equation}
+It satisfies $0\leq A_\kappa\leq1/4$ and tends to
+$\pi^2(\kappa-\mu)^2$ at the upper endpoint.
+The mass average of the bounded conditional eikonal ratio therefore
+exists. This restores an integrable comparison weight, not an
+established physical finite-$G$ density matrix.
+
+On any fixed interior relative mass window, the preceding
+rapidity representation has bounded second derivatives in
+$r=\mu/M$ and in the three displacement variables, for fixed
+principal labels, $\gamma(M)$ away from one and $t=\log M+u$
+with $u$ in a compact set. The bound follows by differentiating
+the smooth real lateral kernel; its derivatives are bounded,
+Gaussian exponential moments are finite, and the rapidity
+majorant is integrable. Taylor expansion with centered Gaussians
+then bounds the conditional smearing error by $O(\delta^2)$
+and the normalized mean-mass averaging error by
+$O((\delta^2 M^2)^{-1})$, provided the positive density has bounded
+relative $C^2$ derivatives there. For \eqref{eq:A}, its endpoint
+bound supplies an exponentially small exterior probability when
+$\delta^2\asymp M^{-1}$ and $\gamma(M)$ is fixed in $(0,1)$.
+Thus the source's $O(M^{-1})$ balancing estimate holds for this
+stipulated comparison model. The constants are not bounds on
+omitted gravitational terms.
+
+\paragraph{What is still missing.}
+CLP (3.35)--(3.37) only calibrates the physical insertion in a
+leading heavy-heavy-light limit. Its positive two-point expression
+does not fix the finite-parameter four-point Gram inverse or
+Lorentzian state. Our filter identity neither supplies these data
+nor invalidates the source's positivity argument, which already
+uses the four separate mass filters.
+
+\newpage
+\section{Numerical checks and reproducibility}
+Exact rational algebra checks $D^TCD=2\delta^2P$ and the reduced
+covariance. A three-level Hermitian matrix example compares the
+actual filtered trace with independent Gaussian quadrature of the
+loop transform; both agree to the saved tolerance. The mean-only
+window is also retained and gives a different result. Mellin
+second moments independently test $q_{n,\nu}$ at 50 decimal digits.
+All 23 diagnostics pass; this finite matrix check is not a test of
+quantum-gravity dynamics.
+
+For the conditional eikonal integrals we use $\nu=.6,\nu'=.9$,
+$\mu=1000$, $\gamma=.25$, $t=\log1000+u$. Eight scrambled Sobol
+seeds at $2^{19}$ and $2^{21}$ points retain both protocols with
+common samples. The following values are correlated minus
+independent, with empirical component standard errors across
+scrambles:
+\begin{center}\begin{tabular}{cc rr rr}
+\toprule
+$\delta$&$u$&$\Re\Delta\R$&$\Im\Delta\R$&SE$_{\Re}$&SE$_{\Im}$\\
+\midrule
+$1/\sqrt{1000}$&0&$-.00015810$&$.00022730$&$5.14\,10^{-8}$&$4.86\,10^{-8}$\\
+.4&0&$-.007832$&$.033554$&$.0000071$&$.0000067$\\
+.8&0&$.032164$&$.079138$&$.0000189$&$.0000315$\\
+.8&2&$-.079416$&$-.147868$&$.0000434$&$.0000599$\\
+\bottomrule
+\end{tabular}\end{center}
+These are full conditional kernel integrals, not just perturbative
+coefficients. They are not mass-integrated traces.
+
+A separate nine-dimensional run implements \eqref{eq:A} at
+$M=1000$, $\kappa=4000$, $G=1/16000$,
+$\delta=1/\sqrt{1000}$ and $u=0$, with antithetic mass offsets.
+Its complete raw estimates, mass normalizer and paired differences
+are retained in \path{results/stage4/mass-filter/packet.json}.
+The comparison is explicitly labeled as the stipulated CLP-weight
+model; a change of mass never changes $G$.
+Empirical scramble errors are not rigorous total error certificates.
+
+All drivers refuse to overwrite raw evidence. The stage records
+dependency versions, code/input hashes, finite-matrix controls,
+and both sampling levels. The next task is to determine a physical
+finite-parameter insertion and gluing prescription, or to establish
+a concrete obstruction to one, retaining the exact filter protocol
+derived here.
+
+\begin{thebibliography}{9}
+\bibitem{csty} Y. Chen, D. Stanford, H. Tang and Z. Yang,
+\emph{Negative shocks versus static patch holography},
+\href{https://arxiv.org/abs/2607.14042v1}{arXiv:2607.14042v1},
+(2.3), Section 3.1 and Appendix F.
+\bibitem{clp} J. Chandra, D. Liska and B. Post,
+\emph{3D de Sitter from complex Virasoro TQFT: Observers and knots},
+\href{https://arxiv.org/abs/2610.30247v1}{arXiv:2610.30247v1},
+(3.5), (3.10), (3.35)--(3.40).
+\end{thebibliography}
+\end{document}

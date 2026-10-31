@@ -1,0 +1,50 @@
+{
+  "created_at_utc": "2026-10-31T12:36:30.116245+00:00",
+  "status": "stage verified; project audit follows",
+  "pages": 5,
+  "full_scrambled_runs": 80,
+  "total_sampled_points": 104857600,
+  "diagnostic_counts": [
+    23,
+    444
+  ],
+  "compilers": [
+    "pdfLaTeX twice exit 0",
+    "desktop success"
+  ],
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "longest_edge_pixels": 1100,
+    "status": "all pages inspected"
+  },
+  "scope": "Exact Gaussian filter transform and specified eikonal comparison models. Finite-kappa mass map is an additional assumption; not an established physical trace, full finite-G dynamics or microscopic dual. Errors are empirical.",
+  "hashes": {
+    "code/mass_filter.py": "8ace50717d4b837bdfd15b2d67ba15bf681a84491ad5dbc96cd315d6374a72e0",
+    "code/run_mass_filter.py": "b6019f7a8bba1d7ced660393a00cdd407f4a24aa626295e17603c4ece3f5d431",
+    "code/check_mass_filter.py": "b76be45bf8cfe8da28ae19868fa02f36974e39e3b663701c3865dc763ae99dd4",
+    "code/packet_mass_filter.py": "55b5086093831737c2f17faca1b263b4131daa1d475fafcfb7c11f5b1340a5f5",
+    "code/audit_mass_filter.py": "372e587d8a291d99dd5a496ca8d2430aed5a625ef008e136311cd47623ac5dc5",
+    "code/record_mass_filter.py": "6dee2b62bf23c359eb63fe9857a1f8b919eaf453735dec71069e9d37c25eec05",
+    "code/build_mass_filter.ps1": "2188ef5d43db18cbedb8c2b3f36003d36f3751e4d49bbc51c5d25c40b31f06e1",
+    "manuscript/mass-filter/main.tex": "d262cd24551511ee8d32115925244007e4e649210b2f0b5006432fcbc7eb4a64",
+    "output/pdf/de-sitter-mass-filter.pdf": "e8280b6634b6c43802f3d0268e5f10a74083a70ad7ca4272671d4245e5304383",
+    "notes/stage4-mass-filter.md": "b1de8b888ed83e4e109aa45cd4d9731c6053d88807e824413da11b01dd030053",
+    "literature/stage4-mass-filter-sources.md": "b1c2bf198839c32986b9f5229fa24d06632c9863b6d737034cb4d0163c13981b",
+    "results/stage4/mass-filter/audit.json": "d56c247813a50b887dcaa8c4ab0fb1ca94a49846ed3cbbb42611a46a36f0c2b4",
+    "results/stage4/mass-filter/build-review.md": "dc4f9712a3398d3ff42ff603cdd55ff55ce396d9eff833c4cfff60a3885a6c30",
+    "results/stage4/mass-filter/diagnostics.json": "0a2de26ec8b33e537404f5c5d521d11a87efaf12756db1ed7533919ca4aad961",
+    "results/stage4/mass-filter/main.log": "bb8bda151d4717f571d41344506d0090e0fdfaebf77073157f19d525aba6d6b3",
+    "results/stage4/mass-filter/packet-runs.jsonl": "176eecd1bfb0c15a188fb0fa05eff782ac881d7cfe26e4369ac07998135c2011",
+    "results/stage4/mass-filter/packet.json": "02fcaa70bfe0fec595c9518eb4519fedee19f962fddb24632f23ee6915343ce8",
+    "results/stage4/mass-filter/preservation.json": "52d38a64fa8a0289506d04c75d6fa216e4fd4f82bbd3c1d4132ac7d1e264bc50",
+    "results/stage4/mass-filter/runs.jsonl": "91c10f00725ac38691f4f122ec0f4d609092775ee219745d5e3c679a5a3d9adf",
+    "results/stage4/mass-filter/source-record.json": "4185d2f2c5b9e8eae3b2d7581e28baa687e347c13984c44de2905337f3939d47",
+    "results/stage4/mass-filter/study.json": "ed628493117b1332c17e181ce6680e97e10dcd699d0a8636f556b48bf0ab580f"
+  }
+}

@@ -1,0 +1,282 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "name": "characteristic",
+      "error": 0.0,
+      "tolerance": 1e-30,
+      "passed": true
+    },
+    {
+      "name": "reduced covariance",
+      "error": 0.0,
+      "tolerance": 1e-30,
+      "passed": true
+    },
+    {
+      "name": "zero center",
+      "error": 0.0,
+      "tolerance": 1e-30,
+      "passed": true
+    },
+    {
+      "name": "pseudoinverse",
+      "error": 0.0,
+      "tolerance": 1e-30,
+      "passed": true
+    },
+    {
+      "name": "finite matrix Fourier 0.2",
+      "error": 3.142854046242057e-16,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "finite matrix quadrature 0.2",
+      "error": 4.718371552622334e-16,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "finite matrix trace real 0.2",
+      "error": 0.0,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "finite matrix Fourier 0.6",
+      "error": 3.618336202944445e-16,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "finite matrix quadrature 0.6",
+      "error": 2.2849793126070535e-12,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "finite matrix trace real 0.6",
+      "error": 2.261460126840278e-17,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "finite matrix Fourier 1.0",
+      "error": 2.397522071145298e-16,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "finite matrix quadrature 1.0",
+      "error": 8.274092786650766e-09,
+      "tolerance": 3e-06,
+      "passed": true
+    },
+    {
+      "name": "finite matrix trace real 1.0",
+      "error": 2.973760137662764e-17,
+      "tolerance": 2e-14,
+      "passed": true
+    },
+    {
+      "name": "spectral derivative (0, mpf('0.59999999999999999999999999999999999999999999999999973'))",
+      "error": 0.0,
+      "tolerance": 1e-43,
+      "passed": true
+    },
+    {
+      "name": "spectral derivative (1, mpf('0.59999999999999999999999999999999999999999999999999973'))",
+      "error": 1.3363823550460978e-51,
+      "tolerance": 1e-43,
+      "passed": true
+    },
+    {
+      "name": "spectral derivative (2, mpf('0.59999999999999999999999999999999999999999999999999973'))",
+      "error": 1.3363823550460978e-51,
+      "tolerance": 1e-43,
+      "passed": true
+    },
+    {
+      "name": "spectral derivative (3, mpf('0.59999999999999999999999999999999999999999999999999973'))",
+      "error": 0.0,
+      "tolerance": 1e-43,
+      "passed": true
+    },
+    {
+      "name": "spectral derivative (0, mpf('0.90000000000000000000000000000000000000000000000000027'))",
+      "error": 0.0,
+      "tolerance": 1e-43,
+      "passed": true
+    },
+    {
+      "name": "spectral derivative (1, mpf('0.90000000000000000000000000000000000000000000000000027'))",
+      "error": 1.3363823550460978e-51,
+      "tolerance": 1e-43,
+      "passed": true
+    },
+    {
+      "name": "spectral derivative (2, mpf('0.90000000000000000000000000000000000000000000000000027'))",
+      "error": 1.3363823550460978e-51,
+      "tolerance": 1e-43,
+      "passed": true
+    },
+    {
+      "name": "spectral derivative (3, mpf('0.90000000000000000000000000000000000000000000000000027'))",
+      "error": 5.345529420184391e-51,
+      "tolerance": 1e-43,
+      "passed": true
+    },
+    {
+      "name": "small filter slope 1",
+      "error": 5.697989066591469e-05,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "small filter slope 2",
+      "error": 0.00013853937417918072,
+      "tolerance": 0.001,
+      "passed": true
+    }
+  ],
+  "details": [
+    {
+      "delta": 0.2,
+      "direct": [
+        -723.4624074099308,
+        0.0
+      ],
+      "quadrature": [
+        [
+          -723.462407409931,
+          1.4210854715202004e-14
+        ],
+        [
+          -723.4624074099306,
+          0.0
+        ]
+      ],
+      "mean_only": [
+        -737.2764615709307,
+        2.842170943040401e-14
+      ]
+    },
+    {
+      "delta": 0.6,
+      "direct": [
+        -628.392893004816,
+        -1.4210854715202004e-14
+      ],
+      "quadrature": [
+        [
+          -628.3928930033799,
+          1.4210854715202004e-14
+        ],
+        [
+          -628.3928930048157,
+          -1.4210854715202004e-14
+        ]
+      ],
+      "mean_only": [
+        -740.8124192084067,
+        2.842170943040401e-14
+      ]
+    },
+    {
+      "delta": 1.0,
+      "direct": [
+        -477.87494812446664,
+        -1.4210854715202004e-14
+      ],
+      "quadrature": [
+        [
+          -477.87494417048487,
+          1.4210854715202004e-14
+        ],
+        [
+          -477.8749481244665,
+          0.0
+        ]
+      ],
+      "mean_only": [
+        -735.5038695775586,
+        0.0
+      ]
+    },
+    {
+      "n": 1,
+      "small_delta_slopes": [
+        -0.11060554346360928,
+        -0.11077635344266731
+      ],
+      "prediction": -0.11083333333333323,
+      "independent_prediction": 0.13916666666666672
+    },
+    {
+      "n": 2,
+      "small_delta_slopes": [
+        0.22322052306098297,
+        0.22280520604084575
+      ],
+      "prediction": 0.22266666666666657,
+      "independent_prediction": 1.2226666666666666
+    }
+  ],
+  "spectral_slopes": [
+    {
+      "n": 0,
+      "nu": "0.6",
+      "exact": "0.45333333333333333333333333333333333333333333333333",
+      "spectral": "0.45333333333333333333333333333333333333333333333333"
+    },
+    {
+      "n": 1,
+      "nu": "0.6",
+      "exact": "0.6525",
+      "spectral": "0.6525"
+    },
+    {
+      "n": 2,
+      "nu": "0.6",
+      "exact": "0.872",
+      "spectral": "0.872"
+    },
+    {
+      "n": 3,
+      "nu": "0.6",
+      "exact": "1.1016666666666666666666666666666666666666666666667",
+      "spectral": "1.1016666666666666666666666666666666666666666666667"
+    },
+    {
+      "n": 0,
+      "nu": "0.9",
+      "exact": "0.60333333333333333333333333333333333333333333333333",
+      "spectral": "0.60333333333333333333333333333333333333333333333333"
+    },
+    {
+      "n": 1,
+      "nu": "0.9",
+      "exact": "0.765",
+      "spectral": "0.765"
+    },
+    {
+      "n": 2,
+      "nu": "0.9",
+      "exact": "0.962",
+      "spectral": "0.962"
+    },
+    {
+      "n": 3,
+      "nu": "0.9",
+      "exact": "1.1766666666666666666666666666666666666666666666667",
+      "spectral": "1.1766666666666666666666666666666666666666666666667"
+    }
+  ],
+  "scope": "Exact cycle algebra and finite matrix identity; conditional moment derivatives. No gravitational Hilbert identification.",
+  "hashes": {
+    "code/check_mass_filter.py": "b76be45bf8cfe8da28ae19868fa02f36974e39e3b663701c3865dc763ae99dd4",
+    "code/mass_filter.py": "8ace50717d4b837bdfd15b2d67ba15bf681a84491ad5dbc96cd315d6374a72e0",
+    "code/principal_eikonal.py": "572619f01fa0995d95b538b79f60212f5b557d2096821a6d43342f7d47bb9a91"
+  }
+}

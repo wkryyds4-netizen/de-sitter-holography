@@ -7,10 +7,10 @@
     "Source remains a link, not an archive: dlmf-16.5",
     "Source remains a link, not an archive: dlmf-15.6"
   ],
-  "verified_at_utc": "2026-10-31T12:00:34.217040+00:00",
-  "required_files": 879,
-  "local_links_checked": 1016,
-  "code_and_input_hashes_checked": 1213,
+  "verified_at_utc": "2026-10-31T12:36:59.918317+00:00",
+  "required_files": 901,
+  "local_links_checked": 1033,
+  "code_and_input_hashes_checked": 1243,
   "scientific_checks": {
     "stage1": {
       "checks": 235,
@@ -666,6 +666,31 @@
       "recorded_hashes": 1
     },
     {
+      "file": "results/stage4/mass-filter/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 21
+    },
+    {
+      "file": "results/stage4/mass-filter/study.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 3
+    },
+    {
+      "file": "results/stage4/mass-filter/diagnostics.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 3
+    },
+    {
+      "file": "results/stage4/mass-filter/packet.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 2
+    },
+    {
+      "file": "results/stage4/mass-filter/audit.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 1
+    },
+    {
       "file": "results/stage3/cross-limit/comparison.json",
       "kind": "projected comparison model only; not exact 6j convergence or interval certification",
       "checks": 19
@@ -907,6 +932,12 @@
       "checks": 727,
       "full_scrambled_runs": 144,
       "kind": "raw arithmetic replay, recorded Bessel/rotation controls; empirical quadrature, late u8 sign unresolved"
+    },
+    {
+      "stage": "mass-filter",
+      "checks": 444,
+      "full_scrambled_runs": 80,
+      "kind": "Exact filter transform, conditional and assumed mass-average comparisons; not an established finite-kappa physical trace"
     },
     {
       "file": "results/stage3/growing-box/diagnostics.json",

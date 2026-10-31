@@ -1,5 +1,17 @@
 # 下一次从这里继续
 
+## 当前继续位置：2026-10-31 mass-filter
+
+先读[五页PDF](output/pdf/de-sitter-mass-filter.pdf)、[中文推导](notes/stage4-mass-filter.md)和[来源边界](literature/stage4-mass-filter-sources.md)。CSTY四段质量Gaussian滤波精确对应循环差矩阵的逆Laplacian协方差；X/Y/Z方差均δ²/2，旧独立时间协议的Z方差是δ²。固定阶中心因子为exp(n²δ²/4)，c₁=[2(ν²+ν′²)−5]/24是宽度修正，不是增长项符号。
+
+归一质量平均需含e²πμ Zsphere Dδ，且G固定、γ随μ变。将大质量近似延伸到α=0会制造不可积端点；本轮另设有限κ质量映射并借CLP权重得到可积比较模型，仅在明确内部窗口下给O(δ²)+O(1/(δ²M²))。不把此模型称为已建立物理迹，不把原文已有O(1/M)当原创。
+
+64条件配对runs、16质量平均runs，共104,857,600个Sobol点；23诊断和444重放通过。误差为经验估计，保留完整复相位。五页PDF已双编译exit0、桌面success并逐页1100像素检查。计算均退出，无活跃句柄；不要重跑one-shot覆盖旧输出。阶段证据与冻结状态以evidence及唯一2026-10-31-mass-filter快照为准，52份此前ZIP与全部旧科学文件保持。持续公开授权有效，私人配置、日志、第三方全文与本机恢复分支不推送。
+
+下一任务：先逐式核CLP有限κ两点插入、四点图切割和缝合测度，标出反射作用于左右手征、外标签及轮廓的方式。选两种插入次序构成最小2×2 Gram测试，明确对角项和混合配对是否来自同一内积、是否需要逆Gram或非平凡反射。只有这些输入齐备才计算行列式/正性；若原文未定，列出具体缺失数据和能区分候选完成的条件，不能用简单模方或正标量权重补齐。再与G=0全Fock基准比较。完整有限G与微观对偶仍开放，goal active。
+
+以下为历史继续位置。
+
 ## 当前继续位置：2026-10-31 principal-eikonal
 
 先读[中文推导](notes/stage4-principal-eikonal.md)、[六页PDF](output/pdf/de-sitter-principal-eikonal.pdf)、[原文边界](literature/stage4-principal-eikonal-sources.md)。真实ν,ν′>0，ℓ=1，固定平均质量混合表示、CSTY12/14两侧与两个sector减重复断开项。原动量相反±π/4旋转固定η=+；四rapidity核K=-J′保留相位。Gaussian平均Bn为Mellin正谱积分，断开D=B₀νB₀ν′/(πα)²，各固定阶系数非负；不等于完整答案正性或Hilbert构造。

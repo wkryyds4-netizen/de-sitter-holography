@@ -1,5 +1,11 @@
 # de Sitter 全息研究
 
+## 最新进展：四段质量滤波与相关时间（2026-10-31）
+
+[五页PDF](output/pdf/de-sitter-mass-filter.pdf)、[LaTeX](manuscript/mass-filter/main.tex)、[中文推导](notes/stage4-mass-filter.md)完成。复读CSTY确认原文已有四段质量滤波；精确变换给相关Gaussian时间，中心时间方差是旧独立涂抹的一半。相应小宽度首阶修正可以反号，这不意味着引力增长项反号。
+
+64组条件比较、16组指定质量平均、23项诊断与444项原始算术重放通过。质量平均保持G固定，包含断开归一权重；有限κ映射仍是比较模型的额外假设。下一步核实际插入、Gram缝合及反射正性，完整物理迹与全息对偶尚未建立。当前继续位置见[NEXT](NEXT.md)。
+
 ## 最新进展：实 principal 探针与带相位四点（2026-10-31）
 
 [六页 PDF](output/pdf/de-sitter-principal-eikonal.pdf)、[LaTeX](manuscript/principal-eikonal/main.tex)及[中文推导](notes/stage4-principal-eikonal.md)完成。保留真实principal Bessel波函数，通过原动量的相反旋转确定两侧解析延拓；Gaussian平均的各阶矩有正谱表示，但完整四点仍有相位与相消。数值扫描显示涂抹后虚部可以变号，最晚点符号未分辨，不能沿用共形全时间负号定理。
