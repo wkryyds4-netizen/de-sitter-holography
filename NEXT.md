@@ -1,5 +1,15 @@
 # 下一次从这里继续
 
+## 进行中的原文核查与 principal 推广（尚未形成新阶段稿）
+
+2026-10-31 再次通过 GitHub API 核实仓库 public、private=false，远端 main 与本机 b2ab04acb01a0a13217cd5e4a6abb07482a2fbc6 一致；沿用用户明确公开授权。以下 gaussian-eikonal 仍是最新已冻结科学阶段。
+
+新增阅读：2610.28719v1 的 HTML 在有效作用量处截断，已改读 PDF 的第8–15页，核到§§4–6及附录A；附录B等未完成，不宣称全文复现。其 D≥4 测试观察者、未定边界条件/角点歧义与未完成量子化，不能直接提供本项目 dS3 有质量观察者的轮廓。2607.13137v1 的§5已定位质量规约双缩放与无质量tree结果的区别，详细中间推导仍需逐式核完；不能把 graviton-mass regulator 当观察者反冲。
+
+数学进度仅为探索性初核：从 CSTY(2.32)及 DLMF10.32.9/10.43.19 出发，拟用四个 rapidity 积分继续真实 principal Bessel 核。辅助核为 K(c)=-J'(c)=((1+c)J(c)-1)/c²；负轴 c=-1/a 的虚部为 -ηπa²(a-1)e^(-a)，会在 a=1 变号，不能移植共形虚部负号定理。3个未涂抹 Bessel 矩以直接积分、Gamma闭式及Mellin谱积分作40位交叉核对，数值一致；这不是完整涂抹、物理轮廓或总误差验证。草稿脚本/输出仅保存在本机 tmp/principal-identity-check.py 与同名JSON，未冻结、未作为新成果发布。
+
+接下来先复核原动量旋转的归一与两侧边值，再推 Gaussian 平均的正谱矩；随后实际计算完整带相位的 principal 四点，记录相消、独立求积和误差。完成后才写新 LaTeX 阶段稿、编译并核版 PDF、登记证据及发布。当前无活跃计算句柄；旧阶段文件与ZIP不改。
+
 ## 当前继续位置：2026-10-31 gaussian-eikonal
 
 先读[中文推导](notes/stage4-gaussian-eikonal.md)、[六页PDF](output/pdf/de-sitter-gaussian-eikonal.pdf)、[来源](literature/stage4-gaussian-eikonal-sources.md)。ℓ=1、m>0、γ=4Gm∈[0,1)、α=2π(1−γ)、两种conformal probes ν=ν′=i/2，固定平均质量混合表示与指定12/14轮廓。与此前real principal p>0全Fock空间不可默认等同。
