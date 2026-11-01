@@ -135,6 +135,11 @@
     "sha256": "278442017a9d6c6fbed0ed066e535a45bd01a571f06d4ec17eb2554e9ef4be39"
   },
   {
+    "file": "code/audit_weak_continuation.py",
+    "bytes": 4151,
+    "sha256": "4848353c894e15fc819026042e070569f61520d812b0101db38b7ac45d93cc7b"
+  },
+  {
     "file": "code/build_bessel_cancellation_note.ps1",
     "bytes": 969,
     "sha256": "e99867a9d6c0578b1a1126ad2244f188106846c370c9d4019b8108f3c0404ea7"
@@ -325,6 +330,11 @@
     "sha256": "c4f7e8103a7c9f66ab860b23dff49ca492b8a02c304c769dd0784215268f5260"
   },
   {
+    "file": "code/build_weak_continuation.ps1",
+    "bytes": 1146,
+    "sha256": "fea3d044cf3bb2b67537509575a6060a6d6da522da8f24f2e596155b95980733"
+  },
+  {
     "file": "code/build_wkb_note.ps1",
     "bytes": 895,
     "sha256": "8688cdddd20364adec33cc9a3cab3c9d0ea0958a8ca1fe2197bb1da44e9ccfe3"
@@ -378,6 +388,11 @@
     "file": "code/check_unitary_flip.py",
     "bytes": 3145,
     "sha256": "6e58b152e2fe3162de359dba59c913940c6e51e62d17c7d70c3b5515f55ffb01"
+  },
+  {
+    "file": "code/check_weak_continuation.py",
+    "bytes": 3621,
+    "sha256": "c0ee501492d36e771d7c7150ad89ba7551206a0ec3e8859d6beea4632294e2b1"
   },
   {
     "file": "code/clock_model.py",
@@ -650,6 +665,11 @@
     "sha256": "7f62a2156c5c0dbd169adacd8a00a6007a22ca13a03e8ffeab7de2b931a4567e"
   },
   {
+    "file": "code/positive_weak_form.py",
+    "bytes": 2223,
+    "sha256": "261c0e7c237fd120dd2e2b618a986ccd28ba575366377ea178d1925edd70be2d"
+  },
+  {
     "file": "code/preparation_asymptotics.py",
     "bytes": 8558,
     "sha256": "f3b07907b5c3395dfd78a54c3065c3eda78ba3e02ecfa5acc45e31e8c6488575"
@@ -661,8 +681,8 @@
   },
   {
     "file": "code/project_audit.py",
-    "bytes": 154929,
-    "sha256": "d3012fe1907d4c7050d9894a8af76bb873282fd815bd698ff9fd3d0cd5f2e801"
+    "bytes": 157907,
+    "sha256": "4af9b1a7e3963c132a29abd81955e89553b8368b01392504eadb41b39a0e9eb0"
   },
   {
     "file": "code/quantized_observer.py",
@@ -808,6 +828,11 @@
     "file": "code/record_unitary_flip.py",
     "bytes": 3896,
     "sha256": "3d980643311b56f4aad6e08dff65392be5798f8f5eaee7bf4c211b79409f53a6"
+  },
+  {
+    "file": "code/record_weak_continuation.py",
+    "bytes": 3934,
+    "sha256": "041375501a1f0fded64211eb005e50fa8a162cc42eaf370570db8f3a1887a93c"
   },
   {
     "file": "code/recover_ds3_fock_vacuum.py",
@@ -983,6 +1008,11 @@
     "file": "code/run_unitary_flip.py",
     "bytes": 1322,
     "sha256": "20294604f0b211d37203577de9fdff0e543e8e9360ea835360c109498094016d"
+  },
+  {
+    "file": "code/run_weak_continuation.py",
+    "bytes": 3723,
+    "sha256": "c2f3cf0e0a027c34efaa3abc6b0c6d09d2eaead478d67190b36f15ead9e01be1"
   },
   {
     "file": "code/semiclassical_clock.py",
@@ -1200,6 +1230,11 @@
     "sha256": "cce160008f954ea6c27ede3c6e1f862b1eeb67470f11b66fd393b77f4d2944d8"
   },
   {
+    "file": "code/weak_continuation.py",
+    "bytes": 2478,
+    "sha256": "8d639acf92e93ad4163a36f0951c654f47fb6687a68617be9b47a1567f9cdfb9"
+  },
+  {
     "file": "code/wkb_overlap.py",
     "bytes": 4583,
     "sha256": "7772b0282ddc1935d7057119a60e6d4612ce9bf328a545651ead5c51502e0feb"
@@ -1221,8 +1256,8 @@
   },
   {
     "file": "journal/2026-11-01.md",
-    "bytes": 5621,
-    "sha256": "2d2d58c6ba6aa2c141aa4480eb538454c71d0c59835315fbf3915a76ad5f828e"
+    "bytes": 7529,
+    "sha256": "e3a9da1ef55d366b0b469b0660bc6e190feec1d214cb72f85836ed27ee807d58"
   },
   {
     "file": "literature/flip-proof-dependency-map.md",
@@ -1533,6 +1568,11 @@
     "file": "literature/stage4-unitary-flip-sources.md",
     "bytes": 1790,
     "sha256": "8543edcf1e7ee3eeea429dcc97653e758067e380f9cbd70de5cb737739703b3a"
+  },
+  {
+    "file": "literature/stage4-weak-continuation-sources.md",
+    "bytes": 1971,
+    "sha256": "657f8ab9de803ce8c2551fc5a39badfa289645e51ae812ccc097b25995e0758b"
   },
   {
     "file": "literature/stage4-wkb-overlap-sources.md",
@@ -1855,9 +1895,14 @@
     "sha256": "09ef9a88abe4f7fc2afd0e9c06b3f1966c8d6ae1af2962683d7a368892710f9d"
   },
   {
+    "file": "manuscript/weak-continuation/main.tex",
+    "bytes": 11716,
+    "sha256": "2b448af7e2223088e2c9fe3bcf6e8a842f52ce7c287ab2b89c2759dfec287368"
+  },
+  {
     "file": "NEXT.md",
-    "bytes": 35485,
-    "sha256": "71ca8549fc620ff283d2f31f8ceb25ed57a18606b73a57fe50c425171d6a850c"
+    "bytes": 37553,
+    "sha256": "bacbb1eb3ed7f144b423160673d12a2101e932308fb950a81328b2dedd4efb4e"
   },
   {
     "file": "notes/math-independent.md",
@@ -2295,6 +2340,11 @@
     "sha256": "5cf6f327c9dfea81f1805e82ed6f6b5c4658c755a9255d4565f61685031fa4dd"
   },
   {
+    "file": "notes/stage4-weak-continuation.md",
+    "bytes": 3759,
+    "sha256": "55a2951cf816fa65ead9a5e9c5268a7adc0462db775c369d94c429656cb00036"
+  },
+  {
     "file": "notes/stage4-wkb-overlap.md",
     "bytes": 3892,
     "sha256": "d7446310209409f4118cbc573ab3f6e8e659439316e433ea05a5adca5eb12c1e"
@@ -2490,14 +2540,19 @@
     "sha256": "b2a7aca54625acb341479043fe0c1345981ac81f04afbad18430e21575d821b3"
   },
   {
+    "file": "output/pdf/de-sitter-weak-continuation.pdf",
+    "bytes": 310268,
+    "sha256": "426d7b27965389df1a27545b789929c7d4cc1d66902d9bd81a4a9d8140ec81f3"
+  },
+  {
     "file": "output/pdf/de-sitter-wkb-overlap.pdf",
     "bytes": 332880,
     "sha256": "800d906ccb714ad9b6da1db3be90ceac2b2d67d4a903d02fe45c4e0b3df30d92"
   },
   {
     "file": "PLAN.md",
-    "bytes": 44752,
-    "sha256": "0d915d82c6e7902e928187a5966d5738f62f0def44d3c8f238398903c78b928e"
+    "bytes": 45421,
+    "sha256": "b05799b4dc684bb63df5b448e28f3d7ecd077c77a64c0182785f60e101ad140d"
   },
   {
     "file": "PROJECT.md",
@@ -2506,8 +2561,8 @@
   },
   {
     "file": "README.md",
-    "bytes": 39175,
-    "sha256": "f781c2be5d96c383cdd16cb838c15c8d201eac9fad72e51948711df87f98dc2f"
+    "bytes": 40045,
+    "sha256": "94a5c1d376278cd72037b4a7abc2ccf1868480077f885d7cc3a8226597e543be"
   },
   {
     "file": "REPOSITORY.md",
@@ -2586,8 +2641,8 @@
   },
   {
     "file": "results/project-audit.json",
-    "bytes": 36537,
-    "sha256": "378898e7fe6ae0561d780b22a7e9d0848e2ee165a05d903e96e23601dcb4cd77"
+    "bytes": 37685,
+    "sha256": "82b80e2a625840d40247357634b24bfe26f7e861fc13f1288b9148a5a23d24c4"
   },
   {
     "file": "results/stage2/errors.csv",
@@ -4540,6 +4595,61 @@
     "sha256": "a980ef8d857bfc4b2c08e8bbf14208c1b14a6ab24e6e58e52c73255ba442e888"
   },
   {
+    "file": "results/stage4/weak-continuation/audit.json",
+    "bytes": 413,
+    "sha256": "0262fa99f11894b347760f067fd16566a21d5cfcf7604246bde12f9ca438dbb3"
+  },
+  {
+    "file": "results/stage4/weak-continuation/build-initial.log",
+    "bytes": 24960,
+    "sha256": "1cf212b3bf0d9aa65f79485b115f988d5ec773b50a30e56ecfd9094155552bd2"
+  },
+  {
+    "file": "results/stage4/weak-continuation/build-review.md",
+    "bytes": 971,
+    "sha256": "641a0bd6155c81347a3d4fed2f0f3cb2b216143f7c0499ee7a91ab3b9ae5eef5"
+  },
+  {
+    "file": "results/stage4/weak-continuation/diagnostics.json",
+    "bytes": 4444,
+    "sha256": "7733ea91316903f681133a80a401d4059303d2be4bdc74abf7337e0c917b945c"
+  },
+  {
+    "file": "results/stage4/weak-continuation/evidence.json",
+    "bytes": 3068,
+    "sha256": "980ba24b9b78f8840de2487d1856999180e876197baf5976b9266c6977c483fd"
+  },
+  {
+    "file": "results/stage4/weak-continuation/main.log",
+    "bytes": 23979,
+    "sha256": "715bf6921f7b1a2190e3f786847c27bf2e0ec13a1010ebdf5aac984a208bfa7d"
+  },
+  {
+    "file": "results/stage4/weak-continuation/positive-form.json",
+    "bytes": 3731,
+    "sha256": "93a0456e0f2133ab4f64759d7f8b6b07be8c38535f9a05bdbb00eb609af12583"
+  },
+  {
+    "file": "results/stage4/weak-continuation/preservation.json",
+    "bytes": 8523,
+    "sha256": "17ebb3fad84edd9e8c935436c08619e55316a5d1487550840593112f081d17a1"
+  },
+  {
+    "file": "results/stage4/weak-continuation/runs.jsonl",
+    "bytes": 14211,
+    "sha256": "c384108c427de467a8a7196a782c6af749f15b9c72a7eb38c4a405e147024c0e"
+  },
+  {
+    "file": "results/stage4/weak-continuation/source-record.json",
+    "bytes": 824,
+    "sha256": "b672717d860cb1fe2c17247ec50351d80567d19faa87c47267caaacb14bc2017"
+  },
+  {
+    "file": "results/stage4/weak-continuation/study.json",
+    "bytes": 20675,
+    "sha256": "40405a2afff456cda8cef29d9585b9fc42e904f116577378461714ff57563fe1"
+  },
+  {
     "file": "results/stage4/wkb-overlap/diagnostics.json",
     "bytes": 15466,
     "sha256": "f98bdbdebc3c3e9e94c0dfc2374e813b3c7e797bd3be75d8687a4b457ceed058"
@@ -4768,6 +4878,11 @@
     "file": "sources/pusz-soltan-math-0604613v1.pdf",
     "bytes": 148378,
     "sha256": "b4510061fbf7d9e3fda63474811322c375a002709fbee421f172d77dac46e7aa"
+  },
+  {
+    "file": "sources/ramond-distributions-2015.pdf",
+    "bytes": 910622,
+    "sha256": "aed544920c4027dde81c3e536718842d295fab1439d4110b8ec3758e112a2f3f"
   },
   {
     "file": "sources/sun-2111.04591v2.html",

@@ -1,0 +1,48 @@
+{
+  "created_at_utc": "2026-11-01T00:58:49.789925+00:00",
+  "status": "diagnostic stage bound; project audit follows",
+  "scientific_status": "literal local weak pairing is not holomorphic; bounded pentagon not tested",
+  "pages": 5,
+  "runs": 13,
+  "positive_state_records": 3,
+  "diagnostic_checks": 34,
+  "saved_arithmetic_replay_checks": 62,
+  "compilers": [
+    "pdfLaTeX twice exit 0",
+    "desktop success"
+  ],
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "longest_edge_pixels": 1100,
+    "status": "all inspected"
+  },
+  "hashes": {
+    "code/weak_continuation.py": "8d639acf92e93ad4163a36f0951c654f47fb6687a68617be9b47a1567f9cdfb9",
+    "code/run_weak_continuation.py": "c2f3cf0e0a027c34efaa3abc6b0c6d09d2eaead478d67190b36f15ead9e01be1",
+    "code/positive_weak_form.py": "261c0e7c237fd120dd2e2b618a986ccd28ba575366377ea178d1925edd70be2d",
+    "code/check_weak_continuation.py": "c0ee501492d36e771d7c7150ad89ba7551206a0ec3e8859d6beea4632294e2b1",
+    "code/audit_weak_continuation.py": "4848353c894e15fc819026042e070569f61520d812b0101db38b7ac45d93cc7b",
+    "code/build_weak_continuation.ps1": "fea3d044cf3bb2b67537509575a6060a6d6da522da8f24f2e596155b95980733",
+    "code/record_weak_continuation.py": "041375501a1f0fded64211eb005e50fa8a162cc42eaf370570db8f3a1887a93c",
+    "manuscript/weak-continuation/main.tex": "2b448af7e2223088e2c9fe3bcf6e8a842f52ce7c287ab2b89c2759dfec287368",
+    "output/pdf/de-sitter-weak-continuation.pdf": "426d7b27965389df1a27545b789929c7d4cc1d66902d9bd81a4a9d8140ec81f3",
+    "notes/stage4-weak-continuation.md": "55a2951cf816fa65ead9a5e9c5268a7adc0462db775c369d94c429656cb00036",
+    "literature/stage4-weak-continuation-sources.md": "657f8ab9de803ce8c2551fc5a39badfa289645e51ae812ccc097b25995e0758b",
+    "results/stage4/weak-continuation/audit.json": "0262fa99f11894b347760f067fd16566a21d5cfcf7604246bde12f9ca438dbb3",
+    "results/stage4/weak-continuation/build-initial.log": "1cf212b3bf0d9aa65f79485b115f988d5ec773b50a30e56ecfd9094155552bd2",
+    "results/stage4/weak-continuation/build-review.md": "641a0bd6155c81347a3d4fed2f0f3cb2b216143f7c0499ee7a91ab3b9ae5eef5",
+    "results/stage4/weak-continuation/diagnostics.json": "7733ea91316903f681133a80a401d4059303d2be4bdc74abf7337e0c917b945c",
+    "results/stage4/weak-continuation/main.log": "715bf6921f7b1a2190e3f786847c27bf2e0ec13a1010ebdf5aac984a208bfa7d",
+    "results/stage4/weak-continuation/positive-form.json": "93a0456e0f2133ab4f64759d7f8b6b07be8c38535f9a05bdbb00eb609af12583",
+    "results/stage4/weak-continuation/preservation.json": "17ebb3fad84edd9e8c935436c08619e55316a5d1487550840593112f081d17a1",
+    "results/stage4/weak-continuation/runs.jsonl": "c384108c427de467a8a7196a782c6af749f15b9c72a7eb38c4a405e147024c0e",
+    "results/stage4/weak-continuation/source-record.json": "b672717d860cb1fe2c17247ec50351d80567d19faa87c47267caaacb14bc2017",
+    "results/stage4/weak-continuation/study.json": "40405a2afff456cda8cef29d9585b9fc42e904f116577378461714ff57563fe1"
+  }
+}

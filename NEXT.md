@@ -1,5 +1,17 @@
 # 下一次从这里继续
 
+## 当前继续位置：2026-11-01 weak-continuation
+
+先读[五页PDF](output/pdf/de-sitter-weak-continuation.pdf)、[中文推导](notes/stage4-weak-continuation.md)与[来源核查](literature/stage4-weak-continuation-sources.md)。本轮核用 KS v2 的产品/极点，以及 Ramond version 2.06 印刷p87的标准 Cauchy 核分布公式。核心是已有定理的参数匹配，不作原创性声明。
+
+第一象限内部 Hc=1+i 的局部固定紧测试满足非零 ∂bar 参数源项；字面弱积分与外部值的亚纯延拓不同。归一正态也有非零源项，但只定义有限一阶谱矩，不在单因子作用域。未直接计算 H=i hbar 边界，未测试最终有界配对五边形；不能推广成完整原定理错误或全息不可能。
+
+13条主记录、3个正态差分、34项诊断及62项保存算术/哈希检查已完成，无活跃计算句柄。五页 LaTeX 已双遍编译、桌面编译并全页核版；初版溢出日志保留。不得重跑已有 run/check/audit 主程序覆盖数据；audit(root)只读重放可供整体检查。阶段证据及第56份快照以实际文件为准，唯一标签2026-11-01-weak-continuation。上一 flip-domain 已公开，提交92c5c9fcd9378e54993898e14a72394b236f0268；旧55份ZIP及旧科学文件须原字节保全。
+
+下一科研动作：先检索并核读最终有界配对函数 F 的既有积分/Fourier 核或严格五边形证明，记录准确命题及全部适用条件，不能仅凭同名量子双对数判断可用。优先解决与当前 Lebesgue L² 表示的等同性；必要时再计算分离奇点、含尾和舍入界的认证矩阵元。此前正 Galerkin margin 未认证，不能称反例。随后回到实际观察者插入、反射、质量标签及 Gram 缝合；有限 G 与完整全息目标保持 active。
+
+持续公开授权有效，仅发布研究代码、阶段结果、来源笔记及稿件；私人约定、journal、第三方全文、tmp、恢复分支不上传。不新建代理。下文均为历史继续位置，以本节为准。
+
 ## 当前继续位置：2026-11-01 flip-domain
 
 先读[六页PDF](output/pdf/de-sitter-flip-domain.pdf)、[推导](notes/stage4-flip-domain.md)、[来源](literature/stage4-flip-domain-sources.md)和[证明依赖](literature/flip-proof-dependency-map.md)。标准函数/定理均注明已有来源。本轮补核FG eq.(87)/Prop.5.8、Kim Props.7.4/9.1的依赖、Pusz–Sołtan regular-pair的谱条件；尚未全文独立验证。配对的简单极点给绕数-2和H¹破坏，单手征移动极点族无参数开集上的共同稠密域；只针对明确Lebesgue谱乘法解释，不宣称有界五边形反例。

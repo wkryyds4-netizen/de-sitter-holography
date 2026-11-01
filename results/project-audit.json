@@ -7,10 +7,10 @@
     "Source remains a link, not an archive: dlmf-16.5",
     "Source remains a link, not an archive: dlmf-15.6"
   ],
-  "verified_at_utc": "2026-11-01T00:42:41.358539+00:00",
-  "required_files": 966,
-  "local_links_checked": 1062,
-  "code_and_input_hashes_checked": 1319,
+  "verified_at_utc": "2026-11-01T00:59:20.956593+00:00",
+  "required_files": 988,
+  "local_links_checked": 1074,
+  "code_and_input_hashes_checked": 1348,
   "scientific_checks": {
     "stage1": {
       "checks": 235,
@@ -741,6 +741,31 @@
       "recorded_hashes": 1
     },
     {
+      "file": "results/stage4/weak-continuation/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 21
+    },
+    {
+      "file": "results/stage4/weak-continuation/study.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 2
+    },
+    {
+      "file": "results/stage4/weak-continuation/positive-form.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 2
+    },
+    {
+      "file": "results/stage4/weak-continuation/diagnostics.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 3
+    },
+    {
+      "file": "results/stage4/weak-continuation/audit.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 1
+    },
+    {
       "file": "results/stage3/cross-limit/comparison.json",
       "kind": "projected comparison model only; not exact 6j convergence or interval certification",
       "checks": 19
@@ -1002,6 +1027,14 @@
       "runs": 11,
       "scientific_status": "bounded pentagon unresolved; quadrature not certified",
       "kind": "Domain/literature diagnostic and saved-vector arithmetic; no continuum pentagon certification"
+    },
+    {
+      "stage": "weak-continuation",
+      "checks": 62,
+      "runs": 13,
+      "positive_state_records": 3,
+      "scientific_status": "literal local weak pairing is not holomorphic; bounded pentagon not tested",
+      "kind": "Standard Cauchy identity applied to a specified local weak prescription; quadrature empirical"
     },
     {
       "file": "results/stage3/growing-box/diagnostics.json",

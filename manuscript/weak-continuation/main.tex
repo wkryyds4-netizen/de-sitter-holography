@@ -1,0 +1,292 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,microtype}
+\usepackage[margin=24mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\db}{\partial_{\overline H}}
+\newcommand{\CC}{\mathbb C}
+\title{Literal weak integrals and\\moving-pole continuation}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Working research note --- 1 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+A locally integrable single-chiral multiplier need not define a
+holomorphic family of weak pairings. Applying the standard distributional
+Cauchy-kernel identity to the known quantum-dilogarithm pole divisor,
+we compute the parameter-space source term exactly. A compact local
+example separates the literal weak integral from the meromorphic
+continuation of its exterior values, and a fixed normalized test state
+has the same obstruction. Full-product quadrature checks the formulas.
+The result concerns one specified weak prescription in the interior
+of the first quadrant. It neither refutes the final bounded pentagon
+nor constructs a physical de Sitter observer state.
+\end{abstract}
+\section{Existing ingredients and the question}
+Use dimensionless real coordinates $(x,y)$, Lebesgue measure, and
+$H=a+ib$ with $a,b>0$. The known scalar function \cite{ks} is
+\[
+ \Phi^H(z)=\frac{\psi_q(e^z)}{\psi_{\widetilde q}(e^{z/H})},
+ \quad q=e^{\pi iH},\quad\widetilde q=e^{-\pi i/H},
+ \quad \psi_q(v)=\prod_{k\geq0}(1+q^{2k+1}v)^{-1}.
+\]
+Its first simple pole is $z_0(H)=-\pi i(1+H)$, with residue
+\[
+ R_H=-\frac{(\widetilde q^2;\widetilde q^2)_\infty}
+             {(q^2;q^2)_\infty}\ne0,\qquad
+ (v;q)_\infty=\prod_{k\geq0}(1-vq^k).
+\]
+The residue is holomorphic and nonzero on the upper half-plane.
+We ask whether the literal compact pairing
+\[
+ W_f(H)=\int_{\mathbb R^2}f(x,y)\Phi^H(x+Hy)\,dx\,dy
+\]
+is holomorphic when the pole moves through the support of a
+\emph{fixed} test density $f$.
+
+The main mathematical input is standard:
+$\partial_{\bar z}(1/z)=\pi\delta_0$ for
+$\partial_{\bar z}=(\partial_{\Re z}+i\partial_{\Im z})/2$ and
+ordinary area measure \cite{ramond}. Thus pointwise holomorphy
+away from a moving pole does not justify differentiating an integral
+as though that pole were absent. We use this established identity,
+not a newly proposed continuation theorem.
+
+\newpage
+\section{A precise local pairing and its source term}
+Let
+\begin{align}
+ p(H)&=(x_0(H),y_0(H))
+ =\left(\frac{\pi(a^2+a+b^2)}b,-\frac{\pi(a+1)}b\right),\\
+ u(x,y)&=-\frac{x+\pi i}{y+\pi i},\qquad
+ w(x,y)=y+\pi i,\\
+ d_H(x,y)&=x+Hy+\pi i(1+H)=w(x,y)(H-u(x,y)).
+\end{align}
+The pole map is a diffeomorphism onto
+$\{x>0,y<0,xy<-\pi^2\}$; its positive real Jacobian is
+\[
+ J(H)=\det Dp(H)=\frac{\pi^2((a+1)^2+b^2)}{b^3}
+             =\frac{|w(p(H))|^2}{b}.
+\]
+Choose small neighborhoods $V$ in parameter space and $U$ in coordinate
+space such that only this pole branch meets $V\times U$.
+Then
+\[
+ \Phi^H(x+Hy)=\frac{R_H}{d_H(x,y)}+E(H,x,y),
+\]
+where $E$ is holomorphic in $H$, locally uniformly for $(x,y)$ in
+compact subsets of $U$. For $f\in C_c^\infty(U)$ the singularity is
+locally integrable in two real variables. Applying the Cauchy identity
+and changing variables through $p$ gives
+\begin{align}
+ \db W_f(H)
+ &=\pi R_H\frac{J(H)}{w(p(H))}\,f(p(H))\\
+ &=\frac{\pi R_H}{b}
+       \bigl(y_0(H)-\pi i\bigr)f(p(H)).
+ \label{source}
+\end{align}
+All equalities hold distributionally in $H$. One justification is
+Fubini on the locally integrable joint kernel: at fixed $(x,y)$,
+\[
+ \db\frac{1}{w(H-u)}=\frac{\pi}{w}\delta^{(2)}(H-u).
+\]
+The holomorphic remainder contributes zero. The conjugate factor in
+\eqref{source} is essential; the Jacobian cannot be omitted.
+Whenever $f(p(H))\ne0$, the source is nonzero.
+
+\subsection*{An explicit region with no other poles}
+Take $H_c=1+i$ and $V=\{|H-H_c|<.08\}$. Put the source support
+inside $p(\{|u-H_c|\leq.04\})$. Both lie over the square
+$Q=[.9,1.1]^2$ in $(a,b)$.
+The other poles have coordinates
+\[
+ y_{mn}(H)=-\frac{\pi((2m+1)+a(2n+1))}{b},\quad m,n\geq0 .
+\]
+First-pole support has
+$-7\pi/3\leq y\leq-19\pi/11$.
+If $m+n\geq1$, then $y_{mn}\leq-37\pi/11<-7\pi/3$.
+Thus no other pole enters this compact test. This isolation is exact,
+not inferred from a finite scan of poles.
+
+\newpage
+\section{Literal values and exterior continuation differ}
+Let $r_0=.04$, $z=H-H_c$, and
+\[
+ g(u)=\left(1-\frac{|u-H_c|^2}{r_0^2}\right)_+^8,
+ \qquad m_g=\int g\,dA=\frac{\pi r_0^2}{9}.
+\]
+This compact function is $C^7$; the locally integrable calculation above
+also applies to it. Choose the fixed complex density
+\[
+ f(p(u))=\frac{w(p(u))}{J(u)}g(u).
+\]
+It is a test pairing, not a probability density. Changing variables
+exactly, the residue-normalized pairing becomes
+\[
+ \mathcal W(H):=\frac{W_f(H)}{R_H}
+       =\int_{\CC}\frac{g(u)}{H-u}\,dA(u)+K(H)
+       =\mathcal C_g(H)+K(H),
+\]
+where $K$ is holomorphic throughout $V$. Angular integration gives
+\[
+ \mathcal C_g(H)=
+ \begin{cases}
+ \displaystyle\frac{\pi r_0^2}{9z}
+       \left[1-\left(1-\frac{|z|^2}{r_0^2}\right)^9\right],
+       &0<|z|<r_0,\\[6pt]
+ 0,&z=0,\\[2pt]
+ \displaystyle\frac{m_g}{z},&|z|\geq r_0 .
+ \end{cases}
+\]
+In particular $\db\mathcal W=\pi g$, and at $H_c$ this is $\pi$.
+The exterior values have the unique meromorphic continuation
+$\mathcal W_{\rm ext}=K+m_g/z$ to $V$, with a pole at $H_c$.
+The literal value there is finite. For $0<|z|<r_0$ their exact difference is
+\[
+ \mathcal W-\mathcal W_{\rm ext}
+       =-\frac{m_g}{z}
+         \left(1-\frac{|z|^2}{r_0^2}\right)^9.
+\]
+No function holomorphic on all of $V$ can match the exterior values:
+on the counterclockwise circle $|z|=.06$,
+\[
+ \oint\mathcal W(H)\,dH=2\pi i\,m_g\ne0 .
+\]
+Subtracting the full Cauchy transform gives the holomorphic remainder
+$K$, but changes the exterior values too. Adding a holomorphic function
+cannot remove a nonzero $\bar\partial$ source.
+
+\subsection*{A normalized nonnegative test state}
+Define one fixed real state by
+\[
+ |\eta(p(u))|^2=\frac{g(u)}{J(u)m_g},\qquad\|\eta\|_{L^2}=1.
+\]
+It is compact and $C^3$. Its spectral first moment of $\Phi^H(X+HY)$
+is finite, while the vector is outside that operator's domain when
+the pole meets its nonzero region. For its residue-normalized quadratic
+form $\mathcal W_\eta$,
+\[
+ \db\mathcal W_\eta(H_c)
+ =\frac{\pi}{m_g(-2\pi+i\pi)}
+ =\frac{-2-i}{5m_g}\ne0.
+\]
+This is a well-defined first-moment form, not an $L^2$ operator action
+on $\eta$, and not a claim that $\eta$ is a physical de Sitter state.
+
+\newpage
+\section{Full-product calculations}
+We computed the complete $\Phi^H$, rather than only its pole.
+For $d=w(p(u))(H-u)$ define
+\[
+ E_H(d)=
+ \frac{(\widetilde q^2e^{d/H};\widetilde q^2)_\infty}
+      {(\widetilde q^2;\widetilde q^2)_\infty}
+ \frac{(q^2;q^2)_\infty}{(q^2e^d;q^2)_\infty}.
+\]
+Then $\Phi^H(x+Hy)/R_H=E_H(d)/(e^d-1)$, and the regular integrand is
+\[
+ w(p(u))\left[\frac{E_H(d)}{\operatorname{expm1}(d)}-\frac1d\right].
+\]
+We integrate this smooth difference on the fixed source disk and add
+the exact $\mathcal C_g$. Independently, for interior $H$ we integrate
+the full product in polar coordinates centered at its pole; the area
+Jacobian removes the integrable $1/r$ singularity. Exterior checks
+use the full product on the fixed disk.
+
+At 40-digit working precision, six points were evaluated using
+8/32 and 16/64 radial/angular nodes for subtraction, and 16/64 for
+the direct route. The largest route difference was $1.43\,10^{-22}$;
+the largest subtraction-grid change was $1.76\,10^{-31}$.
+These are empirical comparisons, not certified error bounds.
+
+With four-point central differences for $\partial_{\bar H}$,
+the complex test approaches the exact value $\pi$:
+\begin{center}
+\begin{tabular}{rr}
+\toprule
+step $\delta$ & relative deviation from $\pi$\\
+\midrule
+.004 & .03908052789\\
+.002 & .00994188494\\
+.001 & .00249635760\\
+.0005& .00062477219\\
+\bottomrule
+\end{tabular}
+\end{center}
+The ratio of successive deviations approaches four, consistent with
+second-order differencing. The two smallest steps were also evaluated
+by the direct route, agreeing within $1.57\,10^{-34}$ in the derivatives.
+
+The full-product contour integral on $|H-H_c|=.06$ approaches
+$2\pi i\,m_g$. For the loop, radial, and source angular orders
+$(8,12,32)$, $(16,16,48)$, $(32,16,64)$, relative deviations are
+$3.44\,10^{-10}$, $9.14\,10^{-17}$, and $1.54\,10^{-20}$.
+For the normalized positive state the derivative approaches
+\[
+-716.1972439135-358.0986219568i.
+\]
+Its final relative deviation is $.00062478468$.
+
+There are 13 main records and three positive-state difference records,
+with samples, parameters, versions, and input hashes.
+All 34 symbolic/numerical diagnostics and 62 saved-arithmetic/hash
+replay checks pass. Replay does not re-integrate the quantum dilogarithm;
+the analytic Cauchy-kernel argument establishes the non-holomorphy.
+
+\newpage
+\section{What this resolves, and what remains}
+The local example answers a specific question left by the preceding
+domain study: replacing a divergent operator action by its
+locally integrable weak pairing does \emph{not}, by itself, justify
+fixed-vector holomorphic continuation. The missing contribution is
+the ordinary distributional Cauchy source from the moving pole.
+This is an application of known complex analysis, not a new general
+theorem about quantum dilogarithms.
+
+The statement has several boundaries.
+The example lies inside the first parameter quadrant, around $1+i$;
+it is not a direct computation of the boundary $H=i\hbar$.
+The compact test density is fixed as $H$ varies.
+A chosen contour, a parameter-dependent test space, or a
+meromorphic continuation can define a different object.
+The example proves that such an object cannot silently be identified
+with the literal weak integral on the whole neighborhood.
+
+In particular, nothing here computes the bounded paired word
+\[
+ F_\hbar(X,Y)F_\hbar(P_y,P_x)
+ \quad\text{versus}\quad
+ B M^{-1} B M A.
+\]
+The bounded phase remains well-defined almost everywhere even when its
+individual chiral factors have these domain and continuation problems.
+The original pentagon reproduction is still unresolved.
+
+\paragraph{Next research action.}
+Do not continue trying to rescue the single-factor argument by merely
+declaring a weak integral. Return to identities or Fourier kernels
+for the \emph{paired bounded function} with all measure and representation
+hypotheses stated. An existing theorem with those hypotheses would be
+preferable to a new proof. Otherwise a singularity-aware certified
+bounded matrix element could distinguish the candidate words.
+The previous finite-grid residuals are motivation, not certification.
+
+The physical goal remains the same: determine the actual observer
+insertion, reflection, mass labels, and gluing measure in a common
+Hilbert-space prescription before claiming a positive four-point
+Gram matrix or a finite-$G$ holographic dictionary. A local
+mathematical obstruction is not a no-go theorem for de Sitter holography.
+
+\begin{thebibliography}{9}\small
+\bibitem{ks} H. K. Kim and C. Scarinci,
+\emph{A quantization of moduli spaces of 3-dimensional gravity},
+\href{https://arxiv.org/abs/2112.13329v2}{arXiv:2112.13329v2},
+especially \S6.3, Prop.~6.6 (pole divisor and compact-product formula),
+and \S6.4 (the continuation step under examination).
+\bibitem{ramond} T. Ramond,
+\emph{Distributions and Partial Differential Equations},
+lecture notes, version 2.06, 19 January 2015,
+Example 4.4.5 and Proposition 4.4.6, printed p.~87 (PDF p.~88).
+\href{https://www.math.u-psud.fr/~ramond/docs/cours/distributionsedp.pdf}
+{Author's university-hosted notes}.
+\end{thebibliography}
+\end{document}

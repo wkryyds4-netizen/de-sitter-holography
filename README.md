@@ -1,5 +1,11 @@
 # de Sitter 全息研究
 
+## 最新进展：字面弱积分与移动极点（2026-11-01）
+
+[五页PDF](output/pdf/de-sitter-weak-continuation.pdf)、[LaTeX](manuscript/weak-continuation/main.tex)、[中文记录](notes/stage4-weak-continuation.md)及[来源核查](literature/stage4-weak-continuation-sources.md)已完成。应用已有 Cauchy 核分布恒等式，明确一个固定紧测试的字面弱积分具有非零参数源项，不能自动等同于全纯延拓。例子在第一象限内部；未测试最终有界配对五边形，也不是 de Sitter 全息否定结论。
+
+13条主记录、3个归一正态差分、34项诊断及62项算术/哈希重放通过；数值误差为经验比较。下一步先查直接适用于有界配对函数的积分/Fourier 核与严格恒等式，逐项核对文献假设；继续位置见[NEXT](NEXT.md)。下列条目保留阶段历史。
+
 ## 最新进展：定义域、相位奇性与文献证明条件（2026-11-01）
 
 [六页PDF](output/pdf/de-sitter-flip-domain.pdf)、[LaTeX](manuscript/flip-domain/main.tex)、[中文推导](notes/stage4-flip-domain.md)与[证明依赖图](literature/flip-proof-dependency-map.md)整理了已有理论的适用条件。在明确L²(R²)表示中，形式对易不推出强对易；单因子极点阻止Gaussian入域，配对虽有界却使该态失去H¹正则性。移动极点还排除了字面单因子族在参数开集上的共同稠密域。这些诊断不是有界五边形反例，也不作数学原创性声明。

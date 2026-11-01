@@ -1005,6 +1005,22 @@ CG_ROOT_HASH_RECORDS[FLIP_DOMAIN_DIR+'refinement.json'] = {'code/refine_flip_dom
 CG_ROOT_HASH_RECORDS[FLIP_DOMAIN_DIR+'regularity.json'] = {'code/check_flip_regularity.py'}
 CG_ROOT_HASH_RECORDS[FLIP_DOMAIN_DIR+'audit.json'] = {'code/audit_flip_domain.py'}
 
+WEAK_CONTINUATION_DIR = 'results/stage4/weak-continuation/'
+CG_ROOT_HASH_RECORDS[WEAK_CONTINUATION_DIR+'evidence.json'] = {
+    'code/'+p for p in ['weak_continuation.py','run_weak_continuation.py','positive_weak_form.py',
+        'check_weak_continuation.py','audit_weak_continuation.py','build_weak_continuation.ps1','record_weak_continuation.py']
+} | {'manuscript/weak-continuation/main.tex','output/pdf/de-sitter-weak-continuation.pdf',
+    'notes/stage4-weak-continuation.md','literature/stage4-weak-continuation-sources.md'
+} | {WEAK_CONTINUATION_DIR+p for p in ['study.json','runs.jsonl','positive-form.json','diagnostics.json',
+    'audit.json','build-initial.log','main.log','build-review.md','preservation.json','source-record.json']}
+REQUIRED.extend(sorted(CG_ROOT_HASH_RECORDS[WEAK_CONTINUATION_DIR+'evidence.json']))
+REQUIRED.append(WEAK_CONTINUATION_DIR+'evidence.json')
+CG_ROOT_HASH_RECORDS[WEAK_CONTINUATION_DIR+'study.json'] = {'code/weak_continuation.py','code/run_weak_continuation.py'}
+CG_ROOT_HASH_RECORDS[WEAK_CONTINUATION_DIR+'positive-form.json'] = {'code/positive_weak_form.py','code/weak_continuation.py'}
+CG_ROOT_HASH_RECORDS[WEAK_CONTINUATION_DIR+'diagnostics.json'] = {'code/check_weak_continuation.py',
+    WEAK_CONTINUATION_DIR+'study.json',WEAK_CONTINUATION_DIR+'positive-form.json'}
+CG_ROOT_HASH_RECORDS[WEAK_CONTINUATION_DIR+'audit.json'] = {'code/audit_weak_continuation.py'}
+
 def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
@@ -2213,6 +2229,28 @@ def main():
             kind='Domain/literature diagnostic and saved-vector arithmetic; no continuum pentagon certification'))
     except (KeyError, TypeError, ValueError, ArithmeticError) as exc:
         errors.append('malformed flip-domain records: '+str(exc))
+    try:
+        from audit_weak_continuation import audit as replay_weak_continuation
+        replay = replay_weak_continuation(ROOT)
+        errors.extend('weak-continuation: '+e for e in replay['errors'])
+        if replay['status'] != 'passed' or replay['checks'] != 62:
+            errors.append('weak-continuation: incomplete saved-arithmetic replay')
+        if replay['scientific_status'] != 'literal local weak pairing is not holomorphic; bounded pentagon not tested':
+            errors.append('weak-continuation: scientific status lost')
+        source = read_json(ROOT/WEAK_CONTINUATION_DIR/'source-record.json')
+        if len(source['sources']) != 2:
+            errors.append('weak-continuation: source count')
+        for cache in source['sources']:
+            if digest(ROOT/cache['file']) != cache['sha256']:
+                errors.append('weak-continuation: source mismatch '+cache['file'])
+        for file, expected in source['prior_evidence'].items():
+            if digest(ROOT/file) != expected:
+                errors.append('weak-continuation: prior evidence mismatch '+file)
+        supporting_records.append(dict(stage='weak-continuation',checks=62,runs=13,positive_state_records=3,
+            scientific_status=replay['scientific_status'],
+            kind='Standard Cauchy identity applied to a specified local weak prescription; quadrature empirical'))
+    except (KeyError, TypeError, ValueError, ArithmeticError) as exc:
+        errors.append('malformed weak-continuation records: '+str(exc))
     growing_checks = growing.get("checks", [])
     if (growing.get("status") != "passed" or len(growing_checks) != 290
             or any(row.get("passed") is not True for row in growing_checks)

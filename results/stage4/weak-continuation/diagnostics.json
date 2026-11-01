@@ -1,0 +1,207 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "name": "pole-map Jacobian",
+      "passed": true
+    },
+    {
+      "name": "Jacobian equals absolute-w squared over b",
+      "passed": true
+    },
+    {
+      "name": "affine divisor factorization",
+      "passed": true
+    },
+    {
+      "name": "inverse pole parameter",
+      "passed": true
+    },
+    {
+      "name": "density Jacobian factor",
+      "passed": true
+    },
+    {
+      "name": "w in parameter coordinates",
+      "passed": true
+    },
+    {
+      "name": "radial Cauchy dbar formula",
+      "passed": true
+    },
+    {
+      "name": "meromorphic and literal difference",
+      "passed": true
+    },
+    {
+      "name": "other-pole separation in Q",
+      "passed": true
+    },
+    {
+      "name": "chosen source and loop within Q",
+      "passed": true
+    },
+    {
+      "name": "source within loop",
+      "passed": true
+    },
+    {
+      "name": "independent local integral",
+      "passed": true,
+      "offset": [
+        "0",
+        "0"
+      ]
+    },
+    {
+      "name": "smooth quadrature doubling",
+      "passed": true,
+      "offset": [
+        "0",
+        "0"
+      ]
+    },
+    {
+      "name": "independent local integral",
+      "passed": true,
+      "offset": [
+        ".01",
+        "0"
+      ]
+    },
+    {
+      "name": "smooth quadrature doubling",
+      "passed": true,
+      "offset": [
+        ".01",
+        "0"
+      ]
+    },
+    {
+      "name": "independent local integral",
+      "passed": true,
+      "offset": [
+        "0",
+        ".01"
+      ]
+    },
+    {
+      "name": "smooth quadrature doubling",
+      "passed": true,
+      "offset": [
+        "0",
+        ".01"
+      ]
+    },
+    {
+      "name": "independent local integral",
+      "passed": true,
+      "offset": [
+        ".015",
+        ".01"
+      ]
+    },
+    {
+      "name": "smooth quadrature doubling",
+      "passed": true,
+      "offset": [
+        ".015",
+        ".01"
+      ]
+    },
+    {
+      "name": "independent local integral",
+      "passed": true,
+      "offset": [
+        "-.01",
+        ".015"
+      ]
+    },
+    {
+      "name": "smooth quadrature doubling",
+      "passed": true,
+      "offset": [
+        "-.01",
+        ".015"
+      ]
+    },
+    {
+      "name": "independent local integral",
+      "passed": true,
+      "offset": [
+        ".06",
+        "0"
+      ]
+    },
+    {
+      "name": "smooth quadrature doubling",
+      "passed": true,
+      "offset": [
+        ".06",
+        "0"
+      ]
+    },
+    {
+      "name": "second-order Wirtinger approach",
+      "passed": true,
+      "delta": ".002",
+      "ratio": "3.930897220132592328653407"
+    },
+    {
+      "name": "second-order Wirtinger approach",
+      "passed": true,
+      "delta": ".001",
+      "ratio": "3.982556401662625756721993"
+    },
+    {
+      "name": "second-order Wirtinger approach",
+      "passed": true,
+      "delta": ".0005",
+      "ratio": "3.995628530230775220972344"
+    },
+    {
+      "name": "nonzero derivative approached",
+      "passed": true
+    },
+    {
+      "name": "independent derivative quadrature",
+      "passed": true,
+      "delta": ".001"
+    },
+    {
+      "name": "independent derivative quadrature",
+      "passed": true,
+      "delta": ".0005"
+    },
+    {
+      "name": "nonzero Morera witness",
+      "passed": true
+    },
+    {
+      "name": "Morera refinement improves",
+      "passed": true
+    },
+    {
+      "name": "positive state normalized",
+      "passed": true
+    },
+    {
+      "name": "positive-state derivative nonzero",
+      "passed": true
+    },
+    {
+      "name": "positive-state refinement improves",
+      "passed": true
+    }
+  ],
+  "scope": "Exact symbolic identities plus finite quadrature checks. Weak non-holomorphy is proved analytically, not certified by finite sampling.",
+  "versions": {
+    "sympy": "1.14.0",
+    "mpmath": "1.3.0"
+  },
+  "hashes": {
+    "code/check_weak_continuation.py": "c0ee501492d36e771d7c7150ad89ba7551206a0ec3e8859d6beea4632294e2b1",
+    "results/stage4/weak-continuation/study.json": "40405a2afff456cda8cef29d9585b9fc42e904f116577378461714ff57563fe1",
+    "results/stage4/weak-continuation/positive-form.json": "93a0456e0f2133ab4f64759d7f8b6b07be8c38535f9a05bdbb00eb609af12583"
+  }
+}
