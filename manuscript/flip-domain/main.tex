@@ -1,0 +1,324 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,microtype,array}
+\usepackage[margin=24mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\HH}{\mathcal H}
+\newcommand{\Dom}{\operatorname{Dom}}
+\newcommand{\Sp}{\operatorname{Sp}}
+\title{Domains, phase singularities, and the\\two-variable pentagon benchmark}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Working research note --- 1 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+We revisit an unresolved reproduction of the positive-cosmological-constant
+local phase operator. Before further computation, we trace the existing
+proofs and their hypotheses. In a specified Schr\"odinger representation,
+we identify a strong-commutation obstruction, singular domains of
+individual chiral factors, and loss of first-order Sobolev regularity
+under the bounded paired multiplier. These elementary domain diagnostics
+do not refute the bounded pentagon. Eleven oversampled Hermite calculations
+are preserved with their projection losses; their quadrature error remains
+uncertified. No finite-$G$ observer gluing or holographic dual is constructed.
+\end{abstract}
+\section{Objects, state, and scope}
+All coordinates are dimensionless, $\hbar>0$, and
+$\HH=L^2(\mathbb R^2,dx\,dy)$ with Lebesgue measure. Let
+\[
+ X=x,\quad Y=y,\quad P_x=-\pi i\partial_x,\quad P_y=-\pi i\partial_y,
+ \qquad \psi(x,y)=\pi^{-1}e^{-(x^2+y^2)/(2\pi)}.
+\]
+The self-adjoint position and momentum closures obey their Weyl relations;
+$\|\psi\|=1$. Use the existing scalar functions \cite{ks,kim}
+\begin{align}
+ \psi_q(w)&=\prod_{n\geq0}(1+q^{2n+1}w)^{-1},\\
+ \Phi^H(z)&=\frac{\psi_{e^{\pi iH}}(e^z)}
+ {\psi_{e^{-\pi i/H}}(e^{z/H})},\qquad \Im H>0,\\
+ F_\hbar(x,y)&=\frac{\Phi^{i\hbar}(x+i\hbar y)}
+ {\overline{\Phi^{i\hbar}(x+i\hbar y)}}.
+\end{align}
+Assign arbitrary unit values at the discrete zeros and poles. Then
+$A=F_\hbar(X,Y)$ is unitary by measurable functional calculus. Define
+\[
+ B=F_\hbar(P_y,P_x),\qquad M=e^{iXY/\pi},\qquad
+ C=M^{-1}BM=F_\hbar(X+P_y,Y+P_x).
+\]
+Our unresolved test is $AB=BCA=BM^{-1}BMA$. This is the separately
+stated local identity, not the full geometric flip with all linear factors.
+The representation is a mathematical benchmark: $\hbar$ is not here
+identified with an observer mass or a derived finite-$G$ parameter.
+
+\newpage
+\section{Formal commutation and the bounded phase}
+Consider the normal operators
+\[
+ \overline Z_1=X-i\hbar Y,\qquad Z_2=P_y+i\hbar P_x.
+\]
+Their algebraic commutator vanishes on the Schwartz space. Nevertheless,
+their spectral measures do not commute. Their spectral real and
+imaginary parts include $X$ and $\hbar P_x$, for which
+\[
+ e^{iaX}e^{ib\hbar P_x}
+   =e^{-i\pi\hbar ab}e^{ib\hbar P_x}e^{iaX}.
+\]
+Taking $a=1$, $b=1/\hbar$ gives phase $-1$ and a commutator of norm $2$
+on every unit vector. Strong commutation of the two normal operators
+would imply commutation of these bounded spectral functions, a contradiction.
+This tests the literal joint-spectral interpretation of the cross-chiral
+step in KS, \S6.4. It does not invalidate commutation of $Z_1$ with its
+\emph{own} adjoint, nor rule out a different domain-based identity.
+
+\subsection*{A bounded multiplier need not preserve a smooth core}
+The first simple pole of $\Phi^{i\hbar}$ is
+\[
+ z_0=\pi\hbar-\pi i,\qquad
+ (x_0,y_0)=(\pi\hbar,-\pi/\hbar),\qquad
+ \zeta=(x-x_0)+i\hbar(y-y_0).
+\]
+Write $\Phi^{i\hbar}(z_0+\zeta)=R\,u(\zeta)/\zeta$,
+where $R\ne0$, $u$ is analytic, and $u(0)=1$.
+Thus, off the pole,
+\[
+ F_\hbar(x,y)=\frac{R}{\overline R}
+       \frac{\overline\zeta}{\zeta}
+       \frac{u(\zeta)}{\overline{u(\zeta)}}.
+\]
+The smooth last factor cannot remove the winding $-2$.
+For $\zeta=r e^{i\theta}$ the leading squared gradient is
+$4(\sin^2\theta+\hbar^2\cos^2\theta)/r^2$.
+Since $dx\,dy=r\,dr\,d\theta/\hbar$, it follows that
+\begin{align}
+ \int_{\epsilon<|\zeta|<\rho}|\nabla(A\psi)|^2\,dx\,dy
+ &=D_\hbar\log(\rho/\epsilon)+O(1),\quad \epsilon\downarrow0,\\
+ D_\hbar&=\frac{4(1+\hbar^2)}{\pi\hbar}
+       e^{-\pi(\hbar^2+\hbar^{-2})}>0 .
+\end{align}
+Here $\rho$ is fixed and small enough to exclude other zeros/poles.
+The derivatives away from the pole must agree with any weak derivatives;
+their divergent norm proves $A\psi\notin H^1(\mathbb R^2)$.
+Each partial derivative separately diverges. In particular,
+$A\psi\notin\Dom P_x,\Dom P_y$.
+Unitarity on $L^2$ survives. This does not exclude a singular adapted core,
+and by itself says nothing about equality of two bounded operator words.
+
+\newpage
+\section{Individual factors and moving domains}
+The first pole of $\Phi^H$, $z_0(H)=-\pi i(1+H)$, has residue
+\[
+ R_H=-\frac{(\widetilde q^2;\widetilde q^2)_\infty}
+                {(q^2;q^2)_\infty},
+ \qquad q=e^{\pi iH},\quad\widetilde q=e^{-\pi i/H},
+ \quad (a;q)_\infty=\prod_{n\geq0}(1-aq^n).
+\]
+For $\Im H>0$ both products converge and the residue is nonzero.
+This follows by separating the first vanishing denominator
+factor in the known product; it is not a new special-function identity.
+For $H=i\hbar$ the Gaussian is nonzero at $(x_0,y_0)$, and
+\begin{align}
+ \int_{\epsilon<|\zeta|<\rho}
+       |\Phi^{i\hbar}(x+i\hbar y)\psi(x,y)|^2\,dx\,dy
+ &=C_\hbar\log(\rho/\epsilon)+O(1),\\
+ C_\hbar&=\frac{2|R_{i\hbar}|^2}{\pi\hbar}
+       e^{-\pi(\hbar^2+\hbar^{-2})}>0 .
+\end{align}
+Consequently $\psi\notin\Dom\Phi^{i\hbar}(X+i\hbar Y)$.
+At $\hbar=1$, $R_i=-1$ and $C_1=2e^{-2\pi}/\pi
+\simeq0.00118885096677$; $D_1=4C_1$.
+The bounded ratio cannot automatically be factored into an everywhere
+defined product of the two unbounded factors.
+
+\subsection*{No common dense multiplication domain on a parameter open set}
+For $H=a+ib$, $a,b>0$, the first pole meets the real coordinate plane at
+\[
+ x_0=\frac{\pi(a^2+a+b^2)}b,\qquad
+ y_0=-\frac{\pi(a+1)}b.
+\]
+This maps the first quadrant diffeomorphically onto
+$W=\{x>0,y<0,xy<-\pi^2\}$. The inverse is
+\[
+ a=\frac{-xy-\pi^2}{\pi^2+y^2},\qquad
+ b=\frac{\pi(x-y)}{\pi^2+y^2}.
+\]
+For any nonempty open parameter set $\Omega$ in that quadrant, let
+$W_\Omega$ be its image. Then
+\[
+ \bigcap_{H\in\Omega}\Dom\Phi^H(X+HY)
+ \ \subset\ \{f\in L^2:f=0\ \text{a.e. on }W_\Omega\}.
+\]
+For arbitrary $L^2$ vectors put $g=|f|^2$.
+At a Lebesgue point $p$ with $g(p)>0$, the ball mass
+$G_p(r)=\int_{B_r(p)}g$ satisfies $G_p(r)\sim\pi g(p)r^2$.
+Tonelli gives
+\[
+ \int_{B_\rho(p)}\frac{g(u)}{|u-p|^2}\,du
+ =\frac{G_p(\rho)}{\rho^2}
+       +2\int_0^\rho\frac{G_p(r)}{r^3}\,dr=\infty.
+\]
+The corresponding simple pole has this locally equivalent weight.
+Thus $g$ must vanish almost everywhere on $W_\Omega$.
+The right-hand side is a proper closed subspace, so the intersection is
+not dense. This concerns the literal multiplication family on one fixed
+Hilbert space; weak distributions, moving contours, parameter-dependent
+vectors, and the paired bounded family are distinct.
+
+\newpage
+\section{Which existing proofs can be reused?}
+We separate a theorem's published conclusion from applicability to this
+realization. This is a local reading audit, not a claim
+to have independently verified every argument in the cited papers.
+\begin{center}\small
+\begin{tabular}{p{.27\linewidth}p{.63\linewidth}}
+\toprule
+Source and locator & Conditions and dependencies\\
+\midrule
+Goncharov \cite{gon}, \S2.3--2.5 &
+Positive real parameter; $L^2(\mathbb R)$; algebra-adapted test space
+and topology. A complex two-variable extension is extra work.\\[4pt]
+Fock--Goncharov \cite{fg}, Thm.~5.6, eq.~(87), Prop.~5.8 &
+Contour displacement uses a pole-free analytic strip and rapid decay.
+Extension uses the seminorms $\|Bf\|$, not only the Hilbert norm.\\[4pt]
+Kim--Scarinci \cite{ks}, Prop.~6.11 &
+Check cancellation and fixed-vector parameter continuation:
+the literal single-factor family has the obstruction above.\\[4pt]
+Kim \cite{pseudo}, Props.~7.3--7.4, 9.1--9.2 &
+Prop.~9.1 uses Prop.~7.4; \S7 attributes that identity to KS.
+This is not independent validation of the continuation step.\\[4pt]
+Pusz--So{\l}tan \cite{ps}, Def.~2.1, Prop.~3.1 &
+For $0<q<1$, regular pairs have spectra in
+$\overline\Gamma$, $\Gamma=\{z:|z|\in q^{\mathbb Z}\}$, and specified
+bicharacter covariance. Formal relations alone are insufficient.\\
+\bottomrule
+\end{tabular}
+\end{center}
+There is a concrete mismatch with the last route.
+In our Lebesgue representation, $e^{X+i\hbar Y}$
+has spectrum $\mathbb C$: its essential range is all nonzero complex
+numbers, and its closure includes zero. This is not contained in
+$\overline\Gamma$, a union of discrete-radius circles and zero.
+That regular-pair theorem cannot simply be applied here.
+It may motivate another representation, but such a change would need
+its own geometric and physical justification.
+
+The practical lesson is to use the established real-parameter proof
+as a source of precise hypotheses. Scalar meromorphic identities,
+equations on an analytic core, weak continuation of matrix
+elements, and equality of bounded spectral operators are different claims.
+The preceding domain tests exclude some naive identifications; they do
+not settle all formulations of the paired identity.
+
+Source versions are pinned in the bibliography and source record.
+We inspected the full relevant rendered pages for FG eq.~(87), Kim's
+use of Prop.~7.4, and the regular-pair definition.
+Further candidates remain candidates until their assumptions and
+normalization are matched; absence of a located correction is not
+evidence that no correction exists.
+
+\newpage
+\section{Oversampled projection experiment}
+Let $P_n$ project onto the first $n$ Hermite functions in each coordinate.
+For an \emph{exact} compression $v_j=P_nU_jv_{j-1}$ of a unitary $U_j$,
+\[
+ \ell_j=\|(1-P_n)U_jv_{j-1}\|
+       =\sqrt{\|v_{j-1}\|^2-\|v_j\|^2}.
+\]
+Telescoping gives an error at most $\sum_j\ell_j$ for a word.
+Our left word uses $[B,A]$ and the right uses
+$[A,M,B,M^{-1},B]$, in order of application.
+Their projected difference minus the seven losses would be a continuous
+lower bound if all compressions were exact.
+
+We instead use $q>n$ Gauss--Hermite nodes. If $Q$ diagonalizes the $q$-node
+Jacobi matrix and $W$ is its first $n$ rows, a multiplier step is
+\[
+ v\longmapsto W\bigl[f\odot(W^TvW)\bigr]W^T.
+\]
+The Fourier transform is diagonal with coefficients $(-i)^{m+k}$.
+These are oversampled approximations, not exact Galerkin compressions.
+Define $\mu_q=r_q-\sum_j\ell_{j,q}$.
+\emph{Positive $\mu_q$ is not a certified continuous lower bound.}
+
+\begin{center}\small
+\begin{tabular}{rrrrr}
+\toprule
+$\hbar$ & $n$ & $q$ & residual $r_q$ & margin $\mu_q$\\
+\midrule
+1 &16&128& .106990701&-.101943670\\
+1 &32&256& .114715070&-.019846987\\
+1 &64&256& .118041741& .027620827\\
+1 &64&512& .117989373& .026793971\\
+1 &128&512& .119750912& .057061713\\
+1 &128&768& .119712207& .056877670\\
+1 &128&1024& .119630925& .057013742\\
+.5&64&512& .028263351& .007989570\\
+.5&128&768& .028962160& .016228235\\
+flat&32&256& $4.6300\,10^{-5}$& $-5.0987\,10^{-5}$\\
+flat&64&512& $2.5202\,10^{-7}$& $-4.9643\,10^{-7}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The flat control uses $F_0(x,y)=\exp[-iy\log(1+e^x)/\pi]$.
+Compression loses norm even for this control; unlike nodewise DVR,
+it need not be unitary in the finite subspace.
+
+All intermediate coefficient arrays are saved, with input hashes and
+Python/NumPy/SciPy versions. Independent saved-vector arithmetic replay
+passes 322 checks. It does not re-evaluate the multiplier integrals.
+Product tails, projection loss, quadrature, and rounding remain separate.
+Stability with increasing $q$ cannot replace a bound, especially
+near the phase singularities.
+
+\newpage
+\section{Retained failures and the next physical question}
+The initial 22 scalar/algebra diagnostics contain two failures, preserved.
+One used structural symbolic equality for a polynomial identity;
+its exact difference simplifies to zero. The other tested a shell at
+$\hbar=.5$, $\rho=.025$ and missed the original one-percent tolerance:
+the deviation was $0.01009160698$.
+A separate refinement keeps that tolerance and halves the radius;
+the deviation becomes $0.00251886700$, with 64/128 angular samples
+agreeing to the recorded precision. All five refinement checks pass.
+
+A further 31 controls test the phase-vortex coefficient and local winding
+using 50-digit products, two radii, and 32/64 angular samples.
+They pass, but the quadrature controls are empirical.
+Domain conclusions rely on the Laurent expansion and the
+Lebesgue-point argument, not numerical extrapolation.
+
+\paragraph{Next decisions.}
+Compare any proposed weak or contour continuation with the bounded
+paired functional calculus; specify its boundary values, pairing, and
+test space. If they are proved equal, use that theorem directly.
+If not, identify the additional assumption. A separate numerical route
+is singularity-aware certified matrix-element quadrature,
+including tails and rounding; more node counts alone do not provide it.
+
+Even a resolved local pentagon leaves the observer problem:
+physical insertion, mass/central-label correspondence, reflection,
+and gluing measure must come from the same inner product before a
+four-point Gram test is meaningful. A regular-pair representation on
+discrete radial spectra changes the mathematical input, and cannot
+be presented as the original de Sitter observer theory without that
+dictionary. The complete holographic objective remains open.
+
+\begin{thebibliography}{9}\small
+\bibitem{gon} A. B. Goncharov,
+\emph{Pentagon relation for the quantum dilogarithm and quantized
+$M_{0,5}^{\rm cyc}$}, \href{https://arxiv.org/abs/0706.4054v2}{arXiv:0706.4054v2}.
+\bibitem{fg} V. V. Fock and A. B. Goncharov,
+\emph{The quantum dilogarithm and representations of quantum cluster varieties},
+\href{https://arxiv.org/abs/math/0702397v6}{arXiv:math/0702397v6}.
+\bibitem{ks} H. K. Kim and C. Scarinci,
+\emph{A quantization of moduli spaces of 3-dimensional gravity},
+\href{https://arxiv.org/abs/2112.13329v2}{arXiv:2112.13329v2}.
+\bibitem{kim} H. K. Kim,
+\emph{A trilogy of mapping class group representations from
+three-dimensional quantum gravity},
+\href{https://arxiv.org/abs/2308.02934v2}{arXiv:2308.02934v2}.
+\bibitem{pseudo} H. K. Kim,
+\emph{Three-dimensional quantum gravity from the quantum pseudo-K\"ahler plane},
+\href{https://arxiv.org/abs/2112.13962v2}{arXiv:2112.13962v2}.
+\bibitem{ps} W. Pusz and P. M. So{\l}tan,
+\emph{Functional form of unitary representations of the quantum az+b group},
+\href{https://arxiv.org/abs/math/0604613v1}{arXiv:math/0604613v1}.
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "name": "preserved two initial failures",
+      "passed": true
+    },
+    {
+      "name": "wedge identity by exact difference",
+      "passed": true
+    },
+    {
+      "name": "same one-percent criterion on smaller shell 64",
+      "passed": true
+    },
+    {
+      "name": "same one-percent criterion on smaller shell 128",
+      "passed": true
+    },
+    {
+      "name": "angular refinement agreement",
+      "passed": true
+    }
+  ],
+  "initial_status": "failed",
+  "reason": "SymPy structural equality replaced by zero difference; h=.5 radius halved, original 1% criterion unchanged.",
+  "h": ".5",
+  "radius": ".0125",
+  "precision": 60,
+  "rows": [
+    {
+      "nodes": 64,
+      "shell": "0.00000222570326154610688295041900096283890863227546",
+      "relative_to_limit": "0.002518866995496052678130083239118185930773"
+    },
+    {
+      "nodes": 128,
+      "shell": "0.00000222570326154610688295041900096283890863227546",
+      "relative_to_limit": "0.002518866995496052678130083239118185930773"
+    }
+  ],
+  "scope": "Repairs two finite checks; does not certify Galerkin quadrature or refute the pentagon.",
+  "hashes": {
+    "code/refine_flip_domain.py": "1b830e0edddf27774c0b6be1580a3524f2aab6154f4eacb2f1219b1a6b1bf797",
+    "results/stage4/flip-domain/diagnostics.json": "79994ba3bebe4eda0bcf088a5cf1936ada9d54f4ddff7d9dc4575bc330339a5e"
+  }
+}

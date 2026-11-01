@@ -1,0 +1,333 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "name": "exact elliptic angular coefficient",
+      "passed": true
+    },
+    {
+      "name": "small-radius gradient shell",
+      "passed": true,
+      "h": ".5",
+      "radius": ".0125",
+      "n": 32
+    },
+    {
+      "name": "sampled phase winding",
+      "passed": true,
+      "h": ".5",
+      "radius": ".0125",
+      "n": 32
+    },
+    {
+      "name": "small-radius gradient shell",
+      "passed": true,
+      "h": ".5",
+      "radius": ".0125",
+      "n": 64
+    },
+    {
+      "name": "sampled phase winding",
+      "passed": true,
+      "h": ".5",
+      "radius": ".0125",
+      "n": 64
+    },
+    {
+      "name": "angular doubling",
+      "passed": true,
+      "h": ".5",
+      "radius": ".0125"
+    },
+    {
+      "name": "small-radius gradient shell",
+      "passed": true,
+      "h": ".5",
+      "radius": ".00625",
+      "n": 32
+    },
+    {
+      "name": "sampled phase winding",
+      "passed": true,
+      "h": ".5",
+      "radius": ".00625",
+      "n": 32
+    },
+    {
+      "name": "small-radius gradient shell",
+      "passed": true,
+      "h": ".5",
+      "radius": ".00625",
+      "n": 64
+    },
+    {
+      "name": "sampled phase winding",
+      "passed": true,
+      "h": ".5",
+      "radius": ".00625",
+      "n": 64
+    },
+    {
+      "name": "angular doubling",
+      "passed": true,
+      "h": ".5",
+      "radius": ".00625"
+    },
+    {
+      "name": "small-radius gradient shell",
+      "passed": true,
+      "h": "1",
+      "radius": ".0125",
+      "n": 32
+    },
+    {
+      "name": "sampled phase winding",
+      "passed": true,
+      "h": "1",
+      "radius": ".0125",
+      "n": 32
+    },
+    {
+      "name": "small-radius gradient shell",
+      "passed": true,
+      "h": "1",
+      "radius": ".0125",
+      "n": 64
+    },
+    {
+      "name": "sampled phase winding",
+      "passed": true,
+      "h": "1",
+      "radius": ".0125",
+      "n": 64
+    },
+    {
+      "name": "angular doubling",
+      "passed": true,
+      "h": "1",
+      "radius": ".0125"
+    },
+    {
+      "name": "small-radius gradient shell",
+      "passed": true,
+      "h": "1",
+      "radius": ".00625",
+      "n": 32
+    },
+    {
+      "name": "sampled phase winding",
+      "passed": true,
+      "h": "1",
+      "radius": ".00625",
+      "n": 32
+    },
+    {
+      "name": "small-radius gradient shell",
+      "passed": true,
+      "h": "1",
+      "radius": ".00625",
+      "n": 64
+    },
+    {
+      "name": "sampled phase winding",
+      "passed": true,
+      "h": "1",
+      "radius": ".00625",
+      "n": 64
+    },
+    {
+      "name": "angular doubling",
+      "passed": true,
+      "h": "1",
+      "radius": ".00625"
+    },
+    {
+      "name": "small-radius gradient shell",
+      "passed": true,
+      "h": "2",
+      "radius": ".0125",
+      "n": 32
+    },
+    {
+      "name": "sampled phase winding",
+      "passed": true,
+      "h": "2",
+      "radius": ".0125",
+      "n": 32
+    },
+    {
+      "name": "small-radius gradient shell",
+      "passed": true,
+      "h": "2",
+      "radius": ".0125",
+      "n": 64
+    },
+    {
+      "name": "sampled phase winding",
+      "passed": true,
+      "h": "2",
+      "radius": ".0125",
+      "n": 64
+    },
+    {
+      "name": "angular doubling",
+      "passed": true,
+      "h": "2",
+      "radius": ".0125"
+    },
+    {
+      "name": "small-radius gradient shell",
+      "passed": true,
+      "h": "2",
+      "radius": ".00625",
+      "n": 32
+    },
+    {
+      "name": "sampled phase winding",
+      "passed": true,
+      "h": "2",
+      "radius": ".00625",
+      "n": 32
+    },
+    {
+      "name": "small-radius gradient shell",
+      "passed": true,
+      "h": "2",
+      "radius": ".00625",
+      "n": 64
+    },
+    {
+      "name": "sampled phase winding",
+      "passed": true,
+      "h": "2",
+      "radius": ".00625",
+      "n": 64
+    },
+    {
+      "name": "angular doubling",
+      "passed": true,
+      "h": "2",
+      "radius": ".00625"
+    }
+  ],
+  "rows": [
+    {
+      "h": ".5",
+      "radius": ".0125",
+      "angular_nodes": 32,
+      "shell": "0.000005078255897951571388496958037163744748563",
+      "limit": "0.0000050611664849423849511615027627241324735",
+      "relative_to_limit": "0.00337657594549193710695760433603",
+      "winding": "-2.0"
+    },
+    {
+      "h": ".5",
+      "radius": ".0125",
+      "angular_nodes": 64,
+      "shell": "0.000005078255897951571388496958037163744748563",
+      "limit": "0.0000050611664849423849511615027627241324735",
+      "relative_to_limit": "0.00337657594549193710695760433603",
+      "winding": "-2.0"
+    },
+    {
+      "h": ".5",
+      "radius": ".00625",
+      "angular_nodes": 32,
+      "shell": "0.000005065436746084949653475353644559366925302",
+      "limit": "0.0000050611664849423849511615027627241324735",
+      "relative_to_limit": "0.000843730621244978447848954109872",
+      "winding": "-2.0"
+    },
+    {
+      "h": ".5",
+      "radius": ".00625",
+      "angular_nodes": 64,
+      "shell": "0.000005065436746084949653475353644559366925302",
+      "limit": "0.0000050611664849423849511615027627241324735",
+      "relative_to_limit": "0.000843730621244978447848954109872",
+      "winding": "-2.0"
+    },
+    {
+      "h": "1",
+      "radius": ".0125",
+      "angular_nodes": 32,
+      "shell": "0.004756471915012514218311481817332337442441",
+      "limit": "0.004755403867077736468235924269389809336493",
+      "relative_to_limit": "0.000224596682980383908293850360339",
+      "winding": "-2.0"
+    },
+    {
+      "h": "1",
+      "radius": ".0125",
+      "angular_nodes": 64,
+      "shell": "0.004756471915012514218311481817332337442441",
+      "limit": "0.004755403867077736468235924269389809336493",
+      "relative_to_limit": "0.000224596682980383908293850360339",
+      "winding": "-2.0"
+    },
+    {
+      "h": "1",
+      "radius": ".00625",
+      "angular_nodes": 32,
+      "shell": "0.004755670865360990914636734965222254949086",
+      "limit": "0.004755403867077736468235924269389809336493",
+      "relative_to_limit": "0.0000561462897195565969251768957468",
+      "winding": "-2.0"
+    },
+    {
+      "h": "1",
+      "radius": ".00625",
+      "angular_nodes": 64,
+      "shell": "0.004755670865360990914636734965222254949086",
+      "limit": "0.004755403867077736468235924269389809336493",
+      "relative_to_limit": "0.0000561462897195565969251768957468",
+      "winding": "-2.0"
+    },
+    {
+      "h": "2",
+      "radius": ".0125",
+      "angular_nodes": 32,
+      "shell": "0.000005063321042107034829078017506461367410655",
+      "limit": "0.0000050611664849423849511615027627241324735",
+      "relative_to_limit": "0.000425703673463412032859074364524",
+      "winding": "-2.0"
+    },
+    {
+      "h": "2",
+      "radius": ".0125",
+      "angular_nodes": 64,
+      "shell": "0.000005063321042107034829078017506461367410655",
+      "limit": "0.0000050611664849423849511615027627241324735",
+      "relative_to_limit": "0.000425703673463412032859074364524",
+      "winding": "-2.0"
+    },
+    {
+      "h": "2",
+      "radius": ".00625",
+      "angular_nodes": 32,
+      "shell": "0.000005061705078312949958918171853270566293374",
+      "limit": "0.0000050611664849423849511615027627241324735",
+      "relative_to_limit": "0.000106416845240596539753002477719",
+      "winding": "-2.0"
+    },
+    {
+      "h": "2",
+      "radius": ".00625",
+      "angular_nodes": 64,
+      "shell": "0.000005061705078312949958918171853270566293374",
+      "limit": "0.0000050611664849423849511615027627241324735",
+      "relative_to_limit": "0.000106416845240596539753002477719",
+      "winding": "-2.0"
+    }
+  ],
+  "precision": 50,
+  "versions": {
+    "python": "3.14.5",
+    "mpmath": "1.3.0",
+    "sympy": "1.14.0"
+  },
+  "scope": "Local Laurent/vortex controls only. Empirical angular quadrature, no continuum pentagon certification.",
+  "hashes": {
+    "code/check_flip_regularity.py": "5da385eb6459246ff001d137996a1d6c8ca8a3b57c175527028d434ae012f9df"
+  }
+}

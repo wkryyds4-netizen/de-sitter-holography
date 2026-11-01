@@ -1,5 +1,21 @@
 # 下一次从这里继续
 
+## 当前继续位置：2026-11-01 flip-domain
+
+先读[六页PDF](output/pdf/de-sitter-flip-domain.pdf)、[推导](notes/stage4-flip-domain.md)、[来源](literature/stage4-flip-domain-sources.md)和[证明依赖](literature/flip-proof-dependency-map.md)。标准函数/定理均注明已有来源。本轮补核FG eq.(87)/Prop.5.8、Kim Props.7.4/9.1的依赖、Pusz–Sołtan regular-pair的谱条件；尚未全文独立验证。配对的简单极点给绕数-2和H¹破坏，单手征移动极点族无参数开集上的共同稠密域；只针对明确Lebesgue谱乘法解释，不宣称有界五边形反例。
+
+11组过采样数据、31项局部正则性控制、322项保存向量重放已结束，未认证矩阵元求积。初始22项中2失败保留，另5项refinement通过。当前无活跃计算句柄。六页稿本机双编译exit0、桌面success、全页1100像素核版完成。34份阶段证据绑定，914份旧文件及54份旧ZIP核对通过；整体966必需文件、1062链接、1319代码/输入哈希通过，errors空。冻结标签为2026-11-01-flip-domain；完成状态核实际ZIP/旁文件与Git远端，不重跑已有快照。
+
+下一任务：先查明确的分布/轮廓延拓及参数依赖域理论，选定一种完整定义，核它是否与F=Phi/conj(Phi)的Lebesgue有界谱算符相同。需明确测试空间、反射、边界值和极点处理；不能仅凭逐点解析延拓、形式交换或结合律图示补齐。若改用regular q² pair，须给谱改变与原几何的映射，不默认是同一dS理论。认证连续残差是独立支线，可用分离奇点的矩阵元/尾/舍入界，不能继续仅加节点。之后回到观察者质量标签、物理插入和Gram缝合；有限G/完整全息仍开放，goal active。
+
+以下保留历史继续位置，以本节为准。不要重跑one-shot run/check/record脚本覆盖数据，也不新建代理。
+
+## 最新优先事项：2026-11-01 文献证明与适用条件
+
+按用户提醒，先读 [证明依赖图](literature/flip-proof-dependency-map.md)，再继续 flip-domain。已定位 Goncharov 0706.4054v2、FG math/0702397v6 和 Kim 2112.13962v2 的具体命题；后者 §7 引用 KS 解析延拓，不能计为独立验证。下一步逐项匹配 FG Theorem 5.6 / Proposition 5.8 → KS Proposition 6.11 → Kim §§7–9 的空间、参数、域、闭包与变量字典。尚未全文复现，不宣称文献已消除或证实当前疑问。
+
+上一 unitary-flip 已公开，main 提交 0a59affbb44d9a71e4af61e0bfa588144bdab783，54份旧 ZIP 保留。新增 code/flip_domain.py、run/check/refine_flip_domain.py 及 results/stage4/flip-domain 已有11组计算，未冻结、未写最终阶段稿。初始22项诊断中2失败保留，另5项 refinement 通过；正 Galerkin margin 仍未认证求积误差。不得重跑覆盖、称连续反例或直接发布为原创定理。当前无活跃计算句柄；完整有限 G 与微观全息目标继续开放。下面的旧进度保留历史，以本段为当前顺序。
+
 ## 当前继续位置：2026-11-01 unitary-flip
 
 先读[五页PDF](output/pdf/de-sitter-unitary-flip.pdf)、[中文记录](notes/stage4-unitary-flip.md)、[来源边界](literature/stage4-unitary-flip-sources.md)。上一mass-filter已公开5ce5ca05b0f345f54e95a5a49d4d1473e24a8b15，快照SHA256=38e787a9b26f56f9cb0d33de4c5d2871d513c15c8eb2d3763c37fc4d5cd89210；本轮之前53份ZIP必须保持。

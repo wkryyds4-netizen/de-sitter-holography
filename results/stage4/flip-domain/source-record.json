@@ -1,0 +1,38 @@
+{
+  "sources": [
+    {
+      "file": "sources/kim-scarinci-2112.13329.pdf",
+      "url": "https://arxiv.org/pdf/2112.13329v2",
+      "sha256": "131a68f66c7c8521c902bc38b9883620d28a579dceae2dc2096ff1bf4de0b26c"
+    },
+    {
+      "file": "sources/kim-trilogy-2308.02934v2.html",
+      "url": "https://arxiv.org/html/2308.02934v2",
+      "sha256": "361893f195efb5cc39c64b200b55b95d3e3171fb1dcb0aca191b54a145322e3a"
+    },
+    {
+      "file": "sources/fock-goncharov-math-0702397v6.pdf",
+      "url": "https://arxiv.org/pdf/math/0702397v6",
+      "sha256": "e909062d02600bbf1ab5109661619f0e7556960c69d38600de69df1a3bd928b5"
+    },
+    {
+      "file": "sources/goncharov-0706.4054v2.pdf",
+      "url": "https://arxiv.org/pdf/0706.4054v2",
+      "sha256": "b32e98bbb761e765977bf0698125a3538e0224adbaf3732850466e4fb1a6352b"
+    },
+    {
+      "file": "sources/kim-pseudo-kahler-2112.13962v2.pdf",
+      "url": "https://arxiv.org/pdf/2112.13962v2",
+      "sha256": "aa4bb34a123351be67041df9c5e5c74a48373578be4d30f0da1dd1c266aade95"
+    },
+    {
+      "file": "sources/pusz-soltan-math-0604613v1.pdf",
+      "url": "https://arxiv.org/pdf/math/0604613v1",
+      "sha256": "b4510061fbf7d9e3fda63474811322c375a002709fbee421f172d77dac46e7aa"
+    }
+  ],
+  "prior_evidence": {
+    "results/stage4/unitary-flip/evidence.json": "7e9079dc68eec5b34b01fcdbd2f2bde5cf834ba47041ddc2882489413f1db4f4"
+  },
+  "reading_scope": "Pinned local partial reading. FG p38, Kim pseudo-Kahler p21, Pusz-Soltan p3 rendered; no full independent theorem verification."
+}

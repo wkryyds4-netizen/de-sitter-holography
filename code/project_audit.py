@@ -987,6 +987,24 @@ CG_ROOT_HASH_RECORDS[UNITARY_FLIP_DIR+'study.json'] = {'code/run_unitary_flip.py
 CG_ROOT_HASH_RECORDS[UNITARY_FLIP_DIR+'diagnostics.json'] = {'code/check_unitary_flip.py', 'code/unitary_flip.py'}
 CG_ROOT_HASH_RECORDS[UNITARY_FLIP_DIR+'audit.json'] = {'code/audit_unitary_flip.py'}
 
+FLIP_DOMAIN_DIR = 'results/stage4/flip-domain/'
+CG_ROOT_HASH_RECORDS[FLIP_DOMAIN_DIR+'evidence.json'] = {
+    'code/'+p for p in ['flip_domain.py','run_flip_domain.py','check_flip_domain.py','refine_flip_domain.py',
+        'check_flip_regularity.py','audit_flip_domain.py','build_flip_domain.ps1','record_flip_domain.py']
+} | {
+    'manuscript/flip-domain/main.tex','output/pdf/de-sitter-flip-domain.pdf','notes/stage4-flip-domain.md',
+    'literature/stage4-flip-domain-sources.md','literature/flip-proof-dependency-map.md'
+} | {FLIP_DOMAIN_DIR+p for p in ['study.json','runs.jsonl','diagnostics.json','refinement.json',
+    'regularity.json','audit.json','main.log','build-review.md','preservation.json','source-record.json']
+} | {FLIP_DOMAIN_DIR+f'coefficients-{i:02d}.npz' for i in range(11)}
+REQUIRED.extend(sorted(CG_ROOT_HASH_RECORDS[FLIP_DOMAIN_DIR+'evidence.json']))
+REQUIRED.append(FLIP_DOMAIN_DIR+'evidence.json')
+CG_ROOT_HASH_RECORDS[FLIP_DOMAIN_DIR+'study.json'] = {'code/flip_domain.py','code/run_flip_domain.py','code/unitary_flip.py'}
+CG_ROOT_HASH_RECORDS[FLIP_DOMAIN_DIR+'diagnostics.json'] = {'code/check_flip_domain.py'}
+CG_ROOT_HASH_RECORDS[FLIP_DOMAIN_DIR+'refinement.json'] = {'code/refine_flip_domain.py',FLIP_DOMAIN_DIR+'diagnostics.json'}
+CG_ROOT_HASH_RECORDS[FLIP_DOMAIN_DIR+'regularity.json'] = {'code/check_flip_regularity.py'}
+CG_ROOT_HASH_RECORDS[FLIP_DOMAIN_DIR+'audit.json'] = {'code/audit_flip_domain.py'}
+
 def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
@@ -2173,6 +2191,28 @@ def main():
             kind='Integrity replay only; scalar/algebra controls passed, continuum pentagon reproduction unresolved'))
     except (KeyError, TypeError, ValueError, ArithmeticError) as exc:
         errors.append('malformed unitary-flip records: '+str(exc))
+    try:
+        from audit_flip_domain import audit as replay_flip_domain
+        replay = replay_flip_domain(ROOT)
+        errors.extend('flip-domain: '+e for e in replay['errors'])
+        if replay['status'] != 'passed' or replay['checks'] != 322:
+            errors.append('flip-domain: incomplete saved-vector replay')
+        if replay['scientific_status'] != 'bounded pentagon unresolved; quadrature not certified':
+            errors.append('flip-domain: scientific status lost')
+        source = read_json(ROOT/FLIP_DOMAIN_DIR/'source-record.json')
+        if len(source['sources']) != 6:
+            errors.append('flip-domain: source count')
+        for cache in source['sources']:
+            if digest(ROOT/cache['file']) != cache['sha256']:
+                errors.append('flip-domain: source mismatch '+cache['file'])
+        for file, expected in source['prior_evidence'].items():
+            if digest(ROOT/file) != expected:
+                errors.append('flip-domain: prior evidence mismatch '+file)
+        supporting_records.append(dict(stage='flip-domain',checks=322,runs=11,
+            scientific_status=replay['scientific_status'],
+            kind='Domain/literature diagnostic and saved-vector arithmetic; no continuum pentagon certification'))
+    except (KeyError, TypeError, ValueError, ArithmeticError) as exc:
+        errors.append('malformed flip-domain records: '+str(exc))
     growing_checks = growing.get("checks", [])
     if (growing.get("status") != "passed" or len(growing_checks) != 290
             or any(row.get("passed") is not True for row in growing_checks)

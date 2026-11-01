@@ -1,0 +1,67 @@
+{
+  "created_at_utc": "2026-11-01T00:41:45.143848+00:00",
+  "status": "diagnostic stage bound; project audit follows",
+  "scientific_status": "bounded pentagon unresolved; quadrature not certified",
+  "pages": 6,
+  "runs": 11,
+  "initial_checks": {
+    "total": 22,
+    "passed": 20,
+    "failed": 2
+  },
+  "refinement_checks": 5,
+  "regularity_checks": 31,
+  "saved_vector_replay_checks": 322,
+  "compilers": [
+    "pdfLaTeX twice exit 0",
+    "desktop success"
+  ],
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "longest_edge_pixels": 1100,
+    "status": "all inspected"
+  },
+  "hashes": {
+    "code/flip_domain.py": "a125ae89650166dcf613991d03dae39f7c24c7a9aec661c8357accbef096fc7b",
+    "code/run_flip_domain.py": "f2b78d04d2851d840a474f32a6b9bc94b115bec2cb3e259fb874d37c6b298e4f",
+    "code/check_flip_domain.py": "629f340da7d1fe0b3454c7a7e1c88de0e05b7cf35aa6ae8e169a766d05546b72",
+    "code/refine_flip_domain.py": "1b830e0edddf27774c0b6be1580a3524f2aab6154f4eacb2f1219b1a6b1bf797",
+    "code/check_flip_regularity.py": "5da385eb6459246ff001d137996a1d6c8ca8a3b57c175527028d434ae012f9df",
+    "code/audit_flip_domain.py": "f120d8c078d26d1b1764b3c629fc9492e8601d3c781129e7891ce775db9078ad",
+    "code/build_flip_domain.ps1": "7c02c2bc44a6fd554edf3475b88efca4d41a669cfb1048a49019185ebeaa1be5",
+    "code/record_flip_domain.py": "320b4d3e55bb7463e5297ce194c4042ec2d4fbd6e00c0d86c762f61d3b949d64",
+    "manuscript/flip-domain/main.tex": "820da335da2e9ff14665ec8d599b2f9170682b451ca5ea99029efb49d9205fbf",
+    "output/pdf/de-sitter-flip-domain.pdf": "4e7e3a319da682f380de6854eada838173d0f29f9705c4c8fa308417899dbaae",
+    "notes/stage4-flip-domain.md": "e0de78b7db437b13c7b054118c7359a927344f9eac4c2e5384a99c1e8957f852",
+    "literature/stage4-flip-domain-sources.md": "2732975a0991cfbd6c80800c61f26861dd13704014b7bfb32330f1aed8afcba5",
+    "literature/flip-proof-dependency-map.md": "fc08cfb40a2bd840aaf93137af489ad2528193af45663d70be55a0efd2640c4f",
+    "results/stage4/flip-domain/audit.json": "db466c907454aa0695337f53442d0f18d7656eb93c053f273afb5e91346f97bd",
+    "results/stage4/flip-domain/build-review.md": "d4ddb65d40f0df11e4bf34d0fb3a841c2022793843dca1be9074ca4494196744",
+    "results/stage4/flip-domain/coefficients-00.npz": "f3c8b2c2467e23cc773a79225dca9886005b2aca3dc468cb0a62c6f95f1d98e3",
+    "results/stage4/flip-domain/coefficients-01.npz": "f22d51d78893049c4cfa8c70fe577e4878481d928bf9a5bd207a86c3fe805fa6",
+    "results/stage4/flip-domain/coefficients-02.npz": "3c80e00ea0becd1e8dda2e70e1b9c18821318a0b88125056f2425edf09fddcd6",
+    "results/stage4/flip-domain/coefficients-03.npz": "dab8314362182d2dde164e5cfb82f3df55d5c07347cee53cadd1c70503bf31e2",
+    "results/stage4/flip-domain/coefficients-04.npz": "91b2843488a527fc525e57ade44e48a9976f912ea6ca87e3d3572af95d3b24fd",
+    "results/stage4/flip-domain/coefficients-05.npz": "0a05da589afaa565fcf230628b63c3c1a7717a8f61b12708a5dee234112cc25b",
+    "results/stage4/flip-domain/coefficients-06.npz": "958969548f679072a51506778e5d7d6503db5e700a80f100f8f11cdb22d96e23",
+    "results/stage4/flip-domain/coefficients-07.npz": "a4e53a9a4300e45a8754ce41485afda593de7c3669821c8c4f919b43739b28b9",
+    "results/stage4/flip-domain/coefficients-08.npz": "c9349c835ae896c6d9e4a23821e5a5e7dcbdb2516e3f10975f0664a2f9c0c6a4",
+    "results/stage4/flip-domain/coefficients-09.npz": "d92e5fa23f002181ad80f0b37d496ba735963dbd85ad3f8d7b9d3aba11748faa",
+    "results/stage4/flip-domain/coefficients-10.npz": "5fc7e30e4b9d40cec2ed94fa95a7f03e537c7328b8586908998d63625e58e08b",
+    "results/stage4/flip-domain/diagnostics.json": "79994ba3bebe4eda0bcf088a5cf1936ada9d54f4ddff7d9dc4575bc330339a5e",
+    "results/stage4/flip-domain/main.log": "98481748e39d1e41ca1c95f55d267cc1d0b1e5a94524f96d8b6b39e8b6c36626",
+    "results/stage4/flip-domain/preservation.json": "b4a37554bb6699305fae04352620813f6e45f1a5f3943aeeb3ce4516a8605d10",
+    "results/stage4/flip-domain/refinement.json": "0b6917f457e7c8e8fd17dd5a67ea90a265269866676b7f3c393ab8003af716d6",
+    "results/stage4/flip-domain/regularity.json": "c9ca3aa4160cdbb962aa16141846d33bb947181f5ee405b861b38c5e53330491",
+    "results/stage4/flip-domain/runs.jsonl": "49427eb96e8f4f1f07e2c0b39a8e5c079660fbf926d4866b596cd73b814e04b3",
+    "results/stage4/flip-domain/source-record.json": "c7303018f14f661e25cba5cd1845a25a2c1fffa4dd666ffb58c0916309b99aa4",
+    "results/stage4/flip-domain/study.json": "06d0857663f7c9ea6b03bf56e90afe4afe83e1314745336deb619b9236c7423a"
+  }
+}

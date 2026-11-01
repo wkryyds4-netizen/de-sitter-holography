@@ -7,10 +7,10 @@
     "Source remains a link, not an archive: dlmf-16.5",
     "Source remains a link, not an archive: dlmf-15.6"
   ],
-  "verified_at_utc": "2026-11-01T00:20:16.596904+00:00",
-  "required_files": 931,
-  "local_links_checked": 1044,
-  "code_and_input_hashes_checked": 1277,
+  "verified_at_utc": "2026-11-01T00:42:41.358539+00:00",
+  "required_files": 966,
+  "local_links_checked": 1062,
+  "code_and_input_hashes_checked": 1319,
   "scientific_checks": {
     "stage1": {
       "checks": 235,
@@ -711,6 +711,36 @@
       "recorded_hashes": 1
     },
     {
+      "file": "results/stage4/flip-domain/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 34
+    },
+    {
+      "file": "results/stage4/flip-domain/study.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 3
+    },
+    {
+      "file": "results/stage4/flip-domain/diagnostics.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 1
+    },
+    {
+      "file": "results/stage4/flip-domain/refinement.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 2
+    },
+    {
+      "file": "results/stage4/flip-domain/regularity.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 1
+    },
+    {
+      "file": "results/stage4/flip-domain/audit.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 1
+    },
+    {
       "file": "results/stage3/cross-limit/comparison.json",
       "kind": "projected comparison model only; not exact 6j convergence or interval certification",
       "checks": 19
@@ -965,6 +995,13 @@
       "matched_protocol_runs": 21,
       "scientific_status": "non-flat pentagon reproduction unresolved",
       "kind": "Integrity replay only; scalar/algebra controls passed, continuum pentagon reproduction unresolved"
+    },
+    {
+      "stage": "flip-domain",
+      "checks": 322,
+      "runs": 11,
+      "scientific_status": "bounded pentagon unresolved; quadrature not certified",
+      "kind": "Domain/literature diagnostic and saved-vector arithmetic; no continuum pentagon certification"
     },
     {
       "file": "results/stage3/growing-box/diagnostics.json",

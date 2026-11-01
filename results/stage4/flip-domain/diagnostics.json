@@ -1,0 +1,318 @@
+{
+  "status": "failed",
+  "checks": [
+    {
+      "name": "formal cross-chiral commutator zero",
+      "passed": true
+    },
+    {
+      "name": "spectral real-imaginary pair nonzero",
+      "passed": true
+    },
+    {
+      "name": "bounded Weyl anticommutation phase",
+      "passed": true
+    },
+    {
+      "name": "moving pole location",
+      "passed": true
+    },
+    {
+      "name": "inverse pole map real",
+      "passed": true
+    },
+    {
+      "name": "inverse pole map imaginary",
+      "passed": true
+    },
+    {
+      "name": "pole sweep wedge",
+      "passed": false
+    },
+    {
+      "name": "first pole residue",
+      "passed": true,
+      "parameter": "(0.0 + 0.5j)",
+      "theta": "0.2"
+    },
+    {
+      "name": "first pole residue",
+      "passed": true,
+      "parameter": "(0.0 + 0.5j)",
+      "theta": "1.1"
+    },
+    {
+      "name": "first pole residue",
+      "passed": true,
+      "parameter": "(0.0 + 1.0j)",
+      "theta": "0.2"
+    },
+    {
+      "name": "first pole residue",
+      "passed": true,
+      "parameter": "(0.0 + 1.0j)",
+      "theta": "1.1"
+    },
+    {
+      "name": "first pole residue",
+      "passed": true,
+      "parameter": "(0.0 + 2.0j)",
+      "theta": "0.2"
+    },
+    {
+      "name": "first pole residue",
+      "passed": true,
+      "parameter": "(0.0 + 2.0j)",
+      "theta": "1.1"
+    },
+    {
+      "name": "first pole residue",
+      "passed": true,
+      "parameter": "(0.4 + 0.7j)",
+      "theta": "0.2"
+    },
+    {
+      "name": "first pole residue",
+      "passed": true,
+      "parameter": "(0.4 + 0.7j)",
+      "theta": "1.1"
+    },
+    {
+      "name": "positive logarithmic coefficient",
+      "passed": true,
+      "h": "0.5"
+    },
+    {
+      "name": "small-shell empirical check",
+      "passed": false,
+      "h": "0.5"
+    },
+    {
+      "name": "positive logarithmic coefficient",
+      "passed": true,
+      "h": "1.0"
+    },
+    {
+      "name": "small-shell empirical check",
+      "passed": true,
+      "h": "1.0"
+    },
+    {
+      "name": "positive logarithmic coefficient",
+      "passed": true,
+      "h": "2.0"
+    },
+    {
+      "name": "small-shell empirical check",
+      "passed": true,
+      "h": "2.0"
+    },
+    {
+      "name": "h=1 residue exact compact-product equality",
+      "passed": true
+    }
+  ],
+  "pole_rows": [
+    {
+      "parameter": [
+        "0.0",
+        "0.5"
+      ],
+      "theta": "0.2",
+      "relative_error": "4.528790071979540172105894e-13",
+      "residue": [
+        "-1.04720581805536571812515439391",
+        "0.0"
+      ]
+    },
+    {
+      "parameter": [
+        "0.0",
+        "0.5"
+      ],
+      "theta": "1.1",
+      "relative_error": "4.528790071979990145365287e-13",
+      "residue": [
+        "-1.04720581805536571812515439391",
+        "0.0"
+      ]
+    },
+    {
+      "parameter": [
+        "0.0",
+        "1.0"
+      ],
+      "theta": "0.2",
+      "relative_error": "4.981290962204222338844573e-13",
+      "residue": [
+        "-1.0",
+        "0.0"
+      ]
+    },
+    {
+      "parameter": [
+        "0.0",
+        "1.0"
+      ],
+      "theta": "1.1",
+      "relative_error": "4.981290962204661762141909e-13",
+      "residue": [
+        "-1.0",
+        "0.0"
+      ]
+    },
+    {
+      "parameter": [
+        "0.0",
+        "2.0"
+      ],
+      "theta": "0.2",
+      "relative_error": "5.005513056993447597957291e-13",
+      "residue": [
+        "-0.954922120139643887143562123286",
+        "0.0"
+      ]
+    },
+    {
+      "parameter": [
+        "0.0",
+        "2.0"
+      ],
+      "theta": "1.1",
+      "relative_error": "5.005513056993867200709256e-13",
+      "residue": [
+        "-0.954922120139643887143562123286",
+        "0.0"
+      ]
+    },
+    {
+      "parameter": [
+        "0.4",
+        "0.7"
+      ],
+      "theta": "0.2",
+      "relative_error": "5.101751006773860384471742e-13",
+      "residue": [
+        "-0.991003656741793293908890794579",
+        "-0.00619783111714995146703913867634"
+      ]
+    },
+    {
+      "parameter": [
+        "0.4",
+        "0.7"
+      ],
+      "theta": "1.1",
+      "relative_error": "5.101751006774304010703639e-13",
+      "residue": [
+        "-0.991003656741793293908890794579",
+        "-0.00619783111714995146703913867634"
+      ]
+    }
+  ],
+  "shells": [
+    {
+      "h": "0.5",
+      "residue": "-1.047205818055365718125154393907242",
+      "log_coefficient": "0.0000022201110969775954813825014279581771",
+      "shells": [
+        {
+          "radius": ".2",
+          "angular_nodes": 64,
+          "shell": "0.0000038562058577408593026895125805138039",
+          "relative_to_limit": "0.7369427426359892064016063208"
+        },
+        {
+          "radius": ".1",
+          "angular_nodes": 64,
+          "shell": "0.0000025901874606074096644607611207043999",
+          "relative_to_limit": "0.166692722780236998783485221648"
+        },
+        {
+          "radius": ".05",
+          "angular_nodes": 64,
+          "shell": "0.0000023103039839565302448643169069610719",
+          "relative_to_limit": "0.0406253935227480896949631770958"
+        },
+        {
+          "radius": ".025",
+          "angular_nodes": 64,
+          "shell": "0.0000022425155856221019992327128026981569",
+          "relative_to_limit": "0.0100916069808431823025540033924"
+        }
+      ]
+    },
+    {
+      "h": "1.0",
+      "residue": "-1.0",
+      "log_coefficient": "0.0011888509667694341170589810673474523",
+      "shells": [
+        {
+          "radius": ".2",
+          "angular_nodes": 64,
+          "shell": "0.0013308740522221293967066643945035694",
+          "relative_to_limit": "0.119462480514800516578040162557"
+        },
+        {
+          "radius": ".1",
+          "angular_nodes": 64,
+          "shell": "0.0012237831344399653667324868342712432",
+          "relative_to_limit": "0.0293831343431173724123329919797"
+        },
+        {
+          "radius": ".05",
+          "angular_nodes": 64,
+          "shell": "0.0011975483557629508738135320457286777",
+          "relative_to_limit": "0.00731579418835895963148485783239"
+        },
+        {
+          "radius": ".025",
+          "angular_nodes": 64,
+          "shell": "0.0011910230887921694087344351755490733",
+          "relative_to_limit": "0.00182707680226545439784253138882"
+        }
+      ]
+    },
+    {
+      "h": "2.0",
+      "residue": "-0.95492212013964388714356212328576854",
+      "log_coefficient": "0.00000046151575429132783573144695611514048",
+      "shells": [
+        {
+          "radius": ".2",
+          "angular_nodes": 64,
+          "shell": "0.00000058027830004064604338202145155076877",
+          "relative_to_limit": "0.257331509585586922125954904693"
+        },
+        {
+          "radius": ".1",
+          "angular_nodes": 64,
+          "shell": "0.00000049005512155158127104144401769963859",
+          "relative_to_limit": "0.0618383381171386970705697825111"
+        },
+        {
+          "radius": ".05",
+          "angular_nodes": 64,
+          "shell": "0.00000046857996586097727136940505103963899",
+          "relative_to_limit": "0.0153065448014808462387098698956"
+        },
+        {
+          "radius": ".025",
+          "angular_nodes": 64,
+          "shell": "0.00000046327741330272316878019755094521873",
+          "relative_to_limit": "0.00381711565643174340225385582696"
+        }
+      ]
+    }
+  ],
+  "precision": 50,
+  "scope": "Exact canonical/pole-map identities and high-precision scalar controls. Pole/domain proof is analytic; shell quadrature is empirical. No pentagon disproof.",
+  "versions": {
+    "python": "3.14.5",
+    "mpmath": "1.3.0",
+    "sympy": "1.14.0"
+  },
+  "hashes": {
+    "code/check_flip_domain.py": "629f340da7d1fe0b3454c7a7e1c88de0e05b7cf35aa6ae8e169a766d05546b72"
+  }
+}
