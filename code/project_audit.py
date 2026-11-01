@@ -1053,6 +1053,21 @@ CG_ROOT_HASH_RECORDS[HEAT_MATRIX_DIR+'cutoff-bound.json'] = {'code/heat_cutoff_b
 CG_ROOT_HASH_RECORDS[HEAT_MATRIX_DIR+'rational-certificate.json'] = {'code/rational_heat_certificate.py'}
 CG_ROOT_HASH_RECORDS[HEAT_MATRIX_DIR+'audit.json'] = {'code/audit_heat_matrix.py','code/rational_heat_certificate.py'}
 
+RESIDUAL_DIR = 'results/stage4/residual-certificate/'
+CG_ROOT_HASH_RECORDS[RESIDUAL_DIR+'evidence.json'] = {
+    'code/tensor_overlap.py','code/tensor_pair_overlap.py','code/audit_tensor_chain.py',
+    'code/chirp_residual_certificate.py','code/audit_chirp_residual.py',
+    'code/run_tensor_gaussian.py','code/run_tensor_pair.py','code/record_residual_certificate.py',
+    'manuscript/residual-certificate/main.tex','output/pdf/de-sitter-residual-certificate.pdf',
+    'notes/stage4-residual-certificate.md','literature/stage4-residual-certificate-sources.md'
+} | {RESIDUAL_DIR+p for p in ['chirp.json','tensor-chain-audit.json','tensor-gaussian.json',
+    'tensor-left-1.json','tensor-left-2.json','tensor-right-3.json','tensor-right-5.json',
+    'preservation.json','source-record.json','final-build.json']}
+REQUIRED.extend(sorted(CG_ROOT_HASH_RECORDS[RESIDUAL_DIR+'evidence.json']))
+REQUIRED.append(RESIDUAL_DIR+'evidence.json')
+CG_ROOT_HASH_RECORDS[RESIDUAL_DIR+'tensor-chain-audit.json'] = {'code/audit_tensor_chain.py'}
+CG_ROOT_HASH_RECORDS[RESIDUAL_DIR+'tensor-pair-controls.json'] = {'code/tensor_pair_overlap.py','code/check_tensor_pair.py'}
+
 def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
@@ -2332,6 +2347,30 @@ def main():
             kind='Exact rational heat-cutoff certificate; actual complex matrix quadrature remains uncertified'))
     except (KeyError, TypeError, ValueError, ArithmeticError) as exc:
         errors.append('malformed heat-matrix records: '+str(exc))
+    try:
+        from audit_tensor_chain import audit as replay_tensor_chain
+        from audit_chirp_residual import audit as replay_residual_chirp
+        replay = replay_tensor_chain(ROOT, replay_bounds=False)
+        errors.extend('residual-certificate: '+e for e in replay['failed'])
+        chirp = replay_residual_chirp()
+        errors.extend('residual-certificate chirp: '+e for e in chirp['errors'])
+        if not replay['passed'] or len(replay['overlaps']) != 5 or chirp['checks'] != 114:
+            errors.append('residual-certificate: incomplete seven-step certificate')
+        saved = read_json(ROOT/RESIDUAL_DIR/'tensor-chain-audit.json')
+        if saved['scientific_status'] != replay['scientific_status']:
+            errors.append('residual-certificate: scientific status mismatch')
+        source = read_json(ROOT/RESIDUAL_DIR/'source-record.json')
+        for cache in source['sources']:
+            if digest(ROOT/cache['file']) != cache['sha256']:
+                errors.append('residual-certificate: source mismatch '+cache['file'])
+        for file, expected in source['prior_evidence'].items():
+            if digest(ROOT/file) != expected:
+                errors.append('residual-certificate: prior evidence mismatch '+file)
+        supporting_records.append(dict(stage='residual-certificate',checks=replay['checks'],
+            chirp_checks=chirp['checks'],full_F_overlaps=5,
+            scientific_status=replay['scientific_status'],scope=replay['scope']))
+    except (KeyError, TypeError, ValueError, ArithmeticError) as exc:
+        errors.append('malformed residual-certificate records: '+str(exc))
     growing_checks = growing.get("checks", [])
     if (growing.get("status") != "passed" or len(growing_checks) != 290
             or any(row.get("passed") is not True for row in growing_checks)

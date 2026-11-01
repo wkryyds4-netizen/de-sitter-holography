@@ -1,0 +1,86 @@
+{
+  "status": "working stage; first F overlap certified; not frozen or published",
+  "updated_at_utc": "2026-11-01T02:16:13.433172+00:00",
+  "prior_heat_bound_files_verified": 22,
+  "pages": 7,
+  "completed_hashes": {
+    "code/audit_chirp_residual.py": "094289a0733a332b056daf03ae50e755a02ad59ae6b817b90838a6ee3324484d",
+    "code/audit_tensor_controls.py": "40a62fa1d0df15f9746f2d8712a3fc611bb969697402ab027f821e07a0c29384",
+    "code/audit_tensor_gaussian.py": "839ee0f7dc7c32e9ab734e8c0025a5b3a2c3e70b4bf0e7fc4c3f99f4734568e5",
+    "code/audit_tensor_gaussian_refined.py": "c454db60a43e232e6941ed4e6d61807036643bb7479493156911c9ec7027e50d",
+    "code/build_residual_certificate.ps1": "74ab63e33949da81741489af5a906e0ed94653b1f45718cd3349b1b63d42aab9",
+    "code/check_tensor_overlap.py": "ef9442c361d5d856fe558f68f331fdbb9e7fc6182bf33e8ad0e4aa58aac2d560",
+    "code/chirp_residual_certificate.py": "b0b6fa5c0bc0b77819b9e8a5be9778a6db00ce2049be112188fe915645a2e3fd",
+    "code/chirp_residual_certificate_initial.py": "960f5dcaf648468ee17a994c314a59899eca9582a573730b80754d35ed53a601",
+    "code/gaussian_outer_bound.py": "f83a9e162041e560a7a2ccf53de4a11724fdb2930aff0cc604fc942ba332d08b",
+    "code/residual_full_overlap.py": "bcd50385529f7390d50571df6d5caf9c8a88316c508efe3d40becc0ee9da7c09",
+    "code/residual_gaussian_overlap.py": "4bcef4318d6127d1f1e15a7ca37cd14ce9efe17b5d5d21a0072bb5e8050c1a1e",
+    "code/residual_gaussian_overlap_bounded.py": "82fa944ed38b26294d96d3e469d37de51163072478cd7cf2814e6624e4dc5076",
+    "code/residual_overlap_rectangle.py": "7c930eca517b0dd565f94ee5dac6ef2b1d08333d12519415d37e10582206720e",
+    "code/run_tensor_gaussian.py": "ed8e6f023078bb8cc9ddcbf66334db29386e8fd4184dc1149a788a2298a99684",
+    "code/tensor_overlap.py": "bf903e21ae04e362877befea92a53e203b73751b9789ab6531d6dea81e031e4e",
+    "literature/stage4-residual-certificate-sources.md": "e0e257e1760488d0ac970f99ab19d58cc9ad7ba343c37e7ffda3e8a5ef8046c2",
+    "manuscript/residual-certificate/main.tex": "8706ebc02dc516ec8bf39fd9523b343fbfa5b6fd325297e6f4af333a3d367812",
+    "notes/stage4-residual-certificate.md": "32d1ec0cdad1c3aa81dc415e56361acba65dcdc2c4d336dfe912e71f46a57d49",
+    "output/pdf/de-sitter-residual-certificate.pdf": "4ff81399534c1d146a2be638843b93c75b290c8086b825d54777f4684691e852",
+    "results/stage4/residual-certificate/build-review.md": "c755561e4d69d5b6779cb481d6e6ceb0d780ea1c13a1649d088f773b41e9ea22",
+    "results/stage4/residual-certificate/chirp-audit.json": "2833450daca38191dea456550819b123bd3eda936141a01c66e7f694d44ffd81",
+    "results/stage4/residual-certificate/chirp-initial-tail-control.json": "43ef05d58acb52f0afdb63ad28805795b6cd33e6b0c189a35a6c473b2faecf99",
+    "results/stage4/residual-certificate/chirp.json": "00a560f6751c7d77638356ba91a40d3ce92f4aeeb5c715d2faf53bbda207a4d0",
+    "results/stage4/residual-certificate/full-right-1-input.json": "0f389e1d3d72b99009ff6984b8d799a5bdaedde117b2b87381008189b73ea239",
+    "results/stage4/residual-certificate/full-right-1-segments.jsonl": "f189f6ede2f49d4609a21e27b9183d8a2a632dabb53d484ba874be4e3a902356",
+    "results/stage4/residual-certificate/gaussian-bounded-input.json": "d54f7025d2f229cc8b19ccdd2e04a37ea7ce26a5f709546d18948ac28ee6c07c",
+    "results/stage4/residual-certificate/gaussian-bounded-segments.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "results/stage4/residual-certificate/gaussian-overlap-input.json": "49a0555abd9d5f8b8890a1ba214d85e466f71d341f1453820774dd73d49c4512",
+    "results/stage4/residual-certificate/gaussian-overlap-segments.jsonl": "daff0c76904d99d347f3c7e6461fdb5608c4873d305fed3fe18e7a634624e1cd",
+    "results/stage4/residual-certificate/main.log": "9d8ccf5251fc094aa29360e36a0866fcc160f0d18a591eaac54a0474fef4e7d4",
+    "results/stage4/residual-certificate/rectangle-pilot-initial-input.json": "4cb392c1307efb3676eb6bcc71fa4342e65d452c2ff32f7f1610c5fb029a552a",
+    "results/stage4/residual-certificate/rectangle-pilot.json": "5539419c75c90840778e76f9194f2a23689e4d6728389aacaa69d39634fb1e34",
+    "results/stage4/residual-certificate/tensor-controls-audit.json": "6f6166b46293ffdc9b626f7b74d921aade2b2293a61d8b5b1105813812ddd236",
+    "results/stage4/residual-certificate/tensor-controls.json": "c0ba89c3c362dcf49ad570d5194fbde825d033e541dce0b7eef56ac50d1737d0",
+    "results/stage4/residual-certificate/tensor-gaussian-audit-refined.json": "25228d3b518022ccf59b5c73ee7033abd6e945377f4a76901f1a5465cbef9bf2",
+    "results/stage4/residual-certificate/tensor-gaussian-audit.json": "acf6fe19e8b688360608399006a6d505d3178351aab42646183422f930a5b38c",
+    "results/stage4/residual-certificate/tensor-gaussian-cells.jsonl": "ed04e1e1a9c618073e9f9d00c0f674a7aed81ad4a626c14cc9eee78659974ed3",
+    "results/stage4/residual-certificate/tensor-gaussian.json": "bd7c1102a822e056b1f69b53e2f4b2716a4fd20f4391a688e088a6250d219898",
+    "results/stage4/residual-certificate/working-state-before-tensor.json": "9bb926753e3405adb15b54a1045934c8dbe33bf18d13b118e2683749c38d20ec"
+  },
+  "scientific_status": "Two chirp steps and right F step 1 certified. Four F overlaps remain open. No full continuous word counterexample.",
+  "stopped_runs": [
+    {
+      "session": 73519,
+      "exit_code": 1,
+      "script": "code/residual_full_overlap.py",
+      "retained_segments": 3,
+      "reason": "Gaussian-specific smaller box available"
+    },
+    {
+      "session": 86352,
+      "exit_code": 1,
+      "script": "code/residual_gaussian_overlap.py",
+      "retained_segments": 1,
+      "reason": "Replace unresolved parameter-width refinement with uniform outer bounds"
+    },
+    {
+      "session": 33891,
+      "exit_code": 1,
+      "script": "code/residual_gaussian_overlap_bounded.py",
+      "retained_segments": 0,
+      "reason": "Nested repeated quadrature replaced by tensor cubature; termination established in prior tool transcript"
+    }
+  ],
+  "completed_run": {
+    "session": 75595,
+    "exit_code": 0,
+    "seconds": 26.1086832000874
+  },
+  "live_handles": [],
+  "checks": {
+    "tensor_controls": 5,
+    "tensor_audit_refined": 2794
+  },
+  "preserved_failures": [
+    "tensor-controls.json: 2 invalid containment criteria",
+    "tensor-gaussian-audit.json: 925 invalid cross-precision endpoint comparisons"
+  ],
+  "scope": "Working file integrity only; no final project audit registration, freeze, or publication yet"
+}

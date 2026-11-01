@@ -1,0 +1,27 @@
+{
+  "pages": 10,
+  "compilation": "pdfLaTeX twice exit 0 via code/build_residual_certificate.ps1",
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "longest_edge_pixels": 1100,
+    "status": "all inspected"
+  },
+  "hashes": {
+    "manuscript/residual-certificate/main.tex": "8b94b0d23228620b51bfa527cfcfb023724ba870190310ae357cd5ba03957f4c",
+    "output/pdf/de-sitter-residual-certificate.pdf": "cc845acd33df7909a61b5e23f62a7267f196355570a8f98c54bfdf3f70f15536",
+    "code/build_residual_certificate.ps1": "74ab63e33949da81741489af5a906e0ed94653b1f45718cd3349b1b63d42aab9",
+    "results/stage4/residual-certificate/main.log": "92214dc84e2ce90b0b871b9e3a90395e4e00b08207817df6a191191ded3cad00",
+    "results/stage4/residual-certificate/build-review.md": "7f902e30e47501de526a6f72add9d22cc89c0fc0bb8697c9005698dbd4291abe"
+  }
+}

@@ -20,6 +20,11 @@
     "sha256": "92735dd2286f61b4d7ce9bf628163d51df5cf202d8050aaca084ef84ef8c2b91"
   },
   {
+    "file": "code/audit_chirp_residual.py",
+    "bytes": 4948,
+    "sha256": "094289a0733a332b056daf03ae50e755a02ad59ae6b817b90838a6ee3324484d"
+  },
+  {
     "file": "code/audit_ds3_bose.py",
     "bytes": 5571,
     "sha256": "5088fb3786842e1fddc765e11b72f14a511ccffc44929f25138124eceed8877b"
@@ -138,6 +143,26 @@
     "file": "code/audit_principal_eikonal.py",
     "bytes": 3784,
     "sha256": "0b17280ba3d9d01b916661174f2f6546d3d94a4c2bce376f187defcc08cb7fe1"
+  },
+  {
+    "file": "code/audit_tensor_chain.py",
+    "bytes": 7446,
+    "sha256": "66fc702b79b162f7129e9b25a2d0aef63f50527377e359acdc401ac24c33f8b9"
+  },
+  {
+    "file": "code/audit_tensor_controls.py",
+    "bytes": 1721,
+    "sha256": "40a62fa1d0df15f9746f2d8712a3fc611bb969697402ab027f821e07a0c29384"
+  },
+  {
+    "file": "code/audit_tensor_gaussian.py",
+    "bytes": 3896,
+    "sha256": "839ee0f7dc7c32e9ab734e8c0025a5b3a2c3e70b4bf0e7fc4c3f99f4734568e5"
+  },
+  {
+    "file": "code/audit_tensor_gaussian_refined.py",
+    "bytes": 4045,
+    "sha256": "c454db60a43e232e6941ed4e6d61807036643bb7479493156911c9ec7027e50d"
   },
   {
     "file": "code/audit_unitary_flip.py",
@@ -325,6 +350,11 @@
     "sha256": "d2b305aa0796003d4b7279c87e82656d0ec109fdd8c8b6b74f4f07f219eec0e6"
   },
   {
+    "file": "code/build_residual_certificate.ps1",
+    "bytes": 1177,
+    "sha256": "74ab63e33949da81741489af5a906e0ed94653b1f45718cd3349b1b63d42aab9"
+  },
+  {
     "file": "code/build_saddle_note.ps1",
     "bytes": 909,
     "sha256": "3f8f333c2566e2c4f5ca7aba28c869ec4231459525837eee0e1c5b8d73c807de"
@@ -358,6 +388,11 @@
     "file": "code/build_wkb_note.ps1",
     "bytes": 895,
     "sha256": "8688cdddd20364adec33cc9a3cab3c9d0ea0958a8ca1fe2197bb1da44e9ccfe3"
+  },
+  {
+    "file": "code/check_actual_pair_rectangle.py",
+    "bytes": 2279,
+    "sha256": "b97bb723c6eb11900f2b7043a4169b0fc64e26475fa4f459f26190d1a9d53869"
   },
   {
     "file": "code/check_ds3_bose_nodes.py",
@@ -410,6 +445,16 @@
     "sha256": "6fae51963f44d37ece4538dfbc615b314388acb4efc3789671362bb4acfd28b2"
   },
   {
+    "file": "code/check_tensor_overlap.py",
+    "bytes": 3068,
+    "sha256": "ef9442c361d5d856fe558f68f331fdbb9e7fc6182bf33e8ad0e4aa58aac2d560"
+  },
+  {
+    "file": "code/check_tensor_pair.py",
+    "bytes": 3435,
+    "sha256": "795bbeff7b1b415ce6b42a93ec16b21af9c89b2c8ccaf3b67025d992da1aab6b"
+  },
+  {
     "file": "code/check_unitary_flip.py",
     "bytes": 3145,
     "sha256": "6e58b152e2fe3162de359dba59c913940c6e51e62d17c7d70c3b5515f55ffb01"
@@ -418,6 +463,16 @@
     "file": "code/check_weak_continuation.py",
     "bytes": 3621,
     "sha256": "c0ee501492d36e771d7c7150ad89ba7551206a0ec3e8859d6beea4632294e2b1"
+  },
+  {
+    "file": "code/chirp_residual_certificate.py",
+    "bytes": 6802,
+    "sha256": "b0b6fa5c0bc0b77819b9e8a5be9778a6db00ce2049be112188fe915645a2e3fd"
+  },
+  {
+    "file": "code/chirp_residual_certificate_initial.py",
+    "bytes": 6802,
+    "sha256": "960f5dcaf648468ee17a994c314a59899eca9582a573730b80754d35ed53a601"
   },
   {
     "file": "code/clock_model.py",
@@ -615,6 +670,11 @@
     "sha256": "29d1122d1b56d3ca52e9ee887d3d02add37b3366be4b2bdc59910fb307f7afd2"
   },
   {
+    "file": "code/gaussian_outer_bound.py",
+    "bytes": 1004,
+    "sha256": "f83a9e162041e560a7a2ccf53de4a11724fdb2930aff0cc604fc942ba332d08b"
+  },
+  {
     "file": "code/global_racah.py",
     "bytes": 2860,
     "sha256": "4b9702c8c8f68b3f3901f3e392321824edf37198b70c0344298c95addd88a15c"
@@ -726,8 +786,8 @@
   },
   {
     "file": "code/project_audit.py",
-    "bytes": 163811,
-    "sha256": "dc46a3aaeafc0ad8d9d08c6b25e49ea80a4cf5a2f75c47c63408af124a6940b3"
+    "bytes": 166638,
+    "sha256": "1a47c3880d5d039ae218ce4925f9d5d17ba8c959682900472943b81a5054d9a0"
   },
   {
     "file": "code/quantized_observer.py",
@@ -885,6 +945,11 @@
     "sha256": "22ee088bc2cacb3c23e6348d7091a23b1d26825d2d921285b5feb4720c44488a"
   },
   {
+    "file": "code/record_residual_certificate.py",
+    "bytes": 4444,
+    "sha256": "35b696e8e35d175364bb7dfed4d7c597220e267a826153120e031ac229c0f18c"
+  },
+  {
     "file": "code/record_unitary_flip.py",
     "bytes": 3896,
     "sha256": "3d980643311b56f4aad6e08dff65392be5798f8f5eaee7bf4c211b79409f53a6"
@@ -933,6 +998,31 @@
     "file": "code/replay_ds3_crossed_packet.py",
     "bytes": 5009,
     "sha256": "af4bd9c61f8d655decfba3ebcdc6467bfd3a07ae1189558d876c44dc2e6b7dde"
+  },
+  {
+    "file": "code/requirements-residual.txt",
+    "bytes": 146,
+    "sha256": "fa7fbe011cba08ccca475d6525e8afaf1a76ea79fb4a7c56e3fbc155445dae80"
+  },
+  {
+    "file": "code/residual_full_overlap.py",
+    "bytes": 5074,
+    "sha256": "bcd50385529f7390d50571df6d5caf9c8a88316c508efe3d40becc0ee9da7c09"
+  },
+  {
+    "file": "code/residual_gaussian_overlap.py",
+    "bytes": 4833,
+    "sha256": "4bcef4318d6127d1f1e15a7ca37cd14ce9efe17b5d5d21a0072bb5e8050c1a1e"
+  },
+  {
+    "file": "code/residual_gaussian_overlap_bounded.py",
+    "bytes": 5166,
+    "sha256": "82fa944ed38b26294d96d3e469d37de51163072478cd7cf2814e6624e4dc5076"
+  },
+  {
+    "file": "code/residual_overlap_rectangle.py",
+    "bytes": 4155,
+    "sha256": "7c930eca517b0dd565f94ee5dac6ef2b1d08333d12519415d37e10582206720e"
   },
   {
     "file": "code/run_conformal_shock.py",
@@ -1075,6 +1165,16 @@
     "sha256": "96e553acd9e01bc7ad40c78f3679f4bb518ab30424499af1fd0d2d4563694421"
   },
   {
+    "file": "code/run_tensor_gaussian.py",
+    "bytes": 3881,
+    "sha256": "ed8e6f023078bb8cc9ddcbf66334db29386e8fd4184dc1149a788a2298a99684"
+  },
+  {
+    "file": "code/run_tensor_pair.py",
+    "bytes": 4266,
+    "sha256": "86241af092c30bdb4e2e788489f7164b6509024cf8de3fefd58b60abbd560b03"
+  },
+  {
     "file": "code/run_unitary_flip.py",
     "bytes": 1322,
     "sha256": "20294604f0b211d37203577de9fdff0e543e8e9360ea835360c109498094016d"
@@ -1088,6 +1188,16 @@
     "file": "code/semiclassical_clock.py",
     "bytes": 3091,
     "sha256": "f9746be11cba312817942ea5069c96664906acdbd9a433b05e7630372d2624bc"
+  },
+  {
+    "file": "code/tensor_overlap.py",
+    "bytes": 4962,
+    "sha256": "bf903e21ae04e362877befea92a53e203b73751b9789ab6531d6dea81e031e4e"
+  },
+  {
+    "file": "code/tensor_pair_overlap.py",
+    "bytes": 4819,
+    "sha256": "58ee91cd64831734dd6c63d4f03832d27ab03c2a49080ffd021d569c5a728b29"
   },
   {
     "file": "code/transverse_consequences.py",
@@ -1326,8 +1436,8 @@
   },
   {
     "file": "journal/2026-11-01.md",
-    "bytes": 12106,
-    "sha256": "36beb8f38e259b55cf6dd44e5a572cd4a2f923392452564033166c68fa514ba7"
+    "bytes": 17040,
+    "sha256": "5eacafe7c05423feab2aeef4610b707d723613695e6f2633519a306ed334b7aa"
   },
   {
     "file": "literature/flip-proof-dependency-map.md",
@@ -1638,6 +1748,11 @@
     "file": "literature/stage4-recoil-vertex-sources.md",
     "bytes": 2186,
     "sha256": "728fefadb0c84398aa2b468068ab9444d0a8330e5282dda009fcf7dad9862209"
+  },
+  {
+    "file": "literature/stage4-residual-certificate-sources.md",
+    "bytes": 4315,
+    "sha256": "ccca2b76aacdd97257488640d88d3c1f365cffa526bae00e7a6c486bf053c06b"
   },
   {
     "file": "literature/stage4-time-corrections.md",
@@ -1965,6 +2080,11 @@
     "sha256": "2f58c96f639dc60d45e0eed2ee994b90d88e77fe6aea66fc60be6830cbff0ae2"
   },
   {
+    "file": "manuscript/residual-certificate/main.tex",
+    "bytes": 22644,
+    "sha256": "8b94b0d23228620b51bfa527cfcfb023724ba870190310ae357cd5ba03957f4c"
+  },
+  {
     "file": "manuscript/spectral.tex",
     "bytes": 9925,
     "sha256": "7241eb3e7f6becb872bb027b3d38befa541d61c75534b30e7cd55ef195452934"
@@ -1991,8 +2111,8 @@
   },
   {
     "file": "NEXT.md",
-    "bytes": 42398,
-    "sha256": "88ea0ceeaad7f4dce2ace1c90bd048f733dc4ee044591259432292da05a833d2"
+    "bytes": 44663,
+    "sha256": "6da4e018a8b648a01c2d71cdbbf2f76fa7815021d32157c0fc84af724a5f525e"
   },
   {
     "file": "notes/math-independent.md",
@@ -2435,6 +2555,11 @@
     "sha256": "96b0fc6bc686a4a76d60205f305cd62d823b5c0074c28e379ddadbfce70865b6"
   },
   {
+    "file": "notes/stage4-residual-certificate.md",
+    "bytes": 3991,
+    "sha256": "909870696781c3d915f919f64918db6640c868292f973dddeaf1b324a4ddcf99"
+  },
+  {
     "file": "notes/stage4-unitary-flip.md",
     "bytes": 3188,
     "sha256": "5cf6f327c9dfea81f1805e82ed6f6b5c4658c755a9255d4565f61685031fa4dd"
@@ -2645,6 +2770,11 @@
     "sha256": "b572c695d567aa26c671bddc6937f8819b91a36870a6148bb3a632dad3d045bc"
   },
   {
+    "file": "output/pdf/de-sitter-residual-certificate.pdf",
+    "bytes": 325046,
+    "sha256": "cc845acd33df7909a61b5e23f62a7267f196355570a8f98c54bfdf3f70f15536"
+  },
+  {
     "file": "output/pdf/de-sitter-unitary-flip.pdf",
     "bytes": 332801,
     "sha256": "b2a7aca54625acb341479043fe0c1345981ac81f04afbad18430e21575d821b3"
@@ -2661,8 +2791,8 @@
   },
   {
     "file": "PLAN.md",
-    "bytes": 46732,
-    "sha256": "8d85b0babef6272a6c7075a04a75c663a317e5b34e4d9fcf58464d6920aebb32"
+    "bytes": 48271,
+    "sha256": "ed4ddbf739c770925470e9bb0b3bb0ccb95369bb5cad5153660375da44fe91e1"
   },
   {
     "file": "PROJECT.md",
@@ -2671,8 +2801,8 @@
   },
   {
     "file": "README.md",
-    "bytes": 41787,
-    "sha256": "bde487730c0718cb7441047269eda64e88298021af927f3cac7f6dce9419da30"
+    "bytes": 42611,
+    "sha256": "962e408272cc7961dc5a4fc0c1c62a228e43bbf703d8823cd8f2f2f27f86f6aa"
   },
   {
     "file": "REPOSITORY.md",
@@ -2751,8 +2881,8 @@
   },
   {
     "file": "results/project-audit.json",
-    "bytes": 40015,
-    "sha256": "e9742f9f0eaa5a73fa59223f6ba11776fbf19b759fb57be53f3e4dd016bff4e5"
+    "bytes": 41030,
+    "sha256": "06b4a1a889f0332a379b3c9273fe3bec80b6f6f4625f9a075111912f852c0541"
   },
   {
     "file": "results/stage2/errors.csv",
@@ -4705,6 +4835,216 @@
     "sha256": "715e583a6d18932cd49bd7a874bd8d1a9c5337dd226d5b4fe83094c60130ce5b"
   },
   {
+    "file": "results/stage4/residual-certificate/actual-pair-rectangle.json",
+    "bytes": 5011,
+    "sha256": "e88db64a4f9d78a1f19d26056e6d2748d7bcb4a30c16ef55d868298f2124a45e"
+  },
+  {
+    "file": "results/stage4/residual-certificate/build-review.md",
+    "bytes": 731,
+    "sha256": "7f902e30e47501de526a6f72add9d22cc89c0fc0bb8697c9005698dbd4291abe"
+  },
+  {
+    "file": "results/stage4/residual-certificate/chirp-audit.json",
+    "bytes": 302,
+    "sha256": "2833450daca38191dea456550819b123bd3eda936141a01c66e7f694d44ffd81"
+  },
+  {
+    "file": "results/stage4/residual-certificate/chirp-initial-tail-control.json",
+    "bytes": 63244,
+    "sha256": "43ef05d58acb52f0afdb63ad28805795b6cd33e6b0c189a35a6c473b2faecf99"
+  },
+  {
+    "file": "results/stage4/residual-certificate/chirp.json",
+    "bytes": 63244,
+    "sha256": "00a560f6751c7d77638356ba91a40d3ce92f4aeeb5c715d2faf53bbda207a4d0"
+  },
+  {
+    "file": "results/stage4/residual-certificate/evidence.json",
+    "bytes": 10013,
+    "sha256": "685fc83680ff8be82d6d5fa59194e95ace05e27495a42a7e5d375857f1eb5fcb"
+  },
+  {
+    "file": "results/stage4/residual-certificate/final-build.json",
+    "bytes": 939,
+    "sha256": "b363e9547727242cb6a0d556c3ef45dfd837e91682b3720099c351aca759148e"
+  },
+  {
+    "file": "results/stage4/residual-certificate/full-right-1-input.json",
+    "bytes": 9363,
+    "sha256": "0f389e1d3d72b99009ff6984b8d799a5bdaedde117b2b87381008189b73ea239"
+  },
+  {
+    "file": "results/stage4/residual-certificate/full-right-1-segments.jsonl",
+    "bytes": 8232,
+    "sha256": "f189f6ede2f49d4609a21e27b9183d8a2a632dabb53d484ba874be4e3a902356"
+  },
+  {
+    "file": "results/stage4/residual-certificate/gaussian-bounded-input.json",
+    "bytes": 6905,
+    "sha256": "d54f7025d2f229cc8b19ccdd2e04a37ea7ce26a5f709546d18948ac28ee6c07c"
+  },
+  {
+    "file": "results/stage4/residual-certificate/gaussian-bounded-segments.jsonl",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "results/stage4/residual-certificate/gaussian-overlap-input.json",
+    "bytes": 6792,
+    "sha256": "49a0555abd9d5f8b8890a1ba214d85e466f71d341f1453820774dd73d49c4512"
+  },
+  {
+    "file": "results/stage4/residual-certificate/gaussian-overlap-segments.jsonl",
+    "bytes": 3288,
+    "sha256": "daff0c76904d99d347f3c7e6461fdb5608c4873d305fed3fe18e7a634624e1cd"
+  },
+  {
+    "file": "results/stage4/residual-certificate/main.log",
+    "bytes": 24218,
+    "sha256": "92214dc84e2ce90b0b871b9e3a90395e4e00b08207817df6a191191ded3cad00"
+  },
+  {
+    "file": "results/stage4/residual-certificate/pair-development.json",
+    "bytes": 1433,
+    "sha256": "f8c2ad781d7dd020f333be6c89bbaed1875390fdec75f070143fe5dc4bf9ef48"
+  },
+  {
+    "file": "results/stage4/residual-certificate/preservation.json",
+    "bytes": 8964,
+    "sha256": "2764c1b7b0d513588a2504f5ec172c236098e7f6dfab1c519d2c1f9ee3ccd27a"
+  },
+  {
+    "file": "results/stage4/residual-certificate/rectangle-pilot-initial-input.json",
+    "bytes": 3457,
+    "sha256": "4cb392c1307efb3676eb6bcc71fa4342e65d452c2ff32f7f1610c5fb029a552a"
+  },
+  {
+    "file": "results/stage4/residual-certificate/rectangle-pilot.json",
+    "bytes": 3457,
+    "sha256": "5539419c75c90840778e76f9194f2a23689e4d6728389aacaa69d39634fb1e34"
+  },
+  {
+    "file": "results/stage4/residual-certificate/source-record.json",
+    "bytes": 880,
+    "sha256": "dffde59127ec4ce155e462175316b1635a058ad095fc3fb46a0906f15c3df577"
+  },
+  {
+    "file": "results/stage4/residual-certificate/tensor-chain-audit.json",
+    "bytes": 9607,
+    "sha256": "5b9d0fc9df7b712e22992396596fd7c80f761a814f1e4f37a7a147b071c3acde"
+  },
+  {
+    "file": "results/stage4/residual-certificate/tensor-controls-audit.json",
+    "bytes": 1045,
+    "sha256": "6f6166b46293ffdc9b626f7b74d921aade2b2293a61d8b5b1105813812ddd236"
+  },
+  {
+    "file": "results/stage4/residual-certificate/tensor-controls.json",
+    "bytes": 6592,
+    "sha256": "c0ba89c3c362dcf49ad570d5194fbde825d033e541dce0b7eef56ac50d1737d0"
+  },
+  {
+    "file": "results/stage4/residual-certificate/tensor-gaussian-audit-refined.json",
+    "bytes": 204589,
+    "sha256": "25228d3b518022ccf59b5c73ee7033abd6e945377f4a76901f1a5465cbef9bf2"
+  },
+  {
+    "file": "results/stage4/residual-certificate/tensor-gaussian-audit.json",
+    "bytes": 205507,
+    "sha256": "acf6fe19e8b688360608399006a6d505d3178351aab42646183422f930a5b38c"
+  },
+  {
+    "file": "results/stage4/residual-certificate/tensor-gaussian-cells.jsonl",
+    "bytes": 1309277,
+    "sha256": "ed04e1e1a9c618073e9f9d00c0f674a7aed81ad4a626c14cc9eee78659974ed3"
+  },
+  {
+    "file": "results/stage4/residual-certificate/tensor-gaussian.json",
+    "bytes": 5101,
+    "sha256": "bd7c1102a822e056b1f69b53e2f4b2716a4fd20f4391a688e088a6250d219898"
+  },
+  {
+    "file": "results/stage4/residual-certificate/tensor-left-1-cells.jsonl",
+    "bytes": 1309577,
+    "sha256": "e936be71b3f1e57289f71f5b4d7508bbebdba9ee25e26aab6a9895d69ff20302"
+  },
+  {
+    "file": "results/stage4/residual-certificate/tensor-left-1-input.json",
+    "bytes": 3498,
+    "sha256": "978a166ca2d7cc7a645d43b21b7d48a9cec43e87a5681538ebf6c080ed929796"
+  },
+  {
+    "file": "results/stage4/residual-certificate/tensor-left-1.json",
+    "bytes": 5795,
+    "sha256": "4591bd26a6cad93c2797cc1eb0b0ca6e862a9f8a707808b052e9ffdc1cfefbf8"
+  },
+  {
+    "file": "results/stage4/residual-certificate/tensor-left-2-cells.jsonl",
+    "bytes": 8863383,
+    "sha256": "ac64bd4e8302415946222f1c91f64153c8a31b87de3699cc66c24f3b2157e77a"
+  },
+  {
+    "file": "results/stage4/residual-certificate/tensor-left-2-input.json",
+    "bytes": 3825,
+    "sha256": "d4da772c8ecdfa36aad6104ab2e6aba8db24d5adf7a0ef857524c8fd3ff07905"
+  },
+  {
+    "file": "results/stage4/residual-certificate/tensor-left-2.json",
+    "bytes": 6118,
+    "sha256": "b7d5e6303ec4eff3fc6fa910ef82ac154728be8a749ff4624a8483fe43f490d4"
+  },
+  {
+    "file": "results/stage4/residual-certificate/tensor-pair-controls.json",
+    "bytes": 6575,
+    "sha256": "8032a3f4bc67efd8d4a3a71cfe0442456ddc86795ecd846a2571321b8a016fcc"
+  },
+  {
+    "file": "results/stage4/residual-certificate/tensor-right-3-cells.jsonl",
+    "bytes": 8751486,
+    "sha256": "8041170301a7eab68b42c1a7d96905f11952d8bbdde509a0dc97b0994c09ca61"
+  },
+  {
+    "file": "results/stage4/residual-certificate/tensor-right-3-input.json",
+    "bytes": 3820,
+    "sha256": "d19567c426df58164b2bb32c03af1fd35a4f9a7cdab0f1c7571dc355e1865339"
+  },
+  {
+    "file": "results/stage4/residual-certificate/tensor-right-3.json",
+    "bytes": 6115,
+    "sha256": "18899ebec380054b2ee8bc7dede11857fd1ce384bdcfbc269558d096c5d1bb7f"
+  },
+  {
+    "file": "results/stage4/residual-certificate/tensor-right-5-cells.jsonl",
+    "bytes": 9859993,
+    "sha256": "32d9b39207659d16166d1a5ed0793d5cd417b09992fdd1d077fb57cd5fef13e3"
+  },
+  {
+    "file": "results/stage4/residual-certificate/tensor-right-5-input.json",
+    "bytes": 3796,
+    "sha256": "f34bd0b450eb8d675b7677dcbd4b6f5273823e340a2e83f6af97caf21f1ee34c"
+  },
+  {
+    "file": "results/stage4/residual-certificate/tensor-right-5.json",
+    "bytes": 6084,
+    "sha256": "b81c1df1eb0bde9e3a5359793bc3b253fec7e4d850c9a83cfbc9bf50df1071fb"
+  },
+  {
+    "file": "results/stage4/residual-certificate/working-state-before-chain.json",
+    "bytes": 6469,
+    "sha256": "929cb973daee9deceb76a037c8f5f3257285a88eb6926623a3454e1d45f51f99"
+  },
+  {
+    "file": "results/stage4/residual-certificate/working-state-before-tensor.json",
+    "bytes": 3096,
+    "sha256": "9bb926753e3405adb15b54a1045934c8dbe33bf18d13b118e2683749c38d20ec"
+  },
+  {
+    "file": "results/stage4/residual-certificate/working-state.json",
+    "bytes": 647,
+    "sha256": "04468d6c7f8b3a065923a422385bf9327249009bce8f9c18eedeb9ff122363f6"
+  },
+  {
     "file": "results/stage4/shock_moments.csv",
     "bytes": 670,
     "sha256": "67b55672b8617d91ff3acfb660fb6b879b027cf331e5a675d14c051ef0221bca"
@@ -4893,6 +5233,11 @@
     "file": "sources/ali-et-al-2003.11046v2.html",
     "bytes": 454565,
     "sha256": "68026695d1cef3d2fc4c3f8acfe1322ae4c55124821b01dca71f175143baae7b"
+  },
+  {
+    "file": "sources/belousov-sarkissian-spiridonov-2412.07562v2.pdf",
+    "bytes": 447165,
+    "sha256": "c27ceb36837f261c8d7549c167ad843cb25ab3cbac4f4b42eb8fc5164ddaa546"
   },
   {
     "file": "sources/bonifacio-edge-2610.28719v1.pdf",

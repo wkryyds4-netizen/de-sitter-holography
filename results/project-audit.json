@@ -7,10 +7,10 @@
     "Source remains a link, not an archive: dlmf-16.5",
     "Source remains a link, not an archive: dlmf-15.6"
   ],
-  "verified_at_utc": "2026-11-01T01:32:27.960126+00:00",
-  "required_files": 1030,
-  "local_links_checked": 1097,
-  "code_and_input_hashes_checked": 1403,
+  "verified_at_utc": "2026-11-01T02:37:07.370406+00:00",
+  "required_files": 1053,
+  "local_links_checked": 1108,
+  "code_and_input_hashes_checked": 1479,
   "scientific_checks": {
     "stage1": {
       "checks": 235,
@@ -816,6 +816,21 @@
       "recorded_hashes": 2
     },
     {
+      "file": "results/stage4/residual-certificate/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 67
+    },
+    {
+      "file": "results/stage4/residual-certificate/tensor-chain-audit.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 7
+    },
+    {
+      "file": "results/stage4/residual-certificate/tensor-pair-controls.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 2
+    },
+    {
       "file": "results/stage3/cross-limit/comparison.json",
       "kind": "projected comparison model only; not exact 6j convergence or interval certification",
       "checks": 19
@@ -1103,6 +1118,14 @@
       "rational_certificates": 3,
       "scientific_status": "heat cutoff certified; matrix quadrature uncertified; no continuum counterexample",
       "kind": "Exact rational heat-cutoff certificate; actual complex matrix quadrature remains uncertified"
+    },
+    {
+      "stage": "residual-certificate",
+      "checks": 42376,
+      "chirp_checks": 114,
+      "full_F_overlaps": 5,
+      "scientific_status": "Specified hbar=1 bounded L2(R2) word has a positive norm lower bound",
+      "scope": "Uses existing quadrature and Mehler bounds with ball arithmetic. Not formal verification; not a physical observer, finite-G or full holographic result. Identification with any published theorem requires its separate representation/definition audit."
     },
     {
       "file": "results/stage3/growing-box/diagnostics.json",

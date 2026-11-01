@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "control": "complex nonsymmetric low Hermite",
+      "passed": true
+    },
+    {
+      "control": "complex nonsymmetric low Hermite",
+      "passed": true
+    },
+    {
+      "control": "complex nonsymmetric low Hermite",
+      "passed": true
+    },
+    {
+      "control": "independent enclosures intersect: real",
+      "passed": true
+    },
+    {
+      "control": "independent enclosures intersect: imag",
+      "passed": true
+    }
+  ],
+  "correction": "Containment was an invalid acceptance criterion for independent enclosures of different widths; original failure preserved.",
+  "hashes": {
+    "code/audit_tensor_controls.py": "40a62fa1d0df15f9746f2d8712a3fc611bb969697402ab027f821e07a0c29384",
+    "results/stage4/residual-certificate/tensor-controls.json": "c0ba89c3c362dcf49ad570d5194fbde825d033e541dce0b7eef56ac50d1737d0",
+    "results/stage4/residual-certificate/rectangle-pilot.json": "5539419c75c90840778e76f9194f2a23689e4d6728389aacaa69d39634fb1e34"
+  }
+}

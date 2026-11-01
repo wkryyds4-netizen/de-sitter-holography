@@ -1,0 +1,521 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,microtype}
+\usepackage[margin=25mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\R}{\mathbb R}
+\title{A posteriori certification of a bounded pentagon word:\\Gaussian moments and validated overlap integrals}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Working note --- 1 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+We continue reproducing a specified bounded Kim--Scarinci pentagon
+representation. Additional literature does not yet supply a directly
+matched kernel. A standard residual estimate reduces verification of
+saved finite Hermite chains to seven two-dimensional overlaps.
+Two chirp overlaps are evaluated by Gaussian moments in ball arithmetic.
+All five quantum-dilogarithm overlaps are certified using an existing
+Gauss--Legendre error theorem and Mehler bounds. Their combination gives
+$\|Df\|>0.04489$ for the precisely defined $\hbar=1$ continuous word
+and normalized Gaussian below. This is a computer-assisted statement
+about that literal spectral representation, not a finite-$G$ observer
+correlator or a conclusion about the viability of de Sitter holography.
+\end{abstract}
+
+\section{What the new literature does and does not supply}
+Belousov--Sarkissian--Spiridonov \cite{bss}, equations (2.5),
+(4.2)--(4.5), (4.18), (5.9)--(5.11), and (6.16), retain an integer
+angular label. The binomial formula is a sum over that label and an
+integral over a continuous variable; its degeneration is taken as
+$b\to i$. Equation (4.12) requires real angular Fourier parameter and
+$\operatorname{Im}h>-1$. These are useful explicit formulae, but do not
+identify the fixed-deformation additive $\R^2$ phase below.
+In particular, the two real dimensions of a complex integration
+variable do not remove the discrete label of its Mellin--Fourier
+transform.
+
+Andersen--Kashaev \cite{ak}, equations (103), (117)--(122) and
+Lemma 6, use $A_N=\R\oplus\mathbb Z/N\mathbb Z$ with measure
+$N^{-1/2}\sum_n dx$, positive integer $N$, and $|\theta|=1$,
+$\operatorname{Re}\theta>0$. Their Fourier formula and finite Weyl
+operators require that cyclic spectral component. An explicit
+intertwining identification with the present representation is still
+missing. This is an applicability check, not a claim that no such
+identification can exist.
+
+For validated integration we use existing Arb/Petras algorithms
+\cite{johansson,flint}, rather than inventing a new quadrature theorem.
+The caller must supply valid complex enclosures and check analyticity.
+Our calculation below does not claim a new general mathematical result.
+
+\newpage
+\section{Residuals of actual saved vectors}
+Keep $\hbar=1$, $P_j=-\pi i\partial_j$, $Q=(X,Y)$,
+$P=(P_y,P_x)$, and the phase $F=F_1$ defined in KS \cite{ks}.
+The operators
+\[
+ A=F(Q),\qquad B=F(P),\qquad M=e^{iXY/\pi}
+\]
+are unitary on $L^2(\R^2,dx\,dy/(2\pi^2))$. The tested word is
+\[
+ D=AB-BM^{-1}BMA .
+\]
+No heat multiplier is inserted in this section.
+
+Let $v_0=f$ and let $v_j$ be any chosen finite vectors approximating
+$U_jv_{j-1}$. Define
+\[
+ e_j=\|U_jv_{j-1}-v_j\|.
+\]
+Unitarity and the triangle inequality, iterated one step at a time, give
+\[
+ \|U_m\cdots U_1f-v_m\|\le\sum_{j=1}^m e_j .
+\]
+For saved left and right chains $l_0=r_0=f$ this yields
+\begin{equation}
+ \|Df\|\ge \|l_2-r_5\|-\sum_{j=1}^2e_{L,j}
+                           -\sum_{j=1}^5e_{R,j}.                 \label{bound}
+\end{equation}
+Every step error is determined by one overlap:
+\begin{equation}
+ e_j^2=\|v_{j-1}\|^2+\|v_j\|^2
+            -2\operatorname{Re}\langle v_j,U_jv_{j-1}\rangle .
+                                                               \label{step}
+\end{equation}
+These statements do not require the saved vectors to be exact
+orthogonal projections. Consequently they avoid interpreting a
+quadrature-dependent norm loss as an already certified leakage.
+
+The left steps are $(B,A)$; the right steps are $(A,M,B,M^{-1},B)$.
+For a $B$ step, Fourier transform both finite vectors. The Hermite
+Fourier factors are exactly $(-i)^{m+n}$, so the remaining overlap is
+again a coordinate integral, with multiplier $F(y,x)$. At $\hbar=1$
+the exact phase is symmetric. Thus five $F$ overlaps and two chirp
+overlaps suffice, without nested Fourier kernels or an assumption
+that a single chiral factor acts on the Gaussian.
+
+All saved complex binary64 coefficients are lifted as exact dyadic
+numbers. They specify legitimate finite vectors independently of how
+accurately they approximated a projection. The initial state is the
+exact normalized oscillator vacuum, not a subsequently rounded
+normalization.
+
+\newpage
+\section{Gaussian moments certify the chirp steps}
+In oscillator coordinates $z=x/\sqrt\pi$, $t=y/\sqrt\pi$, a normalized
+Hermite expansion has the form
+\[
+ v(z,t)=\pi^{-1/2}e^{-(z^2+t^2)/2}
+        \sum_{m,n}c_{mn}p_m(z)p_n(t),\qquad
+ p_m(z)=\frac{H_m(z)}{\sqrt{2^m m!}} .
+\]
+The coefficient norm is its Hilbert norm. Multiplication by $M^{s}$,
+$s=\pm1$, inserts $e^{istz}$. For polynomials $V,W$ specified by
+these coefficients,
+\[
+ \langle w,M^sv\rangle
+ =\frac1\pi\int_{\R^2}e^{-z^2-t^2+istz}\,
+                    \overline{W(z,t)}V(z,t)\,dz\,dt .
+\]
+Conjugation here acts on polynomial coefficients on the real plane.
+The Gaussian prefactor is $2/\sqrt5$ and the normalized covariance is
+\[
+ C_s=\begin{pmatrix}2/5&is/5\\is/5&2/5\end{pmatrix}.
+\]
+Writing its normalized moments as $\mu_{mn}$, one has
+\[
+ \mu_{00}=1,\quad \mu_{0,2k}=(2k-1)!!(2/5)^k,\quad
+ \mu_{0,2k+1}=0,
+\]
+\[
+ \mu_{mn}=(m-1)\frac25\mu_{m-2,n}
+                  +n\frac{is}{5}\mu_{m-1,n-1}\quad(m\ge1).
+\]
+A finite polynomial product therefore gives the overlap without
+quadrature, boundary truncation or spectral-tail approximation.
+Ball arithmetic bounds rounding and cancellation in this evaluation.
+
+\begin{center}
+\begin{tabular}{rrrr}
+\toprule
+Hermite size & saved quadrature & $e_{R,2}$ & $e_{R,4}$\\
+\midrule
+64 & 512 & 0.00400544475824 & 0.01177031292439\\
+128 & 1024 & 0.00234776595683 & 0.00787506108862\\
+\bottomrule
+\end{tabular}
+\end{center}
+These displayed decimals abbreviate stored rational endpoints.
+The first case uses 512-bit arithmetic; the second was evaluated at
+768 and 1024 bits. Independent integer Wick pairing sums check
+selected moments through degree $(254,254)$. The vacuum control also
+uses a one-dimensional Arb Gaussian integral. An initially missing
+factor two in that control's two-sided tail bound was corrected;
+the initial output is retained, and the chirp overlaps are unchanged.
+
+\section{A quantitative conditional target}
+Suppose, for each of the five full $F$ overlaps,
+\[
+ \operatorname{Re}\langle v_j,U_jv_{j-1}\rangle
+                           \ge \|v_j\|^2-\eta .
+\]
+Then (\ref{step}) gives
+$e_j\le\sqrt{\|v_{j-1}\|^2-\|v_j\|^2+2\eta}$
+for these particular saved vectors. For the size-128 chain,
+(\ref{bound}) would give respectively
+$0.05208026006$ at $\eta=10^{-5}$ and $0.02048259469$ at
+$\eta=10^{-4}$. These were initially conditional targets. The completed
+calculation below proves all five hypotheses for $\eta=10^{-4}$, but
+not for $\eta=10^{-5}$, and gives a stronger bound using their actual
+individual error enclosures.
+
+\newpage
+\section{A validated local pilot and the full-plane task}
+For $\hbar=1$ use the finite product
+\[
+ F_N(x,y)=\prod_{j=0}^{N-1}
+ \frac{1+e^{x-(2j+1)\pi-iy}}{1+e^{x-(2j+1)\pi+iy}}
+ \frac{1+e^{y-(2j+1)\pi-ix}}{1+e^{y-(2j+1)\pi+ix}} .
+\]
+For real $|x|,|y|\le L_x$ with
+$r=e^{L_x-(2N+1)\pi}<1$, its exact-arithmetic tail obeys
+\[
+ |F-F_N|\le\frac{4r}{(1-e^{-2\pi})(1-r)} .
+\]
+On a rectangle avoiding the product singularities, the remaining
+finite integrand is meromorphic in its complexified variables.
+In a nested integral with real inner coordinate $z$, poles require
+$\operatorname{Re}t$ to lie on an odd multiple of $\sqrt\pi$.
+The outer callback therefore rejects any complex ball intersecting
+one of these rows before asserting analyticity. It never applies
+ordinary conjugation or absolute value to a complex integration
+variable.
+
+A pilot for the size-64 first right step on $(z,t)\in[-1,1]^2$,
+$N=8$, encloses the finite-product overlap near
+\[
+ 0.710145049-0.0000006487\,i .
+\]
+The stored enclosure has sub-$10^{-9}$ width; the product tail is
+separately bounded. This is one compact square, not the full overlap.
+
+For the size-128 first step, the input is exactly Gaussian.
+Outside $[-L,L]^2$, Cauchy--Schwarz bounds the omitted overlap by
+\[
+ \sqrt{2\operatorname{erfc}(L)}\,\|w\| .
+\]
+Removing horizontal strips of half-width $\rho$ around $K$ pole rows
+costs at most $2K\rho\,\mathcal K_n\|w\|$, where the standard Mehler
+formula gives, for $0<r_0<1$,
+\[
+ \mathcal K_n=\frac{r_0^{-(n-1)}}{\sqrt{\pi(1-r_0^2)}} .
+\]
+This follows by bounding the one-coordinate Hermite projection kernel
+and applying Cauchy--Schwarz in the other coordinate. Together with
+the product tail it gives an explicit omission budget. This nested
+approach was discontinued; the tensor method below certifies the first
+full overlap. Remaining steps need their own tail bounds and complete
+overlap enclosures.
+
+\newpage
+\section{A uniform outer bound for nested integration}
+There is a computational distinction between evaluating the inner
+integral at a nearly exact outer node and bounding it on an entire
+complex ball. Asking the inner integrator to resolve parameter
+uncertainty to a tiny tolerance can waste subdivisions. For the
+Gaussian-input step, Mehler's formula \cite{mehler} supplies the
+following uniform bound instead.
+
+Let $I_N(t)$ be the inner $z$ integral of the finite-product Gaussian
+overlap, over any finite real interval. Set $u=\sqrt\pi\operatorname{Re}t$,
+$v=\sqrt\pi\operatorname{Im}t$, $a_j=(2j+1)\pi$, and
+\[
+ G_N(u,v)=\frac{e^{2N|v|}}{|\cos(u/2)|^N}
+       \prod_{j=0}^{N-1}\frac{1+e^{u-a_j}}{|1-e^{u-a_j}|}.
+\]
+This is finite away from the excluded pole rows. For real $x$, the
+first product ratio is bounded by $e^{2|v|}/|\cos(u/2)|$, since
+$|1+Re^{iu}|\ge(1+R)|\cos(u/2)|$ for $R\ge0$.
+The second ratio is at most $(1+e^{u-a_j})/|1-e^{u-a_j}|$ by the
+triangle inequalities. These estimates retain all finite factors.
+
+For any $0<r<1$, the finite Hermite polynomial kernel satisfies
+\[
+ \sum_{k=0}^{n-1}|p_k(z)|^2
+ \le\frac{r^{-(n-1)}}{\sqrt{1-r^2}}
+ \exp\left(\frac{2r(\operatorname{Re}z)^2}{1+r}
+           +\frac{2r(\operatorname{Im}z)^2}{1-r}\right).
+\]
+Apply this estimate to both coordinates, use coefficient
+Cauchy--Schwarz for $W$, multiply by the vacuum Gaussian, and extend
+the absolute inner Gaussian integral to the real line. The result is
+\[
+ |I_N(t)|\le
+ \frac{\|w\|r^{-(n-1)}}{\sqrt{\pi(1-r)}}
+ \exp\left(-\frac{(\operatorname{Re}t)^2}{1+r}
+              +\frac{(\operatorname{Im}t)^2}{1-r}\right)
+ G_N(u,v).
+\]
+Each of several chosen $r$ values gives a valid bound, so the smallest
+upper endpoint may be used. The outer callback returns a containing
+complex ball from this inequality for its analytic-bound requests;
+nearly exact quadrature nodes still use actual inner integration.
+Holomorphy is checked by the pole-row guard, not inferred from a
+finite numerical answer. This nested run was subsequently stopped
+without a completed segment; the direct tensor method below replaces it.
+
+\newpage
+\section{Direct use of an existing quadrature theorem}
+Johansson's Section 2 \cite{johansson} states that an analytic function
+bounded by $M$ on a Bernstein ellipse of parameter $\rho>1.1$ has
+$n_q$-point Gauss--Legendre error at most $50M\rho^{-2n_q}$.
+We use this existing result with $\rho=2$, whose semiaxes are $5/4,3/4$;
+we do not claim a new quadrature theorem.
+
+For a rectangle with half-widths $h_x,h_y$, let $M_x$ bound the
+integrand on the $x$ ellipse times the real $y$ interval, and let $M_y$
+bound it on the real $x$ interval times the $y$ ellipse. Positivity
+and sum $2$ of the reference weights, together with
+\[
+ I_xI_y-Q_xQ_y=(I_x-Q_x)I_y+Q_x(I_y-Q_y),
+\]
+give the tensor error bound
+\[
+ E_R=100h_xh_y\,2^{-2n_q}(M_x+M_y).
+\]
+The scaled integrand is the analytic extension of
+$\overline{w(z,t)}F_N(\sqrt\pi z,\sqrt\pi t)h_0(z)h_0(t)$:
+only coefficients are conjugated in its extension.
+Every product denominator must exclude zero on the bounding complex
+rectangle. Otherwise no analytic quadrature bound is accepted.
+
+For a saved $n\times n$ vector, Mehler's formula and coefficient
+Cauchy--Schwarz give the following amplitude bound for any $0<r<1$:
+\[
+ |\overline{w}_{\rm an}(z,t)h_0(z)h_0(t)|
+ \le \frac{\|w\|r^{-(n-1)}}{\pi\sqrt{1-r^2}}
+ \exp\!\left[-\frac{(\Re z)^2+(\Re t)^2}{1+r}
+             +\frac{(\Im z)^2+(\Im t)^2}{1-r}\right].
+\]
+The code chooses among eight valid values $r=1-2^{-k}$.
+On real cells $|F_N|=1$ almost everywhere. A cell touching a singularity
+can therefore contribute zero to the numerical sum while its full
+absolute integral bound is added to the error. No region is silently
+deleted. Dyadic subdivision covers the whole square exactly.
+
+For $[-L,L]^2$, the remaining errors are bounded by
+\[
+ T\le\|w\|\sqrt{2\operatorname{erfc}(L)},\qquad
+ P\le\frac{4r_N\|w\|}{(1-e^{-2\pi})(1-r_N)},\quad
+ r_N=e^{L\sqrt\pi-(2N+1)\pi}<1.
+\]
+The first bound uses the exact vacuum input and Cauchy--Schwarz;
+it must not be transferred to a general finite Hermite input.
+
+\newpage
+\section{The first certified overlap and its checks}
+The first right step, $\langle w,Af\rangle$, used the saved $n=128$
+vector, $L=5$, $N=3$, $n_q=24$ and 256-bit ball arithmetic.
+There were 925 cells, including 27 absolute-bound cells. The bounds are
+\[
+ E<1.940\,10^{-5},\quad T<1.754\,10^{-6},\quad
+ P<7.963\,10^{-6}.
+\]
+Including ball rounding, the saved output proves
+\[
+ \boxed{\ \|w\|^2-\Re\langle w,Af\rangle<2.973\,10^{-5}<10^{-4}.\ }
+\]
+The run completed normally in about 26 seconds. This first calculation
+alone does not decide the word; the complete chain is reported below.
+
+Three independent low-Hermite antiderivative controls include complex
+coefficients and asymmetric rectangles. Two further comparisons agree
+with the earlier nested-Arb rectangle. The initial test incorrectly
+required a narrower enclosure to contain a wider one; the corrected
+criterion is intersection, and both original failures are retained.
+Exact-rational coverage and error accounting, all 925 bound replays,
+and selected 320-bit quadrature checks pass 2794 checks. An initial
+audit incorrectly compared precision-dependent upper endpoints as
+enclosures of one common exact number. Replaying bounds at their
+original precision corrects that check; higher-precision integration
+comparisons remain separate. These tests are not formal verification
+of the arithmetic library.
+
+\newpage
+\section{General finite pairs: weighted Mehler bounds}
+For a finite coefficient array $c$ define, for $0<r<1$,
+\[
+ A_c(r)=\sum_{m,n}|c_{mn}|^2r^{-m-n},\quad
+ X_c(r)=\sum_{m,n}|c_{mn}|^2r^{-m},\quad
+ Y_c(r)=\sum_{m,n}|c_{mn}|^2r^{-n},\quad a_r=\frac{1-r}{1+r}.
+\]
+Weighted Cauchy--Schwarz and the standard Mehler formula give
+\[
+ |\overline{w}_{\rm an}(z,t)v(z,t)|\le
+ \frac{\sqrt{A_v(r)A_w(r)}}{\pi(1-r^2)}
+ \exp\left[-a_r\big((\Re z)^2+(\Re t)^2\big)
+       +a_r^{-1}\big((\Im z)^2+(\Im t)^2\big)\right].
+\]
+For the exterior of a real square, integrate the other coordinate
+first using Hermite orthogonality, and apply the one-coordinate
+Mehler bound. The union bound gives
+\[
+ T_c(L):=\|1_{\R^2\setminus[-L,L]^2}c\|^2
+ \le\frac{X_c(r)+Y_c(r)}{1-r}\operatorname{erfc}(\sqrt{a_r}L).
+\]
+Each chosen $r$ is a valid bound. Minimize the upper endpoints
+separately for $v,w$; the omitted overlap is at most
+$\sqrt{T_v(L)T_w(L)}$. This handles the entire finite vectors,
+including every retained high Hermite mode, without treating them
+as Gaussian inputs. It is an application of existing identities,
+not a new general theorem.
+
+\paragraph{A sharper phase enclosure.}
+For real $u,b,y$ write $x=u+ib$, $a_j=(2j+1)\pi$, and
+\[
+ d(s,\theta)=|1+e^{s+i\theta}|e^{-s}
+ =\sqrt{(e^{-s}-1)^2+4e^{-s}\cos^2(\theta/2)}.
+\]
+Subtract the conjugate denominator from the numerator of each
+factor. The triangle inequality then yields
+\[
+ |F_N(u+ib,y)|\le\prod_{j=0}^{N-1}
+ \left(1+\frac{2|\sin b|}{d(u-a_j,b+y)}\right)
+ \left(1+\frac{|e^{2b}-1|}{d(y-a_j-b,u)}\right).
+\]
+For a $y$ ellipse interchange coordinates, using the symmetry of
+$F_N$ at $\hbar=1$. All denominator lower bounds must be strictly
+positive. Zero-containing bounds reject analytic quadrature and
+trigger subdivision or a real absolute-integral bound.
+The initial implementation used interval powers across zero, which
+can return NaN in this interface. The production version squares
+nonnegative lower endpoints, preserving rigorous denominator bounds.
+
+\paragraph{Controls.}
+Eleven checks cover three non-vacuum complex-coefficient integrals
+against explicit low-Hermite antiderivatives, two exact Fourier norms,
+four complex-point phase inequalities, rejection at a pole, and a
+non-vacuum exterior mass against incomplete Gaussian moments.
+These controls supplement the analytic derivation; they do not
+replace it or independently verify the numerical library.
+
+\newpage
+\section{Completed chain and a positive continuous bound}
+All five overlaps have now completed normally. The three non-vacuum
+steps use $L=16$, eight product factors, 24-point tensor quadrature,
+and 256-bit ball arithmetic. Their spatial overlap tails are less
+than $1.315\,10^{-6}$, $1.052\,10^{-6}$, and $3.000\,10^{-6}$,
+respectively. The table gives safe upward decimal bounds, not fitted
+errors. The ``deficit'' means $\|w\|^2-\Re\langle w,Uv\rangle$.
+\begin{center}
+\begin{tabular}{lrrr}
+\toprule
+Step & cells & deficit upper bound & $e_j$ upper bound\\
+\midrule
+$L,1$ & 925  & $2.973\,10^{-5}$ & $0.010410$\\
+$L,2$ & 6229 & $2.364\,10^{-5}$ & $0.015491$\\
+$R,1$ & 925  & $2.973\,10^{-5}$ & $0.010410$\\
+$R,3$ & 6157 & $2.322\,10^{-5}$ & $0.015776$\\
+$R,5$ & 6907 & $2.417\,10^{-5}$ & $0.012427$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The total of 21,143 cells includes absolute-bound cells covering
+singular regions. All omitted mass, product tails, quadrature errors,
+and ball rounding enter the reported bounds. The first left and first
+right steps are related by Fourier symmetry; they are distinct chain
+errors, not independent physical measurements.
+
+Using the stored rational endpoints rather than the rounded table,
+the exact finite-vector separation and the upper bound on all seven
+step errors satisfy
+\[
+ \|l_2-r_5\|>0.1196309251,\qquad
+ \sum e_j<0.0747344165.
+\]
+Consequently the a posteriori inequality proves
+\[
+ \boxed{\ \|(AB-BM^{-1}BMA)f\|>0.04489>0.\ }
+\]
+This is a positive bound for the continuous operators. It does not
+assert that their exact residual equals this lower bound.
+
+An exact-rational audit checks cell coverage, disjointness, all
+recorded sums and the worst-endpoint inequality. It also replays
+every analytic/direct cell bound at its original precision and
+selected quadratures at 320 bits: 63,551 checks pass. These checks
+share the stated mathematics and library, and are not 63,551
+independent proofs. A further actual size-128 right-step-5 rectangle
+was computed using polynomial evaluation and nested Arb integration;
+its real and imaginary enclosures agree with the tensor method.
+The earlier failed development checks are retained with their fixes.
+
+\newpage
+\section{The precise continuous representation being tested}
+The state in the original measure is
+\[
+ f(x,y)=\sqrt{2}\,e^{-(x^2+y^2)/(2\pi)},\qquad
+ \int_{\R^2}|f|^2\frac{dx\,dy}{2\pi^2}=1.
+\]
+The unitary coordinate change to the oscillator convention sends
+this state to $h_0(z)h_0(t)$, with $z=x/\sqrt\pi,t=y/\sqrt\pi$.
+The infinite product is the almost-everywhere limit of the displayed
+$F_N$. Values on its discrete singular set can be assigned arbitrarily
+with modulus one without changing the multiplication operator.
+
+The source conventions were checked again against KS Section 6.3,
+equation (35), and Proposition 6.15, and against the pure-imaginary
+parameter formulas in Kim's survey, Section 3 \cite{trilogy}.
+With $q=e^{-\pi}$ the two compact-product ratios give precisely the
+displayed symmetric $F(x,y)$ at $\hbar=1$; this check does not use a
+formal cancellation of unbounded operators.
+
+For $P_x=-\pi i\partial_x$, the exact translation action gives
+\[
+ e^{isX}e^{itP_x}=e^{-i\pi st}e^{itP_x}e^{isX}.
+\]
+The analogous formula holds for $(Y,P_y)$; the other coordinate and
+momentum pairs commute strongly. Consequently the ordered quadruple
+$(X,Y,P_y,P_x)$ obeys the Weyl assumptions stated in Proposition 6.15.
+Moreover, by direct differentiation and unitary conjugation,
+\[
+ M^{-1}P_yM=P_y+X,\qquad M^{-1}P_xM=P_x+Y.
+\]
+The two sums strongly commute since they are simultaneous unitary
+conjugates of $P_y,P_x$. Bounded joint spectral calculus therefore
+identifies $M^{-1}BM$ with $F(X+P_y,Y+P_x)$.
+
+These identities specify the literal continuous test independently
+of any finite matrix commutators. The finite vectors are only
+auxiliary comparison vectors in the residual inequality.
+If their certified residual sum is below their final separation,
+the conclusion concerns this exact bounded word on $L^2(\R^2)$.
+Its comparison with the published assertion must retain the explicit
+definitions above and the distinction between a literal spectral
+operator and a proposed analytic continuation prescription.
+
+No observable time, observer mass, gravitational coupling $G$, or
+physical four-point gluing measure has been assigned to these
+operators. A nonzero word would obstruct using this literal
+implementation as an already verified physical building block; it
+would not rule out de Sitter holography or every other representation.
+
+\begin{thebibliography}{9}\small
+\bibitem{ks} H. K. Kim and C. Scarinci,
+\href{https://arxiv.org/abs/2112.13329v2}{arXiv:2112.13329v2},
+especially Proposition 6.15.
+\bibitem{bss} N. M. Belousov, G. A. Sarkissian and V. P. Spiridonov,
+\href{https://arxiv.org/abs/2412.07562v2}{arXiv:2412.07562v2}.
+\bibitem{ak} J. E. Andersen and R. Kashaev,
+\href{https://arxiv.org/abs/1409.1208v1}{arXiv:1409.1208v1}.
+\bibitem{johansson} F. Johansson,
+\href{https://arxiv.org/abs/1802.07942v1}{arXiv:1802.07942v1}.
+\bibitem{flint} python-flint 0.9.0 documentation,
+\href{https://python-flint.readthedocs.io/en/latest/acb.html}{acb.integral};
+FLINT documentation, \href{https://arblib.org/acb_calc.html}{complex integration}.
+\bibitem{mehler} NIST DLMF,
+\href{https://dlmf.nist.gov/18.18.E28}{equation 18.18.28 (Mehler formula)}.
+\bibitem{trilogy} H. K. Kim,
+\href{https://arxiv.org/abs/2308.02934v2}{arXiv:2308.02934v2}, Section 3.
+\end{thebibliography}
+\end{document}

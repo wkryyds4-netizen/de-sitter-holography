@@ -1,0 +1,49 @@
+{
+  "status": "working stage; not frozen or fully certified",
+  "created_at_utc": "2026-11-01T02:02:18.234153+00:00",
+  "prior_heat_bound_files_verified": 22,
+  "completed_hashes": {
+    "code/chirp_residual_certificate.py": "b0b6fa5c0bc0b77819b9e8a5be9778a6db00ce2049be112188fe915645a2e3fd",
+    "code/chirp_residual_certificate_initial.py": "960f5dcaf648468ee17a994c314a59899eca9582a573730b80754d35ed53a601",
+    "code/audit_chirp_residual.py": "094289a0733a332b056daf03ae50e755a02ad59ae6b817b90838a6ee3324484d",
+    "code/residual_overlap_rectangle.py": "7c930eca517b0dd565f94ee5dac6ef2b1d08333d12519415d37e10582206720e",
+    "code/build_residual_certificate.ps1": "74ab63e33949da81741489af5a906e0ed94653b1f45718cd3349b1b63d42aab9",
+    "manuscript/residual-certificate/main.tex": "72306cc5894276c0715294a420f74b7ff3758f2d5e77edb7f97ffc44491cb0c7",
+    "output/pdf/de-sitter-residual-certificate.pdf": "a3f74f3735c22a2d389c836220661f74473cb6abbf933593f36c5505435f955d",
+    "literature/stage4-residual-certificate-sources.md": "0a1c17077bf91d87e17a7fbb21c0dc886c7e06d113446c67ac1f85a74ea528ca",
+    "notes/stage4-residual-certificate.md": "4d07449a78e3bd5400215fa5626d0da117c59d61a8256862292adc3b3a652a1a",
+    "results/stage4/residual-certificate/chirp.json": "00a560f6751c7d77638356ba91a40d3ce92f4aeeb5c715d2faf53bbda207a4d0",
+    "results/stage4/residual-certificate/chirp-initial-tail-control.json": "43ef05d58acb52f0afdb63ad28805795b6cd33e6b0c189a35a6c473b2faecf99",
+    "results/stage4/residual-certificate/chirp-audit.json": "2833450daca38191dea456550819b123bd3eda936141a01c66e7f694d44ffd81",
+    "results/stage4/residual-certificate/rectangle-pilot.json": "5539419c75c90840778e76f9194f2a23689e4d6728389aacaa69d39634fb1e34",
+    "results/stage4/residual-certificate/rectangle-pilot-initial-input.json": "4cb392c1307efb3676eb6bcc71fa4342e65d452c2ff32f7f1610c5fb029a552a",
+    "results/stage4/residual-certificate/main.log": "9f7bcc5d51f30a193033fff10faad8b524e586f5ad6500fb4a748d5fa0ed4dc3",
+    "results/stage4/residual-certificate/build-review.md": "e9031f391e8fcabb69171209b9f37475a4a35914f91e11378136d6d1a4d2ba4f"
+  },
+  "online_sources_only": [
+    "https://arxiv.org/html/2412.07562v2",
+    "https://arxiv.org/pdf/1409.1208v1",
+    "https://arxiv.org/html/1802.07942v1",
+    "https://python-flint.readthedocs.io/en/latest/acb.html",
+    "https://arblib.org/acb_calc.html",
+    "https://dlmf.nist.gov/18.18.E28"
+  ],
+  "interrupted_runs": [
+    {
+      "session": 73519,
+      "exit_code": 1,
+      "script": "code/residual_full_overlap.py",
+      "retained_segments": 3,
+      "reason": "Gaussian-specific smaller box available"
+    },
+    {
+      "session": 86352,
+      "exit_code": 1,
+      "script": "code/residual_gaussian_overlap.py",
+      "retained_segments": 1,
+      "reason": "Replace unresolved parameter-width refinement with uniform outer bounds"
+    }
+  ],
+  "live_handle_requires_revalidation": 33891,
+  "missing": "Five full F overlap hypotheses, completed project audit registration, stage freeze and publication"
+}

@@ -1,0 +1,53 @@
+{
+  "scope": "Development observations from tool outputs; not production certificates",
+  "initial_generic_phase_bound": {
+    "L": 18,
+    "order": 32,
+    "leaves": 19069,
+    "note": "Finite pair weights valid; generic complex product boxes were costly"
+  },
+  "initial_sharp_phase_bound": {
+    "status": "partition budget exhausted",
+    "max_leaves": 30000,
+    "cause": "arb powers of zero-containing intervals returned NaN; denominator lower-bound implementation corrected before production"
+  },
+  "production_bound_trials": [
+    {
+      "L": 16,
+      "order": 12,
+      "status": "partition budget exhausted at 30000 leaves"
+    },
+    {
+      "L": 16,
+      "order": 16,
+      "leaves": 24166
+    },
+    {
+      "L": 16,
+      "order": 20,
+      "leaves": 7285
+    },
+    {
+      "L": 16,
+      "order": 24,
+      "leaves": 6157
+    }
+  ],
+  "choice": "L16, order24 for three non-Gaussian overlaps; all retained modes in weighted Mehler tails; no scientific target relaxed",
+  "old_nested_runs": [
+    {
+      "session": 73519,
+      "exit_code": 1
+    },
+    {
+      "session": 86352,
+      "exit_code": 1
+    },
+    {
+      "session": 33891,
+      "exit_code": 1
+    }
+  ],
+  "new_controls": "tensor-pair-controls.json and actual-pair-rectangle.json",
+  "note": "Trial stdout was inspected; no fictitious code hash for intermediate unsaved prototypes is asserted."
+}

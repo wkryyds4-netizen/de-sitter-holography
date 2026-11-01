@@ -1,5 +1,11 @@
 # de Sitter 全息研究
 
+## 最新进展：明确连续表示中的非零五边形残差（2026-11-01）
+
+[十页PDF](output/pdf/de-sitter-residual-certificate.pdf)、[LaTeX](manuscript/residual-certificate/main.tex)、[中文记录](notes/stage4-residual-certificate.md)与[来源核查](literature/stage4-residual-certificate-sources.md)已完成。直接采用已有Gaussian矩、Mehler和严格求积定理，认证两步chirp及五个全平面F重叠；对明确hbar=1连续L²表示和归一Gaussian，得到||(AB−BM⁻¹BMA)f|| > .04489。
+
+21,143叶子、63,551项覆盖/算术/区间核查及独立局部求积对照已保存。结果与原文五边形的字面谱实现有实质张力，下一步独立核其定义及延拓框架，再回有限G物理缝合；不是de Sitter全息否定结论。继续位置见[NEXT](NEXT.md)。
+
 ## 最新进展：严格热截断界与尚未认证的矩阵元（2026-11-01）
 
 [六页PDF](output/pdf/de-sitter-heat-matrix.pdf)、[LaTeX](manuscript/heat-matrix/main.tex)、[中文记录](notes/stage4-heat-matrix.md)及[来源边界](literature/stage4-heat-matrix-sources.md)已完成。固定hbar=1和归一Gaussian测试，用挖孔Sobolev近似控制完整相位的热截断误差；纯整数/有理区间证书给ε=1e−10时严格上界0.000982。标准方法不作原创性声明。

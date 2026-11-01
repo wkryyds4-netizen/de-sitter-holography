@@ -1,5 +1,17 @@
 # 下一次从这里继续
 
+## 当前继续位置：2026-11-01 residual-certificate
+
+先读[十页PDF](output/pdf/de-sitter-residual-certificate.pdf)、[中文推导](notes/stage4-residual-certificate.md)、[来源核查](literature/stage4-residual-certificate-sources.md)、[完整链输出](results/stage4/residual-certificate/tensor-chain-audit.json)。固定hbar=1、明确F产品和L²(R²,dxdy/(2π²))表示，精确归一Gaussian，已得到||(AB−BM⁻¹BMA)f|| > .04489。是这个字面连续实现的计算辅助非零界，不是有限G或全息否定结论；当前原文联系有实质张力，不能略过后续独立核查。
+
+五个完整F重叠均完成：21,143叶子、Gaussian两项L5/N3/GL24，其余L16/N8/GL24、256bit。两步chirp已有Gaussian矩证书。最终向量距离.11963092513989593，总步误差上界.07473441641329339，保存有理下端点.04489650872660254。63,551项完整链核查通过，另11项一般配对控制及真实n128嵌套积分对照。初始失败/修正均保留，不重写旧阶段科学记录。
+
+所有计算已终止：75595、26212、66095、30906、76010、44767 exit0；旧73519、86352、33891 exit1。不要再poll或重启一次性driver。python-flint0.9.0在tmp/arb-runtime；公开复算可安装code/requirements-residual.txt。可只读调用audit_tensor_chain.audit(root,replay_bounds=True)，main保护输出防覆盖。
+
+下一任务：先独立重读KS§6.3/Prop6.11/Prop6.15、Kim 2308.02934v2§3与2112.13962v2的证明依赖，逐项核产品、Weyl符号、强谱演算及参数延拓。现有明写表示已给非零界，不把它含糊退回未认证FFT；同时不未经核查就宣布所有文献框架错误。查有无勘误或不同谱/边界值实现；只有明确变换与假设匹配才引用。优先更独立的解析见证或简化证书，不重复加密同一矩阵。接着返回有限G观察者插入、实际态、质量、反射和Gram缝合，完整全息goal active。
+
+本阶段十页PDF双遍编译及逐页核版；阶段绑定、整体审计、第59份唯一快照及公开提交以实际evidence/ZIP/Git为准。此前58ZIP与旧科学文件保全。持续公开授权有效，私人日志/配置/第三方全文/tmp不上传，不新建代理。下方为历史。
+
 ## 当前继续位置：2026-11-01 heat-matrix
 
 先读[六页PDF](output/pdf/de-sitter-heat-matrix.pdf)、[中文记录](notes/stage4-heat-matrix.md)和[来源边界](literature/stage4-heat-matrix-sources.md)。上一paired-kernel已冻结并公开main=1de9f9404322b61c51026a025cd85103b7159737，第57份ZIP的SHA256为09b8e530a73734990f7dec0085efdf0cdfb6344d5cf42eb0e885624075659a4b。
