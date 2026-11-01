@@ -7,10 +7,10 @@
     "Source remains a link, not an archive: dlmf-16.5",
     "Source remains a link, not an archive: dlmf-15.6"
   ],
-  "verified_at_utc": "2026-11-01T01:12:21.752625+00:00",
-  "required_files": 1007,
-  "local_links_checked": 1085,
-  "code_and_input_hashes_checked": 1372,
+  "verified_at_utc": "2026-11-01T01:32:27.960126+00:00",
+  "required_files": 1030,
+  "local_links_checked": 1097,
+  "code_and_input_hashes_checked": 1403,
   "scientific_checks": {
     "stage1": {
       "checks": 235,
@@ -786,6 +786,36 @@
       "recorded_hashes": 1
     },
     {
+      "file": "results/stage4/heat-matrix/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 22
+    },
+    {
+      "file": "results/stage4/heat-matrix/matrix-study.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 3
+    },
+    {
+      "file": "results/stage4/heat-matrix/direct-left.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 2
+    },
+    {
+      "file": "results/stage4/heat-matrix/cutoff-bound.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 1
+    },
+    {
+      "file": "results/stage4/heat-matrix/rational-certificate.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 1
+    },
+    {
+      "file": "results/stage4/heat-matrix/audit.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 2
+    },
+    {
       "file": "results/stage3/cross-limit/comparison.json",
       "kind": "projected comparison model only; not exact 6j convergence or interval certification",
       "checks": 19
@@ -1063,6 +1093,16 @@
       "nested_prefixes": true,
       "scientific_status": "bounded-kernel formulation and empirical heat-tail study; pentagon not evaluated",
       "kind": "Literature dictionary and bounded heat-kernel error functional; QMC not certified"
+    },
+    {
+      "stage": "heat-matrix",
+      "checks": 188,
+      "matrix_records": 37,
+      "direct_left_records": 12,
+      "interval_evaluations": 6,
+      "rational_certificates": 3,
+      "scientific_status": "heat cutoff certified; matrix quadrature uncertified; no continuum counterexample",
+      "kind": "Exact rational heat-cutoff certificate; actual complex matrix quadrature remains uncertified"
     },
     {
       "file": "results/stage3/growing-box/diagnostics.json",

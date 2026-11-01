@@ -1,5 +1,17 @@
 # 下一次从这里继续
 
+## 当前继续位置：2026-11-01 heat-matrix
+
+先读[六页PDF](output/pdf/de-sitter-heat-matrix.pdf)、[中文记录](notes/stage4-heat-matrix.md)和[来源边界](literature/stage4-heat-matrix-sources.md)。上一paired-kernel已冻结并公开main=1de9f9404322b61c51026a025cd85103b7159737，第57份ZIP的SHA256为09b8e530a73734990f7dec0085efdf0cdfb6344d5cf42eb0e885624075659a4b。
+
+固定hbar=1、μ=dxdy/(2π²)、f=sqrt(2)exp(−|s|²/(2π))、D=AB−BM⁻¹BMA，Bε=Bexp(−εP²)。对完整v=MAf用紧截断和七个孔得到w∈H¹，保持所有复相位；不要求v本身属于H¹。热矩阵元误差≤2Eε(f)+sqrt(T+Jρ)+πsqrt(ε)G，完整常数见稿。6次mpmath.iv求值与3份独立120位有理区间证书完成；ε=1e−8、1e−10、1e−12的严格上界分别为.01、.000982、.000117。证书只界D−Dε，不界Dε求积。
+
+37条FFT/过采样Hermite记录和12条独立左侧连续核记录完成，188项只读证书/算术/哈希重放通过。h1、ε1e−10矩阵元模约.0057–.0059；FFT改变L及Hermite加阶仍有差异，固定L加n不减小动量步长π²/L。已知平直恒等式在ε=.01也产生.0334368残差，ε0对照小于1e−12。热收缩损失不能套酉投影泄漏式。46269与35889均exit0，无活跃句柄；不得重跑已有driver覆盖输出，audit(root)可只读复核。
+
+下一研究首先核文献：现有精确核或严格五边形证明能否逐项对应本表示？记录原文命题/页码、算符定义、测度、谱、参数、域与延拓条件，以及能直接引用和仍缺少的步骤。已有推导可直接引用或复现，不包装为原创。若仍缺认证，优先右侧积分，需含产品截断、舍入、Fourier/物理尾、极点邻域和求积误差的复区间Iε。只有inf|Iε|>Bε才得到连续非零见证；现在不能把约.0058减去.000982称反例。实际观察者插入、反射、质量、Gram缝合及有限G仍开放，goal active。
+
+六页LaTeX已实际双遍编译、桌面success并逐页1100像素核版。阶段绑定、整体审计及第58份唯一快照2026-11-01-heat-matrix以实际evidence/ZIP为准；旧57份ZIP和科学文件须原字节保持。公开授权继续，私人配置、journal、第三方全文、tmp及恢复分支不上传，不新建代理。以下是历史继续位置。
+
 ## 当前继续位置：2026-11-01 paired-kernel
 
 先读[六页PDF](output/pdf/de-sitter-paired-kernel.pdf)、[中文记录](notes/stage4-paired-kernel.md)、[来源表](literature/stage4-paired-kernel-sources.md)。本轮先核GK1706.08132v2 Appendix B、2306.01331v2§2–3及Kashaev1403.1298v1的L²条件。三个新PDF缓存与六张原文页图留本机，文献公式不作原创。上一weak-continuation已公开提交2b7db5a8783ec511507700aa61dfc1d8c0037697，快照SHA256=b210186472bad8ed68f7d18d3382c5812430ca2da35b72aab890aa3443d1c7de。

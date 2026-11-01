@@ -1,0 +1,28 @@
+{
+  "sources": [
+    {
+      "file": "sources/kim-scarinci-2112.13329.pdf",
+      "url": "https://arxiv.org/pdf/2112.13329v2",
+      "sha256": "131a68f66c7c8521c902bc38b9883620d28a579dceae2dc2096ff1bf4de0b26c"
+    },
+    {
+      "file": "sources/garoufalidis-kashaev-1706.08132v2.pdf",
+      "url": "https://arxiv.org/pdf/1706.08132v2",
+      "sha256": "edc59e04a8d4feb90ea820c367cffeef12dd6d98fcab510e972f3a3f17455a9f"
+    }
+  ],
+  "prior_evidence": {
+    "results/stage4/paired-kernel/evidence.json": "7bfee476017bbd39118b29326ddf7daa073ede1497370dcfb40cab6027ecfcc9"
+  },
+  "online_references": [
+    {
+      "url": "https://dlmf.nist.gov/7.8",
+      "reading_scope": "Mills ratio and Gaussian tail bounds"
+    },
+    {
+      "url": "https://mpmath.readthedocs.io/en/1.3.0/contexts.html",
+      "reading_scope": "Interval inclusion semantics and experimental status"
+    }
+  ],
+  "reading_scope": "Cached KS product conventions and flat control; GK Appendix B Fourier framework. Online pages have no content-hash certification. No complete paired-pentagon proof claimed."
+}

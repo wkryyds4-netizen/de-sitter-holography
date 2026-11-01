@@ -1,0 +1,1507 @@
+{
+  "status": "unresolved continuum identity; quadrature not certified",
+  "rows": [
+    {
+      "method": "periodic_fft",
+      "n": 512,
+      "L": 20,
+      "h": 1,
+      "flat": false,
+      "epsilon": 0,
+      "lhs": [
+        0.9141440810413152,
+        0.00010422560164344876
+      ],
+      "rhs": [
+        0.9102286337428431,
+        0.004424069277002226
+      ],
+      "defect": [
+        0.003915447298472041,
+        -0.004319843675358777
+      ],
+      "defect_modulus": 0.0058302467294831725,
+      "word_vector_residual": 0.12317921932822622,
+      "left_norm": 1.0000000000000002,
+      "right_norm": 1.0000000000000004,
+      "product_tails": [
+        {
+          "terms": [
+            10,
+            10
+          ],
+          "phase_tail_bound": 4.0080093002113314e-20,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        },
+        {
+          "terms": [
+            27,
+            27
+          ],
+          "phase_tail_bound": 1.6318683347131396e-20,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        }
+      ]
+    },
+    {
+      "method": "periodic_fft",
+      "n": 512,
+      "L": 20,
+      "h": 1,
+      "flat": false,
+      "epsilon": 0.01,
+      "lhs": [
+        0.8853613371398183,
+        2.391516286666671e-05
+      ],
+      "rhs": [
+        0.8483405458504173,
+        0.00749699401814688
+      ],
+      "defect": [
+        0.037020791289401056,
+        -0.007473078855280213
+      ],
+      "defect_modulus": 0.03776752434659478,
+      "word_vector_residual": 0.13140839375737576,
+      "left_norm": 0.9699910322050671,
+      "right_norm": 0.9165813308952374,
+      "product_tails": [
+        {
+          "terms": [
+            10,
+            10
+          ],
+          "phase_tail_bound": 4.0080093002113314e-20,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        },
+        {
+          "terms": [
+            27,
+            27
+          ],
+          "phase_tail_bound": 1.6318683347131396e-20,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        }
+      ]
+    },
+    {
+      "method": "periodic_fft",
+      "n": 512,
+      "L": 20,
+      "h": 1,
+      "flat": false,
+      "epsilon": 0.0001,
+      "lhs": [
+        0.9138474014916179,
+        0.0001034129146205979
+      ],
+      "rhs": [
+        0.9095802640362045,
+        0.004464808160834278
+      ],
+      "defect": [
+        0.004267137455413406,
+        -0.00436139524621368
+      ],
+      "defect_modulus": 0.00610165801705465,
+      "word_vector_residual": 0.1223653591529687,
+      "left_norm": 0.9996859887012338,
+      "right_norm": 0.9989964853092769,
+      "product_tails": [
+        {
+          "terms": [
+            10,
+            10
+          ],
+          "phase_tail_bound": 4.0080093002113314e-20,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        },
+        {
+          "terms": [
+            27,
+            27
+          ],
+          "phase_tail_bound": 1.6318683347131396e-20,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        }
+      ]
+    },
+    {
+      "method": "periodic_fft",
+      "n": 512,
+      "L": 20,
+      "h": 1,
+      "flat": false,
+      "epsilon": 1e-08,
+      "lhs": [
+        0.9141440513641572,
+        0.00010422552036919749
+      ],
+      "rhs": [
+        0.9102285688766769,
+        0.004424073363350652
+      ],
+      "defect": [
+        0.003915482487480304,
+        -0.0043198478429814545
+      ],
+      "defect_modulus": 0.005830273449528459,
+      "word_vector_residual": 0.12317911797540668,
+      "left_norm": 0.9999999685840751,
+      "right_norm": 0.9999998969642733,
+      "product_tails": [
+        {
+          "terms": [
+            10,
+            10
+          ],
+          "phase_tail_bound": 4.0080093002113314e-20,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        },
+        {
+          "terms": [
+            27,
+            27
+          ],
+          "phase_tail_bound": 1.6318683347131396e-20,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        }
+      ]
+    },
+    {
+      "method": "periodic_fft",
+      "n": 512,
+      "L": 20,
+      "h": 1,
+      "flat": false,
+      "epsilon": 1e-10,
+      "lhs": [
+        0.9141440807445437,
+        0.00010422560083072268
+      ],
+      "rhs": [
+        0.9102286330941813,
+        0.004424069317865744
+      ],
+      "defect": [
+        0.003915447650362336,
+        -0.004319843717035022
+      ],
+      "defect_modulus": 0.005830246996683322,
+      "word_vector_residual": 0.12317921831464926,
+      "left_norm": 0.9999999996858405,
+      "right_norm": 0.9999999989696366,
+      "product_tails": [
+        {
+          "terms": [
+            10,
+            10
+          ],
+          "phase_tail_bound": 4.0080093002113314e-20,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        },
+        {
+          "terms": [
+            27,
+            27
+          ],
+          "phase_tail_bound": 1.6318683347131396e-20,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        }
+      ]
+    },
+    {
+      "method": "periodic_fft",
+      "n": 1024,
+      "L": 20,
+      "h": 1,
+      "flat": false,
+      "epsilon": 0,
+      "lhs": [
+        0.9141410525865489,
+        0.00010382561328934787
+      ],
+      "rhs": [
+        0.910228923790836,
+        0.004422034128929401
+      ],
+      "defect": [
+        0.003912128795712899,
+        -0.004318208515640053
+      ],
+      "defect_modulus": 0.005826806715413884,
+      "word_vector_residual": 0.12319051518785441,
+      "left_norm": 1.0000000000000018,
+      "right_norm": 1.0000000000000007,
+      "product_tails": [
+        {
+          "terms": [
+            10,
+            10
+          ],
+          "phase_tail_bound": 4.167670239805244e-20,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        },
+        {
+          "terms": [
+            47,
+            47
+          ],
+          "phase_tail_bound": 3.1802371401320766e-20,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        }
+      ]
+    },
+    {
+      "method": "periodic_fft",
+      "n": 1024,
+      "L": 20,
+      "h": 1,
+      "flat": false,
+      "epsilon": 0.01,
+      "lhs": [
+        0.8853584453037897,
+        2.3140691363395494e-05
+      ],
+      "rhs": [
+        0.8483400331829736,
+        0.007495432062472918
+      ],
+      "defect": [
+        0.037018412120816135,
+        -0.007472291371109522
+      ],
+      "defect_modulus": 0.037765036399841384,
+      "word_vector_residual": 0.13140515041249062,
+      "left_norm": 0.9699910322050662,
+      "right_norm": 0.9165800720214791,
+      "product_tails": [
+        {
+          "terms": [
+            10,
+            10
+          ],
+          "phase_tail_bound": 4.167670239805244e-20,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        },
+        {
+          "terms": [
+            47,
+            47
+          ],
+          "phase_tail_bound": 3.1802371401320766e-20,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        }
+      ]
+    },
+    {
+      "method": "periodic_fft",
+      "n": 1024,
+      "L": 20,
+      "h": 1,
+      "flat": false,
+      "epsilon": 0.0001,
+      "lhs": [
+        0.9138443744300969,
+        0.00010300900347888466
+      ],
+      "rhs": [
+        0.9095805378598725,
+        0.004462778338353589
+      ],
+      "defect": [
+        0.004263836570224444,
+        -0.004359769334874704
+      ],
+      "defect_modulus": 0.006098187513589359,
+      "word_vector_residual": 0.12237217577402311,
+      "left_norm": 0.999685988701235,
+      "right_norm": 0.9989962209559197,
+      "product_tails": [
+        {
+          "terms": [
+            10,
+            10
+          ],
+          "phase_tail_bound": 4.167670239805244e-20,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        },
+        {
+          "terms": [
+            47,
+            47
+          ],
+          "phase_tail_bound": 3.1802371401320766e-20,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        }
+      ]
+    },
+    {
+      "method": "periodic_fft",
+      "n": 1024,
+      "L": 20,
+      "h": 1,
+      "flat": false,
+      "epsilon": 1e-08,
+      "lhs": [
+        0.9141410229095295,
+        0.00010382553162259157
+      ],
+      "rhs": [
+        0.9102288589232052,
+        0.004422038215762906
+      ],
+      "defect": [
+        0.003912163986324324,
+        -0.004318212684140315
+      ],
+      "defect_modulus": 0.00582683343175033,
+      "word_vector_residual": 0.12319040009783888,
+      "left_norm": 0.9999999685840748,
+      "right_norm": 0.999999895207228,
+      "product_tails": [
+        {
+          "terms": [
+            10,
+            10
+          ],
+          "phase_tail_bound": 4.167670239805244e-20,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        },
+        {
+          "terms": [
+            47,
+            47
+          ],
+          "phase_tail_bound": 3.1802371401320766e-20,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        }
+      ]
+    },
+    {
+      "method": "periodic_fft",
+      "n": 1024,
+      "L": 20,
+      "h": 1,
+      "flat": false,
+      "epsilon": 1e-10,
+      "lhs": [
+        0.9141410522897786,
+        0.00010382561247266399
+      ],
+      "rhs": [
+        0.9102289231421598,
+        0.00442203416979782
+      ],
+      "defect": [
+        0.003912129147618848,
+        -0.004318208557325156
+      ],
+      "defect_modulus": 0.00582680698257675,
+      "word_vector_residual": 0.12319051403672232,
+      "left_norm": 0.9999999996858415,
+      "right_norm": 0.9999999989520425,
+      "product_tails": [
+        {
+          "terms": [
+            10,
+            10
+          ],
+          "phase_tail_bound": 4.167670239805244e-20,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        },
+        {
+          "terms": [
+            47,
+            47
+          ],
+          "phase_tail_bound": 3.1802371401320766e-20,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        }
+      ]
+    },
+    {
+      "method": "periodic_fft",
+      "n": 2048,
+      "L": 20,
+      "h": 1,
+      "flat": false,
+      "epsilon": 0,
+      "lhs": [
+        0.9141411926806223,
+        0.00010384656667764305
+      ],
+      "rhs": [
+        0.9102288888312678,
+        0.004422121822137859
+      ],
+      "defect": [
+        0.0039123038493544815,
+        -0.004318275255460216
+      ],
+      "defect_modulus": 0.005826973707817283,
+      "word_vector_residual": 0.12319084640813073,
+      "left_norm": 1.0000000000000024,
+      "right_norm": 1.0000000000000018,
+      "product_tails": [
+        {
+          "terms": [
+            10,
+            10
+          ],
+          "phase_tail_bound": 4.249870169819193e-20,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        },
+        {
+          "terms": [
+            87,
+            87
+          ],
+          "phase_tail_bound": 1.2078368761448118e-19,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        }
+      ]
+    },
+    {
+      "method": "periodic_fft",
+      "n": 2048,
+      "L": 20,
+      "h": 1,
+      "flat": false,
+      "epsilon": 0.01,
+      "lhs": [
+        0.885358578278031,
+        2.3179478076116316e-05
+      ],
+      "rhs": [
+        0.8483400553659318,
+        0.007495509171008595
+      ],
+      "defect": [
+        0.03701852291209917,
+        -0.007472329692932479
+      ],
+      "defect_modulus": 0.03776515258321475,
+      "word_vector_residual": 0.13140560982670346,
+      "left_norm": 0.9699910322050688,
+      "right_norm": 0.9165801298010634,
+      "product_tails": [
+        {
+          "terms": [
+            10,
+            10
+          ],
+          "phase_tail_bound": 4.249870169819193e-20,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        },
+        {
+          "terms": [
+            87,
+            87
+          ],
+          "phase_tail_bound": 1.2078368761448118e-19,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        }
+      ]
+    },
+    {
+      "method": "periodic_fft",
+      "n": 2048,
+      "L": 20,
+      "h": 1,
+      "flat": false,
+      "epsilon": 0.0001,
+      "lhs": [
+        0.9138445144514966,
+        0.000103030143269541
+      ],
+      "rhs": [
+        0.9095805048195876,
+        0.004462866174526237
+      ],
+      "defect": [
+        0.004264009631908983,
+        -0.004359836031256696
+      ],
+      "defect_modulus": 0.006098356201506822,
+      "word_vector_residual": 0.12237208492104364,
+      "left_norm": 0.9996859887012323,
+      "right_norm": 0.9989961927796757,
+      "product_tails": [
+        {
+          "terms": [
+            10,
+            10
+          ],
+          "phase_tail_bound": 4.249870169819193e-20,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        },
+        {
+          "terms": [
+            87,
+            87
+          ],
+          "phase_tail_bound": 1.2078368761448118e-19,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        }
+      ]
+    },
+    {
+      "method": "periodic_fft",
+      "n": 2048,
+      "L": 20,
+      "h": 1,
+      "flat": false,
+      "epsilon": 1e-08,
+      "lhs": [
+        0.914141163003595,
+        0.00010384648502940341
+      ],
+      "rhs": [
+        0.9102288239640814,
+        0.004422125908728756
+      ],
+      "defect": [
+        0.0039123390395136015,
+        -0.004318279423699353
+      ],
+      "defect_modulus": 0.0058270004239958165,
+      "word_vector_residual": 0.12319072013904546,
+      "left_norm": 0.9999999685840755,
+      "right_norm": 0.9999998937964178,
+      "product_tails": [
+        {
+          "terms": [
+            10,
+            10
+          ],
+          "phase_tail_bound": 4.249870169819193e-20,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        },
+        {
+          "terms": [
+            87,
+            87
+          ],
+          "phase_tail_bound": 1.2078368761448118e-19,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        }
+      ]
+    },
+    {
+      "method": "periodic_fft",
+      "n": 2048,
+      "L": 20,
+      "h": 1,
+      "flat": false,
+      "epsilon": 1e-10,
+      "lhs": [
+        0.9141411923838522,
+        0.00010384656586124575
+      ],
+      "rhs": [
+        0.9102288881825971,
+        0.004422121863003725
+      ],
+      "defect": [
+        0.003912304201255101,
+        -0.00431827529714248
+      ],
+      "defect_modulus": 0.005826973974977861,
+      "word_vector_residual": 0.1231908451446913,
+      "left_norm": 0.9999999996858406,
+      "right_norm": 0.9999999989378713,
+      "product_tails": [
+        {
+          "terms": [
+            10,
+            10
+          ],
+          "phase_tail_bound": 4.249870169819193e-20,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        },
+        {
+          "terms": [
+            87,
+            87
+          ],
+          "phase_tail_bound": 1.2078368761448118e-19,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        }
+      ]
+    },
+    {
+      "method": "periodic_fft",
+      "n": 2048,
+      "L": 28,
+      "h": 1,
+      "flat": false,
+      "epsilon": 0,
+      "lhs": [
+        0.9141334802544229,
+        0.00010911072565727279
+      ],
+      "rhs": [
+        0.9101649216703739,
+        0.004453893254059894
+      ],
+      "defect": [
+        0.003968558584048987,
+        -0.004344782528402621
+      ],
+      "defect_modulus": 0.005884436460200889,
+      "word_vector_residual": 0.12127419321295803,
+      "left_norm": 0.9999999999999999,
+      "right_norm": 1.0000000000000007,
+      "product_tails": [
+        {
+          "terms": [
+            11,
+            11
+          ],
+          "phase_tail_bound": 2.347393430421491e-19,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        },
+        {
+          "terms": [
+            64,
+            64
+          ],
+          "phase_tail_bound": 1.5918144270893763e-19,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        }
+      ]
+    },
+    {
+      "method": "periodic_fft",
+      "n": 2048,
+      "L": 28,
+      "h": 1,
+      "flat": false,
+      "epsilon": 0.01,
+      "lhs": [
+        0.8853494167434259,
+        2.723379490445107e-05
+      ],
+      "rhs": [
+        0.8483147925935757,
+        0.0075185144313641905
+      ],
+      "defect": [
+        0.03703462414985026,
+        -0.007491280636459739
+      ],
+      "defect_modulus": 0.0377846883207321,
+      "word_vector_residual": 0.13110547255872618,
+      "left_norm": 0.9699910322050693,
+      "right_norm": 0.9165804683025404,
+      "product_tails": [
+        {
+          "terms": [
+            11,
+            11
+          ],
+          "phase_tail_bound": 2.347393430421491e-19,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        },
+        {
+          "terms": [
+            64,
+            64
+          ],
+          "phase_tail_bound": 1.5918144270893763e-19,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        }
+      ]
+    },
+    {
+      "method": "periodic_fft",
+      "n": 2048,
+      "L": 28,
+      "h": 1,
+      "flat": false,
+      "epsilon": 0.0001,
+      "lhs": [
+        0.913836782976895,
+        0.00010828065218897962
+      ],
+      "rhs": [
+        0.909518451425791,
+        0.004495004620796249
+      ],
+      "defect": [
+        0.004318331551103949,
+        -0.004386723968607269
+      ],
+      "defect_modulus": 0.00615559376193827,
+      "word_vector_residual": 0.12050409454774404,
+      "left_norm": 0.9996859887012344,
+      "right_norm": 0.9989949644585455,
+      "product_tails": [
+        {
+          "terms": [
+            11,
+            11
+          ],
+          "phase_tail_bound": 2.347393430421491e-19,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        },
+        {
+          "terms": [
+            64,
+            64
+          ],
+          "phase_tail_bound": 1.5918144270893763e-19,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        }
+      ]
+    },
+    {
+      "method": "periodic_fft",
+      "n": 2048,
+      "L": 28,
+      "h": 1,
+      "flat": false,
+      "epsilon": 1e-08,
+      "lhs": [
+        0.9141334505754852,
+        0.00010911064264283225
+      ],
+      "rhs": [
+        0.9101648570007823,
+        0.004453897379848573
+      ],
+      "defect": [
+        0.003968593574702917,
+        -0.004344786737205741
+      ],
+      "defect_modulus": 0.005884463166081692,
+      "word_vector_residual": 0.12127407906217114,
+      "left_norm": 0.999999968584075,
+      "right_norm": 0.9999998946702351,
+      "product_tails": [
+        {
+          "terms": [
+            11,
+            11
+          ],
+          "phase_tail_bound": 2.347393430421491e-19,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        },
+        {
+          "terms": [
+            64,
+            64
+          ],
+          "phase_tail_bound": 1.5918144270893763e-19,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        }
+      ]
+    },
+    {
+      "method": "periodic_fft",
+      "n": 2048,
+      "L": 28,
+      "h": 1,
+      "flat": false,
+      "epsilon": 1e-10,
+      "lhs": [
+        0.9141334799576332,
+        0.00010911072482729125
+      ],
+      "rhs": [
+        0.910164921023678,
+        0.004453893295317797
+      ],
+      "defect": [
+        0.003968558933955202,
+        -0.004344782570490506
+      ],
+      "defect_modulus": 0.005884436727258926,
+      "word_vector_residual": 0.12127419207109344,
+      "left_norm": 0.9999999996858416,
+      "right_norm": 0.99999999894666,
+      "product_tails": [
+        {
+          "terms": [
+            11,
+            11
+          ],
+          "phase_tail_bound": 2.347393430421491e-19,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        },
+        {
+          "terms": [
+            64,
+            64
+          ],
+          "phase_tail_bound": 1.5918144270893763e-19,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        }
+      ]
+    },
+    {
+      "method": "oversampled_hermite",
+      "n": 64,
+      "q": 256,
+      "h": 1,
+      "flat": false,
+      "epsilon": 0,
+      "lhs": [
+        0.9141153181093925,
+        0.00010454791929813412
+      ],
+      "rhs": [
+        0.910200845504876,
+        0.004353773400617954
+      ],
+      "defect": [
+        0.003914472604516495,
+        -0.00424922548131982
+      ],
+      "defect_modulus": 0.005777457309457838,
+      "word_vector_residual": 0.11804174073581165,
+      "left_norm": 0.9997569985270996,
+      "right_norm": 0.9995578218890209,
+      "product_tails": [
+        {
+          "terms": [
+            13,
+            13
+          ],
+          "phase_tail_bound": 4.933878444000826e-20,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        },
+        {
+          "terms": [
+            13,
+            13
+          ],
+          "phase_tail_bound": 4.933878444000826e-20,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        }
+      ]
+    },
+    {
+      "method": "oversampled_hermite",
+      "n": 64,
+      "q": 256,
+      "h": 1,
+      "flat": false,
+      "epsilon": 0.01,
+      "lhs": [
+        0.8853391972529421,
+        2.7480068163998617e-05
+      ],
+      "rhs": [
+        0.8482938225773505,
+        0.007437015466195487
+      ],
+      "defect": [
+        0.03704537467559155,
+        -0.007409535398031488
+      ],
+      "defect_modulus": 0.037779107978744564,
+      "word_vector_residual": 0.12940655822659153,
+      "left_norm": 0.9697688159820975,
+      "right_norm": 0.9165413690409101,
+      "product_tails": [
+        {
+          "terms": [
+            13,
+            13
+          ],
+          "phase_tail_bound": 4.933878444000826e-20,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        },
+        {
+          "terms": [
+            13,
+            13
+          ],
+          "phase_tail_bound": 4.933878444000826e-20,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        }
+      ]
+    },
+    {
+      "method": "oversampled_hermite",
+      "n": 64,
+      "q": 256,
+      "h": 1,
+      "flat": false,
+      "epsilon": 1e-10,
+      "lhs": [
+        0.9141153178126922,
+        0.00010454791851929879
+      ],
+      "rhs": [
+        0.9102008448553531,
+        0.0043537734413423256
+      ],
+      "defect": [
+        0.0039144729573390435,
+        -0.004249225522823027
+      ],
+      "defect_modulus": 0.00577745757903503,
+      "word_vector_residual": 0.11804174028982059,
+      "left_norm": 0.9997569982132133,
+      "right_norm": 0.9995578209365912,
+      "product_tails": [
+        {
+          "terms": [
+            13,
+            13
+          ],
+          "phase_tail_bound": 4.933878444000826e-20,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        },
+        {
+          "terms": [
+            13,
+            13
+          ],
+          "phase_tail_bound": 4.933878444000826e-20,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        }
+      ]
+    },
+    {
+      "method": "oversampled_hermite",
+      "n": 128,
+      "q": 512,
+      "h": 1,
+      "flat": false,
+      "epsilon": 0,
+      "lhs": [
+        0.9140590147298181,
+        9.792946045183992e-05
+      ],
+      "rhs": [
+        0.9101534746223715,
+        0.004257029616818717
+      ],
+      "defect": [
+        0.0039055401074465923,
+        -0.004159100156366877
+      ],
+      "defect_modulus": 0.005705379710550816,
+      "word_vector_residual": 0.11975091177168258,
+      "left_norm": 0.9998803713473926,
+      "right_norm": 0.9997863307661569,
+      "product_tails": [
+        {
+          "terms": [
+            15,
+            15
+          ],
+          "phase_tail_bound": 3.1700759891953693e-18,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        },
+        {
+          "terms": [
+            15,
+            15
+          ],
+          "phase_tail_bound": 3.1700759891953693e-18,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        }
+      ]
+    },
+    {
+      "method": "oversampled_hermite",
+      "n": 128,
+      "q": 512,
+      "h": 1,
+      "flat": false,
+      "epsilon": 0.01,
+      "lhs": [
+        0.8852887520385984,
+        1.8070947124790293e-05
+      ],
+      "rhs": [
+        0.8482663455341741,
+        0.007374963517678735
+      ],
+      "defect": [
+        0.03702240650442423,
+        -0.007356892570553945
+      ],
+      "defect_modulus": 0.03774629056839235,
+      "word_vector_residual": 0.13019194620331523,
+      "left_norm": 0.9698817323187628,
+      "right_norm": 0.9165381565331351,
+      "product_tails": [
+        {
+          "terms": [
+            15,
+            15
+          ],
+          "phase_tail_bound": 3.1700759891953693e-18,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        },
+        {
+          "terms": [
+            15,
+            15
+          ],
+          "phase_tail_bound": 3.1700759891953693e-18,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        }
+      ]
+    },
+    {
+      "method": "oversampled_hermite",
+      "n": 128,
+      "q": 512,
+      "h": 1,
+      "flat": false,
+      "epsilon": 1e-10,
+      "lhs": [
+        0.9140590144331813,
+        9.792945964397226e-05
+      ],
+      "rhs": [
+        0.9101534739741475,
+        0.0042570296583763975
+      ],
+      "defect": [
+        0.003905540459033796,
+        -0.004159100198732425
+      ],
+      "defect_modulus": 0.005705379982108643,
+      "word_vector_residual": 0.11975091121722285,
+      "left_norm": 0.9998803710333687,
+      "right_norm": 0.9997863297939875,
+      "product_tails": [
+        {
+          "terms": [
+            15,
+            15
+          ],
+          "phase_tail_bound": 3.1700759891953693e-18,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        },
+        {
+          "terms": [
+            15,
+            15
+          ],
+          "phase_tail_bound": 3.1700759891953693e-18,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        }
+      ]
+    },
+    {
+      "method": "oversampled_hermite",
+      "n": 256,
+      "q": 768,
+      "h": 1,
+      "flat": false,
+      "epsilon": 0,
+      "lhs": [
+        0.914061270857412,
+        9.82838113339074e-05
+      ],
+      "rhs": [
+        0.9101396813186857,
+        0.004258241752545057
+      ],
+      "defect": [
+        0.003921589538726233,
+        -0.0041599579412111495
+      ],
+      "defect_modulus": 0.005717002237439892,
+      "word_vector_residual": 0.12057360436023132,
+      "left_norm": 0.9999424212486183,
+      "right_norm": 0.999898512098208,
+      "product_tails": [
+        {
+          "terms": [
+            17,
+            17
+          ],
+          "phase_tail_bound": 4.045826643366332e-18,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        },
+        {
+          "terms": [
+            17,
+            17
+          ],
+          "phase_tail_bound": 4.045826643366332e-18,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        }
+      ]
+    },
+    {
+      "method": "oversampled_hermite",
+      "n": 256,
+      "q": 768,
+      "h": 1,
+      "flat": false,
+      "epsilon": 0.01,
+      "lhs": [
+        0.8852907303210099,
+        1.854172407202148e-05
+      ],
+      "rhs": [
+        0.8482671178825837,
+        0.007377883861023369
+      ],
+      "defect": [
+        0.03702361243842622,
+        -0.0073593421369513475
+      ],
+      "defect_modulus": 0.037747950867292074,
+      "word_vector_residual": 0.13063570707002958,
+      "left_norm": 0.9699384001980464,
+      "right_norm": 0.9165476646424069,
+      "product_tails": [
+        {
+          "terms": [
+            17,
+            17
+          ],
+          "phase_tail_bound": 4.045826643366332e-18,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        },
+        {
+          "terms": [
+            17,
+            17
+          ],
+          "phase_tail_bound": 4.045826643366332e-18,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        }
+      ]
+    },
+    {
+      "method": "oversampled_hermite",
+      "n": 256,
+      "q": 768,
+      "h": 1,
+      "flat": false,
+      "epsilon": 1e-10,
+      "lhs": [
+        0.9140612705607722,
+        9.828381052726098e-05
+      ],
+      "rhs": [
+        0.9101396806717987,
+        0.004258241794362735
+      ],
+      "defect": [
+        0.003921589888973509,
+        -0.004159957983835474
+      ],
+      "defect_modulus": 0.0057170025087081916,
+      "word_vector_residual": 0.1205736037036867,
+      "left_norm": 0.9999424209345235,
+      "right_norm": 0.9998985111070127,
+      "product_tails": [
+        {
+          "terms": [
+            17,
+            17
+          ],
+          "phase_tail_bound": 4.045826643366332e-18,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        },
+        {
+          "terms": [
+            17,
+            17
+          ],
+          "phase_tail_bound": 4.045826643366332e-18,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        }
+      ]
+    },
+    {
+      "method": "periodic_fft",
+      "n": 1024,
+      "L": 20,
+      "h": 1,
+      "flat": true,
+      "epsilon": 0,
+      "lhs": [
+        0.8049216972700328,
+        1.2849586857951119e-17
+      ],
+      "rhs": [
+        0.8049216972700338,
+        4.8458512573047403e-17
+      ],
+      "defect": [
+        -9.992007221626409e-16,
+        -3.560892571509628e-17
+      ],
+      "defect_modulus": 9.998350257722152e-16,
+      "word_vector_residual": 3.806601074519114e-07,
+      "left_norm": 0.9999999999999972,
+      "right_norm": 0.9999999999999941,
+      "product_tails": [
+        {
+          "terms": [],
+          "phase_tail_bound": 0.0
+        },
+        {
+          "terms": [],
+          "phase_tail_bound": 0.0
+        }
+      ]
+    },
+    {
+      "method": "periodic_fft",
+      "n": 1024,
+      "L": 20,
+      "h": 1,
+      "flat": true,
+      "epsilon": 0.01,
+      "lhs": [
+        0.7813372905022925,
+        1.191828851319276e-17
+      ],
+      "rhs": [
+        0.7479004915417782,
+        3.7123938048925606e-17
+      ],
+      "defect": [
+        0.033436798960514325,
+        -2.5205649535732845e-17
+      ],
+      "defect_modulus": 0.033436798960514325,
+      "word_vector_residual": 0.07750737699056565,
+      "left_norm": 0.969991032205064,
+      "right_norm": 0.9112906188954025,
+      "product_tails": [
+        {
+          "terms": [],
+          "phase_tail_bound": 0.0
+        },
+        {
+          "terms": [],
+          "phase_tail_bound": 0.0
+        }
+      ]
+    },
+    {
+      "method": "periodic_fft",
+      "n": 1024,
+      "L": 20,
+      "h": 1,
+      "flat": true,
+      "epsilon": 0.0001,
+      "lhs": [
+        0.8046790485198907,
+        1.5507365237803012e-17
+      ],
+      "rhs": [
+        0.804318011851011,
+        3.8408652075957725e-17
+      ],
+      "defect": [
+        0.00036103666887965513,
+        -2.2901286838154713e-17
+      ],
+      "defect_modulus": 0.00036103666887965513,
+      "word_vector_residual": 0.0008601296685093562,
+      "left_norm": 0.9996859887012306,
+      "right_norm": 0.9990403078079202,
+      "product_tails": [
+        {
+          "terms": [],
+          "phase_tail_bound": 0.0
+        },
+        {
+          "terms": [],
+          "phase_tail_bound": 0.0
+        }
+      ]
+    },
+    {
+      "method": "periodic_fft",
+      "n": 1024,
+      "L": 20,
+      "h": 1,
+      "flat": true,
+      "epsilon": 1e-08,
+      "lhs": [
+        0.8049216729980941,
+        1.6174992462440622e-17
+      ],
+      "rhs": [
+        0.8049216368655602,
+        4.4830275734720105e-17
+      ],
+      "defect": [
+        3.613253396483884e-08,
+        -2.8655283272279485e-17
+      ],
+      "defect_modulus": 3.613253396483884e-08,
+      "word_vector_residual": 3.902734961202821e-07,
+      "left_norm": 0.9999999685840736,
+      "right_norm": 0.9999999039504717,
+      "product_tails": [
+        {
+          "terms": [],
+          "phase_tail_bound": 0.0
+        },
+        {
+          "terms": [],
+          "phase_tail_bound": 0.0
+        }
+      ]
+    },
+    {
+      "method": "periodic_fft",
+      "n": 1024,
+      "L": 20,
+      "h": 1,
+      "flat": true,
+      "epsilon": 1e-10,
+      "lhs": [
+        0.8049216970273143,
+        1.7546014060635095e-17
+      ],
+      "rhs": [
+        0.8049216966659886,
+        5.293078809880791e-17
+      ],
+      "defect": [
+        3.6132574710023846e-10,
+        -3.5384774038172816e-17
+      ],
+      "defect_modulus": 3.613257471002402e-10,
+      "word_vector_residual": 3.8066103551789534e-07,
+      "left_norm": 0.9999999996858382,
+      "right_norm": 0.9999999990394987,
+      "product_tails": [
+        {
+          "terms": [],
+          "phase_tail_bound": 0.0
+        },
+        {
+          "terms": [],
+          "phase_tail_bound": 0.0
+        }
+      ]
+    },
+    {
+      "method": "oversampled_hermite",
+      "n": 64,
+      "q": 512,
+      "h": 1,
+      "flat": true,
+      "epsilon": 0,
+      "lhs": [
+        0.8049216972700319,
+        8.326672684688678e-17
+      ],
+      "rhs": [
+        0.8049216972700286,
+        -1.5866027308745969e-16
+      ],
+      "defect": [
+        3.3306690738754696e-15,
+        2.419269999343465e-16
+      ],
+      "defect_modulus": 3.3394438388701364e-15,
+      "word_vector_residual": 2.520241392358843e-07,
+      "left_norm": 0.9999999999999962,
+      "right_norm": 0.9999999999999456,
+      "product_tails": [
+        {
+          "terms": [],
+          "phase_tail_bound": 0.0
+        },
+        {
+          "terms": [],
+          "phase_tail_bound": 0.0
+        }
+      ]
+    },
+    {
+      "method": "oversampled_hermite",
+      "n": 64,
+      "q": 512,
+      "h": 1,
+      "flat": true,
+      "epsilon": 0.01,
+      "lhs": [
+        0.7813372905022913,
+        -8.32667268468867e-17
+      ],
+      "rhs": [
+        0.7479004915417734,
+        -1.5979042436825943e-16
+      ],
+      "defect": [
+        0.03343679896051788,
+        7.652369752137273e-17
+      ],
+      "defect_modulus": 0.03343679896051788,
+      "word_vector_residual": 0.07750737699055783,
+      "left_norm": 0.969991032205064,
+      "right_norm": 0.9112906188953996,
+      "product_tails": [
+        {
+          "terms": [],
+          "phase_tail_bound": 0.0
+        },
+        {
+          "terms": [],
+          "phase_tail_bound": 0.0
+        }
+      ]
+    },
+    {
+      "method": "oversampled_hermite",
+      "n": 64,
+      "q": 512,
+      "h": 1,
+      "flat": true,
+      "epsilon": 1e-10,
+      "lhs": [
+        0.8049216970273128,
+        2.775557561562895e-17
+      ],
+      "rhs": [
+        0.8049216966659841,
+        -2.0236003787770137e-16
+      ],
+      "defect": [
+        3.613286336801025e-10,
+        2.3011561349333033e-16
+      ],
+      "defect_modulus": 3.613286336801758e-10,
+      "word_vector_residual": 2.520256110856639e-07,
+      "left_norm": 0.9999999996858372,
+      "right_norm": 0.9999999990394505,
+      "product_tails": [
+        {
+          "terms": [],
+          "phase_tail_bound": 0.0
+        },
+        {
+          "terms": [],
+          "phase_tail_bound": 0.0
+        }
+      ]
+    }
+  ],
+  "seconds": 168.1011824607849,
+  "versions": {
+    "python": "3.14.5",
+    "numpy": "2.4.6",
+    "scipy": "1.18.0"
+  },
+  "scope": "Actual discrete matrix elements of D_epsilon, not certified continuous values. Heat error is separately bounded analytically.",
+  "hashes": {
+    "code/heat_matrix.py": "2aeacb6706712dd1a6b0bec97a46d141ee17010543aa406bb7071aefae02b906",
+    "code/run_heat_matrix.py": "930a11ca8ed433bab053f2945b7b217ab87a0939edccc45299087a41b6a12f23",
+    "code/unitary_flip.py": "c3ee0fb9bb4252d56b285f77b9dbfbd96513df9de09d110703bc76cd4b88935c"
+  }
+}

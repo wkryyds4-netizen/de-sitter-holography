@@ -1,5 +1,11 @@
 # de Sitter 全息研究
 
+## 最新进展：严格热截断界与尚未认证的矩阵元（2026-11-01）
+
+[六页PDF](output/pdf/de-sitter-heat-matrix.pdf)、[LaTeX](manuscript/heat-matrix/main.tex)、[中文记录](notes/stage4-heat-matrix.md)及[来源边界](literature/stage4-heat-matrix-sources.md)已完成。固定hbar=1和归一Gaussian测试，用挖孔Sobolev近似控制完整相位的热截断误差；纯整数/有理区间证书给ε=1e−10时严格上界0.000982。标准方法不作原创性声明。
+
+37条FFT/Hermite矩阵元、12条独立左侧积分和188项证书/算术核查已完成。矩阵元模约0.0057–0.0059，但求积误差未认证，不能据此宣布连续反例。平直对照也表明热截断本身会破坏恒等式。下一步先核已有严格核公式能否覆盖当前表示，再补真正缺失的右侧积分误差；继续位置见[NEXT](NEXT.md)。以下保留阶段历史。
+
 ## 最新进展：有界配对的 Fourier 字典与热核误差（2026-11-01）
 
 [六页PDF](output/pdf/de-sitter-paired-kernel.pdf)、[LaTeX](manuscript/paired-kernel/main.tex)、[中文记录](notes/stage4-paired-kernel.md)和[文献对照](literature/stage4-paired-kernel-sources.md)已完成。核用GK已有Gaussian-group框架，明确当前测度、符号及三个相近构造的适用差别；给完整有界相位的绝对可积截断核和Gaussian矩阵元误差式，避免拆分无界因子。

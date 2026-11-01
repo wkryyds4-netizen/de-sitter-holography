@@ -1,0 +1,312 @@
+{
+  "rows": [
+    {
+      "n": 128,
+      "epsilon": 0.01,
+      "flat": false,
+      "unit": false,
+      "value": [
+        0.8855431040889598,
+        7.293154847821362e-05
+      ],
+      "product_tails": [
+        {
+          "terms": [
+            13,
+            13
+          ],
+          "phase_tail_bound": 2.5799539782391835e-20,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        },
+        {
+          "terms": [
+            12,
+            12
+          ],
+          "phase_tail_bound": 4.373290516679545e-18,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        }
+      ],
+      "exact_if_unit": null
+    },
+    {
+      "n": 128,
+      "epsilon": 1e-10,
+      "flat": false,
+      "unit": false,
+      "value": [
+        0.9143045243539738,
+        0.00013887271135518855
+      ],
+      "product_tails": [
+        {
+          "terms": [
+            13,
+            13
+          ],
+          "phase_tail_bound": 2.5799539782391835e-20,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        },
+        {
+          "terms": [
+            13,
+            13
+          ],
+          "phase_tail_bound": 2.5799539471713564e-20,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        }
+      ],
+      "exact_if_unit": null
+    },
+    {
+      "n": 256,
+      "epsilon": 0.01,
+      "flat": false,
+      "unit": false,
+      "value": [
+        0.885326038487988,
+        2.4236187858674735e-05
+      ],
+      "product_tails": [
+        {
+          "terms": [
+            15,
+            15
+          ],
+          "phase_tail_bound": 1.7688389923352426e-18,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        },
+        {
+          "terms": [
+            15,
+            15
+          ],
+          "phase_tail_bound": 3.382665895693677e-19,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        }
+      ],
+      "exact_if_unit": null
+    },
+    {
+      "n": 256,
+      "epsilon": 1e-10,
+      "flat": false,
+      "unit": false,
+      "value": [
+        0.914060288456097,
+        9.794848308332897e-05
+      ],
+      "product_tails": [
+        {
+          "terms": [
+            15,
+            15
+          ],
+          "phase_tail_bound": 1.7688389923352426e-18,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        },
+        {
+          "terms": [
+            15,
+            15
+          ],
+          "phase_tail_bound": 1.7688389617024366e-18,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        }
+      ],
+      "exact_if_unit": null
+    },
+    {
+      "n": 512,
+      "epsilon": 0.01,
+      "flat": false,
+      "unit": false,
+      "value": [
+        0.8853207011883182,
+        2.5503782672612345e-05
+      ],
+      "product_tails": [
+        {
+          "terms": [
+            19,
+            19
+          ],
+          "phase_tail_bound": 4.05028700205599e-19,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        },
+        {
+          "terms": [
+            19,
+            19
+          ],
+          "phase_tail_bound": 3.8082040248511445e-20,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        }
+      ],
+      "exact_if_unit": null
+    },
+    {
+      "n": 512,
+      "epsilon": 1e-10,
+      "flat": false,
+      "unit": false,
+      "value": [
+        0.9141142086939503,
+        0.00010402088645840914
+      ],
+      "product_tails": [
+        {
+          "terms": [
+            19,
+            19
+          ],
+          "phase_tail_bound": 4.05028700205599e-19,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        },
+        {
+          "terms": [
+            19,
+            19
+          ],
+          "phase_tail_bound": 4.0502869018089373e-19,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        }
+      ],
+      "exact_if_unit": null
+    },
+    {
+      "n": 768,
+      "epsilon": 0.01,
+      "flat": false,
+      "unit": false,
+      "value": [
+        0.885316460550106,
+        2.5176534672344465e-05
+      ],
+      "product_tails": [
+        {
+          "terms": [
+            22,
+            22
+          ],
+          "phase_tail_bound": 1.9459166644577053e-19,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        },
+        {
+          "terms": [
+            22,
+            22
+          ],
+          "phase_tail_bound": 1.0623098103629447e-20,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        }
+      ],
+      "exact_if_unit": null
+    },
+    {
+      "n": 768,
+      "epsilon": 1e-10,
+      "flat": false,
+      "unit": false,
+      "value": [
+        0.9141130803994287,
+        0.00010473043943260313
+      ],
+      "product_tails": [
+        {
+          "terms": [
+            22,
+            22
+          ],
+          "phase_tail_bound": 1.9459166644577053e-19,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        },
+        {
+          "terms": [
+            22,
+            22
+          ],
+          "phase_tail_bound": 1.9459166052199817e-19,
+          "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+        }
+      ],
+      "exact_if_unit": null
+    },
+    {
+      "n": 128,
+      "epsilon": 0.01,
+      "flat": false,
+      "unit": true,
+      "value": [
+        0.969540972048578,
+        0.0
+      ],
+      "product_tails": [],
+      "exact_if_unit": 0.9695409720485787
+    },
+    {
+      "n": 256,
+      "epsilon": 0.01,
+      "flat": true,
+      "unit": false,
+      "value": [
+        0.7813372905023098,
+        4.729258149190569e-18
+      ],
+      "product_tails": [
+        {
+          "terms": [],
+          "phase_tail_bound": 0.0
+        },
+        {
+          "terms": [],
+          "phase_tail_bound": 0.0
+        }
+      ],
+      "exact_if_unit": null
+    },
+    {
+      "n": 128,
+      "epsilon": 1e-10,
+      "flat": false,
+      "unit": true,
+      "value": [
+        0.9999999996858402,
+        3.851859886354277e-34
+      ],
+      "product_tails": [],
+      "exact_if_unit": 0.9999999996858406
+    },
+    {
+      "n": 256,
+      "epsilon": 1e-10,
+      "flat": true,
+      "unit": false,
+      "value": [
+        0.8049216970273325,
+        -1.6246164039380918e-17
+      ],
+      "product_tails": [
+        {
+          "terms": [],
+          "phase_tail_bound": 0.0
+        },
+        {
+          "terms": [],
+          "phase_tail_bound": 0.0
+        }
+      ],
+      "exact_if_unit": null
+    }
+  ],
+  "versions": {
+    "python": "3.14.5",
+    "numpy": "2.4.6",
+    "scipy": "1.18.0"
+  },
+  "scope": "Direct continuous-kernel quadrature of the left word only; empirical Gauss convergence, no rigorous quadrature bound.",
+  "hashes": {
+    "code/direct_heat_left.py": "b91e86a8837ded9e23f24edbfc4402f1b54a7caeeb1932ec2c638b7714a7c4d2",
+    "code/unitary_flip.py": "c3ee0fb9bb4252d56b285f77b9dbfbd96513df9de09d110703bc76cd4b88935c"
+  }
+}

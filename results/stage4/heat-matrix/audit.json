@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "checks": 188,
+  "errors": [],
+  "scientific_status": "heat cutoff certified; matrix quadrature uncertified; no continuum counterexample",
+  "scope": "Re-evaluates exact elementary rational certificate and saved complex arithmetic; does not certify FFT/Hermite/direct quadrature.",
+  "hashes": {
+    "code/audit_heat_matrix.py": "bf07fa260ff59f0de7b07ebf69466028fc1031ace63d0d2f76d5801278e66569",
+    "code/rational_heat_certificate.py": "48b1c62f80421cab3272103fb39b5baa04ac35b48dbef52119e8c6f9a36f2a83"
+  }
+}

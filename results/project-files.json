@@ -120,6 +120,11 @@
     "sha256": "f120d8c078d26d1b1764b3c629fc9492e8601d3c781129e7891ce775db9078ad"
   },
   {
+    "file": "code/audit_heat_matrix.py",
+    "bytes": 3846,
+    "sha256": "bf07fa260ff59f0de7b07ebf69466028fc1031ace63d0d2f76d5801278e66569"
+  },
+  {
     "file": "code/audit_mass_filter.py",
     "bytes": 3751,
     "sha256": "372e587d8a291d99dd5a496ca8d2430aed5a625ef008e136311cd47623ac5dc5"
@@ -268,6 +273,11 @@
     "file": "code/build_gram_note.ps1",
     "bytes": 901,
     "sha256": "2109aabd30b22542019dbf2560b356ed7b59f92d50c3130278099bc7e950f296"
+  },
+  {
+    "file": "code/build_heat_matrix.ps1",
+    "bytes": 1132,
+    "sha256": "d9b7a5d0f0ea29635b16e4d85d9a77cd379c11f0075ce9f7eb79cba9c6adfd20"
   },
   {
     "file": "code/build_identity_note.ps1",
@@ -455,6 +465,11 @@
     "sha256": "736271b01aaeace28e690cf99d5c3bfdf78ab1cf18efab8628fabc8bdce8c64f"
   },
   {
+    "file": "code/direct_heat_left.py",
+    "bytes": 2017,
+    "sha256": "b91e86a8837ded9e23f24edbfc4402f1b54a7caeeb1932ec2c638b7714a7c4d2"
+  },
+  {
     "file": "code/ds3_bose_packet.py",
     "bytes": 6673,
     "sha256": "8c09521f96bed106276a4d41fea3908ed775b6eb02be9f0a71799ee0d71a304f"
@@ -615,6 +630,16 @@
     "sha256": "0b2fc3547f9ad7706c052bab84de569244612abc071802f99d41b1b4776d7bc2"
   },
   {
+    "file": "code/heat_cutoff_bound.py",
+    "bytes": 3440,
+    "sha256": "5506f9fe68befc0fb7edf2b2f8f1d0e11c43a75241a7ccc5f864eb17d0dbe6f2"
+  },
+  {
+    "file": "code/heat_matrix.py",
+    "bytes": 2614,
+    "sha256": "2aeacb6706712dd1a6b0bec97a46d141ee17010543aa406bb7071aefae02b906"
+  },
+  {
     "file": "code/hyper_endpoint.py",
     "bytes": 6952,
     "sha256": "6515cdb06b74c908815f5e1ebc85cfbffc4b90bd2787c67e9aa09d8b3b88511d"
@@ -701,13 +726,18 @@
   },
   {
     "file": "code/project_audit.py",
-    "bytes": 160558,
-    "sha256": "ea1624bb608a5a9ec923e9bc4bed44e196a59337557c5bf090f532f7e9086c2a"
+    "bytes": 163811,
+    "sha256": "dc46a3aaeafc0ad8d9d08c6b25e49ea80a4cf5a2f75c47c63408af124a6940b3"
   },
   {
     "file": "code/quantized_observer.py",
     "bytes": 8015,
     "sha256": "6851265b9daa9b02b2a96580d175be1d7153a13bc1e20ef9e891b8abe936583f"
+  },
+  {
+    "file": "code/rational_heat_certificate.py",
+    "bytes": 5099,
+    "sha256": "48b1c62f80421cab3272103fb39b5baa04ac35b48dbef52119e8c6f9a36f2a83"
   },
   {
     "file": "code/recoil_bessel_cancellation.py",
@@ -833,6 +863,11 @@
     "file": "code/record_gaussian_eikonal.py",
     "bytes": 3569,
     "sha256": "a553fc56a0ee4fe2e5556cdc7b1c05113b932f423859075996352394c9926b1a"
+  },
+  {
+    "file": "code/record_heat_matrix.py",
+    "bytes": 4441,
+    "sha256": "2393f7b3b6ca81c7d8cc5f336e059997e6b639d0ac45744ba7773c76dbcd7acc"
   },
   {
     "file": "code/record_mass_filter.py",
@@ -988,6 +1023,11 @@
     "file": "code/run_gaussian_eikonal.py",
     "bytes": 2213,
     "sha256": "e0220c0ad99d97e4bc50b8b023dff757c9aa7d98837ac35bd63abadb1abfa29f"
+  },
+  {
+    "file": "code/run_heat_matrix.py",
+    "bytes": 1726,
+    "sha256": "930a11ca8ed433bab053f2945b7b217ab87a0939edccc45299087a41b6a12f23"
   },
   {
     "file": "code/run_mass_filter.py",
@@ -1286,8 +1326,8 @@
   },
   {
     "file": "journal/2026-11-01.md",
-    "bytes": 9646,
-    "sha256": "5a06f6cdd99a56e194db34376f0bcc4b83a26647e3f99b94d0cd42ea5b151533"
+    "bytes": 12106,
+    "sha256": "36beb8f38e259b55cf6dd44e5a572cd4a2f923392452564033166c68fa514ba7"
   },
   {
     "file": "literature/flip-proof-dependency-map.md",
@@ -1503,6 +1543,11 @@
     "file": "literature/stage4-gram-prefactor-sources.md",
     "bytes": 3236,
     "sha256": "66a45fc9f3fa77d8f516f01da05dbe6ce09196bc3d9106580c24455f92bdf84d"
+  },
+  {
+    "file": "literature/stage4-heat-matrix-sources.md",
+    "bytes": 1641,
+    "sha256": "90464969ba52295339827a60e7159f8b77991d5375dd58519d6c28ded1474c97"
   },
   {
     "file": "literature/stage4-mass-filter-sources.md",
@@ -1780,6 +1825,11 @@
     "sha256": "3ce9775383daa3e2f5f42bdee7f3b342db6829b227757a9d78533fefb2e1426a"
   },
   {
+    "file": "manuscript/heat-matrix/main.tex",
+    "bytes": 12762,
+    "sha256": "ee9dba2690aba7a180160a4fda69a4fcc030986b59edaa8dce2131b1739329ea"
+  },
+  {
     "file": "manuscript/logtime.tex",
     "bytes": 10948,
     "sha256": "c33549cac95393718b1e8adc3353062bfee5a1e1ca0f2c971b31ae642de1eef0"
@@ -1941,8 +1991,8 @@
   },
   {
     "file": "NEXT.md",
-    "bytes": 40057,
-    "sha256": "cdff20fd5f90dd57f9f0fdc8e33d721d11fa990380ffb755d2de7c6a8289467f"
+    "bytes": 42398,
+    "sha256": "88ea0ceeaad7f4dce2ace1c90bd048f733dc4ee044591259432292da05a833d2"
   },
   {
     "file": "notes/math-independent.md",
@@ -2295,6 +2345,11 @@
     "sha256": "1183fc1ad670c00eb00877d0de0dfd800aa86740750f5c2300848a225f918983"
   },
   {
+    "file": "notes/stage4-heat-matrix.md",
+    "bytes": 3947,
+    "sha256": "67e277fd8d70c6e087d4767a17ca24118f80ff600a6ba3371fa61abbd4d18fcf"
+  },
+  {
     "file": "notes/stage4-mass-filter.md",
     "bytes": 4966,
     "sha256": "b1de8b888ed83e4e109aa45cd4d9731c6053d88807e824413da11b01dd030053"
@@ -2495,6 +2550,11 @@
     "sha256": "be944b8bc86892ff8011dbeeab1b78cc2e10a34f4e5cc7e9f5f37ac2ad6acc8a"
   },
   {
+    "file": "output/pdf/de-sitter-heat-matrix.pdf",
+    "bytes": 375102,
+    "sha256": "0996a75b39b712df831ad0a6010e13494cdab92829c81fe125c554d9bc0c9f70"
+  },
+  {
     "file": "output/pdf/de-sitter-mass-filter.pdf",
     "bytes": 357907,
     "sha256": "e8280b6634b6c43802f3d0268e5f10a74083a70ad7ca4272671d4245e5304383"
@@ -2601,8 +2661,8 @@
   },
   {
     "file": "PLAN.md",
-    "bytes": 46032,
-    "sha256": "363ca7f6d4926368693c71afb44c694c9d278ccf227c4d5b2760be83f6dff0a3"
+    "bytes": 46732,
+    "sha256": "8d85b0babef6272a6c7075a04a75c663a317e5b34e4d9fcf58464d6920aebb32"
   },
   {
     "file": "PROJECT.md",
@@ -2611,8 +2671,8 @@
   },
   {
     "file": "README.md",
-    "bytes": 40879,
-    "sha256": "3ceeae4047a8e082ddf6fdcd1f41b6d67e17120c1ec6a201f07b92e9eb088fe2"
+    "bytes": 41787,
+    "sha256": "bde487730c0718cb7441047269eda64e88298021af927f3cac7f6dce9419da30"
   },
   {
     "file": "REPOSITORY.md",
@@ -2691,8 +2751,8 @@
   },
   {
     "file": "results/project-audit.json",
-    "bytes": 38647,
-    "sha256": "ee84cdc1760b4aa52ecaa798586b0ca96c3ec5e75511a13347b5056129dad9dd"
+    "bytes": 40015,
+    "sha256": "e9742f9f0eaa5a73fa59223f6ba11776fbf19b759fb57be53f3e4dd016bff4e5"
   },
   {
     "file": "results/stage2/errors.csv",
@@ -4053,6 +4113,61 @@
     "file": "results/stage4/gram-prefactor/main.log",
     "bytes": 24924,
     "sha256": "0320eb1d1883cb71c8d2ed8d7a61eb0d332c877ac81a22c6c783c2a59a5aded0"
+  },
+  {
+    "file": "results/stage4/heat-matrix/audit.json",
+    "bytes": 546,
+    "sha256": "35f6d46f394667c63d9be943d5e9ab315592c9a98189caebdb5d64480312cf18"
+  },
+  {
+    "file": "results/stage4/heat-matrix/build-review.md",
+    "bytes": 806,
+    "sha256": "ec1eec2857525c1ee7d220c1a376cca2903af265bc53a109d29cec9a1eebc9ec"
+  },
+  {
+    "file": "results/stage4/heat-matrix/cutoff-bound.json",
+    "bytes": 43039,
+    "sha256": "998dd30c394bcb717a0355f70e2da1ac78f672cc34d6b8c7c8ac9209fdfa3a0a"
+  },
+  {
+    "file": "results/stage4/heat-matrix/direct-left.json",
+    "bytes": 7782,
+    "sha256": "35be6c589407403db02213fbad0e85bf6af2ff1b4f241484975d58d918c34c6c"
+  },
+  {
+    "file": "results/stage4/heat-matrix/evidence.json",
+    "bytes": 3136,
+    "sha256": "0f2b216e71586ac2d0d8f0d28d7da05213fcad8cbe5e513907627b05d99d4168"
+  },
+  {
+    "file": "results/stage4/heat-matrix/main.log",
+    "bytes": 25580,
+    "sha256": "5e32f7857a46834097d52b21b7ba85f27e99b7287cb542594ddcb933a20885be"
+  },
+  {
+    "file": "results/stage4/heat-matrix/matrix-runs.jsonl",
+    "bytes": 25278,
+    "sha256": "3e9709963603b5bc92630ba48e497478834d7b2f227df4400dc10fc796ab75c2"
+  },
+  {
+    "file": "results/stage4/heat-matrix/matrix-study.json",
+    "bytes": 39360,
+    "sha256": "7bb9c4c9517299c80aa81c49b67391fc5050801075bc8b92416a4903e690fe0e"
+  },
+  {
+    "file": "results/stage4/heat-matrix/preservation.json",
+    "bytes": 8819,
+    "sha256": "575df86a8a91725ef3d0fa346bcd62fcf6ce187f01af2b83b8eb0ed71ee6f212"
+  },
+  {
+    "file": "results/stage4/heat-matrix/rational-certificate.json",
+    "bytes": 6434,
+    "sha256": "f4235e114fb93f43a95db9cf061374865625024c2584471eb8467ccb91fe5311"
+  },
+  {
+    "file": "results/stage4/heat-matrix/source-record.json",
+    "bytes": 1103,
+    "sha256": "2920139990c7612b72085d5d0c9dc0f5f05d0403c549c3b9ea1c76f5f01dea7b"
   },
   {
     "file": "results/stage4/mass-filter/audit.json",

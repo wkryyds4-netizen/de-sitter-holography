@@ -1,0 +1,51 @@
+{
+  "created_at_utc": "2026-11-01T01:31:53.546986+00:00",
+  "status": "diagnostic stage bound; project audit follows",
+  "scientific_status": "heat cutoff certified; matrix quadrature uncertified; no continuum counterexample",
+  "pages": 6,
+  "matrix_records": 37,
+  "direct_left_records": 12,
+  "interval_evaluations": 6,
+  "rational_certificates": 3,
+  "saved_arithmetic_replay_checks": 188,
+  "compilers": [
+    "pdfLaTeX twice exit 0",
+    "desktop success"
+  ],
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "longest_edge_pixels": 1100,
+    "status": "all inspected"
+  },
+  "hashes": {
+    "code/heat_matrix.py": "2aeacb6706712dd1a6b0bec97a46d141ee17010543aa406bb7071aefae02b906",
+    "code/run_heat_matrix.py": "930a11ca8ed433bab053f2945b7b217ab87a0939edccc45299087a41b6a12f23",
+    "code/direct_heat_left.py": "b91e86a8837ded9e23f24edbfc4402f1b54a7caeeb1932ec2c638b7714a7c4d2",
+    "code/heat_cutoff_bound.py": "5506f9fe68befc0fb7edf2b2f8f1d0e11c43a75241a7ccc5f864eb17d0dbe6f2",
+    "code/rational_heat_certificate.py": "48b1c62f80421cab3272103fb39b5baa04ac35b48dbef52119e8c6f9a36f2a83",
+    "code/audit_heat_matrix.py": "bf07fa260ff59f0de7b07ebf69466028fc1031ace63d0d2f76d5801278e66569",
+    "code/build_heat_matrix.ps1": "d9b7a5d0f0ea29635b16e4d85d9a77cd379c11f0075ce9f7eb79cba9c6adfd20",
+    "code/record_heat_matrix.py": "2393f7b3b6ca81c7d8cc5f336e059997e6b639d0ac45744ba7773c76dbcd7acc",
+    "manuscript/heat-matrix/main.tex": "ee9dba2690aba7a180160a4fda69a4fcc030986b59edaa8dce2131b1739329ea",
+    "output/pdf/de-sitter-heat-matrix.pdf": "0996a75b39b712df831ad0a6010e13494cdab92829c81fe125c554d9bc0c9f70",
+    "notes/stage4-heat-matrix.md": "67e277fd8d70c6e087d4767a17ca24118f80ff600a6ba3371fa61abbd4d18fcf",
+    "literature/stage4-heat-matrix-sources.md": "90464969ba52295339827a60e7159f8b77991d5375dd58519d6c28ded1474c97",
+    "results/stage4/heat-matrix/audit.json": "35f6d46f394667c63d9be943d5e9ab315592c9a98189caebdb5d64480312cf18",
+    "results/stage4/heat-matrix/build-review.md": "ec1eec2857525c1ee7d220c1a376cca2903af265bc53a109d29cec9a1eebc9ec",
+    "results/stage4/heat-matrix/cutoff-bound.json": "998dd30c394bcb717a0355f70e2da1ac78f672cc34d6b8c7c8ac9209fdfa3a0a",
+    "results/stage4/heat-matrix/direct-left.json": "35be6c589407403db02213fbad0e85bf6af2ff1b4f241484975d58d918c34c6c",
+    "results/stage4/heat-matrix/main.log": "5e32f7857a46834097d52b21b7ba85f27e99b7287cb542594ddcb933a20885be",
+    "results/stage4/heat-matrix/matrix-runs.jsonl": "3e9709963603b5bc92630ba48e497478834d7b2f227df4400dc10fc796ab75c2",
+    "results/stage4/heat-matrix/matrix-study.json": "7bb9c4c9517299c80aa81c49b67391fc5050801075bc8b92416a4903e690fe0e",
+    "results/stage4/heat-matrix/preservation.json": "575df86a8a91725ef3d0fa346bcd62fcf6ce187f01af2b83b8eb0ed71ee6f212",
+    "results/stage4/heat-matrix/rational-certificate.json": "f4235e114fb93f43a95db9cf061374865625024c2584471eb8467ccb91fe5311",
+    "results/stage4/heat-matrix/source-record.json": "2920139990c7612b72085d5d0c9dc0f5f05d0403c549c3b9ea1c76f5f01dea7b"
+  }
+}

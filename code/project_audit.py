@@ -1035,6 +1035,24 @@ CG_ROOT_HASH_RECORDS[PAIRED_KERNEL_DIR+'heat-study.json'] = {'code/paired_kernel
 CG_ROOT_HASH_RECORDS[PAIRED_KERNEL_DIR+'diagnostics.json'] = {'code/check_paired_kernel.py',PAIRED_KERNEL_DIR+'heat-study.json'}
 CG_ROOT_HASH_RECORDS[PAIRED_KERNEL_DIR+'audit.json'] = {'code/audit_paired_kernel.py'}
 
+HEAT_MATRIX_DIR = 'results/stage4/heat-matrix/'
+CG_ROOT_HASH_RECORDS[HEAT_MATRIX_DIR+'evidence.json'] = {
+    'code/'+p for p in ['heat_matrix.py','run_heat_matrix.py','direct_heat_left.py',
+        'heat_cutoff_bound.py','rational_heat_certificate.py','audit_heat_matrix.py',
+        'build_heat_matrix.ps1','record_heat_matrix.py']
+} | {'manuscript/heat-matrix/main.tex','output/pdf/de-sitter-heat-matrix.pdf',
+    'notes/stage4-heat-matrix.md','literature/stage4-heat-matrix-sources.md'
+} | {HEAT_MATRIX_DIR+p for p in ['matrix-study.json','matrix-runs.jsonl','direct-left.json',
+    'cutoff-bound.json','rational-certificate.json','audit.json','main.log','build-review.md',
+    'preservation.json','source-record.json']}
+REQUIRED.extend(sorted(CG_ROOT_HASH_RECORDS[HEAT_MATRIX_DIR+'evidence.json']))
+REQUIRED.append(HEAT_MATRIX_DIR+'evidence.json')
+CG_ROOT_HASH_RECORDS[HEAT_MATRIX_DIR+'matrix-study.json'] = {'code/heat_matrix.py','code/run_heat_matrix.py','code/unitary_flip.py'}
+CG_ROOT_HASH_RECORDS[HEAT_MATRIX_DIR+'direct-left.json'] = {'code/direct_heat_left.py','code/unitary_flip.py'}
+CG_ROOT_HASH_RECORDS[HEAT_MATRIX_DIR+'cutoff-bound.json'] = {'code/heat_cutoff_bound.py'}
+CG_ROOT_HASH_RECORDS[HEAT_MATRIX_DIR+'rational-certificate.json'] = {'code/rational_heat_certificate.py'}
+CG_ROOT_HASH_RECORDS[HEAT_MATRIX_DIR+'audit.json'] = {'code/audit_heat_matrix.py','code/rational_heat_certificate.py'}
+
 def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
@@ -2287,6 +2305,33 @@ def main():
             kind='Literature dictionary and bounded heat-kernel error functional; QMC not certified'))
     except (KeyError, TypeError, ValueError, ArithmeticError) as exc:
         errors.append('malformed paired-kernel records: '+str(exc))
+    try:
+        from audit_heat_matrix import audit as replay_heat_matrix
+        replay = replay_heat_matrix(ROOT)
+        errors.extend('heat-matrix: '+e for e in replay['errors'])
+        if replay['status'] != 'passed' or replay['checks'] != 188:
+            errors.append('heat-matrix: incomplete certificate and arithmetic replay')
+        if replay['scientific_status'] != 'heat cutoff certified; matrix quadrature uncertified; no continuum counterexample':
+            errors.append('heat-matrix: scientific status lost')
+        source = read_json(ROOT/HEAT_MATRIX_DIR/'source-record.json')
+        if len(source['sources']) != 2:
+            errors.append('heat-matrix: cached source count')
+        for cache in source['sources']:
+            if digest(ROOT/cache['file']) != cache['sha256']:
+                errors.append('heat-matrix: source mismatch '+cache['file'])
+        for file, expected in source['prior_evidence'].items():
+            if digest(ROOT/file) != expected:
+                errors.append('heat-matrix: prior evidence mismatch '+file)
+        if {x['url'] for x in source['online_references']} != {
+                'https://dlmf.nist.gov/7.8',
+                'https://mpmath.readthedocs.io/en/1.3.0/contexts.html'}:
+            errors.append('heat-matrix: online reference URLs')
+        supporting_records.append(dict(stage='heat-matrix',checks=188,matrix_records=37,
+            direct_left_records=12,interval_evaluations=6,rational_certificates=3,
+            scientific_status=replay['scientific_status'],
+            kind='Exact rational heat-cutoff certificate; actual complex matrix quadrature remains uncertified'))
+    except (KeyError, TypeError, ValueError, ArithmeticError) as exc:
+        errors.append('malformed heat-matrix records: '+str(exc))
     growing_checks = growing.get("checks", [])
     if (growing.get("status") != "passed" or len(growing_checks) != 290
             or any(row.get("passed") is not True for row in growing_checks)

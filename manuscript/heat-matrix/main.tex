@@ -1,0 +1,318 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,microtype}
+\usepackage[margin=24mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\R}{\mathbb R}
+\newcommand{\F}{F_1}
+\newcommand{\eps}{\epsilon}
+\title{Gaussian pentagon matrix elements:\\a certified heat cutoff and unresolved quadrature}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Working research note --- 1 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+For the specified Kim--Scarinci phase at $\hbar=1$, a punctured
+$H^1$ approximation bounds the heat-cutoff error in a Gaussian
+pentagon matrix element by $0.000982$ at $\epsilon=10^{-10}$.
+An independent integer/rational enclosure certifies the numerical
+constant. Actual FFT and Hermite evaluations give nonzero discrete
+matrix elements, but their quadrature errors remain uncertified.
+A flat control shows why damping-induced residuals alone cannot
+refute the undamped identity. No continuous counterexample or
+physical holographic conclusion is established.
+\end{abstract}
+\section{The precise scope of the certificate}
+Use dimensionless coordinates, $d\mu=dx\,dy/(2\pi^2)$ and
+\[
+ P_j=-\pi i\partial_j,\quad A=\F(X,Y),\quad
+ B=\F(P_y,P_x),\quad M=e^{iXY/\pi},
+\]
+where $\F$ is the bounded paired phase of KS \cite{ks}, defined
+almost everywhere by
+\[
+ \F(x,y)=\Phi^i(x+iy)/\overline{\Phi^i(x+iy)} .
+\]
+The identity being reproduced is $D=AB-BM^{-1}BMA=0$.
+Let $H_\eps=e^{-\eps(P_x^2+P_y^2)}$, $B_\eps=BH_\eps$, and
+$D_\eps=AB_\eps-B_\eps M^{-1}B_\eps MA$.
+The bounded Fourier-kernel formulation uses the Gaussian-group
+framework \cite{gk}; it does not split unbounded chiral factors.
+
+For $f=\sqrt2\,e^{-(x^2+y^2)/(2\pi)}$, normalized in $L^2(\mu)$,
+put $v=MAf$ and $E_\eps(u)=\|(1-H_\eps)u\|$.
+The preceding bounded-word estimate gives
+\[
+ |\langle f,(D-D_\eps)f\rangle|
+ \leq 2E_\eps(f)+E_\eps(v),\qquad
+ E_\eps(f)^2=\frac{2(\pi\eps)^2}{(1+\pi\eps)(1+2\pi\eps)}. \tag{1}
+\]
+Here we bound the last term explicitly.
+All constants are for $\hbar=1$ and this fixed test.
+The certificate concerns (1), not numerical integration of
+$\langle f,D_\eps f\rangle$.
+
+\newpage
+\section{A derivative bound on a punctured box}
+Set $q=e^{-\pi}$ and $a_j=(2j+1)\pi$. The known product formula gives
+\[
+ \F(x,y)=\prod_{j\geq0}g_j(x,y)g_j(y,x),\qquad
+ g_j(x,y)=\frac{1+e^{x-a_j-iy}}{1+e^{x-a_j+iy}}. \tag{2}
+\]
+Each factor has modulus one. For $z=e^{x-a_j+iy}$ a local phase obeys
+\[
+ |\nabla\arg g_j|=2\left|\frac{z}{1+z}\right|.
+\]
+Write $u=x-a_j$ and let $\tau\in[-\pi,\pi]$ be the angular displacement
+from an odd multiple of $\pi$. Then
+\begin{align*}
+ \left|\frac{z}{1+z}\right|^2
+ &=\frac{e^u}{2(\cosh u-\cos\tau)}
+ \leq 1+\frac1{\cosh u-\cos\tau}\\
+ &\leq1+\frac{\pi^2}{2(u^2+\tau^2)}. \tag{3}
+\end{align*}
+The last step uses $\cosh u-1\geq u^2/2$ and
+$1-\cos\tau\geq2\tau^2/\pi^2$.
+
+On $[-9,9]^2$, all $j\geq1$ terms are uniformly controlled by
+\[
+ T_{\rm prod}=
+ \frac{e^{9-3\pi}}{(1-e^{9-3\pi})(1-e^{-2\pi})}.
+\]
+Their radial moduli are less than one, so the geometric denominator
+estimate applies term by term. Let $d_x$ be the distance to the
+nearest $(\pi,(2k+1)\pi)$, and $d_y$ to the nearest
+$((2k+1)\pi,\pi)$. A local phase $\theta=\arg(MF_1)$ satisfies
+\[
+ |\nabla\theta|\leq C+\frac{\sqrt2\pi}{d_x}
+                         +\frac{\sqrt2\pi}{d_y},\qquad
+ C=\frac{9\sqrt2}{\pi}+4+4T_{\rm prod}.
+\]
+Consequently
+\[
+ |\nabla\theta|^2\leq
+ 3C^2+6\pi^2(d_x^{-2}+d_y^{-2}). \tag{4}
+\]
+Only the odd ordinates $\pm\pi,\pm3\pi$ are needed on this box.
+These estimates remove more points than are singular in the combined
+phase, which is harmless for an upper bound. In particular, no
+uncancelled singularity at $(\pi,\pi)$ is asserted.
+
+\newpage
+\section{The punctured $H^1$ approximation}
+Let $a(s)$ equal one on $[-8,8]^2$, taper linearly in each coordinate
+to zero at $|x|=9$ or $|y|=9$, and vanish outside.
+Use holes of radius $\rho=10^{-4}$ around the seven points
+\[
+ {\cal P}=\pi\{(1,-3),(1,-1),(1,1),(1,3),(-3,1),(-1,1),(3,1)\}.
+\]
+At each point take a radial cutoff that is zero up to $\rho$,
+linear up to one at $2\rho$, and one thereafter.
+Their transition annuli are disjoint. Let $b$ be their product
+and $w=abv$. It is compactly supported and in $H^1$.
+The probability density of $|v|^2d\mu$ in ordinary coordinates is
+$\varrho(s)=\pi^{-2}e^{-|s|^2/\pi}$. Define
+\[
+ K(d,R)=\pi^{-2}e^{-(d-R)^2/\pi},\quad
+ T=\frac14 e^{-64/\pi},\quad
+ J_\rho=\sum_{p\in{\cal P}}4\pi\rho^2K(|p|,2\rho).
+\]
+The Gaussian union-tail bound gives mass outside $[-8,8]^2$
+at most $T$, so $\|v-w\|\leq\sqrt{T+J_\rho}$.
+Indeed, bound $\int_L^\infty e^{-x^2/\pi}dx$ by
+$\int_L^\infty(x/L)e^{-x^2/\pi}dx$; see also \cite{dlmf}.
+
+For $R=1/2$, $c=3/5$, $d=|p|$, the inverse-distance integral
+outside the hole is bounded by
+\[
+ I_p=
+ 2\pi K(d,R)\log(R/\rho)
+ +\frac1{(1-c)^2d^2}+\frac{e^{-c^2d^2/\pi}}{R^2}. \tag{5}
+\]
+The first term integrates $\rho<|s-p|<R$.
+For the remainder split at $|s|=cd$: inside, $|s-p|\geq(1-c)d$;
+outside, the radial Gaussian tail is $e^{-c^2d^2/\pi}$.
+Let $\mathcal P'$ be the list $\mathcal P$ with $(\pi,\pi)$ repeated
+once, accounting for both product orientations.
+Equation (4) and the real Gaussian amplitude derivative give
+\[
+ G=
+ \sqrt{\frac2\pi+3C^2+6\pi^2\sum_{p\in{\cal P}'}I_p}
+ +\sqrt{2T}
+ +\sqrt{\sum_{p\in{\cal P}}4\pi K(|p|,2\rho)}
+ \ \geq\ \|\nabla w\|. \tag{6}
+\]
+The last two terms bound the square cutoff and hole cutoffs.
+Since $\|1-H_\eps\|\leq1$ and $(1-e^{-z})^2\leq z$ for $z\geq0$,
+\[
+ E_\eps(v)\leq\sqrt{T+J_\rho}+\pi\sqrt\eps\,G. \tag{7}
+\]
+Thus the original phase need not lie in $H^1$.
+\newpage
+\section{Elementary enclosure and a direct left-word integral}
+Combining (1) and (7) gives
+\[
+ {\cal B}_\eps=
+ 2\sqrt{\frac{2(\pi\eps)^2}{(1+\pi\eps)(1+2\pi\eps)}}
+ +\sqrt{T+J_\rho}+\pi\sqrt\eps\,G. \tag{8}
+\]
+Two independent evaluations are saved: 40/70-digit
+\texttt{mpmath.iv}, and a Python integer/Fraction implementation.
+Since interval support in mpmath is documented as experimental
+\cite{mpmath}, the final strict inequalities also use the latter.
+
+The rational implementation rounds outward to 120-bit dyadic
+endpoints after arithmetic. It uses the alternating Machin formula
+$\pi=16\arctan(1/5)-4\arctan(1/239)$ with next-term tails.
+For $\exp(x)$, range reduction gives $0\leq x\leq1/8$; a degree-24
+Taylor sum has tail at most its next term divided by $1-x/26$.
+Negative arguments use reciprocals.
+For $\log y$, powers of two reduce $y$ to $[1,2]$, then
+\[
+ \log y=2\sum_{j=0}^{39}\frac{z^{2j+1}}{2j+1}+R,\quad
+ z=\frac{y-1}{y+1},\quad
+ 0\leq R\leq\frac{2z^{81}}{81(1-z^2)}.
+\]
+Integer square roots enclose square roots. The final comparisons
+are exact rational endpoint comparisons:
+\begin{center}
+\begin{tabular}{rrr}
+\toprule
+$\eps$ & approximate $\mathcal B_\eps$ & certified strict upper\\
+\midrule
+$10^{-8}$ & .009631522192 & .01\\
+$10^{-10}$ & .000981734116 & .000982\\
+$10^{-12}$ & .000116763225 & .000117\\
+\bottomrule
+\end{tabular}
+\end{center}
+This is an arithmetic certificate for the stated bound, not a
+proof-assistant verification of all software or of the pentagon.
+
+An independent continuous integral for the left word is
+\[
+ \langle f,AB_\eps f\rangle=
+ \frac{2}{1+2\pi\eps}\,
+ \mathbb E\!\left[
+ F_1(S)F_1(T)
+ e^{i(S_xT_y+S_yT_x)/\pi}\right], \tag{9}
+\]
+where $S,T$ are independent centered planar Gaussians with
+covariances $\pi I$ and $\pi I/(1+2\pi\eps)$.
+This follows directly from the Fourier transform of $f$.
+Four-dimensional tensor Gaussian quadrature is evaluated through
+two separable matrix products, at orders 128--768.
+It uses neither periodic FFT nor a truncated Hilbert basis.
+For $F_1=1$, (9) is exactly $(1+\pi\eps)^{-1}$.
+
+\newpage
+\section{Actual regulated matrix elements and controls}
+We evaluated the same $D_\eps$ with periodic FFT and oversampled
+Hermite projection. The heat multiplier is included at both $B$
+occurrences. Heat-induced norm loss is not counted as unitary
+projection leakage. Thirty-seven records retain both complex word
+values, their difference, norms, parameters and scalar product tails.
+
+For $\hbar=1$ and $\eps=10^{-10}$, representative defects are:
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+method/settings & real part & imaginary part\\
+\midrule
+FFT $1024,\ L=20$ & .00391212915 & -.00431820856\\
+FFT $2048,\ L=20$ & .00391230420 & -.00431827530\\
+FFT $2048,\ L=28$ & .00396855893 & -.00434478257\\
+Hermite $64,\ q=256$ & .00391447296 & -.00424922552\\
+Hermite $128,\ q=512$ & .00390554046 & -.00415910020\\
+Hermite $256,\ q=768$ & .00392158989 & -.00415995798\\
+\bottomrule
+\end{tabular}
+\end{center}
+Their moduli are around $.0057$--$.0059$. At fixed $L$, doubling
+FFT size changes the answer much less than changing $L$.
+It primarily extends the momentum range while its momentum spacing
+stays $\pi^2/L$; apparent convergence in size alone cannot control
+periodization and momentum quadrature.
+
+For the left word alone, direct order-768 quadrature at $10^{-10}$
+gives
+\[
+ .914113080399+ .000104730439\,i.
+\]
+FFT $2048,L=20$ gives $.914141192384+.000103846566\,i$, and
+Hermite $256,q=768$ gives $.914061270561+.000098283811\,i$.
+These differences have not been enclosed by rigorous error bounds.
+Direct quadrature with $F=1$ agrees with the exact Gaussian formula
+within $10^{-12}$, and its flat left-word control agrees with FFT
+within $10^{-12}$; these controls do not certify the singular
+paired-phase integrals.
+
+\paragraph{The flat control is essential.}
+For $F_0(x,y)=\exp[-iy\log(1+e^x)/\pi]$, the undamped identity is
+known \cite{ks}. FFT and Hermite give undamped scalar residuals
+below $10^{-12}$. Yet at $\eps=.01$ both give a defect
+approximately $.0334367989605$.
+At $\eps=10^{-10}$ it decreases to $3.6133\,10^{-10}$.
+Damping does not preserve the exact pentagon. A nonzero regulated
+defect without a removal-error estimate proves nothing about $D$.
+
+\newpage
+\section{What is established and what is missing}
+The heat-removal part of the Gaussian matrix-element error is now
+explicitly bounded. At $\eps=10^{-10}$ it is below $.000982$,
+including puncture, spatial-tail, derivative and arithmetic
+contributions. This improves the earlier empirical phase-loss
+estimate without assuming $H^1$ regularity for $MAf$.
+
+The actual regulated words have also been evaluated in two
+discretizations, and their left word has an independent
+continuous-kernel quadrature. The results motivate a more precise
+test, but none supplies a certified enclosure for
+$\langle f,D_\eps f\rangle$. It is invalid to subtract $.000982$
+from the modulus of a tabulated approximation and call the result
+a continuous lower bound.
+
+The next required calculation is a rigorous enclosure
+\[
+ \langle f,D_\eps f\rangle\in {\cal I}_\eps .
+\]
+It must account for scalar product truncation, floating-point
+rounding, Fourier/physical tails, phase neighborhoods and quadrature.
+A true nonzero witness would require
+\[
+ \inf_{z\in{\cal I}_\eps}|z|>{\cal B}_\eps .
+\]
+Failure to meet this inequality is inconclusive, not proof of the
+identity. The current interval is missing.
+
+Prioritize a singularity-aware enclosure of the right word, which
+remains the more difficult integral. The flat and unit controls,
+actual complex word values and failed precision targets must remain
+visible. Further unbounded-factor analytic continuation is not
+needed for this bounded test. Literature may still provide an exact
+kernel that simplifies the integration.
+
+The stage contains 37 matrix rows, 12 direct-left rows, six interval
+evaluations and three rational certificates. The 188 replay checks
+verify saved arithmetic, controls, hashes and exact certificate
+regeneration. They do not certify the discrete matrix values.
+This is a model calculation in a fixed Hilbert representation,
+not an observation, a complete finite-$G$ construction or a no-go
+result for de Sitter holography.
+
+\begin{thebibliography}{9}\small
+\bibitem{ks} H.~K.~Kim and C.~Scarinci,
+\emph{A quantization of moduli spaces of 3-dimensional gravity},
+\href{https://arxiv.org/abs/2112.13329v2}{2112.13329v2},
+\S6.3 and Proposition~6.15.
+\bibitem{gk} S.~Garoufalidis and R.~Kashaev,
+\emph{A meromorphic extension of the 3D index},
+\href{https://arxiv.org/abs/1706.08132v2}{1706.08132v2},
+Appendix~B. The preceding paired-kernel note gives the full dictionary.
+\bibitem{dlmf} NIST Digital Library of Mathematical Functions,
+\href{https://dlmf.nist.gov/7.8}{\S7.8, Gaussian tail inequalities}.
+We use the elementary weaker bound derived in the text.
+\bibitem{mpmath} mpmath 1.3.0 documentation,
+\href{https://mpmath.readthedocs.io/en/1.3.0/contexts.html}
+{Contexts: interval arithmetic}, accessed 1 November 2026.
+\end{thebibliography}
+\end{document}
