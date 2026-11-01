@@ -1,5 +1,11 @@
 # de Sitter 全息研究
 
+## 最新进展：有界配对的 Fourier 字典与热核误差（2026-11-01）
+
+[六页PDF](output/pdf/de-sitter-paired-kernel.pdf)、[LaTeX](manuscript/paired-kernel/main.tex)、[中文记录](notes/stage4-paired-kernel.md)和[文献对照](literature/stage4-paired-kernel-sources.md)已完成。核用GK已有Gaussian-group框架，明确当前测度、符号及三个相近构造的适用差别；给完整有界相位的绝对可积截断核和Gaussian矩阵元误差式，避免拆分无界因子。
+
+240条嵌套Sobol记录、30项字典/控制检查及1290项保存算术/哈希重放完成。热误差的数值仍为经验估计，尚未计算或认证截断五边形矩阵元。下一步直接推进该矩阵元及其严格误差；完整恒等式、物理缝合和全息对偶仍开放，以[NEXT](NEXT.md)为准。
+
 ## 最新进展：字面弱积分与移动极点（2026-11-01）
 
 [五页PDF](output/pdf/de-sitter-weak-continuation.pdf)、[LaTeX](manuscript/weak-continuation/main.tex)、[中文记录](notes/stage4-weak-continuation.md)及[来源核查](literature/stage4-weak-continuation-sources.md)已完成。应用已有 Cauchy 核分布恒等式，明确一个固定紧测试的字面弱积分具有非零参数源项，不能自动等同于全纯延拓。例子在第一象限内部；未测试最终有界配对五边形，也不是 de Sitter 全息否定结论。

@@ -7,10 +7,10 @@
     "Source remains a link, not an archive: dlmf-16.5",
     "Source remains a link, not an archive: dlmf-15.6"
   ],
-  "verified_at_utc": "2026-11-01T00:59:20.956593+00:00",
-  "required_files": 988,
-  "local_links_checked": 1074,
-  "code_and_input_hashes_checked": 1348,
+  "verified_at_utc": "2026-11-01T01:12:21.752625+00:00",
+  "required_files": 1007,
+  "local_links_checked": 1085,
+  "code_and_input_hashes_checked": 1372,
   "scientific_checks": {
     "stage1": {
       "checks": 235,
@@ -766,6 +766,26 @@
       "recorded_hashes": 1
     },
     {
+      "file": "results/stage4/paired-kernel/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 18
+    },
+    {
+      "file": "results/stage4/paired-kernel/heat-study.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 3
+    },
+    {
+      "file": "results/stage4/paired-kernel/diagnostics.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 2
+    },
+    {
+      "file": "results/stage4/paired-kernel/audit.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 1
+    },
+    {
       "file": "results/stage3/cross-limit/comparison.json",
       "kind": "projected comparison model only; not exact 6j convergence or interval certification",
       "checks": 19
@@ -1035,6 +1055,14 @@
       "positive_state_records": 3,
       "scientific_status": "literal local weak pairing is not holomorphic; bounded pentagon not tested",
       "kind": "Standard Cauchy identity applied to a specified local weak prescription; quadrature empirical"
+    },
+    {
+      "stage": "paired-kernel",
+      "checks": 1290,
+      "runs": 240,
+      "nested_prefixes": true,
+      "scientific_status": "bounded-kernel formulation and empirical heat-tail study; pentagon not evaluated",
+      "kind": "Literature dictionary and bounded heat-kernel error functional; QMC not certified"
     },
     {
       "file": "results/stage3/growing-box/diagnostics.json",

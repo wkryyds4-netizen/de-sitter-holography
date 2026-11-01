@@ -1,5 +1,19 @@
 # 下一次从这里继续
 
+## 当前继续位置：2026-11-01 paired-kernel
+
+先读[六页PDF](output/pdf/de-sitter-paired-kernel.pdf)、[中文记录](notes/stage4-paired-kernel.md)、[来源表](literature/stage4-paired-kernel-sources.md)。本轮先核GK1706.08132v2 Appendix B、2306.01331v2§2–3及Kashaev1403.1298v1的L²条件。三个新PDF缓存与六张原文页图留本机，文献公式不作原创。上一weak-continuation已公开提交2b7db5a8783ec511507700aa61dfc1d8c0037697，快照SHA256=b210186472bad8ed68f7d18d3382c5812430ca2da35b72aab890aa3443d1c7de。
+
+明确μ=dxdy/(2π²)、负号交叉Fourier S、gamma=M⁻¹；文献p=−P,q=Q经S*共轭给当前顺序。已有R²例子精确匹配负宇宙常数配对，不能实线性变换为有孤立绕数的当前F。圆周产品连续m因子化是标量恒等式，不继承整数谱算符定理；复数local-field构造的群是R²×Z×T。
+
+新可执行接口：Hε=exp(−επ²(−Δ))，Bε=BHε，Dε=ABε−BεM⁻¹BεMA。其核中间积分绝对收敛，Dε→D强收敛。归一Gaussian f的矩阵元误差≤2Eε(f)+sqrt(1−C2ε)，其中1−Ct=(πt+E Lt)/(1+πt)，Lt是两有界相位之差模平方的一半，0≤Lt≤2。协方差和归一见稿第5页；不需H¹。真实期望才给严格上界。
+
+已完成240条嵌套Sobol记录（4种子×4模型×5ε×3前缀），30项诊断、1290项算术/哈希重放。h=1、ε=1e−6经验误差量范围.00311482–.00318232；不能称认证上界或与旧残差拼成反例。本轮没有计算Dε矩阵元。81770已明确exit0，无活跃计算；不重跑run/check/audit主程序覆盖输出，只读audit(root)可重放。
+
+下一科研计算：在h=1、明确Gaussian测试下，先选择可认证的ε和求积表示，计算〈f,Dεf〉；同时严格界定Gaussian相位损失期望，分离尾、所有相关零极点邻域、产品截断和舍入。若认证模不超误差则保留无判定；若超出才得到该表示的连续下界。继续搜索已知有界核公式可简化这一计算，不能凭同名函数移植定理。后续实际观察者插入、反射、质量、Gram缝合及有限G仍未解决，goal active。
+
+六页稿已双遍编译、桌面success并逐页核版。阶段证据和第57份唯一快照标签2026-11-01-paired-kernel以实际文件核查；此前56份ZIP与旧科学文件原字节保全。公开授权持续，私人约定、journal、第三方全文、tmp和恢复分支不上传，不新建代理。以下均为历史。
+
 ## 当前继续位置：2026-11-01 weak-continuation
 
 先读[五页PDF](output/pdf/de-sitter-weak-continuation.pdf)、[中文推导](notes/stage4-weak-continuation.md)与[来源核查](literature/stage4-weak-continuation-sources.md)。本轮核用 KS v2 的产品/极点，以及 Ramond version 2.06 印刷p87的标准 Cauchy 核分布公式。核心是已有定理的参数匹配，不作原创性声明。

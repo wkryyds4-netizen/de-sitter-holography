@@ -125,6 +125,11 @@
     "sha256": "372e587d8a291d99dd5a496ca8d2430aed5a625ef008e136311cd47623ac5dc5"
   },
   {
+    "file": "code/audit_paired_kernel.py",
+    "bytes": 3186,
+    "sha256": "a64f57ab09ad6f77232836de7edcef8b0dcf6e08f369178a30e342c595d874dc"
+  },
+  {
     "file": "code/audit_principal_eikonal.py",
     "bytes": 3784,
     "sha256": "0b17280ba3d9d01b916661174f2f6546d3d94a4c2bce376f187defcc08cb7fe1"
@@ -290,6 +295,11 @@
     "sha256": "2188ef5d43db18cbedb8c2b3f36003d36f3751e4d49bbc51c5d25c40b31f06e1"
   },
   {
+    "file": "code/build_paired_kernel.ps1",
+    "bytes": 1142,
+    "sha256": "cccc056f07c2257367696bb171630f75823bfe2efadcd479c4f2673040405f67"
+  },
+  {
     "file": "code/build_pairing_note.ps1",
     "bytes": 1144,
     "sha256": "872995de04a8556e1c2e3f539901bda4bea0e968e6b12c45b49d268d4b1f2e07"
@@ -378,6 +388,11 @@
     "file": "code/check_mass_filter.py",
     "bytes": 4631,
     "sha256": "b76be45bf8cfe8da28ae19868fa02f36974e39e3b663701c3865dc763ae99dd4"
+  },
+  {
+    "file": "code/check_paired_kernel.py",
+    "bytes": 3781,
+    "sha256": "fa926035a49770dd1fc0f4c9f795b0335120ea71187128d565d66b76c9d6f173"
   },
   {
     "file": "code/check_principal_eikonal.py",
@@ -665,6 +680,11 @@
     "sha256": "7f62a2156c5c0dbd169adacd8a00a6007a22ca13a03e8ffeab7de2b931a4567e"
   },
   {
+    "file": "code/paired_kernel_heat.py",
+    "bytes": 1244,
+    "sha256": "dddd5534d595349efd2f1d914a106fb566962a93ff9b63c9f35c33ee18c00342"
+  },
+  {
     "file": "code/positive_weak_form.py",
     "bytes": 2223,
     "sha256": "261c0e7c237fd120dd2e2b618a986ccd28ba575366377ea178d1925edd70be2d"
@@ -681,8 +701,8 @@
   },
   {
     "file": "code/project_audit.py",
-    "bytes": 157907,
-    "sha256": "4af9b1a7e3963c132a29abd81955e89553b8368b01392504eadb41b39a0e9eb0"
+    "bytes": 160558,
+    "sha256": "ea1624bb608a5a9ec923e9bc4bed44e196a59337557c5bf090f532f7e9086c2a"
   },
   {
     "file": "code/quantized_observer.py",
@@ -818,6 +838,11 @@
     "file": "code/record_mass_filter.py",
     "bytes": 4020,
     "sha256": "6dee2b62bf23c359eb63fe9857a1f8b919eaf453735dec71069e9d37c25eec05"
+  },
+  {
+    "file": "code/record_paired_kernel.py",
+    "bytes": 4061,
+    "sha256": "6ceb3132b650017b1f7520644d1318fe5188622bfadd6b396a816701aafdf1c1"
   },
   {
     "file": "code/record_principal_eikonal.py",
@@ -978,6 +1003,11 @@
     "file": "code/run_observer_fourpoint.py",
     "bytes": 10809,
     "sha256": "38ad0df557ce46ba7baf9509e2999b89cbb4fc1d631f33be697bc5db5aba5cec"
+  },
+  {
+    "file": "code/run_paired_kernel_heat.py",
+    "bytes": 2340,
+    "sha256": "894ba3302f6a14f64b51208de8051f0e6afd69aa3380e0e5acbf42e7b3ebc252"
   },
   {
     "file": "code/run_principal_eikonal.py",
@@ -1256,8 +1286,8 @@
   },
   {
     "file": "journal/2026-11-01.md",
-    "bytes": 7529,
-    "sha256": "e3a9da1ef55d366b0b469b0660bc6e190feec1d214cb72f85836ed27ee807d58"
+    "bytes": 9646,
+    "sha256": "5a06f6cdd99a56e194db34376f0bcc4b83a26647e3f99b94d0cd42ea5b151533"
   },
   {
     "file": "literature/flip-proof-dependency-map.md",
@@ -1483,6 +1513,11 @@
     "file": "literature/stage4-microscopic-match.md",
     "bytes": 10366,
     "sha256": "ee6ff9b9e92608a48ba10cf285d25f571a82fab8c64a5af07caa4d170802b1ec"
+  },
+  {
+    "file": "literature/stage4-paired-kernel-sources.md",
+    "bytes": 2782,
+    "sha256": "ef1d7f39d9dc288d4d4f80ac5b6efde26a5854d7a25b8ba1cc0edb7f599b42b5"
   },
   {
     "file": "literature/stage4-principal-eikonal-sources.md",
@@ -1775,6 +1810,11 @@
     "sha256": "6c554d3ae265e49cf3427b6c6cc89132246a7cb4919f7d3f0ad3cd0116c79912"
   },
   {
+    "file": "manuscript/paired-kernel/main.tex",
+    "bytes": 13270,
+    "sha256": "9517f0cd0e4720c8e044a0b101e6bafb059b3860e80cb10eee9de19f8d571e23"
+  },
+  {
     "file": "manuscript/physical.tex",
     "bytes": 8738,
     "sha256": "e4a6ed8a83ee92c1e74def3662acf25f7c5467a3b0a0eae5c3ba905fb9b37134"
@@ -1901,8 +1941,8 @@
   },
   {
     "file": "NEXT.md",
-    "bytes": 37553,
-    "sha256": "bacbb1eb3ed7f144b423160673d12a2101e932308fb950a81328b2dedd4efb4e"
+    "bytes": 40057,
+    "sha256": "cdff20fd5f90dd57f9f0fdc8e33d721d11fa990380ffb755d2de7c6a8289467f"
   },
   {
     "file": "notes/math-independent.md",
@@ -2260,6 +2300,11 @@
     "sha256": "b1de8b888ed83e4e109aa45cd4d9731c6053d88807e824413da11b01dd030053"
   },
   {
+    "file": "notes/stage4-paired-kernel.md",
+    "bytes": 3678,
+    "sha256": "b91e1dd6256e7613ae300717319cccbbe6ffdd61d07684af00e1ca78eddddb37"
+  },
+  {
     "file": "notes/stage4-principal-eikonal.md",
     "bytes": 5523,
     "sha256": "b320a7103cc742cebd9a27a1da21d699a4fd2560152e400e39a4b312f604beaf"
@@ -2460,6 +2505,11 @@
     "sha256": "da40aec8613ce630680fc51e2b0ae3029b6e176a0591e7a5c55bfabadf5912a3"
   },
   {
+    "file": "output/pdf/de-sitter-paired-kernel.pdf",
+    "bytes": 324724,
+    "sha256": "c8d6e2f4f7f0c7525f2f7b60c01ec96184e17cde6cd3e596b675fbab19e06f64"
+  },
+  {
     "file": "output/pdf/de-sitter-principal-eikonal.pdf",
     "bytes": 358807,
     "sha256": "77dabfb0c2ba05f517a35fdba37d5e85f53d1bfe56650ca7fdeff6fecbcf87c9"
@@ -2551,8 +2601,8 @@
   },
   {
     "file": "PLAN.md",
-    "bytes": 45421,
-    "sha256": "b05799b4dc684bb63df5b448e28f3d7ecd077c77a64c0182785f60e101ad140d"
+    "bytes": 46032,
+    "sha256": "363ca7f6d4926368693c71afb44c694c9d278ccf227c4d5b2760be83f6dff0a3"
   },
   {
     "file": "PROJECT.md",
@@ -2561,8 +2611,8 @@
   },
   {
     "file": "README.md",
-    "bytes": 40045,
-    "sha256": "94a5c1d376278cd72037b4a7abc2ccf1868480077f885d7cc3a8226597e543be"
+    "bytes": 40879,
+    "sha256": "3ceeae4047a8e082ddf6fdcd1f41b6d67e17120c1ec6a201f07b92e9eb088fe2"
   },
   {
     "file": "REPOSITORY.md",
@@ -2641,8 +2691,8 @@
   },
   {
     "file": "results/project-audit.json",
-    "bytes": 37685,
-    "sha256": "82b80e2a625840d40247357634b24bfe26f7e861fc13f1288b9148a5a23d24c4"
+    "bytes": 38647,
+    "sha256": "ee84cdc1760b4aa52ecaa798586b0ca96c3ec5e75511a13347b5056129dad9dd"
   },
   {
     "file": "results/stage2/errors.csv",
@@ -4065,6 +4115,51 @@
     "sha256": "884c71ba6a2a89ac445b3bb4215cf5c0932d632512c9c67aa1f0c6ca5b37557f"
   },
   {
+    "file": "results/stage4/paired-kernel/audit.json",
+    "bytes": 407,
+    "sha256": "73c511dc2d46cbd59c8a1f4737b8ad0d2d0471fc6bbebfa2cb0c8a7f098fafb7"
+  },
+  {
+    "file": "results/stage4/paired-kernel/build-review.md",
+    "bytes": 874,
+    "sha256": "6a22d9f1d4281bb93103073eb47d9178863f5173fe5b179b6c4a4d6e35fea2b4"
+  },
+  {
+    "file": "results/stage4/paired-kernel/diagnostics.json",
+    "bytes": 13893,
+    "sha256": "f50766effcb7bb87c595e9fea46621b63fd4726b724c53b7cea6053413643ead"
+  },
+  {
+    "file": "results/stage4/paired-kernel/evidence.json",
+    "bytes": 2673,
+    "sha256": "7bfee476017bbd39118b29326ddf7daa073ede1497370dcfb40cab6027ecfcc9"
+  },
+  {
+    "file": "results/stage4/paired-kernel/heat-runs.jsonl",
+    "bytes": 139719,
+    "sha256": "2cc310420e521918e63af34a8bca4dea68fc99c6c710bbe8b1a7e812c4bfb9df"
+  },
+  {
+    "file": "results/stage4/paired-kernel/heat-study.json",
+    "bytes": 200357,
+    "sha256": "230635889477096d9936e86612e1df466e4f4397e81dbbf8d0cc5ea477f64980"
+  },
+  {
+    "file": "results/stage4/paired-kernel/main.log",
+    "bytes": 24103,
+    "sha256": "4043478407731a335e3e2803488946c0d07941c4a49a5d4b7e1904a9624d697a"
+  },
+  {
+    "file": "results/stage4/paired-kernel/preservation.json",
+    "bytes": 8673,
+    "sha256": "0f41fb40ffca6552ab4c550b5089570b8df7aaad9d694148d0d3d3841c89f107"
+  },
+  {
+    "file": "results/stage4/paired-kernel/source-record.json",
+    "bytes": 1238,
+    "sha256": "eebf7a725c8163846965f0460010308aeb537f196f269848cdf86e0a9b4d63f6"
+  },
+  {
     "file": "results/stage4/principal-eikonal/audit.json",
     "bytes": 1227,
     "sha256": "faa108f3c3209cf44f379f870c627fa823019970269371f7ae11041e4868e6f9"
@@ -4775,6 +4870,16 @@
     "sha256": "e909062d02600bbf1ab5109661619f0e7556960c69d38600de69df1a3bd928b5"
   },
   {
+    "file": "sources/garoufalidis-kashaev-1706.08132v2.pdf",
+    "bytes": 406502,
+    "sha256": "edc59e04a8d4feb90ea820c367cffeef12dd6d98fcab510e972f3a3f17455a9f"
+  },
+  {
+    "file": "sources/garoufalidis-kashaev-2306.01331v2.pdf",
+    "bytes": 479391,
+    "sha256": "b7619f0482c77dd89212cf7dafc803373e8098c4b27633fbc68d66f707b3bf63"
+  },
+  {
     "file": "sources/germain-pusateri-rousset-2018.pdf",
     "bytes": 821965,
     "sha256": "d17f1b53d998a01d4ae007f1765597e23e49c311ce0608d24536206a74e3b58c"
@@ -4808,6 +4913,11 @@
     "file": "sources/karateev-kravchuk-simmons-duffin-1809.05111v1.html",
     "bytes": 3083289,
     "sha256": "4f16f5d8d3048611f1786d4cc414aaf175719539b8e33e0097bb57e22ebc4a48"
+  },
+  {
+    "file": "sources/kashaev-beta-1403.1298v1.pdf",
+    "bytes": 122883,
+    "sha256": "6aa81638535737691e1505c8a3fc010d7e354096e8e9f0ecdd73bc399afa92f1"
   },
   {
     "file": "sources/kim-pseudo-kahler-2112.13962v2.pdf",

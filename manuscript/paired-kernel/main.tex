@@ -1,0 +1,326 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,microtype}
+\usepackage[margin=24mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\R}{\mathbb R}
+\newcommand{\T}{\mathbb T}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\F}{F_\hbar}
+\newcommand{\dd}{\,d}
+\title{Paired quantum dilogarithms:\\source dictionary and bounded kernel tests}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Working research note --- 1 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+Existing Gaussian-group Fourier identities offer a direct language for
+the bounded paired pentagon. We match their measure and sign conventions,
+distinguish three nearby constructions, and give a heat-regularized
+kernel test without unbounded chiral factors. Its matrix-element error
+reduces to a positive Gaussian phase-loss expectation. An empirical
+Sobol study explores the size of that functional, but does not certify
+it or evaluate the pentagon defect. The original bounded identity and
+the physical observer gluing problem remain open in this project.
+\end{abstract}
+\section{Literature first: what can be imported}
+The scalar function under study is the Kim--Scarinci (KS) phase
+\cite{ks}
+\[
+ \F(x,y)=
+ \frac{\Phi^{i\hbar}(x+i\hbar y)}
+ {\overline{\Phi^{i\hbar}(x+i\hbar y)}},\qquad \hbar>0 .
+\]
+It has modulus one almost everywhere, with arbitrary values assigned
+at the discrete exceptional points. Coordinates are dimensionless.
+The claim being reproduced is KS Proposition~6.15, in the representation
+\[
+ Q=(X,Y),\quad P=(P_y,P_x),\quad P_j=-\pi i\partial_j,\quad
+ A=\F(Q),\quad B=\F(P),\quad M=e^{iXY/\pi},
+\]
+\[
+ AB=BM^{-1}BMA. \tag{1}
+\]
+The components of each vector strongly commute. The shift in the middle
+factor is the self-adjoint closure specified by
+$M^{-1}PM=P+Q$.
+
+Garoufalidis--Kashaev (GK), Appendix~B, equations (136)--(138)
+\cite{index}, provides the bounded-operator/Fourier-kernel equivalence
+on a Gaussian group. GK's later Remark~2.6 restates the distributional
+version \cite{local}. These results give a framework, not an automatic
+proof that our particular function satisfies its required identity.
+Kashaev's earlier Lemma~1 and Theorem~1 have square-integrability
+hypotheses \cite{beta}; a unit-modulus function on $\R^2$ is not in
+$L^2(\R^2)$. A damping factor supplies integrability but generally
+destroys the exact pentagon, so it cannot be inserted into those
+theorems as though the hypothesis were unchanged.
+
+\newpage
+\section{The precise Gaussian group and nearby examples}
+Use the additive group $G=\R^2$ with
+\[
+ \gamma(s)=e^{-is_xs_y/\pi},\qquad
+ \chi(s,t)=e^{-i(s_xt_y+s_yt_x)/\pi},\qquad
+ d\mu(s)=\frac{ds_x\,ds_y}{2\pi^2}.
+\]
+The negative-sign Fourier transform $S$ with kernel $\chi$ is unitary,
+$S^2f(s)=f(-s)$, and its Gaussian integral is $1$ in the oscillatory
+sense. Thus $SQS^*=-P$. The source convention is
+$f(q)=f(Q)$, $f(p)=Sf(Q)S^*=f(-P)$ and
+$f(p+q)=\gamma(Q)^*f(p)\gamma(Q)=f(Q-P)$.
+Conjugating the source pentagon by $S^*$ gives exactly (1).
+
+With $k=S^*\F$ as a tempered distribution, the matched version
+of GK's equation (137) is
+\[
+ k(a)k(b)\chi(a,b)=
+ \int_G k(b-c)k(c)k(a-c)\gamma(c)\,d\mu(c). \tag{2}
+\]
+Equation (2) is the identity to establish, not an ordinary absolutely
+convergent integral already known for this $k$.
+
+\paragraph{The known real-plane example.}
+GK Example~2.4 uses
+$\varphi_b(\dot x+\ddot x/2)/\varphi_b(\dot x-\ddot x/2)$, with the
+usual Faddeev convention. For real $b=\sqrt\hbar$, set
+\[
+ \dot x=\frac{x}{2\pi\sqrt\hbar},\qquad
+ \ddot x=-\frac{\sqrt\hbar\,y}{\pi}.
+\]
+The absolute Jacobian is $1/(2\pi^2)$ and
+$e^{2\pi i\dot x\ddot x}=\gamma(x,y)$.
+Since the KS convention is
+$\Phi^\hbar(z)=\varphi_{\sqrt\hbar}(z/(2\pi\sqrt\hbar))^{-1}$,
+this gives the KS \emph{negative}-cosmological-constant pairing
+\[
+ \frac{\Phi^\hbar(x+\hbar y)}{\Phi^\hbar(x-\hbar y)}.
+\]
+Replacing $\hbar$ by $i\hbar$ is not a real change of Haar coordinates.
+The real-parameter ratio is smooth on the real plane, whereas our
+phase has isolated nonremovable windings. Thus a real invertible
+linear substitution, even with a smooth nonvanishing phase, cannot
+identify these two multipliers. This does not exclude a more general
+unitary equivalence.
+
+\paragraph{The local-field construction.}
+GK Definition~3.1 and Theorem~3.3 use $B=F^\times$,
+$G=\widehat B\times B$, and $\varphi(\alpha,z)=\alpha(1+z)$.
+For $F=\mathbb C$ this group is $\R^2\times\Z\times\T$, not
+the additive complex plane. Lemma~3.2 gives a Fourier expression
+away from $z=1$ and explicitly retains its distributional qualification
+there. The theorem does not identify this construction with $\F$.
+
+\newpage
+\section{A scalar cylinder dictionary is not an operator dictionary}
+For real $0<q<1$, write
+\[
+ C_q(\theta,m)=
+ \frac{(-q^{1-m}e^{i\theta};q^2)_\infty}
+      {(-q^{1-m}e^{-i\theta};q^2)_\infty}.
+\]
+For integer $m$, this is the $\T\times\Z$ phase in GK
+Appendix~A, equations (129)--(131) \cite{index}. Away from exceptional
+arguments, the same product is a scalar function of real $m$.
+The KS product formula gives the exact scalar factorization
+\[
+ \F(x,y)=
+ \frac{C_{\widetilde q}(-x/\hbar,\hbar y/\pi)}
+      {C_q(\hbar y,x/(\pi\hbar))},\qquad
+ q=e^{-\pi\hbar},\quad\widetilde q=e^{-\pi/\hbar}. \tag{3}
+\]
+Both second arguments in (3) are generally noninteger.
+
+The known inversion formula
+\[
+ C_q(\theta,m)C_q(-\theta,-m)=e^{im\theta},\qquad m\in\Z,
+\]
+cannot hold for arbitrary real $m$ as a function on the circle.
+The left side is $2\pi$-periodic, whereas the proposed right side
+has monodromy $e^{2\pi im}$. Passing to the real universal cover
+changes the group and its Fourier dual; it does not extend the
+original operator theorem without further work. Likewise, integer
+radial spectra in the quantum-$az+b$ theory cannot silently be
+replaced by the full complex spectrum of $e^{X+i\hbar Y}$.
+
+The \emph{combined} phase in (3) still has the correct inversion,
+\[
+ \F(x,y)\F(-x,-y)=e^{-ixy/\pi}. \tag{4}
+\]
+It follows directly from KS's scalar inversion formula, including
+its real constant at parameter $i\hbar$. Thus the individual
+continuous-index failure does not prove a failure of the paired
+pentagon. Sixty-digit checks of nine generic $(\hbar,x,y)$ points
+verify (3) and (4); four integer cylinder controls and three
+noninteger monodromy controls are also saved.
+
+\paragraph{What the search has established.}
+There is an applicable \emph{formulation} of the bounded identity.
+The real-plane, cylinder, and local-field examples do not yet
+supply its missing proof for our phase in this representation.
+These are identified hypothesis differences, not a claim that
+all relevant literature has been exhausted. We do not claim a
+new general quantum-dilogarithm theorem.
+
+\newpage
+\section{An absolutely defined regulated kernel}
+Let
+\[
+ H_\epsilon=e^{-\epsilon(P_x^2+P_y^2)},\quad
+ B_\epsilon=BH_\epsilon,\quad
+ k_\epsilon=S^*(e^{-\epsilon|s|^2}\F(s)),\qquad\epsilon>0.
+\]
+The Fourier integral defining $k_\epsilon$ is absolutely convergent,
+and Plancherel gives
+\[
+ \|k_\epsilon\|_\infty\leq\frac1{2\pi\epsilon},
+ \qquad
+ \|k_\epsilon\|_{L^2(\mu)}^2=\frac1{4\pi\epsilon}.
+\]
+The convolution kernel of
+$D_\epsilon=AB_\epsilon-B_\epsilon M^{-1}B_\epsilon MA$ is therefore
+\begin{align*}
+ D_\epsilon(s,t)
+ &=\F(s)k_\epsilon(s-t)\\
+ &\quad-M(t)\F(t)\int_G
+ k_\epsilon(s-u)\overline{M(u)}k_\epsilon(u-t)\,d\mu(u).
+\end{align*}
+The inner integral is absolutely convergent by Cauchy--Schwarz,
+bounded in modulus by $1/(4\pi\epsilon)$. For Schwartz input and
+output tests the remaining double pairing is also absolutely
+convergent. This does not authorize expanding every Fourier
+integral and exchanging all oscillatory integrations at once.
+
+Dominated convergence in the momentum spectral measure gives
+$B_\epsilon\to B$ strongly. Products are uniformly bounded, so
+$D_\epsilon\to D=AB-BM^{-1}BMA$ strongly. No unbounded chiral
+factor or fixed-vector holomorphic continuation is used.
+
+For normalized $f,g$, put $v=MAf$ and
+$E_\epsilon(w)=\|(1-H_\epsilon)w\|$. A telescoping difference and
+Cauchy--Schwarz yield the useful matrix-element bound
+\[
+ |\langle g,(D-D_\epsilon)f\rangle|
+ \leq E_\epsilon(f)+E_\epsilon(g)+E_\epsilon(v). \tag{5}
+\]
+For example, moving the outer $B-B_\epsilon$ to the output test
+costs $E_\epsilon(g)$, since $B$ commutes with $H_\epsilon$ and is
+unitary. The inner difference costs $E_\epsilon(MAf)$.
+All three errors tend to zero for every fixed $L^2$ test.
+One must still compute and control a matrix element of $D_\epsilon$;
+its value need not be zero even if $D=0$.
+
+\newpage
+\section{Gaussian reduction of the only rough heat tail}
+In $L^2(\mu)$ take $f=g=f_0=\sqrt2\,e^{-|s|^2/(2\pi)}$,
+so $\|f_0\|=1$. Then
+\[
+ E_\epsilon(f_0)^2
+ =\frac{2(\pi\epsilon)^2}{(1+\pi\epsilon)(1+2\pi\epsilon)}.
+\]
+For $v(s)=r(s)f_0(s)$, $r=M\F$, define the real heat overlap
+$C_t=\langle v,H_t v\rangle$. In ordinary coordinates the heat
+kernel is $(4\pi^3t)^{-1}e^{-|s-s'|^2/(4\pi^2t)}$.
+Using $U=(s+s')/2$, $Z=s-s'$, Gaussian completion gives
+\[
+ C_t=\frac1{1+\pi t}\,
+ \mathbb E\!\left[
+ \overline{r(U+Z/2)}r(U-Z/2)\right], \tag{6}
+\]
+where $U,Z$ are independent centered two-dimensional Gaussians with
+\[
+ \operatorname{Cov}(U)=\frac\pi2 I,\qquad
+ \operatorname{Cov}(Z)=\frac{2\pi^2t}{1+\pi t}I .
+\]
+Symmetry makes the expectation real. An explicitly nonnegative
+form, useful near cancellation, is
+\[
+ 1-C_t=\frac{\pi t+\mathbb E L_t}{1+\pi t},\qquad
+ L_t=\frac12|r(U+Z/2)-r(U-Z/2)|^2\in[0,2]. \tag{7}
+\]
+The spectral inequality $(1-a)^2\leq1-a^2$, $0\leq a\leq1$, proves
+\[
+ E_\epsilon(v)^2\leq1-C_{2\epsilon}.
+\]
+Combining it with (5) yields the exact bound functional
+\[
+ {\cal E}_\epsilon=
+ 2\sqrt{\frac{2(\pi\epsilon)^2}
+ {(1+\pi\epsilon)(1+2\pi\epsilon)}}+\sqrt{1-C_{2\epsilon}}. \tag{8}
+\]
+No $H^1$ assumption on the vortex phase is needed.
+A numerical estimate of (7) is not itself a certified upper bound.
+
+As a separate analytic control, remove $F$ but retain $r=M$.
+Integrating the Gaussian bilinear phase in (6) gives
+$C_t=(1+2\pi t)^{-1}$. If $r=1$, instead
+$C_t=(1+\pi t)^{-1}$, which recovers the exact vacuum formula above.
+These controls test the measure, covariance and chirp normalization.
+
+\newpage
+\section{Exploration, evidence and the next decision}
+We used four scrambled Sobol seeds, $2^{16}$ four-dimensional
+normal samples per seed, three paired cases
+$\hbar=.5,1,2$, the analytic chirp control, and five
+$\epsilon$ values from $10^{-2}$ to $10^{-6}$.
+Prefixes $2^{12},2^{14},2^{16}$ give 240 saved records.
+Prefixes and settings reuse base nodes; they are not independent
+replications. Seeds, versions, input hashes, prefix moments and
+counts of large phase losses are saved.
+
+For $\hbar=1$, the four fine-grid estimates of (8) span:
+\begin{center}
+\begin{tabular}{rcc}
+\toprule
+$\epsilon$ & minimum & maximum\\
+\midrule
+$10^{-2}$ & .376212 & .376429\\
+$10^{-3}$ & .106305 & .106500\\
+$10^{-4}$ & .0319381 & .0324646\\
+$10^{-5}$ & .00991042 & .0101192\\
+$10^{-6}$ & .00311482 & .00318232\\
+\bottomrule
+\end{tabular}
+\end{center}
+At $10^{-6}$ the ranges for $\hbar=.5,2$ are approximately
+$.00307294$--$.00307389$ and $.00307308$--$.00307398$.
+The chirp-only control has maximum relative deviation
+$2.80\,10^{-4}$ at the fine order. Thirty scalar, symbolic and
+control checks pass. These figures explore feasibility only.
+The larger replicate spread at $\hbar=1$ is a reason to resolve
+rare phase-loss regions, not evidence of a certified error bar.
+
+\paragraph{Next scientific calculation.}
+Use the matched bounded kernel to compute one specified
+$\langle f_0,D_\epsilon f_0\rangle$ with certified integration error,
+and separately bound the expectation in (7). Split off Gaussian
+tails and neighborhoods of the known phase singularities; their
+contribution is controlled by $0\leq L_t\leq2$.
+Only a certified modulus exceeding the sum of those errors can
+yield a continuous nonzero defect. If it does not, retain that
+outcome and refine the representation/identity comparison.
+The earlier finite-grid residuals and the present empirical
+heat estimates cannot be combined into a counterexample.
+
+This supplies an executable route around the unbounded-factor
+difficulty, using known Fourier and heat-semigroup facts.
+It does not resolve the final pentagon, provide observer mass labels
+or construct the finite-$G$ physical gluing measure.
+
+\begin{thebibliography}{9}\small
+\bibitem{ks} H.~K.~Kim and C.~Scarinci,
+\emph{A quantization of moduli spaces of 3-dimensional gravity},
+\href{https://arxiv.org/abs/2112.13329v2}{2112.13329v2},
+\S6.3, Proposition~6.15.
+\bibitem{index} S.~Garoufalidis and R.~Kashaev,
+\emph{A meromorphic extension of the 3D index},
+\href{https://arxiv.org/abs/1706.08132v2}{1706.08132v2},
+Appendices A--B, equations (129)--(138).
+\bibitem{local} S.~Garoufalidis and R.~Kashaev,
+\emph{Quantum dilogarithms over local fields and invariants of 3-manifolds},
+\href{https://arxiv.org/abs/2306.01331v2}{2306.01331v2},
+Example~2.4, Remark~2.6, Definition~3.1, Lemma~3.2, Theorem~3.3.
+\bibitem{beta} R.~Kashaev, \emph{On beta pentagon relations},
+\href{https://arxiv.org/abs/1403.1298v1}{1403.1298v1},
+Lemma~1 and Theorem~1.
+\end{thebibliography}
+\end{document}

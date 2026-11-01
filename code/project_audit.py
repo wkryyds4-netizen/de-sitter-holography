@@ -1021,6 +1021,20 @@ CG_ROOT_HASH_RECORDS[WEAK_CONTINUATION_DIR+'diagnostics.json'] = {'code/check_we
     WEAK_CONTINUATION_DIR+'study.json',WEAK_CONTINUATION_DIR+'positive-form.json'}
 CG_ROOT_HASH_RECORDS[WEAK_CONTINUATION_DIR+'audit.json'] = {'code/audit_weak_continuation.py'}
 
+PAIRED_KERNEL_DIR = 'results/stage4/paired-kernel/'
+CG_ROOT_HASH_RECORDS[PAIRED_KERNEL_DIR+'evidence.json'] = {
+    'code/'+p for p in ['paired_kernel_heat.py','run_paired_kernel_heat.py',
+        'check_paired_kernel.py','audit_paired_kernel.py','build_paired_kernel.ps1','record_paired_kernel.py']
+} | {'manuscript/paired-kernel/main.tex','output/pdf/de-sitter-paired-kernel.pdf',
+    'notes/stage4-paired-kernel.md','literature/stage4-paired-kernel-sources.md'
+} | {PAIRED_KERNEL_DIR+p for p in ['heat-study.json','heat-runs.jsonl','diagnostics.json',
+    'audit.json','main.log','build-review.md','preservation.json','source-record.json']}
+REQUIRED.extend(sorted(CG_ROOT_HASH_RECORDS[PAIRED_KERNEL_DIR+'evidence.json']))
+REQUIRED.append(PAIRED_KERNEL_DIR+'evidence.json')
+CG_ROOT_HASH_RECORDS[PAIRED_KERNEL_DIR+'heat-study.json'] = {'code/paired_kernel_heat.py','code/run_paired_kernel_heat.py','code/unitary_flip.py'}
+CG_ROOT_HASH_RECORDS[PAIRED_KERNEL_DIR+'diagnostics.json'] = {'code/check_paired_kernel.py',PAIRED_KERNEL_DIR+'heat-study.json'}
+CG_ROOT_HASH_RECORDS[PAIRED_KERNEL_DIR+'audit.json'] = {'code/audit_paired_kernel.py'}
+
 def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
@@ -2251,6 +2265,28 @@ def main():
             kind='Standard Cauchy identity applied to a specified local weak prescription; quadrature empirical'))
     except (KeyError, TypeError, ValueError, ArithmeticError) as exc:
         errors.append('malformed weak-continuation records: '+str(exc))
+    try:
+        from audit_paired_kernel import audit as replay_paired_kernel
+        replay = replay_paired_kernel(ROOT)
+        errors.extend('paired-kernel: '+e for e in replay['errors'])
+        if replay['status'] != 'passed' or replay['checks'] != 1290:
+            errors.append('paired-kernel: incomplete saved-arithmetic replay')
+        if replay['scientific_status'] != 'bounded-kernel formulation and empirical heat-tail study; pentagon not evaluated':
+            errors.append('paired-kernel: scientific status lost')
+        source = read_json(ROOT/PAIRED_KERNEL_DIR/'source-record.json')
+        if len(source['sources']) != 4:
+            errors.append('paired-kernel: source count')
+        for cache in source['sources']:
+            if digest(ROOT/cache['file']) != cache['sha256']:
+                errors.append('paired-kernel: source mismatch '+cache['file'])
+        for file, expected in source['prior_evidence'].items():
+            if digest(ROOT/file) != expected:
+                errors.append('paired-kernel: prior evidence mismatch '+file)
+        supporting_records.append(dict(stage='paired-kernel',checks=1290,runs=240,nested_prefixes=True,
+            scientific_status=replay['scientific_status'],
+            kind='Literature dictionary and bounded heat-kernel error functional; QMC not certified'))
+    except (KeyError, TypeError, ValueError, ArithmeticError) as exc:
+        errors.append('malformed paired-kernel records: '+str(exc))
     growing_checks = growing.get("checks", [])
     if (growing.get("status") != "passed" or len(growing_checks) != 290
             or any(row.get("passed") is not True for row in growing_checks)

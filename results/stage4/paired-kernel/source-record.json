@@ -1,0 +1,28 @@
+{
+  "sources": [
+    {
+      "file": "sources/kim-scarinci-2112.13329.pdf",
+      "url": "https://arxiv.org/pdf/2112.13329v2",
+      "sha256": "131a68f66c7c8521c902bc38b9883620d28a579dceae2dc2096ff1bf4de0b26c"
+    },
+    {
+      "file": "sources/garoufalidis-kashaev-2306.01331v2.pdf",
+      "url": "https://arxiv.org/pdf/2306.01331v2",
+      "sha256": "b7619f0482c77dd89212cf7dafc803373e8098c4b27633fbc68d66f707b3bf63"
+    },
+    {
+      "file": "sources/garoufalidis-kashaev-1706.08132v2.pdf",
+      "url": "https://arxiv.org/pdf/1706.08132v2",
+      "sha256": "edc59e04a8d4feb90ea820c367cffeef12dd6d98fcab510e972f3a3f17455a9f"
+    },
+    {
+      "file": "sources/kashaev-beta-1403.1298v1.pdf",
+      "url": "https://arxiv.org/pdf/1403.1298v1",
+      "sha256": "6aa81638535737691e1505c8a3fc010d7e354096e8e9f0ecdd73bc399afa92f1"
+    }
+  ],
+  "prior_evidence": {
+    "results/stage4/weak-continuation/evidence.json": "980ba24b9b78f8840de2487d1856999180e876197baf5976b9266c6977c483fd"
+  },
+  "reading_scope": "Partial source reading: GK local-fields pages 4,5,8; GK index pages 30,31; Kashaev beta page 4 rendered and reviewed. KS scalar conventions and Proposition 6.15. Does not certify the paired pentagon."
+}

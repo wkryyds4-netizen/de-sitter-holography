@@ -1,0 +1,46 @@
+{
+  "created_at_utc": "2026-11-01T01:11:54.698760+00:00",
+  "status": "diagnostic stage bound; project audit follows",
+  "scientific_status": "bounded-kernel formulation and empirical heat-tail study; pentagon not evaluated",
+  "pages": 6,
+  "runs": 240,
+  "nested_prefixes": true,
+  "diagnostic_checks": 30,
+  "saved_arithmetic_replay_checks": 1290,
+  "compilers": [
+    "pdfLaTeX twice exit 0",
+    "desktop success"
+  ],
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "longest_edge_pixels": 1100,
+    "status": "all inspected"
+  },
+  "hashes": {
+    "code/paired_kernel_heat.py": "dddd5534d595349efd2f1d914a106fb566962a93ff9b63c9f35c33ee18c00342",
+    "code/run_paired_kernel_heat.py": "894ba3302f6a14f64b51208de8051f0e6afd69aa3380e0e5acbf42e7b3ebc252",
+    "code/check_paired_kernel.py": "fa926035a49770dd1fc0f4c9f795b0335120ea71187128d565d66b76c9d6f173",
+    "code/audit_paired_kernel.py": "a64f57ab09ad6f77232836de7edcef8b0dcf6e08f369178a30e342c595d874dc",
+    "code/build_paired_kernel.ps1": "cccc056f07c2257367696bb171630f75823bfe2efadcd479c4f2673040405f67",
+    "code/record_paired_kernel.py": "6ceb3132b650017b1f7520644d1318fe5188622bfadd6b396a816701aafdf1c1",
+    "manuscript/paired-kernel/main.tex": "9517f0cd0e4720c8e044a0b101e6bafb059b3860e80cb10eee9de19f8d571e23",
+    "output/pdf/de-sitter-paired-kernel.pdf": "c8d6e2f4f7f0c7525f2f7b60c01ec96184e17cde6cd3e596b675fbab19e06f64",
+    "notes/stage4-paired-kernel.md": "b91e1dd6256e7613ae300717319cccbbe6ffdd61d07684af00e1ca78eddddb37",
+    "literature/stage4-paired-kernel-sources.md": "ef1d7f39d9dc288d4d4f80ac5b6efde26a5854d7a25b8ba1cc0edb7f599b42b5",
+    "results/stage4/paired-kernel/audit.json": "73c511dc2d46cbd59c8a1f4737b8ad0d2d0471fc6bbebfa2cb0c8a7f098fafb7",
+    "results/stage4/paired-kernel/build-review.md": "6a22d9f1d4281bb93103073eb47d9178863f5173fe5b179b6c4a4d6e35fea2b4",
+    "results/stage4/paired-kernel/diagnostics.json": "f50766effcb7bb87c595e9fea46621b63fd4726b724c53b7cea6053413643ead",
+    "results/stage4/paired-kernel/heat-runs.jsonl": "2cc310420e521918e63af34a8bca4dea68fc99c6c710bbe8b1a7e812c4bfb9df",
+    "results/stage4/paired-kernel/heat-study.json": "230635889477096d9936e86612e1df466e4f4397e81dbbf8d0cc5ea477f64980",
+    "results/stage4/paired-kernel/main.log": "4043478407731a335e3e2803488946c0d07941c4a49a5d4b7e1904a9624d697a",
+    "results/stage4/paired-kernel/preservation.json": "0f41fb40ffca6552ab4c550b5089570b8df7aaad9d694148d0d3d3841c89f107",
+    "results/stage4/paired-kernel/source-record.json": "eebf7a725c8163846965f0460010308aeb537f196f269848cdf86e0a9b4d63f6"
+  }
+}
