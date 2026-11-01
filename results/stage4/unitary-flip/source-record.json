@@ -1,0 +1,26 @@
+{
+  "sources": [
+    {
+      "file": "sources/chandra-liska-post-2610.30247v1.html",
+      "url": "https://arxiv.org/html/2610.30247v1",
+      "sha256": "fe8580884e81ba9817e292bbca7c70b7c7d494e89efef62695e94bcf07801d0f"
+    },
+    {
+      "file": "sources/kim-trilogy-2308.02934v2.html",
+      "url": "https://arxiv.org/html/2308.02934v2",
+      "sha256": "361893f195efb5cc39c64b200b55b95d3e3171fb1dcb0aca191b54a145322e3a"
+    },
+    {
+      "file": "sources/kim-scarinci-2112.13329.pdf",
+      "url": "https://arxiv.org/pdf/2112.13329v2",
+      "sha256": "131a68f66c7c8521c902bc38b9883620d28a579dceae2dc2096ff1bf4de0b26c"
+    }
+  ],
+  "online_only": [
+    "https://arxiv.org/html/2501.01486v1"
+  ],
+  "version_note": "KS downloaded from unversioned pdf endpoint; title page confirms v2, 21 June 2024. Prop.6.15 in this PDF, (3.8) in Kim v2.",
+  "prior_evidence": {
+    "results/stage4/mass-filter/evidence.json": "79d0783c0a0e5315b9f9c3acf3f06ae86270689a9e5bf494bbfdb2a34d207d10"
+  }
+}

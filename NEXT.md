@@ -1,5 +1,19 @@
 # 下一次从这里继续
 
+## 当前继续位置：2026-11-01 unitary-flip
+
+先读[五页PDF](output/pdf/de-sitter-unitary-flip.pdf)、[中文记录](notes/stage4-unitary-flip.md)、[来源边界](literature/stage4-unitary-flip-sources.md)。上一mass-filter已公开5ce5ca05b0f345f54e95a5a49d4d1473e24a8b15，快照SHA256=38e787a9b26f56f9cb0d33de4c5d2871d513c15c8eb2d3763c37fc4d5cd89210；本轮之前53份ZIP必须保持。
+
+本轮复现KS Lambda=+1局部相位F=Phi/conj(Phi)，不是CLP模平方；已有理论与标准Heisenberg表示不当原创。显式四穿孔球E=UJUᵀ及L²(R²)约束表示、实中心值的代数扩展均核，但质量/锥角、完整翻转和物理Gram字典仍缺。测试采用x1=x,y1=y,x2=p_y,y2=p_x，p=-pi i derivative；A=F(x,y),B=F(p_y,p_x),M=exp(i xy/pi)，需AB=BM^-1BMA。输入归一exp[-(x²+y²)/(2pi)]。
+
+21组统一协议已完成，所有计算句柄30155/37829明确exit0，无活跃计算；prototype原数据保留，不重跑覆盖。高阶FFT/Hermite的hbar=.5残差约.02956/.02947，hbar1约.12168/.12157；平直对照约3.01e-12/4.81e-15。36标量/代数检查及161证据算术检查通过，非平直五边形复现仍unresolved。不能把audit passed转述为科学目标通过，也不能宣称连续反例。55位q-Pochhammer、3个倾斜Barnes积分及源PDF55–56页已核。KS缓存实际v2，Prop.6.15，与综述引用编号区分。
+
+下一实质任务：先独立复核归一、chirp方向及原文§6.4–6.5域/解析延拓假设，然后计算真正Hermite Galerkin矩阵元PU P（非DVR节点演算）。P为有限正交投影、U为实际酉算符，leak²=||v||²−||PUv||²；各步泄漏范数之和加矩阵求积误差控制完整word误差。只有观测r减两branch误差仍正，才有连续下界。处理Phi孤立零极点邻域、Gaussian尾及舍入，比较独立实现；不继续盲目加密同一FFT。PDF第5页给精确误差账本，但尚无数值认证。后续再接有质量观察者、缝合与全息字典。
+
+五页PDF已双编译exit0、桌面success、逐页1100像素检查。初版两处排版溢出日志保留。阶段证据/冻结以实际evidence和唯一2026-11-01-unitary-flip快照为准。公开授权继续，私人约定/journal/第三方原文/tmp/恢复分支不上传；git联网使用现有系统代理127.0.0.1:7897的单次命令配置，不改全局。goal active。
+
+以下为历史继续位置。
+
 ## 当前继续位置：2026-10-31 mass-filter
 
 先读[五页PDF](output/pdf/de-sitter-mass-filter.pdf)、[中文推导](notes/stage4-mass-filter.md)和[来源边界](literature/stage4-mass-filter-sources.md)。CSTY四段质量Gaussian滤波精确对应循环差矩阵的逆Laplacian协方差；X/Y/Z方差均δ²/2，旧独立时间协议的Z方差是δ²。固定阶中心因子为exp(n²δ²/4)，c₁=[2(ν²+ν′²)−5]/24是宽度修正，不是增长项符号。

@@ -1,0 +1,278 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,microtype}
+\usepackage[margin=24mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\HH}{\mathcal H}
+\newcommand{\F}{F_\hbar}
+\title{A positive local representation and an\\unresolved pentagon reproduction}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Working research note --- 1 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+We follow the existing positive-cosmological-constant quantization of
+Kim--Scarinci to identify a concrete local Hilbert-space benchmark for
+the missing observer gluing problem. We give an explicit four-puncture
+Heisenberg representation, distinguish phase pairing from a modulus
+square, and implement the stated pentagon in two discretizations.
+Scalar controls agree, but our non-flat operator reproduction remains
+unresolved. This is a diagnostic record, not a refutation of the
+continuum theorem or a construction of a finite-$G$ observer dual.
+\end{abstract}
+\section{What is known, and what is being tested}
+CLP's fixed-topology continuation does not itself supply a general
+de Sitter gluing theory; its discussion points to both quantization
+and the non-diagonal physical Gram problem \cite{clp,cem}.
+The KS construction supplies explicit unitary local operators on
+punctured-surface Hilbert spaces \cite{ks,kim}. Its full flip also
+contains a linear, or Shale--Weil, intertwiner. Here we test the
+separately stated two-variable pentagon, not a complete flip network.
+
+Use dimensionless coordinates, $\Lambda=+1$, and $\hbar>0$.
+The proposed comparison $b^2=i/\kappa=i\hbar$ matches deformation
+parameters; it is not an observer mass dictionary. The source functions are
+\begin{align}
+ \psi_q(w)&=\prod_{n=0}^\infty(1+q^{2n+1}w)^{-1},\\
+ \Phi^{i\hbar}(z)&=
+ \frac{\psi_{e^{-\pi\hbar}}(e^z)}
+      {\psi_{e^{-\pi/\hbar}}(e^{z/(i\hbar)})},\qquad z=x+i\hbar y,\\
+ \F(x,y)&=\Phi^{i\hbar}(z)\Phi^{-i\hbar}(\bar z)
+       =\frac{\Phi^{i\hbar}(z)}{\overline{\Phi^{i\hbar}(z)}}.
+ \label{phase}
+\end{align}
+Consequently $|\F|=1$ almost everywhere. Isolated exceptional points can
+be assigned arbitrary unit values for the Lebesgue multiplication
+operator. This phase ratio is distinct from $|\Phi|^2$.
+Neither a scalar modulus square nor scalar positivity identifies an
+inner product for general mixed four-point pairings.
+\newpage
+
+\section{An explicit four-puncture representation}
+Order the edges as $12,13,14,23,24,34$, and orient faces as
+$(132),(124),(143),(234)$. Let $V_{ep}=1$ when $p$ is an endpoint
+of $e$, and zero otherwise. The oriented exchange matrix is
+\begin{equation}
+ E=UJU^T,\qquad
+ U=\begin{pmatrix}1&0\\0&1\\-1&-1\\-1&-1\\0&1\\1&0\end{pmatrix},
+ \quad J=\begin{pmatrix}0&1\\-1&0\end{pmatrix}.
+\end{equation}
+Here $\operatorname{rank}E=2$, $\operatorname{rank}V=4$,
+$EV=0$ and $V^TU=0$. On
+$\HH=L^2(\mathbb R^2,dt_1dt_2)$ put
+\begin{equation}
+ p_a=-\pi i\partial_{t_a},\qquad
+ \mathbf x=U\mathbf p,\qquad \mathbf y=UJ\mathbf t.
+ \label{rep}
+\end{equation}
+On Schwartz functions, and in the Weyl sense after closure,
+\begin{equation}
+ [x_i,x_j]=[y_i,y_j]=0,\quad
+ [x_i,y_j]=\pi iE_{ij},\quad
+ V^T\mathbf x=V^T\mathbf y=0.
+\end{equation}
+For example $(x_1,y_1)=(p_1,t_2)$ and
+$(x_2,y_2)=(p_2,-t_1)$. Each same-edge pair strongly commutes.
+The four operators on these two edges recover two canonical pairs,
+so this representation is irreducible. This is an explicit instance
+of the known constraint reduction, not a new quantization theorem.
+
+There is also a useful purely algebraic extension. Define
+\begin{equation}
+ R=V(V^TV)^{-1},\qquad
+ \mathbf x_\xi=U\mathbf p+R\xi,\qquad
+ \mathbf y_\eta=UJ\mathbf t+R\eta,\qquad \xi,\eta\in\mathbb R^4.
+\end{equation}
+Then $V^T\mathbf x_\xi=\xi$ and $V^T\mathbf y_\eta=\eta$,
+with the same commutators, self-adjointness and local unitarity.
+This does \emph{not} establish that these central characters are
+conical masses, nor construct all intertwiners between triangulations.
+
+\paragraph{Relation to the CLP special function.}
+With $b^2=i\hbar$, $Q=b+b^{-1}$ and $w=2\pi ib\zeta$,
+CLP (3.48) becomes
+\begin{equation}
+ S_b(Q/2+\zeta)=
+ \Phi^{i\hbar}(w)
+ \exp\left[-\frac{\pi i}{2}\zeta^2+
+                  \frac{i\pi}{24}(Q^2-2)\right].
+\end{equation}
+Thus the same compact products occur, but the Gaussian prefactor
+and pairing operation must be retained. Equality of special-function
+ingredients does not identify their states or gluing measures.
+CEM's $h+\tilde h^*=1$ applies to weights in one wavefunction;
+it should not be confused with CLP's paired-factor $h_++h_-=1$.
+\newpage
+
+\section{A mixed Gram test and the pentagon}
+For calculation it is convenient to use the unitarily equivalent
+realization
+\begin{equation}
+ (x_1,y_1)=(x,y),\qquad (x_2,y_2)=(p_y,p_x),
+ \qquad p_x=-\pi i\partial_x,\quad p_y=-\pi i\partial_y .
+\end{equation}
+It has $[x_1,y_2]=[y_1,x_2]=\pi i$ and all other required
+commutators zero. Let
+\begin{equation}
+ A=\F(x,y),\quad B=\F(p_y,p_x),\quad
+ M=e^{ixy/\pi},\quad C=M^{-1}BM.
+\end{equation}
+The exact differential identities
+$M^{-1}p_yM=p_y+x$ and $M^{-1}p_xM=p_x+y$ give
+\begin{equation}
+ C=\F(x+p_y,y+p_x).
+\end{equation}
+The source pentagon (KS v2, Proposition 6.15; Kim v2, (3.8)) is
+\begin{equation}
+ AB=BCA=BM^{-1}BMA. \label{pent}
+\end{equation}
+Our numerical residual is the norm of the difference of these two
+words acting on the normalized state
+\begin{equation}
+ \psi(x,y)=\pi^{-1}\exp[-(x^2+y^2)/(2\pi)] .
+ \label{state}
+\end{equation}
+No observer time or physical OTOC is assigned to these operators.
+
+The different words $AB$ and $BA$ are used for a separate Gram check.
+For $u=AB\psi$, $v=BA\psi$ and $z=\langle u,v\rangle$,
+\begin{equation}
+ G=\begin{pmatrix}1&z\\\bar z&1\end{pmatrix}\succeq0,\qquad
+ D=\|u-v\|^2=2-2\operatorname{Re}z .
+\end{equation}
+This follows from the stated Hilbert space and unitarity; it does not
+imply (\ref{pent}). In particular, a discretization made of unitary
+matrices can pass every norm/Gram check while failing its continuum
+operator target.
+
+\paragraph{Two implementations.}
+The periodic FFT uses nodes $x_j=-L+2Lj/N$ and a two-dimensional
+unitary Fourier transform. Its momentum grid is
+\[
+p_k=2\pi^2\operatorname{fftfreq}(N,2L/N).
+\]
+The Hermite DVR uses eigenvectors $Q_{nj}$
+of the Jacobi matrix with off-diagonal entries $\sqrt{n/2}$.
+Its physical nodes are $\sqrt{\pi}$ times the Hermite nodes and
+its Fourier matrix is
+\begin{equation}
+ T=Q^T\operatorname{diag}((-i)^n)Q .
+\end{equation}
+Both implement $B=T^\dagger\F(p_y,p_x)T$ and the same chirp
+factorization, with the same continuum Gaussian target.
+Finite matrices do not satisfy exact canonical Weyl relations.
+\newpage
+
+\section{Results: scalar agreement, operator residual}
+There are 21 matched-protocol runs: three FFT grids, four Hermite
+orders, and three multipliers at each setting. The flat control uses
+$F_0(x,y)=\exp[-iy\log(1+e^x)/\pi]$; it is the independently defined
+$\Lambda=0$ formula, not a claimed numerical $\hbar\to0$ limit.
+\begin{center}
+\begin{tabular}{lrrr}
+\toprule
+Method & $\hbar=.5$ & $\hbar=1$ & flat control\\
+\midrule
+FFT $N=256,L=16$ & .03005165 & .12331190 & $1.40\,10^{-5}$\\
+FFT $N=512,L=24$ & .02975935 & .12189770 & $8.54\,10^{-9}$\\
+FFT $N=1024,L=32$ & .02955658 & .12168478 & $3.01\,10^{-12}$\\
+Hermite $N=128$ & .02940377 & .12229173 & $1.52\,10^{-10}$\\
+Hermite $N=256$ & .02948460 & .12170210 & $4.77\,10^{-15}$\\
+Hermite $N=512$ & .02946719 & .12156956 & $4.81\,10^{-15}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Entries are $\|(AB-BM^{-1}BMA)\psi\|$. The non-flat reproduction
+is unresolved; we do not mark it as passed.
+At Hermite $N=512,\hbar=1$ the order-exchange overlap is approximately
+$.94417241-.00563230i$, giving $D=.11165518$.
+These are results of the discrete benchmark, not finite-$G$
+observer correlations.
+
+Thirty-six scalar/algebra checks passed. They include independent
+55-digit compact products, the inversion identity
+\begin{equation}
+ \F(x,y)\F(-x,-y)=e^{-ixy/\pi},
+\end{equation}
+three slanted Barnes-integral controls, exact puncture matrices,
+and the chirp conjugation. The Barnes line is
+$p=e^{-i\pi/4}(t+0.2i)$ with $-30<t<30$ at $\hbar=1$.
+This quadrature has empirical, not interval-certified, errors.
+
+For a compact-product logarithm, truncate after $n=N-1$ and set
+$r_0=e^{a-(2N+1)r}<1$. Its exact-arithmetic logarithmic tail obeys
+\begin{equation}
+ \left|\sum_{n=N}^\infty\log(1+e^{a-(2n+1)r+ib})\right|
+ \leq\frac{r_0}{(1-e^{-2r})(1-r_0)}.
+\end{equation}
+Twice the sum of the two tails bounds the scalar phase error.
+It does not bound floating-point errors, aliasing, or Hermite
+functional-calculus errors.
+
+The 161-check evidence replay verifies hashes, run counts and Gram
+arithmetic while explicitly retaining the unresolved status.
+Earlier prototypes used different states/representations and are
+preserved separately. Neither their norm preservation nor the
+agreement between two discretizations is a continuum counterexample.
+\newpage
+
+\section{A controlled next test}
+The next calculation should replace nodewise DVR functional calculus
+by actual Hermite Galerkin matrix elements. This matters because a DVR
+phase multiplier is exactly unitary at every finite order, concealing
+the leakage of a projected continuum state.
+
+Here is an elementary error ledger for that task. Let $P$ be a finite
+orthogonal Hermite projector, $U_j$ the actual bounded unitary
+multiplication or Fourier-conjugated multiplication operators, and
+$T_j=PU_jP$. For $\psi\in P\HH$, define
+$v_0=\psi$, $v_j=T_jv_{j-1}$. Then
+\begin{align}
+ \ell_j^2&=\|(1-P)U_jv_{j-1}\|^2
+          =\|v_{j-1}\|^2-\|v_j\|^2,\\
+ \|U_m\cdots U_1\psi-v_m\|&\leq\sum_{j=1}^m\ell_j .
+ \label{leak}
+\end{align}
+The proof is a one-step telescoping triangle inequality and
+orthogonality of $P$. It requires true compressed operators;
+substituting a unitary DVR matrix makes the leakage estimate invalid.
+
+If computed matrices $\widetilde T_j$ satisfy
+$\|\widetilde T_j-T_j\|\leq\epsilon_j$, the difference of their
+products is bounded by
+\begin{equation}
+ \|\widetilde T_m\cdots\widetilde T_1-T_m\cdots T_1\|
+ \leq\sum_{j=1}^m\epsilon_j\prod_{k<j}(1+\epsilon_k),
+\end{equation}
+since $\|T_j\|\leq1$. A finite observed residual $r$ can lower-bound
+the continuum residual only after both word errors are controlled:
+\begin{equation}
+ \|(AB-BM^{-1}BMA)\psi\|\geq r-\delta_{\rm left}-\delta_{\rm right}.
+\end{equation}
+This is an actionable certification target, not a completed estimate.
+Scalar zero/pole neighborhoods must be excised with norm bounds or
+integrated with appropriate local coordinates. The Gaussian tails,
+quadrature errors and Hermite leakage must all be recorded.
+
+\paragraph{Open physical interfaces.}
+Even a successful continuum reproduction would leave the mass and holonomy
+map, boundary states, full triangulation intertwiners, and the physical
+observer insertions and Gram gluing unresolved. Conversely, the current
+numerical difficulty is not evidence that de Sitter holography is
+impossible. We keep the original scientific objective open.
+
+\begin{thebibliography}{9}\small
+\bibitem{clp} J. Chandra, D. Liska and B. Post,
+\emph{3D de Sitter from complex Virasoro TQFT: Observers and knots},
+\href{https://arxiv.org/abs/2610.30247v1}{arXiv:2610.30247v1}.
+\bibitem{cem} S. Collier, L. Eberhardt and B. M\"uhlmann,
+\emph{A microscopic realization of dS$_3$},
+\href{https://arxiv.org/abs/2501.01486v1}{arXiv:2501.01486v1}.
+\bibitem{ks} H. K. Kim and C. Scarinci,
+\emph{A quantization of moduli spaces of 3-dimensional gravity},
+\href{https://arxiv.org/abs/2112.13329v2}{arXiv:2112.13329v2}.
+\bibitem{kim} H. K. Kim,
+\emph{A trilogy of mapping class group representations from
+three-dimensional quantum gravity},
+\href{https://arxiv.org/abs/2308.02934v2}{arXiv:2308.02934v2}.
+\end{thebibliography}
+\end{document}

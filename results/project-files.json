@@ -125,6 +125,11 @@
     "sha256": "0b17280ba3d9d01b916661174f2f6546d3d94a4c2bce376f187defcc08cb7fe1"
   },
   {
+    "file": "code/audit_unitary_flip.py",
+    "bytes": 2728,
+    "sha256": "278442017a9d6c6fbed0ed066e535a45bd01a571f06d4ec17eb2554e9ef4be39"
+  },
+  {
     "file": "code/build_bessel_cancellation_note.ps1",
     "bytes": 969,
     "sha256": "e99867a9d6c0578b1a1126ad2244f188106846c370c9d4019b8108f3c0404ea7"
@@ -300,6 +305,11 @@
     "sha256": "ffcde9b1182e0064c6aabd7fcc7d68a2891b75fed2506788d001266b43e9e169"
   },
   {
+    "file": "code/build_unitary_flip.ps1",
+    "bytes": 1122,
+    "sha256": "50e0bc5f17e5d4821ede7924bf07cb1c931ffb4be16ba776c1b1227619d04c32"
+  },
+  {
     "file": "code/build_vertex_note.ps1",
     "bytes": 905,
     "sha256": "c4f7e8103a7c9f66ab860b23dff49ca492b8a02c304c769dd0784215268f5260"
@@ -343,6 +353,11 @@
     "file": "code/check_principal_eikonal.py",
     "bytes": 5849,
     "sha256": "6fae51963f44d37ece4538dfbc615b314388acb4efc3789671362bb4acfd28b2"
+  },
+  {
+    "file": "code/check_unitary_flip.py",
+    "bytes": 3145,
+    "sha256": "6e58b152e2fe3162de359dba59c913940c6e51e62d17c7d70c3b5515f55ffb01"
   },
   {
     "file": "code/clock_model.py",
@@ -621,8 +636,8 @@
   },
   {
     "file": "code/project_audit.py",
-    "bytes": 148799,
-    "sha256": "c6edf34f642b4dffb129357463e78404943c3360e28895615fbdae0bb5ca8249"
+    "bytes": 152040,
+    "sha256": "0d740e152e1432d0dc8a1e259d0416c25d6541ff3cb9be40138679acc7fcdd46"
   },
   {
     "file": "code/quantized_observer.py",
@@ -758,6 +773,11 @@
     "file": "code/record_principal_eikonal.py",
     "bytes": 4092,
     "sha256": "22ee088bc2cacb3c23e6348d7091a23b1d26825d2d921285b5feb4720c44488a"
+  },
+  {
+    "file": "code/record_unitary_flip.py",
+    "bytes": 3896,
+    "sha256": "3d980643311b56f4aad6e08dff65392be5798f8f5eaee7bf4c211b79409f53a6"
   },
   {
     "file": "code/recover_ds3_fock_vacuum.py",
@@ -920,6 +940,11 @@
     "sha256": "96e553acd9e01bc7ad40c78f3679f4bb518ab30424499af1fd0d2d4563694421"
   },
   {
+    "file": "code/run_unitary_flip.py",
+    "bytes": 1322,
+    "sha256": "20294604f0b211d37203577de9fdff0e543e8e9360ea835360c109498094016d"
+  },
+  {
     "file": "code/semiclassical_clock.py",
     "bytes": 3091,
     "sha256": "f9746be11cba312817942ea5069c96664906acdbd9a433b05e7630372d2624bc"
@@ -933,6 +958,31 @@
     "file": "code/two_branch_window.py",
     "bytes": 7944,
     "sha256": "f346b94d535167151c9809b080d0be4b2b65273021de15e9aa0feebe74718e04"
+  },
+  {
+    "file": "code/unitary-flip-prototypes/ks-alternative.py",
+    "bytes": 1271,
+    "sha256": "40123f91a9cf1e66584a83272e0abfbd11ca375599c063db2bd567bd4d37e88c"
+  },
+  {
+    "file": "code/unitary-flip-prototypes/ks-chirp.py",
+    "bytes": 1015,
+    "sha256": "658704074830eb97d3cc00d984c5fdeeaf9ec5f7ed2df2234c1cebe66da2c996"
+  },
+  {
+    "file": "code/unitary-flip-prototypes/ks-hermite.py",
+    "bytes": 1097,
+    "sha256": "154a3463bfb36ee8890827b9cf1d089c4c89312b46aa2b526b703f38839a6827"
+  },
+  {
+    "file": "code/unitary-flip-prototypes/ks-prototype.py",
+    "bytes": 1703,
+    "sha256": "7a453618ab2c56e02ae7d52abe83002a4d8368ee77df3e0f6fb8e220c0b2444c"
+  },
+  {
+    "file": "code/unitary_flip.py",
+    "bytes": 3064,
+    "sha256": "c3ee0fb9bb4252d56b285f77b9dbfbd96513df9de09d110703bc76cd4b88935c"
   },
   {
     "file": "code/validate_clock.py",
@@ -1128,6 +1178,11 @@
     "file": "journal/2026-10-31.md",
     "bytes": 62423,
     "sha256": "34bff8b515db2937d48f6b800529dad4ea9893cd38f294a5aec73d5d42c000e7"
+  },
+  {
+    "file": "journal/2026-11-01.md",
+    "bytes": 2637,
+    "sha256": "f6e9e86e1dd12356506ef3e93f542789fb811ae39c2da4ab04239d6f134379e3"
   },
   {
     "file": "literature/models.md",
@@ -1423,6 +1478,11 @@
     "file": "literature/stage4-time-corrections.md",
     "bytes": 11364,
     "sha256": "33f0ef3bdd513e3e3c73716b9729d6ecbcb0136709af235d83e100c4a175f5b9"
+  },
+  {
+    "file": "literature/stage4-unitary-flip-sources.md",
+    "bytes": 1790,
+    "sha256": "8543edcf1e7ee3eeea429dcc97653e758067e380f9cbd70de5cb737739703b3a"
   },
   {
     "file": "literature/stage4-wkb-overlap-sources.md",
@@ -1730,14 +1790,19 @@
     "sha256": "a45bd590f4c0a7ef4c5928c3cec48f39f61c8588ec0da4ae0eaf9f878c9ff833"
   },
   {
+    "file": "manuscript/unitary-flip/main.tex",
+    "bytes": 11890,
+    "sha256": "df287b58b1b93c4cbbe12036233b594d7136de024dda010160d78ed9b64ccf7b"
+  },
+  {
     "file": "manuscript/vertex.tex",
     "bytes": 5475,
     "sha256": "09ef9a88abe4f7fc2afd0e9c06b3f1966c8d6ae1af2962683d7a368892710f9d"
   },
   {
     "file": "NEXT.md",
-    "bytes": 30011,
-    "sha256": "8c727c2c46e9aa4883c86aa0368f56af5a08f2afe8abb571db03b60274fc8320"
+    "bytes": 32428,
+    "sha256": "569850aeba23f1cdcde5a7f2144a3bdbef80566977a95df64a06d82f879acf46"
   },
   {
     "file": "notes/math-independent.md",
@@ -2165,6 +2230,11 @@
     "sha256": "96b0fc6bc686a4a76d60205f305cd62d823b5c0074c28e379ddadbfce70865b6"
   },
   {
+    "file": "notes/stage4-unitary-flip.md",
+    "bytes": 3188,
+    "sha256": "5cf6f327c9dfea81f1805e82ed6f6b5c4658c755a9255d4565f61685031fa4dd"
+  },
+  {
     "file": "notes/stage4-wkb-overlap.md",
     "bytes": 3892,
     "sha256": "d7446310209409f4118cbc573ab3f6e8e659439316e433ea05a5adca5eb12c1e"
@@ -2350,14 +2420,19 @@
     "sha256": "b572c695d567aa26c671bddc6937f8819b91a36870a6148bb3a632dad3d045bc"
   },
   {
+    "file": "output/pdf/de-sitter-unitary-flip.pdf",
+    "bytes": 332801,
+    "sha256": "b2a7aca54625acb341479043fe0c1345981ac81f04afbad18430e21575d821b3"
+  },
+  {
     "file": "output/pdf/de-sitter-wkb-overlap.pdf",
     "bytes": 332880,
     "sha256": "800d906ccb714ad9b6da1db3be90ceac2b2d67d4a903d02fe45c4e0b3df30d92"
   },
   {
     "file": "PLAN.md",
-    "bytes": 42883,
-    "sha256": "49a99961891fea2039e851c79422a88357f27360216ec871b755e2111c7a11a7"
+    "bytes": 43500,
+    "sha256": "8902e578d760b79adaa93f9a44785194e55d846f3c7ebe6a0f56cc8c7968c92f"
   },
   {
     "file": "PROJECT.md",
@@ -2366,8 +2441,8 @@
   },
   {
     "file": "README.md",
-    "bytes": 37334,
-    "sha256": "5435e98843d529f57627bd7869f581fc0b06cd6011d2320bd7c05591a663311b"
+    "bytes": 38127,
+    "sha256": "ad6fb75660e68d1697c3076370f826099baa0663387702f03c70e43c708621a5"
   },
   {
     "file": "REPOSITORY.md",
@@ -2446,8 +2521,8 @@
   },
   {
     "file": "results/project-audit.json",
-    "bytes": 34417,
-    "sha256": "95f2985bf3ea472e93cbe14bed9d9b90042815fefc548f8cbfbcc8455cea2f52"
+    "bytes": 35328,
+    "sha256": "0d690ebd5afdb46aac041739cb8b7a7a6af3a4a817a972c582220a7fee7008d9"
   },
   {
     "file": "results/stage2/errors.csv",
@@ -4205,6 +4280,86 @@
     "sha256": "6afffd08e49ebca2260acb9f73c89d0e7caa2233eace66a90193dee62a8e9518"
   },
   {
+    "file": "results/stage4/unitary-flip/audit.json",
+    "bytes": 352,
+    "sha256": "7dbd020c5d46aa1d61e978d4eda5331ca01f430a5101c43f8df40613bf9b5ebc"
+  },
+  {
+    "file": "results/stage4/unitary-flip/build-initial.log",
+    "bytes": 25290,
+    "sha256": "d016fe415393b2112c411ec4be600484ffd2e5183c64c7edf44394258986af4e"
+  },
+  {
+    "file": "results/stage4/unitary-flip/build-review.md",
+    "bytes": 1292,
+    "sha256": "52ffe219725ca4d5d85b3fda902a10634da5e950314d4f52d934d954315240e3"
+  },
+  {
+    "file": "results/stage4/unitary-flip/diagnostics.json",
+    "bytes": 9717,
+    "sha256": "e1824f2e47380752965d081888cbaf20719c10ff176dd8784f22f17c6f1f6180"
+  },
+  {
+    "file": "results/stage4/unitary-flip/evidence.json",
+    "bytes": 3950,
+    "sha256": "7e9079dc68eec5b34b01fcdbd2f2bde5cf834ba47041ddc2882489413f1db4f4"
+  },
+  {
+    "file": "results/stage4/unitary-flip/ks-alternative.jsonl",
+    "bytes": 918,
+    "sha256": "4e03c04185824de5267e928f8f9a7201d7e2de17fa9b2a9f26a7570bab21bf15"
+  },
+  {
+    "file": "results/stage4/unitary-flip/ks-chirp.jsonl",
+    "bytes": 945,
+    "sha256": "1a0220baea5f81e765ffb771a4e819092215d280783566a868f2d36dc06748ba"
+  },
+  {
+    "file": "results/stage4/unitary-flip/ks-hermite.jsonl",
+    "bytes": 3000,
+    "sha256": "15096b6b128bfd09b05048c6bfbd362b6489b74538d3582e7869fbceda32c71d"
+  },
+  {
+    "file": "results/stage4/unitary-flip/ks-prototype-controls.txt",
+    "bytes": 1144,
+    "sha256": "ed46f1087e43650f0bfe212deff6662ebacac4d3b4206f565dbfedd6de27cb0c"
+  },
+  {
+    "file": "results/stage4/unitary-flip/ks-prototype-expanded.jsonl",
+    "bytes": 1048,
+    "sha256": "a799504415a15d546332755988d8a326aa50bd8ce036733d589b91998e2a1d24"
+  },
+  {
+    "file": "results/stage4/unitary-flip/ks-prototype.jsonl",
+    "bytes": 1034,
+    "sha256": "f70017a0a4f4f2567492798faa669994d817dd05470c524beaed09685a90518f"
+  },
+  {
+    "file": "results/stage4/unitary-flip/main.log",
+    "bytes": 24454,
+    "sha256": "02efeb78d8357af5b248b2b86655ecdc9846d131a629d2bd14bfe92de7c5fa7a"
+  },
+  {
+    "file": "results/stage4/unitary-flip/preservation.json",
+    "bytes": 8204,
+    "sha256": "a5f20673f126860b234067987ef1239fb12d887048236ffdb13738ddc0c09c07"
+  },
+  {
+    "file": "results/stage4/unitary-flip/runs.jsonl",
+    "bytes": 18438,
+    "sha256": "1eaf1eb59fcc3299a8ea4b389a8c744df03a9207c180b774102b924c66cf7339"
+  },
+  {
+    "file": "results/stage4/unitary-flip/source-record.json",
+    "bytes": 1011,
+    "sha256": "b7bca7e38161aceeb49615ca85f9e5af3f5b51d10e5a11286d540bc96069325d"
+  },
+  {
+    "file": "results/stage4/unitary-flip/study.json",
+    "bytes": 27359,
+    "sha256": "36134db007cf80f71448c99c78a021088bfd41bd9507129c3799d9e8e3858570"
+  },
+  {
     "file": "results/stage4/validation.json",
     "bytes": 11877,
     "sha256": "a980ef8d857bfc4b2c08e8bbf14208c1b14a6ab24e6e58e52c73255ba442e888"
@@ -4358,6 +4513,16 @@
     "file": "sources/karateev-kravchuk-simmons-duffin-1809.05111v1.html",
     "bytes": 3083289,
     "sha256": "4f16f5d8d3048611f1786d4cc414aaf175719539b8e33e0097bb57e22ebc4a48"
+  },
+  {
+    "file": "sources/kim-scarinci-2112.13329.pdf",
+    "bytes": 837177,
+    "sha256": "131a68f66c7c8521c902bc38b9883620d28a579dceae2dc2096ff1bf4de0b26c"
+  },
+  {
+    "file": "sources/kim-trilogy-2308.02934v2.html",
+    "bytes": 838399,
+    "sha256": "361893f195efb5cc39c64b200b55b95d3e3171fb1dcb0aca191b54a145322e3a"
   },
   {
     "file": "sources/kolchmeyer-liu-2411.08090v1.html",

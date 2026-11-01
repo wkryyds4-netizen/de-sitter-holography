@@ -1,0 +1,416 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "name": "oriented tetrahedron factorization",
+      "passed": true
+    },
+    {
+      "name": "exchange rank",
+      "passed": true
+    },
+    {
+      "name": "puncture rank",
+      "passed": true
+    },
+    {
+      "name": "puncture kernel",
+      "passed": true
+    },
+    {
+      "name": "coordinate constraints",
+      "passed": true
+    },
+    {
+      "name": "central section",
+      "passed": true
+    },
+    {
+      "name": "CCR sign",
+      "passed": true
+    },
+    {
+      "name": "chirp conjugation x",
+      "passed": true
+    },
+    {
+      "name": "chirp conjugation y",
+      "passed": true
+    },
+    {
+      "name": "independent compact products",
+      "passed": true,
+      "h": 0.25,
+      "x": 0.2,
+      "y": 0.3
+    },
+    {
+      "name": "involutivity",
+      "passed": true,
+      "h": 0.25,
+      "x": 0.2,
+      "y": 0.3
+    },
+    {
+      "name": "independent compact products",
+      "passed": true,
+      "h": 0.25,
+      "x": 2.0,
+      "y": 3.0
+    },
+    {
+      "name": "involutivity",
+      "passed": true,
+      "h": 0.25,
+      "x": 2.0,
+      "y": 3.0
+    },
+    {
+      "name": "independent compact products",
+      "passed": true,
+      "h": 0.25,
+      "x": 2.0,
+      "y": -4.0
+    },
+    {
+      "name": "involutivity",
+      "passed": true,
+      "h": 0.25,
+      "x": 2.0,
+      "y": -4.0
+    },
+    {
+      "name": "independent compact products",
+      "passed": true,
+      "h": 0.5,
+      "x": 0.2,
+      "y": 0.3
+    },
+    {
+      "name": "involutivity",
+      "passed": true,
+      "h": 0.5,
+      "x": 0.2,
+      "y": 0.3
+    },
+    {
+      "name": "independent compact products",
+      "passed": true,
+      "h": 0.5,
+      "x": 2.0,
+      "y": 3.0
+    },
+    {
+      "name": "involutivity",
+      "passed": true,
+      "h": 0.5,
+      "x": 2.0,
+      "y": 3.0
+    },
+    {
+      "name": "independent compact products",
+      "passed": true,
+      "h": 0.5,
+      "x": 2.0,
+      "y": -4.0
+    },
+    {
+      "name": "involutivity",
+      "passed": true,
+      "h": 0.5,
+      "x": 2.0,
+      "y": -4.0
+    },
+    {
+      "name": "independent compact products",
+      "passed": true,
+      "h": 1.0,
+      "x": 0.2,
+      "y": 0.3
+    },
+    {
+      "name": "involutivity",
+      "passed": true,
+      "h": 1.0,
+      "x": 0.2,
+      "y": 0.3
+    },
+    {
+      "name": "independent compact products",
+      "passed": true,
+      "h": 1.0,
+      "x": 2.0,
+      "y": 3.0
+    },
+    {
+      "name": "involutivity",
+      "passed": true,
+      "h": 1.0,
+      "x": 2.0,
+      "y": 3.0
+    },
+    {
+      "name": "independent compact products",
+      "passed": true,
+      "h": 1.0,
+      "x": 2.0,
+      "y": -4.0
+    },
+    {
+      "name": "involutivity",
+      "passed": true,
+      "h": 1.0,
+      "x": 2.0,
+      "y": -4.0
+    },
+    {
+      "name": "independent compact products",
+      "passed": true,
+      "h": 2.0,
+      "x": 0.2,
+      "y": 0.3
+    },
+    {
+      "name": "involutivity",
+      "passed": true,
+      "h": 2.0,
+      "x": 0.2,
+      "y": 0.3
+    },
+    {
+      "name": "independent compact products",
+      "passed": true,
+      "h": 2.0,
+      "x": 2.0,
+      "y": 3.0
+    },
+    {
+      "name": "involutivity",
+      "passed": true,
+      "h": 2.0,
+      "x": 2.0,
+      "y": 3.0
+    },
+    {
+      "name": "independent compact products",
+      "passed": true,
+      "h": 2.0,
+      "x": 2.0,
+      "y": -4.0
+    },
+    {
+      "name": "involutivity",
+      "passed": true,
+      "h": 2.0,
+      "x": 2.0,
+      "y": -4.0
+    },
+    {
+      "name": "slanted Barnes vs compact",
+      "passed": true,
+      "x": ".2",
+      "y": ".3"
+    },
+    {
+      "name": "slanted Barnes vs compact",
+      "passed": true,
+      "x": "1",
+      "y": "1"
+    },
+    {
+      "name": "slanted Barnes vs compact",
+      "passed": true,
+      "x": "-1",
+      "y": ".7"
+    }
+  ],
+  "matrices": {
+    "U": "Matrix([[1, 0], [0, 1], [-1, -1], [-1, -1], [0, 1], [1, 0]])",
+    "J": "Matrix([[0, 1], [-1, 0]])",
+    "V": "Matrix([[1, 1, 0, 0], [1, 0, 1, 0], [1, 0, 0, 1], [0, 1, 1, 0], [0, 1, 0, 1], [0, 0, 1, 1]])",
+    "E": "Matrix([[0, 1, -1, -1, 1, 0], [-1, 0, 1, 1, 0, -1], [1, -1, 0, 0, -1, 1], [1, -1, 0, 0, -1, 1], [-1, 0, 1, 1, 0, -1], [0, 1, -1, -1, 1, 0]])",
+    "R": "Matrix([[1/3, 1/3, -1/6, -1/6], [1/3, -1/6, 1/3, -1/6], [1/3, -1/6, -1/6, 1/3], [-1/6, 1/3, 1/3, -1/6], [-1/6, 1/3, -1/6, 1/3], [-1/6, -1/6, 1/3, 1/3]])"
+  },
+  "scalar": [
+    {
+      "h": 0.25,
+      "x": 0.2,
+      "y": 0.3,
+      "error": 0.0,
+      "involutivity_error": 1.0408340855860843e-17,
+      "terms": [
+        25,
+        2
+      ],
+      "phase_tail_bound": 1.2396502420479452e-17,
+      "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+    },
+    {
+      "h": 0.25,
+      "x": 2.0,
+      "y": 3.0,
+      "error": 7.447602459741819e-16,
+      "involutivity_error": 7.447602459741819e-16,
+      "terms": [
+        26,
+        2
+      ],
+      "phase_tail_bound": 1.5589818553900093e-17,
+      "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+    },
+    {
+      "h": 0.25,
+      "x": 2.0,
+      "y": -4.0,
+      "error": 1.5700924586837752e-16,
+      "involutivity_error": 1.5700924586837752e-16,
+      "terms": [
+        26,
+        2
+      ],
+      "phase_tail_bound": 1.5589818533199148e-17,
+      "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+    },
+    {
+      "h": 0.5,
+      "x": 0.2,
+      "y": 0.3,
+      "error": 4.163336342344337e-17,
+      "involutivity_error": 1.1739862079479962e-16,
+      "terms": [
+        13,
+        4
+      ],
+      "phase_tail_bound": 9.727328868033517e-19,
+      "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+    },
+    {
+      "h": 0.5,
+      "x": 2.0,
+      "y": 3.0,
+      "error": 1.2412670766236366e-16,
+      "involutivity_error": 1.5700924586837752e-16,
+      "terms": [
+        13,
+        4
+      ],
+      "phase_tail_bound": 5.884697626511927e-18,
+      "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+    },
+    {
+      "h": 0.5,
+      "x": 2.0,
+      "y": -4.0,
+      "error": 5.4672143489065705e-16,
+      "involutivity_error": 6.473657049138938e-16,
+      "terms": [
+        13,
+        3
+      ],
+      "phase_tail_bound": 5.88758777766771e-18,
+      "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+    },
+    {
+      "h": 1.0,
+      "x": 0.2,
+      "y": 0.3,
+      "error": 0.0,
+      "involutivity_error": 3.469446951953614e-18,
+      "terms": [
+        7,
+        7
+      ],
+      "phase_tail_bound": 1.763367062770287e-20,
+      "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+    },
+    {
+      "h": 1.0,
+      "x": 2.0,
+      "y": 3.0,
+      "error": 5.551115123125783e-17,
+      "involutivity_error": 1.1102230246251565e-16,
+      "terms": [
+        7,
+        7
+      ],
+      "phase_tail_bound": 1.8842031881867613e-19,
+      "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+    },
+    {
+      "h": 1.0,
+      "x": 2.0,
+      "y": -4.0,
+      "error": 0.0,
+      "involutivity_error": 1.1102230246251565e-16,
+      "terms": [
+        7,
+        6
+      ],
+      "phase_tail_bound": 1.1793625598107647e-19,
+      "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+    },
+    {
+      "h": 2.0,
+      "x": 0.2,
+      "y": 0.3,
+      "error": 0.0,
+      "involutivity_error": 3.469446951953614e-18,
+      "terms": [
+        4,
+        13
+      ],
+      "phase_tail_bound": 1.0750359481685556e-18,
+      "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+    },
+    {
+      "h": 2.0,
+      "x": 2.0,
+      "y": 3.0,
+      "error": 2.0014830212433605e-16,
+      "involutivity_error": 1.6653345369377348e-16,
+      "terms": [
+        4,
+        14
+      ],
+      "phase_tail_bound": 6.912641368246157e-19,
+      "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+    },
+    {
+      "h": 2.0,
+      "x": 2.0,
+      "y": -4.0,
+      "error": 1.3877787807814457e-17,
+      "involutivity_error": 4.965068306494546e-16,
+      "terms": [
+        4,
+        11
+      ],
+      "phase_tail_bound": 7.811049261591752e-18,
+      "caveat": "Exact-arithmetic product tail only; no rounding or spectral truncation bound."
+    }
+  ],
+  "barnes": [
+    {
+      "x": ".2",
+      "y": ".3",
+      "relative_error": "2.04088881022083278879374768357e-56"
+    },
+    {
+      "x": "1",
+      "y": "1",
+      "relative_error": "2.50510943529896595727881497619e-57"
+    },
+    {
+      "x": "-1",
+      "y": ".7",
+      "relative_error": "5.81586392359977798402952021331e-45"
+    }
+  ],
+  "precision": 55,
+  "barnes_contour": "p=exp(-i*pi/4)*(t+0.2i), -30<t<30; empirical truncation, not interval certified",
+  "scope": "Scalar and algebra checks only. Does not validate the pentagon reproduction.",
+  "hashes": {
+    "code/unitary_flip.py": "c3ee0fb9bb4252d56b285f77b9dbfbd96513df9de09d110703bc76cd4b88935c",
+    "code/check_unitary_flip.py": "6e58b152e2fe3162de359dba59c913940c6e51e62d17c7d70c3b5515f55ffb01"
+  }
+}

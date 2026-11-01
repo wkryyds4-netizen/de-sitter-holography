@@ -1,0 +1,55 @@
+{
+  "created_at_utc": "2026-11-01T00:19:47.940990+00:00",
+  "status": "diagnostic stage bound; project audit follows",
+  "scientific_status": "non-flat pentagon reproduction unresolved; no continuum counterexample",
+  "pages": 5,
+  "matched_protocol_runs": 21,
+  "scalar_algebra_checks": 36,
+  "evidence_replay_checks": 161,
+  "compilers": [
+    "pdfLaTeX twice exit 0",
+    "desktop success"
+  ],
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "longest_edge_pixels": 1100,
+    "status": "all inspected"
+  },
+  "hashes": {
+    "code/unitary_flip.py": "c3ee0fb9bb4252d56b285f77b9dbfbd96513df9de09d110703bc76cd4b88935c",
+    "code/run_unitary_flip.py": "20294604f0b211d37203577de9fdff0e543e8e9360ea835360c109498094016d",
+    "code/check_unitary_flip.py": "6e58b152e2fe3162de359dba59c913940c6e51e62d17c7d70c3b5515f55ffb01",
+    "code/audit_unitary_flip.py": "278442017a9d6c6fbed0ed066e535a45bd01a571f06d4ec17eb2554e9ef4be39",
+    "code/record_unitary_flip.py": "3d980643311b56f4aad6e08dff65392be5798f8f5eaee7bf4c211b79409f53a6",
+    "code/build_unitary_flip.ps1": "50e0bc5f17e5d4821ede7924bf07cb1c931ffb4be16ba776c1b1227619d04c32",
+    "code/unitary-flip-prototypes/ks-alternative.py": "40123f91a9cf1e66584a83272e0abfbd11ca375599c063db2bd567bd4d37e88c",
+    "code/unitary-flip-prototypes/ks-chirp.py": "658704074830eb97d3cc00d984c5fdeeaf9ec5f7ed2df2234c1cebe66da2c996",
+    "code/unitary-flip-prototypes/ks-hermite.py": "154a3463bfb36ee8890827b9cf1d089c4c89312b46aa2b526b703f38839a6827",
+    "code/unitary-flip-prototypes/ks-prototype.py": "7a453618ab2c56e02ae7d52abe83002a4d8368ee77df3e0f6fb8e220c0b2444c",
+    "manuscript/unitary-flip/main.tex": "df287b58b1b93c4cbbe12036233b594d7136de024dda010160d78ed9b64ccf7b",
+    "output/pdf/de-sitter-unitary-flip.pdf": "b2a7aca54625acb341479043fe0c1345981ac81f04afbad18430e21575d821b3",
+    "notes/stage4-unitary-flip.md": "5cf6f327c9dfea81f1805e82ed6f6b5c4658c755a9255d4565f61685031fa4dd",
+    "literature/stage4-unitary-flip-sources.md": "8543edcf1e7ee3eeea429dcc97653e758067e380f9cbd70de5cb737739703b3a",
+    "results/stage4/unitary-flip/audit.json": "7dbd020c5d46aa1d61e978d4eda5331ca01f430a5101c43f8df40613bf9b5ebc",
+    "results/stage4/unitary-flip/build-initial.log": "d016fe415393b2112c411ec4be600484ffd2e5183c64c7edf44394258986af4e",
+    "results/stage4/unitary-flip/build-review.md": "52ffe219725ca4d5d85b3fda902a10634da5e950314d4f52d934d954315240e3",
+    "results/stage4/unitary-flip/diagnostics.json": "e1824f2e47380752965d081888cbaf20719c10ff176dd8784f22f17c6f1f6180",
+    "results/stage4/unitary-flip/ks-alternative.jsonl": "4e03c04185824de5267e928f8f9a7201d7e2de17fa9b2a9f26a7570bab21bf15",
+    "results/stage4/unitary-flip/ks-chirp.jsonl": "1a0220baea5f81e765ffb771a4e819092215d280783566a868f2d36dc06748ba",
+    "results/stage4/unitary-flip/ks-hermite.jsonl": "15096b6b128bfd09b05048c6bfbd362b6489b74538d3582e7869fbceda32c71d",
+    "results/stage4/unitary-flip/ks-prototype-controls.txt": "ed46f1087e43650f0bfe212deff6662ebacac4d3b4206f565dbfedd6de27cb0c",
+    "results/stage4/unitary-flip/ks-prototype-expanded.jsonl": "a799504415a15d546332755988d8a326aa50bd8ce036733d589b91998e2a1d24",
+    "results/stage4/unitary-flip/ks-prototype.jsonl": "f70017a0a4f4f2567492798faa669994d817dd05470c524beaed09685a90518f",
+    "results/stage4/unitary-flip/main.log": "02efeb78d8357af5b248b2b86655ecdc9846d131a629d2bd14bfe92de7c5fa7a",
+    "results/stage4/unitary-flip/preservation.json": "a5f20673f126860b234067987ef1239fb12d887048236ffdb13738ddc0c09c07",
+    "results/stage4/unitary-flip/runs.jsonl": "1eaf1eb59fcc3299a8ea4b389a8c744df03a9207c180b774102b924c66cf7339",
+    "results/stage4/unitary-flip/source-record.json": "b7bca7e38161aceeb49615ca85f9e5af3f5b51d10e5a11286d540bc96069325d",
+    "results/stage4/unitary-flip/study.json": "36134db007cf80f71448c99c78a021088bfd41bd9507129c3799d9e8e3858570"
+  }
+}

@@ -7,10 +7,10 @@
     "Source remains a link, not an archive: dlmf-16.5",
     "Source remains a link, not an archive: dlmf-15.6"
   ],
-  "verified_at_utc": "2026-10-31T12:36:59.918317+00:00",
-  "required_files": 901,
-  "local_links_checked": 1033,
-  "code_and_input_hashes_checked": 1243,
+  "verified_at_utc": "2026-11-01T00:20:16.596904+00:00",
+  "required_files": 931,
+  "local_links_checked": 1044,
+  "code_and_input_hashes_checked": 1277,
   "scientific_checks": {
     "stage1": {
       "checks": 235,
@@ -691,6 +691,26 @@
       "recorded_hashes": 1
     },
     {
+      "file": "results/stage4/unitary-flip/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 29
+    },
+    {
+      "file": "results/stage4/unitary-flip/study.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 2
+    },
+    {
+      "file": "results/stage4/unitary-flip/diagnostics.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 2
+    },
+    {
+      "file": "results/stage4/unitary-flip/audit.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 1
+    },
+    {
       "file": "results/stage3/cross-limit/comparison.json",
       "kind": "projected comparison model only; not exact 6j convergence or interval certification",
       "checks": 19
@@ -938,6 +958,13 @@
       "checks": 444,
       "full_scrambled_runs": 80,
       "kind": "Exact filter transform, conditional and assumed mass-average comparisons; not an established finite-kappa physical trace"
+    },
+    {
+      "stage": "unitary-flip",
+      "checks": 161,
+      "matched_protocol_runs": 21,
+      "scientific_status": "non-flat pentagon reproduction unresolved",
+      "kind": "Integrity replay only; scalar/algebra controls passed, continuum pentagon reproduction unresolved"
     },
     {
       "file": "results/stage3/growing-box/diagnostics.json",

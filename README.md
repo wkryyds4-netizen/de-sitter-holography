@@ -1,5 +1,11 @@
 # de Sitter 全息研究
 
+## 最新进展：正内积局部表示与未解决的五边形复现（2026-11-01）
+
+[五页PDF](output/pdf/de-sitter-unitary-flip.pdf)、[LaTeX](manuscript/unitary-flip/main.tex)、[中文记录](notes/stage4-unitary-flip.md)保存了对Kim–Scarinci已有有限形变量子化的具体复现。明确四穿孔球的正Hilbert表示、相位配对与非零中心值的代数扩展；尚未建立观察者质量字典或物理缝合。
+
+21组统一态FFT/Hermite计算中，平直五边形对照达到约1e-12/1e-15，但正宇宙常数复现仍有非零残差。36项标量/代数检查和161项证据算术核查通过，不代表连续五边形通过或已被反驳。下一步按稿中投影泄漏界控制连续误差；完整研究仍开放。当前以[NEXT](NEXT.md)为准。
+
 ## 最新进展：四段质量滤波与相关时间（2026-10-31）
 
 [五页PDF](output/pdf/de-sitter-mass-filter.pdf)、[LaTeX](manuscript/mass-filter/main.tex)、[中文推导](notes/stage4-mass-filter.md)完成。复读CSTY确认原文已有四段质量滤波；精确变换给相关Gaussian时间，中心时间方差是旧独立涂抹的一半。相应小宽度首阶修正可以反号，这不意味着引力增长项反号。

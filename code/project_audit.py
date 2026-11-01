@@ -979,6 +979,14 @@ CG_ROOT_HASH_RECORDS[MASS_FILTER_DIR+'diagnostics.json'] = {'code/check_mass_fil
 CG_ROOT_HASH_RECORDS[MASS_FILTER_DIR+'packet.json'] = {'code/packet_mass_filter.py', 'code/principal_eikonal.py'}
 CG_ROOT_HASH_RECORDS[MASS_FILTER_DIR+'audit.json'] = {'code/audit_mass_filter.py'}
 
+UNITARY_FLIP_DIR = 'results/stage4/unitary-flip/'
+CG_ROOT_HASH_RECORDS[UNITARY_FLIP_DIR+"evidence.json"] = {'results/stage4/unitary-flip/ks-prototype.jsonl', 'code/unitary_flip.py', 'code/unitary-flip-prototypes/ks-prototype.py', 'code/record_unitary_flip.py', 'results/stage4/unitary-flip/study.json', 'results/stage4/unitary-flip/ks-hermite.jsonl', 'results/stage4/unitary-flip/build-review.md', 'code/check_unitary_flip.py', 'results/stage4/unitary-flip/ks-prototype-expanded.jsonl', 'results/stage4/unitary-flip/audit.json', 'results/stage4/unitary-flip/ks-chirp.jsonl', 'literature/stage4-unitary-flip-sources.md', 'notes/stage4-unitary-flip.md', 'results/stage4/unitary-flip/build-initial.log', 'results/stage4/unitary-flip/diagnostics.json', 'code/run_unitary_flip.py', 'code/unitary-flip-prototypes/ks-alternative.py', 'code/unitary-flip-prototypes/ks-hermite.py', 'results/stage4/unitary-flip/runs.jsonl', 'code/audit_unitary_flip.py', 'results/stage4/unitary-flip/preservation.json', 'output/pdf/de-sitter-unitary-flip.pdf', 'results/stage4/unitary-flip/main.log', 'code/build_unitary_flip.ps1', 'code/unitary-flip-prototypes/ks-chirp.py', 'results/stage4/unitary-flip/source-record.json', 'results/stage4/unitary-flip/ks-prototype-controls.txt', 'manuscript/unitary-flip/main.tex', 'results/stage4/unitary-flip/ks-alternative.jsonl'}
+REQUIRED.extend(sorted(CG_ROOT_HASH_RECORDS[UNITARY_FLIP_DIR+"evidence.json"]))
+REQUIRED.append(UNITARY_FLIP_DIR+"evidence.json")
+CG_ROOT_HASH_RECORDS[UNITARY_FLIP_DIR+'study.json'] = {'code/run_unitary_flip.py', 'code/unitary_flip.py'}
+CG_ROOT_HASH_RECORDS[UNITARY_FLIP_DIR+'diagnostics.json'] = {'code/check_unitary_flip.py', 'code/unitary_flip.py'}
+CG_ROOT_HASH_RECORDS[UNITARY_FLIP_DIR+'audit.json'] = {'code/audit_unitary_flip.py'}
+
 def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
@@ -2143,6 +2151,28 @@ def main():
             kind='Exact filter transform, conditional and assumed mass-average comparisons; not an established finite-kappa physical trace'))
     except (KeyError, TypeError, ValueError, ArithmeticError) as exc:
         errors.append('malformed mass-filter records: '+str(exc))
+    try:
+        from audit_unitary_flip import audit as replay_unitary_flip
+        replay = replay_unitary_flip(ROOT)
+        errors.extend('unitary-flip: '+e for e in replay['errors'])
+        if replay['status'] != 'passed' or replay['checks'] != 161:
+            errors.append('unitary-flip: incomplete integrity replay')
+        if replay['scientific_status'] != 'non-flat pentagon reproduction unresolved':
+            errors.append('unitary-flip: scientific status lost')
+        source = read_json(ROOT/UNITARY_FLIP_DIR/'source-record.json')
+        if len(source['sources']) != 3:
+            errors.append('unitary-flip: source count')
+        for cache in source['sources']:
+            if digest(ROOT/cache['file']) != cache['sha256']:
+                errors.append('unitary-flip: source mismatch '+cache['file'])
+        for file, expected in source['prior_evidence'].items():
+            if digest(ROOT/file) != expected:
+                errors.append('unitary-flip: prior evidence mismatch '+file)
+        supporting_records.append(dict(stage='unitary-flip', checks=161, matched_protocol_runs=21,
+            scientific_status=replay['scientific_status'],
+            kind='Integrity replay only; scalar/algebra controls passed, continuum pentagon reproduction unresolved'))
+    except (KeyError, TypeError, ValueError, ArithmeticError) as exc:
+        errors.append('malformed unitary-flip records: '+str(exc))
     growing_checks = growing.get("checks", [])
     if (growing.get("status") != "passed" or len(growing_checks) != 290
             or any(row.get("passed") is not True for row in growing_checks)
