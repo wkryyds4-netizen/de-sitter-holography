@@ -1,5 +1,17 @@
 # de Sitter 全息研究
 
+## 当前主线：从 Susskind 静态补丁全息到体粒子（2026-11-05）
+
+研究重心转向 **静态补丁 → DSSYK∞ → 尺度分离 → singlet 动力学 → 体粒子与相互作用**。首先精读已有论证，再求 complex DSSYK 的 singlet 关联矩阵及其体谱映射。
+
+[七页研究稿 PDF](output/pdf/de-sitter-susskind-mainline.pdf)、[LaTeX](manuscript/susskind-mainline/main.tex)、[中文规划](notes/susskind-mainline.md)与[文献地图](literature/susskind-mainline.md)已保存。首步给出导数复合算符的守恒低项、候选 A₂=Σ[H,cᵢ]†[H,cᵢ]，以及它与双时四点核的关系。下一步统一模型规范并推小正λ下的实时核，见[NEXT](NEXT.md)。
+
+以下为阶段历史；表示接口及五边形计算作为独立技术补充保存。
+
+## 最新进展：参数连续性与正规表示接口（2026-11-05）
+
+[四页PDF](output/pdf/de-sitter-representation-interface.pdf)、[LaTeX](manuscript/representation-interface/main.tex)、[中文推论](notes/stage4-representation-interface.md)及[来源核查](literature/stage4-representation-interface-sources.md)已完成。应用已有支配收敛和 Stone–von Neumann 定理，说明上一阶段的非零残差延续到一个未定量的正参数邻域，且在同一 Weyl 关系、相位函数与普通谱演算下不能靠换正规表示消除。它是旧计算辅助证书的解析后果，未独立重算证书，也不涉及有限G物理结论。下一步返回观察者反射与实际内积/缝合字典，见[NEXT](NEXT.md)。
+
 ## 最新进展：明确连续表示中的非零五边形残差（2026-11-01）
 
 [十页PDF](output/pdf/de-sitter-residual-certificate.pdf)、[LaTeX](manuscript/residual-certificate/main.tex)、[中文记录](notes/stage4-residual-certificate.md)与[来源核查](literature/stage4-residual-certificate-sources.md)已完成。直接采用已有Gaussian矩、Mehler和严格求积定理，认证两步chirp及五个全平面F重叠；对明确hbar=1连续L²表示和归一Gaussian，得到||(AB−BM⁻¹BMA)f|| > .04489。

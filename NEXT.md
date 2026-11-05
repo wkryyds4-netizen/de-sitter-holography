@@ -1,5 +1,33 @@
 # 下一次从这里继续
 
+## 当前继续位置：2026-11-05 Susskind 主线
+
+用户明确要求优先研究Susskind主线，先做物理构建，技术细节放后面。先读[七页PDF](output/pdf/de-sitter-susskind-mainline.pdf)、[中文规划](notes/susskind-mainline.md)和[文献地图](literature/susskind-mainline.md)。当前课题是complex DSSYK∞的singlet关联及体粒子谱映射；旧五边形/表示接口已收存为补充，不自动返回该支线。
+
+已构造Mₙ=Σcᵢ†(i adH)ⁿcᵢ，M₀=Q、M₁=−ipH；乘积法则给A₂=−M₂=Σ[H,cᵢ]†[H,cᵢ]。其中心化两点等于双时B(τ;t)=Σcᵢ†(t)cᵢ(t+τ)迹连通四点的τ²σ²导数。此为下一核计算的输入，尚未求出定量singlet谱。
+
+下一动作按顺序：
+
+1. 统一2506.18054v3 (2.2)–(2.3)的CAR、complex p（每侧p、总阶2p）、方差、string/cosmic Hamiltonian及时间单位；读2209.09999 §§2–6、9–10和2401.08555相应公式。不要从Majorana规范直接借系数。
+2. 接读2303.00792 §§4–6、2501.09423v2实时附录A及Gross–Rosenhaus 1702.08016v2核方法。2506.18054v3 §§4–6.1正文及6.2开头已经读过，图形尚未逐项验证；继续6.2余段，追读其原始’t Hooft谱与近年谱论文。
+3. 在双标度后小正λ下构建B的实时四点核，提取O₂关联和谱矩；再决定最小有限N校验。固定λ的一般结果需要重求和。Rindler频率到质量须通过传播核建立。
+
+尺度字典已纳入2511.10907v1修正：ρsh∼ℓP/√λ、ℓs/ρsh∼√N；2506.18054 §6.1的旧string-distance相界不能继续直接使用。2607.05678v2 §4.3是目前定量singlet谱目标的明确出处。
+
+七页稿双遍编译exit0，无溢出/未定义引用，全部页面已1200像素渲染核版。构建/输入输出哈希见results/susskind-mainline。没有新数值模型扫描或活跃计算。旧科学记录及59份旧快照保持原字节；本轮整体审计/第60快照和Git发布状态以实际结果为准。完整研究goal仍active，不新建代理。
+
+以下为历史继续位置。
+
+## 当前继续位置：2026-11-05 representation-interface
+
+先读[四页PDF](output/pdf/de-sitter-representation-interface.pdf)、[中文推论](notes/stage4-representation-interface.md)和[原文位置](literature/stage4-representation-interface-sources.md)。本轮直接引用 Dereziński §3.2 Theorem 4，不重复构造已有表示分类；产品一致尾与支配收敛给正参数强连续性。由既有 ||D₁f||>.04489，推出某个未定量邻域内 ||Dₜf||>.022445；同一完整正规 Weyl 关系与普通谱演算下，所有非零表示均张量重数等价，不能靠换极化或稠密域令最终有界词为零。这两条是旧证书的解析后果，不是独立数值再认证，不给邻域半径。
+
+本轮检索 arXiv、作者和出版社条目，未定位相关勘误；不是不存在的证明。KS/Kim版本未更新，Kim §7 明确依赖同一KS延拓。旧科学文件、PDF及59份快照保持原字节；新阶段构建与保存状态以 results/stage4/representation-interface 和Git为准。没有新参数扫描或活跃计算，不重跑一次性旧driver。
+
+下一任务返回有限G物理接口，先读 literature/tqft-recoil-dictionary.md §8、literature/october-tqft-update.md、notes/stage4-unitary-flip.md 与 notes/stage4-mass-filter.md。先查 CLP 和其所引物理内积原文中，反射后的观察者插入、通道基与非对角Gram核是否已有严格构造，再选可计算问题。区分四面体面法向的几何Gram行列式与态空间的Gram内积。不得重复已有归一不唯一性结论、把裸6j模平方当物理Gram，或把本轮局部障碍推广为全息否定。替代量子化须明说改变了哪个谱/代数/演算假设并给物理映射。完整全息目标仍 active，继续文献优先。
+
+以下为历史继续位置。
+
 ## 当前继续位置：2026-11-01 residual-certificate
 
 先读[十页PDF](output/pdf/de-sitter-residual-certificate.pdf)、[中文推导](notes/stage4-residual-certificate.md)、[来源核查](literature/stage4-residual-certificate-sources.md)、[完整链输出](results/stage4/residual-certificate/tensor-chain-audit.json)。固定hbar=1、明确F产品和L²(R²,dxdy/(2π²))表示，精确归一Gaussian，已得到||(AB−BM⁻¹BMA)f|| > .04489。是这个字面连续实现的计算辅助非零界，不是有限G或全息否定结论；当前原文联系有实质张力，不能略过后续独立核查。

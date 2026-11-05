@@ -1,0 +1,342 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,microtype}
+\usepackage[margin=25mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\ad}{\operatorname{ad}}
+\title{From de Sitter horizons to bulk particles:\\a Susskind-line research programme}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Research programme and first operator construction --- 5 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+We organize our de Sitter project around static-patch horizon holography
+and infinite-temperature double-scaled SYK. The central objective is to
+derive a propagating bulk sector from microscopic horizon dynamics.
+Our first research target is the correlation and spectral matrix of
+contracted singlet operators in complex SYK, followed by a comparison
+with the proposed two-dimensional gauge-theory bulk. We identify the
+primary literature, incorporate the corrected location of the entropy
+layer, and formulate the finite-system operator problem that will anchor
+the subsequent large-$N$ analysis.
+\end{abstract}
+
+\section{The physical question we will pursue}
+A static observer has access to a region bounded by a cosmological
+horizon. The programme is to specify a microscopic Hilbert space,
+state, Hamiltonian and observable map that account for this region.
+The horizon should encode both its entropy and the particles that can
+propagate inside it. We therefore choose the following chain of questions:
+\[
+ \boxed{\text{horizon degrees of freedom}}
+ \ \longrightarrow\ \boxed{\text{singlet dynamics}}
+ \ \longrightarrow\ \boxed{\text{bulk fields and interactions}}.
+\]
+The starting microscopic state is the normalized trace of complex SYK,
+$\rho_\infty=I/2^N$, with entropy $S_\infty=N\log2$. The double-scaled
+limit takes $N,p\to\infty$ at fixed $\lambda=p^2/N$. Here $p$ counts
+creation operators, and also annihilation operators, in the complex
+Hamiltonian used below; the total monomial degree is $2p$.
+
+The physical hypothesis to develop is that particular contracted
+composites carry the propagating bulk sector. This makes a useful
+research objective: obtain their spectral data and reconstruct the
+corresponding bulk dynamics. The 2026 proposal \cite{mss26} identifies
+singlet spectroscopy as a quantitative test of its gauge-theory
+interpretation. We select that test as the first main project.
+
+Our earlier observer and local-quantization calculations remain
+supporting material. They supply techniques and comparison models;
+the present programme determines which techniques are needed next.
+
+\newpage
+\section{Reading the development as a connected argument}
+The following reading order follows the physical construction. Exact
+passages already inspected and those still to be worked through are
+listed in the accompanying literature ledger.
+
+\paragraph{1. The observer's horizon as the holographic screen.}
+Dyson--Lindesay--Susskind \cite{dls} formulate static-patch
+complementarity. Read this as the motivation for a finite-entropy
+observer description. It supplies the question that the microscopic
+model must answer.
+
+\paragraph{2. Why infinite-temperature SYK enters.}
+Lin--Susskind \cite{ls} introduce tomperature to connect a maximally
+mixed microscopic state with a finite physical temperature. Susskind's
+scale analysis \cite{scales} and Rahman's dS-JT geometry \cite{rahman}
+then provide the microscopic and bulk sides of the proposed dictionary.
+Our first reproduction will tabulate their time and energy conventions
+and trace the entropy and correlation-time matching.
+
+\paragraph{3. Which operators describe bulk matter.}
+The confinement analysis \cite{confine} separates elementary or generic
+cord excitations from special contracted composites. The 2024 temperature
+paper \cite{temperatures}, especially \S4.2, points to derivative
+bilinears as a useful tower. This motivates our operator basis rather
+than an average over arbitrary matter cords.
+
+\paragraph{4. The flat-space dynamics.}
+Sekino--Susskind \cite{qcd} compare the large-$N$ expansions of SYK and
+gauge theory. Miyashita--Sekino--Susskind \cite{mss25} develop the
+candidate $1+1$ dimensional gauge-theory interpretation in the Rindler
+limit. We will follow the equations from the complex Hamiltonian to
+the singlet sector and then to the proposed meson spectrum.
+
+\paragraph{5. Updated scales and a quantitative target.}
+The November 2025 correction \cite{correction} moves the entropy layer
+from the string scale to a parametrically smaller proper distance.
+The October 2026 version of \cite{mss26}, \S4.3, gives the singlet
+tower and calls for quantitative spectral agreement. These two papers
+set our current rather than historical target.
+
+\paragraph{6. Methods we can reuse.}
+Gross--Rosenhaus \cite{gr} extract singlet data and cubic couplings
+from SYK correlators. Their calculation offers a useful methodological
+template: two-point data organize the particles, higher-point data
+organize interactions. We will inspect its kernel and normalization
+before building the high-temperature counterpart. Its infrared setting
+will be recorded in the comparison appendix.
+
+\newpage
+\section{A three-scale picture for the construction}
+Use $L$ for the cosmic length and $\ell_s$ for the string length.
+The parameter relations organizing the Susskind line are
+\begin{equation}
+ \frac{L}{\ell_s}\sim p,\qquad
+ \frac{L}{\ell_P}\sim N,\qquad
+ \lambda=\frac{p^2}{N},\qquad g_{\rm open}^2=\lambda.
+\end{equation}
+Here $\ell_P$ is the Planck scale in the dS$_3$/reduced-JT dictionary;
+the relations are parametric and are not a four-dimensional area law.
+The corrected phase-boundary relations \cite{correction} are
+\begin{equation}
+ T_c\sim \sqrt N\,\ell_s^{-1}
+       \sim\sqrt\lambda\,\ell_P^{-1},\qquad
+ \rho_{\rm sh}\sim \frac{\ell_P}{\sqrt\lambda}.
+\end{equation}
+Combining these existing relations gives the working hierarchy
+\begin{equation}
+ \frac{\ell_s}{\rho_{\rm sh}}\sim\sqrt N,\qquad
+ \rho_{\rm sh}\ll\ell_s\ll L
+ \quad(N\to\infty,\ 0<\lambda\text{ fixed}).\label{hierarchy}
+\end{equation}
+The entropy layer and the string-scale region therefore play different
+roles in bulk reconstruction. We will track both radial locations when
+defining horizon operators and bulk extrapolates.
+
+For orientation, the static-patch metric gives the exact proper-distance
+and redshift relations
+\begin{align}
+ f(r)&=1-r^2/L^2, & \rho(r)&=L\arccos(r/L),\nonumber\\
+ \sqrt{f(r)}&=\sin(\rho/L), &
+ T_{\rm loc}(\rho)&=\frac{1}{2\pi L\sin(\rho/L)}.
+\end{align}
+Thus $T_{\rm loc}\sim(2\pi\rho)^{-1}$ near the horizon. The blueshift
+at the string scale is of order $p$, whereas at the corrected entropy
+layer it is of order $N\sqrt\lambda$. These are immediate consequences
+of the geometry and the proposed scale dictionary. They explain why
+the older string-layer temperature discussion must be read together
+with the later correction.
+
+\paragraph{What will determine the physics.}
+Entropy fixes the available microscopic state count. The scale hierarchy
+sets the regime in which a locally flat bulk can emerge. The singlet
+correlators must then determine what propagates there. The next step is
+to specify those correlators before attempting to fit a particle spectrum.
+
+\newpage
+\section{First construction: an operator spectral problem}
+Fix normalized complex fermions $\{c_i,c_j^\dagger\}=\delta_{ij}$ and
+the homogeneous number-conserving Hamiltonian
+\begin{equation}
+ H_J=\sum_{|I|=|J'|=p}J_{I J'}\,c_I^\dagger c_{J'},
+ \qquad J_{I J'}=J_{J'I}^*,\qquad Q=\sum_i c_i^\dagger c_i.
+\end{equation}
+Ordered multi-indices specify the signs, with $c_{J'}$ the adjoint of
+the corresponding ordered creation product. At this algebraic step
+the coupling variance is left explicit. For numerical work it will be
+matched to \cite{mss25}, (2.2)--(2.3), after fixing the CAR convention.
+Set $\mathcal L_J O=[H_J,O]$ and use $O(t)=e^{iH_Jt}Oe^{-iH_Jt}$.
+The candidate contracted tower is
+\begin{equation}
+ M_n(J)=\sum_i c_i^\dagger(i\mathcal L_J)^n c_i .
+\end{equation}
+The same disorder realization must occur in $M_n$ and $H_J$.
+For every normally ordered homogeneous monomial, the CAR give
+$\sum_i c_i^\dagger[H_J,c_i]=-pH_J$. Consequently
+\begin{equation}
+ M_0=Q,\qquad M_1=-ipH_J,\qquad [H_J,M_0]=[H_J,M_1]=0.\label{ward}
+\end{equation}
+This fixes the phase and normalization of the first two tower elements
+in our convention. It also identifies the first possible dynamical
+operators at $n\ge2$. Use Hermitian components of these elements as
+probes $O_a$.
+
+With $d=2^N$ and $(A,B)=d^{-1}\Tr(A^\dagger B)$, the microscopic
+target is
+\begin{equation}
+ C_{ab}(t)=\overline{d^{-1}\Tr[O_a(t)O_b]},\qquad
+ \mathsf S_{ab}(\omega)=\frac{2\pi}{d}\,
+ \overline{\sum_{r,s}(O_a)_{rs}(O_b)_{sr}
+ \delta(\omega-E_s+E_r)}.\label{spectral}
+\end{equation}
+For any complex vector $z$, $z^\dagger\mathsf S(\omega)z$ is a positive
+measure, since each summand is an absolute square. Its moments obey
+\begin{equation}
+ G_{ab}=\int\frac{d\omega}{2\pi}\mathsf S_{ab}(\omega)=(O_a,O_b),
+ \qquad
+ K_{ab}=\int\frac{d\omega}{2\pi}\omega^2\mathsf S_{ab}(\omega)
+       =(\mathcal L_J O_a,\mathcal L_J O_b),
+\end{equation}
+with an ensemble average on the right where appropriate. These standard
+spectral identities supply exact sum rules for the first calculation.
+The generalized eigenvalues of $Kv=\Omega^2Gv$ measure frequency moments.
+Bulk masses will instead require a matching to the Rindler or dS bulk
+propagator; the microscopic Hamiltonian generates boost time there.
+
+\newpage
+\section{A bilocal bridge to the first dynamical candidate}
+The first candidate can be written without numerical time derivatives.
+Differentiate the conserved $M_1$ using the product rule:
+\begin{equation}
+ 0=\dot M_1=\sum_i\dot c_i^\dagger\dot c_i+M_2,
+ \qquad
+ A_2=-M_2=\sum_i[H_J,c_i]^\dagger[H_J,c_i]\geq0.\label{a2}
+\end{equation}
+Thus $A_2$ is Hermitian in every sample. Center it with the same trace
+state, $O_2=A_2-d^{-1}\Tr(A_2)I$. Its nonzero-frequency spectral
+weight is our first concrete microscopic target. Positivity of $A_2$
+is an operator identity; $O_2$ need not be positive after centering.
+
+Rather than compute each derivative composite independently, organize
+the whole tower with a two-time operator,
+\begin{equation}
+ B_J(\tau;t)=\sum_i c_i^\dagger(t)c_i(t+\tau),\qquad
+ \left.\partial_\tau^nB_J(\tau;t)\right|_{\tau=0}=M_n(t).
+\end{equation}
+Define $b_J(\tau)=d^{-1}\Tr B_J(\tau;0)$ and the connected-in-trace
+correlator
+\begin{equation}
+ F_J(\tau,\sigma;t)=d^{-1}\Tr\!\left[B_J(\tau;t)B_J(\sigma;0)\right]
+                  -b_J(\tau)b_J(\sigma).
+\end{equation}
+At finite $N$ the exact relation is
+\begin{equation}
+ C_{22}(t)=
+ \overline{\left.
+ \partial_\tau^2\partial_\sigma^2F_J(\tau,\sigma;t)
+ \right|_{\tau=\sigma=0}}.\label{bilocal}
+\end{equation}
+This turns the first composite two-point problem into a contracted
+fermion four-point problem with a specified operator order. The
+subtraction is made within each sample before averaging. Equation
+\eqref{bilocal} is the interface to a real-time bilocal or ladder
+calculation, not yet a solution of that calculation. In the large-$N$
+limit its equal-time derivatives must be justified by control of the
+frequency moments.
+
+\paragraph{How this guides the next calculation.}
+We will derive the kernel for $F_J$ in the chosen high-temperature
+limit, then take the derivatives in \eqref{bilocal}. A nonzero spectral
+component of $O_2$ is the first object to match to a bulk propagator.
+Centering removes the identity expectation; other conserved components
+are separated using the energy projectors in the appendix. For a
+quadratic number-conserving Hamiltonian, $A_2=c^\dagger h^2c$ is itself
+conserved. That limiting case provides a useful check that interactions,
+rather than the notation of the tower, generate the dynamics.
+
+\newpage
+\section{Research sequence and concrete deliverables}
+\paragraph{A. Complete the microscopic--geometric dictionary.}
+Read \cite{scales,rahman,confine,mss25,correction} at equation level.
+Deliver one convention table: real versus complex $N$, interaction
+order, CAR, variance, $H_c/H_s$, proper time, entropy, and the two radial
+scales in \eqref{hierarchy}. Reproduce the geometric redshift and the
+leading correlation times in a shared convention.
+
+\paragraph{B. Derive the singlet correlation kernel.}
+Work through the existing bilocal and ladder methods, starting with
+\cite{gr} and the real-time analysis in \cite{qcd}. Construct the
+contracted channel before disorder averaging, keeping its $J$ dependence.
+Deliver the kernel equation for $C_{ab}$, the conserved modes in
+\eqref{ward}, and the first nonzero moments for $n=2,3$, starting with
+the bilocal derivative in \eqref{bilocal}.
+
+\paragraph{C. Calculate the spectrum in controlled limits.}
+First validate the operator construction with finite-$N$ diagonalization
+and the spectral sum rules. Start with small positive $\lambda$ after
+double scaling, where \cite{mss25}, \S5.3, proposes the meson comparison.
+Then organize corrections in $\lambda$: a fixed-order planar kernel
+alone does not sum the finite-$\lambda$ expansion. Keep the Hamiltonian
+normalization fixed by the dictionary. Deliver the spectral matrix,
+its sample variation, and convergence with operator basis size.
+
+\paragraph{D. Reconstruct particles and then interactions.}
+Derive the bulk-to-horizon map in Rindler coordinates and compare the
+singlet correlators with the candidate gauge-theory propagators. The
+desired outputs are invariant mass ratios and spectral weights. Once
+that map is fixed, use three- and four-point functions to determine
+couplings and test the interaction interpretation of $\lambda$.
+
+\appendix
+\section{Technical notes and present status}
+This is the first mainline construction and reading plan, not a completed
+singlet-spectrum computation. The normal-ordered identities and spectral
+sum rules above are standard CAR and linear-algebra consequences.
+The 2026 paper supplies the motivation, not the missing quantitative
+spectrum. Low-temperature conformal dimensions from \cite{gr} will be
+used as method references, not identified with infinite-temperature
+boost frequencies.
+
+For finite samples the group action rotates both the fermions and the
+coupling tensor. The contracted family is covariant under this joint
+action; a fixed generic $H_J$ has exact $U(1)$ charge conservation, not
+an assumed exact $U(N)$ symmetry. Conserved contributions to
+\eqref{spectral} sit at $\omega=0$. They can be recorded separately
+using $\mathcal P_0O=\sum_E P_EOP_E$, with $P_E$ the full degenerate
+energy projector. This subtraction changes the measured probe, not the
+state or the Hamiltonian.
+
+At exactly infinite temperature the trace of a commutator of two even
+operators vanishes. Equation \eqref{spectral} therefore starts with
+trace correlation spectra, not an ordinary bosonic retarded response.
+The bulk response and the observer map belong to step D.
+The earlier spectral-pentagon note is retained as a separate technical
+branch; it is not a prerequisite for this programme.
+
+\newpage
+\begin{thebibliography}{99}\small
+\bibitem{dls} L. Dyson, J. Lindesay and L. Susskind,
+\emph{Is There Really a de Sitter/CFT Duality},
+\href{https://arxiv.org/abs/hep-th/0202163v4}{hep-th/0202163v4}.
+\bibitem{ls} H. Lin and L. Susskind, \emph{Infinite Temperature's Not
+So Hot}, \href{https://arxiv.org/abs/2206.01083}{2206.01083}.
+\bibitem{scales} L. Susskind, \emph{De Sitter Space, Double-Scaled
+SYK, and the Separation of Scales in the Semiclassical Limit},
+\href{https://arxiv.org/abs/2209.09999v1}{2209.09999v1}.
+\bibitem{rahman} A. A. Rahman, \emph{dS JT Gravity and Double-Scaled
+SYK}, \href{https://arxiv.org/abs/2209.09997v2}{2209.09997v2}.
+\bibitem{confine} L. Susskind, \emph{De Sitter Space has no Chords.
+Almost Everything is Confined},
+\href{https://arxiv.org/abs/2303.00792v1}{2303.00792v1}.
+\bibitem{temperatures} A. Rahman and L. Susskind, \emph{Infinite
+Temperature is Not So Infinite: The Many Temperatures of de Sitter Space},
+\href{https://arxiv.org/abs/2401.08555v3}{2401.08555v3}.
+\bibitem{qcd} Y. Sekino and L. Susskind, \emph{Double-Scaled SYK,
+QCD, and the Flat Space Limit of de Sitter Space},
+\href{https://arxiv.org/abs/2501.09423v2}{2501.09423v2}.
+\bibitem{mss25} S. Miyashita, Y. Sekino and L. Susskind,
+\emph{DSSYK at Infinite Temperature: The Flat-Space Limit and the
+'t Hooft Model}, \href{https://arxiv.org/abs/2506.18054v3}{2506.18054v3}.
+\bibitem{correction} L. Susskind, \emph{Where is the entropy in
+DSSYK--de Sitter? Correction to a Wrong Claim},
+\href{https://arxiv.org/abs/2511.10907v1}{2511.10907v1}.
+\bibitem{mss26} S. Miyashita, Y. Sekino and L. Susskind,
+\emph{Holograms and Standard Models},
+\href{https://arxiv.org/abs/2607.05678v2}{2607.05678v2}.
+\bibitem{gr} D. J. Gross and V. Rosenhaus, \emph{The Bulk Dual
+of SYK: Cubic Couplings},
+\href{https://arxiv.org/abs/1702.08016v2}{1702.08016v2}.
+\end{thebibliography}
+\end{document}

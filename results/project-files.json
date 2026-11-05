@@ -145,6 +145,11 @@
     "sha256": "0b17280ba3d9d01b916661174f2f6546d3d94a4c2bce376f187defcc08cb7fe1"
   },
   {
+    "file": "code/audit_representation_interface.py",
+    "bytes": 2270,
+    "sha256": "f609c225b2ffc168cbee22c71331eef540eb197eea45d3070d1c5b053ab5b04f"
+  },
+  {
     "file": "code/audit_tensor_chain.py",
     "bytes": 7446,
     "sha256": "66fc702b79b162f7129e9b25a2d0aef63f50527377e359acdc401ac24c33f8b9"
@@ -350,6 +355,11 @@
     "sha256": "d2b305aa0796003d4b7279c87e82656d0ec109fdd8c8b6b74f4f07f219eec0e6"
   },
   {
+    "file": "code/build_representation_interface.ps1",
+    "bytes": 1300,
+    "sha256": "db722bfaf4f434cc66682b5a56b7cf0d264cd91fb218c69760690d3d6ec218fa"
+  },
+  {
     "file": "code/build_residual_certificate.ps1",
     "bytes": 1177,
     "sha256": "74ab63e33949da81741489af5a906e0ed94653b1f45718cd3349b1b63d42aab9"
@@ -363,6 +373,11 @@
     "file": "code/build_spectral_note.ps1",
     "bytes": 1166,
     "sha256": "f1343b776fb9d2484eb77c9d895064812fc3d56925ca1e7c898674ac190520aa"
+  },
+  {
+    "file": "code/build_susskind_mainline.ps1",
+    "bytes": 1244,
+    "sha256": "519836bf5944cde71aae5819cfdac26623b399adf651f724aad06da8825ff88f"
   },
   {
     "file": "code/build_transverse_note.ps1",
@@ -786,8 +801,8 @@
   },
   {
     "file": "code/project_audit.py",
-    "bytes": 166638,
-    "sha256": "1a47c3880d5d039ae218ce4925f9d5d17ba8c959682900472943b81a5054d9a0"
+    "bytes": 168882,
+    "sha256": "9147d1d6926f57501f269e7d0e29b8c815854456ec51e10a2d012c83c7a2fd96"
   },
   {
     "file": "code/quantized_observer.py",
@@ -945,9 +960,19 @@
     "sha256": "22ee088bc2cacb3c23e6348d7091a23b1d26825d2d921285b5feb4720c44488a"
   },
   {
+    "file": "code/record_representation_interface.py",
+    "bytes": 5070,
+    "sha256": "fcb706bb99b8a96bf0046cd1b3c0e3e1da20c337870e97a678d5166a0cc97f63"
+  },
+  {
     "file": "code/record_residual_certificate.py",
     "bytes": 4444,
     "sha256": "35b696e8e35d175364bb7dfed4d7c597220e267a826153120e031ac229c0f18c"
+  },
+  {
+    "file": "code/record_susskind_mainline.py",
+    "bytes": 3372,
+    "sha256": "b6699cca4e47c1bd13c9a5b75c6cc8fd5ab8071585b29da6f91fdc774a8f7dfd"
   },
   {
     "file": "code/record_unitary_flip.py",
@@ -1436,8 +1461,13 @@
   },
   {
     "file": "journal/2026-11-01.md",
-    "bytes": 17040,
-    "sha256": "5eacafe7c05423feab2aeef4610b707d723613695e6f2633519a306ed334b7aa"
+    "bytes": 17540,
+    "sha256": "27aaed0e1b440629c2c1e807415048778d4dc5c5d4f68f14e621103604f91852"
+  },
+  {
+    "file": "journal/2026-11-05.md",
+    "bytes": 3065,
+    "sha256": "8e95408b04446318fdcfec9cf4bc9c5462565b0e957b0748a77f4cedbe703cd6"
   },
   {
     "file": "literature/flip-proof-dependency-map.md",
@@ -1750,6 +1780,11 @@
     "sha256": "728fefadb0c84398aa2b468068ab9444d0a8330e5282dda009fcf7dad9862209"
   },
   {
+    "file": "literature/stage4-representation-interface-sources.md",
+    "bytes": 2882,
+    "sha256": "6aae4baf0f20994d9783232c88236ed98daa8fcf73a6814c398ee6853cc04a36"
+  },
+  {
     "file": "literature/stage4-residual-certificate-sources.md",
     "bytes": 4315,
     "sha256": "ccca2b76aacdd97257488640d88d3c1f365cffa526bae00e7a6c486bf053c06b"
@@ -1773,6 +1808,11 @@
     "file": "literature/stage4-wkb-overlap-sources.md",
     "bytes": 1381,
     "sha256": "a8815e124bb99a1290b59b9deae079c9e64c31882ea71d1f0972b5fda03670c9"
+  },
+  {
+    "file": "literature/susskind-mainline.md",
+    "bytes": 5121,
+    "sha256": "12e9785afb46581b97865ac96f05d25eeaf6da3bbceaac0fac209ba5e889d12b"
   },
   {
     "file": "literature/tqft-recoil-dictionary.md",
@@ -2080,6 +2120,11 @@
     "sha256": "2f58c96f639dc60d45e0eed2ee994b90d88e77fe6aea66fc60be6830cbff0ae2"
   },
   {
+    "file": "manuscript/representation-interface/main.tex",
+    "bytes": 10665,
+    "sha256": "c1abc862874d8bd9744f329c641d858a2eb4725ffab1636c01f48554a992ee60"
+  },
+  {
     "file": "manuscript/residual-certificate/main.tex",
     "bytes": 22644,
     "sha256": "8b94b0d23228620b51bfa527cfcfb023724ba870190310ae357cd5ba03957f4c"
@@ -2088,6 +2133,11 @@
     "file": "manuscript/spectral.tex",
     "bytes": 9925,
     "sha256": "7241eb3e7f6becb872bb027b3d38befa541d61c75534b30e7cd55ef195452934"
+  },
+  {
+    "file": "manuscript/susskind-mainline/main.tex",
+    "bytes": 17043,
+    "sha256": "a47ff29d6e990508445f2adcc8bbb1c7304df49dec01b1f6242cfb28fa9e1b50"
   },
   {
     "file": "manuscript/twobranch.tex",
@@ -2111,8 +2161,8 @@
   },
   {
     "file": "NEXT.md",
-    "bytes": 44663,
-    "sha256": "6da4e018a8b648a01c2d71cdbbf2f76fa7815021d32157c0fc84af724a5f525e"
+    "bytes": 48575,
+    "sha256": "7fc5abb032ae71984107c83e042d07d0d1fa7df8f31fab2e0d96aaf1a20928ea"
   },
   {
     "file": "notes/math-independent.md",
@@ -2555,6 +2605,11 @@
     "sha256": "96b0fc6bc686a4a76d60205f305cd62d823b5c0074c28e379ddadbfce70865b6"
   },
   {
+    "file": "notes/stage4-representation-interface.md",
+    "bytes": 2994,
+    "sha256": "a6d00c609df5066af7d158aa58b4985f96d28a76a9aae138e229df0e574d1e59"
+  },
+  {
     "file": "notes/stage4-residual-certificate.md",
     "bytes": 3991,
     "sha256": "909870696781c3d915f919f64918db6640c868292f973dddeaf1b324a4ddcf99"
@@ -2573,6 +2628,11 @@
     "file": "notes/stage4-wkb-overlap.md",
     "bytes": 3892,
     "sha256": "d7446310209409f4118cbc573ab3f6e8e659439316e433ea05a5adca5eb12c1e"
+  },
+  {
+    "file": "notes/susskind-mainline.md",
+    "bytes": 2948,
+    "sha256": "bac052ff103477207c132cdd211fba2f1513f39882106daeed7411b07ef62dd8"
   },
   {
     "file": "output/pdf/de-sitter-ds3-bose.pdf",
@@ -2770,9 +2830,19 @@
     "sha256": "b572c695d567aa26c671bddc6937f8819b91a36870a6148bb3a632dad3d045bc"
   },
   {
+    "file": "output/pdf/de-sitter-representation-interface.pdf",
+    "bytes": 329959,
+    "sha256": "c146ef38b2c93824ca953448350a67063f838b438abc5c5135f0ad951e9db79d"
+  },
+  {
     "file": "output/pdf/de-sitter-residual-certificate.pdf",
     "bytes": 325046,
     "sha256": "cc845acd33df7909a61b5e23f62a7267f196355570a8f98c54bfdf3f70f15536"
+  },
+  {
+    "file": "output/pdf/de-sitter-susskind-mainline.pdf",
+    "bytes": 335800,
+    "sha256": "daa4ccccc88298aa3bc572ee4b27e77853f66334119a5a3141d1a25b7afffe9b"
   },
   {
     "file": "output/pdf/de-sitter-unitary-flip.pdf",
@@ -2791,18 +2861,18 @@
   },
   {
     "file": "PLAN.md",
-    "bytes": 48271,
-    "sha256": "ed4ddbf739c770925470e9bb0b3bb0ccb95369bb5cad5153660375da44fe91e1"
+    "bytes": 49884,
+    "sha256": "d7c396cdd1a4470cb3202957c2d0c13b5dad97aefa8c525294ce28dd1fd02972"
   },
   {
     "file": "PROJECT.md",
-    "bytes": 2388,
-    "sha256": "2f607df78947a37a43e3dcdeca2ba2060d6d46fc526b835acaf20b0e63c8c64d"
+    "bytes": 2728,
+    "sha256": "44d8669c75ad4326ae95d511a9aea7d1666e5b0129db785a001b70bc510ece16"
   },
   {
     "file": "README.md",
-    "bytes": 42611,
-    "sha256": "962e408272cc7961dc5a4fc0c1c62a228e43bbf703d8823cd8f2f2f27f86f6aa"
+    "bytes": 44179,
+    "sha256": "8307c81d42dfdb4c16d7dee652668896516322dc8e9eaa780c29ce74022efda4"
   },
   {
     "file": "REPOSITORY.md",
@@ -2881,8 +2951,8 @@
   },
   {
     "file": "results/project-audit.json",
-    "bytes": 41030,
-    "sha256": "06b4a1a889f0332a379b3c9273fe3bec80b6f6f4625f9a075111912f852c0541"
+    "bytes": 41752,
+    "sha256": "64ac603b4d837fbff7b0b569f38570bb3cf13265cff05f8a1ba92cea5c36c04a"
   },
   {
     "file": "results/stage2/errors.csv",
@@ -4835,6 +4905,36 @@
     "sha256": "715e583a6d18932cd49bd7a874bd8d1a9c5337dd226d5b4fe83094c60130ce5b"
   },
   {
+    "file": "results/stage4/representation-interface/build-review.json",
+    "bytes": 998,
+    "sha256": "9f04e010106152c9c22e360963456f96271f8f93193f996c7d1eeb4feb5ab52d"
+  },
+  {
+    "file": "results/stage4/representation-interface/evidence.json",
+    "bytes": 2026,
+    "sha256": "5e00244c8fe022fca3dae824b4fd83595642e6f0f40043054fcd748a7df198eb"
+  },
+  {
+    "file": "results/stage4/representation-interface/input-audit.json",
+    "bytes": 774,
+    "sha256": "790519c69b566c910977e88ccb9325b811ecd7fb8fd5ee98e34619b7729ff5b7"
+  },
+  {
+    "file": "results/stage4/representation-interface/main.log",
+    "bytes": 25380,
+    "sha256": "7ea751e52d06a6ec90b76423a2a775ad35c71058725482a022f9d97609e82f44"
+  },
+  {
+    "file": "results/stage4/representation-interface/preservation.json",
+    "bytes": 9091,
+    "sha256": "0afe7fdd9c4879eb088f834a3abce9b4ecbe81c69512790969db7bc0fa99e6f9"
+  },
+  {
+    "file": "results/stage4/representation-interface/source-record.json",
+    "bytes": 1091,
+    "sha256": "42b0e7e0ae3309a9c6b5fb1c3f36cd9a1cd63e32431a26970af24fd6ac2edd31"
+  },
+  {
     "file": "results/stage4/residual-certificate/actual-pair-rectangle.json",
     "bytes": 5011,
     "sha256": "e88db64a4f9d78a1f19d26056e6d2748d7bcb4a30c16ef55d868298f2124a45e"
@@ -5223,6 +5323,26 @@
     "file": "results/study.json",
     "bytes": 1567,
     "sha256": "0a8f3acd8b17d656131a4498c86bfc09a56dfcbf0b77d7829d4e8727ba4e4d5f"
+  },
+  {
+    "file": "results/susskind-mainline/build-review.json",
+    "bytes": 2004,
+    "sha256": "6f9c3af9f0c126127c336cb6475b392d4c4664ad9aa41aa1cc679b1166fc119d"
+  },
+  {
+    "file": "results/susskind-mainline/evidence.json",
+    "bytes": 1268,
+    "sha256": "b3b71d80d6cd0bab82dc81090abb7e0930c4c83241b5cb996bb0f43241b9a2b7"
+  },
+  {
+    "file": "results/susskind-mainline/main.log",
+    "bytes": 24794,
+    "sha256": "06f0764111d8a553258493da85a82f3b318975f8de206978f452a7be1054062a"
+  },
+  {
+    "file": "results/susskind-mainline/source-record.json",
+    "bytes": 850,
+    "sha256": "a6e6fe5955b2d10a65f8c140ab45417ad4780e01a7f57e9bb32ca381c89febe4"
   },
   {
     "file": "results/validation.json",

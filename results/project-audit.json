@@ -7,10 +7,10 @@
     "Source remains a link, not an archive: dlmf-16.5",
     "Source remains a link, not an archive: dlmf-15.6"
   ],
-  "verified_at_utc": "2026-11-01T02:37:07.370406+00:00",
-  "required_files": 1053,
-  "local_links_checked": 1108,
-  "code_and_input_hashes_checked": 1479,
+  "verified_at_utc": "2026-11-05T12:41:00.705142+00:00",
+  "required_files": 1076,
+  "local_links_checked": 1135,
+  "code_and_input_hashes_checked": 1500,
   "scientific_checks": {
     "stage1": {
       "checks": 235,
@@ -831,6 +831,16 @@
       "recorded_hashes": 2
     },
     {
+      "file": "results/stage4/representation-interface/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 12
+    },
+    {
+      "file": "results/susskind-mainline/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 9
+    },
+    {
       "file": "results/stage3/cross-limit/comparison.json",
       "kind": "projected comparison model only; not exact 6j convergence or interval certification",
       "checks": 19
@@ -1126,6 +1136,13 @@
       "full_F_overlaps": 5,
       "scientific_status": "Specified hbar=1 bounded L2(R2) word has a positive norm lower bound",
       "scope": "Uses existing quadrature and Mehler bounds with ball arithmetic. Not formal verification; not a physical observer, finite-G or full holographic result. Identification with any published theorem requires its separate representation/definition audit."
+    },
+    {
+      "stage": "representation-interface",
+      "kind": "Prior file integrity and exact endpoint arithmetic; analytic propositions are in the manuscript",
+      "prior_bound_files_checked": 67,
+      "interval_radius": null,
+      "scope": "Hash and exact rational endpoint checks only. No overlap reintegration, no formal proof checking, no quantitative parameter neighborhood."
     },
     {
       "file": "results/stage3/growing-box/diagnostics.json",

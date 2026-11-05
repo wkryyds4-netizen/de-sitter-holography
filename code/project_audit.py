@@ -1068,6 +1068,25 @@ REQUIRED.append(RESIDUAL_DIR+'evidence.json')
 CG_ROOT_HASH_RECORDS[RESIDUAL_DIR+'tensor-chain-audit.json'] = {'code/audit_tensor_chain.py'}
 CG_ROOT_HASH_RECORDS[RESIDUAL_DIR+'tensor-pair-controls.json'] = {'code/tensor_pair_overlap.py','code/check_tensor_pair.py'}
 
+INTERFACE_DIR = 'results/stage4/representation-interface/'
+CG_ROOT_HASH_RECORDS[INTERFACE_DIR+'evidence.json'] = {
+    'code/audit_representation_interface.py','code/record_representation_interface.py',
+    'code/build_representation_interface.ps1','manuscript/representation-interface/main.tex',
+    'output/pdf/de-sitter-representation-interface.pdf','notes/stage4-representation-interface.md',
+    'literature/stage4-representation-interface-sources.md'
+} | {INTERFACE_DIR+p for p in ['input-audit.json','source-record.json','preservation.json','build-review.json','main.log']}
+REQUIRED.extend(sorted(CG_ROOT_HASH_RECORDS[INTERFACE_DIR+'evidence.json']))
+REQUIRED.append(INTERFACE_DIR+'evidence.json')
+
+SUSSKIND_MAINLINE_DIR = 'results/susskind-mainline/'
+CG_ROOT_HASH_RECORDS[SUSSKIND_MAINLINE_DIR+'evidence.json'] = {
+    'code/build_susskind_mainline.ps1', 'code/record_susskind_mainline.py',
+    'manuscript/susskind-mainline/main.tex', 'output/pdf/de-sitter-susskind-mainline.pdf',
+    'notes/susskind-mainline.md', 'literature/susskind-mainline.md',
+} | {SUSSKIND_MAINLINE_DIR+p for p in ['main.log', 'build-review.json', 'source-record.json']}
+REQUIRED.extend(sorted(CG_ROOT_HASH_RECORDS[SUSSKIND_MAINLINE_DIR+'evidence.json']))
+REQUIRED.append(SUSSKIND_MAINLINE_DIR+'evidence.json')
+
 def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
@@ -2371,6 +2390,19 @@ def main():
             scientific_status=replay['scientific_status'],scope=replay['scope']))
     except (KeyError, TypeError, ValueError, ArithmeticError) as exc:
         errors.append('malformed residual-certificate records: '+str(exc))
+    try:
+        from audit_representation_interface import audit as replay_representation_interface
+        replay = replay_representation_interface(ROOT)
+        errors.extend('representation-interface: '+e for e in replay['errors'])
+        saved = read_json(ROOT/INTERFACE_DIR/'input-audit.json')
+        if saved != replay:
+            errors.append('representation-interface: input audit differs from read-only replay')
+        supporting_records.append(dict(stage='representation-interface',
+            kind='Prior file integrity and exact endpoint arithmetic; analytic propositions are in the manuscript',
+            prior_bound_files_checked=replay['prior_bound_files_checked'],
+            interval_radius=replay['interval_radius'],scope=replay['scope']))
+    except (KeyError, TypeError, ValueError, ArithmeticError) as exc:
+        errors.append('malformed representation-interface records: '+str(exc))
     growing_checks = growing.get("checks", [])
     if (growing.get("status") != "passed" or len(growing_checks) != 290
             or any(row.get("passed") is not True for row in growing_checks)

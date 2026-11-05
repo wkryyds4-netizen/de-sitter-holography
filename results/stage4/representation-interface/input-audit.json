@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "errors": [],
+  "prior_bound_files_checked": 67,
+  "threshold": [
+    "4489",
+    "100000"
+  ],
+  "neighborhood_threshold": [
+    "4489",
+    "200000"
+  ],
+  "interval_radius": null,
+  "scope": "Hash and exact rational endpoint checks only. No overlap reintegration, no formal proof checking, no quantitative parameter neighborhood.",
+  "hashes": {
+    "results/stage4/residual-certificate/evidence.json": "685fc83680ff8be82d6d5fa59194e95ace05e27495a42a7e5d375857f1eb5fcb",
+    "results/stage4/residual-certificate/tensor-chain-audit.json": "5b9d0fc9df7b712e22992396596fd7c80f761a814f1e4f37a7a147b071c3acde",
+    "code/audit_representation_interface.py": "f609c225b2ffc168cbee22c71331eef540eb197eea45d3070d1c5b053ab5b04f"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "created_at_utc": "2026-11-05T12:15:14.224056+00:00",
+  "pages": 4,
+  "compiler": "MiKTeX-pdfTeX 4.27 (MiKTeX 26.5 Portable)",
+  "build_command": "powershell -File code/build_representation_interface.ps1",
+  "passes": 2,
+  "exit_codes": [
+    0,
+    0
+  ],
+  "unresolved_references": false,
+  "overfull_boxes": false,
+  "visual_review": {
+    "status": "all inspected",
+    "pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "longest_edge_pixels": 1200
+  },
+  "hashes": {
+    "manuscript/representation-interface/main.tex": "c1abc862874d8bd9744f329c641d858a2eb4725ffab1636c01f48554a992ee60",
+    "output/pdf/de-sitter-representation-interface.pdf": "c146ef38b2c93824ca953448350a67063f838b438abc5c5135f0ad951e9db79d",
+    "code/build_representation_interface.ps1": "db722bfaf4f434cc66682b5a56b7cf0d264cd91fb218c69760690d3d6ec218fa",
+    "results/stage4/representation-interface/main.log": "7ea751e52d06a6ec90b76423a2a775ad35c71058725482a022f9d97609e82f44"
+  }
+}

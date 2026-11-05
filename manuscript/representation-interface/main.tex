@@ -1,0 +1,226 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,microtype}
+\usepackage[margin=25mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\R}{\mathbb R}
+\newcommand{\HH}{\mathcal H}
+\newtheorem{proposition}{Proposition}
+\title{The spectral pentagon interface:\\parameter continuity and regular Weyl representations}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Working note --- 5 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+We examine two possible explanations of a previously certified nonzero
+pentagon residual: an exceptional deformation parameter and a different
+regular representation of the same Weyl relations. Dominated convergence
+and the standard Stone--von Neumann theorem exclude these explanations
+within the specified bounded spectral construction. These are applications
+of existing mathematics, conditional on the earlier computer-assisted
+bound; they do not independently certify that bound. No quantitative
+parameter interval or finite-$G$ physical correlator is obtained.
+\end{abstract}
+
+\section{Fixed input and literature interface}
+All variables are dimensionless. Write $t>0$ for the deformation parameter
+denoted $\hbar$ in Kim--Scarinci (KS) \cite{ks}; it is distinct from the
+fixed CCR normalization $\pi$. Let
+\[
+ \HH=L^2(\R^2,dx\,dy/(2\pi^2)),\quad
+ P_j=-\pi i\partial_j,\quad M=e^{iXY/\pi}.
+\]
+The KS compact-product formula and conjugate pairing give, almost everywhere,
+\begin{align}
+ F_t(x,y)&=\prod_{j=0}^\infty
+ \frac{1+e^{x-(2j+1)\pi t-ity}}{1+e^{x-(2j+1)\pi t+ity}}
+ \frac{1+e^{y-(2j+1)\pi/t-ix/t}}{1+e^{y-(2j+1)\pi/t+ix/t}}.\label{prod}
+\end{align}
+Assign any modulus-one value at a zero denominator. Define by ordinary
+joint spectral calculus
+\[
+ A_t=F_t(X,Y),\quad B_t=F_t(P_y,P_x),\quad
+ D_t=A_tB_t-B_tM^{-1}B_tMA_t.
+\]
+The normalized input is $f(x,y)=\sqrt2e^{-(x^2+y^2)/(2\pi)}$.
+Our preceding certificate \cite{cert} gives
+\begin{equation}
+ \|D_1f\|>b,\qquad b=0.04489.\label{input}
+\end{equation}
+Equation \eqref{input} is reused, not recomputed here. KS Proposition 6.15
+states the pentagon for self-adjoint generators satisfying these Weyl
+relations. Its $\Lambda=1$ proof refers back to parameter continuation.
+Kim's Proposition 7.4 \cite{kim} explicitly cites the same argument;
+it is not an independent check. The following implications concern
+exactly \eqref{prod} and these bounded operators.
+
+\newpage
+\section{The residual is not confined to the self-dual parameter}
+\begin{proposition}
+The maps $t\mapsto A_t$, $t\mapsto B_t$, and $t\mapsto D_t$ are strongly
+continuous on $(0,\infty)$. Consequently there is an $\varepsilon>0$
+such that
+\begin{equation}
+ |t-1|<\varepsilon\quad\Longrightarrow\quad
+ \|D_tf\|>b/2=0.022445.\label{openbound}
+\end{equation}
+The value of $\varepsilon$ is not estimated here.
+\end{proposition}
+\begin{proof}
+Fix $t_0>0$ and a compact interval $[a,c]\subset(0,\infty)$ around it.
+For $|x|,|y|\le R$ the absolute values of the small terms in the two
+denominators of \eqref{prod} are bounded by
+\[
+ e^{R-(2j+1)\pi a},\qquad e^{R-(2j+1)\pi/c}.
+\]
+Both sequences are summable, uniformly in $t\in[a,c]$. For large $j$
+these bounds are below $1/2$; the corresponding ratios differ from
+one by at most four times these bounds. Hence the infinite tails
+converge uniformly on these compact parameter and spatial sets.
+
+At $t=t_0$, every zero denominator lies in the countable set
+\[
+ E_{t_0}=\{((2m+1)\pi t_0,(2n+1)\pi/t_0):m,n\in\mathbb Z\}.
+\]
+This set may overcount cancellations, which is harmless. For a fixed
+$(x,y)\notin E_{t_0}$, finitely many initial denominators stay nonzero in
+a parameter neighborhood, while the tails already have a uniform
+nonzero lower bound. Thus $F_t(x,y)\to F_{t_0}(x,y)$ almost everywhere
+as $t\to t_0$. Also $|F_t|=1$ almost everywhere. For every $g\in\HH$,
+dominated convergence therefore gives
+\[
+ \|(A_t-A_{t_0})g\|^2
+ =\int |F_t-F_{t_0}|^2|g|^2\,d\mu\longrightarrow0,
+ \qquad |F_t-F_{t_0}|^2|g|^2\le4|g|^2.
+\]
+The fixed Fourier transform diagonalizes $(P_y,P_x)$, so it gives the
+same conclusion for $B_t$. Products of strongly continuous uniformly
+bounded families are strongly continuous: for example,
+\[
+ \|(U_tV_t-U_0V_0)g\|
+ \le \|U_t\|\|(V_t-V_0)g\|+\|(U_t-U_0)V_0g\|.
+\]
+Apply this to the two words defining $D_t$; $M$ is fixed and unitary.
+Finally use \eqref{input} and continuity of $D_tf$ to obtain
+\eqref{openbound}.
+\end{proof}
+This is strong continuity for a real parameter, not operator-norm
+continuity, differentiability, or holomorphic continuation. It includes
+both rational and irrational $t$ near one. KS Proposition 6.6(SB1)
+distinguishes real Barnes parameter $h$ from $h=it$; its remark on
+rational real $h$ cannot be applied to $t=1$ as an exclusion.
+
+\newpage
+\section{Changing a regular realization cannot remove the word}
+Let $(Q_1,Q_2,R_1,R_2)$ be self-adjoint on a nonzero separable Hilbert
+space $\HH_\pi$, with the full Weyl versions of
+\[
+ [Q_1,R_2]=[Q_2,R_1]=\pi i,
+ \quad[Q_1,R_1]=[Q_2,R_2]=[Q_1,Q_2]=[R_1,R_2]=0.
+\]
+In particular every individual exponential group is strongly continuous.
+After the relabeling $q=(Q_1,Q_2)$, $p=(R_2,R_1)/\pi$, these are the
+ordinary nondegenerate two-degree-of-freedom CCR. The regularity and
+finite-dimensional hypotheses of the Stone--von Neumann theorem are
+exactly those in Derezi\'nski \cite{derezinski}, \S3.1--3.2, Theorem 4.
+
+\begin{proposition}
+Use the same Borel function $F_t$ and ordinary joint spectral calculus
+to define the pentagon word $D_t^\pi$ in this representation. There are
+a nonzero multiplicity space $\mathcal K$ and a unitary
+$U:\HH\otimes\mathcal K\to\HH_\pi$ such that
+\begin{equation}
+ U^{-1}D_t^\pi U=D_t\otimes I_{\mathcal K}.\label{unitary}
+\end{equation}
+Thus $\|D_1^\pi\|>b$, and $\|D_t^\pi\|>b/2$ in the neighborhood above.
+\end{proposition}
+\begin{proof}
+The cited theorem supplies the intertwiner for all Weyl unitaries and
+hence their self-adjoint generators and spectral measures. The constant
+in the Lebesgue measure of $\HH$ is absorbed in a unitary normalization.
+Joint Borel functional calculus commutes with this equivalence.
+For the middle factor the closures of the sums satisfy
+\[
+ (X+P_y,Y+P_x)=M^{-1}(P_y,P_x)M,
+\]
+as follows first on the Schwartz core by differentiating the chirp,
+then by unitary conjugation. In particular the sums strongly commute,
+and $F_t(X+P_y,Y+P_x)=M^{-1}B_tM$. This transports every factor of the
+pentagon and proves \eqref{unitary}. For any unit vector $k\in\mathcal K$,
+\[
+ \|D_t^\pi U(f\otimes k)\|=\|D_tf\|,
+\]
+which proves the claimed lower bounds.
+\end{proof}
+This directly applies the standard multiplicity theorem; it is not a
+new representation-classification result. A simultaneous symplectic
+change of the four generators is included. Multiplicity, normalization
+of Lebesgue measure, or a mere choice of coordinate polarization does
+not change the conclusion. A representation with a different spectrum,
+a nonregular Weyl action, or only formal commutators is outside the
+stated hypothesis and must be identified explicitly before comparison.
+
+\newpage
+\section{What this closes, and what remains open}
+\paragraph{Dense-domain changes.}
+All factors in the final word are bounded. If the same two bounded
+words agree on a norm-dense subspace, continuity extends the equality
+to the full Hilbert space. Thus a different dense test domain cannot
+repair this particular bounded identity. It can still matter for
+intermediate unbounded factors or for a construction defining
+different bounded operators.
+
+\paragraph{Null sets and states.}
+In the canonical realization each paired joint spectral measure is
+unitarily related to Lebesgue measure. Changing $F_t$ only on its
+countable exceptional set has no effect, also after \eqref{unitary}.
+Some individual states could nevertheless lie in $\ker D_t$; our
+conclusion is the failure of an operator identity, not a claim that
+every state's residual is nonzero. A proposed constrained physical
+sector requires its own observable algebra and inner product.
+
+\paragraph{Evidence boundary and next physical question.}
+The positive input \eqref{input} remains computer-assisted. This note
+neither independently re-integrates its overlaps nor formally verifies
+the numerical library. It derives consequences of that input and
+identifies two inadequate explanations of the discrepancy with KS's
+literal spectral statement. It does not rule out every quantization of
+three-dimensional gravity or any complete de Sitter duality.
+
+The next physical task is to compare an actual observer state's
+reflection and gluing prescription with the local algebra used here.
+A replacement must specify the changed spectrum, scalar function or
+functional calculus, and map its observables and inner product to that
+physical problem. It is insufficient to give another formula with the
+same name. The finite-$G$ observer and full holographic dictionary
+remain open; routine refinement of the previous FFT is not required
+by either proposition in this note.
+
+\paragraph{Reading and reproducibility.}
+On 5 November 2026 the arXiv records still list KS v2 (21 June 2024)
+and Kim v2 (5 July 2023). A targeted search and the checked author and
+publisher pages did not locate a relevant correction; this is not an
+exhaustive absence claim. The source ledger records exact reading
+locations. The previous bound and its file hashes are checked by the
+accompanying input audit, which is an integrity check, not another
+proof of the overlap enclosures. The present note needs no parameter
+scan. Source, PDF, build log, and audit hashes are retained separately.
+
+\begin{thebibliography}{9}\small
+\bibitem{ks} H. K. Kim and C. Scarinci,
+\emph{A quantization of moduli spaces of 3-dimensional gravity},
+\href{https://arxiv.org/abs/2112.13329v2}{arXiv:2112.13329v2},
+\S6.3--6.5, Propositions 6.6, 6.11, 6.15.
+\bibitem{kim} H. K. Kim, \emph{Three-dimensional quantum gravity from
+the quantum pseudo-K\"ahler plane},
+\href{https://arxiv.org/abs/2112.13962v2}{arXiv:2112.13962v2},
+\S5, Propositions 7.3--7.4.
+\bibitem{derezinski} J. Derezi\'nski, \emph{Introduction to
+representations of the canonical commutation and anticommutation
+relations}, \href{https://arxiv.org/abs/math-ph/0511030v2}{arXiv:math-ph/0511030v2},
+\S3.1--3.2, Theorem 4, p.~12.
+\bibitem{cert} A. Day and Chengheng, \emph{A posteriori certification
+of a bounded pentagon word: Gaussian moments and validated overlap
+integrals}, project working note, 1 November 2026;
+\texttt{manuscript/residual-certificate/main.tex} and associated evidence.
+\end{thebibliography}
+\end{document}
