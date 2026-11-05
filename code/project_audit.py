@@ -1087,6 +1087,21 @@ CG_ROOT_HASH_RECORDS[SUSSKIND_MAINLINE_DIR+'evidence.json'] = {
 REQUIRED.extend(sorted(CG_ROOT_HASH_RECORDS[SUSSKIND_MAINLINE_DIR+'evidence.json']))
 REQUIRED.append(SUSSKIND_MAINLINE_DIR+'evidence.json')
 
+SUSSKIND_DICT_DIR = 'results/susskind-dictionary/'
+CG_ROOT_HASH_RECORDS[SUSSKIND_DICT_DIR+'evidence.json'] = {
+    'code/complex_syk_dictionary.py', 'code/run_complex_syk_dictionary.py',
+    'code/audit_complex_syk_dictionary.py', 'code/check_singlet_charge_bridge.py',
+    'code/build_susskind_dictionary.ps1', 'code/record_susskind_dictionary.py',
+    'manuscript/susskind-dictionary/main.tex', 'output/pdf/de-sitter-susskind-dictionary.pdf',
+    'notes/susskind-dictionary.md', 'literature/susskind-dictionary-sources.md',
+} | {SUSSKIND_DICT_DIR+p for p in ['calibration.json','audit.json','charge-bridge.json',
+    'main.log','build-initial.log','preservation.json','build-review.json','source-record.json']}
+CG_ROOT_HASH_RECORDS[SUSSKIND_DICT_DIR+'evidence.json'].update(
+    SUSSKIND_DICT_DIR+f'sample-{n}-{p}-{seed}.npz'
+    for n,p in [(4,1),(3,2),(4,2),(5,2),(6,2),(6,3)] for seed in [1105,1106,1107])
+REQUIRED.extend(sorted(CG_ROOT_HASH_RECORDS[SUSSKIND_DICT_DIR+'evidence.json']))
+REQUIRED.append(SUSSKIND_DICT_DIR+'evidence.json')
+
 def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
@@ -2403,6 +2418,20 @@ def main():
             interval_radius=replay['interval_radius'],scope=replay['scope']))
     except (KeyError, TypeError, ValueError, ArithmeticError) as exc:
         errors.append('malformed representation-interface records: '+str(exc))
+    try:
+        from audit_complex_syk_dictionary import audit as replay_complex_dictionary
+        from check_singlet_charge_bridge import verify as replay_charge_bridge
+        replay = replay_complex_dictionary(ROOT)
+        errors.extend('susskind-dictionary: '+e for e in replay['errors'])
+        bridge = replay_charge_bridge(ROOT)
+        if not bridge['passed'] or len(bridge['rows']) != 18:
+            errors.append('susskind-dictionary: charged four-point reconstruction failed')
+        supporting_records.append(dict(stage='susskind-dictionary',
+            sample_hashes_checked=replay['sample_hashes_checked'],
+            independent_sector_moments=len(replay['sector_rows']),
+            charged_reconstruction_samples=len(bridge['rows']),scope=replay['scope']))
+    except (KeyError, TypeError, ValueError, ArithmeticError) as exc:
+        errors.append('malformed susskind-dictionary records: '+str(exc))
     growing_checks = growing.get("checks", [])
     if (growing.get("status") != "passed" or len(growing_checks) != 290
             or any(row.get("passed") is not True for row in growing_checks)

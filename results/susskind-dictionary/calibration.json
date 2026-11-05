@@ -1,0 +1,1503 @@
+{
+  "created_at_utc": "2026-11-05T13:12:45.555218+00:00",
+  "state": "normalized full trace I/2^N, beta=mu=0",
+  "Js": 1.0,
+  "covariance": "Hermitian complex Gaussian: E[J_IJ J_KL]=v delta_IL delta_JK; diagonal real variance v, offdiagonal E|J|^2=v",
+  "time": "string convention with H_s; H_c=p H_s is a separate time-unit conversion",
+  "python": "3.14.5",
+  "numpy": "2.4.6",
+  "scope": "Finite-N calibration and sample spectra only; no asymptotic singlet spectrum or bulk-mass claim.",
+  "code_sha256": {
+    "code/run_complex_syk_dictionary.py": "62ad2cdc741ab317cc4391e01e5dea4b4d6115f0f3353ee58dd934063735c9f8",
+    "code/complex_syk_dictionary.py": "96b4890a167beeadf0849ccffdbb20dd125d921af062fd291044da9024900abf"
+  },
+  "covariance_rows": [
+    {
+      "N": 2,
+      "p": 1,
+      "H2_formula": 3.0,
+      "H2_matrix": 3.0,
+      "A2_formula": 4.0,
+      "A2_matrix": 4.0
+    },
+    {
+      "N": 3,
+      "p": 2,
+      "H2_formula": 0.8888888888888888,
+      "H2_matrix": 0.8888888888888888,
+      "A2_formula": 2.2222222222222223,
+      "A2_matrix": 2.2222222222222223
+    },
+    {
+      "N": 4,
+      "p": 2,
+      "H2_formula": 1.21875,
+      "H2_matrix": 1.21875,
+      "A2_formula": 3.375,
+      "A2_matrix": 3.375
+    },
+    {
+      "N": 5,
+      "p": 2,
+      "H2_formula": 1.52,
+      "H2_matrix": 1.52,
+      "A2_formula": 4.48,
+      "A2_matrix": 4.48
+    },
+    {
+      "N": 5,
+      "p": 3,
+      "H2_formula": 0.4864,
+      "H2_matrix": 0.48640000000000005,
+      "A2_formula": 1.92,
+      "A2_matrix": 1.9200000000000002
+    }
+  ],
+  "samples": [
+    {
+      "N": 4,
+      "p": 1,
+      "seed": 1105,
+      "lambda_value": 0.25,
+      "file": "sample-4-1-1105.npz",
+      "sha256": "b889b036884a6af58aabd2bad6a52e9f9bd6a0bcdedf9a38dc6860f0e8270fb3",
+      "trace_H2": 3.936730158537637,
+      "G": 12.179528863228134,
+      "K": 1.5700180906644747e-30,
+      "static_weight": 12.179528863228139,
+      "dynamic_weight": 4.396597378355663e-27,
+      "dynamic_fraction": 3.609825493028441e-28,
+      "zero_cutoff": 3.7925106585623936e-10,
+      "min_resolved_gap": 0.028103359517811954
+    },
+    {
+      "N": 4,
+      "p": 1,
+      "seed": 1106,
+      "lambda_value": 0.25,
+      "file": "sample-4-1-1106.npz",
+      "sha256": "7cb3878f15370af1ee6169e068139f13c47a7b0135bc99d957cbe14a1fb5bb29",
+      "trace_H2": 5.397050386824936,
+      "G": 54.6335913875518,
+      "K": 7.004992393725254e-30,
+      "static_weight": 54.63359138755179,
+      "dynamic_weight": 1.468578700346055e-29,
+      "dynamic_fraction": 2.6880508182749068e-31,
+      "zero_cutoff": 4.2865478532401764e-10,
+      "min_resolved_gap": 0.962519962310076
+    },
+    {
+      "N": 4,
+      "p": 1,
+      "seed": 1107,
+      "lambda_value": 0.25,
+      "file": "sample-4-1-1107.npz",
+      "sha256": "a8629a24bdbe4272f253182ce4b065be768d42e82b4b8574e9e4cb4ed6e6263e",
+      "trace_H2": 4.851773228657866,
+      "G": 32.80656571579807,
+      "K": 8.869256468705641e-30,
+      "static_weight": 32.80656571579806,
+      "dynamic_weight": 4.481443087470288e-28,
+      "dynamic_fraction": 1.3660201821467217e-29,
+      "zero_cutoff": 4.4038715291911163e-10,
+      "min_resolved_gap": 0.12492440049069453
+    },
+    {
+      "N": 3,
+      "p": 2,
+      "seed": 1105,
+      "lambda_value": 1.3333333333333333,
+      "file": "sample-3-2-1105.npz",
+      "sha256": "f41e1fe5f28cbada4ebe5969cf57ab2da53c2a20ce8d81f8d89c4d9c87081223",
+      "trace_H2": 0.3937999614934794,
+      "G": 2.7785503504860793,
+      "K": 3.4666738998970245e-32,
+      "static_weight": 2.778550350486081,
+      "dynamic_weight": 5.57374762241787e-32,
+      "dynamic_fraction": 2.005991225403851e-32,
+      "zero_cutoff": 1.5091915994220516e-10,
+      "min_resolved_gap": 0.24274661981652434
+    },
+    {
+      "N": 3,
+      "p": 2,
+      "seed": 1106,
+      "lambda_value": 1.3333333333333333,
+      "file": "sample-3-2-1106.npz",
+      "sha256": "ff780cf9c2f209da035358327ea5e5f23b5c1d434b52f96dbcd07849b072c598",
+      "trace_H2": 0.4627397044129982,
+      "G": 3.36546905826809,
+      "K": 6.486170940831638e-32,
+      "static_weight": 3.3654690582680904,
+      "dynamic_weight": 8.151515554896607e-31,
+      "dynamic_fraction": 2.42210384756634e-31,
+      "zero_cutoff": 1.5311394863228717e-10,
+      "min_resolved_gap": 0.8902716857154238
+    },
+    {
+      "N": 3,
+      "p": 2,
+      "seed": 1107,
+      "lambda_value": 1.3333333333333333,
+      "file": "sample-3-2-1107.npz",
+      "sha256": "fb462a72526cc1314a3d0af732306256162480e61330be3140d949d3e77ab216",
+      "trace_H2": 0.7917931390957276,
+      "G": 6.1658524712185665,
+      "K": 2.147411887991768e-31,
+      "static_weight": 6.165852471218566,
+      "dynamic_weight": 1.224393003974859e-31,
+      "dynamic_fraction": 1.9857643524397856e-32,
+      "zero_cutoff": 1.6491600128255936e-10,
+      "min_resolved_gap": 0.8600889231445664
+    },
+    {
+      "N": 4,
+      "p": 2,
+      "seed": 1105,
+      "lambda_value": 1.0,
+      "file": "sample-4-2-1105.npz",
+      "sha256": "c51c76d76ba27f28811518f2dc939eac6a175de3196db9ff7d3de26ffdba1c6a",
+      "trace_H2": 0.5480171736687647,
+      "G": 2.913412212713157,
+      "K": 0.07870802071251416,
+      "static_weight": 2.843069535016894,
+      "dynamic_weight": 0.07034267769626194,
+      "dynamic_fraction": 0.024144430159697285,
+      "zero_cutoff": 1.435464304779973e-10,
+      "min_resolved_gap": 0.136180565924309
+    },
+    {
+      "N": 4,
+      "p": 2,
+      "seed": 1106,
+      "lambda_value": 1.0,
+      "file": "sample-4-2-1106.npz",
+      "sha256": "1949f51067f01da227c6d6694831c87c6b848e7ecd353f22414c07c3cf3265e3",
+      "trace_H2": 0.5541766849338229,
+      "G": 3.0264607252188123,
+      "K": 0.1290782315483246,
+      "static_weight": 2.814282050287383,
+      "dynamic_weight": 0.2121786749314286,
+      "dynamic_fraction": 0.07010785673291305,
+      "zero_cutoff": 1.4112052578622986e-10,
+      "min_resolved_gap": 0.4693226129992434
+    },
+    {
+      "N": 4,
+      "p": 2,
+      "seed": 1107,
+      "lambda_value": 1.0,
+      "file": "sample-4-2-1107.npz",
+      "sha256": "7c4a63deb994a34cf7e2aae626f5f581ec26a7196317511ffa80764d1d856e27",
+      "trace_H2": 1.3282289417428303,
+      "G": 18.768177906760744,
+      "K": 2.3234129659617304,
+      "static_weight": 17.778937216985838,
+      "dynamic_weight": 0.9892406897749064,
+      "dynamic_fraction": 0.05270840327118587,
+      "zero_cutoff": 2.629463317358432e-10,
+      "min_resolved_gap": 0.23326042700385408
+    },
+    {
+      "N": 5,
+      "p": 2,
+      "seed": 1105,
+      "lambda_value": 0.8,
+      "file": "sample-5-2-1105.npz",
+      "sha256": "d322ca3da25840d0e304718a2a3cc773c26f9a739538abfda8129c59532570e4",
+      "trace_H2": 1.5883110830666771,
+      "G": 14.993738304805353,
+      "K": 2.989158105546419,
+      "static_weight": 14.095342924725717,
+      "dynamic_weight": 0.8983953800796349,
+      "dynamic_fraction": 0.05991803790464367,
+      "zero_cutoff": 2.991113432026627e-10,
+      "min_resolved_gap": 0.19136672268801802
+    },
+    {
+      "N": 5,
+      "p": 2,
+      "seed": 1106,
+      "lambda_value": 0.8,
+      "file": "sample-5-2-1106.npz",
+      "sha256": "638dd46e912946191dcdd1f8a2b703580ee2077c088fbdec4388fa48f3b78ab6",
+      "trace_H2": 1.159012598027874,
+      "G": 10.450621578351068,
+      "K": 3.391520836404987,
+      "static_weight": 9.342346794465241,
+      "dynamic_weight": 1.1082747838858291,
+      "dynamic_fraction": 0.10604869534092308,
+      "zero_cutoff": 2.3435826462210055e-10,
+      "min_resolved_gap": 0.06366877568989596
+    },
+    {
+      "N": 5,
+      "p": 2,
+      "seed": 1107,
+      "lambda_value": 0.8,
+      "file": "sample-5-2-1107.npz",
+      "sha256": "bdbcf7bc18bbc755812c3fdda17e724aff4fd55ba230b0472f239f8846186070",
+      "trace_H2": 1.4663542693445202,
+      "G": 17.865343962308152,
+      "K": 4.564423597962145,
+      "static_weight": 16.123852254554354,
+      "dynamic_weight": 1.7414917077537961,
+      "dynamic_fraction": 0.0974787673513564,
+      "zero_cutoff": 2.8381572536757517e-10,
+      "min_resolved_gap": 0.10002337723620691
+    },
+    {
+      "N": 6,
+      "p": 2,
+      "seed": 1105,
+      "lambda_value": 0.6666666666666666,
+      "file": "sample-6-2-1105.npz",
+      "sha256": "467a13482306e1604675536a7a208fdd11c7027d9a5ad202fd1a9b41722bc524",
+      "trace_H2": 1.6638939973051283,
+      "G": 17.224271082466483,
+      "K": 7.528654695946808,
+      "static_weight": 15.083335181360967,
+      "dynamic_weight": 2.1409359011055096,
+      "dynamic_fraction": 0.12429761996052674,
+      "zero_cutoff": 2.8457455682167e-10,
+      "min_resolved_gap": 0.10511454400797804
+    },
+    {
+      "N": 6,
+      "p": 2,
+      "seed": 1106,
+      "lambda_value": 0.6666666666666666,
+      "file": "sample-6-2-1106.npz",
+      "sha256": "1d9dd20c18ee6e895f2c3594e3435bb1a12d2082e196d64e989875c85467fc85",
+      "trace_H2": 1.7329667734430234,
+      "G": 19.281549002940856,
+      "K": 11.905987293037795,
+      "static_weight": 16.352492335410215,
+      "dynamic_weight": 2.9290566675306424,
+      "dynamic_fraction": 0.15190982151298618,
+      "zero_cutoff": 2.899608252038439e-10,
+      "min_resolved_gap": 0.09682762202183193
+    },
+    {
+      "N": 6,
+      "p": 2,
+      "seed": 1107,
+      "lambda_value": 0.6666666666666666,
+      "file": "sample-6-2-1107.npz",
+      "sha256": "d8909a2be8796ce3b42a5ac80d253fb3a5f7657e6ecbe968dc482410464d3f38",
+      "trace_H2": 1.826964459650844,
+      "G": 21.076828440125443,
+      "K": 12.503142394654366,
+      "static_weight": 18.05168347781611,
+      "dynamic_weight": 3.025144962309337,
+      "dynamic_fraction": 0.143529420040738,
+      "zero_cutoff": 3.369440381294406e-10,
+      "min_resolved_gap": 0.03922883518446729
+    },
+    {
+      "N": 6,
+      "p": 3,
+      "seed": 1105,
+      "lambda_value": 1.5,
+      "file": "sample-6-3-1105.npz",
+      "sha256": "0ca3c68149d6adce84dbc0315972f49a7d5cc73cd2593810893cb540ea3af360",
+      "trace_H2": 0.6943727124021453,
+      "G": 13.29938388172965,
+      "K": 1.3312683391371978,
+      "static_weight": 12.799739973195265,
+      "dynamic_weight": 0.49964390853438473,
+      "dynamic_fraction": 0.0375689515377312,
+      "zero_cutoff": 2.177182076776405e-10,
+      "min_resolved_gap": 0.03599196017715639
+    },
+    {
+      "N": 6,
+      "p": 3,
+      "seed": 1106,
+      "lambda_value": 1.5,
+      "file": "sample-6-3-1106.npz",
+      "sha256": "10b0a309632ea8083d91a5c6e4af8df8695ea12c3ea75f16b251b504b49335ba",
+      "trace_H2": 0.6200083921099326,
+      "G": 10.579405547296894,
+      "K": 0.7662064913177047,
+      "static_weight": 10.198709393423082,
+      "dynamic_weight": 0.3806961538738176,
+      "dynamic_fraction": 0.035984645089164574,
+      "zero_cutoff": 2.2423933152602232e-10,
+      "min_resolved_gap": 0.057782138858509136
+    },
+    {
+      "N": 6,
+      "p": 3,
+      "seed": 1107,
+      "lambda_value": 1.5,
+      "file": "sample-6-3-1107.npz",
+      "sha256": "8a06aed3f67e44d78072a87335afb9406cee99ab664855d8c5523ff871d146c6",
+      "trace_H2": 0.7000490326901582,
+      "G": 13.724511855659577,
+      "K": 1.339230069100017,
+      "static_weight": 13.228956191312658,
+      "dynamic_weight": 0.4955556643469251,
+      "dynamic_fraction": 0.036107343529494844,
+      "zero_cutoff": 2.346596043203023e-10,
+      "min_resolved_gap": 0.03917639369113235
+    }
+  ],
+  "asymptotics": [
+    {
+      "N": 400,
+      "p": 10,
+      "lambda_value": 0.25,
+      "lambda_H2": 1.0176924363814441,
+      "p_fundamental_mu2": 3.973524888491241
+    },
+    {
+      "N": 1600,
+      "p": 20,
+      "lambda_value": 0.25,
+      "lambda_H2": 1.008595698062177,
+      "p_fundamental_mu2": 3.9851397214219832
+    },
+    {
+      "N": 6400,
+      "p": 40,
+      "lambda_value": 0.25,
+      "lambda_H2": 1.0042330714885326,
+      "p_fundamental_mu2": 3.992130782271394
+    },
+    {
+      "N": 25600,
+      "p": 80,
+      "lambda_value": 0.25,
+      "lambda_H2": 1.0021000413872967,
+      "p_fundamental_mu2": 3.995951000343605
+    },
+    {
+      "N": 100,
+      "p": 10,
+      "lambda_value": 1.0,
+      "lambda_H2": 0.990504865910124,
+      "p_fundamental_mu2": 3.6250831498875002
+    },
+    {
+      "N": 400,
+      "p": 20,
+      "lambda_value": 1.0,
+      "lambda_H2": 0.989991293434128,
+      "p_fundamental_mu2": 3.7788712683846564
+    },
+    {
+      "N": 1600,
+      "p": 40,
+      "lambda_value": 1.0,
+      "lambda_H2": 0.993442502251794,
+      "p_fundamental_mu2": 3.8789975293570977
+    },
+    {
+      "N": 6400,
+      "p": 80,
+      "lambda_value": 1.0,
+      "lambda_H2": 0.9962932198962205,
+      "p_fundamental_mu2": 3.936551683254617
+    },
+    {
+      "N": 25,
+      "p": 10,
+      "lambda_value": 4.0,
+      "lambda_H2": 0.35539647724458934,
+      "p_fundamental_mu2": 1.063158606261649
+    },
+    {
+      "N": 100,
+      "p": 20,
+      "lambda_value": 4.0,
+      "lambda_H2": 0.5313279260507576,
+      "p_fundamental_mu2": 1.8068809720077195
+    },
+    {
+      "N": 400,
+      "p": 40,
+      "lambda_value": 4.0,
+      "lambda_H2": 0.6958733926905486,
+      "p_fundamental_mu2": 2.5478664410470473
+    },
+    {
+      "N": 1600,
+      "p": 80,
+      "lambda_value": 4.0,
+      "lambda_H2": 0.8212833706664077,
+      "p_fundamental_mu2": 3.135115697817022
+    }
+  ],
+  "checks": [
+    {
+      "name": "covariance-H2-2-1",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "covariance-A2-2-1",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "covariance-H2-3-2",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "covariance-A2-3-2",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "covariance-H2-4-2",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "covariance-A2-4-2",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "covariance-H2-5-2",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "covariance-A2-5-2",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "covariance-H2-5-3",
+      "error": 5.551115123125783e-17,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "covariance-A2-5-3",
+      "error": 1.1564823173178715e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "Hermiticity-4-1-1105",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "charge-4-1-1105",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "M1-4-1-1105",
+      "error": 1.0087512517832377e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "A2-M2-4-1-1105",
+      "error": 1.237455326928975e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "charge-block-form-4-1-1105",
+      "error": 1.668411682191702e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "lowest-active-sector-4-1-1105",
+      "error": 9.837408579333688e-17,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "spectral-weight-4-1-1105",
+      "error": 1.4584774660400405e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "spectral-second-moment-4-1-1105",
+      "error": 1.1090370272466069e-29,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "zero-bin-stability-4-1-1105",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "conserved-control-4-1-1105",
+      "error": 1.2890630732068792e-31,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "Hermiticity-4-1-1106",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "charge-4-1-1106",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "M1-4-1-1106",
+      "error": 4.778944572471458e-17,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "A2-M2-4-1-1106",
+      "error": 8.845436802668064e-17,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "charge-block-form-4-1-1106",
+      "error": 1.2984246818290834e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "lowest-active-sector-4-1-1106",
+      "error": 5.3142319977727856e-17,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "spectral-weight-4-1-1106",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "spectral-second-moment-4-1-1106",
+      "error": 1.074026579634999e-28,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "zero-bin-stability-4-1-1106",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "conserved-control-4-1-1106",
+      "error": 1.2821768102401067e-31,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "Hermiticity-4-1-1107",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "charge-4-1-1107",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "M1-4-1-1107",
+      "error": 1.2600854346711093e-17,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "A2-M2-4-1-1107",
+      "error": 9.492129954777686e-17,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "charge-block-form-4-1-1107",
+      "error": 1.5034108592675569e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "lowest-active-sector-4-1-1107",
+      "error": 6.853065007606576e-17,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "spectral-weight-4-1-1107",
+      "error": 4.3317105601086234e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "spectral-second-moment-4-1-1107",
+      "error": 2.9368939799841405e-29,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "zero-bin-stability-4-1-1107",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "conserved-control-4-1-1107",
+      "error": 2.7035004351079126e-31,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "Hermiticity-3-2-1105",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "charge-3-2-1105",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "M1-3-2-1105",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "A2-M2-3-2-1105",
+      "error": 1.3534515638258115e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "charge-block-form-3-2-1105",
+      "error": 1.9346789188633438e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "lowest-active-sector-3-2-1105",
+      "error": 1.3261162699570782e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "spectral-weight-3-2-1105",
+      "error": 6.39310653157498e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "spectral-second-moment-3-2-1105",
+      "error": 1.4981098112248823e-31,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "zero-bin-stability-3-2-1105",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "conserved-control-3-2-1105",
+      "error": 1.247655598283675e-32,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "Hermiticity-3-2-1106",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "charge-3-2-1106",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "M1-3-2-1106",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "A2-M2-3-2-1106",
+      "error": 1.5679788131472226e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "charge-block-form-3-2-1106",
+      "error": 1.4110741833529785e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "lowest-active-sector-3-2-1106",
+      "error": 1.717260901519126e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "spectral-weight-3-2-1106",
+      "error": 2.6390925137704055e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "spectral-second-moment-3-2-1106",
+      "error": 2.4800515409687845e-30,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "zero-bin-stability-3-2-1106",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "conserved-control-3-2-1106",
+      "error": 1.9272710069631417e-32,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "Hermiticity-3-2-1107",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "charge-3-2-1107",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "M1-3-2-1107",
+      "error": 8.822453232238997e-17,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "A2-M2-3-2-1107",
+      "error": 2.224409116855379e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "charge-block-form-3-2-1107",
+      "error": 2.224409116855379e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "lowest-active-sector-3-2-1107",
+      "error": 1.49653298898568e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "spectral-weight-3-2-1107",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "spectral-second-moment-3-2-1107",
+      "error": 1.1309086058226037e-32,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "zero-bin-stability-3-2-1107",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "conserved-control-3-2-1107",
+      "error": 3.48274938139636e-32,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "Hermiticity-4-2-1105",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "charge-4-2-1105",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "M1-4-2-1105",
+      "error": 5.633743769257633e-17,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "A2-M2-4-2-1105",
+      "error": 1.0851769749369834e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "charge-block-form-4-2-1105",
+      "error": 1.1311263902278521e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "lowest-active-sector-4-2-1105",
+      "error": 1.6317318048339648e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "spectral-weight-4-2-1105",
+      "error": 4.572877204731336e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "spectral-second-moment-4-2-1105",
+      "error": 9.71445146547012e-17,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "zero-bin-stability-4-2-1105",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "Hermiticity-4-2-1106",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "charge-4-2-1106",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "M1-4-2-1106",
+      "error": 4.168512611791421e-17,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "A2-M2-4-2-1106",
+      "error": 1.1082334189305768e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "charge-block-form-4-2-1106",
+      "error": 1.325865857312124e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "lowest-active-sector-4-2-1106",
+      "error": 1.2315304202515653e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "spectral-weight-4-2-1106",
+      "error": 2.9347098817411885e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "spectral-second-moment-4-2-1106",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "zero-bin-stability-4-2-1106",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "Hermiticity-4-2-1107",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "charge-4-2-1107",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "M1-4-2-1107",
+      "error": 4.663687079424916e-17,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "A2-M2-4-2-1107",
+      "error": 9.265492425241547e-17,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "charge-block-form-4-2-1107",
+      "error": 8.312760246979873e-17,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "lowest-active-sector-4-2-1107",
+      "error": 1.2965369661649082e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "spectral-weight-4-2-1107",
+      "error": 1.892945440122202e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "spectral-second-moment-4-2-1107",
+      "error": 7.645463227691694e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "zero-bin-stability-4-2-1107",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "Hermiticity-5-2-1105",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "charge-5-2-1105",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "M1-5-2-1105",
+      "error": 6.628463161181218e-17,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "A2-M2-5-2-1105",
+      "error": 1.4380564973658956e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "charge-block-form-5-2-1105",
+      "error": 1.4447356844854085e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "lowest-active-sector-5-2-1105",
+      "error": 1.2110653254596344e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "spectral-weight-5-2-1105",
+      "error": 3.554197365504795e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "spectral-second-moment-5-2-1105",
+      "error": 7.428332563373776e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "zero-bin-stability-5-2-1105",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "Hermiticity-5-2-1106",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "charge-5-2-1106",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "M1-5-2-1106",
+      "error": 3.0868761809077345e-17,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "A2-M2-5-2-1106",
+      "error": 1.2607992655933877e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "charge-block-form-5-2-1106",
+      "error": 1.1337439397251393e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "lowest-active-sector-5-2-1106",
+      "error": 1.0591737544135591e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "spectral-weight-5-2-1106",
+      "error": 3.399523800727898e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "spectral-second-moment-5-2-1106",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "zero-bin-stability-5-2-1106",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "Hermiticity-5-2-1107",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "charge-5-2-1107",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "M1-5-2-1107",
+      "error": 6.034604380446831e-17,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "A2-M2-5-2-1107",
+      "error": 1.398118518944038e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "charge-block-form-5-2-1107",
+      "error": 1.3452523875424492e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "lowest-active-sector-5-2-1107",
+      "error": 1.4440926343618613e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "spectral-weight-5-2-1107",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "spectral-second-moment-5-2-1107",
+      "error": 9.729360133190373e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "zero-bin-stability-5-2-1107",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "Hermiticity-6-2-1105",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "charge-6-2-1105",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "M1-6-2-1105",
+      "error": 8.29147007199173e-17,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "A2-M2-6-2-1105",
+      "error": 1.4662056677870695e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "charge-block-form-6-2-1105",
+      "error": 1.4766173820480432e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "lowest-active-sector-6-2-1105",
+      "error": 1.3626739074843802e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "spectral-weight-6-2-1105",
+      "error": 4.1252412503156666e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "spectral-second-moment-6-2-1105",
+      "error": 1.2977036417889134e-15,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "zero-bin-stability-6-2-1105",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "Hermiticity-6-2-1106",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "charge-6-2-1106",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "M1-6-2-1106",
+      "error": 7.923952110209788e-17,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "A2-M2-6-2-1106",
+      "error": 1.4945705079457695e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "charge-block-form-6-2-1106",
+      "error": 1.6389148670381577e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "lowest-active-sector-6-2-1106",
+      "error": 1.609681219986386e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "spectral-weight-6-2-1106",
+      "error": 1.842545782114619e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "spectral-second-moment-6-2-1106",
+      "error": 7.459930855289094e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "zero-bin-stability-6-2-1106",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "Hermiticity-6-2-1107",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "charge-6-2-1107",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "M1-6-2-1107",
+      "error": 8.291224356309296e-17,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "A2-M2-6-2-1107",
+      "error": 1.4391628942096816e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "charge-block-form-6-2-1107",
+      "error": 1.4648561183342882e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "lowest-active-sector-6-2-1107",
+      "error": 1.4001393611424851e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "spectral-weight-6-2-1107",
+      "error": 1.6856016496471308e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "spectral-second-moment-6-2-1107",
+      "error": 1.420728312395866e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "zero-bin-stability-6-2-1107",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "Hermiticity-6-3-1105",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "charge-6-3-1105",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "M1-6-3-1105",
+      "error": 8.495289474915021e-17,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "A2-M2-6-3-1105",
+      "error": 1.5091302027318354e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "charge-block-form-6-3-1105",
+      "error": 1.4692556779233214e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "lowest-active-sector-6-3-1105",
+      "error": 1.6316139816872623e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "spectral-weight-6-3-1105",
+      "error": 1.3356685205850501e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "spectral-second-moment-6-3-1105",
+      "error": 1.667917717242037e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "zero-bin-stability-6-3-1105",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "Hermiticity-6-3-1106",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "charge-6-3-1106",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "M1-6-3-1106",
+      "error": 7.648037740566718e-17,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "A2-M2-6-3-1106",
+      "error": 1.5632609946961145e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "charge-block-form-6-3-1106",
+      "error": 1.3467752561296413e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "lowest-active-sector-6-3-1106",
+      "error": 1.8016047225641296e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "spectral-weight-6-3-1106",
+      "error": 6.716282238954801e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "spectral-second-moment-6-3-1106",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "zero-bin-stability-6-3-1106",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "Hermiticity-6-3-1107",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "charge-6-3-1107",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "M1-6-3-1107",
+      "error": 7.588534784170317e-17,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "A2-M2-6-3-1107",
+      "error": 1.3849829364481927e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "charge-block-form-6-3-1107",
+      "error": 1.4430141249692402e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "lowest-active-sector-6-3-1107",
+      "error": 1.7320791193237347e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "spectral-weight-6-3-1107",
+      "error": 6.471475481540476e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "spectral-second-moment-6-3-1107",
+      "error": 9.948011624660519e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "zero-bin-stability-6-3-1107",
+      "error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    }
+  ],
+  "passed": true
+}

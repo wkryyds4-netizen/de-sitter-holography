@@ -1,5 +1,21 @@
 # 下一次从这里继续
 
+## 当前继续位置：2026-11-05 Susskind 规范与带电四点
+
+先读[六页PDF](output/pdf/de-sitter-susskind-dictionary.pdf)、[中文记录](notes/susskind-dictionary.md)及[来源表](literature/susskind-dictionary-sources.md)。Susskind主线继续推进；上一主线稿为基础，不回旧五边形支线。规范已统一：ψ=√2c，complex Hamiltonian每侧p，总阶2p，标准CAR系数方差4ᵖv_s，λ=p²/N。BNR尺度J_B=(J_s/√λ)∏(1−j/N)，极限指数因子不可略；已有Hamiltonian chord谱q=e^(−4λ)直接引用。时间单独按H_c=pH_s转换。
+
+本轮核心是A₂=T(H²)−(Q−2p)H²，T(X)=Σc†Xc；m扇区的非零频谱由Σc†H_(m−1)²c决定。稿中Ξ_m包含c†、c、c†、c的固定指标收缩及m↔m−1跃迁；以中间能量u²v²积分得到S₂₂(ω≠0)。该谱保持同一J，不是独立随机探针。m=p有A₂=pH²，p=1全守恒。
+
+下一步执行：
+
+1. 精读Tall–Tomsovic 2604.14522v2 §3、§4.2及附录A，继而BNR 2006.13983v2 §3及附录C。前者§2.1至(2.11)、§4.1和§6，以及后者§2.1、§4.1、§7定义/7.1、§8.1至(8.6)已经读过。重点是四点Wick收缩如何保留相邻电荷扇区、固定长度c插入以及同J相关性。
+2. 用已知固定扇区F_m=4ᵖv_s binom(m,p)binom(N−m+p,p)与E A₂|m=F_m p(N−p+1)/(N−m+1)校准Ξ_m的能量加权低阶矩。先寻已有embedded-ensemble多扇区/相关算符公式，再推确实缺少的部分。
+3. 从双标度后小正λ的领先动态谱做起，再尝试λ修正和Rindler体质量映射。不把Hamiltonian密度或独立探针谱当A₂谱；也不以晚时指数直接作等时导数。
+
+178项代数/谱检查、5组无抽样协方差和独立扇区求和、18样本相干四点重建通过；所有J/H/A₂/离散频率权重在results/susskind-dictionary。六页PDF双遍编译、全页1200像素核版完成。首次长文件名排版溢出日志保留，已修正。生成脚本一次性禁止覆盖；只读可导入audit_complex_syk_dictionary.audit与check_singlet_charge_bridge.verify。无活跃计算，不重复小N扫描。本轮整体归档和Git状态以实际结果为准，goal仍active。
+
+以下为历史继续位置。
+
 ## 当前继续位置：2026-11-05 Susskind 主线
 
 用户明确要求优先研究Susskind主线，先做物理构建，技术细节放后面。先读[七页PDF](output/pdf/de-sitter-susskind-mainline.pdf)、[中文规划](notes/susskind-mainline.md)和[文献地图](literature/susskind-mainline.md)。当前课题是complex DSSYK∞的singlet关联及体粒子谱映射；旧五边形/表示接口已收存为补充，不自动返回该支线。

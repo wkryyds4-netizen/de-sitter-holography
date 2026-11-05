@@ -1,5 +1,9 @@
 # de Sitter 全息研究
 
+## 当前进展：规范已统一，singlet谱化为带电四点问题（2026-11-05）
+
+[六页推导PDF](output/pdf/de-sitter-susskind-dictionary.pdf)、[LaTeX](manuscript/susskind-dictionary/main.tex)、[中文记录](notes/susskind-dictionary.md)与[来源](literature/susskind-dictionary-sources.md)完成。直接复用BNR的complex chord谱与embedded-ensemble二阶矩，统一CAR、方差和时间单位。首个候选A₂已写成相邻电荷扇区的四点谱密度；18个样本及独立相干重建完成校验。下一步研究该特定四点对象的大N矩与重求和，见[NEXT](NEXT.md)。
+
 ## 当前主线：从 Susskind 静态补丁全息到体粒子（2026-11-05）
 
 研究重心转向 **静态补丁 → DSSYK∞ → 尺度分离 → singlet 动力学 → 体粒子与相互作用**。首先精读已有论证，再求 complex DSSYK 的 singlet 关联矩阵及其体谱映射。

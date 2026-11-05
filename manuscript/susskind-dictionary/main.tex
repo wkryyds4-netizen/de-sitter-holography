@@ -1,0 +1,275 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,microtype}
+\usepackage[margin=25mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\E}{\mathbb E}
+\title{Complex DSSYK: a normalized route\\to the first singlet spectral function}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Research note --- 5 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+We connect the Susskind-line singlet programme to existing solutions of
+complex double-scaled SYK and embedded ensembles. A finite-$N$ dictionary
+fixes the fermion and coupling normalizations. The first derivative
+composite is expressed through neighboring particle-number sectors,
+turning its dynamical spectrum into a precisely specified charged
+four-point density. Exact ensemble moments and small-system calculations
+provide the calibration for the next large-$N$ calculation.
+\end{abstract}
+
+\section{Fixing the microscopic model}
+Let $N$ count complex modes, $p$ count creation operators per monomial,
+and $\lambda=p^2/N$. Work with $\{c_i,c_j^\dagger\}=\delta_{ij}$,
+$Q=\sum_i c_i^\dagger c_i$, and the full infinite-temperature trace
+$\tr=2^{-N}\Tr$. The fermions in \cite{confine,bnr} have
+$\psi_i=\sqrt2 c_i$. Thus the string Hamiltonian of \cite{mss} becomes
+\begin{equation}
+ H_s=2^p\sum_{|I|=|J|=p}J_{IJ}c_I^\dagger c_J,\qquad
+ J_{IJ}=J_{JI}^*,\qquad
+ \E J_{IJ}J_{KL}=v_s\delta_{IL}\delta_{JK},
+\end{equation}
+\begin{equation}
+ v_s=\frac{\mathcal J_s^2}{\lambda}
+       \left(\frac{p!}{N^p}\right)^2.\label{vs}
+\end{equation}
+Creation products are ordered and annihilation products are their
+adjoints. Reversing both orderings changes no monomial. Diagonal
+$J_{II}$ are real with variance $v_s$; off-diagonal entries have
+$\E|J_{IJ}|^2=v_s$. In standard-CAR code the coefficient variance is
+$4^p v_s$, not $v_s$.
+
+The BNR convention \cite{bnr}, (2.4), uses
+$v_B=J_B^2\binom Np^{-2}$. The exact coefficient matching is
+\begin{equation}
+ J_B=\frac{\mathcal J_s}{\sqrt\lambda}P_{N,p},\qquad
+ P_{N,p}=\frac{(N)_p}{N^p}
+        =\prod_{j=0}^{p-1}\left(1-\frac jN\right).\label{map}
+\end{equation}
+At fixed $\lambda>0$, $P_{N,p}\to e^{-\lambda/2}$, since
+$\log P_{N,p}=-p(p-1)/(2N)+O(p^3/N^2)$. Keeping this factor is essential
+when transferring an existing spectral formula.
+
+\newpage
+\section{Reuse the known Hamiltonian solution}
+BNR \cite{bnr}, (4.3), gives the zero-chemical-potential chord moments.
+After \eqref{map}, their double-scaled form in our units is
+\begin{equation}
+ \E\tr H_s^{2k}
+ =\left(\frac{\mathcal J_s^2}{\lambda}\right)^k
+   \sum_{\pi\in\mathcal P_2(2k)}q^{\operatorname{cr}(\pi)},
+ \qquad q=e^{-4\lambda},\qquad \E\tr H_s^{2k+1}=0.
+\end{equation}
+Here the equality is in the double-scaled limit and $\mathcal P_2$
+denotes pairings. In particular,
+\begin{equation}
+ \E\tr H_s^2=\frac{\mathcal J_s^2}{\lambda},\qquad
+ \frac{\E\tr H_s^4}{(\E\tr H_s^2)^2}=2+e^{-4\lambda}.
+\end{equation}
+The existing $q$-Hermite measure can therefore be imported directly;
+there is no need to rederive the Hamiltonian density of states.
+
+\paragraph{Time units.}
+Use $t_s=p\,t_c$ and $H_c=pH_s$, so that $H_st_s=H_ct_c$.
+These relations follow the time-unit convention in \cite{qcd,temp}.
+For a fixed probe $O$, $\omega_c=p\omega_s$ and
+$S_c(\omega_c)=p^{-1}S_s(\omega_c/p)$. A derivative probe also changes:
+$M_{n,c}=p^nM_{n,s}$, hence
+\begin{equation}
+ A_{2,c}=p^2 A_{2,s},\qquad
+ S_{22,c}(\omega_c)=p^3 S_{22,s}(\omega_c/p).
+\end{equation}
+The coupling symbols in different papers also change definitions.
+For the same unit Gaussian coefficients, the 2023 complex Hamiltonian
+and the 2025 one obey
+$H_{2025}=\mathcal J_{2025}H_{2023}/(p\mathcal J_{2023})$.
+We fix \eqref{vs} first and perform time conversion only once.
+The Majorana paper \cite{qcd} instead uses total degree $p_M$ and
+$\lambda_M=2p_M^2/N_M$; its coefficients are not those of the complex model.
+
+\paragraph{Finite-$N$ normalization.}
+Set $w=4^pv_s$. In the $m$-particle sector, of dimension $d_m=\binom Nm$,
+the standard embedded-ensemble identity \cite{tt}, (2.8)--(2.9), gives
+\begin{equation}
+ \E(H_s^2)|_m=F_m I_m,\qquad
+ F_m=w\binom mp\binom{N-m+p}{p},\qquad F_m=0\ (m<p).\label{fm}
+\end{equation}
+The full trace second moment is exactly
+$2^{-N}\sum_m d_mF_m$. Equivalently, counting the overlap $k=|I\cap J|$,
+\begin{equation}
+ \E\tr H_s^2=v_s\binom Np
+ \sum_{k=\max(0,2p-N)}^p\binom pk\binom{N-p}{p-k}2^k.\label{overlap}
+\end{equation}
+Equations \eqref{fm} and \eqref{overlap} are independent implementations
+of the same finite-system normalization, used below as a check.
+
+\newpage
+\section{The first singlet connects neighboring charge sectors}
+Use $O(t)=e^{iH_st}Oe^{-iH_st}$ and
+$M_n=\sum_i c_i^\dagger(i\,\operatorname{ad}_{H_s})^n c_i$.
+As in the programme note, $M_0=Q$, $M_1=-ipH_s$ and
+\begin{equation}
+ A_2=-M_2=\sum_i[H_s,c_i]^\dagger[H_s,c_i].
+\end{equation}
+Define $\mathcal T(X)=\sum_i c_i^\dagger Xc_i$. The homogeneous
+normal-ordered CAR identity gives $\mathcal T(H_s)=(Q-p)H_s$.
+Expanding the two commutators then yields the useful exact formula
+\begin{equation}
+ \boxed{A_2=\mathcal T(H_s^2)-(Q-2p)H_s^2.}\label{a2}
+\end{equation}
+Let $H_m$ denote $H_s$ restricted to particle number $m$. Since $c_i$
+lowers particle number by one,
+\begin{equation}
+ (A_2)_m=\sum_i c_i^\dagger H_{m-1}^2c_i-(m-2p)H_m^2.\label{block}
+\end{equation}
+The second term is conserved. All nonzero-frequency weight comes from
+the first term, which retains the same couplings in adjacent sectors.
+For energy eigenstates $r,s$ in sector $m$ and $u$ in sector $m-1$,
+\begin{equation}
+ (A_2)^{(m)}_{rs}=
+ \sum_{i,u}(E_u^{(m-1)})^2(c_i)_{ur}^*(c_i)_{us}
+ -(m-2p)(E_r^{(m)})^2\delta_{rs}.\label{matrix}
+\end{equation}
+This identifies the matrix elements needed for the singlet spectrum.
+The coherent sum over $i,u$ must be formed before taking its modulus
+squared. The Hamiltonian density of states alone does not supply it.
+
+\paragraph{Two useful exact consequences.}
+At the first active sector, $m=p$, the preceding Hamiltonian vanishes,
+so $(A_2)_p=pH_p^2$. This sector has only zero-frequency weight.
+For $p=1$, $H=c^\dagger h c$ and $A_2=c^\dagger h^2c$ commute in every
+sector. These give two distinct conserved controls for a calculation.
+
+Taking the ensemble expectation in \eqref{block} and using \eqref{fm}
+also fixes the mean without numerical disorder sampling:
+\begin{align}
+ \E(A_2)|_m
+ &=\big[mF_{m-1}-(m-2p)F_m\big]I_m\nonumber\\
+ &=F_m\frac{p(N-p+1)}{N-m+1}I_m,\qquad m\ge p.\label{amean}
+\end{align}
+The elementary binomial ratio proves the second line. This is a
+normalization and static-background formula, not the dynamical spectrum.
+
+\newpage
+\section{The precise four-point object to compute next}
+Write $D_m(E)=\delta(H_m-E)$, understood as a finite-system spectral
+measure. Define the charged four-point density
+\begin{align}
+ \Xi_m(E,E';u,v)=\frac{1}{d_m}\E\sum_{i,j}\Tr_m\big[&
+ c_i^\dagger D_{m-1}(u)c_i D_m(E')\nonumber\\[-2pt]
+ &\cdot c_j^\dagger D_{m-1}(v)c_j D_m(E)\big].\label{xi}
+\end{align}
+In this equation $u,v$ are energy variables, not state labels.
+The first probe's nonzero-frequency trace spectrum is exactly
+\begin{align}
+ S_{22}(\omega)=2\pi\sum_{m=1}^N\frac{d_m}{2^N}
+ \int &dE\,dE'\,du\,dv\;u^2v^2\nonumber\\[-2pt]
+ &\cdot\Xi_m(E,E';u,v)\delta(\omega-E'+E),\qquad\omega\ne0.\label{target}
+\end{align}
+Centering $A_2$ changes only its zero-frequency contribution. Likewise,
+the conserved term in \eqref{block} drops out of \eqref{target}. The
+formula follows by inserting energy projectors in \eqref{matrix};
+it is an exact finite-$N$ reformulation of the proposed observable.
+
+\paragraph{Why this is an efficient next target.}
+BNR supplies oriented-chord methods for complex fermions, while
+Tall--Tomsovic supplies fixed-charge moments and four-point strength
+densities \cite{bnr,tt}. We can use those methods to evaluate
+\eqref{xi}, retaining both adjacent sectors and the prescribed index
+contractions. This is more specific than constructing an unspecified
+new ladder kernel from scratch.
+
+The published closed probe formulas in BNR \S7--8 and
+Tall--Tomsovic \S4 use independent Gaussian probe coefficients.
+Our $A_2$ depends quadratically on the same $J$ as $H_s$.
+Equation \eqref{xi} keeps that dependence through explicit elementary
+fermion insertions, rather than replacing $A_2$ by an independent
+random operator. Individual elementary insertions have fixed length;
+their double-scaled limit and the weighted energy integrals must be
+controlled together.
+
+\paragraph{The calculation sequence.}
+First derive low energy-weighted moments of \eqref{xi} using the
+fixed-charge operator identities and oriented contractions. Reproduce
+the conserved channels and \eqref{amean}. Then resum the dynamical
+channel, starting with small positive $\lambda$ after double scaling.
+Finally compare the resulting boost-frequency kernel with Rindler
+bulk propagation to extract invariant particle masses and weights.
+
+\newpage
+\section{Finite-system calibration}
+We implemented \eqref{vs} with $\mathcal J_s=1$ and the exact full
+trace. Five covariance sums over all pairs of Hamiltonian monomials
+agree with \eqref{overlap} and the mean of $A_2$; an independent
+particle-sector sum using \eqref{fm}--\eqref{amean} agrees as well.
+These ensemble checks require no Monte Carlo estimate.
+
+Eighteen same-sample calculations use three seeds (1105--1107) for
+each pair $(N,p)$ below. Diagonalizing within exact charge sectors,
+we store every transition frequency and weight, plus the couplings,
+Hamiltonian and $A_2$ matrices. Let $O_2=A_2-\tr(A_2)I$ and
+\begin{equation}
+ G=\tr O_2^2,\qquad K=\tr([H_s,O_2]^\dagger[H_s,O_2]),\qquad
+ f_{\rm dyn}=\frac{\int_{\omega\ne0}S_{22}(\omega)d\omega}{2\pi G}.
+\end{equation}
+The observed ranges of $f_{\rm dyn}$ are
+\begin{center}
+\begin{tabular}{rrl}
+\toprule $N$&$p$& $f_{\rm dyn}$ across three samples\\\midrule
+4&1& below $4\times10^{-28}$ (conserved)\\
+3&2& below $3\times10^{-31}$ (conserved)\\
+4&2& $0.02414$--$0.07011$\\
+5&2& $0.05992$--$0.10605$\\
+6&2& $0.12430$--$0.15191$\\
+6&3& $0.03598$--$0.03757$\\\bottomrule
+\end{tabular}
+\end{center}
+Thus the construction distinguishes the conserved controls from
+interacting samples with nonzero dynamical weight. These small systems
+calibrate the observable; they are not an extrapolation of its
+double-scaled spectrum. The 178 algebraic and spectral checks include
+$M_1$, $M_2$, \eqref{block}, the $m=p$ sector and both spectral sum rules.
+The largest recorded scaled residual is $1.30\times10^{-15}$.
+
+\appendix
+\section{Reproduction and remaining scope}
+The implementation and read-only audit scripts are listed in the
+accompanying source ledger and stored in \texttt{code/}.
+The environment is Python 3.14.5 and NumPy 2.4.6, also recorded
+in \texttt{calibration.json}.
+All calculations use complex double precision and save code/data hashes.
+The numerical zero bin is $10^{-10}\max(1,\|H_s\|_2)$; reducing it by
+ten changes no reported static weight at the test tolerance.
+
+The algebraic formulas are standard CAR/ensemble consequences; the
+Hamiltonian chord solution is due to the cited literature. The
+large-$N$ evaluation of \eqref{xi}, its spectral normalization and its
+bulk mass map remain the next research work. Late-time exponential
+approximations to elementary correlators are not differentiated at
+zero time to obtain the energy-weighted insertions above.
+
+\newpage
+\begin{thebibliography}{9}\small
+\bibitem{confine} L. Susskind, \emph{De Sitter Space has no Chords.
+Almost Everything is Confined},
+\href{https://arxiv.org/abs/2303.00792v1}{arXiv:2303.00792v1}.
+\bibitem{mss} S. Miyashita, Y. Sekino and L. Susskind,
+\emph{DSSYK at Infinite Temperature: The Flat-Space Limit and the
+'t Hooft Model}, \href{https://arxiv.org/abs/2506.18054v3}{arXiv:2506.18054v3}.
+\bibitem{bnr} M. Berkooz, V. Narovlansky and H. Raj,
+\emph{Complex Sachdev-Ye-Kitaev model in the double scaling limit},
+JHEP 02 (2021) 113,
+\href{https://arxiv.org/abs/2006.13983v2}{arXiv:2006.13983v2}.
+\bibitem{qcd} Y. Sekino and L. Susskind, \emph{Double-Scaled SYK,
+QCD, and the Flat Space Limit of de Sitter Space},
+\href{https://arxiv.org/abs/2501.09423v2}{arXiv:2501.09423v2}.
+\bibitem{temp} A. Rahman and L. Susskind, \emph{Infinite Temperature
+is Not So Infinite: The Many Temperatures of de Sitter Space},
+\href{https://arxiv.org/abs/2401.08555v3}{arXiv:2401.08555v3}.
+\bibitem{tt} J. Tall and S. Tomsovic, \emph{Double-scaled bosonic and
+fermionic embedded ensembles, complex SYK, and the dual Hilbert space},
+\href{https://arxiv.org/abs/2604.14522v2}{arXiv:2604.14522v2}.
+\end{thebibliography}
+\end{document}

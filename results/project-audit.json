@@ -7,10 +7,10 @@
     "Source remains a link, not an archive: dlmf-16.5",
     "Source remains a link, not an archive: dlmf-15.6"
   ],
-  "verified_at_utc": "2026-11-05T12:41:00.705142+00:00",
-  "required_files": 1076,
-  "local_links_checked": 1135,
-  "code_and_input_hashes_checked": 1500,
+  "verified_at_utc": "2026-11-05T13:46:18.986334+00:00",
+  "required_files": 1113,
+  "local_links_checked": 1146,
+  "code_and_input_hashes_checked": 1536,
   "scientific_checks": {
     "stage1": {
       "checks": 235,
@@ -841,6 +841,11 @@
       "recorded_hashes": 9
     },
     {
+      "file": "results/susskind-dictionary/evidence.json",
+      "kind": "evidence/root-relative provenance",
+      "recorded_hashes": 36
+    },
+    {
       "file": "results/stage3/cross-limit/comparison.json",
       "kind": "projected comparison model only; not exact 6j convergence or interval certification",
       "checks": 19
@@ -1143,6 +1148,13 @@
       "prior_bound_files_checked": 67,
       "interval_radius": null,
       "scope": "Hash and exact rational endpoint checks only. No overlap reintegration, no formal proof checking, no quantitative parameter neighborhood."
+    },
+    {
+      "stage": "susskind-dictionary",
+      "sample_hashes_checked": 18,
+      "independent_sector_moments": 5,
+      "charged_reconstruction_samples": 18,
+      "scope": "Saved finite-system moments and independent sector normalization; no large-N singlet claim."
     },
     {
       "file": "results/stage3/growing-box/diagnostics.json",
