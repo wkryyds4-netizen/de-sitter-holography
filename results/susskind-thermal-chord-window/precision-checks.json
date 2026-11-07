@@ -1,0 +1,129 @@
+{
+  "status": "passed",
+  "created_at_utc": "2026-11-07T22:59:57.393849+00:00",
+  "rows": [
+    {
+      "m": 8,
+      "decimal_precision": 50,
+      "cutoff": 186,
+      "order": 274,
+      "values": {
+        "seed_overlap": "0.018985646695767467050463503851233112773498982227704",
+        "number_mean": "7.8979242042101075881807618473686552045154253920450",
+        "coherent_distance": "0.018337688827154808362446661655003178053668503495206",
+        "scaled_norm_squared": "0.92105998362743041186053223408015759939638633555428",
+        "boost_sum_norm": "0.17178867136909431111335421362378139800021870654778",
+        "E_eigenvector_defect": "0.12564839589284647504641010806565807717368596887247",
+        "B_second": "0.83757975603206267387637538052148455781464454980686",
+        "BP_commutator_expectation_imag": "1.5657815744216967659820627718860353014764731226193"
+      },
+      "relative_difference": {
+        "seed_overlap": 5.5329350676551694e-17,
+        "number_mean": 5.214271845418634e-17,
+        "coherent_distance": 1.6488579859306523e-14,
+        "scaled_norm_squared": 1.5071108206210199e-15,
+        "boost_sum_norm": 2.975362333631701e-16,
+        "E_eigenvector_defect": 1.9859855523515697e-16,
+        "B_second": 3.118941740334815e-17,
+        "BP_commutator_expectation_imag": 4.214001738796533e-17
+      },
+      "h_mean": "-5.5990640367132176707220182826903006953299484928136",
+      "h_mean_over_sqrt_m": "-1.9795680743288203511536067002115185734233895047519"
+    },
+    {
+      "m": 32,
+      "decimal_precision": 50,
+      "cutoff": 290,
+      "order": 570,
+      "values": {
+        "seed_overlap": "1.1356466454969484908111608587791967783218760201649E-7",
+        "number_mean": "31.973990557253471388570873122516978877674333660776",
+        "coherent_distance": "0.0023061334205922833051175814656640504453829257399451",
+        "scaled_norm_squared": "0.97939841567063530947564007718819762109787110282087",
+        "boost_sum_norm": "0.087558825040836258233099376550717157590025599402308",
+        "E_eigenvector_defect": "0.031260172849454803311339263117281594662719887264731",
+        "B_second": "0.94392905930655186556287367116904179504831115384912",
+        "BP_commutator_expectation_imag": "1.8796452633675078380974366048876020053328742898167"
+      },
+      "relative_difference": {
+        "seed_overlap": 3.602186628278797e-15,
+        "number_mean": 4.882540106754346e-16,
+        "coherent_distance": 1.6941555893075447e-13,
+        "scaled_norm_squared": 1.3672193201123117e-14,
+        "boost_sum_norm": 3.2244721606740587e-16,
+        "E_eigenvector_defect": 1.05928373431084e-16,
+        "B_second": 6.945741634369659e-17,
+        "BP_commutator_expectation_imag": 2.0268418380515876e-17
+      },
+      "h_mean": "-11.306351534815725558213197280633710570420233965685",
+      "h_mean_over_sqrt_m": "-1.9986994601867822541182806771703592333880998366609"
+    },
+    {
+      "m": 128,
+      "decimal_precision": 50,
+      "cutoff": 594,
+      "order": 1451,
+      "values": {
+        "seed_overlap": "1.6074693755186981237847262106760554269972041776836E-28",
+        "number_mean": "127.99349008286998022556856155873553509787336286655",
+        "coherent_distance": "0.00028790847547508482806680146742279539265450428912867",
+        "scaled_norm_squared": "0.99480546072817749686876796151216054809210520916686",
+        "boost_sum_norm": "0.044094545394105467614823051444978437656521863370502",
+        "E_eigenvector_defect": "0.0078126589468829702008260742827986093337981525577662",
+        "B_second": "0.98479559303158873644374504076592429228471982775186",
+        "BP_commutator_expectation_imag": "1.9690512690224283653151100253733734013132918470123"
+      },
+      "relative_difference": {
+        "seed_overlap": 4.431676792543543e-15,
+        "number_mean": 1.7623440177519195e-18,
+        "coherent_distance": 3.152320560145119e-11,
+        "scaled_norm_squared": 1.3674162204619656e-14,
+        "boost_sum_norm": 1.0798347647282944e-15,
+        "E_eigenvector_defect": 2.8170000626494336e-16,
+        "B_second": 1.3855032049924018e-16,
+        "BP_commutator_expectation_imag": 8.395673217155341e-17
+      },
+      "h_mean": "-22.626496353663275774941526079810487268390939403484",
+      "h_mean_over_sqrt_m": "-1.9999186257709991714718498615773392779079253136473"
+    },
+    {
+      "m": 512,
+      "decimal_precision": 50,
+      "cutoff": 1586,
+      "order": 3628,
+      "values": {
+        "seed_overlap": "6.6200311466151115591584026152925947558952099178426E-112",
+        "number_mean": "511.99837240362106993191604809852670073945583607443",
+        "coherent_distance": "0.000035971505806673831904333590328877924847787528205475",
+        "scaled_norm_squared": "0.99869876798266002807286563554493176405615667395017",
+        "boost_sum_norm": "0.022084862640792697010764096104013988494189604148502",
+        "E_eigenvector_defect": "0.0019531274835282151489422042345327551358811383448550",
+        "B_second": "0.99612034773265015282287702298203453413239867085203",
+        "BP_commutator_expectation_imag": "1.9922065116608304512899213637863299928499324578847"
+      },
+      "relative_difference": {
+        "seed_overlap": 3.777310904805532e-14,
+        "number_mean": 2.5404003403621286e-16,
+        "coherent_distance": 1.5652553089093306e-11,
+        "scaled_norm_squared": 1.4846511469506373e-13,
+        "boost_sum_norm": 1.493748747296347e-15,
+        "E_eigenvector_defect": 7.62583116005705e-17,
+        "B_second": 1.5341808584759311e-16,
+        "BP_commutator_expectation_imag": 2.445031594420693e-17
+      },
+      "h_mean": "-45.254718907471969220595667482054867676377433247720",
+      "h_mean_over_sqrt_m": "-1.9999949137602810489344663266242735410997431463048"
+    }
+  ],
+  "correction": "On this Windows host numpy.longdouble has nmant=52. The first output compares two double-precision evaluation paths, not 53/64-bit significands. Its limitations string overstates this precision check and is superseded here. No sealed bytes changed. Decimal uses 50 significant decimal digits.",
+  "scope": "Positive Jacobi Taylor recurrence at actual 50-decimal precision, compared against sealed double-precision observables for d=2. Analytic remainder bounds are exact-arithmetic, no interval-rounding certification.",
+  "input_sha256": {
+    "results/susskind-thermal-chord-window/window-checks.json": "d36161666759fda1bfe351a0a09be636692931705fef7facdecf27a10a4cd6b0",
+    "code/check_thermal_chord_precision.py": "b27be2dcf2cfd2620b370c2884e53d9869229280f0c91705ee3c5167d3be633a"
+  },
+  "environment": {
+    "python": "3.14.5 (tags/v3.14.5:5607950, May 10 2026, 10:43:50) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "decimal_precision": 50
+  }
+}

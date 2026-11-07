@@ -1,0 +1,374 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=24mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,booktabs,microtype}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+\newcommand{\tr}{\tau}
+\newcommand{\A}{\mathcal A}
+\newtheorem{proposition}{Proposition}
+\title{A preparation dictionary for the selected state\\\large Modular spectra and energy-resolved balance}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{8 November 2026\quad Local research draft}
+\begin{document}\maketitle
+\begin{abstract}
+The complete selected bilocal mean and covariance call for a
+distinction between preparation and the generator of static-patch
+time. We apply standard tracial modular theory to the already
+established selected density. Its modular flow has an explicit
+q-Mehler spectral representation after an orthogonal rotation of
+the two q-Gaussian fields. We derive a nonzero stationary part in
+the modular correlation of the microscopic Hamiltonian, spectral
+sum rules, and a finite-window test that rules out every constant
+Hamiltonian temperature even on the stationary charged restriction.
+These are model-level preparation data for a subsequent bulk
+dictionary; no spatial generator is supplied by taking a logarithm
+of the density.
+\end{abstract}
+
+\section{The physical comparison and its conventions}
+Miyashita--Sekino--Susskind identify the microscopic Hamiltonian
+with static-patch boost time, while distinguishing its Boltzmann
+temperature from the Gibbons--Hawking temperature
+\cite[Sec.~2, (2.4)--(2.5)]{MSS26}.
+Their flat-space construction uses the maximally mixed microscopic
+background, whereas the bulk Rindler vacuum has dimensionless
+temperature $1/(2\pi)$ \cite[Secs.~1, 6]{MSS25}.
+The singlet mass comparison is still a quantitative target
+\cite[Sec.~4.3]{MSS26}. These statements do not assign a new
+temperature to every prepared microscopic state.
+
+Our model is the same-disorder overlapping complex Gaussian
+$p$-body CAR system, at half filling. Exact finite-$N$ pinching
+precedes $p^2/N\to\lambda>0$ double scaling. Use
+\[
+ q=e^{-4\lambda},\quad \zeta=\sqrt q,\quad C=J_s^2/\lambda,
+ \quad h=H/\sqrt C,\quad W=\sqrt\lambda U,\quad\hbar=1.
+\]
+The fields $h,U$ are orthogonal unit-variance q-Gaussians in the
+faithful tracial limiting algebra. Let $\A$ be the controlled
+covariant algebra containing them and the charged curvature $X$.
+The preceding selected-state and higher-descendant results give
+\begin{equation}\label{density}
+ \sigma(A)=\tr(\rho A),\qquad
+ \rho=1-\zeta(1+\lambda)+\zeta(h-W)^2.
+\end{equation}
+All algebraic results below concern this limiting algebra. We do
+not infer microscopic modular convergence from polynomial moment
+convergence alone.
+
+Physical Hamiltonian time is $\alpha_T(A)=e^{iTh}Ae^{-iTh}$,
+with $T=\sqrt C\,t_{\rm phys}$. The previous string variable is
+$u=2\sqrt\lambda T$; the earlier candidate Rindler matching used
+$\eta=2u$. The modular parameter introduced below is a separate
+dimensionless variable. Lin--Stanford's bra/ket maps
+\cite[(158)--(159)]{LS} are kept as preparation-dependent maps;
+they are not a uniform rescaling of all these clocks.
+
+\newpage
+\section{A computable modular flow}
+Use the already established rotation
+\begin{equation}\label{rotation}
+ v=\frac{h-\sqrt\lambda U}{\sqrt{1+\lambda}},\qquad
+ z=\frac{\sqrt\lambda h+U}{\sqrt{1+\lambda}},\qquad
+ h=\frac{v+\sqrt\lambda z}{\sqrt{1+\lambda}}.
+\end{equation}
+Orthogonal second quantization preserves the q-Gaussian trace
+\cite[Theorem 2.11]{BKS}; hence $v,z$ have the same joint law
+as $h,U$. Set
+\begin{equation}\label{ab}
+ a=1-\zeta(1+\lambda),\quad b=\zeta(1+\lambda),\quad
+ R=\frac2{\sqrt{1-q}},\quad p(x)=a+bx^2.
+\end{equation}
+Then $\rho=p(v)$, $a+b=1$ and $a>0$, since
+$e^{2\lambda}>1+\lambda$. The known exact spectral bounds are
+$a\le\rho\le a+bR^2$. In particular the state is faithful.
+
+On the tracial standard Hilbert space $L^2(\A,\tr)$, the
+normalized cyclic separating vector is $\Omega_\sigma=\rho^{1/2}$.
+For left and right multiplication $L,R$, standard modular theory
+\cite[Sec.~4.2]{Witten} gives
+\[
+ \Delta_\sigma=L_\rho R_{\rho^{-1}},\qquad
+ \Delta_\sigma^{is}A\Delta_\sigma^{-is}=\rho^{is}A\rho^{-is}.
+\]
+We choose the opposite sign to use ordinary positive-temperature
+Heisenberg conventions:
+\begin{equation}\label{flow}
+ k(x)=-\log p(x),\quad K=k(v),\qquad
+ \beta_s(A)=e^{isK}Ae^{-isK}=\rho^{-is}A\rho^{is}.
+\end{equation}
+Then $\sigma$ is a $\beta=1$ KMS state for $\beta_s$.
+The implementing generator on $L^2$ is $L_K-R_K$, not $L_K$
+alone. This follows directly by moving $\rho$ around the trace;
+no finite-dimensional matrix trace is assumed.
+
+The state also has the exact preparation forms
+\begin{equation}\label{prep}
+ \sigma(A)=a\tr(A)+b\tr(vAv)
+           =\langle\rho^{1/2},A\rho^{1/2}\rangle_2.
+\end{equation}
+These are two descriptions of the same established density.
+The rotation, positivity and nonstationarity were already proved
+in \cite{selected}; the new calculations below are its modular
+response and an energy-resolved balance test.
+
+In particular the inherited identity
+\[
+ \|[h,\rho]\|_2^2
+ =2q\lambda(1+\lambda)(1+q)(1-q^2)>0
+\]
+shows that no nonzero constant rescaling of $\alpha_T$ equals
+\eqref{flow} on the full algebra: $\beta_s$ preserves $\sigma$,
+whereas $\alpha_T$ does not. The modular clock is available for
+computing preparation response, not as a replacement boost.
+
+\newpage
+\section{Exact modular spectral kernel}
+Let $d\mu_q$ be the unit-variance q-Hermite measure and let
+$K_r(x,y)$ denote its Mehler kernel with eigenvalues $r^n$.
+The one-$z$ bimodule measure relative to $v$ is
+\[
+ d\nu(x,y)=K_q(x,y)d\mu_q(x)d\mu_q(y).
+\]
+For $\mathcal W(s)=\sigma(\beta_s(z)z)$, functional calculus
+and the two-$z$ trace formula give
+\begin{equation}\label{kernel}
+ \boxed{\mathcal W(s)=\int p(x)e^{is[k(x)-k(y)]}\,d\nu(x,y).}
+\end{equation}
+Here $x$ is the state-weighted energy of $v$, not the original
+Hamiltonian energy $h$. The positive spectral measure, using
+$\mathcal W(s)=\int e^{-i\omega s}dS(\omega)$, is the pushforward
+of $p(x)d\nu$ under
+\[
+ \omega=k(y)-k(x)=\log\frac{p(x)}{p(y)}.
+\]
+It is supported in $[-\Omega,\Omega]$, with
+\begin{equation}\label{band}
+ \Omega=\log\frac{a+bR^2}{a}.
+\end{equation}
+Exchanging $x,y$ proves the measure identity
+$dS(-\omega)=e^{-\omega}dS(\omega)$, equivalently
+\begin{equation}\label{kms}
+ \mathcal W(s-i)=\mathcal W(-s)\qquad(s\in\mathbb R).
+\end{equation}
+At fixed $q$, the kernel is entire in $s$ because $K$ is bounded.
+This KMS statement fixes the sign convention in \eqref{flow}.
+
+Some useful exact sum rules are
+\begin{align}
+ \mathcal W(0)&=1,\\
+ i\mathcal W'(0)&=\frac12\int[p(x)-p(y)]
+                  \log\frac{p(x)}{p(y)}d\nu>0,\label{first}\\
+ -\mathcal W''(0)&=\int p(x)\left[\log\frac{p(x)}{p(y)}\right]^2d\nu,\\
+ D(\sigma\|\tr)&=\int p(x)\log p(x)d\mu_q(x).
+\end{align}
+The entropy is relative to the normalized trace, not an absolute
+von Neumann entropy of a continuum wedge. Strict positivity in
+\eqref{first} uses the strictly positive kernel and nonconstant $p$.
+
+The microscopic Hamiltonian has the modular correlation
+\begin{equation}\label{hcor}
+ \sigma(\beta_s(h)h)=
+ \frac{1+b(1+q)}{1+\lambda}
+       +\frac{\lambda}{1+\lambda}\mathcal W(s).
+\end{equation}
+Cross terms vanish by odd $z$ parity, and
+$\sigma(v^2)=1+b(1+q)$. The $\mathcal W$ spectrum has no atoms:
+on each half of $[-R,R]$, $k$ is strictly monotone with nonzero
+derivative away from zero. Its pushforward of the integrable
+two-variable density is absolutely continuous; the isolated
+critical point carries no mass. Taking the difference of the
+two transformed variables preserves absolute continuity.
+Riemann--Lebesgue therefore gives $\mathcal W(s)\to0$.
+Thus \eqref{hcor} has the explicit nonzero plateau shown there.
+This is a modular-time result after fixed-$\lambda$ double scaling.
+
+\newpage
+\section{A finite-window test of Hamiltonian temperature}
+The previously proved charged restriction on $W^*(h,X)$ is
+\[
+ \sigma|_{h,X}=\tau_f,\qquad
+ f(h)=1-\zeta+\zeta h^2,
+\]
+where $X$ is the normalized centered charged curvature with
+Hamiltonian crossing $q^2$. This restriction is stationary under
+$\alpha_T$ even though the full state is not.
+Its unfiltered $X$ autocorrelation is real and even. Consequently
+that one autocorrelation alone has symmetric frequency weight
+and cannot establish tracial equilibrium on the whole algebra.
+
+Take a bounded energy-filtered probe
+$A_{IJ}=P_I(h)XP_J(h)$. The exact same-disorder two-energy
+measure is $d\nu_X=K_{q^2}(x,y)d\mu_q(x)d\mu_q(y)$, and
+\begin{align}\label{rates}
+ F_{IJ}:=\tau_f(A_{IJ}^\dagger A_{IJ})
+  &=\int_{I\times J}f(y)d\nu_X,\\
+ R_{IJ}:=\tau_f(A_{IJ}A_{IJ}^\dagger)
+  &=\int_{I\times J}f(x)d\nu_X.
+\end{align}
+These are positive probe norms (or transition weights), not
+rates obtained from a new interaction model.
+
+\begin{proposition}
+The restriction $\tau_f$ on $W^*(h,X)$ is not a KMS state for
+$\alpha_T$ at any constant real inverse temperature $\beta$.
+\end{proposition}
+\begin{proof}
+The bounded inner dynamics makes every bounded probe entire
+analytic. Its KMS identity requires energy-resolved reverse to
+forward ratio $e^{-\beta(x-y)}$. Equivalently,
+\[
+ R_{IJ}=\int_{I\times J}e^{-\beta(x-y)}f(y)d\nu_X.
+\]
+Choose $I_+=[.8,1.2]$, $I_-=[-1.2,-.8]$, $J=[-.2,.2]$.
+All intervals lie inside the support for every $0<q<1$.
+The positive Mehler kernel and monotonicity of $f$ in $|x|$ give
+\begin{equation}\label{ratio}
+ \frac{R_{I_+J}}{F_{I_+J}}
+ =\frac{R_{I_-J}}{F_{I_-J}}
+ \ge\frac{1-\zeta+.64\zeta}{1-\zeta+.04\zeta}>1.
+\end{equation}
+The equality follows from simultaneous reflection. In the
+positive window $x-y>0$, so this inequality would force
+$\beta<0$. In the negative window it would force $\beta>0$.
+The value $\beta=0$ would give ratio one in both. No constant
+temperature is consistent with the two probes.
+\end{proof}
+
+At the density level the same obstruction is
+$f(x)/f(y)\ne e^{-\beta(x-y)}$ for any fixed $\beta$ on the
+full support: evenness would force $\beta=0$, then $f$ would
+have to be constant. The restricted state's own modular
+Hamiltonian is instead $K_f=-\log f(h)$.
+This distinguishes physical stationarity from thermal balance,
+and uses actual probes in the charged algebra rather than an
+assumed temperature inferred from a fit to one correlator.
+
+\newpage
+\section{Executed checks and error scope}
+We evaluated \eqref{kernel} at $q=1/4,1/2$, with
+$\lambda=-\log q/4$, using two independent representations:
+the q-Hermite Jacobi matrix and the angular q-Pochhammer density
+and Mehler product. Each used orders 128 and 192.
+The 22 comparisons cover real modular times $0,.5,1,2,4$,
+mid-strip times $.5-i/2,1-i/2,2-i/2$, and lower-boundary times
+$.5-i,1-i,2-i$. All complex values are saved.
+
+The maximum cross-representation absolute difference is
+$2.34\cdot10^{-14}$, and the largest within-method refinement
+is $1.88\cdot10^{-12}$. The maximum cross relative difference
+is $2.76\cdot10^{-14}$; the largest phase-cancellation factor
+is $72.92$. Neither comparison is an interval certificate.
+KMS boundary exchanges are sign/implementation checks, not an
+independent proof of modular theory. Sum rules were compared
+between the two representations as well.
+
+\begin{center}
+\begin{tabular}{cccc}
+\toprule
+$q$&$\mathcal W(1)$&$-\mathcal W''(0)$&$R_{I_+J}/F_{I_+J}$\\
+\midrule
+$1/4$&$.55776147-.30164823i$&$1.09084006$&$1.97039949$\\
+$1/2$&$.40881713-.31551359i$&$1.70797502$&$3.28486964$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Four finite-window calculations (both signs and both $q$) used
+32/64-point interval quadrature. Their ratios exceed the analytic
+lower bounds $1.57692308$ and $2.32096452$ respectively. The
+analytic incompatibility in \eqref{ratio} does not depend on
+these numerical values.
+
+\paragraph{A separately controlled product tail.}
+Truncate the density products at $n=P$ and the kernel product
+at $n=P-1$, as in the code. For a general Mehler parameter $r$,
+the absolute logarithmic error of the joint density is bounded by
+\begin{equation}\label{producttail}
+ \delta_P=\frac1{1-q}\left[
+ \frac{6q^{P+1}}{1-q^{P+1}}+
+ \frac{r^2q^P}{1-r^2q^P}+
+ \frac{4rq^P}{1-rq^P}\right].
+\end{equation}
+This follows termwise from
+$|\log(1-z)|\le |z|/(1-|z|)$, including each conjugate factor.
+For real $s$, the finite-product continuous integral differs
+from \eqref{kernel} by at most $e^{\delta_P}-1$; its positive
+reference weight $p(x)d\nu$ has mass one. For
+$s=t-i\theta$, $0\le\theta\le1$, the absolute weight is
+$p(x)^{1-\theta}p(y)^\theta d\nu$, whose mass is at most one
+by weighted arithmetic--geometric mean. The same bound holds.
+For the second sum rule multiply by $\Omega^2$.
+We used $P=192$. This bound excludes angular quadrature,
+Jacobi truncation and floating-point error.
+
+All computations are fixed-$q$ diagnostics. The logarithmic
+flow and its bounds are not uniform as $\lambda\downarrow0$;
+no small-$\lambda$ modular limit is asserted.
+
+\newpage
+\section{What this changes in the bulk construction}
+The constructive output is a definite preparation vector
+$\rho^{1/2}$ and its exact modular spectral response. It allows
+us to keep three objects separate in the next comparison:
+the trace background used in the DSSYK proposal, the prepared
+state used in our bilocal calculation, and the generator of
+candidate bulk boost time. A stationary charged restriction does
+not remove the need to match the preparation: its energy-filtered
+balance test still differs from a constant-temperature Gibbs law.
+
+For a vacuum wedge in relativistic QFT, the modular/boost
+identification uses the wedge algebra and the vacuum, with the
+fixed $2\pi$ factor \cite[Sec.~5]{Witten}. Applying this statement
+to an arbitrary selected state and the entire microscopic algebra
+would change both inputs. Here $K=k(v)$ is explicitly known,
+but taking $K$ to be the geometrical boost is not the dictionary.
+
+The next constructive target is the action of a candidate null
+translation on the \emph{prepared} cyclic states, with the boost
+still implemented by the original Hamiltonian time. The earlier
+translation note \cite{translations} supplies a check:
+two-point boost kernels alone admit arbitrary masses, while
+reverse-null response probes mass moments. We should calculate
+generator matrix elements with the bra/ket preparation kept
+explicit, verify the mixed boost/translation Ward identities,
+and only then compare the mass operator to the existing
+'t Hooft target. This stage supplies the state and balance data
+for that test; the null generator, selected four-bilocal dynamics
+and finite-$G$ dictionary remain to be constructed.
+
+\begin{thebibliography}{9}\small
+\bibitem{MSS26} S. Miyashita, Y. Sekino and L. Susskind,
+\emph{Holograms and Standard Models},
+\href{https://arxiv.org/abs/2607.05678v2}{arXiv:2607.05678v2},
+Secs.~2 and 4.3.
+\bibitem{MSS25} S. Miyashita, Y. Sekino and L. Susskind,
+\emph{DSSYK at Infinite Temperature: The Flat-Space Limit and
+the 't Hooft Model},
+\href{https://arxiv.org/abs/2506.18054v3}{arXiv:2506.18054v3},
+Secs.~1 and 6. The earlier phase-boundary location is corrected
+in L. Susskind, \href{https://arxiv.org/abs/2511.10907}{arXiv:2511.10907}.
+\bibitem{LS} H. W. Lin and D. Stanford,
+\emph{A symmetry algebra in double-scaled SYK},
+\href{https://arxiv.org/abs/2307.15725}{arXiv:2307.15725},
+Sec.~4.2, (153)--(164).
+\bibitem{BKS} M. Bo\.{z}ejko, B. K\"ummerer and R. Speicher,
+\emph{q-Gaussian processes: non-commutative and classical aspects},
+Commun. Math. Phys. 185 (1997), 129--154,
+\href{https://arxiv.org/abs/funct-an/9604010}{arXiv:funct-an/9604010}.
+\bibitem{Witten} E. Witten,
+\emph{Notes on Some Entanglement Properties of Quantum Field Theory},
+\href{https://arxiv.org/abs/1803.04993v6}{arXiv:1803.04993v6},
+Secs.~4.1--4.2 and 5.
+\bibitem{selected} A. Day and Chengheng,
+\emph{Single selected Slater preparation}, local stage
+\texttt{susskind-slater-selected-state}, 8 Nov. 2026,
+and \texttt{susskind-slater-higher-wick} for the extended tower.
+\bibitem{covariance} A. Day and Chengheng,
+\emph{Preparation memory in the complete bilocal covariance},
+local stage \texttt{susskind-selected-bilocal-covariance},
+8 Nov. 2026.
+\bibitem{translations} A. Day and Chengheng,
+\emph{From boost kernels to candidate translations}, local stage
+\texttt{susskind-translations}, 6 Nov. 2026.
+\end{thebibliography}
+\end{document}

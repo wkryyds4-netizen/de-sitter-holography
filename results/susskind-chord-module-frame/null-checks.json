@@ -1,0 +1,94 @@
+{
+  "status": "passed",
+  "created_at_utc": "2026-11-07T23:18:08.551839+00:00",
+  "rows": [
+    {
+      "m": 8.0,
+      "j": 0,
+      "k": 0,
+      "null_commutator_defect": 0.33790681797741895,
+      "relative": 0.1531692051591342,
+      "cancellation": 25.03882717984751
+    },
+    {
+      "m": 8.0,
+      "j": 2,
+      "k": 3,
+      "null_commutator_defect": 2.461122882613674,
+      "relative": 0.4305505951919378,
+      "cancellation": 18.753912010685283
+    },
+    {
+      "m": 32.0,
+      "j": 0,
+      "k": 0,
+      "null_commutator_defect": 0.1149937301934278,
+      "relative": 0.051714859238593376,
+      "cancellation": 73.35749296465261
+    },
+    {
+      "m": 32.0,
+      "j": 2,
+      "k": 3,
+      "null_commutator_defect": 0.9332626538914238,
+      "relative": 0.15773716294863416,
+      "cancellation": 48.478296040989974
+    },
+    {
+      "m": 128.0,
+      "j": 0,
+      "k": 0,
+      "null_commutator_defect": 0.04792864539154208,
+      "relative": 0.021466988046427327,
+      "cancellation": 177.0877934756133
+    },
+    {
+      "m": 128.0,
+      "j": 2,
+      "k": 3,
+      "null_commutator_defect": 0.3743483777014979,
+      "relative": 0.062309182874411416,
+      "cancellation": 121.6680208825405
+    },
+    {
+      "m": 512.0,
+      "j": 0,
+      "k": 0,
+      "null_commutator_defect": 0.022580599383743412,
+      "relative": 0.010102270996713075,
+      "cancellation": 376.6199728700453
+    },
+    {
+      "m": 512.0,
+      "j": 2,
+      "k": 3,
+      "null_commutator_defect": 0.17269749829849557,
+      "relative": 0.028625497528151887,
+      "cancellation": 264.35553235555847
+    }
+  ],
+  "exact_positivity_forms": [
+    {
+      "d": 1,
+      "dimension": 8,
+      "identity": "Q=A^dagger A"
+    },
+    {
+      "d": 2,
+      "dimension": 8,
+      "identity": "Q=A^dagger A"
+    },
+    {
+      "d": 3,
+      "dimension": 8,
+      "identity": "Q=A^dagger A"
+    }
+  ],
+  "input_sha256": {
+    "results/susskind-chord-module-frame/frame-checks.json": "f2227eca8b2c57f0d9292773bbf04046fb0c4687b8971eb98ab9625bc5615e27",
+    "code/chord_module_frame.py": "1d77fd01b1af618be156507c7c558dd154a3178cf43ca13905834567a770b55f",
+    "code/check_chord_module_null.py": "77071590b16a76fc600c251a12f3c6c7d7e5816fa8dac6caef32a3f2387a6fd7"
+  },
+  "scope": "Finite moving vectors: [Btr,Qepsilon]-iQepsilon. Exact positivity form belongs to limiting relative Q, not finite-q LS matrices.",
+  "limitations": "No finite-q positivity assertion, no opposite null generator or mass selection; main frame-checks contains environment and independent 50-decimal diagnostics."
+}

@@ -1,0 +1,360 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=24mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,booktabs,microtype}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+\newtheorem{proposition}{Proposition}
+\newcommand{\eps}{\epsilon}
+\newcommand{\ket}[1]{|#1\rangle}
+\newcommand{\B}{\widehat B}
+\newcommand{\PP}{\widehat P}
+\newcommand{\Bt}{B_{\rm tr}}
+\newcommand{\Pois}{\operatorname{Pois}}
+\title{A controlled thermal window for chord generators\\
+\large Endpoint preparation and the Hamiltonian boost}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{8 November 2026\quad Local research draft}
+\begin{document}\maketitle
+\begin{abstract}
+The zero-chord matter seed fails a direct identification of the
+Lin--Stanford length-preserving generators with the microscopic boost.
+We study their exact action on an endpoint Euclidean preparation.
+A positive-path comparison with the ordinary oscillator gives a
+sufficient joint window in which the inverse-temperature parameter
+vanishes, the chord number diverges, and the normalized heat vector
+approaches a moving coherent vector. In this window the actions of
+the rescaled chord boost and the negative Hamiltonian boost agree
+in norm on the prepared vector. Lowest-weight and second-moment
+limits follow. The preparation becomes orthogonal to its original
+seed, so the result supplies a controlled moving family, rather
+than an identification of the original selected state.
+\end{abstract}
+
+\section{Conventions and the question being tested}
+First take the established fixed-$\lambda$ double-scaled,
+half-filled limit of the project's complex Gaussian CAR model.
+The subsequent limit in this note is
+\[
+ q=e^{-\eps},\qquad \eps=4\lambda,\qquad
+ K=\frac{H}{2J_s}=\frac{h}{\sqrt\eps},\qquad \hbar=1.
+\]
+In Lin--Stanford (LS) units their deformation parameter is our
+$\eps$, and their Hamiltonian is our $K$ \cite[(18)]{LS}.
+We work in the tracial one-insertion chord module of fixed weight
+$d>0$, with Hamiltonian--matter crossing $r=q^d$.
+For the established actual charged curvature channel, $d=2$;
+we use that module, without adding an independent random probe.
+The full selected density is not inserted in this note.
+
+Let $\ket{l,k}=\ket{d;l,k}$, and set $[n]=(1-q^n)/(1-q)$.
+LS creation and annihilation operators give
+\begin{align}
+ a_L\ket{l,k}&=[l]\ket{l-1,k}+rq^l[k]\ket{l,k-1},\\
+ a_R\ket{l,k}&=[k]\ket{l,k-1}+rq^k[l]\ket{l-1,k}.
+\end{align}
+Creation adds a chord on the indicated side. The total level is
+$\bar n=l+k+d$ and different total levels are orthogonal.
+We compare $\Bt=(K_L-K_R)/2$ with the LS combinations of
+$J_{ij}=a_i^\dagger a_j-[\bar n]$.
+The new estimates below use this existing representation and do
+not constitute a new chord algebra or an independent bulk dual.
+
+\newpage
+\section{A sufficient joint window from positive paths}
+The endpoint choice of the LS preparation \cite[(141)]{LS} is
+\begin{equation}
+ \Psi=Z_q^{-1/2}e^{-\beta K_L/2}\ket{0,0},\qquad
+ t=\frac{\beta}{2\sqrt\eps},\quad m=t^2,\quad
+ Z_q=\|e^{-tT_q}e_0\|^2 .\label{heat}
+\end{equation}
+Here $e_n=\ket{n,0}/\sqrt{[n]!}$ is orthonormal and
+$T_q=\sqrt\eps K_L$ has off-diagonal entries $\sqrt{[n]}$.
+This endpoint subspace is invariant under $K_L$, but not under
+the other generators. After a parity transformation the heat
+vector has positive coefficients $x=e^{tT_q}e_0$.
+The comparison vector $y=e^{tT_1}e_0$ satisfies
+\[
+ 0\le x_n\le y_n,\qquad \|y\|^2=e^{2m},\qquad
+ \chi_n=(-1)^n e^{-m/2}\frac{m^{n/2}}{\sqrt{n!}}.
+\]
+Thus $|\chi_n|^2$ is a Poisson law of mean $m$.
+
+\begin{proposition}\label{comparison}
+For $\delta=2\eps m^2<1$,
+\begin{align}
+ 1-\delta&\le Z_q/e^{2m}\le1,\label{partition}\\
+ \|\Psi-\chi\|^2&\le2(1-\sqrt{1-\delta})\le2\delta,\label{distance}\\
+ |\Psi_n|^2&\le\frac{e^{-m}m^n}{(1-\delta)n!},\qquad
+ |\Psi_0|\le\frac{e^{-m/2}}{\sqrt{1-\delta}}.\label{domination}
+\end{align}
+The identification in \eqref{distance} uses the orthonormal
+endpoint basis for each $q$, not the raw chord basis.
+\end{proposition}
+\begin{proof}
+The $2j$-th vacuum moment of $T_q$ sums $q^{\mathrm{cr}}$
+over pairings. Each has at most $j(j-1)/2$ crossings, so its
+deficit from the $q=1$ weight is at most
+$\eps j(j-1)/2$. In the normalized series for
+$\langle e_0,e^{2tT_1}e_0\rangle$, $j$ has law $\Pois(2m)$.
+Its factorial moment gives total deficit at most $2\eps m^2$.
+Positivity gives $\langle x,y\rangle\ge\|x\|^2$, proving
+\eqref{distance}. The componentwise bound and \eqref{partition}
+give \eqref{domination}; for the last bound use $y_0=e^{m/2}$.
+\end{proof}
+
+The sufficient, nonempty window is
+\begin{equation}
+ m\longrightarrow\infty,\quad \eps m^2\longrightarrow0,
+ \qquad\text{equivalently}\qquad
+ \sqrt\eps\ll\beta\ll\eps^{1/4}.\label{window}
+\end{equation}
+In particular,
+$\mathbb E_\Psi(N/m-1)^2\le[(1-\delta)m]^{-1}$.
+Thus $N/m\to1$, $\eps N\to0$, and the seed overlap tends to
+zero. This is a sufficient window, not an optimal one. The
+fixed-temperature LS saddle motivates it but does not by itself
+prove this joint limiting statement.
+
+\newpage
+\section{Exact generator action at the endpoint}
+In the sector $l+k=n$, put $c_n=q^{(n+d)/2}$ and use
+the exact LS definitions \cite[(48), (147)]{LS}:
+\begin{align}
+ E&=-\frac{J_{LL}+J_{RR}}{2c_n},&
+ B&=\frac{J_{LL}-J_{RR}}{2c_n},&
+ P&=\frac{i}{2}(J_{LR}-J_{RL}),\\
+ \B&=\frac{B}{\sqrt{1-c_n^2}},&
+ \PP&=\frac{P}{\sqrt{1-c_n^2}}.&&
+\end{align}
+The rescaling is sectorwise. All these operators preserve $n$.
+For $n\ge1$, define
+\[
+ u_n=\frac{\ket{n-1,1}}{\sqrt{[n]!}},\qquad
+ \langle e_n,u_n\rangle=r,\qquad
+ \|u_n\|^2=r^2+\frac{1-r^2}{[n]},\qquad
+ f_n=\frac{u_n-re_n}{\sqrt{(1-r^2)/[n]}}.
+\]
+The Gram identities follow by moving a creation operator to
+the bra and applying its annihilation adjoint. They make $e_n,f_n$
+orthonormal, avoiding subtraction of nearly parallel raw vectors
+in the numerical implementation. Write $g_n=\sqrt{[n](1-r^2)}$.
+Direct application of the annihilators gives
+\begin{align}
+ \B e_n&=\frac{[n](1-r^2)e_n-rg_n f_n}
+                 {2c_n\sqrt{1-c_n^2}},\label{Bexact}\\
+ \PP e_n&=-\frac{ig_n f_n}{2\sqrt{1-c_n^2}},\label{Pexact}\\
+ E e_n&=\frac{[d]-(1-r)^2[n]/2}{c_n}e_n
+                 -\frac{rg_n}{2c_n}f_n.\label{Eexact}
+\end{align}
+At $n=0$ the $f_n$ terms are absent, $B=P=0$ and
+$E=[d]/q^{d/2}$, recovering the previously recorded seed obstruction.
+
+For an arbitrary endpoint vector $\psi=\sum_n\psi_ne_n$,
+the level-$n$ components of the physical boost are instead
+\begin{align}
+ (\Bt\psi)_{e,n}
+ &=\frac{1-r}{2\sqrt\eps}
+       \left(\sqrt{[n]}\,\psi_{n-1}
+                    +\sqrt{[n+1]}\,\psi_{n+1}\right),\label{physicale}\\
+ (\Bt\psi)_{f,n}
+ &=-\frac{\sqrt{1-r^2}}{2\sqrt\eps}\,\psi_{n-1}.\label{physicalf}
+\end{align}
+Missing coefficients are zero. Equations \eqref{physicale}--\eqref{physicalf}
+retain both lowering and raising, including the first output
+level beyond a numerical cutoff. The comparison is between
+operators in the same chord Hilbert space, rather than between
+two independently fitted correlation functions.
+
+\newpage
+\section{Matching on the moving preparation}
+\begin{proposition}\label{matching}
+For each fixed $d>0$, in \eqref{window},
+\begin{align}
+ \|(\B+\Bt)\Psi\|&\longrightarrow0,&
+ \|(E-d)\Psi\|&\longrightarrow0,&
+ \|(\B+i\PP)\Psi\|&\longrightarrow0,\label{strong}\\
+ \langle\B\rangle_\Psi,\ \langle\Bt\rangle_\Psi&\longrightarrow0,&
+ \langle\B^2\rangle_\Psi,\ \langle\PP^2\rangle_\Psi,
+ \langle\Bt^2\rangle_\Psi&\longrightarrow d/2.\label{moments}
+\end{align}
+Also $\langle[\B,\PP]\rangle_\Psi\to id$. These are
+one-vector and weak-matrix-element limits; no convergence of
+commutators in norm or of the full operators is asserted.
+\end{proposition}
+\begin{proof}
+First work on the comparison vector $\chi$.
+On levels with $n\to\infty$ and $\eps n\to0$,
+\[
+ [n]/n\to1,\quad(1-r^2)/\eps\to2d,\quad
+ (1-c_n^2)/(\eps(n+d))\to1.
+\]
+Equations \eqref{Bexact}--\eqref{Eexact} therefore give,
+uniformly in the Poisson bulk as $n/m\to1$,
+\[
+ \B e_n=-\sqrt{d/2}\,f_n+o(1),\qquad
+ \PP e_n=-i\sqrt{d/2}\,f_n+o(1),\qquad E e_n=de_n+o(1).
+\]
+Here vector remainders are in the level's orthonormal coordinates.
+The coherent coefficients satisfy exactly
+$\chi_{n-1}=-\sqrt{n/m}\,\chi_n$ and
+$\chi_{n+1}=-\sqrt{m/(n+1)}\,\chi_n$.
+Consequently \eqref{physicalf} approaches
+$+\sqrt{d/2}\,\chi_n f_n$, while \eqref{physicale} vanishes:
+its bulk size is $O_d(\sqrt{\eps m})$.
+This proves the plus sign in \eqref{strong}.
+
+To justify the bulk restriction and transfer from $\chi$ to
+$\Psi$, one needs more than norm closeness alone. The squared
+endpoint coefficients of $\B,\PP,E$, and the two shifted
+coefficients of $\Bt$, obey a common envelope
+\begin{equation}
+ C_d(1+\eps(n+1))^2 e^{2\eps(n+d+1)},\qquad0<\eps\le1.\label{envelope}
+\end{equation}
+For example, use $[n]\le n$, $1-r^2\le2d\eps$ and
+$1-e^{-z}\ge ze^{-z}$; the diagonal part of $\B$ squared
+is at most $d^2\eps n e^{2\eps(n+d)}$, and its $f_n$
+part squared at most $(d/2)e^{2\eps(n+d)}$.
+The other coefficients follow from the same inequalities.
+On $m/2\le n\le2m$ the envelope is bounded uniformly.
+On its complement, the Poisson domination \eqref{domination}
+and exponential tilting of $\Pois(m)$ make the weighted tail
+tend to zero. Indeed, tilting by $e^{2\eps n}$ gives mean
+$me^{2\eps}$ and prefactor $e^{m(e^{2\eps}-1)}\to1$;
+the fixed polynomial weights do not overcome the exponential
+concentration. Shifts by one level have the same property.
+Equation \eqref{distance} now transfers each graph norm.
+The moments follow by inner products; specifically
+$\langle[\B,\PP]\rangle=2i\operatorname{Im}
+\langle\B\Psi,\PP\Psi\rangle\to id$.
+\end{proof}
+
+\newpage
+\section{Finite checks, truncations, and numerical corrections}
+The exact rational checks use $q=1/4,4/9$, $d=1,2,3$ and
+levels $0\le n\le7$. They test the full chord Gram symmetry
+and creation/annihilation adjoint relation, endpoint Gram and
+generator formulas, and both boost degree shifts. Independent
+pairing enumeration through order twelve checks the positive
+vacuum-moment input. There are 4,152 exact equalities in total.
+
+For the thermal vectors we use $m=8,32,128,512$,
+$\eps=m^{-3}$, $\beta=2/m$, so $\delta=2/m$.
+The coarse Jacobi cutoffs are $122,226,530,1522$; each is
+increased by 64. The scaled positive Taylor vector is
+$e^{-m}\sum_{j=0}^{L}(tT_{q,M})^je_0/j!$.
+The actual Taylor orders are $274,570,1451,3628$.
+
+Here are bounds that avoid numerical underflow. Let
+$\pi_\mu(k)=\Pr\{\Pois(\mu)\ge k\}$.
+Positive paths and their maximum level give, in exact arithmetic,
+\begin{align}
+ \|\Psi-\Psi_M\|^2&\le
+           \frac{2\pi_{2m}(M+1)}{1-\delta},\label{cutoff}\\
+ \left\|e^{-m}e^{tT_{q,M}}e_0-
+ e^{-m}\sum_{j=0}^{L}\frac{(tT_{q,M})^j}{j!}e_0\right\|^2
+ &\le\pi_{2m}\bigl(\lceil(L+1)/2\rceil\bigr).\label{Taylor}
+\end{align}
+For \eqref{cutoff}, a vacuum path visiting level $M+1$
+has at least $M+1$ up steps. For \eqref{Taylor}, positivity
+bounds the squared remainder by the difference of squared
+norms. Missing pairs of Taylor powers have even total degree
+$2j\ge L+1$. In both cases compare to the $q=1$ moments.
+We evaluate the tails using
+$\log\pi_\mu(k)\le-\mu+k(1+\log(\mu/k))$, $k>\mu$.
+The largest vector bounds are $1.68\times10^{-23}$ for the
+Jacobi cutoff and $8.41\times10^{-39}$ for the scaled Taylor tail.
+
+\begin{center}
+\begin{tabular}{rrrrr}
+\toprule
+$m$ & $\langle N\rangle$ & $\|(\B+\Bt)\Psi\|$
+ & $\|(E-2)\Psi\|$ & $\langle\B^2\rangle$\\
+\midrule
+8   & 7.897924 & 0.171789 & 0.125648 & 0.837580\\
+32  & 31.973991 & 0.087559 & 0.031260 & 0.943929\\
+128 & 127.993490 & 0.044095 & 0.007813 & 0.984796\\
+512 & 511.998372 & 0.022085 & 0.001953 & 0.996120\\
+\bottomrule
+\end{tabular}
+\end{center}
+These entries use the actual channel $d=2$; the same driver
+also checks $d=1,3$. At $m=512$, $\langle\Bt^2\rangle=1.000015$,
+whereas $\|(\B-\Bt)\Psi\|=1.997945$, confirming the sign.
+The cancellation ratio
+$(\|\B\Psi\|+\|\Bt\Psi\|)/\|(\B+\Bt)\Psi\|$ is at most
+$90.48$ for this channel. It is recorded rather than suppressed.
+
+\newpage
+\section{What the comparison establishes and what comes next}
+The single-step matching and the limiting lowest-weight
+relations provide a concrete route beyond the old zero-chord
+test. They do not leave the preparation fixed. In fact,
+\eqref{domination} proves $\langle e_0,\Psi\rangle\to0$;
+at $m=512$ the overlap is about $6.62\times10^{-112}$.
+The same bulk/tail argument, applied to $T_q/\sqrt m$, gives
+\[
+ \|(T_q/\sqrt m+2)\Psi\|\longrightarrow0.
+\]
+Thus the thermal vector moves far in rms Hamiltonian units even
+though $\beta\to0$. A claim that this regulator simply restores
+the original trace preparation would be incorrect.
+
+The original full selected preparation has
+\[
+ \rho=1-\sqrt q(1+\lambda)+\sqrt q(h-\sqrt\lambda U)^2.
+\]
+Its $U$ dependence is not represented by the endpoint heat
+vector above. A useful next step is an explicit moving-space
+identification, followed by mixed generator matrix elements
+with this density retained. A displacement on the endpoint
+oscillator alone has not yet been extended to the entire matter
+module. Products of generators, commutator norms on descendants,
+and the selected mixed Ward identities remain to be established.
+Neither $d=2$ nor $E\Psi\simeq2\Psi$ fixes a Poincare mass;
+positive null translations and their multiparticle composition
+still require a separate construction. The selected four-bilocal
+and finite-$G$ dynamics are also outside this result.
+
+\paragraph{Numerical record.}
+Long calls to \texttt{expm\_multiply} failed the initial
+precision check; splitting and normalizing reduced, but did not
+eliminate, the discrepancy. The largest split-method vector
+difference is $3.45\times10^{-9}$, and this method is retained
+only as a diagnostic. The positive Taylor calculation was
+checked at 50 decimal digits: the largest relative discrepancy
+among the eight recorded $d=2$ observables is
+$3.16\times10^{-11}$, in the small coherent-distance quantity.
+The initial \texttt{longdouble} comparison did not increase
+precision on this Windows host; the supplemental decimal check
+explicitly corrects that description. An underflowed zero in
+the original Taylor-bound field is likewise superseded by
+\eqref{Taylor} and the separate logarithmic tail audit.
+The bounds are for exact arithmetic, not interval certificates
+for all floating-point operations. Failed diagnostics and both
+corrections are preserved alongside the sealed scientific outputs.
+
+\paragraph{Predecessors and attribution.}
+The q-oscillator, one-matter representation, Euclidean
+preparation and rescaled generators are LS inputs. Central-spectrum
+coherent behavior and thermal chord wavefunctions are already
+studied by Xu \cite[Secs.~2.3, 5]{Xu}; q-coherent preparations
+are also discussed in \cite[Sec.~3.2.1]{FJKP}. Our ordinary
+exponential heat vector is not defined to be a q-annihilation
+eigenstate. This note supplies a sufficient norm-controlled
+joint window and an endpoint application of the existing
+generators. We do not claim priority for coherent-state methods
+or for emergent $\mathfrak{sl}_2$ symmetry.
+
+\begin{thebibliography}{9}
+\bibitem{LS} H.~W. Lin and D. Stanford,
+\emph{A symmetry algebra in double-scaled SYK},
+\href{https://arxiv.org/abs/2307.15725}{arXiv:2307.15725};
+formula numbering from the v1 HTML.
+\bibitem{Xu} J. Xu, \emph{On Chord Dynamics and Complexity Growth
+in Double-Scaled SYK},
+\href{https://arxiv.org/abs/2411.04251v3}{arXiv:2411.04251v3}.
+\bibitem{FJKP} Y. Fu, H.-S. Jeong, K.-Y. Kim and J.~F. Pedraza,
+\emph{Toward Krylov-based holography in double-scaled SYK},
+\href{https://arxiv.org/abs/2510.22658v1}{arXiv:2510.22658v1}.
+\end{thebibliography}
+\end{document}

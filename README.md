@@ -1,5 +1,33 @@
 # de Sitter 全息研究
 
+## 2026-11-08 集中快照：制备与物质弦移动框架
+
+按本轮要求集中整理四个阶段，见[发布入口](notes/research-release-2026-11-08-moving-frames.md)，附 6、6、7、6 页 PDF、LaTeX 和封存证据。本次只读核对 537 个不同文件，零哈希不符。下一步是同种物质交换内积与奇通道对实际四点的首阶贡献；issue #1 的独立重积分缺口保持开放。下方“本地”“未 Git”保留原记录时点含义。
+
+## 当前进展：共同背景中的两物质加法（2026-11-08，本地）
+
+[六页PDF](output/pdf/de-sitter-susskind-multimatter-moving-frame.pdf)、[LaTeX](manuscript/susskind-multimatter-moving-frame/main.tex)、[中文推导](notes/susskind-multimatter-moving-frame.md)与[来源](literature/susskind-multimatter-moving-frame-sources.md)已完成。在真实ordered direct内积上给出三角振子框架，证明共同位移极限下LS生成元按两个物质因子相加，得到正且强对易的个体Q候选以及与原boost的渐近协变。新纳入HVX2511.08743v2的既有量子群factorization和交换权重推导，避免重复旧two-matter阶段。
+
+1,764项有理精确比较、12个移动组及包含两个对易子残差的60位复核已保存；[主证据](results/susskind-multimatter-moving-frame/local-evidence.json)核10当前/479父文件，[旧two-matter分支补核](results/susskind-multimatter-moving-frame/prior-two-matter-evidence.json)另核15文件。六页双遍/全页目检通过。下一步接同种物质crossed metric及奇通道的奇异归一化，计算实际四点中的首阶效应；质量及另一零方向仍需动力学选择。本轮无Git/issue。
+
+## 当前进展：全物质弦模块的移动框架（2026-11-08，本地）
+
+[七页 PDF](output/pdf/de-sitter-susskind-chord-module-frame.pdf)、[LaTeX](manuscript/susskind-chord-module-frame/main.tex)、[中文推导](notes/susskind-chord-module-frame.md)与[来源核查](literature/susskind-chord-module-frame-sources.md)已完成。对既有 one-matter 表示建立精确正交框架，在 m→∞、epsilon m→0 的移动核心上证明固定有限生成元词及对易子范数的极限，并得到与原 boost 相容的正零方向候选 Q0=E0-P0。完整选态密度保留 U 后，对指定左向量插入给出趋零距离界；原 selected 关联的排序仍须另行处理。
+
+2,109 项精确等式、48 个移动参数组、8 个零方向检查和独立 50 位词比较已保存；[证据清单](results/susskind-chord-module-frame/local-evidence.json)核12当前/466父科学文件。两个微小对易子残差存在约10^9倍相消，已明确记录其精度范围。七页双遍编译、最终全页目检完成。下一步先读多物质弦 coproduct，确定实际组合律和另一零方向的微观来源，再推进质量字典。此前 Git 与 issue 回复已完成，本轮不重复发布。
+
+## 当前进展：热弦数窗口与 boost 匹配（2026-11-08，本地）
+
+[六页 PDF](output/pdf/de-sitter-susskind-thermal-chord-window.pdf)、[LaTeX](manuscript/susskind-thermal-chord-window/main.tex)、[中文推导](notes/susskind-thermal-chord-window.md)及[来源核查](literature/susskind-thermal-chord-window-sources.md)已完成。正路径比较给出充分联合窗口 sqrt(epsilon)<<beta<<epsilon^(1/4)，在实际 charged 曲率单插入模块上证明重标度 LS boost 与原 Hamiltonian boost 的负号单次作用匹配，同时得到最低权与二阶矩极限。热制备态与原零弦种子的重叠却趋零，因此下一步须建立移动表示的明确识别，再接完整 selected 密度。
+
+4,152 项有理精确检查、四组热参数及 50 位复核已保存；[证据清单](results/susskind-thermal-chord-window/local-evidence.json)核21当前/444父科学文件。六页双遍编译、全页目检完成。初始 longdouble 精度描述及下溢的零尾界由独立补充文件更正；成功科学输出未覆盖。本轮仅本地，376848c 与 issue 回复已经完成，不重复发布。
+
+## 当前进展：制备的模谱与能量窗口（2026-11-08，本地）
+
+[六页PDF](output/pdf/de-sitter-susskind-preparation-modular-clock.pdf)、[LaTeX](manuscript/susskind-preparation-modular-clock/main.tex)、[中文笔记](notes/susskind-preparation-modular-clock.md)及[来源](literature/susskind-preparation-modular-clock-sources.md)已完成。将已知选态密度用于标准模理论，得到明确的Mehler模频谱、Hamiltonian模关联平台与相对迹熵接口。两个相反能量窗口给出解析见证：平稳charged限制态仍不是原Hamiltonian任何常数温度的KMS态。因此下一步把选态作为制备保留，原Hamiltonian继续承担候选boost。
+
+22个复时间点的Jacobi/角度乘积比较及4个能窗检查完成，最大两表示差2.34e−14；乘积截断尾与求积/舍入范围分开。[证据](results/susskind-preparation-modular-clock/local-evidence.json)核10当前/433父科学文件，六页双遍编译并全页目检。下一步核Lin–Stanford热制备进入大弦数窗口的极限次序，再计算空间生成元矩阵元；本轮没有Git或新issue回复。
+
 ## 当前进展：完整双局域的制备协方差（2026-11-08）
 
 [八页 PDF](output/pdf/de-sitter-susskind-selected-bilocal-covariance.pdf)、[LaTeX](manuscript/susskind-selected-bilocal-covariance/main.tex)、[中文推导](notes/susskind-selected-bilocal-covariance.md)和[来源](literature/susskind-selected-bilocal-covariance-sources.md)已完成。完整选态两点函数分为保留同一原始耦合全部涨落的能量倾斜谱项，以及由中性投影确定的制备修正。未扣均值的修正是正 Gram 核；连通修正可为负，完整方差保持正。固定 lambda 双标度之后，共同中心时间推远时制备修正趋零；短时展开保留非零中心的 t⁷ 项。

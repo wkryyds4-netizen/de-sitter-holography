@@ -1,0 +1,48 @@
+{
+  "status": "passed",
+  "created_at_utc": "2026-11-07T23:01:04.733493+00:00",
+  "rows": [
+    {
+      "m": 8,
+      "taylor_order": 274,
+      "poisson_threshold": 138,
+      "scaled_vector_taylor_tail_bound": "8.40591971369087100182002206574201486600281609258552517672025E-39",
+      "scaled_vector_taylor_log_bound": "-87.671882441302218322570817600715256201572562401186940764619",
+      "normalized_cutoff_vector_bound": "9.37462119016950462596273802833015045008885688954324146366364E-32",
+      "correction_needed": false
+    },
+    {
+      "m": 32,
+      "taylor_order": 570,
+      "poisson_threshold": 286,
+      "scaled_vector_taylor_tail_bound": "1.69856055142844625805864108541335737568539830339002307324077E-45",
+      "scaled_vector_taylor_log_bound": "-103.086548026805844823185668950257804187674800146177767007892",
+      "normalized_cutoff_vector_bound": "1.41912905071216430726168801468488270680709757944833583115275E-27",
+      "correction_needed": false
+    },
+    {
+      "m": 128,
+      "taylor_order": 1451,
+      "poisson_threshold": 726,
+      "scaled_vector_taylor_tail_bound": "5.37424351817993050769431341430451175374085194582329283273701E-63",
+      "scaled_vector_taylor_log_bound": "-143.381243035319801736258237980334042977752407038814319467726",
+      "normalized_cutoff_vector_bound": "5.55317570494614572232011574923748624511843996601721465725952E-25",
+      "correction_needed": false
+    },
+    {
+      "m": 512,
+      "taylor_order": 3628,
+      "poisson_threshold": 1815,
+      "scaled_vector_taylor_tail_bound": "1.51403909027187396574240971901494345097363845819517827777612E-54",
+      "scaled_vector_taylor_log_bound": "-123.924814047794489402420239183714683728315130799920701961492",
+      "normalized_cutoff_vector_bound": "1.67988176526722340944187013040760599254513884746786852634022E-23",
+      "correction_needed": true
+    }
+  ],
+  "correction": "The first output records zero for the m=512 finite-matrix Taylor bound because scipy poisson.logsf underflows. Zero is not an error certificate. Supersede all those Taylor bounds by the state-specific positive-walk bound here; no sealed driver or vector rerun.",
+  "proof": "For positive Tq<=T1 entrywise, the omitted Taylor vector has norm squared <= ||exp(t T1)e0||^2 - ||sum_{j=0}^K(t T1)^j/j! e0||^2. Missing pairs of powers require total even degree 2l>=K+1. Dividing by exp(2m) bounds the scaled-vector squared error by P(Poisson(2m)>=ceil((K+1)/2)). Evaluate with log Chernoff <= -mu+k(1+log(mu/k)), k>mu. The same crossing-level argument gives normalized Jacobi-cutoff error squared <= 2 P(Poisson(2m)>=cutoff+1)/(1-delta). These bound exact arithmetic only.",
+  "input_sha256": {
+    "results/susskind-thermal-chord-window/window-checks.json": "d36161666759fda1bfe351a0a09be636692931705fef7facdecf27a10a4cd6b0",
+    "code/record_thermal_chord_tail_bounds.py": "3007c7555f6736c71f396ea74b8f9477d9e5309077072ece689dbf477629f416"
+  }
+}

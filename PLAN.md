@@ -1,5 +1,15 @@
 # de Sitter 全息研究规划
 
+2026-11-08 按用户本轮明确要求集中 Git 并回复 issue #1，覆盖 preparation-modular-clock、thermal-chord-window、chord-module-frame 和 multimatter-moving-frame。发布入口 notes/research-release-2026-11-08-moving-frames.md。研究顺序继续为交换内积、奇通道归一化及实际四点；尚在推导的首阶公式不纳入本次已证成果。KS 全量重积分未新增，日常低频 Git 继续。
+
+2026-11-08 multimatter-moving-frame：先核旧two-matter已有primary/tensor结果，新增精读HVX2511.08743v2，明确factorization和swapping的前驱。三角A0=a,A1=aR1+b1,A2=A1R2+b2重建actual ordered Gram/outer action，在epsilon m→0的共同移动核心上证明LS有限词按物质因子相加；运输Qi给有限q正强对易候选及渐近boost covariance。六页稿、1764精确比较、12移动组、60位commutator复核封存；主证据10当前/479父文件，独立旧two-matter分支补核15文件。下一首任务改为crossed metric的epsilon首阶与relative Casimir关系，保留same-species奇通道epsilon^-1/2归一化并接实际四点。理由：ordered加法已有实际框架，未解的是physical交换权及动力学，重复标准tensor map不能确定质量A。完整selected排序/四bilocal/finiteG继续开放；低频Git不变，本轮无发布，goal active。
+
+2026-11-08 chord-module-frame：读Xu§3.2、Okuyama§3后，通过ker(aL)构造既有one-matter表示的精确ON张量框架。Ucal=F(D(-sqrtm)⊗1)在epsilon m→0下给固定有限词/后代/commutator范数及个别生成元strong-resolvent极限；Q0=E0-P0为与T0=-B0相容的正候选。标准离散系列与Laguerre谱明确归前驱。保留U的全rho左向量插入距离趋零，但不覆盖原selected排序。七页稿、2,109精确等式、48移动组及证据12当前/466父文件封存。下一首任务改为精读多物质弦coproduct并建立实际双插入的Q组合律，继而找另一零方向及质量选择；理由是单物质正Q已经有微观逼近，而E0+P0不与Q0对易，不能机械当另一动量。selected排序/次阶U、四bilocal、finiteG继续开放。成功driver/recorder不重跑，本轮无新Git/issue，长期goal active。
+
+2026-11-08 thermal-chord-window：沿用 LS 精确一物质弦表示，用正路径/Poisson 主控建立 m=beta²/(4epsilon)→∞、epsilon m²→0 的充分窗口，证明端点热制备上的 Bhat+Btr、E−d、Bhat+iPhat 单次作用趋零，d2 二阶矩趋1。已知相干态/弦空间框架作前驱；不声称全sl2算符收敛。六页稿与4,152精确等式、四组热参数、50位校核和独立尾界审计封存，21当前/444父文件核对。下一首任务改为完整物质弦模块的移动表示识别：先精读Xu2411.04251§3.2与Okuyama doubled-space原文，再检查该映射对Btr和rho的混合矩阵元，继而生成元后代/commutator范数。理由：窗口虽已闭合，热态与原种子趋于正交；端点普通振子的displacement不自动扩展到全模块，也不能忽略selected U源。空间null生成元、质量、四bilocal与finiteG仍开放，长期goal active；本轮无新Git/issue。
+
+2026-11-08 preparation-modular-clock：回读MSS的Hamiltonian/温度与LS bra/ket映射，应用标准模理论得到已知rho的显式模谱及Hamiltonian模关联平台；finite charged能窗给全0<q<1、任意常数实beta的非KMS见证。六页PDF、22复时间/4窗口结果及10当前/433父科学文件清单已封存，旧旋转与commutator明确作前置。下一首任务收窄为LS热Euclidean制备的大弦数与smooth-state窗口：先从原文弦数分布确定小热调节、lambda和时间的合法联合次序，再计算带sqrt(rho)制备的boost/null生成元矩阵元。旧beta0零弦种子直接sl2认同失败，不再重复；调节窗口仅为候选，不能提前宣布匹配。随后质量矩与't Hooft谱、selected四bilocal及finiteG，长期goal active。本轮仅本地，不重复376848c或issue6713933550。
+
 2026-11-08 selected-bilocal-covariance：从真实 selected 边界的两源展开得到完整两场恒等式，保留 stationary 共同谱及投影残余；完整 bilocal 的制备修正成为显式 Mehler Gram 减均值乘积。建立固定 lambda DS 后共同中心时间衰减、t⁶/t⁷ 和负连通修正见证。八页 PDF、三份科学输出及15当前/417父文件证据封存，与均值阶段按本次要求集中 Git 并回复 issue #1；KS 独立重积分未新增。下一首任务回到 Susskind 静态补丁文献，统一态、时间/能量单位和空间/质量生成元，比较已得非平稳一、二点是否容纳同一体解释；随后处理四 bilocal 源分区及 finite-G。理由：两点制备依赖已有完整归约，继续同一低阶数值扫点不能代替体字典。长期 goal active，日常低频 Git 保持。
 
 2026-11-08 selected-bilocal-mean：由disjoint局域源直接证明任意次数单L插入的h,U投影，接chaos/OU与N_j递推；CKY已有多项式提供两能量符号。用标准插值余项给|c_j|≤|s|^j/j!，与one-U递推界及既有actual/sector桥完成固定lambda完整bilocal一阶矩。下一任务改为两插入投影/共同涨落：保留L-L及D-L连接，不能乘单插入投影。低阶检验必须恢复neutral-selected-response及已有charged-neutral cross。先文献/既有源接口，再定具体两插入核。七页PDF、两科学输出与证据本地封存，无新Git/issue；长期goal active。调整原因：单选态均值已闭合，下一障碍是被单投影舍去的协方差，不重复最低阶奇源。

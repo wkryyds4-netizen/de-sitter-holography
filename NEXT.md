@@ -1,4 +1,66 @@
-## 当前继续位置：2026-11-08 完整双局域制备协方差
+# 本轮集中发布：2026-11-08
+
+按用户当前要求集中发布四个移动框架相关阶段，见 notes/research-release-2026-11-08-moving-frames.md。只读核对 537 个不同文件及四份 PDF 页数，零哈希不符；没有重跑封存科学输出。发布与 issue 回复回执保存于本机 tmp/publication-2026-11-08-moving-frames 和 journal。下方“无新 Git/issue”均为历史阶段状态。下一步仍按下述交换内积与奇通道任务推进，未核实的首阶四点推导不是既成结果。
+
+## 当前继续位置：2026-11-08 两物质共同移动框架
+
+先读manuscript/susskind-multimatter-moving-frame/main.tex、notes/susskind-multimatter-moving-frame.md、literature/susskind-multimatter-moving-frame-sources.md及同名最新journal。上一轮和本轮均progress，长期goal active。科学进程53440已exit0，无活跃进程。所有成功driver/helper/recorder与proof/PDF/evidence已封存，不重跑/改写；纯helper可只读导入新问题。本轮无新Git或issue回复，376848c/6713933550请求已完成。
+
+- **先前重复点已消除**：11月6日two-matter阶段已有primary分解、标准Jacobi/Laguerre及自由质量非对角例子，不再当新任务重做。新读HVX2511.08743v2（q_HVX²=q_project）§3.1–3.4给量子群factorization及(82)–(83)swapping权重推导。旧LS一般overlap的guess证据状态由新文献更新；不修改旧sealed稿。源读区和HTML规范疑点记literature；该文footnote16未直接等同其coproduct与LS原concatenation。
+- **精确ordered框架**：ell²_n⊗ell²_k1⊗ell²_k2，R_i=q^(d_i+Ni)，b_i|k>=sqrt([k](1-q^(2d_i+k-1)))|k-1>。A0=a，A1=aR1+b1，A2=A1R2+b2。raw|l,m,r>=(A0†)^l(A1†)^m(A2†)^r|000>，逐grade三角可逆；outer action和puremiddle norm[m]!固定actual direct Gram。F幺正，aL=A0、aR=A2，nbar=N0+N1+N2+d1+d2。
+- **共同moving极限**：V=F(D(-sqrtm)⊗1⊗1)，先fixedlambda半填充DS，后m→∞、epsilon=4lambda→0且epsilon m→0。每个固定finite word在固定有限j,k1,k2核心上，(E,Bhat,Phat,Btr)→(E1+E2,B1+B2,P1+P2,-B1-B2)。尾为固定多项式Poisson乘指数包络，不由单次收敛推乘积。true heat端点仍沿用更强epsilon m²→0。
+- **实际稳定公式**：w=d1+d2+N1+N2,R=R1R2,C=b1R2+b2,c=q^((N0+w)/2)，Z=a†RC+C†Ra+C†C。E=([w]-(1-R)²[N0]/2-Z/2)/c；Bhat=((1-R²)[N0]-Z)/(2c sqrt(1-c²))；Phat=i(a†C-C†a)/(2sqrt(1-c²))；Btr=((a+a†)(1-R)-(C+C†))/(2sqrtepsilon)。C/sqrtepsilon→L1-+L2-，common shifts→-I。
+- **正候选与限制**：Qi=Ei-Pi在不同internal因子正且强对易。有限q的mathfrakQi=F Qi F†也是正强对易，mixed-word estimate给([Btr,mathfrakQi]-i mathfrakQi)Vv→0，实际LS Q−sum mathfrakQi→0；不是单侧local或唯一性声明。ordered direct仍不等于同种X direct+cross；旧k0,k1 physical norm²=1+q⁴、1-q⁸~8epsilon不被共同位移消去。不能把奇通道先丢掉。
+- **质量仍开放**：Qsum=P,Tsum=i(P∂P+1/2)上，正且强对易、反向协变的Pminus为A/(mu P)，A作用relative/common multiplicity；boost和Q不选A。自由A=m1²/x+m2²/(1-x)只是输入。S=Esum+Psum与Q的对易子=-2iT，不是对易Poincare另一动量；此处不是要求global dS平移对易。
+- **科学输出**：checks SHA4f3621ca842f4fac8db04b276567991204fb3ac65bf825053ee0500fddf084db；1484 Gram+280 lowerings=1764 rational(q1/4,4/9；d=(2,2),(1,2)；grade0..4)。12移动组m8/32/128/512,epsilon=m^-3,d=(2,2),j/k1/k2=(0,0,0),(1,1,0),(2,1,2)，8词及BP/TQ。最大refinement1.527e-24、input norm²tail3.178e-48，后者非全词证书；相消BP358.56,TQ528.98。60位独立direct outer ladder在m128,j2,k1=1,k2=2对8量含两个commutator residual本身，maxrelative5.923e-13，不是interval证书。
+- **交付**：六页PDF SHA333d79f8b537f2fc5ab22305f21211ec35bc4e50110036dd0b7f2998c62ebb86；manifest SHA8e0bd77324ef54c01934a200862d271a473279d7b16d43582329c0025f0c4b7d，10当前/479父科学文件。旧two-matter非该链传递父，因此另加prior-two-matter-evidence SHAafca550e4c95fc10a1e4ea627e2455089956efde60d60b10869e00dfcee0803d，核15文件和旧41checks，未重跑。双遍首次干净，90dpi六页全目检，marker一次。
+- **下一首任务**：先核HVX(82)–(83)及引用Askey–Wilson变换与我们同种cross Gram的规范，再从known R_k=(-1)^k exp[-epsilon(d1d2+k(d1+d2)+k(k-1)/2)]构造物理交换metric。可比较指数系数与(Ctotal-C1-C2)/2，但尚未完成本项目全态/次阶极限证明。保留奇通道epsilon^-1/2归一化，并检验该metric对actual identical-singlet四点的首阶贡献；不能把positive crossing衰减当unitary S-matrix相位。随后原selected排序、另一零方向/质量、完整四bilocal及finiteG。KS独立全量重积分/9890旧端点差异仍未完成。
+
+以下为历史继续位置。
+
+## 2026-11-08 全模块移动框架与正零方向候选
+
+先读 manuscript/susskind-chord-module-frame/main.tex、notes/susskind-chord-module-frame.md、literature/susskind-chord-module-frame-sources.md 与最新同名journal。本轮progress，长期goal active，无活跃进程。用户此前Git/issue请求已由376848cc087a3375ddaa419c443075ff7f8639c9和issuecomment-6713933550完成，本轮不重复。全部成功科学driver/helper/recorder与证据已封存，不重跑/改写；pure helper可只读导入新问题。
+
+- **精确框架**：xi_k=prod_(j<k)(aR†-r q^j aL†)Omega/sqrt([k]!(r²;q)_k)，e_nk=(aL†)^n xi_k/sqrt([n]!)。F将普通ell²⊗ell²幺正映至one-matter module；aL=a_q⊗1，aR=a_q⊗R+1⊗b，R=q^(d+K0)，b|k>=sqrt([k](1-r²q^(k-1)))|k-1>。旧f_n=e_(n-1,1)。这是已有LS表示的正交实现，不把Xu/Okuyama factorization或Laguerre表示称原创。
+- **移动极限**：Ucal=F(D(-sqrtm)⊗1)，Dcore为固定有限j,k线性组合。先fixedlambda半填充DS，再m→∞、epsilon=4lambda→0、epsilon m→0。对每个固定非交换多项式，(E,Bhat,Phat,Btr)→(d+K0,(L++L-)/2,i(L+-L-)/2,-B0)，L-|k>=sqrt(k(2d+k-1))|k-1>。直接有限路径/Poisson倾斜尾给词范数，不从单次作用推乘积。各共轭自伴生成元strong-resolvent及固定时间幺正群强收敛。真热端点向量联系仍用更强epsilon m²→0，不能把全coherent后代称真热态。
+- **正Q**：Q0=E0-P0≥0，T0=-B0，[T0,Q0]=iQ0；正形式1/2 sum|sqrt(2d+k)v_k+i sqrt(k+1)v_(k+1)|²。标准Gamma(2d,rate2)种子谱，无零特征向量。有限q的Q=E-Phat不保证正。E0+P0与Q0不对易，不能充当另一个Poincare动量；M²/(mu Q0)仍是手动插质量。实际charged d=2不等于质量确定。
+- **完整rho协议**：rho=a+s(h-W)²，s=sqrtq、a=1-s(1+lambda)>0、W=sqrtlambda U，||W||≤sqrt(epsilon/(1-exp(-epsilon)))。明确zeta_rho=L_sqrtrho zeta/||L_sqrtrho zeta||，zeta=Ucal v。eta=(||(h+2sqrtm)zeta||+||W||)/(2sqrtm)+sqrta/(2sqrt(sm))，向量差≤2eta→0，有界观测差≤4eta||A||，插入范数平方/(4sm)→1。**该左向量协议不自动等于原tau(rho X†alpha_t X)**；领先阶scalarization抹去制备信息，排序及次阶U仍需追踪。
+- **科学证据**：frame-checks SHA f2227eca8b2c57f0d9292773bbf04046fb0c4687b8971eb98ab9625bc5615e27：2,109精确等式、48组(m8/32/128/512,epsilon=m^-3,d2,j0..2,k0..3)、9词及3commutators。截断差max1.075e-23，输入norm²尾3.178e-48不当词误差certificate。50位8词maxrelative1.395e-13；BP相消733.45，EP/BE可达4.027e8/1.518e9，后两微小残差不在独立高精度认证范围。null-checks SHA4207be310055a890a839c60c63219920536c230e937d21fc184a9ef441160fb1：8组null covariance与3精确正性形式，相消376.62。rho距离数字是上界，非实际误差。
+- **交付**：七页PDF SHA ea0e74afeddff92e9ae7be0d51d2384da2947aa90e972d1d2595488077c916e6；manifest SHA e53e52972b31177f8fb000197d6db8cde04d7f8b369ab4c0913aa3c24f430d50，12当前/466父科学文件。双遍无undefined/overfull，90dpi最终七页全目检，marker一次。构建首次行溢出已修；没有重跑科学检查。
+- **下一首任务**：先读LS多物质弦/coproduct原文及已有项目相关笔记，明确同一背景、物质权与排序，再从实际双插入模块算Q的组合律。抽象离散系列张量加法不等于微观加法；另一零方向必须来自微观作用或明确物理条件，不能再随意取逆固定质量。原selected排序/次阶U、质量/空间字典、四bilocal及finiteG仍开放。KS issue的21,143单元独立全量重积分/9,890旧端点差异定位未完成，不以本轮主线代替。
+
+以下为历史继续位置。
+
+## 2026-11-08 热弦数窗口与 boost 单次作用
+
+先读 manuscript/susskind-thermal-chord-window/main.tex、notes/susskind-thermal-chord-window.md、literature/susskind-thermal-chord-window-sources.md 和最新同名journal。上一轮模谱和本轮热窗口均为progress；长期goal active，无活跃进程。用户上一Git/issue请求已由376848c和6713933550完成，本轮没有再次发布。成功科学driver/recorder与已封存文件不得重跑/修改；pure helper可按新问题导入，注意下面两个补充更正。
+
+- **态/单位**：先fixedlambda half-filled DS，再epsilon=4lambda→0。K=H/(2Js)=h/sqrtepsilon，r=q^d，实际charged曲率d2；Psi=normalized exp(-beta K_L/2)|d;0,0>，仍在tracial one-insertion module，不含完整selected rho。n是Hamiltonian弦数，nbar=n+d，c_n=q^((n+d)/2)；Bhat/P按sector除sqrt(1−c_n²)。
+- **已证明窗口**：t=beta/(2sqrtepsilon)、m=t²，delta=2epsilon m²<1。正Jacobi热向量逐项<=ordinary oscillator热向量；Wick最大crossing给Zq/e^(2m)>=1−delta。||Psi−chi||²<=2(1−sqrt(1−delta))，|Psi_n|²<=Pois(m)_n/(1−delta)，chi_n=(-1)^n e^-m/2 m^(n/2)/sqrtn!。m→∞且epsilon m²→0，即sqrtepsilon<<beta<<epsilon^1/4；E(N/m−1)²<=1/[(1−delta)m]。seed overlap<=e^-m/2/sqrt(1−delta)→0，不能声称撤热调节恢复原态。
+- **精确作用**：e_n=|n,0>/sqrt([n]!)，u_n=|n−1,1>/sqrt([n]!)，<e,u>=r、||u||²=r²+(1−r²)/[n]；f=(u−re)/sqrt((1−r²)/[n])。g=sqrt([n](1−r²))，Bhat e=([n](1−r²)e−rg f)/(2c sqrt1−c²)，Phat e=−ig f/(2sqrt1−c²)，E e=([d]−(1−r)²[n]/2)e/c−rg f/(2c)。Btr e-coordinate=(1−r)/(2sqrtepsilon)(sqrt[n]psi_(n−1)+sqrt[n+1]psi_(n+1))，f-coordinate=−sqrt(1−r²)psi_(n−1)/(2sqrtepsilon)。
+- **匹配**：|| (Bhat+Btr)Psi ||→0（是加号）；||(E−d)Psi||→0，||(Bhat+iPhat)Psi||→0。Bhat/Phat/Btr二阶矩趋d/2、means趋0，weak<[Bhat,Phat]>→id。证明确保无界graph norm：系数平方共同包络Cd(1+epsilon(n+1))²exp(2epsilon(n+d+1))，bulk有界，Poisson指数倾斜控尾。尚未证完整commutator范数、后代作用或全算符收敛。另||(Tq/sqrtm+2)Psi||→0。
+- **科学输出**：window-checks SHA d36161666759fda1bfe351a0a09be636692931705fef7facdecf27a10a4cd6b0；4,152有理等式、m8/32/128/512，epsilon=m^-3、beta=2/m，d1/2/3。实际d2 Bhat+Btr范数 .1717887/.0875588/.0440945/.0220849；相消max90.48。通用expm四次失败诊断保留，split方法max差3.44e−9，只作诊断。
+- **必须连读补充**：precision-checks SHA a5a06530821b404234e0ebc57bac299b6ae63513fc21c263dc5569e094d2e94c：Windows longdouble nmant52，初输出53/64位描述错误，50位Decimal补检32个d2量maxrelative3.1524e−11。tail-bounds SHA0875b6f3d3475d3e521211ed13d1ad64444b293ca4fbca8feb34ab8d2e6f7939：原m512 Taylor bound=0来自poisson.logsf下溢，不用该字段；正路径改用scaled Taylor尾²<=Pr(Pois(2m)>=ceil((L+1)/2))，60位logChernoff给max8.406e−39，normalized Jacobi cutoff尾max1.680e−23。仅exact arithmetic bounds。旧science原字节未改。
+- **交付**：六页PDF SHA129604d2b2734adecb4d23811e2095086798a9fced06f725321e472d6bfd7ea5；manifest SHA f5909c457062c3d9dade9871528a422ba7a44dadc1313a02671785cf8bb98234，21当前/444父科学文件。双遍/90dpi六页全目检，marker一次。首次TeX因align行尾单反斜线失败，修正后双遍干净；不重跑成功科学driver/recorder。
+- **下一首任务**：核Xu2411.04251v3§3.2的one-particle isometric factorization、Okuyama2401.07403及后续More on doubled Hilbert space原文，然后建立整个物质弦模块的移动态识别。普通endpoint oscillator displacement只送chi回e0，尚不决定f_n/后代作用；不能直接当全module幺正。研究Btr在该识别下是否保留其boost作用，以及rho=1−sqrtq(1+lambda)+sqrtq(h−sqrtlambda U)²的混合矩阵元。先从d2固定低后代、weak Ward到commutator范数，再定null生成元。完整selected、质量/空间字典、四bilocal及finiteG仍开放。不要把热窗口重新列作猜想，也不将单向量匹配提升成完整对偶。
+
+以下为历史继续位置。
+
+## 2026-11-08 制备模谱与能量窗口
+
+先读 manuscript/susskind-preparation-modular-clock/main.tex、notes/susskind-preparation-modular-clock.md、literature/susskind-preparation-modular-clock-sources.md 与 journal/2026-11-08-susskind-preparation-modular-clock.md。上一轮协方差封存/发布为progress，本轮模谱阶段也是progress；长期goal active，无运行进程。376848c及issue6713933550已完成，本轮不再Git/回复。
+
+- 前置rho、h/U旋转及||[h,rho]||₂²沿用slater-selected-state，不是新发现。令v=(h−√lambda U)/√(1+lambda)、z=(√lambda h+U)/√(1+lambda)，rho=p(v)=a+bv²，a=1−√q(1+lambda)>0,b=√q(1+lambda)。标准空间制备sqrt(rho)，Delta=Lrho Rrho^-1。取beta_s=Ad rho^(-is)，K=−logrho，是Tomita常见参数反向，对此Heisenberg流sigma逆温1 KMS；原alpha_T=Ad e^(iTh)不换名。
+- Wcal(s)=sigma(beta_s(z)z)=∫p(x)e^[is(kx−ky)]K_q dmu²，omega=ky−kx，dS(−omega)=e^-omega dS(omega)，Wcal(s−i)=Wcal(−s)。固定q频带Omega=log[(a+bR²)/a]。谱pushforward绝对连续，Wcal→0；sigma(beta_s(h)h)=[1+b(1+q)]/(1+lambda)+lambda Wcal/(1+lambda)，给非零平台。模时间s和原h/string/candidate Rindler时间不能混用。没有finiteN模收敛或smalllambda模极限。
+- charged restriction tau_f仍stationary，f=1−√q+√q h²；X未滤波自关联实偶并不认证全代数KMS。A_IJ=P_I X P_J，forward∫f(y)K_q²，reverse∫f(x)K_q²。I±=±[.8,1.2],J=[−.2,.2]两ratio相等且≥(1−.36√q)/(1−.96√q)>1；正gap要求beta<0，负gap要求beta>0，故所有常数实beta皆不成立。restricted modular Kf=−logf(h)，不当full rho流。
+- 成功science SHAeef7dc91d4280ee0d3955aea75de20a536a243931f2916f3fb941d103da65cc8，22复时间/4窗口；Jacobi与角度产品各128/192、product192，window32/64。maxcross2.33147e−14，相对2.75418e−14，maxrefinement1.87134e−12，相消72.914；product解析尾只控乘积截断，不认证求积/roundoff。script与输入成功后不重跑/不改，pure helper可导入。
+- 六页PDF SHAec6982c39a7312b1d0680a20d4d21dccab77edadc5ea566b0dd6ca29120a75f0；manifest SHA6b7a75c24e923934b3f63a5e6b8ab24eefa14cb96204ee57fdc73e9e89423e6d，10当前/433父科学文件。双遍、90dpi全页目检通过，marker已成功一次，不重跑。来源更正：Witten是1803.04993v6，误查1710.11031为E11已排除。
+- **下一首任务**：读取Lin–Stanford2307.15725 §§2.4、3.4、4.1–4.2及Appendix G/H的热制备、总弦数鞍点、fixed-c/smooth-state条件；对照notes/susskind-translations.md的beta0零弦种子相对缺陷=1。构造小非零Euclidean热调节的态并检验其大弦数分布，研究先lambda→0后调节撤除或可控联合窗口；诸如“调节²/epsilon大”只是待核候选，需先按原文统一epsilon=4lambda及beta的K=H/(2Js)单位。随后插入本轮sqrt(rho)制备，算生成元矩阵元与mixed Ward identity，检验原boost是否一致。不要再只拟合sech核或直接把K当空间boost。完整空间P±、体质量谱匹配、selected四bilocal、finiteG仍开放。
+
+以下为历史继续位置。
+
+## 2026-11-08 完整双局域制备协方差
 
 先读 manuscript/susskind-selected-bilocal-covariance/main.tex、notes/susskind-selected-bilocal-covariance.md、literature/susskind-selected-bilocal-covariance-sources.md 与 journal/2026-11-08-susskind-selected-bilocal-covariance.md。本轮为progress，长期goal active，无科学进程运行。用户本次明确要求集中Git并回复issue；范围见 notes/research-release-2026-11-08-bilocal-covariance.md，实际回执保存在 tmp/publication-2026-11-08-bilocal-covariance。
 

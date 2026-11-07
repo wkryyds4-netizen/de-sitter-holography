@@ -1,0 +1,4213 @@
+{
+  "status": "passed",
+  "created_at_utc": "2026-11-07T23:16:23.993858+00:00",
+  "conventions": {
+    "frame": "aL=a_q tensor I; aR=a_q tensor r q^K + I tensor b",
+    "b": "b|k>=sqrt([k](1-r^2 q^(k-1)))|k-1>",
+    "moving": "F_q,d (D(-sqrt(m)) tensor I)",
+    "limit": "E->L0, Bhat->L1, Phat->i(Lplus-Lminus)/2, Btr->-L1, Q=E-Phat>=0 in limit"
+  },
+  "exact_counts": {
+    "gram": 1224,
+    "ladder": 864,
+    "laguerre": 21
+  },
+  "rows": [
+    {
+      "m": 8.0,
+      "epsilon": 0.001953125,
+      "d": 2.0,
+      "j": 0,
+      "k": 0,
+      "cutoff": 130,
+      "fine_cutoff": 178,
+      "input_norm": 0.999999999999999,
+      "input_tail_squared_bound": 1.3570088383139227e-99,
+      "word_refinement_absolute": 2.279216662549172e-52,
+      "residuals": {
+        "B": {
+          "absolute": 0.2814840389057433,
+          "target_norm": 0.999999999999999,
+          "relative": 0.2814840389057436
+        },
+        "P": {
+          "absolute": 0.17398189846076353,
+          "target_norm": 0.999999999999999,
+          "relative": 0.1739818984607637
+        },
+        "E": {
+          "absolute": 0.12647763227935463,
+          "target_norm": 1.999999999999998,
+          "relative": 0.06323881613967738
+        },
+        "T": {
+          "absolute": 0.2523433784914384,
+          "target_norm": 0.999999999999999,
+          "relative": 0.2523433784914387
+        },
+        "Q": {
+          "absolute": 0.21509600753850147,
+          "target_norm": 2.2360679774997876,
+          "relative": 0.09619385890897938
+        },
+        "BE": {
+          "absolute": 0.6606912440140902,
+          "target_norm": 1.999999999999998,
+          "relative": 0.3303456220070454
+        },
+        "PT": {
+          "absolute": 0.4498945067042431,
+          "target_norm": 1.8708286933869689,
+          "relative": 0.24047872918270732
+        },
+        "EBP": {
+          "absolute": 2.4009070858438193,
+          "target_norm": 6.633249580710793,
+          "relative": 0.3619503618295254
+        },
+        "EEEE": {
+          "absolute": 8.610531050866774,
+          "target_norm": 15.999999999999984,
+          "relative": 0.5381581906791739
+        },
+        "comm_BP": {
+          "absolute": 0.47901402356599593,
+          "scale": 2.021487009256051,
+          "cancellation": 10.148567837852243
+        },
+        "comm_EP": {
+          "absolute": 0.003648488681674546,
+          "scale": 0.9169533802465355,
+          "cancellation": 1476.4341792246962
+        },
+        "comm_BE": {
+          "absolute": 0.0017271637298884614,
+          "scale": 0.8834445289517885,
+          "cancellation": 3231.9703850836536
+        },
+        "casimir": {
+          "absolute": 0.5239403916398745
+        },
+        "boost_match": {
+          "absolute": 0.17007168387434787
+        }
+      },
+      "selected_vector_bound": {
+        "eta_h": 0.17476144514833175,
+        "W_operator_bound": 1.000488320967026,
+        "eta": 0.35553262171569255,
+        "normalized_vector_distance_upper": 0.7110652434313851
+      }
+    },
+    {
+      "m": 8.0,
+      "epsilon": 0.001953125,
+      "d": 2.0,
+      "j": 0,
+      "k": 1,
+      "cutoff": 130,
+      "fine_cutoff": 178,
+      "input_norm": 0.999999999999999,
+      "input_tail_squared_bound": 1.3570088383139227e-99,
+      "word_refinement_absolute": 1.0432815116042835e-51,
+      "residuals": {
+        "B": {
+          "absolute": 0.48291530643338876,
+          "target_norm": 1.8708286933869689,
+          "relative": 0.2581290890718132
+        },
+        "P": {
+          "absolute": 0.3869989357956177,
+          "target_norm": 1.8708286933869689,
+          "relative": 0.20685963239904695
+        },
+        "E": {
+          "absolute": 0.2391387670576066,
+          "target_norm": 2.999999999999997,
+          "relative": 0.07971292235253562
+        },
+        "T": {
+          "absolute": 0.37816788837102094,
+          "target_norm": 1.8708286933869689,
+          "relative": 0.20213923899487646
+        },
+        "Q": {
+          "absolute": 0.4549236487772128,
+          "target_norm": 3.535533905932734,
+          "relative": 0.12867183878899788
+        },
+        "BE": {
+          "absolute": 1.7065882475265983,
+          "target_norm": 5.612486080160908,
+          "relative": 0.30406992964473795
+        },
+        "PT": {
+          "absolute": 1.1828785417175387,
+          "target_norm": 3.6742346141747633,
+          "relative": 0.32193876165504864
+        },
+        "EBP": {
+          "absolute": 6.965426836594746,
+          "target_norm": 17.36375535418532,
+          "relative": 0.4011474876554176
+        },
+        "EEEE": {
+          "absolute": 37.6868381145924,
+          "target_norm": 80.99999999999991,
+          "relative": 0.465269606352993
+        },
+        "comm_BP": {
+          "absolute": 1.1552620661560637,
+          "scale": 3.031791439326202,
+          "cancellation": 6.923976040941022
+        },
+        "comm_EP": {
+          "absolute": 0.008993918449599214,
+          "scale": 1.638887747310278,
+          "cancellation": 1351.015120200888
+        },
+        "comm_BE": {
+          "absolute": 0.00313295669891831,
+          "scale": 1.6025078614184696,
+          "cancellation": 4026.965557540447
+        },
+        "casimir": {
+          "absolute": 2.098749217552071
+        },
+        "boost_match": {
+          "absolute": 0.38723416362712443
+        }
+      },
+      "selected_vector_bound": {
+        "eta_h": 0.17476144514833175,
+        "W_operator_bound": 1.000488320967026,
+        "eta": 0.35553262171569255,
+        "normalized_vector_distance_upper": 0.7110652434313851
+      }
+    },
+    {
+      "m": 8.0,
+      "epsilon": 0.001953125,
+      "d": 2.0,
+      "j": 0,
+      "k": 2,
+      "cutoff": 130,
+      "fine_cutoff": 178,
+      "input_norm": 0.999999999999999,
+      "input_tail_squared_bound": 1.3570088383139227e-99,
+      "word_refinement_absolute": 3.12789350770364e-51,
+      "residuals": {
+        "B": {
+          "absolute": 0.707897393978709,
+          "target_norm": 2.645751311064588,
+          "relative": 0.2675600654597683
+        },
+        "P": {
+          "absolute": 0.6214651615677788,
+          "target_norm": 2.645751311064588,
+          "relative": 0.23489175228555997
+        },
+        "E": {
+          "absolute": 0.33847098627113553,
+          "target_norm": 3.999999999999996,
+          "relative": 0.08461774656778397
+        },
+        "T": {
+          "absolute": 0.5037768976380097,
+          "target_norm": 2.645751311064588,
+          "relative": 0.19040976962997394
+        },
+        "Q": {
+          "absolute": 0.7076592086518909,
+          "target_norm": 4.795831523312715,
+          "relative": 0.1475571452441424
+        },
+        "BE": {
+          "absolute": 3.2397449322780196,
+          "target_norm": 10.583005244258352,
+          "relative": 0.3061271215031944
+        },
+        "PT": {
+          "absolute": 2.2100828626791946,
+          "target_norm": 6.164414002968968,
+          "relative": 0.3585227828005634
+        },
+        "EBP": {
+          "absolute": 15.308607915022563,
+          "target_norm": 34.7562943939655,
+          "relative": 0.44045569822542685
+        },
+        "EEEE": {
+          "absolute": 110.04796276420008,
+          "target_norm": 255.99999999999974,
+          "relative": 0.429874854547657
+        },
+        "comm_BP": {
+          "absolute": 1.9755733232652628,
+          "scale": 4.039396013017815,
+          "cancellation": 5.970581173433587
+        },
+        "comm_EP": {
+          "absolute": 0.016239948330407938,
+          "scale": 2.2147672834585874,
+          "cancellation": 1262.3610127577747
+        },
+        "comm_BE": {
+          "absolute": 0.004253804846773796,
+          "scale": 2.175821871476078,
+          "cancellation": 5002.3391991489125
+        },
+        "casimir": {
+          "absolute": 4.9942761883451166
+        },
+        "boost_match": {
+          "absolute": 0.6284251677366978
+        }
+      },
+      "selected_vector_bound": {
+        "eta_h": 0.17476144514833175,
+        "W_operator_bound": 1.000488320967026,
+        "eta": 0.35553262171569255,
+        "normalized_vector_distance_upper": 0.7110652434313851
+      }
+    },
+    {
+      "m": 8.0,
+      "epsilon": 0.001953125,
+      "d": 2.0,
+      "j": 0,
+      "k": 3,
+      "cutoff": 130,
+      "fine_cutoff": 178,
+      "input_norm": 0.999999999999999,
+      "input_tail_squared_bound": 1.3570088383139227e-99,
+      "word_refinement_absolute": 7.408745368323173e-51,
+      "residuals": {
+        "B": {
+          "absolute": 0.9613817341424556,
+          "target_norm": 3.3911649915626305,
+          "relative": 0.28349600698710214
+        },
+        "P": {
+          "absolute": 0.8850078879178938,
+          "target_norm": 3.3911649915626305,
+          "relative": 0.2609745884142567
+        },
+        "E": {
+          "absolute": 0.4334710930823482,
+          "target_norm": 4.999999999999995,
+          "relative": 0.08669421861646974
+        },
+        "T": {
+          "absolute": 0.6291822434459505,
+          "target_norm": 3.3911649915626305,
+          "relative": 0.1855357215031955
+        },
+        "Q": {
+          "absolute": 0.9854624042625355,
+          "target_norm": 6.04152298679728,
+          "relative": 0.16311489775278448
+        },
+        "BE": {
+          "absolute": 5.3443781020649865,
+          "target_norm": 16.955824957813153,
+          "relative": 0.31519422471994357
+        },
+        "PT": {
+          "absolute": 3.5539166076678526,
+          "target_norm": 9.354143466934845,
+          "relative": 0.37992966648740056
+        },
+        "EBP": {
+          "absolute": 28.953367550715083,
+          "target_norm": 60.72478900745555,
+          "relative": 0.47679651134169115
+        },
+        "EEEE": {
+          "absolute": 256.7028980228963,
+          "target_norm": 624.9999999999993,
+          "relative": 0.4107246368366345
+        },
+        "comm_BP": {
+          "absolute": 2.903684473877791,
+          "scale": 5.044722846874036,
+          "cancellation": 5.542646620752688
+        },
+        "comm_EP": {
+          "absolute": 0.025146437894892026,
+          "scale": 2.7211813239612552,
+          "cancellation": 1209.073019144829
+        },
+        "comm_BE": {
+          "absolute": 0.005242927672353893,
+          "scale": 2.6817583577494157,
+          "cancellation": 6009.262058790101
+        },
+        "casimir": {
+          "absolute": 9.378532085294859
+        },
+        "boost_match": {
+          "absolute": 0.901523469754604
+        }
+      },
+      "selected_vector_bound": {
+        "eta_h": 0.17476144514833175,
+        "W_operator_bound": 1.000488320967026,
+        "eta": 0.35553262171569255,
+        "normalized_vector_distance_upper": 0.7110652434313851
+      }
+    },
+    {
+      "m": 8.0,
+      "epsilon": 0.001953125,
+      "d": 2.0,
+      "j": 1,
+      "k": 0,
+      "cutoff": 130,
+      "fine_cutoff": 178,
+      "input_norm": 0.9999999999999987,
+      "input_tail_squared_bound": 1.3570088383139227e-99,
+      "word_refinement_absolute": 9.916951539846683e-51,
+      "residuals": {
+        "B": {
+          "absolute": 0.38309465922128944,
+          "target_norm": 0.9999999999999987,
+          "relative": 0.38309465922128993
+        },
+        "P": {
+          "absolute": 0.29843280146594087,
+          "target_norm": 0.9999999999999987,
+          "relative": 0.29843280146594126
+        },
+        "E": {
+          "absolute": 0.13466692976024455,
+          "target_norm": 1.9999999999999973,
+          "relative": 0.06733346488012236
+        },
+        "T": {
+          "absolute": 0.2595277835252452,
+          "target_norm": 0.9999999999999987,
+          "relative": 0.2595277835252455
+        },
+        "Q": {
+          "absolute": 0.3274100165875508,
+          "target_norm": 2.2360679774997867,
+          "relative": 0.14642221072081965
+        },
+        "BE": {
+          "absolute": 0.8623856349179831,
+          "target_norm": 1.9999999999999973,
+          "relative": 0.43119281745899213
+        },
+        "PT": {
+          "absolute": 0.6474889013890591,
+          "target_norm": 1.8708286933869689,
+          "relative": 0.3460973758195028
+        },
+        "EBP": {
+          "absolute": 3.75242737495996,
+          "target_norm": 6.633249580710793,
+          "relative": 0.5656997116272933
+        },
+        "EEEE": {
+          "absolute": 9.30727318813124,
+          "target_norm": 15.999999999999979,
+          "relative": 0.5817045742582033
+        },
+        "comm_BP": {
+          "absolute": 0.5531176791852034,
+          "scale": 2.02397253268477,
+          "cancellation": 8.77151909238075
+        },
+        "comm_EP": {
+          "absolute": 0.0036514285158908803,
+          "scale": 0.9140545490267975,
+          "cancellation": 1464.8791806163545
+        },
+        "comm_BE": {
+          "absolute": 0.0017096691795182688,
+          "scale": 0.8744960635900133,
+          "cancellation": 3264.563752476529
+        },
+        "casimir": {
+          "absolute": 0.5920684147450787
+        },
+        "boost_match": {
+          "absolute": 0.2961929609729404
+        }
+      },
+      "selected_vector_bound": {
+        "eta_h": 0.3025629703133211,
+        "W_operator_bound": 1.000488320967026,
+        "eta": 0.4833341468806819,
+        "normalized_vector_distance_upper": 0.9666682937613638
+      }
+    },
+    {
+      "m": 8.0,
+      "epsilon": 0.001953125,
+      "d": 2.0,
+      "j": 1,
+      "k": 1,
+      "cutoff": 130,
+      "fine_cutoff": 178,
+      "input_norm": 0.9999999999999987,
+      "input_tail_squared_bound": 1.3570088383139227e-99,
+      "word_refinement_absolute": 4.539353137839394e-50,
+      "residuals": {
+        "B": {
+          "absolute": 0.6827120055386333,
+          "target_norm": 1.8708286933869689,
+          "relative": 0.3649249169375545
+        },
+        "P": {
+          "absolute": 0.6018971969391887,
+          "target_norm": 1.8708286933869689,
+          "relative": 0.3217275847151496
+        },
+        "E": {
+          "absolute": 0.25389477162261714,
+          "target_norm": 2.999999999999997,
+          "relative": 0.08463159054087246
+        },
+        "T": {
+          "absolute": 0.3889333770629627,
+          "target_norm": 1.8708286933869689,
+          "relative": 0.2078936347500815
+        },
+        "Q": {
+          "absolute": 0.653255532499001,
+          "target_norm": 3.535533905932734,
+          "relative": 0.18476856675106926
+        },
+        "BE": {
+          "absolute": 2.2941654077888853,
+          "target_norm": 5.612486080160906,
+          "relative": 0.4087609973587878
+        },
+        "PT": {
+          "absolute": 1.640945220006474,
+          "target_norm": 3.6742346141747633,
+          "relative": 0.4466087205416609
+        },
+        "EBP": {
+          "absolute": 10.181205395334105,
+          "target_norm": 17.36375535418532,
+          "relative": 0.5863481250258489
+        },
+        "EEEE": {
+          "absolute": 40.75044883018953,
+          "target_norm": 80.9999999999999,
+          "relative": 0.503091960866538
+        },
+        "comm_BP": {
+          "absolute": 1.2787617099349569,
+          "scale": 3.035916537615223,
+          "cancellation": 6.2918049627339245
+        },
+        "comm_EP": {
+          "absolute": 0.00902337539196044,
+          "scale": 1.6343070187840965,
+          "cancellation": 1338.5834044300666
+        },
+        "comm_BE": {
+          "absolute": 0.0031075371730118033,
+          "scale": 1.5895057697799435,
+          "cancellation": 4069.4221832590542
+        },
+        "casimir": {
+          "absolute": 2.298243798534019
+        },
+        "boost_match": {
+          "absolute": 0.6012340148277197
+        }
+      },
+      "selected_vector_bound": {
+        "eta_h": 0.3025629703133211,
+        "W_operator_bound": 1.000488320967026,
+        "eta": 0.4833341468806819,
+        "normalized_vector_distance_upper": 0.9666682937613638
+      }
+    },
+    {
+      "m": 8.0,
+      "epsilon": 0.001953125,
+      "d": 2.0,
+      "j": 1,
+      "k": 2,
+      "cutoff": 130,
+      "fine_cutoff": 178,
+      "input_norm": 0.9999999999999987,
+      "input_tail_squared_bound": 1.3570088383139227e-99,
+      "word_refinement_absolute": 1.3609568418802419e-49,
+      "residuals": {
+        "B": {
+          "absolute": 0.9803407200482468,
+          "target_norm": 2.645751311064588,
+          "relative": 0.37053396362252233
+        },
+        "P": {
+          "absolute": 0.9000515392794628,
+          "target_norm": 2.645751311064588,
+          "relative": 0.34018750572490625
+        },
+        "E": {
+          "absolute": 0.3591147413986752,
+          "target_norm": 3.9999999999999947,
+          "relative": 0.08977868534966893
+        },
+        "T": {
+          "absolute": 0.5181156519600963,
+          "target_norm": 2.645751311064588,
+          "relative": 0.19582930935093018
+        },
+        "Q": {
+          "absolute": 0.96904910652101,
+          "target_norm": 4.795831523312714,
+          "relative": 0.20206070663876047
+        },
+        "BE": {
+          "absolute": 4.3255741177853615,
+          "target_norm": 10.583005244258352,
+          "relative": 0.40872833547277465
+        },
+        "PT": {
+          "absolute": 3.01507542924857,
+          "target_norm": 6.164414002968968,
+          "relative": 0.48910982094914757
+        },
+        "EBP": {
+          "absolute": 21.07057869926971,
+          "target_norm": 34.7562943939655,
+          "relative": 0.6062377784131111
+        },
+        "EEEE": {
+          "absolute": 119.00161829955279,
+          "target_norm": 255.99999999999966,
+          "relative": 0.4648500714826287
+        },
+        "comm_BP": {
+          "absolute": 2.1277919909518976,
+          "scale": 4.045069604538706,
+          "cancellation": 5.616404574557665
+        },
+        "comm_EP": {
+          "absolute": 0.016331881731969502,
+          "scale": 2.2117279251079265,
+          "cancellation": 1249.757901788746
+        },
+        "comm_BE": {
+          "absolute": 0.004225717340294813,
+          "scale": 2.1614551073405934,
+          "cancellation": 5061.227204911928
+        },
+        "casimir": {
+          "absolute": 5.3384088464677975
+        },
+        "boost_match": {
+          "absolute": 0.9024903846811098
+        }
+      },
+      "selected_vector_bound": {
+        "eta_h": 0.3025629703133211,
+        "W_operator_bound": 1.000488320967026,
+        "eta": 0.4833341468806819,
+        "normalized_vector_distance_upper": 0.9666682937613638
+      }
+    },
+    {
+      "m": 8.0,
+      "epsilon": 0.001953125,
+      "d": 2.0,
+      "j": 1,
+      "k": 3,
+      "cutoff": 130,
+      "fine_cutoff": 178,
+      "input_norm": 0.9999999999999987,
+      "input_tail_squared_bound": 1.3570088383139227e-99,
+      "word_refinement_absolute": 3.2235694162766705e-49,
+      "residuals": {
+        "B": {
+          "absolute": 1.2910304893685287,
+          "target_norm": 3.39116499156263,
+          "relative": 0.38070412161622047
+        },
+        "P": {
+          "absolute": 1.2127661325119012,
+          "target_norm": 3.39116499156263,
+          "relative": 0.35762522187192824
+        },
+        "E": {
+          "absolute": 0.45975784935959446,
+          "target_norm": 4.999999999999995,
+          "relative": 0.09195156987191899
+        },
+        "T": {
+          "absolute": 0.6470861449995654,
+          "target_norm": 3.39116499156263,
+          "relative": 0.19081529403893488
+        },
+        "Q": {
+          "absolute": 1.2969884240869824,
+          "target_norm": 6.041522986797279,
+          "relative": 0.21467905144469865
+        },
+        "BE": {
+          "absolute": 7.01450422047979,
+          "target_norm": 16.955824957813153,
+          "relative": 0.4136928894897292
+        },
+        "PT": {
+          "absolute": 4.769611640798728,
+          "target_norm": 9.354143466934843,
+          "relative": 0.5098929322239303
+        },
+        "EBP": {
+          "absolute": 37.95191598378363,
+          "target_norm": 60.72478900745553,
+          "relative": 0.6249822618424258
+        },
+        "EEEE": {
+          "absolute": 277.56738863213155,
+          "target_norm": 624.9999999999993,
+          "relative": 0.44410782181141095
+        },
+        "comm_BP": {
+          "absolute": 3.068526293950774,
+          "scale": 5.051903457733133,
+          "cancellation": 5.347578447155907
+        },
+        "comm_EP": {
+          "absolute": 0.025351054452118153,
+          "scale": 2.722579664935271,
+          "cancellation": 1196.3421736886748
+        },
+        "comm_BE": {
+          "absolute": 0.005217694936173113,
+          "scale": 2.6688518090860813,
+          "cancellation": 6086.07515638214
+        },
+        "casimir": {
+          "absolute": 9.851843204494534
+        },
+        "boost_match": {
+          "absolute": 1.2203380778634612
+        }
+      },
+      "selected_vector_bound": {
+        "eta_h": 0.3025629703133211,
+        "W_operator_bound": 1.000488320967026,
+        "eta": 0.4833341468806819,
+        "normalized_vector_distance_upper": 0.9666682937613638
+      }
+    },
+    {
+      "m": 8.0,
+      "epsilon": 0.001953125,
+      "d": 2.0,
+      "j": 2,
+      "k": 0,
+      "cutoff": 130,
+      "fine_cutoff": 178,
+      "input_norm": 0.9999999999999986,
+      "input_tail_squared_bound": 1.3570088383139227e-99,
+      "word_refinement_absolute": 3.0247197265644388e-49,
+      "residuals": {
+        "B": {
+          "absolute": 0.4656828864128221,
+          "target_norm": 0.9999999999999986,
+          "relative": 0.46568288641282274
+        },
+        "P": {
+          "absolute": 0.38780928801894415,
+          "target_norm": 0.9999999999999986,
+          "relative": 0.3878092880189447
+        },
+        "E": {
+          "absolute": 0.1424286188204582,
+          "target_norm": 1.9999999999999971,
+          "relative": 0.0712143094102292
+        },
+        "T": {
+          "absolute": 0.2665054545561984,
+          "target_norm": 0.9999999999999986,
+          "relative": 0.2665054545561988
+        },
+        "Q": {
+          "absolute": 0.41313672716530997,
+          "target_norm": 2.2360679774997867,
+          "relative": 0.18476036118868366
+        },
+        "BE": {
+          "absolute": 1.0305309311322421,
+          "target_norm": 1.9999999999999971,
+          "relative": 0.5152654655661218
+        },
+        "PT": {
+          "absolute": 0.8033407784805158,
+          "target_norm": 1.870828693386968,
+          "relative": 0.4294037082711935
+        },
+        "EBP": {
+          "absolute": 4.702630330921218,
+          "target_norm": 6.63324958071079,
+          "relative": 0.7089481970641159
+        },
+        "EEEE": {
+          "absolute": 9.97224656418345,
+          "target_norm": 15.999999999999977,
+          "relative": 0.6232654102614665
+        },
+        "comm_BP": {
+          "absolute": 0.6301438632510706,
+          "scale": 2.0264599331750244,
+          "cancellation": 7.70691614062952
+        },
+        "comm_EP": {
+          "absolute": 0.003655206885940793,
+          "scale": 0.9113587744304675,
+          "cancellation": 1453.283427990178
+        },
+        "comm_BE": {
+          "absolute": 0.0016924180516507583,
+          "scale": 0.865672108878043,
+          "cancellation": 3298.127219551251
+        },
+        "casimir": {
+          "absolute": 0.6635301447585689
+        },
+        "boost_match": {
+          "absolute": 0.38634360788576716
+        }
+      },
+      "selected_vector_bound": {
+        "eta_h": 0.39042580238256325,
+        "W_operator_bound": 1.000488320967026,
+        "eta": 0.571196978949924,
+        "normalized_vector_distance_upper": 1.142393957899848
+      }
+    },
+    {
+      "m": 8.0,
+      "epsilon": 0.001953125,
+      "d": 2.0,
+      "j": 2,
+      "k": 1,
+      "cutoff": 130,
+      "fine_cutoff": 178,
+      "input_norm": 0.9999999999999986,
+      "input_tail_squared_bound": 1.3570088383139227e-99,
+      "word_refinement_absolute": 1.384524971471453e-48,
+      "residuals": {
+        "B": {
+          "absolute": 0.841579796670509,
+          "target_norm": 1.870828693386968,
+          "relative": 0.4498433232531323
+        },
+        "P": {
+          "absolute": 0.7642921810324919,
+          "target_norm": 1.870828693386968,
+          "relative": 0.4085313549733991
+        },
+        "E": {
+          "absolute": 0.2678989989396169,
+          "target_norm": 2.999999999999995,
+          "relative": 0.08929966631320577
+        },
+        "T": {
+          "absolute": 0.39938911610376876,
+          "target_norm": 1.870828693386968,
+          "relative": 0.21348246235239768
+        },
+        "Q": {
+          "absolute": 0.8098841964257928,
+          "target_norm": 3.535533905932732,
+          "relative": 0.22906984290739874
+        },
+        "BE": {
+          "absolute": 2.7750061304392366,
+          "target_norm": 5.612486080160905,
+          "relative": 0.49443438982385496
+        },
+        "PT": {
+          "absolute": 1.9958229144936515,
+          "target_norm": 3.6742346141747624,
+          "relative": 0.5431941952737592
+        },
+        "EBP": {
+          "absolute": 12.496045746947638,
+          "target_norm": 17.363755354185315,
+          "relative": 0.7196626243605548
+        },
+        "EEEE": {
+          "absolute": 43.67553725034935,
+          "target_norm": 80.99999999999989,
+          "relative": 0.5392041635845607
+        },
+        "comm_BP": {
+          "absolute": 1.3956578036020553,
+          "scale": 3.0400442117606574,
+          "cancellation": 5.818391051067614
+        },
+        "comm_EP": {
+          "absolute": 0.009061893453339857,
+          "scale": 1.6314319273466227,
+          "cancellation": 1326.397080847447
+        },
+        "comm_BE": {
+          "absolute": 0.0030854776250183735,
+          "scale": 1.5782223073908346,
+          "cancellation": 4112.305747259592
+        },
+        "casimir": {
+          "absolute": 2.4878375575947644
+        },
+        "boost_match": {
+          "absolute": 0.7633361212186349
+        }
+      },
+      "selected_vector_bound": {
+        "eta_h": 0.39042580238256325,
+        "W_operator_bound": 1.000488320967026,
+        "eta": 0.571196978949924,
+        "normalized_vector_distance_upper": 1.142393957899848
+      }
+    },
+    {
+      "m": 8.0,
+      "epsilon": 0.001953125,
+      "d": 2.0,
+      "j": 2,
+      "k": 2,
+      "cutoff": 130,
+      "fine_cutoff": 178,
+      "input_norm": 0.9999999999999986,
+      "input_tail_squared_bound": 1.3570088383139227e-99,
+      "word_refinement_absolute": 4.1509844892960134e-48,
+      "residuals": {
+        "B": {
+          "absolute": 1.1980397244622973,
+          "target_norm": 2.6457513110645867,
+          "relative": 0.45281645310051266
+        },
+        "P": {
+          "absolute": 1.1174514015784045,
+          "target_norm": 2.6457513110645867,
+          "relative": 0.4223569301110046
+        },
+        "E": {
+          "absolute": 0.3787136588261983,
+          "target_norm": 3.9999999999999942,
+          "relative": 0.09467841470654971
+        },
+        "T": {
+          "absolute": 0.5320419087371917,
+          "target_norm": 2.6457513110645867,
+          "relative": 0.2010929396546763
+        },
+        "Q": {
+          "absolute": 1.1798820577799574,
+          "target_norm": 4.795831523312713,
+          "relative": 0.24602241593444377
+        },
+        "BE": {
+          "absolute": 5.211462975521667,
+          "target_norm": 10.583005244258347,
+          "relative": 0.49243696428753725
+        },
+        "PT": {
+          "absolute": 3.636856862950044,
+          "target_norm": 6.164414002968967,
+          "relative": 0.589976088756924
+        },
+        "EBP": {
+          "absolute": 25.32007794200866,
+          "target_norm": 34.75629439396548,
+          "relative": 0.7285033799922245
+        },
+        "EEEE": {
+          "absolute": 127.55427705047092,
+          "target_norm": 255.99999999999963,
+          "relative": 0.49825889472840273
+        },
+        "comm_BP": {
+          "absolute": 2.262702779889969,
+          "scale": 4.050746490221928,
+          "cancellation": 5.364047747300133
+        },
+        "comm_EP": {
+          "absolute": 0.016446053601369616,
+          "scale": 2.212015825085461,
+          "cancellation": 1237.6411410192252
+        },
+        "comm_BE": {
+          "absolute": 0.004204435812490258,
+          "scale": 2.1505696024045227,
+          "cancellation": 5119.722572807611
+        },
+        "casimir": {
+          "absolute": 5.643905946048294
+        },
+        "boost_match": {
+          "absolute": 1.1176845121252845
+        }
+      },
+      "selected_vector_bound": {
+        "eta_h": 0.39042580238256325,
+        "W_operator_bound": 1.000488320967026,
+        "eta": 0.571196978949924,
+        "normalized_vector_distance_upper": 1.142393957899848
+      }
+    },
+    {
+      "m": 8.0,
+      "epsilon": 0.001953125,
+      "d": 2.0,
+      "j": 2,
+      "k": 3,
+      "cutoff": 130,
+      "fine_cutoff": 178,
+      "input_norm": 0.9999999999999986,
+      "input_tail_squared_bound": 1.3570088383139227e-99,
+      "word_refinement_absolute": 9.83204248359893e-48,
+      "residuals": {
+        "B": {
+          "absolute": 1.557408237737921,
+          "target_norm": 3.3911649915626296,
+          "relative": 0.45925463420766094
+        },
+        "P": {
+          "absolute": 1.4750299088765189,
+          "target_norm": 3.3911649915626296,
+          "relative": 0.4349625903034678
+        },
+        "E": {
+          "absolute": 0.4847190855333853,
+          "target_norm": 4.999999999999993,
+          "relative": 0.0969438171066772
+        },
+        "T": {
+          "absolute": 0.6644750936871677,
+          "target_norm": 3.3911649915626296,
+          "relative": 0.19594301525888935
+        },
+        "Q": {
+          "absolute": 1.5526319022745194,
+          "target_norm": 6.041522986797277,
+          "relative": 0.2569934610308581
+        },
+        "BE": {
+          "absolute": 8.381825464991303,
+          "target_norm": 16.955824957813146,
+          "relative": 0.4943330970828999
+        },
+        "PT": {
+          "absolute": 5.712170847078623,
+          "target_norm": 9.354143466934842,
+          "relative": 0.610656749842472
+        },
+        "EBP": {
+          "absolute": 44.738868924369775,
+          "target_norm": 60.72478900745551,
+          "relative": 0.7367480341327648
+        },
+        "EEEE": {
+          "absolute": 297.5054315526847,
+          "target_norm": 624.9999999999991,
+          "relative": 0.47600869048429617
+        },
+        "comm_BP": {
+          "absolute": 3.2069594072528584,
+          "scale": 5.059088103078859,
+          "cancellation": 5.222943077028261
+        },
+        "comm_EP": {
+          "absolute": 0.02559331904311134,
+          "scale": 2.728675775967507,
+          "cancellation": 1184.2944031274503
+        },
+        "comm_BE": {
+          "absolute": 0.005202308799589501,
+          "scale": 2.660981797719229,
+          "cancellation": 6161.274041136926
+        },
+        "casimir": {
+          "absolute": 10.24897897060399
+        },
+        "boost_match": {
+          "absolute": 1.477710921444937
+        }
+      },
+      "selected_vector_bound": {
+        "eta_h": 0.39042580238256325,
+        "W_operator_bound": 1.000488320967026,
+        "eta": 0.571196978949924,
+        "normalized_vector_distance_upper": 1.142393957899848
+      }
+    },
+    {
+      "m": 32.0,
+      "epsilon": 3.0517578125e-05,
+      "d": 2.0,
+      "j": 0,
+      "k": 0,
+      "cutoff": 193,
+      "fine_cutoff": 241,
+      "input_norm": 1.0000000000000029,
+      "input_tail_squared_bound": 8.535666968813988e-76,
+      "word_refinement_absolute": 5.788372503233468e-41,
+      "residuals": {
+        "B": {
+          "absolute": 0.10645661755244357,
+          "target_norm": 1.0000000000000029,
+          "relative": 0.10645661755244326
+        },
+        "P": {
+          "absolute": 0.08770537868103268,
+          "target_norm": 1.0000000000000029,
+          "relative": 0.08770537868103243
+        },
+        "E": {
+          "absolute": 0.03127290359824402,
+          "target_norm": 2.0000000000000058,
+          "relative": 0.015636451799121966
+        },
+        "T": {
+          "absolute": 0.06272620647223075,
+          "target_norm": 1.0000000000000029,
+          "relative": 0.06272620647223057
+        },
+        "Q": {
+          "absolute": 0.09311405881524232,
+          "target_norm": 2.236067977499796,
+          "relative": 0.041641873034358956
+        },
+        "BE": {
+          "absolute": 0.23507051994442146,
+          "target_norm": 2.0000000000000058,
+          "relative": 0.1175352599722104
+        },
+        "PT": {
+          "absolute": 0.1842245659731803,
+          "target_norm": 1.870828693386976,
+          "relative": 0.09847217258553877
+        },
+        "EBP": {
+          "absolute": 1.1636926224813673,
+          "target_norm": 6.633249580710818,
+          "relative": 0.17543326363978998
+        },
+        "EEEE": {
+          "absolute": 2.0387342748052353,
+          "target_norm": 16.000000000000046,
+          "relative": 0.12742089217532684
+        },
+        "comm_BP": {
+          "absolute": 0.12330835788479695,
+          "scale": 2.0012513888881744,
+          "cancellation": 44.445361434079594
+        },
+        "comm_EP": {
+          "absolute": 5.9386536242664514e-05,
+          "scale": 0.9715862350208393,
+          "cancellation": 98027.47819599102
+        },
+        "comm_BE": {
+          "absolute": 2.9579507260241714e-05,
+          "scale": 0.969246504207248,
+          "cancellation": 197280.42544492517
+        },
+        "casimir": {
+          "absolute": 0.1242395606377127
+        },
+        "boost_match": {
+          "absolute": 0.08750314826258573
+        }
+      },
+      "selected_vector_bound": {
+        "eta_h": 0.08832397021710646,
+        "W_operator_bound": 1.0000076294042326,
+        "eta": 0.17695713470350607,
+        "normalized_vector_distance_upper": 0.35391426940701215
+      }
+    },
+    {
+      "m": 32.0,
+      "epsilon": 3.0517578125e-05,
+      "d": 2.0,
+      "j": 0,
+      "k": 1,
+      "cutoff": 193,
+      "fine_cutoff": 241,
+      "input_norm": 1.0000000000000029,
+      "input_tail_squared_bound": 8.535666968813988e-76,
+      "word_refinement_absolute": 2.9054245688635064e-40,
+      "residuals": {
+        "B": {
+          "absolute": 0.1944469052645345,
+          "target_norm": 1.870828693386976,
+          "relative": 0.10393624277405375
+        },
+        "P": {
+          "absolute": 0.17386118056682234,
+          "target_norm": 1.870828693386976,
+          "relative": 0.09293271007729814
+        },
+        "E": {
+          "absolute": 0.05875278540497675,
+          "target_norm": 3.0000000000000084,
+          "relative": 0.01958426180165886
+        },
+        "T": {
+          "absolute": 0.09408789570016547,
+          "target_norm": 1.870828693386976,
+          "relative": 0.05029209570750561
+        },
+        "Q": {
+          "absolute": 0.18352002588527622,
+          "target_norm": 3.5355339059327475,
+          "relative": 0.05190730191480367
+        },
+        "BE": {
+          "absolute": 0.6424092248300753,
+          "target_norm": 5.612486080160928,
+          "relative": 0.11446072482938886
+        },
+        "PT": {
+          "absolute": 0.4870769649750641,
+          "target_norm": 3.674234614174778,
+          "relative": 0.13256555885026414
+        },
+        "EBP": {
+          "absolute": 3.2241578585280566,
+          "target_norm": 17.36375535418539,
+          "relative": 0.18568321153815956
+        },
+        "EEEE": {
+          "absolute": 8.923115836937876,
+          "target_norm": 81.00000000000023,
+          "relative": 0.11016192391281299
+        },
+        "comm_BP": {
+          "absolute": 0.3283987406390511,
+          "scale": 3.002024446384151,
+          "cancellation": 29.236248401699317
+        },
+        "comm_EP": {
+          "absolute": 0.00015096713057049903,
+          "scale": 1.7976774536746218,
+          "cancellation": 89641.56613388243
+        },
+        "comm_BE": {
+          "absolute": 5.4771309706476056e-05,
+          "scale": 1.7947188909430463,
+          "cancellation": 247737.7374759647
+        },
+        "casimir": {
+          "absolute": 0.5695270250667231
+        },
+        "boost_match": {
+          "absolute": 0.17357063676671117
+        }
+      },
+      "selected_vector_bound": {
+        "eta_h": 0.08832397021710646,
+        "W_operator_bound": 1.0000076294042326,
+        "eta": 0.17695713470350607,
+        "normalized_vector_distance_upper": 0.35391426940701215
+      }
+    },
+    {
+      "m": 32.0,
+      "epsilon": 3.0517578125e-05,
+      "d": 2.0,
+      "j": 0,
+      "k": 2,
+      "cutoff": 193,
+      "fine_cutoff": 241,
+      "input_norm": 1.0000000000000029,
+      "input_tail_squared_bound": 8.535666968813988e-76,
+      "word_refinement_absolute": 9.145825407725152e-40,
+      "residuals": {
+        "B": {
+          "absolute": 0.28521149276541585,
+          "target_norm": 2.6457513110645983,
+          "relative": 0.10779981155925511
+        },
+        "P": {
+          "absolute": 0.2623171425108146,
+          "target_norm": 2.6457513110645983,
+          "relative": 0.09914656053038612
+        },
+        "E": {
+          "absolute": 0.08317395674094194,
+          "target_norm": 4.0000000000000115,
+          "relative": 0.020793489185235426
+        },
+        "T": {
+          "absolute": 0.1254486573991211,
+          "target_norm": 2.6457513110645983,
+          "relative": 0.04741513568357376
+        },
+        "Q": {
+          "absolute": 0.2751875548330322,
+          "target_norm": 4.795831523312733,
+          "relative": 0.057380571751808676
+        },
+        "BE": {
+          "absolute": 1.2436234337681362,
+          "target_norm": 10.583005244258393,
+          "relative": 0.11751136894152446
+        },
+        "PT": {
+          "absolute": 0.9246291890509759,
+          "target_norm": 6.164414002968993,
+          "relative": 0.1499946610668334
+        },
+        "EBP": {
+          "absolute": 6.874020774309727,
+          "target_norm": 34.75629439396563,
+          "relative": 0.19777772326336351
+        },
+        "EEEE": {
+          "absolute": 26.088873028648326,
+          "target_norm": 256.00000000000074,
+          "relative": 0.10190966026815723
+        },
+        "comm_BP": {
+          "absolute": 0.6079578414674023,
+          "scale": 4.002725598194836,
+          "cancellation": 24.331489573200244
+        },
+        "comm_EP": {
+          "absolute": 0.000281362116124885,
+          "scale": 2.508270164672195,
+          "cancellation": 83540.26321103759
+        },
+        "comm_BE": {
+          "absolute": 7.643570732134029e-05,
+          "scale": 2.5046070398381346,
+          "cancellation": 308377.6722884317
+        },
+        "casimir": {
+          "absolute": 1.4811888767000598
+        },
+        "boost_match": {
+          "absolute": 0.26194166679039554
+        }
+      },
+      "selected_vector_bound": {
+        "eta_h": 0.08832397021710646,
+        "W_operator_bound": 1.0000076294042326,
+        "eta": 0.17695713470350607,
+        "normalized_vector_distance_upper": 0.35391426940701215
+      }
+    },
+    {
+      "m": 32.0,
+      "epsilon": 3.0517578125e-05,
+      "d": 2.0,
+      "j": 0,
+      "k": 3,
+      "cutoff": 193,
+      "fine_cutoff": 241,
+      "input_norm": 1.0000000000000029,
+      "input_tail_squared_bound": 8.535666968813988e-76,
+      "word_refinement_absolute": 2.2283100846813643e-39,
+      "residuals": {
+        "B": {
+          "absolute": 0.38527825439004887,
+          "target_norm": 3.391164991562644,
+          "relative": 0.11361235898242546
+        },
+        "P": {
+          "absolute": 0.36080779027845383,
+          "target_norm": 3.391164991562644,
+          "relative": 0.10639641278916191
+        },
+        "E": {
+          "absolute": 0.106657344796608,
+          "target_norm": 5.000000000000014,
+          "relative": 0.02133146895932154
+        },
+        "T": {
+          "absolute": 0.15680850282561834,
+          "target_norm": 3.391164991562644,
+          "relative": 0.04624030479665963
+        },
+        "Q": {
+          "absolute": 0.3762420108449922,
+          "target_norm": 6.041522986797304,
+          "relative": 0.06227602074298212
+        },
+        "BE": {
+          "absolute": 2.0759483139037984,
+          "target_norm": 16.95582495781322,
+          "relative": 0.12243275211137424
+        },
+        "PT": {
+          "absolute": 1.5032955992301054,
+          "target_norm": 9.35414346693488,
+          "relative": 0.1607090595246876
+        },
+        "EBP": {
+          "absolute": 12.827217175711178,
+          "target_norm": 60.72478900745577,
+          "relative": 0.2112352695723036
+        },
+        "EEEE": {
+          "absolute": 61.01594417621071,
+          "target_norm": 625.0000000000018,
+          "relative": 0.09762551068193685
+        },
+        "comm_BP": {
+          "absolute": 0.9555064388366966,
+          "scale": 5.003379641924583,
+          "cancellation": 21.964455519842282
+        },
+        "comm_EP": {
+          "absolute": 0.0004488832418010245,
+          "scale": 3.171653617965232,
+          "cancellation": 79739.87933192812
+        },
+        "comm_BE": {
+          "absolute": 9.666079532520923e-05,
+          "scale": 3.1673326111157976,
+          "cancellation": 371368.8150619339
+        },
+        "casimir": {
+          "absolute": 2.987393126118258
+        },
+        "boost_match": {
+          "absolute": 0.36039617259593193
+        }
+      },
+      "selected_vector_bound": {
+        "eta_h": 0.08832397021710646,
+        "W_operator_bound": 1.0000076294042326,
+        "eta": 0.17695713470350607,
+        "normalized_vector_distance_upper": 0.35391426940701215
+      }
+    },
+    {
+      "m": 32.0,
+      "epsilon": 3.0517578125e-05,
+      "d": 2.0,
+      "j": 1,
+      "k": 0,
+      "cutoff": 193,
+      "fine_cutoff": 241,
+      "input_norm": 1.0000000000000024,
+      "input_tail_squared_bound": 8.535666968813988e-76,
+      "word_refinement_absolute": 1.6596770613114288e-39,
+      "residuals": {
+        "B": {
+          "absolute": 0.16366553666799583,
+          "target_norm": 1.0000000000000024,
+          "relative": 0.16366553666799544
+        },
+        "P": {
+          "absolute": 0.15170938309427684,
+          "target_norm": 1.0000000000000024,
+          "relative": 0.15170938309427648
+        },
+        "E": {
+          "absolute": 0.031759897009942306,
+          "target_norm": 2.000000000000005,
+          "relative": 0.015879948504971115
+        },
+        "T": {
+          "absolute": 0.06320916899830062,
+          "target_norm": 1.0000000000000024,
+          "relative": 0.06320916899830047
+        },
+        "Q": {
+          "absolute": 0.15499815475330084,
+          "target_norm": 2.236067977499795,
+          "relative": 0.0693172820830824
+        },
+        "BE": {
+          "absolute": 0.34285318220753186,
+          "target_norm": 2.000000000000005,
+          "relative": 0.1714265911037655
+        },
+        "PT": {
+          "absolute": 0.2957520032644574,
+          "target_norm": 1.8708286933869755,
+          "relative": 0.15808609538109214
+        },
+        "EBP": {
+          "absolute": 1.9185554625473606,
+          "target_norm": 6.633249580710818,
+          "relative": 0.28923311857983314
+        },
+        "EEEE": {
+          "absolute": 2.07103495284405,
+          "target_norm": 16.00000000000004,
+          "relative": 0.12943968455275282
+        },
+        "comm_BP": {
+          "absolute": 0.13043836016235577,
+          "scale": 2.001289584992163,
+          "cancellation": 41.96483711806795
+        },
+        "comm_EP": {
+          "absolute": 5.9340752814983485e-05,
+          "scale": 0.9707854350570332,
+          "cancellation": 98017.46889256073
+        },
+        "comm_BE": {
+          "absolute": 2.9552590573186597e-05,
+          "scale": 0.968364511670747,
+          "cancellation": 197304.6633501703
+        },
+        "casimir": {
+          "absolute": 0.13133891597260278
+        },
+        "boost_match": {
+          "absolute": 0.15160975804226223
+        }
+      },
+      "selected_vector_bound": {
+        "eta_h": 0.15298046234466883,
+        "W_operator_bound": 1.0000076294042326,
+        "eta": 0.24161362683106843,
+        "normalized_vector_distance_upper": 0.48322725366213687
+      }
+    },
+    {
+      "m": 32.0,
+      "epsilon": 3.0517578125e-05,
+      "d": 2.0,
+      "j": 1,
+      "k": 1,
+      "cutoff": 193,
+      "fine_cutoff": 241,
+      "input_norm": 1.0000000000000024,
+      "input_tail_squared_bound": 8.535666968813988e-76,
+      "word_refinement_absolute": 8.33060751728328e-39,
+      "residuals": {
+        "B": {
+          "absolute": 0.3026206427834951,
+          "target_norm": 1.8708286933869755,
+          "relative": 0.1617575376373057
+        },
+        "P": {
+          "absolute": 0.2893007343324155,
+          "target_norm": 1.8708286933869755,
+          "relative": 0.15463774708771502
+        },
+        "E": {
+          "absolute": 0.05965874397184081,
+          "target_norm": 3.000000000000007,
+          "relative": 0.019886247990613556
+        },
+        "T": {
+          "absolute": 0.09481232826992726,
+          "target_norm": 1.8708286933869755,
+          "relative": 0.05067932120405832
+        },
+        "Q": {
+          "absolute": 0.29538801705142426,
+          "target_norm": 3.535533905932746,
+          "relative": 0.08354834797532365
+        },
+        "BE": {
+          "absolute": 0.9487166845030565,
+          "target_norm": 5.612486080160926,
+          "relative": 0.16903679954888262
+        },
+        "PT": {
+          "absolute": 0.7659581352974776,
+          "target_norm": 3.6742346141747775,
+          "relative": 0.20846739953472176
+        },
+        "EBP": {
+          "absolute": 5.13789112170144,
+          "target_norm": 17.36375535418538,
+          "relative": 0.295897460940844
+        },
+        "EEEE": {
+          "absolute": 9.064405265218817,
+          "target_norm": 81.0000000000002,
+          "relative": 0.11190623784220734
+        },
+        "comm_BP": {
+          "absolute": 0.3458772221915515,
+          "scale": 3.002088099091407,
+          "cancellation": 27.71190616308481
+        },
+        "comm_EP": {
+          "absolute": 0.00015081357627618234,
+          "scale": 1.7958033002139548,
+          "cancellation": 89632.59190875766
+        },
+        "comm_BE": {
+          "absolute": 5.4710733103208025e-05,
+          "scale": 1.7927339470989254,
+          "cancellation": 247760.0049369256
+        },
+        "casimir": {
+          "absolute": 0.599638871807594
+        },
+        "boost_match": {
+          "absolute": 0.2891517940287559
+        }
+      },
+      "selected_vector_bound": {
+        "eta_h": 0.15298046234466883,
+        "W_operator_bound": 1.0000076294042326,
+        "eta": 0.24161362683106843,
+        "normalized_vector_distance_upper": 0.48322725366213687
+      }
+    },
+    {
+      "m": 32.0,
+      "epsilon": 3.0517578125e-05,
+      "d": 2.0,
+      "j": 1,
+      "k": 2,
+      "cutoff": 193,
+      "fine_cutoff": 241,
+      "input_norm": 1.0000000000000024,
+      "input_tail_squared_bound": 8.535666968813988e-76,
+      "word_refinement_absolute": 2.6223457507688747e-38,
+      "residuals": {
+        "B": {
+          "absolute": 0.4339392041658792,
+          "target_norm": 2.645751311064597,
+          "relative": 0.1640136026205996
+        },
+        "P": {
+          "absolute": 0.4185956200350725,
+          "target_norm": 2.645751311064597,
+          "relative": 0.1582142729305265
+        },
+        "E": {
+          "absolute": 0.08445341162310305,
+          "target_norm": 4.00000000000001,
+          "relative": 0.02111335290577571
+        },
+        "T": {
+          "absolute": 0.12641455241790614,
+          "target_norm": 2.645751311064597,
+          "relative": 0.04778020968533111
+        },
+        "Q": {
+          "absolute": 0.4270300596530976,
+          "target_norm": 4.7958315233127315,
+          "relative": 0.0890419226733231
+        },
+        "BE": {
+          "absolute": 1.8083202531443956,
+          "target_norm": 10.583005244258388,
+          "relative": 0.17087020287790805
+        },
+        "PT": {
+          "absolute": 1.4356756397276154,
+          "target_norm": 6.164414002968993,
+          "relative": 0.2328973425594298
+        },
+        "EBP": {
+          "absolute": 10.540396608379808,
+          "target_norm": 34.75629439396561,
+          "relative": 0.3032658340645725
+        },
+        "EEEE": {
+          "absolute": 26.50151276306331,
+          "target_norm": 256.0000000000006,
+          "relative": 0.1035215342307158
+        },
+        "comm_BP": {
+          "absolute": 0.6377999055296653,
+          "scale": 4.002813432737721,
+          "cancellation": 23.14838149658013
+        },
+        "comm_EP": {
+          "absolute": 0.00028101451974856266,
+          "scale": 2.505061181591965,
+          "cancellation": 83530.78689748829
+        },
+        "comm_BE": {
+          "absolute": 7.633326517670807e-05,
+          "scale": 2.5012502668680514,
+          "cancellation": 308410.0605730063
+        },
+        "casimir": {
+          "absolute": 1.5534969106602954
+        },
+        "boost_match": {
+          "absolute": 0.41838664245235163
+        }
+      },
+      "selected_vector_bound": {
+        "eta_h": 0.15298046234466883,
+        "W_operator_bound": 1.0000076294042326,
+        "eta": 0.24161362683106843,
+        "normalized_vector_distance_upper": 0.48322725366213687
+      }
+    },
+    {
+      "m": 32.0,
+      "epsilon": 3.0517578125e-05,
+      "d": 2.0,
+      "j": 1,
+      "k": 3,
+      "cutoff": 193,
+      "fine_cutoff": 241,
+      "input_norm": 1.0000000000000024,
+      "input_tail_squared_bound": 8.535666968813988e-76,
+      "word_refinement_absolute": 6.389143745907296e-38,
+      "residuals": {
+        "B": {
+          "absolute": 0.5687197276150157,
+          "target_norm": 3.391164991562643,
+          "relative": 0.16770629828687592
+        },
+        "P": {
+          "absolute": 0.5516560857622503,
+          "target_norm": 3.391164991562643,
+          "relative": 0.16267450481907936
+        },
+        "E": {
+          "absolute": 0.10829618874102391,
+          "target_norm": 5.000000000000013,
+          "relative": 0.021659237748204725
+        },
+        "T": {
+          "absolute": 0.15801585261319875,
+          "target_norm": 3.391164991562643,
+          "relative": 0.04659633282554775
+        },
+        "Q": {
+          "absolute": 0.5621854689107135,
+          "target_norm": 6.041522986797302,
+          "relative": 0.09305360091143774
+        },
+        "BE": {
+          "absolute": 2.9522135158851865,
+          "target_norm": 16.95582495781321,
+          "relative": 0.17411205430761495
+        },
+        "PT": {
+          "absolute": 2.301716337764797,
+          "target_norm": 9.35414346693488,
+          "relative": 0.24606382678445404
+        },
+        "EBP": {
+          "absolute": 18.92720432420143,
+          "target_norm": 60.72478900745576,
+          "relative": 0.31168826822728946
+        },
+        "EEEE": {
+          "absolute": 61.97991969771495,
+          "target_norm": 625.0000000000016,
+          "relative": 0.09916787151634367
+        },
+        "comm_BP": {
+          "absolute": 0.9988483852053234,
+          "scale": 5.003491147232605,
+          "cancellation": 20.968292625336126
+        },
+        "comm_EP": {
+          "absolute": 0.0004482485172194146,
+          "scale": 3.1669816242526796,
+          "cancellation": 79730.09516235438
+        },
+        "comm_BE": {
+          "absolute": 9.651249572547631e-05,
+          "scale": 3.1624732040025783,
+          "cancellation": 371413.7651630305
+        },
+        "casimir": {
+          "absolute": 3.1222148025167966
+        },
+        "boost_match": {
+          "absolute": 0.5514082120632502
+        }
+      },
+      "selected_vector_bound": {
+        "eta_h": 0.15298046234466883,
+        "W_operator_bound": 1.0000076294042326,
+        "eta": 0.24161362683106843,
+        "normalized_vector_distance_upper": 0.48322725366213687
+      }
+    },
+    {
+      "m": 32.0,
+      "epsilon": 3.0517578125e-05,
+      "d": 2.0,
+      "j": 2,
+      "k": 0,
+      "cutoff": 193,
+      "fine_cutoff": 241,
+      "input_norm": 1.0000000000000007,
+      "input_tail_squared_bound": 8.535666968813988e-76,
+      "word_refinement_absolute": 3.34014906463772e-38,
+      "residuals": {
+        "B": {
+          "absolute": 0.20591141493910128,
+          "target_norm": 1.0000000000000007,
+          "relative": 0.20591141493910115
+        },
+        "P": {
+          "absolute": 0.19621119112517282,
+          "target_norm": 1.0000000000000007,
+          "relative": 0.19621119112517268
+        },
+        "E": {
+          "absolute": 0.03223957849391102,
+          "target_norm": 2.0000000000000013,
+          "relative": 0.0161197892469555
+        },
+        "T": {
+          "absolute": 0.06368845467684166,
+          "target_norm": 1.0000000000000007,
+          "relative": 0.06368845467684162
+        },
+        "Q": {
+          "absolute": 0.19884220362947136,
+          "target_norm": 2.2360679774997916,
+          "relative": 0.0889249368222706
+        },
+        "BE": {
+          "absolute": 0.4248281021288898,
+          "target_norm": 2.0000000000000013,
+          "relative": 0.21241405106444475
+        },
+        "PT": {
+          "absolute": 0.37626168190155496,
+          "target_norm": 1.8708286933869718,
+          "relative": 0.20112032877813418
+        },
+        "EBP": {
+          "absolute": 2.449065226991789,
+          "target_norm": 6.633249580710805,
+          "relative": 0.3692104747744698
+        },
+        "EEEE": {
+          "absolute": 2.1028539249526967,
+          "target_norm": 16.00000000000001,
+          "relative": 0.13142837030954346
+        },
+        "comm_BP": {
+          "absolute": 0.13805888600085192,
+          "scale": 2.0013277815339356,
+          "cancellation": 39.598293751254644
+        },
+        "comm_EP": {
+          "absolute": 5.929218017571308e-05,
+          "scale": 0.9699387660345922,
+          "cancellation": 98007.39700127175
+        },
+        "comm_BE": {
+          "absolute": 2.952426554161581e-05,
+          "scale": 0.9674363711946397,
+          "cancellation": 197329.06078365352
+        },
+        "casimir": {
+          "absolute": 0.13892935377757237
+        },
+        "boost_match": {
+          "absolute": 0.19614948138693608
+        }
+      },
+      "selected_vector_bound": {
+        "eta_h": 0.19749543013702484,
+        "W_operator_bound": 1.0000076294042326,
+        "eta": 0.2861285946234245,
+        "normalized_vector_distance_upper": 0.572257189246849
+      }
+    },
+    {
+      "m": 32.0,
+      "epsilon": 3.0517578125e-05,
+      "d": 2.0,
+      "j": 2,
+      "k": 1,
+      "cutoff": 193,
+      "fine_cutoff": 241,
+      "input_norm": 1.0000000000000007,
+      "input_tail_squared_bound": 8.535666968813988e-76,
+      "word_refinement_absolute": 1.676559147025022e-37,
+      "residuals": {
+        "B": {
+          "absolute": 0.3819979049166386,
+          "target_norm": 1.8708286933869718,
+          "relative": 0.20418646895192996
+        },
+        "P": {
+          "absolute": 0.37112689798705134,
+          "target_norm": 1.8708286933869718,
+          "relative": 0.19837567132624984
+        },
+        "E": {
+          "absolute": 0.06055121096498653,
+          "target_norm": 3.000000000000003,
+          "relative": 0.020183736988328822
+        },
+        "T": {
+          "absolute": 0.0955312456562904,
+          "target_norm": 1.8708286933869718,
+          "relative": 0.05106359871108211
+        },
+        "Q": {
+          "absolute": 0.3760340723376241,
+          "target_norm": 3.5355339059327404,
+          "relative": 0.10635849700285062
+        },
+        "BE": {
+          "absolute": 1.180088728759623,
+          "target_norm": 5.6124860801609175,
+          "relative": 0.2102613194767671
+        },
+        "PT": {
+          "absolute": 0.9683270064693251,
+          "target_norm": 3.67423461417477,
+          "relative": 0.2635452300007278
+        },
+        "EBP": {
+          "absolute": 6.5057634637408865,
+          "target_norm": 17.36375535418535,
+          "relative": 0.3746749093751048
+        },
+        "EEEE": {
+          "absolute": 9.203591776647901,
+          "target_norm": 81.00000000000006,
+          "relative": 0.11362458983515919
+        },
+        "comm_BP": {
+          "absolute": 0.36436687820965474,
+          "scale": 3.0021517523934627,
+          "cancellation": 26.260093163937768
+        },
+        "comm_EP": {
+          "absolute": 0.00015065264221471287,
+          "scale": 1.7938451705779084,
+          "cancellation": 89623.61817232233
+        },
+        "comm_BE": {
+          "absolute": 5.464758037162748e-05,
+          "scale": 1.7906645899632356,
+          "cancellation": 247782.0484712388
+        },
+        "casimir": {
+          "absolute": 0.6314986725912543
+        },
+        "boost_match": {
+          "absolute": 0.3710332378917234
+        }
+      },
+      "selected_vector_bound": {
+        "eta_h": 0.19749543013702484,
+        "W_operator_bound": 1.0000076294042326,
+        "eta": 0.2861285946234245,
+        "normalized_vector_distance_upper": 0.572257189246849
+      }
+    },
+    {
+      "m": 32.0,
+      "epsilon": 3.0517578125e-05,
+      "d": 2.0,
+      "j": 2,
+      "k": 2,
+      "cutoff": 193,
+      "fine_cutoff": 241,
+      "input_norm": 1.0000000000000007,
+      "input_tail_squared_bound": 8.535666968813988e-76,
+      "word_refinement_absolute": 5.277547284652944e-37,
+      "residuals": {
+        "B": {
+          "absolute": 0.5444411687337729,
+          "target_norm": 2.6457513110645925,
+          "relative": 0.2057794194249881
+        },
+        "P": {
+          "absolute": 0.5317788069995034,
+          "target_norm": 2.6457513110645925,
+          "relative": 0.20099349654504273
+        },
+        "E": {
+          "absolute": 0.08571385190433439,
+          "target_norm": 4.000000000000003,
+          "relative": 0.021428462976083584
+        },
+        "T": {
+          "absolute": 0.12737309397862567,
+          "target_norm": 2.6457513110645925,
+          "relative": 0.04814250434118599
+        },
+        "Q": {
+          "absolute": 0.5386423340047579,
+          "target_norm": 4.7958315233127236,
+          "relative": 0.11231469066133716
+        },
+        "BE": {
+          "absolute": 2.23874243887696,
+          "target_norm": 10.58300524425837,
+          "relative": 0.2115412765283804
+        },
+        "PT": {
+          "absolute": 1.8082360760151668,
+          "target_norm": 6.164414002968981,
+          "relative": 0.29333462599109367
+        },
+        "EBP": {
+          "absolute": 13.214250015691544,
+          "target_norm": 34.75629439396557,
+          "relative": 0.38019732097751535
+        },
+        "EEEE": {
+          "absolute": 26.908023527483508,
+          "target_norm": 256.00000000000017,
+          "relative": 0.10510946690423238
+        },
+        "comm_BP": {
+          "absolute": 0.6690807518848618,
+          "scale": 4.002901268036339,
+          "cancellation": 22.023226588722537
+        },
+        "comm_EP": {
+          "absolute": 0.0002806539559435756,
+          "scale": 2.5017396528078777,
+          "cancellation": 83521.26550717748
+        },
+        "comm_BE": {
+          "absolute": 7.622736842632406e-05,
+          "scale": 2.4977802950945485,
+          "cancellation": 308442.3762240987
+        },
+        "casimir": {
+          "absolute": 1.6293020249761019
+        },
+        "boost_match": {
+          "absolute": 0.5316380479526335
+        }
+      },
+      "selected_vector_bound": {
+        "eta_h": 0.19749543013702484,
+        "W_operator_bound": 1.0000076294042326,
+        "eta": 0.2861285946234245,
+        "normalized_vector_distance_upper": 0.572257189246849
+      }
+    },
+    {
+      "m": 32.0,
+      "epsilon": 3.0517578125e-05,
+      "d": 2.0,
+      "j": 2,
+      "k": 3,
+      "cutoff": 193,
+      "fine_cutoff": 241,
+      "input_norm": 1.0000000000000007,
+      "input_tail_squared_bound": 8.535666968813988e-76,
+      "word_refinement_absolute": 1.2858337716006634e-36,
+      "residuals": {
+        "B": {
+          "absolute": 0.7073585509934209,
+          "target_norm": 3.3911649915626363,
+          "relative": 0.20858865692272693
+        },
+        "P": {
+          "absolute": 0.6930918485700367,
+          "target_norm": 3.3911649915626363,
+          "relative": 0.20438163589635977
+        },
+        "E": {
+          "absolute": 0.10991070111755503,
+          "target_norm": 5.0000000000000036,
+          "relative": 0.02198214022351099
+        },
+        "T": {
+          "absolute": 0.1592140107311875,
+          "target_norm": 3.3911649915626363,
+          "relative": 0.046949650378946106
+        },
+        "Q": {
+          "absolute": 0.7017525723318606,
+          "target_norm": 6.04152298679729,
+          "relative": 0.11615491224074133
+        },
+        "BE": {
+          "absolute": 3.6289724954644442,
+          "target_norm": 16.95582495781318,
+          "relative": 0.21402512142543834
+        },
+        "PT": {
+          "absolute": 2.8874707104257653,
+          "target_norm": 9.354143466934861,
+          "relative": 0.3086836032216559
+        },
+        "EBP": {
+          "absolute": 23.470230529448155,
+          "target_norm": 60.72478900745566,
+          "relative": 0.38650163982564895
+        },
+        "EEEE": {
+          "absolute": 62.929602282285416,
+          "target_norm": 625.0000000000006,
+          "relative": 0.10068736365165658
+        },
+        "comm_BP": {
+          "absolute": 1.0439087231195405,
+          "scale": 5.003602653461856,
+          "cancellation": 20.022221933491263
+        },
+        "comm_EP": {
+          "absolute": 0.0004475960365128865,
+          "scale": 3.162185832961513,
+          "cancellation": 79720.24392890443
+        },
+        "comm_BE": {
+          "absolute": 9.636039162062474e-05,
+          "scale": 3.1574891327377643,
+          "cancellation": 371458.8493890751
+        },
+        "casimir": {
+          "absolute": 3.2623992437282126
+        },
+        "boost_match": {
+          "absolute": 0.6929151135373673
+        }
+      },
+      "selected_vector_bound": {
+        "eta_h": 0.19749543013702484,
+        "W_operator_bound": 1.0000076294042326,
+        "eta": 0.2861285946234245,
+        "normalized_vector_distance_upper": 0.572257189246849
+      }
+    },
+    {
+      "m": 128.0,
+      "epsilon": 4.76837158203125e-07,
+      "d": 2.0,
+      "j": 0,
+      "k": 0,
+      "cutoff": 368,
+      "fine_cutoff": 416,
+      "input_norm": 0.9999999999999832,
+      "input_tail_squared_bound": 3.676815442775023e-59,
+      "word_refinement_absolute": 8.95574226438502e-33,
+      "residuals": {
+        "B": {
+          "absolute": 0.04673920814002081,
+          "target_norm": 0.9999999999999832,
+          "relative": 0.046739208140021596
+        },
+        "P": {
+          "absolute": 0.044099894222407,
+          "target_norm": 0.9999999999999832,
+          "relative": 0.044099894222407746
+        },
+        "E": {
+          "absolute": 0.007812857643680947,
+          "target_norm": 1.9999999999999665,
+          "relative": 0.003906428821840539
+        },
+        "T": {
+          "absolute": 0.015640004316686013,
+          "target_norm": 0.9999999999999832,
+          "relative": 0.015640004316686277
+        },
+        "Q": {
+          "absolute": 0.0447866209373727,
+          "target_norm": 2.236067977499752,
+          "relative": 0.02002918577969648
+        },
+        "BE": {
+          "absolute": 0.09704667774388136,
+          "target_norm": 1.9999999999999665,
+          "relative": 0.04852333887194149
+        },
+        "PT": {
+          "absolute": 0.08521988578506519,
+          "target_norm": 1.8708286933869398,
+          "relative": 0.04555194502110372
+        },
+        "EBP": {
+          "absolute": 0.5662393677904186,
+          "target_norm": 6.63324958071069,
+          "relative": 0.08536379656767737
+        },
+        "EEEE": {
+          "absolute": 0.507929135020821,
+          "target_norm": 15.999999999999732,
+          "relative": 0.03174557093880185
+        },
+        "comm_BP": {
+          "absolute": 0.03113239399057507,
+          "scale": 2.0000767716011105,
+          "cancellation": 182.24341038096273
+        },
+        "comm_EP": {
+          "absolute": 9.464859855179728e-07,
+          "scale": 0.9923690781161912,
+          "cancellation": 6290318.764947901
+        },
+        "comm_BE": {
+          "absolute": 4.731265912182156e-07,
+          "scale": 0.9922181391132843,
+          "cancellation": 12585643.80418036
+        },
+        "casimir": {
+          "absolute": 0.031147841261403988
+        },
+        "boost_match": {
+          "absolute": 0.044092763612028595
+        }
+      },
+      "selected_vector_bound": {
+        "eta_h": 0.04419215345297603,
+        "W_operator_bound": 1.0000001192092918,
+        "eta": 0.0884015913363729,
+        "normalized_vector_distance_upper": 0.1768031826727458
+      }
+    },
+    {
+      "m": 128.0,
+      "epsilon": 4.76837158203125e-07,
+      "d": 2.0,
+      "j": 0,
+      "k": 1,
+      "cutoff": 368,
+      "fine_cutoff": 416,
+      "input_norm": 0.9999999999999832,
+      "input_tail_squared_bound": 3.676815442775023e-59,
+      "word_refinement_absolute": 4.5325985570461575e-32,
+      "residuals": {
+        "B": {
+          "absolute": 0.08689316277572728,
+          "target_norm": 1.8708286933869398,
+          "relative": 0.0464463491942794
+        },
+        "P": {
+          "absolute": 0.08379469344772687,
+          "target_norm": 1.8708286933869398,
+          "relative": 0.04479014767302149
+        },
+        "E": {
+          "absolute": 0.014632647906276563,
+          "target_norm": 2.99999999999995,
+          "relative": 0.004877549302092269
+        },
+        "T": {
+          "absolute": 0.023460000902930572,
+          "target_norm": 1.8708286933869398,
+          "relative": 0.012539897953167851
+        },
+        "Q": {
+          "absolute": 0.0850627123641586,
+          "target_norm": 3.5355339059326787,
+          "relative": 0.024059368295527333
+        },
+        "BE": {
+          "absolute": 0.27023242682002024,
+          "target_norm": 5.612486080160818,
+          "relative": 0.048148435997952106
+        },
+        "PT": {
+          "absolute": 0.22247735155222398,
+          "target_norm": 3.6742346141747055,
+          "relative": 0.06055066562541655
+        },
+        "EBP": {
+          "absolute": 1.5227815366439517,
+          "target_norm": 17.363755354185045,
+          "relative": 0.08769885923766646
+        },
+        "EEEE": {
+          "absolute": 2.221543429700997,
+          "target_norm": 80.99999999999865,
+          "relative": 0.027426462095074496
+        },
+        "comm_BP": {
+          "absolute": 0.08494329085928182,
+          "scale": 3.0001269986286383,
+          "cancellation": 119.49138739172267
+        },
+        "comm_EP": {
+          "absolute": 2.428236186566807e-06,
+          "scale": 1.8513959270630478,
+          "cancellation": 5750719.339113319
+        },
+        "comm_BE": {
+          "absolute": 8.827197427230216e-07,
+          "scale": 1.8511970340035282,
+          "cancellation": 15822115.20855739
+        },
+        "casimir": {
+          "absolute": 0.14675921601393685
+        },
+        "boost_match": {
+          "absolute": 0.0837816327749141
+        }
+      },
+      "selected_vector_bound": {
+        "eta_h": 0.04419215345297603,
+        "W_operator_bound": 1.0000001192092918,
+        "eta": 0.0884015913363729,
+        "normalized_vector_distance_upper": 0.1768031826727458
+      }
+    },
+    {
+      "m": 128.0,
+      "epsilon": 4.76837158203125e-07,
+      "d": 2.0,
+      "j": 0,
+      "k": 2,
+      "cutoff": 368,
+      "fine_cutoff": 416,
+      "input_norm": 0.9999999999999832,
+      "input_tail_squared_bound": 3.676815442775023e-59,
+      "word_refinement_absolute": 1.4323426278472691e-31,
+      "residuals": {
+        "B": {
+          "absolute": 0.1246793641436308,
+          "target_norm": 2.6457513110645463,
+          "relative": 0.04712437016367375
+        },
+        "P": {
+          "absolute": 0.12092189825550063,
+          "target_norm": 2.6457513110645463,
+          "relative": 0.04570418154941645
+        },
+        "E": {
+          "absolute": 0.02069938852995602,
+          "target_norm": 3.999999999999933,
+          "relative": 0.0051748471324890915
+        },
+        "T": {
+          "absolute": 0.0312799937892355,
+          "target_norm": 2.6457513110645463,
+          "relative": 0.011822726368280495
+        },
+        "Q": {
+          "absolute": 0.12268076525367667,
+          "target_norm": 4.795831523312639,
+          "relative": 0.025580707882944358
+        },
+        "BE": {
+          "absolute": 0.516230806884005,
+          "target_norm": 10.583005244258185,
+          "relative": 0.048779226218761094
+        },
+        "PT": {
+          "absolute": 0.4200812919902933,
+          "target_norm": 6.164414002968873,
+          "relative": 0.06814618417711334
+        },
+        "EBP": {
+          "absolute": 3.133289183876521,
+          "target_norm": 34.75629439396494,
+          "relative": 0.09015026597371045
+        },
+        "EEEE": {
+          "absolute": 6.49060396689607,
+          "target_norm": 255.9999999999957,
+          "relative": 0.0253539217456882
+        },
+        "comm_BP": {
+          "absolute": 0.16090653824253934,
+          "scale": 4.000174195696178,
+          "cancellation": 98.89039511123669
+        },
+        "comm_EP": {
+          "absolute": 4.569491617878731e-06,
+          "scale": 2.6089666903296163,
+          "cancellation": 5359981.253878245
+        },
+        "comm_BE": {
+          "absolute": 1.2439306977654121e-06,
+          "scale": 2.608711131592197,
+          "cancellation": 19693124.979026854
+        },
+        "casimir": {
+          "absolute": 0.39085538134058867
+        },
+        "boost_match": {
+          "absolute": 0.12090001729768643
+        }
+      },
+      "selected_vector_bound": {
+        "eta_h": 0.04419215345297603,
+        "W_operator_bound": 1.0000001192092918,
+        "eta": 0.0884015913363729,
+        "normalized_vector_distance_upper": 0.1768031826727458
+      }
+    },
+    {
+      "m": 128.0,
+      "epsilon": 4.76837158203125e-07,
+      "d": 2.0,
+      "j": 0,
+      "k": 3,
+      "cutoff": 368,
+      "fine_cutoff": 416,
+      "input_norm": 0.9999999999999832,
+      "input_tail_squared_bound": 3.676815442775023e-59,
+      "word_refinement_absolute": 3.4967062314717195e-31,
+      "residuals": {
+        "B": {
+          "absolute": 0.16337979041286452,
+          "target_norm": 3.391164991562577,
+          "relative": 0.048178071789300524
+        },
+        "P": {
+          "absolute": 0.15898728207872834,
+          "target_norm": 3.391164991562577,
+          "relative": 0.046882791746877046
+        },
+        "E": {
+          "absolute": 0.026534720417534702,
+          "target_norm": 4.9999999999999165,
+          "relative": 0.0053069440835070295
+        },
+        "T": {
+          "absolute": 0.039099982986596934,
+          "target_norm": 3.391164991562577,
+          "relative": 0.011529955954334294
+        },
+        "Q": {
+          "absolute": 0.1611863742703392,
+          "target_norm": 6.041522986797184,
+          "relative": 0.026679758501720035
+        },
+        "BE": {
+          "absolute": 0.8440171484886281,
+          "target_norm": 16.955824957812894,
+          "relative": 0.049777415760577454
+        },
+        "PT": {
+          "absolute": 0.6779353234948039,
+          "target_norm": 9.354143466934698,
+          "relative": 0.07247433459741019
+        },
+        "EBP": {
+          "absolute": 5.642812781738372,
+          "target_norm": 60.72478900745458,
+          "relative": 0.09292437032668256
+        },
+        "EEEE": {
+          "absolute": 15.171294726568393,
+          "target_norm": 624.9999999999895,
+          "relative": 0.024274071562509835
+        },
+        "comm_BP": {
+          "absolute": 0.25851136752627935,
+          "scale": 5.000219894644894,
+          "cancellation": 88.7974649578257
+        },
+        "comm_EP": {
+          "absolute": 7.3610429623994685e-06,
+          "scale": 3.3317640561710813,
+          "cancellation": 5116347.103888711
+        },
+        "comm_BE": {
+          "absolute": 1.5885602295572316e-06,
+          "scale": 3.3314514617618163,
+          "cancellation": 23712566.251565356
+        },
+        "casimir": {
+          "absolute": 0.8060986936058839
+        },
+        "boost_match": {
+          "absolute": 0.15895489388418094
+        }
+      },
+      "selected_vector_bound": {
+        "eta_h": 0.04419215345297603,
+        "W_operator_bound": 1.0000001192092918,
+        "eta": 0.0884015913363729,
+        "normalized_vector_distance_upper": 0.1768031826727458
+      }
+    },
+    {
+      "m": 128.0,
+      "epsilon": 4.76837158203125e-07,
+      "d": 2.0,
+      "j": 1,
+      "k": 0,
+      "cutoff": 368,
+      "fine_cutoff": 416,
+      "input_norm": 0.9999999999999805,
+      "input_tail_squared_bound": 3.676815442775023e-59,
+      "word_refinement_absolute": 1.9118977060744494e-31,
+      "residuals": {
+        "B": {
+          "absolute": 0.07793432624656639,
+          "target_norm": 0.9999999999999805,
+          "relative": 0.07793432624656792
+        },
+        "P": {
+          "absolute": 0.07636741012404673,
+          "target_norm": 0.9999999999999805,
+          "relative": 0.07636741012404823
+        },
+        "E": {
+          "absolute": 0.007843325592638799,
+          "target_norm": 1.999999999999961,
+          "relative": 0.003921662796319476
+        },
+        "T": {
+          "absolute": 0.01567045642248594,
+          "target_norm": 0.9999999999999805,
+          "relative": 0.015670456422486247
+        },
+        "Q": {
+          "absolute": 0.07676912846585207,
+          "target_norm": 2.236067977499746,
+          "relative": 0.03433219796461255
+        },
+        "BE": {
+          "absolute": 0.15805776429569568,
+          "target_norm": 1.999999999999961,
+          "relative": 0.07902888214784938
+        },
+        "PT": {
+          "absolute": 0.14435363925317587,
+          "target_norm": 1.8708286933869342,
+          "relative": 0.07716026580276526
+        },
+        "EBP": {
+          "absolute": 0.9663088854924377,
+          "target_norm": 6.63324958071067,
+          "relative": 0.1456765456711354
+        },
+        "EEEE": {
+          "absolute": 0.5099120946064242,
+          "target_norm": 15.999999999999687,
+          "relative": 0.031869505912902135
+        },
+        "comm_BP": {
+          "absolute": 0.031610157052019194,
+          "scale": 2.0000773676970613,
+          "cancellation": 179.47285227476885
+        },
+        "comm_EP": {
+          "absolute": 9.464310293849076e-07,
+          "scale": 0.992310695682791,
+          "cancellation": 6290309.530276531
+        },
+        "comm_BE": {
+          "absolute": 4.7309817496572446e-07,
+          "scale": 0.9921585457971652,
+          "cancellation": 12585665.938255925
+        },
+        "casimir": {
+          "absolute": 0.0316254818620479
+        },
+        "boost_match": {
+          "absolute": 0.07636400475907279
+        }
+      },
+      "selected_vector_bound": {
+        "eta_h": 0.07654304599990867,
+        "W_operator_bound": 1.0000001192092918,
+        "eta": 0.12075248388330553,
+        "normalized_vector_distance_upper": 0.24150496776661107
+      }
+    },
+    {
+      "m": 128.0,
+      "epsilon": 4.76837158203125e-07,
+      "d": 2.0,
+      "j": 1,
+      "k": 1,
+      "cutoff": 368,
+      "fine_cutoff": 416,
+      "input_norm": 0.9999999999999805,
+      "input_tail_squared_bound": 3.676815442775023e-59,
+      "word_refinement_absolute": 9.676322168819981e-31,
+      "residuals": {
+        "B": {
+          "absolute": 0.14536060413691038,
+          "target_norm": 1.8708286933869342,
+          "relative": 0.07769851117354344
+        },
+        "P": {
+          "absolute": 0.14351352745615134,
+          "target_norm": 1.8708286933869342,
+          "relative": 0.07671120715832914
+        },
+        "E": {
+          "absolute": 0.014689580571412042,
+          "target_norm": 2.9999999999999405,
+          "relative": 0.004896526857137444
+        },
+        "T": {
+          "absolute": 0.023505679050698745,
+          "target_norm": 1.8708286933869342,
+          "relative": 0.01256431395016945
+        },
+        "Q": {
+          "absolute": 0.1442633575800574,
+          "target_norm": 3.5355339059326676,
+          "relative": 0.040803839368640134
+        },
+        "BE": {
+          "absolute": 0.441919161478548,
+          "target_norm": 5.612486080160802,
+          "relative": 0.07873857594777084
+        },
+        "PT": {
+          "absolute": 0.374113729229075,
+          "target_norm": 3.6742346141746958,
+          "relative": 0.10182086026455558
+        },
+        "EBP": {
+          "absolute": 2.568855820599546,
+          "target_norm": 17.363755354185,
+          "relative": 0.14794356221912575
+        },
+        "EEEE": {
+          "absolute": 2.230213390015946,
+          "target_norm": 80.99999999999842,
+          "relative": 0.02753349864217271
+        },
+        "comm_BP": {
+          "absolute": 0.0862212921751394,
+          "scale": 3.000127992116909,
+          "cancellation": 117.70360110568946
+        },
+        "comm_EP": {
+          "absolute": 2.42803862226818e-06,
+          "scale": 1.851250553957722,
+          "cancellation": 5750717.19167152
+        },
+        "comm_BE": {
+          "absolute": 8.826496477570013e-07,
+          "scale": 1.8510500337782498,
+          "cancellation": 15822100.676773623
+        },
+        "casimir": {
+          "absolute": 0.1489663602177867
+        },
+        "boost_match": {
+          "absolute": 0.14350717271530442
+        }
+      },
+      "selected_vector_bound": {
+        "eta_h": 0.07654304599990867,
+        "W_operator_bound": 1.0000001192092918,
+        "eta": 0.12075248388330553,
+        "normalized_vector_distance_upper": 0.24150496776661107
+      }
+    },
+    {
+      "m": 128.0,
+      "epsilon": 4.76837158203125e-07,
+      "d": 2.0,
+      "j": 1,
+      "k": 2,
+      "cutoff": 368,
+      "fine_cutoff": 416,
+      "input_norm": 0.9999999999999805,
+      "input_tail_squared_bound": 3.676815442775023e-59,
+      "word_refinement_absolute": 3.0578063592554682e-30,
+      "residuals": {
+        "B": {
+          "absolute": 0.20645592317966283,
+          "target_norm": 2.6457513110645388,
+          "relative": 0.07803300420423628
+        },
+        "P": {
+          "absolute": 0.20418805818696742,
+          "target_norm": 2.6457513110645388,
+          "relative": 0.07717583180741608
+        },
+        "E": {
+          "absolute": 0.020779879872825553,
+          "target_norm": 3.999999999999922,
+          "relative": 0.00519496996820649
+        },
+        "T": {
+          "absolute": 0.031340897971655374,
+          "target_norm": 2.6457513110645388,
+          "relative": 0.011845745985492914
+        },
+        "Q": {
+          "absolute": 0.2052427014870284,
+          "target_norm": 4.795831523312626,
+          "relative": 0.04279606164005967
+        },
+        "BE": {
+          "absolute": 0.8366286522539214,
+          "target_norm": 10.583005244258155,
+          "relative": 0.0790539769133949
+        },
+        "PT": {
+          "absolute": 0.7028269665674082,
+          "target_norm": 6.164414002968855,
+          "relative": 0.11401358932559012
+        },
+        "EBP": {
+          "absolute": 5.206669296999543,
+          "target_norm": 34.75629439396485,
+          "relative": 0.1498050752471368
+        },
+        "EEEE": {
+          "absolute": 6.515924243036007,
+          "target_norm": 255.999999999995,
+          "relative": 0.0254528290743599
+        },
+        "comm_BP": {
+          "absolute": 0.16328019209446756,
+          "scale": 4.000175566706956,
+          "cancellation": 97.43494254001986
+        },
+        "comm_EP": {
+          "absolute": 4.569009927074937e-06,
+          "scale": 2.6086974977201765,
+          "cancellation": 5359976.814005703
+        },
+        "comm_BE": {
+          "absolute": 1.2438013197124617e-06,
+          "scale": 2.6084398068985992,
+          "cancellation": 19693111.257608958
+        },
+        "casimir": {
+          "absolute": 0.39661930150645985
+        },
+        "boost_match": {
+          "absolute": 0.204176799188196
+        }
+      },
+      "selected_vector_bound": {
+        "eta_h": 0.07654304599990867,
+        "W_operator_bound": 1.0000001192092918,
+        "eta": 0.12075248388330553,
+        "normalized_vector_distance_upper": 0.24150496776661107
+      }
+    },
+    {
+      "m": 128.0,
+      "epsilon": 4.76837158203125e-07,
+      "d": 2.0,
+      "j": 1,
+      "k": 3,
+      "cutoff": 368,
+      "fine_cutoff": 416,
+      "input_norm": 0.9999999999999805,
+      "input_tail_squared_bound": 3.676815442775023e-59,
+      "word_refinement_absolute": 7.46486932038627e-30,
+      "residuals": {
+        "B": {
+          "absolute": 0.26655973182421056,
+          "target_norm": 3.391164991562569,
+          "relative": 0.07860417658457429
+        },
+        "P": {
+          "absolute": 0.2638651720827304,
+          "target_norm": 3.391164991562569,
+          "relative": 0.07780959426605415
+        },
+        "E": {
+          "absolute": 0.026637875020011727,
+          "target_norm": 4.999999999999902,
+          "relative": 0.00532757500400245
+        },
+        "T": {
+          "absolute": 0.03917611319633058,
+          "target_norm": 3.391164991562569,
+          "relative": 0.011552405528425545
+        },
+        "Q": {
+          "absolute": 0.2652063449916512,
+          "target_norm": 6.041522986797168,
+          "relative": 0.04389726656196118
+        },
+        "BE": {
+          "absolute": 1.3497676223319235,
+          "target_norm": 16.955824957812833,
+          "relative": 0.07960495143646687
+        },
+        "PT": {
+          "absolute": 1.1275335660587533,
+          "target_norm": 9.354143466934673,
+          "relative": 0.12053840846512513
+        },
+        "EBP": {
+          "absolute": 9.212884761436312,
+          "target_norm": 60.72478900745442,
+          "relative": 0.15171538529850406
+        },
+        "EEEE": {
+          "absolute": 15.230456862439297,
+          "target_norm": 624.9999999999877,
+          "relative": 0.024368730979903355
+        },
+        "comm_BP": {
+          "absolute": 0.262250847230265,
+          "scale": 5.00022163523004,
+          "cancellation": 87.511840387976
+        },
+        "comm_EP": {
+          "absolute": 7.360091601260455e-06,
+          "scale": 3.3313387599560085,
+          "cancellation": 5116341.272638357
+        },
+        "comm_BE": {
+          "absolute": 1.5883561642350397e-06,
+          "scale": 3.331023506479664,
+          "cancellation": 23712559.326435443
+        },
+        "casimir": {
+          "absolute": 0.8177558300963009
+        },
+        "boost_match": {
+          "absolute": 0.2638477054666543
+        }
+      },
+      "selected_vector_bound": {
+        "eta_h": 0.07654304599990867,
+        "W_operator_bound": 1.0000001192092918,
+        "eta": 0.12075248388330553,
+        "normalized_vector_distance_upper": 0.24150496776661107
+      }
+    },
+    {
+      "m": 128.0,
+      "epsilon": 4.76837158203125e-07,
+      "d": 2.0,
+      "j": 2,
+      "k": 0,
+      "cutoff": 368,
+      "fine_cutoff": 416,
+      "input_norm": 0.9999999999999808,
+      "input_tail_squared_bound": 3.676815442775023e-59,
+      "word_refinement_absolute": 2.867907056359246e-30,
+      "residuals": {
+        "B": {
+          "absolute": 0.09986999070394496,
+          "target_norm": 0.9999999999999808,
+          "relative": 0.09986999070394688
+        },
+        "P": {
+          "absolute": 0.09864183616128261,
+          "target_norm": 0.9999999999999808,
+          "relative": 0.09864183616128451
+        },
+        "E": {
+          "absolute": 0.007873675687132998,
+          "target_norm": 1.9999999999999616,
+          "relative": 0.0039368378435665746
+        },
+        "T": {
+          "absolute": 0.01570084945146275,
+          "target_norm": 0.9999999999999808,
+          "relative": 0.01570084945146305
+        },
+        "Q": {
+          "absolute": 0.09895557897408044,
+          "target_norm": 2.2360679774997467,
+          "relative": 0.0442542802677794
+        },
+        "BE": {
+          "absolute": 0.20147124475674327,
+          "target_norm": 1.9999999999999616,
+          "relative": 0.10073562237837357
+        },
+        "PT": {
+          "absolute": 0.18561185266721872,
+          "target_norm": 1.8708286933869347,
+          "relative": 0.09921370851501554
+        },
+        "EBP": {
+          "absolute": 1.2436628887633923,
+          "target_norm": 6.633249580710672,
+          "relative": 0.18748923489626165
+        },
+        "EEEE": {
+          "absolute": 0.5118873867548839,
+          "target_norm": 15.999999999999693,
+          "relative": 0.03199296167218086
+        },
+        "comm_BP": {
+          "absolute": 0.03209698956591784,
+          "scale": 2.000077963793124,
+          "cancellation": 176.73461439472135
+        },
+        "comm_EP": {
+          "absolute": 9.46375218016716e-07,
+          "scale": 0.9922514162777905,
+          "cancellation": 6290300.29122833
+        },
+        "comm_BE": {
+          "absolute": 4.7306933083414004e-07,
+          "scale": 0.99209805522111,
+          "cancellation": 12585688.083590042
+        },
+        "casimir": {
+          "absolute": 0.032112192771506905
+        },
+        "boost_match": {
+          "absolute": 0.09863976689743185
+        }
+      },
+      "selected_vector_bound": {
+        "eta_h": 0.0988166357090692,
+        "W_operator_bound": 1.0000001192092918,
+        "eta": 0.14302607359246608,
+        "normalized_vector_distance_upper": 0.28605214718493216
+      }
+    },
+    {
+      "m": 128.0,
+      "epsilon": 4.76837158203125e-07,
+      "d": 2.0,
+      "j": 2,
+      "k": 1,
+      "cutoff": 368,
+      "fine_cutoff": 416,
+      "input_norm": 0.9999999999999808,
+      "input_tail_squared_bound": 3.676815442775023e-59,
+      "word_refinement_absolute": 1.4514789363086688e-29,
+      "residuals": {
+        "B": {
+          "absolute": 0.18640609552600684,
+          "target_norm": 1.8708286933869347,
+          "relative": 0.09963824918065513
+        },
+        "P": {
+          "absolute": 0.18495663529857376,
+          "target_norm": 1.8708286933869347,
+          "relative": 0.09886348009968225
+        },
+        "E": {
+          "absolute": 0.014746293493565285,
+          "target_norm": 2.9999999999999427,
+          "relative": 0.004915431164521856
+        },
+        "T": {
+          "absolute": 0.023551268583253588,
+          "target_norm": 1.8708286933869347,
+          "relative": 0.012588682580347078
+        },
+        "Q": {
+          "absolute": 0.18554355314256538,
+          "target_norm": 3.53553390593267,
+          "relative": 0.05247964185302282
+        },
+        "BE": {
+          "absolute": 0.5638295449793566,
+          "target_norm": 5.612486080160804,
+          "relative": 0.10045985627873526
+        },
+        "PT": {
+          "absolute": 0.48016549499451905,
+          "target_norm": 3.6742346141746967,
+          "relative": 0.13068449498083382
+        },
+        "EBP": {
+          "absolute": 3.2981052711627084,
+          "target_norm": 17.363755354185006,
+          "relative": 0.18994193386673122
+        },
+        "EEEE": {
+          "absolute": 2.238849840855712,
+          "target_norm": 80.99999999999845,
+          "relative": 0.02764012149204635
+        },
+        "comm_BP": {
+          "absolute": 0.08752270682872217,
+          "scale": 3.0001289856053357,
+          "cancellation": 115.93679428532339
+        },
+        "comm_EP": {
+          "absolute": 2.4278381293700306e-06,
+          "scale": 1.851103055671317,
+          "cancellation": 5750715.148191957
+        },
+        "comm_BE": {
+          "absolute": 8.825785388261142e-07,
+          "scale": 1.8509009078635346,
+          "cancellation": 15822085.532002062
+        },
+        "casimir": {
+          "absolute": 0.15121394773739194
+        },
+        "boost_match": {
+          "absolute": 0.18495271044871137
+        }
+      },
+      "selected_vector_bound": {
+        "eta_h": 0.0988166357090692,
+        "W_operator_bound": 1.0000001192092918,
+        "eta": 0.14302607359246608,
+        "normalized_vector_distance_upper": 0.28605214718493216
+      }
+    },
+    {
+      "m": 128.0,
+      "epsilon": 4.76837158203125e-07,
+      "d": 2.0,
+      "j": 2,
+      "k": 2,
+      "cutoff": 368,
+      "fine_cutoff": 416,
+      "input_norm": 0.9999999999999808,
+      "input_tail_squared_bound": 3.676815442775023e-59,
+      "word_refinement_absolute": 4.586806261708179e-29,
+      "residuals": {
+        "B": {
+          "absolute": 0.2641562713826847,
+          "target_norm": 2.64575131106454,
+          "relative": 0.09984168590524074
+        },
+        "P": {
+          "absolute": 0.26237149482553684,
+          "target_norm": 2.64575131106454,
+          "relative": 0.09916710377437911
+        },
+        "E": {
+          "absolute": 0.02086006071312913,
+          "target_norm": 3.999999999999923,
+          "relative": 0.005215015178282382
+        },
+        "T": {
+          "absolute": 0.03140168400048614,
+          "target_norm": 2.64575131106454,
+          "relative": 0.011868720944846253
+        },
+        "Q": {
+          "absolute": 0.26319943660642997,
+          "target_norm": 4.795831523312628,
+          "relative": 0.05488087630414299
+        },
+        "BE": {
+          "absolute": 1.065179333048662,
+          "target_norm": 10.58300524425816,
+          "relative": 0.10064998631901635
+        },
+        "PT": {
+          "absolute": 0.9009960987427303,
+          "target_norm": 6.164414002968858,
+          "relative": 0.14616086757132138
+        },
+        "EBP": {
+          "absolute": 6.662811567427106,
+          "target_norm": 34.75629439396487,
+          "relative": 0.19170086119951973
+        },
+        "EEEE": {
+          "absolute": 6.541146702163661,
+          "target_norm": 255.99999999999508,
+          "relative": 0.02555135430532729
+        },
+        "comm_BP": {
+          "absolute": 0.16569579971490234,
+          "scale": 4.0001769377179315,
+          "cancellation": 95.99666531677347
+        },
+        "comm_EP": {
+          "absolute": 4.5685214193339735e-06,
+          "scale": 2.6084245389891314,
+          "cancellation": 5359972.434341866
+        },
+        "comm_BE": {
+          "absolute": 1.2436701458952984e-06,
+          "scale": 2.6081647152213177,
+          "cancellation": 19693096.825951263
+        },
+        "casimir": {
+          "absolute": 0.40248511369321943
+        },
+        "boost_match": {
+          "absolute": 0.262364079754789
+        }
+      },
+      "selected_vector_bound": {
+        "eta_h": 0.0988166357090692,
+        "W_operator_bound": 1.0000001192092918,
+        "eta": 0.14302607359246608,
+        "normalized_vector_distance_upper": 0.28605214718493216
+      }
+    },
+    {
+      "m": 128.0,
+      "epsilon": 4.76837158203125e-07,
+      "d": 2.0,
+      "j": 2,
+      "k": 3,
+      "cutoff": 368,
+      "fine_cutoff": 416,
+      "input_norm": 0.9999999999999808,
+      "input_tail_squared_bound": 3.676815442775023e-59,
+      "word_refinement_absolute": 1.1197540092117205e-28,
+      "residuals": {
+        "B": {
+          "absolute": 0.33990800923305037,
+          "target_norm": 3.3911649915625692,
+          "relative": 0.10023340358807747
+        },
+        "P": {
+          "absolute": 0.33777940624889974,
+          "target_norm": 3.3911649915625692,
+          "relative": 0.09960571281235683
+        },
+        "E": {
+          "absolute": 0.026740631798538386,
+          "target_norm": 4.999999999999903,
+          "relative": 0.005348126359707781
+        },
+        "T": {
+          "absolute": 0.03925209571411389,
+          "target_norm": 3.3911649915625692,
+          "relative": 0.011574811550536633
+        },
+        "Q": {
+          "absolute": 0.33883622692215815,
+          "target_norm": 6.04152298679717,
+          "relative": 0.056084571334518336
+        },
+        "BE": {
+          "absolute": 1.7130196646791118,
+          "target_norm": 16.955824957812844,
+          "relative": 0.10102838811683962
+        },
+        "PT": {
+          "absolute": 1.4435144620292133,
+          "target_norm": 9.354143466934675,
+          "relative": 0.15431818713619203
+        },
+        "EBP": {
+          "absolute": 11.742396814089927,
+          "target_norm": 60.72478900745445,
+          "relative": 0.19337073057015405
+        },
+        "EEEE": {
+          "absolute": 15.289390537546435,
+          "target_norm": 624.999999999988,
+          "relative": 0.024463024860074768
+        },
+        "comm_BP": {
+          "absolute": 0.2660540695165585,
+          "scale": 5.000223375815424,
+          "cancellation": 86.24147069382612
+        },
+        "comm_EP": {
+          "absolute": 7.359127370028683e-06,
+          "scale": 3.3309077646866467,
+          "cancellation": 5116335.474208349
+        },
+        "comm_BE": {
+          "absolute": 1.5881493815336174e-06,
+          "scale": 3.330589850832968,
+          "cancellation": 23712551.68864188
+        },
+        "casimir": {
+          "absolute": 0.8296117011510747
+        },
+        "boost_match": {
+          "absolute": 0.33776739188778265
+        }
+      },
+      "selected_vector_bound": {
+        "eta_h": 0.0988166357090692,
+        "W_operator_bound": 1.0000001192092918,
+        "eta": 0.14302607359246608,
+        "normalized_vector_distance_upper": 0.28605214718493216
+      }
+    },
+    {
+      "m": 512.0,
+      "epsilon": 7.450580596923828e-09,
+      "d": 2.0,
+      "j": 0,
+      "k": 0,
+      "cutoff": 910,
+      "fine_cutoff": 958,
+      "input_norm": 0.9999999999999633,
+      "input_tail_squared_bound": 3.177468208854371e-48,
+      "word_refinement_absolute": 1.2499400203918976e-27,
+      "residuals": {
+        "B": {
+          "absolute": 0.022426281120838637,
+          "target_norm": 0.9999999999999633,
+          "relative": 0.022426281120839463
+        },
+        "P": {
+          "absolute": 0.022085036115796722,
+          "target_norm": 0.9999999999999633,
+          "relative": 0.022085036115797534
+        },
+        "E": {
+          "absolute": 0.0019531305879510056,
+          "target_norm": 1.9999999999999265,
+          "relative": 0.0009765652939755388
+        },
+        "T": {
+          "absolute": 0.003907199798991757,
+          "target_norm": 0.9999999999999633,
+          "relative": 0.003907199798991901
+        },
+        "Q": {
+          "absolute": 0.022171232246531437,
+          "target_norm": 2.2360679774997076,
+          "relative": 0.009915276489636297
+        },
+        "BE": {
+          "absolute": 0.045335083303476215,
+          "target_norm": 1.9999999999999265,
+          "relative": 0.02266754165173894
+        },
+        "PT": {
+          "absolute": 0.04166384222160848,
+          "target_norm": 1.870828693386902,
+          "relative": 0.02227026042998159
+        },
+        "EBP": {
+          "absolute": 0.28046790847542263,
+          "target_norm": 6.633249580710556,
+          "relative": 0.042282128097670464
+        },
+        "EEEE": {
+          "absolute": 0.12695494641161584,
+          "target_norm": 15.999999999999412,
+          "relative": 0.007934684150726281
+        },
+        "comm_BP": {
+          "absolute": 0.007804941828690416,
+          "scale": 2.000004775825447,
+          "cancellation": 733.4442042698295
+        },
+        "comm_EP": {
+          "absolute": 1.4872315727555134e-08,
+          "scale": 0.9980582949647032,
+          "cancellation": 402648611.0895186
+        },
+        "comm_BE": {
+          "absolute": 7.436042880352984e-09,
+          "scale": 0.9980487842203342,
+          "cancellation": 805317345.5050786
+        },
+        "casimir": {
+          "absolute": 0.007805186581214724
+        },
+        "boost_match": {
+          "absolute": 0.02208480657751038
+        }
+      },
+      "selected_vector_bound": {
+        "eta_h": 0.0220970237124692,
+        "W_operator_bound": 1.0000000018626451,
+        "eta": 0.04419506434002602,
+        "normalized_vector_distance_upper": 0.08839012868005204
+      }
+    },
+    {
+      "m": 512.0,
+      "epsilon": 7.450580596923828e-09,
+      "d": 2.0,
+      "j": 0,
+      "k": 1,
+      "cutoff": 910,
+      "fine_cutoff": 958,
+      "input_norm": 0.9999999999999633,
+      "input_tail_squared_bound": 3.177468208854371e-48,
+      "word_refinement_absolute": 6.327754220601878e-27,
+      "residuals": {
+        "B": {
+          "absolute": 0.041888841424502554,
+          "target_norm": 1.870828693386902,
+          "relative": 0.022390527562771143
+        },
+        "P": {
+          "absolute": 0.04148094520172033,
+          "target_norm": 1.870828693386902,
+          "relative": 0.02217249786062681
+        },
+        "E": {
+          "absolute": 0.0036549895796138907,
+          "target_norm": 2.9999999999998903,
+          "relative": 0.0012183298598713414
+        },
+        "T": {
+          "absolute": 0.0058607996766751784,
+          "target_norm": 1.870828693386902,
+          "relative": 0.003132729200376402
+        },
+        "Q": {
+          "absolute": 0.041641658992590716,
+          "target_norm": 3.535533905932608,
+          "relative": 0.0117780397814079
+        },
+        "BE": {
+          "absolute": 0.12695951774238595,
+          "target_norm": 5.612486080160708,
+          "relative": 0.02262090558962252
+        },
+        "PT": {
+          "absolute": 0.10818299903261808,
+          "target_norm": 3.6742346141746314,
+          "relative": 0.029443682941547807
+        },
+        "EBP": {
+          "absolute": 0.7465288314142356,
+          "target_norm": 17.363755354184697,
+          "relative": 0.04299351241632881
+        },
+        "EEEE": {
+          "absolute": 0.5551761793136498,
+          "target_norm": 80.99999999999703,
+          "relative": 0.006854026905107039
+        },
+        "comm_BP": {
+          "absolute": 0.021421637630163522,
+          "scale": 3.0000079448067827,
+          "cancellation": 480.73319162131634
+        },
+        "comm_EP": {
+          "absolute": 3.824837408252759e-08,
+          "scale": 1.8658951979151759,
+          "cancellation": 368068623.2211075
+        },
+        "comm_BE": {
+          "absolute": 1.3901908081026683e-08,
+          "scale": 1.8658825332689635,
+          "cancellation": 1012679548.8064444
+        },
+        "casimir": {
+          "absolute": 0.03700163233891102
+        },
+        "boost_match": {
+          "absolute": 0.041480501356749466
+        }
+      },
+      "selected_vector_bound": {
+        "eta_h": 0.0220970237124692,
+        "W_operator_bound": 1.0000000018626451,
+        "eta": 0.04419506434002602,
+        "normalized_vector_distance_upper": 0.08839012868005204
+      }
+    },
+    {
+      "m": 512.0,
+      "epsilon": 7.450580596923828e-09,
+      "d": 2.0,
+      "j": 0,
+      "k": 2,
+      "cutoff": 910,
+      "fine_cutoff": 958,
+      "input_norm": 0.9999999999999633,
+      "input_tail_squared_bound": 3.177468208854371e-48,
+      "word_refinement_absolute": 1.9998730128148628e-26,
+      "residuals": {
+        "B": {
+          "absolute": 0.05948636723620857,
+          "target_norm": 2.645751311064493,
+          "relative": 0.022483733443667765
+        },
+        "P": {
+          "absolute": 0.058978432768418534,
+          "target_norm": 2.645751311064493,
+          "relative": 0.022291752260226273
+        },
+        "E": {
+          "absolute": 0.005169295410723847,
+          "target_norm": 3.999999999999853,
+          "relative": 0.0012923238526810093
+        },
+        "T": {
+          "absolute": 0.007814399539831407,
+          "target_norm": 2.645751311064493,
+          "relative": 0.0029535654039560344
+        },
+        "Q": {
+          "absolute": 0.05920453653954396,
+          "target_norm": 4.795831523312543,
+          "relative": 0.012344999246064135
+        },
+        "BE": {
+          "absolute": 0.24036149842711435,
+          "target_norm": 10.583005244257972,
+          "relative": 0.022712026771178957
+        },
+        "PT": {
+          "absolute": 0.2035924508068898,
+          "target_norm": 6.164414002968753,
+          "relative": 0.03302705670138972
+        },
+        "EBP": {
+          "absolute": 1.5140499306528266,
+          "target_norm": 34.75629439396426,
+          "relative": 0.043561891653091614
+        },
+        "EEEE": {
+          "absolute": 1.621749994964784,
+          "target_norm": 255.9999999999906,
+          "relative": 0.00633496091783142
+        },
+        "comm_BP": {
+          "absolute": 0.040816117525199494,
+          "scale": 4.000010947236564,
+          "cancellation": 397.45264814305244
+        },
+        "comm_EP": {
+          "absolute": 7.216404533517083e-08,
+          "scale": 2.6363938518003724,
+          "cancellation": 343073702.63307166
+        },
+        "comm_BE": {
+          "absolute": 1.9642542131710767e-08,
+          "scale": 2.636377425694035,
+          "cancellation": 1260421036.7279809
+        },
+        "casimir": {
+          "absolute": 0.09912617973592125
+        },
+        "boost_match": {
+          "absolute": 0.05897764834205159
+        }
+      },
+      "selected_vector_bound": {
+        "eta_h": 0.0220970237124692,
+        "W_operator_bound": 1.0000000018626451,
+        "eta": 0.04419506434002602,
+        "normalized_vector_distance_upper": 0.08839012868005204
+      }
+    },
+    {
+      "m": 512.0,
+      "epsilon": 7.450580596923828e-09,
+      "d": 2.0,
+      "j": 0,
+      "k": 3,
+      "cutoff": 910,
+      "fine_cutoff": 958,
+      "input_norm": 0.9999999999999633,
+      "input_tail_squared_bound": 3.177468208854371e-48,
+      "word_refinement_absolute": 4.8824904813926964e-26,
+      "residuals": {
+        "B": {
+          "absolute": 0.07674499170124013,
+          "target_norm": 3.3911649915625097,
+          "relative": 0.022630863403045213
+        },
+        "P": {
+          "absolute": 0.07613280151875218,
+          "target_norm": 3.3911649915625097,
+          "relative": 0.02245033836695551
+        },
+        "E": {
+          "absolute": 0.0066259125776902015,
+          "target_norm": 4.999999999999816,
+          "relative": 0.001325182515538089
+        },
+        "T": {
+          "absolute": 0.009767999388471194,
+          "target_norm": 3.3911649915625097,
+          "relative": 0.002880425875112169
+        },
+        "Q": {
+          "absolute": 0.07642058743938643,
+          "target_norm": 6.041522986797064,
+          "relative": 0.012649225635058138
+        },
+        "BE": {
+          "absolute": 0.38755994506200986,
+          "target_norm": 16.95582495781255,
+          "relative": 0.02285703857089172
+        },
+        "PT": {
+          "absolute": 0.327125279427808,
+          "target_norm": 9.354143466934513,
+          "relative": 0.0349711633763312
+        },
+        "EBP": {
+          "absolute": 2.679375917990601,
+          "target_norm": 60.72478900745335,
+          "relative": 0.04412326435027605
+        },
+        "EEEE": {
+          "absolute": 3.7901329686181153,
+          "target_norm": 624.9999999999771,
+          "relative": 0.006064212749789207
+        },
+        "comm_BP": {
+          "absolute": 0.06595466086751359,
+          "scale": 5.000013878575361,
+          "cancellation": 356.53314395625614
+        },
+        "comm_EP": {
+          "absolute": 1.1656141924725922e-07,
+          "scale": 3.3760072748660783,
+          "cancellation": 327488301.60734135
+        },
+        "comm_BE": {
+          "absolute": 2.5153063012409784e-08,
+          "scale": 3.3759869990159936,
+          "cancellation": 1517626843.281743
+        },
+        "casimir": {
+          "absolute": 0.20562580473440306
+        },
+        "boost_match": {
+          "absolute": 0.07613157363202983
+        }
+      },
+      "selected_vector_bound": {
+        "eta_h": 0.0220970237124692,
+        "W_operator_bound": 1.0000000018626451,
+        "eta": 0.04419506434002602,
+        "normalized_vector_distance_upper": 0.08839012868005204
+      }
+    },
+    {
+      "m": 512.0,
+      "epsilon": 7.450580596923828e-09,
+      "d": 2.0,
+      "j": 1,
+      "k": 0,
+      "cutoff": 910,
+      "fine_cutoff": 958,
+      "input_norm": 0.9999999999999494,
+      "input_tail_squared_bound": 3.177468208854371e-48,
+      "word_refinement_absolute": 2.211124764963588e-26,
+      "residuals": {
+        "B": {
+          "absolute": 0.03844918739409187,
+          "target_norm": 0.9999999999999494,
+          "relative": 0.03844918739409382
+        },
+        "P": {
+          "absolute": 0.03825073973560662,
+          "target_norm": 0.9999999999999494,
+          "relative": 0.03825073973560856
+        },
+        "E": {
+          "absolute": 0.001955037044333831,
+          "target_norm": 1.9999999999998987,
+          "relative": 0.000977518522166965
+        },
+        "T": {
+          "absolute": 0.00390910619339073,
+          "target_norm": 0.9999999999999494,
+          "relative": 0.003909106193390928
+        },
+        "Q": {
+          "absolute": 0.038300669186919344,
+          "target_norm": 2.2360679774996766,
+          "relative": 0.017128579977137518
+        },
+        "BE": {
+          "absolute": 0.07718155791860212,
+          "target_norm": 1.9999999999998987,
+          "relative": 0.03859077895930302
+        },
+        "PT": {
+          "absolute": 0.07174554716341443,
+          "target_norm": 1.870828693386876,
+          "relative": 0.03834960807316305
+        },
+        "EBP": {
+          "absolute": 0.4838951044112916,
+          "target_norm": 6.633249580710463,
+          "relative": 0.07294993178282662
+        },
+        "EEEE": {
+          "absolute": 0.12707887603386958,
+          "target_norm": 15.99999999999919,
+          "relative": 0.007942429752117251
+        },
+        "comm_BP": {
+          "absolute": 0.007835295400106053,
+          "scale": 2.0000047851386933,
+          "cancellation": 730.5986402872132
+        },
+        "comm_EP": {
+          "absolute": 1.4872259618585096e-08,
+          "scale": 0.9980545213623491,
+          "cancellation": 402648603.4709983
+        },
+        "comm_BE": {
+          "absolute": 7.436014625602218e-09,
+          "scale": 0.9980449919186012,
+          "cancellation": 805317367.1207867
+        },
+        "casimir": {
+          "absolute": 0.00783553967278928
+        },
+        "boost_match": {
+          "absolute": 0.03825063100632259
+        }
+      },
+      "selected_vector_bound": {
+        "eta_h": 0.038273167694854615,
+        "W_operator_bound": 1.0000000018626451,
+        "eta": 0.06037120832241144,
+        "normalized_vector_distance_upper": 0.12074241664482288
+      }
+    },
+    {
+      "m": 512.0,
+      "epsilon": 7.450580596923828e-09,
+      "d": 2.0,
+      "j": 1,
+      "k": 1,
+      "cutoff": 910,
+      "fine_cutoff": 958,
+      "input_norm": 0.9999999999999494,
+      "input_tail_squared_bound": 3.177468208854371e-48,
+      "word_refinement_absolute": 1.1193700364155942e-25,
+      "residuals": {
+        "B": {
+          "absolute": 0.07187684900710027,
+          "target_norm": 1.870828693386876,
+          "relative": 0.038419791860780796
+        },
+        "P": {
+          "absolute": 0.07163938630218539,
+          "target_norm": 1.870828693386876,
+          "relative": 0.03829286270593392
+        },
+        "E": {
+          "absolute": 0.0036585552221007557,
+          "target_norm": 2.9999999999998486,
+          "relative": 0.0012195184073669802
+        },
+        "T": {
+          "absolute": 0.005863659268262968,
+          "target_norm": 1.870828693386876,
+          "relative": 0.0031342577163746754
+        },
+        "Q": {
+          "absolute": 0.07173274493609531,
+          "target_norm": 3.5355339059325592,
+          "relative": 0.020289084150976213
+        },
+        "BE": {
+          "absolute": 0.21638856954643368,
+          "target_norm": 5.612486080160629,
+          "relative": 0.03855485188842386
+        },
+        "PT": {
+          "absolute": 0.18591773865546912,
+          "target_norm": 3.674234614174581,
+          "relative": 0.05060039931533758
+        },
+        "EBP": {
+          "absolute": 1.2839469617877948,
+          "target_norm": 17.363755354184462,
+          "relative": 0.07394408269397659
+        },
+        "EEEE": {
+          "absolute": 0.555718072608936,
+          "target_norm": 80.9999999999959,
+          "relative": 0.006860716945789681
+        },
+        "comm_BP": {
+          "absolute": 0.021504539672510176,
+          "scale": 3.000007960328861,
+          "cancellation": 478.8754286724582
+        },
+        "comm_EP": {
+          "absolute": 3.8248169562253426e-08,
+          "scale": 1.8658856628616376,
+          "cancellation": 368068643.83966815
+        },
+        "comm_BE": {
+          "absolute": 1.3901837049620532e-08,
+          "scale": 1.86587297319246,
+          "cancellation": 1012679386.4163334
+        },
+        "casimir": {
+          "absolute": 0.03714482555284447
+        },
+        "boost_match": {
+          "absolute": 0.07163917332253095
+        }
+      },
+      "selected_vector_bound": {
+        "eta_h": 0.038273167694854615,
+        "W_operator_bound": 1.0000000018626451,
+        "eta": 0.06037120832241144,
+        "normalized_vector_distance_upper": 0.12074241664482288
+      }
+    },
+    {
+      "m": 512.0,
+      "epsilon": 7.450580596923828e-09,
+      "d": 2.0,
+      "j": 1,
+      "k": 2,
+      "cutoff": 910,
+      "fine_cutoff": 958,
+      "input_norm": 0.9999999999999494,
+      "input_tail_squared_bound": 3.177468208854371e-48,
+      "word_refinement_absolute": 3.537744749503486e-25,
+      "residuals": {
+        "B": {
+          "absolute": 0.10176427141201032,
+          "target_norm": 2.645751311064457,
+          "relative": 0.03846327921541039
+        },
+        "P": {
+          "absolute": 0.101467543805347,
+          "target_norm": 2.645751311064457,
+          "relative": 0.0383511267219306
+        },
+        "E": {
+          "absolute": 0.005174337634655753,
+          "target_norm": 3.9999999999997975,
+          "relative": 0.0012935844086640036
+        },
+        "T": {
+          "absolute": 0.007818212328600908,
+          "target_norm": 2.645751311064457,
+          "relative": 0.0029550065026540348
+        },
+        "Q": {
+          "absolute": 0.10159939082419454,
+          "target_norm": 4.7958315233124775,
+          "relative": 0.021184937446263732
+        },
+        "BE": {
+          "absolute": 0.40847767807984126,
+          "target_norm": 10.583005244257828,
+          "relative": 0.03859751258287194
+        },
+        "PT": {
+          "absolute": 0.34937617863456455,
+          "target_norm": 6.1644140029686625,
+          "relative": 0.056676300207337105
+        },
+        "EBP": {
+          "absolute": 2.5928110660797374,
+          "target_norm": 34.75629439396376,
+          "relative": 0.07459975556341356
+        },
+        "EEEE": {
+          "absolute": 1.6233327666788138,
+          "target_norm": 255.99999999998704,
+          "relative": 0.006341143619839437
+        },
+        "comm_BP": {
+          "absolute": 0.040973305374680774,
+          "scale": 4.000010968657031,
+          "cancellation": 395.92294511707104
+        },
+        "comm_EP": {
+          "absolute": 7.21635383457625e-08,
+          "scale": 2.636375864387072,
+          "cancellation": 343073712.15380436
+        },
+        "comm_BE": {
+          "absolute": 1.9642407744575556e-08,
+          "scale": 2.6363594056651003,
+          "cancellation": 1260420869.014706
+        },
+        "casimir": {
+          "absolute": 0.09950791904683795
+        },
+        "boost_match": {
+          "absolute": 0.10146714926483816
+        }
+      },
+      "selected_vector_bound": {
+        "eta_h": 0.038273167694854615,
+        "W_operator_bound": 1.0000000018626451,
+        "eta": 0.06037120832241144,
+        "normalized_vector_distance_upper": 0.12074241664482288
+      }
+    },
+    {
+      "m": 512.0,
+      "epsilon": 7.450580596923828e-09,
+      "d": 2.0,
+      "j": 1,
+      "k": 3,
+      "cutoff": 910,
+      "fine_cutoff": 958,
+      "input_norm": 0.9999999999999494,
+      "input_tail_squared_bound": 3.177468208854371e-48,
+      "word_refinement_absolute": 8.637050929583408e-25,
+      "residuals": {
+        "B": {
+          "absolute": 0.1306899086151269,
+          "target_norm": 3.3911649915624618,
+          "relative": 0.03853835155184006
+        },
+        "P": {
+          "absolute": 0.13033055848789302,
+          "target_norm": 3.3911649915624618,
+          "relative": 0.03843238498043231
+        },
+        "E": {
+          "absolute": 0.006632375179515277,
+          "target_norm": 4.999999999999748,
+          "relative": 0.0013264750359031224
+        },
+        "T": {
+          "absolute": 0.00977276537441529,
+          "target_norm": 3.3911649915624618,
+          "relative": 0.0028818312876934186
+        },
+        "Q": {
+          "absolute": 0.13049920642014629,
+          "target_norm": 6.041522986796981,
+          "relative": 0.021600382338250894
+        },
+        "BE": {
+          "absolute": 0.6557146381187423,
+          "target_norm": 16.955824957812315,
+          "relative": 0.03867193956945309
+        },
+        "PT": {
+          "absolute": 0.5603943091731121,
+          "target_norm": 9.354143466934381,
+          "relative": 0.05990867161210744
+        },
+        "EBP": {
+          "absolute": 4.563965815227927,
+          "target_norm": 60.72478900745254,
+          "relative": 0.07515819963850032
+        },
+        "EEEE": {
+          "absolute": 3.793831640466177,
+          "target_norm": 624.9999999999685,
+          "relative": 0.006070130624746189
+        },
+        "comm_BP": {
+          "absolute": 0.06620742198783758,
+          "scale": 5.000013905770041,
+          "cancellation": 355.16649358973257
+        },
+        "comm_EP": {
+          "absolute": 1.165603989595143e-07,
+          "scale": 3.375978295007763,
+          "cancellation": 327488305.9400317
+        },
+        "comm_BE": {
+          "absolute": 2.515284724961978e-08,
+          "scale": 3.3759579786996965,
+          "cancellation": 1517626634.175047
+        },
+        "casimir": {
+          "absolute": 0.20641381984993706
+        },
+        "boost_match": {
+          "absolute": 0.13032991879013506
+        }
+      },
+      "selected_vector_bound": {
+        "eta_h": 0.038273167694854615,
+        "W_operator_bound": 1.0000000018626451,
+        "eta": 0.06037120832241144,
+        "normalized_vector_distance_upper": 0.12074241664482288
+      }
+    },
+    {
+      "m": 512.0,
+      "epsilon": 7.450580596923828e-09,
+      "d": 2.0,
+      "j": 2,
+      "k": 0,
+      "cutoff": 910,
+      "fine_cutoff": 958,
+      "input_norm": 0.9999999999999521,
+      "input_tail_squared_bound": 3.177468208854371e-48,
+      "word_refinement_absolute": 2.750162124765481e-25,
+      "residuals": {
+        "B": {
+          "absolute": 0.0495424159722072,
+          "target_norm": 0.9999999999999521,
+          "relative": 0.049542415972209576
+        },
+        "P": {
+          "absolute": 0.04938824153367343,
+          "target_norm": 0.9999999999999521,
+          "relative": 0.0493882415336758
+        },
+        "E": {
+          "absolute": 0.0019569416434865755,
+          "target_norm": 1.9999999999999043,
+          "relative": 0.0009784708217433346
+        },
+        "T": {
+          "absolute": 0.003911011658517491,
+          "target_norm": 0.9999999999999521,
+          "relative": 0.003911011658517679
+        },
+        "Q": {
+          "absolute": 0.049426996898299186,
+          "target_norm": 2.236067977499683,
+          "relative": 0.022104424997654706
+        },
+        "BE": {
+          "absolute": 0.09930534819483942,
+          "target_norm": 1.9999999999999043,
+          "relative": 0.049652674097422085
+        },
+        "PT": {
+          "absolute": 0.09252806616560044,
+          "target_norm": 1.8708286933868805,
+          "relative": 0.04945833175034908
+        },
+        "EBP": {
+          "absolute": 0.624214508118436,
+          "target_norm": 6.633249580710481,
+          "relative": 0.09410387782387303
+        },
+        "EEEE": {
+          "absolute": 0.1272026849292714,
+          "target_norm": 15.999999999999234,
+          "relative": 0.007950167808079842
+        },
+        "comm_BP": {
+          "absolute": 0.007865796152037132,
+          "scale": 2.000004794451973,
+          "cancellation": 727.7614044675346
+        },
+        "comm_EP": {
+          "absolute": 1.4872203333885223e-08,
+          "scale": 0.9980507330779274,
+          "cancellation": 402648594.68675596
+        },
+        "comm_BE": {
+          "absolute": 7.435986223321051e-09,
+          "scale": 0.9980411849345169,
+          "cancellation": 805317392.8675333
+        },
+        "casimir": {
+          "absolute": 0.007866039945792202
+        },
+        "boost_match": {
+          "absolute": 0.049388175880757126
+        }
+      },
+      "selected_vector_bound": {
+        "eta_h": 0.049410446937582335,
+        "W_operator_bound": 1.0000000018626451,
+        "eta": 0.07150848756513915,
+        "normalized_vector_distance_upper": 0.1430169751302783
+      }
+    },
+    {
+      "m": 512.0,
+      "epsilon": 7.450580596923828e-09,
+      "d": 2.0,
+      "j": 2,
+      "k": 1,
+      "cutoff": 910,
+      "fine_cutoff": 958,
+      "input_norm": 0.9999999999999521,
+      "input_tail_squared_bound": 3.177468208854371e-48,
+      "word_refinement_absolute": 1.3922548044317278e-24,
+      "residuals": {
+        "B": {
+          "absolute": 0.09263023003708823,
+          "target_norm": 1.8708286933868805,
+          "relative": 0.0495129406366939
+        },
+        "P": {
+          "absolute": 0.09244569338889516,
+          "target_norm": 1.8708286933868805,
+          "relative": 0.04941430164914502
+        },
+        "E": {
+          "absolute": 0.0036621173929408395,
+          "target_norm": 2.999999999999856,
+          "relative": 0.001220705797647005
+        },
+        "T": {
+          "absolute": 0.005866517465942456,
+          "target_norm": 1.8708286933868805,
+          "relative": 0.0031357854872975707
+        },
+        "Q": {
+          "absolute": 0.0925181999930462,
+          "target_norm": 3.5355339059325677,
+          "relative": 0.026168098639303722
+        },
+        "BE": {
+          "absolute": 0.27848079361446754,
+          "target_norm": 5.612486080160643,
+          "relative": 0.04961808183344247
+        },
+        "PT": {
+          "absolute": 0.23965920041282962,
+          "target_norm": 3.6742346141745905,
+          "relative": 0.06522697257498582
+        },
+        "EBP": {
+          "absolute": 1.655205657648409,
+          "target_norm": 17.363755354184505,
+          "relative": 0.09532532703241063
+        },
+        "EEEE": {
+          "absolute": 0.5562594380698465,
+          "target_norm": 80.99999999999612,
+          "relative": 0.0068674004699984335
+        },
+        "comm_BP": {
+          "absolute": 0.02158784028799956,
+          "scale": 3.000007975850987,
+          "cancellation": 477.0231101384732
+        },
+        "comm_EP": {
+          "absolute": 3.824796429045473e-08,
+          "scale": 1.8658760911484165,
+          "cancellation": 368068664.2132464
+        },
+        "comm_BE": {
+          "absolute": 1.3901765442638612e-08,
+          "scale": 1.8658633764557608,
+          "cancellation": 1012679245.3807589
+        },
+        "casimir": {
+          "absolute": 0.03728870721359606
+        },
+        "boost_match": {
+          "absolute": 0.0924455626113132
+        }
+      },
+      "selected_vector_bound": {
+        "eta_h": 0.049410446937582335,
+        "W_operator_bound": 1.0000000018626451,
+        "eta": 0.07150848756513915,
+        "normalized_vector_distance_upper": 0.1430169751302783
+      }
+    },
+    {
+      "m": 512.0,
+      "epsilon": 7.450580596923828e-09,
+      "d": 2.0,
+      "j": 2,
+      "k": 2,
+      "cutoff": 910,
+      "fine_cutoff": 958,
+      "input_norm": 0.9999999999999521,
+      "input_tail_squared_bound": 3.177468208854371e-48,
+      "word_refinement_absolute": 4.4001911465586075e-24,
+      "residuals": {
+        "B": {
+          "absolute": 0.1310657231556347,
+          "target_norm": 2.645751311064463,
+          "relative": 0.04953818698209513
+        },
+        "P": {
+          "absolute": 0.13083496150372553,
+          "target_norm": 2.645751311064463,
+          "relative": 0.04945096727594054
+        },
+        "E": {
+          "absolute": 0.005179374949965743,
+          "target_norm": 3.9999999999998086,
+          "relative": 0.0012948437374914977
+        },
+        "T": {
+          "absolute": 0.007822023258826007,
+          "target_norm": 2.645751311064463,
+          "relative": 0.0029564468988882327
+        },
+        "Q": {
+          "absolute": 0.13093743955245832,
+          "target_norm": 4.79583152331249,
+          "relative": 0.0273023434864158
+        },
+        "BE": {
+          "absolute": 0.5253694531953232,
+          "target_norm": 10.583005244257851,
+          "relative": 0.049642747128031454
+        },
+        "PT": {
+          "absolute": 0.45022539529317046,
+          "target_norm": 6.164414002968681,
+          "relative": 0.07303620345362094
+        },
+        "EBP": {
+          "absolute": 3.3395875227968586,
+          "target_norm": 34.75629439396384,
+          "relative": 0.09608583368936038
+        },
+        "EEEE": {
+          "absolute": 1.6249139968627009,
+          "target_norm": 255.99999999998775,
+          "relative": 0.006347320300245229
+        },
+        "comm_BP": {
+          "absolute": 0.04113124252486458,
+          "scale": 4.000010990077565,
+          "cancellation": 394.39773086154406
+        },
+        "comm_EP": {
+          "absolute": 7.216302911242493e-08,
+          "scale": 2.6363578085271078,
+          "cancellation": 343073723.21565557
+        },
+        "comm_BE": {
+          "absolute": 1.964227288653446e-08,
+          "scale": 2.6363413171886156,
+          "cancellation": 1260420697.9860952
+        },
+        "casimir": {
+          "absolute": 0.09989147809287889
+        },
+        "boost_match": {
+          "absolute": 0.1308347033490778
+        }
+      },
+      "selected_vector_bound": {
+        "eta_h": 0.049410446937582335,
+        "W_operator_bound": 1.0000000018626451,
+        "eta": 0.07150848756513915,
+        "normalized_vector_distance_upper": 0.1430169751302783
+      }
+    },
+    {
+      "m": 512.0,
+      "epsilon": 7.450580596923828e-09,
+      "d": 2.0,
+      "j": 2,
+      "k": 3,
+      "cutoff": 910,
+      "fine_cutoff": 958,
+      "input_norm": 0.9999999999999521,
+      "input_tail_squared_bound": 3.177468208854371e-48,
+      "word_refinement_absolute": 1.0742627781882023e-23,
+      "residuals": {
+        "B": {
+          "absolute": 0.16816048182413962,
+          "target_norm": 3.391164991562471,
+          "relative": 0.04958782077620472
+        },
+        "P": {
+          "absolute": 0.16788073873939155,
+          "target_norm": 3.391164991562471,
+          "relative": 0.0495053290409326
+        },
+        "E": {
+          "absolute": 0.0066388314903935534,
+          "target_norm": 4.99999999999976,
+          "relative": 0.0013277662980787743
+        },
+        "T": {
+          "absolute": 0.009777529037178875,
+          "target_norm": 3.391164991562471,
+          "relative": 0.002883236015206061
+        },
+        "Q": {
+          "absolute": 0.16801195351296194,
+          "target_norm": 6.041522986796997,
+          "relative": 0.027809536416584252
+        },
+        "BE": {
+          "absolute": 0.842568446920867,
+          "target_norm": 16.955824957812357,
+          "relative": 0.04969197600336488
+        },
+        "PT": {
+          "absolute": 0.7218928403444417,
+          "target_norm": 9.354143466934403,
+          "relative": 0.07717359081526091
+        },
+        "EBP": {
+          "absolute": 5.871964901147507,
+          "target_norm": 60.724789007452685,
+          "relative": 0.09669798771020592
+        },
+        "EEEE": {
+          "absolute": 3.79752671038197,
+          "target_norm": 624.99999999997,
+          "relative": 0.006076042736611444
+        },
+        "comm_BP": {
+          "absolute": 0.06646137773843178,
+          "scale": 5.000013932964802,
+          "cancellation": 353.80385867925776
+        },
+        "comm_EP": {
+          "absolute": 1.1655937497291434e-07,
+          "scale": 3.3759492059656413,
+          "cancellation": 327488309.88904494
+        },
+        "comm_BE": {
+          "absolute": 2.5152630077307097e-08,
+          "scale": 3.3759288491982162,
+          "cancellation": 1517626460.1743722
+        },
+        "casimir": {
+          "absolute": 0.20720555940991667
+        },
+        "boost_match": {
+          "absolute": 0.16788030259188588
+        }
+      },
+      "selected_vector_bound": {
+        "eta_h": 0.049410446937582335,
+        "W_operator_bound": 1.0000000018626451,
+        "eta": 0.07150848756513915,
+        "normalized_vector_distance_upper": 0.1430169751302783
+      }
+    }
+  ],
+  "precision_50_decimal": [
+    {
+      "word": "B",
+      "absolute": "0.00000000000047069032527055021645202315502082783088834716470901",
+      "relative": "0.00000000000013942458744307244951146252475081360986798927822923",
+      "norm": "3.3759492059658038100444762037352599505338397417936"
+    },
+    {
+      "word": "P",
+      "absolute": "0.00000000000047071487616116960433829799355807442181605274007527",
+      "relative": "0.00000000000013943270050639303492839280185014304206924631882807",
+      "norm": "3.3759288491983784914902644660683224476158332657796"
+    },
+    {
+      "word": "E",
+      "absolute": "0.00000000000069723010525677034621528564249653385719352002731401",
+      "relative": "0.00000000000013944563247312954441295694578592033836084341076809",
+      "norm": "5.0000139329650428351394891689560318912983500108882"
+    },
+    {
+      "word": "T",
+      "absolute": "0.00000000000047283721848560719279729195499593884327804911432872",
+      "relative": "0.00000000000013943151171721456481973713325113925619835896979951",
+      "norm": "3.3911790287735187883725497822319755598319897886742"
+    },
+    {
+      "word": "Q",
+      "absolute": "0.00000000000084125044684433439689747754659557777122266081424939",
+      "relative": "0.00000000000013944158325371516896983690420304228128613523663638",
+      "norm": "6.0329955183718182513712777907498030151310596139914"
+    },
+    {
+      "word": "BE",
+      "absolute": "0.0000000000023536372781373738830336951289431753289202532861577",
+      "relative": "0.00000000000013943403534879456618445770447588226088476683488403",
+      "norm": "16.879933742502285873712402741316114863648703563262"
+    },
+    {
+      "word": "EBP",
+      "absolute": "0.0000000000083797077385927306689485574621704937755017428129277",
+      "relative": "0.00000000000013948492458771655831780170435644743274275591958697",
+      "norm": "60.076081794223314339181815019184447044037695723896"
+    },
+    {
+      "word": "EEEE",
+      "absolute": "0.000000000087173738947455769571087436238511952953737523554231",
+      "relative": "0.00000000000013947281727989590276766518145167700121131762974031",
+      "norm": "625.02314535250515555272961524037784160202815380746"
+    }
+  ],
+  "input_sha256": {
+    "code/chord_module_frame.py": "1d77fd01b1af618be156507c7c558dd154a3178cf43ca13905834567a770b55f",
+    "code/check_chord_module_frame.py": "84efb231373038ab66e171586bd72f117e5228e48ba0c3723b416f68505ce209",
+    "code/thermal_chord_window.py": "a8ba1d054dc403106ed1fd9d62e6209ead1225c32967f18051ebed4c1f6c95d8",
+    "notes/susskind-thermal-chord-window.md": "323782d2645006c663b2763234e7f8d8b5af0336dc62a6c282f189657aa4b043",
+    "notes/susskind-slater-selected-state.md": "fafc3bf70ec1d5e2b0d51cd79563b809256436325ae2b0801f877cc7322ae6e8"
+  },
+  "environment": {
+    "python": "3.14.5 (tags/v3.14.5:5607950, May 10 2026, 10:43:50) [MSC v.1944 64 bit (AMD64)]",
+    "numpy": "2.4.6",
+    "scipy": "1.18.0",
+    "sympy": "1.14.0",
+    "mpmath": "1.3.0",
+    "precision_decimal": 50,
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "scope": "Exact one-matter frame, moving finite-word and commutator diagnostics for actual d=2. Full rho vector insertion controlled analytically using uniform W norm, not numerically replaced by energy-only density.",
+  "limitations": "Input Poisson tail bound is exact-arithmetic. Word tail convergence uses manuscript envelopes; refinement and 50-decimal comparison are diagnostics, not interval certificates. Finite Q matrices need not be positive; positivity is proved for the limit. No mass or multiparticle translation law claimed."
+}

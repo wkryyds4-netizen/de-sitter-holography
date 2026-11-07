@@ -1,0 +1,353 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=24mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,booktabs,microtype}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue,citecolor=blue]{hyperref}
+\newtheorem{proposition}{Proposition}
+\newcommand{\eps}{\epsilon}
+\newcommand{\ket}[1]{|#1\rangle}
+\newcommand{\B}{\widehat B}
+\newcommand{\PP}{\widehat P}
+\newcommand{\Bt}{B_{\rm tr}}
+\newcommand{\V}{\mathcal V}
+\title{Two matter insertions in a common moving chord frame\\
+\large Additive null candidates from the ordered chord inner product}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{8 November 2026\quad Local research draft}
+\begin{document}\maketitle
+\begin{abstract}
+We connect the preceding moving-core limit of the Lin--Stanford
+generators to an ordered two-matter space with its actual chord
+inner product. A triangular oscillator realization provides a
+common background factor and two matter factors. Its finite-level
+Gram form and outer ladder action agree exactly with the chord
+rules. Displacing only the common factor gives convergence of
+every fixed finite generator word to the sum representation on
+the two matter factors. In particular, the limiting positive
+null candidate is additive. Positive commuting candidates can
+also be transported to the finite-deformation ordered space;
+their boost covariance holds in the specified moving limit.
+The underlying quantum-group factorization is established prior
+work. The result does not fix an opposite light-cone momentum,
+particle masses, or the identical-matter exchange completion.
+\end{abstract}
+
+\section{What is being connected}
+Take the fixed-$\lambda$, half-filled double-scaling limit first,
+then $q=e^{-\eps}\to1$, $\eps=4\lambda$, with
+$K=H/(2J_s)=h/\sqrt\eps$ and $\hbar=1$.
+We use the ordered direct two-matter module with weights
+$d_1,d_2>0$; the charged singlet example has $d_1=d_2=2$.
+The order is retained. In particular, its norm is not the
+direct-plus-crossed norm of two identical insertions.
+
+The project already resolved the two-matter primary channels
+and their standard Jacobi--Laguerre coupling on 6 November.
+We do not repeat that result as a new particle construction.
+The missing connection was between the actual large-background
+LS generators and the individual matter factors.
+
+Lin--Stanford supply the ordered ladder rules \cite{LS}.
+Van der Heijden, Verlinde and Xu (HVX) construct the
+quantum-group factorization and its fusion/ordering operators
+\cite{HVX}. Their deformation parameter obeys
+$q_{\rm HVX}^{\,2}=q$ in our notation. The construction below
+is a chord-number realization of that established factorization,
+with the background at the left. Its moving-core estimate is
+the additional step needed here. We derive the ladder realization
+directly, avoiding dependence on normalization conventions in
+energy-space intertwiner formulas.
+
+\newpage
+\section{An exact triangular realization}
+On $\ell^2(\mathbb N_0)^{\otimes3}$ use coordinates $(n,k_1,k_2)$.
+Let $a$ act on the first factor with
+$a\ket n=\sqrt{[n]}\ket{n-1}$, where $[z]=(1-q^z)/(1-q)$.
+On matter factor $i$ define
+\begin{equation}
+ R_i=q^{d_i+N_i},\qquad
+ b_i\ket{k_i}=\sqrt{[k_i](1-q^{2d_i+k_i-1})}\ket{k_i-1}.
+ \label{b}
+\end{equation}
+Define successively
+\begin{equation}
+ A_0=a,\qquad A_1=A_0R_1+b_1,\qquad
+ A_2=A_1R_2+b_2=aR_1R_2+b_1R_2+b_2.
+ \label{triangle}
+\end{equation}
+Different tensor factors commute. All $A_i$ are bounded at
+fixed $q$, and $A_iA_i^\dagger-qA_i^\dagger A_i=1$.
+For example, $b_ib_i^\dagger-qb_i^\dagger b_i=1-R_i^2$;
+$R_ib_i^\dagger=qb_i^\dagger R_i$ cancels the cross terms.
+The three creation operators commute.
+
+\begin{proposition}\label{isometry}
+There is a unitary $\mathcal F_{q;d_1,d_2}$ from this tensor
+space to the ordered chord module such that
+\begin{equation}
+ a_L=A_0,\quad a_R=A_2,\quad
+ \bar n=N_0+N_1+N_2+d_1+d_2.\label{outer}
+\end{equation}
+Explicitly, the raw chord state $\ket{l,m,r}$ corresponds to
+$(A_0^\dagger)^l(A_1^\dagger)^m(A_2^\dagger)^r\ket{0,0,0}$.
+\end{proposition}
+\begin{proof}
+Commuting the outer annihilators through this product yields
+\begin{align}
+ a_L\ket{l,m,r}={}&[l]\ket{l-1,m,r}
+ +q^{d_1+l}[m]\ket{l,m-1,r}\nonumber\\
+ &+q^{d_1+d_2+l+m}[r]\ket{l,m,r-1},\label{lower}
+\end{align}
+and the reflected right action. These are the ordered chord
+rules. For the left action use
+$[a,A_1^\dagger]=q^{N_0+d_1+N_1}$ and
+$[a,A_2^\dagger]=q^{\bar n}$. For the right action first
+remove the right creators using its q-oscillator relation;
+on the subspace with $k_2=0$, the remaining $A_2$ is
+$q^{d_2}A_1$. Removing the left creators uses
+$[A_2,a^\dagger]=q^{\bar n}$.
+
+Adjointness recursively removes every exterior chord from
+either entry of a Gram matrix element. The remaining
+pure-middle norm is $[m]!$, since $A_1$ is a q-oscillator
+annihilating the vacuum. Thus the entire direct Gram form
+agrees, not only the outer algebra. At each total grade,
+the creation map is triangular: its coefficient at
+$(n,k_1,k_2)=(l,m,r)$ is nonzero, and no term has $k_2>r$,
+or $k_2=r,k_1>m$. It is invertible at every grade and
+extends to the claimed unitary.
+\end{proof}
+
+\newpage
+\section{The joint moving-core limit}
+Let $D(-\sqrt m)$ be the ordinary oscillator displacement on
+the common factor, and set
+\begin{equation}
+ \V=\mathcal F_{q;d_1,d_2}(D(-\sqrt m)\otimes1\otimes1).
+\end{equation}
+Here $m$ is a displacement parameter, not the middle raw
+chord number in \eqref{lower}. The core consists of finite
+linear combinations of $\ket{j,k_1,k_2}$.
+On factor $i$ define
+\[
+ L_{i,-}\ket k=\sqrt{k(2d_i+k-1)}\ket{k-1},\quad
+ E_i=d_i+N_i,\quad B_i=(L_{i,+}+L_{i,-})/2,
+ \quad P_i=i(L_{i,+}-L_{i,-})/2.
+\]
+Write $E_\Sigma=E_1+E_2$, $B_\Sigma=B_1+B_2$,
+$P_\Sigma=P_1+P_2$ and $T_\Sigma=-B_\Sigma$.
+
+\begin{proposition}\label{limit}
+If $m\to\infty$ and $\eps m\to0$, every fixed finite
+noncommutative polynomial $p$ satisfies, for each core vector $v$,
+\begin{equation}
+ \|p(E,\B,\PP,\Bt)\V v
+ -\V p(E_\Sigma,B_\Sigma,P_\Sigma,T_\Sigma)v\|\to0.
+ \label{words}
+\end{equation}
+The LS conventions are those of the preceding note:
+$E=([\bar n]-(a_L^\dagger a_L+a_R^\dagger a_R)/2)/c$,
+$\B=(a_L^\dagger a_L-a_R^\dagger a_R)/(2c\sqrt{1-c^2})$,
+$\PP=i(a_L^\dagger a_R-a_R^\dagger a_L)/(2\sqrt{1-c^2})$,
+$c=q^{\bar n/2}$, and $\Bt=(K_L-K_R)/2$.
+\end{proposition}
+\begin{proof}
+Put $w=d_1+d_2+N_1+N_2$, $R=R_1R_2=q^w$,
+$C=b_1R_2+b_2$, so $a_R=aR+C$. The exact stable expressions are
+\begin{align}
+ Z&=a^\dagger RC+C^\dagger Ra+C^\dagger C,\nonumber\\
+ E&=\frac{[w]-(1-R)^2[N_0]/2-Z/2}{c},\label{stable}\\
+ \B&=\frac{(1-R^2)[N_0]-Z}{2c\sqrt{1-c^2}},\qquad
+ \PP=\frac{i(a^\dagger C-C^\dagger a)}{2\sqrt{1-c^2}},\nonumber\\
+ \Bt&=\frac{(a+a^\dagger)(1-R)-(C+C^\dagger)}{2\sqrt\eps}.
+ \label{T}
+\end{align}
+Every numerator preserves the total grade where the displayed
+denominator is used. For bounded $k_1,k_2$,
+$C/\sqrt\eps\to L_{1,-}+L_{2,-}$, while $R_i\to1$.
+On $m/2\le n\le2m$, the common diagonal terms of $\B$
+and the common-oscillator part of \eqref{T} are
+$O(\sqrt{\eps m})$. The $E$ cross terms have the same order,
+and $E\to w$. The $C^\dagger C$ contribution to $\B$ is
+$O(\sqrt{\eps/m})$ there. The common shifts accompanying
+$C$ in $\B,\PP$ act as $-1$ on displaced fixed descendants,
+giving $B_\Sigma,P_\Sigma$ with the displayed signs.
+\end{proof}
+
+\newpage
+\section{Tails, positive candidates and the meaning of addition}
+To finish the proof of Proposition~\ref{limit}, write
+$\zeta_j=D(-\sqrt m)\ket j$.
+Its coefficients are a fixed-degree Charlier polynomial times
+the Poisson amplitude, and
+\[
+ \|(N_0/m-1)\zeta_j\|^2=(2j+1)/m+j^2/m^2.
+\]
+As in the preceding one-matter proof, both common unilateral
+shifts approach $-1$ on these vectors. A word of length $L$
+changes the internal levels and $n$ by bounded amounts.
+From \eqref{stable} its finite-path coefficients admit an envelope
+$C(1+\eps(n+L))^L\exp(C_L\eps(n+w+L))$ for bounded
+initial internal levels. Squared envelopes times the
+polynomial-Poisson weight have exponentially small tails
+outside $[m/2,2m]$: tilting changes the Poisson mean to
+$me^{O_L(\eps)}$ and its prefactor to
+$\exp(m(e^{O_L(\eps)}-1))\to1$.
+The bulk estimates and finite path expansion prove \eqref{words}
+for products directly. They also apply if a fixed number of the
+limiting internal generators is inserted between actual generators.
+
+Define $Q_i=E_i-P_i$. Each has the positive form
+\[
+ \langle v,Q_i v\rangle=\tfrac12\sum_{k\ge0}
+ |\sqrt{2d_i+k}v_k+i\sqrt{k+1}v_{k+1}|^2.
+\]
+Its Jacobi closure is self-adjoint and positive; different
+factors strongly commute. Consequently
+\begin{equation}
+ Q_\Sigma=Q_1+Q_2\ge0,\qquad [T_\Sigma,Q_i]=iQ_i,
+ \qquad E-\PP\ \longrightarrow\ Q_\Sigma.\label{additive}
+\end{equation}
+The last arrow has the moving-core meaning of \eqref{words}.
+This is addition in an explicit microscopic ordered-space
+identification, not an assumption about the bare concatenation
+coproduct. The common oscillator supplies a multiplicity factor.
+
+There are also positive, strongly commuting operators on the
+finite-$q$ ordered space:
+\begin{equation}
+ \mathfrak Q_i^{(q)}=\mathcal F_{q;d_1,d_2}
+ (1\otimes Q_i)\mathcal F_{q;d_1,d_2}^{\dagger}.\label{transport}
+\end{equation}
+The notation $1\otimes Q_i$ means the appropriate matter factor.
+Because these commute with the common displacement,
+the mixed-word estimate gives
+\[
+ \|([\Bt,\mathfrak Q_i^{(q)}]-i\mathfrak Q_i^{(q)})\V v\|\to0,
+ \qquad
+ \|(E-\PP-\mathfrak Q_1^{(q)}-\mathfrak Q_2^{(q)})\V v\|\to0.
+\]
+The transported operators are specified candidates, not a
+uniqueness statement or single-sided local observables.
+The finite-$q$ LS combination $E-\PP$ itself need not be positive.
+The limit operators satisfy the usual Carleman core condition;
+the conjugated individual self-adjoint LS operators therefore
+also converge in the strong-resolvent sense.
+
+\newpage
+\section{Exchange, the other null direction, and mass}
+The ordered direct space must be distinguished from the physical
+two-open-$X$ Wick sector for identical singlets. The latter adds
+a crossed Gram form. Our earlier first-channel calculation gives,
+at $d_1=d_2=2$,
+\begin{equation}
+ \|\Omega_0\|_{\rm phys}^2=1+q^4,\qquad
+ \|\Omega_1\|_{\rm phys}^2=1-q^8\sim8\eps,
+ \label{physical}
+\end{equation}
+where the primaries are unit normalized in the direct form.
+The crossed overlap intertwines the outer chord action, so the
+same factors multiply all descendants in these two channels.
+Neither displacement nor a large number of common chords
+removes this mismatch. Uniformly importing individual-factor
+operators into the identical-matter completion requires the
+crossed metric, including its singular normalization.
+
+There is useful newer literature here. The LS general channel
+overlap was originally supported by a finite-level conjecture;
+HVX derive the corresponding fusion-channel swapping weight
+from an Askey--Wilson transform \cite{HVX}, (82)--(83).
+This updates the project's literature map. It does not by itself
+identify swapping with a unitary scattering matrix or resolve
+our identical-matter moving limit. We leave the older sealed
+calculation intact and use the newer result as a subsequent input.
+
+Even after ordered addition, an opposite momentum is not fixed.
+The spectral representation of $Q_\Sigma,T_\Sigma$ can be written
+as $L^2(\mathbb R_+,dP)\otimes\mathcal K$, with
+$Q_\Sigma=P$ and $T_\Sigma=i(P\partial_P+1/2)$.
+Here $\mathcal K$ includes the relative coordinate and, if retained,
+the common multiplicity. A positive self-adjoint operator
+strongly commuting with $P$ and obeying the opposite dilation
+covariance is of the form
+\begin{equation}
+ P^- = \frac{A}{\mu P},\qquad P^+=\mu P,\qquad A\ge0
+ \text{ on }\mathcal K.\label{mass}
+\end{equation}
+Indeed strong commutation makes it a measurable operator field
+in $P$; dilation covariance makes $P P^-(P)$ constant, up to
+null sets. Equivalently the logarithmic variable makes this a
+translation-invariant field. Appropriate self-adjoint domains
+are understood through the joint spectral calculus.
+Thus the internal operator $A=P^+P^-$ remains free kinematic data.
+For two freely assigned masses its usual choice is
+$A=m_1^2/x+m_2^2/(1-x)$, $x=p_1/(p_1+p_2)$;
+the chord boost and positive $Q$ alone do not select it.
+
+The other LS limit $S=E_\Sigma+P_\Sigma$ obeys
+$[Q_\Sigma,S]=-2iT_\Sigma$, and hence is not a commuting
+opposite Poincare momentum. This observation does not require
+global de Sitter translations to commute; it concerns the
+specific flat-space particle interpretation sought here.
+Selected-state ordering, four-bilocal dynamics and finite-$G$
+effects must still supply additional physical information.
+
+\newpage
+\section{Verification and next target}
+Independent rational Gram recursion and the triangular images
+agree in 1,484 entries, with 280 outer lowering actions checked.
+Parameters are $q=1/4,4/9$, $(d_1,d_2)=(2,2),(1,2)$ and total
+grades zero through four. Monic orthogonal coordinates make
+these comparisons rational and avoid numerical Gram degeneracy.
+
+The moving check uses $m=8,32,128,512$, $\eps=m^{-3}$,
+$(d_1,d_2)=(2,2)$, and
+$(j,k_1,k_2)=(0,0,0),(1,1,0),(2,1,2)$.
+Eight words and both $[\B,\PP]-iE$ and $[\Bt,Q]-iQ$ are tested,
+with $Q=E-\PP$. Common cutoffs differ by 48, and all axes are
+padded beyond the word shifts. The input tail is bounded by a
+polynomial-weighted Poisson Chernoff estimate; it does not on
+its own certify unbounded-word errors.
+
+\begin{center}
+\begin{tabular}{rrr}
+\toprule
+$m$ & relative $Q$ error & $\|([\Bt,Q]-iQ)\V\ket{2,1,2}\|$\\
+\midrule
+8 & 0.200467 & 3.222535\\
+32 & 0.090199 & 1.181758\\
+128 & 0.042464 & 0.414286\\
+512 & 0.020876 & 0.173320\\
+\bottomrule
+\end{tabular}
+\end{center}
+Here the relative $Q$ error uses
+$\|Q_\Sigma\ket{2,1,2}\|$ as denominator. At $m=128$ the
+same nontrivial descendant was independently evaluated with
+60-decimal sparse outer-ladder composition. This uses the direct
+LS definition, whereas the double-precision code uses
+\eqref{stable}. Eight quantities were compared, including the
+two commutator defects themselves; the largest relative vector
+discrepancy was $5.93\times10^{-13}$. Full cutoffs, tail bounds,
+cancellation ratios, versions and input/output hashes accompany
+the data. Refinement and high-precision agreement are diagnostics,
+not interval arithmetic certificates.
+
+The next target is the crossed metric in this explicit moving
+frame, followed by its effect on the actual identical-singlet
+four-point function. This preserves the singular first relative
+channel rather than discarding it as a free-limit null vector.
+The opposite momentum and mass require that dynamical step;
+repeating the standard tensor decomposition will not determine them.
+
+\begin{thebibliography}{9}
+\bibitem{LS} H.~W. Lin and D. Stanford,
+\emph{A symmetry algebra in double-scaled SYK},
+\href{https://arxiv.org/abs/2307.15725}{arXiv:2307.15725},
+Secs.~2.3, 3.3 and Apps.~B.2, F.
+\bibitem{HVX} J. van der Heijden, E. Verlinde and J. Xu,
+\emph{Quantum Symmetry and Geometry in Double-Scaled SYK},
+\href{https://arxiv.org/abs/2511.08743v2}{arXiv:2511.08743v2},
+Secs.~3.1--3.4, especially (55), (62), (82)--(83), (92).
+\end{thebibliography}
+\end{document}

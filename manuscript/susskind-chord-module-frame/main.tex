@@ -1,0 +1,463 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=24mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,booktabs,microtype}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+\newtheorem{proposition}{Proposition}
+\newcommand{\eps}{\epsilon}
+\newcommand{\ket}[1]{|#1\rangle}
+\newcommand{\B}{\widehat B}
+\newcommand{\PP}{\widehat P}
+\newcommand{\Bt}{B_{\rm tr}}
+\newcommand{\U}{\mathcal U}
+\newcommand{\F}{\mathcal F}
+\newcommand{\D}{\mathcal D}
+\title{An orthogonal frame for the matter chord module\\
+\large Moving-core symmetry limits and a positive null candidate}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{8 November 2026\quad Local research draft}
+\begin{document}\maketitle
+\begin{abstract}
+We give an orthogonal realization of the established one-matter
+chord representation, separating a left q-oscillator from its
+vacuum multiplicity. An ordinary displacement on the first factor
+then defines an explicit moving unitary frame on the entire
+module. In a joint large-displacement, small-deformation limit,
+every fixed finite word of the Lin--Stanford generators and the
+Hamiltonian boost converges on the finite-support core to the
+positive discrete series of $\mathfrak{sl}_2$. This extends the
+preceding endpoint single-vector comparison to descendants and
+commutator norms. The combination $E-\widehat P$ has a positive,
+boost-covariant limit with the standard Laguerre spectral measure.
+Finally, an operator-norm bound on the neutral field controls a
+specified insertion of the full selected density without replacing
+it by an energy-only density. The limit retains a null-generator
+candidate but does not determine a mass or a multiparticle law.
+\end{abstract}
+
+\section{Setting and existing constructions}
+Work after the established fixed-$\lambda$, half-filled double
+scaling, with $q=e^{-\eps}$, $\eps=4\lambda$,
+$K=H/(2J_s)=h/\sqrt\eps$ and $\hbar=1$.
+The one-insertion module has weight $d>0$, crossing $r=q^d$,
+and seed $\Omega_d=\ket{d;0,0}$. The actual charged curvature
+channel has $d=2$. This module is the existing tracial one, not
+a new independent-probe model.
+
+Lin--Stanford (LS) supply its ladder algebra and length-preserving
+generators \cite{LS}. Okuyama's doubled-space map and Xu's
+isometric formulation explicitly involve the matter-dependent
+inner product \cite{Oku,Xu}. A linear tensor map in those
+coordinates cannot simply be treated as a product-inner-product
+unitary. We instead orthogonalize using the kernel of $a_L$.
+This is an elementary realization of the same representation;
+neither the factorization idea nor the resulting discrete series
+is claimed as a new representation-theoretic discovery.
+
+We retain the earlier conventions
+$J_{ij}=a_i^\dagger a_j-[\bar n]$, $c=q^{\bar n/2}$,
+$E=-(J_{LL}+J_{RR})/(2c)$,
+$B=(J_{LL}-J_{RR})/(2c)$,
+$P=i(J_{LR}-J_{RL})/2$, and
+$\B=B/\sqrt{1-c^2}$, $\PP=P/\sqrt{1-c^2}$.
+The rescaling acts separately on each total level.
+The physical comparison is $\Bt=(K_L-K_R)/2$.
+
+\newpage
+\section{An exact orthonormal tensor frame}
+Write $[n]=(1-q^n)/(1-q)$ and
+$(r^2;q)_k=\prod_{j=0}^{k-1}(1-r^2q^j)$.
+Define the normalized left-vacuum vectors
+\begin{equation}
+ \xi_k=\frac{\prod_{j=0}^{k-1}
+       (a_R^\dagger-rq^j a_L^\dagger)\Omega_d}
+                {\sqrt{[k]!(r^2;q)_k}},\qquad
+ e_{n,k}=\frac{(a_L^\dagger)^n}{\sqrt{[n]!}}\xi_k.
+ \label{frame}
+\end{equation}
+All factors in the numerator commute. Empty products are one.
+
+\begin{proposition}\label{orthogonal}
+The $e_{n,k}$, $n,k\ge0$, form an orthonormal basis of the
+one-matter module. The unitary
+$\F_{q,d}:\ell^2(\mathbb N_0)\otimes\ell^2(\mathbb N_0)
+\to\mathcal H_d$, defined by $\ket{n}\otimes\ket{k}\mapsto e_{n,k}$,
+gives
+\begin{equation}
+ a_L=a_q\otimes1,\qquad
+ a_R=a_q\otimes R+1\otimes b_q,\qquad
+ \bar n=N+K_0+d,\qquad R=q^{d+K_0},\label{tensor}
+\end{equation}
+where tensor symbols are suppressed on the right in $\bar n$,
+and
+\[
+ a_q\ket n=\sqrt{[n]}\ket{n-1},\quad
+ b_q\ket k=\sqrt{[k](1-r^2q^{k-1})}\ket{k-1},\quad K_0\ket k=k\ket k.
+\]
+\end{proposition}
+\begin{proof}
+Suppose $\xi_k$ is a normalized $a_L$-vacuum at total level $k$.
+The relations $[a_L,a_R^\dagger]=q^{\bar n}$ and
+$a_La_L^\dagger-qa_L^\dagger a_L=1$ show that
+$(a_R^\dagger-rq^ka_L^\dagger)\xi_k$ is again a left vacuum.
+The q-oscillator relation gives the ladder norm $[n]!$.
+Different $n$ at the same total level have distinct eigenvalues
+$[n]$ of the self-adjoint $a_L^\dagger a_L$, hence are orthogonal.
+Inductively there is exactly one new left-vacuum direction per
+level, because the level-$s$ space has dimension $s+1$.
+
+Let $s_k$ be the norm of the new vacuum vector. Since $a_R$
+commutes with $a_L$, it maps the vacuum line at level $k$ to
+the previous one; adjointness gives $a_R\xi_k=s_{k-1}\xi_{k-1}$.
+The right q-oscillator relation yields
+\[
+ s_k^2=1+q s_{k-1}^2-r^2q^{2k}
+      =[k+1](1-r^2q^k),\qquad s_{-1}=0.
+\]
+This proves the normalization in \eqref{frame} and positivity
+of each new direction. Commuting $a_R^\dagger$ through
+$(a_L^\dagger)^n$ gives \eqref{tensor}; the annihilators follow
+by adjointness. Each total level now has a complete orthonormal
+set of $s+1$ vectors.
+\end{proof}
+For $k=0$, $e_{n,0}$ is the preceding endpoint basis; its
+orthogonal $f_n$ is exactly $e_{n-1,1}$.
+Diagonalizing $a_q+a_q^\dagger$ makes the right Hamiltonian
+an Al-Salam--Chihara Jacobi operator with parameters
+$re^{\pm i\theta_L}$, consistent with the known conditional
+matter measure \cite{Xu,DLMFq}.
+
+\newpage
+\section{The moving frame and its limiting generators}
+Let $a_1$ be the ordinary oscillator on the first factor, and
+set $D(-t)=\exp[-t(a_1^\dagger-a_1)]$, $t=\sqrt m$.
+This is an ordinary unitary displacement, not q-thermal
+evolution. Define
+\begin{equation}
+ \U_{q,d,m}=\F_{q,d}(D(-\sqrt m)\otimes1),\qquad
+ \D=\operatorname{span}\{\ket j\otimes\ket k:j,k<\infty\}.
+ \label{moving}
+\end{equation}
+Its ground vector is the moving coherent state used to compare
+with the true heat vector in the preceding note.
+
+On the second factor introduce the standard discrete-series
+operators
+\begin{align}
+ L_-\ket k&=\sqrt{k(2d+k-1)}\ket{k-1},&L_+&=L_-^\dagger,\\
+ E_0&=d+K_0,&B_0&=(L_++L_-)/2,&P_0&=i(L_+-L_-)/2.
+\end{align}
+They act as the identity on the first factor. Their commutators
+are $[B_0,P_0]=iE_0$, $[E_0,P_0]=iB_0$,
+$[B_0,E_0]=iP_0$, with
+$E_0^2-B_0^2-P_0^2=d(d-1)$.
+
+\begin{proposition}\label{words}
+Take $m\to\infty$, $\eps\to0$ with $\eps m\to0$ and fixed
+$d>0$. For every fixed finite noncommutative polynomial $p$
+and every $v\in\D$,
+\begin{equation}
+ \|p(E,\B,\PP,\Bt)\U v
+ -\U p(E_0,B_0,P_0,-B_0)v\|\longrightarrow0.\label{wordlimit}
+\end{equation}
+In particular the three $\mathfrak{sl}_2$ defects and the
+Casimir defect converge in norm on this moving core.
+\end{proposition}
+
+Here are the coefficients used to prove it. Put
+\[
+R_k=q^{d+k},\qquad c_{n,k}=q^{(n+k+d)/2},\qquad
+s_k=\sqrt{[k+1](1-r^2q^k)},\qquad s_{-1}=0.
+\]
+The diagonal coefficients are
+\begin{align}
+ E_{n,k;n,k}&=
+ \frac{[d+k]-(1-R_k)^2[n]/2-s_{k-1}^2/2}{c_{n,k}},\\
+ \B_{n,k;n,k}&=
+ \frac{(1-R_k^2)[n]-s_{k-1}^2}
+ {2c_{n,k}\sqrt{1-c_{n,k}^2}},\qquad \PP_{n,k;n,k}=0.
+\end{align}
+The edge $(n,k)\to(n-1,k+1)$ has coefficients
+\begin{equation}
+ -\frac{R_ks_k\sqrt{[n]}}{2c_{n,k}},\qquad
+ -\frac{R_ks_k\sqrt{[n]}}{2c_{n,k}\sqrt{1-c_{n,k}^2}},\qquad
+ -\frac{i s_k\sqrt{[n]}}{2\sqrt{1-c_{n,k}^2}}\label{edge}
+\end{equation}
+for $E,\B,\PP$, respectively; reverse edges are conjugates.
+Finally the exact Hamiltonian boost is
+\begin{equation}
+ \Bt=\frac{(a_q+a_q^\dagger)\otimes(1-R)
+                   -1\otimes(b_q+b_q^\dagger)}{2\sqrt\eps}.
+ \label{boost}
+\end{equation}
+
+\newpage
+\section{Proof of the finite-word limit and operator consequence}
+Write $\zeta_j=D(-\sqrt m)\ket j$.
+The displacement identity gives
+\[
+ \|(N/m-1)\zeta_j\|^2=(2j+1)/m+j^2/m^2.
+\]
+Its coefficients are the Poisson amplitude times a fixed-degree
+Charlier polynomial. Explicitly, for the first three levels,
+\begin{align*}
+ (\zeta_0)_n&=(-1)^n e^{-m/2}m^{n/2}/\sqrt{n!},\\
+ (\zeta_1)_n&=(m-n)(\zeta_0)_n/\sqrt m,\\
+ (\zeta_2)_n&=((n-m)^2-n)(\zeta_0)_n/(\sqrt2m).
+\end{align*}
+For fixed $j$, the squared polynomial is bounded by
+$C_jm^j(1+n/m)^{2j}$ for $m\ge1$.
+
+Let $S_-\ket n=\ket{n-1}$ for $n\ge1$ and $S_+=S_-^\dagger$.
+Comparison to $a_1/\sqrt m$, followed by displacement, gives
+\[
+ \|(S_-+1)\zeta_j\|\le
+ \|(N/m-1)\zeta_j\|+\sqrt{j/m}\longrightarrow0.
+\]
+The analogous bound for $S_+$ includes the vanishing vacuum
+boundary term. Every fixed string of shifts therefore acts as
+its parity sign on $\zeta_j$, up to norm error tending to zero.
+
+On $m/2\le n\le2m$ and bounded $k$, the diagonal coefficients
+above converge uniformly to $d+k,0,0$.
+The $E$ edge vanishes, while the $\B$ and $\PP$ edges tend to
+$-\sqrt{(k+1)(2d+k)}/2$ and
+$-i\sqrt{(k+1)(2d+k)}/2$. The minus sign from $S_-$
+turns these into $B_0,P_0$. In \eqref{boost}, the common
+oscillator edges are $O_{d,k}(\sqrt{\eps m})$, while
+$s_k/\sqrt\eps\to\sqrt{(k+1)(2d+k)}$; hence $\Bt\to-B_0$.
+
+For a word of fixed length $L$, only $|\Delta n|,|\Delta k|\le L$
+occur. From $[n]\le n$ and $1-e^{-x}\ge xe^{-x}$, each
+coefficient has a bound of the form
+$C_{d,k,L}(1+\eps(n+L))^L e^{L\eps(n+k+d+L)}$ after
+enlarging the constant. Squaring this bound and using the
+polynomial-times-Poisson estimate controls the omitted tails:
+exponential tilting changes the mean to $me^{O_L(\eps)}$,
+and the prefactor is $e^{m(e^{O_L(\eps)}-1)}\to1$.
+Outside $[m/2,2m]$, exponential concentration beats every
+fixed polynomial. The finite path expansion of the word now
+proves \eqref{wordlimit}. This argument controls products
+directly, rather than inferring them from convergence of factors.
+
+\paragraph{Strong resolvents.}
+Each finite-$q$ LS combination is the self-adjoint direct sum
+of its finite total-level blocks; $\Bt$ is bounded at fixed $q$.
+The limiting Jacobi operators are essentially self-adjoint on
+finite support since their off-diagonal coefficients grow
+linearly and satisfy the Carleman criterion. The same applies
+to $Q_0=E_0-P_0$; $E_0$ is diagonal.
+Core convergence implies strong-resolvent convergence for
+the conjugated individual operators, including $Q=E-\PP$.
+Indeed, for $w=(A_0-z)v$, $v\in\D$, the resolvent difference
+is bounded by $|\operatorname{Im}z|^{-1}\|(A_0-A_{q,m})v\|$;
+such $w$ form a dense set. The uniform resolvent bound extends
+the result to the whole space. The corresponding unitary groups
+converge strongly at each fixed time.
+
+\newpage
+\section{A positive null-generator candidate}
+In the moving frame, define $Q_0=E_0-P_0$ and
+$T_0=-B_0$, the limiting physical boost. Then
+\begin{equation}
+ [T_0,Q_0]=iQ_0,\qquad Q_0\ge0.\label{null}
+\end{equation}
+The commutator follows from the displayed algebra. Positivity
+has a direct form proof: for finite-support $v=(v_k)$,
+\begin{equation}
+ \langle v,Q_0v\rangle=
+ \frac12\sum_{k\ge0}
+ \left|\sqrt{2d+k}\,v_k+i\sqrt{k+1}\,v_{k+1}\right|^2.
+ \label{positive}
+\end{equation}
+Its closure is nonnegative. A zero eigenvector would obey
+$v_{k+1}=i\sqrt{(2d+k)/(k+1)}v_k$, whose squared coefficients
+are proportional to $(2d)_k/k!$. They are not summable for
+$d>0$, so zero is not an eigenvalue.
+
+The phase transformation $v_k=i^kw_k$ turns $Q_0$ into the
+Laguerre Jacobi matrix with diagonal $d+k$ and off-diagonal
+$-\sqrt{(k+1)(2d+k)}/2$. The recurrence and orthogonality of
+$L_k^{(2d-1)}(2x)$ \cite{DLMF} give the seed spectral measure
+\begin{equation}
+ d\nu_d(x)=\frac{2^{2d}}{\Gamma(2d)}x^{2d-1}e^{-2x}\,dx,
+ \qquad x>0.\label{gamma}
+\end{equation}
+Thus $\langle Q_0\rangle=d$, $\operatorname{Var}(Q_0)=d/2$,
+and $\langle e^{-aQ_0}\rangle=(2/(2+a))^{2d}$ for $a\ge0$.
+This is the standard positive discrete-series realization already
+used as a kinematic model in the project's earlier translation
+note. The present step identifies its finite-word and resolvent
+approximation by actual chord generators in a specified moving
+frame; it does not create a new Laguerre representation.
+
+In particular, Proposition~\ref{words} proves
+\begin{equation}
+ \|([\Bt,Q]-iQ)\U v\|\longrightarrow0,\qquad v\in\D.
+\end{equation}
+The finite-$q$ matrix $Q$ itself need not be positive.
+Equation \eqref{null} belongs to its self-adjoint limiting
+operator. The associated boost action rescales $Q_0$ as
+$e^{i\eta T_0}Q_0e^{-i\eta T_0}=e^{-\eta}Q_0$.
+
+\paragraph{The remaining translation problem.}
+A single positive dilation-covariant operator is a null
+translation candidate. It is not a complete Poincare dictionary.
+The other LS combination $E_0+P_0$ does not commute with $Q_0$,
+so the two cannot simply be called the two light-cone momenta.
+The earlier construction $P^+=\mu Q_0$,
+$P^-=M^2/(\mu Q_0)$ still inserts $M$ and $\mu$ by hand.
+Determining the opposite null action and its multiparticle
+composition from the microscopic model, rather than selecting
+an arbitrary inverse, is the next physical question. In particular
+$d=2$ remains a representation weight, not a mass determination.
+
+\newpage
+\section{An insertion of the full selected density}
+The established covariant algebra has the self-adjoint fields
+$h,U$ and the actual density
+\begin{equation}
+ \rho=a+s(h-W)^2,\quad
+ s=\sqrt q,\quad W=\sqrt\lambda U,\quad
+ a=1-s(1+\lambda)>0.\label{rho}
+\end{equation}
+Here $U$ is a unit q-Gaussian. Its operator norm gives the
+uniform estimate
+\begin{equation}
+ \|W\|\le\sqrt{\frac{\eps}{1-e^{-\eps}}}=O(1).
+ \label{Wnorm}
+\end{equation}
+This bound retains $U$ on the full tracial Hilbert space; no
+energy-only replacement of $\rho$ is made.
+
+Specify the preparation being compared. Embed the one-matter
+module in the full tracial representation, choose a unit
+$v\in\D$, and let $\zeta=\U v$. Apply the density on the left:
+\begin{equation}
+ \zeta_\rho=\frac{L_{\sqrt\rho}\zeta}
+                    {\|L_{\sqrt\rho}\zeta\|}.
+ \label{protocol}
+\end{equation}
+This is a vector-insertion protocol. It is not automatically
+the original nonstationary functional
+$\tau(\rho X^\dagger\alpha_t(X))$, whose density ordering
+must be retained separately.
+
+\begin{proposition}\label{selected}
+In the window of Proposition~\ref{words}, set
+\[
+ \eta=\frac{\|(h+2\sqrt m)\zeta\|+\|W\|}{2\sqrt m}
+               +\frac{\sqrt a}{2\sqrt{s m}}.
+\]
+Then
+\begin{align}
+ \left\|\left(\frac{\sqrt\rho}{2\sqrt{s m}}-1\right)
+                  \zeta\right\|&\le\eta\longrightarrow0,\\
+ \|\zeta_\rho-\zeta\|&\le2\eta.\label{selectedbound}
+\end{align}
+For every bounded operator $A$ in this common representation,
+the expectation difference is at most $4\eta\|A\|$.
+The squared insertion norm $\|L_{\sqrt\rho}\zeta\|^2$
+divided by $4sm$ tends to one.
+\end{proposition}
+\begin{proof}
+On the first factor $h=a_q+a_q^\dagger$.
+The inequality $0\le1-\sqrt{[n]/n}\le\eps n/2$ bounds the
+q-oscillator error on $\zeta_j$ by
+$O_j(\eps m^{3/2})$. The ordinary displaced Hamiltonian
+has residual norm $\sqrt{2j+1}$ about $-2\sqrt m$.
+Hence $\|(h+2\sqrt m)\zeta\|/\sqrt m\to0$ for finite $v$.
+Put $A_*=h-W$. Spectral calculus gives
+$\|(|A_*|-2\sqrt m)\zeta\|\le\|(A_*+2\sqrt m)\zeta\|$
+and
+$\|\sqrt{a+sA_*^2}-\sqrt{s}|A_*|\|\le\sqrt a$.
+Together with \eqref{Wnorm} these prove the first bound.
+Normalizing a vector at distance at most $\eta$ from a unit
+vector changes that distance to at most $2\eta$.
+The bounded-observable estimate follows by two applications
+of Cauchy--Schwarz.
+\end{proof}
+
+For the true endpoint heat vector, the preceding stage supplies
+the same Hamiltonian concentration under the stronger window
+$\eps m^2\to0$, so this bound also applies there.
+It proves that this thermal insertion loses leading preparation
+information. Recovering the original selected response requires
+its ordering and subleading terms, not just this scalarized limit.
+
+\newpage
+\section{Verification and next calculation}
+The exact checks use $q=1/4,4/9$, $d=1,2,3$ and total levels
+zero through seven: 1,224 Gram equalities and 864 ladder
+actions compare \eqref{frame} with the original nonorthogonal
+LS representation. Twenty-one symbolic Laguerre recurrences
+and three exact finite positivity forms check the spectral step.
+
+For moving vectors we use $m=8,32,128,512$, $\eps=m^{-3}$,
+$d=2$, $j=0,1,2$ and $k=0,1,2,3$ (48 cases).
+Each case tests nine words, all three commutators, the Casimir,
+and the boost match. The grid is padded beyond every applied
+shift. Two common-oscillator cutoffs differ by 48.
+The largest word refinement difference is $1.08\times10^{-23}$;
+a Poisson polynomial envelope bounds the omitted input norm
+squared by $3.18\times10^{-48}$.
+These are distinct checks: the input tail alone does not certify
+every unbounded word. Its analytic control is in the proof.
+
+\begin{center}
+\begin{tabular}{rrrrr}
+\toprule
+ & \multicolumn{2}{c}{$\|([\B,\PP]-iE)\U\ket{j,k}\|$}
+ & \multicolumn{2}{c}{$\|([\Bt,Q]-iQ)\U\ket{j,k}\|$}\\
+$m$ & $(0,0)$ & $(2,3)$ & $(0,0)$ & $(2,3)$\\
+\midrule
+8 & 0.479014 & 3.206959 & 0.337907 & 2.461123\\
+32 & 0.123308 & 1.043909 & 0.114994 & 0.933263\\
+128 & 0.031132 & 0.266054 & 0.047929 & 0.374348\\
+512 & 0.007805 & 0.066461 & 0.022581 & 0.172697\\
+\bottomrule
+\end{tabular}
+\end{center}
+The errors on excited states are visibly larger than on the
+seed; a seed check would not establish the theorem's scope.
+Eight words on the largest-displacement $j=2,k=3$ vector were
+recomputed by an independent sparse direct-coefficient routine
+at 50 decimal digits. The largest relative vector difference is
+$1.40\times10^{-13}$. The $[\B,\PP]$ cancellation ratio reaches
+$733.45$, and the null-commutator ratio reaches $376.62$.
+They are retained in the output. Floating-point diagnostics are
+not interval certificates. The other two commutators have
+cancellation ratios up to $4.03\times10^8$ and $1.52\times10^9$;
+their tiny residuals are precision-sensitive and are not covered
+by the eight-word high-precision comparison. Their convergence
+rests on Proposition~\ref{words}. No successful earlier scientific
+driver was rerun or its output modified.
+
+The next calculation should use the established multiparticle
+chord coproduct to determine whether the positive candidate
+$Q_0$ has the required additive action and what fixes its
+opposite null partner. In parallel, the insertion ordering in
+the actual selected correlator must be carried through this
+frame; its $U$ contribution cannot be recovered from the leading
+scalarization alone. Four-bilocal and finite-$G$ dynamics remain
+open. This note advances the microscopic generator map rather
+than declaring those problems solved.
+
+\begin{thebibliography}{9}
+\bibitem{LS} H.~W. Lin and D. Stanford,
+\emph{A symmetry algebra in double-scaled SYK},
+\href{https://arxiv.org/abs/2307.15725}{arXiv:2307.15725},
+Secs.~2--4; conventions from (18), (45)--(48), (147).
+\bibitem{Oku} K. Okuyama, \emph{More on doubled Hilbert space
+in double-scaled SYK},
+\href{https://arxiv.org/abs/2404.02833}{arXiv:2404.02833}, Sec.~3.
+\bibitem{Xu} J. Xu, \emph{On Chord Dynamics and Complexity Growth
+in Double-Scaled SYK},
+\href{https://arxiv.org/abs/2411.04251v3}{arXiv:2411.04251v3}, Sec.~3.2.
+\bibitem{DLMF} NIST DLMF,
+\href{https://dlmf.nist.gov/18.3}{18.3} and
+\href{https://dlmf.nist.gov/18.9}{18.9}, Laguerre orthogonality and recurrence.
+\bibitem{DLMFq} NIST DLMF,
+\href{https://dlmf.nist.gov/18.28}{18.28(iii)}, Al-Salam--Chihara polynomials.
+\end{thebibliography}
+\end{document}

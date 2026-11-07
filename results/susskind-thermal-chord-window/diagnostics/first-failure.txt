@@ -1,0 +1,23 @@
+First checker run: assertion at cross < 2e-11 and refinement < 2e-11.
+No successful scientific output was written. A second failed diagnostic run
+printed the same comparisons before the assertion:
+m=8: cross 7.160345097308474e-14, cutoff difference 2.2018705847873894e-13.
+m=32: cross 5.508628877348465e-10, cutoff difference 4.215767327076411e-10.
+m=32 scaled norms squared: shifted expm 0.9793984151856236;
+positive Taylor 0.9793984156706487 (Taylor norm tail <= 1.17298e-37).
+The implementation placed -m I inside expm_multiply. A third run moved this
+scalar outside the matrix action, but FAILED with essentially identical
+errors (m=32 cross 5.508630457317554e-10). Thus the shift was not the cause;
+the earlier tentative explanation was rejected. The next repair splits
+the long exponential into ceil(4m) steps with normalization between steps.
+This is an algorithmic comparison, not a change to the analytic window.
+The failed helpers and checker are kept. No failed run wrote window-checks.json.
+
+Fourth run: split expm passes m=8,32 but fails at m=128. Cross differences:
+5.039397701797792e-15, 6.309173867971272e-13, 1.3295655567482054e-10.
+At m=128: expm norm squared 0.994805460178121 versus positive Taylor
+0.9948054607281911. Increasing the cutoff alone did not reveal this error.
+Primary computation changed to the nonnegative Taylor series with the
+explicit finite-matrix remainder. Compare float64/longdouble recomputation
+of coefficients and summation, and two cutoffs. Split expm is kept as an
+algorithmic diagnostic, not called a certified or high-accuracy reference.

@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "created_at_utc": "2026-11-07T23:42:18.935966+00:00",
+  "reason": "The November 6 two-matter branch is not transitively included in the recent moving-frame manifest; verify its separate sealed science and proof inputs explicitly.",
+  "current_evidence": {
+    "results/susskind-multimatter-moving-frame/local-evidence.json": "8e0bd77324ef54c01934a200862d271a473279d7b16d43582329c0025f0c4b7d"
+  },
+  "verified_prior_hashes": {
+    "results/susskind-two-matter/local-evidence.json": "ff83dcf1b0335259e3401071b8203d57b8282b6cf1a139da9f5a49079781e81b",
+    "code/two_matter_chords.py": "1847404af6009589e4d4950b07150ad84d107403cb496f148f6b88080d3b0649",
+    "code/check_two_matter_chords.py": "c1a28d0e6fc7728734933133715b0ded8c99017bbd63d2e12b087454af5dc4f0",
+    "code/check_two_matter_tensor.py": "414ad3440957f9c95aa65032b0a96c3565037a67d0714c511514dbc538475b12",
+    "code/build_two_matter_chords.ps1": "ee48156c621096304ae4022ff284058dfa9bd072173e1bd66b9171ce7d77bb35",
+    "code/record_two_matter_chords.py": "7927dd87bc90c2d62921f464aeaabae185da5b59c58ddc5eab1414aec7ef0fff",
+    "manuscript/susskind-two-matter/main.tex": "2f7601aa5ea55ee88d5eae0746d4f01cd95d48df212c223f17052413ffce6b06",
+    "output/pdf/de-sitter-susskind-two-matter.pdf": "b353608315ba2bc22c3e17ad2543de8bea925ba26d9917c98e3688ac64f7a8b6",
+    "notes/susskind-two-matter.md": "c6ae71f13afbd7af73096ceebdbf990baf5176d5d51555e9d1432caa1554b951",
+    "literature/susskind-two-matter-sources.md": "6cd4c81e2c9ac09cb243c47c7d0293ae789abc448c23faf080333acf2b9191b0",
+    "results/susskind-two-matter/main.log": "2bfd14436a858ea607d8fde4103d3ae2e57696ba9d9007d7e3c3811b08549ff3",
+    "results/susskind-two-matter/tensor-check.json": "3efa0f6ec919a91f09ebdb8a0df1260e0d733f90ab8414524f5286efe0394b69",
+    "results/susskind-two-matter/validation.json": "235044cd0bbe1d693c5542fa4880c2ceedde4a4a0a9eb9f5fad0e4e38a5ec026",
+    "code/singlet_coefficient.py": "ef7d9b96f96a036ea0d9774950702a82a968b56758a778db0365e9df0c3b2e10",
+    "code/singlet_multimark.py": "5b1def3fcc893c807e416c909076c6bb8383f54975bd9ed09d5dde37f129db0d"
+  },
+  "historical_mutable_entrances": {
+    "journal/2026-11-06-susskind-two-matter.md": "dc881c28d7a621fb7d8a8e086be6a4cae33f04ac7d82d55b29308fdd1fd5fc24",
+    "README.md": "2fbdbfe98d717b96e6f248692ad58f1292758298a960e7486b3c11c7a8ac2db5",
+    "PLAN.md": "419f1f3a161819726239cff9da8a27e257b956b9dc336fd5da9a7fe954128eb7",
+    "NEXT.md": "99213b7161efcdf5f1990f9238851ed34f1389fc89cb24cbe5b39f29c6ba2865"
+  },
+  "recorder_sha256": "70fbe09e71a2d647332218266bca9c11a1cf5b4b3dec258e31ab695245840ebd",
+  "checks": 41,
+  "scientific_drivers_rerun": false
+}
