@@ -1,0 +1,437 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,microtype,booktabs}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newcommand{\E}{\mathbb E}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\Wick}{\mathcal W}
+\newcommand{\Ncal}{\mathcal N}
+\newcommand{\Rcal}{\mathcal R}
+\newcommand{\Def}{\mathfrak D}
+\newcommand{\Pin}{\mathcal P_H}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\eh}{\widehat\eta}
+\newtheorem{lemma}{Lemma}
+\newtheorem{theorem}{Theorem}
+\title{The neutral memory field in a fixed charge sector\\
+\large Composite filtering, exact pinching and selected finite-time moments}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{8 November 2026\quad Local research draft}
+\begin{document}\maketitle
+\begin{abstract}
+We complete the central-sector transfer of the actual neutral memory
+component to local marked Wick descendants. A fixed-degree graph
+interpolation estimate shows that the covariance filter on the actual
+Jacobi correction agrees asymptotically with its Gaussian-chaos
+multiplier. Together with the preceding covariance tangent and uniform
+tails, this yields strong convergence on compact real-time intervals
+at every fixed finite Schatten order. At half filling, the previously
+established central source identity transfers the residual spectral
+argument and exact energy pinching. The resulting finite-time moments
+extend to controlled polynomial preparations and the single-selected
+functional, retaining its local-size boundary terms.
+\end{abstract}
+\section{Model, object and scope}
+Use standard CAR and the overlapping complex Gaussian p-body Hamiltonian
+with the same static couplings in all sectors. Let
+$\mathcal H_m=\wedge^m\mathbb C^N$,
+$\norm{X}_{r,m}=(\E\tr_m|X|^r)^{1/r}$ and
+$\tr_m=\binom Nm^{-1}\operatorname{Tr}_{\mathcal H_m}$.
+Take $\lambda_N=p^2/N\to\lambda>0$, fixed energy normalization,
+$\hbar=1$, and string time $t$. Set
+\[
+ C_mI=\E H_m^2,\quad \Psi_m=\Phi_m/C_m,\quad
+ \Phi_m(X)=\E_{H'}H'_mXH'_m ,
+\]
+where the independent copy only defines the deterministic covariance
+map: every actual observable still uses the original disorder.
+The exact neutral component is
+\begin{equation}\label{Bactual}
+ B_{m,N}(t)=m\epsilon_m(1-\Pin)e^{-iH_mt/2}
+       \Phi_m(e^{i\alpha_mH_mt})e^{-iH_mt/2},
+ \quad \alpha_m=1-p/m,\quad\epsilon_m=1-\alpha_m^2 .
+\end{equation}
+We work on $|m-N/2|\le L_0p$, so $m>p$ eventually.
+$\Pin X=\sum_eP_eXP_e$ includes whole degenerate energy blocks.
+Strong approximation below holds on this compact central window.
+The limiting selected-state statements are at $m=N/2$.
+The actual total memory field and its bilocal return still require
+their separate sector interfaces.
+
+\newpage
+\section{The missing composite filter estimate}
+Let $\Ncal$ count coupling Gaussian chaos and $\Rcal$ be the output
+$U(N)$ rank. On the equivariant Gaussian-matrix Hilbert space,
+\[
+ \Def=p\Ncal-\Rcal\ge0,\qquad
+ \Psi_m=\mu_m(\Rcal),\qquad
+ \theta_{j,m}=\mu_m(jp),\quad \Theta_m=\theta_m(\Ncal).
+\]
+The positive-part extension is
+\[
+ \mu_m(x)=\prod_{a=0}^{p-1}
+ \left(1-\frac{x}{m-a}\right)_+
+ \left(1-\frac{x}{N-m+p-a}\right)_+ .
+\]
+On a broad central interval it is Lipschitz with
+$\operatorname{Lip}(\mu_m)\le12p/N$. These are the existing
+fixed-sector rank and covariance identities \cite{rank,series}.
+Define the finite-parameter Jacobi polynomials and their actual error:
+\begin{align}
+ a_j&=\sum_{v<j}\theta_{v,m},\quad Q_0=1,\quad Q_1=x,\quad
+ Q_{j+1}=xQ_j-C_ma_jQ_{j-1},\nonumber\\
+ Z_j&=\Wick_j(H^j),\quad E_j=Z_j-Q_j(H),\quad\eta_j=pE_j .
+\end{align}
+\begin{lemma}\label{filter}
+For each fixed $j,L_0$,
+\[
+ \norm{(\Psi_m-\Theta_m)\eta_j}_{2,m}
+ \le12\lambda_N
+       \bigl(\norm{E_j}_{2,m}\norm{\Def^2E_j}_{2,m}\bigr)^{1/2}
+ =O_{j,L_0}(p^{-1/2}).
+\]
+\end{lemma}
+\begin{proof}
+The joint rank/chaos spectral decomposition gives
+$\norm{(\Psi_m-\Theta_m)X}_2\le(12p/N)\norm{\Def X}_2$.
+Spectral Cauchy--Schwarz gives
+$\norm{\Def E}_2^2\le\norm E_2\norm{\Def^2E}_2$.
+Insert $\eta=pE$ and $p^2/N=\lambda_N$.
+The needed inputs, $\norm{E_j}_2=O(p^{-1})$ and
+$\norm{\Def^2E_j}_2=O_j(1)$, are sectorwise; their audit follows.
+\end{proof}
+The first bound also follows directly from the preceding actual
+$\eta_j$ envelope \cite{gradient,operator}. For the second, the Racah
+sixth-moment certificate \cite{central,series} is polynomial in
+$a/\sqrt N,r/\sqrt N,(m-N/2)/\sqrt N$. Its denominators stay nonzero
+on compact sets, so it controls each fixed rank step with
+$a\le p,r\le jp$ on the present window. It bounds both the fourth
+deficit moment of the independent product chain and the fourth
+one-step moment.
+
+Gaussian creation symmetrization contracts normalized sector $L^2$.
+The chain bound thus gives $\norm{\Def^2Z_j}_2=O_j(1)$.
+For left multiplication $\mathcal T=H_{\rm left}$, the one-step bound
+gives bounded $[\Def,[\Def,\mathcal T]]$ on each fixed-degree space.
+The annihilation block is its adjoint. Iterating
+$\Def^2\mathcal T=\mathcal T\Def^2+
+2[\Def,\mathcal T]\Def+[\Def,[\Def,\mathcal T]]$
+gives $\norm{\Def^2H^n}_2=O_n(1)$, hence the same bound for $Q_j(H)$.
+No full-trace averaging is used.
+
+\newpage
+\section{From the tangent to every fixed neutral coefficient}
+On full neutral block families set
+\[
+ D=Q-\sum_i c_i^\dagger(\,\cdot\,)c_i,\qquad
+ \bar D=N-Q-\sum_i c_i(\,\cdot\,)c_i^\dagger,\quad
+ L=(D+\bar D)/2,\quad S_v=(vp-L)Z_v .
+\]
+Apply these maps before sector restriction. With target-sector
+scalars $C_m,\theta_{v,m}$ retained, the preceding tangent \cite{tangent}
+is
+\begin{equation}\label{tangent}
+ A_v=p(\Phi_m-C_m\theta_{v,m})Z_v,\qquad
+ \norm{A_v-4\lambda_NC_m\theta_{v,m}S_v}_{r,m}=O_{v,r,L_0}(p^{-1}).
+\end{equation}
+The ordered coupling-Wick product is denoted by $\diamond$.
+Define the local forced recurrence
+\begin{align}
+ \widehat r_j^S&=4\lambda_NC_m\sum_{v<j}\theta_{v,m}
+                          (S_v\diamond Z_{j-1-v}),\nonumber\\
+ \eh_{j+1}^S&=H\eh_j^S-C_ma_j\eh_{j-1}^S-\widehat r_j^S,
+ \qquad\eh_0^S=\eh_1^S=\eh_2^S=0 .\label{etarec}
+\end{align}
+The exact actual recurrence has the same form with forcing
+$\sum_{v<j}A_v\diamond Z_{j-1-v}$ \cite{series,operator}.
+For a pure degree-$v$ error $X_v$,
+\[
+ X_v\diamond Z_w=\Wick_{v+w}(X_vH^w),\qquad
+ \norm{\Wick_dY}_r\le2^d\norm Y_r\quad(\deg_{\rm Gaussian}Y\le d).
+\]
+Fixed-degree H\"older and \eqref{tangent}, followed by the finite
+recurrence, prove
+\begin{equation}\label{etaerror}
+ \norm{\eta_j-\eh_j^S}_{r,m}=O_{j,r,L_0}(p^{-1})
+ \quad(j,r\text{ fixed}).
+\end{equation}
+This estimate does not assert a degree-uniform error constant.
+
+The actual and local neutral coefficients are
+\begin{align}
+ T_j&=A_j+(C_m\theta_{j,m}-\Phi_m)\eta_j,\nonumber\\
+ V_j^S&=4\lambda_N\theta_{j,m}S_j+
+                    (\theta_{j,m}-\Theta_m)\eh_j^S .\label{TV}
+\end{align}
+Their difference is exactly
+\begin{align}
+ C_m^{-1}T_j-V_j^S
+ ={}&C_m^{-1}A_j-4\lambda_N\theta_{j,m}S_j\nonumber\\
+ &+(\theta_{j,m}-\Theta_m)(\eta_j-\eh_j^S)
+       -(\Psi_m-\Theta_m)\eta_j .\label{difference}
+\end{align}
+Here $\Theta_m$ is an $L^2$ contraction and $C_m$ is bounded above
+and away from zero on the window. Lemma~\ref{filter} and
+\eqref{etaerror} give $O_j(p^{-1/2})$ in $L^2$.
+Both sides have bounded higher fixed Schatten norms. Interpolation
+therefore gives $\norm{T_j-C_mV_j^S}_{r,m}\to0$ for every fixed
+finite $r$. We do not claim the same rate at all $r$.
+
+\newpage
+\section{The actual infinite series, before energy pinching}
+The finite Jacobi coefficients satisfy the exact entire expansion
+and the uniform estimate \cite{series,operator}
+\[
+ e^{itH}=\sum_{j\ge0}c_{j,m}(t)Q_j(H),\qquad
+ |c_{j,m}(t)|\le e^{2\sqrt{AC_*}S}(2\sqrt A S)^j/j!,
+ \quad |t|\le S ,
+\]
+where $a_j\le A$ and $C_m\le C_*$. Removing the samplewise conserved
+function $\sum_jc_j\theta_jQ_j(H)$ gives the exact identity
+\[
+ p(1-\Pin)\Phi_m(e^{itH})
+       =(1-\Pin)\sum_{j\ge0}c_{j,m}(t)T_j .
+\]
+The actual $A_j,\eta_j$ envelopes and CP contraction of $\Phi_m/C_m$
+give, on the window and at fixed $r$,
+\begin{equation}\label{tails}
+ \norm{T_j}_{r,m}+\norm{V_j^S}_{r,m}
+       \le K_r(j+1)^{b_r}L_r^j\sqrt{j!}.
+\end{equation}
+For the local term this follows from the pure $S_v$ envelope, the
+OU/Chebyshev projection bound and the fully expanded recurrence
+\eqref{etarec}. Expand that recurrence before H\"older: its two
+product layers require only a fixed multiple of $r$, not an exponent
+doubling at every degree. The same argument controls
+$\Theta_m\eh_j^S$ by an exponential-in-$j$ factor, absorbed in $L_r$.
+All these bounds are already sectorwise in \cite{operator,gradient}.
+
+Define the finite local proxy
+\[
+ \widetilde B^S_{m,N}(t)=
+ \frac{m\epsilon_mC_m}{p}(1-\Pin)e^{-iH_mt/2}
+       \sum_{j\ge0}c_{j,m}(\alpha_mt)V_j^S e^{-iH_mt/2}.
+\]
+\begin{theorem}\label{strong}
+For every fixed finite $r,S,L_0$,
+\[
+ \sup_{|m-N/2|\le L_0p}\sup_{|t|\le S}
+ \norm{B_{m,N}(t)-\widetilde B^S_{m,N}(t)}_{r,m}\longrightarrow0 .
+\]
+\end{theorem}
+\begin{proof}
+The tail of either series after $J$ is bounded by a constant times
+\[
+ \sum_{j>J}(j+1)^{b_r}L_{r,S}^j/\sqrt{j!}\longrightarrow0
+\]
+uniformly in $N,m,t$. The external phases are unitary,
+$m\epsilon_m/p\le2$, and $\norm{1-\Pin}_{r\to r}\le2$.
+At fixed $J$, apply \eqref{difference} term by term. First take
+$N\to\infty$, then $J\to\infty$.
+\end{proof}
+The approximation uses the original common disorder and retains the
+finite-$N$ energy projection. It uses the rank graph bounds only on
+fixed-degree errors; no high-Schatten bound on a nonlinear rank
+multiplier or rank-marked proxy is assumed.
+
+\newpage
+\section{Central limiting fields and exact removal of static mass}
+Now set $m=N/2$, $C_m\to C>0$, $q=e^{-4\lambda}\in(0,1)$.
+Each term in \eqref{etarec} is a finite linear combination of
+\[
+ \Wick_d[H^a(S_v\diamond Z_w)] .
+\]
+Its L mark lies in a pure Wick subblock; any exterior H slots and
+overall chaos filter are allowed. The central all-G source identity
+of \cite{higher} therefore applies to arbitrary products of these
+primitives and their adjoints. Its local exponent agrees with the
+earlier tracial exponent, directly in the central sector. Thus the
+regression and two-energy proof of \cite{desc} transfers without
+inferring a sector law from a full-charge average.
+
+Let $H_j^{(q,C)}$ be monic q-Hermite, $P_j(q)=[j]_q!$, and
+\[
+ \kappa_j=\lambda\frac{(j^2-4q\partial_q)P_j}{P_j}.
+\]
+For $g_j=\operatorname{Reg}\eh_j^S$, the existing regression is
+\begin{align*}
+ g_{j+1}(x)&=xg_j(x)-C[j]_qg_{j-1}(x)
+ -4\lambda C\left(\sum_{v<j}q^v\kappa_v\right)H_{j-1}^{(q,C)}(x),\\
+ g_0&=g_1=g_2=0,\qquad g_j=\sum_dg_{jd}H_d^{(q,C)} .
+\end{align*}
+The regression of $V_j=4\lambda q^jS_j+(q^j-q^\Ncal)\eh_j^S$ is
+\[
+ v_j(x)=4\lambda q^j\kappa_jH_j^{(q,C)}(x)
+           +\sum_{d\le j-2}(q^j-q^d)g_{jd}H_d^{(q,C)}(x).
+\]
+Define $N_j=V_j-v_j(H)$. For finite $N$, use the same polynomial
+$v_{j,N}$ at $(\lambda_N,q_N,C_m)$ and set
+$N_{j,N}=V_{j,N}^S-v_{j,N}(H_m)$.
+
+In the two-energy cut-diagram expansion, subtracting $v_j$ cancels
+all groups with no direct field bridge. If $D$ bounds the two fields'
+raw length, the remaining normalized energy-Hermite coefficients obey
+\[
+ |M_{ab}|\le K_D(a+b+1)^D
+ q^{\max(0,\min(a,b)-D)}\,\mathbf1_{|a-b|\le D}.
+\]
+This square-summable bound gives an $L^2(\rho_{q,C}\otimes\rho_{q,C})$
+spectral density, hence zero mass on the energy diagonal.
+It is the old fixed-degree proof \cite{desc}, now with central moments.
+
+The finite positive measure
+$\nu_N(A,B)=\E\tr_m[N_{j,N}^\dagger P_H(B)N_{j,N}P_H(A)]$
+has this weak limit. Higher central moments give tightness and uniform
+integrability; the compact limiting moment problem identifies it.
+Portmanteau on the closed diagonal yields
+\[
+ \norm{\Pin N_{j,N}}_{2,m}^2=\nu_N(\{E=E'\})\longrightarrow0.
+\]
+Higher fixed moments and pinching contraction upgrade this to all
+finite $r$. Since $v_{j,N}(H)$ commutes exactly with $H$,
+$(1-\Pin)V_{j,N}^S-N_{j,N}=-\Pin N_{j,N}\to0$.
+
+\newpage
+\section{Finite-time selected moments}
+The limiting neutral field is the convergent noncommutative $L^r$
+series
+\begin{equation}\label{limitfield}
+ B_\infty(t)=2C e^{-iHt/2}
+       \sum_{j\ge1}c_j^{(q,C)}(t)N_j e^{-iHt/2}.
+\end{equation}
+To justify every fixed finite $r$, first apply the preceding fixed-$j$
+pinching result. The norm of the limiting $N_j$ is bounded by the
+limiting norm of $(1-\Pin)V_{j,N}^S$, hence by twice \eqref{tails}.
+This supplies the limiting series tail, without assuming a uniform
+high-norm bound on the entire regression map. The finite Jacobi
+coefficients converge on compact times; keep $\alpha_m$ and
+$m\epsilon_m/p$ until this fixed-truncation limit.
+
+H\"older and telescoping transfer all fixed mixed covariant words
+in $B(t)$, its adjoint, fixed energy polynomials/phases, and the already
+controlled charged time fields. Times range over fixed compact sets.
+For a controlled fixed polynomial preparation $P_NO$,
+\[
+ \E\norm{X_NP_NO}^2\le C_P\norm{X_N}_{4,m}^2
+\]
+by the finite-$N$ orbit-density theorem \cite{prep}.
+Together with polarization this transfers errors inside
+$\E\langle O|P_N^\dagger\mathcal B_NQ_N|O\rangle$.
+Preparation degree stays fixed. Multiple arbitrary nonpolynomial
+selected factors interlaced with separate pinched blocks are not
+included merely by this preparation argument.
+
+For one normalized selected excitation, put
+$h=H/\sqrt C$, $W=(S_1-\lambda H)/\sqrt C$, $s=\sqrt q$.
+The full boundary functional \cite{higher} extends through the
+convergent tails:
+\begin{equation}\label{density}
+ \sigma_1(\mathcal B)=
+ [1-s(1+\lambda)]\tau(\mathcal B)
+ +s\tau\bigl((h-W)\mathcal B(h-W)\bigr).
+\end{equation}
+Use the actual phases in \eqref{limitfield}. This functional need not
+be stationary on the full marked algebra. The charged-only expression
+$\tau((1-s+sh^2)\mathcal B)$ is not a replacement for \eqref{density}
+on neutral or mixed words.
+
+As a calibration, $N_1=4\lambda q(S_1-\lambda H)=4\lambda q\sqrt C\,W$,
+$\tau(W^2)=\lambda$, and
+\[
+ \sigma_1(N_1^2)=16\lambda^3Cq^2[1+\lambda s(1+q)].
+\]
+This recovers the earlier slope result in the complete-field interface.
+In string time,
+\[
+ \sigma_1(B_\infty'(0)^\dagger B_\infty'(0))
+       =64\lambda^3C^3q^2[1+\lambda\sqrt q(1+q)] .
+\]
+Using the charged-only density would omit the positive relative
+correction $\lambda\sqrt q(1+q)$. Rational source checks recover this
+difference exactly; they do not identify rational $(\gamma,\lambda)$
+with the physical curve $\gamma=e^{-\lambda}$.
+
+\newpage
+\section{Executed checks and the remaining return problem}
+The new finite checker keeps all Gaussian coordinates in
+$(N,p,m)=(3,1,2),(4,1,2),(4,2,2)$ through degrees $5,4,3$.
+An independently constructed CAR Casimir diagonalizes the rank filter;
+the covariance is also built directly from its Kraus matrices.
+Fifteen degree rows check the graph Cauchy--Schwarz inequality and
+the composite-filter estimate, with six nonzero filter rows.
+The largest direct-versus-spectral Hermite error is below
+$9.7\cdot10^{-16}$; these are floating-point consistency tests with
+explicit tolerances, not interval certificates.
+
+The rational local-source compiler retains pure-Wick regions, local
+L subblocks, overall chaos and OU degree weights. At two independent
+rational $(\gamma,\lambda)$ points it checks 16 two-energy moments
+against the old descendant evaluator and 40 regression cancellations.
+It also checks 16 selected boundary identities and two explicit
+counterchecks to the charged-only density. No finite-$N$ energy
+pinching simulation is used as evidence for its limiting theorem.
+
+The graph inputs are inherited, not recalculated: fixed-sector
+rank transition orthogonality, the compact-window sixth-moment
+certificate, and fixed-degree multiplication bounds. The decisive
+new combination is Lemma~\ref{filter} applied to the \emph{actual}
+$pE_j$, followed by \eqref{difference}. This avoids reconstructing a
+rank-proxy exponential just to resolve the composite filter.
+
+All science outputs are preserved after their first successful run.
+The evidence manifest records code versions, parameters, inherited
+file hashes, the two-pass PDF and final rendered pages. No Git push
+or issue update accompanies this local stage.
+
+\paragraph{Next physical interface.}
+The actual neutral component is now controlled at fixed charge in
+the preparations just stated. The next task is to audit the finite-$N$
+total-memory decomposition into charged plus neutral components,
+including the collective return error and its conserved subtraction,
+then the Volterra return to the original bilocal. Sector-uniform force
+high moments alone do not prove these small-error statements.
+The full-trace bilocal calculation is already available and will be
+reused only where its proof is genuinely sectorwise. The full selected
+bilocal, spatial/mass bulk dictionary and finite-$G$ dynamics remain
+unfinished.
+
+\newpage
+\begin{thebibliography}{12}\small
+\bibitem{bnr} M. Berkooz, V. Narovlansky and H. Raj,
+\emph{Complex Sachdev--Ye--Kitaev model in the double scaling limit},
+\href{https://arxiv.org/abs/2006.13983}{arXiv:2006.13983}.
+\bibitem{ep} E. G. Effros and M. Popa,
+\emph{Feynman Diagrams and Wick Products Associated with q-Fock spaces},
+\href{https://arxiv.org/abs/math/0303045}{arXiv:math/0303045}.
+These are the fixed-charge and q-Wick combinatorial background,
+not substitutes for the present sector-error estimates.
+\bibitem{rank} Project draft,
+\nolinkurl{manuscript/susskind-memory-wick-rank/main.tex}, §§5--6:
+rank transition orthogonality and creation/annihilation bounds.
+\bibitem{central} Project draft,
+\nolinkurl{manuscript/susskind-memory-central-window/main.tex}, §§2--3:
+the compact-window polynomial-ring certificate.
+\bibitem{series} Project draft,
+\nolinkurl{manuscript/susskind-memory-neutral-marked-series/main.tex},
+§§2--6: finite Jacobi recurrences and fixed-degree graph bounds.
+\bibitem{operator} Project derivation,
+\nolinkurl{notes/susskind-bilocal-fourth-tail-operator-draft.md},
+§§2--7: actual CP residual, recurrence and neutral tails.
+\bibitem{gradient} Project draft,
+\nolinkurl{manuscript/susskind-sector-gradient-tail/main.tex}:
+central-sector actual envelopes and charged time summation.
+\bibitem{tangent} Project draft,
+\nolinkurl{manuscript/susskind-sector-covariance-tangent/main.tex}:
+the exact two-deficit remainder and fixed-degree local tangent.
+\bibitem{desc} Project draft,
+\nolinkurl{manuscript/susskind-memory-wick-descendants/main.tex}:
+ordered local sources, regression and the no-diagonal-mass proof.
+\bibitem{higher} Project draft,
+\nolinkurl{manuscript/susskind-slater-higher-wick/main.tex}:
+the all-G central source identity and selected boundary functional.
+\bibitem{prep} Project draft,
+\nolinkurl{manuscript/susskind-slater-polynomial-density/main.tex}:
+finite-$N$ densities for fixed polynomial preparations.
+\end{thebibliography}
+\end{document}

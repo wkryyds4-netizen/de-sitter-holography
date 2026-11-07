@@ -1,5 +1,16 @@
 # de Sitter 全息研究
 
+## 2026-11-08 集中快照：固定电荷中性记忆场
+
+本次按用户要求整理已完成的中性全时间阶段，附八页 PDF、LaTeX、有限检查和封存证据，见[发布说明](notes/research-release-2026-11-08-sector-neutral.md)。发布前只读核对 273 个不同文件及 PDF 页数；未重跑成功科学输出。下文“本地”“未 Git”保留记录时点的含义。下一步仍是 total-memory 的逐扇区返回与实际 bilocal 重建。
+
+
+## 当前进展：固定电荷的实际中性记忆场（2026-11-08，本地）
+
+[八页 PDF](output/pdf/de-sitter-susskind-sector-neutral-transfer.pdf)、[LaTeX](manuscript/susskind-sector-neutral-transfer/main.tex)、[中文推导](notes/susskind-sector-neutral-transfer.md)及[来源接口](literature/susskind-sector-neutral-transfer-sources.md)已保存。对实际 Jacobi 误差使用秩图范数插值，补齐 composite covariance 筛选；结合上轮 tangent 和逐扇区尾，得到 compact central window 内完整中性时间场的所有固定有限 Schatten 强替换。半填充下，central source 恒等式再接 exact pinching 与单 selected/已控制固定多项式制备。中性选态保留 W 边界项。
+
+新增三有限 CAR/Hermite 系统共15行、56个精确图/回归比较、18个选态检查；[证据清单](results/susskind-sector-neutral-transfer/local-evidence.json)核10当前/252父科学文件，八页双遍与全页目检完成。下一步 total-memory 的 collective-return 守恒背景及 bilocal 逐扇区返回；完整 selected 双局域、空间/质量与finite-G仍开放。本轮仅本地，上一轮 aa519f1 和 issue 回复已完成，不重复发布。
+
 ## 2026-11-08 集中快照：固定电荷尾与协方差展开
 
 本次按用户要求集中整理[八页梯度尾稿](output/pdf/de-sitter-susskind-sector-gradient-tail.pdf)与[四页协方差展开稿](output/pdf/de-sitter-susskind-sector-covariance-tangent.pdf)，LaTeX、代码和封存证据见[发布说明](notes/research-release-2026-11-08-sector-tangent.md)。新增直接展开将固定次数的实际 A_v 接到局域大小缺额，保留有限 N 系数并给 O(p^-1) 误差。下一步处理复合后代的 covariance 筛选、完整中性场及 memory/bilocal 返回。完整 selected 双局域和体字典仍未完成。下文“本地”保留各阶段记录时点的含义。

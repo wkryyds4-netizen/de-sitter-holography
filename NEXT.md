@@ -1,5 +1,26 @@
 # 下一次从这里继续
 
+## 2026-11-08 中性阶段集中发布交接
+
+用户本次要求 Git 与 issue 回复；本次快照收录 sector-neutral-transfer，见[发布说明](notes/research-release-2026-11-08-sector-neutral.md)。已只读核对 273 个不同证据文件、八页 PDF；成功科学输出及封存 manifest 均未改。具体发布回执保存在本机 tmp/publication-2026-11-08-sector-neutral，旧 aa519f1/6712418023 属上一批。下方“本地”“没有 Git”保留当时记录。
+
+下一科学任务仍为 total-memory→两分量→bilocal 的逐扇区连接。新增待核路线：从 operator-draft 式(21) 的 K_(n+2)=ΣH^a F_b H^c 反演得到 F_n=K_(n+2)−HK_(n+1)−K_(n+1)H+HK_nH；用 sector-gradient-tail 的 K_n 阶乘包络控制指数 force defect，再以 neutral 的有限参数 Jacobi 分解构造与 H 对易的返回代理。须检查 sector 邻移、时间尾和 p/m 系数，不将候选路线等同已完成定理。four-u 条件回归和实际 bilocal 返回仍开放。长期 goal active。
+
+
+## 最新继续位置：2026-11-08 sector-neutral-transfer（本地）
+
+先读[八页PDF](output/pdf/de-sitter-susskind-sector-neutral-transfer.pdf)、[LaTeX](manuscript/susskind-sector-neutral-transfer/main.tex)、[中文推导](notes/susskind-sector-neutral-transfer.md)、[来源](literature/susskind-sector-neutral-transfer-sources.md)与journal/2026-11-08-susskind-sector-neutral-transfer.md。上一轮协方差短稿+发布是progress，本轮中性全时间强连接也是progress；长期goal active，无活跃计算。本轮没有Git或外部回复，aa519f1/6712418023已完成。
+
+- **直接补齐composite filter**：Dfrak=pNcal−Rcal，Psi=mu(Rcal)，Theta=mu(pNcal)，eta=pE。||E_j||2=O(1/p)，||Dfrak²E_j||2=O_j(1)逐sector成立：旧QQ[A,B,z]中央六矩证书覆盖a≤p、r≤jp紧集；creation sym和doublecomm给Z_j/Q_j图范数。于是||(Psi−Theta)eta||2≤12lambda_N sqrt(||E||||Dfrak²E||)=O(p^-1/2)。保留fixedj，不声称次数一致，也不称rank-free。
+- **actual→local coefficient**：tangent及topWick投影给eta−etaS=O_j,r(1/p)。精确T_j/C−V_jS=(A_j/C−4lambda theta_j S_j)+(theta_j−Theta)(eta−etaS)−(Psi−Theta)eta。二范数O(p^-1/2)，actual/local高矩插值给每个fixedS_r收敛。两侧逐sector polynomial(j)L^j sqrtj!包络配c_j的L^j/j!，先fixedJ再去J，得到compactcentral+compacttime实际中性B与local proxy全fixedS_r强差。
+- **pinching与态**：限m=N/2，local primitive为W_d[H^a(S_v diamond Z_w)]，L mark在pure子块，外部H可内缩；higherWick的allG源恒等式直接给central全部fixedwords，继承wick-descendants的回归/无桥抵消/HS谱。N_j=V_j−v_j(H)的正两能量测度无对角质量，Portmanteau再高矩插值给P_H N_j→0。B∞(t)=2C e^-iHt/2 Σc_j(t)N_j e^-iHt/2。保留stringtime、finitealpha与mε/p到fixedtruncation极限。
+- **selected**：sigma1(B)=[1−s(1+lambda)]tauB+s tau((h−W)B(h−W))，W=(S1−lambdaH)/sqrtC，s=sqrtq。neutral不能用D-only f(h)。已控制P†covwordQ的fixedpolypreps可传误差；不宣称任意nonpolynomial selected块交错都完成。斜率校准sigma1|B'(0)|²=64lambda³C³q²[1+lambda sqrtq(1+q)]，重现旧结果，不是新斜率定理。
+- **证据**：interface-checks SHA6f10a97e7b014b0e267dbdcb2c5686bd758849d9d535bf34ca840050edc69635；15finite rows/6非零filter、16旧图比较+40回归零式、16选态density+2反例校准，两形式gamma/lambda点不在物理曲线上。finite(Hermite/Casimir)浮点max9.65e-16。新pure helper code/sector_neutral_transfer.py可import；checker与recorder成功后不重跑。manifest SHAaf2ca8bcfebf8bf3439931bc94f2ec8950e8c6c1766fa030ad9f480e696a55f6，10current/252parent；八页双遍/全目检，最后补topchaos degY≤d仅第三页变动已复检。旧tangent科学仍在同目录且未改。
+- **下一首任务**：读 notes/susskind-memory-return-background.md、return-expansion.md、two-component.md、bilocal-reconstruction-proof.md，以及各LaTeX。已读上述notes：return-expansion的force Gaussian squarefunction、G≤A/m及固定次Volterra误差都是逐sector；瓶颈是旧return-background的Q_N(f)=(2p/N)ΣFi†f(H)Fi双tag强桥（旧正文用fulltrace），需核固定m=N/2或compactwindow占据trace/有限能量尾。其两指定bubble应接4Js² P_q f(H)但尚未给本轮sector证明，不能当完成。随后four-u replica到能量函数的central版本：颜色只删配对，已有central unmarked源或精确charge Fourier可望沿用，仍须逐式核。若totalmemory已有strongL2且actual高矩仅O(p)，不可直接升高范数；需检查旧full-four-point-transfer/finite-tail里真正的allr小量与uniform界。
+- **bilocal返回**：旧精确静态dilation使F0收缩且[H,F0]=0，F−F0=−F0*deltaM*F、Q=m deltaM；若先有sector uniform memory L2，则原重建p^-1/3二范数估计的大中央段可逐sector使用，无需binomial尾。全selected高矩返回仍需对应强阶接口。不要将two-component归约、返回界或完整bulk字典仅凭本轮neutral结果宣布完成。
+
+以下为历史继续位置。
+
 ## 最新继续位置：2026-11-08 covariance-tangent 与集中发布
 
 先读[四页 PDF](output/pdf/de-sitter-susskind-sector-covariance-tangent.pdf)、[LaTeX](manuscript/susskind-sector-covariance-tangent/main.tex)、[中文笔记](notes/susskind-sector-covariance-tangent.md)和[本轮发布说明](notes/research-release-2026-11-08-sector-tangent.md)。本轮用户授权 Git 和 issue 回复；具体回执记本机 journal 与 tmp/publication-2026-11-08-sector-tangent。长期 goal active。

@@ -1,5 +1,10 @@
 # de Sitter 全息研究规划
 
+2026-11-08 本次按用户要求集中发布 sector-neutral-transfer，发布入口见 notes/research-release-2026-11-08-sector-neutral.md。核对已有证据并回复 issue #1，日常低频 Git 约定不变。下一步检查 force-defect 精确逆式能否利用 ordinary 全次数包络建立守恒返回代理；尚未将此候选路线列为完成结果。
+
+
+2026-11-08 sector-neutral-transfer：不重建整个rank-proxy指数，直接对实际eta=pE使用 mu 的12p/N Lipschitz和 ||Dfrak E||²≤||E||||Dfrak²E||，由旧逐sector fixeddegree图范数给composite filter O(p^-1/2)二范数误差。接tangent、eta局域递推与actual/local全次数尾，完整中性场强替换在compactcentral所有fixedS_r成立；half-filled allG源和旧无桥谱证明接exactpinching、选态有限时间词。八页PDF/新science/manifest本地封存。下一首任务明确为原始total memory→A+B的逐sector守恒返回和four-u条件平均，再接Volterra bilocal返回；不将已闭合neutral重复列作待办。长期goal active，本轮不Git/issue。
+
 2026-11-08 covariance-tangent 子阶段：对既有 CP telescope 的每一前缀再展开，得到零参考因子也有效的有序二次余项。pure repeated deficits 给固定 v 的 A_v→4lambda_N C_m theta_v(vp−L)Z_v，误差 O(p^-1)，不宣称次数一致。四页 PDF/精确检查/manifest 已封存。本轮按用户授权集中 Git 并回复 issue；日常低频约定不变。下一步核旧 neutral-marked-series 在 compact central window 的 rank slope/graph tail，将复合 eta 的 covariance 筛选接到局域后代，再处理 exact pinching、实际 memory 返回。完整中性场尚未在本阶段封闭。
 
 2026-11-08 sector-gradient-tail阶段：归一t/s的梯度恒等式和行列Schwarz给无K^ell膨胀的CP路径界；graded partial的1/2移位保留pure tags的双标签条件，得到sqrt(p)梯度包络。normalized-trace矩形CP Holder控制ordinary乘积，实际A_v/eta_j递推与inverse Jacobi重组现已给O(p)中央窗口的一致次数尾。下一首任务转为actual neutral/filter及memory-return的sector强接口，再组成完整selected bilocal。先核旧compact-charge证明和新CP telescope能否直接给A_v的local-size强极限，避免重复旧rank计算；若用候选直接法必须给出精确系数和误差。八页PDF/两科学输出/manifest已封存，长期goalactive；本轮不Git或issue。

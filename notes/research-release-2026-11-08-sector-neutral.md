@@ -1,0 +1,13 @@
+# Fixed-charge neutral memory: research snapshot
+
+This snapshot follows aa519f1d2a470092003d436e6550008d63ba8a23 and collects the completed sector-neutral-transfer stage.
+
+Read the [eight-page PDF](../output/pdf/de-sitter-susskind-sector-neutral-transfer.pdf), [LaTeX derivation](../manuscript/susskind-sector-neutral-transfer/main.tex), [Chinese notes](susskind-sector-neutral-transfer.md), [source interfaces](../literature/susskind-sector-neutral-transfer-sources.md) and [saved evidence manifest](../results/susskind-sector-neutral-transfer/local-evidence.json).
+
+The model is the static, same-disorder Gaussian p-body CAR Hamiltonian, with normalized annealed sector Schatten norms, fixed energy normalization and p²/N tending to a fixed positive lambda. The manuscript establishes a composite covariance-filter estimate on the actual Jacobi corrections. Together with the preceding tangent and degree-uniform bounds, this gives compact-time strong replacement of the neutral memory component at every fixed finite Schatten order in a central O(p) charge window. At half filling, the central source identity connects exact energy pinching and the controlled polynomial preparations. The single-selected functional retains its local-size boundary term.
+
+The saved checks include 15 finite CAR/Hermite rows (six with a nonzero filter), 56 exact graph/regression comparisons and 18 selected-state checks. The rational parameter tests use independent formal gamma and lambda; they are not samples on the physical curve. Finite checks support the implementation and do not prove the asymptotic estimates. The evidence manifest records two PDF compilation passes, all eight pages visually checked, ten current files and 252 inherited scientific files. Publication preparation rechecks saved bytes; successful scientific drivers and sealed manifests are not rerun or overwritten.
+
+The remaining interfaces are the fixed-sector total-memory return, the actual bilocal reconstruction, arbitrary interlaced nonpolynomial selected blocks, and the bulk spatial/mass and finite-G dictionary. The neutral component result alone does not complete these tasks.
+
+Issue [#1](https://github.com/wkryyds4-netizen/de-sitter-holography/issues/1) concerns the earlier KS pentagon branch. This release adds no reintegration of its 21,143 cells and does not resolve the 9,890 endpoint-reproduction discrepancies. The [existing review](issue-1-review.md) and its qualifications remain in force; the issue stays open. Research and release preparation used AI assistance. Historical statements such as “local” in the stage records describe their recording time. Private context, journals, temporary files and cached third-party full texts are excluded.

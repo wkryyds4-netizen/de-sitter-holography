@@ -1,0 +1,929 @@
+{
+  "status": "passed",
+  "created_at_utc": "2026-11-07T20:14:05.830378+00:00",
+  "finite": [
+    {
+      "N": 3,
+      "p": 1,
+      "m": 2,
+      "C": 1,
+      "Gaussian_coordinates": 9,
+      "maximum": 5,
+      "phi_casimir_error": 3.864194466498951e-16,
+      "lipschitz": "1",
+      "rows": [
+        {
+          "degree": 0,
+          "hermite_matrices": 1,
+          "E_norm_squared": 0.0,
+          "deficit_E_norm_squared": 0.0,
+          "second_deficit_E_norm_squared": 0.0,
+          "interpolation_rhs": 0.0,
+          "eta_filter_norm_squared": 0.0,
+          "filter_bound_squared": 0.0,
+          "direct_spectral_error": 0.0,
+          "scalar_chaos_E_norm_squared": 0.0
+        },
+        {
+          "degree": 1,
+          "hermite_matrices": 9,
+          "E_norm_squared": 0.0,
+          "deficit_E_norm_squared": 0.0,
+          "second_deficit_E_norm_squared": 0.0,
+          "interpolation_rhs": 0.0,
+          "eta_filter_norm_squared": 0.0,
+          "filter_bound_squared": 0.0,
+          "direct_spectral_error": 0.0,
+          "scalar_chaos_E_norm_squared": 0.0
+        },
+        {
+          "degree": 2,
+          "hermite_matrices": 46,
+          "E_norm_squared": 0.0,
+          "deficit_E_norm_squared": 0.0,
+          "second_deficit_E_norm_squared": 0.0,
+          "interpolation_rhs": 0.0,
+          "eta_filter_norm_squared": 0.0,
+          "filter_bound_squared": 0.0,
+          "direct_spectral_error": 0.0,
+          "scalar_chaos_E_norm_squared": 0.0
+        },
+        {
+          "degree": 3,
+          "hermite_matrices": 174,
+          "E_norm_squared": 0.18749999999999994,
+          "deficit_E_norm_squared": 0.18749999999999997,
+          "second_deficit_E_norm_squared": 0.18749999999999997,
+          "interpolation_rhs": 0.18749999999999997,
+          "eta_filter_norm_squared": 0.10546875,
+          "filter_bound_squared": 0.18749999999999997,
+          "direct_spectral_error": 1.3502643003081224e-16,
+          "scalar_chaos_E_norm_squared": 0.0
+        },
+        {
+          "degree": 4,
+          "hermite_matrices": 541,
+          "E_norm_squared": 2.4687499999999987,
+          "deficit_E_norm_squared": 6.90625,
+          "second_deficit_E_norm_squared": 24.906250000000004,
+          "interpolation_rhs": 7.841384105341351,
+          "eta_filter_norm_squared": 1.5566406250000002,
+          "filter_bound_squared": 6.90625,
+          "direct_spectral_error": 3.1449296211506686e-16,
+          "scalar_chaos_E_norm_squared": 0.06249999999999997
+        },
+        {
+          "degree": 5,
+          "hermite_matrices": 1461,
+          "E_norm_squared": 24.121093750000032,
+          "deficit_E_norm_squared": 131.3867187499999,
+          "second_deficit_E_norm_squared": 916.2929687499981,
+          "interpolation_rhs": 148.66737571398963,
+          "eta_filter_norm_squared": 10.592041015624977,
+          "filter_bound_squared": 131.3867187499999,
+          "direct_spectral_error": 9.640454216298061e-16,
+          "scalar_chaos_E_norm_squared": 0.0
+        }
+      ]
+    },
+    {
+      "N": 4,
+      "p": 1,
+      "m": 2,
+      "C": 1,
+      "Gaussian_coordinates": 16,
+      "maximum": 4,
+      "phi_casimir_error": 1.2449784546928371e-15,
+      "lipschitz": "5/6",
+      "rows": [
+        {
+          "degree": 0,
+          "hermite_matrices": 1,
+          "E_norm_squared": 0.0,
+          "deficit_E_norm_squared": 0.0,
+          "second_deficit_E_norm_squared": 0.0,
+          "interpolation_rhs": 0.0,
+          "eta_filter_norm_squared": 0.0,
+          "filter_bound_squared": 0.0,
+          "direct_spectral_error": 0.0,
+          "scalar_chaos_E_norm_squared": 0.0
+        },
+        {
+          "degree": 1,
+          "hermite_matrices": 16,
+          "E_norm_squared": 0.0,
+          "deficit_E_norm_squared": 0.0,
+          "second_deficit_E_norm_squared": 0.0,
+          "interpolation_rhs": 0.0,
+          "eta_filter_norm_squared": 0.0,
+          "filter_bound_squared": 0.0,
+          "direct_spectral_error": 0.0,
+          "scalar_chaos_E_norm_squared": 0.0
+        },
+        {
+          "degree": 2,
+          "hermite_matrices": 137,
+          "E_norm_squared": 4.930380657631324e-32,
+          "deficit_E_norm_squared": 3.2791422435459683e-63,
+          "second_deficit_E_norm_squared": 9.831102534150983e-63,
+          "interpolation_rhs": 2.2016148113956787e-47,
+          "eta_filter_norm_squared": 1.0327324597775127e-63,
+          "filter_bound_squared": 2.2771821135735895e-63,
+          "direct_spectral_error": 5.885233897384216e-32,
+          "scalar_chaos_E_norm_squared": 4.930380657631324e-32
+        },
+        {
+          "degree": 3,
+          "hermite_matrices": 832,
+          "E_norm_squared": 0.0740740740740743,
+          "deficit_E_norm_squared": 0.07407407407407429,
+          "second_deficit_E_norm_squared": 0.07407407407407429,
+          "interpolation_rhs": 0.0740740740740743,
+          "eta_filter_norm_squared": 0.03292181069958857,
+          "filter_bound_squared": 0.05144032921810715,
+          "direct_spectral_error": 1.2965039485541185e-16,
+          "scalar_chaos_E_norm_squared": 0.0
+        },
+        {
+          "degree": 4,
+          "hermite_matrices": 4013,
+          "E_norm_squared": 0.9629629629629666,
+          "deficit_E_norm_squared": 2.135802469135809,
+          "second_deficit_E_norm_squared": 6.876543209876562,
+          "interpolation_rhs": 2.5732968006675025,
+          "eta_filter_norm_squared": 0.45679012345679176,
+          "filter_bound_squared": 1.4831961591220897,
+          "direct_spectral_error": 3.4711648986549744e-16,
+          "scalar_chaos_E_norm_squared": 0.01234567901234582
+        }
+      ]
+    },
+    {
+      "N": 4,
+      "p": 2,
+      "m": 2,
+      "C": 1,
+      "Gaussian_coordinates": 36,
+      "maximum": 3,
+      "phi_casimir_error": 5.640599496620651e-16,
+      "lipschitz": "8/3",
+      "rows": [
+        {
+          "degree": 0,
+          "hermite_matrices": 1,
+          "E_norm_squared": 0.0,
+          "deficit_E_norm_squared": 0.0,
+          "second_deficit_E_norm_squared": 0.0,
+          "interpolation_rhs": 0.0,
+          "eta_filter_norm_squared": 0.0,
+          "filter_bound_squared": 0.0,
+          "direct_spectral_error": 0.0,
+          "scalar_chaos_E_norm_squared": 0.0
+        },
+        {
+          "degree": 1,
+          "hermite_matrices": 36,
+          "E_norm_squared": 0.0,
+          "deficit_E_norm_squared": 0.0,
+          "second_deficit_E_norm_squared": 0.0,
+          "interpolation_rhs": 0.0,
+          "eta_filter_norm_squared": 0.0,
+          "filter_bound_squared": 0.0,
+          "direct_spectral_error": 0.0,
+          "scalar_chaos_E_norm_squared": 0.0
+        },
+        {
+          "degree": 2,
+          "hermite_matrices": 667,
+          "E_norm_squared": 4.930380657631324e-32,
+          "deficit_E_norm_squared": 3.2791422435459683e-63,
+          "second_deficit_E_norm_squared": 9.831102534150983e-63,
+          "interpolation_rhs": 2.2016148113956787e-47,
+          "eta_filter_norm_squared": 6.564608683578859e-63,
+          "filter_bound_squared": 9.32733793719742e-62,
+          "direct_spectral_error": 1.2762472352658357e-31,
+          "scalar_chaos_E_norm_squared": 4.930380657631324e-32
+        },
+        {
+          "degree": 3,
+          "hermite_matrices": 8472,
+          "E_norm_squared": 0.02777777777777784,
+          "deficit_E_norm_squared": 0.11111111111111135,
+          "second_deficit_E_norm_squared": 0.4444444444444454,
+          "interpolation_rhs": 0.11111111111111135,
+          "eta_filter_norm_squared": 0.11111111111111135,
+          "filter_bound_squared": 3.1604938271605008,
+          "direct_spectral_error": 1.415262216750919e-16,
+          "scalar_chaos_E_norm_squared": 0.0
+        }
+      ]
+    }
+  ],
+  "exact": [
+    {
+      "kind": "two_energy_trace",
+      "gamma": "1/2",
+      "lam": "1/3",
+      "j": 1,
+      "k": 1,
+      "a": 0,
+      "b": 0,
+      "value": "1/324"
+    },
+    {
+      "kind": "two_energy_trace",
+      "gamma": "1/2",
+      "lam": "1/3",
+      "j": 1,
+      "k": 2,
+      "a": 1,
+      "b": 0,
+      "value": "115/331776"
+    },
+    {
+      "kind": "two_energy_trace",
+      "gamma": "1/2",
+      "lam": "1/3",
+      "j": 2,
+      "k": 2,
+      "a": 0,
+      "b": 0,
+      "value": "7/82944"
+    },
+    {
+      "kind": "two_energy_trace",
+      "gamma": "1/2",
+      "lam": "1/3",
+      "j": 1,
+      "k": 3,
+      "a": 0,
+      "b": 0,
+      "value": "85/442368"
+    },
+    {
+      "kind": "two_energy_trace",
+      "gamma": "1/2",
+      "lam": "1/3",
+      "j": 2,
+      "k": 3,
+      "a": 1,
+      "b": 0,
+      "value": "14047/452984832"
+    },
+    {
+      "kind": "two_energy_trace",
+      "gamma": "1/2",
+      "lam": "1/3",
+      "j": 3,
+      "k": 3,
+      "a": 0,
+      "b": 0,
+      "value": "72259/5435817984"
+    },
+    {
+      "kind": "two_energy_trace",
+      "gamma": "1/2",
+      "lam": "1/3",
+      "j": 1,
+      "k": 4,
+      "a": 1,
+      "b": 0,
+      "value": "5717695/7247757312"
+    },
+    {
+      "kind": "two_energy_trace",
+      "gamma": "1/2",
+      "lam": "1/3",
+      "j": 1,
+      "k": 5,
+      "a": 0,
+      "b": 0,
+      "value": "55813975/463856467968"
+    },
+    {
+      "kind": "regression",
+      "gamma": "1/2",
+      "lam": "1/3",
+      "j": 1,
+      "energy": 0,
+      "value": "0"
+    },
+    {
+      "kind": "regression",
+      "gamma": "1/2",
+      "lam": "1/3",
+      "j": 1,
+      "energy": 1,
+      "value": "0"
+    },
+    {
+      "kind": "regression",
+      "gamma": "1/2",
+      "lam": "1/3",
+      "j": 1,
+      "energy": 2,
+      "value": "0"
+    },
+    {
+      "kind": "regression",
+      "gamma": "1/2",
+      "lam": "1/3",
+      "j": 1,
+      "energy": 3,
+      "value": "0"
+    },
+    {
+      "kind": "regression",
+      "gamma": "1/2",
+      "lam": "1/3",
+      "j": 1,
+      "energy": 4,
+      "value": "0"
+    },
+    {
+      "kind": "regression",
+      "gamma": "1/2",
+      "lam": "1/3",
+      "j": 1,
+      "energy": 5,
+      "value": "0"
+    },
+    {
+      "kind": "regression",
+      "gamma": "1/2",
+      "lam": "1/3",
+      "j": 2,
+      "energy": 0,
+      "value": "0"
+    },
+    {
+      "kind": "regression",
+      "gamma": "1/2",
+      "lam": "1/3",
+      "j": 2,
+      "energy": 1,
+      "value": "0"
+    },
+    {
+      "kind": "regression",
+      "gamma": "1/2",
+      "lam": "1/3",
+      "j": 2,
+      "energy": 2,
+      "value": "0"
+    },
+    {
+      "kind": "regression",
+      "gamma": "1/2",
+      "lam": "1/3",
+      "j": 2,
+      "energy": 3,
+      "value": "0"
+    },
+    {
+      "kind": "regression",
+      "gamma": "1/2",
+      "lam": "1/3",
+      "j": 2,
+      "energy": 4,
+      "value": "0"
+    },
+    {
+      "kind": "regression",
+      "gamma": "1/2",
+      "lam": "1/3",
+      "j": 3,
+      "energy": 0,
+      "value": "0"
+    },
+    {
+      "kind": "regression",
+      "gamma": "1/2",
+      "lam": "1/3",
+      "j": 3,
+      "energy": 1,
+      "value": "0"
+    },
+    {
+      "kind": "regression",
+      "gamma": "1/2",
+      "lam": "1/3",
+      "j": 3,
+      "energy": 2,
+      "value": "0"
+    },
+    {
+      "kind": "regression",
+      "gamma": "1/2",
+      "lam": "1/3",
+      "j": 3,
+      "energy": 3,
+      "value": "0"
+    },
+    {
+      "kind": "regression",
+      "gamma": "1/2",
+      "lam": "1/3",
+      "j": 4,
+      "energy": 0,
+      "value": "0"
+    },
+    {
+      "kind": "regression",
+      "gamma": "1/2",
+      "lam": "1/3",
+      "j": 4,
+      "energy": 1,
+      "value": "0"
+    },
+    {
+      "kind": "regression",
+      "gamma": "1/2",
+      "lam": "1/3",
+      "j": 4,
+      "energy": 2,
+      "value": "0"
+    },
+    {
+      "kind": "regression",
+      "gamma": "1/2",
+      "lam": "1/3",
+      "j": 5,
+      "energy": 0,
+      "value": "0"
+    },
+    {
+      "kind": "regression",
+      "gamma": "1/2",
+      "lam": "1/3",
+      "j": 5,
+      "energy": 1,
+      "value": "0"
+    },
+    {
+      "kind": "two_energy_trace",
+      "gamma": "2/3",
+      "lam": "1/4",
+      "j": 1,
+      "k": 1,
+      "a": 0,
+      "b": 0,
+      "value": "80/6561"
+    },
+    {
+      "kind": "two_energy_trace",
+      "gamma": "2/3",
+      "lam": "1/4",
+      "j": 1,
+      "k": 2,
+      "a": 1,
+      "b": 0,
+      "value": "182272/43046721"
+    },
+    {
+      "kind": "two_energy_trace",
+      "gamma": "2/3",
+      "lam": "1/4",
+      "j": 2,
+      "k": 2,
+      "a": 0,
+      "b": 0,
+      "value": "131072/43046721"
+    },
+    {
+      "kind": "two_energy_trace",
+      "gamma": "2/3",
+      "lam": "1/4",
+      "j": 1,
+      "k": 3,
+      "a": 0,
+      "b": 0,
+      "value": "8070400/3486784401"
+    },
+    {
+      "kind": "two_energy_trace",
+      "gamma": "2/3",
+      "lam": "1/4",
+      "j": 2,
+      "k": 3,
+      "a": 1,
+      "b": 0,
+      "value": "44139839488/22876792454961"
+    },
+    {
+      "kind": "two_energy_trace",
+      "gamma": "2/3",
+      "lam": "1/4",
+      "j": 3,
+      "k": 3,
+      "a": 0,
+      "b": 0,
+      "value": "47085269577728/50031545098999707"
+    },
+    {
+      "kind": "two_energy_trace",
+      "gamma": "2/3",
+      "lam": "1/4",
+      "j": 1,
+      "k": 4,
+      "a": 1,
+      "b": 0,
+      "value": "6023649816080/1853020188851841"
+    },
+    {
+      "kind": "two_energy_trace",
+      "gamma": "2/3",
+      "lam": "1/4",
+      "j": 1,
+      "k": 5,
+      "a": 0,
+      "b": 0,
+      "value": "21637209918272000/12157665459056928801"
+    },
+    {
+      "kind": "regression",
+      "gamma": "2/3",
+      "lam": "1/4",
+      "j": 1,
+      "energy": 0,
+      "value": "0"
+    },
+    {
+      "kind": "regression",
+      "gamma": "2/3",
+      "lam": "1/4",
+      "j": 1,
+      "energy": 1,
+      "value": "0"
+    },
+    {
+      "kind": "regression",
+      "gamma": "2/3",
+      "lam": "1/4",
+      "j": 1,
+      "energy": 2,
+      "value": "0"
+    },
+    {
+      "kind": "regression",
+      "gamma": "2/3",
+      "lam": "1/4",
+      "j": 1,
+      "energy": 3,
+      "value": "0"
+    },
+    {
+      "kind": "regression",
+      "gamma": "2/3",
+      "lam": "1/4",
+      "j": 1,
+      "energy": 4,
+      "value": "0"
+    },
+    {
+      "kind": "regression",
+      "gamma": "2/3",
+      "lam": "1/4",
+      "j": 1,
+      "energy": 5,
+      "value": "0"
+    },
+    {
+      "kind": "regression",
+      "gamma": "2/3",
+      "lam": "1/4",
+      "j": 2,
+      "energy": 0,
+      "value": "0"
+    },
+    {
+      "kind": "regression",
+      "gamma": "2/3",
+      "lam": "1/4",
+      "j": 2,
+      "energy": 1,
+      "value": "0"
+    },
+    {
+      "kind": "regression",
+      "gamma": "2/3",
+      "lam": "1/4",
+      "j": 2,
+      "energy": 2,
+      "value": "0"
+    },
+    {
+      "kind": "regression",
+      "gamma": "2/3",
+      "lam": "1/4",
+      "j": 2,
+      "energy": 3,
+      "value": "0"
+    },
+    {
+      "kind": "regression",
+      "gamma": "2/3",
+      "lam": "1/4",
+      "j": 2,
+      "energy": 4,
+      "value": "0"
+    },
+    {
+      "kind": "regression",
+      "gamma": "2/3",
+      "lam": "1/4",
+      "j": 3,
+      "energy": 0,
+      "value": "0"
+    },
+    {
+      "kind": "regression",
+      "gamma": "2/3",
+      "lam": "1/4",
+      "j": 3,
+      "energy": 1,
+      "value": "0"
+    },
+    {
+      "kind": "regression",
+      "gamma": "2/3",
+      "lam": "1/4",
+      "j": 3,
+      "energy": 2,
+      "value": "0"
+    },
+    {
+      "kind": "regression",
+      "gamma": "2/3",
+      "lam": "1/4",
+      "j": 3,
+      "energy": 3,
+      "value": "0"
+    },
+    {
+      "kind": "regression",
+      "gamma": "2/3",
+      "lam": "1/4",
+      "j": 4,
+      "energy": 0,
+      "value": "0"
+    },
+    {
+      "kind": "regression",
+      "gamma": "2/3",
+      "lam": "1/4",
+      "j": 4,
+      "energy": 1,
+      "value": "0"
+    },
+    {
+      "kind": "regression",
+      "gamma": "2/3",
+      "lam": "1/4",
+      "j": 4,
+      "energy": 2,
+      "value": "0"
+    },
+    {
+      "kind": "regression",
+      "gamma": "2/3",
+      "lam": "1/4",
+      "j": 5,
+      "energy": 0,
+      "value": "0"
+    },
+    {
+      "kind": "regression",
+      "gamma": "2/3",
+      "lam": "1/4",
+      "j": 5,
+      "energy": 1,
+      "value": "0"
+    }
+  ],
+  "selected": [
+    {
+      "gamma": "1/2",
+      "lam": "1/3",
+      "j": 1,
+      "k": 1,
+      "a": 0,
+      "b": 0,
+      "trace": "1/432",
+      "selected": "209/82944",
+      "chi": "1/256"
+    },
+    {
+      "gamma": "1/2",
+      "lam": "1/3",
+      "j": 1,
+      "k": 2,
+      "a": 1,
+      "b": 0,
+      "trace": "17/110592",
+      "selected": "57715/339738624",
+      "chi": "7633/28311552"
+    },
+    {
+      "gamma": "1/2",
+      "lam": "1/3",
+      "j": 2,
+      "k": 2,
+      "a": 0,
+      "b": 0,
+      "trace": "55/1410048",
+      "selected": "984641/23102226432",
+      "chi": "1151683/17326669824"
+    },
+    {
+      "gamma": "1/2",
+      "lam": "1/3",
+      "j": 1,
+      "k": 3,
+      "a": 0,
+      "b": 0,
+      "trace": "85/589824",
+      "selected": "288881/1811939328",
+      "chi": "38267/150994944"
+    },
+    {
+      "gamma": "1/2",
+      "lam": "1/3",
+      "j": 2,
+      "k": 3,
+      "a": 1,
+      "b": 0,
+      "trace": "93715/7700742144",
+      "selected": "17860213/1314259992576",
+      "chi": "64777757/2957084983296"
+    },
+    {
+      "gamma": "1/2",
+      "lam": "1/3",
+      "j": 3,
+      "k": 3,
+      "a": 0,
+      "b": 0,
+      "trace": "5025873869/538189466959872",
+      "selected": "92599736397323/8817696226670542848",
+      "chi": "113111374252577/6613272170002907136"
+    },
+    {
+      "gamma": "1/2",
+      "lam": "1/3",
+      "j": 1,
+      "k": 4,
+      "a": 1,
+      "b": 0,
+      "trace": "24565/2415919104",
+      "selected": "1354647329/118747255799808",
+      "chi": "183233803/9895604649984"
+    },
+    {
+      "gamma": "1/2",
+      "lam": "1/3",
+      "j": 1,
+      "k": 5,
+      "a": 0,
+      "b": 0,
+      "trace": "1856825/206158430208",
+      "selected": "2105762375/211106232532992",
+      "chi": "2514509525/158329674399744"
+    },
+    {
+      "kind": "D_only_density_countercheck",
+      "gamma": "1/2",
+      "lam": "1/3",
+      "actual": "209/82944",
+      "D_only": "1/432",
+      "difference": "17/82944"
+    },
+    {
+      "gamma": "2/3",
+      "lam": "1/4",
+      "j": 1,
+      "k": 1,
+      "a": 0,
+      "b": 0,
+      "trace": "64/6561",
+      "selected": "52864/4782969",
+      "chi": "8032/531441"
+    },
+    {
+      "gamma": "2/3",
+      "lam": "1/4",
+      "j": 1,
+      "k": 2,
+      "a": 1,
+      "b": 0,
+      "trace": "99328/43046721",
+      "selected": "7262267392/2541865828329",
+      "chi": "1163875840/282429536481"
+    },
+    {
+      "gamma": "2/3",
+      "lam": "1/4",
+      "j": 2,
+      "k": 2,
+      "a": 0,
+      "b": 0,
+      "trace": "7405568/4175531937",
+      "selected": "42672920870912/19971439813180953",
+      "chi": "6732607754240/2219048868131217"
+    },
+    {
+      "gamma": "2/3",
+      "lam": "1/4",
+      "j": 1,
+      "k": 3,
+      "a": 0,
+      "b": 0,
+      "trace": "6456320/3486784401",
+      "selected": "483540822016/205891132094649",
+      "chi": "78525289984/22876792454961"
+    },
+    {
+      "gamma": "2/3",
+      "lam": "1/4",
+      "j": 2,
+      "k": 3,
+      "a": 1,
+      "b": 0,
+      "trace": "1933262209024/2219048868131217",
+      "selected": "12019846706655035392/10613641945756698843273",
+      "chi": "1977546875037835264/1179293549528522093697"
+    },
+    {
+      "gamma": "2/3",
+      "lam": "1/4",
+      "j": 3,
+      "k": 3,
+      "a": 0,
+      "b": 0,
+      "trace": "21584103923396034560/39372874762653908420427",
+      "selected": "423718632145894489468076032/564957718291968005111223923289",
+      "chi": "71517624717013086359216128/62773079810218667234580435921"
+    },
+    {
+      "gamma": "2/3",
+      "lam": "1/4",
+      "j": 1,
+      "k": 4,
+      "a": 1,
+      "b": 0,
+      "trace": "971960238080/1853020188851841",
+      "selected": "6301830984512733184/8862938119652501095929",
+      "chi": "1058918225242710016/984770902183611232881"
+    },
+    {
+      "gamma": "2/3",
+      "lam": "1/4",
+      "j": 1,
+      "k": 5,
+      "a": 0,
+      "b": 0,
+      "trace": "4440004549427200/12157665459056928801",
+      "selected": "340350492606717132800/717897987691852588770249",
+      "chi": "55956753302887424000/79766443076872509863361"
+    },
+    {
+      "kind": "D_only_density_countercheck",
+      "gamma": "2/3",
+      "lam": "1/4",
+      "actual": "52864/4782969",
+      "D_only": "64/6561",
+      "difference": "6208/4782969"
+    }
+  ],
+  "counts": {
+    "finite_rows": 15,
+    "nonzero_filter_rows": 6,
+    "exact_comparisons": 56,
+    "selected_rows": 18
+  },
+  "parameters": {
+    "C": 1,
+    "formal_parameters": "q=gamma^4; gamma and lambda are independent rational variables, not points on the physical curve"
+  },
+  "scope": "Finite full-coordinate Hermite filter/Casimir consistency and exact local-source interface checks. No finite-N pinching simulation or numerical proof of the all-degree limit.",
+  "environment": {
+    "python": "3.14.5",
+    "numpy": "2.4.6",
+    "rational": "fractions.Fraction"
+  },
+  "input_sha256": {
+    "code/check_sector_neutral_transfer.py": "5fe1a7fb3411b395df10da8784b2f18c420b25cbf063d10ab8a9488a0e3be3a7",
+    "code/complex_syk_dictionary.py": "96b4890a167beeadf0849ccffdbb20dd125d921af062fd291044da9024900abf",
+    "code/singlet_coefficient.py": "ef7d9b96f96a036ea0d9774950702a82a968b56758a778db0365e9df0c3b2e10",
+    "code/singlet_multimark.py": "5b1def3fcc893c807e416c909076c6bb8383f54975bd9ed09d5dde37f129db0d",
+    "code/memory_size_marked_chords.py": "4b7e54c2218198ef0d8c29ed4aa6344cd3e5a24d466464c5006f49e0b6d7ec36",
+    "code/memory_wick_descendant_chords.py": "e6f8199a41dda6b3a81c91f49afa20441a6270ca86de227658d5e72d9557d660",
+    "code/slater_joint_site_polynomial.py": "68d364e710f0d37cfca24720554fb342fac35d435e59fba3e3ba6b0a2048b489",
+    "code/memory_body_source_chords.py": "e0c34558f1e18684bf3a32c906f5edc13e8ab02dfe113b34eaa6936f78015b72",
+    "code/bilocal_multisource_chords.py": "fd1af9072cd1c7550f6a6ec24aa892ad67bb3f032821476c8baae9f063ef668f",
+    "code/slater_composite_sources.py": "ded5176752fbbc3ffdb626eca2430678bb56fecff979af5fa1cd4310cb704ba7",
+    "code/slater_higher_wick_sources.py": "445056b264c4440d812960596cfef8a0b70ae52ab70a8569801be7efccc716d9",
+    "code/sector_neutral_transfer.py": "fcfdb2569f6957437cecc1ca0a7fbf49fd5a4b45407d639fef2e0e32c3c15693"
+  },
+  "elapsed_seconds": 12.80481743812561
+}
