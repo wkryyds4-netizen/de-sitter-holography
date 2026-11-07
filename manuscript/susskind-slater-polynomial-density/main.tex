@@ -1,0 +1,468 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,microtype,booktabs}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\HH}{\mathcal H}
+\newcommand{\WW}{\mathcal W}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\title{Polynomial Slater preparations and uniform orbit densities\\
+\large Exact neutral-slope pinching on the selected polynomial core}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{8 November 2026\quad Local research draft}
+\begin{document}\maketitle
+\begin{abstract}
+We extend the finite-$N$ linear preparation estimate to fixed Gaussian
+degree in the half-filled double-scaled regime. Partial traces of the
+coefficient seed have weights within a controlled distance of a Slater
+weight. A Weyl-orbit count bounds the dimensions of every supporting
+irreducible representation. It controls all oriented tensor flattenings
+of the orbit synthesis map. Iterated fixed-Schatten Gaussian inequalities
+and a conditional Wick identity then give dimension-uniform density
+moments. This transfers exact energy-pinching errors to every fixed
+selected polynomial preparation. Two quadratic preparations give explicit
+normalized slope correlators. Multiple interlaced nonpolynomial pinched
+factors are not inferred from convergence on this core.
+\end{abstract}
+
+\section{Setting and quantitative statement}
+Use standard CAR and the same overlapping Hermitian complex Gaussian
+$p$-body couplings as in the preceding Slater drafts. Set
+$m=N/2$, $d_m=\binom Nm$, $\HH_m=\bigwedge^m\mathbb C^N$ and fix a
+Slater determinant $O$. Real independent standard Gaussian coordinates
+$g_a$ carry the orthogonal noise representation $R(U)$ of $U(N)$.
+Let $P_O(g)$ have degree at most $K\ge1$ and obey
+\begin{equation}\label{stab}
+ P_O(k\cdot g)=k_mP_O(g)k_m^\dagger,
+ \qquad k\in U(m)\times U(N-m).
+\end{equation}
+Write $P_OO=\sum_{k=0}^K P_{k,O}O$ for its orthogonal Wick-chaos
+decomposition and $a_k=\E\norm{P_{k,O}O}^2$, $a=\sum_k a_k$.
+All these quantities may depend on $N$.
+
+\begin{theorem}\label{main}
+Assume $p^2/N\le\Lambda$ and $p\le N/(12K)$, and put
+\begin{equation}\label{constants}
+ C_K=e^{36K^2\Lambda+1},\qquad B_{0,r}=1,\qquad
+ B_{k,r}=\frac{[k(2r-1)]^k}{k!}C_K^{1-1/r}\quad(k\ge1).
+\end{equation}
+There is a positive covariant orbit density $R_P$ such that for covariant
+$Y$ in joint Schatten $L^2$,
+\begin{align}
+ \E\langle O|P_O^\dagger YP_O|O\rangle&=\E\tr_m(R_PY),\label{identity}\\
+ \norm{R_P}_{L^r(\tr_m)}&\le
+ \left(\sum_{k=0}^K\sqrt{B_{k,r}a_k}\right)^2
+ \le (K+1)\max_{k\le K}B_{k,r}\,a .\label{bound}
+\end{align}
+Here $r\ge1$ is an integer and $\tr_m=\Tr/d_m$.
+\end{theorem}
+The constants are not optimized. For fixed $K$ and $p^2/N\to\lambda>0$,
+the hypotheses hold eventually. This is a fixed-degree statement,
+not a bound uniform in degree or a general matrix-polynomial
+hypercontractivity assertion.
+
+\newpage
+\section{Orbit synthesis and the coefficient seed}
+Normalized Haar measure is understood. Define
+\begin{equation}\label{synthesis}
+ q_U(g)=U_m^\dagger P_O(U\cdot g)O,\qquad
+ Z(g)f=\sqrt{d_m}\int q_U(g)f(U)\,\dd U,\qquad R_P=ZZ^\dagger.
+\end{equation}
+Only a finite-dimensional space of matrix coefficients is needed in the
+Haar domain. Gaussian invariance and $Y(U\cdot g)=U_mY(g)U_m^\dagger$
+give \eqref{identity}. They also give $\E\tr_m R_P=a$.
+Chaos projection commutes with orthogonal noise rotations, so
+\eqref{stab} holds separately in each chaos.
+
+For degree $k$, use a symmetric coefficient tensor in ordered indices:
+\begin{equation}\label{seed}
+ P_{k,O}(g)O=\sum_{i_1,\ldots,i_k} A_{i_1\cdots i_k}
+ :g_{i_1}\cdots g_{i_k}:,\qquad
+ \Psi=\sum_{\boldsymbol i}e_{i_1}\otimes\cdots\otimes e_{i_k}
+                     \otimes A_{\boldsymbol i}.
+\end{equation}
+Wick isometry in this ordered symmetric convention reads
+\begin{equation}\label{isometry}
+ a_k=k!\norm{\Psi}^2.
+\end{equation}
+Let $\rho=R^{\otimes k}\otimes\bigwedge^m$. The coefficient tensor
+of $q_U$ is $\Psi_U=\rho(U^{-1})\Psi$. For a diagonal unitary $D$,
+stabilizer covariance and $D_mO=\chi_O(D)O$ imply
+\begin{equation}\label{weight}
+ \rho(D)\Psi=\chi_O(D)\Psi,\qquad
+ w=(\underbrace{1,\ldots,1}_{m},0,\ldots,0).
+\end{equation}
+This is a statement about the full tensor, before taking any partial
+trace.
+
+Complexify the real Hermitian noise space and choose an orthonormal
+weight basis. It is unitarily equivalent to the conjugate adjoint
+representation on $\operatorname{End}(\bigwedge^p\mathbb C^N)$.
+Its weights are differences of two $p$-subset indicators. Every noise
+weight $\nu$ has integral entries, sum zero and $\norm{\nu}_1\le2p$.
+This change of coefficient basis does not change any flattening's
+singular values; we still use real independent Gaussians for the
+probabilistic estimates.
+
+Trace out a set $J$ of $\ell$ noise legs. In a product weight basis,
+\begin{equation}\label{partial}
+ T_I=\Tr_{\WW^{\otimes J}}|\Psi\rangle\langle\Psi|
+     =\sum_\beta|\psi_\beta\rangle\langle\psi_\beta|,
+ \quad I=[k]\setminus J.
+\end{equation}
+Each nonzero $\psi_\beta$ has a weight $z=w-\nu_\beta$ with
+\begin{equation}\label{near}
+ \sum_i z_i=m,\qquad\norm{z-w}_1\le2\ell p.
+\end{equation}
+Thus partial tracing loses the exact Slater weight but retains a
+quantitative neighborhood of it. This is the additional input needed
+beyond the preceding linear argument.
+
+\newpage
+\section{A near-Slater Weyl-orbit bound}
+\begin{lemma}\label{weyl}
+Under the hypotheses of Theorem \ref{main}, every integral weight
+satisfying \eqref{near}, with $0\le\ell\le K$, has at least
+$d_m/C_K$ distinct coordinate permutations. Every irreducible
+$U(N)$ representation containing such a weight therefore has
+dimension at least $d_m/C_K$.
+\end{lemma}
+\begin{proof}
+For $\ell=0$ the orbit has exactly $d_m$ elements. Otherwise let $b$
+be the number of entries of $z$ outside $\{0,1\}$ and let $S$ be
+their sum. Since $z-w$ is integral of total sum zero, its total
+positive and negative masses are both at most $\ell p$. Consequently
+\begin{equation}
+ b\le2\ell p,\quad -\ell p\le S\le b+\ell p,\quad
+ |S|,|S-b|\le3\ell p=:D.
+\end{equation}
+The counts of ones and zeros are $n_1=m-S$, $n_0=m-b+S$.
+Put $\delta_1=-S$, $\delta_0=S-b$; then
+$|\delta_i|\le D\le m/2$ and $\delta_0+\delta_1=-b$.
+
+For an integer $|\delta|\le m/2$,
+\begin{equation}\label{factorial}
+ \log\frac{(m+\delta)!}{m!}
+ \le\delta\log m+\frac{\delta^2+|\delta|}{m}.
+\end{equation}
+For positive $\delta$, expand the logarithm as
+$\delta\log m+\sum_{j=1}^{\delta}\log(1+j/m)$ and use
+$\log(1+x)\le x$. For $\delta=-t$, expand it as
+$-t\log m-\sum_{j=0}^{t-1}\log(1-j/m)$ and use
+$-\log(1-x)\le2x$ for $0\le x\le1/2$. Both give
+\eqref{factorial}, including the endpoints.
+
+If $n_t$ counts the entries equal to $t\notin\{0,1\}$, the orbit
+cardinality $L(z)$ satisfies
+\begin{align}
+ \frac{L(z)}{d_m}
+ &=\frac{m!^2}{n_0!n_1!\prod_{t\ne0,1}n_t!}\\
+ &\ge\frac{m^b}{b!}
+       \exp\left[-\frac{2D^2+2D}{m}\right]
+ \ge\exp[-36\ell^2\Lambda-1]\ge C_K^{-1}.\label{orbitbound}
+\end{align}
+We used $\prod n_t!\le b!$, $b\le m$, and
+$2D/m=12\ell p/N\le1$.
+Permutation matrices implement the Weyl group. Their distinct weights
+have orthogonal weight spaces in a unitary representation, so its
+dimension bounds their number from below.
+\end{proof}
+
+No multiplicity-free assumption is involved. The estimate permits
+entries such as $2$ and $-1$ as well as imbalanced numbers of zeroes
+and ones. It is deliberately coarse; the bounded $p^2/N$ and fixed
+$K$ assumptions, rather than closeness in operator norm, keep its
+loss independent of $N$.
+
+\newpage
+\section{All oriented flattenings and decoupled moments}
+Let $F_I$ flatten the synthesis coefficient tensor with physical
+output and noise legs $I$ on its row side, and the Haar input and
+remaining noise legs $J$ on its column side. Summing over the column
+noise indices cancels their unitary rotations. Thus
+\begin{equation}\label{frame}
+ F_IF_I^\dagger=d_m\int\rho_I(U^{-1})T_I
+                    \rho_I(U^{-1})^\dagger\,\dd U,
+ \qquad \norm{F_I}_{\mathrm{HS}}^2=d_m\norm{\Psi}^2.
+\end{equation}
+Decompose the row representation as $\bigoplus_\alpha V_\alpha
+\otimes\mathcal M_\alpha$. Every supporting irreducible component
+of $T_I$ contains one of the weights in \eqref{near}: project each
+$\psi_\beta$ in \eqref{partial} onto the isotypic components, using
+that these projections commute with the torus. Schur averaging gives
+\begin{equation}\label{schur}
+ F_IF_I^\dagger=\bigoplus_\alpha\frac{d_m}{\dim V_\alpha}
+ I_{V_\alpha}\otimes\Tr_{V_\alpha}(T_{I,\alpha\alpha})
+ \le C_K\norm{\Psi}^2 I.
+\end{equation}
+Here each multiplicity matrix is positive with norm no larger than
+its trace, and $\Tr T_I=\norm{\Psi}^2$. Hence, for all orientations,
+\begin{equation}\label{flattenmom}
+ \norm{F_I}_{S_{2r}}^{2r}
+ \le d_m C_K^{r-1}\norm{\Psi}^{2r}.
+\end{equation}
+
+For clarity we derive the exact probabilistic form required here.
+For $X=\sum_i g_i A_i$, Hermitian dilation and the fixed-Schatten
+Gaussian inequality give
+\begin{equation}\label{rect}
+ \E\norm{X}_{S_{2r}}^{2r}\le\frac{(2r-1)^r}{2}
+ \left[\Tr\left(\sum_i A_iA_i^\dagger\right)^r
+       +\Tr\left(\sum_i A_i^\dagger A_i\right)^r\right].
+\end{equation}
+Indeed, Gaussian integration by parts bounds $\E\Tr S^{2r}$ by
+$(2r-1)\E\Tr(V|S|^{2r-2})$. Trace H\"older followed by scalar
+H\"older gives $(\E\Tr S^{2r})^{1/r}\le
+(2r-1)(\Tr V^r)^{1/r}$; dilation contributes the factor $1/2$.
+This is the standard matrix-Gaussian argument \cite{tropp}.
+
+Let $Z_{\rm dec}$ use independent Gaussian families for its $k$ slots.
+Condition on $k-1$ families and apply \eqref{rect}. The two terms
+are the $2r$-moments of a row concatenation and a column stacking.
+Repeat in each branch. Each noise slot is assigned once to a row or
+column, producing precisely all $2^k$ oriented flattenings:
+\begin{align}
+ \E\norm{Z_{\rm dec}}_{S_{2r}}^{2r}
+ &\le(2r-1)^{kr}2^{-k}\sum_{I\subset[k]}
+                      \norm{F_I}_{S_{2r}}^{2r}\label{iteration}\\
+ &\le d_m(2r-1)^{kr}C_K^{r-1}(a_k/k!)^r .\nonumber
+\end{align}
+The flattening iteration is established methodology \cite{chaos};
+we retain fixed Schatten moments, not a logarithmic-dimensional
+operator-norm specialization.
+
+\newpage
+\section{Coupled Wick chaos and sums of degrees}
+Let $g^{(1)},\ldots,g^{(k)}$ be independent standard Gaussian vectors
+and let $g=k^{-1/2}\sum_jg^{(j)}$. Conditional means are $g/\sqrt k$;
+conditional cross-covariances between distinct slots are $-I/k$.
+The conditional exponential generating function is
+\begin{equation}\label{generating}
+ \E\left[\exp\left(\sum_j t_j\cdot g^{(j)}\right)\middle|g\right]
+ =\exp\left[\frac{g\cdot\sum_jt_j}{\sqrt k}
+       +\frac12\sum_j|t_j|^2-\frac1{2k}\left|\sum_jt_j\right|^2\right].
+\end{equation}
+Differentiate once in each slot. Terms involving two derivatives of
+the same $t_j$ cannot contribute. Comparing with the Wick generating
+function yields, including repeated coordinate indices,
+\begin{equation}\label{conditional}
+ \E\left[\prod_{j=1}^k g^{(j)}_{i_j}\middle|g\right]
+ =k^{-k/2}:g_{i_1}\cdots g_{i_k}:.
+\end{equation}
+Consequently $Z_k(g)=k^{k/2}\E[Z_{\rm dec}\mid g]$ exactly. Convexity
+of the $2r$-th power of a Schatten norm gives
+\begin{equation}
+ \E\norm{Z_k}_{S_{2r}}^{2r}
+ \le k^{kr}\E\norm{Z_{\rm dec}}_{S_{2r}}^{2r}.
+\end{equation}
+With \eqref{isometry} and \eqref{iteration}, this proves
+\begin{equation}\label{purebound}
+ \left(d_m^{-1}\E\Tr (Z_kZ_k^\dagger)^r\right)^{1/r}
+ \le B_{k,r}a_k.
+\end{equation}
+This proof handles Wick polynomials with repeated indices directly;
+no square-free-chaos restriction is imported from an operator-norm
+decoupling theorem.
+
+The zero-chaos vector has weight $w$ in $\bigwedge^m\mathbb C^N$,
+whose weight space is one-dimensional, so $P_{0,O}O=cO$. Its orbit
+density is $|c|^2I$ and $B_{0,r}=1$ is exact. Since $Z=\sum_kZ_k$,
+Minkowski in the Gaussian--Schatten space, normalized by $d_m$, gives
+\begin{equation}
+ \norm{R_P}_{L^r}^{1/2}
+ =d_m^{-1/(2r)}\norm{Z}_{L^{2r}(S_{2r})}
+ \le\sum_{k=0}^K\norm{R_{P_k}}_{L^r}^{1/2}.
+\end{equation}
+Cauchy--Schwarz and Gaussian-chaos orthogonality finish
+\eqref{bound}. This argument retains interference between degrees;
+it does not assert $R_P=\sum_k R_{P_k}$ samplewise.
+
+For $k=1$, the preceding linear-stage estimate
+$\E\tr_m R_{P_1}^r\le(2r-1)!!a_1^r$ is stronger and holds without
+half filling or double scaling. The present constants are only used
+to secure finite, $N$-independent bounds at every fixed degree.
+
+\newpage
+\section{Exact pinching on the polynomial core}
+For a covariant $X_N$, \eqref{identity} and H\"older imply
+\begin{equation}\label{transfer}
+ \E\norm{X_NP_NO}^2
+ \le\norm{R_{P,N}}_{L^2(\tr_m)}\norm{X_N}_{L^4(\tr_m)}^2.
+\end{equation}
+Take $P_N$ to be the evaluation of a fixed polynomial in the previously
+constructed $h_N,u_N,M_N,M_N^\dagger$. Its Gaussian
+degree is fixed, it obeys stabilizer covariance, and its total
+$a_N$ stays bounded by the established same-$J$ fixed-word limits.
+Thus any covariant error going to zero in tracial $L^4$ goes to zero
+as a vector in every such preparation.
+
+In particular, use the actual normalized unpinched slope from the
+neutral-slope stage,
+\begin{equation}
+ t_N=\frac{m\epsilon\alpha(\Phi_m(H_N)-\bar\kappa_mH_N)}
+ {8\lambda_N C_m^{3/2}q_N\sqrt{\lambda_N}},\qquad
+ b_N=(1-\mathcal P_{H_N})t_N,
+\end{equation}
+where $h_N=H_N/\sqrt{C_m}$, $\lambda_N=p^2/N$,
+$q_N=e^{-4\lambda_N}$, $\alpha=1-p/m$, $\epsilon=1-\alpha^2$.
+The symbols $\Phi_m,\bar\kappa_m$ retain their exact covariance-channel
+and regression definitions from that stage; $\mathcal P_{H_N}$ keeps
+entire degenerate energy blocks. Its tracial results give
+\begin{equation}
+ \norm{\mathcal P_{H_N}t_N}_{L^r(\tr_m)}\longrightarrow0,
+ \qquad \norm{t_N-u_N}_{L^r(\tr_m)}\longrightarrow0
+ \quad\hbox{for every fixed finite }r.
+\end{equation}
+The second statement also follows by interpolating the rank/size $L^2$
+bridge with the uniform higher moments. Equation \eqref{transfer}
+therefore yields
+\begin{equation}\label{core}
+ \E\norm{(b_N-u_N)P_NO}^2\longrightarrow0.
+\end{equation}
+These are dimensionless string-energy observables with $\hbar=1$,
+fixed $\lambda>0$ and annealed half-filled Slater expectations. No
+thermal or gravitational interpretation is added by this estimate.
+
+More generally, let $W_N$ be a fixed covariant block of $h_N,u_N,b_N$
+and fixed-time $h_N$ phases. Tracial H\"older and telescoping show
+$W_N(b_N)-W_N(u_N)\to0$ in $L^2$; fixed higher norms bound all other
+factors. Apply \eqref{identity} and polarize $P_N,Q_N$ to obtain
+\begin{equation}\label{block}
+ \varphi_N\bigl(P_N^\dagger W_N(b_N)Q_N\bigr)
+ \longrightarrow\varphi\bigl(P^\dagger W(h,u)Q\bigr).
+\end{equation}
+The unpinched limit on the right is the established Slater transfer
+representation, not the tracial vacuum unless its preparation says so.
+An arbitrary number of selected factors is allowed in the fixed
+polynomials $P,Q$; the exact-pinched factors remain inside a covariant
+block. This does not yet justify raw words with several such blocks
+separated by selected operators: their intervening preparations are
+no longer Gaussian polynomials. Nor does core convergence alone
+establish those high moments.
+
+\newpage
+\section{Quadratic preparations and explicit slope responses}
+In the subset labels below, $O$ and $E$ denote the occupied and
+unoccupied one-particle index sets. Then
+\begin{equation}
+ M_N^\dagger=L_N^{-1/2}
+ \sum_{A\subset E,\,B\subset O}J_{AB}C_A^\dagger C_B,
+ \quad L_N=\binom mp\binom{N-m}p,
+\end{equation}
+with $|A|=|B|=p$ and GUE covariance
+$\E J_{AB}J_{CD}=\delta_{AD}\delta_{BC}$. The normalization of $h_N$
+removes the common physical coupling scale.
+For $P_N=M_N^\dagger h_N$, a possible internal contraction pairs
+the left selected label $(A,B)$ with the right label $(B,A)$.
+The latter annihilates particles in $A\subset E$ and hence kills
+$O$. For $P_N=(M_N^\dagger)^2$, a selected label's reverse is never
+selected. Both preparation vectors consequently have zero chaos-zero
+part and are pure second Wick chaos. This argument is finite $N$.
+
+The established transfer rule, with
+$\gamma=q^{1/4}$, $q=e^{-4\lambda}$ and $s=\sqrt q$, gives
+\begin{align}
+ a_{M^\dagger h}&=\varphi(hMM^\dagger h)=q(1+s),\\
+ a_{(M^\dagger)^2}&=\varphi(M^2(M^\dagger)^2)=2q.\label{norms}
+\end{align}
+Both are positive at fixed $\lambda>0$. At small finite $N$, the
+second vector can vanish when $2p>m$; no normalization is taken there.
+Let the normalized preparation expectation divide by its finite-$N$
+$a_N$. Applying \eqref{block} to $b_N^2$ and evaluating the existing
+same-$J$ word rule yields
+\begin{align}
+ \lim_N\frac{\varphi_N(h_NM_Nb_N^2M_N^\dagger h_N)}
+                  {\varphi_N(h_NM_NM_N^\dagger h_N)}
+ &=1+\frac{\lambda s q(1+q)}{1+s},\label{quad1}\\
+ \lim_N\frac{\varphi_N(M_N^2b_N^2(M_N^\dagger)^2)}
+                  {\varphi_N(M_N^2(M_N^\dagger)^2)}
+ &=1+2\lambda s q(1+q).\label{quad2}
+\end{align}
+For example, before normalization the first numerator is
+$q[1+s+\lambda\gamma^6(1+q)]$, and the second is
+$2q[1+2\lambda\gamma^6(1+q)]$. The code checks these word
+polynomials in algebraically independent $\gamma$ and
+$\sqrt\lambda$ before imposing the physical curve.
+
+The exact finite fixtures retain the same disorder and CAR signs:
+\begin{center}
+\begin{tabular}{ccrr}
+\toprule
+$N$ & $p$ & $\E\norm{M_N^\dagger h_NO}^2$
+          & $\E\norm{(M_N^\dagger)^2O}^2$\\\midrule
+4&1&$2/3$&$1/2$\\
+6&1&$11/12$&$8/9$\\
+4&2&$1/6$&$0$\\
+6&2&$1/6$&$0$\\
+8&2&$2/9$&$1/18$\\\bottomrule
+\end{tabular}
+\end{center}
+Here $m=N/2$. These are finite algebra checks, not fits to the
+double-scaled asymptotic values in \eqref{norms}.
+
+\newpage
+\section{Evidence, attribution and continuation}
+The exact driver checks the original finite CAR preparations,
+symmetrizes their ordered Gaussian coefficient tensors and compares
+the Wick factor $2!$ with a separate pairing of raw coefficients.
+The saved output includes:
+\begin{itemize}
+\item 1,610 full seed-weight identities and 6,440 partial-weight checks
+over five finite half-filled CAR systems and the two preparations;
+\item 20,199 rational factorial estimates and 342 near-weight cases,
+including asymmetric entries outside $\{0,1\}$;
+\item 126 conditional Wick identities through degree six, with
+repeated indices;
+\item eight exact moment comparisons for rectangular tensors of
+degrees one through three, checking all flattening orientations and
+the coupled-chaos Jensen bound;
+\item symbolic transfer expressions for the two preparation norms
+and their two unnormalized $u^2$ responses.
+\end{itemize}
+These diagnostics do not replace the representation-theoretic and
+probabilistic proofs above. They use no Haar Monte Carlo or floating
+point extrapolation. The scientific JSON records parameters, software
+versions and input SHA256 hashes. A separate read-only manifest binds
+this draft, its PDF, source notes, build logs and parent evidence.
+The successful driver is not rerun or overwritten during PDF production.
+
+The use of tensor flattenings, Gaussian matrix inequalities and
+decoupling is established methodology. Our project-specific step is
+the control of every synthesis flattening by the near-Slater weight
+estimate in the half-filled double-scaled regime. Equation
+\eqref{conditional} is derived here to fix the repeated-index and
+normalization conventions, rather than proposed as a new general
+decoupling principle. Existing $q$-word rules supply the algebra in
+\eqref{quad1}--\eqref{quad2}; the new input is the finite-$N$
+transfer of exact pinching into these preparation states.
+
+The next microscopic interface is the quadratic covariant generator
+$J_2$ with selected $M$ in the same disorder, followed by the full
+bilocal in this representation. The previously completed full-trace
+bilocal four-point construction is retained. Interlaced pinched
+moments, physical bulk spatial and mass generators and finite-$G$
+dynamics remain open; no full de Sitter dictionary is claimed here.
+
+\begin{thebibliography}{9}
+\bibitem{chaos} A. S. Bandeira, K. Lucca, P. Nizi\'c-Nikolac and
+R. van Handel, \emph{Matrix Chaos Inequalities and Chaos of
+Combinatorial Type}, author manuscript dated 24 December 2024,
+\S\S2.2--2.4 and Appendix A.2.
+\url{https://web.math.princeton.edu/~rvan/chaosconf241224.pdf}.
+\bibitem{tropp} J. A. Tropp,
+\emph{Second-Order Matrix Concentration Inequalities},
+\S\S6--7, especially the proof of Proposition 7.1.
+\url{https://tropp.caltech.edu/papers/Tro16-Second-Order-Matrix-preprint.pdf}.
+\bibitem{parent} A. Day and Chengheng,
+\emph{Uniform Slater-orbit densities for linear selected preparations},
+local project draft, 8 November 2026; and the preceding
+\emph{Slater neutral-slope} and \emph{Slater covariant} stages.
+Manuscripts, scientific outputs and provenance in this repository.
+\end{thebibliography}
+\end{document}

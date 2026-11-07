@@ -1,0 +1,93 @@
+{
+  "status": "Local research milestone; full de Sitter goal remains active",
+  "created_at_utc": "2026-11-07T17:42:16.423290+00:00",
+  "scientific_scope": "Uniform orbit-density moments for fixed Gaussian-degree stabilizer-covariant preparations in half-filled double scaling. Exact neutral-slope pinching on the selected polynomial core and within a covariant block between polynomial preparations. Two normalized quadratic response limits. Not all interlaced nonpolynomial pinched moments or the full bulk dictionary.",
+  "scientific_output_hashes": {
+    "results/susskind-slater-polynomial-density/exact-checks.json": "644911ef2ffb91c3b6b5d4419fe757653d0ba6f1decc09053888983c6b2e4951"
+  },
+  "input_hashes_verified": {
+    "code/check_slater_polynomial_density.py": "02751f750195a75113a063961546986fbd9e6457ee24523f415b1a314242edc9",
+    "code/slater_covariant_transfer.py": "849a4a3fd7de2e68c644b1925804fa1776944fc27614c6ba65d1c80a4af5de9f",
+    "code/slater_joint_site_polynomial.py": "68d364e710f0d37cfca24720554fb342fac35d435e59fba3e3ba6b0a2048b489",
+    "results/susskind-slater-orbit-density/local-evidence.json": "0864d7bca7abbc5bdfb86a23e8e21b08bb97c7e852dc3b3a28a752b6a5bea028"
+  },
+  "parameters": {
+    "CAR_fixtures": 5,
+    "max_conditional_degree": 6,
+    "half_filling": true
+  },
+  "parameter_hash": "aa271a8face9271f559f9672f8ac71b965a926e92710819b1c848a822e6bfec5",
+  "previous_evidence": {
+    "results/susskind-slater-orbit-density/local-evidence.json": {
+      "sha256": "0864d7bca7abbc5bdfb86a23e8e21b08bb97c7e852dc3b3a28a752b6a5bea028",
+      "verified_scientific_hashes": {
+        "code/record_slater_orbit_density.py": "4f6c290b92e6b300dda85fae72905fe995678cee027c4d78231d6380e72168f4",
+        "code/check_slater_orbit_density.py": "6aa47110f948feaf81870156aef82b88e70f7dc05f0ba654bfd069052ebd88c2",
+        "code/build_slater_orbit_density.ps1": "19d7d9cb6645601401963bc5a27b8f4ca7f53417de01e996b4a25aaf25d274b7",
+        "notes/susskind-slater-orbit-density.md": "cd582148372889b7203bd4a5d68fe0f1f10eaffa1200d1c43e510027dd6dcfe7",
+        "literature/susskind-slater-orbit-density-sources.md": "d47dbe821f2a0525a35a79ef70fd32218612edd8761816bff302a8d5df571913",
+        "manuscript/susskind-slater-orbit-density/main.tex": "db742ce6e14949afb39ce38969652985cbbda876d80750536d463c4653a864cd",
+        "output/pdf/de-sitter-susskind-slater-orbit-density.pdf": "fabc8d38846a3a8413d42a74a9374ee432c90fa8d00e21d82ec64f84c228cfe3",
+        "results/susskind-slater-orbit-density/main.log": "c59c515f1a3dfb3c1feb1413d7b3892c55578a8977088e6d39d1895456848bd7",
+        "results/susskind-slater-orbit-density/exact-checks.json": "95313475713ec714a8d525d8a0d32315afb92ed7ee41983bcd96719a4c4120ac",
+        "results/susskind-slater-orbit-density/diagnostics/initial-check-failure.txt": "57af1f7690848feeb256599c24dca252ddb7f184d2fe167e3a7605580d508cac",
+        "results/susskind-slater-orbit-density/diagnostics/initial-build-failure.txt": "5528df2446be2be3ce53107dd11d9e5f5b5743731558cf603f0ac4992ff52012"
+      }
+    }
+  },
+  "hashes": {
+    "code/record_slater_polynomial_density.py": "0986536abf180b81543d02649c5a09c8c3a1a9b0d19fabbb51c34289d9a6d001",
+    "code/check_slater_polynomial_density.py": "02751f750195a75113a063961546986fbd9e6457ee24523f415b1a314242edc9",
+    "code/build_slater_polynomial_density.ps1": "8d60557bfdc4f4cb016066eb2172fb695ccbbcb10270ed67e33894f6fe69e1a1",
+    "notes/susskind-slater-polynomial-density.md": "2fd0e5b1892ea9c00f55ab1ec0c5a316eac934e4e0024703699f0179e2e64d25",
+    "literature/susskind-slater-polynomial-density-sources.md": "1b7007de33f0a99fb295fdc8b8c396fe68a1e39f4fe4cb794a669cc56760a382",
+    "manuscript/susskind-slater-polynomial-density/main.tex": "7d6b5bc0c835f8fd810c16f3099e77f13b82fb61a823f42e2f11019763199fd0",
+    "output/pdf/de-sitter-susskind-slater-polynomial-density.pdf": "0f9a71c1d3a56df74aa8a652dce90afb0b3cac92d260692ce00582dccc1f78d2",
+    "results/susskind-slater-polynomial-density/main.log": "e90c61ea57c3b7377e986a3e3971d5c70f66c2b77dbf70985d3764661b508fde",
+    "results/susskind-slater-polynomial-density/exact-checks.json": "644911ef2ffb91c3b6b5d4419fe757653d0ba6f1decc09053888983c6b2e4951"
+  },
+  "render_hashes": {
+    "tmp/pdfs/susskind-slater-polynomial-density-render/page-1.png": "0da7cf0e44200e0ab17becf1d66b38b3ea239191c17205a4a8743272bda01bce",
+    "tmp/pdfs/susskind-slater-polynomial-density-render/page-2.png": "224d096188c7baa50d68a0943dfa7041fb51efbcbe4a1dcad4bc365c0ff714db",
+    "tmp/pdfs/susskind-slater-polynomial-density-render/page-3.png": "b92939fb318b9316b5bd6ab2294188135cdaa5f75653f413a667c4d2e9a9e18a",
+    "tmp/pdfs/susskind-slater-polynomial-density-render/page-4.png": "c14737c84b82817d65b88f615cd7a3b70554e8eb063f2cac7115675de117d9af",
+    "tmp/pdfs/susskind-slater-polynomial-density-render/page-5.png": "a94eea79523234f81e9f221b206d8e6ea9a26603f27611a7fbf04ea51abc5248",
+    "tmp/pdfs/susskind-slater-polynomial-density-render/page-6.png": "b97e271618520368067143fca580d3b0b81b08554e28b76a345fc67b3b89816a",
+    "tmp/pdfs/susskind-slater-polynomial-density-render/page-7.png": "a55518bce2244de6e6bfd540d87c4a79c2c3aa1369f4b692259b0110b5d886e0",
+    "tmp/pdfs/susskind-slater-polynomial-density-render/page-8.png": "05e9eff980877f53c6552826195b5f4dfcdad890048885430a0bf8f40828b0ac"
+  },
+  "build_pass_hashes": {
+    "tmp/pdfs/susskind-slater-polynomial-density-build/pass1.txt": "3be96b276aa9b738b7133722f2d8be43fd64be920e5929067118df181255a3fd",
+    "tmp/pdfs/susskind-slater-polynomial-density-build/pass2.txt": "3be96b276aa9b738b7133722f2d8be43fd64be920e5929067118df181255a3fd"
+  },
+  "checks": {
+    "seed_weights": 1610,
+    "partial_weights": 6440,
+    "factorial_rational": 20199,
+    "near_weights": 342,
+    "conditional_Wick": 126,
+    "rectangular_moments": 8
+  },
+  "build": {
+    "command": "./code/build_slater_polynomial_density.ps1",
+    "passes": 2,
+    "final_exit_code_observed": 0,
+    "pages": 8,
+    "review": "All eight pages viewed at 90 dpi; final pages 6 and 7 re-inspected after clarifying fixed polynomial coefficients and occupied index notation. Other six page hashes unchanged.",
+    "no_undefined_references_or_overfull": true,
+    "render": "pdftoppm -r 90 -png"
+  },
+  "environment": {
+    "recorder_python": "3.14.5",
+    "science": {
+      "python": "3.14.5",
+      "sympy": "1.14.0",
+      "arithmetic": "exact integers, Fraction, SymPy"
+    }
+  },
+  "diagnostics": "Scientific driver passed on first run and was not rerun. Both builds passed; final changes were notation only. pdftotext emitted a MiKTeX logger permission warning during ancillary text extraction; PDF rendering and visual review succeeded.",
+  "git_commit_created": false,
+  "git_push_performed": false,
+  "external_reply_sent": false,
+  "recorder_scope": "File/build integrity. Finite algebra checks do not independently certify general analytic proofs."
+}

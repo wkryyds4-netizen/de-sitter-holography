@@ -1,0 +1,22 @@
+# Slater preparations and selected curvature: consolidated snapshot
+
+This snapshot collects four completed stages after `a5be60579c5cd65bcbba879eb3de55cf4fd6ef1d`. The latest draft gives the density of one selected excitation on the full covariant h,u,x algebra and the corresponding actual, exactly energy-pinched curvature correlation at fixed time.
+
+| Stage | Reading copy and scope | Evidence |
+| --- | --- | --- |
+| Polynomial preparations | [Eight-page PDF](../output/pdf/de-sitter-susskind-slater-polynomial-density.pdf): uniform orbit-density moments for fixed Gaussian degree, and transfer of exact-pinching errors to polynomial preparations. | [Manifest](../results/susskind-slater-polynomial-density/local-evidence.json) |
+| Same-J composite field | [Eight-page PDF](../output/pdf/de-sitter-susskind-slater-composite.pdf): joint marked-source formula for the actual curvature and selected operators, central-sector bounds and the covariant normal representation. | [Manifest](../results/susskind-slater-composite/local-evidence.json) |
+| Open composite transfer | [Six-page PDF](../output/pdf/de-sitter-susskind-slater-composite-transfer.pdf): open-endpoint recursion with two link types, fixed-word equivalence and the reachable positive Gram quotient. | [Manifest](../results/susskind-slater-composite-transfer/local-evidence.json) |
+| Selected density and dynamics | [Seven-page PDF](../output/pdf/de-sitter-susskind-slater-selected-state.pdf): the full covariant density, stationary h,x restriction and a rational certificate distinguishing selected and tracial time correlations. | [Manifest](../results/susskind-slater-selected-state/local-evidence.json) |
+
+The model uses standard CAR, overlapping Hermitian Gaussian p-body couplings, the same disorder for all operators, and the annealed half-filled Slater state. The limit is p squared over N tending to fixed positive lambda. With q=exp(-4 lambda), s=sqrt(q), W=sqrt(lambda)u and normalized h, the selected functional has density rho=s(h-W)^2+[1-s(1+lambda)]I. Its restriction to h,x has density 1-s+s h^2 and is stationary, although the full h,u,x state is not. The complete equal-time curvature marginal agrees with the tracial marginal; its two-energy distribution and time correlation differ.
+
+At q=1/4 and dimensionless h-time t=2, the selected correlation lies between -0.0044147491323 and -0.0044147477086, whereas the tracial correlation lies between 0.0081500723940 and 0.0081500738176. These outward-rounded displays follow from saved exact rational Hermite moments and a cosine remainder bound, not floating-point sign inference. The standard q-Mehler kernel is an application of the cited literature. These are model results, not a completed de Sitter bulk dictionary or a finite-G construction.
+
+Each stage includes LaTeX, source notes, derivations, code, scientific outputs and build records. All four PDFs were compiled twice and visually inspected at their milestones. Release preparation checks saved hashes and Git object bytes; successful scientific drivers and recorders are not rerun, and sealed outputs are not rewritten. Historical statements that a stage was local retain their original time-of-record meaning.
+
+The next research step concerns higher whole-Wick charged marks and neutral marked subblocks. Extending the boundary-density argument is still a conjectural route. A separate central-sector strong bridge and degree-uniform time-series tail remain necessary for the full selected bilocal: the existing full-Fock Clifford Riesz estimate cannot simply be restricted to fixed charge, and fixed-degree preparation bounds do not by themselves justify summation over growing degrees. The previously completed full-trace bilocal four-point construction remains available. Spatial/mass generators and finite-G dynamics follow after these interfaces.
+
+Issue [#1](https://github.com/wkryyds4-netizen/de-sitter-holography/issues/1) concerns the earlier KS pentagon branch. This snapshot adds no independent reintegration of its 21,143 cells and does not locate the cause of the 9,890 historical endpoint replay failures. The [existing review](issue-1-review.md) remains the relevant evidence; this mainline work does not strengthen the pentagon claim. The issue stays open.
+
+Research and preparation used AI assistance. Private project context, journals, temporary material and downloaded third-party attachments remain outside this snapshot.

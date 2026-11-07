@@ -1,5 +1,33 @@
 # de Sitter 全息研究
 
+## 2026-11-08 集中快照：选态密度与曲率动力学
+
+按本轮要求集中发布 polynomial-density、composite、composite-transfer、selected-state 四个阶段，附四份已编译 PDF、LaTeX 与封存证据。[阅读入口与发布范围](notes/research-release-2026-11-08-selected-state.md)。下文“本地”“未 Git”保留各阶段记录时点的含义。后续研究接高阶双局域后代及固定电荷扇区的一致时间尾。
+
+## 当前进展：选态密度与曲率时间关联（2026-11-08，本地）
+
+[七页 PDF](output/pdf/de-sitter-susskind-slater-selected-state.pdf)、[LaTeX](manuscript/susskind-slater-selected-state/main.tex)、[中文证明](notes/susskind-slater-selected-state.md)和[来源](literature/susskind-slater-selected-state-sources.md)已保存。边界源比较将单selected激发密度推广到完整 h,u,x 协变代数；其 h,x restriction 为平稳密度 1−√q+√q h²，曲率等时谱仍与迹态相同，时间关联却不同。实际 exact-pinched 曲率的固定时间极限已接入；q=1/4、t=2 的关联负号由独立有理谱矩及余项界严格认证，迹态同期严格为正。
+
+2186 密度词、2953 边界源、1022 reduced 词及三物理参数的双方法动力学核对通过。七页双遍编译/逐页目检；[证据清单](results/susskind-slater-selected-state/local-evidence.json)绑定三科学输出、15 当前/98 父科学文件。下一步高双局域后代的 central-sector 与 selected 全时间接口；本轮只本地，无新 Git/issue。
+
+## 当前进展：曲率的显式开放双弦递推（2026-11-08，本地）
+
+[六页 PDF](output/pdf/de-sitter-susskind-slater-composite-transfer.pdf)、[LaTeX](manuscript/susskind-slater-composite-transfer/main.tex)、[中文推导](notes/susskind-slater-composite-transfer.md)和[来源](literature/susskind-slater-composite-transfer-sources.md)已完成。归一化碰撞源的局域性给完整几何分类；五种开放端点及两类链接将全部固定 h,W,j,M 混合词化为显式递推，闭弦历史可合并。可达状态空间的正 Gram 商恢复共同 GNS，保留同 J 关联。
+
+2774 源指数、994 矩比较、4096 旧六字词及五个长词已精确核对；八曲率插入例最多保留 21 个中间状态。双遍编译、六页目检和 11 当前/86 父科学文件核验见[证据清单](results/susskind-slater-composite-transfer/local-evidence.json)。下一步单选态激发在完整协变三场代数中的密度，再接高双局域后代与体生成元。当前仅本地；上一批 Git/issue 已完成，不重复发布。
+
+## 当前进展：实际曲率与 selected 态的同 J 共同代数（2026-11-08，本地）
+
+[八页 PDF](output/pdf/de-sitter-susskind-slater-composite.pdf)、[LaTeX](manuscript/susskind-slater-composite/main.tex)、[中文推导](notes/susskind-slater-composite.md)及[来源](literature/susskind-slater-composite-sources.md)已完成。分开空/占据局部矩阵元的多源公式构造 h,u,J₂,M 的全部固定混合矩；全部G弦时严格恢复旧tracial源指数，直接补齐central-sector高矩与exact pinching。新density界把实际曲率和中性斜率传到扩大后的多项式制备；协变三场在共同GNS上为有界正常表示。曲率与双selected激发的非零重叠说明同J收缩不能用独立probe替代。
+
+592704项有限CAR、326源指数、340旧selected词及混合Gram已核；八页双遍编译/逐页目检，[证据清单](results/susskind-slater-composite/local-evidence.json)核11当前/72父科学文件。下一步高效composite transfer及完整bilocal后代；本轮仅本地，无新Git/issue。
+
+## 当前进展：固定多项式制备中的精确投影（2026-11-08，本地）
+
+[八页 PDF](output/pdf/de-sitter-susskind-slater-polynomial-density.pdf)、[LaTeX 完整证明](manuscript/susskind-slater-polynomial-density/main.tex)、[中文笔记](notes/susskind-slater-polynomial-density.md)及[来源](literature/susskind-slater-polynomial-density-sources.md)已保存。半填充 DS 中，near-Slater 权重维数下界控制所有部分 tensor flattenings，再经固定 Schatten 高斯迭代与条件 Wick 去耦，得到任意固定 Gaussian degree 的一致轨道密度矩界。实际 exact pinching 因而可传到所有固定 selected 多项式制备 core，以及多项式准备之间的协变观测块。二次制备 M†h、(M†)² 的归一斜率响应已显式计算。
+
+[证据清单](results/susskind-slater-polynomial-density/local-evidence.json)绑定首次成功精确检查、9 当前/11 父文件和双遍编译；八页已逐页目检。多块非多项式 pinching 与 selected 因子交错的所有原始矩仍需额外控制。下一步实际 J₂ 与 M 的共同表示，再接完整 bilocal 和体生成元。本轮仅本地保存，上一批集中发布 a5be605 与 issue 回复 6710690876 不重复。
+
 ## 2026-11-08 集中研究快照：Slater 态与精确投影
 
 本次集中整理 stationary、covariant、neutral-slope、orbit-density 四个阶段，附四份已编译 PDF、LaTeX、代码与封存证据。[发布范围与阅读入口](notes/research-release-2026-11-08-slater-density.md)。下文各阶段的“本地”“未 Git”保留其记录时点含义；当前已完成范围止于线性制备及协变后置 dressing，非线性制备仍为下一任务。

@@ -1,0 +1,3288 @@
+{
+  "status": "passed",
+  "scope": "Exact finite diagnostics, not a numerical proof of the general asymptotic theorem.",
+  "CAR_rows": [
+    {
+      "N": 4,
+      "m": 2,
+      "p": 1,
+      "preparation": "MdagH",
+      "raw_terms": 12,
+      "symmetric_terms": 20,
+      "chaos0_norm_squared": "0",
+      "unnormalized_symmetric_norm": "8",
+      "normalized_chaos2_norm": "2/3"
+    },
+    {
+      "N": 4,
+      "m": 2,
+      "p": 1,
+      "preparation": "Mdag2",
+      "raw_terms": 4,
+      "symmetric_terms": 4,
+      "chaos0_norm_squared": "0",
+      "unnormalized_symmetric_norm": "4",
+      "normalized_chaos2_norm": "1/2"
+    },
+    {
+      "N": 6,
+      "m": 3,
+      "p": 1,
+      "preparation": "MdagH",
+      "raw_terms": 63,
+      "symmetric_terms": 90,
+      "chaos0_norm_squared": "0",
+      "unnormalized_symmetric_norm": "99/2",
+      "normalized_chaos2_norm": "11/12"
+    },
+    {
+      "N": 6,
+      "m": 3,
+      "p": 1,
+      "preparation": "Mdag2",
+      "raw_terms": 36,
+      "symmetric_terms": 36,
+      "chaos0_norm_squared": "0",
+      "unnormalized_symmetric_norm": "36",
+      "normalized_chaos2_norm": "8/9"
+    },
+    {
+      "N": 4,
+      "m": 2,
+      "p": 2,
+      "preparation": "MdagH",
+      "raw_terms": 1,
+      "symmetric_terms": 2,
+      "chaos0_norm_squared": "0",
+      "unnormalized_symmetric_norm": "1/2",
+      "normalized_chaos2_norm": "1/6"
+    },
+    {
+      "N": 4,
+      "m": 2,
+      "p": 2,
+      "preparation": "Mdag2",
+      "raw_terms": 0,
+      "symmetric_terms": 0,
+      "chaos0_norm_squared": "0",
+      "unnormalized_symmetric_norm": "0",
+      "normalized_chaos2_norm": "0"
+    },
+    {
+      "N": 6,
+      "m": 3,
+      "p": 2,
+      "preparation": "MdagH",
+      "raw_terms": 45,
+      "symmetric_terms": 90,
+      "chaos0_norm_squared": "0",
+      "unnormalized_symmetric_norm": "45/2",
+      "normalized_chaos2_norm": "1/6"
+    },
+    {
+      "N": 6,
+      "m": 3,
+      "p": 2,
+      "preparation": "Mdag2",
+      "raw_terms": 0,
+      "symmetric_terms": 0,
+      "chaos0_norm_squared": "0",
+      "unnormalized_symmetric_norm": "0",
+      "normalized_chaos2_norm": "0"
+    },
+    {
+      "N": 8,
+      "m": 4,
+      "p": 2,
+      "preparation": "MdagH",
+      "raw_terms": 684,
+      "symmetric_terms": 1332,
+      "chaos0_norm_squared": "0",
+      "unnormalized_symmetric_norm": "360",
+      "normalized_chaos2_norm": "2/9"
+    },
+    {
+      "N": 8,
+      "m": 4,
+      "p": 2,
+      "preparation": "Mdag2",
+      "raw_terms": 36,
+      "symmetric_terms": 36,
+      "chaos0_norm_squared": "0",
+      "unnormalized_symmetric_norm": "36",
+      "normalized_chaos2_norm": "1/18"
+    }
+  ],
+  "seed_weights": 1610,
+  "partial_weights": 6440,
+  "factorial_rational_checks": 20199,
+  "near_weight_rows": [
+    {
+      "N": 48,
+      "p": 1,
+      "ell": 1,
+      "bad": 1,
+      "S": 2,
+      "orbit_ratio": "552/25",
+      "exponent": "1"
+    },
+    {
+      "N": 48,
+      "p": 1,
+      "ell": 1,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "576",
+      "exponent": "1"
+    },
+    {
+      "N": 48,
+      "p": 1,
+      "ell": 1,
+      "bad": 0,
+      "S": 0,
+      "orbit_ratio": "1",
+      "exponent": "1"
+    },
+    {
+      "N": 48,
+      "p": 1,
+      "ell": 1,
+      "bad": 1,
+      "S": -1,
+      "orbit_ratio": "552/25",
+      "exponent": "1"
+    },
+    {
+      "N": 48,
+      "p": 1,
+      "ell": 1,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "576",
+      "exponent": "1"
+    },
+    {
+      "N": 48,
+      "p": 1,
+      "ell": 1,
+      "bad": 0,
+      "S": 0,
+      "orbit_ratio": "1",
+      "exponent": "1"
+    },
+    {
+      "N": 48,
+      "p": 1,
+      "ell": 2,
+      "bad": 2,
+      "S": 2,
+      "orbit_ratio": "552",
+      "exponent": "7/2"
+    },
+    {
+      "N": 48,
+      "p": 1,
+      "ell": 2,
+      "bad": 2,
+      "S": 2,
+      "orbit_ratio": "552",
+      "exponent": "7/2"
+    },
+    {
+      "N": 48,
+      "p": 1,
+      "ell": 2,
+      "bad": 0,
+      "S": 0,
+      "orbit_ratio": "1",
+      "exponent": "7/2"
+    },
+    {
+      "N": 48,
+      "p": 1,
+      "ell": 2,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "576",
+      "exponent": "7/2"
+    },
+    {
+      "N": 48,
+      "p": 1,
+      "ell": 2,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "576",
+      "exponent": "7/2"
+    },
+    {
+      "N": 48,
+      "p": 1,
+      "ell": 2,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "576",
+      "exponent": "7/2"
+    },
+    {
+      "N": 48,
+      "p": 1,
+      "ell": 2,
+      "bad": 2,
+      "S": 2,
+      "orbit_ratio": "552",
+      "exponent": "7/2"
+    },
+    {
+      "N": 48,
+      "p": 1,
+      "ell": 2,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "576",
+      "exponent": "7/2"
+    },
+    {
+      "N": 48,
+      "p": 1,
+      "ell": 2,
+      "bad": 0,
+      "S": 0,
+      "orbit_ratio": "1",
+      "exponent": "7/2"
+    },
+    {
+      "N": 48,
+      "p": 1,
+      "ell": 2,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "576",
+      "exponent": "7/2"
+    },
+    {
+      "N": 48,
+      "p": 1,
+      "ell": 2,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "76176",
+      "exponent": "7/2"
+    },
+    {
+      "N": 48,
+      "p": 1,
+      "ell": 2,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "576",
+      "exponent": "7/2"
+    },
+    {
+      "N": 48,
+      "p": 1,
+      "ell": 2,
+      "bad": 0,
+      "S": 0,
+      "orbit_ratio": "1",
+      "exponent": "7/2"
+    },
+    {
+      "N": 48,
+      "p": 1,
+      "ell": 2,
+      "bad": 0,
+      "S": 0,
+      "orbit_ratio": "1",
+      "exponent": "7/2"
+    },
+    {
+      "N": 48,
+      "p": 1,
+      "ell": 2,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "576",
+      "exponent": "7/2"
+    },
+    {
+      "N": 48,
+      "p": 1,
+      "ell": 2,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "576",
+      "exponent": "7/2"
+    },
+    {
+      "N": 48,
+      "p": 1,
+      "ell": 2,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "576",
+      "exponent": "7/2"
+    },
+    {
+      "N": 48,
+      "p": 1,
+      "ell": 2,
+      "bad": 0,
+      "S": 0,
+      "orbit_ratio": "1",
+      "exponent": "7/2"
+    },
+    {
+      "N": 48,
+      "p": 1,
+      "ell": 2,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "576",
+      "exponent": "7/2"
+    },
+    {
+      "N": 48,
+      "p": 1,
+      "ell": 2,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "576",
+      "exponent": "7/2"
+    },
+    {
+      "N": 48,
+      "p": 1,
+      "ell": 2,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "576",
+      "exponent": "7/2"
+    },
+    {
+      "N": 48,
+      "p": 1,
+      "ell": 2,
+      "bad": 2,
+      "S": 0,
+      "orbit_ratio": "552",
+      "exponent": "7/2"
+    },
+    {
+      "N": 48,
+      "p": 1,
+      "ell": 2,
+      "bad": 2,
+      "S": 0,
+      "orbit_ratio": "552",
+      "exponent": "7/2"
+    },
+    {
+      "N": 48,
+      "p": 1,
+      "ell": 2,
+      "bad": 0,
+      "S": 0,
+      "orbit_ratio": "1",
+      "exponent": "7/2"
+    },
+    {
+      "N": 48,
+      "p": 1,
+      "ell": 2,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "576",
+      "exponent": "7/2"
+    },
+    {
+      "N": 48,
+      "p": 1,
+      "ell": 2,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "76176",
+      "exponent": "7/2"
+    },
+    {
+      "N": 48,
+      "p": 1,
+      "ell": 2,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "576",
+      "exponent": "7/2"
+    },
+    {
+      "N": 48,
+      "p": 1,
+      "ell": 2,
+      "bad": 2,
+      "S": 0,
+      "orbit_ratio": "552",
+      "exponent": "7/2"
+    },
+    {
+      "N": 48,
+      "p": 1,
+      "ell": 2,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "576",
+      "exponent": "7/2"
+    },
+    {
+      "N": 48,
+      "p": 1,
+      "ell": 2,
+      "bad": 0,
+      "S": 0,
+      "orbit_ratio": "1",
+      "exponent": "7/2"
+    },
+    {
+      "N": 48,
+      "p": 1,
+      "ell": 2,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "576",
+      "exponent": "7/2"
+    },
+    {
+      "N": 48,
+      "p": 1,
+      "ell": 2,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "576",
+      "exponent": "7/2"
+    },
+    {
+      "N": 48,
+      "p": 1,
+      "ell": 2,
+      "bad": 0,
+      "S": 0,
+      "orbit_ratio": "1",
+      "exponent": "7/2"
+    },
+    {
+      "N": 48,
+      "p": 1,
+      "ell": 2,
+      "bad": 0,
+      "S": 0,
+      "orbit_ratio": "1",
+      "exponent": "7/2"
+    },
+    {
+      "N": 48,
+      "p": 1,
+      "ell": 2,
+      "bad": 0,
+      "S": 0,
+      "orbit_ratio": "1",
+      "exponent": "7/2"
+    },
+    {
+      "N": 48,
+      "p": 1,
+      "ell": 2,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "576",
+      "exponent": "7/2"
+    },
+    {
+      "N": 96,
+      "p": 2,
+      "ell": 1,
+      "bad": 2,
+      "S": 2,
+      "orbit_ratio": "2256",
+      "exponent": "7/4"
+    },
+    {
+      "N": 96,
+      "p": 2,
+      "ell": 1,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "2304",
+      "exponent": "7/4"
+    },
+    {
+      "N": 96,
+      "p": 2,
+      "ell": 1,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "2304",
+      "exponent": "7/4"
+    },
+    {
+      "N": 96,
+      "p": 2,
+      "ell": 1,
+      "bad": 2,
+      "S": 0,
+      "orbit_ratio": "2256",
+      "exponent": "7/4"
+    },
+    {
+      "N": 96,
+      "p": 2,
+      "ell": 1,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "2304",
+      "exponent": "7/4"
+    },
+    {
+      "N": 96,
+      "p": 2,
+      "ell": 1,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "2304",
+      "exponent": "7/4"
+    },
+    {
+      "N": 96,
+      "p": 2,
+      "ell": 2,
+      "bad": 2,
+      "S": 2,
+      "orbit_ratio": "2256",
+      "exponent": "13/2"
+    },
+    {
+      "N": 96,
+      "p": 2,
+      "ell": 2,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "108288",
+      "exponent": "13/2"
+    },
+    {
+      "N": 96,
+      "p": 2,
+      "ell": 2,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "2304",
+      "exponent": "13/2"
+    },
+    {
+      "N": 96,
+      "p": 2,
+      "ell": 2,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "5089536",
+      "exponent": "13/2"
+    },
+    {
+      "N": 96,
+      "p": 2,
+      "ell": 2,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "2304",
+      "exponent": "13/2"
+    },
+    {
+      "N": 96,
+      "p": 2,
+      "ell": 2,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "108288",
+      "exponent": "13/2"
+    },
+    {
+      "N": 96,
+      "p": 2,
+      "ell": 2,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "108288",
+      "exponent": "13/2"
+    },
+    {
+      "N": 96,
+      "p": 2,
+      "ell": 2,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "2304",
+      "exponent": "13/2"
+    },
+    {
+      "N": 96,
+      "p": 2,
+      "ell": 2,
+      "bad": 0,
+      "S": 0,
+      "orbit_ratio": "1",
+      "exponent": "13/2"
+    },
+    {
+      "N": 96,
+      "p": 2,
+      "ell": 2,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "2304",
+      "exponent": "13/2"
+    },
+    {
+      "N": 96,
+      "p": 2,
+      "ell": 2,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "1272384",
+      "exponent": "13/2"
+    },
+    {
+      "N": 96,
+      "p": 2,
+      "ell": 2,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "5089536",
+      "exponent": "13/2"
+    },
+    {
+      "N": 96,
+      "p": 2,
+      "ell": 2,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "2304",
+      "exponent": "13/2"
+    },
+    {
+      "N": 96,
+      "p": 2,
+      "ell": 2,
+      "bad": 0,
+      "S": 0,
+      "orbit_ratio": "1",
+      "exponent": "13/2"
+    },
+    {
+      "N": 96,
+      "p": 2,
+      "ell": 2,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "2304",
+      "exponent": "13/2"
+    },
+    {
+      "N": 96,
+      "p": 2,
+      "ell": 2,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "108288",
+      "exponent": "13/2"
+    },
+    {
+      "N": 96,
+      "p": 2,
+      "ell": 2,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "5089536",
+      "exponent": "13/2"
+    },
+    {
+      "N": 96,
+      "p": 2,
+      "ell": 2,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "1272384",
+      "exponent": "13/2"
+    },
+    {
+      "N": 96,
+      "p": 2,
+      "ell": 2,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "5089536",
+      "exponent": "13/2"
+    },
+    {
+      "N": 96,
+      "p": 2,
+      "ell": 2,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "2304",
+      "exponent": "13/2"
+    },
+    {
+      "N": 96,
+      "p": 2,
+      "ell": 2,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "108288",
+      "exponent": "13/2"
+    },
+    {
+      "N": 96,
+      "p": 2,
+      "ell": 2,
+      "bad": 2,
+      "S": 0,
+      "orbit_ratio": "2256",
+      "exponent": "13/2"
+    },
+    {
+      "N": 96,
+      "p": 2,
+      "ell": 2,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "108288",
+      "exponent": "13/2"
+    },
+    {
+      "N": 96,
+      "p": 2,
+      "ell": 2,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "2304",
+      "exponent": "13/2"
+    },
+    {
+      "N": 96,
+      "p": 2,
+      "ell": 2,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "2304",
+      "exponent": "13/2"
+    },
+    {
+      "N": 96,
+      "p": 2,
+      "ell": 2,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "1272384",
+      "exponent": "13/2"
+    },
+    {
+      "N": 96,
+      "p": 2,
+      "ell": 2,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "5089536",
+      "exponent": "13/2"
+    },
+    {
+      "N": 96,
+      "p": 2,
+      "ell": 2,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "108288",
+      "exponent": "13/2"
+    },
+    {
+      "N": 96,
+      "p": 2,
+      "ell": 2,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "2304",
+      "exponent": "13/2"
+    },
+    {
+      "N": 96,
+      "p": 2,
+      "ell": 2,
+      "bad": 0,
+      "S": 0,
+      "orbit_ratio": "1",
+      "exponent": "13/2"
+    },
+    {
+      "N": 96,
+      "p": 2,
+      "ell": 2,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "108288",
+      "exponent": "13/2"
+    },
+    {
+      "N": 96,
+      "p": 2,
+      "ell": 2,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "5089536",
+      "exponent": "13/2"
+    },
+    {
+      "N": 96,
+      "p": 2,
+      "ell": 2,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "1272384",
+      "exponent": "13/2"
+    },
+    {
+      "N": 96,
+      "p": 2,
+      "ell": 2,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "2304",
+      "exponent": "13/2"
+    },
+    {
+      "N": 96,
+      "p": 2,
+      "ell": 2,
+      "bad": 0,
+      "S": 0,
+      "orbit_ratio": "1",
+      "exponent": "13/2"
+    },
+    {
+      "N": 96,
+      "p": 2,
+      "ell": 2,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "2304",
+      "exponent": "13/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 1,
+      "bad": 2,
+      "S": 2,
+      "orbit_ratio": "5112",
+      "exponent": "7/6"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 1,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "7/6"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 1,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "7/6"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 1,
+      "bad": 2,
+      "S": 0,
+      "orbit_ratio": "5112",
+      "exponent": "7/6"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 1,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "7/6"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 1,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "7/6"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 2,
+      "bad": 2,
+      "S": 2,
+      "orbit_ratio": "5112",
+      "exponent": "13/3"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 2,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "368064",
+      "exponent": "13/3"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 2,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "13/3"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 2,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "26132544",
+      "exponent": "13/3"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 2,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "13/3"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 2,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "368064",
+      "exponent": "13/3"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 2,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "368064",
+      "exponent": "13/3"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 2,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "13/3"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 2,
+      "bad": 0,
+      "S": 0,
+      "orbit_ratio": "1",
+      "exponent": "13/3"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 2,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "13/3"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 2,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "6533136",
+      "exponent": "13/3"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 2,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "26132544",
+      "exponent": "13/3"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 2,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "13/3"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 2,
+      "bad": 0,
+      "S": 0,
+      "orbit_ratio": "1",
+      "exponent": "13/3"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 2,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "13/3"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 2,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "368064",
+      "exponent": "13/3"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 2,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "26132544",
+      "exponent": "13/3"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 2,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "6533136",
+      "exponent": "13/3"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 2,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "26132544",
+      "exponent": "13/3"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 2,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "13/3"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 2,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "368064",
+      "exponent": "13/3"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 2,
+      "bad": 2,
+      "S": 0,
+      "orbit_ratio": "5112",
+      "exponent": "13/3"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 2,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "368064",
+      "exponent": "13/3"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 2,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "13/3"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 2,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "13/3"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 2,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "6533136",
+      "exponent": "13/3"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 2,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "26132544",
+      "exponent": "13/3"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 2,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "368064",
+      "exponent": "13/3"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 2,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "13/3"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 2,
+      "bad": 0,
+      "S": 0,
+      "orbit_ratio": "1",
+      "exponent": "13/3"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 2,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "368064",
+      "exponent": "13/3"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 2,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "26132544",
+      "exponent": "13/3"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 2,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "6533136",
+      "exponent": "13/3"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 2,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "13/3"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 2,
+      "bad": 0,
+      "S": 0,
+      "orbit_ratio": "1",
+      "exponent": "13/3"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 2,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "13/3"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 2,
+      "orbit_ratio": "5112",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "26132544",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 2,
+      "orbit_ratio": "5112",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "184032",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "26132544",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 2,
+      "orbit_ratio": "5112",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "184032",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 0,
+      "orbit_ratio": "5112",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "184032",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "26132544",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "26132544",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "184032",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 0,
+      "orbit_ratio": "5112",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "184032",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 2,
+      "orbit_ratio": "5112",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "26132544",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "184032",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 2,
+      "orbit_ratio": "5112",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 2,
+      "orbit_ratio": "5112",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "184032",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "26132544",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "184032",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "26132544",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "26132544",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 2,
+      "orbit_ratio": "5112",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 0,
+      "orbit_ratio": "5112",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "184032",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 0,
+      "orbit_ratio": "5112",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "184032",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 2,
+      "orbit_ratio": "5112",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "184032",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "26132544",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "184032",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "26132544",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "26132544",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "26132544",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 2,
+      "orbit_ratio": "5112",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "26132544",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 2,
+      "orbit_ratio": "5112",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "184032",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 0,
+      "orbit_ratio": "5112",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "184032",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 2,
+      "orbit_ratio": "5112",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 0,
+      "orbit_ratio": "5112",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "184032",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "26132544",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "26132544",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 0,
+      "orbit_ratio": "5112",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "26132544",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "184032",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 0,
+      "orbit_ratio": "5112",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "26132544",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "26132544",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "26132544",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "184032",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "26132544",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "184032",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "26132544",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "26132544",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "26132544",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "184032",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 0,
+      "orbit_ratio": "5112",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "184032",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 2,
+      "orbit_ratio": "5112",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 0,
+      "orbit_ratio": "5112",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "26132544",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "184032",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "26132544",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 0,
+      "orbit_ratio": "5112",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "184032",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "26132544",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 0,
+      "orbit_ratio": "5112",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 2,
+      "orbit_ratio": "5112",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "184032",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 0,
+      "orbit_ratio": "5112",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "184032",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "184032",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 0,
+      "orbit_ratio": "5112",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "184032",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 2,
+      "orbit_ratio": "5112",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "184032",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "26132544",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "184032",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "26132544",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 0,
+      "orbit_ratio": "5112",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "26132544",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "26132544",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "26132544",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "184032",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "26132544",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 0,
+      "orbit_ratio": "5112",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "184032",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "26132544",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "26132544",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 2,
+      "orbit_ratio": "5112",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 0,
+      "orbit_ratio": "5112",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "26132544",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "184032",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 2,
+      "orbit_ratio": "5112",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "26132544",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "26132544",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 2,
+      "orbit_ratio": "5112",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "26132544",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "184032",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "26132544",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "184032",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "26132544",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 2,
+      "orbit_ratio": "5112",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "184032",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 0,
+      "orbit_ratio": "5112",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "184032",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 2,
+      "orbit_ratio": "5112",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 0,
+      "orbit_ratio": "5112",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 2,
+      "orbit_ratio": "368064",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "26132544",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 4,
+      "S": 2,
+      "orbit_ratio": "26132544",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 3,
+      "S": 1,
+      "orbit_ratio": "184032",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "19/2"
+    },
+    {
+      "N": 144,
+      "p": 2,
+      "ell": 3,
+      "bad": 2,
+      "S": 1,
+      "orbit_ratio": "5184",
+      "exponent": "19/2"
+    }
+  ],
+  "conditional_Wick_checks": 126,
+  "rectangular_tensors": [
+    {
+      "k": 1,
+      "r": 1,
+      "decoupled_moment": "133",
+      "iterated_bound": "133",
+      "coupled_Wick_moment": "133",
+      "Jensen_bound": "133"
+    },
+    {
+      "k": 1,
+      "r": 2,
+      "decoupled_moment": "50627",
+      "iterated_bound": "152604",
+      "coupled_Wick_moment": "50627",
+      "Jensen_bound": "50627"
+    },
+    {
+      "k": 1,
+      "r": 3,
+      "decoupled_moment": "32702217",
+      "iterated_bound": "551600875/2",
+      "coupled_Wick_moment": "32702217",
+      "Jensen_bound": "32702217"
+    },
+    {
+      "k": 2,
+      "r": 1,
+      "decoupled_moment": "442",
+      "iterated_bound": "442",
+      "coupled_Wick_moment": "884",
+      "Jensen_bound": "1768"
+    },
+    {
+      "k": 2,
+      "r": 2,
+      "decoupled_moment": "1641816",
+      "iterated_bound": "14856129",
+      "coupled_Wick_moment": "10931984",
+      "Jensen_bound": "26269056"
+    },
+    {
+      "k": 2,
+      "r": 3,
+      "decoupled_moment": "17363926512",
+      "iterated_bound": "1225604828125",
+      "coupled_Wick_moment": "465540611264",
+      "Jensen_bound": "1111291296768"
+    },
+    {
+      "k": 3,
+      "r": 1,
+      "decoupled_moment": "1660",
+      "iterated_bound": "1660",
+      "coupled_Wick_moment": "9960",
+      "Jensen_bound": "44820"
+    },
+    {
+      "k": 3,
+      "r": 2,
+      "decoupled_moment": "70457328",
+      "iterated_bound": "1910397717",
+      "coupled_Wick_moment": "8732904192",
+      "Jensen_bound": "51363392112"
+    }
+  ],
+  "limiting_transfer": {
+    "H-+H": "gamma**4*(gamma**2 + 1)",
+    "--++": "2*gamma**4",
+    "H-UU+H": "gamma**4*(d**2*gamma**10 + d**2*gamma**6 + gamma**2 + 1)",
+    "--UU++": "2*gamma**4*(2*d**2*gamma**10 + 2*d**2*gamma**6 + 1)"
+  },
+  "parameters": {
+    "CAR_fixtures": 5,
+    "max_conditional_degree": 6,
+    "half_filling": true
+  },
+  "environment": {
+    "python": "3.14.5",
+    "sympy": "1.14.0",
+    "arithmetic": "exact integers, Fraction, SymPy"
+  },
+  "input_sha256": {
+    "code/check_slater_polynomial_density.py": "02751f750195a75113a063961546986fbd9e6457ee24523f415b1a314242edc9",
+    "code/slater_covariant_transfer.py": "849a4a3fd7de2e68c644b1925804fa1776944fc27614c6ba65d1c80a4af5de9f",
+    "code/slater_joint_site_polynomial.py": "68d364e710f0d37cfca24720554fb342fac35d435e59fba3e3ba6b0a2048b489",
+    "results/susskind-slater-orbit-density/local-evidence.json": "0864d7bca7abbc5bdfb86a23e8e21b08bb97c7e852dc3b3a28a752b6a5bea028"
+  }
+}

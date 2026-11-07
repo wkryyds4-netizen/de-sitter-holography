@@ -1,0 +1,147 @@
+{
+  "status": "passed",
+  "scope": "Finite CAR identities, source reduction and selected mixed-word diagnostics. General limits and pinching require the companion proofs.",
+  "finite_CAR": [
+    {
+      "N": 2,
+      "p": 1,
+      "comparisons": 6048,
+      "negative": 0,
+      "nonzero_selected": 96,
+      "max_abs_integer": 4
+    },
+    {
+      "N": 4,
+      "p": 1,
+      "comparisons": 96768,
+      "negative": 40,
+      "nonzero_selected": 1032,
+      "max_abs_integer": 4
+    },
+    {
+      "N": 4,
+      "p": 2,
+      "comparisons": 489888,
+      "negative": 0,
+      "nonzero_selected": 234,
+      "max_abs_integer": 16
+    }
+  ],
+  "central_source_comparisons": 326,
+  "central_words": 59,
+  "old_selected_words": 340,
+  "symbolic_selected_moments": {
+    "JJ": "4*lambda*(4*gamma**4*lambda + gamma**4 + 1)/(gamma**4 + 1)",
+    "JHH": "0",
+    "J++": "4*gamma**6*lambda*(gamma - 1)*(gamma + 1)*(gamma**2 + 1)/(gamma**4 + 1)",
+    "JH+": "0",
+    "J+H": "4*gamma**5*lambda*(gamma - 1)*(gamma + 1)*(gamma**2 + 1)/(gamma**4 + 1)",
+    "JW+": "0",
+    "J+W": "0",
+    "-J+": "0",
+    "--J": "4*gamma**6*lambda*(gamma - 1)*(gamma + 1)*(gamma**2 + 1)/(gamma**4 + 1)",
+    "-JJ+": "4*lambda*(4*gamma**4*lambda + gamma**4 + 1)/(gamma**4 + 1)"
+  },
+  "Gram_preparations": [
+    "",
+    "H",
+    "W",
+    "+",
+    "HH",
+    "HW",
+    "WH",
+    "WW",
+    "+H",
+    "H+",
+    "+W",
+    "W+",
+    "++",
+    "J"
+  ],
+  "Gram_checks": [
+    {
+      "gamma": "1/2",
+      "lambda_value": "1/4",
+      "rank": 14,
+      "pivots": [
+        "1",
+        "1",
+        "1/4",
+        "11/16",
+        "17/16",
+        "1/4",
+        "255/1024",
+        "17/256",
+        "161/2176",
+        "54615/82432",
+        "90727/5762048",
+        "15287085/92904448",
+        "1441/22208",
+        "13283623/12684992"
+      ],
+      "scope": "Exact formal rational parameters, not points on gamma=exp(-lambda)."
+    },
+    {
+      "gamma": "2/3",
+      "lambda_value": "1/9",
+      "rank": 14,
+      "pivots": [
+        "1",
+        "1",
+        "1/9",
+        "41/81",
+        "97/81",
+        "1/9",
+        "6305/59049",
+        "97/6561",
+        "142672/636417",
+        "27004445/58504437",
+        "365446192/19346440383",
+        "201122670385/4046106035889",
+        "8629024/68608377",
+        "14156282398052/30208302333153"
+      ],
+      "scope": "Exact formal rational parameters, not points on gamma=exp(-lambda)."
+    }
+  ],
+  "parameters": {
+    "CAR_systems": [
+      [
+        2,
+        1
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        2
+      ]
+    ],
+    "local_sources": "D two-slot, L one-slot",
+    "Gaussian_edges": 2,
+    "all_G_max_slots": 6,
+    "old_selected_max_letters": 4
+  },
+  "environment": {
+    "python": "3.14.5",
+    "numpy": "2.4.6",
+    "sympy": "1.14.0",
+    "arithmetic": "bounded int64, Fraction and symbolic rational functions"
+  },
+  "input_sha256": {
+    "code/check_slater_composite_sources.py": "7c4b156f2809d511bd19dc0aecec95cdaa678561ec7cd47fa465a2fd9edca74a",
+    "code/slater_composite_sources.py": "ded5176752fbbc3ffdb626eca2430678bb56fecff979af5fa1cd4310cb704ba7",
+    "code/slater_joint_site_polynomial.py": "68d364e710f0d37cfca24720554fb342fac35d435e59fba3e3ba6b0a2048b489",
+    "code/slater_covariant_transfer.py": "849a4a3fd7de2e68c644b1925804fa1776944fc27614c6ba65d1c80a4af5de9f",
+    "code/memory_body_source_chords.py": "e0c34558f1e18684bf3a32c906f5edc13e8ab02dfe113b34eaa6936f78015b72",
+    "code/memory_size_marked_chords.py": "4b7e54c2218198ef0d8c29ed4aa6344cd3e5a24d466464c5006f49e0b6d7ec36",
+    "code/bilocal_multisource_chords.py": "fd1af9072cd1c7550f6a6ec24aa892ad67bb3f032821476c8baae9f063ef668f",
+    "code/singlet_multimark.py": "5b1def3fcc893c807e416c909076c6bb8383f54975bd9ed09d5dde37f129db0d",
+    "code/singlet_coefficient.py": "ef7d9b96f96a036ea0d9774950702a82a968b56758a778db0365e9df0c3b2e10",
+    "code/complex_syk_dictionary.py": "96b4890a167beeadf0849ccffdbb20dd125d921af062fd291044da9024900abf",
+    "results/susskind-slater-polynomial-density/local-evidence.json": "484bf963aa1b457a187e3e05a1cb32d23a5006f81c7eb9636e5fb56bb89da075"
+  },
+  "elapsed_seconds": 5.07812570000533
+}

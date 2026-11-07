@@ -1,0 +1,295 @@
+{
+  "status": "Local research milestone; the complete de Sitter research goal remains active",
+  "created_at_utc": "2026-11-07T18:38:47.373674+00:00",
+  "scientific_scope": "One-selected-state bounded density on the full h/u/x covariant algebra, stationary h/x restriction, tracial curvature marginal, actual fixed-time pinched-curvature kernel and rational strict-sign distinction at physical q=1/4,t=2. Higher bilocal descendants and the bulk dictionary remain open.",
+  "scientific_output_hashes": {
+    "results/susskind-slater-selected-state/exact-checks.json": "65d3cac3fe494ab0770ff97df005452c6e3ecdd2cb6e444f713a0d7ae1a5dea6",
+    "results/susskind-slater-selected-state/curvature-dynamics.json": "b45dd55f29af635552289b500c79f4a3301a7932c73414fb5a3845907bbef382",
+    "results/susskind-slater-selected-state/sign-certificate.json": "635e988df224a84157a9a382640901d96c1d96167db3248566f55ab0fb633f2a"
+  },
+  "input_hashes_verified": {
+    "code/slater_selected_covariant_state.py": "23d9e2365533b2029aa9f3118ba6e7d1a7b4647729a29f105800419992651243",
+    "code/check_slater_selected_covariant_state.py": "97b70f9d374230c87b7e9c420c7c711198fd339be678e6d3154ae8b81903124b",
+    "code/slater_composite_transfer.py": "ea12b6f806779dee73f32d4b37d2f5c966bb77f0677c2e248bde86193c00f0aa",
+    "code/slater_composite_sources.py": "ded5176752fbbc3ffdb626eca2430678bb56fecff979af5fa1cd4310cb704ba7",
+    "code/slater_joint_site_polynomial.py": "68d364e710f0d37cfca24720554fb342fac35d435e59fba3e3ba6b0a2048b489",
+    "code/bilocal_multisource_chords.py": "fd1af9072cd1c7550f6a6ec24aa892ad67bb3f032821476c8baae9f063ef668f",
+    "code/memory_body_source_chords.py": "e0c34558f1e18684bf3a32c906f5edc13e8ab02dfe113b34eaa6936f78015b72",
+    "code/singlet_coefficient.py": "ef7d9b96f96a036ea0d9774950702a82a968b56758a778db0365e9df0c3b2e10",
+    "code/compute_slater_selected_curvature.py": "ac719035786d78f76cd556bf19f73154e01bb6ad3fea953fd98d0f7347a7a495",
+    "results/susskind-slater-selected-state/exact-checks.json": "65d3cac3fe494ab0770ff97df005452c6e3ecdd2cb6e444f713a0d7ae1a5dea6",
+    "code/certify_slater_selected_curvature.py": "402a47d8896a3b092c73befc7add5683b63f59d66989fb9dc66ed43fdb09a560"
+  },
+  "parameters": {
+    "exact-checks.json": {
+      "points": [
+        [
+          "1/2",
+          "1/3"
+        ],
+        [
+          "2/3",
+          "1/4"
+        ]
+      ],
+      "all_words_max_length": 6,
+      "boundary_source_internal_max_length": 4,
+      "reduced_hj_max_length": 8,
+      "pure_j_max_power": 12,
+      "note": "Independent rational points check identities; positivity theorem uses physical gamma=exp(-lambda)."
+    },
+    "curvature-dynamics.json": {
+      "physical_q": [
+        0.0625,
+        0.25,
+        0.64
+      ],
+      "lambda_relation": "lambda=-log(q)/4",
+      "Jacobi_dimensions": [
+        192,
+        256
+      ],
+      "quadratures": [
+        [
+          192,
+          128
+        ],
+        [
+          288,
+          192
+        ]
+      ],
+      "times": [
+        0.0,
+        0.5,
+        1.0,
+        2.0,
+        4.0,
+        6.0
+      ],
+      "small_times": [
+        0.001,
+        0.0005
+      ],
+      "figure_times": [
+        0,
+        6,
+        241
+      ],
+      "probe_crossing": "r=q^2"
+    },
+    "sign-certificate.json": {
+      "q": "1/4",
+      "sqrt_q": "1/2",
+      "probe_r": "1/16",
+      "time": "2",
+      "cosine_order": 40,
+      "spectral_difference_upper_bound": "5",
+      "physical_lambda": "log(2)/2"
+    }
+  },
+  "parameter_hash": "31cd784ae651376c42e1fff5aab9976a95375b915f2e207645d9a97ef6bf3e3c",
+  "parent_manifest": {
+    "path": "results/susskind-slater-composite-transfer/local-evidence.json",
+    "sha256": "d3203a3fa10a17fa72c3eaed96968730fce3f2de28b53a64a4b15529934953c3"
+  },
+  "verified_parent_scientific_hashes": {
+    "code/record_slater_composite_transfer.py": "e9ca19346609818716d6f933b86d550eb7dfd48acacd60fd1ba0683657850a96",
+    "code/slater_composite_transfer.py": "ea12b6f806779dee73f32d4b37d2f5c966bb77f0677c2e248bde86193c00f0aa",
+    "code/check_slater_composite_transfer.py": "5863cbe4ba15aea3d5fa7302ad85e8ca9e9f3d701183ec120504ac4ffc09115e",
+    "code/build_slater_composite_transfer.ps1": "f5565652e79d6a2c04ef77542e55dd7059b73e1d483b8e120ac17d32e0d4f909",
+    "notes/susskind-slater-composite-transfer.md": "b0e1a085b5b865405bd992807f2bbf91c6684031a40e57cc4b32ba363c245a41",
+    "literature/susskind-slater-composite-transfer-sources.md": "b58ab7cb40a4a1dd0e88430e47ea22ef4384ecf4318cf34917729d1e51b1d365",
+    "manuscript/susskind-slater-composite-transfer/main.tex": "d35f24c96e4b1b7a083153d4ef94a48913ff79206172a50e4a8a65602e48a14a",
+    "output/pdf/de-sitter-susskind-slater-composite-transfer.pdf": "13fd11a54ab3ab624cca88c61b4a3d0eac3ada3a89c0500459a426e7c44f70fe",
+    "results/susskind-slater-composite-transfer/main.log": "8b31f2d5778dd5107bc3cb1961bd7bc58d3b1f79d1c51289c0ea2f8f173387f1",
+    "results/susskind-slater-composite-transfer/exact-checks.json": "f13bd76194cb358ae1f471db1a4b567ab77854040b8b78619db7e8a1249487a2",
+    "results/susskind-slater-composite-transfer/diagnostics/initial-reference-stop.txt": "cb40bfacf2b74d45e6a3695564bd85abb3975fcedcb4aff65e232bfb2bef6f56",
+    "code/record_slater_composite.py": "867805c8b4281679345721031668a7af0ef0985549aede953fb864cbc91d8a3b",
+    "code/check_slater_composite_sources.py": "7c4b156f2809d511bd19dc0aecec95cdaa678561ec7cd47fa465a2fd9edca74a",
+    "code/slater_composite_sources.py": "ded5176752fbbc3ffdb626eca2430678bb56fecff979af5fa1cd4310cb704ba7",
+    "code/build_slater_composite.ps1": "a7c94804e92420c9382c5322214ada2fd30e34cc4f0dd1fe1eced6110308d2dc",
+    "notes/susskind-slater-composite.md": "f9263b28cb7cf531ef9ac3a96f4d0b06982bc83da71a2b45564409f91b221e3a",
+    "literature/susskind-slater-composite-sources.md": "a998f95b83ac049ed5babd98b15fc5cf22c15b0130fb8bcade6a59545f461076",
+    "manuscript/susskind-slater-composite/main.tex": "fec50520f966a8f6bfc6946393fe89e5b52f5e19985cc3d155bdb989c44eefc6",
+    "output/pdf/de-sitter-susskind-slater-composite.pdf": "91edb3e1ec046ac622f2ffe39b84323d8d53b58c7613df5a6e95dd329e61cad9",
+    "results/susskind-slater-composite/main.log": "e72753c9fef8fadfd08497b1527103e951608cbbd1c55aa7c2deee40989099fd",
+    "results/susskind-slater-composite/exact-checks.json": "dcb7de18e4231bd129b23d82494909b47107103863c4af83012d3097b9eb603b",
+    "results/susskind-slater-composite/diagnostics/initial-recorder-failure.txt": "ee474316ea054878bbf4f79da7a35bd963b875b67606c4444947fdb888d6bfb7",
+    "results/susskind-slater-polynomial-density/local-evidence.json": "484bf963aa1b457a187e3e05a1cb32d23a5006f81c7eb9636e5fb56bb89da075",
+    "code/record_slater_polynomial_density.py": "0986536abf180b81543d02649c5a09c8c3a1a9b0d19fabbb51c34289d9a6d001",
+    "code/check_slater_polynomial_density.py": "02751f750195a75113a063961546986fbd9e6457ee24523f415b1a314242edc9",
+    "code/build_slater_polynomial_density.ps1": "8d60557bfdc4f4cb016066eb2172fb695ccbbcb10270ed67e33894f6fe69e1a1",
+    "notes/susskind-slater-polynomial-density.md": "2fd0e5b1892ea9c00f55ab1ec0c5a316eac934e4e0024703699f0179e2e64d25",
+    "literature/susskind-slater-polynomial-density-sources.md": "1b7007de33f0a99fb295fdc8b8c396fe68a1e39f4fe4cb794a669cc56760a382",
+    "manuscript/susskind-slater-polynomial-density/main.tex": "7d6b5bc0c835f8fd810c16f3099e77f13b82fb61a823f42e2f11019763199fd0",
+    "output/pdf/de-sitter-susskind-slater-polynomial-density.pdf": "0f9a71c1d3a56df74aa8a652dce90afb0b3cac92d260692ce00582dccc1f78d2",
+    "results/susskind-slater-polynomial-density/main.log": "e90c61ea57c3b7377e986a3e3971d5c70f66c2b77dbf70985d3764661b508fde",
+    "results/susskind-slater-polynomial-density/exact-checks.json": "644911ef2ffb91c3b6b5d4419fe757653d0ba6f1decc09053888983c6b2e4951",
+    "results/susskind-bilocal-four-point/local-evidence.json": "85701857a8e6f0040f837168dbf32077716505b11d36389ef48f9be0efb8ed21",
+    "PROJECT.md": "5c7cab9a9abd28d354b07a94aee40aedcca351bb4eff8b0cb07e8428058fd00a",
+    "code/bilocal_four_point_transfer_check.py": "33bbe8b8e5a0d5d29758b7d4946f3d98cf9c011a8a9179abcf1e9c21a51fdbdf",
+    "code/bilocal_multisource_chords.py": "fd1af9072cd1c7550f6a6ec24aa892ad67bb3f032821476c8baae9f063ef668f",
+    "code/build_bilocal_four_point.ps1": "fd94d906b01d1f3db2b5533ba6438ed98bea02060ead39023d116e38d7793633",
+    "code/check_bilocal_four_sources.py": "35687d46bc8ec01e55e90d81883fea210bf331302e41226bcb4956b0486f6d06",
+    "code/check_bilocal_mixed_otoc.py": "fbdfa943fbc4ea781b4493e02749568e80951b1fe4aa8af48aab1858deb3b614",
+    "code/check_bilocal_multisource_moments.py": "852241809befbd011a70352bc62d1658e35dac45b3a005d22f2a4707fb7235dc",
+    "code/complex_syk_dictionary.py": "96b4890a167beeadf0849ccffdbb20dd125d921af062fd291044da9024900abf",
+    "code/memory_body_source_chords.py": "e0c34558f1e18684bf3a32c906f5edc13e8ab02dfe113b34eaa6936f78015b72",
+    "code/memory_size_marked_chords.py": "4b7e54c2218198ef0d8c29ed4aa6344cd3e5a24d466464c5006f49e0b6d7ec36",
+    "code/mixed_cubic_otoc.py": "e4cdb9f6293867fbafb56581acf8bdf01edcf7782abfc0ca504291f5cac7ae80",
+    "code/record_bilocal_four_point.py": "cf755241c2eff864c186cc0b386f063f22caf569631403f138f1db9ca7764736",
+    "code/record_bilocal_reconstruction.py": "aa112ed1799410a4cf210939fbd9052035218effd533bf86b2f89ce22e7b11a6",
+    "code/singlet_coefficient.py": "ef7d9b96f96a036ea0d9774950702a82a968b56758a778db0365e9df0c3b2e10",
+    "code/singlet_multimark.py": "5b1def3fcc893c807e416c909076c6bb8383f54975bd9ed09d5dde37f129db0d",
+    "code/singlet_otoc.py": "d497109e719109a8e5339ed43db432f5d0e10ffdc704ee61313e1e37dfd780f9",
+    "journal/2026-11-07-susskind-bilocal-four-point.md": "7f8946c9f8f62fc4096a3c6324a25a12c0c251687b4c705a7140a8f8e7e7842b",
+    "literature/susskind-bilocal-four-point-sources.md": "2850fb151989632dd0858add320e4bd8b19b20c0eeb447b7706e15559fe31f4a",
+    "manuscript/susskind-bilocal-four-point/main.tex": "e5cc133bd659266526c8e14a4fef7756d5903f2aedd219a17c95dd2efd42a973",
+    "manuscript/susskind-mixed-cubic/main.tex": "541d2c4ea98766a62ef0e2e9909fabbb63294a9532e778f120efd56a0dd5de1a",
+    "notes/susskind-bilocal-four-point-transfer.md": "a9930d932e4a1ea9159a5db8686b290bb90c1fb013645edfec355b742f6452e4",
+    "notes/susskind-bilocal-four-point.md": "f40de1dafe312f4f4c60d2d3b04ff5539cab659ca84491765f05a5cd0219bace",
+    "notes/susskind-bilocal-multisource-proof.md": "07a30bcb1aa56747c49ecb5d0bbe6ca75065db08e87a5d717b2653fd9033a32e",
+    "output/pdf/de-sitter-susskind-bilocal-four-point.pdf": "6d0b5c3408e192dca704a922663823df761b223ef57d5048e6ec0943df0a012c",
+    "results/susskind-bilocal-four-point/finite-four-source-checks.json": "f79e9ab2b810f74549a43fc97e409d47ebf7f8b3c72c57f3d91f1999de17c92c",
+    "results/susskind-bilocal-four-point/joint-moment-checks.json": "2677ff6c8f90184e2aacd71a60e191a7cc72e67feee57e91128b0376b6ca371d",
+    "results/susskind-bilocal-four-point/main.log": "6e2983a27dfc58e253be0e018a7b26019665bf1673fbf19f604a1230b4065b7e",
+    "results/susskind-bilocal-four-point/mixed-otoc-checks.json": "1c79055ea8fe538cab2a70db6759c2d2e607eb63da82e8dc8a41b549b7e56d1f",
+    "results/susskind-bilocal-four-point/normalized-commutator.png": "407e480d47a8381166ed5903c0ff791af671efc1f1a855f0fac4c3833b38440a",
+    "results/susskind-bilocal-four-point/transfer-checks.json": "d290b89a04fa38c1e36d1106c4f6a2eb68d31f7391f0bc747f3142bb80cba4ad",
+    "results/susskind-memory-joint-regression/local-evidence.json": "1f4660f37829bba8aca6a16030a3f74f4ecc9a6e79891eb209f5eb34d99d4c03",
+    "results/susskind-singlet-multimark/local-evidence.json": "a80b511d980d5b5226f713404475f1c5310ae808a3c4acc2b2b4f1f5da1f7cde",
+    "code/check_singlet_multimark.py": "1652be69b9ad3de6fa499b791ac2e3216b40bbac06f305375e52b14d6a4f5e30",
+    "code/check_multimark_car.py": "b2f492c117e54c2667d3a8755f091079e1f3c821d4a06fb648d13a441027cd3f",
+    "code/run_singlet_fourpoint.py": "1b8055c3ffcab8821872102c97bd5d91b09894745443839b3b7451f7c0e1549e",
+    "code/build_singlet_multimark.ps1": "32e54310b44cedfc63255612c1f7b9015720355e8bf45ffbef8085a53045d393",
+    "code/record_singlet_multimark_local.py": "8995ab573f33f9e4905fceed53c9727e3afc38f71061fa431ee496f4c3f729ef",
+    "manuscript/susskind-singlet-multimark/main.tex": "53ee737467bc270cf46cf086a067b92fca1671e965489c51435cbf8be9bb924e",
+    "output/pdf/de-sitter-susskind-singlet-multimark.pdf": "cc2949541d06632562b2a0bbef3fda5ef2b089450ca7087ac8394e4e48ee6cd2",
+    "notes/susskind-singlet-multimark.md": "c8c7863c5f3574ad179e9ca8cc627ac640c0cd089e98a1d5234036f584b53892",
+    "literature/susskind-singlet-multimark-sources.md": "5d0286dbf5082401d43bf7c90c902843c1b6bf898ba7ae65dff21b6ee2a56a42",
+    "journal/2026-11-06-susskind-singlet-multimark.md": "ff3ac7bbe06ad8744b0114c325e317a95463d80dd5ed8baf27b87d4580cbc0c7",
+    "results/susskind-singlet-multimark/connected-fourpoint.png": "b17233d41e2af8dd2ceba2f651160080b8b21b874559f0448af745e89c37c1ca",
+    "results/susskind-singlet-multimark/exact-checks.json": "79cd83c08e36ff6c2a09038bb4acb2ecda1cfbae6dcba46d0d06e81d1ad80cbc",
+    "results/susskind-singlet-multimark/finite-car.json": "701e94d505035a222565ee26a252cd6ab95f5b4a39cace32d77856a272893dba",
+    "results/susskind-singlet-multimark/fourpoint-numerics.json": "543488b76e2d148a4703da0fab1e176284acd36b935da51d8c1d941c84595461",
+    "results/susskind-singlet-multimark/initial-factorial-car.py": "80d2451b554f4d697e2bc5705fd7efdce33df7f491b594005a60572f1412f647",
+    "results/susskind-singlet-multimark/initial-main.log": "9cb6731944869d940a96978d6e8668c4ebd4cc0d260250495a422845b67cf9a9",
+    "results/susskind-singlet-multimark/main.log": "7d17209e87012173c918ed6636fc804bfe06bd10fbc18767b865ce06513163c0",
+    "results/susskind-slater-joint-words/local-evidence.json": "869aa11a2827556bb5bd7718558d35232ec46c71971d0296826c47f8b287878b",
+    "code/record_slater_joint_words.py": "689de9999b3c0603161941b799fca4e5ab5c0252c183a1b6d70b18dd282da949",
+    "code/slater_joint_site_polynomial.py": "68d364e710f0d37cfca24720554fb342fac35d435e59fba3e3ba6b0a2048b489",
+    "code/check_slater_joint_sites.py": "829f9e637112757d48cb1a4232f993f8c2b6d9b5bb75afb31e14804ed4a9e6d0",
+    "code/check_slater_joint_word_law.py": "2707857a55d3ccfb4a6d750f834177f617ab110cbad7f092aa5607668f60113d",
+    "code/check_slater_joint_time_bound.py": "fc300a9e5eb8945d916f3e014a9566966f4dbbc7e009354f63777ce9fbbf527a",
+    "code/build_slater_joint_words.ps1": "deb6ead429bc0b1982d18ea8f7814bfb7735ac13e4cf49219d6cb5e22fc9ee3a",
+    "manuscript/susskind-slater-joint-words/main.tex": "8148056e35165e59387e0f651e6d0fcecf16bc2593aa7f513616a349506e7e6f",
+    "notes/susskind-slater-joint-words.md": "216766ae4641bc674e5de31d7f45fb8cc634cd6dd65ef6109425f4d58cdfc358",
+    "literature/susskind-slater-joint-word-sources.md": "344ac893cef028196db6210383be21a74c09cfc10a5f363e7e4e00c9a5d2e43c",
+    "output/pdf/de-sitter-susskind-slater-joint-words.pdf": "8cb8660cba3d8133fe6114792e5d44131e283d8aa62d9722b8a05aa0bcadbe54",
+    "results/susskind-slater-joint-words/main.log": "80a7ef27c6a5e9ed9aed8f0045770cf2c2ad6720e1029d56f84b9ec94e695c3f",
+    "results/susskind-slater-joint-words/site-checks.json": "864f4342efb51562d8a877ed2a1f9be14d7d1fa9d9d4e19d01a3d84a200c6f80",
+    "results/susskind-slater-joint-words/word-checks.json": "f4413f05fe251d1ff1cffc927f83af5b013efba32a7bc23c2d4320e93ce0e3bd",
+    "results/susskind-slater-joint-words/time-bound-checks.json": "1e244b4d232e55008a0243cc4a4ecb2afc134b26364d12b6d034d285c4469f34",
+    "results/susskind-slater-composite/local-evidence.json": "c5f9fbdeb165a7e7373e8abedd3310873f2a055765643e884229ce20a1a9bad8"
+  },
+  "historical_mutable_entrances": {
+    "results/susskind-bilocal-four-point/local-evidence.json": {
+      "NEXT.md": {
+        "historical_sha256": "6c2b5038f63baa66f71e083d562bd673dfc989585561d72c61eb17cd5fd918e9",
+        "reason": "Mutable project entrance; historical snapshot retained, not compared to current bytes."
+      },
+      "PLAN.md": {
+        "historical_sha256": "0493eebe26604d8a7e14dbfd888ca02cdfd474f9be17c29ed4df06b893db51b7",
+        "reason": "Mutable project entrance; historical snapshot retained, not compared to current bytes."
+      },
+      "README.md": {
+        "historical_sha256": "4fa005d4312f6ec011705949f475df9e72625cfa7ee6e2cb3df8c4d2f23e2310",
+        "reason": "Mutable project entrance; historical snapshot retained, not compared to current bytes."
+      }
+    },
+    "results/susskind-singlet-multimark/local-evidence.json": {
+      "README.md": {
+        "historical_sha256": "9b78dcb481a836135655e9d3b27b8ef647141af3f0ccfb6416de89b915c65b50",
+        "reason": "Mutable project entrance; historical snapshot retained, not compared to current bytes."
+      },
+      "PLAN.md": {
+        "historical_sha256": "0882e9e069f73d6e556515c1ff2a308e6d736b90bbd68371bff3c80c00ba87a8",
+        "reason": "Mutable project entrance; historical snapshot retained, not compared to current bytes."
+      },
+      "NEXT.md": {
+        "historical_sha256": "e16638c079ec20ce3a0f0d066014e1e9613a77a7c6bf57d2ebb776a9d474ea6d",
+        "reason": "Mutable project entrance; historical snapshot retained, not compared to current bytes."
+      }
+    }
+  },
+  "hashes": {
+    "code/record_slater_selected_state.py": "3b13e9fa13b5ed9a2d1dec7bd7b99d6cfa6940345f8729574cdd48ec2f6d676e",
+    "code/slater_selected_covariant_state.py": "23d9e2365533b2029aa9f3118ba6e7d1a7b4647729a29f105800419992651243",
+    "code/check_slater_selected_covariant_state.py": "97b70f9d374230c87b7e9c420c7c711198fd339be678e6d3154ae8b81903124b",
+    "code/compute_slater_selected_curvature.py": "ac719035786d78f76cd556bf19f73154e01bb6ad3fea953fd98d0f7347a7a495",
+    "code/certify_slater_selected_curvature.py": "402a47d8896a3b092c73befc7add5683b63f59d66989fb9dc66ed43fdb09a560",
+    "code/build_slater_selected_state.ps1": "fad88dede52fe326a4c307a8786ffc8be37192aa87cc188e3485628fb6b06698",
+    "notes/susskind-slater-selected-state.md": "fafc3bf70ec1d5e2b0d51cd79563b809256436325ae2b0801f877cc7322ae6e8",
+    "literature/susskind-slater-selected-state-sources.md": "30a55a7397491f13947e2a22d19404c1b5d265d87d00956641f516cd5b5b048f",
+    "manuscript/susskind-slater-selected-state/main.tex": "a7e9e7d1b204cba0dca4abbbcb1a56a0cc423b718112d07535f4f39b98a993cc",
+    "output/pdf/de-sitter-susskind-slater-selected-state.pdf": "f22ee2f9cd88e5f65c25a2eadc3b3936b2847644037af534136d446ebb0a5ed3",
+    "results/susskind-slater-selected-state/main.log": "486f8117f0eb85d659189fe025984aaffd0f38173c4cf330e7e10e43fa23e48d",
+    "results/susskind-slater-selected-state/selected-curvature.png": "bee81ad66825c72fd54d9be21f68bd3a541678af2368f6ffa02b1baf64645aa2",
+    "results/susskind-slater-selected-state/exact-checks.json": "65d3cac3fe494ab0770ff97df005452c6e3ecdd2cb6e444f713a0d7ae1a5dea6",
+    "results/susskind-slater-selected-state/curvature-dynamics.json": "b45dd55f29af635552289b500c79f4a3301a7932c73414fb5a3845907bbef382",
+    "results/susskind-slater-selected-state/sign-certificate.json": "635e988df224a84157a9a382640901d96c1d96167db3248566f55ab0fb633f2a"
+  },
+  "render_hashes": {
+    "tmp/pdfs/susskind-slater-selected-state-render/page-1.png": "135b2c8638a867b91b1f35c3bd4370595f1da1f15b202ed9b93e0efd7bfaca39",
+    "tmp/pdfs/susskind-slater-selected-state-render/page-2.png": "7da0ae4312d3da7fbb364336606be1171baafa8d90fec666d9d8d56cddcf8316",
+    "tmp/pdfs/susskind-slater-selected-state-render/page-3.png": "4a9438cbe24ccf9708a522ab7b0d3cb53d6bb434b5c05c4b9165def819456912",
+    "tmp/pdfs/susskind-slater-selected-state-render/page-4.png": "405354761603b9780dff244e6f14f021c6dd2871dfe94a6ebb8b31fec13eafa7",
+    "tmp/pdfs/susskind-slater-selected-state-render/page-5.png": "d63dcceb1408572beba64cb1c48cbc1975a883e68838d55830ceed28e609d500",
+    "tmp/pdfs/susskind-slater-selected-state-render/page-6.png": "5d8f1e70be486ac4155ee6c0415def85d5b2e88196010178508039217d0ee569",
+    "tmp/pdfs/susskind-slater-selected-state-render/page-7.png": "b56f188de5eb9ca024cb1101f113a4aa3340caf60624660f48c8348157cf5b90"
+  },
+  "build_pass_hashes": {
+    "tmp/pdfs/susskind-slater-selected-state-build/pass1.txt": "a9aa67bce9438ffb4510a34291eb5489e8fed26cfb4eebf2308bf0b624706ee7",
+    "tmp/pdfs/susskind-slater-selected-state-build/pass2.txt": "a9aa67bce9438ffb4510a34291eb5489e8fed26cfb4eebf2308bf0b624706ee7"
+  },
+  "build": {
+    "command": "./code/build_slater_selected_state.ps1",
+    "passes": 2,
+    "pages": 7,
+    "no_undefined_or_overfull": true,
+    "render": "pdftoppm -r 90 -png",
+    "visual_review": "All seven pages viewed; finite-N normalization and rotation wording clarified, then final pages 1 and 3 re-viewed. Other five rendered page hashes unchanged. No clipping or formula/citation defects observed."
+  },
+  "checks": {
+    "density": 2186,
+    "boundary_source": 2953,
+    "reduced_hj": 1022,
+    "pure_j": 26,
+    "physical_q": 3,
+    "time_rows": 18,
+    "rational_sign_intervals": 2
+  },
+  "environment": {
+    "exact-checks.json": {
+      "python": "3.14.5",
+      "arithmetic": "fractions.Fraction"
+    },
+    "curvature-dynamics.json": {
+      "python": "3.14.5",
+      "numpy": "2.4.6",
+      "scipy": "1.18.0",
+      "matplotlib": "3.11.0",
+      "dtype": "float64/complex128"
+    },
+    "sign-certificate.json": {
+      "python": "3.14.5",
+      "arithmetic": "fractions.Fraction; Decimal only for displayed approximations"
+    }
+  },
+  "diagnostics": "All three fresh scientific drivers passed on their first full run and were not rerun. Both initial and final two-pass PDF builds passed. Final manuscript wording changes affected pages 1 and 3 only. Successful parent science and manifests were not rewritten.",
+  "git_commit_created": false,
+  "git_push_performed": false,
+  "external_reply_sent": false,
+  "recorder_scope": "Saved file/build integrity and rational interval consistency; not an independent proof of general source identities or finite-N convergence."
+}

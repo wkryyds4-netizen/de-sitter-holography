@@ -1,5 +1,64 @@
 # 下一次从这里继续
 
+## 2026-11-08 本轮发布与探索交接
+
+用户本轮授权集中 Git 和回复 issue #1，范围为 polynomial-density 至 selected-state 四个已完成阶段，见[发布说明](notes/research-release-2026-11-08-selected-state.md)。本机回执目录为 tmp/publication-2026-11-08-selected-state；以下历史“无新 Git/issue”仅描述各阶段当时状态。
+
+下一科学任务仍为下节高阶双局域接口。初步回读表明 pure-Wick tagged-deficit 与归一 CP covariance 估计已有逐 central-sector 版本；普通带电时间级数的 Clifford Riesz 步骤仍只有 full-Fock 证明。高阶 D 边界源不变、L 子块每个边界相连端点少一个线性源的规律目前仅为待证路线。应新建通用标记块检查，保留 whole-Wick 禁内部配对及整体 chaos 投影，不将低阶表升级为定理。此前成功科学输出与 recorder 不重跑，sealed manifest 不修改。长期 goal 保持 active。
+
+## 当前继续位置：2026-11-08 单selected完整协变密度与曲率动力学（本地）
+
+先读[七页PDF](output/pdf/de-sitter-susskind-slater-selected-state.pdf)、[LaTeX](manuscript/susskind-slater-selected-state/main.tex)、[中文笔记](notes/susskind-slater-selected-state.md)、[来源](literature/susskind-slater-selected-state-sources.md)及 journal/2026-11-08-susskind-slater-selected-state.md。上一轮与本轮均progress，goalactive，无活跃进程。只本地，既有Git a5be605/issue6710690876已完成，不重复。
+
+- **已证全density**：物理gamma=e^-lambda，q=gamma4，s=gamma²，W=√lambda u，x=j/√v。对D=W*(h,u,x)，sigma1(B)=phi(M B M†)=tau(rho1B)，rho1=s(h-W)²+rP I，rP=1-s(1+lambda)>0，normrho=rP+4s(1+lambda)/(1-q)。boundary0/L直接配贡献tauB；分开接入两F不能是innernesting，也不能是J同侧partners的指定F例外，故J源完全allG，仅内W连接boundary时K_W少1。allG边界chi=h-W正给相同权，sigma=tauB+s[tau(chi B chi)−(1+lambda)tauB]。正常延拓至全D，非有限矩拟合。
+- **态与动力学**：D_hx上density f(h)=1-s+s h²，与h对易，所以restrictionstationary；x marginal整个等于tracial q4-Hermite。全D非stationary，tau([h,rho]†[h,rho])=2q lambda(1+lambda)(1+q)(1-q²)>0。covariant A M†的density=A rho1 A†；未推广任意interleaved selected或offdiagonal doubleprep。
+- **actual时间接口**：a_N=A0/(C_m√v_N)=(1-P_H)x_N，旧polynomialdensity/covblock定理给lim phi_N M a_N(t)a_N M†=C1(t)。C1=∫f(E)e^{it(E−E')}K_q²(E,E')muq²，C0=f1。正单位mass、实偶；−C1''0=2(1-q²)+s(1+q)(1-q²)²。Jacobi C1=C0+s√(1+q)<2|e^{itT}D_q²e^{-itT}|0>。h时间无量纲，先finiteN exactpinch再DS，未换长平均窗。
+- **严格sign**：q1/4,lambda=log2/2,t2。纯有理Hermite计算Delta偶矩0..40、cos余项10^42/42!，C0在(0.0081500723940,0.0081500738176)，C1在(-0.0044147491323,-0.0044147477086)，这些decimal向外放宽，Fraction权威端点在sign-certificate.json。不依赖float；由fixedtime convergence给大N realpart负，未给N阈值。
+- **证据/API**：pure code/slater_selected_covariant_state.py供trace/selected/reduced_hj/commutator公式，H/W/J字母，Fraction参数。三science首次完整passed且封存：exact SHA65d3cac3fe494ab0770ff97df005452c6e3ecdd2cb6e444f713a0d7ae1a5dea6（2186density/2953source/1022reduced/26pureJ/4comm）；dynamics SHAb45dd55f29af635552289b500c79f4a3301a7932c73414fb5a3845907bbef382（三physicalq/18times，Jacobi192/256及GL192/288、products128/192，max差7.33e−14）；sign SHA635e988df224a84157a9a382640901d96c1d96167db3248566f55ab0fb633f2a。manifest d387e521347c020daa48b4dde8c1291be5d308a71caed4c89a7c637566524f01，15当前/98父文件、双遍/七页目检。最终只page1/3措辞改变已重检，其余五页渲染哈希不变。不要重跑任何成功driver/recorder或改sealed输出。
+- **下一首任务**：读 notes/susskind-bilocal-fourth-tail.md、susskind-bilocal-reconstruction.md、susskind-memory-joint-regression.md及相应proof。旧fulltrace完整四点已完成。先将fixedSlater source推广wholeWick高阶D mark及中性L子区，保留actual J_d的Z_d/Hermite回归、charge背景与wholeWick禁配对；核本轮boundary密度机制能否扩展（尚未证明）。继而补fixedcentral实际强桥与统一全次数尾，才能在single-selected态重求和完整bilocal。旧charged尾的Clifford Riesz只在fullFock；不能直接取central，不能由fullcharge平均推central，也不能用fixeddegree orbitdensity常数自动求和degree→∞。先定位哪些旧CP/diagram估计已对goodcharges逐sector一致，哪些需新方法。再空间/质量生成元及finiteG，不将已知Mehler核或本模型态差异当完整全息字典。
+
+以下为历史位置，以本节为先。
+
+## 当前继续位置：2026-11-08 曲率的开放双弦递推（本地）
+
+先读[六页PDF](output/pdf/de-sitter-susskind-slater-composite-transfer.pdf)、[LaTeX](manuscript/susskind-slater-composite-transfer/main.tex)、[中文推导](notes/susskind-slater-composite-transfer.md)、[文献接口](literature/susskind-slater-composite-transfer-sources.md)及 journal/2026-11-08-susskind-slater-composite-transfer.md。本轮progress、goalactive。science/PDF/manifest封存，无活跃进程。仅本地；a5be605及issue回复6710690876已完成，不重复发布。
+
+- **源局域性已证明**：归一two-label collision的一incidence odd factor被singleton取消，spectator全为I；same-edge仅W/Wpair，different-edge仅J/Jpair。K_W=1_G，K_WW=1（同G edge）；K_J=2epsilon，partners同侧时乘指定edge为G的indicator；K_JJ=4仅nested完整连接两J。WJ及所有>=3源为0。单J完整六行表在稿第2页；不再只是低阶猜测。
+- **显式transfer**：pure helper code/slater_composite_transfer.py。word alphabet H/W/J/+/-，W=√lambda u、J=j；参数gamma,lambda用Fraction（精确有理诊断点，物理曲线gamma=e^-lambda）。moment(word,gamma,lambda,stats)带necessary future pruning；vector为unpruned；step给任意一插入，gram对word preps。状态(string,links) oldest→youngest，五色H/h/U/w/P分别G-H/F-H/G-W/F-W/F-M†。G闭合q^(n-1-i)，F闭合q^(n-1)，endpoint权表在稿第3页。S link两端首次闭合乘2lambda epsilon 1_G-kappa并删除；R link仅J整体nested关闭，权4lambda及两次G的q。J有singleton OO/OC/CO/CC四分支及R开/关；禁内部pair。合并相同open状态，closedhistory不保留。
+- **正性/范围**：decorated pairing与path双射证明所有fixedword等价旧源公式；reachable Gram G(T_Pempty,T_Qempty)=phi(P†Q)代表无关，由finiteN正性给GNS quotient和*action。不是形式状态Euclidean metric，不宣称最小正交Fock基或全M bounded/compact。旧covariant boundednormal定理及limit h-Taylor tail可用；fullfiniteN interlaced nonlinear pinching仍需另证。旧fulltrace完整bilocal四点不重列缺口。
+- **已核证据**：2774源指数、497词两有理点994矩、4096旧六字、两14维positiveLDL、5pruned/unpruned、五长词。H24/J8/JHHJWWJHHJ/-JHHHHJ+/--JHHJ++峰值7/21/10/18/22。science SHA f13bd76194cb358ae1f471db1a4b567ab77854040b8b78619db7e8a1249487a2；manifest SHA d3203a3fa10a17fa72c3eaed96968730fce3f2de28b53a64a4b15529934953c3，11当前/86父科学文件、双遍/六页90dpi目检。首次checker误选H24全pairings参考，未生成science即中断；替换Touchard--Riordan后完整passed，诊断保留。成功checker/recorder不再运行，不覆盖任何封存输出。
+- **下一首任务**：求单selected制备在covariant D=W*(h,u,x)的完整密度/谱。旧rho1=(gamma h−√lambda gamma u)^2+[1−√q(1+lambda)]I只已证明在h,u子代数。纯helper探索于gamma1/2,lambda1/3对n1..8有phi(M j^n M†)=phi(j^n)，尚非全阶或全joint结论、未收入science。先比较所有含j的mixed words与tau(rho1 word)，找到最短反例或归纳结构，再讨论真正density。可import新helper和旧bilocal_multisource_chords.compressed_moment；别导入checker/recorder。随后高charged/neutral后代、实际rank/charge桥与selected全时间尾，再空间/质量生成元和finiteG。
+
+以下为历史位置，以本节为先。
+
+## 当前继续位置：2026-11-08 同 J 曲率复合场与 selected 共同表示（本地）
+
+先读[八页PDF](output/pdf/de-sitter-susskind-slater-composite.pdf)、[完整LaTeX](manuscript/susskind-slater-composite/main.tex)、[中文笔记](notes/susskind-slater-composite.md)、[来源](literature/susskind-slater-composite-sources.md)及 journal/2026-11-08-susskind-slater-composite.md。上轮polynomial-density和本轮均progress，长期goal active。science、PDF、read-only manifest全部封存，无活跃进程。仅本地、不Git/issue；a5be605/6710690876是已完成的上一批。
+
+- **实际定义**：λ_N=p²/N，q_N=e^-4λ_N，κ_N=2λ_N(1−q_N)/(1+q_N)，Z₂=H²−C_Q；j_N=C_m^-1(2p−D−κ_N)Z₂|m，v_N=4λ_N+16λ_N²q_N/(1+q_N)，x_N=j_N/√v_N。W_N=(p−L−λ_N)H|m/√C_m=√λ_N u_N。D、L作用在fullFock上之后才restrict m=N/2；C_m为目标sector确定常数，不要先换H/√C_Q再做D。standardCAR、同原J、annealed fixedSlater、固定λ>0，dimensionless stringenergy/hbar1。
+- **全fixedword公式**：j展开twoH wholeD、W singleH L，j内部Gaussian配对禁掉。每edge右C_P†C_Q左adjoint；G不限，F前向Pempty/Qoccupied。每site乘完整block后做1−zloss，按empty/occupied取对角元，乘旧crossing JW sign并保留selected约束，得f_o(S)。正确singleton s_i有常数1，extensive exp[pΣd_a z_a]Πs_i^p=1。F_o=f_o/Πs_i。Kπ=2Σ_(i<j,o)F_o({i,j})−2k(k−1)−2k_G，Kπ(0)=−4ν。极限Σforward γ^b [allz] exp{λKπ−λΣ_Wz−κΣ_jz}，γ=e^-λ；u/x再除λ^(#W/2)v^(#j/2)。pure helper code/slater_composite_sources.py 可import；raw_moment返回(λ,γ)polynomial/(1+γ⁴)^#J，symbolic/evaluate安全。driver不可重跑。
+- **证明范围**：旧normalizeddefect式源系数只多固定B，activity B m(p/m)^|S|仍指数可和；先domination再删triple，高defect尾杀backward（source不改变odd singleton）。falling background−2λk(k−1)，doublemembership2λ，H归一D_N/L_N→e^2λ，n_H=2k_G+b。得到任意固定word及固定P†P bounded和positive joint GNS，未给所有interleaved real-time词的N一致尾。
+- **central与actual**：allG时旧T=(f0+f1)/2、t_i=s_i/2，所以旧R_ij=2ΣF_o，两个background均−2k²，整个source指数相同。Schur精确把Slater covariant word转centraltrace，既有mixedq Q=[[q,q,q²],[q,q,q²],[q²,q²,q⁴]]因而直接适用central。正两能量ν_N→K_q² μ²无对角质量，Portmanteau+高矩给P_H x_N在全fixedS_r趋0。a_N=A0/(C_m√v_N)=(1−P_H)x_N精确；此a_N是observable。新P(h,u,x,M,M†)仍fixedGaussian degree且a_P bounded，由上轮orbitdensity得(a_N−x_N)P O、(b_N−u_N)P O都L²趋0。P†W_cov(h,a,b)Q含fixed h-time phases可替到极限(h,x,u)，时间先trace尾再density。多块nonpolynomial pinching与selected交错仍缺额外控制。
+- **covariant全表示**：对ψ=PΩ、自伴covariant polynomialA，||A^nψ||²≤C_P[τA4n]^1/2≤C_P||A||_D2n，C_P独立n。moment logconvexity取n→∞给bounded faithful C*rep；所有core vector functional由τ-L²界有positive L²density，故vN rep normal。h/u norm≤2/√(1−q)，x≤2/√(1−q⁴)。没有分类full selected algebra、没有证明M在扩大空间compact，也没写闭式j/open-transfer。
+- **新校准**：v=4λ+16λ²q/(1+q)，κ=2λ(1−q)/(1+q)。φj²=v，φjh²=0，φj(M†)²=−2κγ²q，φjM†h=−2κγq，φjhM†=0，φjWM†=φjM†W=0，φMjM†=0，φMj²M†=v。故actual φ[a_N(M†)²]→−2κγ²q/√v（offdiagonal，不是归一doubleprep期望），φ[M a_N² M†]→1。双selected pure2p hop使2p−D为0，剩回归项解释非零信号；独立中心化probe会错置0。
+- **证据**：science SHA `dcb7de18e4231bd129b23d82494909b47107103863c4af83012d3097b9eb603b`。592704 finiteCAR（40negative,maxinteger16）、326allGsource/59centralwords、340旧selectedwords、10symbolic、两14维rationalGram正LDL。γ,λ有理点非物理曲线，有限checks不证明一般定理。首science成功后封存；首PDF双遍通过、8页90dpi全目检。manifest SHA `c5f9fbdeb165a7e7373e8abedd3310873f2a055765643e884229ce20a1a9bad8`，11当前/72父科学文件。首次recorder误将旧mutable NEXT与现在比而停，核查仅旧两manifest的README/PLAN/NEXT变动；当前recorder明确单列历史入口、不称其当前hash通过，旧science全过。失败诊断保留。勿覆盖成功science/manifest。
+- **下一首任务**：将上述constructive source theorem化为高效composite transfer/低模块，追踪一个j mark的两条出边及双j源配对。可以先从局部K_j按出边GF/FG/FF的分类入手：JH+的cross GF有K_j=−2、nested FG有+2；J+H的cross FG/nested GF均K_j=0；J++的两FF均0；JHH为普通−2/+2。这些pure-helper探索已记journal，尚非完整结构定理。先核所有外部selected spectator是否只通过旧ν进入，不凭低阶表猜闭包。考虑明确的marked/open-noise状态空间，验证Gram与*关系，再求j与M action。之后highercharged/neutral后代、实际rank/charge-removal桥、selected完整time尾，最后bulk空间/质量和finiteG。不要重新证明已完成的fulltrace bilocal四点，也不要把新增covariant normalrep当作完整体字典。
+
+以下为历史继续位置，以本节为先。
+
+## 当前继续位置：2026-11-08 固定多项式 Slater 制备（本地）
+
+先读[八页 PDF](output/pdf/de-sitter-susskind-slater-polynomial-density.pdf)、[完整证明](manuscript/susskind-slater-polynomial-density/main.tex)、[中文笔记](notes/susskind-slater-polynomial-density.md)、[来源](literature/susskind-slater-polynomial-density-sources.md)和 journal/2026-11-08-susskind-slater-polynomial-density.md。上一轮集中发布为 progress；本轮也为 progress。science、双遍 PDF、read-only manifest 全部已完成，无活跃句柄。长期 goal active。a5be605 / issuecomment-6710690876 已成功发布，本轮无新 Git/评论。
+
+- **一般定理**：m=N/2，Gaussian degree≤固定 K，P_O 对 U(m)×U(N−m) 稳定子协变，a_k=E||P_k O||²、a=Σa_k。λ_N≤Λ、p≤N/(12K) 下，C_K=exp(36K²Λ+1)，B_0r=1，B_kr=[k(2r−1)]^k C_K^(1−1/r)/k!。R_P=ZZ† 的 ||R_P||r≤(Σsqrt(B_kr a_k))²≤(K+1)maxB a，且 E〈P†Y P〉=Etr_m(R_PY) 对 covariant Y∈L² 精确。DS 固定 λ>0 时最终满足条件；不允许增长degree/交换小λ极限。
+- **证明关键**：ordered symmetric Wick seed a_k=k!||Ψ||²，整体权重 w。trace 去 ℓ noise legs 后每个剩余向量权重 z=w−ν，l1偏移≤2ℓp。坏值数 b≤2ℓp，坏值和 S 有 |S|,|S−b|≤3ℓp=D，零一count=m−b+S,m−S。factorial log界及 b≤m 给 Weyl orbit≥d_m exp[−36ℓ²Λ−1]。Schur twirl 保留multiplicity给每种 row-noise/column-noise flattening op²≤C_K a_k/k!，HS²=d_m a_k/k!。矩形Gaussian Schatten界逐条件迭代成2^k orientations；g=Σg_j/√k 的 conditional Wick 恒等式带 k^-k/2，Jensen后给 B_kr。k0=cO；最后 Minkowski处理不同chaos交叉项，不逐样本删干涉。
+- **实际结果**：固定 P(h,u,M,M†) 的 a_N由旧全word定理有界。E||X P O||²≤||R_P||2||X||4²。旧central t−u及P_Ht的全fixedS_r小量故给 E||(b−u)P O||²→0。对固定covariant W含任意有限个 b 与固定h-time phases，trace Hölder/telescoping加极化得到 φ_N(P†W(b)Q)→φ(P†W(h,u)Q)。P,Q可含任意固定selected因子。未证明多块nonpolynomial b与M交错的全部raw moments；这时右侧prep不再Gaussian polynomial，不能单靠core收敛。
+- **二次prep**：P=M†h的内部收缩反向hop杀O；P=(M†)²的selected标签不能反配，均pure chaos2。极限norm为q(1+√q)、2q。归一b²分别1+λ√q q(1+q)/(1+√q)、1+2λ√q q(1+q)，q=e^-4λ。小finiteN双激发可零，此处不归一。不是stationary态/体mass。
+- **证据**：exact-checks SHA `644911ef2ffb91c3b6b5d4419fe757653d0ba6f1decc09053888983c6b2e4951`。5CAR fixtures、1610 full/6440 partial weights、20199 rational factorial、342近权重、126 conditional Wick、8矩形tensor矩比较。首次成功后未重跑。最终8页双遍无undefined/overfull、90dpi全部目检；最后第6/7页记号澄清后重编译并再目检，其余6页hash不变。manifest SHA `484bf963aa1b457a187e3e05a1cb32d23a5006f81c7eb9636e5fb56bb89da075`，9当前/11父文件核验。recorder也勿覆盖。
+- **下一首任务：J₂ 与 selected 的共同微观结构**。先读 notes/susskind-bilocal-four-point-transfer.md 的前两节、notes/susskind-bilocal-four-point.md、旧 singlet-multimark 源图与 fulltrace J₂/H/U 结论。已知 actual A0=(1−P_H)J₂；J₂−Y_old=κ₂(C−C_Q)，norm方差w=C²[4λ+16λ²q/(1+q)]。先核这些高矩/无对角质量结论在central m=N/2的版本，不能只凭full-Fock平均就转移到central。然后由新密度界将已证central tracial误差传到selected polynomial preparations，计算原J的J₂/M低阶混合Gram/全图接口。J₂是二次Gaussian composite，不能直接补独立mixed-q物种到非tracial Slater表示；需要真实same-J contractions和endpoint cancellations。完整fulltrace bilocal四点早已完成，不重新列为缺口。之后fullbilocal、空间/质量生成元、finite-G。
+
+以下为历史继续位置，以本节为先。
+
 ## 2026-11-08 集中发布交接
 
 用户本轮授权 Git 与 issue 回复。本次快照收录 stationary、covariant、neutral-slope、orbit-density 四阶段；[发布说明](notes/research-release-2026-11-08-slater-density.md)给出全部阅读入口。116 个不同证据文件的当前字节及四份 PDF 页数已只读核对；成功科学输出未重跑、封存 manifest 未改。此前 560d683 及评论 6709573165 是上一批，本次不重复发送旧正文。具体发布回执保存在本机 tmp/publication-2026-11-08-slater-density。

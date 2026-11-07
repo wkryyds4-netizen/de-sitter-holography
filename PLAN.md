@@ -1,5 +1,15 @@
 # de Sitter 全息研究规划
 
+2026-11-08 本轮集中发布：用户明确要求 Git 与 issue 回复，收录 polynomial-density 至 selected-state 四阶段；[发布说明](notes/research-release-2026-11-08-selected-state.md)列明阅读入口和未完成接口。研究仍接高阶 whole-Wick D 标记、中性 L 子块的固定 Slater 源，再补 central-sector 实际强桥与全次数尾。日常低频 Git 偏好不变。
+
+2026-11-08 slater-selected-state 阶段：两极端selected边界不改变J源、只改变连接W的linear源，给单激发在全D=W*(h,u,x)的显式rho1。h,x restriction=f(h)平稳、x marginal tracial，但全D非平稳。由既有actual pinching桥和Mehler核得到真实选态曲率固定时间关联，并在物理q=.25,t2给严格有理负号证书。下一任务转向higherbilocal后代的固定Slater源与central-sector强桥/全次数尾：旧fullFock Clifford Riesz不能直接限制fixedcharge，fixeddegree density亦不能直接用于degree增长。先核前驱与每一接口，再决定如何重求和selected完整bilocal。七页PDF及三science封存，长期goalactive；仅本地，不Git/issue。
+
+2026-11-08 slater-composite-transfer 阶段：已将全源公式化为只记开放端点与S/R链接的显式递推。two-label collision局域性排除spectator影响，给全部W/J源分类；decorated图双射证明全fixedword等价，reachable Gram quotient承接微观正性及共同GNS。下一首任务改为单selected制备在covariant三场代数上的完整密度/谱，先用原文及混合词核旧rho1能否扩展，不从纯j的若干矩猜全joint态。随后higherbilocal后代、selected完整时间尾，再空间/质量与finiteG。六页PDF/精确检查/manifest已封存；仅本地，长期goal active。
+
+2026-11-08 slater-composite 阶段：先核旧J₂/A0定义及BNR固定charge、RX observable/state前驱；用fixedSlater空占据局部D/L源重建all-fixed-word同J h,W,j,M定理。全部G源指数一般性等同旧全迹源，central-sector的mixed-q和高矩/无对角质量因此直接成立。actualA0/(C_m√v_N)=(1−P_H)x_N精确，所有固定selected polynomial preparations可传投影误差；协变块含固定h-time亦成立。由density+moment logconvexity得covariant C*有界faithful、vN normal表示。下一首任务为显式composite open-transfer / partial-source规则及低模块，随后高charged/neutral后代、selected完整time尾与空间/质量、finite-G。旧fulltrace完整bilocal四点保留已完成；nonpolynomial多块interlacing与新空间M compactness仍未证明。本轮八页稿及精确数据本地封存，progress，长期goal active。
+
+2026-11-08 slater-polynomial-density 阶段：先回读矩阵 chaos flattenings / NCK 前驱，固定 Schatten 阶逐步导出概率界，避免 operator-norm 的 log 维数损失。新的 near-Slater Weyl 轨道维数界保留 partial-trace 权重偏移和 Schur multiplicity，将上一轮线性 P 推广到半填充 DS 的任意固定 Gaussian degree。exact pinching 已覆盖固定 selected polynomial core 与 P† W_cov Q，二次制备及其归一 b² 响应闭合。下一首任务转为实际 J₂ 与 M 的同J混合结构；先核 fulltrace 到 central-sector 的已有桥，再用本轮密度控制转移 tracial 小量。多个非多项式投影块交错的 raw moments 单列，不由 core 收敛自动得到。八页 PDF/精确输出/manifest 已封存，本轮 progress，goal active；仅本地、不 Git/issue。
+
 2026-11-08 集中发布安排：按用户本轮要求，将 stationary 至 orbit-density 的四个已完成阶段作为一次快照提交并推送，并为 issue #1 提供材料入口与待核事项更新。发布范围见 [说明](notes/research-release-2026-11-08-slater-density.md)。科学计划继续从二次制备的 chaos/partial-flattening 分析推进；日常低频 Git 偏好不变。
 
 2026-11-08 slater-orbit-density阶段：从上一轮提出的finiteN orbit density出发，利用Slater torus weight的Weyl轨道维数下界dα≥binom(N,m)，保留multiplicity的Schur twirl给第二侧Gaussian variance≤aI；第一侧=aI。Hermitian dilation和既有Gaussian矩递推给EtrR_P^r≤(2r−1)!!a^r。单M†制备的有限N绝对连续性界闭合，实际exact-pinched neutral slope在M W_cov M†及covariant后置dressing中可替换。下一首任务具体化为P=M†h、P=(M†)²的二次Gaussian coefficient张量、partial flattening和orbit密度矩，不能把线性Z的递推用于高次P。随后多个selected插入、J2及完整bilocal共同表示，再物理字典。六页PDF/精确检查/manifest本地封存，本轮progress，goal active。

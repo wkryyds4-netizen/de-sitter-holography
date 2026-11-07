@@ -1,0 +1,9 @@
+2026-11-08. Initial fresh checker reached all 497 source words and all
+4096 old six-letter words without an assertion failure. It then entered
+the H^24 reference: compressed_moment enumerates all Hamiltonian pairings,
+which is unsuitable at 24 endpoints (23!! terms). Interrupted the running
+session 4346 with Ctrl-C; observed exit code 1. No scientific JSON existed.
+Replaced only this independent reference with the Touchard--Riordan finite
+sum. This was a reference-cost error, not a successful scientific run.
+An attempted read-only CIM process lookup was denied by the environment;
+the existing exec session was sufficient to interrupt the computation.

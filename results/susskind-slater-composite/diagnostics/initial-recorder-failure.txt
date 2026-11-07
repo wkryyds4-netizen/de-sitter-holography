@@ -1,0 +1,12 @@
+Initial read-only recorder stopped before creating local-evidence.json:
+Traceback (most recent call last):
+  File "code/record_slater_composite.py", line 20, in <module>
+    assert sha(ROOT/path)==digest,path;parentfiles[path]=digest
+AssertionError: NEXT.md
+
+Follow-up read-only scan found mismatches only in README.md, PLAN.md,
+NEXT.md in the bilocal-four-point and singlet-multimark historical manifests.
+These are mutable project entrances. All scientific files matched.
+The recorder now separately records the historical entrance hashes without
+claiming current-byte equality. Historical manifests and scientific data
+were not changed. No successful output existed at this failure.

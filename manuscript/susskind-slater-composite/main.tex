@@ -1,0 +1,464 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,microtype,booktabs}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\HH}{\mathcal H}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\dd}{\mathrm d}
+\newtheorem{theorem}{Theorem}
+\title{Same-disorder curvature in the Slater selected algebra\\
+\large Fixed-word source calculus, central pinching and covariant observables}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{8 November 2026\quad Local research draft}
+\begin{document}\maketitle
+\begin{abstract}
+We construct all fixed mixed moments of the actual quadratic curvature
+field with the Hamiltonian, local size fluctuation and Slater-selected
+operators. The construction retains the original Gaussian disorder.
+Separate empty and occupied local matrix elements extend the existing
+nilpotent loss-source calculus to selected chords. Without selected
+chords the source exponent agrees exactly with the prior tracial one,
+which proves the central-sector moment and pinching statements directly.
+The polynomial orbit-density estimate transfers these errors to arbitrary
+fixed selected polynomial preparations. It also makes the covariant
+three-field algebra a bounded normal representation on the enlarged
+GNS space. A nonzero curvature/double-selected overlap rules out an
+independent-probe substitution in this state.
+\end{abstract}
+
+\section{Microscopic definitions and the result}
+Keep standard CAR, overlapping Hermitian complex Gaussian $p$-body
+couplings, the same $J$ in every field, a fixed half-filled Slater vector
+$O$, and $\varphi_N=\E\langle O|\,\cdot\,|O\rangle$. Let
+$m=N/2$, $\lambda_N=p^2/N\to\lambda>0$, $q_N=e^{-4\lambda_N}$,
+$C_Q=\E H^2$, and $C_m$ its scalar value on $\bigwedge^m\mathbb C^N$.
+All limits fix the word and $\lambda$ first. Set
+\begin{align}
+ D X&=QX-\sum_i c_i^\dagger Xc_i,&
+ \mathcal L X&=\frac{NX-\sum_i(c_i^\dagger Xc_i+c_iXc_i^\dagger)}2,\label{losses}\\
+ Z_2&=H^2-C_Q,&
+ \kappa_N&=2\lambda_N\frac{1-q_N}{1+q_N},\nonumber\\
+ j_N&=C_m^{-1}(2p-D-\kappa_N)Z_2\big|_m,&
+ v_N&=4\lambda_N+\frac{16\lambda_N^2q_N}{1+q_N},\label{jdef}\\
+ h_N&=H_m/\sqrt{C_m},&
+ W_N&=(p-\mathcal L-\lambda_N)H\big|_m/\sqrt{C_m},\nonumber\\
+ u_N&=W_N/\sqrt{\lambda_N},&x_N&=j_N/\sqrt{v_N}.\nonumber
+\end{align}
+The loss maps act on full-Fock operators \emph{before} sector restriction.
+The deterministic $C_m^{-1}$ is applied afterwards; replacing $H$ by
+the sector-dependent $H/\sqrt{C_Q}$ before applying $D$ would change
+the field. $M_N^\dagger$ is the original normalized occupied-to-empty
+$p$-particle creation block, with $\varphi_N(M_NM_N^\dagger)=1$.
+These are dimensionless string-energy observables, with $\hbar=1$.
+
+\begin{theorem}\label{main}
+Every fixed word in $h_N,W_N,j_N,M_N,M_N^\dagger$ has the limit
+specified by the finite diagram rule in Sections 2--3. The limiting
+functional is positive. Its covariant restriction $(h,u,x)$ has the
+existing tracial mixed-$q$ law with lengths $(1,1,2)$. Exact energy
+pinching of $x_N$ vanishes in every fixed central Schatten norm and
+on every fixed polynomial preparation in this full family.
+\end{theorem}
+
+\newpage
+\section{A local source rule with the selected state retained}
+Expand $j$ into two adjacent Hamiltonian slots with a whole-block $D$
+source; expand $W$ into one slot with an $\mathcal L$ source. Gaussian
+Wick centering of $Z_2$ forbids pairs internal to its two-slot block.
+Other Hamiltonian slots are ordinary. Write a Gaussian pairing as
+$\pi=\{(a_e,b_e):a_e<b_e\}_{e=1}^k$. At the right endpoint use
+$C_{P_e}^\dagger C_{Q_e}$, and at the left its adjoint. An unrestricted
+edge is $G$. A forward selected edge is $F$, requiring $P_e$ empty and
+$Q_e$ occupied in $O$. A backward selected edge has the reverse
+constraint. Two creations or two annihilations cannot pair.
+
+Use one nilpotent variable $z_a$, $z_a^2=0$, for each marked block.
+For a one-site matrix $X=\begin{psmallmatrix}a&b\\c&d\end{psmallmatrix}$,
+the local maps are
+\begin{equation}\label{localmaps}
+ D_iX=\begin{pmatrix}0&b/2\\c/2&d-a\end{pmatrix},\qquad
+ \mathcal L_iX=\frac12\begin{pmatrix}a-d&b\\c&d-a\end{pmatrix}.
+\end{equation}
+For membership $S\subset\{P_e,Q_e\}_{e=1}^k$, multiply the local
+CAR matrices inside each block, apply $1-z_aD_i$ or
+$1-z_a\mathcal L_i$, and multiply the blocks in their original order.
+Take the $(o,o)$ entry for $o=0,1$, rather than the local trace. Multiply
+by the Jordan--Wigner regrouping sign
+\begin{equation}\label{sign}
+ (-1)^{\sum_{e<f:\,e\text{ crosses }f} t_e(S)t_f(S)},\qquad
+ t_e(S)=|S\cap\{P_e,Q_e\}|.
+\end{equation}
+Set the answer to zero for any violated selected-label restriction.
+Call the resulting polynomial $f_o(S;z)$.
+
+Each label has one correct singleton occupancy: $P_e$ at $o=0$,
+$Q_e$ at $o=1$. For a forward diagram its singleton polynomial
+$s_i(z)$ has constant term one. Because no marked block contains
+both endpoints of a Gaussian pair, each incident singleton contributes
+$1-z_a/2$ to that block. For a block of $d_a$ slots,
+\begin{equation}\label{cancel}
+ e_{\rm nil}^{p\sum_a d_a z_a}\prod_i s_i(z)^p=1.
+\end{equation}
+This removes the extensive terms of $pd_a-D$ or
+$pd_a-\mathcal L$ in all source coefficients, not just first
+derivatives. Define normalized collision polynomials
+\begin{equation}\label{ratio}
+ F_o(S;z)=f_o(S;z)\prod_{i\in S}s_i(z)^{-1}.
+\end{equation}
+The inverse exists in the finite nilpotent algebra. In particular,
+we do not divide by a possibly vanishing collision matrix element.
+The local matrix products and the sign are the finite CAR rule;
+no Poisson approximation has yet been made.
+
+\newpage
+\section{The fixed-word limit and its domination}
+Let $b(\pi)$ be the number of Hamiltonian--selected edges and let
+$\nu(\pi)$ count crossings plus nested pairs whose inner edge is
+selected. Only compatible forward diagrams survive. Define
+\begin{equation}\label{K}
+ K_\pi(z)=2\sum_{i<j}\sum_{o=0,1}F_o(\{i,j\};z)
+                 -2k(k-1)-2k_G,
+ \quad K_\pi(0)=-4\nu(\pi),
+\end{equation}
+where $k_G$ is the number of unrestricted edges. Put
+$q=e^{-4\lambda}$, $\gamma=e^{-\lambda}=q^{1/4}$ and
+$\kappa=2\lambda(1-q)/(1+q)$. For $r$ marks, the diagram contribution is
+\begin{equation}\label{rule}
+ \gamma^{b(\pi)}[z_1\cdots z_r]
+ \exp_{\rm nil}\left\{\lambda K_\pi(z)
+       -\lambda\sum_{a:W}z_a-\kappa\sum_{a:j}z_a\right\}.
+\end{equation}
+The constant exponential is $q^{\nu(\pi)}$; nilpotence applies to
+the remaining terms. Sum \eqref{rule} over the allowed pairings.
+For normalized $u,x$, divide additionally by
+$\lambda^{n_W/2}v^{n_j/2}$, with $v=\lim v_N$.
+
+Here is a fixed-degree convergence argument, including signed terms.
+Let $L_N=\binom mp^2$ and expand the exact coefficient of the empty
+and occupied site polynomials $f_0^mf_1^m$. After \eqref{cancel},
+assign $n_{o,S}$ collision sites of membership $|S|\ge2$, with
+$d_i=\sum_{o,S\ni i}n_{o,S}$. The normalized combinatorial factor is
+\begin{equation}\label{defect}
+ \frac{(m)_{U_0}(m)_{U_1}}{(m)_p^{2k}}
+ \prod_i(p)_{d_i}\prod_{o,S}
+                   \frac{F_o(S;z)^{n_{o,S}}}{n_{o,S}!},
+\end{equation}
+where $U_o$ counts the singleton and collision sites in occupancy $o$.
+The source-free counting is unchanged from the previous Slater proof.
+The coefficient norm of each $F_o$ is bounded by a fixed $B$.
+Its falling-factorial estimate therefore bounds the absolute series
+by a constant times the product of exponential series with activities
+\begin{equation}
+ B\alpha_{S,N},\qquad \alpha_{S,N}=m(p/m)^{|S|}.
+\end{equation}
+For fixed slots and marks their total is bounded. The $|S|\ge3$
+activity tends to zero, and the total-defect tail above $R$ tends to
+zero uniformly as $R\to\infty$. This establishes domination before
+discarding higher intersections or taking source coefficients.
+
+At fixed defects, the falling-factorial background is
+$e^{-2\lambda k(k-1)}$ and each double membership has activity
+$p^2/m\to2\lambda$. The Hamiltonian normalization uses
+$D_N=\binom mp\binom{m+p}p$, with $D_N/L_N\to e^{2\lambda}$.
+There are $n_H=2k_G+b$ Hamiltonian slots, giving the additional
+$e^{-\lambda n_H}$. These factors produce \eqref{K}--\eqref{rule}.
+For a backward selected edge a correct singleton is forbidden,
+forcing $d_i=p$ and hence a divergent number of defects. Its
+contribution vanishes by the same tail bound. The source maps
+preserve singleton parity and cannot restore that forbidden entry.
+All fixed moments, including those of $P_N^\dagger P_N$, converge
+and stay bounded. Their finite-$N$ positivity passes to the limit.
+
+\newpage
+\section{The central-sector identification is a direct calculation}
+When all edges are $G$, the empty and occupied source polynomials
+satisfy $T(S;z)=(f_0(S;z)+f_1(S;z))/2$, where $T$ is the old local
+normalized trace. Its singleton is $t_i=s_i/2$. Thus its normalized
+two-label collision ratio is
+\begin{equation}\label{central}
+ R_{ij}^{\rm trace}(z)=\frac{T(\{i,j\};z)}{t_i(z)t_j(z)}
+   =2\sum_{o=0,1}F_o(\{i,j\};z).
+\end{equation}
+The tracial background is $-\binom{2k}{2}-k=-2k^2$.
+For all $G$, the background in \eqref{K} is also $-2k^2$.
+Therefore the entire source exponent, with every coefficient
+retained, is identical to the previous tracial one. This proves
+the central limit from its own finite coefficient expansion; it is
+not an inference from concentration of the full-Fock charge average.
+
+For a covariant word, $\E$ of that word is scalar on
+$\bigwedge^m\mathbb C^N$. Its Slater expectation consequently equals
+its normalized sector trace exactly. The established endpoint
+cancellation of the whole two-slot $D$ field and the one-slot
+$\mathcal L$ rule now apply to \eqref{central}. They give the mixed-$q$
+tracial law for $(h,u,x)$ with covariance the identity and crossing matrix
+\begin{equation}\label{mixedq}
+ \mathsf Q=\begin{pmatrix}
+ q&q&q^2\\q&q&q^2\\q^2&q^2&q^4
+ \end{pmatrix}.
+\end{equation}
+This tracial law and its usual bounded representation were already
+used in the full-trace bilocal stage. What is new here is its direct
+central-sector derivation and its coupling to selected observables.
+In particular all central fixed Schatten moments of $x_N$ are bounded.
+
+Let $\mu_q$ be the unit-variance $q$-Hermite measure and $H_n$ its
+monic polynomials, with squared norm $[n]_q!$. The two-energy measure
+of $x_N$ converges to the established Mehler measure
+\begin{equation}\label{measure}
+ \dd\nu(E,E')=K_{q^2}(E,E')\,\dd\mu_q(E)\,\dd\mu_q(E'),\qquad
+ K_r(E,E')=\sum_{n\ge0}\frac{r^nH_n(E)H_n(E')}{[n]_q!}.
+\end{equation}
+The finite measure is positive:
+$\nu_N=\E\tr_m\sum_{a,b}\Pi_a x_N\Pi_bx_N\,
+\delta_{(E_a,E_b)}$. All its polynomial moments follow from the
+central mixed-word limit. Higher energy moments provide tightness
+and uniform integrability; the compact limiting support determines
+the measure. Since $q^2<1$, \eqref{measure} is absolutely continuous
+with respect to the product of the nonatomic $q$-Hermite measures.
+It has no mass on $E=E'$.
+
+Portmanteau on the closed diagonal therefore gives
+\begin{equation}\label{pinch}
+ \norm{\mathcal P_{H_N}x_N}_{2,m}^2=\nu_N(E=E')\longrightarrow0.
+\end{equation}
+Pinching is contractive in every Schatten norm. Interpolating
+\eqref{pinch} with higher fixed central moments gives convergence
+to zero in every fixed finite $L^r(\tr_m)$, including all degenerate
+energy blocks. No long-time and large-$N$ limits are interchanged.
+
+\newpage
+\section{Actual curvature and selected polynomial preparations}
+The previously established finite-$N$ identity is
+\begin{equation}\label{actual}
+ A_{0,N}=(1-\mathcal P_{H_N})\bigl((2p-D)Z_2\bigr)\big|_m.
+\end{equation}
+The omitted regression term in \eqref{jdef} is a function of $H_m$
+plus a scalar and is killed by $1-\mathcal P_{H_N}$. Thus, exactly,
+\begin{equation}\label{an}
+ a_N:=\frac{A_{0,N}}{C_m\sqrt{v_N}}
+       =(1-\mathcal P_{H_N})x_N.
+\end{equation}
+This $a_N$ denotes a normalized observable, not the preparation norm
+used in the preceding orbit-density draft. The physical $J_{2,N}$
+defined there with the limiting regression coefficient differs from
+$C_mj_N$ by a coefficient tending to zero times $Z_2$, and a scalar
+proportional to $C-C_m$. Both differences vanish in every fixed
+central Schatten norm. Equation \eqref{an} itself needs no such
+asymptotic replacement.
+
+Now allow $P_N$ to be any fixed polynomial in
+$h_N,u_N,x_N,M_N,M_N^\dagger$. It has a fixed Gaussian degree,
+is stabilizer-covariant, and has bounded preparation norm by the
+source theorem. The preceding polynomial orbit-density result yields
+a constant $C_P$, independent of $N$, with
+\begin{equation}\label{density}
+ \norm{R_{P,N}}_{L^2(\tr_m)}\le C_P,\qquad
+ \E\norm{X_NP_NO}^2\le C_P\norm{X_N}_{4,m}^2
+\end{equation}
+for every covariant $X_N$. Combining \eqref{pinch} and \eqref{an},
+\begin{equation}\label{selectedpinch}
+ \E\norm{(a_N-x_N)P_NO}^2\longrightarrow0.
+\end{equation}
+The actual normalized neutral slope $b_N$ also obeys
+$\E\norm{(b_N-u_N)P_NO}^2\to0$ for this enlarged class of preparations:
+its already proved central tracial error is unchanged, and the
+new $P_N$ now has the required bounded orbit density.
+
+More generally, let $W_N$ be a fixed covariant block built from
+$h_N,a_N,b_N$ and fixed $h_N$-time phases. Tracial H\"older and
+telescoping first replace $a_N,b_N$ by $x_N,u_N$ in $L^2$.
+Equation \eqref{density} and polarization of $P_N,Q_N$ then give
+\begin{equation}\label{sandwich}
+ \varphi_N\bigl(P_N^\dagger W_N(h_N,a_N,b_N)Q_N\bigr)
+ \longrightarrow\varphi\bigl(P^\dagger W(h,x,u)Q\bigr).
+\end{equation}
+For the time phases, central Gaussian moments of $h_N$ give a
+uniform Schatten Taylor remainder of order
+$S^n[(rn-1)!!]^{1/r}/n!$ at fixed even $r$.
+Each fixed number of covariant insertions has uniformly bounded higher
+norms, so H\"older gives $L^2$ truncation uniformly on compact real
+time windows. Apply the density bound before removing the truncation.
+This proves the time version of \eqref{sandwich}.
+
+The selected factors in $P,Q$ are unrestricted fixed polynomials.
+Several nonpolynomial exact-pinched blocks separated by selected
+factors still require an additional argument: their intervening
+preparations are not Gaussian polynomials. The present result does
+not replace that problem by convergence on a core.
+
+\newpage
+\section{Bounded covariant observables on the joint GNS space}
+The source theorem defines a positive functional on the full
+polynomial $*$-algebra. Form its GNS quotient and completion;
+let $\mathcal C$ be its dense polynomial core. The fields
+$h,u,x$ are symmetric there, while $M^\dagger$ is the algebraic
+adjoint of $M$. We can identify the covariant action without
+guessing an independent selected representation.
+
+Let $\mathcal D_0$ be the tracial mixed-$q$ polynomial algebra in
+\eqref{mixedq}, with faithful trace $\tau$, and let $A=A^*$ be one
+of its polynomials. For $\psi=P\Omega$, the finite-$N$ density bound
+and both moment limits imply, for every fixed integer $n$,
+\begin{equation}\label{power}
+ \norm{A^n\psi}^2
+ \le C_P\left[\tau(A^{4n})\right]^{1/2}
+ \le C_P\norm{A}_{\mathcal D}^{2n}.
+\end{equation}
+Here $\mathcal D$ is the usual tracial $C^*$ completion. The constant
+$C_P$ does not grow with $n$; it is supplied by the fixed degree of
+the preparation, not the degree of the observable.
+
+Log-convexity of the positive polynomial moments, or repeated
+Cauchy--Schwarz for $n=2^k$, gives
+\begin{equation}
+ \norm{A\psi}^2\le
+ \norm{\psi}^{2-2/n}\norm{A^n\psi}^{2/n}
+ \le\norm{\psi}^{2-2/n}C_P^{1/n}\norm{A}_{\mathcal D}^2.
+\end{equation}
+Letting $n\to\infty$ proves
+$\norm{A\psi}\le\norm{A}_{\mathcal D}\norm{\psi}$.
+Thus covariant null polynomials act as zero, all these operators extend
+boundedly, and the representation extends to $\mathcal D$.
+The vacuum restriction is $\tau$, so it is faithful. In particular,
+\begin{equation}
+ \norm{h},\norm{u}\le\frac2{\sqrt{1-q}},\qquad
+ \norm{x}\le\frac2{\sqrt{1-q^4}}.
+\end{equation}
+
+There is also a useful normality statement. For every core vector,
+\begin{equation}\label{normal}
+ |\langle\psi,A\psi\rangle|\le C_P\norm{A}_{L^2(\tau)}.
+\end{equation}
+Riesz representation gives an $L^2(\tau)$ density $\rho_\psi$ for
+this functional. Positivity on polynomial squares extends by bounded
+approximation to positivity of the density; its trace is
+$\norm{\psi}^2$. Hence these vector functionals are normal on the
+tracial von Neumann completion of $\mathcal D$. Polarization and
+density of $\mathcal C$ give a normal representation there.
+
+This establishes a common representation of the actual covariant
+fields and the selected polynomial algebra. It does not classify
+the complete enlarged algebra, prove compactness of $M$ on this
+larger space, or provide a closed open-chord transfer for $j$.
+Compactness in the older $h,u,M$ cyclic subspace alone would not
+prove any of those statements.
+
+\newpage
+\section{Same-disorder mixed moments that distinguish the construction}
+The diagram rule gives the following unnormalized $j$ moments:
+\begin{align}
+ \varphi(j^2)&=v,&\varphi(jh^2)&=0,\label{tests1}\\
+ \varphi\bigl(j(M^\dagger)^2\bigr)&=-2\kappa\gamma^2q,&
+ \varphi(jM^\dagger h)&=-2\kappa\gamma q,\label{tests2}\\
+ \varphi(jhM^\dagger)&=0,&
+ \varphi(jWM^\dagger)&=\varphi(jM^\dagger W)=0,\nonumber\\
+ \varphi(MjM^\dagger)&=0,&
+ \varphi(Mj^2M^\dagger)&=v.\label{tests3}
+\end{align}
+The order in \eqref{tests2} matters. To see its first identity directly,
+pair the two adjacent $j$ slots with the two selected creations.
+Every surviving label assignment has disjoint occupied-to-empty
+hops. The unregressed loss deficit $2p-D$ on that pure $2p$-body
+hop is zero. The remaining regression term is
+$-\kappa\varphi(h^2(M^\dagger)^2)$, and the two forward pairings give
+$\varphi(h^2(M^\dagger)^2)=2\gamma^2q$.
+This finite-label reasoning agrees with the normalized source rule.
+
+Since $\kappa>0$ for every fixed $\lambda>0$, the overlap is
+nonzero on the physical curve $\gamma=e^{-\lambda}$. A separately
+centered, disorder-independent probe would have zero such overlap.
+The tracial marginal law in \eqref{mixedq} therefore cannot be used
+as a substitute for the common-disorder selected moments.
+
+Equation \eqref{sandwich} transfers these identities to actual
+curvature insertions. For example,
+\begin{equation}\label{actualtests}
+ \lim_N\varphi_N\bigl(a_N(M_N^\dagger)^2\bigr)
+   =-\frac{2\kappa\gamma^2q}{\sqrt v},\qquad
+ \lim_N\varphi_N(M_Na_N^2M_N^\dagger)=1.
+\end{equation}
+The second preparation already has unit norm. The first expression
+is an off-diagonal matrix element, not an expectation in the
+normalized double-excited state. Its adjoint gives the reversed
+matrix element. The physical curvature is recovered by multiplying
+by $C_m\sqrt{v_N}$ before taking the limit.
+
+For an algebraic calibration, form the Gram matrix of the fourteen
+preparations
+\begin{equation}
+ 1,\ H,\ W,\ M^\dagger,\ H^2,\ HW,\ WH,\ W^2,\
+ M^\dagger H,\ HM^\dagger,\ M^\dagger W,\ WM^\dagger,\
+ (M^\dagger)^2,\ j.
+\end{equation}
+Its exact LDL pivots are positive at the two saved rational choices
+$(\gamma,\lambda)=(1/2,1/4),(2/3,1/9)$.
+These are formal polynomial diagnostics, not points on
+$\gamma=e^{-\lambda}$ and not a proof of the full infinite-dimensional
+positivity or of a new orthogonal sector. General physical positivity
+comes from the finite-$N$ construction and its moment limit.
+
+\newpage
+\section{Checks, sources and the next interface}
+The independent finite checker builds full-Fock integer CAR matrices
+for $(N,p)=(2,1),(4,1),(4,2)$. It applies the global maps in
+\eqref{losses} to entire blocks and compares every source coefficient
+with the product of the empty/occupied local polynomials. It includes
+forward, backward and unrestricted label restrictions, internal
+Gaussian pairs at this finite algebra level, and mixed $D/\mathcal L$
+block layouts. The limiting driver separately enforces Wick exclusions.
+There are 592,704 exact comparisons, including 40 negative contributions.
+The maximum recorded integer magnitude is 16; the bounded-size matrix
+products are safely within integer range.
+
+Further checks compare 326 all-$G$ source exponents with the existing
+full-trace helper, their words with the established mixed-field
+formula, and 340 words without $j$ with the older Slater $H/U/M$
+transfer. Ten symbolic mixed expressions include
+\eqref{tests1}--\eqref{tests3}; two fourteen-vector Gram checks use
+exact rational arithmetic. These finite comparisons test signs,
+source placement, counterterms and normalization. The arbitrary
+fixed-word convergence, bounded representation and exact pinching
+are proved above, not inferred from their finite coverage.
+
+The source method builds on our already recorded full-trace
+multimark and bilocal derivations, and on the fixed-Slater defect
+expansion. The physical fixed-charge problem and the complex-SYK
+CAR/chord conventions have established precedents \cite{bnr}.
+The dependence of the emergent algebra on retained state-adapted
+observables is also explicit in recent pure-state SYK work
+\cite{rx}; its Majorana/KM construction is not substituted for the
+present charge-conserving same-$J$ composite calculation.
+
+The next task is to turn the constructive selected-composite rule
+into an efficient transfer and identify its low-lying modules,
+then include the higher charged and neutral descendants of the
+full bilocal. The completed full-trace finite-time bilocal four-point
+construction remains available. The generalized source rule can
+treat fixed higher whole-block Wick marks, but their actual rank
+and charge-removal interfaces, uniform time tails in the selected
+state, and interlaced exact-pinching moments require separate work.
+The bulk spatial and mass generators and finite-$G$ dynamics remain
+open. This stage is a microscopic observable construction, not a
+completed de Sitter duality.
+
+\begin{thebibliography}{9}
+\bibitem{bnr} M. Berkooz, V. Narovlansky and H. Raj,
+\emph{Complex Sachdev--Ye--Kitaev model in the double scaling limit},
+arXiv:2006.13983v2, especially Sections 3 and 5.
+\url{https://arxiv.org/html/2006.13983v2}.
+\bibitem{rx} H. Rajgadia and J. Xu,
+\emph{Emergent States and Algebras from the Double-Scaling limit
+of Pure States in SYK}, arXiv:2604.14387v3, Sections 3--4.
+\url{https://arxiv.org/html/2604.14387v3}.
+\bibitem{local} A. Day and Chengheng, local project stages:
+\emph{Slater joint words}, \emph{Slater covariant},
+\emph{Slater polynomial density}, \emph{Singlet multimark}, and
+\emph{Bilocal four point}. Their manuscripts, pure source helpers,
+scientific outputs and provenance are retained in this repository.
+\end{thebibliography}
+\end{document}

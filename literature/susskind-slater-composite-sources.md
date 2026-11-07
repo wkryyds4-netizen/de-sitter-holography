@@ -1,0 +1,10 @@
+# Sources and scope: selected curvature in the same disorder
+
+Read 2026-11-08. The main prior calculations are already in the project: the fixed-Slater defect expansion, full-trace singlet-multimark endpoint cancellation, bilocal multi-source D/L calculus, the actual A0/J2 identity, and polynomial orbit densities. Their sealed outputs are not regenerated.
+
+- Berkooz, Narovlansky and Raj, [Complex Sachdev–Ye–Kitaev model in the double scaling limit](https://arxiv.org/html/2006.13983v2), §§3 and 5. The fixed-charge discussion explicitly projects the canonical partition function; it is not a license to read a fixed-sector composite result from the full-Fock average. We retain their complex-CAR/chord conventions already mapped to standard CAR in the project, and prove the central marked-word limit by its own empty/occupied coefficient expansion.
+- Rajgadia and Xu, [Emergent States and Algebras from the Double-Scaling limit of Pure States in SYK](https://arxiv.org/html/2604.14387v3), §§3–4. The GNS construction and the distinction between generic and state-adapted observables are useful precedents. Their Majorana/KM model and dressed probes do not specify the present charge-conserving composite J2 built from the same Hamiltonian disorder.
+
+The tracial mixed-q law and q-Mehler kernel are existing results used by earlier stages. This stage's new project-specific interface is the selected local source rule, its central-sector reduction, and the uniform-density transfer of actual curvature into selected polynomial preparations. The nonzero J2/M-dagger-squared overlap is calculated from the common original disorder, rather than inferred from a tracial marginal or an independent probe.
+
+The full selected GNS representation of the covariant fields is bounded and normal by the density estimate and moment log-convexity. The calculation does not classify the enlarged selected algebra, establish its M compactness, or complete the bulk dictionary. Those distinctions are part of the proof's scope.

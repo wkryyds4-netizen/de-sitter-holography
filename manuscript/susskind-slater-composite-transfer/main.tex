@@ -1,0 +1,384 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,microtype,booktabs}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newcommand{\E}{\mathbb E}
+\newcommand{\one}{\mathbf 1}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\title{An open-chord transfer for same-disorder curvature\\
+\large Local source geometry and the Slater selected representation}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{8 November 2026\quad Local research draft}
+\begin{document}\maketitle
+\begin{abstract}
+The fixed-Slater composite source formula is reduced to an explicit
+recursion on open endpoints and two kinds of links. A normalized
+two-label collision can retain only one quadratic mark, a pair of
+nested quadratic marks, or linear marks on the same Gaussian edge.
+This gives a complete source classification, including arbitrary
+selected spectators. The transfer sums all fixed mixed words in the
+Hamiltonian, size fluctuation, curvature and selected operators without
+storing closed diagram history. Its reachable module carries the
+positive Gram form inherited from the microscopic limit. The
+auxiliary configurations themselves are not an orthonormal basis.
+\end{abstract}
+
+\section{Definitions and the source formula used as input}
+Use standard CAR, the overlapping Hermitian complex Gaussian $p$-body
+Hamiltonian, one common disorder $J$, and a fixed half-filled Slater
+vector $O$. The state is annealed,
+$\varphi_N=\E\langle O|\,\cdot\,|O\rangle$.
+Take $m=N/2$, $\lambda_N=p^2/N\to\lambda>0$, at fixed word length.
+Let $C_Q=\E H^2$ and $C_m$ be its scalar on charge $m$. Define
+\begin{align}
+ DX&=QX-\sum_i c_i^\dagger Xc_i,&
+ \mathcal L X&=\tfrac12\bigl(NX-\sum_i(c_i^\dagger Xc_i+c_iXc_i^\dagger)\bigr),\nonumber\\
+ h_N&=H_m/\sqrt{C_m},&
+ W_N&=(p-\mathcal L-\lambda_N)H|_m/\sqrt{C_m},\nonumber\\
+ j_N&=C_m^{-1}(2p-D-\kappa_N)(H^2-C_Q)|_m,&
+ \kappa_N&=2\lambda_N\frac{1-q_N}{1+q_N},\quad q_N=e^{-4\lambda_N}.
+\end{align}
+Loss maps act on full Fock space before sector restriction. The
+denominator is the fixed target-sector constant, not $C_Q$ inside a
+loss map. Use dimensionless energy and $\hbar=1$. In the limit put
+\begin{equation}
+ q=e^{-4\lambda},\quad\gamma=e^{-\lambda},\quad
+ \kappa=2\lambda\frac{1-q}{1+q},\quad
+ W=\sqrt\lambda\,u,\quad
+ v=\varphi(j^2)=4\lambda+\frac{16\lambda^2q}{1+q}.
+\end{equation}
+$M^\dagger$ is the normalized occupied-to-empty block of the same
+original disorder; $\varphi(MM^\dagger)=1$.
+
+The preceding project stage expands a $j$ into two adjacent $H$ slots
+with a whole-block $D$ source, excluding its internal Gaussian pair.
+$W$ is one $H$ slot with an $\mathcal L$ source. An edge is unrestricted
+($G$), or forward selected ($F$). Backward edges vanish in this limit.
+For a compatible pairing $\pi$, write $b$ for mixed $H$/selected edges
+and $\nu$ for crossings plus nestings whose inner edge is $F$. Its weight is
+\begin{equation}\label{input}
+ \gamma^b[z_{\rm all}]
+ \exp\!\left(\lambda K_\pi(z)
+       -\lambda\sum_Wz_a-\kappa\sum_jz_a\right),
+ \qquad K_\pi(0)=-4\nu .
+\end{equation}
+All source variables are commuting and square-zero. We reorganize
+this already established fixed-word limit; no new $N$-limit is taken.
+
+\newpage
+\section{The complete local source classification}
+Write $\pi(a)$ for the partner of endpoint $a$. A quadratic mark at
+$(a,a+1)$ meets two different edges $e,f$. Let
+$\epsilon=1-2\one_{e\text{ crosses }f}$. Define $\alpha_a$ as follows:
+\begin{equation}\label{alpha}
+ \alpha_a=\begin{cases}
+ 2\epsilon\one_{e_*\text{ is }G},&\pi(a),\pi(a+1)>a+1,
+     \ e_*\text{ has the smaller right endpoint},\\
+ 2\epsilon\one_{e_*\text{ is }G},&\pi(a),\pi(a+1)<a,
+     \ e_*\text{ has the larger left endpoint},\\
+ 2\epsilon,&\text{the partners lie on opposite sides.}
+ \end{cases}
+\end{equation}
+\begin{lemma}\label{local}
+The nonconstant coefficients of $K_\pi$ are precisely these:
+\begin{itemize}
+\item $K_W=1$ on a $G$ edge and $0$ on an $F$ edge;
+$K_{WW'}=1$ if both marks are endpoints of the same $G$ edge.
+\item $K_j=\alpha_a$. Two quadratic marks at $(a,a+1)$ and $(c,c+1)$,
+$a<c$, have $K_{jj'}=4$ exactly when
+$\pi(a)=c+1$, $\pi(a+1)=c$; otherwise it is zero.
+\item Every mixed $K_{Wj}$ and every coefficient of source order at
+least three vanishes.
+\end{itemize}
+\end{lemma}
+\begin{proof}
+The normalized collision expansion sums memberships containing two
+labels. A site operator at an endpoint with neither label is $I$.
+At a marked block containing just one label it is odd; both loss maps
+multiply it by $1/2$. Its factor $1-z/2$ cancels the corresponding
+singleton denominator, even when other marked blocks are present.
+The Jordan--Wigner sign for that membership involves only its two
+incident edges. Spectator edges therefore disappear identically.
+
+If the labels are $P,Q$ of one edge, a quadratic block containing
+one endpoint has $D(n)=n$, canceled by its two singleton factors
+$(1-z/2)^2=1-z$. For an $\mathcal L$ mark,
+$\mathcal L(n)=n-I/2$. Summing the empty and occupied matrix elements
+with the factor $2$ in $K$ leaves the coefficients $1,1,1$ for the
+two possible linear marks and their product. An $F$ edge forbids
+this double membership, so all these coefficients vanish there.
+
+For labels on different edges, every linear mark cancels. A surviving
+$D$ mark must contain both incidences. Each edge has two endpoints,
+so at most two such marks survive. Evaluation of the four choices
+$P_eP_f,P_eQ_f,Q_eP_f,Q_eQ_f$ in the two site states gives the table
+below. Two surviving marks consume all four endpoints: the same
+calculation gives $4$ for the nested connection and $0$ for the crossed
+one. Both edges then have $H$ endpoints, hence are $G$.
+\end{proof}
+After deleting spectators, label endpoints $0,1,2,3$ and order edges
+by their left endpoints. The complete one-mark table is
+\begin{center}
+\begin{tabular}{ccrrrr}\toprule
+Mark start&Pairing&$GG$&$GF$&$FG$&$FF$\\\midrule
+0&$(02)(13)$&$-2$&$-2$&0&0\\
+0&$(03)(12)$&2&0&2&0\\
+1&$(01)(23)$&2&2&2&2\\
+1&$(02)(13)$&$-2$&$-2$&$-2$&$-2$\\
+2&$(02)(13)$&$-2$&0&$-2$&0\\
+2&$(03)(12)$&2&0&2&0\\\bottomrule
+\end{tabular}
+\end{center}
+
+\newpage
+\section{Open configurations and single endpoints}
+The cut-diagram transfer is an established method
+\cite[Sec.~2.3]{BINT}; state-adapted dressed operators and their GNS
+interpretation have related precedents \cite[Secs.~3.2--4]{RX}.
+Here the additional information comes from the common-disorder sources.
+
+Scan from right to left. A configuration $(s,\mathcal C)$ consists of
+an ordered list $s$ of open right endpoints, oldest first, and disjoint
+two-endpoint links $\mathcal C$. The five endpoint colors are
+\begin{center}
+\begin{tabular}{ccl}\toprule
+Color&Edge type&Right endpoint\\\midrule
+$H$&$G$&ordinary Hamiltonian slot\\
+$\mathsf h$&$F$&ordinary Hamiltonian slot\\
+$U$&$G$&linear marked slot $W$\\
+$\mathsf w$&$F$&linear marked slot $W$\\
+$P$&$F$&$M^\dagger$\\\bottomrule
+\end{tabular}
+\end{center}
+Specifying $G/F$ when opening a Hamiltonian slot is a sum over future
+compatible closures, not an additional factor. Every completed edge
+has exactly one such type. The vacuum is the empty configuration.
+
+Opening $H$ gives the two branches $H,\mathsf h$; opening $W$ gives
+$U,\mathsf w$; $M^\dagger$ only appends $P$, and $M$ cannot open.
+With $n$ open endpoints and a zero-based position $i$, the geometric
+factor for closing is
+\begin{equation}\label{closeq}
+ \omega_i=\begin{cases}q^{n-1-i},&G,\\q^{n-1},&F.\end{cases}
+\end{equation}
+There are $n-1-i$ younger open edges, each crossing the closing edge.
+When the closing edge is $F$, each of the $i$ older open edges also
+forms an inner-$F$ nesting. This proves \eqref{closeq}.
+Multiply it by the following endpoint coefficient; blanks are zero:
+\begin{center}
+\begin{tabular}{c|rrrrr}\toprule
+Closing insertion&$H$&$\mathsf h$&$U$&$\mathsf w$&$P$\\\midrule
+$H$&1&&&&$\gamma$\\
+$W$&&&$\lambda$&&$-\lambda\gamma$\\
+$M$&&$\gamma$&&$-\lambda\gamma$&1\\\bottomrule
+\end{tabular}
+\end{center}
+Indeed an unpaired $W$ on a $G$ edge has coefficient
+$\lambda(K_W-1)=0$. A pair of $W$ endpoints contributes $\lambda$;
+a selected $W$ endpoint contributes $-\lambda$. This already sums
+all linear sources, including their centering terms.
+
+A link of type $S$ joins the two still-open edges of a singleton-assigned
+quadratic mark. At its first closure multiply by
+\begin{equation}\label{Sclose}
+ 2\lambda\epsilon\one_G-\kappa,\qquad
+ \epsilon=\begin{cases}+1,&\text{younger linked endpoint closes first},\\
+ -1,&\text{older linked endpoint closes first}.\end{cases}
+\end{equation}
+Delete that link; the other endpoint is now ordinary. A link of type
+$R$ is reserved for a quadratic source pair and cannot close at an
+individual endpoint. Relabel surviving positions after every deletion.
+
+\newpage
+\section{The explicit quadratic insertion}
+Expand the coefficient of all quadratic sources in \eqref{input}
+into singleton blocks of weight $\lambda\alpha-\kappa$ and pair blocks
+of weight $4\lambda$. This is the finite set-partition expansion of
+the square-zero exponential; no higher source block exists.
+
+For a singleton-assigned $j$, process its right slot and then its left
+slot as $H$. The two slots cannot pair with one another. There are four
+possibilities, with all ordinary closure factors from the previous page:
+\begin{description}
+\item[OO.] Open both endpoints (each has its $G/F$ branches), join
+them by an $S$ link, and defer the singleton weight to its first closure.
+\item[OC.] Open the right endpoint, close an endpoint that was already
+open before this insertion, and multiply by $-2\lambda-\kappa$.
+The two incident edges cross.
+\item[CO.] Close an old endpoint, open the left endpoint, and multiply
+by $2\lambda-\kappa$. The two incident edges are disjoint.
+\item[CC.] Close two distinct old endpoints with original indices
+$i,k$, in that order. Put $\epsilon=+1$ if $i>k$ and $-1$ otherwise.
+The younger original endpoint has index $\max(i,k)$. Multiply by
+\begin{equation}\label{CC}
+ 2\lambda\epsilon\one_{s_{\max(i,k)}\text{ is }G}-\kappa .
+\end{equation}
+Any old $S$ link encountered during either closure is resolved as well.
+Old $R$ endpoints are unavailable to these singleton branches.
+\end{description}
+The remaining branches assign the current quadratic mark to a source
+pair:
+\begin{description}
+\item[Pair opening.] Append two $H$ endpoints and join them by an $R$
+link, with coefficient one.
+\item[Pair closing.] Choose an existing $R$ link $(a,b)$, $a<b$.
+Close $b$ and then $a$, delete the link, and multiply by
+\begin{equation}\label{Rclose}
+ 4\lambda\,q^{(n-1-b)+(n-2-a)}.
+\end{equation}
+The two edges are nested and unrestricted. Their crossings with
+other open edges are precisely the two exponents in \eqref{Rclose}.
+\end{description}
+The links are always disjoint: an $S$ link is created only on two new
+endpoints and is erased when either is removed; an $R$ link is created
+and removed as a whole. Consequently the record stores no information
+about already closed edges. Configurations with the same ordered colors
+and links are merged by adding their coefficients.
+
+For a prescribed finite word, one may discard configurations that
+cannot close in its unprocessed prefix. The implementation checks the
+remaining number of slots, $M$ closures for $\mathsf h,\mathsf w$,
+$W$ closures for $U$, available $H$ slots for $H$, and $j$ insertions
+for $R$ links. These are necessary conditions only; using them cannot
+discard a valid completed path. This is exact pruning, not a numerical
+cutoff or a bound on worst-case computational complexity.
+
+\newpage
+\section{Equivalence and the physical Gram form}
+Let $T_A$ denote the preceding recursion for an insertion $A$, and
+$\varepsilon$ the coefficient of the empty configuration. For a word
+$w=A_1\cdots A_r$, set $T_w=T_{A_1}\cdots T_{A_r}$.
+\begin{theorem}
+For every fixed word in $h,W,j,M,M^\dagger$,
+\begin{equation}\label{result}
+ \varphi(w)=\varepsilon T_w\emptyset .
+\end{equation}
+The reachable span $V=\operatorname{span}\{T_P\emptyset\}$ has a
+well-defined positive semidefinite form
+\begin{equation}\label{Gram}
+ G(T_P\emptyset,T_Q\emptyset)=\varphi(P^\dagger Q).
+\end{equation}
+Its null quotient is the joint polynomial GNS module, and the induced
+actions satisfy $T_A^*=T_{A^\dagger}$ on that core.
+\end{theorem}
+\begin{proof}
+Decorate a compatible forward pairing with one term of its finite
+source-partition expansion. Each $j$ is either a singleton or paired
+with another $j$ by the nested two-edge connection of Lemma~\ref{local}.
+Scan the decorated pairing. Ordinary closures supply
+$\gamma^bq^\nu$ and the linear-source weights. A singleton quadratic
+mark follows exactly one OO, OC, CO or CC branch; the formula for
+$\alpha$ gives respectively \eqref{Sclose}, the two split weights,
+or \eqref{CC}. A source pair follows a pair opening and \eqref{Rclose}.
+Conversely each completed path specifies this decorated pairing
+uniquely. Thus the finite sums coincide. Merging identical open records
+preserves all future weights, since those records contain every
+unresolved source and edge. This proves \eqref{result}.
+
+If $T_P\emptyset=0$, then for every polynomial $R$,
+$\varphi(RP)=\varepsilon T_RT_P\emptyset=0$. Hence changes of
+polynomial representative do not affect \eqref{Gram} in its second
+slot, or in its first slot by Hermiticity. Positivity follows from the
+established finite-$N$ limit of $\E\norm{P O}^2$. The form is the usual
+positive moment form, whose null space is a left ideal by
+Cauchy--Schwarz. Its quotient and adjoint relations therefore give
+exactly the polynomial GNS construction.
+\end{proof}
+This argument gives the metric on the \emph{reachable} module. It does
+not assign a Euclidean metric to formal open configurations, nor assert
+that every such configuration is individually reachable. In practice a
+word-basis Gram matrix is computed by applying the same recurrence to
+$P_a^\dagger P_b$.
+
+The previous polynomial-density theorem bounds the covariant algebra
+on this entire GNS space. In particular
+\begin{equation}
+ B_h=\frac2{\sqrt{1-q}},\quad
+ \norm W\le\sqrt\lambda B_h,\quad
+ \norm j\le\frac{2\sqrt v}{\sqrt{1-q^4}}.
+\end{equation}
+For $S_K(t)=\sum_{r=0}^K(ith)^r/r!$, the limiting-space estimate is
+\begin{equation}
+ \norm{(e^{ith}-S_K(t))\psi}
+ \le\norm\psi\,e^{|t|B_h}
+              \frac{(|t|B_h)^{K+1}}{(K+1)!}.
+\end{equation}
+It provides controlled limiting covariant time calculations between
+fixed preparations; it does not by itself exchange finite-$N$,
+large-time and nonlinear-pinching limits.
+
+\newpage
+\section{Exact checks, scope and the next calculation}
+The fresh checker uses rational arithmetic and imports only pure
+functions from preceding stages. Its first completed scientific output
+records:
+\begin{center}
+\begin{tabular}{lr}\toprule
+Comparison&Count\\\midrule
+Full local CAR source exponent versus geometric rule&2774\\
+Selected source moments versus transfer (497 words, two points)&994\\
+Old $H/U/P$ transfer: all six-letter $H,W,M,M^\dagger$ words&4096\\
+Positive exact $14\times14$ Gram LDL decompositions&2\\
+Unpruned versus pruned vacuum coefficient checks&5\\\bottomrule
+\end{tabular}
+\end{center}
+The two formal points are $(\gamma,\lambda)=(1/2,1/3),(2/3,1/4)$.
+They test rational identities off the physical curve
+$\gamma=e^{-\lambda}$. Physical positivity is inherited from the
+microscopic theorem, not inferred from these finite tests.
+
+Longer examples provide an actual use of the transfer:
+\begin{center}
+\begin{tabular}{lrr}\toprule
+Word&Expanded endpoints&Peak retained states\\\midrule
+$h^{24}$&24&7\\
+$j^8$&16&21\\
+$j h^2 j W^2 j h^2 j$&14&10\\
+$M j h^4 j M^\dagger$&10&18\\
+$M^2 j h^2 j(M^\dagger)^2$&10&22\\\bottomrule
+\end{tabular}
+\end{center}
+All are exact at the first formal point. The first reference is the
+classical Touchard--Riordan formula \cite{JK},
+\begin{equation}
+ \varphi(h^{2n})=\frac1{(1-q)^n}\sum_{k=0}^n(-1)^k
+ \left[\binom{2n}{n-k}-\binom{2n}{n-k-1}\right]q^{k(k+1)/2}.
+\end{equation}
+The next two use the preceding tracial mixed-$q$ law; the selected
+examples use the original full source engine. A preliminary checker
+was interrupted after mistakenly choosing full pairing enumeration for
+the $h^{24}$ reference. It had written no scientific output. Replacing
+that reference by the displayed classical sum allowed the first complete
+run to finish. The interruption is retained in the diagnostics.
+
+The new result is an arbitrary-fixed-word computational representation
+with a physical Gram quotient. It does not classify the full selected
+operator algebra, prove compactness of $M$ in this enlarged space, or
+provide the spatial and mass generators of de Sitter holography. The
+old bridge for actual curvature $a_N=(1-\mathcal P_H)x_N$, $x=j/\sqrt v$,
+continues to apply to covariant blocks between fixed polynomial
+preparations. General interlacing of nonlinear pinched blocks remains
+a separate limit problem.
+
+The next useful physical calculation is the full restriction of a
+single selected excitation to the three-field covariant algebra,
+followed by higher bilocal descendants. It can now be tested with
+explicit ordered mixed moments while retaining the same original
+disorder, before choosing a spectral or bulk interpretation.
+
+\begin{thebibliography}{9}\small
+\bibitem{BINT} M. Berkooz, M. Isachenkov, V. Narovlansky and G. Torrents,
+\emph{Towards a full solution of the large N double-scaled SYK model},
+\href{https://arxiv.org/abs/1811.02584}{arXiv:1811.02584}, Sec.~2.3.
+\bibitem{RX} H. Rajgadia and J. Xu,
+\emph{Emergent States and Algebras from the Double-Scaling limit of Pure States in SYK},
+\href{https://arxiv.org/abs/2604.14387}{arXiv:2604.14387v3}, Secs.~3.2--4.
+\bibitem{JK} M. Josuat-Verg\`es and J. S. Kim,
+\emph{Touchard--Riordan formulas, T-fractions, and Jacobi's triple product identity},
+\href{https://arxiv.org/abs/1101.5608}{arXiv:1101.5608};
+FPSAC 2011 extended abstract, pp.~563--574.
+\end{thebibliography}
+\end{document}

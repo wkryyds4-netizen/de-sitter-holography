@@ -1,0 +1,10 @@
+# Sources and scope: polynomial Slater orbit densities
+
+Read 2026-11-08. The starting point is the sealed linear orbit-density stage, including its finite-N covariance argument, and the neutral-slope / covariant stages for tracial error bounds and same-J word limits.
+
+- A. S. Bandeira, K. Lucca, P. Nizić-Nikolac and R. van Handel, [Matrix Chaos Inequalities and Chaos of Combinatorial Type](https://web.math.princeton.edu/~rvan/chaosconf241224.pdf), author manuscript dated 24 December 2024. Sections 2.2–2.4 and Appendix A.2 provide the coefficient-flattening viewpoint and iteration through row/column enlargements. Their displayed operator-norm estimates introduce logarithmic dimension factors. We use the iteration structure with fixed Schatten moments derived explicitly in our draft. The square-free coupled model is not silently applied to repeated-index Wick chaos.
+- J. A. Tropp, [Second-Order Matrix Concentration Inequalities](https://tropp.caltech.edu/papers/Tro16-Second-Order-Matrix-preprint.pdf), §§6–7, especially the proof of Proposition 7.1 on PDF page 14: Gaussian integration by parts, a variance-weighted trace bound and Hölder yield the fixed-Schatten inequality. Hermitian dilation gives the rectangular version used here.
+
+These are established probabilistic methods. The specific near-Slater Weyl-orbit estimate, the multiplicity-preserving control of all partial synthesis flattenings, and their use for finite-N exact pinching in this preparation class are derived in the accompanying manuscript. No priority claim is made for general chaos inequalities or conditional Gaussian decoupling.
+
+The repeated-index conditional Wick formula is proved from its generating function to fix constants and tensor normalization. The existing project transfer rule supplies the quadratic response polynomials; the new interface is their applicability to the actual exact-pinched observable. The result covers fixed polynomial preparations and a covariant observable block, not all words with nonlinear pinched factors interlaced with selected operators.
