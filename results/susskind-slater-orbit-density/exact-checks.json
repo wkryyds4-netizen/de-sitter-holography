@@ -1,0 +1,234 @@
+{
+  "status": "passed",
+  "created_at_utc": "2026-11-07T17:09:20.060252+00:00",
+  "seed_systems": [
+    {
+      "N": 4,
+      "m": 2,
+      "p": 1,
+      "sector_dimension": 6,
+      "selected_labels": 4,
+      "weight_orbit_size": 6,
+      "exact_stabilizer_matrices": 2
+    },
+    {
+      "N": 4,
+      "m": 2,
+      "p": 2,
+      "sector_dimension": 6,
+      "selected_labels": 1,
+      "weight_orbit_size": 6,
+      "exact_stabilizer_matrices": 2
+    },
+    {
+      "N": 6,
+      "m": 3,
+      "p": 1,
+      "sector_dimension": 20,
+      "selected_labels": 9,
+      "weight_orbit_size": 20
+    },
+    {
+      "N": 6,
+      "m": 3,
+      "p": 2,
+      "sector_dimension": 20,
+      "selected_labels": 9,
+      "weight_orbit_size": 20
+    },
+    {
+      "N": 8,
+      "m": 4,
+      "p": 2,
+      "sector_dimension": 70,
+      "selected_labels": 36,
+      "weight_orbit_size": 70
+    }
+  ],
+  "projective_integrals": [
+    {
+      "N": 2,
+      "m": 1,
+      "p": 1,
+      "fixture": 0,
+      "trace_density": "196/3",
+      "exact_identity": true
+    },
+    {
+      "N": 2,
+      "m": 1,
+      "p": 1,
+      "fixture": 1,
+      "trace_density": "386/3",
+      "exact_identity": true
+    },
+    {
+      "N": 3,
+      "m": 1,
+      "p": 1,
+      "fixture": 0,
+      "trace_density": "655/3",
+      "exact_identity": true
+    },
+    {
+      "N": 3,
+      "m": 1,
+      "p": 1,
+      "fixture": 1,
+      "trace_density": "1321/3",
+      "exact_identity": true
+    },
+    {
+      "N": 4,
+      "m": 1,
+      "p": 1,
+      "fixture": 0,
+      "trace_density": "2736/5",
+      "exact_identity": true
+    },
+    {
+      "N": 4,
+      "m": 1,
+      "p": 1,
+      "fixture": 1,
+      "trace_density": "3196/3",
+      "exact_identity": true
+    }
+  ],
+  "Gaussian_Wick_moments": [
+    {
+      "N": 2,
+      "real_Gaussian_coordinates": 4,
+      "exact_second_moment": "5/3",
+      "bound": 3
+    },
+    {
+      "N": 3,
+      "real_Gaussian_coordinates": 9,
+      "exact_second_moment": "33/20",
+      "bound": 3
+    },
+    {
+      "N": 4,
+      "real_Gaussian_coordinates": 16,
+      "exact_second_moment": "76/45",
+      "bound": 3
+    },
+    {
+      "N": 5,
+      "real_Gaussian_coordinates": 25,
+      "exact_second_moment": "145/84",
+      "bound": 3
+    }
+  ],
+  "N2_high_moments": [
+    {
+      "r": 1,
+      "N2_exact_density_moment": "1",
+      "universal_bound": 1
+    },
+    {
+      "r": 2,
+      "N2_exact_density_moment": "5/3",
+      "universal_bound": 3
+    },
+    {
+      "r": 3,
+      "N2_exact_density_moment": "35/9",
+      "universal_bound": 15
+    },
+    {
+      "r": 4,
+      "N2_exact_density_moment": "35/3",
+      "universal_bound": 105
+    },
+    {
+      "r": 5,
+      "N2_exact_density_moment": "385/9",
+      "universal_bound": 945
+    },
+    {
+      "r": 6,
+      "N2_exact_density_moment": "5005/27",
+      "universal_bound": 10395
+    },
+    {
+      "r": 7,
+      "N2_exact_density_moment": "25025/27",
+      "universal_bound": 135135
+    },
+    {
+      "r": 8,
+      "N2_exact_density_moment": "425425/81",
+      "universal_bound": 2027025
+    }
+  ],
+  "counts": {
+    "seed_weights": 59,
+    "permutation_frame_counts": 122,
+    "stabilizer_entries": 624,
+    "exact_Haar_entries": 58,
+    "Gaussian_coordinate_pairs": 978
+  },
+  "parameters": {
+    "seed_fixtures": [
+      [
+        4,
+        2,
+        1
+      ],
+      [
+        4,
+        2,
+        2
+      ],
+      [
+        6,
+        3,
+        1
+      ],
+      [
+        6,
+        3,
+        2
+      ],
+      [
+        8,
+        4,
+        2
+      ]
+    ],
+    "projective_N": [
+      2,
+      3,
+      4
+    ],
+    "Gaussian_Wick_N": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "N2_moment_orders": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "sampling": "none; exact Haar monomials through third order"
+  },
+  "environment": {
+    "python": "3.14.5",
+    "sympy": "1.14.0",
+    "arithmetic": "SymPy Rational and exact complex matrices"
+  },
+  "input_sha256": {
+    "code/check_slater_orbit_density.py": "6aa47110f948feaf81870156aef82b88e70f7dc05f0ba654bfd069052ebd88c2",
+    "results/susskind-slater-neutral-slope/local-evidence.json": "cf278d649e5c6d76bebe925ab79ff894b6555a806538e066096adbfadefafc82"
+  },
+  "scope": "Finite diagnostics for seed torus weight/stabilizer and density normalization. General orbit-frame and moment bounds require the analytic representation-theoretic proof. The m=1 fixtures beyond N=2 are general finite-N checks, not half-filled DS examples."
+}

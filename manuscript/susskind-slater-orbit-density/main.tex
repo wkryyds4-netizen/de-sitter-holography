@@ -1,0 +1,334 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,microtype,booktabs}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\HH}{\mathcal H}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newtheorem{theorem}{Theorem}
+\title{Uniform Slater-orbit densities for linear selected preparations\\
+\large Exact energy pinching in the one-excitation sector}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{8 November 2026\quad Local research draft}
+\begin{document}\maketitle
+\begin{abstract}
+We prove a finite-dimensional, size-independent moment bound for the
+orbit density of a linear Slater-adapted preparation. The key estimate
+controls both variance operators of a rectangular Gaussian synthesis
+map. Its input covariance is bounded using the Weyl orbit of the
+Slater weight, with representation multiplicities retained. Standard
+matrix-Gaussian integration by parts then bounds every fixed density
+moment. For the normalized selected creation operator the second
+moment is at most three, uniformly in the microscopic parameters.
+This transfers exact energy-pinching errors from the covariant trace
+to the one-selected excited state and closes its actual neutral-slope
+correlators. Nonlinear selected preparations are left for a separate
+estimate.
+\end{abstract}
+
+\section{Finite-$N$ setting and the result}
+Let $\HH_m=\bigwedge^m\mathbb C^N$, $d_m=\binom Nm$ and $|O\rangle$
+be a fixed Slater determinant. Use the original overlapping complex
+Hermitian Gaussian $p$-body couplings. Express their GUE law in real
+independent standard Gaussian coordinates $g_a$. Physical $U(N)$
+rotations act on these coordinates by an orthogonal representation
+$R(U)$ and on $\HH_m$ by $U_m=\bigwedge^m U$.
+
+Take a homogeneous linear preparation $P_O(J)$ satisfying
+\begin{equation}\label{eq:stab}
+ P_O(k\cdot J)=k_m P_O(J)k_m^\dagger,
+ \qquad k\in U(m)\times U(N-m),
+ \quad a_N=\E\norm{P_O(J)|O\rangle}^2.
+\end{equation}
+The subgroup preserves the occupied plane. Normalized $M_N^\dagger$,
+$h_N$, $u_N$ and fixed linear combinations obey this condition.
+For $M_N^\dagger$, $a_N=1$ exactly.
+
+\begin{theorem}\label{thm:main}
+There is a positive covariant random matrix $\mathcal R_{P,N}$ such
+that, for every covariant $Y_N(J)$ with $\E\tr_m(Y_N^\dagger Y_N)<\infty$,
+\begin{equation}
+ \E\langle O|P_O^\dagger Y_NP_O|O\rangle
+    =\E\tr_m(\mathcal R_{P,N}Y_N),\qquad
+ \E\tr_m\mathcal R_{P,N}^{,r}\le(2r-1)!!\,a_N^r
+\end{equation}
+for every integer $r\ge1$. Here $\tr_m=\Tr/d_m$.
+\end{theorem}
+This theorem is finite $N$; it does not assume double scaling or
+replace finite-$N$ spectral projectors by their limiting functions.
+
+\newpage
+\section{The orbit synthesis map and its output covariance}
+Haar measure on $G=U(N)$ is normalized to one. Put
+\begin{equation}
+ q_U(J)=U_m^\dagger P_O(U\cdot J)|O\rangle,\qquad
+ Z(J)f=\sqrt{d_m}\int_G q_U(J)f(U)\,\dd U.
+\end{equation}
+The map $Z:L^2(G)\to\HH_m$ is a finite Gaussian matrix series after
+restricting its domain to the finite-dimensional matrix-coefficient
+space that supports all its entries. Define
+\begin{equation}\label{eq:density}
+ \mathcal R_{P,N}(J)=Z(J)Z(J)^\dagger
+     =d_m\int_G |q_U(J)\rangle\langle q_U(J)|\,\dd U.
+\end{equation}
+Changing the Haar variable proves covariance of this matrix. Rotating
+the Gaussian variable and using $Y(U\cdot J)=U_mY(J)U_m^\dagger$
+proves the exact pairing identity in Theorem~\ref{thm:main}.
+
+For the output covariance, Gaussian invariance first removes the
+rotation from $P_O(U\cdot J)$ under expectation. Schur averaging
+in the irreducible exterior-power representation then gives
+\begin{equation}\label{eq:output}
+ \E ZZ^\dagger
+ =d_m\int_G U_m^\dagger
+    \E[P_O(J)|O\rangle\langle O|P_O(J)^\dagger]U_m\,\dd U
+ =a_N I_m.
+\end{equation}
+Controlling only \eqref{eq:output} would not suffice: a Gaussian
+column $g\in\mathbb C^d$ has $\E gg^\dagger=I$ but
+$\E\tr(gg^\dagger)^2=d+1$. The input variance must also be bounded.
+
+Write $q_U=\sum_a g_a f_a(U)$ and introduce its coefficient vector
+\begin{equation}
+ \Psi_U=\sum_a e_a\otimes f_a(U)
+     =[R(U)^T\otimes U_m^\dagger]\Psi
+     =\rho(U^{-1})\Psi,\qquad
+ \rho=R\otimes\bigwedge^m,\quad \norm\Psi^2=a_N.
+\end{equation}
+The real Hermitian noise basis makes $R(U)^T=R(U^{-1})$.
+In ordered complex $J_{AB}$ labels the equivalent noise factor is
+the conjugate adjoint action, so its torus weight is $B-A$;
+the physical hop state has weight $O+A-B$.
+
+For a diagonal unitary $D$, equation \eqref{eq:stab} gives
+$q_D=\chi_O(D)^*q_I$, where $\chi_O(D)=\prod_{i\in O}D_{ii}$.
+Consequently
+\begin{equation}\label{eq:weight}
+ \rho(D)\Psi=\chi_O(D)\Psi.
+\end{equation}
+The noise and physical weights therefore sum to the Slater weight.
+This exact selection rule is what controls the other variance.
+
+\newpage
+\section{The Slater weight bounds the input covariance}
+Decompose the finite-dimensional unitary representation as
+$\bigoplus_\alpha V_\alpha\otimes\mathcal M_\alpha$ and let
+$\Psi_\alpha$ be the component of $\Psi$. Equation \eqref{eq:weight}
+holds in each nonzero component. The corresponding irreducible
+representation $V_\alpha$ therefore contains the weight
+$(1^m,0^{N-m})$.
+
+Permutation matrices take that weight to every choice of $m$ occupied
+coordinates. These $d_m$ weights are distinct, and their weight
+spaces are mutually orthogonal. Hence
+\begin{equation}
+ d_\alpha:=\dim V_\alpha\ge d_m
+ \qquad\text{whenever }\Psi_\alpha\ne0.
+\end{equation}
+No highest-weight assumption or multiplicity-free decomposition is
+needed. Schur averaging, with multiplicity spaces retained, gives
+\begin{align}
+ F&:=d_m\int_G|\Psi_U\rangle\langle\Psi_U|\,\dd U\\
+ &=\bigoplus_\alpha\frac{d_m}{d_\alpha}I_{V_\alpha}
+       \otimes\sigma_\alpha,\qquad
+ \sigma_\alpha=\Tr_{V_\alpha}
+                   |\Psi_\alpha\rangle\langle\Psi_\alpha|.
+\end{align}
+Since $\sigma_\alpha\ge0$ and
+$\norm{\sigma_\alpha}\le\Tr\sigma_\alpha
+=\norm{\Psi_\alpha}^2\le a_N$, it follows that $0\le F\le a_N I$.
+
+Let $Af=\sqrt{d_m}\int_G\Psi_U f(U)\dd U$.
+Then $AA^\dagger=F$, while the kernel of $A^\dagger A$ is
+$d_m\langle\Psi_U,\Psi_V\rangle$.
+Gaussian covariance shows that this is precisely the kernel of
+$\E Z^\dagger Z$. The nonzero spectra of $AA^\dagger$ and
+$A^\dagger A$ coincide, so
+\begin{equation}\label{eq:input}
+ 0\le\E Z^\dagger Z\le a_N I,
+ \qquad \Tr(\E Z^\dagger Z)=d_m a_N.
+\end{equation}
+The bounds \eqref{eq:output} and \eqref{eq:input} are independent of
+$N,p,m$ except through the preparation norm $a_N$.
+
+For the selected creation block, this norm is one: it creates the
+$L_N=\binom mp\binom{N-m}p$ orthogonal $p$-hop states from $O$,
+with covariance $1/L_N$ per label. This also gives an elementary
+check on \eqref{eq:output}: the unrotated output covariance is the
+$p$-excitation projector divided by $L_N$, whose Haar average is
+$I_m/d_m$.
+
+\newpage
+\section{Density moments and transfer of small covariant errors}
+Hermitize the rectangular series:
+\begin{equation}
+ S=\begin{pmatrix}0&Z\\Z^\dagger&0\end{pmatrix}
+   =\sum_a g_a A_a,\qquad
+ V=\E S^2=\begin{pmatrix}a_N I_m&0\\0&\E Z^\dagger Z\end{pmatrix}.
+\end{equation}
+We have $V\le a_NI$ and $\Tr V=2d_m a_N$. For $r\ge2$, the
+standard Gaussian integration-by-parts identity \cite[Sec.~6]{Tropp}
+and the derivative of a matrix power give
+\begin{equation}
+ \E\Tr S^{2r}
+ =\sum_a\sum_{k=0}^{2r-2}
+     \E\Tr(A_aS^kA_aS^{2r-2-k}).
+\end{equation}
+In the eigenbasis of $S$, each summand is
+$\sum_{ij}|(A_a)_{ij}|^2 x_j^k x_i^{2r-2-k}$.
+Taking absolute values and applying weighted arithmetic--geometric
+mean bounds it by $\Tr(A_a^2 S^{2r-2})$. This is the usual
+matrix-Gaussian moment argument \cite[Sec.~7]{Tropp}. Thus
+\begin{equation}
+ \E\Tr S^{2r}\le(2r-1)\E\Tr(VS^{2r-2})
+     \le(2r-1)a_N\E\Tr S^{2r-2}.
+\end{equation}
+Start at $\E\Tr S^2=\Tr V$, rather than at the ambient dimension.
+Since $\Tr S^{2r}=2\Tr(ZZ^\dagger)^r$, induction proves
+\begin{equation}\label{eq:moment}
+ \E\tr_m\mathcal R_{P,N}^{,r}\le(2r-1)!!a_N^r.
+\end{equation}
+If $a_N=0$, the statement is immediate. The general Gaussian moment
+method is established literature; the new input here is the orbit
+variance estimate needed to apply it uniformly.
+
+Let $\norm X_{r,m}=(\E\tr_m|X|^r)^{1/r}$. H\"older on the joint
+disorder/matrix trace space now gives
+\begin{align}\label{eq:holder}
+ |\E\langle O|P_O^\dagger YP_O|O\rangle|
+   &\le\sqrt3\,a_N\norm Y_{2,m},\\
+ \E\norm{X P_O|O\rangle}^2
+   &\le\sqrt3\,a_N\norm X_{4,m}^2
+\end{align}
+for covariant $Y,X$, respectively. Positivity of $Y$ is not required
+in the first bound.
+
+For a covariant post-preparation $B(J)$ there is also the exact
+identity $\mathcal R_{BP}=B\mathcal R_PB^\dagger$. Consequently
+\begin{equation}
+ \norm{\mathcal R_{BP}}_{r,m}
+ \le\norm B_{4r,m}^2\norm{\mathcal R_P}_{2r,m}.
+\end{equation}
+Fixed covariant polynomials have the required high moments; actual
+unitary phases preserve them. The preparation order is $BP|O\rangle$.
+It has not been interchanged with $PB|O\rangle$.
+
+\newpage
+\section{The actual neutral slope with exact energy pinching}
+Return to half filling and the double-scaling limit
+$\lambda_N=p^2/N\to\lambda>0$. In the notation of the preceding
+stage, $h_N=H_N/\sqrt{C_m}$ and
+\begin{equation}
+ t_N=\frac{m\epsilon\alpha[\Phi_m(H_N)-\bar\kappa_m H_N]}
+ {8\lambda_N C_m^{3/2}q_N\sqrt{\lambda_N}},\qquad
+ b_N=(1-\mathcal P_{H_N})t_N.
+\end{equation}
+This $b_N$ is the normalized actual neutral slope. The pinching
+$\mathcal P_{H_N}$ preserves whole degenerate energy blocks.
+Time is dimensionless, conjugate to $h_N$; physical string energy
+is $(J_s/\sqrt\lambda)h$.
+
+The preceding central-sector argument already proved
+\begin{equation}
+ X_N:=\mathcal P_{H_N}t_N,
+ \qquad \norm{X_N}_{r,m}\longrightarrow0
+ \quad\text{for every fixed finite }r.
+\end{equation}
+It uses positivity of the two-energy measure, zero diagonal mass in
+its $q$-Mehler limit, Portmanteau, high moments and pinching
+contractivity. It does not interchange infinite time with $N$.
+Applying \eqref{eq:holder} with $P=M_N^\dagger$, $a_N=1$, gives
+\begin{equation}\label{eq:pinch}
+ \E\norm{X_N M_N^\dagger|O\rangle}^2
+      \le\sqrt3\norm{X_N}_{4,m}^2\longrightarrow0.
+\end{equation}
+This is the missing finite-$N$ estimate for the one-selected state.
+
+For any fixed word $W$ of covariant insertions, telescope
+$W(h_N,b_N)-W(h_N,t_N)$ and use tracial H\"older with sufficiently
+high fixed moments. Its $S_2$ norm tends to zero. The first bound in
+\eqref{eq:holder} transfers that difference to the selected state.
+The already proved unpinched same-$J$ limit then yields
+\begin{equation}\label{eq:limit}
+ \lim_N\varphi_N\bigl[M_N W(h_N,b_N)M_N^\dagger\bigr]
+   =\tau\bigl[\rho_1 W(h,u)\bigr],
+\end{equation}
+where $\tau$ is the standard two-color $q$-Gaussian trace and
+\begin{equation}
+ \rho_1=(\gamma h-\sqrt\lambda\gamma u)^2
+          +[1-\sqrt q(1+\lambda)]I,\qquad \gamma=q^{1/4}.
+\end{equation}
+Any finite number of slope insertions and fixed actual $h_N$ time
+phases inside the preparation sandwich are allowed. In particular,
+\begin{equation}
+ \lim_N\varphi_N(M_N b_N^2 M_N^\dagger)
+      =1+\lambda\sqrt q(1+q).
+\end{equation}
+The finite-$N$ operation here is exact pinching, followed by $N\to
+\infty$. It is stronger than the previous ordered finite-window
+statement for this preparation class.
+
+\newpage
+\section{Exact finite checks, scope and the next interface}
+Five finite Slater fixtures check 59 noise-plus-physical weight
+identities and 122 permutation-frame counts. Two exact stabilizer
+matrices for each of $(N,m,p)=(4,2,1),(4,2,2)$ check 624 entries,
+including conjugation of the noise action and CAR signs.
+
+An independent projective case provides the complete density. For
+$m=p=1$, let $J$ be the single-particle Hermitian GUE matrix. Since
+$q_\psi=(I-|\psi\rangle\langle\psi|)J|\psi\rangle/\sqrt{N-1}$,
+Haar integration gives
+\begin{equation}\label{eq:projective}
+ \mathcal R(J)=\frac{NJ^2-2\Tr(J)J+
+       [(\Tr J)^2+\Tr J^2]I/(N+1)}{(N-1)(N+2)}.
+\end{equation}
+The checker independently expands the three projector factors using
+\begin{equation}
+ \E_\psi\prod_{\ell=1}^k (|\psi\rangle\langle\psi|)_{i_\ell j_\ell}
+ =\frac{\sum_{\pi\in S_k}\prod_\ell\delta_{i_\ell,j_{\pi(\ell)}}}
+             {N(N+1)\cdots(N+k-1)},\qquad k\le3.
+\end{equation}
+This formula follows by twirling onto the symmetric tensor power.
+Two exact complex fixtures at each $N=2,3,4$ verify all 58 entries
+of \eqref{eq:projective} and its principal-minor positivity.
+Only $N=2$ is half filled in this diagnostic family.
+
+Independent Gaussian-coordinate Wick contraction at $N=2,3,4,5$
+checks the mean $I$ and second moment with 978 coordinate pairs.
+Writing $D=(N-1)(N+2)$, the result is
+\begin{equation}
+ \E\tr\mathcal R^2=
+ \frac{2N^4-5N^2+3+\frac{2N+3}{(N+1)^2}(N^4-1)}{D^2}\le3.
+\end{equation}
+At $N=2$, $\mathcal R=(\chi_3^2/3)I$; its exact moments
+$\prod_{j=0}^{r-1}(3+2j)/3^r$ obey \eqref{eq:moment}. Orders one
+through eight are saved. No Haar Monte Carlo or asymptotic fit is used.
+
+These checks supplement the general proof. The first checker attempt
+compared differently simplified complex expressions; entrywise exact
+simplification resolved the failed assertion. The initial diagnostic
+is retained. Successful scientific output is sealed, with source,
+versions, PDF build and renders bound by a separate SHA256 manifest.
+
+The result covers linear preparations and covariant post-dressing,
+including all covariant correlators in the $M_N^\dagger|O\rangle$
+state. For multiple interlaced selected insertions, or a preparation
+$M_N^\dagger B_N|O\rangle$, the synthesis map is generally nonlinear
+Gaussian and the present moment recurrence does not apply.
+The next task is that larger preparation class and the $J_2$/complete
+bilocal interface, followed by the physical spatial, mass and
+finite-$G$ dictionary.
+
+\begin{thebibliography}{9}\small
+\bibitem{Tropp} J. A. Tropp, \emph{Second-Order Matrix Concentration Inequalities},
+\href{https://arxiv.org/abs/1504.05919}{arXiv:1504.05919};
+\href{https://tropp.caltech.edu/papers/Tro16-Second-Order-Matrix-preprint.pdf}{author's preprint},
+Secs.~6--7, Lemma 6.1 and Propositions 7.1, 7.3.
+\end{thebibliography}
+\end{document}
+

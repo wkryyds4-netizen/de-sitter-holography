@@ -1,0 +1,63 @@
+{
+  "status": "passed",
+  "created_at_utc": "2026-11-07T16:28:17.667579+00:00",
+  "fixtures": [
+    {
+      "N": 4,
+      "p": 1,
+      "comparisons": 12288,
+      "negative_results": 0
+    },
+    {
+      "N": 4,
+      "p": 2,
+      "comparisons": 62208,
+      "negative_results": 0
+    },
+    {
+      "N": 6,
+      "p": 1,
+      "comparisons": 62208,
+      "negative_results": 0
+    }
+  ],
+  "cluster_checks": 7880,
+  "nonzero_source_coefficients": 579,
+  "parameters": {
+    "fixtures": [
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        6,
+        1
+      ]
+    ],
+    "finite_edges": 2,
+    "all_endpoint_masks": true,
+    "cluster_edges": [
+      1,
+      2,
+      3
+    ],
+    "source": "2(p-half-Clifford-size)"
+  },
+  "environment": {
+    "python": "3.14.5",
+    "numpy": "2.4.6",
+    "arithmetic": "int64 with small matrices; exact integer comparisons"
+  },
+  "input_sha256": {
+    "code/check_slater_covariant_sites.py": "3b724be9504cb1e74898d4e4d1efdaa226078b88e6d22f9d62c75d9f0b65b4f8",
+    "code/slater_covariant_transfer.py": "849a4a3fd7de2e68c644b1925804fa1776944fc27614c6ba65d1c80a4af5de9f",
+    "code/slater_joint_site_polynomial.py": "68d364e710f0d37cfca24720554fb342fac35d435e59fba3e3ba6b0a2048b489",
+    "results/susskind-slater-stationary/local-evidence.json": "3f48570f38afaf6e384117b440eba63f559d3ddd3774439f6dee9fa3ecac7ff7"
+  },
+  "elapsed_seconds": 1.344628700055182,
+  "scope": "Finite exact CAR/site comparisons and local source coefficient table. Arbitrary-order double scaling requires the companion normalized-defect proof."
+}

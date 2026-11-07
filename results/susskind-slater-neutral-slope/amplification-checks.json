@@ -1,0 +1,86 @@
+{
+  "status": "passed",
+  "created_at_utc": "2026-11-07T16:50:21.545124+00:00",
+  "rows": [
+    {
+      "gamma": "1/2",
+      "sqrt_lambda": "1/2",
+      "new_joint_primitive_norm": "11/16",
+      "primitive_checks": [
+        {
+          "level": 1,
+          "kernel_dimension": 1,
+          "primitive_squared_norms": [
+            "11/16"
+          ]
+        },
+        {
+          "level": 2,
+          "kernel_dimension": 3,
+          "primitive_squared_norms": [
+            "4965/272",
+            "1389735/90032",
+            "1441/22208"
+          ]
+        }
+      ]
+    },
+    {
+      "gamma": "2/3",
+      "sqrt_lambda": "1/2",
+      "new_joint_primitive_norm": "4/9",
+      "primitive_checks": [
+        {
+          "level": 1,
+          "kernel_dimension": 1,
+          "primitive_squared_norms": [
+            "4/9"
+          ]
+        },
+        {
+          "level": 2,
+          "kernel_dimension": 3,
+          "primitive_squared_norms": [
+            "72605/13968",
+            "30875455/7801128",
+            "45632/436671"
+          ]
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "density_identities": 1022,
+    "primitive_vectors": 8,
+    "tower_inner_products": 32
+  },
+  "parameters": {
+    "rational_pairs": [
+      [
+        "1/2",
+        "1/2"
+      ],
+      [
+        "2/3",
+        "1/2"
+      ]
+    ],
+    "max_density_word_degree": 8,
+    "primitive_levels": [
+      1,
+      2
+    ],
+    "physical_relation_imposed": false
+  },
+  "environment": {
+    "python": "3.14.5",
+    "sympy": "1.14.0",
+    "arithmetic": "fractions.Fraction and SymPy Rational"
+  },
+  "input_sha256": {
+    "code/check_slater_covariant_amplification.py": "055a19e128cb3dfe199ad3b972ca49ef86d7b39c092b7f65a34202df9880213c",
+    "code/slater_covariant_transfer.py": "849a4a3fd7de2e68c644b1925804fa1776944fc27614c6ba65d1c80a4af5de9f",
+    "results/susskind-slater-covariant/local-evidence.json": "0c26a1bffe0cd006a252d7e229851cb486c0022892564aed773e20da0a980aea"
+  },
+  "scope": "Finite exact checks of the graded q-Fock amplification proof and selected density formula; not an extrapolation of finite kernel ranks."
+}

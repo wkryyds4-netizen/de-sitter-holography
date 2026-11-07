@@ -1,5 +1,64 @@
 # 下一次从这里继续
 
+## 2026-11-08 集中发布交接
+
+用户本轮授权 Git 与 issue 回复。本次快照收录 stationary、covariant、neutral-slope、orbit-density 四阶段；[发布说明](notes/research-release-2026-11-08-slater-density.md)给出全部阅读入口。116 个不同证据文件的当前字节及四份 PDF 页数已只读核对；成功科学输出未重跑、封存 manifest 未改。此前 560d683 及评论 6709573165 是上一批，本次不重复发送旧正文。具体发布回执保存在本机 tmp/publication-2026-11-08-slater-density。
+
+下一科学任务仍是下节所述 P=M†h、P=(M†)² 的二次制备。固定多项式阶的推广目前只是待检验路线，不属于已完成结论；尤其不能从 polynomial core 上的误差控制直接推出多次 exact-pinched 因子与 M 交错的全部 raw moments。长期 goal active。下方历史“无新 Git”均为各阶段当时状态。
+
+## 当前继续位置：2026-11-08 Slater轨道密度与单激发exact pinching（本地）
+
+先读[六页PDF](output/pdf/de-sitter-susskind-slater-orbit-density.pdf)、[LaTeX完整证明](manuscript/susskind-slater-orbit-density/main.tex)、[中文笔记](notes/susskind-slater-orbit-density.md)、[来源](literature/susskind-slater-orbit-density-sources.md)及journal/2026-11-08-susskind-slater-orbit-density.md。上一轮neutral-slope为progress，本轮亦progress；长期goal active。science、PDF、recorder已封存，无活跃进程；无新Git/issue，原560d683/6709573165已完成。
+
+- **有限N定理**：P_O(J) homogeneous linearGaussian，且对O稳定子U(m)×U(N−m)协变；a_N=E||P_O O||²。d=binom(N,m)、q_U=U_m†P_O(U·J)O、Zf=√d∫q_U f(U)dU，R_P=ZZ†。对covariant Y∈jointS2，E〈O|P†Y P|O〉=Etr_m(R_PY)精确。Gaussian invariance+Schur给EZZ†=aI。noise-real coefficient Ψ_U=(R(U)^T⊗U_m†)Ψ=ρ(U^-1)Ψ，Ψ的torus weight是(1^m,0...)；ordered complex noise需conjugate Ad，noise weight B−A，加physical O+A−B才得O。
+- **第二侧variance/矩**：任何含Ψ分量的irrep含整个d个Weyl orbit weights，所以dimVα≥d。d∫Ψ_UΨ_U†=⊕(d/dα)I⊗TrVαΨαΨα†≤aI，multiplicity保留。它与E Z†Z同非零谱，故E Z†Z≤aI且trace=da。Hermitian dilation S的V≤aI、TrV=2da；Gaussian IBP+eigenbasis AMGM给ETrS2r≤(2r−1)aETrS2r−2，从TrV起步得EtrR_P^r≤(2r−1)!!a^r。不是用一般matrix-polynomial hypercontractivity。
+- **实际单selected结果**：P=M†时a=1精确，EtrR_M²≤3。因此covariant X满足E||X M†O||²≤√3||X||4,m²。旧central exact pinching X=P_Ht_N在每个fixedS_r趋0，故此误差在M†O中趋0。更一般固定covariant word W含actual b_N=(1−P_H)t_N、h/u及内部固定unitary phases，有φ_N[M W(h,b)M†]→τ[ρ1 W(h,u)]。ρ1=(γh−√λγu)²+[1−s(1+λ)]I；例φ(M b² M†)→1+λs(1+q)。这是finiteN exact pinching后的N极限，不只finite-window。
+- **后置dressing/边界**：若B协变，R_BP=B R_P B†逐样本，||R_BP||r≤||B||4r²||R_P||2r，故覆盖B M†O。没有据此覆盖M†B O或多次interlaced M/M†。一般P多项式的Z不再linearGaussian，即使ER=aI、Gaussian degree固定，也不能直接套本轮矩递推。
+- **下一首任务**：从二次prep P=M†h、P=(M†)²开始，明确Gaussian chaos/可能内部contraction、coeff张量与orbit synthesis的partial flattening norms；先核相关primary matrix-Gaussian-chaos/decoupling工具，再判断能否保留维数无关界。两个候选在O上可能是pure chaos2，但须实际核，不把这里的预期当结论。目标是把exact pinching传到general selected polynomial准备，从而全joint实际bilocal；也可先计算J2与M的具体同J混合图。旧fulltrace完整bilocal四点已完成；空间/质量/温度/finite-G仍需构建。
+- **证据**：exact-checks SHA `95313475713ec714a8d525d8a0d32315afb92ed7ee41983bcd96719a4c4120ac`；59seed weights、122permutation frame、624stabilizer entries、58exact projective Haar entries、978Gaussian coordinate pairs，N2 density高矩1..8。m=p=1 fixtures除N2非halffilled，仅finiteN一般lemma检查，无Haar MonteCarlo。初checker复数表达未canonicalize失败保留；改逐项simplify后成功，science未再跑。初LaTeX mathscr缺失已换mathcal，失败log保留。最终六页双遍无undefined/overfull、全部90dpi目检，最后仅page1 integrability措辞改变并重检，其余5页hash不变。manifest SHA `0864d7bca7abbc5bdfb86a23e8e21b08bb97c7e852dc3b3a28a752b6a5bea028`，11当前/14父文件核验。成功science/recorder不重跑不覆盖。
+
+以下为历史位置，以本节为先。
+
+## 当前继续位置：2026-11-08 实际中性斜率、Fock放大与有限分辨率（本地）
+
+先读[八页PDF](output/pdf/de-sitter-susskind-slater-neutral-slope.pdf)、[LaTeX](manuscript/susskind-slater-neutral-slope/main.tex)、[中文完整笔记](notes/susskind-slater-neutral-slope.md)、[来源](literature/susskind-slater-neutral-slope-sources.md)和journal/2026-11-08-susskind-slater-neutral-slope.md。上轮covariant为progress，本轮亦progress。长期goal active；三science/八页PDF/recorder均成功封存，无活跃句柄。没有新Git/issue，既有发布560d683和评论6709573165不重复。
+
+- **实际桥已完成**：物理H方差C_m、dimensionless h=H/√C_m，T=mεα(ΦH−κbar H)，t=T/[8λ_N C_m^(3/2)q_N√λ_N]=f_N(R)h。f_N=mεα(μ_N−μbar)/[8λ_Nq_N√λ_N]；μ为旧Kota sandwich比值、μbar按精确H rank权重回归。缺额d=p−r→Poisson(λ)，相邻比≤8λ+/(d+1)，全d高矩受控；p[μ(p−d)−μ(p)]→4λq d且≤6λ_Nd。f_N与(d−λ_N)/√λ_N加权平方差→0。linearGaussian equivariant covariance将此桥传到所有selected固定words/time，再接旧rank/size桥得到u。精确φ_N(t M†)=√(L_N/D_N)f_N(p)→−√λγ。Poissonλ的rank缺额别误写为Slater hop缺额Poisson2λ。
+- **新全表示/商**：K_n=H_n∩ker a_H∩ker a_U，qCCR正规序和逐grade补空间给H≃F_q(R²)⊗K，h/u为standard fields⊗I，未用dimH_n=3^n。故D=C*(h,u)是标准qCstar的faithful amplification，D''有限diffuse因子放大，无非零compact；结合A+=D+K(H)得A+/K(H)≅C*_q(R²)。这是本轮新证明，上一轮只识别指定态GNS。未分类全部stationary states。
+- **选态密度**：c=−√λγ，v=γh+cu，ζ=M†Ω−vΩ是joint primitive，r_P=||ζ||²=1−s(1+λ)>0。σ1(B)=φ(M B M†)=τ(ρ1B)，ρ1=v²+r_PI，normρ1=r_P+4s(1+λ)/(1−q)。任意finitegradeψ有ρψ=ΣP_jP_j† bounded；一般ψ仅L1。r_P不是此前r_u=1−λ/(e2λ−1)，投影子空间不同。
+- **有限分辨率已完成**：D_T(X)=(2T)^−1∫[-T,T]alpha_tX；V=τ(D_Tu)²=∫sinc²(TΔE)Kq μ²=(1/T)∫0^(2T)(1−t/2T)C_u(t)dt，TV→κu=π∫Kq(E,E)ρq²。finitegrade selected向量误差≤||ρψ||V，一致operator界和dense extension给D_Tu在整个Slater H上strong→0。实际b_N,T=(1−D_N,T)t_N满足lim_T lim_N全固定selected词→h,u,M词，允许固定外部time。不是lim_N lim_T的exact pinching定理。
+- **exact pinching范围/下一首任务**：纯协变h,u/t族，central正两能量ν_N→Kμ²无对角质量，Portmanteau给||P_H t_N||2,m→0，Gaussian高矩+pinching contraction+插值给所有固定S_r，再Schur/Hölder传actual B1。含M时需新finiteN selected绝对连续性控制；极限boundedρ1不能用于N-dependent spectral projector。具体建设性入口见本轮journal：对fixed-O selected多项式P，做U(N) Slater轨道twirl得到正矩阵R_{P,N}(J)，使E〈O|P†Y P|O〉=E tr_m(R_P Y)对covariantY精确成立；先核P=M†时R的Gaussian degree2结构及归一，再尝试一致S_r矩界。该界尚未证明，不默认对所有Y成立。可先直接针对Y=(P_Ht_N)²。随后J2/fullbilocal共同表示、空间/质量/温度/finite-G；旧fulltrace完整bilocal四点不重做。
+- **证据**：rank20exact系统/12全p+1rank DS行，80/120位，完整保存有限误差；amplification1022exact density/8primitive/32tower；dephasing3physicalq/36time-cutoff行L512/768、两套κ积分、独立time integral差1.82e−13。q=.0625,.25,.64的κu≈.8876163,1.0287120,1.5860568。finiteL plateau保留；4exp(x)x^L/L!只exact arithmetic，roundoff非interval。manifest SHA256 `cf278d649e5c6d76bebe925ab79ff894b6555a806538e066096adbfadefafc82`，14当前/15父文件核验；八页双遍无undefined/overfull、90dpi全部目检。成功science/plot/recorder不重跑、不覆盖。
+
+以下为历史位置，以本节为先。
+
+## 当前继续位置：2026-11-08 同 J 协变通道、全混合词与平稳动力学（本地）
+
+先读[九页PDF](output/pdf/de-sitter-susskind-slater-covariant.pdf)、[LaTeX](manuscript/susskind-slater-covariant/main.tex)、[中文笔记](notes/susskind-slater-covariant.md)、[来源](literature/susskind-slater-covariant-sources.md)和journal/2026-11-08-susskind-slater-covariant.md。本轮progress；长期goal active。三个science成功即封存，双遍PDF/九页90dpi全部目检完成，无活跃进程。本次没有新增Git/issue；此前560d683和评论6709573165已完成，不重复回复。
+
+- **实际算符/规范**：同原J、半填充固定Slater annealed态、overlapping CAR模型，λ_N=p²/N→固定λ>0，h=H/√(wD)，q=e^(−4λ)、γ=q^(1/4)、s=√q。u_N=(p−L−λ_N)h_N/√λ_N，L是fullFock halfClifford-size，先作用后限制m；来自旧W1，非独立matter。h时间无量纲，物理string能量乘J_s/√λ。
+- **全word/time**：nilpotent endpoint source把own-overlap n替为n+zI/2；G own双membership空/占据和系数1,z_i/2,z_j/2,z_i z_j/2。归一化defect系数范数界activity m(p/m)^|S|，高重O(p³/N²)消失、backward需≥p defects消失，允许任意固定源导数。中心化得G边exp(λz_i z_j)、selected混合端exp(−λz_i)。HH=UU=1、HU=0、H-selected γ、U-selected c=−√λγ、MM†=1，selected只forward，乘q^(crossings+inner-selected nestings)。u线性Gaussian equivariant给Eu²=v_N I→I，逐Wick noise-slot行列收缩接阶乘尾，紧复时间实际有限N指数收敛；未证全joint quenched集中。
+- **完整传递**：H/U/P oldest→newest；a_i†/b† append，a_i删同色j权q^(n−j)、删P权c_i q^(n−1)，b删H/U/P权γ/c/1乘q^(n−1)。正Gram来自微观limit，非Euclidean strings，grade维≤3^n。a_i a_j†−q a_j†a_i=δij；a_i b†−q b†a_i=b a_i†−q a_i†b=c_iq^N；bb†−qb†b=q^N。creator界[n+1]_q与(n+1)q^n，h/u bounded，M在扩大空间仍compact；h为pureAC qJacobi primitive towers，weak closure B(H)。
+- **真正新增方向**：旧cyclic空间所有grade由H/P穷尽，uΩ第一层；P_old uΩ=√λs/(1−s)hΩ−√λγ/(1−s)M†Ω。残量norm²=1−λ/(e^(2λ)−1)>0，λ→0趋1/2，且a_H杀残量。四点φ(Mu²M†)=1+λs(1+q)、φ(uM†Mu)=λs、φ(MuM†u)=q(1+λs)、φ(MM†u²)=1。
+- **建设性平稳态**：D=C*(1,h,u)，A+=D+K，φ|D是标准两色qGaussian trace。pureAC使lim_|t|∞φ(alpha_t(B+K))=φ(B)=τ∞(B+K)，因此well-defined positive trace，杀M保留u；其GNS为Γ_q(R²)，Ricard dim≥2给II1。只识别这个态的GNS，未识别完整A+/K或分类所有stationary states。τ∞相对原TypeI rep非normal；τ∞([h,u]†[h,u])=2(1−q)>0。有限β tilt是真正KMS，未赋予dS温度。qMehler已有公式给C_u(t)=Σq^n|〈n|e^(ith)|0〉|²=1−(1−q)t²+O(t4)。
+- **实际rank桥/下一首任务**：旧size-bridge §1中央sector||(R−L)h||2,m=O(N^-1)，差亦linearGaussian equivariant，covariance O(N^-2)I，故u可换为(p−R−λ_N)h/√λ_N于所有selected固定words/time。尚未自动包含exact-pinched neutral slope或全bilocal：fulltrace S_r估计不能直接用于M-excited态，pinching破坏linearGaussian。下一轮先读旧actual neutral-slope/rank symbol定义和pinching证明，从未pinch实际线性斜率的rank系数做桥；随后selected pinching控制、J2/fullbilocal common rep、空间/质量及finite-G。已有fulltrace完整bilocal四点已完成，不重复。
+- **证据**：site136704CAR/7880clusters；word8192六字/1458旧限制/720代数/62投影/1638Gram；精确γ,d独立有理点非physical曲线。谱3physicalq/18times、L80/120、解析cutoff界4exp(x)x^120/120!仅exact arithmetic，roundoff未enclosed；t0 log null表示exact0。manifest SHA256 `0c26a1bffe0cd006a252d7e229851cb486c0022892564aed773e20da0a980aea`，15当前/31父文件哈希核验。最终仅第5页方程引用修改并重检，其余8页render hash不变。不要重跑成功科学driver/plot/recorder或覆盖封存输出。
+
+以下为历史继续位置，以本节为先。
+
+## 当前继续位置：2026-11-08 平稳态与协变 bilocal 接口（本地）
+
+先读[八页PDF](output/pdf/de-sitter-susskind-slater-stationary.pdf)、[完整证明](manuscript/susskind-slater-stationary/main.tex)、[中文笔记](notes/susskind-slater-stationary.md)、[来源](literature/susskind-slater-stationary-sources.md)和journal/2026-11-08-susskind-slater-stationary.md。本轮progress；长期goal active。新science成功即封存，最终双遍PDF/8页90dpi检查完成，无活跃计算句柄。没有新Git/issue；上一发布560d683和评论6709573165已完成。
+
+- **解析已完成**：固定λ>0、q∈(0,1)、原annealed Slater h,M。M compact，qcomm的幂norm趋PΩ，cyclicity得K(H)⊂A；h所有spectral interval无限维，故A=C*(h)+K、A/K=C(I)且分解唯一。h=Jq⊗I pure AC。B(H)无normal stationary density（compact正本征空间与h对易会产生h eigenvector）。任意finiteβ的普通Gibbs trace发散；bounded-inner KMS倾斜成trace，B(H)连singular finiteβ KMS也无，但不能称无singular invariant states。
+- **全部A平稳态**：限制到K的正functional是traceclass，invariance迫其零。ω_ν(f(h)+K)=∫f dν，ν任意probability。全部tracial/任意finiteβ KMS，GNS abelian、flow trivial；含M/M†的任意有限bounded word都零。当前norm A单靠改态承载不了非平凡静态物质。逆dressing无界不在此命题范围。
+- **实际长时间/有限资源**：pureAC→U(t)ψ弱0→compact期望消失，任意normalρ在A上逐observable趋守恒能量measure，非B(H)全算符收敛。rho_T在[-T,T]均匀平均给stationarity trace-distance≤min(2,|u|/T)。signal=T^-1∫0^T|R|²，purity=T^-1∫0^(2T)(1−t/(2T))|R|²；均∼κ/T，κ=π∫r_q²。先DS后T。finite Jacobi先T∞平台Σw²不能当continuum equilibrium。
+- **建设性桥**：任意不依赖固定O、共同U(N)-covariant的number-preserving B_a(J)，integrable word F有E〈O|F|O〉=Eτ_m(F)，由wedge^m不可约Schur。含time及Gibbs夹心，后者joint annealed normalization。此处是旧H-only事实推广，不是原创一般定理；不含M，不直接代替fullcharge。适当协变bilocal子代数可保留tracial/stationary。扩大joint GNS时旧hM cyclic subspace reducing，但旧M compact不能直接外推新增扇区。
+- **下一首任务**：回读notes/susskind-bilocal-four-point.md、notes/susskind-bilocal-fourth-tail.md、notes/susskind-bilocal-kms-polarization.md及其actual算符证明，挑一个实际非平凡协变生成元B_N（可先核W1或J2的定义/charge规范）。先确认same-J、U(N)covariance及固定sector极限；再算〈M B†B M†〉与〈B†M†M B〉、混合二点和对旧hM cyclic空间的投影/残量。不先引入独立matter，也不先假设新增B可作为当前norm A元素。目标是实际共同表示，随后空间/质量及finite-G。
+- **证据**：stationary-checks.json SHA ec0c798d12dbb09f6f8020d939636f105637f98007b402284f9e5f6c4317f9f9；3q/36quadrature rows/3独立time integrals/5精确occupation systems，最大L差1.23e−15，非interval。初LaTeX宏名AA冲突保留diagnostics；最终图仅layout读取sealed JSON，新旧图均留。manifest SHA3f48570f38afaf6e384117b440eba63f559d3ddd3774439f6dee9fa3ecac7ff7，14当前/17父文件核验。成功science/plot/recorder均不重跑，不覆盖封存输出。
+
+以下为历史位置，以本节为先。
+
 ## 当前继续位置：2026-11-08 全开弦传递、谱与集中发布
 
 先读[九页 PDF](output/pdf/de-sitter-susskind-slater-transfer.pdf)、[完整 LaTeX](manuscript/susskind-slater-transfer/main.tex)、[中文推导](notes/susskind-slater-transfer.md)、[来源](literature/susskind-slater-transfer-sources.md)与本机 journal/2026-11-08-susskind-slater-transfer.md。joint-fourth、joint-words、transfer 三阶段准备本次集中发布；此前“本轮不 Git”均为历史安排，本次用户明确授权覆盖。完整研究 goal 仍 active。

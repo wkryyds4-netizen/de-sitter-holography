@@ -1,0 +1,100 @@
+{
+  "status": "Local research milestone; full de Sitter goal remains active",
+  "created_at_utc": "2026-11-07T16:21:23.606284+00:00",
+  "scientific_scope": "Norm algebra and all stationary states in the existing h,M representation; no normal stationary density; no finite-beta KMS on full B(H); finite-time averaging; exact covariant fixed-sector Schur interface. No completed joint bilocal extension or finite-G dictionary.",
+  "scientific_output_hashes": {
+    "results/susskind-slater-stationary/stationary-checks.json": "ec0c798d12dbb09f6f8020d939636f105637f98007b402284f9e5f6c4317f9f9"
+  },
+  "input_hashes_verified": {
+    "code/check_slater_stationary.py": "5418e1127c11b717f1d3bb5ecce035d2a0b2b5958884488e0324f78bbeb5d76f",
+    "results/susskind-slater-transfer/local-evidence.json": "136226a7a720632fcd5bb92eac67a92724fbfd510a6dde70b701bd7faafac58f",
+    "manuscript/susskind-slater-transfer/main.tex": "5faccc8bd3f170d5ae6b4ccd1325186e5d04e954848e865b6c05cb1f3b29eabd",
+    "notes/susskind-slater-ladder-proof.md": "721c65f368ed9bab747a9c66e78a156633c640323246b2c7f88257c3477ca8f9"
+  },
+  "parameter_hash": "0bae47cb696a5f3c9d0532f1b698b0ef1bb61dc5545a377bdde1607e44fa4234",
+  "previous_evidence": {
+    "results/susskind-slater-transfer/local-evidence.json": {
+      "sha256": "136226a7a720632fcd5bb92eac67a92724fbfd510a6dde70b701bd7faafac58f",
+      "verified_scientific_hashes": {
+        "code/record_slater_transfer.py": "6355eb22100cfd40b57a5f3a40309dc6d39bae2ca0bbc49827fe172b7059b35a",
+        "output/pdf/de-sitter-susskind-slater-transfer.pdf": "9f14557b26eae679acd699ff52fcbe2fbc07580738bf8d4f9d1f92760659f37a",
+        "results/susskind-slater-transfer/main.log": "55bda249b85b72d44f066567e61a07f7e6add9677a1c1588df97eb2f981d0311",
+        "results/susskind-slater-transfer/selected-spectrum.png": "2d0aed06b6286ccf55be25dda914f2e5287f046476cc99b2a4593598832f8dd2",
+        "results/susskind-slater-transfer/exact-checks.json": "9169dc569325988ee624bc5cae80b0935737cda4b058c7a3025167e338441c6a",
+        "results/susskind-slater-transfer/canonical-checks.json": "de1fda36e686f83b7f06798e7c30a2a470e69c52f80ac965361a98e32a953f0e",
+        "results/susskind-slater-transfer/spectral-checks.json": "a7bcf2201f3b0bf4dd935a1a459ee6ffbf0b6a60fa103d091ddca0601172e263",
+        "code/slater_open_transfer.py": "10b2b23fb8e3de9ed7e15c7d8db4308ff17fdbfafa59ec230ca386841522e39d",
+        "code/check_slater_open_transfer.py": "20d9b8bc44ee7ed1dcb6d0c2678546c95c7a4d32ba2126f3ee012d3bfb86ee54",
+        "code/check_slater_transfer_canonical.py": "901f664dad1b2a4430b3ec5f10b326fe64151b9e4b6919c6f2d753194628271b",
+        "code/compute_slater_transfer_spectrum.py": "450516e269e82e000b700defa82c5ee6f671885c156f0ecb135e7cb25a5cdaa5",
+        "code/build_slater_transfer.ps1": "d15370c5be54b0352684b4c9a36c168aa9d1b46071a9179c8649612f1b571367",
+        "manuscript/susskind-slater-transfer/main.tex": "5faccc8bd3f170d5ae6b4ccd1325186e5d04e954848e865b6c05cb1f3b29eabd",
+        "notes/susskind-slater-transfer.md": "ff483c4913086d4ee17ea795190383f8a61e777253fce870807a2f965b0746b9",
+        "literature/susskind-slater-transfer-sources.md": "2cd2dcdf609892fb9bee5ec80c5fc5b550b56b72059210a18d7daebff28c8a62",
+        "results/susskind-slater-transfer/diagnostics/initial-checker.py": "440a495dbcff56bf83ab3e32995adf7fc89dc1b64b4641d728f36b93d7c1e752",
+        "results/susskind-slater-transfer/diagnostics/initial-failure.txt": "68587f189664d9806689b95e3cfda767777e77813e1160d18810aabf777ee0e0"
+      }
+    }
+  },
+  "hashes": {
+    "code/record_slater_stationary.py": "a2ae3f8ec0b472ac49b2a0d4cbf201eb114fd7d09d0e8b1908596c564c46b216",
+    "code/check_slater_stationary.py": "5418e1127c11b717f1d3bb5ecce035d2a0b2b5958884488e0324f78bbeb5d76f",
+    "code/plot_slater_stationary.py": "409a7570b0a978cefb31a47c3fa0790ee854fcb69586c7d1993a5b4b7e16b186",
+    "code/build_slater_stationary.ps1": "da298862406a3dffce14ecc8054f302c76cd0111b1847e0b80216f1fd5057a37",
+    "manuscript/susskind-slater-stationary/main.tex": "5499b8594ba1a1e453f068d43881e8fe08cd668991cb46c9f4f31b031ddf80b9",
+    "notes/susskind-slater-stationary.md": "836b6e9c7d490900b88dc7807abcefc8c81beb8db8beb2483cf5d7c71d4d943a",
+    "literature/susskind-slater-stationary-sources.md": "472c6afe20fe9e04479c3ee1ca6613a6487fa89a07e5ddbb0feafefa4dc3485b",
+    "output/pdf/de-sitter-susskind-slater-stationary.pdf": "340d8e0dbb9e6d9aca8c6b2e90647f3f313f05b78d5a070e787464380fa44314",
+    "results/susskind-slater-stationary/main.log": "20d6b7b236637768148ae0da39a73f28de129817b8750c4138dac928c02f690c",
+    "results/susskind-slater-stationary/stationary-checks.json": "ec0c798d12dbb09f6f8020d939636f105637f98007b402284f9e5f6c4317f9f9",
+    "results/susskind-slater-stationary/layout-evidence.json": "3169aa7720fde12e296bb8d6720e5fb98a957eb735dd79392a6b2b3ebe932ecb",
+    "results/susskind-slater-stationary/finite-time-states.png": "4ad811edb69a8de12403b22f4f95e178c58ad722b7fdc385295348a6c0cc44bb",
+    "results/susskind-slater-stationary/finite-time-states-layout.png": "ff9f558c978432a23c2d5942c8deef2c63ffadbe66ab8a37cc410b7a2b204dd4",
+    "results/susskind-slater-stationary/diagnostics/initial-build-failure.txt": "f1e50ab3055a47b6a7b1ade69cb21d34719ddf89e6b5406136a542cdad943d43"
+  },
+  "render_hashes": {
+    "tmp/pdfs/susskind-slater-stationary-render/page-1.png": "b3fa6c32a85c66ece16b4d2eef1366f1402dc2419753bc453bfb9a8dccc3c888",
+    "tmp/pdfs/susskind-slater-stationary-render/page-2.png": "717d2b9346cde4731d4d9c3be692bc3f26640673ef0ab86b93bffcadef540a02",
+    "tmp/pdfs/susskind-slater-stationary-render/page-3.png": "4475c2253f8686e87aff1771f09d3005e8769320bd5c7ef4cb6c3e9b0c85b7a0",
+    "tmp/pdfs/susskind-slater-stationary-render/page-4.png": "7823d83d04b0f33ea9d5e794a93c005ad963b70ff2cfb807c76cae24c8c616bb",
+    "tmp/pdfs/susskind-slater-stationary-render/page-5.png": "ddc545d3160c74b4e49a2c78c3cee3dcf6ac59d05b9ac78d62bf49e6b09609ec",
+    "tmp/pdfs/susskind-slater-stationary-render/page-6.png": "b3d9e075c72963918a761a7a62b271c19fad8871a1ab21ac3733752f84c81a6f",
+    "tmp/pdfs/susskind-slater-stationary-render/page-7.png": "919b918996d42d92867eed1b95d5374181be4e47d900292112b4b789d2ea34dc",
+    "tmp/pdfs/susskind-slater-stationary-render/page-8.png": "846fb7640f70c5545bb4b7397551b4b4e87521905aeb4a45cc20d7dc4d493d49"
+  },
+  "build_pass_hashes": {
+    "tmp/pdfs/susskind-slater-stationary-build/pass1.txt": "31620af541fb3e0542389a6794102c433238276973ce15d2f23d044dc4af4474",
+    "tmp/pdfs/susskind-slater-stationary-build/pass2.txt": "31620af541fb3e0542389a6794102c433238276973ce15d2f23d044dc4af4474"
+  },
+  "checks": {
+    "q_cases": 3,
+    "quadrature_rows": 36,
+    "independent_time_integrals": 3,
+    "exact_occupancy_systems": 5,
+    "max_quadrature_difference": 1.2212453270876722e-15
+  },
+  "build": {
+    "command": "./code/build_slater_stationary.ps1",
+    "passes": 2,
+    "final_exit_code_observed": 0,
+    "pages": 8,
+    "review": "All eight pages viewed; final pages 5,6,8 re-inspected after spacing/tick fixes; other five final render hashes unchanged.",
+    "no_undefined_references_or_overfull": true,
+    "render": "pdftoppm -r 90 -png"
+  },
+  "environment": {
+    "recorder_python": "3.14.5",
+    "science": {
+      "python": "3.14.5",
+      "numpy": "2.4.6",
+      "scipy": "1.18.0",
+      "matplotlib": "3.11.0",
+      "dtype": "float64"
+    }
+  },
+  "diagnostics": "Initial AA macro conflict retained; corrected macro name. Final layout rendered from sealed science JSON, no scientific rerun. Finite diagnostics are not interval certification or proof of infinite-dimensional classification.",
+  "git_commit_created": false,
+  "git_push_performed": false,
+  "external_reply_sent": false,
+  "recorder_scope": "Read-only integrity and build evidence; does not certify analytic proofs."
+}

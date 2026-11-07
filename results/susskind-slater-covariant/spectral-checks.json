@@ -1,0 +1,229 @@
+{
+  "status": "passed",
+  "created_at_utc": "2026-11-07T16:32:56.370715+00:00",
+  "rows": [
+    {
+      "q": 0.0625,
+      "lambda_value": 0.6931471805599453,
+      "gamma": 0.5,
+      "c_U": -0.41627730557884884,
+      "new_direction_norm": 0.7689509398133516,
+      "first_Gram_eigenvalues": [
+        0.34939505447623115,
+        1.0000000000000002,
+        1.650604945523769
+      ],
+      "time_rows": [
+        {
+          "t": 0.0,
+          "correlator": 1.0000000000000013,
+          "cutoff_difference": 1.9984014443252818e-15,
+          "analytic_L120_bound_log10": null,
+          "relative_cutoff_difference": 1.998401444325279e-15
+        },
+        {
+          "t": 0.5,
+          "correlator": 0.7880408240299744,
+          "cutoff_difference": 2.55351295663786e-15,
+          "analytic_L120_bound_log10": -196.09307302767417,
+          "relative_cutoff_difference": 3.2403308036497523e-15
+        },
+        {
+          "t": 1.0,
+          "correlator": 0.36612446106695284,
+          "cutoff_difference": 3.885780586188048e-16,
+          "analytic_L120_bound_log10": -159.52093613579345,
+          "relative_cutoff_difference": 1.0613277722182728e-15
+        },
+        {
+          "t": 2.0,
+          "correlator": 0.009407652973943643,
+          "cutoff_difference": 5.204170427930421e-18,
+          "analytic_L120_bound_log10": -122.5002618317098,
+          "relative_cutoff_difference": 5.531847786418569e-16
+        },
+        {
+          "t": 4.0,
+          "correlator": 0.002786896496188415,
+          "cutoff_difference": 9.75781955236954e-17,
+          "analytic_L120_bound_log10": -84.58251270322027,
+          "relative_cutoff_difference": 3.501321116774564e-14
+        },
+        {
+          "t": 6.0,
+          "correlator": 0.0007623181632969629,
+          "cutoff_difference": 1.1720225484568303e-16,
+          "analytic_L120_bound_log10": -61.657411967726695,
+          "relative_cutoff_difference": 1.5374453933878865e-13
+        }
+      ],
+      "finite_difference_commutator_norm": [
+        1.874999238760111,
+        1.8749998051958983
+      ],
+      "expected_commutator_norm": 1.875
+    },
+    {
+      "q": 0.25,
+      "lambda_value": 0.34657359027997264,
+      "gamma": 0.7071067811865476,
+      "c_U": -0.4162773055788489,
+      "new_direction_norm": 0.6534264097200273,
+      "first_Gram_eigenvalues": [
+        0.17945944942374337,
+        1.0,
+        1.8205405505762564
+      ],
+      "time_rows": [
+        {
+          "t": 0.0,
+          "correlator": 1.0000000000000004,
+          "cutoff_difference": 6.661338147750939e-16,
+          "analytic_L120_bound_log10": null,
+          "relative_cutoff_difference": 6.661338147750936e-16
+        },
+        {
+          "t": 0.5,
+          "correlator": 0.8284408546525369,
+          "cutoff_difference": 6.661338147750939e-16,
+          "analytic_L120_bound_log10": -190.22552958732487,
+          "relative_cutoff_difference": 8.040813185806517e-16
+        },
+        {
+          "t": 1.0,
+          "correlator": 0.46768387346006246,
+          "cutoff_difference": 9.992007221626409e-16,
+          "analytic_L120_bound_log10": -153.60045003557832,
+          "relative_cutoff_difference": 2.136487441335663e-15
+        },
+        {
+          "t": 2.0,
+          "correlator": 0.05160095126919826,
+          "cutoff_difference": 1.1796119636642288e-16,
+          "analytic_L120_bound_log10": -116.47389041176294,
+          "relative_cutoff_difference": 2.286027553078009e-15
+        },
+        {
+          "t": 4.0,
+          "correlator": 0.0015802856064259304,
+          "cutoff_difference": 1.214306433183765e-17,
+          "analytic_L120_bound_log10": -78.3443706438099,
+          "relative_cutoff_difference": 7.684094749999741e-15
+        },
+        {
+          "t": 6.0,
+          "correlator": 0.0002795936086694318,
+          "cutoff_difference": 1.0299920638612292e-17,
+          "analytic_L120_bound_log10": -55.20749926885284,
+          "relative_cutoff_difference": 3.683889874174506e-14
+        }
+      ],
+      "finite_difference_commutator_norm": [
+        1.4999994621955892,
+        1.4999998665388148
+      ],
+      "expected_commutator_norm": 1.5
+    },
+    {
+      "q": 0.64,
+      "lambda_value": 0.11157177565710487,
+      "gamma": 0.8944271909999159,
+      "c_U": -0.29875980406621616,
+      "new_direction_norm": 0.5537128973715804,
+      "first_Gram_eigenvalues": [
+        0.056995535256760356,
+        1.0000000000000002,
+        1.9430044647432396
+      ],
+      "time_rows": [
+        {
+          "t": 0.0,
+          "correlator": 1.0,
+          "cutoff_difference": 0.0,
+          "analytic_L120_bound_log10": null,
+          "relative_cutoff_difference": 0.0
+        },
+        {
+          "t": 0.5,
+          "correlator": 0.9144984675690581,
+          "cutoff_difference": 3.3306690738754696e-16,
+          "analytic_L120_bound_log10": -170.87765976542352,
+          "relative_cutoff_difference": 3.642071793437921e-16
+        },
+        {
+          "t": 1.0,
+          "correlator": 0.7046096434523581,
+          "cutoff_difference": 4.440892098500626e-16,
+          "analytic_L120_bound_log10": -134.03023614924035,
+          "relative_cutoff_difference": 6.302627475749124e-16
+        },
+        {
+          "t": 2.0,
+          "correlator": 0.2759547219719261,
+          "cutoff_difference": 2.7755575615628914e-16,
+          "analytic_L120_bound_log10": -96.4589883965518,
+          "relative_cutoff_difference": 1.0058018002842e-15
+        },
+        {
+          "t": 4.0,
+          "correlator": 0.020133887091168617,
+          "cutoff_difference": 2.7755575615628914e-17,
+          "analytic_L120_bound_log10": -57.44009237085236,
+          "relative_cutoff_difference": 1.378550276454238e-15
+        },
+        {
+          "t": 6.0,
+          "correlator": 0.001321626111842977,
+          "cutoff_difference": 1.5178830414797062e-18,
+          "analytic_L120_bound_log10": -33.413844738148946,
+          "relative_cutoff_difference": 1.1484965588059194e-15
+        }
+      ],
+      "finite_difference_commutator_norm": [
+        0.7199998528495399,
+        0.7199999672025115
+      ],
+      "expected_commutator_norm": 0.72
+    }
+  ],
+  "parameters": {
+    "q": [
+      0.0625,
+      0.25,
+      0.64
+    ],
+    "physical_relation": "lambda=-log(q)/4",
+    "Jacobi_sizes": [
+      80,
+      120
+    ],
+    "times": [
+      0.0,
+      0.5,
+      1.0,
+      2.0,
+      4.0,
+      6.0
+    ],
+    "figure_lambda_range": [
+      0.001,
+      3
+    ]
+  },
+  "environment": {
+    "python": "3.14.5",
+    "numpy": "2.4.6",
+    "scipy": "1.18.0",
+    "matplotlib": "3.11.0",
+    "dtype": "float64"
+  },
+  "input_sha256": {
+    "code/compute_slater_covariant_spectrum.py": "920b3d09698bce47959ad37b0ae83aa72d81d87bed39db893d53e6ec01c659bf",
+    "results/susskind-slater-covariant/word-checks.json": "dd3f495859d4f7370ca7bf3f04a8b364809f7453ed6ad78454944df418bc65c8",
+    "results/susskind-slater-covariant/site-checks.json": "57bb3e63e0dd601e7ca073aae9f80965fbff9bfacc5c1b26327aab8de532c325"
+  },
+  "figure_sha256": {
+    "results/susskind-slater-covariant/covariant-channel.png": "8136fab104b5897eaeabc05ea84ddd9dd02267d9579b43ff6b2bbd287ed6ac93"
+  },
+  "scope": "Physical-curve finite diagnostics; analytic truncation bound is exact-arithmetic only, eigensolver roundoff not enclosed. None at t=0 denotes an exactly zero bound. q-Mehler spectrum is an established formula applied to this microscopic channel."
+}

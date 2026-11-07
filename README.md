@@ -1,5 +1,33 @@
 # de Sitter 全息研究
 
+## 2026-11-08 集中研究快照：Slater 态与精确投影
+
+本次集中整理 stationary、covariant、neutral-slope、orbit-density 四个阶段，附四份已编译 PDF、LaTeX、代码与封存证据。[发布范围与阅读入口](notes/research-release-2026-11-08-slater-density.md)。下文各阶段的“本地”“未 Git”保留其记录时点含义；当前已完成范围止于线性制备及协变后置 dressing，非线性制备仍为下一任务。
+
+## 当前进展：单激发中的精确能量投影（2026-11-08，本地）
+
+[六页 PDF](output/pdf/de-sitter-susskind-slater-orbit-density.pdf)、[完整 LaTeX](manuscript/susskind-slater-orbit-density/main.tex)、[中文证明](notes/susskind-slater-orbit-density.md)和[来源](literature/susskind-slater-orbit-density-sources.md)已保存。有限N Slater轨道的权重结构同时控制Gaussian synthesis map的两侧variance，给线性制备密度的一致矩界 E tr R_P^r≤(2r−1)!! a_N^r。对M†制备，a_N=1，二阶矩≤3。由此把真实exact pinching误差传入M†|O〉态，完成该制备内任意固定协变斜率关联；归一二点回到1+λ√q(1+q)。下一步处理二次及多次交错selected制备，再接J₂与完整bilocal。
+
+[证据清单](results/susskind-slater-orbit-density/local-evidence.json)绑定精确有限检查、11当前/14父文件、最终双遍编译与六页目检。非线性selected制备尚未包含在本轮定理中；本轮仅本地保存。
+
+## 当前进展：实际中性斜率与选态中的有限分辨率极限（2026-11-08，本地）
+
+[八页 PDF](output/pdf/de-sitter-susskind-slater-neutral-slope.pdf)、[LaTeX](manuscript/susskind-slater-neutral-slope/main.tex)、[中文推导](notes/susskind-slater-neutral-slope.md)和[来源](literature/susskind-slater-neutral-slope-sources.md)已保存。实际未投影中性斜率通过精确rank系数接入u，覆盖全部固定selected混合词。新的共同primitive分解证明h,u在整个Slater空间上是标准qFock表示的放大，并识别A+/K≅C*_q(R²)。单个M†激发对应显式正密度ρ₁=(γh−√λγu)²+[1−√q(1+λ)]I；由此控制时间平均，迹方差为κ_u/T渐近，得到先双标度、后长平均窗的实际选态极限。精确有限N pinching已覆盖纯协变词，含M的接口仍为下一任务。
+
+三份科学输出、14当前/15父文件哈希、双遍编译及八页目检见[证据清单](results/susskind-slater-neutral-slope/local-evidence.json)。本轮无新Git或issue回复。
+
+## 当前进展：同 J 协变通道与非平凡平稳态（2026-11-08，本地）
+
+[九页 PDF](output/pdf/de-sitter-susskind-slater-covariant.pdf)、[LaTeX完整证明](manuscript/susskind-slater-covariant/main.tex)、[中文笔记](notes/susskind-slater-covariant.md)及[文献来源](literature/susskind-slater-covariant-sources.md)已完成。加入实际微观大小涨落 u=(p−L−λ)h/√λ 后，归一化局部源展开给全部同 J 混合词及紧时间窗收敛。uΩ 在旧 h,M cyclic 空间外的范数平方为 1−λ/(e^(2λ)−1)>0。扩大的代数存在保留 h,u 非平凡动力学的平稳迹态，其 GNS 为标准两色 q-Gaussian II₁ 因子；这是指定态的表示，未识别整个 C* 商代数。三个科学输出、双遍编译、九页目检及父阶段哈希由[证据清单](results/susskind-slater-covariant/local-evidence.json)绑定。
+
+下一步处理实际未 pinching neutral slope 的 rank 系数和 selected 态中的 pinching 控制，再接 J₂、完整 bilocal 与空间/质量生成元。此前 Git 推送及 issue 回复已完成；stationary、covariant 两个后续阶段先本地保存，沿用低频发布安排。
+
+## 当前进展：平稳态分类与协变可观测量接口（2026-11-08，本地）
+
+[八页 PDF](output/pdf/de-sitter-susskind-slater-stationary.pdf)、[LaTeX证明](manuscript/susskind-slater-stationary/main.tex)、[中文笔记](notes/susskind-slater-stationary.md)和[文献](literature/susskind-slater-stationary-sources.md)已保存。当前 h,M 的范数代数是 C*(h)+K(H)；所有平稳态只保留能量商，含 M 的有界关联为零，全 B(H) 上没有正常平稳密度。有限时间平均给近似平稳态，其真空信号与纯度同为 κ/T 渐近。与此同时，U(N)协变算符族的Slater联合平均精确回到固定扇区迹，为回接bilocal提供路径。下一步计算实际协变生成元与M的同J混合Gram，建立更大的共同表示；完整体字典仍开放。
+
+本轮科学输出及[证据清单](results/susskind-slater-stationary/local-evidence.json)本地封存，八页已双遍编译、核版。上一轮集中发布为[560d683](https://github.com/wkryyds4-netizen/de-sitter-holography/commit/560d683503beb9b6d85832e0bbe6b65f45f54d31)，[issue回复](https://github.com/wkryyds4-netizen/de-sitter-holography/issues/1#issuecomment-6709573165)已完成；本轮无新增Git或评论。
+
 ## 当前进展：同 J 开弦传递与选择激发谱（2026-11-08）
 
 [九页 PDF](output/pdf/de-sitter-susskind-slater-transfer.pdf)、[LaTeX](manuscript/susskind-slater-transfer/main.tex)、[中文推导](notes/susskind-slater-transfer.md)及[文献接口](literature/susskind-slater-transfer-sources.md)已完成。全 same-J word 规则现已化为带正 Gram 度量的显式 H/P 开弦传递；Hamiltonian 分解为 q-Jacobi 阶梯，选择激发的谱权重为 1−√q+√q E²。三份科学输出、最终双遍编译与九页核版由[证据清单](results/susskind-slater-transfer/local-evidence.json)绑定。下一步研究该表示中的静态观察者态，再接微观空间与质量生成元。

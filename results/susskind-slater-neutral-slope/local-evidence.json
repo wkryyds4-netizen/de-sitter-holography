@@ -1,0 +1,191 @@
+{
+  "status": "Local research milestone; full de Sitter goal remains active",
+  "created_at_utc": "2026-11-07T16:57:58.907508+00:00",
+  "scientific_scope": "Microscopic unpinched neutral slope in all selected words/time; full ordinary q-Fock amplification and compact quotient; bounded densities for finite-grade selected vectors; finite-window ordered microscopic limit. Exact finite-N pinching is transferred only in purely covariant words, not yet general M-excited words.",
+  "scientific_output_hashes": {
+    "results/susskind-slater-neutral-slope/rank-checks.json": "7c8fa223ca99157f1f196f22187b025f028ef16e2c4263742badb4186d7c0123",
+    "results/susskind-slater-neutral-slope/amplification-checks.json": "a168acdb46e530f879bc62d2251d935f49b773ce3d04eec7790eff5ecc139cb5",
+    "results/susskind-slater-neutral-slope/dephasing-checks.json": "47109f31b526f3797f5a83d12758065acb76b6d281fab064bcdfc0745672013b"
+  },
+  "input_hashes_verified": {
+    "code/check_slater_neutral_slope.py": "5ff01da4a56776ba451b8918ca762686538a6caa270775b0b6836ddea3459a36",
+    "results/susskind-slater-covariant/local-evidence.json": "0c26a1bffe0cd006a252d7e229851cb486c0022892564aed773e20da0a980aea",
+    "code/check_slater_covariant_amplification.py": "055a19e128cb3dfe199ad3b972ca49ef86d7b39c092b7f65a34202df9880213c",
+    "code/slater_covariant_transfer.py": "849a4a3fd7de2e68c644b1925804fa1776944fc27614c6ba65d1c80a4af5de9f",
+    "code/compute_slater_neutral_dephasing.py": "0555dcde21d5afdedbf329c8c8171c7c716384676f4bebd7f4ed1ed5f70ad290",
+    "results/susskind-slater-neutral-slope/rank-checks.json": "7c8fa223ca99157f1f196f22187b025f028ef16e2c4263742badb4186d7c0123",
+    "results/susskind-slater-neutral-slope/amplification-checks.json": "a168acdb46e530f879bc62d2251d935f49b773ce3d04eec7790eff5ecc139cb5"
+  },
+  "parameters": {
+    "rank-checks.json": {
+      "lambda_values": [
+        "0.25",
+        "0.5",
+        "1.0"
+      ],
+      "p_values": [
+        16,
+        32,
+        64,
+        128
+      ],
+      "precisions": [
+        80,
+        120
+      ],
+      "normalization": "T/(8 lambda_N C_m^(3/2) q_N sqrt(lambda_N))",
+      "rank_sum": "all p+1 ranks, no cutoff"
+    },
+    "amplification-checks.json": {
+      "rational_pairs": [
+        [
+          "1/2",
+          "1/2"
+        ],
+        [
+          "2/3",
+          "1/2"
+        ]
+      ],
+      "max_density_word_degree": 8,
+      "primitive_levels": [
+        1,
+        2
+      ],
+      "physical_relation_imposed": false
+    },
+    "dephasing-checks.json": {
+      "q": [
+        0.0625,
+        0.25,
+        0.64
+      ],
+      "times": [
+        1.0,
+        2.0,
+        4.0,
+        8.0,
+        12.0,
+        24.0
+      ],
+      "Jacobi_dimensions": [
+        512,
+        768
+      ],
+      "diagonal_quadratures": [
+        [
+          4097,
+          192
+        ],
+        [
+          8193,
+          288
+        ]
+      ],
+      "average": "symmetric [-T,T]"
+    }
+  },
+  "parameter_hashes": {
+    "rank-checks.json": "8d57c1c36a980dec7ea32d30d6dc86a6335dbf8c75fd5cb3612d287998103938",
+    "amplification-checks.json": "0e0de5f3efc3bbe4e9a20270eb0b62f14879d10f7925cceba32579bc6d634cdd",
+    "dephasing-checks.json": "aa6e44bc4f6e1bb46b4d5a81f0f6cadbf50818d8447e92f08c38b5cf86647fb3"
+  },
+  "previous_evidence": {
+    "results/susskind-slater-covariant/local-evidence.json": {
+      "sha256": "0c26a1bffe0cd006a252d7e229851cb486c0022892564aed773e20da0a980aea",
+      "verified_scientific_hashes": {
+        "code/record_slater_covariant.py": "6dbf8c90c85f86d0ecf46421c162bcfc4b88cba6bfd69617b69a02bfe0f7197f",
+        "code/build_slater_covariant.ps1": "d2307360d71aaced90f8a27697a4b00a80d1bfd68b8dcc9e125423f493ede7a0",
+        "code/slater_covariant_transfer.py": "849a4a3fd7de2e68c644b1925804fa1776944fc27614c6ba65d1c80a4af5de9f",
+        "code/check_slater_covariant_sites.py": "3b724be9504cb1e74898d4e4d1efdaa226078b88e6d22f9d62c75d9f0b65b4f8",
+        "code/check_slater_covariant_words.py": "c41a9902a9ba516ffc626daa32a0a8437c7b7fd36563d68743853858d2810a69",
+        "code/compute_slater_covariant_spectrum.py": "920b3d09698bce47959ad37b0ae83aa72d81d87bed39db893d53e6ec01c659bf",
+        "notes/susskind-slater-covariant.md": "ae50a06059bf9c657c3f7685b0e70d8d5d47da1f0509e3ef5c216a7acf84986a",
+        "literature/susskind-slater-covariant-sources.md": "0d6f53cc846da10e16af00a0438960b6736bb57a6334e9243ac86071e92c64d9",
+        "manuscript/susskind-slater-covariant/main.tex": "4117e5763043ac9add333bb9e701950e4223433ff147f4bd8b2a4ef4de91fcc8",
+        "output/pdf/de-sitter-susskind-slater-covariant.pdf": "756c2ac5733fcab66cc6d8fd05b2086e5d3547e026031e775018d4e5d1d11970",
+        "results/susskind-slater-covariant/main.log": "cff9fae458e7dd3831a4dc9e4b93ad417d3e322806418aee67beb253d257f03a",
+        "results/susskind-slater-covariant/covariant-channel.png": "8136fab104b5897eaeabc05ea84ddd9dd02267d9579b43ff6b2bbd287ed6ac93",
+        "results/susskind-slater-covariant/site-checks.json": "57bb3e63e0dd601e7ca073aae9f80965fbff9bfacc5c1b26327aab8de532c325",
+        "results/susskind-slater-covariant/word-checks.json": "dd3f495859d4f7370ca7bf3f04a8b364809f7453ed6ad78454944df418bc65c8",
+        "results/susskind-slater-covariant/spectral-checks.json": "b0fc06fd0c1316e24c81ad4785d1de9f5ad466f3f10ee86567d594f9fd994985"
+      }
+    }
+  },
+  "hashes": {
+    "code/record_slater_neutral_slope.py": "22f618976764b3713dfbd56b0ec0d02e10da03ab12491c388288ea8a45d93782",
+    "code/check_slater_neutral_slope.py": "5ff01da4a56776ba451b8918ca762686538a6caa270775b0b6836ddea3459a36",
+    "code/check_slater_covariant_amplification.py": "055a19e128cb3dfe199ad3b972ca49ef86d7b39c092b7f65a34202df9880213c",
+    "code/compute_slater_neutral_dephasing.py": "0555dcde21d5afdedbf329c8c8171c7c716384676f4bebd7f4ed1ed5f70ad290",
+    "code/build_slater_neutral_slope.ps1": "c7141d063c29310481c9bf24097c6e2fe60ac6f7c3bf10eabb6fb192a03f4332",
+    "notes/susskind-slater-neutral-slope.md": "1ca7f643aff55e13edbdfda086fb832845a683f7e89e50888f2aab478a47deb6",
+    "literature/susskind-slater-neutral-slope-sources.md": "ddc0a2897aa52180e85ec89a823b9d947318e77ed97ca558563b630fad0ed5ac",
+    "manuscript/susskind-slater-neutral-slope/main.tex": "e9fc4d872c3009b37924064a34a2e9391bbf5fd9610c52dd0202797573d9df13",
+    "output/pdf/de-sitter-susskind-slater-neutral-slope.pdf": "ce7505d4e2b0c756068bd1c087ca816a493366dde7afc6523ff2ad2c77d69446",
+    "results/susskind-slater-neutral-slope/main.log": "45b2ca853c9983cf7fb4426c0279d25a40acb43f3de3c9196073d5caeaf0d46e",
+    "results/susskind-slater-neutral-slope/neutral-slope-dephasing.png": "b13da943dfdd2a329e3bf9a68b40aa5c68582cf1f36d4f9239a389dad3314063",
+    "results/susskind-slater-neutral-slope/rank-checks.json": "7c8fa223ca99157f1f196f22187b025f028ef16e2c4263742badb4186d7c0123",
+    "results/susskind-slater-neutral-slope/amplification-checks.json": "a168acdb46e530f879bc62d2251d935f49b773ce3d04eec7790eff5ecc139cb5",
+    "results/susskind-slater-neutral-slope/dephasing-checks.json": "47109f31b526f3797f5a83d12758065acb76b6d281fab064bcdfc0745672013b"
+  },
+  "render_hashes": {
+    "tmp/pdfs/susskind-slater-neutral-slope-render/page-1.png": "27e726367afad2f961986b96e8e7729c6fc375ed1c53f641b815dc6651f33157",
+    "tmp/pdfs/susskind-slater-neutral-slope-render/page-2.png": "e09894c4386f84cf08f7c3627c1b1809808a35b23e8f1d20352202c926ec5a8a",
+    "tmp/pdfs/susskind-slater-neutral-slope-render/page-3.png": "7aa56e47e3098d45cc19342823fb7159948bf1a1c652169efff7615f174c045a",
+    "tmp/pdfs/susskind-slater-neutral-slope-render/page-4.png": "951a78557d454b9037a194428b43bd8cc371083600e71b5d29e4b05d1382b858",
+    "tmp/pdfs/susskind-slater-neutral-slope-render/page-5.png": "5929756c9de524ca33a8305e50c853f723faf03593972885355c6f5072a68ac2",
+    "tmp/pdfs/susskind-slater-neutral-slope-render/page-6.png": "0cd22fe78f8cda0f057df170c6021c43ca9d1b0dafaa7e3d15a39d1b8bd178b5",
+    "tmp/pdfs/susskind-slater-neutral-slope-render/page-7.png": "349973161792857c2e566456dfc9928923b9336471d2007bb20511f23e350164",
+    "tmp/pdfs/susskind-slater-neutral-slope-render/page-8.png": "3a6a9cf1711758a706122b00b933e8454b0e4d615966f892b8ea5a566c26d6b8"
+  },
+  "build_pass_hashes": {
+    "tmp/pdfs/susskind-slater-neutral-slope-build/pass1.txt": "c71168b7b193f780c025c353f114ea3690f11adf90915c2ed3814ab77969c03d",
+    "tmp/pdfs/susskind-slater-neutral-slope-build/pass2.txt": "7dc8b6d13066f9c74fd2df2e775167fef6782c5b817fce912ad723db72b86d7a"
+  },
+  "checks": {
+    "exact_rank_systems": 20,
+    "all_rank_DS_rows": 12,
+    "amplification": {
+      "density_identities": 1022,
+      "primitive_vectors": 8,
+      "tower_inner_products": 32
+    },
+    "dephasing_q_cases": 3,
+    "dephasing_cutoff_time_rows": 36,
+    "time_integral_difference": 1.8185453143360064e-13
+  },
+  "build": {
+    "command": "./code/build_slater_neutral_slope.ps1",
+    "passes": 2,
+    "final_exit_code_observed": 0,
+    "pages": 8,
+    "review": "All eight final pages viewed at 90 dpi, including plotted figure; no layout revisions required.",
+    "no_undefined_references_or_overfull": true,
+    "render": "pdftoppm -r 90 -png"
+  },
+  "environment": {
+    "recorder_python": "3.14.5",
+    "science": {
+      "rank-checks.json": {
+        "python": "3.14.5",
+        "mpmath": "1.3.0"
+      },
+      "amplification-checks.json": {
+        "python": "3.14.5",
+        "sympy": "1.14.0",
+        "arithmetic": "fractions.Fraction and SymPy Rational"
+      },
+      "dephasing-checks.json": {
+        "python": "3.14.5",
+        "numpy": "2.4.6",
+        "scipy": "1.18.0",
+        "matplotlib": "3.11.0"
+      }
+    }
+  },
+  "diagnostics": "Full rank tails and finite coefficient deviations retained. Rational algebra fixtures do not impose the physical curve. Jacobi cutoffs carry exact-arithmetic Taylor bounds; roundoff/infinite-product quadrature tails are not interval enclosed. No successful scientific driver rerun.",
+  "git_commit_created": false,
+  "git_push_performed": false,
+  "external_reply_sent": false,
+  "recorder_scope": "Integrity/build evidence, not independent proof certification."
+}

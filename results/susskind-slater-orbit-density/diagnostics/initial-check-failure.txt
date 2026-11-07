@@ -1,0 +1,4 @@
+First run of check_slater_orbit_density.py failed before creating science JSON at line 94:
+assert actual==closed_density(J)
+AssertionError
+The actual Haar entries were simplified, but the closed complex expression was not canonicalized. The checker will compare entrywise simplified differences and use exact principal minors for positivity.

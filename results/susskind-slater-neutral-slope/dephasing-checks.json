@@ -1,0 +1,454 @@
+{
+  "status": "passed",
+  "created_at_utc": "2026-11-07T16:52:03.863689+00:00",
+  "rows": [
+    {
+      "q": 0.0625,
+      "lambda_value": 0.6931471805599453,
+      "selected_primitive_norm": 0.5767132048600137,
+      "selected_density_norm": 2.3827368641239555,
+      "kappa_u": 0.8876162848227409,
+      "density_mass": 1.0,
+      "diagonal_integral_refinement": 1.1546319456101628e-14,
+      "cutoffs": [
+        {
+          "L": 512,
+          "time_rows": [
+            {
+              "T": 1.0,
+              "trace_variance": 0.636605451636608,
+              "T_variance": 0.636605451636608,
+              "asymptotic_ratio": 0.7172079450567309,
+              "one_selected_upper_bound": 1.5168632775168256,
+              "finite_jacobi_error_bound_log10": -848.7149624440502,
+              "signed_sum_condition": 1.0
+            },
+            {
+              "T": 2.0,
+              "trace_variance": 0.37887665718221003,
+              "T_variance": 0.7577533143644201,
+              "asymptotic_ratio": 0.8536946959189073,
+              "one_selected_upper_bound": 0.902763378024106,
+              "finite_jacobi_error_bound_log10": -692.7934550152802,
+              "signed_sum_condition": 1.0
+            },
+            {
+              "T": 4.0,
+              "trace_variance": 0.20542202155772776,
+              "T_variance": 0.821688086230911,
+              "asymptotic_ratio": 0.9257244377788811,
+              "one_selected_upper_bound": 0.4894666234684638,
+              "finite_jacobi_error_bound_log10": -535.0777979376982,
+              "signed_sum_condition": 1.0
+            },
+            {
+              "T": 8.0,
+              "trace_variance": 0.10680069019495429,
+              "T_variance": 0.8544055215596343,
+              "asymptotic_ratio": 0.9625843240700132,
+              "one_selected_upper_bound": 0.2544779416413995,
+              "finite_jacobi_error_bound_log10": -373.7738415624926,
+              "signed_sum_condition": 1.0
+            },
+            {
+              "T": 12.0,
+              "trace_variance": 0.07211843783771485,
+              "T_variance": 0.8654212540525782,
+              "asymptotic_ratio": 0.9749947909364967,
+              "one_selected_upper_bound": 0.1718392604189551,
+              "finite_jacobi_error_bound_log10": -276.43851833073643,
+              "signed_sum_condition": 1.0
+            },
+            {
+              "T": 24.0,
+              "trace_variance": 0.036520481159012255,
+              "T_variance": 0.8764915478162941,
+              "asymptotic_ratio": 0.9874667272371321,
+              "one_selected_upper_bound": 0.08701869675312286,
+              "finite_jacobi_error_bound_log10": -100.78136476503633,
+              "signed_sum_condition": 1.0
+            }
+          ],
+          "finite_L_plateau": 0.003183329385274859
+        },
+        {
+          "L": 768,
+          "time_rows": [
+            {
+              "T": 1.0,
+              "trace_variance": 0.636605451636608,
+              "T_variance": 0.636605451636608,
+              "asymptotic_ratio": 0.7172079450567309,
+              "one_selected_upper_bound": 1.5168632775168256,
+              "finite_jacobi_error_bound_log10": -1408.7197597081547,
+              "signed_sum_condition": 1.0
+            },
+            {
+              "T": 2.0,
+              "trace_variance": 0.37887665718221,
+              "T_variance": 0.75775331436442,
+              "asymptotic_ratio": 0.8536946959189072,
+              "one_selected_upper_bound": 0.9027633780241059,
+              "finite_jacobi_error_bound_log10": -1175.7345733894053,
+              "signed_sum_condition": 1.0
+            },
+            {
+              "T": 4.0,
+              "trace_variance": 0.20542202155772768,
+              "T_variance": 0.8216880862309107,
+              "asymptotic_ratio": 0.9257244377788808,
+              "one_selected_upper_bound": 0.48946662346846365,
+              "finite_jacobi_error_bound_log10": -940.9552374218442,
+              "signed_sum_condition": 1.0
+            },
+            {
+              "T": 8.0,
+              "trace_variance": 0.10680069019495428,
+              "T_variance": 0.8544055215596342,
+              "asymptotic_ratio": 0.962584324070013,
+              "one_selected_upper_bound": 0.2544779416413994,
+              "finite_jacobi_error_bound_log10": -702.5876021566594,
+              "signed_sum_condition": 1.0
+            },
+            {
+              "T": 12.0,
+              "trace_variance": 0.07211843783771485,
+              "T_variance": 0.8654212540525782,
+              "asymptotic_ratio": 0.9749947909364967,
+              "one_selected_upper_bound": 0.1718392604189551,
+              "finite_jacobi_error_bound_log10": -560.1729166066489,
+              "signed_sum_condition": 1.0
+            },
+            {
+              "T": 24.0,
+              "trace_variance": 0.03652048115901225,
+              "T_variance": 0.876491547816294,
+              "asymptotic_ratio": 0.987466727237132,
+              "one_selected_upper_bound": 0.08701869675312285,
+              "finite_jacobi_error_bound_log10": -307.4520841509696,
+              "signed_sum_condition": 1.0
+            }
+          ],
+          "finite_L_plateau": 0.002123722960775588
+        }
+      ],
+      "max_cutoff_difference": 8.326672684688674e-17
+    },
+    {
+      "q": 0.25,
+      "lambda_value": 0.34657359027997264,
+      "selected_primitive_norm": 0.32671320486001365,
+      "selected_density_norm": 3.917576112273274,
+      "kappa_u": 1.0287119837662047,
+      "density_mass": 1.0,
+      "diagonal_integral_refinement": 4.884981308350689e-15,
+      "cutoffs": [
+        {
+          "L": 512,
+          "time_rows": [
+            {
+              "T": 1.0,
+              "trace_variance": 0.6898540760254646,
+              "T_variance": 0.6898540760254646,
+              "asymptotic_ratio": 0.6705998247438009,
+              "one_selected_upper_bound": 2.702555849191711,
+              "finite_jacobi_error_bound_log10": -823.6942284745244,
+              "signed_sum_condition": 1.0
+            },
+            {
+              "T": 2.0,
+              "trace_variance": 0.4277175839568781,
+              "T_variance": 0.8554351679137562,
+              "asymptotic_ratio": 0.8315594465828356,
+              "one_selected_upper_bound": 1.6756161897087043,
+              "finite_jacobi_error_bound_log10": -667.5609504062907,
+              "signed_sum_condition": 1.0
+            },
+            {
+              "T": 4.0,
+              "trace_variance": 0.2354062975833191,
+              "T_variance": 0.9416251903332764,
+              "asymptotic_ratio": 0.9153438524998068,
+              "one_selected_upper_bound": 0.9222220880911047,
+              "finite_jacobi_error_bound_log10": -509.4217520497817,
+              "signed_sum_condition": 1.0
+            },
+            {
+              "T": 8.0,
+              "trace_variance": 0.12313441487154966,
+              "T_variance": 0.9850753189723973,
+              "asymptotic_ratio": 0.9575812613419261,
+              "one_selected_upper_bound": 0.48238844229953,
+              "finite_jacobi_error_bound_log10": -347.2707131167223,
+              "signed_sum_condition": 1.0
+            },
+            {
+              "T": 12.0,
+              "trace_variance": 0.08330008282028159,
+              "T_variance": 0.9996009938433791,
+              "asymptotic_ratio": 0.9717015156990321,
+              "one_selected_upper_bound": 0.3263344146071205,
+              "finite_jacobi_error_bound_log10": -249.0883073271122,
+              "signed_sum_condition": 1.0
+            },
+            {
+              "T": 24.0,
+              "trace_variance": 0.042256110848405255,
+              "T_variance": 1.0141466603617262,
+              "asymptotic_ratio": 0.9858412037243374,
+              "one_selected_upper_bound": 0.16554153045728398,
+              "finite_jacobi_error_bound_log10": -70.88990608785026,
+              "signed_sum_condition": 1.0
+            }
+          ],
+          "finite_L_plateau": 0.004219792959407777
+        },
+        {
+          "L": 768,
+          "time_rows": [
+            {
+              "T": 1.0,
+              "trace_variance": 0.6898540760254648,
+              "T_variance": 0.6898540760254648,
+              "asymptotic_ratio": 0.6705998247438011,
+              "one_selected_upper_bound": 2.702555849191712,
+              "finite_jacobi_error_bound_log10": -1371.2945440735973,
+              "signed_sum_condition": 1.0
+            },
+            {
+              "T": 2.0,
+              "trace_variance": 0.4277175839568782,
+              "T_variance": 0.8554351679137564,
+              "asymptotic_ratio": 0.8315594465828359,
+              "one_selected_upper_bound": 1.6756161897087047,
+              "finite_jacobi_error_bound_log10": -1138.0975871153846,
+              "signed_sum_condition": 1.0
+            },
+            {
+              "T": 4.0,
+              "trace_variance": 0.23540629758331916,
+              "T_variance": 0.9416251903332766,
+              "asymptotic_ratio": 0.915343852499807,
+              "one_selected_upper_bound": 0.922222088091105,
+              "finite_jacobi_error_bound_log10": -902.8947098688965,
+              "signed_sum_condition": 1.0
+            },
+            {
+              "T": 8.0,
+              "trace_variance": 0.12313441487154972,
+              "T_variance": 0.9850753189723978,
+              "asymptotic_ratio": 0.9575812613419266,
+              "one_selected_upper_bound": 0.4823884422995302,
+              "finite_jacobi_error_bound_log10": -663.6799920458578,
+              "signed_sum_condition": 1.0
+            },
+            {
+              "T": 12.0,
+              "trace_variance": 0.08330008282028162,
+              "T_variance": 0.9996009938433794,
+              "asymptotic_ratio": 0.9717015156990323,
+              "one_selected_upper_bound": 0.3263344146071206,
+              "finite_jacobi_error_bound_log10": -520.4182239379935,
+              "signed_sum_condition": 1.0
+            },
+            {
+              "T": 24.0,
+              "trace_variance": 0.04225611084840526,
+              "T_variance": 1.0141466603617264,
+              "asymptotic_ratio": 0.9858412037243376,
+              "one_selected_upper_bound": 0.165541530457284,
+              "finite_jacobi_error_bound_log10": -265.1561438087522,
+              "signed_sum_condition": 1.0
+            }
+          ],
+          "finite_L_plateau": 0.0028158519787616363
+        }
+      ],
+      "max_cutoff_difference": 2.220446049250313e-16
+    },
+    {
+      "q": 0.64,
+      "lambda_value": 0.11157177565710487,
+      "selected_primitive_norm": 0.1107425794743161,
+      "selected_density_norm": 9.991380585315248,
+      "kappa_u": 1.5860568206673926,
+      "density_mass": 0.9999999999999996,
+      "diagonal_integral_refinement": 4.440892098500626e-16,
+      "cutoffs": [
+        {
+          "L": 512,
+          "time_rows": [
+            {
+              "T": 1.0,
+              "trace_variance": 0.8198424071564248,
+              "T_variance": 0.8198424071564248,
+              "asymptotic_ratio": 0.5169060757933285,
+              "one_selected_upper_bound": 8.191357509880822,
+              "finite_jacobi_error_bound_log10": -741.2026089849282,
+              "signed_sum_condition": 1.0
+            },
+            {
+              "T": 2.0,
+              "trace_variance": 0.582375223134622,
+              "T_variance": 1.164750446269244,
+              "asymptotic_ratio": 0.7343686752528398,
+              "one_selected_upper_bound": 5.818732497795898,
+              "finite_jacobi_error_bound_log10": -584.1799546589482,
+              "signed_sum_condition": 1.0
+            },
+            {
+              "T": 4.0,
+              "trace_variance": 0.34350942622669056,
+              "T_variance": 1.3740377049067622,
+              "asymptotic_ratio": 0.8663231272689113,
+              "one_selected_upper_bound": 3.4321334120741365,
+              "finite_jacobi_error_bound_log10": -424.26200378694654,
+              "signed_sum_condition": 1.0
+            },
+            {
+              "T": 8.0,
+              "trace_variance": 0.18500521707018172,
+              "T_variance": 1.4800417365614538,
+              "asymptotic_ratio": 0.9331580793799499,
+              "one_selected_upper_bound": 1.8484575340170468,
+              "finite_jacobi_error_bound_log10": -258.5534598229014,
+              "signed_sum_condition": 1.0
+            },
+            {
+              "T": 12.0,
+              "trace_variance": 0.12628166789198797,
+              "T_variance": 1.5153800147038556,
+              "asymptotic_ratio": 0.9554386671129493,
+              "one_selected_upper_bound": 1.2617282048572365,
+              "finite_jacobi_error_bound_log10": -156.8135490023061,
+              "signed_sum_condition": 1.0
+            },
+            {
+              "T": 24.0,
+              "trace_variance": 0.06461326638940618,
+              "T_variance": 1.5507183933457482,
+              "asymptotic_ratio": 0.9777193182103183,
+              "one_selected_upper_bound": 0.6455757353569151,
+              "finite_jacobi_error_bound_log10": 32.057367329912424,
+              "signed_sum_condition": 1.0
+            }
+          ],
+          "finite_L_plateau": 0.009808318827970473
+        },
+        {
+          "L": 768,
+          "time_rows": [
+            {
+              "T": 1.0,
+              "trace_variance": 0.8198424071564242,
+              "T_variance": 0.8198424071564242,
+              "asymptotic_ratio": 0.516906075793328,
+              "one_selected_upper_bound": 8.191357509880815,
+              "finite_jacobi_error_bound_log10": -1248.0018029680766,
+              "signed_sum_condition": 1.0
+            },
+            {
+              "T": 2.0,
+              "trace_variance": 0.5823752231346218,
+              "T_variance": 1.1647504462692435,
+              "asymptotic_ratio": 0.7343686752528394,
+              "one_selected_upper_bound": 5.818732497795895,
+              "finite_jacobi_error_bound_log10": -1013.9154697521174,
+              "signed_sum_condition": 1.0
+            },
+            {
+              "T": 4.0,
+              "trace_variance": 0.34350942622669045,
+              "T_variance": 1.3740377049067618,
+              "asymptotic_ratio": 0.8663231272689109,
+              "one_selected_upper_bound": 3.4321334120741356,
+              "finite_jacobi_error_bound_log10": -776.9338399901363,
+              "signed_sum_condition": 1.0
+            },
+            {
+              "T": 8.0,
+              "trace_variance": 0.18500521707018167,
+              "T_variance": 1.4800417365614533,
+              "asymptotic_ratio": 0.9331580793799497,
+              "one_selected_upper_bound": 1.8484575340170462,
+              "finite_jacobi_error_bound_log10": -534.1616171361121,
+              "signed_sum_condition": 1.0
+            },
+            {
+              "T": 12.0,
+              "trace_variance": 0.12628166789198791,
+              "T_variance": 1.515380014703855,
+              "asymptotic_ratio": 0.9554386671129489,
+              "one_selected_upper_bound": 1.261728204857236,
+              "finite_jacobi_error_bound_log10": -387.3423439972625,
+              "signed_sum_condition": 1.0
+            },
+            {
+              "T": 24.0,
+              "trace_variance": 0.06461326638940615,
+              "T_variance": 1.5507183933457476,
+              "asymptotic_ratio": 0.9777193182103179,
+              "one_selected_upper_bound": 0.6455757353569148,
+              "finite_jacobi_error_bound_log10": -121.40774877506482,
+              "signed_sum_condition": 1.0
+            }
+          ],
+          "finite_L_plateau": 0.006553438805557452
+        }
+      ],
+      "max_cutoff_difference": 5.551115123125783e-16
+    }
+  ],
+  "independent_time_integral": {
+    "q": 0.25,
+    "T": 4.0,
+    "points": 2049,
+    "Jacobi_dimension": 192,
+    "absolute_difference": 1.8185453143360064e-13
+  },
+  "parameters": {
+    "q": [
+      0.0625,
+      0.25,
+      0.64
+    ],
+    "times": [
+      1.0,
+      2.0,
+      4.0,
+      8.0,
+      12.0,
+      24.0
+    ],
+    "Jacobi_dimensions": [
+      512,
+      768
+    ],
+    "diagonal_quadratures": [
+      [
+        4097,
+        192
+      ],
+      [
+        8193,
+        288
+      ]
+    ],
+    "average": "symmetric [-T,T]"
+  },
+  "environment": {
+    "python": "3.14.5",
+    "numpy": "2.4.6",
+    "scipy": "1.18.0",
+    "matplotlib": "3.11.0"
+  },
+  "input_sha256": {
+    "code/compute_slater_neutral_dephasing.py": "0555dcde21d5afdedbf329c8c8171c7c716384676f4bebd7f4ed1ed5f70ad290",
+    "results/susskind-slater-neutral-slope/rank-checks.json": "7c8fa223ca99157f1f196f22187b025f028ef16e2c4263742badb4186d7c0123",
+    "results/susskind-slater-neutral-slope/amplification-checks.json": "a168acdb46e530f879bc62d2251d935f49b773ce3d04eec7790eff5ecc139cb5"
+  },
+  "figure_sha256": {
+    "results/susskind-slater-neutral-slope/neutral-slope-dephasing.png": "b13da943dfdd2a329e3bf9a68b40aa5c68582cf1f36d4f9239a389dad3314063"
+  },
+  "scope": "Continuum finite-window dephasing diagnostics and one-selected state upper bound; not exact finite-N pinching. Analytic Jacobi error is exact-arithmetic, roundoff and density infinite-product tails are not interval enclosed."
+}

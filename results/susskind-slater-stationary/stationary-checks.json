@@ -1,0 +1,536 @@
+{
+  "status": "passed",
+  "created_at_utc": "2026-11-07T16:14:18.152263+00:00",
+  "rows": [
+    {
+      "q": 0.0625,
+      "kappa": 0.8448905756171324,
+      "density_mass": 1.0,
+      "density_refinement": 0.0,
+      "quadratures": [
+        {
+          "L": 800,
+          "time_rows": [
+            {
+              "T": 2.0,
+              "vacuum_projection": 0.41603763431878116,
+              "purity": 0.3646697681161844,
+              "T_times_projection": 0.8320752686375623,
+              "T_times_purity": 0.7293395362323688,
+              "projection_relative_to_asymptotic": 0.9848319920361173,
+              "purity_relative_to_asymptotic": 0.8632354973300989,
+              "signed_sum_condition": 1.1862761630212275
+            },
+            {
+              "T": 4.0,
+              "vacuum_projection": 0.21037409433186982,
+              "purity": 0.19659013908246345,
+              "T_times_projection": 0.8414963773274793,
+              "T_times_purity": 0.7863605563298538,
+              "projection_relative_to_asymptotic": 0.9959826770618504,
+              "purity_relative_to_asymptotic": 0.9307247340940847,
+              "signed_sum_condition": 1.4587039638426125
+            },
+            {
+              "T": 8.0,
+              "vacuum_projection": 0.10551777688002506,
+              "purity": 0.1019296638389823,
+              "T_times_projection": 0.8441422150402005,
+              "T_times_purity": 0.8154373107118584,
+              "projection_relative_to_asymptotic": 0.9991142514799797,
+              "purity_relative_to_asymptotic": 0.9651395509012981,
+              "signed_sum_condition": 1.7362892480506262
+            },
+            {
+              "T": 16.0,
+              "vacuum_projection": 0.0527936103518876,
+              "purity": 0.051882324296061585,
+              "T_times_projection": 0.8446977656302016,
+              "T_times_purity": 0.8301171887369854,
+              "projection_relative_to_asymptotic": 0.9997717929487022,
+              "purity_relative_to_asymptotic": 0.9825144376011579,
+              "signed_sum_condition": 2.0164563839850365
+            },
+            {
+              "T": 32.0,
+              "vacuum_projection": 0.026401391808318214,
+              "purity": 0.02617163130407422,
+              "T_times_projection": 0.8448445378661829,
+              "T_times_purity": 0.8374922017303751,
+              "projection_relative_to_asymptotic": 0.9999455103982952,
+              "purity_relative_to_asymptotic": 0.9912433939964908,
+              "signed_sum_condition": 2.297229250674757
+            },
+            {
+              "T": 64.0,
+              "vacuum_projection": 0.013201233991382537,
+              "purity": 0.01314356983033067,
+              "T_times_projection": 0.8448789754484823,
+              "T_times_purity": 0.8411884691411629,
+              "projection_relative_to_asymptotic": 0.9999862702118063,
+              "purity_relative_to_asymptotic": 0.9956182414826139,
+              "signed_sum_condition": 2.577752219521831
+            }
+          ],
+          "diagonal_pinching_plateau": 0.0019553589759895664
+        },
+        {
+          "L": 1100,
+          "time_rows": [
+            {
+              "T": 2.0,
+              "vacuum_projection": 0.4160376343187804,
+              "purity": 0.36466976811618373,
+              "T_times_projection": 0.8320752686375608,
+              "T_times_purity": 0.7293395362323675,
+              "projection_relative_to_asymptotic": 0.9848319920361155,
+              "purity_relative_to_asymptotic": 0.8632354973300973,
+              "signed_sum_condition": 1.1862764829827421
+            },
+            {
+              "T": 4.0,
+              "vacuum_projection": 0.21037409433186943,
+              "purity": 0.19659013908246312,
+              "T_times_projection": 0.8414963773274777,
+              "T_times_purity": 0.7863605563298525,
+              "projection_relative_to_asymptotic": 0.9959826770618485,
+              "purity_relative_to_asymptotic": 0.9307247340940832,
+              "signed_sum_condition": 1.458703828230235
+            },
+            {
+              "T": 8.0,
+              "vacuum_projection": 0.10551777688002487,
+              "purity": 0.10192966383898212,
+              "T_times_projection": 0.8441422150401989,
+              "T_times_purity": 0.815437310711857,
+              "projection_relative_to_asymptotic": 0.9991142514799779,
+              "purity_relative_to_asymptotic": 0.9651395509012963,
+              "signed_sum_condition": 1.7362811538205498
+            },
+            {
+              "T": 16.0,
+              "vacuum_projection": 0.0527936103518875,
+              "purity": 0.05188232429606149,
+              "T_times_projection": 0.8446977656302,
+              "T_times_purity": 0.8301171887369838,
+              "projection_relative_to_asymptotic": 0.9997717929487004,
+              "purity_relative_to_asymptotic": 0.982514437601156,
+              "signed_sum_condition": 2.0164329946493322
+            },
+            {
+              "T": 32.0,
+              "vacuum_projection": 0.026401391808318166,
+              "purity": 0.026171631304074173,
+              "T_times_projection": 0.8448445378661813,
+              "T_times_purity": 0.8374922017303735,
+              "projection_relative_to_asymptotic": 0.9999455103982933,
+              "purity_relative_to_asymptotic": 0.991243393996489,
+              "signed_sum_condition": 2.2971099412518026
+            },
+            {
+              "T": 64.0,
+              "vacuum_projection": 0.013201233991382514,
+              "purity": 0.013143569830330649,
+              "T_times_projection": 0.8448789754484809,
+              "T_times_purity": 0.8411884691411615,
+              "projection_relative_to_asymptotic": 0.9999862702118045,
+              "purity_relative_to_asymptotic": 0.9956182414826124,
+              "signed_sum_condition": 2.5785537356659836
+            }
+          ],
+          "diagonal_pinching_plateau": 0.001422607916902174
+        }
+      ],
+      "max_L_difference": 7.771561172376096e-16
+    },
+    {
+      "q": 0.25,
+      "kappa": 0.8449063017131541,
+      "density_mass": 0.9999999999999999,
+      "density_refinement": 2.220446049250313e-16,
+      "quadratures": [
+        {
+          "L": 800,
+          "time_rows": [
+            {
+              "T": 2.0,
+              "vacuum_projection": 0.421215557218958,
+              "purity": 0.3669172326647627,
+              "T_times_projection": 0.842431114437916,
+              "T_times_purity": 0.7338344653295255,
+              "projection_relative_to_asymptotic": 0.9970704594459535,
+              "purity_relative_to_asymptotic": 0.868539462709159,
+              "signed_sum_condition": 1.1774761979125719
+            },
+            {
+              "T": 4.0,
+              "vacuum_projection": 0.21111542944516629,
+              "purity": 0.19731816334363977,
+              "T_times_projection": 0.8444617177806651,
+              "T_times_purity": 0.7892726533745591,
+              "projection_relative_to_asymptotic": 0.9994738068214339,
+              "purity_relative_to_asymptotic": 0.9341540615500313,
+              "signed_sum_condition": 1.4588072209704934
+            },
+            {
+              "T": 8.0,
+              "vacuum_projection": 0.10560193542772024,
+              "purity": 0.10213340794205637,
+              "T_times_projection": 0.8448154834217619,
+              "T_times_purity": 0.817067263536451,
+              "projection_relative_to_asymptotic": 0.9998925108130831,
+              "purity_relative_to_asymptotic": 0.9670507390934877,
+              "signed_sum_condition": 1.7399222987767018
+            },
+            {
+              "T": 16.0,
+              "vacuum_projection": 0.0528052683018605,
+              "purity": 0.05193633507099374,
+              "T_times_projection": 0.844884292829768,
+              "T_times_purity": 0.8309813611358998,
+              "projection_relative_to_asymptotic": 0.9999739510957115,
+              "purity_relative_to_asymptotic": 0.983518952872029,
+              "signed_sum_condition": 2.020916394632924
+            },
+            {
+              "T": 32.0,
+              "vacuum_projection": 0.026403150941742122,
+              "purity": 0.026185702622054892,
+              "T_times_projection": 0.8449008301357479,
+              "T_times_purity": 0.8379424839057565,
+              "projection_relative_to_asymptotic": 0.999993524042376,
+              "purity_relative_to_asymptotic": 0.9917578815623963,
+              "signed_sum_condition": 2.3014701651947536
+            },
+            {
+              "T": 64.0,
+              "vacuum_projection": 0.013201640075042948,
+              "purity": 0.013147250882481648,
+              "T_times_projection": 0.8449049648027487,
+              "T_times_purity": 0.8414240564788255,
+              "projection_relative_to_asymptotic": 0.9999984176820522,
+              "purity_relative_to_asymptotic": 0.9958785427126441,
+              "signed_sum_condition": 2.5847334772176573
+            }
+          ],
+          "diagonal_pinching_plateau": 0.0022666399424633938
+        },
+        {
+          "L": 1100,
+          "time_rows": [
+            {
+              "T": 2.0,
+              "vacuum_projection": 0.42121555721895676,
+              "purity": 0.3669172326647617,
+              "T_times_projection": 0.8424311144379135,
+              "T_times_purity": 0.7338344653295235,
+              "projection_relative_to_asymptotic": 0.9970704594459506,
+              "purity_relative_to_asymptotic": 0.8685394627091567,
+              "signed_sum_condition": 1.177476387722751
+            },
+            {
+              "T": 4.0,
+              "vacuum_projection": 0.21111542944516565,
+              "purity": 0.1973181633436392,
+              "T_times_projection": 0.8444617177806626,
+              "T_times_purity": 0.7892726533745568,
+              "projection_relative_to_asymptotic": 0.9994738068214309,
+              "purity_relative_to_asymptotic": 0.9341540615500286,
+              "signed_sum_condition": 1.4588050789637597
+            },
+            {
+              "T": 8.0,
+              "vacuum_projection": 0.10560193542771994,
+              "purity": 0.10213340794205608,
+              "T_times_projection": 0.8448154834217595,
+              "T_times_purity": 0.8170672635364487,
+              "projection_relative_to_asymptotic": 0.9998925108130802,
+              "purity_relative_to_asymptotic": 0.9670507390934849,
+              "signed_sum_condition": 1.7399007875697703
+            },
+            {
+              "T": 16.0,
+              "vacuum_projection": 0.05280526830186033,
+              "purity": 0.051936335070993586,
+              "T_times_projection": 0.8448842928297653,
+              "T_times_purity": 0.8309813611358974,
+              "projection_relative_to_asymptotic": 0.9999739510957083,
+              "purity_relative_to_asymptotic": 0.9835189528720261,
+              "signed_sum_condition": 2.020836494750572
+            },
+            {
+              "T": 32.0,
+              "vacuum_projection": 0.026403150941742046,
+              "purity": 0.02618570262205481,
+              "T_times_projection": 0.8449008301357455,
+              "T_times_purity": 0.8379424839057539,
+              "projection_relative_to_asymptotic": 0.9999935240423731,
+              "purity_relative_to_asymptotic": 0.9917578815623932,
+              "signed_sum_condition": 2.3014036603031913
+            },
+            {
+              "T": 64.0,
+              "vacuum_projection": 0.013201640075042907,
+              "purity": 0.013147250882481608,
+              "T_times_projection": 0.844904964802746,
+              "T_times_purity": 0.8414240564788229,
+              "projection_relative_to_asymptotic": 0.9999984176820491,
+              "purity_relative_to_asymptotic": 0.9958785427126411,
+              "signed_sum_condition": 2.5835190277855915
+            }
+          ],
+          "diagonal_pinching_plateau": 0.0016492929683109342
+        }
+      ],
+      "max_L_difference": 1.2212453270876722e-15
+    },
+    {
+      "q": 0.64,
+      "kappa": 0.8654266759681999,
+      "density_mass": 0.9999999999999997,
+      "density_refinement": 0.0,
+      "quadratures": [
+        {
+          "L": 800,
+          "time_rows": [
+            {
+              "T": 2.0,
+              "vacuum_projection": 0.432032830674248,
+              "purity": 0.37406333026914984,
+              "T_times_projection": 0.864065661348496,
+              "T_times_purity": 0.7481266605382997,
+              "projection_relative_to_asymptotic": 0.9984273484311295,
+              "purity_relative_to_asymptotic": 0.8644599032047744,
+              "signed_sum_condition": 1.163832260452463
+            },
+            {
+              "T": 4.0,
+              "vacuum_projection": 0.21635665251515768,
+              "purity": 0.20169416603916995,
+              "T_times_projection": 0.8654266100606307,
+              "T_times_purity": 0.8067766641566798,
+              "projection_relative_to_asymptotic": 0.9999999238438437,
+              "purity_relative_to_asymptotic": 0.932229946868803,
+              "signed_sum_condition": 1.4461569189388521
+            },
+            {
+              "T": 8.0,
+              "vacuum_projection": 0.10817833440834743,
+              "purity": 0.10451270874476079,
+              "T_times_projection": 0.8654266752667794,
+              "T_times_purity": 0.8361016699580863,
+              "projection_relative_to_asymptotic": 0.9999999991895091,
+              "purity_relative_to_asymptotic": 0.9661149733138211,
+              "signed_sum_condition": 1.7278697925527853
+            },
+            {
+              "T": 16.0,
+              "vacuum_projection": 0.05408916724360427,
+              "purity": 0.053172760809236816,
+              "T_times_projection": 0.8654266758976683,
+              "T_times_purity": 0.850764172947789,
+              "projection_relative_to_asymptotic": 0.9999999999185007,
+              "purity_relative_to_asymptotic": 0.9830574866391689,
+              "signed_sum_condition": 2.0089332966572315
+            },
+            {
+              "T": 32.0,
+              "vacuum_projection": 0.027044583623568704,
+              "purity": 0.02681548201420642,
+              "T_times_projection": 0.8654266759541985,
+              "T_times_purity": 0.8580954244546054,
+              "projection_relative_to_asymptotic": 0.9999999999838215,
+              "purity_relative_to_asymptotic": 0.9915287433156684,
+              "signed_sum_condition": 2.291207203808931
+            },
+            {
+              "T": 64.0,
+              "vacuum_projection": 0.013522291811951435,
+              "purity": 0.013465016409540332,
+              "T_times_projection": 0.8654266759648919,
+              "T_times_purity": 0.8617610502105812,
+              "projection_relative_to_asymptotic": 0.9999999999961776,
+              "purity_relative_to_asymptotic": 0.995764371656885,
+              "signed_sum_condition": 2.5717432107443425
+            }
+          ],
+          "diagonal_pinching_plateau": 0.0034968645825970666
+        },
+        {
+          "L": 1100,
+          "time_rows": [
+            {
+              "T": 2.0,
+              "vacuum_projection": 0.43203283067424725,
+              "purity": 0.3740633302691492,
+              "T_times_projection": 0.8640656613484945,
+              "T_times_purity": 0.7481266605382983,
+              "projection_relative_to_asymptotic": 0.9984273484311277,
+              "purity_relative_to_asymptotic": 0.8644599032047728,
+              "signed_sum_condition": 1.163832565673942
+            },
+            {
+              "T": 4.0,
+              "vacuum_projection": 0.21635665251515723,
+              "purity": 0.20169416603916962,
+              "T_times_projection": 0.8654266100606289,
+              "T_times_purity": 0.8067766641566785,
+              "projection_relative_to_asymptotic": 0.9999999238438416,
+              "purity_relative_to_asymptotic": 0.9322299468688016,
+              "signed_sum_condition": 1.446142941620336
+            },
+            {
+              "T": 8.0,
+              "vacuum_projection": 0.10817833440834726,
+              "purity": 0.1045127087447606,
+              "T_times_projection": 0.8654266752667781,
+              "T_times_purity": 0.8361016699580848,
+              "projection_relative_to_asymptotic": 0.9999999991895075,
+              "purity_relative_to_asymptotic": 0.9661149733138192,
+              "signed_sum_condition": 1.7278564307491004
+            },
+            {
+              "T": 16.0,
+              "vacuum_projection": 0.054089167243604186,
+              "purity": 0.05317276080923672,
+              "T_times_projection": 0.865426675897667,
+              "T_times_purity": 0.8507641729477875,
+              "projection_relative_to_asymptotic": 0.9999999999184993,
+              "purity_relative_to_asymptotic": 0.9830574866391671,
+              "signed_sum_condition": 2.008940536355435
+            },
+            {
+              "T": 32.0,
+              "vacuum_projection": 0.02704458362356866,
+              "purity": 0.026815482014206374,
+              "T_times_projection": 0.8654266759541971,
+              "T_times_purity": 0.858095424454604,
+              "projection_relative_to_asymptotic": 0.9999999999838197,
+              "purity_relative_to_asymptotic": 0.9915287433156668,
+              "signed_sum_condition": 2.2906686113696924
+            },
+            {
+              "T": 64.0,
+              "vacuum_projection": 0.013522291811951411,
+              "purity": 0.013465016409540311,
+              "T_times_projection": 0.8654266759648903,
+              "T_times_purity": 0.8617610502105799,
+              "projection_relative_to_asymptotic": 0.9999999999961758,
+              "purity_relative_to_asymptotic": 0.9957643716568836,
+              "signed_sum_condition": 2.573480150926577
+            }
+          ],
+          "diagonal_pinching_plateau": 0.0025462086320919056
+        }
+      ],
+      "max_L_difference": 7.771561172376096e-16
+    }
+  ],
+  "independent_time_checks": [
+    {
+      "T": 2.0,
+      "errors": {
+        "projection": 1.7727586065774403e-10,
+        "purity": 2.482200611719776e-09
+      },
+      "points": 8193
+    },
+    {
+      "T": 8.0,
+      "errors": {
+        "projection": 1.5808604425515682e-12,
+        "purity": 2.4835142414803e-09
+      },
+      "points": 8193
+    },
+    {
+      "T": 32.0,
+      "errors": {
+        "projection": 2.4388130404062736e-13,
+        "purity": 2.4835419450142115e-09
+      },
+      "points": 8193
+    }
+  ],
+  "occupancy_counts": [
+    {
+      "N": 4,
+      "p": 1,
+      "labels": 4,
+      "full": "1/4",
+      "central": "1/3"
+    },
+    {
+      "N": 6,
+      "p": 1,
+      "labels": 9,
+      "full": "1/4",
+      "central": "3/10"
+    },
+    {
+      "N": 6,
+      "p": 2,
+      "labels": 9,
+      "full": "1/16",
+      "central": "1/10"
+    },
+    {
+      "N": 8,
+      "p": 2,
+      "labels": 36,
+      "full": "1/16",
+      "central": "3/35"
+    },
+    {
+      "N": 10,
+      "p": 3,
+      "labels": 100,
+      "full": "1/64",
+      "central": "1/42"
+    }
+  ],
+  "parameters": {
+    "q": [
+      0.0625,
+      0.25,
+      0.64
+    ],
+    "Jacobi_sizes": [
+      800,
+      1100
+    ],
+    "T": [
+      2,
+      4,
+      8,
+      16,
+      32,
+      64
+    ],
+    "density_grids": [
+      8193,
+      16385
+    ],
+    "q_product_terms": [
+      256,
+      384
+    ]
+  },
+  "environment": {
+    "python": "3.14.5",
+    "numpy": "2.4.6",
+    "scipy": "1.18.0",
+    "matplotlib": "3.11.0",
+    "dtype": "float64"
+  },
+  "input_sha256": {
+    "code/check_slater_stationary.py": "5418e1127c11b717f1d3bb5ecce035d2a0b2b5958884488e0324f78bbeb5d76f",
+    "results/susskind-slater-transfer/local-evidence.json": "136226a7a720632fcd5bb92eac67a92724fbfd510a6dde70b701bd7faafac58f",
+    "manuscript/susskind-slater-transfer/main.tex": "5faccc8bd3f170d5ae6b4ccd1325186e5d04e954848e865b6c05cb1f3b29eabd",
+    "notes/susskind-slater-ladder-proof.md": "721c65f368ed9bab747a9c66e78a156633c640323246b2c7f88257c3477ca8f9"
+  },
+  "figure_sha256": {
+    "results/susskind-slater-stationary/finite-time-states.png": "4ad811edb69a8de12403b22f4f95e178c58ad722b7fdc385295348a6c0cc44bb"
+  },
+  "scope": "Finite quadrature/time-integral diagnostics and exact occupancy counts. No numerical proof of stationary-state absence, no interval certification, no long-time-uniform finite-N assertion."
+}

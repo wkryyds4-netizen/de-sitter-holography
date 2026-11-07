@@ -1,0 +1,139 @@
+{
+  "status": "Local research milestone; full de Sitter goal remains active",
+  "created_at_utc": "2026-11-07T17:16:18.003259+00:00",
+  "scientific_scope": "Finite-N uniform orbit-density moments for homogeneous linear stabilizer-covariant preparations, including M-dagger. Exact neutral-slope pinching transferred in the one-selected prepared state and covariant post-dressings. Not yet arbitrary nonlinear/interlaced selected words or the full bilocal dictionary.",
+  "scientific_output_hashes": {
+    "results/susskind-slater-orbit-density/exact-checks.json": "95313475713ec714a8d525d8a0d32315afb92ed7ee41983bcd96719a4c4120ac"
+  },
+  "input_hashes_verified": {
+    "code/check_slater_orbit_density.py": "6aa47110f948feaf81870156aef82b88e70f7dc05f0ba654bfd069052ebd88c2",
+    "results/susskind-slater-neutral-slope/local-evidence.json": "cf278d649e5c6d76bebe925ab79ff894b6555a806538e066096adbfadefafc82"
+  },
+  "parameters": {
+    "seed_fixtures": [
+      [
+        4,
+        2,
+        1
+      ],
+      [
+        4,
+        2,
+        2
+      ],
+      [
+        6,
+        3,
+        1
+      ],
+      [
+        6,
+        3,
+        2
+      ],
+      [
+        8,
+        4,
+        2
+      ]
+    ],
+    "projective_N": [
+      2,
+      3,
+      4
+    ],
+    "Gaussian_Wick_N": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "N2_moment_orders": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "sampling": "none; exact Haar monomials through third order"
+  },
+  "parameter_hash": "555a804718006db7b3fd01d9994659b46f0cd51d0e486d5a5c85a01c3a0b59e5",
+  "previous_evidence": {
+    "results/susskind-slater-neutral-slope/local-evidence.json": {
+      "sha256": "cf278d649e5c6d76bebe925ab79ff894b6555a806538e066096adbfadefafc82",
+      "verified_scientific_hashes": {
+        "code/record_slater_neutral_slope.py": "22f618976764b3713dfbd56b0ec0d02e10da03ab12491c388288ea8a45d93782",
+        "code/check_slater_neutral_slope.py": "5ff01da4a56776ba451b8918ca762686538a6caa270775b0b6836ddea3459a36",
+        "code/check_slater_covariant_amplification.py": "055a19e128cb3dfe199ad3b972ca49ef86d7b39c092b7f65a34202df9880213c",
+        "code/compute_slater_neutral_dephasing.py": "0555dcde21d5afdedbf329c8c8171c7c716384676f4bebd7f4ed1ed5f70ad290",
+        "code/build_slater_neutral_slope.ps1": "c7141d063c29310481c9bf24097c6e2fe60ac6f7c3bf10eabb6fb192a03f4332",
+        "notes/susskind-slater-neutral-slope.md": "1ca7f643aff55e13edbdfda086fb832845a683f7e89e50888f2aab478a47deb6",
+        "literature/susskind-slater-neutral-slope-sources.md": "ddc0a2897aa52180e85ec89a823b9d947318e77ed97ca558563b630fad0ed5ac",
+        "manuscript/susskind-slater-neutral-slope/main.tex": "e9fc4d872c3009b37924064a34a2e9391bbf5fd9610c52dd0202797573d9df13",
+        "output/pdf/de-sitter-susskind-slater-neutral-slope.pdf": "ce7505d4e2b0c756068bd1c087ca816a493366dde7afc6523ff2ad2c77d69446",
+        "results/susskind-slater-neutral-slope/main.log": "45b2ca853c9983cf7fb4426c0279d25a40acb43f3de3c9196073d5caeaf0d46e",
+        "results/susskind-slater-neutral-slope/neutral-slope-dephasing.png": "b13da943dfdd2a329e3bf9a68b40aa5c68582cf1f36d4f9239a389dad3314063",
+        "results/susskind-slater-neutral-slope/rank-checks.json": "7c8fa223ca99157f1f196f22187b025f028ef16e2c4263742badb4186d7c0123",
+        "results/susskind-slater-neutral-slope/amplification-checks.json": "a168acdb46e530f879bc62d2251d935f49b773ce3d04eec7790eff5ecc139cb5",
+        "results/susskind-slater-neutral-slope/dephasing-checks.json": "47109f31b526f3797f5a83d12758065acb76b6d281fab064bcdfc0745672013b"
+      }
+    }
+  },
+  "hashes": {
+    "code/record_slater_orbit_density.py": "4f6c290b92e6b300dda85fae72905fe995678cee027c4d78231d6380e72168f4",
+    "code/check_slater_orbit_density.py": "6aa47110f948feaf81870156aef82b88e70f7dc05f0ba654bfd069052ebd88c2",
+    "code/build_slater_orbit_density.ps1": "19d7d9cb6645601401963bc5a27b8f4ca7f53417de01e996b4a25aaf25d274b7",
+    "notes/susskind-slater-orbit-density.md": "cd582148372889b7203bd4a5d68fe0f1f10eaffa1200d1c43e510027dd6dcfe7",
+    "literature/susskind-slater-orbit-density-sources.md": "d47dbe821f2a0525a35a79ef70fd32218612edd8761816bff302a8d5df571913",
+    "manuscript/susskind-slater-orbit-density/main.tex": "db742ce6e14949afb39ce38969652985cbbda876d80750536d463c4653a864cd",
+    "output/pdf/de-sitter-susskind-slater-orbit-density.pdf": "fabc8d38846a3a8413d42a74a9374ee432c90fa8d00e21d82ec64f84c228cfe3",
+    "results/susskind-slater-orbit-density/main.log": "c59c515f1a3dfb3c1feb1413d7b3892c55578a8977088e6d39d1895456848bd7",
+    "results/susskind-slater-orbit-density/exact-checks.json": "95313475713ec714a8d525d8a0d32315afb92ed7ee41983bcd96719a4c4120ac",
+    "results/susskind-slater-orbit-density/diagnostics/initial-check-failure.txt": "57af1f7690848feeb256599c24dca252ddb7f184d2fe167e3a7605580d508cac",
+    "results/susskind-slater-orbit-density/diagnostics/initial-build-failure.txt": "5528df2446be2be3ce53107dd11d9e5f5b5743731558cf603f0ac4992ff52012"
+  },
+  "render_hashes": {
+    "tmp/pdfs/susskind-slater-orbit-density-render/page-1.png": "8ee4049e5e4cfb4e7b17cd446a8f4a84fa0c285e36b2df64b592752edbf1f462",
+    "tmp/pdfs/susskind-slater-orbit-density-render/page-2.png": "966e0aa12538fd0d0f66b27ea81ddcd6aaa324db2f95956fb185fe2d93d1e12d",
+    "tmp/pdfs/susskind-slater-orbit-density-render/page-3.png": "676e52717d31f8946fb0f87a2cb77440b79a37e61896c5a9837a868457275940",
+    "tmp/pdfs/susskind-slater-orbit-density-render/page-4.png": "0e31c9407ab0a3f2617df8bd7965492b345b47f79646474dc10181425bbf10d6",
+    "tmp/pdfs/susskind-slater-orbit-density-render/page-5.png": "564367792a0f42752c749052fbbdeaaecc6b4f101b232bf1f060e6b746dddf86",
+    "tmp/pdfs/susskind-slater-orbit-density-render/page-6.png": "48e725b0df6278a9cecc12d3518623872cdd364babdd346502049ab3bb4c03ab"
+  },
+  "build_pass_hashes": {
+    "tmp/pdfs/susskind-slater-orbit-density-build/pass1.txt": "e8e7c95e94eb1b9f66abec23fcc1a874acb3c49528c1445f41bf79c0d02087a1",
+    "tmp/pdfs/susskind-slater-orbit-density-build/pass2.txt": "0c17e9339bb97f28b60ac81677ca5b1e56075da3b176111a96dc92461df9b2ea"
+  },
+  "checks": {
+    "seed_weights": 59,
+    "permutation_frame_counts": 122,
+    "stabilizer_entries": 624,
+    "exact_Haar_entries": 58,
+    "Gaussian_coordinate_pairs": 978
+  },
+  "build": {
+    "command": "./code/build_slater_orbit_density.ps1",
+    "passes": 2,
+    "final_exit_code_observed": 0,
+    "pages": 6,
+    "review": "All six pages viewed at 90 dpi; final page 1 re-inspected after explicit L2 integrability wording. Other five render hashes unchanged.",
+    "no_undefined_references_or_overfull": true,
+    "render": "pdftoppm -r 90 -png"
+  },
+  "environment": {
+    "recorder_python": "3.14.5",
+    "science": {
+      "python": "3.14.5",
+      "sympy": "1.14.0",
+      "arithmetic": "SymPy Rational and exact complex matrices"
+    }
+  },
+  "diagnostics": "Initial exact comparison required canonicalization of complex expressions; no mathematical identity changed. Initial LaTeX mathscr macro unavailable, replaced by mathcal. Failed diagnostics retained. Successful science output not regenerated.",
+  "git_commit_created": false,
+  "git_push_performed": false,
+  "external_reply_sent": false,
+  "recorder_scope": "Integrity/build evidence; finite diagnostics do not independently certify the general analytic theorem."
+}

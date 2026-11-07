@@ -1,5 +1,15 @@
 # de Sitter 全息研究规划
 
+2026-11-08 集中发布安排：按用户本轮要求，将 stationary 至 orbit-density 的四个已完成阶段作为一次快照提交并推送，并为 issue #1 提供材料入口与待核事项更新。发布范围见 [说明](notes/research-release-2026-11-08-slater-density.md)。科学计划继续从二次制备的 chaos/partial-flattening 分析推进；日常低频 Git 偏好不变。
+
+2026-11-08 slater-orbit-density阶段：从上一轮提出的finiteN orbit density出发，利用Slater torus weight的Weyl轨道维数下界dα≥binom(N,m)，保留multiplicity的Schur twirl给第二侧Gaussian variance≤aI；第一侧=aI。Hermitian dilation和既有Gaussian矩递推给EtrR_P^r≤(2r−1)!!a^r。单M†制备的有限N绝对连续性界闭合，实际exact-pinched neutral slope在M W_cov M†及covariant后置dressing中可替换。下一首任务具体化为P=M†h、P=(M†)²的二次Gaussian coefficient张量、partial flattening和orbit密度矩，不能把线性Z的递推用于高次P。随后多个selected插入、J2及完整bilocal共同表示，再物理字典。六页PDF/精确检查/manifest本地封存，本轮progress，goal active。
+
+2026-11-08 slater-neutral-slope阶段：实际T=mεα(ΦH−κbar H)的精确rank谱及回归经Poisson(λ)缺额全尾控制，归一后可在全部selected words/time替成u。新增共同primitive分解给整个D表示的qFock amplification和full compact quotient，单selected激发的有界正密度使有限分辨率去相干强收敛；先N后T的微观混合词极限闭合。精确pinching在纯协变词中用正两能量测度无对角质量+高矩处理，含M时尚缺有限N的一致绝对连续性估计，不能用极限ρ1直接代替。下一步优先从有限N Slater轨道twirl构造选态密度，再估其Schatten矩；若能对特殊pinched slope直接给界也可。随后J2/fullbilocal、空间质量及finite-G。八页PDF和三science本地封存；本轮progress，goal active。
+
+2026-11-08 slater-covariant阶段：先核BNR的CAR/固定电荷弦图、Effros–Popa的q Wick、RX的observable/state区分及Ricard的dim≥2因子定理，再把实际同J大小涨落u接到Slater选态。完成任意固定mixed word、紧复时间、rank/size替换、H/U/P transfer、新cyclic残量与指定平稳迹态。标准q-Mehler谱核是已有公式的应用。计划从“寻找更大协变表示”推进到“实际bilocal生成元与该表示相接”：先核未pinch slope的rank谱符号，再证明pinched差在selected混合态中的控制，然后J2及完整bilocal。不能用fulltrace S_r强估计直接跨过selected态，也不能把已有fulltrace bilocal四点重列为未完成。完整C* quotient分类并非当前主线必需；优先物理observable和空间/质量、finite-G字典。九页PDF和三science封存，仅本地，长期goal active。
+
+2026-11-08 slater-stationary阶段：文献先核Type I不变态/Gibbs判据、RX的generic/adapted区分、RS单位与CLPW有限corner。现有全transfer给norm algebra C*(h)+K，stationary states全部能量商化，selected有界关联被杀掉；pure AC排除normal stationary density。有限时间态与Parseval给κ/T信号/纯度。旧Schur接口扩到联合协变word，固定sector Slater限制态精确tracial/stationary，说明下一步应扩大实际observable family。研究顺序转为：核旧非平凡bilocal生成元的covariance及central/fullcharge接口；计算其与同J M的混合Gram和新扇区；再求全joint表示与物理生成元。当前hM闭包中的normal Gibbs路线已排除，不再当待办；无界undressing与换表示仍需各自论证。本轮只本地，长期goal active。
+
 2026-11-08 slater-transfer 阶段：全 H/P 开弦传递、正 Gram 商空间、number-dependent Wick 关系、q-Jacobi primitive towers、compact M 与 Type I closure 已写成九页阶段稿。有限层 core 的 canonical undressing 和单激发谱权重已核；原全层 transfer/谱制备任务闭合。下一首任务改为物理观察者态：先核原文中 stationary/KMS 态与表示选择，再研究本表示的连续谱和正常态存在条件。Euclidean 向量制备不直接当作 KMS；full joint grading 与微观占据数的对应、旧 bilocal 的共同 state 接口、空间/质量生成元和 finite-G 依次保留。用户明确授权本次集中提交/推送与 issue 回复，日常低频 Git 偏好不变。长期 goal active。
 
 2026-11-07 slater-joint-words阶段：先核BNR精确CAR重排和Neeb所述Nelson定理；全site多项式精确提取后，以归一化defect活动度m(p/m)^r的可和界消去r≥3及backward，证明任意固定same-J word为Σγ^b q^ν，ν=全部crossings+inner selected nestings。正极限给全joint GNS，实际有限N行列协方差≤I使每个Gaussian配对算符为收缩，提供独立于N/次数的阶乘界；由此接自伴Hamiltonian与完整有限时间annealed关联，不再停留Taylor系数。六点CAR/符号、系数、Gram和time界三science/九页PDF本地封存。下一首任务改为高效的全层transfer表示及谱/态制备核；degree3秩15仅两有理点证据，不预设二叉树。再明确stationary观察者态、与旧bilocal极限的共同state接口和空间/质量生成元，最终有限G。原三弦/全joint固定矩和紧时间窗收敛任务本轮闭合，勿重复作为待办。无Git/外部评论，长期goal active。
