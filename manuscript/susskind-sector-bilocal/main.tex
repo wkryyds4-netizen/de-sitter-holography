@@ -1,0 +1,586 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,microtype,booktabs}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newcommand{\E}{\mathbb E}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\Nc}{\mathcal N}
+\newcommand{\Pin}{\mathcal P_h}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\Qop}{\mathscr Q}
+\usepackage{mathrsfs}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\title{Fixed-charge bilocals and selected preparations\\
+\large Two-component memory, strong reconstruction and joint moments}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{8 November 2026\quad Local research draft}
+\begin{document}\maketitle
+\begin{abstract}
+We connect the fixed-charge ordinary and neutral field estimates to
+the actual centered bilocal. The charged OU identity and an even
+auxiliary-field expansion first give all fixed finite Schatten bounds
+on the total memory. At half filling, the central Fourier source
+theorem extends to colored words, proving the required four-field
+conditional regression. The two memory components then have their
+common local limit. A static-memory dilation gives an $O(p^{-1})$
+strong reconstruction of the actual bilocal from actual memory.
+Consequently finite products of covariant bilocals converge between
+the already controlled fixed polynomial selected preparations.
+\end{abstract}
+\section{Model, objects and statements}
+Use the common static Gaussian overlapping p-body CAR model of
+\cite{return}, standard CAR, $\hbar=1$, fixed $J_s>0$ and string time.
+Let $\lambda_N=p^2/N\to\lambda>0$, $h=H_m$,
+$d_m=\binom Nm$, $C_m I=\E h^2$, and
+$\norm X_{r,m}=(\E d_m^{-1}\operatorname{Tr}|X|^r)^{1/r}$.
+All norm orders $1\le r<\infty$ and real-time windows are fixed.
+Uniform bounds are on $|m-N/2|\le L_0p$ with fixed $L_0$;
+limiting moments below are at even N and $m=N/2$.
+
+Keep the exact dilation from \cite{return}:
+\begin{gather*}
+ V\psi=m^{-1/2}\sum_i|i\rangle c_i\psi,\quad
+ K=I_N\otimes H_{m-1},\quad Q=I-VV^\dagger,\\
+ a=V^\dagger KV=\alpha h,\quad\alpha=1-p/m,\quad
+ R=QKV,\quad D_\perp=QKQ,\quad G=R^\dagger R,\\
+ F(t)=V^\dagger e^{itK}V,\quad
+ M(s)=R^\dagger e^{isD_\perp}R,\quad
+ \Lambda(s)=R^\dagger e^{isK}R.
+\end{gather*}
+Let $\Pin X=\sum_eP_eXP_e$ retain whole degenerate energy blocks.
+The actual fields are
+\[
+ \mathcal F_N(s)=(1-\Pin)m e^{-ihs/2}M(s)e^{-ihs/2},\qquad
+ \mathcal B_N(t)=(1-\Pin)m e^{-iht/2}F(t)e^{-iht/2}.
+\]
+\begin{theorem}\label{main}
+The fields $\mathcal F_N,\mathcal B_N$ have uniformly bounded
+fixed finite norms on the stated charge and time windows. For $t\ge0$,
+\begin{equation}\label{filter}
+ \norm{\mathcal B_N(t)+\int_0^t ds
+ \int_{-(t-s)/2}^{(t-s)/2}du\,
+ e^{ihu}\mathcal F_N(s)e^{-ihu}}_{r,m}=O_{r,S,L_0}(p^{-1}).
+\end{equation}
+At half filling, their finite ordered covariant moments, including
+blocks between the fixed polynomial preparations specified in
+Section~\ref{selected}, converge to the common local fields in
+Section~\ref{limit}. Negative times use adjoints.
+\end{theorem}
+
+\newpage
+\section{The charged identity with finite alpha retained}
+Define $\mathcal O_\alpha=\alpha^{\Nc}$ on coupling Gaussian chaos,
+$\epsilon=1-\alpha^2$, and the body loss on full charge families
+\[
+ (DX)_m=mX_m-\sum_i c_i^\dagger X_{m-1}c_i.
+\]
+Introduce string-time fields
+\begin{align*}
+ E_m(s)&=m[F(s)-\mathcal O_\alpha(e^{ish})]
+       =[m(1-\alpha^{\Nc})-D]e^{isH}\big|_m,\\
+ \mathsf G_m(s)&=[p\Nc-D-\lambda_N\Nc(\Nc-1)]e^{isH}\big|_m,\\
+ \Qop_\alpha[X]&=-X''+i\alpha\{h,X'\}+\alpha^2hXh.
+\end{align*}
+Derivatives act on s, not on disorder. Direct differentiation of
+$F=V^\dagger e^{isK}V$ gives $\Lambda=\Qop_\alpha[F]$.
+For an independent copy u of h, Gaussian OU averaging gives
+\begin{equation}\label{ou-exact}
+ \Lambda_{\rm OU}(s):=\Qop_\alpha[\mathcal O_\alpha(e^{ish})]
+ =\epsilon\E_u[u e^{is(\alpha h+\sqrt\epsilon u)}u],\quad
+ m(\Lambda-\Lambda_{\rm OU})=\Qop_\alpha[E_m].
+\end{equation}
+To verify the first equality, set $v=\alpha h+\sqrt\epsilon u$;
+v commutes with its own exponential. Expanding
+$(v-\alpha h)e^{isv}(v-\alpha h)$ gives exactly the derivative
+expression. The two outer u's are the same auxiliary copy as
+the one inside the exponential. These identities are inherited
+from \cite{uniform,operator}, with the factors of m displayed.
+
+The difference $E_m-\mathsf G_m$ is the scalar chaos multiplier
+$r_m(\Nc)e^{ish}$, where
+\begin{align}
+ r_m(k)&=m(1-\alpha^k)-pk+\lambda_Nk(k-1),\nonumber\\
+ |r_m(k)|&\le a_m(k+1)^3,\quad
+ a_m=\frac{4\lambda_+|m-N/2|}{N}
+                   +\frac{8\lambda_+^2}{3p}=O(p^{-1}).\label{number}
+\end{align}
+Taylor's formula for $(1-p/m)^k$ proves this: the quadratic
+coefficient differs by $\lambda_N-p^2/(2m)$ and the cubic
+remainder is at most $p^3k(k-1)(k-2)/(6m^2)$.
+For $k=0,1,2$ the corresponding missing terms are zero.
+
+The OU/Chebyshev multiplier bound and Gaussian power moments,
+followed by the ordinary tail of \cite{gradient}, imply for all
+fixed nonnegative a,b,j
+\begin{align}
+ \sup_{m,|s|\le S}\norm{h^a\partial_s^j(E_m-\mathsf G_m)h^b}_{r,m}
+    &=O(p^{-1}),\nonumber\\
+ \sup_{m,|s|\le S}\norm{h^a\partial_s^j\mathsf G_m(s)h^b}_{r,m}
+    &<\infty.\label{weighted}
+\end{align}
+Indeed each coefficient has a polynomial-in-degree times
+$L_r^n\sqrt{n!}$ envelope; finitely many derivatives and exterior
+powers only change its constants and polynomial. Their exponential
+series are absolutely summable. Since $1-\alpha=O(p^{-1})$,
+\begin{equation}\label{charged}
+ \sup_{m,|s|\le S}
+ \norm{\Qop_\alpha[E_m]-\Qop_1[\mathsf G_m]}_{r,m}=O(p^{-1}).
+\end{equation}
+No differentiation of an unweighted convergence statement is used.
+
+\newpage
+\section{Uniform total-memory norms before conditional regression}
+Set $U_s=e^{i\alpha hs}$ and define exact finite-N components
+\begin{align*}
+ A_N(s)&=(1-\Pin)e^{-ihs/2}\Qop_\alpha[E_m](s)e^{-ihs/2},\\
+ B_N(s)&=(1-\Pin)m\epsilon e^{-ihs/2}\Phi_m(U_s)e^{-ihs/2}.
+\end{align*}
+Equation \eqref{charged} bounds $A_N$ in every fixed finite norm.
+The exact neutral series of \cite{neutral} bounds $B_N$:
+$p(1-\Pin)\Phi_m(e^{ish})=(1-\Pin)\sum_jc_{j,m}(s)T_{j,m}$,
+with summable actual coefficient bounds and $m\epsilon/p\le2$.
+
+The auxiliary average in \eqref{ou-exact} is even in
+$\sqrt\epsilon$. A fourth-order Duhamel remainder gives
+\begin{align}
+ \Lambda_{\rm OU}(s)&=\epsilon\Phi_m(U_s)
+       -\epsilon^2\mathcal I_s^{(\alpha)}+\mathcal R_s,\nonumber\\
+ \mathcal I_s^{(\alpha)}&=s^2\int_{0\le y\le x\le1}
+ \E_u[uU_{s(1-x)}uU_{s(x-y)}uU_{sy}u]\,dx\,dy,\label{dyson}\\
+ \norm{\mathcal R_s}_{r,m}&\le
+ \epsilon^3|s|^4\norm u_{6r,m}^6/24.\label{six-u}
+\end{align}
+The norm of u includes its independent Gaussian average. Conditional
+Jensen and Holder prove \eqref{six-u}; all intermediate propagators
+are unitary and six u factors remain.
+
+All three four-u pairings must be kept. For deterministic unitaries
+X,Y,Z and a real Gaussian coefficient basis $u=\sum g_iB_i$,
+$\sum_iB_i^2=C_mI$, their sum is
+\[
+ \Phi(X)Y\Phi(Z)+\Phi(X\Phi(Y)Z)
+       +\sum_{i,j}B_iXB_jYB_iZB_j.
+\]
+Each term has operator norm at most $C_m^2$. For the last, use
+row--column Cauchy--Schwarz on $B_iXB_j$ and $YB_iZB_j$;
+both square sums equal $C_m^2I$. Consequently
+\begin{equation}\label{Ibound}
+ \norm{\mathcal I_s^{(\alpha)}}_\infty\le\tfrac32 C_m^2s^2
+\end{equation}
+samplewise in the original h. This reproduces the existing
+auxiliary-field bound \cite{uniform,two} with an explicit factorization.
+
+Let $X_0$ use $\Lambda$ instead of M in $\mathcal F_N$.
+Since $m\epsilon^2=O(1)$ and $m\epsilon^3=O(p^{-1})$ on the
+central window, \eqref{dyson} implies
+\[
+ X_0=A_N+B_N-(1-\Pin)m\epsilon^2e^{-ihs/2}
+                \mathcal I_s^{(\alpha)}e^{-ihs/2}+O_{r,S}(p^{-1}).
+\]
+The preceding return theorem \cite{return} gives
+$\mathcal F_N-X_0=O_{r,S}(p^{-1/2})$. All terms on the right are
+uniformly bounded. We have therefore proved
+\begin{equation}\label{memory-bound}
+ \sup_N\sup_{|m-N/2|\le L_0p}\sup_{|s|\le S}
+             \norm{\mathcal F_N(s)}_{r,m}<\infty.
+\end{equation}
+This bound precedes the asymptotic removal of the four-u term.
+
+\newpage
+\section{Half-filled colored words and four-field regression}
+Now restrict to $m=N/2$. Let $H^{(0)},H^{(1)},H^{(2)}$ be
+independent coupling copies with the same CAR coefficient basis,
+and covariance $C_m\to C=J_s^2/\lambda$. Gaussian pairing permits
+only equal-color endpoints. For each allowed fixed pairing
+$\pi$, the independent p-set labels and occupation trace are
+identical to its uncolored counterpart.
+
+Apply the central ordinary Fourier theorem \cite{central} with
+all marks absent. Its integrand after $t=p\theta$ has limit
+$e^{-t^2/(8\lambda)}q^{\operatorname{cr}\pi}$,
+$q=e^{-4\lambda}$, and an integrable Gaussian majorant.
+The far Fourier interval is exponentially negligible. Exact
+half-charge extraction divides by the same unmarked Gaussian
+integral. Thus
+\begin{equation}\label{colored}
+ \lim_N\E\tr_m\prod_{j=1}^{2k}H^{(c_j)}
+ =C^k\sum_{\substack{\pi\text{ pairing}\\c_i=c_j\text{ on }\pi}}
+                  q^{\operatorname{cr}\pi}.
+\end{equation}
+Odd words vanish. This is a direct fixed-sector argument. It
+uses the whole Fourier domination, not restriction of a full-trace
+average. Only a finite set of pairings occurs at fixed degree.
+
+Let h,u,v be orthogonal variance-C q-Gaussian variables in their
+tracial algebra. BKS second quantization, Theorems 2.11 and 2.13
+\cite{bks}, supplies trace-preserving conditional expectations
+$E_h,E_{hv}$. On Wick tensors, projection onto $(h,v)$ removes
+u tensors exactly as projection onto h does. Therefore
+\begin{equation}\label{replica}
+ \tau[W_1(h,u)^\dagger W_2(h,v)]
+ =\tau[(E_hW_1)^\dagger(E_hW_2)].
+\end{equation}
+This is an identity for two whole blocks, not classical
+independence for arbitrary interleavings.
+
+For fixed polynomials $f_i$ put
+$W_N(h,u)=u f_1(h)u f_2(h)u f_3(h)u$ and
+$T_N(h)=\E_uW_N(h,u)$. Conditional independence gives the exact
+finite-N identity
+\[
+ \E_h\tr_m T_N^\dagger T_N
+ =\E_{h,u,v}\tr_m W_N(h,u)^\dagger W_N(h,v).
+\]
+Let the polynomial t satisfy $t(h)=E_hW(h,u)$. Applying
+\eqref{colored} and \eqref{replica} to this expression and its
+two mixed terms yields
+\begin{equation}\label{poly-reg}
+ \norm{T_N(h)-t(h)}_{2,m}\longrightarrow0.
+\end{equation}
+The squared norm has limiting terms
+$\norm t_2^2-2\norm t_2^2+\norm t_2^2=0$.
+The conditional expectation is a known q-Gaussian construction;
+the finite-sector bridge here comes from \eqref{colored}.
+
+\newpage
+\section{Finite time and the complete two-component reduction}
+For $\alpha=1$, grouping the ordinary energy powers by total degree
+gives the exact series
+\begin{equation}\label{Iseries}
+ \mathcal I_s^{(1)}=\sum_{n\ge0}\frac{s^2(is)^n}{(n+2)!}
+   \sum_{a+b+c=n}\E_u[u h^a u h^b u h^c u].
+\end{equation}
+Gaussian moments and Holder bound its degree-n $L^2$ norm by
+\[
+ \frac{S^{n+2}}{2n!}\sqrt{(2n+7)!!}\,C_*^{(n+4)/2}.
+\]
+This is summable for every fixed S, uniformly in N. It is the
+existing time-tail argument of \cite{two}, now using
+\eqref{poly-reg} in the half-filled sector.
+
+Define $\iota_s(h)$ by replacing $\E_u$ in \eqref{Iseries} by
+the q conditional expectation, or equivalently by its three
+bounded unitary factors. BKS's $C^*$ result makes it a continuous
+function on $[-E_*,E_*]$, $E_*=2\sqrt{C/(1-q)}$, with norm
+at most $S^2E_*^4/2$. Clip its energy argument to that interval
+to obtain a bounded continuous $\widetilde\iota_s$ on the real line.
+At each fixed degree, spectral weak convergence plus higher
+moments compares the polynomial target with this extension.
+Use \eqref{poly-reg}, the uniform tail, and then a finite time
+mesh to obtain
+\[
+ \sup_{|s|\le S}\norm{\mathcal I_s^{(1)}-
+                         \widetilde\iota_s(h)}_{2,m}\to0.
+\]
+Both full-time terms have samplewise bounded operator norms,
+by \eqref{Ibound} and the clipped target. Hence interpolation
+gives the same convergence for every fixed finite r.
+
+Telescoping the three phases in $\mathcal I_s$ and applying
+Holder to the four u's and one h gives
+\begin{equation}\label{alpha-I}
+ \sup_{|s|\le S}\norm{\mathcal I_s^{(\alpha)}-
+                     \mathcal I_s^{(1)}}_{r,m}
+ \le c_{r,S}|1-\alpha|=O(p^{-1}).
+\end{equation}
+The middle factors are unitary; $5r$ moments suffice. Because
+$\widetilde\iota_s(h)$ is exactly conserved, its phase-centered
+version is annihilated by $1-\Pin$. Combining the result with
+\eqref{dyson} and the return theorem proves, at half filling,
+\begin{equation}\label{two-comp}
+ \sup_{|s|\le S}\norm{\mathcal F_N(s)-A_N(s)-B_N(s)}_{r,m}\to0.
+\end{equation}
+No quantitative rate is asserted for the conditional-regression
+part. Energy pinching remains the finite-N samplewise projection,
+and no infinite time average is interchanged with N.
+
+The centered four-u remainder was only bounded in
+\eqref{memory-bound}; \eqref{two-comp} now removes it strongly.
+This order separates the uniform-norm argument needed for actual
+propagation from the identification of the limiting field.
+
+\newpage
+\section{The common local memory field}\label{limit}
+Let $Q_d^{(q,C)}$ be monic q-Hermite polynomials and define
+$a_{nd}^{(q,C)}$ by $H^n=\sum_d a_{nd}^{(q,C)}Q_d^{(q,C)}(H)$.
+Use the physical-energy local charged fields $J_d$ and neutral
+residuals $N_j$ from \cite{central,neutral,higher}; all come from
+the original disorder. In terms of the dimensionless fields
+of \cite{central}, $J_d=C^{d/2}j_d$. Set
+\begin{gather}
+ R_n=\sum_d a_{nd}^{(q,C)}J_d,\quad R_0=R_1=0,\nonumber\\
+ L_n=R_{n+2}-\{H,R_{n+1}\}+HR_nH.\label{Ln}
+\end{gather}
+The central ordinary same-copy bridge gives, at each fixed n,
+the actual unnormalized coefficient
+$[p\Nc-D-\lambda_N\Nc(\Nc-1)]H^n$ minus its deterministic
+energy polynomial equal to $R_{n,N}+o_{S_r}(1)$.
+It also controls fixed exterior energy powers. Applying
+$\Qop_1$ preserves energy functions, so exact pinching removes
+those polynomials. Exact pinching of the residual local fields
+vanishes by their already proved two-energy measures and higher
+moments \cite{central,higher,neutral}.
+
+The ordinary tails, including two time derivatives, and the
+neutral actual/local tails are uniform at every fixed finite
+norm. Thus \eqref{charged} and \eqref{two-comp} give the limiting
+memory field
+\begin{equation}\label{memory-limit}
+ \mathcal F_\infty(s)=e^{-iHs/2}
+ \left[\sum_{n\ge0}\frac{(is)^n}{n!}L_n
+               +2C\sum_{j\ge1}c_j^{(q,C)}(s)N_j\right]e^{-iHs/2}.
+\end{equation}
+The factor $2C$ uses $m\epsilon/p\to2$, only after a fixed
+coefficient truncation. Finite $C_m,q_N,\alpha$ are retained
+until that step. All series converge in every fixed finite
+norm inherited from the positive microscopic moments.
+
+More precisely, there are same-sample local representatives
+$\mathcal F_N^{[J]}$ such that
+\begin{equation}\label{local-error}
+ \lim_{J\to\infty}\limsup_{N\to\infty}\sup_{|s|\le S}
+       \norm{\mathcal F_N(s)-\mathcal F_N^{[J]}(s)}_{r,N/2}=0.
+\end{equation}
+The proof takes N to infinity at fixed J and then removes J
+using the factorial tails. It does not require an all-degree
+uniform error for the source asymptotics.
+
+The joint law of the entire local tower is the central marked
+source law of \cite{higher,central}. Neutral primitives have
+the form $\mathcal W_d[H^a((vp-L)Z_v\diamond Z_w)]$; the mark
+lies in a pure Wick subblock and exterior H slots may contract.
+These are within that theorem's scope. Its selected-boundary
+extension fixes the common moments with fixed preparations.
+One must retain this full tower; the low-degree H, size and
+curvature fields alone do not determine its joint moments.
+
+\newpage
+\section{Actual bilocal reconstruction at order one over p}
+Write $M_0=\Pin M$, $\delta M=M-M_0$, and
+$\mathcal Q_N=m\delta M=e^{ihs/2}\mathcal F_N(s)e^{ihs/2}$.
+The exact Volterra equation is
+$F'=iaF-M*F$, $F(0)=I$, where convolution preserves order.
+Let $F_0$ solve the same equation with $M_0$.
+
+We recall the explicit static dilation of \cite{reconstruct},
+which is essential for its contraction. If $h=\sum_e eP_e$, take
+\[
+ D_0=\bigoplus_eD_\perp,\quad R_0\psi=(RP_e\psi)_e,\quad
+ K_0=\begin{pmatrix}a&R_0^\dagger\\R_0&D_0\end{pmatrix}.
+\]
+The system compression of $e^{itK_0}$ is $F_0$ because
+$R_0^\dagger e^{isD_0}R_0=M_0(s)$. Therefore
+\[
+ \norm{F(t)}_\infty,\norm{F_0(t)}_\infty\le1,\qquad [F_0(t),h]=0.
+\]
+Whole degenerate blocks are retained; $F_0$ need not be scalar
+inside them. The exact resolvent identity gives
+\begin{equation}\label{volterra}
+ F-F_0=-F_0*\delta M*F,\qquad
+ m(F-F_0)=-F_0*\mathcal Q_N*F.
+\end{equation}
+
+The saved force moments \cite{return} give
+$\norm G_{r,m}=O(p^{-1})$ and
+$\norm{M(s)}_{r,m},\norm{M_0(s)}_{r,m}\le\norm G_{r,m}$.
+Let $U_h(t)=e^{iht}$ and $U_a(t)=e^{iat}$. Duhamel and the
+two contractions imply
+\begin{align}
+ \norm{F(t)-U_a(t)}_{r,m},\norm{F_0(t)-U_a(t)}_{r,m}
+       &\le\tfrac12 t^2\norm G_{r,m},\nonumber\\
+ \norm{U_a(t)-U_h(t)}_{r,m}&\le |t|\frac p m\norm h_{r,m}.
+ \label{free-errors}
+\end{align}
+Hence both propagator differences from $U_h$ are $O(p^{-1})$
+at every fixed finite r. By \eqref{memory-bound},
+$\norm{\mathcal Q_N(s)}_{2r,m}=O(1)$.
+Subtract $-U_h*\mathcal Q_N*U_h$ from \eqref{volterra}:
+\[
+ m(F-F_0)+U_h*\mathcal Q_N*U_h
+ =-(F_0-U_h)*\mathcal Q_N*F
+       -U_h*\mathcal Q_N*(F-U_h).
+\]
+Each integrand is $O(p^{-1})$ by $2r$ Holder and the remaining
+contraction. The simplex has bounded area. Centering and applying
+$1-\Pin$ costs at most two, while the $F_0$ contribution is zero.
+
+For left/right times v,w and middle time s with $v+w+s=t$,
+the centered integrand is
+$e^{ih(v-w)/2}\mathcal F_N(s)e^{-ih(v-w)/2}$.
+Put $u=(v-w)/2=v-(t-s)/2$, so $du=dv$.
+Its pinching is already zero. This proves \eqref{filter},
+including its negative sign and integration domain. It also
+gives a uniform norm bound on $\mathcal B_N$ by \eqref{volterra}.
+
+\newpage
+\section{Selected covariant blocks and limiting bilocals}\label{selected}
+For $t\ge0$ define the common limiting bilocal by
+\begin{equation}\label{bilocal-limit}
+ \mathcal B_\infty(t)=-\int_0^t ds
+ \int_{-(t-s)/2}^{(t-s)/2}du\,
+               e^{iHu}\mathcal F_\infty(s)e^{-iHu},
+ \qquad\mathcal B_\infty(-t)=\mathcal B_\infty(t)^\dagger.
+\end{equation}
+The integral acts with norm at most $t^2/2$ on each fixed
+finite-norm field space. Equations \eqref{filter} and
+\eqref{local-error} transfer its local truncations to the actual
+finite-N bilocal at half filling. All relevant products use
+the same disorder, preserving charged--neutral cross terms.
+
+Let $P_N|O\rangle,Q_N|O\rangle$ be fixed polynomial selected
+preparations in the previously controlled class \cite{density,higher}:
+their Gaussian degrees are fixed, their joint source moments
+exist, and their finite-N orbit densities obey uniform fixed
+moment bounds. For a covariant integrable Y,
+\[
+ \phi_N(P_N^\dagger YP_N)=\E\tr_m(R_{P,N}Y),\qquad
+ \sup_N\norm{R_{P,N}}_{2,m}<\infty.
+\]
+Polarization gives the analogous off-diagonal functional for
+$P_N,Q_N$. Thus an $S_2$ error in a whole covariant block
+has vanishing matrix element between these preparations.
+
+For any fixed finite number of bilocal factors, trace Holder
+and telescoping put their product error in $S_2$: choose
+a sufficiently high but fixed norm for each factor and use
+\eqref{local-error}, \eqref{filter} and uniform moments.
+This applies to arbitrary prescribed order and adjoints,
+including out-of-time order, with fixed or compact external
+center times $T_i$. At a fixed local truncation, Gaussian
+energy Taylor tails treat the phases. The established marked
+source theorem then identifies the joint prepared moments.
+Consequently
+\begin{align}
+ &\lim_N\phi_N\left(P_N^\dagger
+ \prod_{i=1}^k
+ [e^{ihT_i}\mathcal B_N(t_i)e^{-ihT_i}]^{\eta_i}Q_N\right)
+ \nonumber\\
+ &\qquad=\phi\left(P^\dagger
+ \prod_{i=1}^k
+ [e^{iHT_i}\mathcal B_\infty(t_i)e^{-iHT_i}]^{\eta_i}Q\right),
+ \qquad \eta_i\in\{1,\dagger\}.\label{prepared}
+\end{align}
+These are unnormalized matrix elements; a normalized preparation
+requires its limiting squared norm to be nonzero.
+
+The single-selected restriction on the full covariant tower
+retains the known size boundary term \cite{higher,neutral}:
+\[
+ \sigma_1(Y)=[1-\sqrt q(1+\lambda)]\tau(Y)
+       +\sqrt q\,\tau((\widehat H-W)Y(\widehat H-W)),
+ \quad\widehat H=H/\sqrt C,\quad W=(S_1-\lambda H)/\sqrt C.
+\]
+The charged-only energy density cannot replace this expression
+for general neutral-containing bilocal words. Statement
+\eqref{prepared} covers one whole covariant block between fixed
+polynomial preparations. Arbitrary selected M factors interlaced
+inside several nonpolynomial blocks need further domain control.
+No bulk spatial/mass or finite-G gravitational dictionary is
+identified by this convergence theorem.
+
+\newpage
+\section{Finite evidence and remaining work}
+The fresh checks complement the analytic proof and inherited
+source/tail results; they are not double-scaling fits.
+\begin{center}
+\begin{tabular}{lr}\toprule
+Interface&Checks\\\midrule
+Unmarked central-source pairing constants&124\\
+Three-color words: pairings versus q-Fock&1640\\
+Whole-block auxiliary replica identities&400\\
+Exact rational Gaussian-number remainders&105\\
+Finite CAR charged/OU coefficient rows&10\\
+Actual bilocal time points&6\\
+Finite Schatten reconstruction inequalities&18\\\bottomrule
+\end{tabular}
+\end{center}
+The color tests use $q=1/4,2/3$, variance one and exact rational
+arithmetic. The source constants cover all pairings through
+eight slots. Three-color words have up to six slots; the replica
+tests use four-auxiliary-field blocks and zero or one exterior
+energy gap. The number tests include chaos degree 80 and
+charge offsets $-p,0,p$, checking the global multiplier bound
+rather than only low chaos.
+
+CAR OU tests use $(N,p,m)=(3,1,2),(4,1,2),(4,2,3)$,
+seeds 811--813, $C_m=1$, and all Gaussian coordinates shared
+between the adjacent charges. Direct conditional auxiliary
+Hermite averaging is compared with $\Qop_\alpha$.
+
+The propagation checks include a CAR fixture $(4,2,3)$ and
+an independent three-dimensional system with exact energy
+multiplicities $(2,1)$ and a four-dimensional bath. Both have
+nonzero centered bilocal signals. The latter retains a
+non-scalar static-memory matrix inside the degenerate block,
+checking that pinching does not diagonalize within it.
+Times are $-0.55,0.35,0.9$; quadrature orders 10 and 18 are
+compared. Exact finite Volterra residuals, contractions,
+commutators, approximation differences and r=1,2,4 bounds
+are saved. Float64 comparisons use empirical roundoff
+tolerances, not interval certification.
+
+The new rate in \eqref{filter} uses the all-fixed-r bound on
+actual $m\delta M$; the older full-trace reconstruction used
+only a uniform second moment and a coarser higher-moment
+estimate \cite{reconstruct}. Neither numerical refinement nor
+small finite systems prove the improved asymptotic rate.
+
+The completed scope is the actual fixed-charge bilocal and its
+finite covariant blocks in controlled polynomial preparations.
+Next, its joint spectral/positive structure must be connected
+to a concrete static-observer interpretation, spatial and mass
+generators, and finite-G dynamics. Arbitrary nonpolynomial
+selected interlacings remain a separate mathematical interface.
+The build, input hashes, saved scientific output and rendered
+pages are recorded in this stage's local evidence manifest.
+
+\newpage
+\begin{thebibliography}{99}\small
+\bibitem{return} A. Day and Chengheng, \emph{A conserved comparison
+for fixed-charge memory returns}, local draft, 8 November 2026;
+\texttt{manuscript/susskind-sector-memory-return/main.tex}.
+\bibitem{gradient} A. Day and Chengheng, \emph{Fixed-charge gradients
+and the ordinary charged tail}, local draft, 8 November 2026;
+\texttt{manuscript/susskind-sector-gradient-tail/main.tex}.
+\bibitem{neutral} A. Day and Chengheng, \emph{The neutral memory
+field in a fixed charge sector}, local draft, 8 November 2026;
+\texttt{manuscript/susskind-sector-neutral-transfer/main.tex}.
+\bibitem{central} A. Day and Chengheng, central ordinary source and
+same-copy bridge, local draft, 8 November 2026;
+\texttt{manuscript/susskind-central-ordinary/main.tex}, Secs.~2--5.
+\bibitem{higher} A. Day and Chengheng, higher Wick selected-source
+draft, 8 November 2026;
+\texttt{manuscript/susskind-slater-higher-wick/main.tex}.
+\bibitem{density} A. Day and Chengheng, fixed polynomial preparation
+orbit-density draft, 8 November 2026;
+\texttt{manuscript/susskind-slater-polynomial-density/main.tex}.
+\bibitem{uniform} A. Day and Chengheng, uniform finite-memory bound,
+local draft, 6 November 2026;
+\texttt{manuscript/susskind-memory-uniform-bound/main.tex}, Secs.~2--3.
+\bibitem{operator} A. Day and Chengheng, ordinary fourth-norm tail
+operator draft, 7 November 2026;
+\texttt{notes/susskind-bilocal-fourth-tail-operator-draft.md}, Sec.~8.
+\bibitem{two} A. Day and Chengheng, two-component memory reduction,
+local draft, 7 November 2026;
+\texttt{manuscript/susskind-memory-two-component/main.tex}, Secs.~2--4.
+\bibitem{reconstruct} A. Day and Chengheng, actual bilocal strong
+reconstruction, local draft, 7 November 2026;
+\texttt{notes/susskind-bilocal-reconstruction-proof.md}, Secs.~1--6.
+\bibitem{joint} A. Day and Chengheng, full bilocal joint-moment
+interface audit, 7 November 2026;
+\texttt{notes/susskind-bilocal-full-four-point-transfer.md}.
+The full-trace result is a structural guide; the sector bridges
+used here are the separately cited results above.
+\bibitem{bks} M. Bo\.{z}ejko, B. K\"ummerer and R. Speicher,
+\emph{q-Gaussian processes: non-commutative and classical aspects},
+\href{https://arxiv.org/abs/funct-an/9604010}{arXiv:funct-an/9604010},
+Theorems 2.11 and 2.13.
+\bibitem{bnr} M. Berkooz, V. Narovlansky and H. Raj,
+\emph{Complex Sachdev-Ye-Kitaev model in the double scaling limit},
+\href{https://arxiv.org/abs/2006.13983}{arXiv:2006.13983}.
+Fixed-charge complex-SYK background; independent probes do not
+replace the common-disorder fields in this note.
+\end{thebibliography}
+\end{document}

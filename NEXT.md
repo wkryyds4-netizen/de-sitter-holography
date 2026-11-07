@@ -1,4 +1,27 @@
+# 当前继续位置：2026-11-08 固定电荷实际双局域
+
+先读 manuscript/susskind-sector-bilocal/main.tex、notes/susskind-sector-bilocal.md、literature/susskind-sector-bilocal-sources.md 和 journal/2026-11-08-susskind-sector-bilocal.md。十页 PDF 双遍编译、全页目检完成。新 science SHA 0442b1715b4d80fb55703aaf6f474773e98f7708765e2bb4cd6e2ef671ea80f3；manifest SHA 87b5cb2414faa7512d5d5e4accba00f1241c5f51ea6df6f67c2172d841141740。10当前/336父科学文件核验通过。成功科学 driver 与 recorder 均不重跑，封存文件不修改；无活跃计算，goal active。
+
+- 已闭合：Qalpha E−Q1 G=O_r(p^-1)（含固定导数与 exterior H）；实际记忆全 fixed-r compact-central 界；半填充三色源及 whole-block replica；Fscr−A−B→0（条件回归无速率）；同 J 共同 local memory；actual bilocal 到 linear memory filter 的 O_r(p^-1)；已控制固定多项式 P、Q 之间有限协变双局域词的极限。
+- 必须保留：物理 J_d=C^(d/2)j_d；中性 2C 因子；四 u 三种配对；exact pinching 的完整简并块；单 selected 态的 W 边界；先 fixed truncation 再 N 极限、后去 truncation。普通 energy-density 不能替代 neutral-containing 选态。
+- 下一首任务：不再重做 actual bilocal 返回。先检索项目已存 Susskind 静态补丁、DSSYK singlet/非 singlet 及空间/质量解释原文，再查更新，建立候选字典表（对象、态、时间单位、正谱/极点、生成元、适用极限）。选一个由现有 bilocal 共同极限直接计算的必要检验；不要由单个 Mehler 核或有限小矩阵推完整全息字典。任意 nonpolynomial selected interlacing 与有限 G 继续独立列为开放。
+- 本次用户明确要求 Git 与 issue 回复，覆盖 memory-return 和 sector-bilocal；发布入口 notes/research-release-2026-11-08-sector-bilocal.md。具体提交及评论回执保存在本机 tmp/publication-2026-11-08-sector-bilocal 和 journal。Issue #1 的全量独立重积分/端点差异定位尚未完成；不能将主线进展当 KS 新证据。
+
 # 下一次从这里继续
+
+## 最新继续位置：2026-11-08 sector-memory-return（本地）
+
+先读[七页PDF](output/pdf/de-sitter-susskind-sector-memory-return.pdf)、[LaTeX](manuscript/susskind-sector-memory-return/main.tex)、[中文推导](notes/susskind-sector-memory-return.md)、[来源](literature/susskind-sector-memory-return-sources.md)与journal/2026-11-08-susskind-sector-memory-return.md。本轮progress，长期goal active；science/PDF/manifest完成，无活跃进程。仅本地，上一批686b199/issuecomment-6712633148已完成，不重复发布。
+
+- **已完成返回接口**：K_n=(pNcal−D)H^n，F_n=Gamma_(H,m)(H_(m−1)^n)−2pPhi_m(H_m^n)。exact F_n=K_(n+2)−HK_(n+1)−K_(n+1)H+HK_nH，K0=K1=0；旧ordinary全次数包络经固定2r/4r Holder给F_n同型包络，指数force defect紧时间O_r(1)。Gamma lower-charge与Phi same-charge输入必须区分。
+- **有限参数守恒比较**：Phi(exp(itH))=C_m f+Z/p，f=Σc_jtheta_jQ_j(H)，Z=Σc_jT_j；actual tails给||f||r=O(1)，不要求operator bound。b=(2p²/m)C_m f；(p/m)Gamma−b=(p/m)F+(2p/m)Z=O(1/p)。R=DF+(p/m)VH交叉给pLambda−b=O_r(p^-1/2)。firstreturn中心化mJ1−Kcal=O_r(p^-1/2)，Kcal=(m/p²)e^-iHs∫b(v)e^ia(s-v-w)b(w)逐样本守恒。E1六R给mE1=O_r(1/p)。exact pinching后Fscr−X0=O_r(p^-1/2)，所有fixedfinite r、compactcentral/time。fixed polynomial prep误差均方O(1/p)。不要从此单独推Fscr本身统一有界。
+- **证据**：science SHA05599623446e6af7dc9a9cc00f1ab175703db3ae53ce8bf6705c45c1b6adf3b6；21integer inverse degrees/9CAR rows全含非零低chaos/15times/90r1,2,4bounds。helper code/sector_memory_return.py纯函数可import；checker/recorder成功后不重跑。manifest SHA211b80b57265b002a6f1c0a828c5c34fa420ad89a33b8e8f57ff33a68aa1ec37，10current/287parent；七页双遍干净全目检，统一C_-记号改后仅第三页像素变化已复检。PDF SHA d1d7a8b538f7d3a19810d90eebd44c1d5a921ac6d86ee8a0734a9f10cfbd727e。
+- **下一首任务：central两分量**。读memory-two-component§2–4和uniform-bound的OU force。three-color只删pairings；central-ordinary的unmarked Fourier支配给half-filled共同q law。旧two-component一句compactcentral bridge引用central-window，而所读该稿主要rank/variance，不能单凭引文当一般word证明；如需x-window，保留e^-ixt并核分子/分母Gaussian相消。four-u whole-block replica给L2强回归，实际I_s samplewise界与clipped能量参考给全r，alpha漂移与six-u余项都O(1/p)。半填充足以当前selected目标。
+- **charged连接路线**：E=m(Fprop−Oalpha exp(itH))=[m(1−alpha^Ncal)−D]exp(itH)。Qalpha X=−X''+i alpha{H,X'}+alpha²HXH，exact m(Lambda−LambdaOU)=Qalpha E。E−G的number remainder在compactcentral O(1/p)，新的G全r/导数/外部H尾可望直接给Qalpha E−Q1G=O_r(1/p)；须核符号与规范，尚非本轮定理。然后用已完成centralordinary强桥和neutral强桥组成完整memory。
+- **bilocal接续**：先核static F0 bath dilation与exact Fprop−F0=−F0*deltaM*Fprop。若memory Q=m deltaM全r有界，G=O_r(1/p)与Fprop/F0收缩给它们到e^(iHt)的O_r(1/p)；2r Holder可能直接给bilocal滤波同阶误差，不必旧p^-1/3或p^-1/7插值。需实际证明并验证，之后才传selected polynomialpreps。任意nonpolynomial selected多块交错、空间/质量字典与finiteG仍未完成。
+
+以下为历史继续位置。
+
 
 ## 2026-11-08 中性阶段集中发布交接
 

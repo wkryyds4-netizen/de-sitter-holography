@@ -1,0 +1,425 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,microtype,booktabs}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newcommand{\E}{\mathbb E}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\Nc}{\mathcal N}
+\newcommand{\Pin}{\mathcal P_H}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\title{A conserved comparison for fixed-charge memory returns\\
+\large Force-defect inversion and strong finite-time bounds}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{8 November 2026\quad Local research draft}
+\begin{document}\maketitle
+\begin{abstract}
+The ordinary charged-tail estimate and the neutral Jacobi expansion
+give a direct fixed-sector treatment of the first memory return.
+An exact inverse of the body-loss identity bounds the force-sandwich
+defect at every fixed finite Schatten order. A finite-parameter energy
+function then approximates the scaled ordinary kernel at rate
+$O(p^{-1/2})$. The first return is a conserved background up to the
+same error; all later returns contribute $O(p^{-1})$. Exact energy
+pinching therefore reduces the total memory field to ordinary
+propagation in every fixed finite Schatten norm, uniformly on a
+compact central charge window and compact real-time intervals.
+\end{abstract}
+\section{Model and result}
+Use standard CAR, $\mathcal H_m=\wedge^m\mathbb C^N$,
+$d_m=\binom Nm$, and the common static Hermitian Gaussian model
+\[
+ H=\sum_{|I|=|J|=p}J_{IJ}c_I^\dagger c_J,\quad
+ \E J_{IJ}J_{KL}=w_N\delta_{IL}\delta_{JK},\quad
+ w_N=\frac{4^pJ_s^2}{\lambda_N}\left(\frac{p!}{N^p}\right)^2.
+\]
+Overlaps are retained. Let $\lambda_N=p^2/N\to\lambda>0$,
+$J_s>0$ fixed, $\hbar=1$, and use string time. Put
+\[
+ \norm X_{r,m}=(\E\tr_m|X|^r)^{1/r},\qquad
+ C_m=w_N\binom mp\binom{N-m+p}p.
+\]
+All bounds are uniform on $|m-N/2|\le L_0p$ for fixed $L_0$,
+and on $|t|\le S$ for fixed $S$, with fixed $1\le r<\infty$.
+The known fixed-charge setting is described in \cite{bnr}.
+Write $h=H_m$ and define the exact dilation
+\begin{gather*}
+ V\psi=m^{-1/2}\sum_i|i\rangle c_i\psi,\quad
+ K=I_N\otimes H_{m-1},\quad Q=I-VV^\dagger,\\
+ a=V^\dagger KV=\alpha h,\quad\alpha=1-p/m,\quad
+ R=QKV,\quad D_\perp=QKQ,\\
+ M(t)=R^\dagger e^{itD_\perp}R,\qquad
+ \Lambda(t)=R^\dagger e^{itK}R.
+\end{gather*}
+The energy projection $\Pin X=\sum_eP_eXP_e$ retains entire
+degenerate blocks. Let
+\[
+ \mathcal F(t)=(1-\Pin)m e^{-iht/2}M(t)e^{-iht/2},\qquad
+ X_0(t)=(1-\Pin)m e^{-iht/2}\Lambda(t)e^{-iht/2}.
+\]
+\begin{theorem}\label{main}
+In the stated model, norms and limits,
+$\sup_{m,t}\norm{\mathcal F(t)-X_0(t)}_{r,m}=O(p^{-1/2})$.
+\end{theorem}
+
+\newpage
+\section{An exact inverse of the ordinary body-loss identity}
+On full neutral block families let
+\[
+ (DX)_m=mX_m-\sum_i c_i^\dagger X_{m-1}c_i,
+ \qquad K_{n,m}=[p\Nc-D]H^n\big|_m.
+\]
+Here $\Nc$ is Gaussian coupling number. Define the random force
+map and deterministic covariance map with their different inputs:
+\begin{align*}
+ \Gamma_{H,m}(X_{m-1})
+   &=\sum_i[H,c_i]^\dagger X_{m-1}[H,c_i],\\
+ \Phi_m(Y_m)&=\E_{H'}H'_mY_mH'_m,\\
+ F_{n,m}&=\Gamma_{H,m}(H_{m-1}^n)-2p\Phi_m(h^n).
+\end{align*}
+The independent $H'$ only defines $\Phi$; all actual fields
+use the same original disorder. The established body product rule
+and Gaussian Euler--Laplacian identity \cite{operator,gradient} give
+\begin{equation}\label{forward}
+ K_{n+2,m}=\sum_{u+v+w=n}h^u F_{v,m}h^w,
+ \qquad K_{0,m}=K_{1,m}=0.
+\end{equation}
+Indeed, both $DH^n$ and $p\Nc H^n$ start with $pnH^n$;
+their second-order terms are respectively $\Gamma_H$ and $2p\Phi$.
+\begin{lemma}\label{inverse}
+For every $n\ge0$ the exact inverse is
+\begin{equation}\label{inverse-eq}
+ F_{n,m}=K_{n+2,m}-hK_{n+1,m}-K_{n+1,m}h+hK_{n,m}h.
+\end{equation}
+Moreover $\norm{F_{n,m}}_{r,m}\le A_r(n+1)^{b_r}L_r^n\sqrt{n!}$
+with constants independent of $N,m,n$ on the stated window.
+\end{lemma}
+\begin{proof}
+In \eqref{forward}, subtracting $hK_{n+1}$ leaves only $u=0$.
+Subtracting $K_{n+1}h-hK_nh$ then removes all $w\ge1$.
+The argument includes $n=0,1$ by $K_0=K_1=0$ and never
+commutes a force defect through $h$.
+
+Equation (O) of \cite{gradient} bounds $K_n$ itself by a Gaussian
+factorial envelope. Alternatively, its main theorem bounds
+$K_n-\lambda_N\Nc(\Nc-1)H^n$, with $C_m^{-n/2}$ applied after
+loss. The OU/Chebyshev multiplier bound \cite{operator} gives
+$\norm{\Nc(\Nc-1)H^n}_{r,m}\le c n^2(1+\sqrt2)^n
+\norm{H^n}_{r,m}$. Together with $C_m\le C_*$ and
+$\norm{H^n}_{r,m}\le L_r^n\sqrt{n!}$ this gives the same bound
+on $K_n$. In \eqref{inverse-eq}, use $2r$ Holder for each one-sided
+product and $4r$ for $hK_nh$. The extra factor
+$\sqrt{(n+2)!/n!}$ is polynomial. Only a fixed multiple of r is
+needed, independent of n.
+\end{proof}
+Thus the entire exponential series is summable in these norms:
+\begin{equation}\label{force-time}
+ F_m(t)=\Gamma_{H,m}(e^{itH_{m-1}})-2p\Phi_m(e^{ith}),
+ \qquad \sup_{m,|t|\le S}\norm{F_m(t)}_{r,m}\le A_{r,S}.
+\end{equation}
+The tail is bounded by $A_r\sum_{n>L}(n+1)^{b_r}
+(L_rS)^n/\sqrt{n!}$. Finite-N identification with the displayed
+maps follows first by the exponential Taylor series; Gaussian
+moments control its products with the two linear force factors.
+
+\newpage
+\section{A finite-parameter conserved covariance comparison}
+Retain the exact finite-N quantities from \cite{neutral}:
+\begin{gather*}
+ \theta_{j,m}=\prod_{u=0}^{p-1}
+ \left(1-\frac{jp}{m-u}\right)_+
+ \left(1-\frac{jp}{N-m+p-u}\right)_+,\\
+ Q_{0,m}(x)=1,\quad Q_{1,m}(x)=x,\quad
+ Q_{j+1,m}(x)=xQ_{j,m}(x)-b_{j,m}Q_{j-1,m}(x),\\
+ b_{j,m}=C_m\sum_{v<j}\theta_{v,m},\qquad
+ T_{j,m}=p(\Phi_m-C_m\theta_{j,m})Q_{j,m}(h).
+\end{gather*}
+On the central window $b_{j,m}$ are uniformly bounded. The
+exact entire expansion and saved bounds are
+\begin{align}
+ e^{ith}&=\sum_{j\ge0}c_{j,m}(t)Q_{j,m}(h),\nonumber\\
+ |c_{j,m}(t)|&\le A_S L_S^j/j!,\qquad
+ \norm{T_{j,m}}_{r,m}\le A_r(j+1)^{b_r}L_r^j\sqrt{j!}.
+ \label{jacobi-bounds}
+\end{align}
+The polynomials $Q_j(h)$ have an analogous factorial envelope,
+by their bounded recurrence coefficients and Gaussian moments.
+Consequently each of the following series converges in every
+fixed finite norm, uniformly on compact real times:
+\begin{equation}\label{fdef}
+ f_m(t,h)=\sum_{j\ge0}c_{j,m}(t)\theta_{j,m}Q_{j,m}(h),
+ \qquad Z_m(t)=\sum_{j\ge0}c_{j,m}(t)T_{j,m}.
+\end{equation}
+The exact identity before pinching is
+\begin{equation}\label{phif}
+ \Phi_m(e^{ith})=C_m f_m(t,h)+p^{-1}Z_m(t).
+\end{equation}
+For each sample the scalar Jacobi series is entire in h, so
+$f_m(t,h)$ is a function of h, including at degenerate eigenvalues.
+Also $f_m(-t,h)=f_m(t,h)^\dagger$.
+
+The map $\Phi_m/C_m$ is unital, completely positive and trace
+preserving. It contracts Schatten norms, and maps a unitary to
+an operator of norm at most one. Since $C_m$ is bounded away
+from zero by $C_->0$ on the window, \eqref{phif} implies
+\begin{equation}\label{fbnd}
+ \sup_{m,|t|\le S}\norm{f_m(t,h)}_{r,m}
+ \le 1+\frac{A_{r,S}}{pC_-}=O_{r,S}(1).
+\end{equation}
+No samplewise operator bound on f is required. Define
+\begin{equation}\label{bdef}
+ \beta_m=\frac{2p^2}{m}C_m,\qquad
+ b_m(t,h)=\beta_m f_m(t,h).
+\end{equation}
+Then $[b_m(t,h),h]=0$ exactly and all its fixed finite norms
+are uniformly bounded, since $p^2/m=O(1)$.
+
+This comparison uses finite coefficients rather than replacing
+them by $q^j$. The standard q-Gaussian Mehler comparison used
+in \cite{background,bks} remains compatible with the limit,
+but is not an additional input to the strong estimate here.
+
+\newpage
+\section{Ordinary propagation: every fixed finite norm}
+Let $F_i=[H,c_i]$, $\mathcal A_m=\sum_iF_i^\dagger F_i|_m$,
+$D_F=KV-Vh$, and $G=R^\dagger R$. Exact identities give
+\begin{align}
+ D_F^\dagger D_F&=\mathcal A_m/m,&
+ R&=D_F+\delta Vh,\quad\delta=p/m,\nonumber\\
+ D_F^\dagger e^{itK}D_F&=\Gamma_{H,m}(e^{itH_{m-1}})/m,&
+ 0\le G&=\mathcal A_m/m-\delta^2h^2\le\mathcal A_m/m.
+ \label{dilation}
+\end{align}
+All rectangular norms use the same source dimension $d_m$,
+even on the larger dilation space. Thus there is no change of
+trace normalization when applying rectangular Holder.
+
+The sectorwise Gaussian force moments of \cite{return} are
+\begin{equation}\label{force-mom}
+ \E\tr_m\mathcal A_m^k\le(2k-1)!!(Nv_N)^k,
+ \quad v_N\le\frac{4J_s^2}{\lambda_N}\frac pN e^{2\lambda_N}.
+\end{equation}
+They follow from both force covariance bounds, Hermitian
+dilation, Gaussian integration by parts, and Minkowski over i;
+the force components need not be independent. Hence, using a
+larger fixed integer moment when necessary,
+\begin{gather}
+ \norm{\mathcal A_m}_{r,m}=O_r(p),\quad
+ \norm G_{r,m}=O_r(p/m)=O_r(p^{-1}),\label{Gbnd}\\
+ \norm{D_F}_{2r,m}=O_r(p^{-1/2}),\qquad
+ \norm{\delta Vh}_{2r,m}=O_r(p^{-1}).\label{DFbnd}
+\end{gather}
+The G estimate uses eigenvalue monotonicity, not operator
+monotonicity of positive powers. Unitary propagation yields
+$\norm{\Lambda(t)}_{r,m}\le\norm G_{r,m}$.
+
+Expanding $R=D_F+\delta Vh$ and using \eqref{DFbnd} gives
+\begin{align}
+ &\norm{p\Lambda(t)-pD_F^\dagger e^{itK}D_F}_{r,m}\nonumber\\
+ &\qquad\le p\bigl(2\norm{D_F}_{2r,m}\norm{\delta Vh}_{2r,m}
+                         +\norm{\delta Vh}_{2r,m}^2\bigr)
+ =O_r(p^{-1/2}).\label{shift-error}
+\end{align}
+Combine \eqref{force-time}, \eqref{phif}, \eqref{bdef} and
+\eqref{dilation} without changing the lower-charge input:
+\begin{equation}\label{force-b}
+ \frac p m\Gamma_{H,m}(e^{itH_{m-1}})-b_m(t,h)
+   =\frac p m F_m(t)+\frac{2p}{m}Z_m(t).
+\end{equation}
+Both terms are $O_{r,S}(p^{-1})$, because $m\asymp p^2$.
+It follows that
+\begin{equation}\label{leading}
+ \sup_{m,|t|\le S}\norm{p\Lambda(t)-b_m(t,h)}_{r,m}
+       =O_{r,S,L_0}(p^{-1/2}).
+\end{equation}
+The rate holds at each fixed finite r directly; it is not an
+interpolation of an $L^2$ rate with an $O(p)$ coarse bound.
+It concerns a leading ordinary kernel. Multiplying
+\eqref{leading} by $m/p$ would not give a bounded dynamic field.
+
+\newpage
+\section{The first return and its exact remainder}
+Write $U(t)=e^{iat}$ and use time convolution preserving matrix
+order. The finite-dimensional block Duhamel identity from
+\cite{return} is
+\[
+ \Lambda=M-M*U*\Lambda,\qquad
+ M=\Lambda+J_1+E_1,
+\]
+where $J_1=\Lambda*U*\Lambda$ and
+$E_1=M*U*\Lambda*U*\Lambda$. The minus sign in the first
+identity comes from two transitions and $i^2=-1$.
+Auxiliary-kernel removal is an established Mori method
+\cite{mori}; here only finite matrices and finite iteration are used.
+
+For $s\ge0$, let $\Delta_s=\{v,w\ge0:v+w\le s\}$ and
+$u=s-v-w$. Then
+\begin{equation}\label{first}
+ J_1(s)=\int_{\Delta_s}\Lambda(v)U(u)\Lambda(w)\,dv\,dw.
+\end{equation}
+Define the finite-parameter conserved reference
+\begin{equation}\label{kdef}
+ \mathcal K_m(s,h)=\frac m{p^2}e^{-ihs}
+ \int_{\Delta_s}b_m(v,h)e^{iau}b_m(w,h)\,dv\,dw.
+\end{equation}
+Every factor commutes with h. Each fixed finite norm of
+$\mathcal K_m$ is uniformly bounded by Holder and $m/p^2=O(1)$.
+Subtract the integrands in \eqref{first} and \eqref{kdef} as
+\[
+ (p\Lambda(v)-b_m(v,h))U(u)(p\Lambda(w))
+       +b_m(v,h)U(u)(p\Lambda(w)-b_m(w,h)).
+\]
+Apply Holder at $2r$, \eqref{leading}, and the bounds on
+$p\Lambda,b_m$. The simplex has area $s^2/2$, so
+\begin{equation}\label{first-error}
+ \sup_{m,0\le s\le S}
+ \norm{m e^{-ihs/2}J_1(s)e^{-ihs/2}-\mathcal K_m(s,h)}_{r,m}
+       =O(p^{-1/2}).
+\end{equation}
+No operator-norm bound on the comparison function is used.
+
+The integrand of $E_1$ contains six factors R or $R^\dagger$
+and unitary propagators. Holder at $6r$ on the common source
+normalization, including Gaussian expectation, gives
+\begin{equation}\label{E1}
+ \norm{E_1(s)}_{r,m}\le\frac{|s|^4}{4!}\norm G_{3r,m}^3,
+ \qquad \sup_{m,|s|\le S}\norm{mE_1(s)}_{r,m}=O(p^{-1}).
+\end{equation}
+This is an exact finite-return remainder, not a time Taylor
+truncation. Reverse the simplex variables to get
+$J_1(-s)=J_1(s)^\dagger$ and define
+$\mathcal K_m(-s,h)=\mathcal K_m(s,h)^\dagger$.
+The same bounds hold on both time signs. Combining them yields
+\begin{equation}\label{unpinched}
+ \sup_{m,|s|\le S}
+ \norm{m e^{-ihs/2}(M(s)-\Lambda(s))e^{-ihs/2}
+                         -\mathcal K_m(s,h)}_{r,m}=O(p^{-1/2}).
+\end{equation}
+Finally $(1-\Pin)\mathcal K_m=0$ samplewise and
+$\norm{1-\Pin}_{r\to r}\le2$. This proves Theorem~\ref{main}.
+
+\newpage
+\section{Preparations, calibration and the next interface}
+At half filling let $P_O$ be any already controlled fixed
+Gaussian-degree selected polynomial preparation. Its finite-N
+orbit density from \cite{density} satisfies
+\[
+ \E\langle P_O^\dagger YP_O\rangle_O=E\tr_m(R_{P,N}Y),
+ \qquad\sup_N\norm{R_{P,N}}_{2,m}<\infty
+\]
+for covariant integrable Y. Set $\mathcal E=\mathcal F-X_0$.
+It is covariant, including its exact energy pinching. Thus
+\begin{equation}\label{prep}
+ \E\norm{\mathcal E(s)P_O|O\rangle}^2
+ \le\norm{R_{P,N}}_{2,m}\norm{\mathcal E(s)}_{4,m}^2
+ =O(p^{-1}).
+\end{equation}
+This is a strong return-error estimate on the fixed polynomial
+preparation core. It does not require interchanging exact
+pinching and the large-N limit. It also does not by itself
+bound arbitrary products of actual total-memory fields: their
+other factors still need uniform high moments.
+
+The reference is nonzero before pinching. Since
+$f_m(0,h)=1$ and $\partial_tf_m(0,h)=i\theta_{1,m}h$,
+\eqref{kdef} gives, at fixed N,
+\begin{align}
+ \mathcal K_m(s,h)
+  ={}&\frac{2p^2}{m}C_m^2s^2\,I\nonumber\\
+    &+i\frac{2p^2}{3m}C_m^2
+           (2\theta_{1,m}+\alpha-3)hs^3+O(s^4).
+ \label{calibration}
+\end{align}
+To obtain the cubic term use
+$\int_{\Delta_s}v=\int_{\Delta_s}w=\int_{\Delta_s}u=s^3/6$,
+and retain the outside $e^{-ihs}$. The fixed-order coefficients
+have bounded finite moments. At half filling,
+$p^2/m\to2\lambda$, $C_m\to C=J_s^2/\lambda$,
+$\theta_{1,m}\to q=e^{-4\lambda}$, and $\alpha\to1$.
+The first two coefficients therefore reproduce the existing
+background calibration of \cite{background}:
+\[
+ 4\lambda C^2s^2I+i\frac{8\lambda C^2}{3}(q-1)hs^3.
+\]
+This consistency check is not a new finite-time Mehler formula.
+
+The proved reduction is $\mathcal F-X_0=O(p^{-1/2})$ in every
+fixed finite norm, in the actual fixed charge sectors. The next
+task is the fluctuation-scale two-component description of
+$X_0$. It still requires the central four-auxiliary-field
+conditional regression and the charged finite-$\alpha$ interface.
+The actual bilocal Volterra reconstruction must then be
+transferred with its required high moments. Arbitrary interlaced
+nonpolynomial selected blocks, the spatial/mass dictionary and
+finite-G gravitational dynamics are not conclusions of this note.
+
+\newpage
+\section{Saved finite checks and attribution}
+The independent finite checks retain all Gaussian chaoses and
+both adjacent charge sectors. They do not replace the analytic
+bounds or establish a double-scaling limit by numerical fitting.
+\begin{center}
+\begin{tabular}{lll}\toprule
+Check&Parameters&Coverage\\\midrule
+Free noncommutative inverse&$n=0,\ldots,20$&21 exact integer rows\\
+CAR/Hermite inverse&$(N,p,m)=(3,1,2)$&$n=0,1,2,3$\\
+&$(4,1,2)$&$n=0,1,2$\\
+&$(4,2,3)$&$n=0,1$\\
+Block propagation&same three systems&five real times each\\
+Return norm inequalities&$r=1,2,4$&90 inequalities\\\bottomrule
+\end{tabular}
+\end{center}
+All nine CAR rows have a nonzero lower-chaos part. The real
+Gaussian coordinate basis is normalized by $C_m=1$, with the
+same coordinates in charge m and m-1. The block checks use
+seeds 731, 732, 733 and times $-1.1,-0.2,0,0.4,1.1$.
+Upper-triangular block matrix exponentials evaluate the ordered
+convolutions directly, with no quadrature or time cutoff.
+They check $M=\Lambda+J_1+E_1$, the force-dilation identity,
+and the source-normalized bounds on $J_1,E_1$.
+Floating residuals and tolerances are retained in the JSON;
+they are not interval certificates. The formal free-word
+cancellation uses exact integer arithmetic.
+
+The body-loss and Gaussian product identities, the ordinary
+factorial tail, the neutral Jacobi decomposition and the finite
+Volterra expansion are inherited results. This note combines
+them through the exact inverse and a finite-parameter conserved
+comparison to obtain the sectorwise strong return estimate.
+No priority claim is made for the elementary inverse or the
+standard operator inequalities. The local evidence record binds
+the code, scientific output, proof inputs, compilation and pages.
+
+\begin{thebibliography}{9}\small
+\bibitem{gradient} A. Day and Chengheng, \emph{Fixed-charge gradients
+and the ordinary charged tail}, local draft, 8 November 2026;
+\texttt{manuscript/susskind-sector-gradient-tail/main.tex}, (O), (T).
+\bibitem{neutral} A. Day and Chengheng, \emph{The neutral memory field
+in a fixed charge sector}, local draft, 8 November 2026;
+\texttt{manuscript/susskind-sector-neutral-transfer/main.tex}, Sec.~4.
+\bibitem{operator} A. Day and Chengheng, ordinary fourth-norm tail
+operator draft, 7 November 2026;
+\texttt{notes/susskind-bilocal-fourth-tail-operator-draft.md}, (2), (21).
+\bibitem{return} A. Day and Chengheng, \emph{Finite memory times:
+a controlled two-return reduction}, local draft, 6 November 2026;
+\texttt{manuscript/susskind-memory-return-expansion/main.tex}, Secs.~2--3.
+\bibitem{background} A. Day and Chengheng, \emph{The conserved
+background of the first memory return}, local draft, 6 November 2026;
+\texttt{manuscript/susskind-memory-return-background/main.tex}.
+\bibitem{density} A. Day and Chengheng, fixed polynomial preparation
+orbit-density draft, 8 November 2026;
+\texttt{manuscript/susskind-slater-polynomial-density/main.tex}.
+\bibitem{bnr} M. Berkooz, V. Narovlansky and H. Raj,
+\emph{Complex Sachdev-Ye-Kitaev model in the double scaling limit},
+\href{https://arxiv.org/abs/2006.13983}{arXiv:2006.13983}, Secs.~5, 7.
+\bibitem{bks} M. Bo\.{z}ejko, B. K\"ummerer and R. Speicher,
+\emph{q-Gaussian processes: non-commutative and classical aspects},
+\href{https://arxiv.org/abs/funct-an/9604010}{arXiv:funct-an/9604010}.
+\bibitem{mori} A. Montoya-Castillo and D. R. Reichman,
+\emph{Approximate but Accurate Quantum Dynamics from the Mori
+Formalism: I. Nonequilibrium Dynamics},
+\href{https://arxiv.org/abs/1603.01903}{arXiv:1603.01903}, Sec.~III.
+\end{thebibliography}
+\end{document}

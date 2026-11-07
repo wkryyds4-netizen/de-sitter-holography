@@ -1,5 +1,10 @@
 # de Sitter 全息研究规划
 
+2026-11-08 sector-bilocal：已完成 compact-central 实际总记忆的全 fixed finite Schatten 界、半填充 four-u 条件回归、共同局域场与 actual bilocal O_r(p^-1) 重建。固定多项式制备之间的完整有限协变块可传递，包括固定阶 OTOC；不包含任意 selected 因子在多个非多项式块内部交错。十页 PDF/有限检查/证据已封存，本次与 memory-return 集中 Git 并按用户要求回复 issue #1。KS 全量复算未新增。下一阶段从已控制的实际双局域出发，回读静态观察者、singlet/非 singlet 与空间/质量生成元文献，列明同一态、能量单位与谱测度的必要匹配，再选择可计算的字典检验。已有数学接口不重复计算，日常低频 Git 继续。
+
+2026-11-08 sector-memory-return：exact inverse把旧K_n实际阶乘包络传给force defect，finite Jacobi covariance参考在有限N下即守恒；DF/R交叉项和finite Volterra remainder给compactcentral全fixedS_r的Fscr−X0=O(p^-1/2)。七页PDF/科学检查/manifest本地封存。下一首任务为central三色replica的four-u回归与Qalpha E→Q1 G接口，之后用真正allr memory界审计bilocal返回。旧two-component的central一句引文不单独代替colored-word证明；可用新的central-ordinary Fourier支配直接补接口。长期goal active，无新Git/issue。
+
+
 2026-11-08 本次按用户要求集中发布 sector-neutral-transfer，发布入口见 notes/research-release-2026-11-08-sector-neutral.md。核对已有证据并回复 issue #1，日常低频 Git 约定不变。下一步检查 force-defect 精确逆式能否利用 ordinary 全次数包络建立守恒返回代理；尚未将此候选路线列为完成结果。
 
 

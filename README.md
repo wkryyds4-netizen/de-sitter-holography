@@ -1,5 +1,18 @@
 # de Sitter 全息研究
 
+## 当前进展：固定电荷实际双局域（2026-11-08）
+
+[十页 PDF](output/pdf/de-sitter-susskind-sector-bilocal.pdf)、[LaTeX](manuscript/susskind-sector-bilocal/main.tex)、[中文推导](notes/susskind-sector-bilocal.md)及[来源](literature/susskind-sector-bilocal-sources.md)已完成。有限 alpha 的带电接口、实际中性尾及守恒返回先给总记忆的全部固定有限范数界；半填充多色 Fourier 源与整块 replica 接通四辅助场条件回归。实际双局域到记忆积分的重建误差为 O_r(p^-1)，并得到已控制固定多项式制备之间的有限协变双局域词极限。
+
+新增2303项有限检查已封存；十页双遍编译、逐页检查及10当前/336父科学文件的哈希核验见[证据清单](results/susskind-sector-bilocal/local-evidence.json)。本次按用户要求，与上一阶段七页记忆返回稿集中发布，[阅读入口](notes/research-release-2026-11-08-sector-bilocal.md)。历史“本地”“未 Git”保留原记录时点含义。下一步核静态观察者的谱、空间与质量字典；任意非多项式 selected 交错及有限 G 动力学仍开放。
+
+## 当前进展：固定电荷的记忆返回（2026-11-08，本地）
+
+[七页 PDF](output/pdf/de-sitter-susskind-sector-memory-return.pdf)、[LaTeX](manuscript/susskind-sector-memory-return/main.tex)、[中文推导](notes/susskind-sector-memory-return.md)及[来源](literature/susskind-sector-memory-return-sources.md)已保存。普通body-loss恒等式的精确反演控制force defect的全时间尾；有限参数Jacobi函数给逐样本守恒比较，得到compact central window内实际总记忆场到普通传播项的全fixed finite Schatten误差O(p^-1/2)。固定多项式制备中的返回误差也受控。
+
+21个精确free-word式、9个保留低chaos的CAR/Hermite行、15个实时间及90个范数界已核。[证据清单](results/susskind-sector-memory-return/local-evidence.json)核10当前/287父科学文件；七页双遍编译、全页目检完成。下一步X0的central两分量与actual bilocal返回，完整selected交错及空间/质量、finite-G仍开放。本轮仅本地，既有686b199和issue回复不重复发布。
+
+
 ## 2026-11-08 集中快照：固定电荷中性记忆场
 
 本次按用户要求整理已完成的中性全时间阶段，附八页 PDF、LaTeX、有限检查和封存证据，见[发布说明](notes/research-release-2026-11-08-sector-neutral.md)。发布前只读核对 273 个不同文件及 PDF 页数；未重跑成功科学输出。下文“本地”“未 Git”保留记录时点的含义。下一步仍是 total-memory 的逐扇区返回与实际 bilocal 重建。
