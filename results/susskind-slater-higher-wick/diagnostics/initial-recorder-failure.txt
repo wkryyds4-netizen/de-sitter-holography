@@ -1,0 +1,6 @@
+Initial provenance recorder stopped before creating local-evidence.json.
+Assertion at the pass-log Output written on check failed because PowerShell 5
+saved pass1.txt and pass2.txt as UTF-16 LE with BOM. The compiled PDF and
+main.log were valid. Inspecting raw bytes confirmed FF FE; decoding as UTF-16
+showed successful six-page outputs in both passes. The recorder was corrected
+to recognize the BOM. No build log, scientific JSON or prior manifest changed.

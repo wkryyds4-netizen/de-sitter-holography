@@ -1,0 +1,360 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,microtype,booktabs}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Wick}{\mathcal W}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\title{One selected state for higher Wick descendants\\
+\large Boundary sources, charged towers and fixed-degree energy pinching}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{8 November 2026\quad Local research draft}
+\begin{document}\maketitle
+\begin{abstract}
+We extend the single-excitation boundary identity from the Hamiltonian,
+size fluctuation and quadratic curvature to disjoint marked Wick blocks
+of arbitrary fixed lengths, including neutral marked subblocks and
+whole-composite Gaussian-chaos projections. The proof reduces every
+source collision to at most four endpoints. A finite exhaustive rational
+certificate verifies its local algebra. The complete charged Wick tower
+has the same reduced density $1-\sqrt q+\sqrt q\,h^2$. Combining the
+all-unrestricted-source identity with existing charged spectral estimates
+transfers exact energy pinching to each fixed descendant in the selected
+state. The degree-uniform ordinary charged bridge remains a separate task.
+\end{abstract}
+
+\section{Model and admissible expressions}
+Use standard CAR, the overlapping Hermitian complex Gaussian $p$-body
+Hamiltonian $H$, one common disorder, a fixed half-filled Slater vector
+$O$, and $m=N/2$. Set $\lambda_N=p^2/N\to\lambda>0$,
+$C_Q=\E H^2$, and let $C_m$ be its sector value. Define
+\begin{align*}
+ DX&=QX-\sum_i c_i^\dagger Xc_i,&
+ \mathcal LX&=\tfrac12\bigl(NX-\sum_i(c_i^\dagger Xc_i+c_iXc_i^\dagger)\bigr),\\
+ h_N&=H_m/\sqrt{C_m},&
+ W_N&=C_m^{-1/2}(p-\mathcal L-\lambda_N)H|_m.
+\end{align*}
+Loss maps act before restricting charge. The normalization $C_m$ is a
+fixed target-sector scalar, not the operator $C_Q$ inside a loss map.
+$M_N^\dagger$ is the previously normalized same-disorder occupied-to-empty
+block, with $\E\langle O|M_NM_N^\dagger|O\rangle=1$.
+Time is dimensionless $h$-time and $\hbar=1$.
+
+In an ordered list of $H$ slots, a mark $(a,b,T)$ means the deficit
+$((b-a)p-T)$ on that entire interval, for $T=D,\mathcal L$.
+Marked intervals are disjoint and contain no complete Gaussian pair.
+Larger Wick regions can enforce stronger exclusions. A chaos region
+$(a,b,d)$ keeps exactly $(b-a-d)/2$ internal pairs. These constraints
+implement, for example,
+\[
+ \Wick_d\!\left[H^a\bigl(((vp-\mathcal L)Z_v)\diamond Z_w\bigr)\right],
+ \qquad Z_v=\Wick_v(H^v).
+\]
+Here $\diamond$ is coupling Wick multiplication. An arbitrary fixed
+scalar shift of each deficit and finite linear combinations are allowed.
+Repeated overlapping loss maps are not part of this expression class.
+
+\newpage
+\section{General source and the four-endpoint reduction}
+For a pairing $\pi$ with $k$ edges, the right endpoint of edge $e$ is
+$C_{P_e}^\dagger C_{Q_e}$ and the left is its adjoint. A G edge is
+unrestricted; an F edge has $P_e$ empty and $Q_e$ occupied relative to
+$O$. Attach square-zero commuting variables $z_\alpha$ to the marks.
+At a site, multiply the whole marked block before applying $1-zT_i$.
+The local maps on a matrix are
+\[
+ D_i\begin{pmatrix}a&b\\c&d\end{pmatrix}
+ =\begin{pmatrix}0&b/2\\c/2&d-a\end{pmatrix},\qquad
+ \mathcal L_i\begin{pmatrix}a&b\\c&d\end{pmatrix}
+ =\frac12\begin{pmatrix}a-d&b\\c&d-a\end{pmatrix}.
+\]
+Take the empty/occupied diagonal entry, keep the selected membership
+constraint, and multiply by the Jordan--Wigner crossing sign. Denote the
+result by $f_o(S;z)$, where $S$ is the set of present $P/Q$ labels.
+For one label $i$, its correct-occupancy singleton is $s_i(z)$, with
+$s_i(0)=1$. Set $F_o(S;z)=f_o(S;z)/\prod_{i\in S}s_i(z)$. Then
+\begin{equation}
+ K_\pi(z)=2\sum_{i<j}\sum_{o=0,1}F_o(\{i,j\};z)
+             -2k(k-1)-2k_G .\label{K}
+\end{equation}
+With $\gamma=e^{-\lambda}$ and $q=\gamma^4$, a diagram contributes
+\begin{equation}
+ \gamma^{b_{\rm mix}}[z_1\cdots z_r]
+ \exp\!\left(\lambda K_\pi(z)-\sum_\alpha\mu_\alpha z_\alpha\right),
+ \qquad K_\pi(0)=-4\nu_\pi .\label{weight}
+\end{equation}
+$\nu_\pi$ counts crossings and nestings with an inner F edge;
+$b_{\rm mix}$ counts mixed ordinary/selected edges.
+
+The earlier fixed-Slater source derivation \cite{composite} extends
+without a length-two assumption. No pair inside a mark means every
+single present label gives only an odd local factor there. Thus
+$\prod_i s_i^p\exp[p\sum_\alpha(b_\alpha-a_\alpha)z_\alpha]=1$ exactly.
+For each fixed layout, normalized defect coefficients have bounded
+nilpotent norm $B$. The old falling-factorial domination applies with
+activity $B m(p/m)^{|S|}$: its tails are summable, triples disappear
+after domination, and backward selected edges require a defect of
+order $p$. Wick and chaos restrictions only delete pairings.
+This establishes \eqref{weight} for every fixed admissible expression.
+
+\begin{lemma}[Finite local reduction]
+Every source-dependent summand of \eqref{K} is an own-edge collision
+with two endpoints or a two-edge collision with four endpoints.
+Deleting all other endpoints preserves its normalized local polynomial.
+\end{lemma}
+\begin{proof}
+Only the two present labels can supply nonidentity site matrices.
+An empty marked interval contributes $T_i(I)=0$. Each surviving marked
+interval becomes a contiguous interval among the retained endpoints;
+disjointness and absence of an internal pair survive. The singleton
+denominator and crossing sign use exactly the same present labels.
+An F edge touching an extreme endpoint remains extreme after deletion.
+Thus the ordered local cases have no dependence on the original lengths.
+\end{proof}
+
+\newpage
+\section{Local identities and the selected density}
+For an own-edge collision, let $\ell_1,\ell_2$ be the source variables
+at its endpoints when the corresponding mark is of type L, and zero
+otherwise. The source-dependent contribution is
+\[
+ K_{\rm own}^{G}=\ell_1+\ell_2+\ell_1\ell_2,
+ \qquad K_{\rm own}^{F}=0.
+\]
+The endpoints cannot belong to the same mark. In a boundary-selected
+word $M B M^\dagger$, at least one endpoint of every F edge is outside
+all interior marks, so its own-edge difference is just
+$-\ell_1-\ell_2$.
+
+For distinct edges, replacing a G edge that touches a selected exterior
+endpoint by F leaves every nonconstant collision coefficient unchanged.
+Also, an all-G L singleton placed at an exterior endpoint has no
+source-containing two-edge collision. These assertions follow by
+substitution of the two local matrices on the preceding page. The
+exhaustive certificate enumerates the three two-edge orders (disjoint,
+crossed, nested), whether the left/right global extreme is present, and
+all legal contiguous marked intervals of either type. Its counts are
+\begin{center}
+\begin{tabular}{lr}\toprule
+Local layouts (two or four endpoints)&248\\
+Selected two-edge source equalities&241\\
+Selected own-edge source equalities&489\\
+Exterior L two-edge zero identities&241\\
+Exterior L own-edge identities&489\\\bottomrule
+\end{tabular}
+\end{center}
+All nilpotent masks are checked with exact rational arithmetic; the
+complete case inventory is saved with the certificate. This is a finite
+algebraic verification used together with the reduction lemma, not an
+extrapolation from a finite maximum field degree.
+
+Let $n_\alpha$ count selected-boundary attachments inside interior
+L mark $\alpha$. There is no inner-F nesting, and consequently
+\begin{equation}
+ K_F(z)=K_G(z)-\sum_{\alpha:\,L}n_\alpha z_\alpha.\label{boundary}
+\end{equation}
+For the all-G word, add L singleton sources $a,b$ at the two boundaries.
+The own-edge rule and two-edge zero identity give, when they are paired
+to distinct interior endpoints,
+\[
+ K_G(z,a,b)-a-b=K_G(z)+a\ell_0+b\ell_L.
+\]
+Here $\ell_0,\ell_L$ are the interior L variables at the respective
+partners, or zero. For a direct exterior pair the right side is instead
+$K_G(z)+ab$. Insert $\chi=h-W$: each boundary applies
+$(1-\partial_a)$ or $(1-\partial_b)$ at zero to the exponential.
+The attached weight becomes $(1-\lambda\ell_0)(1-\lambda\ell_L)$,
+exactly \eqref{boundary}. The direct exterior pair has weight
+$1+\lambda$, whereas the selected direct pair has weight one.
+
+\begin{theorem}[Fixed-degree boundary identity]
+For every admissible expression $B$ and finite linear combination thereof,
+with $s=\gamma^2=\sqrt q$,
+\begin{equation}
+ \sigma_1(B)=[1-s(1+\lambda)]\tau(B)+s\tau(\chi B\chi),
+ \qquad \chi=h-W.\label{density}
+\end{equation}
+Here $\tau$ denotes the limiting covariant central trace and $\sigma_1$
+the limiting normalized single-selected expectation. In tracial moment
+notation the density is $\rho_1=s\chi^2+[1-s(1+\lambda)]I$.
+\end{theorem}
+The attached diagrams carry $\gamma^2$ and the direct diagrams carry
+one, which proves \eqref{density}. This statement is on polynomial
+moments; it does not assert boundedness of all higher generators.
+
+\newpage
+\section{The charged tower and its exact pinching}
+If $B$ contains only D marks and ordinary energy factors, both
+$\ell_0,\ell_L$ vanish. Therefore
+\begin{equation}
+ \sigma_1(B)=(1-s)\tau(B)+s\tau(hBh)=\tau(f(h)B),
+ \qquad f(h)=1-s+s h^2.\label{charged-density}
+\end{equation}
+This includes arbitrary fixed mixed words in all charged Wick
+descendants, not only the quadratic curvature. In particular the
+polynomial functional is invariant under the Hamiltonian derivation.
+Finite-time invariance for fixed insertions follows from the energy
+tail estimates below. This is not a temperature assignment.
+
+Let $H_d^{(q)}$ be the monic q-Hermite polynomial with variance one,
+$P_d=[d]_q!$, and $m_d=q\partial_q\log P_d$. Use the finite-$N$ field
+\begin{equation}
+ J_{d,N}=C_m^{-d/2}(dp-D)\Wick_d(H^d)|_m
+       -\lambda_N[d(d-1)-4m_d(q_N)]H_d^{(q_N)}(h_N),
+ \quad q_N=e^{-4\lambda_N}.\label{Jd}
+\end{equation}
+For d=2 this is the preceding unnormalized curvature $j_N$.
+All normalization and regression coefficients are fixed before the
+double-scaling limit. The q-Hermite term commutes exactly with $h_N$.
+
+For all-G diagrams, the full-trace local ratio is
+$2\sum_o F_o$, and both constant backgrounds are $-2k^2$.
+Thus the entire central marked-source exponent equals the earlier
+full-trace exponent, for arbitrary legal marks. Schur covariance
+equates the annealed fixed-Slater covariant expectation to normalized
+sector trace. This directly transfers the existing fixed-degree
+charged joint moments and spectral argument \cite{joint}; no extraction
+from a binomial charge average is used.
+
+In particular, for fixed d,e the limiting two-energy measure
+\[
+ \nu_{de,N}(A,B)=\E\tr_m\!\bigl[
+ J_{d,N}^\dagger P_{h_N}(B)J_{e,N}P_{h_N}(A)\bigr]
+\]
+has the previously derived $L^2(\mu_q\otimes\mu_q)$ density.
+For normalized energy polynomials, the old bound reads, with $D=d+e$,
+\[
+ |M_{ab}^{de}|\le K_D(a+b+1)^D
+ q^{\max(0,\min(a,b)-D)}\,\mathbf1_{|a-b|\le D}.
+\]
+It is square summable for fixed d,e. The compact energy support is
+$[-2/\sqrt{1-q},2/\sqrt{1-q}]^2$; $\mu_q$ has no atoms, so the
+energy diagonal has zero mass. Central fixed higher moments give
+tightness and uniform integrability. Portmanteau then yields
+\begin{equation}
+ \norm{\mathcal P_{h_N}J_{d,N}}_{2,m}\longrightarrow0,
+ \qquad \mathcal P_hY=\sum_E P_h(\{E\})YP_h(\{E\}).\label{pinch}
+\end{equation}
+Higher central moments and the Schatten contraction of pinching upgrade
+this to every fixed finite Schatten exponent. Complete degenerate
+blocks are retained. This takes finite-$N$ exact pinching first and
+does not exchange a long-time averaging limit with double scaling.
+
+\newpage
+\section{Selected actual observables and the remaining time interface}
+The previously proved fixed-polynomial preparation estimate
+\cite{polynomial} gives, for any fixed preparation $P_N$ with bounded
+$\E\norm{P_NO}^2$,
+\[
+ \E\norm{X_NP_NO}^2\le C_P\norm{X_N}_{4,m}^2.
+\]
+Apply it to $X_N=\mathcal P_{h_N}J_{d,N}$. Since the new source theorem
+also bounds every fixed preparation norm, \eqref{pinch} implies
+\[
+ \E\norm{\bigl[(1-\mathcal P_{h_N})J_{d,N}-J_{d,N}\bigr]P_NO}^2
+ \longrightarrow0.
+\]
+For single-selected covariant blocks, polarization, trace Holder and
+fixed higher moments similarly transfer any fixed finite number of
+these replacements. Fixed real-time energy phases are included by
+first approximating them in central trace norms and then applying the
+preparation bound. Indeed Gaussian energy moments obey
+$\norm{h_N^n}_{r,m}\le K_r^n\sqrt{n!}$, making their Taylor tails
+summable at every fixed compact time interval after Holder.
+
+Writing $a_{d,N}=(1-\mathcal P_{h_N})J_{d,N}$, the charged two-point
+matrix in the single-selected state is therefore
+\begin{equation}
+ \lim_N\E\langle O|M_N a_{d,N}(t)a_{e,N}M_N^\dagger|O\rangle
+ =\int f(E)e^{it(E-E')}\,d\nu_{de}(E,E').\label{kernel}
+\end{equation}
+The input/column energy is E in this convention. Its positive matrix
+measure is $f(E)\nu_{de}$, and the D-only state is stationary. We do
+not replace every descendant's marginal by the tracial marginal:
+that further property was proved specifically for the curvature field.
+
+The previous tagged-site proof \cite{tails} already supplies, sector
+by sector, for fixed r and a fixed number k of deficits,
+\[
+ \norm{\Delta_{T_1}\cdots\Delta_{T_k}Z_n}_{r,m}
+ \le K_{k,r}(n+1)^{2k}L_{k,r}^n\sqrt{n!}
+\]
+in central charge ranges. It uses restricted covariance row/column
+bounds and keeps CAR signs until matrix contraction. Coupling OU
+projections, normalized covariance CP chains and their telescoping
+estimates also operate sectorwise. These estimates support pure/local
+representatives, including neutral Wick subblocks.
+
+The ordinary charged coefficient needed by the actual full bilocal is
+\[
+ G_{n,N}=[p\mathcal N-D-\lambda_N\mathcal N(\mathcal N-1)]H^n.
+\]
+It permits internal Gaussian pairs in its marked interval, outside
+the present theorem. Its existing full-Fock tail proof uses the
+Clifford Riesz estimate \cite{belp}, whose trace is not the fixed-charge
+trace. Restriction to $m=N/2$ is not automatic. A central strong bridge
+and a degree-uniform actual tail, or an equivalent two-cutoff argument,
+are still needed to identify the full selected bilocal. Fixed-degree
+preparation constants cannot be summed over growing degrees without
+additional control. The previously completed full-trace bilocal four-point
+result is unchanged.
+
+\newpage
+\section{Evidence, reuse and continuation}
+The new pure module \texttt{slater\_higher\_wick\_sources.py} accepts
+slot lengths, disjoint marks, Wick exclusion regions, chaos regions,
+scalar centers and trace/selected/$\chi$ modes. It is built on the
+already checked local CAR engine. Its coefficient exponential retains
+all nilpotent source masks. The fresh checker saves the complete finite
+local case inventory, 30 higher-layout density comparisons at two
+independent rational $(\gamma,\lambda)$ points, and 18 comparisons
+against the previous H/W/J evaluator. Higher examples reach eight
+internal slots; they include two long D marks, neutral L subblocks,
+several simultaneous marks, and projected whole composites.
+
+The rational points check algebraic identities; positivity and the
+physical state interpretation use $\gamma=e^{-\lambda}$. Finite examples
+alone do not prove all degrees: the finite local certificate is made
+exhaustive by the reduction lemma. The convergence and pinching claims
+also use the specified earlier estimates, not just this checker.
+Input hashes, Python version and exact arithmetic are saved with the
+new output. Successful prior scientific drivers and manifests are
+left unchanged.
+
+The source extension is the new construction in this draft. Fixed-charge
+complex-SYK chord methods \cite{bnr}, the previous local source theorem,
+the charged spectral bound and the preparation-density estimate are
+reused with their original scopes. The unresolved ordinary central
+bridge is now the direct next step. Bulk spatial and mass generators,
+and finite-G dynamics, remain beyond this model-level result.
+
+\begin{thebibliography}{9}
+\bibitem{bnr} M. Berkooz, V. Narovlansky and H. Raj,
+\emph{Complex Sachdev--Ye--Kitaev model in the double scaling limit},
+\href{https://arxiv.org/abs/2006.13983}{arXiv:2006.13983v2},
+especially Sections 3 and 5.
+\bibitem{belp} L. Ben Efraim and F. Lust-Piquard,
+\emph{Poincare type inequalities on the discrete cube and in the CAR algebra},
+\href{https://arxiv.org/abs/math/0702233}{arXiv:math/0702233v1},
+Sections 6.1 and 6.4, Theorem 6.8.
+\bibitem{composite} Alan Day and Chengheng,
+\emph{Same-J Slater composite sources} and
+\emph{A selected excitation and its curvature dynamics},
+local project drafts, 8 November 2026; companion notes
+\texttt{susskind-slater-composite} and \texttt{susskind-slater-selected-state}.
+\bibitem{joint} Alan Day and Chengheng,
+\emph{Joint memory regression}, local project proof,
+7 November 2026, Sections 5--7;
+\texttt{susskind-memory-joint-regression-proof.md}.
+\bibitem{polynomial} Alan Day and Chengheng,
+\emph{Fixed polynomial Slater preparations}, local project draft,
+8 November 2026; \texttt{susskind-slater-polynomial-density}.
+\bibitem{tails} Alan Day and Chengheng,
+\emph{Bilocal fourth-tail diagram and operator drafts}, local project proofs,
+7 November 2026; pure marked-block estimates and sectorwise CP bounds.
+\end{thebibliography}
+\end{document}

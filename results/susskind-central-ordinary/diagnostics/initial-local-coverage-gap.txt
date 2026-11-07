@@ -1,0 +1,7 @@
+The first new checker completed its Fourier, Gram and finite-N scalar checks,
+but printed Source comparisons 0. Its recursive layout generator limited the
+tail to length <1, hence never generated the requested two-mark layouts.
+The successful output is preserved unchanged and does not certify local
+source coverage. A separate checker check_central_ordinary_local.py explicitly
+enumerates disjoint intervals, requires positive two/three/four-source counts,
+and writes local-coverage.json. No claim relies on the vacuous loop.

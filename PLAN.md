@@ -1,5 +1,11 @@
 # de Sitter 全息研究规划
 
+2026-11-08 本轮集中发布 higher-wick 与 central-ordinary 两个已完成阶段，按用户要求回复 issue #1；日常低频 Git 约定不变。科研下一步仍为中央扇区全次数尾：先验证归一 CP 通道的精确梯度恒等式及逐扇区行列平方函数界，再处理纯 Wick 标记梯度、ordinary recurrence 与实际级数求和。候选路线尚未形成定理；旧封存科学输出不重跑、不改写。
+
+2026-11-08 central-ordinary 阶段：用精确charge Fourier投影、消去extensive singleton后的近区Gaussian支配及远区support界，补齐普通内部pair的central源。Kcen=Kfull−2I²给fixeddegree同J RR/RJ/JJ强桥，任意fixedS_r及exactpinching/selectedpreps接口完成。下一首任务收窄到真正尚缺的degreeuniform actual中央尾；旧charged-proof §4 Riesz cross-product与force Gram步骤需逐sector替代。pure/repeated tags、CP路径及A_v、DA_v/p、LA_v/p已有逐sector工具，不重做fixeddegree强桥。六页稿/三science/manifest封存，goalactive，仅本地。
+
+2026-11-08 slater-higher-wick 阶段：任意固定 disjoint whole-Wick D/L marks、neutral subblocks与chaos filters的boundary density已由四端点压缩及完整局部有理证书闭合；D-only charged塔限制态=f(h)。allG源直接等同旧trace源，转接固定J_d的central谱及实际pinching，再由polynomialdensity传selected。下一首任务明确改为ordinary charged内部pair的central source/强桥及uniform actual尾；不能简单删除pure-source中的禁配对断言。内部pair的D作用能让原本零的wrong-occupancy singleton出现纯source项，须在归一前处理这些贡献及p阶相消。六页PDF/证据封存，仅本地，goal active。
+
 2026-11-08 本轮集中发布：用户明确要求 Git 与 issue 回复，收录 polynomial-density 至 selected-state 四阶段；[发布说明](notes/research-release-2026-11-08-selected-state.md)列明阅读入口和未完成接口。研究仍接高阶 whole-Wick D 标记、中性 L 子块的固定 Slater 源，再补 central-sector 实际强桥与全次数尾。日常低频 Git 偏好不变。
 
 2026-11-08 slater-selected-state 阶段：两极端selected边界不改变J源、只改变连接W的linear源，给单激发在全D=W*(h,u,x)的显式rho1。h,x restriction=f(h)平稳、x marginal tracial，但全D非平稳。由既有actual pinching桥和Mehler核得到真实选态曲率固定时间关联，并在物理q=.25,t2给严格有理负号证书。下一任务转向higherbilocal后代的固定Slater源与central-sector强桥/全次数尾：旧fullFock Clifford Riesz不能直接限制fixedcharge，fixeddegree density亦不能直接用于degree增长。先核前驱与每一接口，再决定如何重求和selected完整bilocal。七页PDF及三science封存，长期goalactive；仅本地，不Git/issue。

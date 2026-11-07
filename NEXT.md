@@ -1,5 +1,35 @@
 # 下一次从这里继续
 
+## 2026-11-08 本轮发布与梯度路线交接
+
+用户重新授权 Git 和 issue 回复，本次范围为 higher-wick 与 central-ordinary，见[发布说明](notes/research-release-2026-11-08-central-ordinary.md)；回执保存在本机 tmp/publication-2026-11-08-central-ordinary。下方“不重复发布”指此前 b6b2a45 批次。当前没有新的梯度科学输出，也没有活跃计算。
+
+下一步沿 central-ordinary 的尾界缺口继续：对中性块族 X，定义 Y_i=[c_i,X] 及相邻电荷空间的 normalized row/column Schatten 平方函数。候选 t/s 梯度主项分别为 -sum(c_j†Y_i c_j)/m 和 -sum(c_j Y_i c_j†)/(N-m+1)，余项分别为 (X-tX)_(m-1)c_i/m 和 c_i(sX-X)_m/(N-m+1)。先以有限 CAR 非自伴块矩阵逐扇区验证，再证平方函数主项收缩及 O(N^-1/2) 单步余项。随后核纯 marked Wick 梯度的 sqrt(p) 阶乘包络；不要把尚未验证的路径与标记计数写成完成。普通实际级数闭合之后，仍需 separately 核 selected 全 bilocal 的 neutral/rank/memory-return 扇区接口。长期 goal active。
+
+## 当前继续位置：2026-11-08 central ordinary fixed-degree强桥（本地）
+
+先读[六页PDF](output/pdf/de-sitter-susskind-central-ordinary.pdf)、[完整LaTeX](manuscript/susskind-central-ordinary/main.tex)、[中文笔记](notes/susskind-central-ordinary.md)、[来源](literature/susskind-central-ordinary-sources.md)及journal/2026-11-08-susskind-central-ordinary.md。上一轮higherWick与本轮均progress；goal active。无活跃进程。Git b6b2a45及issue6711589107已完成，不重复发布。
+
+- **已证central ordinary源**：same-J standardCAR、m=N/2、lambda_N=p²/N→lambda>0，D/L先作用fullFock再限sector，Cm固定target常数。任意fixed disjoint ordinaryD（允许internalpairs）/pureL-subblock、Wick/chaos constraints：Kcen=Kfull−2I(z)²，I=Σi_a z_a，i_a为D内部弦数，L为0。因此DD扣4i_ai_b，single/DL/LL不改。不是从fulltrace平均令X=0。
+- **Fourier关键**：wrong-occupancy singleton已由rho=e^(iθ)/(1+e^(iθ))完整保留；internal残因子exp_nil[p(e^(iθ)−1)I]，open pd精确消去。标量cos^(N−2kp)，perchord A_N=4^-p binomNp²/[binommp binom(m+p)p]→e^-lambda。near |θ|≤δ：missing singleton memberships≤2R，coeff≤K(1+R)^r A^R，overlap指数矩后界K(1+p|θ|)^r cos^(N−2kp)，t=pθ由poly(t)exp(-t²/(16lambda+))支配。far直接supportU≤2kp、lossI0给Kp^r e^(Kp)cos^(N−2kp)，乘p积分仍0。全Fourier比值由Gaussian t方差4lambda给exp(-2lambda I²)。任意固定source数都成立；常数非degreeuniform。
+- **actual强桥**：normalized G_n=Cm^(-n/2)[pNcal−D−lambda_N Ncal(Ncal−1)]H^n|m。g_n^cen=Σa_nd[-4lambda m_d−lambda(n−d)]H_d，finiteN用q_N/lambda_N。same-copy RR/RJ/JJ组图给G−g−ΣaJd在L2,m趋0；高fixedsource矩有界+插值升任意fixedS_r，Holder可加固定H幂。g精确守恒，上一轮P_hJd小量故(1−P_h)G_n→ΣaJd。orbitdensity传已有fixedpreps/singlecovariantblock、fixed h-times。所有fixed ordinary truncations已接selected；actual infinite sum仍待tail。
+- **证据/API**：pure code/central_ordinary_sources.py 的 central_exponent(length,pi,blocks,gaussian_number_shift)、CentralModel(JointModel)、central_singleton_coefficient、central_G2_zero_chaos。新exact输出SHA54286ec6f07967d3c60770c44ffd93799dd4eac26cb346dbdcab49165280f45c（2186Fourier、20regression、32Gram/96equalities、2G2gaps、5scalar桥、30finiteNrows）。首driver local枚举实际0，原样保存且不计证据；独立local-coverage SHAe7321618b31f4bffe489a4f2eb61f379ee56e443dcfc84dbb912c372195b7add，3496two/459three/1265four源，1380internal/4010negative。Fourier-checks SHAeceb91cd3d59939dad487a968f5a8370ade15aaff8d7690bbe317662a27961f3（10例60/90digits，maxprecisiondiff4.58e-59，tail1.01e-41，仅cutoff解析界，非intervalquadrature）。成功driver不重跑，覆盖缺口diagnostic保留。
+- **PDF/manifest**：六页双遍/90dpi全目检，补A_N与support措辞后仅2/3页改变已重检，其他4render hashes不变。manifest SHA51eedf4105ae14f9630c08d0e3c0002afe4ab9336bdde5e8e0ee028788108606，15当前/127父科学文件，首recorder成功；science/manifest封存。
+- **下一首任务**：central finiteN ordinary全次数尾。精读notes/susskind-bilocal-fourth-tail-charged-proof.md §§3–5：A_v=p(Phi−Ctheta_v)Z_v及DA_v/p、LA_v/p的CP/repeatedpure界已逐sector；缺§4(9) cross B(X,Y)/p的Clifford squarefunction替代及(12)forceCP Gram的sector界，继而eta_j和G_n包络。可优先核纯marked E_h与CP路径的直接tagged gradientGram，避开需要任意X的全Riesz定理；尚无证明。不能以本轮fixeddegreeFourier常数或fulltrace高矩直接给中央uniform尾。若做双截断必须真控制finiteN tail。旧fulltrace完整四点与本轮fixeddegree强桥不重做；之后selected完整bilocal、bulk空间/质量、finiteG。
+
+以下为历史继续位置，以本节为先。
+
+## 当前继续位置：2026-11-08 高阶 Wick 后代选态（本地）
+
+先读[六页PDF](output/pdf/de-sitter-susskind-slater-higher-wick.pdf)、[中文证明](notes/susskind-slater-higher-wick.md)、[LaTeX](manuscript/susskind-slater-higher-wick/main.tex)、[来源](literature/susskind-slater-higher-wick-sources.md)及journal/2026-11-08-susskind-slater-higher-wick.md。上一轮集中发布与本轮科学推进均progress；goal active，无活跃进程。b6b2a45/issue6711589107已完成，不重复Git或回复。
+
+- **一般fixeddegree源与density**：disjoint标记区内禁止完整Gaussian pair；更大wholeWick区和整体chaos区另列。two-label碰撞压缩到2/4端点，empty mark的lossI=0，singleton分母/JW sign保留。ownG源ell1+ell2+ell1ell2、ownF0；触极端F的cross所有源不变，boundaryW cross0。K_F=K_G−ΣL n_a z_a；allG边界h−W给相同shift，directpair1+lambda改回1，因此任意fixed admissibleB有sigma1(B)=[1−s(1+lambda)]tauB+s tau((h−W)B(h−W))。仅moment algebra，不宣称所有高场bounded；重叠repeatedmarks不在本定理范围。
+- **charged塔actual接口**：无L时sigma1(B)=tau([1−s+s h²]B)。Jd=C_m^(-d/2)(dp−D)W_d(H^d)|m−lambda_N[d(d−1)−4m_d(q_N)]H_d^(q_N)(h_N)。allG源一般性=旧fulltrace源，Schur给central矩；旧joint-regression-proof §§5–7的L²两能量谱、无对角质量直接接central。Portmanteau+高矩得P_h Jd在所有fixedS_r趋0；fixedpolynomial density传selectedpreps及singlecovariantblock。actual a_d=(1−P_h)Jd两点为∫(1−s+sE²)e^{it(E−E′)}dnu_de，inputE。不要将所有Jd marginal说成tracial，曲率的特例不自动泛化。
+- **代码/证据**：pure code/slater_higher_wick_sources.py：moment(length,marks,gamma,lam,wick_regions,chaos_regions,shifts,mode)，mode trace/selected/chi；collision_part/exponential安全。248local layouts，241cross/489own、241boundaryWcross0/489boundaryWown，30高阶density（2有理点，最高8内部槽）、18legacy。science SHA27b3557c6ce6c68605eb1a89ecbb7e23ebe7f11d00fc40e87f84f8425f845143；manifest SHA14c5583cca8d9e6b25ff3cccacfc7157f6ef98a33424519a891ba93519417918，12当前/114父科学文件。首科学driver完整passed后封存，不重跑。首PDF括号拼写失败保留，修正双遍/6页90dpi全目检；recorder首遇UTF16 passlogs停、BOM读取修正成功，未改输出日志。两失败记录保留。
+- **下一首任务**：ordinary G_n=[pNcal−D−lambda_N Ncal(Ncal−1)]H^n的fixedcentral强桥与degreeuniform actual尾。pure/CP/OU逐sector界已有；fullFock Clifford Riesz不可直接限制sector。必须处理mark内部pair的wrong-occupancy singleton漏项，不能直接取消旧source_exponent的assert。最小纯helper观察：内部pair(01)、wholeD(0,2)，P标签empty给1、occupied给z；Q标签empty给0、occupied给1−z。wrongP原来zero但带source非zero，归一前p阶相消要先处理。该观察尚无新science或一般证明，先从此重建ordinary central局部展开/正确背景，再strongbridge/tail与selected完整bilocal。旧fulltrace完整四点已完成；bulk空间/质量及finiteG仍随后。
+
+以下为历史交接，以本节为先。
+
 ## 2026-11-08 本轮发布与探索交接
 
 用户本轮授权集中 Git 和回复 issue #1，范围为 polynomial-density 至 selected-state 四个已完成阶段，见[发布说明](notes/research-release-2026-11-08-selected-state.md)。本机回执目录为 tmp/publication-2026-11-08-selected-state；以下历史“无新 Git/issue”仅描述各阶段当时状态。

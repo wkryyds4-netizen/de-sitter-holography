@@ -1,0 +1,360 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,microtype,booktabs}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newcommand{\E}{\mathbb E}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\Wick}{\mathcal W}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\title{Ordinary charged fields at fixed half filling\\
+\large Fourier conditioning, internal contractions and the same-copy strong bridge}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{8 November 2026\quad Local research draft}
+\begin{document}\maketitle
+\begin{abstract}
+We extend the central-sector marked-source calculus to ordinary charged
+blocks with internal Gaussian contractions. Exact charge projection,
+with an integrable Fourier bound after singleton cancellation, subtracts
+$2\lambda(\sum_a i_a z_a)^2$ from the full-trace source exponent.
+Here $i_a$ counts internal chords in charged block a. This removes the
+shared charge fluctuation and establishes the ordinary-to-Wick strong
+bridge in every fixed finite central Schatten norm. Exact energy
+pinching and fixed polynomial preparation bounds then transfer each
+fixed ordinary coefficient to the single-selected state. Uniform tails
+of the actual infinite ordinary series remain to be established.
+\end{abstract}
+
+\section{Definitions and the missing conditioning step}
+Use standard CAR, a Hermitian overlapping complex Gaussian p-body
+Hamiltonian H with the same disorder in all fields, even N, m=N/2 and
+$\lambda_N=p^2/N\to\lambda>0$. Let $C_Q=\E H^2$, with sector value
+$C_m$, and $h_N=H_m/\sqrt{C_m}$. Use normalized annealed sector norms
+$\norm{X}_{r,m}=(\E\tr_m|X|^r)^{1/r}$. All degrees and source counts
+are fixed before N tends to infinity. Time uses dimensionless h units,
+with $\hbar=1$.
+
+The body loss and half-size maps are
+\[
+ DX=QX-\sum_i c_i^\dagger Xc_i,\qquad
+ \mathcal LX=\tfrac12\bigl(NX-\sum_i(c_i^\dagger Xc_i+c_iXc_i^\dagger)\bigr).
+\]
+They act before sector restriction. Disjoint charged D marks may now
+contain complete Gaussian pairs. Neutral L marks still have no internal
+pair in their actual marked subinterval. Larger Wick exclusions and
+Gaussian-chaos projections retain their actual regions.
+
+For a pairing $\pi$, let $i_a$ be the number of internal chords in
+charged mark a, and zero for an L mark. Put
+$I(z)=\sum_a i_a z_a$, with commuting $z_a^2=0$.
+The old charge-tilt formula on compact complex source domains
+\cite{tilt} suggests a conditional rule, but does not itself prove
+convergence at the single lattice charge m. Here we perform that
+projection explicitly, following the Fourier approach to fixed-charge
+complex SYK in \cite{bnr} and retaining the marked-source cancellations.
+
+\newpage
+\section{Exact singleton cancellation before Fourier projection}
+At one site write $n=c^\dagger c$, $\bar n=1-n$. The symmetric local
+body loss gives
+\[
+ (1-zD)n=(1-z)n,\quad
+ (1-zD)\bar n=\bar n+zn,\quad
+ (1-zD)c^{(\dagger)}=(1-z/2)c^{(\dagger)}.
+\]
+The second identity is crucial: an occupation with zero unmarked
+weight can acquire a pure source term. Thus an ordinary mark cannot
+be treated by deleting the no-internal-pair assertion from the pure
+Slater algorithm.
+
+For a Fourier angle $\theta$, use the normalized complex product trace
+with $\rho_\theta=e^{i\theta}/(1+e^{i\theta})$. An internal charged
+chord has the two singleton ratios
+\[
+ (1-z_a)(1+e^{i\theta}z_a)=1+(e^{i\theta}-1)z_a.
+\]
+Each label appears p times. The complete ideal singleton residual is
+\begin{equation}
+ \exp_{\rm nil}\{p(e^{i\theta}-1)I(z)\}.\label{singleton}
+\end{equation}
+Open endpoints cancel the $pd_a$ number source exactly; L singleton
+deficits cancel in the same way, without an internal-chord term.
+The scalar singleton normalization and the unmarked charge trace give
+\begin{equation}
+ [\cos(\theta/2)]^{N-2kp},\label{cosine}
+\end{equation}
+for k Gaussian chords. This factor must be kept until the extensive
+source terms have cancelled. It tends to a Gaussian after the change
+of variable $t=p\theta$.
+
+Let $F_{\pi,N}(\theta,z)$ denote the normalized contribution of this
+pairing to the full-Fock trace with
+$e^{i\theta(Q-N/2)}$ and the indicated deficit sources. Include
+$C_m^{-k}$ and the disorder normalization. Per chord, the combined
+label-count and source-free singleton normalization is
+\[
+ A_N=\frac{4^{-p}\binom Np^2}{\binom mp\binom{m+p}p}
+ \longrightarrow e^{-\lambda}.
+\]
+It is uniformly bounded; the remaining overlap factors are treated
+below. For every fixed real t,
+the normalized collision expansion gives, coefficientwise,
+\begin{equation}
+ F_{\pi,N}(t/p,z)\longrightarrow
+ e^{-t^2/(8\lambda)}
+ \exp_{\rm nil}\{\lambda K_\pi(z)+it I(z)\}.\label{local-limit}
+\end{equation}
+$K_\pi$ is the existing full-trace source exponent, including
+$K_\pi(0)=-4\operatorname{cr}\pi$ and any Gaussian-number shifts.
+To obtain \eqref{local-limit}, divide each overlap-site polynomial by
+its source-bearing singletons. On compact t intervals their
+coefficients tend to their half-occupation values. Fixed label-pair
+overlaps have uniformly bounded exponential moments, and triple
+memberships vanish after domination. Formula \eqref{singleton} tends
+to $e^{itI}$. This extends the previous one/two-source argument to any
+fixed source count: the coefficient norm merely acquires a fixed
+polynomial power in the total overlap count.
+
+\newpage
+\section{An integrable bound for the full Fourier interval}
+We give the missing bound that permits conditioning on a single charge.
+Let R be the sum of pairwise intersection sizes of the $2k$ independent
+p-set labels. For fixed k and every fixed positive a,
+\[
+ \sup_N\E e^{aR}<\infty.
+\]
+Indeed each pair overlap Y obeys
+$\E e^{aY}\le\exp[\lambda_N(e^a-1)]$ by its factorial moments;
+Holder handles their finite sum without assuming independence.
+
+Fix $0<\delta<\pi/2$ and r source variables. On $|\theta|\le\delta$,
+the singleton denominators have nonzero constant terms uniformly away
+from zero. At most $2R$ label memberships are missing from ideal
+singleton sites. After the exact cancellation in \eqref{singleton},
+all corrections from those missing sites and overlap-site matrices
+have coefficient norm at most
+\[
+ K(1+R)^r A^R.
+\]
+This follows by expanding the fixed-r nilpotent products: the local
+matrix maps have uniformly bounded coefficients, the number of
+non-singleton sites is at most R, and at most r marked factors may be
+chosen. No division by the possibly zero unmarked overlap numerator
+is used. The residual \eqref{singleton} adds at most
+$K(1+p|\theta|)^r$. Consequently each coefficient satisfies
+\begin{equation}
+ |[z_S]F_{\pi,N}(\theta,z)|
+ \le K(1+p|\theta|)^r|\cos(\theta/2)|^{N-2kp}.
+ \label{near}
+\end{equation}
+The overlap average has been absorbed into K. Constants here depend on
+the fixed diagram, r and a compact positive range of $\lambda_N$.
+For sufficiently large N, $N-2kp\ge N/2$, so under $t=p\theta$,
+\begin{equation}
+ |[z_S]F_{\pi,N}(t/p,z)|
+ \le K(1+|t|)^r e^{-t^2/(16\lambda_+)}.
+ \label{domination}
+\end{equation}
+
+For $\delta\le|\theta|\le\pi$, avoid complex singleton denominators.
+Every label configuration has support U at most $2kp$ sites. Loss
+on sites outside that support is zero because $D_iI=\mathcal L_iI=0$.
+Sites outside the support therefore contribute exactly a factor
+of modulus $|\cos(\theta/2)|^{N-U}$. Direct expansion of the r loss
+and number factors gives at most $Kp^r$ on the support. The normalized
+label count contributes at most $e^{Kp}$, since k is fixed. Thus
+\begin{equation}
+ |[z_S]F_{\pi,N}(\theta,z)|
+ \le Kp^r e^{Kp}|\cos(\theta/2)|^{N-2kp}.
+ \label{far}
+\end{equation}
+Its integral, even multiplied by p, tends to zero exponentially in N.
+Equations \eqref{domination} and \eqref{far} justify dominated
+convergence on the rescaled whole Fourier interval. This is stronger
+than compact-t convergence of a charge generating function.
+
+\newpage
+\section{The central source and the ordinary strong bridge}
+Exact half-charge extraction divides the integral of
+$F_{\pi,N}(\theta,z)$ by that of $\cos(\theta/2)^N$.
+Using \eqref{local-limit}--\eqref{far}, the limiting ratio is
+\begin{equation}
+ e^{\lambda K_\pi(z)}
+ \frac{\int_{\mathbb R}e^{-t^2/(8\lambda)}e^{itI(z)}\,dt}
+      {\int_{\mathbb R}e^{-t^2/(8\lambda)}\,dt}
+ =\exp_{\rm nil}\{\lambda[K_\pi(z)-2I(z)^2]\}.
+ \label{conditioned}
+\end{equation}
+The Gaussian integral is a finite polynomial identity in the sources.
+
+\begin{theorem}[Fixed central ordinary source]
+For every fixed admissible marked layout, the half-filled sector limit
+is given by the full-trace source with
+\[
+ K_{\pi,\mathrm{cen}}=K_\pi-4\sum_{a<b}i_ai_bz_az_b.
+\]
+All higher fixed central moments exist and are bounded along the
+double-scaling sequence. No source correction is added when a mark
+has no internal chords. Wick exclusions and chaos projections may
+be imposed before summing the finite set of diagrams.
+\end{theorem}
+
+For ordinary G sources, the explicit single-source coefficient is
+$-4\operatorname{cr}(O_a)-2i_a$, where $O_a$ is the open-chord set.
+The connected DD coefficient becomes
+$2b(b-1)-4\operatorname{cr}(B)$, with $B=O_1\cap O_2$, $b=|B|$.
+The former $4i_1i_2$ term is absent. L has zero internal count, so
+the DL and LL formulas retain their previous values.
+
+Normalize the actual ordinary field by the target-sector scalar:
+\[
+ G_{n,N}=C_m^{-n/2}
+ [p\mathcal N-D-\lambda_N\mathcal N(\mathcal N-1)]H^n|_m.
+\]
+Let $h^n=\sum_d a_{nd}(q)H_d^{(q)}(h)$, $q_N=e^{-4\lambda_N}$,
+$m_d(q)=q\partial_q\log[d]_q!$, and define
+\begin{align*}
+ g_n^{\rm cen}(h)&=\sum_d a_{nd}(q)
+     [-4\lambda m_d(q)-\lambda(n-d)]H_d^{(q)}(h),\\
+ J_{d,N}&=C_m^{-d/2}(dp-D)\Wick_d(H^d)|_m
+ -\lambda_N[d(d-1)-4m_d(q_N)]H_d^{(q_N)}(h_N).
+\end{align*}
+In the finite-N $g_n$ and $a_{nd}$ below use $q_N,\lambda_N$.
+Cutting a fixed internal matching leaves its original $q^{c_\gamma}$
+weight. Its remaining source is
+$\lambda[-4\operatorname{inv}\sigma-2i]$; its Mahonian average is
+$\lambda[-4m_d-2i]$. Subtracting $g_n^{\rm cen}$ thus leaves the
+pure J source. The same grouping applies to RR, RJ and JJ Gram terms
+on the same original disorder, exactly as in \cite{joint}, now with
+the central rule proved independently. Therefore, for fixed n,
+\begin{equation}
+ \left\|G_{n,N}-g_n^{\rm cen}(h_N)
+       -\sum_d a_{nd}(q_N)J_{d,N}\right\|_{2,m}\longrightarrow0.
+ \label{bridge}
+\end{equation}
+All fixed higher moments are bounded by the source theorem. Interpolation
+upgrades \eqref{bridge} to every fixed finite Schatten exponent;
+Holder permits fixed left/right energy powers. This is a same-copy
+strong statement, not equality of two marginal laws.
+
+\newpage
+\section{Actual pinching, selected preparations and a scalar calibration}
+The counterterm $g_n^{\rm cen}(h_N)$ commutes exactly with $h_N$.
+The preceding higher-Wick stage \cite{higher} established
+$\norm{\mathcal P_{h_N}J_{d,N}}_{r,m}\to0$ for every fixed d,r,
+using the central two-energy measure and its zero diagonal mass.
+Apply the contraction of exact pinching to \eqref{bridge}. Then
+\begin{equation}
+ \left\|(1-\mathcal P_{h_N})G_{n,N}
+       -\sum_d a_{nd}(q_N)J_{d,N}\right\|_{r,m}\longrightarrow0
+ \label{actual}
+\end{equation}
+for every fixed n and finite r. Complete degenerate energy blocks are
+retained; no long-time averaging limit is interchanged.
+
+For an existing fixed-degree stabilizer-covariant preparation $P_NO$
+with bounded norm, the orbit-density estimate \cite{prep} gives
+\[
+ \E\norm{X_NP_NO}^2\le C_P\norm{X_N}_{4,m}^2.
+\]
+Thus \eqref{actual} holds on such selected preparation vectors.
+Polarization, higher moments and trace Holder transfer any fixed
+covariant block between polynomial preparations. Fixed real h-time
+phases are handled by the already summable Gaussian energy Taylor
+tails. In particular, all fixed ordinary charged truncations now have
+an actual, exactly pinched selected-state limit. The limit uses the
+charged Wick tower's density $f(h)=1-\sqrt q+\sqrt q\,h^2$.
+
+An exact finite-N check exposes the role of internal contractions.
+For m=N/2 the covariance ratio is
+\[
+ \frac{C_{m-1}}{C_m}
+ =\frac{(m-p)(m+p+1)}{m(m+1)},\qquad
+ \frac{\E G_{2,N}^{\rm unnormalized}}{C_m}
+ =m\left(\frac{C_{m-1}}{C_m}-1\right)
+ =-\frac{p(p+1)}{m+1}=:b_{N,p}.
+\]
+This tends to $-2\lambda$. At n=2 the full difference in
+\eqref{bridge} is exactly the deterministic scalar
+$(b_{N,p}+2\lambda_N)I$, since $Z_2|_m/C_m=h_N^2-1$.
+For $N=4p^2$,
+\[
+ b_{N,p}+2\lambda_N=\frac{1-2p}{4p^2+2}\longrightarrow0.
+\]
+Two separately internal G2 blocks have a central diagram weight
+$4\lambda^2$. Their full-trace weight is $4\lambda^2+4\lambda$.
+The difference is the shared charge variance removed by
+\eqref{conditioned}; deleting it without a charge-conditioning
+argument would have been unjustified.
+
+This closes the fixed-degree ordinary strong bridge. The full selected
+bilocal also needs a uniform finite-N bound on the tail as n grows.
+The constants in \eqref{near} depend on the fixed diagram and cannot
+be used as such a bound. The known full-Fock Clifford Riesz estimate
+\cite{belp} does not automatically apply to fixed-charge trace.
+Neither the Fourier argument nor preparation-density bounds authorize
+interchanging the infinite ordinary sum with the N limit.
+
+\newpage
+\section{Finite evidence and continuation}
+Three fresh outputs support separate parts of the construction.
+The exact algebra checker verifies 2,186 nilpotent Fourier transforms,
+20 energy regressions, 96 RR/RJ/JJ Gram equalities across 32 layouts,
+two nonzero full-versus-central G2 gaps, and five finite-N G2 scalar
+bridges. It also saves 30 exact conditional-singleton coefficients
+at $N=4p^2$, $p=16,32,64,128,256$, including their finite-size errors.
+
+The first checker had a coverage defect: its requested two-mark
+local loop generated no cases. That output is retained and supplies
+no local-source coverage. A separate checker explicitly enumerates
+the intervals and requires positive coverage. It verifies 3,496
+two-source, 459 three-source and 1,265 four-source cases against the
+unrestricted-site matrix source engine, preserving 1,380 cases with
+internal pairs and 4,010 negative nonconstant coefficients.
+
+For disjoint singleton supports, set $L=N-2kp$ and take r internal
+source counts $i_1,\ldots,i_r$. The exact normalized half-charge
+coefficient is
+\[
+ \frac{p^r\prod_a i_a}{\binom L{L/2}}
+ \sum_{j=0}^r(-1)^{r-j}\binom rj\binom L{L/2-j}.
+\]
+It tends to zero for odd r and to
+$(-4\lambda)^{r/2}(r-1)!!\prod_a i_a$ for even r. This isolates the
+conditioning factor; it is not the complete interacting diagram with
+overlap corrections. An independent Fourier quadrature checks ten
+finite systems against these exact rational values at 60 and 90
+decimal digits. A Gaussian incomplete-integral bound controls the
+omitted $|t|>16$ interval. Quadrature and roundoff are assessed by
+precision comparison, not interval certification.
+
+The next task is the central finite-N ordinary degree tail. Sectorwise
+pure-Wick tagged bounds and covariance CP estimates remain available;
+the Riesz-dependent product step needs replacement or another uniform
+argument. The existing full-trace bilocal four-point result is not
+being redone. Spatial/mass generators and finite-G dynamics remain
+open. No new external publication is made in this stage.
+
+\begin{thebibliography}{9}
+\bibitem{bnr} M. Berkooz, V. Narovlansky and H. Raj,
+\emph{Complex Sachdev--Ye--Kitaev model in the double scaling limit},
+\href{https://arxiv.org/abs/2006.13983}{arXiv:2006.13983v2},
+Section 5, especially (5.2)--(5.5).
+\bibitem{tilt} Alan Day and Chengheng, \emph{Joint charge tilt},
+local proof, 7 November 2026;
+\texttt{susskind-memory-charge-tilt-proof.md}.
+\bibitem{joint} Alan Day and Chengheng, \emph{Joint memory regression},
+local proof, 7 November 2026, Sections 3--5;
+\texttt{susskind-memory-joint-regression-proof.md}.
+\bibitem{higher} Alan Day and Chengheng, \emph{One selected state for
+higher Wick descendants}, local draft, 8 November 2026.
+\bibitem{prep} Alan Day and Chengheng, \emph{Fixed polynomial Slater
+preparations}, local draft, 8 November 2026.
+\bibitem{belp} L. Ben Efraim and F. Lust-Piquard,
+\emph{Poincare type inequalities on the discrete cube and in the CAR algebra},
+\href{https://arxiv.org/abs/math/0702233}{arXiv:math/0702233v1},
+Section 6.4, Theorem 6.8.
+\end{thebibliography}
+\end{document}

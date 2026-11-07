@@ -1,5 +1,21 @@
 # de Sitter 全息研究
 
+## 2026-11-08 集中快照：高阶 Wick 与固定电荷归约
+
+本次按用户要求集中发布 higher-wick 和 central-ordinary 两个阶段，附两份六页 PDF、LaTeX、代码与封存证据，见[发布说明](notes/research-release-2026-11-08-central-ordinary.md)。当前结果覆盖固定次数的实际场归约；下一步是中央电荷扇区的全次数统一尾界，再接完整 selected 双局域。下文“本地”“未 Git”保留各阶段记录时点的含义。
+
+## 当前进展：普通带电场的固定电荷强桥（2026-11-08，本地）
+
+[六页 PDF](output/pdf/de-sitter-susskind-central-ordinary.pdf)、[LaTeX](manuscript/susskind-central-ordinary/main.tex)、[中文证明](notes/susskind-central-ordinary.md)及[来源接口](literature/susskind-central-ordinary-sources.md)已保存。有限 N Fourier 投影和完整积分支配给含内部 Gaussian 收缩的中央源 K_cen=K_full−2(Σi_a z_a)²，移除共同电荷方差。普通 G_n 与 Wick 后代的 same-copy 强归约已在任意固定次数和有限 Schatten 阶接通，继而传到逐样本 exact pinching 与 selected 多项式制备。
+
+2186 Fourier 系数、96 Gram 等式、5220 个独立局部源案例及有限 N 校准已核；首枚举零覆盖缺口原样记录，补充检查单独保存。[证据清单](results/susskind-central-ordinary/local-evidence.json)绑定三份科学输出、15当前/127父科学文件与六页编译渲染。下一步实际普通级数的中央统一尾界。本轮仅本地，未新增 Git/issue。
+
+## 当前进展：高阶 Wick 后代的共同选态（2026-11-08，本地）
+
+[六页 PDF](output/pdf/de-sitter-susskind-slater-higher-wick.pdf)、[LaTeX](manuscript/susskind-slater-higher-wick/main.tex)、[中文推导](notes/susskind-slater-higher-wick.md)及[前驱接口](literature/susskind-slater-higher-wick-sources.md)已完成。四端点压缩将任意固定长度的 disjoint whole-Wick D/L 标记、neutral 子块与整体 chaos 投影归入有限局部代数；单选态密度继续成立，整个 charged Wick 塔的限制态均为 f(h)=1−√q+√q h²。已有 charged 两能量谱因此直接接到 central-sector 与 selected 的逐阶 exact pinching。
+
+248 个局部 layout 的完整源恒等式、30 个高阶密度例及 18 个旧接口比较已精确通过；六页双遍编译、逐页检查，[证据清单](results/susskind-slater-higher-wick/local-evidence.json)核12当前/114父科学文件。下一步普通内部 Gaussian pair 的 central 强桥和实际全次数尾；本轮仅本地，集中发布 b6b2a45 与 issue 回复已在上一轮完成。
+
 ## 2026-11-08 集中快照：选态密度与曲率动力学
 
 按本轮要求集中发布 polynomial-density、composite、composite-transfer、selected-state 四个阶段，附四份已编译 PDF、LaTeX 与封存证据。[阅读入口与发布范围](notes/research-release-2026-11-08-selected-state.md)。下文“本地”“未 Git”保留各阶段记录时点的含义。后续研究接高阶双局域后代及固定电荷扇区的一致时间尾。
