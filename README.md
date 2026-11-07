@@ -1,5 +1,15 @@
 # de Sitter 全息研究
 
+## 2026-11-08 集中快照：固定电荷尾与协方差展开
+
+本次按用户要求集中整理[八页梯度尾稿](output/pdf/de-sitter-susskind-sector-gradient-tail.pdf)与[四页协方差展开稿](output/pdf/de-sitter-susskind-sector-covariance-tangent.pdf)，LaTeX、代码和封存证据见[发布说明](notes/research-release-2026-11-08-sector-tangent.md)。新增直接展开将固定次数的实际 A_v 接到局域大小缺额，保留有限 N 系数并给 O(p^-1) 误差。下一步处理复合后代的 covariance 筛选、完整中性场及 memory/bilocal 返回。完整 selected 双局域和体字典仍未完成。下文“本地”保留各阶段记录时点的含义。
+
+## 当前进展：固定电荷 ordinary 时间尾（2026-11-08，本地）
+
+[八页 PDF](output/pdf/de-sitter-susskind-sector-gradient-tail.pdf)、[LaTeX](manuscript/susskind-sector-gradient-tail/main.tex)、[中文推导](notes/susskind-sector-gradient-tail.md)与[来源接口](literature/susskind-sector-gradient-tail-sources.md)已保存。归一电荷通道的行列梯度主项收缩、分次导数的半单位移位和矩形 CP 乘积估计，给中央 O(p) 电荷窗口内实际 ordinary 系数的统一阶乘包络。上一阶段逐阶强桥因此可解除时间级数截断，并传入已控制的固定多项式制备与 exact pinching。
+
+新增8692个分次 CAR 精确等式通过；另继承上一轮通道检查，未重跑旧输出。八页双遍编译并逐页目检，[证据清单](results/susskind-sector-gradient-tail/local-evidence.json)核13当前/143父科学文件。下一步完整 selected 双局域的中性滤波与记忆返回扇区接口；完整体字典、finite-G仍开放。本阶段仅本地，集中发布261a31a及issue回复已在上一轮完成。
+
 ## 2026-11-08 集中快照：高阶 Wick 与固定电荷归约
 
 本次按用户要求集中发布 higher-wick 和 central-ordinary 两个阶段，附两份六页 PDF、LaTeX、代码与封存证据，见[发布说明](notes/research-release-2026-11-08-central-ordinary.md)。当前结果覆盖固定次数的实际场归约；下一步是中央电荷扇区的全次数统一尾界，再接完整 selected 双局域。下文“本地”“未 Git”保留各阶段记录时点的含义。

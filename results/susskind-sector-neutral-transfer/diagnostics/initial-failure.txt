@@ -1,0 +1,1 @@
+First exact checker failed at N=3, X=|0><0|, p=1, m=1, b=1/2. Inspection showed an empty math.prod returned integer 1 and division by denominator produced a float. No scientific output was written. Fix: seed every possibly-empty rational product/sum with Fraction(1)/Fraction(0).

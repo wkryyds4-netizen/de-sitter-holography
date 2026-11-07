@@ -1,5 +1,11 @@
 # de Sitter 全息研究规划
 
+2026-11-08 covariance-tangent 子阶段：对既有 CP telescope 的每一前缀再展开，得到零参考因子也有效的有序二次余项。pure repeated deficits 给固定 v 的 A_v→4lambda_N C_m theta_v(vp−L)Z_v，误差 O(p^-1)，不宣称次数一致。四页 PDF/精确检查/manifest 已封存。本轮按用户授权集中 Git 并回复 issue；日常低频约定不变。下一步核旧 neutral-marked-series 在 compact central window 的 rank slope/graph tail，将复合 eta 的 covariance 筛选接到局域后代，再处理 exact pinching、实际 memory 返回。完整中性场尚未在本阶段封闭。
+
+2026-11-08 sector-gradient-tail阶段：归一t/s的梯度恒等式和行列Schwarz给无K^ell膨胀的CP路径界；graded partial的1/2移位保留pure tags的双标签条件，得到sqrt(p)梯度包络。normalized-trace矩形CP Holder控制ordinary乘积，实际A_v/eta_j递推与inverse Jacobi重组现已给O(p)中央窗口的一致次数尾。下一首任务转为actual neutral/filter及memory-return的sector强接口，再组成完整selected bilocal。先核旧compact-charge证明和新CP telescope能否直接给A_v的local-size强极限，避免重复旧rank计算；若用候选直接法必须给出精确系数和误差。八页PDF/两科学输出/manifest已封存，长期goalactive；本轮不Git或issue。
+
+2026-11-08 发布后探索：归一 CP 通道的候选梯度恒等式已通过 N=3..6 的非自伴有限 CAR 精确检查，主项行列 Schwarz 与 Schatten 收缩通过数值诊断。下一步写一般证明并攻 pure marked-Wick 梯度的 sqrt(p) 统一包络，再向 A_v、eta_j 和实际 ordinary 全次数尾传播；此处尚未形成新的完整尾界阶段。新检查仅本地，集中发布261a31a与issue回复6712037243已完成。
+
 2026-11-08 本轮集中发布 higher-wick 与 central-ordinary 两个已完成阶段，按用户要求回复 issue #1；日常低频 Git 约定不变。科研下一步仍为中央扇区全次数尾：先验证归一 CP 通道的精确梯度恒等式及逐扇区行列平方函数界，再处理纯 Wick 标记梯度、ordinary recurrence 与实际级数求和。候选路线尚未形成定理；旧封存科学输出不重跑、不改写。
 
 2026-11-08 central-ordinary 阶段：用精确charge Fourier投影、消去extensive singleton后的近区Gaussian支配及远区support界，补齐普通内部pair的central源。Kcen=Kfull−2I²给fixeddegree同J RR/RJ/JJ强桥，任意fixedS_r及exactpinching/selectedpreps接口完成。下一首任务收窄到真正尚缺的degreeuniform actual中央尾；旧charged-proof §4 Riesz cross-product与force Gram步骤需逐sector替代。pure/repeated tags、CP路径及A_v、DA_v/p、LA_v/p已有逐sector工具，不重做fixeddegree强桥。六页稿/三science/manifest封存，goalactive，仅本地。

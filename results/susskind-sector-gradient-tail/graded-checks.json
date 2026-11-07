@@ -1,0 +1,78 @@
+{
+  "status": "passed",
+  "counts": {
+    "matrix_units": 340,
+    "graded_derivative_commutators": 5008,
+    "repeated_shift_identities": 840,
+    "normal_monomial_euler": 340,
+    "normal_monomial_deletions": 2504,
+    "nonzero_deletions": 1252
+  },
+  "rows": [
+    {
+      "N": 1,
+      "counts": {
+        "matrix_units": 4,
+        "graded_derivative_commutators": 16,
+        "repeated_shift_identities": 84,
+        "normal_monomial_euler": 4,
+        "normal_monomial_deletions": 8,
+        "nonzero_deletions": 4
+      }
+    },
+    {
+      "N": 2,
+      "counts": {
+        "matrix_units": 16,
+        "graded_derivative_commutators": 128,
+        "repeated_shift_identities": 168,
+        "normal_monomial_euler": 16,
+        "normal_monomial_deletions": 64,
+        "nonzero_deletions": 32
+      }
+    },
+    {
+      "N": 3,
+      "counts": {
+        "matrix_units": 64,
+        "graded_derivative_commutators": 768,
+        "repeated_shift_identities": 252,
+        "normal_monomial_euler": 64,
+        "normal_monomial_deletions": 384,
+        "nonzero_deletions": 192
+      }
+    },
+    {
+      "N": 4,
+      "counts": {
+        "matrix_units": 256,
+        "graded_derivative_commutators": 4096,
+        "repeated_shift_identities": 336,
+        "normal_monomial_euler": 256,
+        "normal_monomial_deletions": 2048,
+        "nonzero_deletions": 1024
+      }
+    }
+  ],
+  "parameters": {
+    "N": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "repeated_deficits_max": 3,
+    "all_matrix_units": true,
+    "all_normal_monomials": true
+  },
+  "environment": {
+    "python": "3.14.5",
+    "numpy": "2.4.6",
+    "arithmetic": "exact int64; doubled D_g/L_g maps"
+  },
+  "max_observed_integer": 864,
+  "input_sha256": {
+    "code/check_sector_graded_gradient.py": "5b04c2e8307fa55cfac36efe64d5a19e81cf413bf5b6dc3255566aef5c07ad3c"
+  },
+  "scope": "Exact graded CAR derivation commutators, half-unit deficit shift and membership-preserving monomial deletion. Does not numerically establish degree-uniform Gaussian estimates."
+}

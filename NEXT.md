@@ -1,5 +1,42 @@
 # 下一次从这里继续
 
+## 最新继续位置：2026-11-08 covariance-tangent 与集中发布
+
+先读[四页 PDF](output/pdf/de-sitter-susskind-sector-covariance-tangent.pdf)、[LaTeX](manuscript/susskind-sector-covariance-tangent/main.tex)、[中文笔记](notes/susskind-sector-covariance-tangent.md)和[本轮发布说明](notes/research-release-2026-11-08-sector-tangent.md)。本轮用户授权 Git 和 issue 回复；具体回执记本机 journal 与 tmp/publication-2026-11-08-sector-tangent。长期 goal active。
+
+- 精确二次 telescope 已正式写出。路径外到内为 t^p s^p；一次权重 product_(h≠j)a_h/d_j；二次为 i<j、product_(h>i,h≠j)a_h/(d_i d_j) 乘 K_1...K_(i−1)Delta_i Delta_j X。完整族上作用后限制，不交换 deficit 次序；参考因子零时用乘积式，不除 theta/a。
+- b=vp、固定 v,r、|m−N/2|≤L0p：zeta_T,zeta_S=2lambda_N+O(p^-1)，p binom(2p,2)/d_min²=O(p^-1)。继承 pure repeated2 得 A_v−4lambda_N C_m theta_v(vp−L)Z_v=O(p^-1)。不能把有限参数换极限后保留相同误差率。
+- 科学输出仍在 results/susskind-sector-neutral-transfer/tangent-checks.json，SHA 2bcc489f4dd8a5d81d0c0a77f6de4a16af81997be506247dc282113e30989e1c；96 matrix units、1824 path、1824 bounds、608 zero-reference、60 scalar。成功 checker 不重跑；初空乘积类型错误已保留。纯 helper code/sector_covariance_tangent.py 可安全 import。
+- 新子阶段 manifest results/susskind-sector-covariance-tangent/local-evidence.json SHA ffcab40784a57edb877a209f83d3d9f3d6e964471e327708c94d6612cb0e3758；13 当前、160 父科学文件核对；四页双遍、逐页检查、编号修正后复检。旧 gradient manifest 不改。
+- 下一首任务是 T_j=A_j+(Ctheta_j−Phi)eta_j 的第二项。不要因 A_j 直接桥成立就断言 Phi 对 composite local fields 等于 Ctheta(Ncal)，它们含低 coupling chaos。旧 neutral-marked-series 的 graph norm、Racah sixth-moment 和 rank slope 是在 compact central window 内先证明再 fulltrace 汇总；需要逐项读取其输入并落成 sector 论证。先 L2 actual→rank proxy，再 fixed-degree rank→size，实际/local 高范数和尾允许插值；不要求 rank proxy 高 Schatten。
+- 中性 selected functional 必须保留 W 边界项：sigma1(B)=[1−s(1+lambda)]tau(B)+s tau((h−W)B(h−W))，s=sqrt(q)。只在 D-only 子代数可用 1−s+s h²。保留 string-time 与 h-time 区别、有限 alpha_m 与 m epsilon_m/p，随后 exact pinching/实际 memory→A+B/双局域返回逐项核。上述完整 neutral transfer 尚未在本稿中宣布完成。
+
+以下为历史继续位置。
+
+## 最新继续位置：2026-11-08 sector-gradient-tail（本地）
+
+先读[八页PDF](output/pdf/de-sitter-susskind-sector-gradient-tail.pdf)、[完整LaTeX](manuscript/susskind-sector-gradient-tail/main.tex)、[中文推导](notes/susskind-sector-gradient-tail.md)、[来源接口](literature/susskind-sector-gradient-tail-sources.md)与journal/2026-11-08-susskind-sector-gradient-tail.md。前一轮发布+有限检查为progress，本轮一般证明和统一尾也为progress。长期goalactive，无活跃进程；本轮无新Git/issue，上一批261a31a/6712037243已完成。
+
+- **已完成**：same-J standardCAR、lambda_N在正紧集、normalized annealed sector Schatten；Y_i=[c_i,X]同时保留row/column与X†。t/s主项平方函数因子分别sqrt((m−1)/m)、sqrt((N−m)/(N−m+1))，中央区路径g(PX)≤supg(X)+8ell/sqrtN sup||X||。scalar差分有sqrtN，未丢失。
+- **pure-gradient关键**：[partial,D_g]=[partial,L_g]=partial/2，故partial product(np−T)Z_n=product(np−1/2−T_g)partial Z_n。先梯度删除一个原字母，再重复tag，membership不丢。2r矩中A个taggedsites/B个gradient-onlysites给lambda^A p^B，B≤r，得sqrtp(n+1)^(2k+1)L^n sqrt(n!)。有限检查不代替此一般证明。
+- **产品/实际递推**：矩形CP的normalized adjoint带d_source/d_target；固定阶CP Holder避免I_N tensor X的维数漏项，g_s(XY)用4s阶而非沿degree反复翻倍。A_v梯度、旧D/L导数、普通H幂和两层完全展开eta recurrence给统一包络；inverse Jacobi差分保留1+|X_N|。最终G_n=C_m^(-n/2)[pNcal−D−lambda_N Ncal(Ncal−1)]H^n|m，在|m−N/2|≤L0 p有poly(n)L^n sqrt(n!)界。不能扩大为整个macroscopic charge区相同常数。actual时间尾、fixedenergyweights/derivatives、exactpinching、已有fixedpolynomialpreps/covblock现可接。
+- **科学证据**：旧channel结果SHA255d2ef0993c3b073cd9eab3d7900f9ba7ebc88626b1051dfb1afc3f1b0a087f保持。新code/check_sector_graded_gradient.py与results/susskind-sector-gradient-tail/graded-checks.json首次成功，SHA719fd3b024e20edb89212a220c58ff15a3af9888c6d25fb9ec7715652f8bb65c；340matrixunits/340normalmonomials，5008commutators、840repeatedshifts、340Euler、2504deletions（1252非零），共8692等式。整数doublemaps，非Gaussian ensemble仿真。成功driver/recorder不可重跑。
+- **PDF/manifest**：八页双遍/90dpi全目检，无undefined/overfull。首mathscr未定义和随后Jacobi长式溢出日志保留，修为mathcal及拆行。manifest SHA6a4543be7dfb804201ceeee2e2e27b96ea908c1bd6c3f5f26aee6c1a17d7c15e核13current/143parent；科学和manifest封存。
+- **下一首任务**：完整selected bilocal的neutral/rank/filter及memory-return sector audit。已读full-four-point-transfer §§3/5、neutral-marked-series、wick-descendants和operator-draft §§6–9。actual中性T_j=A_j+(Ctheta_j−Phi)eta_j的高范数尾本来逐sector，由本轮eta包络也能直接继承；真正先核fixeddegree actual→local与无对角谱/central pinching，然后finiteN memory→A+B以及bilocal返回。旧neutral-marked-series先在|m−N/2|≤Xp论证再用binomial补全，须检查其中每个Racah/rank输入是否确实逐sector。
+- **可选直接切口（尚未证明）**：对fixed v，(A) telescope内每个E_h=Delta_DZ_v或Delta_barDZ_v，再沿P_h用同一vp参考因子展开；repeatedpure2界可能令P_hE_h与scalar-path×E_h相差O(p/N)。若把两类精确系数都算清，预计A_v−4lambda_N C_m theta_v(vp−L)Z_v在中央fixedv的S_r趋0，可绕开这一处rank桥。还须处理Phi作用于eta局域后代的chaos筛选接口，不能仅由A_v一项宣布中性全场完成。此切口只有分析思路，无新计算输出。随后才空间/质量生成元和finiteG。
+
+以下为历史继续位置。
+
+## 最新继续位置：2026-11-08 CP 梯度有限检查（本地探索）
+
+本轮集中发布已完成：commit 261a31ac806c3cf783226bbb6f05b6c1c123a821，远端 main 已由 API 核对；[issue 回复](https://github.com/wkryyds4-netizen/de-sitter-holography/issues/1#issuecomment-6712037243)已发出并回读全文一致，issue 保持 open。33 个发布文件、167 个保存证据文件核对通过；后续探索不再 Git。
+
+新增 code/check_sector_cp_gradient.py 已首次运行成功，results/sector-cp-gradient/finite-car-checks.json SHA256=255d2ef0993c3b073cd9eab3d7900f9ba7ebc88626b1051dfb1afc3f1b0a087f。N=3..6，每 N 三组非自伴整数中性块及其转置：1032 梯度等式、216 unital/normalized-trace 等式精确通过；独立任意矩形数组的168个主项PSD检查、324个Schatten收缩检查为浮点容差检查。边界 t_0=s_N=0 仅用于有限恒等式，内部区间才用于收缩路径。成功输出和脚本不重跑、不覆盖；未检验整个 CP 路径、marked-Wick 梯度或 ordinary 无穷尾。
+
+下一步先把下节候选 T/S 恒等式及主项行列 Schwarz 界写成一般证明，控制归一 sector trace 的方向与相邻维数。其后证明纯 repeated-marked Wick 梯度的 sqrt(p) 阶乘包络，再经有限 CP 路径、A_v/eta_j 递推接 central ordinary 统一尾。详细推导位置与未完成事项见 journal/2026-11-08-central-ordinary-publication-and-gradient.md。当前无活跃计算，长期 goal active；完整 selected bilocal 的 neutral/rank/memory-return 接口仍须后续逐项核。
+
+以下发布准备段保留其时点含义，以本节为准。
+
 ## 2026-11-08 本轮发布与梯度路线交接
 
 用户重新授权 Git 和 issue 回复，本次范围为 higher-wick 与 central-ordinary，见[发布说明](notes/research-release-2026-11-08-central-ordinary.md)；回执保存在本机 tmp/publication-2026-11-08-central-ordinary。下方“不重复发布”指此前 b6b2a45 批次。当前没有新的梯度科学输出，也没有活跃计算。

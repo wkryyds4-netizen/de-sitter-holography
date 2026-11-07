@@ -1,0 +1,546 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,microtype,booktabs}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newcommand{\E}{\mathbb E}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\Wick}{\mathcal W}
+\newcommand{\Ncal}{\mathcal N}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\Hh}{\mathcal H}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\title{Fixed-charge gradients and the ordinary charged tail\\
+\large CAR channel identities, marked Wick estimates and finite-time summation}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{8 November 2026\quad Local research draft}
+\begin{document}\maketitle
+\begin{abstract}
+We replace the full-Fock Riesz step in the ordinary charged-tail argument
+by estimates on adjacent charge sectors. Normalized up/down channels
+contract the principal row and column gradient terms; their remainders
+accumulate linearly along a channel path. A graded derivative shifts
+each body/size deficit by one half. This gives a direct marked-Wick
+gradient estimate with a square-root-p cost, uniform in polynomial
+degree. A rectangular completely positive map estimate controls
+products at fixed Schatten orders. The actual covariance residual and
+forced Jacobi recurrence then yield a finite-N, degree-uniform ordinary
+tail in a central charge window. Combined with the previous fixed-degree
+half-filling bridge, this permits finite-time summation in the
+previously controlled polynomial preparations.
+\end{abstract}
+
+\section{Model, norms and statement}
+Use standard CAR, $\{c_i,c_j^\dagger\}=\delta_{ij}$, and
+$\Hh_m=\wedge^m\mathbb C^N$, $d_m=\binom Nm$. The Hermitian Gaussian
+overlapping p-body Hamiltonian is the same common-disorder model as
+in the preceding drafts. Its directed coefficients are
+$A_{IJ}=\sqrt{w_N}C_I^\dagger C_J$, $|I|=|J|=p$, with covariance
+\[
+ C_m I=\E H_m^2,\qquad C_m=w_N\binom mp\binom{N-m+p}p.
+\]
+Take even N, $\lambda_N=p^2/N\in[\lambda_-,\lambda_+]\subset(0,\infty)$,
+and fixed energy normalization $J_s>0$. Along the double-scaling
+sequence p tends to infinity. Covariances are bounded above by $C_*$
+on all sectors and bounded below on $|m-N/2|\le L_0p$ for each fixed
+$L_0$, by the binomial estimates in \cite{operator}.
+All norms include Gaussian expectation:
+\[
+ \norm{X}_{s,m}=(\E\tr_m|X|^s)^{1/s},\qquad
+ \tr_m=d_m^{-1}\operatorname{Tr}_{\Hh_m}.
+\]
+On neutral block families put
+\[
+ TX=\sum_i c_i^\dagger Xc_i,\quad SX=\sum_i c_iXc_i^\dagger,
+ \quad D=Q-T,\quad \bar D=N-Q-S,\quad L=(D+\bar D)/2.
+\]
+Loss acts on the full family before restriction. $\Ncal$ is the
+coupling Gaussian number, not body degree; $Z_n=\Wick_n(H^n)$ is top
+coupling chaos. Fixed-charge ensembles have the established background
+of \cite{bnr}; the present finite-N bounds concern this specific model.
+
+\begin{theorem}\label{thm:tail}
+For fixed finite s and $L_0$, constants $K_s,L_s,b_s$ independent of
+N and n satisfy
+\begin{align}
+ G_{n,N;m}&=C_m^{-n/2}
+ [p\Ncal-D-\lambda_N\Ncal(\Ncal-1)]H^n\big|_{\Hh_m},\nonumber\\
+ \sup_{|m-N/2|\le L_0p}\norm{G_{n,N;m}}_{s,m}
+ &\le K_s(n+1)^{b_s}L_s^n\sqrt{n!}.\label{eq:main}
+\end{align}
+$C_m$ here is a fixed target scalar applied after loss. For finite S,
+the actual series $G_N(t)=\sum_{n\ge0}(it)^nG_{n,N;m}/n!$ has tail
+\[
+ \sup_N\sup_{|t|\le S}
+ \norm{G_N(t)-\sum_{n\le K}(it)^nG_{n,N;m}/n!}_{s,m}
+ \le K_s\sum_{n>K}\frac{(n+1)^{b_s}(L_sS)^n}{\sqrt{n!}}
+ \longrightarrow0. \tag{T}
+\]
+Time uses dimensionless $h=H_m/\sqrt{C_m}$ units and $\hbar=1$.
+Finitely many initial N are absorbed in the constants.
+\end{theorem}
+
+The fixed-degree half-filling bridge is in \cite{central}. The
+full-Fock Clifford estimate of \cite{belp}, Theorem 6.8, is not a
+fixed-charge theorem; we do not restrict it to a sector. We use
+the earlier pure-tag and covariance identities
+\cite{diagram,operator,charged}, with their sectorwise bounds,
+and supply the missing gradient and product estimates.
+
+\section{Adjacent-sector gradients and channel transport}
+Put $Y_{i,m}(X)=[c_i,X]_m:\Hh_m\to\Hh_{m-1}$ and
+\[
+ g_s^C(X;m)=\norm{(\sum_iY_{i,m}^\dagger Y_{i,m})^{1/2}}_{s,m},
+ \qquad
+ g_s^R(X;m)=\norm{(\sum_iY_{i,m}Y_{i,m}^\dagger)^{1/2}}_{s,m-1}.
+\]
+Let $g_s$ be the maximum of both quantities for X and $X^\dagger$.
+Raising derivatives are covered by adjoints. Interval suprema
+include the neighboring sectors of their edges. We work at $s\ge2$;
+higher even orders imply other fixed orders by monotonicity.
+
+The channels $(tX)_k=(TX)_k/k$, $(sX)_k=(SX)_k/(N-k)$ are unital
+and preserve normalized sector trace, by cyclicity and
+$d_{k-1}/d_k=k/(N-k+1)$. Thus they contract every Schatten order,
+also after Gaussian averaging. The channel s and norm exponent s
+are distinguished by context.
+
+\begin{lemma}\label{lem:channel}
+On an interior edge $m\to m-1$, with $d=N-m+1$,
+\begin{align}
+ [c_i,tX]_m&=-\frac1m\sum_jc_j^\dagger Y_{i,m-1}(X)c_j
+       +\frac1m(X-tX)_{m-1}c_i,\label{eq:tgrad}\\
+ [c_i,sX]_m&=-\frac1d\sum_jc_jY_{i,m+1}(X)c_j^\dagger
+       +\frac1d c_i(sX-X)_m.\label{eq:sgrad}
+\end{align}
+The principal terms contract both row and column square-function
+norms with factors $\sqrt{(m-1)/m}$ and $\sqrt{(d-1)/d}$.
+\end{lemma}
+\begin{proof}
+CAR gives $[c_i,TX]=Xc_i-\sum_jc_j^\dagger[c_i,X]c_j$ and
+$[c_i,SX]=-c_iX-\sum_jc_j[c_i,X]c_j^\dagger$.
+The left/right normalized denominators are m and $m-1$ for T,
+and $d-1$ and d for S. Keeping them distinct gives the identities.
+
+For arbitrary $Y_i:\Hh_{m-1}\to\Hh_{m-2}$, let
+$P_i=\sum_jc_j^\dagger Y_i c_j$,
+$Q_C=\sum_iY_i^\dagger Y_i$, $Q_R=\sum_iY_iY_i^\dagger$.
+Row/column operator Cauchy--Schwarz gives
+\[
+ \sum_iP_i^\dagger P_i\le(m-1)TQ_C,\qquad
+ \sum_iP_iP_i^\dagger\le mTQ_R.
+\]
+The first T targets m and the second targets $m-1$. After division
+by $m^2$, both yield $(m-1)/m$ times normalized t. For
+$Y_i:\Hh_{m+1}\to\Hh_m$ and $P_i=\sum_jc_jY_i c_j^\dagger$,
+\[
+ \sum_iP_i^\dagger P_i\le dSQ_C,\qquad
+ \sum_iP_iP_i^\dagger\le(d-1)SQ_R.
+\]
+After division by $d^2$, both yield $(d-1)/d$ times normalized s.
+Positivity, Schatten monotonicity, and channel contraction at order
+$s/2$ prove the bounds. The proof also applies to $X^\dagger$.
+\end{proof}
+
+For the remainder $U_{m-1}c_i/m$, the column and row norms are,
+respectively, bounded by
+\[
+ m^{-1/2}\norm U_{s,m-1},\qquad
+ \sqrt{N-m+1}\norm U_{s,m-1}/m,
+\]
+with equality in the row expression. For $c_iV_m/d$ they are
+$\sqrt m\norm V_{s,m}/d$ and at most $\norm V_{s,m}/\sqrt d$.
+These follow by summing the Gram matrices before taking norms.
+On $[N/4,3N/4]$, each step therefore adds at most
+$8N^{-1/2}\sup\norm X_s$, since $U=X-tX$, $V=sX-X$.
+For a normalized path P of length $\ell$, all of whose required
+edges and sectors stay in that interval, induction gives
+\[
+ g_s(PX;m)\le\sup_{\rm reachable}g_s(X)
+   +\frac{8\ell}{\sqrt N}\sup_{\rm reachable}\norm X_s. \tag{P}
+\]
+Intermediate norms contract. No factor greater than one is raised
+to $\ell$. For a scalar charge function f the extra derivative is
+$(f_m-f_{m-1})X_{m-1}c_i$, so
+\[
+ g_s(fX;m)\le\sup|f|\,g_s(X;m)
+    +\sqrt N\sup|\Delta f|\sup\norm X_s. \tag{F}
+\]
+
+\section{The graded shift and the pure marked gradient}
+For homogeneous parity $a\in\{0,1\}$ define algebraically
+\[
+ D_gX=\tfrac12\{Q,X\}-(-1)^a\sum_i c_i^\dagger Xc_i,\quad
+ \partial_bX=bX-(-1)^aXb,\quad
+ L_g=D_g-\tfrac12\sum_i\partial_{c_i^\dagger}\partial_{c_i}.
+\]
+On neutral even fields these agree with D,L. No odd-field CP
+property is assumed. A normal-ordered monomial of total degree d
+is a $D_g$ eigenvector with eigenvalue $d/2$. A graded derivative
+deletes one matching letter with its position sign. Such monomials
+form a basis; hence for $b=c_i$ or $c_i^\dagger$,
+\[
+ [\partial_b,D_g]=\tfrac12\partial_b,\qquad
+ [\partial_b,L_g]=\tfrac12\partial_b. \tag{G}
+\]
+For L, use the anticommutation of graded derivatives: their
+quadratic contraction commutes with each derivative. For an ordered
+list $T_j\in\{D,L\}$,
+\[
+ \partial_b\prod_{j=1}^k(np-T_j)Z_n
+ =\prod_{j=1}^k(np-\tfrac12-T_{j,g})\,\partial_bZ_n. \tag{S}
+\]
+The order is preserved; commutativity of deficits is not required.
+
+\begin{lemma}\label{lem:pure}
+For fixed k,s and a fixed interior charge interval, uniformly in N,n,
+\[
+ g_s\!\left(\prod_{j=1}^k(np-T_j)Z_n;m\right)
+ \le K_{k,s}\sqrt p\,(n+1)^{2k+1}L_{k,s}^n\sqrt{n!}. \tag{W}
+\]
+The field without the gradient has the earlier bound
+$K_{k,s}(n+1)^{2k}L_{k,s}^n\sqrt{n!}$.
+\end{lemma}
+\begin{proof}
+We extend the restricted-covariance proof of \cite{diagram}.
+The graded Leibniz rule for $\partial_bZ_n$ chooses one of n
+original coefficient slots and deletes a matching letter, imposing
+one membership in its original I or J label. The remaining total
+degree is $2np-1$, so (S) uses exactly the appropriate deficit.
+The graded product rule is
+\[
+ D_g(XY)=(D_gX)Y+X(D_gY)
+       +(-1)^{|X|}\sum_i(\partial_{c_i^\dagger}X)(\partial_{c_i}Y).
+\]
+Each subsequent deficit either multiplies a term by its number
+of already deleted pairs or creates a new two-letter contraction;
+L also permits an own-slot I/J contraction. After k operations
+there are at most $K_k(n+1)^{2k+1}$ terms, with coefficients
+depending only on k. Deleting an already deleted letter is zero.
+All surviving memberships remain requirements on the original
+sets; (S) avoids differentiating inserted sandwich letters.
+
+Expand a column square-function moment
+$\E\tr_m(\sum_iY_i^\dagger Y_i)^r$ (order $2r$).
+There are $2r$ differentiated Wick blocks, at most $2rk$ pure
+tags, and r summed gradient indices, each occurring twice.
+Fix the Gaussian pairing, slot choices, and partition of all
+site variables into equal sites. Let A count distinct sites
+carrying a pure tag and B sites carrying gradients only.
+Every tagged site requires two distinct underlying p-set labels.
+For a cross-slot tag its two slots are in one Wick block and
+cannot be paired together; an own-slot tag uses independent I,J.
+Identifications elsewhere cannot remove those two requirements.
+Every gradient-only site needs at least one membership, and $B\le r$.
+
+For fixed membership sets $T_I,T_J$, the occupation-basis column
+covariance is bounded by
+\[
+ C_*\frac{(p)_{|T_J|}}{(m)_{|T_J|}}
+       \frac{(p)_{|T_I|}}{(N-m+p)_{|T_I|}}
+ \le C_*(K_{k,r}p/N)^{|T_I|+|T_J|}. \tag{R}
+\]
+If an I site is occupied but not removed by J the contribution
+is zero, so dropping that extra restriction is an upper bound.
+The row bound swaps I,J. Combine conditions at both ends of a
+Gaussian chord before applying (R). Derived coefficients are
+finite sums of fixed CAR sandwiches of the restricted original
+coefficient; their number depends only on k,r and all insertions
+contract.
+
+Scan a chord word with column creation and row annihilation maps
+for Gaussian-index ancillas. Crossings only permute open ancillas
+unitarily. The contraction norm is bounded by the product of
+endpoint covariance square roots, keeping CAR signs throughout.
+Each independent set/site condition is counted once per chord.
+Summing site assignments therefore costs at most
+\[
+ N^{A+B}(p/N)^{2A+B}=\lambda_N^A p^B\le K_{k,r}p^r. \tag{C}
+\]
+Additional memberships improve the estimate. The numbers of site
+partitions and intermediate charge shifts depend only on k,r,
+not n. For sufficiently large N all intermediate charges remain
+in a wider fixed interior interval. Small N have bounded p and
+CAR norms and are absorbed with polynomial degree costs.
+
+There are at most $(2rn-1)!!$ Gaussian pairings, with
+$[(2rn-1)!!]^{1/(2r)}\le(2r)^{n/2}\sqrt{n!}$.
+Taking the root gives the stated slot factor and $\sqrt p$ from
+(C). The row moment has the same argument on sector $m-1$;
+adjoints and reversed orientations give the same estimates.
+Higher even orders imply all fixed orders. Omitting the gradient
+gives $B=0$ and the previous pure-tag estimate.
+\end{proof}
+
+\section{Products without an ancilla dimension loss}
+For $\Phi(X)=\sum_iV_iXV_i^\dagger$ from an a-dimensional sector
+to a b-dimensional sector, the normalized-trace adjoint is
+$\Phi^\sharp(Y)=(a/b)\sum_iV_i^\dagger YV_i$.
+For positive X,Y, spectral decomposition and scalar Holder with
+weights $\sum_i|(V_i)_{uv}|^2/b$ imply
+\[
+ \E\tr_bY\Phi(X)\le
+ (\E\tr_aX^u\Phi^\sharp(I))^{1/u}
+ (\E\tr_bY^v\Phi(I))^{1/v},\qquad u^{-1}+v^{-1}=1.
+\]
+The map and inputs may share the disorder. With $u=2r$, duality
+at order r and a second trace Holder give
+\[
+ \norm{\Phi(X)}_{r,b}\le
+ 4\norm X_{4r,a}\norm{\Phi^\sharp(I)}_{2,a}^{1/(2r)}
+                   \norm{\Phi(I)}_{2r-1,b}^{1-1/(2r)}. \tag{CP}
+\]
+The factor four allows arbitrary X by splitting its real and
+imaginary positive/negative parts; positive X needs no factor.
+At $r=1$ the dual variable is bounded and the same formula holds.
+
+Apply (CP) to the arrays $Y_i(X)$ and their adjoints. Adjacent
+dimension ratios are bounded in the interior. The ordinary
+Leibniz rule, with (CP) for inside Gram multipliers and rectangular
+Holder for outside multipliers, gives
+\begin{align*}
+ g_s(XY;m)\le K_s\bigl[
+ &g_{4s}(X;m)\sup_{k=m-1,m}\norm{Y_k}_{4s,k}\\
+ &+\sup_{k=m-1,m}\norm{X_k}_{4s,k}g_{4s}(Y;m)\bigr]. \tag{B}
+\end{align*}
+For example the row Gram of $Y_i(X)Y_m$ is
+$\Phi_X(Y_mY_m^\dagger)$; its column Gram is
+$Y_m^\dagger(\sum_iY_i(X)^\dagger Y_i(X))Y_m$.
+Use (CP) at $s/2$ for the former and Holder for the latter.
+The other derivative term and adjoints cover all cases. Thus
+no trace dimension of $I_N\otimes Y$ has been discarded.
+
+For the body-loss cross term,
+\[
+ B_D(X,Y)=\sum_i[c_i^\dagger,X][Y,c_i],\qquad
+ D(XY)=(DX)Y+X(DY)-B_D(X,Y),
+\]
+rectangular Holder yields
+$\norm{B_D(X,Y)}_{r,m}\le g_{2r}(X;m)g_{2r}(Y;m)$.
+The reverse loss uses row norms on edge $m+1$, and L is their
+average. No general fixed-charge Riesz theorem is used.
+
+\section{Residuals, ordinary powers and the forced recurrence}
+Use nested intervals
+$[2N/5,3N/5]\subset[N/3,2N/3]\subset[N/4,3N/4]$.
+For large N, $p\le N/100$, leaving room for paths and a fixed
+number of neighboring sectors. Write
+$F_s(n)=K_s(n+1)^bL_s^n\sqrt{n!}$, allowing constants and b to
+increase a fixed number of times.
+
+The covariance and scalar approximation are
+\begin{align*}
+ \Phi_m(X)&=w_N\sum_{I,J}C_I^\dagger C_JX C_J^\dagger C_I,
+ &\Psi_m&=\Phi_m/C_m,\\
+ \theta_{v,m}&=\prod_{j=0}^{p-1}
+ (1-vp/(m-j))_+(1-vp/(N-m+p-j))_+,
+ &A_v&=p(\Phi-C\theta_v)Z_v.
+\end{align*}
+$\Psi$ is the exact normalized path of p down and p up channels
+\cite{operator}. If $vp\le N/8$, its telescoping identity is
+\[
+ A_v=pC\sum_{h=1}^{2p}f_h(Q)P_hE_h,\qquad
+ E_h\in\{(vp-D)Z_v,(vp-\bar D)Z_v\}. \tag{A}
+\]
+Each $P_h$ has length at most $2p$; $f_h$ is one inverse charge
+denominator times remaining scalar factors, with exact shifts.
+The sectorwise bounds in \cite{charged} are
+\[
+ |f_h|\le K/N,\quad |\Delta f_h|\le K(1+v\lambda_N)/N^2,
+ \quad C\le C_*,\quad |\Delta C|\le Kp/N.
+\]
+Lemma \ref{lem:pure}, (P) and (F) give
+\[
+ g_s(A_v)/\sqrt p\le F_s(v). \tag{A1}
+\]
+Indeed the principal coefficient sum is $O(p^2/N)$ and the
+path cost is $O(p/\sqrt N)$ before division by $\sqrt p$.
+After that division the scalar-gradient contribution is at most
+$Kp^{3/2}[p+1+v\lambda_N]/N^{3/2}$ times the pure envelope,
+with only polynomial v growth. If $vp>N/8$, use the coarse
+$g_s(X)\le K\sqrt N\sup\norm X_s$ and
+$\norm{A_v}_s\le Kp\norm{Z_v}_s$. Since
+$p\le8\lambda_Nv$, $N\le64\lambda_Nv^2$, its cost divided by
+$\sqrt p$ is also polynomial in v.
+
+The previous sectorwise derivative calculation gives
+\[
+ \norm{A_v}_s+\norm{DA_v/p}_s+\norm{LA_v/p}_s\le F_s(v). \tag{A2}
+\]
+Its inputs, which did not use Riesz, are the exact relations
+\[
+ [D,t]=t-t^2,\quad
+ [D,s]=-s+\frac Q{N-Q}ts-\frac{2Q-N}{N-Q}I,\quad
+ [D,f]=(f(Q)-f(Q-1))T
+\]
+and reverse-loss versions. Expanding a path gives
+$O(\ell/p)$ for $[D/p,P]$ and $[L/p,P]$. Repeated pure
+deficits control derivatives of $E_h$ in (A); the scalar
+differences control the remaining terms. The large-v case uses
+the same $N=O(v^2)$ estimate.
+
+All-sector ordinary Gaussian moments obey
+$\norm{H^w}_s\le L_s^w\sqrt{w!}$. Lemma \ref{lem:pure} at
+$n=1,k=0$ gives both force Grams of $[c_i,H]$ of order p.
+Hence (CP) bounds each forward/reverse force map by
+$K_rp\norm X_{4r}$. Expanding
+\[
+ [c_i,H^w]=\sum_{a+b=w-1}H_{m-1}^a[c_i,H]_mH_m^b
+\]
+and applying this force estimate to inside Gram multipliers
+gives $g_s(H^w)/\sqrt p\le F_s(w)$ at fixed higher norm orders.
+For D the exact expansion is
+\[
+ DH^w=pwH^w-\sum_{a+b+c=w-2}H^a\Gamma_H(H^b)H^c,\qquad
+ \Gamma_H(X)=\sum_i[c_i^\dagger,H]X[H,c_i].
+\]
+For L use single-slot LH and averaged forward/reverse cross
+terms. Pure $n=1$ controls $LH/p$. Fixed-order Holder and (CP)
+then give
+\[
+ \norm{H^w}_s+\norm{DH^w/p}_s+\norm{LH^w/p}_s
+              +g_s(H^w)/\sqrt p\le F_s(w). \tag{H}
+\]
+Only $O(w^2)$ terms occur, each with at most three powers and
+one force map. Norm orders are not doubled w times.
+
+Define the finite-N Jacobi polynomials and actual error by
+\begin{gather*}
+ Q_{j+1,m}(x)=xQ_{j,m}(x)-b_{j,m}Q_{j-1,m}(x),
+ \qquad b_{j,m}=C_m\sum_{v<j}\theta_{v,m},\\
+ \eta_j=p[Z_j-Q_j(H)],\qquad Q_0=1,\qquad Q_1=x.
+\end{gather*}
+The exact forced recurrence \cite{charged} is
+\[
+ p r_\ell=\sum_{v+w=\ell-1}\Wick_{v+w}(A_vH^w),\qquad
+ \eta_j=-\sum_{\ell<j}P_{j,\ell,m}(H)\,p r_\ell. \tag{J}
+\]
+$P_{j,\ell}$ is the scalar Jacobi propagator, of degree at most
+$j-\ell-1$. Its coefficient sums grow at most exponentially,
+since $b_{j,m}\le B$ on interior intervals. Their charge
+differences satisfy
+$N\sum|\Delta f|/p\le\operatorname{poly}(j)K^j$, from
+$|\Delta b_{j,m}|\le K[p+j^2]/N$ and path product differences.
+
+The OU/Chebyshev estimate
+$\norm{\Wick_dX}_s\le2^d\norm X_s$ for degree-d Gaussian
+polynomials \cite{operator} applies unchanged to row/column
+arrays: conditional Jensen uses their Banach norms with the
+specified sector trace. Physical derivatives commute with
+coupling OU and top-chaos projection.
+
+Apply (A1), (A2), (H), (B) and the loss cross bound first to
+$A_vH^w$, then top project and sum. Fully expand $P_{j,\ell}(H)$
+and apply the same estimates to $H^a(p r_\ell)$, retaining
+coefficient differences. There are two product layers,
+independent of j. Norm orders remain fixed multiples of s.
+Use $\sqrt{a!v!w!}\le\sqrt{j!}$, exponential coefficient
+sums and polynomially many degree choices to obtain
+\[
+ \norm{\eta_j}_s+\norm{D\eta_j/p}_s+\norm{L\eta_j/p}_s
+               +g_s(\eta_j)/\sqrt p\le F_s(j). \tag{E}
+\]
+For coefficient gradients (F) uses
+$\sqrt N|\Delta f|/\sqrt p\le\sqrt{p/N}\operatorname{poly}(j)K^j$;
+for D/L it uses $N|\Delta f|/p$. All needed neighbors fit the
+nested intervals; no sharp charge cutoff is differentiated.
+
+\section{Ordinary powers and selected time fields}
+Write $H^n=\sum_jh_{nj,m}Q_{j,m}(H)$ using nonnegative weighted
+Jacobi paths. The exact covariance ratio and the Lipschitz
+bound for the positive part in $\theta_v$ give \cite{charged}
+\[
+ \sum_j|h_{nj,m}|\le K^n,\qquad
+ \sum_jN|\Delta h_{nj,m}|
+ \le K(n+1)^3L^n(1+|X_N|),\quad X_N=(m-N/2)/p. \tag{I}
+\]
+Explicitly,
+\[
+ \frac{C_m}{C_{m-1}}-1
+ =\frac{p(N-2m+p+1)}{(m-p)(N-m+p+1)},\qquad
+ N|\Delta\theta_{v,m}|\le K\lambda_Nv.
+\]
+The second bound includes positive-part cutoffs. The factor
+$1+|X_N|$ is bounded on our central window; it cannot be
+discarded on a macroscopic charge interval.
+
+Keeping every charge difference yields
+\begin{align}
+ (p\Ncal-D)H^n=\sum_j\bigl[&
+ h_{nj}(pj-D)Z_j-(\Delta h_{nj})TZ_j-h_{nj}\Ncal\eta_j
+ \nonumber\\
+ &+h_{nj}D\eta_j/p+(\Delta h_{nj})T\eta_j/p\bigr]. \tag{O}
+\end{align}
+Pure deficit bounds, (I) and normalized T control the first two
+terms. The third uses the degree-j Gaussian number multiplier
+and (E), with Chebyshev cost at most $jK^j$. The last two use
+(E), (I) and adjacent-sector contraction. The counterterm
+$\lambda_N\Ncal(\Ncal-1)H^n$ has the same multiplier estimate
+with an extra polynomial in n. Thus \eqref{eq:main} holds before
+the target factor $C_m^{-n/2}$; its lower bound changes only
+$L_s$. Finitely many small N have bounded p and physical
+losses, hence the same Gaussian factorial envelope. Summing
+proves (T), also for fixed time derivatives and fixed exterior
+energy powers. This completes Theorem \ref{thm:tail}.
+
+At $m=N/2$, combine (T) with the same-copy fixed-degree bridge
+\cite{central}. Exact energy pinching contracts every fixed
+sector Schatten norm. Each previously controlled fixed
+polynomial preparation P has a finite-N orbit density satisfying
+$\sup_N\norm{R_{P,N}}_a<\infty$ at each fixed a \cite{prep}.
+Holder transfers the actual tail to that preparation, with the
+degree of P fixed. Fixed products in a covariant block use
+a fixed number of Holder factors. Take N to infinity at fixed
+truncation, then remove the truncation with (T). This gives the
+complete ordinary charged time series and its exactly pinched
+version in that preparation class.
+
+The complete selected bilocal still requires a sectorwise audit
+of the actual neutral/rank filter and memory-return estimates.
+Spatial/mass generators and finite-G dynamics remain open.
+The earlier full-trace bilocal construction is neither retracted
+nor promoted to a selected-state result by this theorem.
+
+\section{Finite checks and provenance}
+The saved channel check uses $N=3,4,5,6$, three non-selfadjoint
+integer neutral fixtures per N and their transposes. It verifies
+1,032 gradient and 216 unital/normalized-trace identities exactly
+after clearing denominators. A further 168 PSD and 324 Schatten
+checks are floating-point diagnostics, not proofs of the lemma
+or its path corollary.
+
+The new graded check exhausts 340 matrix units and 340 normal
+monomials at $N=1,2,3,4$. It verifies 5,008 derivative
+commutators, 840 repeated-deficit shifts, 340 Euler identities
+and 2,504 signed deletions, 1,252 of them nonzero. Doubled maps
+use exact integer arithmetic. These fixtures check algebra and
+signs, not degree-uniform Gaussian convergence. The general
+estimates rely on the contraction and norm arguments above,
+not numerical extrapolation. Successful scientific outputs
+are preserved without rerunning their drivers.
+
+\begin{thebibliography}{9}
+\bibitem{belp} L. Ben Efraim and F. Lust-Piquard,
+\emph{Poincare type inequalities on the discrete cube and in the CAR algebra},
+\href{https://arxiv.org/abs/math/0702233}{arXiv:math/0702233v1},
+Section 6.4, Theorem 6.8.
+\bibitem{bnr} M. Berkooz, V. Narovlansky and H. Raj,
+\emph{Complex Sachdev--Ye--Kitaev model in the double scaling limit},
+\href{https://arxiv.org/abs/2006.13983}{arXiv:2006.13983v2}, Section 5.
+\bibitem{diagram} Alan Day and Chengheng, \emph{Pure Wick tagged
+contractions}, local proof, 7 November 2026, Sections 1--4.1;
+\texttt{susskind-bilocal-fourth-tail-diagram-draft.md}.
+\bibitem{operator} Alan Day and Chengheng, \emph{OU projections
+and covariance CP paths}, local proof, 7 November 2026, Sections 1--5;
+\texttt{susskind-bilocal-fourth-tail-operator-draft.md}.
+\bibitem{charged} Alan Day and Chengheng, \emph{Ordinary charged
+tail on the full Fock trace}, local proof, 7 November 2026,
+Sections 2--3 and 5--7;
+\texttt{susskind-bilocal-fourth-tail-charged-proof.md}.
+\bibitem{central} Alan Day and Chengheng, \emph{Ordinary charged
+fields at fixed half filling}, local draft, 8 November 2026.
+\bibitem{prep} Alan Day and Chengheng, \emph{Fixed polynomial
+Slater preparations}, local draft, 8 November 2026.
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,212 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,microtype,booktabs}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newcommand{\E}{\mathbb E}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\title{A fixed-charge covariance tangent\\
+\large An exact two-deficit channel expansion}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{8 November 2026\quad Research draft}
+\begin{document}\maketitle
+\begin{abstract}
+The normalized covariance of the overlapping complex p-body model is
+an exact path of charge-changing completely positive maps. We expand
+this path to first order around a scalar reference, with an explicit
+second-order remainder valid even when a reference factor vanishes.
+Previously established pure-Wick deficit bounds then give a same-copy
+local-size tangent with error of order $p^{-1}$ at each fixed degree
+and finite Schatten order. This isolates one input to the central-sector
+neutral-memory problem; the full neutral transfer is not asserted here.
+\end{abstract}
+\section{Model and inherited inputs}
+Use standard CAR, $\{c_i,c_j^\dagger\}=\delta_{ij}$, on
+$\mathcal H_m=\wedge^m\mathbb C^N$, and the same static Gaussian
+couplings on all sectors. Set $Z_v=\mathcal W_v(H^v)$, where
+$\mathcal W_v$ is projection onto top coupling chaos, and
+\[
+ \norm{X}_{r,m}=(\E\tr_m|X_m|^r)^{1/r},\qquad
+ \tr_m=\binom Nm^{-1}\operatorname{Tr}_{\mathcal H_m}.
+\]
+The covariance and its scalar normalization are
+\[
+ \Phi_m(X)=w_N\!\sum_{|I|=|J|=p}C_I^\dagger C_JX C_J^\dagger C_I,
+ \qquad C_m=w_N\binom mp\binom{N-m+p}p .
+\]
+The energy normalization is fixed, $\hbar=1$; no time rescaling is used
+in this note. For neutral block families define, before restricting,
+\[
+ TX=\sum_i c_i^\dagger Xc_i,\quad SX=\sum_i c_iXc_i^\dagger,\quad
+ D=Q-T,\quad\bar D=N-Q-S,\quad L=(D+\bar D)/2.
+\]
+We inherit the exact covariance path and the pure-Wick first and
+second deficit bounds from \cite{operator,diagram,gradient}.
+The literature context is fixed-charge complex SYK \cite{bnr}.
+The SU(2) size construction of \cite{tx} distinguishes a representation
+rank from local Clifford size; its Brownian dynamics are not used here.
+\newpage
+\section{Exact expansion, including zero reference factors}
+Write $t_k=T/k$ and $s_k=S/(N-k)$ for the maps with target charge $k$.
+They are unital and preserve normalized traces between adjacent sectors,
+hence contract every normalized Schatten norm, also after disorder
+averaging. Expansion of their Kraus products gives \cite{operator}
+\[
+ \Psi_m:=\Phi_m/C_m=t_m\cdots t_{m-p+1}s_{m-p}\cdots s_{m-1}.
+\]
+Let $\ell=2p$ and $K_1\cdots K_\ell$ denote this outer-to-inner path.
+The target charges are $k_0=m,k_1=m-1,\ldots,k_p=m-p,
+k_{p+1}=m-p+1,\ldots,k_\ell=m$. Its denominators are
+\[
+ (d_1,\ldots,d_\ell)
+ =(m,m-1,\ldots,m-p+1;\ N-m+p,\ldots,N-m+1).
+\]
+For a constant $b$ put $a_j=1-b/d_j$, $\theta=\prod_ja_j$,
+and $\Delta_j=b-D$ on a $t$ step, $\Delta_j=b-\bar D$ on an $s$
+step. The exact identity at each step's target is
+$K_jX=a_jX+d_j^{-1}\Delta_jX$.
+\begin{proposition}
+For every neutral block family,
+\begin{align}
+ \Psi_mX_m&=\theta X_m+
+ \sum_{j=1}^{\ell}\frac{\prod_{h\ne j}a_h}{d_j}(\Delta_jX)_m
+ +\mathcal R_m(X), \label{eq:exp}\\
+ \mathcal R_m(X)&=\sum_{i<j}
+ \frac{\prod_{\substack{h>i\\h\ne j}}a_h}{d_id_j}
+ \bigl(K_1\cdots K_{i-1}\Delta_i\Delta_jX\bigr)_m .
+ \label{eq:rem}
+\end{align}
+In the remainder the composed deficits act on the full family before
+the prefix path is applied. No division by $a_j$ occurs.
+If $0\le b\le d_{\min}:=\min_jd_j$, then for $1\le r<\infty$,
+\[
+ \norm{\mathcal R_m(X)}_{r,m}
+ \le \binom{\ell}{2}d_{\min}^{-2}
+ \sup_{\substack{k\ {\rm on\ path}\\
+             \sigma,\tau\in\{D,\bar D\}}}
+ \norm{(b-\sigma)(b-\tau)X}_{r,k}.
+ \label{eq:bound}\tag{3}
+\]
+\end{proposition}
+\begin{proof}
+First telescope against the scalar path:
+\[
+ \Psi_mX_m-\theta X_m
+ =\sum_j\frac{\prod_{h>j}a_h}{d_j}
+       (K_1\cdots K_{j-1}\Delta_jX)_m .
+\]
+Apply the same telescope to each prefix acting on the full family
+$\Delta_jX$. Its scalar part gives the first sum in
+\eqref{eq:exp}; its difference gives \eqref{eq:rem}, with the displayed
+order $\Delta_i\Delta_j$. Finally $0\le a_h\le1$ and prefix
+contraction bound every term by its source-sector norm.
+\end{proof}
+\newpage
+\section{Fixed-degree local-size tangent}
+Take $\lambda_N=p^2/N$ in a compact subset of $(0,\infty)$,
+$p\to\infty$, $|m-N/2|\le L_0p$, and fixed $v,r,L_0$.
+Set $b=vp$ and $\theta_{v,m}=\prod_j(1-vp/d_j)$.
+Eventually $d_{\min}>vp$. Define
+\begin{align*}
+ \zeta_T&=p\sum_{j=0}^{p-1}(m-j-vp)^{-1},\\
+ \zeta_S&=p\sum_{j=0}^{p-1}(N-m+p-j-vp)^{-1}.
+\end{align*}
+Then the actual same-disorder residual satisfies the exact formula
+\begin{align}
+ A_v&:=p(\Phi_m-C_m\theta_{v,m})Z_v \nonumber\\
+ &=C_m\theta_{v,m}
+   \{\zeta_T(vp-D)Z_v+\zeta_S(vp-\bar D)Z_v\}_m
+    +pC_m\mathcal R_m(Z_v). \tag{4}\label{eq:actual}
+\end{align}
+For $D_*=\max_j|N/2-(d_j-vp)|<N/2$, subtraction of the
+reciprocal $2/N$ term by term gives
+\[
+ |\zeta_\sigma-2\lambda_N|
+ \le \frac{p^2D_*}{(N/2)(N/2-D_*)},\qquad \sigma=T,S.
+ \tag{5}
+\]
+Since $D_*=O_{v,L_0}(p)$ and $N\asymp p^2$, this is $O(p^{-1})$.
+The remainder coefficient in (3), after multiplying by $p$, is
+\[
+ \frac{p\binom{2p}{2}}{d_{\min}^2}=O(p^3/N^2)=O(p^{-1}).
+ \tag{6}
+\]
+\begin{corollary}
+With the pure repeated-deficit bounds of \cite{diagram,operator},
+\[
+ \boxed{\;
+ \norm{A_v-4\lambda_N C_m\theta_{v,m}(vp-L)Z_v}_{r,m}
+       =O_{v,r,L_0}(p^{-1}) .\;}
+ \tag{7}
+\]
+The constant is uniform on the stated central charge window.
+\end{corollary}
+\begin{proof}
+For fixed $v$ the inherited bounds control both first deficits and all
+ordered second deficits at every charge visited by the path. These
+charges lie in an enlarged compact central window. $C_m$ is uniformly
+bounded in the fixed energy normalization, and $0\le\theta_{v,m}\le1$.
+Subtract the terms with both $\zeta_\sigma=2\lambda_N$ in
+\eqref{eq:actual} and use (3), (5), (6). Their sum is precisely
+$4\lambda_N(vp-L)Z_v$.
+\end{proof}
+This is a strong estimate on the same microscopic coupling sample,
+with annealed norms. The finite parameters $\lambda_N,C_m,\theta_{v,m}$
+are retained: their convergence to limiting constants need not have
+rate $p^{-1}$. The constant in (7) is not claimed uniform in $v$.
+\newpage
+\section{Evidence and the next interface}
+The saved exact checker uses Python 3.14.5 and rational
+\texttt{fractions.Fraction} arithmetic. It tests all 96 neutral matrix
+units for $N=2,3,4$, path lengths with $p\le2$, admissible target charges,
+and $b=0,1/2,d_{\min}$. It records 1,824 path identities and 1,824
+normalized $S_2$ remainder inequalities, including 608 zero-reference
+cases and 904 nonzero remainders. Sixty scalar rows use
+$N=4p^2$, $p=4,8,16,32,64$, central offsets $-2,0,2$ and
+$v=1,2,3,5$.
+
+These checks test the finite algebra and scalar bounds, not the Gaussian
+asymptotic theorem. The first attempt accidentally made an empty product
+an integer and introduced floating-point division. Its failure and code
+are preserved; explicit rational seeds correct that implementation.
+The successful science output is not rerun or overwritten.
+
+The exact neutral coefficient still has two pieces,
+\[
+ T_j=A_j+(C_m\theta_{j,m}-\Phi_m)\eta_j,\qquad
+ \eta_j=p[Z_j-Q_{j,m}(H)] .
+\]
+Here $Q_{j,m}$ is the existing covariance-normalized Jacobi polynomial.
+Equation (7) controls the first piece. It does not identify the action
+of $\Phi_m$ on the lower-chaos composite descendants in the second.
+The next task is to audit the earlier compact-central rank-series
+bridge \cite{neutral} and the rank-to-size identity \cite{size}, then
+combine fixed-degree transfer with sectorwise tails and exact energy
+pinching. The single-selected functional must retain its local-size
+boundary terms; the D-only density cannot be substituted for general
+neutral words. Actual memory return and the full selected bilocal remain
+subsequent interfaces. No bulk spatial/mass or finite-$G$ dictionary is
+derived in this note.
+
+\begin{thebibliography}{9}\small
+\bibitem{bnr} M. Berkooz, V. Narovlansky and H. Raj,
+\emph{Complex Sachdev--Ye--Kitaev model in the double scaling limit},
+\href{https://arxiv.org/abs/2006.13983}{arXiv:2006.13983}.
+\bibitem{tx} M. Tarakemeh and S. Xu,
+\emph{Non-Abelian operator size distribution in charge-conserving
+many-body systems}, \href{https://arxiv.org/abs/2511.16634v1}{arXiv:2511.16634v1}.
+\bibitem{diagram} Project derivation,
+\nolinkurl{notes/susskind-bilocal-fourth-tail-diagram-draft.md}, §§1--4.
+\bibitem{operator} Project derivation,
+\nolinkurl{notes/susskind-bilocal-fourth-tail-operator-draft.md}, §§2--4.
+\bibitem{gradient} Project draft,
+\nolinkurl{manuscript/susskind-sector-gradient-tail/main.tex}.
+\bibitem{neutral} Project draft,
+\nolinkurl{manuscript/susskind-memory-neutral-marked-series/main.tex}.
+\bibitem{size} Project draft,
+\nolinkurl{manuscript/susskind-memory-size-bridge/main.tex}, §1.
+\end{thebibliography}
+\end{document}
