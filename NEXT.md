@@ -1,5 +1,55 @@
 # 下一次从这里继续
 
+## 当前继续位置：2026-11-08 全开弦传递、谱与集中发布
+
+先读[九页 PDF](output/pdf/de-sitter-susskind-slater-transfer.pdf)、[完整 LaTeX](manuscript/susskind-slater-transfer/main.tex)、[中文推导](notes/susskind-slater-transfer.md)、[来源](literature/susskind-slater-transfer-sources.md)与本机 journal/2026-11-08-susskind-slater-transfer.md。joint-fourth、joint-words、transfer 三阶段准备本次集中发布；此前“本轮不 Git”均为历史安排，本次用户明确授权覆盖。完整研究 goal 仍 active。
+
+- **已完成**：固定 λ>0、半填充 annealed Slater 态、同原 J、overlapping CAR 模型；h=H/√(wD)、q=e^(−4λ)、γ=q^(1/4)。H/P 字串不是正交基，使用正 Gram 商空间。a†/b† append H/P，a 删除 H 权 q^(n−j)、删除 P 权 γq^(n−1)；b 删除 H/P 权 γq^(n−1)/q^(n−1)。h=a+a†，M=b。全层 word 规则与前驱一致。
+- **代数/谱**：aa†−qa†a=1，ab†−qb†a=ba†−qa†b=γq^N，bb†−qb†b=q^N。M compact，q-commutator 恢复 grade 并提取 vacuum projection，W*(h,M)=B(H)。h=J_q⊗I_K，primitive multiplicities 未计算；β=q^(−N/2)b 仅 finite-level core 上满足 CCR，不能先认作微观 Q_E/p。
+- **具体核**：φ(M f(h) M†)=∫(1−√q+√q E²)f(E)dμ_q。C_M=(1−√q)R−√q R″；Euclidean 制备 Z_M=(1−√q)Z+√q Z″。单插入 vacuum-tower 压缩 weighted shift d_n=γ(n+1)q^n/√[n+1]_q，只捕获范数平方 √q，不能迭代当全四点。
+- **证据**：exact/canonical/spectral 三科学 JSON 已封存；新 manifest SHA256 为 136226a7a720632fcd5bb92eac67a92724fbfd510a6dde70b701bd7faafac58f。17当前文件、14父文件哈希通过。双遍编译 exit0、九页90dpi检查；最终仅第5页 unit vector 措辞改变，已重新目检，其余八页图哈希不变。初 checker float 污染失败保留，成功科学 driver 不重跑。spectral JSON 的 t=0 log bound 为 Python −Infinity 扩展，非区间证书。
+- **下一实质任务**：先读 stationary/KMS 与 Susskind/RX 态选择的原文，再检验 h 的纯非原子谱是否排除全 B(H) 上的 normal stationary density。候选证明路线是 trace-class compact commutant 的有限维谱投影，当前仅研究入口，尚未写成定理。若有障碍，研究受限代数/其他表示或有限资源态；不是据此否定 de Sitter。随后处理 joint grade 的微观解释与旧 bilocal 的共同态接口，进入空间/质量和 finite-G。
+- **Issue #1**：本轮已读最新公开状态，仍 open、仅上次回复，无新追问。补充回复只更新发布与待办；21,143 单元未独立重积分、9,890 旧端点失败及成因未定位保持不变。不要在科学阶段记录中虚写完成。
+
+以下为历史继续位置，以本节为先。
+
+## 当前继续位置：2026-11-07 全 same-J word 与有限时间演化（本地）
+
+先读[九页PDF](output/pdf/de-sitter-susskind-slater-joint-words.pdf)、[LaTeX完整证明](manuscript/susskind-slater-joint-words/main.tex)、[中文笔记](notes/susskind-slater-joint-words.md)、[来源](literature/susskind-slater-joint-word-sources.md)、[journal](journal/2026-11-07-susskind-slater-joint-words.md)。上轮joint-fourth是progress；本轮三科学输出/全joint证明/双遍编译/九页90dpi全部目检完成，也属progress。goal继续active。新证据results/susskind-slater-joint-words/local-evidence.json；无活跃计算句柄，成功main不重跑。Git与issue已在更早阶段完成，不重复发布。
+
+- **范围**：固定半填充Slater annealed态，同原J、标准CAR、overlapping p-body，h=H/√(wD)、M†=纯O→E块/√L；q=e^(−4λ)、γ=q^(1/4)、p²/N→固定λ>0。全joint自平均尚未证明。全joint word与紧复时间窗实际指数关联本轮已证明；物理H时间尺度√(wD)→J_s/√λ。非stationary态，非finite-G结论。
+- **全word定理**：Σ_(compatible all-forward π) γ^b q^ν，b=HM混合edge数，ν=全部crossings+inner S的nestings；奇数degree0。G=HH；S由M端点限制，++/−−不相容，right creation先发生为forward。原两弦猜想通过一般k系数证明升级，不依赖六阶数值外推。
+- **精确局部引擎**：code/slater_joint_site_polynomial.py。edge右X=P†Q、左X†；local f_o(mask)按单site CAR×(−1)^Σ_cross t_e t_f，t_e=P/Q membership数，含三重及负号；G任意，F(P E,Q O)，B相反。raw=[Πz_i^p]F_0^m F_1^m，empty/occupied固定。BNR细弦每thick crossing有4p²偶数，剩余sign逐site因子。无需trace平均。
+- **归一化cluster证明**：除L^k，defect n_(o,S), |S|≥2，d_i=Σ含i n，singleton=p−d_i，U_o=kp−Σcorrect_i d_i+Σ_S n。权重=(m)_U0(m)_U1/(m)_p^(2k) Π(p)_di Πf^n/n!。绝对≤C_(k,λ)Π[m(p/m)^|S|]^n/n!；总activity O_k1、size≥3 O_k(p³/N²)，tail按defect数指数可和。固定double配置背景e^(−2λk(k−1))；sum double f=kG+k(k−1)−2ν。raw/L^k→e^(2λkG)qν；D/L→e2λ、nH=2kG+b给γb。Backward令correct singleton0、d_i=p，至少p个defect，受同一尾压制，覆盖H general edges。
+- **全time证明**：实际共同实Gaussian系数A(h),B(M)：ΣA†A=ΣAA†=I；B两和在E占据x基上为C(x,p)²/L、C(m−x,p)²/L≤1。任意Wick图依次column打开/row关闭noise index，cross只置换tensor slots，norm≤1。故任意word length2r有|φ_N|≤(2r−1)!!；向量lengthd有F_d=√((2d−1)!!)。GNS所有core为h的entire analytic vectors，Nelson给本质自伴。任意固定polynomial插入总degree d和时间绝对和T，尾≤CΣ_(n≥R)T^n F_(n+d)/n!；ρ_n=T√(2(n+d)+1)/(n+1)递减→0，尾≤C T^R F_(R+d)/(R!(1−ρ_R))。先N后R，紧复时间一致。不能再把旧fixed-k cluster常数直接拿去time求和。
+- **新六阶**：g=h−γ(M+M†)，s=√q；φg6/(1−s)^3=5+6s+14q+10sq+13q²+7sq²+6q³。H6=5+6q+3q²+q³，M³M†³=6q³。γ=1/2,2/3两点Gram degree2秩7、degree3秩15，positive pivots；不称泛型15维或已证二叉树。
+- **证据**：site-checks.json hash864f4342efb51562d8a877ed2a1f9be14d7d1fa9d9d4e19d01a3d84a200c6f80，1,461,120CAR标签/1,215系数/1,814双cluster cases，保留8+72负贡献。word-checks.json hashf4413f05fe251d1ff1cffc927f83af5b013efba32a7bc23c2d4320e93ce0e3bd，729六字/4Gram；time-bound-checks.json hash1e244b4d232e55008a0243cc4a4ecb2afc134b26364d12b6d034d285c4469f34，348exact covariance/9高精度tail（非interval）。科学输出exclusive-create，不重跑，不覆盖。
+- **下一实质任务**：把已有全矩/GNS左乘法变为可高效计算的全层transfer或显式波函数表示，计算真实谱/态制备核，回收joint-fourth四个第二层方向。可研究degree≤d Gram增量是否2^d，但目前只是两点degree3迹象，需解析relation/rank证明。物质耦合来自H本身，不能换独立probe。然后选stationary observer态、核与旧bilocal的共同state接口，接空间/质量生成元及finite-G。全joint集中可作为技术子问题；不可把纯M旧集中直接套全H。
+
+以下为历史位置，上节优先。
+
+## 当前继续位置：2026-11-07 same-J 联合四点与 Hamiltonian 前两层（本地）
+
+先读[七页PDF](output/pdf/de-sitter-susskind-slater-joint-fourth.pdf)、[LaTeX完整推导](manuscript/susskind-slater-joint-fourth/main.tex)、[中文笔记](notes/susskind-slater-joint-fourth.md)、[来源](literature/susskind-slater-joint-sources.md)与[journal](journal/2026-11-07-susskind-slater-joint-fourth.md)。三份科学JSON已首次成功封存，双遍编译与全部七页95dpi目检完成，证据见results/susskind-slater-joint-fourth/local-evidence.json。无活跃科学进程。长期goal active，本轮progress。先前Git和issue已完成（下节），新增阶段只本地，不再commit/push/评论。
+
+- **规范**：沿用Slater-ladder，m=a=N/2、同原Gaussian J、standard CAR、overlapping A/B允许；φ_N=E〈O|·|O〉非stationary。h=H/√(wD)、M†=R†/√L，L=C(m,p)C(a,p)、D=C(m,p)C(a+p,p)，q=e^(−4λ)、s=√q、γ=q^(1/4)、δ=√(1−s)，固定λ>0和固定字长。全joint自平均未证明。
+- **有限两弦表**：G=HH；S=有M端点并固定selected orientation。raw GG disjoint/nested D²，crossed K。SS forward disjoint L²、overlap L²r_N。GS forward disjoint DL、crossed LT、Souter/Ginner DL、Gouter/Sinner U。nested inner S backward且outer forward S或G时L，其余backward零。r_N=C(m−p,p)C(a−p,p)/L，T=C(m−p,p)C(a,p)，U=Σ_k C(m,p)C(p,k)C(a,k)C(a−k,p)C(m−k,p)。按D^(nH/2)L^((4−nH)/2)归一。K由Kota(28)原公式另核；不宣称样本中观察的K=L²一般成立。
+- **极限规则仅两弦**：endpoint HH/MM†=1、HM†/MH=γ；backward丢失；crossed添q，nested仅inner S添q。r_N,T/D,U/(DL)→q（U用Poisson缺额tightness）；K/D²→q用BNR+Schur。φ(h³M†)=γ(2+q)、φ(h²M†²)=2sq、φ(hM†hM†)=s。不能套独立matter数量选择律。
+- **正空间**：U=M†²Ω，V=(M†h−γM†²)Ω，D_v=(hM†−M†h−γ)Ω，R_v=(h²−1)Ω−sU−2γV−γD_v，彼此正交、norm²为2q、q(1−s)、1−q、(1−s)²(1+s+2q)。MhΩ→γΩ精确有限norm²误差1/D。归一四向量e2,e_r2,e_d,e_rr，加Ω,e1=M†Ω,e_r=(hΩ−γe1)/δ形成七维degree≤2商空间。he1=γΩ+γ√(2q)e2+δ√q e_r2+√(1−q)e_d；he_r=δΩ+γ√q e_r2+δ√(1+s+2q)e_rr。尚无H在degree2及以上的闭包。
+- **实际补块**g_N=h_N−γ_N(M+M†)：Gaussian坐标与M独立，不代表state矩独立。φg²=1−s，(g²−(1−s))Ω=R_v，归一四矩2+s+2q；q>1/4时>3。不可补成标准q-Gaussian模式。
+- **证据**：check_slater_joint_fourth.py：2,000,499标签、324四字/972配对、36二字、116covariance columns、6渐近比值行；science hash 5021e7ce3cdf836a7d0b75025de546b0ce253beb02cf546287ccb6be215920f0。check_slater_joint_gram.py：62精确符号/有限residual；hash 55d3aef7e7a051b28471360922604c4edf2adf5e2acb4039e4b08c28d12c0b6c。check_slater_joint_covariance.py：12现成EGUE公式vs保存CAR；hash 8e4ab41f5a2e9db3286ea8c13a355d80a8b82600d142ac89240a7a16915d18dc。不得重跑成功main或覆写输出；新任务新文件。
+- **下一实质任务**：三弦/六阶same-J Wick规则，优先构造单site CAR局部表与pair-overlap Poisson归约。候选任意图指数=GG crossings + SS active overlaps + GS overlaps（排除G完全在S内部）；仅与两弦一致，未证明。必须处理general-hop A∩B、自重叠、全局CAR signs、含H时backward的归一控制。纯M旧backward概率界不能直接搬用。先做独立六阶小系统/选定配对检验，证明因子化再谈全joint Hilbert表示/真实时间演化。之后接bilocal、态选择与体质量/空间；finite-G仍开放。
+
+以下为历史继续位置，若与上节冲突以本节为准。
+
+## 发布与外部回复更新：2026-11-07
+
+用户明确要求“git一下，顺便回复一下issue”，本轮已完成一次集中提交并推送至main：`6e0f40af31f2ebf0ff0cf8f842244aaa04d82462`。1051个文件纳入阶段快照；私人PROJECT/AGENTS/journal/tmp及外部附件缓存未发布。61份阶段manifest的1017个公开科学哈希引用只读核验通过，暂存内容逐文件保持原字节；未重跑科学main。历史CRLF/空白保留，不能称git diff --check完全无警告。
+
+[Issue #1 回复](https://github.com/wkryyds4-netizen/de-sitter-holography/issues/1#issuecomment-6708558378)已以wkryyds4-netizen账号发送并读回核对。回复明确两个保守下界、未独立重积分21143单元及保留9890端点失败；没有关闭issue。旧阶段文件中的“未提交/未回复”保留为当时历史状态。本次授权完成，后续探索仍按低频Git偏好先本地保存，不每轮发布。
+
+研究继续位置仍是下面的joint(H,M,M†)：此前新一轮的文献/证明任务尚未留下新stage文件，当前没有运行中的科学计算或子任务。下一轮由当前代理先核原文混合规则，再写独立有限CAR/Wick交错矩检查；不把先前已发出的工作安排当作完成证据。本轮publication属于progress，长期研究goal继续active。发布过程、网络失败与验证回执见journal/2026-11-07-publication-and-issue-reply.md及本机tmp/publication-2026-11-07。
+
 ## 当前继续位置：2026-11-07 同 J Slater 极化与微观 canonical core（本地）
 
 先读[九页PDF](output/pdf/de-sitter-susskind-slater-ladder.pdf)、[主笔记](notes/susskind-slater-ladder.md)、[完整证明](notes/susskind-slater-ladder-proof.md)、[微观/文献接口](notes/susskind-slater-ladder-literature-interface.md)、[canonical接口](notes/susskind-bilocal-polarization-interface.md)、[来源](literature/susskind-bilocal-polarization-sources.md)及[journal](journal/2026-11-07-susskind-slater-ladder.md)。本轮progress，长期goal active。一份science首次成功已封存；不重跑任何旧main。九页PDF双遍编译/95dpi全部目检完成；只读证据目标为results/susskind-slater-ladder/local-evidence.json。当前无科学计算句柄，不commit/push/ZIP/issue回复。

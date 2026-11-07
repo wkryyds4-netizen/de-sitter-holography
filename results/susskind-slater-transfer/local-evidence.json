@@ -1,0 +1,134 @@
+{
+  "status": "Local milestone sealed before the user-authorized consolidated publication; long-term goal active",
+  "created_at_utc": "2026-11-07T16:05:45.656096+00:00",
+  "scientific_scope": "Same-J annealed Slater open transfer, positive graded metric quotient, q-Jacobi towers, compact selected operator, Type I closure, finite-core undressing, selected spectral weight and single-insertion compression. No stationary observer or finite-G dictionary claim.",
+  "scientific_output_hashes": {
+    "results/susskind-slater-transfer/exact-checks.json": "9169dc569325988ee624bc5cae80b0935737cda4b058c7a3025167e338441c6a",
+    "results/susskind-slater-transfer/canonical-checks.json": "de1fda36e686f83b7f06798e7c30a2a470e69c52f80ac965361a98e32a953f0e",
+    "results/susskind-slater-transfer/spectral-checks.json": "a7bcf2201f3b0bf4dd935a1a459ee6ffbf0b6a60fa103d091ddca0601172e263"
+  },
+  "input_hashes_verified": {
+    "code/check_slater_open_transfer.py": "20d9b8bc44ee7ed1dcb6d0c2678546c95c7a4d32ba2126f3ee012d3bfb86ee54",
+    "code/slater_open_transfer.py": "10b2b23fb8e3de9ed7e15c7d8db4308ff17fdbfafa59ec230ca386841522e39d",
+    "code/slater_joint_site_polynomial.py": "68d364e710f0d37cfca24720554fb342fac35d435e59fba3e3ba6b0a2048b489",
+    "results/susskind-slater-joint-words/word-checks.json": "f4413f05fe251d1ff1cffc927f83af5b013efba32a7bc23c2d4320e93ce0e3bd",
+    "results/susskind-slater-joint-words/local-evidence.json": "869aa11a2827556bb5bd7718558d35232ec46c71971d0296826c47f8b287878b",
+    "code/check_slater_transfer_canonical.py": "901f664dad1b2a4430b3ec5f10b326fe64151b9e4b6919c6f2d753194628271b",
+    "results/susskind-slater-transfer/exact-checks.json": "9169dc569325988ee624bc5cae80b0935737cda4b058c7a3025167e338441c6a",
+    "code/compute_slater_transfer_spectrum.py": "450516e269e82e000b700defa82c5ee6f671885c156f0ecb135e7cb25a5cdaa5"
+  },
+  "parameter_hashes": {
+    "exact-checks.json": "9c6907ca3272bd53e8851bbb9f1c2733bc8122a0154d01b0bba444eb6adecad9",
+    "canonical-checks.json": "c85017a3109ed9ed5b4c05430ca1f951ec9a022542c78bd41af1ece713e282d4",
+    "spectral-checks.json": "fe52c165e77241de10184d97fa9dae0fb2a16f27137242c6dd22fcddac122e0a"
+  },
+  "checks": {
+    "exact-checks.json": {
+      "saved_sixth_words": 1458,
+      "independent_eighth_words": 232,
+      "q_relations": 248,
+      "primitive_projection": 124,
+      "tower_decomposition": 62,
+      "adjoint_entries": 680,
+      "metric_symmetry": 170,
+      "residual_Jacobi": 18,
+      "compressed_selected": 18,
+      "selected_spectral_moments": 18
+    },
+    "canonical-checks.json": {
+      "grading_from_M": 62,
+      "canonical_CCR": 62,
+      "same_J_cross": 62,
+      "selected_shift_norm": 18
+    }
+  },
+  "previous_evidence": {
+    "results/susskind-slater-joint-words/local-evidence.json": {
+      "sha256": "869aa11a2827556bb5bd7718558d35232ec46c71971d0296826c47f8b287878b",
+      "verified_scientific_hashes": {
+        "code/record_slater_joint_words.py": "689de9999b3c0603161941b799fca4e5ab5c0252c183a1b6d70b18dd282da949",
+        "code/slater_joint_site_polynomial.py": "68d364e710f0d37cfca24720554fb342fac35d435e59fba3e3ba6b0a2048b489",
+        "code/check_slater_joint_sites.py": "829f9e637112757d48cb1a4232f993f8c2b6d9b5bb75afb31e14804ed4a9e6d0",
+        "code/check_slater_joint_word_law.py": "2707857a55d3ccfb4a6d750f834177f617ab110cbad7f092aa5607668f60113d",
+        "code/check_slater_joint_time_bound.py": "fc300a9e5eb8945d916f3e014a9566966f4dbbc7e009354f63777ce9fbbf527a",
+        "code/build_slater_joint_words.ps1": "deb6ead429bc0b1982d18ea8f7814bfb7735ac13e4cf49219d6cb5e22fc9ee3a",
+        "manuscript/susskind-slater-joint-words/main.tex": "8148056e35165e59387e0f651e6d0fcecf16bc2593aa7f513616a349506e7e6f",
+        "notes/susskind-slater-joint-words.md": "216766ae4641bc674e5de31d7f45fb8cc634cd6dd65ef6109425f4d58cdfc358",
+        "literature/susskind-slater-joint-word-sources.md": "344ac893cef028196db6210383be21a74c09cfc10a5f363e7e4e00c9a5d2e43c",
+        "output/pdf/de-sitter-susskind-slater-joint-words.pdf": "8cb8660cba3d8133fe6114792e5d44131e283d8aa62d9722b8a05aa0bcadbe54",
+        "results/susskind-slater-joint-words/main.log": "80a7ef27c6a5e9ed9aed8f0045770cf2c2ad6720e1029d56f84b9ec94e695c3f",
+        "results/susskind-slater-joint-words/site-checks.json": "864f4342efb51562d8a877ed2a1f9be14d7d1fa9d9d4e19d01a3d84a200c6f80",
+        "results/susskind-slater-joint-words/word-checks.json": "f4413f05fe251d1ff1cffc927f83af5b013efba32a7bc23c2d4320e93ce0e3bd",
+        "results/susskind-slater-joint-words/time-bound-checks.json": "1e244b4d232e55008a0243cc4a4ecb2afc134b26364d12b6d034d285c4469f34"
+      }
+    }
+  },
+  "hashes": {
+    "code/record_slater_transfer.py": "6355eb22100cfd40b57a5f3a40309dc6d39bae2ca0bbc49827fe172b7059b35a",
+    "output/pdf/de-sitter-susskind-slater-transfer.pdf": "9f14557b26eae679acd699ff52fcbe2fbc07580738bf8d4f9d1f92760659f37a",
+    "results/susskind-slater-transfer/main.log": "55bda249b85b72d44f066567e61a07f7e6add9677a1c1588df97eb2f981d0311",
+    "results/susskind-slater-transfer/selected-spectrum.png": "2d0aed06b6286ccf55be25dda914f2e5287f046476cc99b2a4593598832f8dd2",
+    "results/susskind-slater-transfer/exact-checks.json": "9169dc569325988ee624bc5cae80b0935737cda4b058c7a3025167e338441c6a",
+    "results/susskind-slater-transfer/canonical-checks.json": "de1fda36e686f83b7f06798e7c30a2a470e69c52f80ac965361a98e32a953f0e",
+    "results/susskind-slater-transfer/spectral-checks.json": "a7bcf2201f3b0bf4dd935a1a459ee6ffbf0b6a60fa103d091ddca0601172e263",
+    "code/slater_open_transfer.py": "10b2b23fb8e3de9ed7e15c7d8db4308ff17fdbfafa59ec230ca386841522e39d",
+    "code/check_slater_open_transfer.py": "20d9b8bc44ee7ed1dcb6d0c2678546c95c7a4d32ba2126f3ee012d3bfb86ee54",
+    "code/check_slater_transfer_canonical.py": "901f664dad1b2a4430b3ec5f10b326fe64151b9e4b6919c6f2d753194628271b",
+    "code/compute_slater_transfer_spectrum.py": "450516e269e82e000b700defa82c5ee6f671885c156f0ecb135e7cb25a5cdaa5",
+    "code/build_slater_transfer.ps1": "d15370c5be54b0352684b4c9a36c168aa9d1b46071a9179c8649612f1b571367",
+    "manuscript/susskind-slater-transfer/main.tex": "5faccc8bd3f170d5ae6b4ccd1325186e5d04e954848e865b6c05cb1f3b29eabd",
+    "notes/susskind-slater-transfer.md": "ff483c4913086d4ee17ea795190383f8a61e777253fce870807a2f965b0746b9",
+    "literature/susskind-slater-transfer-sources.md": "2cd2dcdf609892fb9bee5ec80c5fc5b550b56b72059210a18d7daebff28c8a62",
+    "results/susskind-slater-transfer/diagnostics/initial-checker.py": "440a495dbcff56bf83ab3e32995adf7fc89dc1b64b4641d728f36b93d7c1e752",
+    "results/susskind-slater-transfer/diagnostics/initial-failure.txt": "68587f189664d9806689b95e3cfda767777e77813e1160d18810aabf777ee0e0"
+  },
+  "render_hashes": {
+    "tmp/pdfs/susskind-slater-transfer-render/page-1.png": "bf96c57036887be160a8ea72fb06aabb8ef32718262af7b0054455208b01ffc1",
+    "tmp/pdfs/susskind-slater-transfer-render/page-2.png": "1730c6256960ae6ae195c9020ce864244ede822e2417304555c949d155a535b7",
+    "tmp/pdfs/susskind-slater-transfer-render/page-3.png": "b588ce6141bcc4d13cdb8ee55f47e462075f79dc3441ef5ce06223b16e1a66b1",
+    "tmp/pdfs/susskind-slater-transfer-render/page-4.png": "949369694ad5d3536b80e25b8c2c3a290306ccbf23cdea76f5b46c604e903d2f",
+    "tmp/pdfs/susskind-slater-transfer-render/page-5.png": "8451a3ecf01f64ead5eb498e7cef30f7c0a7a9525f0b856d263d3417c63032b0",
+    "tmp/pdfs/susskind-slater-transfer-render/page-6.png": "d8f35235fd0cb47a4f6723d56f514a09f39ba421c6f291b575e33f604a6ecaac",
+    "tmp/pdfs/susskind-slater-transfer-render/page-7.png": "a5fa2bb34985e3d30484a3914bb158f15bf12ab996f7784f37ff13d6262b1c3e",
+    "tmp/pdfs/susskind-slater-transfer-render/page-8.png": "2ac66fcb640792f15bc9664332920fe16f91fc4b21f7f4afffd6f2f4f737a2bf",
+    "tmp/pdfs/susskind-slater-transfer-render/page-9.png": "95c86c0c4ae514fdb12f454f0f2e2a7d36b0d1a046e04555972c90ba7e3eee52"
+  },
+  "build_pass_hashes": {
+    "tmp/pdfs/susskind-slater-transfer-build/pass1.txt": "029427bb6255882eaac0c0714e4795100bd751bf188aaa4adadddabed36d1b75",
+    "tmp/pdfs/susskind-slater-transfer-build/pass2.txt": "029427bb6255882eaac0c0714e4795100bd751bf188aaa4adadddabed36d1b75"
+  },
+  "build": {
+    "command": "./code/build_slater_transfer.ps1",
+    "passes": 2,
+    "pages": 9,
+    "final_script_exit_code_observed": 0,
+    "no_undefined_references_or_overfull": true,
+    "review": "All nine pages inspected in prior continuation; final unit-vector clarification changed only page 5, re-inspected in this continuation. Other eight render hashes identical.",
+    "changed_final_pages": [
+      "page-5.png"
+    ],
+    "render": "pdftoppm -r 90 -png"
+  },
+  "environment": {
+    "recorder_python": "3.14.5",
+    "scientific_environments": {
+      "exact-checks.json": {
+        "python": "3.14.5",
+        "dependencies": "standard library"
+      },
+      "canonical-checks.json": {
+        "python": "3.14.5",
+        "dependencies": "standard library"
+      },
+      "spectral-checks.json": {
+        "python": "3.14.5",
+        "numpy": "2.4.6",
+        "scipy": "1.18.0",
+        "matplotlib": "3.11.0",
+        "dtype": "float64"
+      }
+    }
+  },
+  "diagnostics": "Initial float contamination in exact checker preserved; corrected Fraction(1) run passed before sealing. Spectral JSON retains Python -Infinity at t=0 logarithmic zero-tail bound. Floating diagnostics are not interval certification.",
+  "recorder_scope": "Read-only hash, status and build verification; no scientific rerun or independent proof certification."
+}

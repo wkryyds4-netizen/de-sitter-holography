@@ -1,0 +1,3830 @@
+{
+  "status": "passed",
+  "created_utc": "2026-11-07T15:33:55.217967+00:00",
+  "parameters": {
+    "gamma": "q^(1/4)",
+    "rational_points": [
+      "1/2",
+      "2/3"
+    ],
+    "max_degree": 6
+  },
+  "sixth_words": [
+    {
+      "word": "HHHHHH",
+      "gamma_polynomial": {
+        "0": 5,
+        "4": 6,
+        "8": 3,
+        "12": 1
+      }
+    },
+    {
+      "word": "HHHHH+",
+      "gamma_polynomial": {
+        "1": 5,
+        "5": 6,
+        "9": 3,
+        "13": 1
+      }
+    },
+    {
+      "word": "HHHHH-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "HHHH+H",
+      "gamma_polynomial": {
+        "5": 6,
+        "9": 4,
+        "13": 2
+      }
+    },
+    {
+      "word": "HHHH++",
+      "gamma_polynomial": {
+        "6": 6,
+        "10": 4,
+        "14": 2
+      }
+    },
+    {
+      "word": "HHHH+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "HHHH-H",
+      "gamma_polynomial": {
+        "1": 2,
+        "5": 1
+      }
+    },
+    {
+      "word": "HHHH-+",
+      "gamma_polynomial": {
+        "0": 2,
+        "4": 1
+      }
+    },
+    {
+      "word": "HHHH--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "HHH+HH",
+      "gamma_polynomial": {
+        "1": 2,
+        "5": 1,
+        "13": 3,
+        "9": 3
+      }
+    },
+    {
+      "word": "HHH+H+",
+      "gamma_polynomial": {
+        "2": 2,
+        "6": 1,
+        "14": 3,
+        "10": 3
+      }
+    },
+    {
+      "word": "HHH+H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "HHH++H",
+      "gamma_polynomial": {
+        "14": 6
+      }
+    },
+    {
+      "word": "HHH+++",
+      "gamma_polynomial": {
+        "15": 6
+      }
+    },
+    {
+      "word": "HHH++-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "HHH+-H",
+      "gamma_polynomial": {
+        "2": 2,
+        "6": 1
+      }
+    },
+    {
+      "word": "HHH+-+",
+      "gamma_polynomial": {
+        "1": 2,
+        "5": 1
+      }
+    },
+    {
+      "word": "HHH+--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "HHH-HH",
+      "gamma_polynomial": {
+        "5": 4,
+        "9": 2
+      }
+    },
+    {
+      "word": "HHH-H+",
+      "gamma_polynomial": {
+        "4": 2,
+        "6": 2,
+        "8": 1,
+        "10": 1
+      }
+    },
+    {
+      "word": "HHH-H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "HHH-+H",
+      "gamma_polynomial": {
+        "6": 2,
+        "4": 2,
+        "10": 1,
+        "8": 1
+      }
+    },
+    {
+      "word": "HHH-++",
+      "gamma_polynomial": {
+        "5": 4,
+        "9": 2
+      }
+    },
+    {
+      "word": "HHH-+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "HHH--H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "HHH--+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "HHH---",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "HH+HHH",
+      "gamma_polynomial": {
+        "5": 4,
+        "9": 2
+      }
+    },
+    {
+      "word": "HH+HH+",
+      "gamma_polynomial": {
+        "6": 4,
+        "10": 2
+      }
+    },
+    {
+      "word": "HH+HH-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "HH+H+H",
+      "gamma_polynomial": {
+        "10": 4
+      }
+    },
+    {
+      "word": "HH+H++",
+      "gamma_polynomial": {
+        "11": 4
+      }
+    },
+    {
+      "word": "HH+H+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "HH+H-H",
+      "gamma_polynomial": {
+        "6": 2
+      }
+    },
+    {
+      "word": "HH+H-+",
+      "gamma_polynomial": {
+        "5": 2
+      }
+    },
+    {
+      "word": "HH+H--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "HH++HH",
+      "gamma_polynomial": {
+        "6": 2
+      }
+    },
+    {
+      "word": "HH++H+",
+      "gamma_polynomial": {
+        "7": 2
+      }
+    },
+    {
+      "word": "HH++H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "HH+++H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "HH++++",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "HH+++-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "HH++-H",
+      "gamma_polynomial": {
+        "7": 2
+      }
+    },
+    {
+      "word": "HH++-+",
+      "gamma_polynomial": {
+        "6": 2
+      }
+    },
+    {
+      "word": "HH++--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "HH+-HH",
+      "gamma_polynomial": {
+        "10": 4
+      }
+    },
+    {
+      "word": "HH+-H+",
+      "gamma_polynomial": {
+        "9": 2,
+        "11": 2
+      }
+    },
+    {
+      "word": "HH+-H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "HH+-+H",
+      "gamma_polynomial": {
+        "11": 2,
+        "9": 2
+      }
+    },
+    {
+      "word": "HH+-++",
+      "gamma_polynomial": {
+        "10": 4
+      }
+    },
+    {
+      "word": "HH+-+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "HH+--H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "HH+--+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "HH+---",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "HH-HHH",
+      "gamma_polynomial": {
+        "1": 2,
+        "5": 1,
+        "13": 3,
+        "9": 3
+      }
+    },
+    {
+      "word": "HH-HH+",
+      "gamma_polynomial": {
+        "2": 1,
+        "6": 1,
+        "0": 1,
+        "12": 1,
+        "14": 2,
+        "8": 1,
+        "10": 2
+      }
+    },
+    {
+      "word": "HH-HH-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "HH-H+H",
+      "gamma_polynomial": {
+        "4": 1,
+        "6": 1,
+        "14": 3,
+        "12": 1,
+        "10": 1,
+        "8": 1
+      }
+    },
+    {
+      "word": "HH-H++",
+      "gamma_polynomial": {
+        "5": 2,
+        "13": 2,
+        "9": 2,
+        "15": 2
+      }
+    },
+    {
+      "word": "HH-H+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "HH-H-H",
+      "gamma_polynomial": {
+        "2": 1
+      }
+    },
+    {
+      "word": "HH-H-+",
+      "gamma_polynomial": {
+        "1": 1
+      }
+    },
+    {
+      "word": "HH-H--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "HH-+HH",
+      "gamma_polynomial": {
+        "0": 1,
+        "14": 4,
+        "12": 1,
+        "8": 1
+      }
+    },
+    {
+      "word": "HH-+H+",
+      "gamma_polynomial": {
+        "1": 1,
+        "13": 3,
+        "15": 2,
+        "9": 1
+      }
+    },
+    {
+      "word": "HH-+H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "HH-++H",
+      "gamma_polynomial": {
+        "15": 2,
+        "13": 4
+      }
+    },
+    {
+      "word": "HH-+++",
+      "gamma_polynomial": {
+        "14": 6
+      }
+    },
+    {
+      "word": "HH-++-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "HH-+-H",
+      "gamma_polynomial": {
+        "1": 1
+      }
+    },
+    {
+      "word": "HH-+-+",
+      "gamma_polynomial": {
+        "0": 1
+      }
+    },
+    {
+      "word": "HH-+--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "HH--HH",
+      "gamma_polynomial": {
+        "6": 2
+      }
+    },
+    {
+      "word": "HH--H+",
+      "gamma_polynomial": {
+        "5": 2
+      }
+    },
+    {
+      "word": "HH--H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "HH--+H",
+      "gamma_polynomial": {
+        "5": 2
+      }
+    },
+    {
+      "word": "HH--++",
+      "gamma_polynomial": {
+        "4": 2
+      }
+    },
+    {
+      "word": "HH--+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "HH---H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "HH---+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "HH----",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H+HHHH",
+      "gamma_polynomial": {
+        "1": 2,
+        "5": 1
+      }
+    },
+    {
+      "word": "H+HHH+",
+      "gamma_polynomial": {
+        "2": 2,
+        "6": 1
+      }
+    },
+    {
+      "word": "H+HHH-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H+HH+H",
+      "gamma_polynomial": {
+        "6": 2
+      }
+    },
+    {
+      "word": "H+HH++",
+      "gamma_polynomial": {
+        "7": 2
+      }
+    },
+    {
+      "word": "H+HH+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H+HH-H",
+      "gamma_polynomial": {
+        "2": 1
+      }
+    },
+    {
+      "word": "H+HH-+",
+      "gamma_polynomial": {
+        "1": 1
+      }
+    },
+    {
+      "word": "H+HH--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H+H+HH",
+      "gamma_polynomial": {
+        "2": 1
+      }
+    },
+    {
+      "word": "H+H+H+",
+      "gamma_polynomial": {
+        "3": 1
+      }
+    },
+    {
+      "word": "H+H+H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H+H++H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H+H+++",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H+H++-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H+H+-H",
+      "gamma_polynomial": {
+        "3": 1
+      }
+    },
+    {
+      "word": "H+H+-+",
+      "gamma_polynomial": {
+        "2": 1
+      }
+    },
+    {
+      "word": "H+H+--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H+H-HH",
+      "gamma_polynomial": {
+        "6": 2
+      }
+    },
+    {
+      "word": "H+H-H+",
+      "gamma_polynomial": {
+        "5": 1,
+        "7": 1
+      }
+    },
+    {
+      "word": "H+H-H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H+H-+H",
+      "gamma_polynomial": {
+        "7": 1,
+        "5": 1
+      }
+    },
+    {
+      "word": "H+H-++",
+      "gamma_polynomial": {
+        "6": 2
+      }
+    },
+    {
+      "word": "H+H-+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H+H--H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H+H--+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H+H---",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H++HHH",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H++HH+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H++HH-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H++H+H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H++H++",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H++H+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H++H-H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H++H-+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H++H--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H+++HH",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H+++H+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H+++H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H++++H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H+++++",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H++++-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H+++-H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H+++-+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H+++--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H++-HH",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H++-H+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H++-H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H++-+H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H++-++",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H++-+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H++--H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H++--+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H++---",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H+-HHH",
+      "gamma_polynomial": {
+        "2": 2,
+        "6": 1
+      }
+    },
+    {
+      "word": "H+-HH+",
+      "gamma_polynomial": {
+        "3": 1,
+        "7": 1,
+        "1": 1
+      }
+    },
+    {
+      "word": "H+-HH-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H+-H+H",
+      "gamma_polynomial": {
+        "5": 1,
+        "7": 1
+      }
+    },
+    {
+      "word": "H+-H++",
+      "gamma_polynomial": {
+        "6": 2
+      }
+    },
+    {
+      "word": "H+-H+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H+-H-H",
+      "gamma_polynomial": {
+        "3": 1
+      }
+    },
+    {
+      "word": "H+-H-+",
+      "gamma_polynomial": {
+        "2": 1
+      }
+    },
+    {
+      "word": "H+-H--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H+-+HH",
+      "gamma_polynomial": {
+        "1": 1
+      }
+    },
+    {
+      "word": "H+-+H+",
+      "gamma_polynomial": {
+        "2": 1
+      }
+    },
+    {
+      "word": "H+-+H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H+-++H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H+-+++",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H+-++-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H+-+-H",
+      "gamma_polynomial": {
+        "2": 1
+      }
+    },
+    {
+      "word": "H+-+-+",
+      "gamma_polynomial": {
+        "1": 1
+      }
+    },
+    {
+      "word": "H+-+--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H+--HH",
+      "gamma_polynomial": {
+        "7": 2
+      }
+    },
+    {
+      "word": "H+--H+",
+      "gamma_polynomial": {
+        "6": 2
+      }
+    },
+    {
+      "word": "H+--H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H+--+H",
+      "gamma_polynomial": {
+        "6": 2
+      }
+    },
+    {
+      "word": "H+--++",
+      "gamma_polynomial": {
+        "5": 2
+      }
+    },
+    {
+      "word": "H+--+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H+---H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H+---+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H+----",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H-HHHH",
+      "gamma_polynomial": {
+        "5": 6,
+        "9": 4,
+        "13": 2
+      }
+    },
+    {
+      "word": "H-HHH+",
+      "gamma_polynomial": {
+        "6": 4,
+        "10": 3,
+        "4": 2,
+        "14": 2,
+        "8": 1
+      }
+    },
+    {
+      "word": "H-HHH-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H-HH+H",
+      "gamma_polynomial": {
+        "8": 1,
+        "10": 3,
+        "12": 1,
+        "14": 3,
+        "6": 1,
+        "4": 1
+      }
+    },
+    {
+      "word": "H-HH++",
+      "gamma_polynomial": {
+        "9": 2,
+        "13": 2,
+        "11": 2,
+        "15": 2,
+        "5": 2
+      }
+    },
+    {
+      "word": "H-HH+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H-HH-H",
+      "gamma_polynomial": {
+        "6": 2
+      }
+    },
+    {
+      "word": "H-HH-+",
+      "gamma_polynomial": {
+        "5": 2
+      }
+    },
+    {
+      "word": "H-HH--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H-H+HH",
+      "gamma_polynomial": {
+        "4": 1,
+        "6": 1,
+        "14": 3,
+        "10": 1,
+        "12": 1,
+        "8": 1
+      }
+    },
+    {
+      "word": "H-H+H+",
+      "gamma_polynomial": {
+        "5": 1,
+        "7": 1,
+        "15": 2,
+        "9": 2,
+        "13": 2
+      }
+    },
+    {
+      "word": "H-H+H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H-H++H",
+      "gamma_polynomial": {
+        "13": 4,
+        "15": 2
+      }
+    },
+    {
+      "word": "H-H+++",
+      "gamma_polynomial": {
+        "14": 6
+      }
+    },
+    {
+      "word": "H-H++-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H-H+-H",
+      "gamma_polynomial": {
+        "5": 1,
+        "7": 1
+      }
+    },
+    {
+      "word": "H-H+-+",
+      "gamma_polynomial": {
+        "4": 1,
+        "6": 1
+      }
+    },
+    {
+      "word": "H-H+--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H-H-HH",
+      "gamma_polynomial": {
+        "10": 4
+      }
+    },
+    {
+      "word": "H-H-H+",
+      "gamma_polynomial": {
+        "9": 3,
+        "11": 1
+      }
+    },
+    {
+      "word": "H-H-H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H-H-+H",
+      "gamma_polynomial": {
+        "9": 3,
+        "11": 1
+      }
+    },
+    {
+      "word": "H-H-++",
+      "gamma_polynomial": {
+        "8": 2,
+        "10": 2
+      }
+    },
+    {
+      "word": "H-H-+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H-H--H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H-H--+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H-H---",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H-+HHH",
+      "gamma_polynomial": {
+        "6": 2,
+        "10": 1,
+        "4": 2,
+        "8": 1
+      }
+    },
+    {
+      "word": "H-+HH+",
+      "gamma_polynomial": {
+        "7": 1,
+        "11": 1,
+        "5": 3,
+        "9": 1
+      }
+    },
+    {
+      "word": "H-+HH-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H-+H+H",
+      "gamma_polynomial": {
+        "9": 3,
+        "11": 1
+      }
+    },
+    {
+      "word": "H-+H++",
+      "gamma_polynomial": {
+        "10": 4
+      }
+    },
+    {
+      "word": "H-+H+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H-+H-H",
+      "gamma_polynomial": {
+        "7": 1,
+        "5": 1
+      }
+    },
+    {
+      "word": "H-+H-+",
+      "gamma_polynomial": {
+        "6": 1,
+        "4": 1
+      }
+    },
+    {
+      "word": "H-+H--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H-++HH",
+      "gamma_polynomial": {
+        "5": 2
+      }
+    },
+    {
+      "word": "H-++H+",
+      "gamma_polynomial": {
+        "6": 2
+      }
+    },
+    {
+      "word": "H-++H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H-+++H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H-++++",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H-+++-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H-++-H",
+      "gamma_polynomial": {
+        "6": 2
+      }
+    },
+    {
+      "word": "H-++-+",
+      "gamma_polynomial": {
+        "5": 2
+      }
+    },
+    {
+      "word": "H-++--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H-+-HH",
+      "gamma_polynomial": {
+        "11": 2,
+        "9": 2
+      }
+    },
+    {
+      "word": "H-+-H+",
+      "gamma_polynomial": {
+        "10": 3,
+        "8": 1
+      }
+    },
+    {
+      "word": "H-+-H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H-+-+H",
+      "gamma_polynomial": {
+        "10": 3,
+        "8": 1
+      }
+    },
+    {
+      "word": "H-+-++",
+      "gamma_polynomial": {
+        "9": 4
+      }
+    },
+    {
+      "word": "H-+-+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H-+--H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H-+--+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H-+---",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H--HHH",
+      "gamma_polynomial": {
+        "14": 6
+      }
+    },
+    {
+      "word": "H--HH+",
+      "gamma_polynomial": {
+        "13": 4,
+        "15": 2
+      }
+    },
+    {
+      "word": "H--HH-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H--H+H",
+      "gamma_polynomial": {
+        "13": 4,
+        "15": 2
+      }
+    },
+    {
+      "word": "H--H++",
+      "gamma_polynomial": {
+        "12": 2,
+        "14": 4
+      }
+    },
+    {
+      "word": "H--H+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H--H-H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H--H-+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H--H--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H--+HH",
+      "gamma_polynomial": {
+        "15": 2,
+        "13": 4
+      }
+    },
+    {
+      "word": "H--+H+",
+      "gamma_polynomial": {
+        "14": 4,
+        "12": 2
+      }
+    },
+    {
+      "word": "H--+H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H--++H",
+      "gamma_polynomial": {
+        "14": 4,
+        "12": 2
+      }
+    },
+    {
+      "word": "H--+++",
+      "gamma_polynomial": {
+        "13": 6
+      }
+    },
+    {
+      "word": "H--++-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H--+-H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H--+-+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H--+--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H---HH",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H---H+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H---H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H---+H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H---++",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H---+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H----H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H----+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "H-----",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+HHHHH",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+HHHH+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+HHHH-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+HHH+H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+HHH++",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+HHH+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+HHH-H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+HHH-+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+HHH--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+HH+HH",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+HH+H+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+HH+H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+HH++H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+HH+++",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+HH++-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+HH+-H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+HH+-+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+HH+--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+HH-HH",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+HH-H+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+HH-H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+HH-+H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+HH-++",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+HH-+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+HH--H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+HH--+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+HH---",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H+HHH",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H+HH+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H+HH-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H+H+H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H+H++",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H+H+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H+H-H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H+H-+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H+H--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H++HH",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H++H+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H++H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H+++H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H++++",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H+++-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H++-H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H++-+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H++--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H+-HH",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H+-H+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H+-H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H+-+H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H+-++",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H+-+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H+--H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H+--+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H+---",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H-HHH",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H-HH+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H-HH-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H-H+H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H-H++",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H-H+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H-H-H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H-H-+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H-H--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H-+HH",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H-+H+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H-+H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H-++H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H-+++",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H-++-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H-+-H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H-+-+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H-+--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H--HH",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H--H+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H--H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H--+H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H--++",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H--+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H---H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H---+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+H----",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++HHHH",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++HHH+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++HHH-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++HH+H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++HH++",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++HH+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++HH-H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++HH-+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++HH--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++H+HH",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++H+H+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++H+H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++H++H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++H+++",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++H++-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++H+-H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++H+-+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++H+--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++H-HH",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++H-H+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++H-H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++H-+H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++H-++",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++H-+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++H--H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++H--+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++H---",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+++HHH",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+++HH+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+++HH-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+++H+H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+++H++",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+++H+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+++H-H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+++H-+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+++H--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++++HH",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++++H+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++++H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+++++H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++++++",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+++++-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++++-H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++++-+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++++--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+++-HH",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+++-H+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+++-H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+++-+H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+++-++",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+++-+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+++--H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+++--+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+++---",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++-HHH",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++-HH+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++-HH-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++-H+H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++-H++",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++-H+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++-H-H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++-H-+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++-H--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++-+HH",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++-+H+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++-+H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++-++H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++-+++",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++-++-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++-+-H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++-+-+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++-+--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++--HH",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++--H+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++--H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++--+H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++--++",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++--+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++---H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++---+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "++----",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-HHHH",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-HHH+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-HHH-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-HH+H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-HH++",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-HH+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-HH-H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-HH-+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-HH--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-H+HH",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-H+H+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-H+H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-H++H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-H+++",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-H++-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-H+-H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-H+-+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-H+--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-H-HH",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-H-H+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-H-H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-H-+H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-H-++",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-H-+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-H--H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-H--+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-H---",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-+HHH",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-+HH+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-+HH-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-+H+H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-+H++",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-+H+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-+H-H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-+H-+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-+H--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-++HH",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-++H+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-++H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-+++H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-++++",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-+++-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-++-H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-++-+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-++--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-+-HH",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-+-H+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-+-H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-+-+H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-+-++",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-+-+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-+--H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-+--+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-+---",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+--HHH",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+--HH+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+--HH-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+--H+H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+--H++",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+--H+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+--H-H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+--H-+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+--H--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+--+HH",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+--+H+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+--+H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+--++H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+--+++",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+--++-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+--+-H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+--+-+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+--+--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+---HH",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+---H+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+---H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+---+H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+---++",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+---+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+----H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+----+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "+-----",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-HHHHH",
+      "gamma_polynomial": {
+        "1": 5,
+        "5": 6,
+        "9": 3,
+        "13": 1
+      }
+    },
+    {
+      "word": "-HHHH+",
+      "gamma_polynomial": {
+        "2": 3,
+        "6": 5,
+        "10": 3,
+        "14": 1,
+        "0": 2,
+        "4": 1
+      }
+    },
+    {
+      "word": "-HHHH-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-HHH+H",
+      "gamma_polynomial": {
+        "6": 4,
+        "10": 3,
+        "14": 2,
+        "4": 2,
+        "8": 1
+      }
+    },
+    {
+      "word": "-HHH++",
+      "gamma_polynomial": {
+        "7": 2,
+        "11": 2,
+        "15": 2,
+        "5": 4,
+        "9": 2
+      }
+    },
+    {
+      "word": "-HHH+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-HHH-H",
+      "gamma_polynomial": {
+        "2": 2,
+        "6": 1
+      }
+    },
+    {
+      "word": "-HHH-+",
+      "gamma_polynomial": {
+        "1": 2,
+        "5": 1
+      }
+    },
+    {
+      "word": "-HHH--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-HH+HH",
+      "gamma_polynomial": {
+        "2": 1,
+        "6": 1,
+        "0": 1,
+        "12": 1,
+        "8": 1,
+        "14": 2,
+        "10": 2
+      }
+    },
+    {
+      "word": "-HH+H+",
+      "gamma_polynomial": {
+        "3": 1,
+        "7": 1,
+        "1": 1,
+        "13": 1,
+        "9": 3,
+        "15": 2
+      }
+    },
+    {
+      "word": "-HH+H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-HH++H",
+      "gamma_polynomial": {
+        "13": 4,
+        "15": 2
+      }
+    },
+    {
+      "word": "-HH+++",
+      "gamma_polynomial": {
+        "14": 6
+      }
+    },
+    {
+      "word": "-HH++-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-HH+-H",
+      "gamma_polynomial": {
+        "3": 1,
+        "7": 1,
+        "1": 1
+      }
+    },
+    {
+      "word": "-HH+-+",
+      "gamma_polynomial": {
+        "2": 1,
+        "6": 1,
+        "0": 1
+      }
+    },
+    {
+      "word": "-HH+--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-HH-HH",
+      "gamma_polynomial": {
+        "6": 4,
+        "10": 2
+      }
+    },
+    {
+      "word": "-HH-H+",
+      "gamma_polynomial": {
+        "5": 3,
+        "7": 1,
+        "9": 1,
+        "11": 1
+      }
+    },
+    {
+      "word": "-HH-H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-HH-+H",
+      "gamma_polynomial": {
+        "7": 1,
+        "5": 3,
+        "11": 1,
+        "9": 1
+      }
+    },
+    {
+      "word": "-HH-++",
+      "gamma_polynomial": {
+        "6": 2,
+        "10": 2,
+        "4": 2
+      }
+    },
+    {
+      "word": "-HH-+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-HH--H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-HH--+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-HH---",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-H+HHH",
+      "gamma_polynomial": {
+        "4": 2,
+        "8": 1,
+        "6": 2,
+        "10": 1
+      }
+    },
+    {
+      "word": "-H+HH+",
+      "gamma_polynomial": {
+        "5": 3,
+        "9": 1,
+        "7": 1,
+        "11": 1
+      }
+    },
+    {
+      "word": "-H+HH-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-H+H+H",
+      "gamma_polynomial": {
+        "9": 3,
+        "11": 1
+      }
+    },
+    {
+      "word": "-H+H++",
+      "gamma_polynomial": {
+        "10": 4
+      }
+    },
+    {
+      "word": "-H+H+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-H+H-H",
+      "gamma_polynomial": {
+        "5": 1,
+        "7": 1
+      }
+    },
+    {
+      "word": "-H+H-+",
+      "gamma_polynomial": {
+        "4": 1,
+        "6": 1
+      }
+    },
+    {
+      "word": "-H+H--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-H++HH",
+      "gamma_polynomial": {
+        "5": 2
+      }
+    },
+    {
+      "word": "-H++H+",
+      "gamma_polynomial": {
+        "6": 2
+      }
+    },
+    {
+      "word": "-H++H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-H+++H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-H++++",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-H+++-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-H++-H",
+      "gamma_polynomial": {
+        "6": 2
+      }
+    },
+    {
+      "word": "-H++-+",
+      "gamma_polynomial": {
+        "5": 2
+      }
+    },
+    {
+      "word": "-H++--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-H+-HH",
+      "gamma_polynomial": {
+        "9": 2,
+        "11": 2
+      }
+    },
+    {
+      "word": "-H+-H+",
+      "gamma_polynomial": {
+        "8": 1,
+        "10": 3
+      }
+    },
+    {
+      "word": "-H+-H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-H+-+H",
+      "gamma_polynomial": {
+        "10": 3,
+        "8": 1
+      }
+    },
+    {
+      "word": "-H+-++",
+      "gamma_polynomial": {
+        "9": 4
+      }
+    },
+    {
+      "word": "-H+-+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-H+--H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-H+--+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-H+---",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-H-HHH",
+      "gamma_polynomial": {
+        "2": 2,
+        "6": 1,
+        "14": 3,
+        "10": 3
+      }
+    },
+    {
+      "word": "-H-HH+",
+      "gamma_polynomial": {
+        "3": 1,
+        "7": 1,
+        "1": 1,
+        "13": 1,
+        "15": 2,
+        "9": 3
+      }
+    },
+    {
+      "word": "-H-HH-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-H-H+H",
+      "gamma_polynomial": {
+        "5": 1,
+        "7": 1,
+        "15": 2,
+        "13": 2,
+        "9": 2
+      }
+    },
+    {
+      "word": "-H-H++",
+      "gamma_polynomial": {
+        "6": 2,
+        "14": 4,
+        "8": 2
+      }
+    },
+    {
+      "word": "-H-H+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-H-H-H",
+      "gamma_polynomial": {
+        "3": 1
+      }
+    },
+    {
+      "word": "-H-H-+",
+      "gamma_polynomial": {
+        "2": 1
+      }
+    },
+    {
+      "word": "-H-H--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-H-+HH",
+      "gamma_polynomial": {
+        "1": 1,
+        "13": 3,
+        "15": 2,
+        "9": 1
+      }
+    },
+    {
+      "word": "-H-+H+",
+      "gamma_polynomial": {
+        "2": 1,
+        "12": 1,
+        "14": 4,
+        "8": 1
+      }
+    },
+    {
+      "word": "-H-+H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-H-++H",
+      "gamma_polynomial": {
+        "14": 4,
+        "12": 2
+      }
+    },
+    {
+      "word": "-H-+++",
+      "gamma_polynomial": {
+        "13": 6
+      }
+    },
+    {
+      "word": "-H-++-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-H-+-H",
+      "gamma_polynomial": {
+        "2": 1
+      }
+    },
+    {
+      "word": "-H-+-+",
+      "gamma_polynomial": {
+        "1": 1
+      }
+    },
+    {
+      "word": "-H-+--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-H--HH",
+      "gamma_polynomial": {
+        "7": 2
+      }
+    },
+    {
+      "word": "-H--H+",
+      "gamma_polynomial": {
+        "6": 2
+      }
+    },
+    {
+      "word": "-H--H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-H--+H",
+      "gamma_polynomial": {
+        "6": 2
+      }
+    },
+    {
+      "word": "-H--++",
+      "gamma_polynomial": {
+        "5": 2
+      }
+    },
+    {
+      "word": "-H--+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-H---H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-H---+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-H----",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-+HHHH",
+      "gamma_polynomial": {
+        "0": 2,
+        "4": 1
+      }
+    },
+    {
+      "word": "-+HHH+",
+      "gamma_polynomial": {
+        "1": 2,
+        "5": 1
+      }
+    },
+    {
+      "word": "-+HHH-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-+HH+H",
+      "gamma_polynomial": {
+        "5": 2
+      }
+    },
+    {
+      "word": "-+HH++",
+      "gamma_polynomial": {
+        "6": 2
+      }
+    },
+    {
+      "word": "-+HH+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-+HH-H",
+      "gamma_polynomial": {
+        "1": 1
+      }
+    },
+    {
+      "word": "-+HH-+",
+      "gamma_polynomial": {
+        "0": 1
+      }
+    },
+    {
+      "word": "-+HH--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-+H+HH",
+      "gamma_polynomial": {
+        "1": 1
+      }
+    },
+    {
+      "word": "-+H+H+",
+      "gamma_polynomial": {
+        "2": 1
+      }
+    },
+    {
+      "word": "-+H+H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-+H++H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-+H+++",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-+H++-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-+H+-H",
+      "gamma_polynomial": {
+        "2": 1
+      }
+    },
+    {
+      "word": "-+H+-+",
+      "gamma_polynomial": {
+        "1": 1
+      }
+    },
+    {
+      "word": "-+H+--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-+H-HH",
+      "gamma_polynomial": {
+        "5": 2
+      }
+    },
+    {
+      "word": "-+H-H+",
+      "gamma_polynomial": {
+        "4": 1,
+        "6": 1
+      }
+    },
+    {
+      "word": "-+H-H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-+H-+H",
+      "gamma_polynomial": {
+        "6": 1,
+        "4": 1
+      }
+    },
+    {
+      "word": "-+H-++",
+      "gamma_polynomial": {
+        "5": 2
+      }
+    },
+    {
+      "word": "-+H-+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-+H--H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-+H--+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-+H---",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-++HHH",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-++HH+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-++HH-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-++H+H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-++H++",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-++H+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-++H-H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-++H-+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-++H--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-+++HH",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-+++H+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-+++H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-++++H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-+++++",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-++++-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-+++-H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-+++-+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-+++--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-++-HH",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-++-H+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-++-H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-++-+H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-++-++",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-++-+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-++--H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-++--+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-++---",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-+-HHH",
+      "gamma_polynomial": {
+        "1": 2,
+        "5": 1
+      }
+    },
+    {
+      "word": "-+-HH+",
+      "gamma_polynomial": {
+        "2": 1,
+        "6": 1,
+        "0": 1
+      }
+    },
+    {
+      "word": "-+-HH-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-+-H+H",
+      "gamma_polynomial": {
+        "4": 1,
+        "6": 1
+      }
+    },
+    {
+      "word": "-+-H++",
+      "gamma_polynomial": {
+        "5": 2
+      }
+    },
+    {
+      "word": "-+-H+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-+-H-H",
+      "gamma_polynomial": {
+        "2": 1
+      }
+    },
+    {
+      "word": "-+-H-+",
+      "gamma_polynomial": {
+        "1": 1
+      }
+    },
+    {
+      "word": "-+-H--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-+-+HH",
+      "gamma_polynomial": {
+        "0": 1
+      }
+    },
+    {
+      "word": "-+-+H+",
+      "gamma_polynomial": {
+        "1": 1
+      }
+    },
+    {
+      "word": "-+-+H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-+-++H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-+-+++",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-+-++-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-+-+-H",
+      "gamma_polynomial": {
+        "1": 1
+      }
+    },
+    {
+      "word": "-+-+-+",
+      "gamma_polynomial": {
+        "0": 1
+      }
+    },
+    {
+      "word": "-+-+--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-+--HH",
+      "gamma_polynomial": {
+        "6": 2
+      }
+    },
+    {
+      "word": "-+--H+",
+      "gamma_polynomial": {
+        "5": 2
+      }
+    },
+    {
+      "word": "-+--H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-+--+H",
+      "gamma_polynomial": {
+        "5": 2
+      }
+    },
+    {
+      "word": "-+--++",
+      "gamma_polynomial": {
+        "4": 2
+      }
+    },
+    {
+      "word": "-+--+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-+---H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-+---+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-+----",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "--HHHH",
+      "gamma_polynomial": {
+        "6": 6,
+        "10": 4,
+        "14": 2
+      }
+    },
+    {
+      "word": "--HHH+",
+      "gamma_polynomial": {
+        "7": 2,
+        "11": 2,
+        "5": 4,
+        "15": 2,
+        "9": 2
+      }
+    },
+    {
+      "word": "--HHH-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "--HH+H",
+      "gamma_polynomial": {
+        "9": 2,
+        "11": 2,
+        "13": 2,
+        "15": 2,
+        "5": 2
+      }
+    },
+    {
+      "word": "--HH++",
+      "gamma_polynomial": {
+        "10": 4,
+        "14": 4,
+        "4": 2
+      }
+    },
+    {
+      "word": "--HH+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "--HH-H",
+      "gamma_polynomial": {
+        "7": 2
+      }
+    },
+    {
+      "word": "--HH-+",
+      "gamma_polynomial": {
+        "6": 2
+      }
+    },
+    {
+      "word": "--HH--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "--H+HH",
+      "gamma_polynomial": {
+        "5": 2,
+        "13": 2,
+        "9": 2,
+        "15": 2
+      }
+    },
+    {
+      "word": "--H+H+",
+      "gamma_polynomial": {
+        "6": 2,
+        "14": 4,
+        "8": 2
+      }
+    },
+    {
+      "word": "--H+H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "--H++H",
+      "gamma_polynomial": {
+        "12": 2,
+        "14": 4
+      }
+    },
+    {
+      "word": "--H+++",
+      "gamma_polynomial": {
+        "13": 6
+      }
+    },
+    {
+      "word": "--H++-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "--H+-H",
+      "gamma_polynomial": {
+        "6": 2
+      }
+    },
+    {
+      "word": "--H+-+",
+      "gamma_polynomial": {
+        "5": 2
+      }
+    },
+    {
+      "word": "--H+--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "--H-HH",
+      "gamma_polynomial": {
+        "11": 4
+      }
+    },
+    {
+      "word": "--H-H+",
+      "gamma_polynomial": {
+        "10": 4
+      }
+    },
+    {
+      "word": "--H-H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "--H-+H",
+      "gamma_polynomial": {
+        "10": 4
+      }
+    },
+    {
+      "word": "--H-++",
+      "gamma_polynomial": {
+        "9": 4
+      }
+    },
+    {
+      "word": "--H-+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "--H--H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "--H--+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "--H---",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "--+HHH",
+      "gamma_polynomial": {
+        "5": 4,
+        "9": 2
+      }
+    },
+    {
+      "word": "--+HH+",
+      "gamma_polynomial": {
+        "6": 2,
+        "10": 2,
+        "4": 2
+      }
+    },
+    {
+      "word": "--+HH-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "--+H+H",
+      "gamma_polynomial": {
+        "8": 2,
+        "10": 2
+      }
+    },
+    {
+      "word": "--+H++",
+      "gamma_polynomial": {
+        "9": 4
+      }
+    },
+    {
+      "word": "--+H+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "--+H-H",
+      "gamma_polynomial": {
+        "6": 2
+      }
+    },
+    {
+      "word": "--+H-+",
+      "gamma_polynomial": {
+        "5": 2
+      }
+    },
+    {
+      "word": "--+H--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "--++HH",
+      "gamma_polynomial": {
+        "4": 2
+      }
+    },
+    {
+      "word": "--++H+",
+      "gamma_polynomial": {
+        "5": 2
+      }
+    },
+    {
+      "word": "--++H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "--+++H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "--++++",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "--+++-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "--++-H",
+      "gamma_polynomial": {
+        "5": 2
+      }
+    },
+    {
+      "word": "--++-+",
+      "gamma_polynomial": {
+        "4": 2
+      }
+    },
+    {
+      "word": "--++--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "--+-HH",
+      "gamma_polynomial": {
+        "10": 4
+      }
+    },
+    {
+      "word": "--+-H+",
+      "gamma_polynomial": {
+        "9": 4
+      }
+    },
+    {
+      "word": "--+-H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "--+-+H",
+      "gamma_polynomial": {
+        "9": 4
+      }
+    },
+    {
+      "word": "--+-++",
+      "gamma_polynomial": {
+        "8": 4
+      }
+    },
+    {
+      "word": "--+-+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "--+--H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "--+--+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "--+---",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "---HHH",
+      "gamma_polynomial": {
+        "15": 6
+      }
+    },
+    {
+      "word": "---HH+",
+      "gamma_polynomial": {
+        "14": 6
+      }
+    },
+    {
+      "word": "---HH-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "---H+H",
+      "gamma_polynomial": {
+        "14": 6
+      }
+    },
+    {
+      "word": "---H++",
+      "gamma_polynomial": {
+        "13": 6
+      }
+    },
+    {
+      "word": "---H+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "---H-H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "---H-+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "---H--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "---+HH",
+      "gamma_polynomial": {
+        "14": 6
+      }
+    },
+    {
+      "word": "---+H+",
+      "gamma_polynomial": {
+        "13": 6
+      }
+    },
+    {
+      "word": "---+H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "---++H",
+      "gamma_polynomial": {
+        "13": 6
+      }
+    },
+    {
+      "word": "---+++",
+      "gamma_polynomial": {
+        "12": 6
+      }
+    },
+    {
+      "word": "---++-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "---+-H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "---+-+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "---+--",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "----HH",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "----H+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "----H-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "----+H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "----++",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "----+-",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-----H",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "-----+",
+      "gamma_polynomial": {}
+    },
+    {
+      "word": "------",
+      "gamma_polynomial": {}
+    }
+  ],
+  "complement_moments": {
+    "2": {
+      "raw": "-(gamma - 1)*(gamma + 1)",
+      "normalized": "1"
+    },
+    "4": {
+      "raw": "(gamma - 1)**2*(gamma + 1)**2*(2*gamma**4 + gamma**2 + 2)",
+      "normalized": "2*gamma**4 + gamma**2 + 2"
+    },
+    "6": {
+      "raw": "-(gamma - 1)**3*(gamma + 1)**3*(6*gamma**12 + 7*gamma**10 + 13*gamma**8 + 10*gamma**6 + 14*gamma**4 + 6*gamma**2 + 5)",
+      "normalized": "6*gamma**12 + 7*gamma**10 + 13*gamma**8 + 10*gamma**6 + 14*gamma**4 + 6*gamma**2 + 5"
+    }
+  },
+  "gram_audits": [
+    {
+      "gamma": "1/2",
+      "degree": 2,
+      "raw_words": 13,
+      "rank": 7,
+      "pivots": [
+        {
+          "word": "",
+          "squared_norm": "1"
+        },
+        {
+          "word": "H",
+          "squared_norm": "1"
+        },
+        {
+          "word": "+",
+          "squared_norm": "3/4"
+        },
+        {
+          "word": "HH",
+          "squared_norm": "17/16"
+        },
+        {
+          "word": "H+",
+          "squared_norm": "3/4"
+        },
+        {
+          "word": "+H",
+          "squared_norm": "1245/17408"
+        },
+        {
+          "word": "++",
+          "squared_norm": "99/1328"
+        }
+      ]
+    },
+    {
+      "gamma": "1/2",
+      "degree": 3,
+      "raw_words": 40,
+      "rank": 15,
+      "pivots": [
+        {
+          "word": "",
+          "squared_norm": "1"
+        },
+        {
+          "word": "H",
+          "squared_norm": "1"
+        },
+        {
+          "word": "+",
+          "squared_norm": "3/4"
+        },
+        {
+          "word": "HH",
+          "squared_norm": "17/16"
+        },
+        {
+          "word": "H+",
+          "squared_norm": "3/4"
+        },
+        {
+          "word": "+H",
+          "squared_norm": "1245/17408"
+        },
+        {
+          "word": "++",
+          "squared_norm": "99/1328"
+        },
+        {
+          "word": "HHH",
+          "squared_norm": "4641/4096"
+        },
+        {
+          "word": "HH+",
+          "squared_norm": "51/64"
+        },
+        {
+          "word": "H+H",
+          "squared_norm": "1245/17408"
+        },
+        {
+          "word": "H++",
+          "squared_norm": "99/1328"
+        },
+        {
+          "word": "+HH",
+          "squared_norm": "24627825/6106906624"
+        },
+        {
+          "word": "+H+",
+          "squared_norm": "339360345/121947357184"
+        },
+        {
+          "word": "++H",
+          "squared_norm": "4740379875/7907669180416"
+        },
+        {
+          "word": "+++",
+          "squared_norm": "107811/149430272"
+        }
+      ]
+    },
+    {
+      "gamma": "2/3",
+      "degree": 2,
+      "raw_words": 13,
+      "rank": 7,
+      "pivots": [
+        {
+          "word": "",
+          "squared_norm": "1"
+        },
+        {
+          "word": "H",
+          "squared_norm": "1"
+        },
+        {
+          "word": "+",
+          "squared_norm": "5/9"
+        },
+        {
+          "word": "HH",
+          "squared_norm": "97/81"
+        },
+        {
+          "word": "H+",
+          "squared_norm": "5/9"
+        },
+        {
+          "word": "+H",
+          "squared_norm": "1178320/5727753"
+        },
+        {
+          "word": "++",
+          "squared_norm": "119200/825957"
+        }
+      ]
+    },
+    {
+      "gamma": "2/3",
+      "degree": 3,
+      "raw_words": 40,
+      "rank": 15,
+      "pivots": [
+        {
+          "word": "",
+          "squared_norm": "1"
+        },
+        {
+          "word": "H",
+          "squared_norm": "1"
+        },
+        {
+          "word": "+",
+          "squared_norm": "5/9"
+        },
+        {
+          "word": "HH",
+          "squared_norm": "97/81"
+        },
+        {
+          "word": "H+",
+          "squared_norm": "5/9"
+        },
+        {
+          "word": "+H",
+          "squared_norm": "1178320/5727753"
+        },
+        {
+          "word": "++",
+          "squared_norm": "119200/825957"
+        },
+        {
+          "word": "HHH",
+          "squared_norm": "786961/531441"
+        },
+        {
+          "word": "HH+",
+          "squared_norm": "485/729"
+        },
+        {
+          "word": "H+H",
+          "squared_norm": "1178320/5727753"
+        },
+        {
+          "word": "H++",
+          "squared_norm": "119200/825957"
+        },
+        {
+          "word": "+HH",
+          "squared_norm": "866254851488000/20622157465233177"
+        },
+        {
+          "word": "+H+",
+          "squared_norm": "12265114488889600/668837795482495557"
+        },
+        {
+          "word": "++H",
+          "squared_norm": "1730085095993712640/125029979498133480321"
+        },
+        {
+          "word": "+++",
+          "squared_norm": "711461888000/58745594959641"
+        }
+      ]
+    }
+  ],
+  "environment": {
+    "python": "3.14.5",
+    "sympy": "1.14.0"
+  },
+  "input_sha256": {
+    "code/check_slater_joint_word_law.py": "2707857a55d3ccfb4a6d750f834177f617ab110cbad7f092aa5607668f60113d",
+    "code/slater_joint_site_polynomial.py": "68d364e710f0d37cfca24720554fb342fac35d435e59fba3e3ba6b0a2048b489",
+    "results/susskind-slater-joint-words/site-checks.json": "864f4342efb51562d8a877ed2a1f9be14d7d1fa9d9d4e19d01a3d84a200c6f80"
+  },
+  "scope": "All 729 sixth words as exact polynomials from the analytic rule; rational Gram positivity/rank at two points through degree3. Not an independent proof of all-word convergence or generic degree3 rank."
+}

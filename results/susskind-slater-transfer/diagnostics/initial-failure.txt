@@ -1,0 +1,5 @@
+Initial run failed before creating a scientific JSON.
+Assertion: tower decomposition HHP, gamma=1/2.
+Actual {'HHP':1.0,'HHH':8.673617379884035e-19}; expected {'HHP':Fraction(1,1)}.
+Cause: Python 1/qfac(0,q) used integer denominator 1, producing float at r=0.
+Correction: use Fraction(1)/qfac throughout that coefficient. Analytic identity unchanged.

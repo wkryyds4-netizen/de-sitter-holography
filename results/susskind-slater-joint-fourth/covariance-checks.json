@@ -1,0 +1,62 @@
+{
+  "status": "passed",
+  "created_utc": "2026-11-07T15:20:45.286132+00:00",
+  "checks": 12,
+  "rows": [
+    {
+      "N": 4,
+      "p": 1,
+      "K": "16",
+      "T": 2,
+      "D": 6,
+      "rank_sum_terms": [
+        36,
+        60
+      ]
+    },
+    {
+      "N": 6,
+      "p": 1,
+      "K": "81",
+      "T": 6,
+      "D": 12,
+      "rank_sum_terms": [
+        360,
+        1260
+      ]
+    },
+    {
+      "N": 6,
+      "p": 2,
+      "K": "81",
+      "T": 0,
+      "D": 30,
+      "rank_sum_terms": [
+        360,
+        1260
+      ]
+    },
+    {
+      "N": 8,
+      "p": 2,
+      "K": "1296",
+      "T": 6,
+      "D": 90,
+      "rank_sum_terms": [
+        8100,
+        56700,
+        25920
+      ]
+    }
+  ],
+  "source": "Kota nucl-th/0410069 equations (17), (25)-(28), unit Gaussian covariance",
+  "environment": {
+    "python": "3.14.5",
+    "dependencies": "standard library"
+  },
+  "input_sha256": {
+    "code/check_slater_joint_covariance.py": "8ebdde058f08f9ee31ca2274bfe988967cc5365d0adf87b789f01579bb654443",
+    "results/susskind-slater-joint-fourth/exact-checks.json": "5021e7ce3cdf836a7d0b75025de546b0ce253beb02cf546287ccb6be215920f0"
+  },
+  "scope": "Independent scalar literature formula vs saved finite CAR enumeration; no rerun of scientific generator and no general K=L^2 assertion."
+}

@@ -1,0 +1,5373 @@
+{
+  "status": "passed",
+  "created_utc": "2026-11-07T15:08:17.061349+00:00",
+  "parameters": {
+    "fixtures": [
+      [
+        4,
+        1
+      ],
+      [
+        6,
+        1
+      ],
+      [
+        6,
+        2
+      ],
+      [
+        8,
+        2
+      ]
+    ],
+    "alphabet": "H+-",
+    "order": "written left to right, rightmost acts first",
+    "covariance": "E J_AB J_CD = delta_AD delta_BC",
+    "filling": "m=N/2",
+    "arithmetic": "integer CAR and Fraction",
+    "words": "all 3^4 fourth-order words and all 3^2 second-order words",
+    "asymptotic_p": [
+      2,
+      4,
+      8,
+      16,
+      32,
+      64
+    ],
+    "asymptotic_lambda": "1/2"
+  },
+  "parameter_sha256": "316cea57605891be16c849881a9cf50f4e7d34849c68eaa25d5cd90414f7484e",
+  "fixtures": [
+    {
+      "N": 4,
+      "p": 1,
+      "L": 4,
+      "D": 6,
+      "ratio_R": "1/4",
+      "crossed_eigenvalue_T": 2,
+      "nested_U": 12,
+      "H_crossed_K": 16,
+      "H_first_step_weights": [
+        2,
+        4
+      ],
+      "counts": {
+        "Gaussian_pair_label_assignments": 768,
+        "nonzero_word_assignments": 652
+      },
+      "raw_CAR_sign_counts": {
+        "1": 88,
+        "0": 680
+      },
+      "second_moments": {
+        "HH": 6,
+        "H+": 4,
+        "H-": 0,
+        "+H": 0,
+        "++": 0,
+        "+-": 0,
+        "-H": 4,
+        "-+": 4,
+        "--": 0
+      },
+      "words": [
+        {
+          "word": "HHHH",
+          "pairing_contributions": [
+            36,
+            16,
+            36
+          ],
+          "total": 88,
+          "normalized_denominator": {
+            "D_power": 4,
+            "L_power": 0,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "HHH+",
+          "pairing_contributions": [
+            24,
+            8,
+            24
+          ],
+          "total": 56,
+          "normalized_denominator": {
+            "D_power": 3,
+            "L_power": 1,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "HHH-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 3,
+            "L_power": 1,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "HH+H",
+          "pairing_contributions": [
+            0,
+            8,
+            12
+          ],
+          "total": 20,
+          "normalized_denominator": {
+            "D_power": 3,
+            "L_power": 1,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "HH++",
+          "pairing_contributions": [
+            0,
+            4,
+            4
+          ],
+          "total": 8,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "HH+-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "HH-H",
+          "pairing_contributions": [
+            24,
+            0,
+            4
+          ],
+          "total": 28,
+          "normalized_denominator": {
+            "D_power": 3,
+            "L_power": 1,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "HH-+",
+          "pairing_contributions": [
+            24,
+            0,
+            4
+          ],
+          "total": 28,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "HH--",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H+HH",
+          "pairing_contributions": [
+            24,
+            0,
+            4
+          ],
+          "total": 28,
+          "normalized_denominator": {
+            "D_power": 3,
+            "L_power": 1,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H+H+",
+          "pairing_contributions": [
+            16,
+            0,
+            4
+          ],
+          "total": 20,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H+H-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H++H",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H+++",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H++-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H+-H",
+          "pairing_contributions": [
+            16,
+            0,
+            4
+          ],
+          "total": 20,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H+-+",
+          "pairing_contributions": [
+            16,
+            0,
+            4
+          ],
+          "total": 20,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H+--",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H-HH",
+          "pairing_contributions": [
+            0,
+            8,
+            12
+          ],
+          "total": 20,
+          "normalized_denominator": {
+            "D_power": 3,
+            "L_power": 1,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H-H+",
+          "pairing_contributions": [
+            0,
+            8,
+            4
+          ],
+          "total": 12,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H-H-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H-+H",
+          "pairing_contributions": [
+            0,
+            4,
+            12
+          ],
+          "total": 16,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H-++",
+          "pairing_contributions": [
+            0,
+            4,
+            4
+          ],
+          "total": 8,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H-+-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H--H",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H--+",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H---",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+HHH",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 3,
+            "L_power": 1,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+HH+",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+HH-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+H+H",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+H++",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+H+-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+H-H",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+H-+",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+H--",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "++HH",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "++H+",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "++H-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+++H",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "++++",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+++-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "++-H",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "++-+",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "++--",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+-HH",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+-H+",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+-H-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+-+H",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+-++",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+-+-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+--H",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+--+",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+---",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-HHH",
+          "pairing_contributions": [
+            24,
+            8,
+            24
+          ],
+          "total": 56,
+          "normalized_denominator": {
+            "D_power": 3,
+            "L_power": 1,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-HH+",
+          "pairing_contributions": [
+            16,
+            4,
+            24
+          ],
+          "total": 44,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-HH-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-H+H",
+          "pairing_contributions": [
+            0,
+            8,
+            4
+          ],
+          "total": 12,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-H++",
+          "pairing_contributions": [
+            0,
+            4,
+            4
+          ],
+          "total": 8,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-H+-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-H-H",
+          "pairing_contributions": [
+            16,
+            0,
+            4
+          ],
+          "total": 20,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-H-+",
+          "pairing_contributions": [
+            16,
+            0,
+            4
+          ],
+          "total": 20,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-H--",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-+HH",
+          "pairing_contributions": [
+            24,
+            0,
+            4
+          ],
+          "total": 28,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-+H+",
+          "pairing_contributions": [
+            16,
+            0,
+            4
+          ],
+          "total": 20,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-+H-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-++H",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-+++",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-++-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-+-H",
+          "pairing_contributions": [
+            16,
+            0,
+            4
+          ],
+          "total": 20,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-+-+",
+          "pairing_contributions": [
+            16,
+            0,
+            4
+          ],
+          "total": 20,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-+--",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "--HH",
+          "pairing_contributions": [
+            0,
+            4,
+            4
+          ],
+          "total": 8,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "--H+",
+          "pairing_contributions": [
+            0,
+            4,
+            4
+          ],
+          "total": 8,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "--H-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "--+H",
+          "pairing_contributions": [
+            0,
+            4,
+            4
+          ],
+          "total": 8,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "--++",
+          "pairing_contributions": [
+            0,
+            4,
+            4
+          ],
+          "total": 8,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "--+-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "---H",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "---+",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "----",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        }
+      ],
+      "covariance_columns_verified": 6,
+      "covariance_columns": [
+        {
+          "state": 3,
+          "nonzero": {
+            "10": -2
+          }
+        },
+        {
+          "state": 5,
+          "nonzero": {
+            "12": -2
+          }
+        },
+        {
+          "state": 6,
+          "nonzero": {}
+        },
+        {
+          "state": 9,
+          "nonzero": {}
+        },
+        {
+          "state": 10,
+          "nonzero": {}
+        },
+        {
+          "state": 12,
+          "nonzero": {}
+        }
+      ]
+    },
+    {
+      "N": 6,
+      "p": 1,
+      "L": 9,
+      "D": 12,
+      "ratio_R": "4/9",
+      "crossed_eigenvalue_T": 6,
+      "nested_U": 63,
+      "H_crossed_K": 81,
+      "H_first_step_weights": [
+        3,
+        9
+      ],
+      "counts": {
+        "Gaussian_pair_label_assignments": 3888,
+        "nonzero_word_assignments": 3339
+      },
+      "raw_CAR_sign_counts": {
+        "1": 369,
+        "0": 3519
+      },
+      "second_moments": {
+        "HH": 12,
+        "H+": 9,
+        "H-": 0,
+        "+H": 0,
+        "++": 0,
+        "+-": 0,
+        "-H": 9,
+        "-+": 9,
+        "--": 0
+      },
+      "words": [
+        {
+          "word": "HHHH",
+          "pairing_contributions": [
+            144,
+            81,
+            144
+          ],
+          "total": 369,
+          "normalized_denominator": {
+            "D_power": 4,
+            "L_power": 0,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "HHH+",
+          "pairing_contributions": [
+            108,
+            54,
+            108
+          ],
+          "total": 270,
+          "normalized_denominator": {
+            "D_power": 3,
+            "L_power": 1,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "HHH-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 3,
+            "L_power": 1,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "HH+H",
+          "pairing_contributions": [
+            0,
+            54,
+            63
+          ],
+          "total": 117,
+          "normalized_denominator": {
+            "D_power": 3,
+            "L_power": 1,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "HH++",
+          "pairing_contributions": [
+            0,
+            36,
+            36
+          ],
+          "total": 72,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "HH+-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "HH-H",
+          "pairing_contributions": [
+            108,
+            0,
+            9
+          ],
+          "total": 117,
+          "normalized_denominator": {
+            "D_power": 3,
+            "L_power": 1,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "HH-+",
+          "pairing_contributions": [
+            108,
+            0,
+            9
+          ],
+          "total": 117,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "HH--",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H+HH",
+          "pairing_contributions": [
+            108,
+            0,
+            9
+          ],
+          "total": 117,
+          "normalized_denominator": {
+            "D_power": 3,
+            "L_power": 1,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H+H+",
+          "pairing_contributions": [
+            81,
+            0,
+            9
+          ],
+          "total": 90,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H+H-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H++H",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H+++",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H++-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H+-H",
+          "pairing_contributions": [
+            81,
+            0,
+            9
+          ],
+          "total": 90,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H+-+",
+          "pairing_contributions": [
+            81,
+            0,
+            9
+          ],
+          "total": 90,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H+--",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H-HH",
+          "pairing_contributions": [
+            0,
+            54,
+            63
+          ],
+          "total": 117,
+          "normalized_denominator": {
+            "D_power": 3,
+            "L_power": 1,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H-H+",
+          "pairing_contributions": [
+            0,
+            54,
+            36
+          ],
+          "total": 90,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H-H-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H-+H",
+          "pairing_contributions": [
+            0,
+            36,
+            63
+          ],
+          "total": 99,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H-++",
+          "pairing_contributions": [
+            0,
+            36,
+            36
+          ],
+          "total": 72,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H-+-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H--H",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H--+",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H---",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+HHH",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 3,
+            "L_power": 1,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+HH+",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+HH-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+H+H",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+H++",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+H+-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+H-H",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+H-+",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+H--",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "++HH",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "++H+",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "++H-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+++H",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "++++",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+++-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "++-H",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "++-+",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "++--",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+-HH",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+-H+",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+-H-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+-+H",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+-++",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+-+-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+--H",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+--+",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+---",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-HHH",
+          "pairing_contributions": [
+            108,
+            54,
+            108
+          ],
+          "total": 270,
+          "normalized_denominator": {
+            "D_power": 3,
+            "L_power": 1,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-HH+",
+          "pairing_contributions": [
+            81,
+            36,
+            108
+          ],
+          "total": 225,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-HH-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-H+H",
+          "pairing_contributions": [
+            0,
+            54,
+            36
+          ],
+          "total": 90,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-H++",
+          "pairing_contributions": [
+            0,
+            36,
+            36
+          ],
+          "total": 72,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-H+-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-H-H",
+          "pairing_contributions": [
+            81,
+            0,
+            9
+          ],
+          "total": 90,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-H-+",
+          "pairing_contributions": [
+            81,
+            0,
+            9
+          ],
+          "total": 90,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-H--",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-+HH",
+          "pairing_contributions": [
+            108,
+            0,
+            9
+          ],
+          "total": 117,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-+H+",
+          "pairing_contributions": [
+            81,
+            0,
+            9
+          ],
+          "total": 90,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-+H-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-++H",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-+++",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-++-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-+-H",
+          "pairing_contributions": [
+            81,
+            0,
+            9
+          ],
+          "total": 90,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-+-+",
+          "pairing_contributions": [
+            81,
+            0,
+            9
+          ],
+          "total": 90,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-+--",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "--HH",
+          "pairing_contributions": [
+            0,
+            36,
+            36
+          ],
+          "total": 72,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "--H+",
+          "pairing_contributions": [
+            0,
+            36,
+            36
+          ],
+          "total": 72,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "--H-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "--+H",
+          "pairing_contributions": [
+            0,
+            36,
+            36
+          ],
+          "total": 72,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "--++",
+          "pairing_contributions": [
+            0,
+            36,
+            36
+          ],
+          "total": 72,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "--+-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "---H",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "---+",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "----",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        }
+      ],
+      "covariance_columns_verified": 20,
+      "covariance_columns": [
+        {
+          "state": 7,
+          "nonzero": {
+            "38": 6
+          }
+        },
+        {
+          "state": 11,
+          "nonzero": {
+            "42": 6
+          }
+        },
+        {
+          "state": 13,
+          "nonzero": {
+            "44": 6
+          }
+        },
+        {
+          "state": 14,
+          "nonzero": {}
+        },
+        {
+          "state": 19,
+          "nonzero": {
+            "50": 6
+          }
+        },
+        {
+          "state": 21,
+          "nonzero": {
+            "52": 6
+          }
+        },
+        {
+          "state": 22,
+          "nonzero": {}
+        },
+        {
+          "state": 25,
+          "nonzero": {
+            "56": 6
+          }
+        },
+        {
+          "state": 26,
+          "nonzero": {}
+        },
+        {
+          "state": 28,
+          "nonzero": {}
+        },
+        {
+          "state": 35,
+          "nonzero": {}
+        },
+        {
+          "state": 37,
+          "nonzero": {}
+        },
+        {
+          "state": 38,
+          "nonzero": {}
+        },
+        {
+          "state": 41,
+          "nonzero": {}
+        },
+        {
+          "state": 42,
+          "nonzero": {}
+        },
+        {
+          "state": 44,
+          "nonzero": {}
+        },
+        {
+          "state": 49,
+          "nonzero": {}
+        },
+        {
+          "state": 50,
+          "nonzero": {}
+        },
+        {
+          "state": 52,
+          "nonzero": {}
+        },
+        {
+          "state": 56,
+          "nonzero": {}
+        }
+      ]
+    },
+    {
+      "N": 6,
+      "p": 2,
+      "L": 9,
+      "D": 30,
+      "ratio_R": "0",
+      "crossed_eigenvalue_T": 0,
+      "nested_U": 45,
+      "H_crossed_K": 81,
+      "H_first_step_weights": [
+        3,
+        18,
+        9
+      ],
+      "counts": {
+        "Gaussian_pair_label_assignments": 151875,
+        "nonzero_word_assignments": 5283
+      },
+      "raw_CAR_sign_counts": {
+        "1": 1881,
+        "0": 149994
+      },
+      "second_moments": {
+        "HH": 30,
+        "H+": 9,
+        "H-": 0,
+        "+H": 0,
+        "++": 0,
+        "+-": 0,
+        "-H": 9,
+        "-+": 9,
+        "--": 0
+      },
+      "words": [
+        {
+          "word": "HHHH",
+          "pairing_contributions": [
+            900,
+            81,
+            900
+          ],
+          "total": 1881,
+          "normalized_denominator": {
+            "D_power": 4,
+            "L_power": 0,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "HHH+",
+          "pairing_contributions": [
+            270,
+            0,
+            270
+          ],
+          "total": 540,
+          "normalized_denominator": {
+            "D_power": 3,
+            "L_power": 1,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "HHH-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 3,
+            "L_power": 1,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "HH+H",
+          "pairing_contributions": [
+            0,
+            0,
+            45
+          ],
+          "total": 45,
+          "normalized_denominator": {
+            "D_power": 3,
+            "L_power": 1,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "HH++",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "HH+-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "HH-H",
+          "pairing_contributions": [
+            270,
+            0,
+            9
+          ],
+          "total": 279,
+          "normalized_denominator": {
+            "D_power": 3,
+            "L_power": 1,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "HH-+",
+          "pairing_contributions": [
+            270,
+            0,
+            9
+          ],
+          "total": 279,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "HH--",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H+HH",
+          "pairing_contributions": [
+            270,
+            0,
+            9
+          ],
+          "total": 279,
+          "normalized_denominator": {
+            "D_power": 3,
+            "L_power": 1,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H+H+",
+          "pairing_contributions": [
+            81,
+            0,
+            9
+          ],
+          "total": 90,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H+H-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H++H",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H+++",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H++-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H+-H",
+          "pairing_contributions": [
+            81,
+            0,
+            9
+          ],
+          "total": 90,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H+-+",
+          "pairing_contributions": [
+            81,
+            0,
+            9
+          ],
+          "total": 90,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H+--",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H-HH",
+          "pairing_contributions": [
+            0,
+            0,
+            45
+          ],
+          "total": 45,
+          "normalized_denominator": {
+            "D_power": 3,
+            "L_power": 1,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H-H+",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H-H-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H-+H",
+          "pairing_contributions": [
+            0,
+            0,
+            45
+          ],
+          "total": 45,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H-++",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H-+-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H--H",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H--+",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H---",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+HHH",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 3,
+            "L_power": 1,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+HH+",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+HH-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+H+H",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+H++",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+H+-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+H-H",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+H-+",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+H--",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "++HH",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "++H+",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "++H-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+++H",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "++++",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+++-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "++-H",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "++-+",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "++--",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+-HH",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+-H+",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+-H-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+-+H",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+-++",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+-+-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+--H",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+--+",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+---",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-HHH",
+          "pairing_contributions": [
+            270,
+            0,
+            270
+          ],
+          "total": 540,
+          "normalized_denominator": {
+            "D_power": 3,
+            "L_power": 1,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-HH+",
+          "pairing_contributions": [
+            81,
+            0,
+            270
+          ],
+          "total": 351,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-HH-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-H+H",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-H++",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-H+-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-H-H",
+          "pairing_contributions": [
+            81,
+            0,
+            9
+          ],
+          "total": 90,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-H-+",
+          "pairing_contributions": [
+            81,
+            0,
+            9
+          ],
+          "total": 90,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-H--",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-+HH",
+          "pairing_contributions": [
+            270,
+            0,
+            9
+          ],
+          "total": 279,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-+H+",
+          "pairing_contributions": [
+            81,
+            0,
+            9
+          ],
+          "total": 90,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-+H-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-++H",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-+++",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-++-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-+-H",
+          "pairing_contributions": [
+            81,
+            0,
+            9
+          ],
+          "total": 90,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-+-+",
+          "pairing_contributions": [
+            81,
+            0,
+            9
+          ],
+          "total": 90,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-+--",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "--HH",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "--H+",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "--H-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "--+H",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "--++",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "--+-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "---H",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "---+",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "----",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        }
+      ],
+      "covariance_columns_verified": 20,
+      "covariance_columns": [
+        {
+          "state": 7,
+          "nonzero": {}
+        },
+        {
+          "state": 11,
+          "nonzero": {}
+        },
+        {
+          "state": 13,
+          "nonzero": {}
+        },
+        {
+          "state": 14,
+          "nonzero": {}
+        },
+        {
+          "state": 19,
+          "nonzero": {}
+        },
+        {
+          "state": 21,
+          "nonzero": {}
+        },
+        {
+          "state": 22,
+          "nonzero": {}
+        },
+        {
+          "state": 25,
+          "nonzero": {}
+        },
+        {
+          "state": 26,
+          "nonzero": {}
+        },
+        {
+          "state": 28,
+          "nonzero": {}
+        },
+        {
+          "state": 35,
+          "nonzero": {}
+        },
+        {
+          "state": 37,
+          "nonzero": {}
+        },
+        {
+          "state": 38,
+          "nonzero": {}
+        },
+        {
+          "state": 41,
+          "nonzero": {}
+        },
+        {
+          "state": 42,
+          "nonzero": {}
+        },
+        {
+          "state": 44,
+          "nonzero": {}
+        },
+        {
+          "state": 49,
+          "nonzero": {}
+        },
+        {
+          "state": 50,
+          "nonzero": {}
+        },
+        {
+          "state": 52,
+          "nonzero": {}
+        },
+        {
+          "state": 56,
+          "nonzero": {}
+        }
+      ]
+    },
+    {
+      "N": 8,
+      "p": 2,
+      "L": 36,
+      "D": 90,
+      "ratio_R": "1/36",
+      "crossed_eigenvalue_T": 6,
+      "nested_U": 684,
+      "H_crossed_K": 1296,
+      "H_first_step_weights": [
+        6,
+        48,
+        36
+      ],
+      "counts": {
+        "Gaussian_pair_label_assignments": 1843968,
+        "nonzero_word_assignments": 62748
+      },
+      "raw_CAR_sign_counts": {
+        "1": 17496,
+        "0": 1826472
+      },
+      "second_moments": {
+        "HH": 90,
+        "H+": 36,
+        "H-": 0,
+        "+H": 0,
+        "++": 0,
+        "+-": 0,
+        "-H": 36,
+        "-+": 36,
+        "--": 0
+      },
+      "words": [
+        {
+          "word": "HHHH",
+          "pairing_contributions": [
+            8100,
+            1296,
+            8100
+          ],
+          "total": 17496,
+          "normalized_denominator": {
+            "D_power": 4,
+            "L_power": 0,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "HHH+",
+          "pairing_contributions": [
+            3240,
+            216,
+            3240
+          ],
+          "total": 6696,
+          "normalized_denominator": {
+            "D_power": 3,
+            "L_power": 1,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "HHH-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 3,
+            "L_power": 1,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "HH+H",
+          "pairing_contributions": [
+            0,
+            216,
+            684
+          ],
+          "total": 900,
+          "normalized_denominator": {
+            "D_power": 3,
+            "L_power": 1,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "HH++",
+          "pairing_contributions": [
+            0,
+            36,
+            36
+          ],
+          "total": 72,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "HH+-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "HH-H",
+          "pairing_contributions": [
+            3240,
+            0,
+            36
+          ],
+          "total": 3276,
+          "normalized_denominator": {
+            "D_power": 3,
+            "L_power": 1,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "HH-+",
+          "pairing_contributions": [
+            3240,
+            0,
+            36
+          ],
+          "total": 3276,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "HH--",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H+HH",
+          "pairing_contributions": [
+            3240,
+            0,
+            36
+          ],
+          "total": 3276,
+          "normalized_denominator": {
+            "D_power": 3,
+            "L_power": 1,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H+H+",
+          "pairing_contributions": [
+            1296,
+            0,
+            36
+          ],
+          "total": 1332,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H+H-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H++H",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H+++",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H++-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H+-H",
+          "pairing_contributions": [
+            1296,
+            0,
+            36
+          ],
+          "total": 1332,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H+-+",
+          "pairing_contributions": [
+            1296,
+            0,
+            36
+          ],
+          "total": 1332,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H+--",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H-HH",
+          "pairing_contributions": [
+            0,
+            216,
+            684
+          ],
+          "total": 900,
+          "normalized_denominator": {
+            "D_power": 3,
+            "L_power": 1,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H-H+",
+          "pairing_contributions": [
+            0,
+            216,
+            36
+          ],
+          "total": 252,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H-H-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H-+H",
+          "pairing_contributions": [
+            0,
+            36,
+            684
+          ],
+          "total": 720,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H-++",
+          "pairing_contributions": [
+            0,
+            36,
+            36
+          ],
+          "total": 72,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H-+-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H--H",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H--+",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "H---",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+HHH",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 3,
+            "L_power": 1,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+HH+",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+HH-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+H+H",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+H++",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+H+-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+H-H",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+H-+",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+H--",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "++HH",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "++H+",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "++H-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+++H",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "++++",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+++-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "++-H",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "++-+",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "++--",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+-HH",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+-H+",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+-H-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+-+H",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+-++",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+-+-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+--H",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+--+",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "+---",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-HHH",
+          "pairing_contributions": [
+            3240,
+            216,
+            3240
+          ],
+          "total": 6696,
+          "normalized_denominator": {
+            "D_power": 3,
+            "L_power": 1,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-HH+",
+          "pairing_contributions": [
+            1296,
+            36,
+            3240
+          ],
+          "total": 4572,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-HH-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-H+H",
+          "pairing_contributions": [
+            0,
+            216,
+            36
+          ],
+          "total": 252,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-H++",
+          "pairing_contributions": [
+            0,
+            36,
+            36
+          ],
+          "total": 72,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-H+-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-H-H",
+          "pairing_contributions": [
+            1296,
+            0,
+            36
+          ],
+          "total": 1332,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-H-+",
+          "pairing_contributions": [
+            1296,
+            0,
+            36
+          ],
+          "total": 1332,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-H--",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-+HH",
+          "pairing_contributions": [
+            3240,
+            0,
+            36
+          ],
+          "total": 3276,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-+H+",
+          "pairing_contributions": [
+            1296,
+            0,
+            36
+          ],
+          "total": 1332,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-+H-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-++H",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-+++",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-++-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-+-H",
+          "pairing_contributions": [
+            1296,
+            0,
+            36
+          ],
+          "total": 1332,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-+-+",
+          "pairing_contributions": [
+            1296,
+            0,
+            36
+          ],
+          "total": 1332,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "-+--",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "--HH",
+          "pairing_contributions": [
+            0,
+            36,
+            36
+          ],
+          "total": 72,
+          "normalized_denominator": {
+            "D_power": 2,
+            "L_power": 2,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "--H+",
+          "pairing_contributions": [
+            0,
+            36,
+            36
+          ],
+          "total": 72,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "--H-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "--+H",
+          "pairing_contributions": [
+            0,
+            36,
+            36
+          ],
+          "total": 72,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "--++",
+          "pairing_contributions": [
+            0,
+            36,
+            36
+          ],
+          "total": 72,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "--+-",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "---H",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 1,
+            "L_power": 3,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "---+",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        },
+        {
+          "word": "----",
+          "pairing_contributions": [
+            0,
+            0,
+            0
+          ],
+          "total": 0,
+          "normalized_denominator": {
+            "D_power": 0,
+            "L_power": 4,
+            "outer_power": "1/2"
+          }
+        }
+      ],
+      "covariance_columns_verified": 70,
+      "covariance_columns": [
+        {
+          "state": 15,
+          "nonzero": {
+            "204": 6
+          }
+        },
+        {
+          "state": 23,
+          "nonzero": {
+            "212": 6
+          }
+        },
+        {
+          "state": 27,
+          "nonzero": {
+            "216": 6
+          }
+        },
+        {
+          "state": 29,
+          "nonzero": {}
+        },
+        {
+          "state": 30,
+          "nonzero": {}
+        },
+        {
+          "state": 39,
+          "nonzero": {
+            "228": 6
+          }
+        },
+        {
+          "state": 43,
+          "nonzero": {
+            "232": 6
+          }
+        },
+        {
+          "state": 45,
+          "nonzero": {}
+        },
+        {
+          "state": 46,
+          "nonzero": {}
+        },
+        {
+          "state": 51,
+          "nonzero": {
+            "240": 6
+          }
+        },
+        {
+          "state": 53,
+          "nonzero": {}
+        },
+        {
+          "state": 54,
+          "nonzero": {}
+        },
+        {
+          "state": 57,
+          "nonzero": {}
+        },
+        {
+          "state": 58,
+          "nonzero": {}
+        },
+        {
+          "state": 60,
+          "nonzero": {}
+        },
+        {
+          "state": 71,
+          "nonzero": {}
+        },
+        {
+          "state": 75,
+          "nonzero": {}
+        },
+        {
+          "state": 77,
+          "nonzero": {}
+        },
+        {
+          "state": 78,
+          "nonzero": {}
+        },
+        {
+          "state": 83,
+          "nonzero": {}
+        },
+        {
+          "state": 85,
+          "nonzero": {}
+        },
+        {
+          "state": 86,
+          "nonzero": {}
+        },
+        {
+          "state": 89,
+          "nonzero": {}
+        },
+        {
+          "state": 90,
+          "nonzero": {}
+        },
+        {
+          "state": 92,
+          "nonzero": {}
+        },
+        {
+          "state": 99,
+          "nonzero": {}
+        },
+        {
+          "state": 101,
+          "nonzero": {}
+        },
+        {
+          "state": 102,
+          "nonzero": {}
+        },
+        {
+          "state": 105,
+          "nonzero": {}
+        },
+        {
+          "state": 106,
+          "nonzero": {}
+        },
+        {
+          "state": 108,
+          "nonzero": {}
+        },
+        {
+          "state": 113,
+          "nonzero": {}
+        },
+        {
+          "state": 114,
+          "nonzero": {}
+        },
+        {
+          "state": 116,
+          "nonzero": {}
+        },
+        {
+          "state": 120,
+          "nonzero": {}
+        },
+        {
+          "state": 135,
+          "nonzero": {}
+        },
+        {
+          "state": 139,
+          "nonzero": {}
+        },
+        {
+          "state": 141,
+          "nonzero": {}
+        },
+        {
+          "state": 142,
+          "nonzero": {}
+        },
+        {
+          "state": 147,
+          "nonzero": {}
+        },
+        {
+          "state": 149,
+          "nonzero": {}
+        },
+        {
+          "state": 150,
+          "nonzero": {}
+        },
+        {
+          "state": 153,
+          "nonzero": {}
+        },
+        {
+          "state": 154,
+          "nonzero": {}
+        },
+        {
+          "state": 156,
+          "nonzero": {}
+        },
+        {
+          "state": 163,
+          "nonzero": {}
+        },
+        {
+          "state": 165,
+          "nonzero": {}
+        },
+        {
+          "state": 166,
+          "nonzero": {}
+        },
+        {
+          "state": 169,
+          "nonzero": {}
+        },
+        {
+          "state": 170,
+          "nonzero": {}
+        },
+        {
+          "state": 172,
+          "nonzero": {}
+        },
+        {
+          "state": 177,
+          "nonzero": {}
+        },
+        {
+          "state": 178,
+          "nonzero": {}
+        },
+        {
+          "state": 180,
+          "nonzero": {}
+        },
+        {
+          "state": 184,
+          "nonzero": {}
+        },
+        {
+          "state": 195,
+          "nonzero": {}
+        },
+        {
+          "state": 197,
+          "nonzero": {}
+        },
+        {
+          "state": 198,
+          "nonzero": {}
+        },
+        {
+          "state": 201,
+          "nonzero": {}
+        },
+        {
+          "state": 202,
+          "nonzero": {}
+        },
+        {
+          "state": 204,
+          "nonzero": {}
+        },
+        {
+          "state": 209,
+          "nonzero": {}
+        },
+        {
+          "state": 210,
+          "nonzero": {}
+        },
+        {
+          "state": 212,
+          "nonzero": {}
+        },
+        {
+          "state": 216,
+          "nonzero": {}
+        },
+        {
+          "state": 225,
+          "nonzero": {}
+        },
+        {
+          "state": 226,
+          "nonzero": {}
+        },
+        {
+          "state": 228,
+          "nonzero": {}
+        },
+        {
+          "state": 232,
+          "nonzero": {}
+        },
+        {
+          "state": 240,
+          "nonzero": {}
+        }
+      ]
+    }
+  ],
+  "asymptotic": [
+    {
+      "N": 8,
+      "p": 2,
+      "gamma_squared": "2/5",
+      "R": "1/36",
+      "cross": "1/15",
+      "nest": "19/90",
+      "inverse_D": "1/90",
+      "decimal": {
+        "gamma_squared": 0.4,
+        "R": 0.027777777777777776,
+        "cross": 0.06666666666666667,
+        "nest": 0.2111111111111111
+      },
+      "limiting": {
+        "gamma_squared": 0.36787944117144233,
+        "R": 0.1353352832366127,
+        "cross": 0.1353352832366127,
+        "nest": 0.1353352832366127
+      }
+    },
+    {
+      "N": 32,
+      "p": 4,
+      "gamma_squared": "364/969",
+      "R": "9801/132496",
+      "cross": "33/323",
+      "nest": "23473/154700",
+      "inverse_D": "1/8817900",
+      "decimal": {
+        "gamma_squared": 0.37564499484004127,
+        "R": 0.0739720444390774,
+        "cross": 0.1021671826625387,
+        "nest": 0.15173238526179703
+      },
+      "limiting": {
+        "gamma_squared": 0.36787944117144233,
+        "R": 0.1353352832366127,
+        "cross": 0.1353352832366127,
+        "nest": 0.1353352832366127
+      }
+    },
+    {
+      "N": 128,
+      "p": 8,
+      "gamma_squared": "491796152/1329890705",
+      "R": "24911153297655625/241863455122007104",
+      "cross": "12985/109411",
+      "nest": "433589358466867373/3116285037368525880",
+      "inverse_D": "1/52976845635264939960",
+      "decimal": {
+        "gamma_squared": 0.3698019319565062,
+        "R": 0.10299676437306036,
+        "cross": 0.11868093701730173,
+        "nest": 0.13913661724378132
+      },
+      "limiting": {
+        "gamma_squared": 0.36787944117144233,
+        "R": 0.1353352832366127,
+        "cross": 0.1353352832366127,
+        "nest": 0.1353352832366127
+      }
+    },
+    {
+      "N": 512,
+      "p": 16,
+      "gamma_squared": "3467062814593159227600/9412188034956295074659",
+      "R": "4318541799417610691527471927353624721/36356974095530099653497717359809538304",
+      "cross": "41203908165083467325/324558208101941209471",
+      "nest": "3415757015032052635637197654969442368220198349167/25069731538238081441767221459582594503419809915600",
+      "inverse_D": "1/275767046920618895859439436055408539537617909071600",
+      "decimal": {
+        "gamma_squared": 0.36835885574286215,
+        "R": 0.11878166175409391,
+        "cross": 0.1269538318135576,
+        "nest": 0.13625024303998248
+      },
+      "limiting": {
+        "gamma_squared": 0.36787944117144233,
+        "R": 0.1353352832366127,
+        "cross": 0.1353352832366127,
+        "nest": 0.1353352832366127
+      }
+    },
+    {
+      "N": 2048,
+      "p": 32,
+      "gamma_squared": "526864181549779520519020294806422642962297427878091936/1431699184282800101549558869402545822677637654985733115",
+      "R": "881101282877590517969939413848135923329937307883998706043818230283931202872659868860022108994092834017688121/6939646645002975872997754156831317400390540749640683463155190028191515471200635339920534378388569801705702400",
+      "cross": "1086017444116352596527683515438801274814778871/8282199094243567429749246797587557583126271325",
+      "nest": "71817356982347153962066928322017316012187924969660337487174261961579482622040766168153152996483361890751953980972441771/529783825424718781260686288674147739305049669545709985888848466751392149688424395930767745010967377030805187099293652000",
+      "inverse_D": "1/67282545828939285220107158661616762891741308032305168207883755277426803010429898283207503616392856882912258761610293804000",
+      "decimal": {
+        "gamma_squared": 0.36799921892370746,
+        "R": 0.12696630361029176,
+        "cross": 0.13112670098345916,
+        "nest": 0.13555973877604208
+      },
+      "limiting": {
+        "gamma_squared": 0.36787944117144233,
+        "R": 0.1353352832366127,
+        "cross": 0.1353352832366127,
+        "nest": 0.1353352832366127
+      }
+    },
+    {
+      "N": 8192,
+      "p": 64,
+      "gamma_squared": "1272082129269153593263217529003417103240439393319092122755684324825747620899133769392430914519355474034132006841779706983998272/3457596341506242133912588229669798821798813224996950662984650442256299774506384192586231678402840088281926791705335935972839475",
+      "R": "167571786640411805571714340379712556673733891790239849431074620456181969703376016324867955463327085416609227828311375127563496343277778823589771553915183541798845788011550730714621937675023844203513551688339579717848847687623660268206384945422725625/1277922805467445760488724378863479021716275742950244606682885162846026987995434149541780862729785636340712908296389630898594431342349730177109337975152284033734413556666720584524133369440556087843982926078005420309222370801665860982061111146205876224",
+      "cross": "1369697934409983454657520247442864398948095393051972399557286367193285690153807007996461416304649986215740001060060957/10281010424767873261410784068442518665538953328738941731074969981138430212530690347805835583839742708989071452502211647",
+      "nest": "577338519649620968220616916040475237187557141439966499004143376294697076921758919979969450771152619498091542242371975245231933783831319100627185312894404139407418209741276623296719023050247744162611572960256434796278987925110044305508142215876585784229997298793328119084322771799/4264235215249446236107727169940737596240058009634138976147014666942981032941790637537673489402326896524781130994778260572833193312696376228369890276201812044187100087159872470760428357380513263681197685697807218055173599714779371628896201083681114607158823750277475028885872404800",
+      "inverse_D": "1/151273744260974105225921621353647666226616057891771080178815345309802252143610022866648967036547546654216610622039758793821257532767903946701421857548259282267537375591996475900226195978073708029090487900129711060507283449881798208535092733443587540688959272541093426649726323560280000",
+      "decimal": {
+        "gamma_squared": 0.36790938086051794,
+        "R": 0.13112825432293343,
+        "cross": 0.13322600384785707,
+        "nest": 0.13539087093155303
+      },
+      "limiting": {
+        "gamma_squared": 0.36787944117144233,
+        "R": 0.1353352832366127,
+        "cross": 0.1353352832366127,
+        "nest": 0.1353352832366127
+      }
+    }
+  ],
+  "counts": {
+    "finite_systems": 4,
+    "fourth_words": 324,
+    "pairing_formulas": 972,
+    "second_words": 36,
+    "label_assignments": 2000499,
+    "covariance_columns": 116
+  },
+  "environment": {
+    "python": "3.14.5",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "dependencies": "standard library"
+  },
+  "input_sha256": {
+    "code/check_slater_joint_fourth.py": "a2201a2fdec8c94ec28b9282359fde751353d8167b62cf2e16a279b493c5f15f",
+    "results/susskind-slater-ladder/local-evidence.json": "f191dba4e3348a61cd77a7f591f8d5c66005f28678d6991eeec12b997382f1e3",
+    "results/susskind-bilocal-four-point/local-evidence.json": "85701857a8e6f0040f837168dbf32077716505b11d36389ef48f9be0efb8ed21"
+  },
+  "scope": "Exact all fourth/second words for finite fixtures. H-only crossed K is enumerated, not independently predicted here. Other pairing formulas and covariance eigenvalue are independently checked. Large-p scalar rows diagnose analytic limits, not interval certificates.",
+  "elapsed_seconds": 1.4845439000055194,
+  "failures": []
+}

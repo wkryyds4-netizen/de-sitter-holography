@@ -1,0 +1,136 @@
+{
+  "status": "passed",
+  "created_utc": "2026-11-07T15:56:04.040185+00:00",
+  "counts": {
+    "grading_from_M": 62,
+    "canonical_CCR": 62,
+    "same_J_cross": 62,
+    "selected_shift_norm": 18
+  },
+  "rows": [
+    {
+      "gamma": "1/2",
+      "level": 0,
+      "selected_creation_norm_squared": "1"
+    },
+    {
+      "gamma": "1/2",
+      "level": 1,
+      "selected_creation_norm_squared": "1/8"
+    },
+    {
+      "gamma": "1/2",
+      "level": 2,
+      "selected_creation_norm_squared": "3/256"
+    },
+    {
+      "gamma": "1/2",
+      "level": 3,
+      "selected_creation_norm_squared": "1/1024"
+    },
+    {
+      "gamma": "1/2",
+      "level": 4,
+      "selected_creation_norm_squared": "5/65536"
+    },
+    {
+      "gamma": "1/2",
+      "level": 5,
+      "selected_creation_norm_squared": "3/524288"
+    },
+    {
+      "gamma": "1/2",
+      "level": 6,
+      "selected_creation_norm_squared": "7/16777216"
+    },
+    {
+      "gamma": "1/2",
+      "level": 7,
+      "selected_creation_norm_squared": "1/33554432"
+    },
+    {
+      "gamma": "1/2",
+      "level": 8,
+      "selected_creation_norm_squared": "9/4294967296"
+    },
+    {
+      "gamma": "2/3",
+      "level": 0,
+      "selected_creation_norm_squared": "1"
+    },
+    {
+      "gamma": "2/3",
+      "level": 1,
+      "selected_creation_norm_squared": "32/81"
+    },
+    {
+      "gamma": "2/3",
+      "level": 2,
+      "selected_creation_norm_squared": "256/2187"
+    },
+    {
+      "gamma": "2/3",
+      "level": 3,
+      "selected_creation_norm_squared": "16384/531441"
+    },
+    {
+      "gamma": "2/3",
+      "level": 4,
+      "selected_creation_norm_squared": "327680/43046721"
+    },
+    {
+      "gamma": "2/3",
+      "level": 5,
+      "selected_creation_norm_squared": "2097152/1162261467"
+    },
+    {
+      "gamma": "2/3",
+      "level": 6,
+      "selected_creation_norm_squared": "117440512/282429536481"
+    },
+    {
+      "gamma": "2/3",
+      "level": 7,
+      "selected_creation_norm_squared": "2147483648/22876792454961"
+    },
+    {
+      "gamma": "2/3",
+      "level": 8,
+      "selected_creation_norm_squared": "4294967296/205891132094649"
+    }
+  ],
+  "parameters": {
+    "gamma": [
+      "1/2",
+      "2/3"
+    ],
+    "word_levels": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "norm_levels": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  "environment": {
+    "python": "3.14.5",
+    "dependencies": "standard library"
+  },
+  "input_sha256": {
+    "code/check_slater_transfer_canonical.py": "901f664dad1b2a4430b3ec5f10b326fe64151b9e4b6919c6f2d753194628271b",
+    "code/slater_open_transfer.py": "10b2b23fb8e3de9ed7e15c7d8db4308ff17fdbfafa59ec230ca386841522e39d",
+    "results/susskind-slater-transfer/exact-checks.json": "9169dc569325988ee624bc5cae80b0935737cda4b058c7a3025167e338441c6a"
+  },
+  "scope": "Exact finite-core algebra checks; Type I closure, general norms and spectral decomposition are proved analytically in companion text. No microscopic occupation identification beyond the proved joint representation."
+}

@@ -1,0 +1,124 @@
+{
+  "status": "passed",
+  "created_utc": "2026-11-07T15:52:09.795913+00:00",
+  "counts": {
+    "saved_sixth_words": 1458,
+    "independent_eighth_words": 232,
+    "q_relations": 248,
+    "primitive_projection": 124,
+    "tower_decomposition": 62,
+    "adjoint_entries": 680,
+    "metric_symmetry": 170,
+    "residual_Jacobi": 18,
+    "compressed_selected": 18,
+    "selected_spectral_moments": 18
+  },
+  "summaries": [
+    {
+      "gamma": "1/2",
+      "q": "1/16",
+      "selected_spectral_moments": [
+        {
+          "power": 0,
+          "moment": "1"
+        },
+        {
+          "power": 1,
+          "moment": "0"
+        },
+        {
+          "power": 2,
+          "moment": "81/64"
+        },
+        {
+          "power": 3,
+          "moment": "0"
+        },
+        {
+          "power": 4,
+          "moment": "47409/16384"
+        },
+        {
+          "power": 5,
+          "moment": "0"
+        },
+        {
+          "power": 6,
+          "moment": "537295425/67108864"
+        },
+        {
+          "power": 7,
+          "moment": "0"
+        },
+        {
+          "power": 8,
+          "moment": "107583484149585/4398046511104"
+        }
+      ]
+    },
+    {
+      "gamma": "2/3",
+      "q": "16/81",
+      "selected_spectral_moments": [
+        {
+          "power": 0,
+          "moment": "1"
+        },
+        {
+          "power": 1,
+          "moment": "0"
+        },
+        {
+          "power": 2,
+          "moment": "1117/729"
+        },
+        {
+          "power": 3,
+          "moment": "0"
+        },
+        {
+          "power": 4,
+          "moment": "19252750/4782969"
+        },
+        {
+          "power": 5,
+          "moment": "0"
+        },
+        {
+          "power": 6,
+          "moment": "32401953436945/2541865828329"
+        },
+        {
+          "power": 7,
+          "moment": "0"
+        },
+        {
+          "power": 8,
+          "moment": "4888036443583488216430/109418989131512359209"
+        }
+      ]
+    }
+  ],
+  "parameters": {
+    "gamma": [
+      "1/2",
+      "2/3"
+    ],
+    "relations_max_level": 4,
+    "adjoints_max_level": 3,
+    "spectral_max_power": 8
+  },
+  "environment": {
+    "python": "3.14.5",
+    "dependencies": "standard library"
+  },
+  "input_sha256": {
+    "code/check_slater_open_transfer.py": "20d9b8bc44ee7ed1dcb6d0c2678546c95c7a4d32ba2126f3ee012d3bfb86ee54",
+    "code/slater_open_transfer.py": "10b2b23fb8e3de9ed7e15c7d8db4308ff17fdbfafa59ec230ca386841522e39d",
+    "code/slater_joint_site_polynomial.py": "68d364e710f0d37cfca24720554fb342fac35d435e59fba3e3ba6b0a2048b489",
+    "results/susskind-slater-joint-words/word-checks.json": "f4413f05fe251d1ff1cffc927f83af5b013efba32a7bc23c2d4320e93ce0e3bd",
+    "results/susskind-slater-joint-words/local-evidence.json": "869aa11a2827556bb5bd7718558d35232ec46c71971d0296826c47f8b287878b"
+  },
+  "elapsed_seconds": 0.22781839995877817,
+  "scope": "Exact transfer vs sealed sixth moments and independently enumerated selected eighth moments; coefficient-level Wick relations, projection/tower decomposition, low-level metric adjunction and selected spectral identities. Analytic general-level proofs are separate."
+}

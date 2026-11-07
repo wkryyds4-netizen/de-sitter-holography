@@ -1,5 +1,21 @@
 # de Sitter 全息研究
 
+## 当前进展：同 J 开弦传递与选择激发谱（2026-11-08）
+
+[九页 PDF](output/pdf/de-sitter-susskind-slater-transfer.pdf)、[LaTeX](manuscript/susskind-slater-transfer/main.tex)、[中文推导](notes/susskind-slater-transfer.md)及[文献接口](literature/susskind-slater-transfer-sources.md)已完成。全 same-J word 规则现已化为带正 Gram 度量的显式 H/P 开弦传递；Hamiltonian 分解为 q-Jacobi 阶梯，选择激发的谱权重为 1−√q+√q E²。三份科学输出、最终双遍编译与九页核版由[证据清单](results/susskind-slater-transfer/local-evidence.json)绑定。下一步研究该表示中的静态观察者态，再接微观空间与质量生成元。
+
+用户本轮要求集中 Git 并回复 issue，本次整理 joint-fourth、joint-words、transfer 三个阶段。[发布说明](notes/research-release-2026-11-08.md)记录范围；下方“仅本地”等文字保留历史时点，不代表本次发布状态。Issue #1 的完整重积分仍未完成。
+
+## 当前进展：全部 same-J 联合 word 与有限时间构造（2026-11-07，本地）
+
+[九页PDF](output/pdf/de-sitter-susskind-slater-joint-words.pdf)、[LaTeX完整证明](manuscript/susskind-slater-joint-words/main.tex)、[中文推导](notes/susskind-slater-joint-words.md)与[来源](literature/susskind-slater-joint-word-sources.md)已保存。精确site多项式保留CAR负号，归一化缺陷级数控制高重交集和含H的backward配对，证明任意固定joint word的γ^b q^ν规则；有限N行列covariance收缩给全次数尾，接正GNS、自伴H和紧时间窗实际关联。1,461,120六点标签、1,215系数、1,814局部表、729六字与time界核对完成，九页双遍编译/逐页目检。下一步全层transfer/谱核及state preparation，再物理态和体字典；全joint自平均与finite-G仍开放。本轮仅本地，不Git/issue，见[NEXT](NEXT.md)。
+
+## 当前进展：同一 J 的联合四点与 Hamiltonian 前两层（2026-11-07，本地）
+
+[七页 PDF](output/pdf/de-sitter-susskind-slater-joint-fourth.pdf)、[LaTeX](manuscript/susskind-slater-joint-fourth/main.tex)、[推导](notes/susskind-slater-joint-fourth.md)与[原文接口](literature/susskind-slater-joint-sources.md)已保存。同 J 交叉收缩接既有 EGUE covariance，给全部二/四次矩及七维 degree≤2 正空间；第一层 H 作用含范数平方 1−q 的新交换子方向。实际 disorder complement 的归一四矩为 2+√q+2q，不能补成标准 q 模式。四个有限 CAR 系统、62 个符号恒等式及12个文献标量比较已核，PDF双遍编译/逐页目检完成。下一步三弦/六阶，再全联合表示与真实演化；本轮尚非全阶闭包或体字典。
+
+本次用户授权的集中 Git 已推送 [6e0f40a](https://github.com/wkryyds4-netizen/de-sitter-holography/commit/6e0f40af31f2ebf0ff0cf8f842244aaa04d82462)，[issue #1 回复](https://github.com/wkryyds4-netizen/de-sitter-holography/issues/1#issuecomment-6708558378)已发送并读回核对，issue保持开启。下方历史阶段的“未发布/未回复”保留为当时记录。新增 joint-fourth 阶段仅本地保存，继续位置见 [NEXT](NEXT.md)。
+
 ## 当前进展：同一 J 的 Slater 极化与微观 canonical 阶梯（2026-11-07，本地）
 
 [九页PDF](output/pdf/de-sitter-susskind-slater-ladder.pdf)、[LaTeX](manuscript/susskind-slater-ladder/main.tex)、[主推导](notes/susskind-slater-ladder.md)、[完整证明](notes/susskind-slater-ladder-proof.md)及[文献接口](notes/susskind-slater-ladder-literature-interface.md)已保存。先核纯态DSSYK前驱，再从原H取半填充Slater适配creation块；forward精确计数与backward余项给全部固定word的dressed boson律。实际占据数去dressing得到指定态固定激发core的渐近CCR。完整H首步仍有Poisson(2lambda)缺额，单ladder只捕获sqrt(q)范数平方；下一步同J联合(H,M)动力学。1,537,310个精确标签项、一份科学JSON、双遍编译及九页目检完成。完整体字典仍开放；仅本地、不Git，见[NEXT](NEXT.md)。

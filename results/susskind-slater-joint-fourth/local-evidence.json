@@ -1,0 +1,168 @@
+{
+  "status": "Local research milestone; long-term de Sitter goal remains active",
+  "created_at_utc": "2026-11-07T15:26:33.421230+00:00",
+  "scope": "Exact finite two-pair table, its fixed-degree limits, degree<=2 positive quotient and first Hamiltonian actions. Not an all-word joint representation or finite-time/finite-G solution.",
+  "parameters": "Same original unit Hermitian complex Gaussian J, standard CAR, annealed half-filled Slater state, p^2/N -> fixed lambda>0; h normalized by exact sector variance; no joint self-averaging asserted.",
+  "scientific_output_hashes": {
+    "results/susskind-slater-joint-fourth/exact-checks.json": "5021e7ce3cdf836a7d0b75025de546b0ce253beb02cf546287ccb6be215920f0",
+    "results/susskind-slater-joint-fourth/gram-checks.json": "55d3aef7e7a051b28471360922604c4edf2adf5e2acb4039e4b08c28d12c0b6c",
+    "results/susskind-slater-joint-fourth/covariance-checks.json": "8e4ab41f5a2e9db3286ea8c13a355d80a8b82600d142ac89240a7a16915d18dc"
+  },
+  "input_hashes_verified": {
+    "code/check_slater_joint_fourth.py": "a2201a2fdec8c94ec28b9282359fde751353d8167b62cf2e16a279b493c5f15f",
+    "results/susskind-slater-ladder/local-evidence.json": "f191dba4e3348a61cd77a7f591f8d5c66005f28678d6991eeec12b997382f1e3",
+    "results/susskind-bilocal-four-point/local-evidence.json": "85701857a8e6f0040f837168dbf32077716505b11d36389ef48f9be0efb8ed21",
+    "code/check_slater_joint_gram.py": "7518534a12e3ee581046fffc5a800c9b8e3db0745536792cb95831f9dcff7350",
+    "results/susskind-slater-joint-fourth/exact-checks.json": "5021e7ce3cdf836a7d0b75025de546b0ce253beb02cf546287ccb6be215920f0",
+    "code/check_slater_joint_covariance.py": "8ebdde058f08f9ee31ca2274bfe988967cc5365d0adf87b789f01579bb654443"
+  },
+  "previous_evidence": {
+    "results/susskind-slater-ladder/local-evidence.json": {
+      "sha256": "f191dba4e3348a61cd77a7f591f8d5c66005f28678d6991eeec12b997382f1e3",
+      "verified_scientific_hashes": {
+        "code/build_slater_ladder.ps1": "8023efef4b567af470b2d078155ad1ac810679714a2ec0310c4062bc008aad20",
+        "code/check_slater_ladder.py": "78d9a7a7ae45b636de7efe53e175dedca97844d473cab675fba24677523b0787",
+        "code/record_bilocal_reconstruction.py": "aa112ed1799410a4cf210939fbd9052035218effd533bf86b2f89ce22e7b11a6",
+        "code/record_slater_ladder_evidence.py": "d9d2722aa12b7c6dd4d4320555fc9c8e754c7a982261a5da3ceefae7bcb85a0c",
+        "literature/susskind-bilocal-canonical-sources.md": "0ae84c9fb947fd781a31d8a90d754165bdd78f7bbf4efd50467e8d45e23a5188",
+        "literature/susskind-bilocal-polarization-sources.md": "5bfc2493174dca5f16811af8bf42b9c151e35ab25f1b1320a284f764f550e3ac",
+        "manuscript/susskind-slater-ladder/main.tex": "138a4f0a0ecaf940a39eccb668084fa64548a34d5927ac1c079844d85de60c30",
+        "notes/susskind-bilocal-kms-polarization.md": "e62c0205684d1896a7ad878d420bc58d39f100236f0f200644edd01d8fa887fa",
+        "notes/susskind-bilocal-polarization-interface.md": "80064ffea78093f16c7045a6f3ff3953448df834f9b4e426b7ed7d1f11db7023",
+        "notes/susskind-slater-ladder-literature-interface.md": "c1b71206443f1a2b539a727d7dd62c38e308d368b925e15b3623daf36cb920ee",
+        "notes/susskind-slater-ladder-proof.md": "721c65f368ed9bab747a9c66e78a156633c640323246b2c7f88257c3477ca8f9",
+        "notes/susskind-slater-ladder.md": "a372092029c41f18075a7f6c7f98d890a8e7359019430eea27bae08cd7b483ab",
+        "output/pdf/de-sitter-susskind-slater-ladder.pdf": "67dd39ad14bc5445833e74cdfa7c9e24838570332a897be861f62249aecbc782",
+        "results/susskind-bilocal-four-point/local-evidence.json": "85701857a8e6f0040f837168dbf32077716505b11d36389ef48f9be0efb8ed21",
+        "results/susskind-bilocal-fourth-tail/local-evidence.json": "9055c2f1249cec6e4b2347a639532dd2f39ea8bcb381a880d77dd748a58692c8",
+        "results/susskind-slater-ladder/exact-checks.json": "c3ffab60baf7b8302dfe73312bd5a386d9a5b942a893bc34d4dc5ba956b18ac1",
+        "results/susskind-slater-ladder/main.log": "58434e140a8589f26734ca025320c3020c56764ee3152a5efe54f56de71de7ce"
+      },
+      "excluded_mutable_or_private": [
+        "NEXT.md",
+        "PLAN.md",
+        "PROJECT.md",
+        "README.md",
+        "journal/2026-11-07-susskind-slater-ladder.md"
+      ]
+    },
+    "results/susskind-bilocal-four-point/local-evidence.json": {
+      "sha256": "85701857a8e6f0040f837168dbf32077716505b11d36389ef48f9be0efb8ed21",
+      "verified_scientific_hashes": {
+        "code/bilocal_four_point_transfer_check.py": "33bbe8b8e5a0d5d29758b7d4946f3d98cf9c011a8a9179abcf1e9c21a51fdbdf",
+        "code/bilocal_multisource_chords.py": "fd1af9072cd1c7550f6a6ec24aa892ad67bb3f032821476c8baae9f063ef668f",
+        "code/build_bilocal_four_point.ps1": "fd94d906b01d1f3db2b5533ba6438ed98bea02060ead39023d116e38d7793633",
+        "code/check_bilocal_four_sources.py": "35687d46bc8ec01e55e90d81883fea210bf331302e41226bcb4956b0486f6d06",
+        "code/check_bilocal_mixed_otoc.py": "fbdfa943fbc4ea781b4493e02749568e80951b1fe4aa8af48aab1858deb3b614",
+        "code/check_bilocal_multisource_moments.py": "852241809befbd011a70352bc62d1658e35dac45b3a005d22f2a4707fb7235dc",
+        "code/complex_syk_dictionary.py": "96b4890a167beeadf0849ccffdbb20dd125d921af062fd291044da9024900abf",
+        "code/memory_body_source_chords.py": "e0c34558f1e18684bf3a32c906f5edc13e8ab02dfe113b34eaa6936f78015b72",
+        "code/memory_size_marked_chords.py": "4b7e54c2218198ef0d8c29ed4aa6344cd3e5a24d466464c5006f49e0b6d7ec36",
+        "code/mixed_cubic_otoc.py": "e4cdb9f6293867fbafb56581acf8bdf01edcf7782abfc0ca504291f5cac7ae80",
+        "code/record_bilocal_four_point.py": "cf755241c2eff864c186cc0b386f063f22caf569631403f138f1db9ca7764736",
+        "code/record_bilocal_reconstruction.py": "aa112ed1799410a4cf210939fbd9052035218effd533bf86b2f89ce22e7b11a6",
+        "code/singlet_coefficient.py": "ef7d9b96f96a036ea0d9774950702a82a968b56758a778db0365e9df0c3b2e10",
+        "code/singlet_multimark.py": "5b1def3fcc893c807e416c909076c6bb8383f54975bd9ed09d5dde37f129db0d",
+        "code/singlet_otoc.py": "d497109e719109a8e5339ed43db432f5d0e10ffdc704ee61313e1e37dfd780f9",
+        "literature/susskind-bilocal-four-point-sources.md": "2850fb151989632dd0858add320e4bd8b19b20c0eeb447b7706e15559fe31f4a",
+        "manuscript/susskind-bilocal-four-point/main.tex": "e5cc133bd659266526c8e14a4fef7756d5903f2aedd219a17c95dd2efd42a973",
+        "manuscript/susskind-mixed-cubic/main.tex": "541d2c4ea98766a62ef0e2e9909fabbb63294a9532e778f120efd56a0dd5de1a",
+        "notes/susskind-bilocal-four-point-transfer.md": "a9930d932e4a1ea9159a5db8686b290bb90c1fb013645edfec355b742f6452e4",
+        "notes/susskind-bilocal-four-point.md": "f40de1dafe312f4f4c60d2d3b04ff5539cab659ca84491765f05a5cd0219bace",
+        "notes/susskind-bilocal-multisource-proof.md": "07a30bcb1aa56747c49ecb5d0bbe6ca75065db08e87a5d717b2653fd9033a32e",
+        "output/pdf/de-sitter-susskind-bilocal-four-point.pdf": "6d0b5c3408e192dca704a922663823df761b223ef57d5048e6ec0943df0a012c",
+        "results/susskind-bilocal-four-point/finite-four-source-checks.json": "f79e9ab2b810f74549a43fc97e409d47ebf7f8b3c72c57f3d91f1999de17c92c",
+        "results/susskind-bilocal-four-point/joint-moment-checks.json": "2677ff6c8f90184e2aacd71a60e191a7cc72e67feee57e91128b0376b6ca371d",
+        "results/susskind-bilocal-four-point/main.log": "6e2983a27dfc58e253be0e018a7b26019665bf1673fbf19f604a1230b4065b7e",
+        "results/susskind-bilocal-four-point/mixed-otoc-checks.json": "1c79055ea8fe538cab2a70db6759c2d2e607eb63da82e8dc8a41b549b7e56d1f",
+        "results/susskind-bilocal-four-point/normalized-commutator.png": "407e480d47a8381166ed5903c0ff791af671efc1f1a855f0fac4c3833b38440a",
+        "results/susskind-bilocal-four-point/transfer-checks.json": "d290b89a04fa38c1e36d1106c4f6a2eb68d31f7391f0bc747f3142bb80cba4ad",
+        "results/susskind-memory-joint-regression/local-evidence.json": "1f4660f37829bba8aca6a16030a3f74f4ecc9a6e79891eb209f5eb34d99d4c03",
+        "results/susskind-singlet-multimark/local-evidence.json": "a80b511d980d5b5226f713404475f1c5310ae808a3c4acc2b2b4f1f5da1f7cde"
+      },
+      "excluded_mutable_or_private": [
+        "NEXT.md",
+        "PLAN.md",
+        "PROJECT.md",
+        "README.md",
+        "journal/2026-11-07-susskind-bilocal-four-point.md"
+      ]
+    }
+  },
+  "checks": {
+    "finite_CAR_label_assignments": 2000499,
+    "fourth_words": 324,
+    "pairing_formulas": 972,
+    "second_words": 36,
+    "covariance_columns": 116,
+    "symbolic_identities": 62,
+    "literature_scalar_comparisons": 12
+  },
+  "build": {
+    "command": "./code/build_slater_joint_fourth.ps1",
+    "passes": 2,
+    "final_script_exit_code_observed": 0,
+    "pages": 7,
+    "no_undefined_references_or_overfull": true,
+    "render_command": "pdftoppm -r 95 -png",
+    "visual_review": "All seven final pages inspected by root using view_image; no clipping, overlap or broken references.",
+    "initial_attempt": "Sandbox attempt produced a PDF but returned nonzero. Preserved diagnostics; final two-pass build succeeded with approved MiKTeX access."
+  },
+  "hashes": {
+    "code/record_slater_joint_fourth.py": "0ac40cda74cdf3a181ff54b67a5c56732a4144275be233e714cb084563801fcf",
+    "code/check_slater_joint_fourth.py": "a2201a2fdec8c94ec28b9282359fde751353d8167b62cf2e16a279b493c5f15f",
+    "code/check_slater_joint_gram.py": "7518534a12e3ee581046fffc5a800c9b8e3db0745536792cb95831f9dcff7350",
+    "code/check_slater_joint_covariance.py": "8ebdde058f08f9ee31ca2274bfe988967cc5365d0adf87b789f01579bb654443",
+    "code/build_slater_joint_fourth.ps1": "0736b3f7f7395882980ddec1a371c5fea763a5b248330eea980f2b719abbd6c7",
+    "manuscript/susskind-slater-joint-fourth/main.tex": "e83d79dfacf47907d0e60f299f63904b5ff79e6d4b65b82bd40b32b6865476c4",
+    "notes/susskind-slater-joint-fourth.md": "c041e5a4cf3aa78b242fe394ef5f6e6b3793dd36c2252793f7d79a400d783e5e",
+    "literature/susskind-slater-joint-sources.md": "ce740af426ef82f0868da498392792f54c4d2f23482c7a874cc034a8889af579",
+    "output/pdf/de-sitter-susskind-slater-joint-fourth.pdf": "12c760688fdfd2543cf51cbd6cccc321d6daaa9c06a7638c31b1b8a5a2fc8ead",
+    "results/susskind-slater-joint-fourth/main.log": "f50d54b066470319fedfe451e1817162dbf73304e9a697d30ebf8232ae5c0ba6",
+    "results/susskind-slater-joint-fourth/exact-checks.json": "5021e7ce3cdf836a7d0b75025de546b0ce253beb02cf546287ccb6be215920f0",
+    "results/susskind-slater-joint-fourth/gram-checks.json": "55d3aef7e7a051b28471360922604c4edf2adf5e2acb4039e4b08c28d12c0b6c",
+    "results/susskind-slater-joint-fourth/covariance-checks.json": "8e4ab41f5a2e9db3286ea8c13a355d80a8b82600d142ac89240a7a16915d18dc"
+  },
+  "render_hashes": {
+    "tmp/pdfs/susskind-slater-joint-fourth-render/page-1.png": "6f3e2f0e29cc9230ccad8c33ed2f417603276e75884f6e373ed0c49b16c10c44",
+    "tmp/pdfs/susskind-slater-joint-fourth-render/page-2.png": "62b977c910e7fff8944c64a8828e55e31483cb055d9b88a000aa342ebbe09025",
+    "tmp/pdfs/susskind-slater-joint-fourth-render/page-3.png": "2d0a6d153399f43499557005ac79ce958ad1da19d9b100f92391e64a48215421",
+    "tmp/pdfs/susskind-slater-joint-fourth-render/page-4.png": "f00a94a8a46c0d76490068e8c9528a5d0c5f6e4d2e179d96271a6e55011c7b09",
+    "tmp/pdfs/susskind-slater-joint-fourth-render/page-5.png": "6fb3f1f7a916e0212bad0cbe5b3ce0c875309548fbcf25a364bc11e6b06a0f7b",
+    "tmp/pdfs/susskind-slater-joint-fourth-render/page-6.png": "d363700e1220f18095f8a4c16201b648656e7b17b2e476d79efb8ad24e234f30",
+    "tmp/pdfs/susskind-slater-joint-fourth-render/page-7.png": "bb251124d2d38f6c6b6a29950bf1d211372bb8ac9e0563c9c8864ad28e6db808"
+  },
+  "build_pass_hashes": {
+    "tmp/pdfs/susskind-slater-joint-fourth-build/pass1.txt": "8f2b1cefe39237c5cb8bc4d8ba6592ab4e18311fe0cbf37fd541e8047036aaae",
+    "tmp/pdfs/susskind-slater-joint-fourth-build/pass2.txt": "d528064c6032d349a94ba50046e1bfe203ab1573ec4aa25ad45c5c7b1b1a862d"
+  },
+  "diagnostic_hashes": {
+    "tmp/pdfs/susskind-slater-joint-fourth-build/initial-sandbox-pass1.txt": "3b43015e908001b3efe9c545b7b3809057d741416561d56398754ab13916ddf3",
+    "tmp/pdfs/susskind-slater-joint-fourth-build/initial-main.log": "e33cd07a937b94b84afe7d93090c2e53ca6a3756271868161ee1cdc18c97906a"
+  },
+  "environment": {
+    "recorder_python": "3.14.5",
+    "scientific_environments": {
+      "results/susskind-slater-joint-fourth/exact-checks.json": {
+        "python": "3.14.5",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "dependencies": "standard library"
+      },
+      "results/susskind-slater-joint-fourth/gram-checks.json": {
+        "python": "3.14.5",
+        "sympy": "1.14.0"
+      },
+      "results/susskind-slater-joint-fourth/covariance-checks.json": {
+        "python": "3.14.5",
+        "dependencies": "standard library"
+      }
+    }
+  },
+  "publication": {
+    "this_stage_committed": false,
+    "this_stage_pushed": false,
+    "prior_authorized_commit": "6e0f40af31f2ebf0ff0cf8f842244aaa04d82462",
+    "prior_authorized_issue_reply": "https://github.com/wkryyds4-netizen/de-sitter-holography/issues/1#issuecomment-6708558378"
+  },
+  "recorder_scope": "File provenance, saved-output status, counts and build checks only; does not prove analytic claims or rerun science."
+}

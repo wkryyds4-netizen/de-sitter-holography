@@ -1,0 +1,382 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,microtype,booktabs}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\Om}{\Omega_O}
+\newcommand{\ph}{\varphi}
+\newcommand{\bn}[2]{\binom{#1}{#2}}
+\title{The first joint Hamiltonian layers above a Slater state\\
+\large Same-disorder mixed fourth moments in complex double-scaled SYK}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{7 November 2026\quad Local research draft}
+\begin{document}\maketitle
+\begin{abstract}
+The Slater-adapted creation block of the original Hamiltonian has a
+dressed bosonic vacuum law, but captures only part of the first
+Hamiltonian excitation. We retain its correlations with the same
+Hamiltonian and evaluate every joint word through degree four.
+Finite-size Gaussian pairings reduce to elementary counts and the
+known embedded-ensemble covariance channel. Their double-scaled limit
+gives a positive seven-dimensional space of polynomial vectors of
+degree at most two. The first Hamiltonian actions exhibit a new
+commutator direction of squared norm $1-q$. The actual disorder
+complement has normalized fourth moment $2+\sqrt q+2q$; replacing it
+by another standard $q$-Gaussian mode would change the model. These
+results determine the first layers, with the all-degree joint
+representation and its bulk interpretation left as the next tasks.
+\end{abstract}
+
+\section{State, normalization, and the literature interface}
+Use standard complex CAR, $\{c_i,c_j^\dagger\}=\delta_{ij}$, and
+\begin{equation}
+ H_N=\sqrt{w_N}\sum_{|A|=|B|=p}J_{AB}C_A^\dagger C_B,
+ \quad w_N=\frac{4^pJ_s^2}{\lambda_N}\left(\frac{p!}{N^p}\right)^2,
+ \quad\lambda_N=\frac{p^2}{N}.
+\end{equation}
+Here $C_A^\dagger$ has increasing site order, $C_A$ is its adjoint,
+and the centered Hermitian Gaussian coefficients obey
+$\EE J_{AB}J_{CD}=\delta_{AD}\delta_{BC}$. Overlapping $A,B$ are
+included. Fix even $N$, $m=a=N/2$, an occupied set $O$ of size $m$,
+its empty complement $E$, and $\Om=|O\rangle$. All moments use
+\begin{equation}
+ \ph_N(X)=\EE\langle\Om,X\Om\rangle.
+\end{equation}
+This is the annealed Slater vector state. It is not assumed stationary.
+Take $p\to\infty$, $\lambda_N\to\lambda>0$, fixed $J_s>0$ and
+fixed word length, with $\hbar=1$ and string-energy units for $H_N$.
+The normalized $h_N$ below is dimensionless.
+
+\newpage
+The same-$J$ excitation block and normalizations are
+\begin{align}
+ R_N^\dagger&=\sum_{A\subset E,\ B\subset O}J_{AB}C_A^\dagger C_B,
+ &L_N&=\bn mp\bn ap,\\
+ D_N&=\bn mp\bn{a+p}p,
+ &h_N&=\frac{H_N}{\sqrt{w_ND_N}},\qquad
+ M_N^\dagger=\frac{R_N^\dagger}{\sqrt{L_N}}.
+\end{align}
+Every subset in the sum has size $p$; $M_N$ is the adjoint.
+Set
+\begin{equation}
+ q=e^{-4\lambda},\quad s=\sqrt q,\quad\gamma=q^{1/4},\quad
+ \gamma_N=\sqrt{L_N/D_N},\quad\delta=\sqrt{1-s}.
+\end{equation}
+The preceding stage proved the pure-$M$ fixed-word law
+$M=q^{n/2}b$, $M^\dagger=b^\dagger q^{n/2}$ in its vacuum
+state, and the first-step fraction $L_N/D_N\to s$.
+Here we retain the rest of $h_N\Om$.
+
+Rajgadia--Xu's state-adapted construction uses matter Gaussian
+coefficients separate from those of $H$; see their HTML
+Eqs.~(42)--(44) and the selection rule after (47) \cite{RX}.
+That selection rule is not an input for the present same-$J$ model.
+Already at degree two,
+\begin{equation}\label{second}
+ \ph_N(h_N^2)=\ph_N(M_NM_N^\dagger)=1,\qquad
+ \ph_N(h_NM_N^\dagger)=\ph_N(M_Nh_N)=\gamma_N.
+\end{equation}
+All other two-letter moments vanish. Odd total degree vanishes by
+Gaussian parity, but unequal numbers of $M$ and $M^\dagger$ need
+not make a mixed word vanish.
+
+\section{An exact finite-size table for the three pairings}
+In this section only, use the raw alphabet $H,+,-$ for
+$H_N/\sqrt{w_N},R_N^\dagger,R_N$. Omit subscripts on counts.
+A Gaussian edge with two $H$ endpoints is type $G$; every other
+edge is type $S$, restricted to the excitation block or its adjoint.
+An $S$ edge is forward if its creation acts first (right to left).
+An endpoint $+$ is a creation and $-$ is an annihilation, fixing the
+opposite endpoint even when that endpoint is $H$.
+Two equal non-$H$ endpoints are incompatible and give zero.
+
+For four written slots $0,1,2,3$, the three pairings are
+\begin{equation}
+ (01)(23)\ \text{disjoint},\qquad
+ (02)(13)\ \text{crossed},\qquad
+ (03)(12)\ \text{nested}.
+\end{equation}
+In a nested pairing the first edge listed is outer. Define
+\begin{align}
+ r_N&=\frac{\bn{m-p}p\bn{a-p}p}{L},
+ &T_N&=\bn{m-p}p\bn ap,\\
+ W_k&=\bn mp\bn pk\bn ak,
+ &U_N&=\sum_{k=0}^p W_k\bn{a-k}p\bn{m-k}p.
+\end{align}
+Binomials outside their natural range are zero. $K_N$ denotes
+the raw crossed $HHHH$ contraction.
+
+\newpage
+\begin{center}
+\begin{tabular}{llll}
+\toprule
+Edges / orientation & Disjoint & Crossed & Nested\\
+\midrule
+$G,G$ & $D^2$ & $K_N$ & $D^2$\\
+$S,S$, both forward & $L^2$ & $L^2r_N$ & $L^2r_N$\\
+$G,S$, $S$ forward & $DL$ & $LT_N$ & see below\\
+$S$ outer, $G$ inner & --- & --- & $DL$\\
+$G$ outer, $S$ inner forward & --- & --- & $U_N$\\
+$S$ outer forward, $S$ inner backward & $0$ & $0$ & $L$\\
+$G$ outer, $S$ inner backward & $0$ & $0$ & $L$\\
+\bottomrule
+\end{tabular}
+\end{center}
+All other backward cases are zero. Sum the three contractions,
+then divide by $D^{n_H/2}L^{(4-n_H)/2}$ to obtain the normalized
+moment. This specifies all $3^4$ ordered fourth words.
+
+\subsection*{Derivation of the entries}
+For a fixed excitation label $\alpha=(A,B)$, write
+$X_\alpha=C_A^\dagger C_B$. Relative to $\Om$, this is a pure
+creation monomial of even degree $2p$. Two active excitation labels
+must be disjoint on both $O$ and $E$. Their even CAR monomials then
+commute, and each creation/adjoint pair has amplitude $+1$.
+Disjoint time intervals give $L^2$; overlapping intervals give
+$L\bn{m-p}p\bn{a-p}p$. If an inner selected edge is backward,
+it can annihilate an outer selected excitation only by taking the
+same entire label. It then recreates it, giving exactly $L$.
+All other backward placements meet the vacuum boundary or cannot
+remove the required particles and holes.
+
+For general labels $Y_{AB}=C_A^\dagger C_B$, the channel
+\begin{equation}\label{channel}
+ \Phi(X)=\sum_{A,B}Y_{AB}X Y_{AB}^\dagger
+\end{equation}
+has $\Phi(I)=DI$ on the $m$-particle sector. Thus adjacent $G$
+contractions and $G$ nested inside a selected edge give the table's
+$D$ factors. The established embedded-ensemble spectrum is
+\begin{equation}\label{eigen}
+ \Lambda^r(p)=\bn{m-r}p\bn{N-m+p-r}p
+\end{equation}
+on rank-$r$ irreducible tensors \cite[Eqs.~(17),(25)--(26)]{Kota}.
+A disjoint $p$-hop $X_\alpha$ is a rank-$p$ tensor: choose its
+creation and annihilation indices as opposite extremal sets to
+obtain a highest-weight vector; site permutations generate every
+such disjoint hop. Hence $\Phi(X_\alpha)=T_NX_\alpha$, giving
+the crossed $GS$ value $LT_N$. This is an application of the
+known channel, not a newly discovered covariance eigenvalue.
+
+\newpage
+For $G$ outer and $S$ inner, let $k$ be the number of particles
+that the first general hop moves from $O$ to $E$. The exact number
+of allowed raw labels is $W_k$. Indeed choose its $p$ annihilated
+occupied sites, the $k$ particles left displaced among those $p$,
+and their $k$ empty destinations; the other $p-k$ are restored.
+After this hop there are $a-k$ empty $E$ sites and $m-k$ filled
+$O$ sites. A forward selected pair therefore has
+$\bn{a-k}p\bn{m-k}p$ choices. Summing gives $U_N$.
+A backward selected pair requires $k=p$, and must undo the whole
+first hop, giving $W_p=L$. These are sums of squared CAR amplitudes;
+their signs are not discarded by an absolute-value approximation.
+
+For completeness the standard finite $G,G$ expression is
+\begin{equation}\label{K}
+ K_N=\frac{1}{\bn Nm}\sum_{r=0}^{\min(p,m-p)}
+ \Lambda^r(m-p)\Lambda^r(p)
+ \left[\bn Nr^2-\bn N{r-1}^2\right],
+\end{equation}
+with $\Lambda^r(k)=\bn{m-r}k\bn{N-m+k-r}k$; this is the
+crossed term in the existing fourth-moment formula
+\cite[Eq.~(28)]{Kota}. Alternatively $K_N$ can be left as the
+raw CAR sum. Its double-scaled ratio $K_N/D_N^2\to q$ is the
+ordinary complex DSSYK fourth-moment input already used in the
+preceding stages \cite[Sec.~5.1]{BNR}. Unitary invariance makes the
+annealed $H$-only Slater moments equal to the sector trace; the
+half-filled sector has intersection parameter $e^{-4\lambda}$.
+No finite identity inferred from a few fixtures
+is needed here.
+
+\section{Double-scaled mixed fourth moments}
+Elementary binomial ratios and the preceding first-step deficit
+law give
+\begin{equation}\label{ratios}
+ \frac LD\to s,\qquad r_N\to q,\qquad
+ \frac{T_N}{D}\to q,\qquad\frac{U_N}{DL}\to q.
+\end{equation}
+For example, for fixed $c$,
+\begin{equation}
+ \log\frac{\bn{m-cp}p}{\bn mp}
+ =\sum_{j=0}^{p-1}\log\left(1-\frac{cp}{m-j}\right)
+ =-\frac{cp^2}{m}+o(1).
+\end{equation}
+For the last ratio in \eqref{ratios}, view $W_k/D$ as a probability.
+The deficit $p-k$ converges to $\mathrm{Poisson}(2\lambda)$ from
+the preceding stage. On any fixed deficit window the remaining
+binomial product divided by $L$ converges uniformly to $q$.
+That product lies in $[0,1]$, so tightness controls the window's
+complement. This proves the limit without interchanging an
+uncontrolled tail and the large-$N$ limit.
+The nonzero backward terms vanish after normalization (as $1/L$
+or $1/D$, with bounded mixed factors).
+
+\newpage
+One can now evaluate each limiting diagram with endpoint factors
+$1$ for $HH$ or $MM^\dagger$, and $\gamma$ for $HM^\dagger$
+or $MH$. Reject backward or incompatible selected edges.
+Every crossing contributes $q$. A nesting contributes $q$
+precisely when the inner edge is selected. All disjoint diagrams
+and the remaining nesting have factor one. This is a
+\emph{two-edge rule}; an arbitrary-edge version has not been proved.
+Some useful moments are
+\begin{align}
+ \ph(h^4)&=2+q,&\ph(h^3M^\dagger)&=\gamma(2+q),\\
+ \ph(h^2(M^\dagger)^2)&=2s q,
+ &\ph(hM^\dagger hM^\dagger)&=s.
+\end{align}
+Here and below limiting notation abbreviates limits of the
+specified finite sequences, not an assumed full representation.
+
+\section{A positive space and the first Hamiltonian actions}
+For polynomials $P,Q$ of degree at most two, set
+$\langle P\Omega,Q\Omega\rangle=\lim_N\ph_N(P_N^\dagger Q_N)$.
+Every entry exists by the table, and positivity follows from
+finite-$N$ positivity. Quotient by null vectors. The identities
+$M\Omega=0$, $MM^\dagger\Omega=\Omega$ in this quotient follow
+from the preceding pure-ladder law. The additional relation is
+\begin{equation}\label{Mh}
+ M h\Omega=\gamma\Omega,
+ \qquad
+ \EE\|(M_Nh_N-\gamma_N I)\Om\|^2=\frac1{D_N}.
+\end{equation}
+Thus words ending in $M$ vanish on the vacuum, and the remaining
+degree-two space is spanned by $I,M^\dagger,h,(M^\dagger)^2,
+M^\dagger h,hM^\dagger,h^2$ acting on $\Omega$.
+
+Define the following four centered degree-two vectors:
+\begin{align}
+ U&=(M^\dagger)^2\Omega,\\
+ V&=\left(M^\dagger h-\gamma(M^\dagger)^2\right)\Omega,\\
+ D_v&=\left(hM^\dagger-M^\dagger h-\gamma I\right)\Omega,\\
+ R_v&=(h^2-I)\Omega-sU-2\gamma V-\gamma D_v.
+\end{align}
+They are mutually orthogonal and orthogonal to $\Omega$ and all
+degree-one vectors. Their norms are
+\begin{equation}\label{norms}
+ \begin{split}
+ \|U\|^2&=2q,\qquad \|V\|^2=q(1-s),\qquad\|D_v\|^2=1-q,\\
+ \|R_v\|^2&=(1-s)^2(1+s+2q).
+ \end{split}
+\end{equation}
+For example $\|hM^\dagger\Omega\|^2=1+s(1+q)$, while
+$\|M^\dagger h\Omega\|^2=
+\langle hM^\dagger\Omega,M^\dagger h\Omega\rangle=q(1+s)$;
+these give the $D_v$ norm after subtracting its vacuum component.
+All other entries follow from the same table. Gaussian parity
+sets inner products with degree-one vectors to zero.
+
+\newpage
+Let $e_1=M^\dagger\Omega$, $e_r=(h\Omega-\gamma e_1)/\delta$,
+and normalize the four vectors as
+\begin{equation}
+ e_2=\frac U{\sqrt{2q}},\quad
+ e_{r2}=\frac V{\delta\sqrt q},\quad
+ e_d=\frac{D_v}{\sqrt{1-q}},\quad
+ e_{rr}=\frac{R_v}{(1-s)\sqrt{1+s+2q}}.
+\end{equation}
+For fixed $0<q<1$ every denominator is strictly positive.
+The seven vectors $\Omega,e_1,e_r,e_2,e_{r2},e_d,e_{rr}$ are an
+orthonormal basis of this degree-at-most-two quotient. Multiplication
+by $h$ is determined from degree at most one into this space:
+\begin{align}\label{actions}
+ h\Omega&=\gamma e_1+\delta e_r,\\
+ he_1&=\gamma\Omega+\gamma\sqrt{2q}\,e_2
+       +\delta\sqrt q\,e_{r2}+\sqrt{1-q}\,e_d,\\
+ he_r&=\delta\Omega+\gamma\sqrt q\,e_{r2}
+       +\delta\sqrt{1+s+2q}\,e_{rr}.
+\end{align}
+These follow by substituting the four definitions; \eqref{Mh}
+ensures the quotient relation needed below. No action of $h$ on
+the degree-two basis is specified. Consequently this is not a
+closed seven-state Hamiltonian or a finite-time solution.
+
+The extra commutator direction has a particularly simple test:
+\begin{equation}
+ \|([h,M^\dagger]-\gamma I)\Omega\|^2=1-q>0.
+\end{equation}
+It is orthogonal to the pure second ladder state $e_2$, to the
+mixed direction $e_{r2}$, and to the residual pair direction
+$e_{rr}$. This resolves a definite part of the Hamiltonian leakage
+instead of treating all missing norm as one scalar correction.
+
+\section{The actual Gaussian-disorder complement}
+At finite $N$ define
+\begin{equation}
+ g_N=h_N-\gamma_N(M_N+M_N^\dagger).
+\end{equation}
+This removes exactly the selected excitation block and its adjoint
+from the original Hamiltonian. The remaining Gaussian coordinates
+are independent of the selected coordinates. That statement is
+about disorder coordinates; the CAR matrix factors still share
+the same quantum state. The table gives
+\begin{equation}\label{g}
+ \ph(g^2)=1-s,\quad
+ (g^2-(1-s)I)\Omega=R_v,\quad
+ \frac{\ph(g^4)}{\ph(g^2)^2}=2+s+2q.
+\end{equation}
+To see the vector identity, expand $g^2\Omega$ using
+$M\Omega=0$, $MM^\dagger\Omega=\Omega$, and \eqref{Mh}; the
+result is exactly the definition of $R_v$ plus $(1-s)\Omega$.
+Its norm then yields \eqref{g}. For $q>1/4$ this kurtosis exceeds
+$3$. A standard normalized $q$-Gaussian mode would have fourth
+moment $2+q$, so it cannot represent this complement.
+
+\newpage
+\section{Verification and the next calculation}
+The independent finite CAR driver uses integer fermion actions
+and Gaussian Wick sums, with no import of the old ladder driver.
+It evaluates all 81 fourth words and all nine second words for
+$(N,p)=(4,1),(6,1),(6,2),(8,2)$. In total it checks 972 pairing
+entries from 2,000,499 Gaussian pair-label assignments, plus all
+116 sector-basis columns of the channel acting on one disjoint
+$p$-hop per fixture. It records six exact scalar ratio rows at
+$\lambda_N=1/2$, $p=2,4,8,16,32,64$. Those asymptotic decimal
+rows are diagnostics, not interval certificates.
+
+The first driver enumerates the $HHHH$ crossed contribution; it
+does not independently predict that contribution. A separate
+read-only scalar check compares it with the literature expression
+\eqref{K}. A second independent symbolic audit uses the limiting
+two-edge rule to verify 62 identities, including the full $7\times7$
+Gram matrix, \eqref{actions}, \eqref{g}, and four exact finite
+residuals read from the CAR output. This checks algebraic
+consequences, not a replacement for the analytic limiting proof.
+
+The scientific records are
+\begin{itemize}
+ \item \texttt{results/susskind-slater-joint-fourth/exact-checks.json};
+ \item \texttt{results/susskind-slater-joint-fourth/gram-checks.json};
+ \item \texttt{results/susskind-slater-joint-fourth/covariance-checks.json}.
+\end{itemize}
+The stage evidence manifest binds source files, parameters,
+environment versions, parent evidence, build logs, PDF and page
+renders. Successful scientific outputs are preserved rather than
+rerun for document compilation.
+
+The next target is the all-degree same-$J$ joint law. At degree six,
+three simultaneously active labels can test whether the two-edge
+weights really factorize. A proof must retain general-hop overlaps,
+CAR signs, and backward selected pairings; pure-ladder suppression
+alone does not prove their suppression in the presence of $H$.
+Once those rules are established, an all-layer positive
+representation can supply the actual Hamiltonian evolution.
+The first-layer calculation here does not yet identify a de Sitter
+mass, position operator, stationary observer state, or finite-$G$
+gravitational four-point function. Those are subsequent physics
+questions, not substitutes for the joint-law calculation.
+
+\begin{thebibliography}{9}
+\bibitem{RX} H. Rajgadia and J. Xu,
+\emph{Emergent States and Algebras from the Double-Scaling limit of
+Pure States in SYK},
+\href{https://arxiv.org/abs/2604.14387v3}{arXiv:2604.14387v3} (2026).
+\bibitem{Kota} V. K. B. Kota,
+\emph{SU(N) Wigner-Racah algebra for the matrix of second moments of
+embedded Gaussian unitary ensemble of random matrices},
+\href{https://arxiv.org/abs/nucl-th/0410069}{arXiv:nucl-th/0410069} (2004).
+\bibitem{BNR} M. Berkooz, V. Narovlansky and H. Raj,
+\emph{Complex Sachdev-Ye-Kitaev model in the double scaling limit},
+\href{https://arxiv.org/abs/2006.13983v2}{arXiv:2006.13983v2} (2020).
+\end{thebibliography}
+\end{document}

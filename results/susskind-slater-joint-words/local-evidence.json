@@ -1,0 +1,115 @@
+{
+  "status": "Local milestone; full de Sitter objective remains active",
+  "created_at_utc": "2026-11-07T15:45:17.844849+00:00",
+  "scientific_scope": "All fixed same-J Slater word limits, their positive GNS representation, essential self-adjointness of h, and actual annealed finite-time polynomial-insertion correlators on compact complex time sets. Not quenched concentration, a stationary observer dictionary, or finite-G scattering.",
+  "parameters": "Half filling, standard CAR, overlapping Hermitian complex Gaussian p-body model, fixed Slater state, fixed lambda>0, h normalized by exact sector variance.",
+  "scientific_output_hashes": {
+    "results/susskind-slater-joint-words/site-checks.json": "864f4342efb51562d8a877ed2a1f9be14d7d1fa9d9d4e19d01a3d84a200c6f80",
+    "results/susskind-slater-joint-words/word-checks.json": "f4413f05fe251d1ff1cffc927f83af5b013efba32a7bc23c2d4320e93ce0e3bd",
+    "results/susskind-slater-joint-words/time-bound-checks.json": "1e244b4d232e55008a0243cc4a4ecb2afc134b26364d12b6d034d285c4469f34"
+  },
+  "input_hashes_verified": {
+    "code/check_slater_joint_sites.py": "829f9e637112757d48cb1a4232f993f8c2b6d9b5bb75afb31e14804ed4a9e6d0",
+    "code/slater_joint_site_polynomial.py": "68d364e710f0d37cfca24720554fb342fac35d435e59fba3e3ba6b0a2048b489",
+    "results/susskind-slater-joint-fourth/local-evidence.json": "0ee963da0ed7a32142bdd69f07a5727eca209c4a1b0e0a1025dcf8af11160381",
+    "code/check_slater_joint_word_law.py": "2707857a55d3ccfb4a6d750f834177f617ab110cbad7f092aa5607668f60113d",
+    "results/susskind-slater-joint-words/site-checks.json": "864f4342efb51562d8a877ed2a1f9be14d7d1fa9d9d4e19d01a3d84a200c6f80",
+    "code/check_slater_joint_time_bound.py": "fc300a9e5eb8945d916f3e014a9566966f4dbbc7e009354f63777ce9fbbf527a"
+  },
+  "parameter_hashes": {
+    "results/susskind-slater-joint-words/site-checks.json": "de6a071471339474e76bdaec894176bff8ce7c9c7f4cfb817f7700b6641378b3",
+    "results/susskind-slater-joint-words/word-checks.json": "94569381f8b007d55b487f3dcc9e4981fafac1971dc3a525834af586fae10caf",
+    "results/susskind-slater-joint-words/time-bound-checks.json": "0717c83079534b2d4eae5cd4b8e124fa97d1b80592ecdbb95ce2564f2dddc172"
+  },
+  "previous_evidence": {
+    "results/susskind-slater-joint-fourth/local-evidence.json": {
+      "sha256": "0ee963da0ed7a32142bdd69f07a5727eca209c4a1b0e0a1025dcf8af11160381",
+      "verified_scientific_hashes": {
+        "code/record_slater_joint_fourth.py": "0ac40cda74cdf3a181ff54b67a5c56732a4144275be233e714cb084563801fcf",
+        "code/check_slater_joint_fourth.py": "a2201a2fdec8c94ec28b9282359fde751353d8167b62cf2e16a279b493c5f15f",
+        "code/check_slater_joint_gram.py": "7518534a12e3ee581046fffc5a800c9b8e3db0745536792cb95831f9dcff7350",
+        "code/check_slater_joint_covariance.py": "8ebdde058f08f9ee31ca2274bfe988967cc5365d0adf87b789f01579bb654443",
+        "code/build_slater_joint_fourth.ps1": "0736b3f7f7395882980ddec1a371c5fea763a5b248330eea980f2b719abbd6c7",
+        "manuscript/susskind-slater-joint-fourth/main.tex": "e83d79dfacf47907d0e60f299f63904b5ff79e6d4b65b82bd40b32b6865476c4",
+        "notes/susskind-slater-joint-fourth.md": "c041e5a4cf3aa78b242fe394ef5f6e6b3793dd36c2252793f7d79a400d783e5e",
+        "literature/susskind-slater-joint-sources.md": "ce740af426ef82f0868da498392792f54c4d2f23482c7a874cc034a8889af579",
+        "output/pdf/de-sitter-susskind-slater-joint-fourth.pdf": "12c760688fdfd2543cf51cbd6cccc321d6daaa9c06a7638c31b1b8a5a2fc8ead",
+        "results/susskind-slater-joint-fourth/main.log": "f50d54b066470319fedfe451e1817162dbf73304e9a697d30ebf8232ae5c0ba6",
+        "results/susskind-slater-joint-fourth/exact-checks.json": "5021e7ce3cdf836a7d0b75025de546b0ce253beb02cf546287ccb6be215920f0",
+        "results/susskind-slater-joint-fourth/gram-checks.json": "55d3aef7e7a051b28471360922604c4edf2adf5e2acb4039e4b08c28d12c0b6c",
+        "results/susskind-slater-joint-fourth/covariance-checks.json": "8e4ab41f5a2e9db3286ea8c13a355d80a8b82600d142ac89240a7a16915d18dc"
+      }
+    }
+  },
+  "checks": {
+    "CAR_label_assignments": 1461120,
+    "coefficient_extractions": 1215,
+    "negative_CAR_assignments": 80,
+    "quadratic_graphs": 1814,
+    "sixth_words": 729,
+    "rational_Gram_cases": 4,
+    "covariance_counts": 348,
+    "tail_diagnostics": 9
+  },
+  "hashes": {
+    "code/record_slater_joint_words.py": "689de9999b3c0603161941b799fca4e5ab5c0252c183a1b6d70b18dd282da949",
+    "code/slater_joint_site_polynomial.py": "68d364e710f0d37cfca24720554fb342fac35d435e59fba3e3ba6b0a2048b489",
+    "code/check_slater_joint_sites.py": "829f9e637112757d48cb1a4232f993f8c2b6d9b5bb75afb31e14804ed4a9e6d0",
+    "code/check_slater_joint_word_law.py": "2707857a55d3ccfb4a6d750f834177f617ab110cbad7f092aa5607668f60113d",
+    "code/check_slater_joint_time_bound.py": "fc300a9e5eb8945d916f3e014a9566966f4dbbc7e009354f63777ce9fbbf527a",
+    "code/build_slater_joint_words.ps1": "deb6ead429bc0b1982d18ea8f7814bfb7735ac13e4cf49219d6cb5e22fc9ee3a",
+    "manuscript/susskind-slater-joint-words/main.tex": "8148056e35165e59387e0f651e6d0fcecf16bc2593aa7f513616a349506e7e6f",
+    "notes/susskind-slater-joint-words.md": "216766ae4641bc674e5de31d7f45fb8cc634cd6dd65ef6109425f4d58cdfc358",
+    "literature/susskind-slater-joint-word-sources.md": "344ac893cef028196db6210383be21a74c09cfc10a5f363e7e4e00c9a5d2e43c",
+    "output/pdf/de-sitter-susskind-slater-joint-words.pdf": "8cb8660cba3d8133fe6114792e5d44131e283d8aa62d9722b8a05aa0bcadbe54",
+    "results/susskind-slater-joint-words/main.log": "80a7ef27c6a5e9ed9aed8f0045770cf2c2ad6720e1029d56f84b9ec94e695c3f",
+    "results/susskind-slater-joint-words/site-checks.json": "864f4342efb51562d8a877ed2a1f9be14d7d1fa9d9d4e19d01a3d84a200c6f80",
+    "results/susskind-slater-joint-words/word-checks.json": "f4413f05fe251d1ff1cffc927f83af5b013efba32a7bc23c2d4320e93ce0e3bd",
+    "results/susskind-slater-joint-words/time-bound-checks.json": "1e244b4d232e55008a0243cc4a4ecb2afc134b26364d12b6d034d285c4469f34"
+  },
+  "render_hashes": {
+    "tmp/pdfs/susskind-slater-joint-words-render/page-1.png": "4fd2016d4049c885308e252b1c60a45bdd745a12a1692b6e05429916e28bb0fc",
+    "tmp/pdfs/susskind-slater-joint-words-render/page-2.png": "fc0ce545d55e1317ca7965641dc4e4334244242cd0693d63e7c8faacbcc28cca",
+    "tmp/pdfs/susskind-slater-joint-words-render/page-3.png": "be0ec785be78799228a87349465ec43b6ce456652bb096d1e9cf8d0ca07583d4",
+    "tmp/pdfs/susskind-slater-joint-words-render/page-4.png": "1280f175422f960755a2f1a24aa7a407cefa6333bb5fb5c997e7ad8e6058e55d",
+    "tmp/pdfs/susskind-slater-joint-words-render/page-5.png": "526ab9bffc9f2732bcd5b5ea226d1feba3a79fb391d75613462147a71cecc76a",
+    "tmp/pdfs/susskind-slater-joint-words-render/page-6.png": "cc180723baf157f1e1a14aadac7c4738c2bea99575279c0f54a00e3a4249035c",
+    "tmp/pdfs/susskind-slater-joint-words-render/page-7.png": "b62ac8db506810826f421e9c98674a8c90a71dd16576b9de4d3e66b900fc2284",
+    "tmp/pdfs/susskind-slater-joint-words-render/page-8.png": "c0dfc9fef2920552fbeb8b846a14250b4e7601d124320d5766fb269764ee6a58",
+    "tmp/pdfs/susskind-slater-joint-words-render/page-9.png": "43a25ddfdd08f2c2b1031d622905bd875503c49bc56d52601bdf343a278f0260"
+  },
+  "build_pass_hashes": {
+    "tmp/pdfs/susskind-slater-joint-words-build/pass1.txt": "3b25f6e2b7bbf274cbaeb2e4b6617b09f0c8bb86384a0eb0c55a0f28a937bf0e",
+    "tmp/pdfs/susskind-slater-joint-words-build/pass2.txt": "5c7315d74a0157d5d2e20b4e2317f42e7d097d8b070c5d8d20236e4bd6c55987"
+  },
+  "build": {
+    "command": "./code/build_slater_joint_words.ps1",
+    "passes": 2,
+    "final_script_exit_code_observed": 0,
+    "pages": 9,
+    "no_undefined_references_or_overfull": true,
+    "render": "pdftoppm -r 90 -png",
+    "review": "All nine final pages viewed by root; no clipping, overlap or broken references."
+  },
+  "environment": {
+    "recorder_python": "3.14.5",
+    "scientific_environments": {
+      "results/susskind-slater-joint-words/site-checks.json": {
+        "python": "3.14.5",
+        "dependencies": "standard library"
+      },
+      "results/susskind-slater-joint-words/word-checks.json": {
+        "python": "3.14.5",
+        "sympy": "1.14.0"
+      },
+      "results/susskind-slater-joint-words/time-bound-checks.json": {
+        "python": "3.14.5",
+        "mpmath": "1.3.0"
+      }
+    }
+  },
+  "git_commit_created": false,
+  "git_push_performed": false,
+  "external_reply_sent": false,
+  "recorder_scope": "Read-only hash/status/coverage/build verification. Does not prove analytic statements or rerun scientific generators."
+}

@@ -1,0 +1,460 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,microtype,booktabs}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\Om}{\Omega_O}
+\newcommand{\ph}{\varphi}
+\newcommand{\bn}[2]{\binom{#1}{#2}}
+\newcommand{\fall}[2]{(#1)_{\underline{#2}}}
+\newtheorem{theorem}{Theorem}
+\title{All fixed joint words above a Slater state\\
+\large Local CAR polynomials, the same-disorder limit, and finite-time evolution}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{7 November 2026\quad Local research draft}
+\begin{document}\maketitle
+\begin{abstract}
+We extend the same-disorder Slater calculation from fourth moments
+to every fixed joint word of the Hamiltonian and its selected
+particle--hole block. An exact single-site polynomial retains CAR
+signs, including negative finite-size six-point contributions.
+A coefficient estimate controls all multiple-overlap configurations
+after normalization. Only quadratic site clusters survive, while
+backward selected edges vanish. The resulting positive word law
+constructs the joint cyclic representation. Uniform finite-size
+row/column covariance bounds then control the complete time series,
+giving annealed finite-time correlators and a self-adjoint limiting
+Hamiltonian. This is a model-level joint dynamics result; the
+stationary physical state and the de Sitter bulk dictionary remain
+separate targets.
+\end{abstract}
+
+\section{The model and what is being extended}
+Use $N$ complex fermions with standard CAR, $m=N/2$, $a=N-m=m$,
+and a fixed occupied set $O$, empty complement $E$, and
+$\Om=|O\rangle$. With increasing-order creators and adjoint
+annihilators, set
+\begin{equation}
+ H_N=\sqrt{w_N}\sum_{|A|=|B|=p}J_{AB}C_A^\dagger C_B,
+ \quad w_N=\frac{4^pJ_s^2}{\lambda_N}\left(\frac{p!}{N^p}\right)^2,
+ \quad\lambda_N=\frac{p^2}{N}.
+\end{equation}
+The centered Hermitian Gaussian matrix obeys
+$\EE J_{AB}J_{CD}=\delta_{AD}\delta_{BC}$; overlapping $A,B$
+are included. Write $\ph_N(X)=\EE\langle\Om,X\Om\rangle$.
+All operators below use this same $J$. Take $p\to\infty$,
+$\lambda_N\to\lambda>0$, fixed $J_s>0$, $\hbar=1$ and string
+units for $H_N$. The microscopic state is not assumed stationary.
+
+\newpage
+The normalized operators and exact counts are
+\begin{align}
+ L_N&=\bn mp\bn ap,&D_N&=\bn mp\bn{a+p}p,\\
+ h_N&=H_N/\sqrt{w_ND_N},&
+ M_N^\dagger&=L_N^{-1/2}
+       \sum_{P\subset E,\ Q\subset O}J_{PQ}C_P^\dagger C_Q.
+\end{align}
+All subsets have size $p$, and $M_N$ is the adjoint. Define
+\begin{equation}
+ q=e^{-4\lambda},\qquad s=\sqrt q,\qquad\gamma=q^{1/4}.
+\end{equation}
+The preceding stage evaluated all words through degree four.
+It found $\ph(hM^\dagger)=\gamma$ and a seven-dimensional
+degree-at-most-two quotient. The task here is the full joint law,
+not another derivation of the pure-$M$ dressed oscillator.
+
+The literature inputs are the exact oriented CAR sign organization
+and pair-intersection method of complex DSSYK
+\cite[Sec.~3.2--3.3]{BNR}, and the state-adapted perspective of
+Rajgadia--Xu \cite{RX}. Their separate matter disorder is not
+substituted for our same-$J$ block. Our coefficient proof below
+keeps the fixed Slater occupation instead of a trace and bounds
+the discarded clusters after the required normalization.
+
+\section{The limiting word rule}
+Write a word in $h,M^\dagger,M$ from left to right. For each
+Gaussian pairing $\pi$, call an $hh$ edge $G$. Every other edge
+is selected, $S$, and its $M$ endpoint fixes its creation direction.
+An edge with equal non-$h$ endpoints is incompatible. A selected
+edge is forward when its creation acts first, from the right;
+otherwise it is backward. Let $b(\pi)$ count mixed $hM$ edges.
+For a pairing with all selected edges forward, let
+\begin{equation}\label{nu}
+ \nu(\pi)=\#\{\text{crossing edge pairs}\}
+ +\#\{\text{nested edge pairs with selected inner edge}\}.
+\end{equation}
+Disjoint pairs and nestings with general inner edge add zero.
+
+\begin{theorem}\label{words}
+For each fixed word $w$ of length $2k$,
+\begin{equation}\label{law}
+ \lim_N\ph_N(w)=
+ \sum_{\substack{\pi\text{ compatible}\
+                   \text{all selected edges forward}}}
+       \gamma^{b(\pi)}q^{\nu(\pi)}.
+\end{equation}
+Odd moments vanish. The empty word has value one.
+\end{theorem}
+The remainder of the proof establishes this for arbitrary fixed
+$k$, including signs and the suppression of backward edges.
+It does not rely on inferring general factorization from fourth
+or sixth moments.
+
+\newpage
+\section{An exact single-site polynomial}
+Orient each Gaussian edge $e=(i,j)$, $i<j$, with right operator
+$X_e=C_{P_e}^\dagger C_{Q_e}$ and left $X_e^\dagger$.
+General edges allow arbitrary $p$-subsets $P_e,Q_e$. Forward
+selected edges require $P_e\subset E,Q_e\subset O$; backward
+ones require $P_e\subset O,Q_e\subset E$.
+Introduce $2k$ membership variables $z_{P_e},z_{Q_e}$.
+
+For a site of initial occupation $o\in\{0,1\}$ and a membership
+subset $S$ of those $2k$ labels, calculate its one-mode CAR
+matrix element by following the slots from right to left.
+At a right endpoint annihilate $Q_e$ then create $P_e$; at a
+left endpoint annihilate $P_e$ then create $Q_e$. Omit actions
+whose labels are absent from $S$. Set the result to zero if a
+selected-edge site restriction is violated. Multiply by
+\begin{equation}\label{sign}
+ (-1)^{\sum_{e<f:\ e,f\text{ cross}}t_e(S)t_f(S)},
+ \qquad t_e(S)=\boldsymbol1_{P_e\in S}+\boldsymbol1_{Q_e\in S}.
+\end{equation}
+Call this coefficient $f_o(S)\in\{-1,0,1\}$, with $f_o(\varnothing)=1$,
+and define
+\begin{equation}
+ F_o(z)=\sum_{S\subset\{P_1,Q_1,\ldots,P_k,Q_k\}}
+               f_o(S)\prod_{i\in S}z_i.
+\end{equation}
+The raw Gaussian contraction is exactly
+\begin{equation}\label{exact}
+ A_N(\pi)=[\prod_{i=1}^{2k}z_i^p]\ F_0(z)^a F_1(z)^m.
+\end{equation}
+
+\subsection*{Why the CAR sign is exact}
+Split each number-conserving edge into its two thin, oriented
+fermion chords. Grouping events by site produces the sign
+$(-1)^{\sum_{u,v\text{ cross}}(p^2-|I_u\cap I_v|)}$.
+This is the exact grouping identity in the oriented CAR derivation
+\cite[Eqs.~(3.11)--(3.12)]{BNR}; changing the trace to a diagonal
+occupation matrix element changes the local factors, not this
+permutation sign. The two thin chords within one edge are nested.
+Two crossing thick edges give four thin crossings, so their
+$4p^2$ contribution is even. The remaining overlap parity is
+precisely \eqref{sign}. Reversal phases of the ordered monomials
+cancel between the two endpoints. This argument includes sites
+belonging to three or more thin labels; they have not been dropped.
+
+Choosing a membership subset at each of the $a$ empty and $m$
+occupied sites gives \eqref{exact}. The coefficient enforces size
+$p$ for every set. There is no independent-probe replacement and
+no positivity assumption on individual finite-size contractions.
+
+\newpage
+\section{A normalized coefficient bound for every cluster}
+Put $n=a=m=N/2$. Irrespective of edge type, a nonzero singleton
+can only be $P_e$ at an empty site or $Q_e$ at an occupied site.
+For general and forward selected edges these singletons have
+coefficient one. For backward selected edges both are forbidden.
+Use the fictitious singleton baseline $L_N^k=\bn np^{2k}$ even
+in the backward case.
+
+For each reservoir $o$ and membership $S$ with $|S|\ge2$, let
+$n_{o,S}$ be its number of sites. Let
+\begin{equation}
+ d_i=\sum_{o,S\ni i}n_{o,S},\quad
+ A_o=\sum_{|S|\ge2}n_{o,S},\quad
+ U_o=kp-\sum_{i:\ r_i=o}d_i+A_o,
+\end{equation}
+where $r_{P_e}=0,r_{Q_e}=1$. The correct singleton multiplicity
+of label $i$ is $p-d_i$. Feasible configurations have $d_i\le p$;
+if that singleton is forbidden, feasibility also requires $d_i=p$.
+After division by $L_N^k$, each configuration has signed weight
+\begin{equation}\label{cluster}
+ \frac{\fall n{U_0}\fall n{U_1}}{\fall np^{2k}}
+ \prod_i\fall p{d_i}
+ \prod_{o,S}\frac{f_o(S)^{n_{o,S}}}{n_{o,S}!}.
+\end{equation}
+This follows directly from the multinomial expansion of
+\eqref{exact}; singleton factorials have been absorbed into
+$\fall p{d_i}$.
+
+For fixed $k$, take $kp<n/2$. Since $|f_o(S)|\le1$,
+$\fall p d\le p^d$, and the denominator falling factorials
+differ from $n^{2kp}$ by a uniformly bounded exponential,
+the absolute value of \eqref{cluster} is at most
+\begin{equation}\label{bound}
+ C_{k,\lambda}\prod_{o,S}
+ \frac{\alpha_{S,N}^{n_{o,S}}}{n_{o,S}!},\qquad
+ \alpha_{S,N}=n(p/n)^{|S|}.
+\end{equation}
+Here $C_{k,\lambda}$ can be chosen uniformly along the sequence
+with $p^2/N$ in a compact positive interval. In particular,
+\begin{equation}
+ \sum_{o,|S|\ge2}\alpha_{S,N}=O_k(1),\qquad
+ \sum_{o,|S|\ge3}\alpha_{S,N}=O_k(p^3/N^2)=o(1).
+\end{equation}
+Summing \eqref{bound} over all counts gives an exponential series.
+The total absolute weight with at least one higher cluster is
+$o(1)$, and the tail with more than $R$ defects is bounded by
+$C\sum_{j>R}A^j/j!$ for a fixed finite $A$. This controls signed
+cancellations and rare large-overlap configurations after normalization.
+
+\newpage
+\subsection*{Forward limit and backward suppression}
+For any fixed collection of double-cluster counts, the factorials
+in \eqref{cluster} have limit
+\begin{equation}
+ e^{-2\lambda k(k-1)}
+ \prod_{o,|S|=2}\frac{(2\lambda f_o(S))^{n_{o,S}}}{n_{o,S}!}.
+\end{equation}
+Indeed $U_o=kp+O(1)$, and
+$\log\fall n r=r\log n-r(r-1)/(2n)+O(r^3/n^2)$ uniformly
+for $r\le kp$; also $\fall p d/p^d\to1$ for fixed $d$.
+The bound on defect tails justifies summing these limits:
+\begin{equation}\label{forward}
+ \frac{A_N(\pi)}{L_N^k}\longrightarrow
+ \exp\left[2\lambda\left(
+       \sum_{o,|S|=2}f_o(S)-k(k-1)\right)\right].
+\end{equation}
+For a backward edge, at least one forbidden correct singleton
+forces $d_i=p$. Since each defect contains label $i$ at most once,
+the number of defect sites is at least $p$. Its total normalized
+weight is bounded by $C\sum_{j\ge p}A^j/j!\to0$.
+This includes general $H$ edges, for which the old pure-ladder
+backward estimate alone would not suffice.
+
+\subsection*{The complete quadratic local table}
+For an all-forward graph the sum of double-cluster coefficients
+is obtained from the following one-site CAR cases:
+\begin{center}
+\begin{tabular}{lc}
+\toprule
+Membership sources & Sum over allowed reservoir and two labels\\
+\midrule
+Within a general edge: $P_e,Q_e$ & $1$\\
+Within a selected edge & $0$\\
+Two disjoint edges & $2$\\
+Two crossing edges & $0$\\
+Nested edges, inner general & $2$\\
+Nested edges, inner selected & $0$\\
+\bottomrule
+\end{tabular}
+\end{center}
+For disjoint edges the surviving pairs are $P_eP_f$ at empty
+sites and $Q_eQ_f$ at occupied sites. For nested edges the two
+survivors instead put the inner edge's annihilator on an empty
+site or its creator on an occupied site; an inner selected edge
+forbids both. Crossings have no alternating two-label local
+history. Within a general edge only an initially occupied
+site carrying both $P_e,Q_e$ survives.
+
+Writing $k_G$ for the number of general edges, the sum is
+$k_G+k(k-1)-2\nu(\pi)$. Equation \eqref{forward} is therefore
+$e^{2\lambda k_G}q^{\nu(\pi)}$. A word with $n_h$ Hamiltonian
+endpoints has normalization $L_N^k(D_N/L_N)^{n_h/2}$, with
+$D_N/L_N\to e^{2\lambda}$ and $n_h=2k_G+b(\pi)$.
+The remaining factor is $e^{-\lambda b}=\gamma^b$.
+Summing the finitely many pairings proves Theorem~\ref{words}.
+
+\newpage
+\section{Uniform finite-size bounds before taking time limits}
+Fixed-degree convergence by itself does not justify a real-time
+series. Here the actual finite operators have a stronger bound.
+Expand all of them in the same independent standard real Gaussian
+coordinates $x_\alpha$:
+\begin{equation}
+ h_N=\sum_\alpha x_\alpha A_\alpha,\qquad
+ M_N=\sum_\alpha x_\alpha B_\alpha.
+\end{equation}
+On the $m$-particle sector,
+\begin{equation}\label{rowcol}
+ \sum A_\alpha^\dagger A_\alpha=
+ \sum A_\alpha A_\alpha^\dagger=I,\qquad
+ \sum B_\alpha^\dagger B_\alpha\le I,\quad
+ \sum B_\alpha B_\alpha^\dagger\le I.
+\end{equation}
+The first identity is the exact sector variance $D_N$.
+For the selected block the two sums are diagonal on occupation
+states. On a state with $x$ particles in $E$ their eigenvalues,
+in either order, are
+\begin{equation}
+ \frac{\bn xp^2}{L_N},\qquad
+ \frac{\bn{m-x}p^2}{L_N},
+ \qquad 0\le x\le m,
+\end{equation}
+both at most one. The circular Gaussian real and imaginary
+parts have their $1/\sqrt2$ factors; hence no extra factor two
+appears. Adjoints obey the same row/column bounds.
+
+\subsection*{Every Wick contraction is a contraction}
+For a coefficient family $C_\alpha$, opening a Gaussian edge
+uses $v\mapsto\sum_\alpha e_\alpha\otimes C_\alpha v$;
+its norm is $\|\sum C_\alpha^\dagger C_\alpha\|^{1/2}$.
+Closing it uses $\sum e_\alpha\otimes v_\alpha\mapsto
+\sum C_\alpha v_\alpha$, with row norm
+$\|\sum C_\alpha C_\alpha^\dagger\|^{1/2}$.
+Keep tensor slots for all open Gaussian indices and permute
+them unitarily to close the required edge. Following any pairing
+from right to left reproduces its matrix product in its original
+order. By \eqref{rowcol} its operator norm is at most one.
+Thus for every finite $N$ and every word of length $2r$,
+\begin{equation}\label{allbound}
+ |\ph_N(w)|\le(2r-1)!!.
+\end{equation}
+This proof allows crossings and the shared disorder. It is not
+a scalar-independence approximation. For a word $v$ of length $d$,
+\begin{equation}\label{vectorbound}
+ \|v\Om\|_{L^2(J)}\le F_d,
+ \qquad F_d=\sqrt{(2d-1)!!},\quad F_0=1.
+\end{equation}
+The bound is uniform in both $N$ and degree. Unlike the cluster
+proof, it has no degree-squared exponential prefactor.
+
+\newpage
+\section{Joint representation and finite-time convergence}
+Define $\ph$ on the free star-polynomial algebra by
+Theorem~\ref{words}. It is positive because for every fixed
+polynomial $P$,
+\begin{equation}
+ \ph(P^*P)=\lim_N\ph_N(P_N^*P_N)\ge0.
+\end{equation}
+Quotient by its null left ideal and complete to obtain the cyclic
+GNS space. Left multiplication defines $h=h^*$ and the mutually
+adjoint-on-the-core $M,M^\dagger$. This provides an all-degree
+constructive representation through its Gram matrices and
+multiplication, without assuming a finite closed Hamiltonian.
+
+If $P$ has degree at most $d$ and coefficient one-norm $C_P$,
+\eqref{vectorbound} gives
+\begin{equation}
+ \|h^nP\Omega\|\le C_P F_{n+d},\qquad
+ \sum_{n\ge0}\frac{|z|^n}{n!}\|h^nP\Omega\|<\infty
+ \quad(z\in\mathbb C).
+\end{equation}
+Every core vector is entire analytic for $h$. Nelson's analytic
+vector criterion makes this symmetric Hamiltonian essentially
+self-adjoint; we use the standard theorem as recalled in
+\cite[Theorem~4.8]{Neeb}. Its closure generates the unitary
+$e^{ith}$. Polynomial insertions on evolved core vectors are
+defined by the same graph-norm-convergent series; the moment
+bound remains valid with their additional fixed degree.
+
+More concretely, for fixed star-polynomials $P_0,\ldots,P_\ell$,
+fixed complex $z_1,\ldots,z_\ell$, and $d=\sum_j\deg P_j$,
+the ordered correlator
+\begin{equation}\label{time}
+ \ph_N\left(P_{0,N}e^{z_1h_N}P_{1,N}\cdots
+                       e^{z_\ell h_N}P_{\ell,N}\right)
+\end{equation}
+converges to the series obtained by replacing every polynomial
+word coefficient with \eqref{law}. With
+$T=\sum_j|z_j|$ and $C=\prod_j C_{P_j}$, the absolute tail
+after total exponential degree $R-1$ is bounded uniformly in $N$ by
+\begin{equation}\label{tail}
+ C\sum_{n\ge R}\frac{T^n F_{n+d}}{n!}.
+\end{equation}
+The multinomial theorem combines all time powers into $T^n/n!$.
+Their successive majorant ratio is
+\begin{equation}
+ \rho_n=\frac{T\sqrt{2(n+d)+1}}{n+1}\longrightarrow0.
+\end{equation}
+It decreases with $n\ge0$. When $\rho_R<1$, \eqref{tail} is
+at most $C T^R F_{R+d}/[R!(1-\rho_R)]$.
+First take $N\to\infty$ at fixed $R$, then $R\to\infty$;
+the bound is uniform on compact complex-time sets. Physical
+string time uses $H_N=\sqrt{w_ND_N}h_N$, where
+$w_ND_N\to J_s^2/\lambda$. No time growing with $N$ is claimed.
+
+\newpage
+\section{Six-point consequences and independent finite checks}
+The familiar Hamiltonian moment is recovered:
+\begin{equation}
+ \ph(h^6)=5+6q+3q^2+q^3,\qquad
+ \ph(M^3(M^\dagger)^3)=6q^3.
+\end{equation}
+The actual disorder complement remains
+$g=h-\gamma(M+M^\dagger)$, with $\ph(g^2)=1-s$.
+Its sixth moment from the joint law is
+\begin{equation}\label{six}
+ \frac{\ph(g^6)}{(1-s)^3}
+ =5+6s+14q+10sq+13q^2+7sq^2+6q^3.
+\end{equation}
+Together with the preceding fourth moment $2+s+2q$, this
+quantifies why a standard independent $q$ mode is not the
+Hamiltonian complement.
+
+The new integer CAR driver checks all fifteen three-edge pairings
+for $(N,p)=(4,1),(6,1),(4,2)$. There are 1,461,120 independent
+Gaussian label assignments. Each raw matrix element is compared
+with the single-site product including \eqref{sign}. The first
+two systems contain respectively 8 and 72 negative nonzero
+contributions; all are reproduced. Independently extracting
+\eqref{exact} verifies all $3^3$ general/forward/backward edge
+specifications for each pairing and fixture: 1,215 coefficients.
+The quadratic local table is checked for all pairings and forward
+edge types through four edges, 1,814 cases.
+
+A separate exact symbolic driver lists all 729 sixth-word
+polynomials and verifies \eqref{six}. Rational Gram elimination
+at $\gamma=1/2,2/3$ gives rank seven through degree two and rank
+fifteen through degree three, with positive nonzero pivots.
+The latter rank is a two-parameter-point check, not a proof of
+generic rank fifteen or a universal binary-tree representation.
+Finite row/column covariance counts and the scalar time-tail
+majorant are separately recorded. These checks support the
+specific implementations; the arbitrary-degree and time claims
+rest on the proofs above.
+
+The source, parameters, versions, input hashes and three scientific
+outputs are stored in
+\texttt{results/susskind-slater-joint-words/}.
+The evidence manifest also binds the final LaTeX, PDF, two-pass
+build logs and every rendered page. Old successful scientific
+outputs were not regenerated or overwritten.
+
+\newpage
+\section{What this makes possible next}
+The same-$J$ joint dynamics is now specified by a positive
+all-word law and a convergent finite-time construction in the
+annealed Slater state. It can be used to evaluate dynamical
+commutators, spectral measures with selected insertions and
+state-preparation kernels. It also supplies a precise object
+against which proposed canonical or bulk representations can be
+tested, beyond matching two or four moments.
+
+The next constructive task is to turn the Gram/multiplication
+description into a transparent transfer representation and to
+compute physically useful kernels efficiently. The degree-three
+rank check suggests an economical organization, but no such
+organization is assumed in this paper. The four second-layer
+directions of the preceding stage must all survive any proposed
+representation with their known Hamiltonian coefficients.
+
+The microscopic Slater vector is not stationary under $h$.
+A physical observer state, its preparation and its relation to
+the original static-patch observables must therefore be specified
+before identifying particle masses or spatial generators. The
+joint moment limit here is annealed; concentration for the full
+joint algebra is not asserted. It has fixed positive $\lambda$
+and fixed time windows, and says nothing about recurrences at
+times growing with $N$. Nor is this a derivation of a finite-$G$
+gravitational scattering amplitude. These remaining questions
+preserve the original de Sitter research target.
+
+\begin{thebibliography}{9}
+\bibitem{BNR} M. Berkooz, V. Narovlansky and H. Raj,
+\emph{Complex Sachdev-Ye-Kitaev model in the double scaling limit},
+\href{https://arxiv.org/abs/2006.13983v2}{arXiv:2006.13983v2} (2020).
+\bibitem{RX} H. Rajgadia and J. Xu,
+\emph{Emergent States and Algebras from the Double-Scaling limit
+of Pure States in SYK},
+\href{https://arxiv.org/abs/2604.14387v3}{arXiv:2604.14387v3} (2026).
+\bibitem{Neeb} K.-H. Neeb,
+\emph{On Analytic Vectors for Unitary Representations of Infinite
+Dimensional Lie Groups},
+\href{https://arxiv.org/abs/1002.4792v2}{arXiv:1002.4792v2} (2010),
+Theorem~4.8 (Nelson's theorem).
+\end{thebibliography}
+\end{document}

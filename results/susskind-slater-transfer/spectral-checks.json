@@ -1,0 +1,327 @@
+{
+  "status": "passed",
+  "created_utc": "2026-11-07T15:54:22.623161+00:00",
+  "rows": [
+    {
+      "q": 0.0625,
+      "gamma": 0.5,
+      "support_radius": 2.065591117977289,
+      "density_mass": 0.9999999999999745,
+      "density_second": 0.9999999999998916,
+      "selected_mass": 0.9999999999999998,
+      "time_rows": [
+        {
+          "t": 0,
+          "vacuum_real": 0.9999999999999999,
+          "selected_real": 0.9999999999999998,
+          "imaginary_roundoff": 0.0,
+          "L160_L240_difference": 6.661338147750939e-16,
+          "exact_arithmetic_quadrature_tail_log10": -Infinity
+        },
+        {
+          "t": 0.5,
+          "vacuum_real": 0.8802557126977799,
+          "selected_real": 0.8491609328429786,
+          "imaginary_roundoff": 2.220446049250313e-16,
+          "L160_L240_difference": 5.551115123125783e-16,
+          "exact_arithmetic_quadrature_tail_log10": -654.11046175247
+        },
+        {
+          "t": 1,
+          "vacuum_real": 0.5788355637784952,
+          "selected_real": 0.4772202605333129,
+          "imaginary_roundoff": 3.3306690738754696e-16,
+          "L160_L240_difference": 6.280369834735101e-16,
+          "exact_arithmetic_quadrature_tail_log10": -557.934385719121
+        },
+        {
+          "t": 2,
+          "vacuum_real": -0.015968142251405942,
+          "selected_real": -0.17882701837757006,
+          "imaginary_roundoff": 3.608224830031759e-16,
+          "L160_L240_difference": 7.716848701410009e-16,
+          "exact_arithmetic_quadrature_tail_log10": -461.30977227356914
+        },
+        {
+          "t": 4,
+          "vacuum_real": 0.05086148259829421,
+          "selected_real": 0.09959702618240937,
+          "imaginary_roundoff": 3.7470027081099033e-16,
+          "L160_L240_difference": 1.0931786361305639e-15,
+          "exact_arithmetic_quadrature_tail_log10": -363.78808400361135
+        }
+      ],
+      "preparation_rows": [
+        {
+          "beta": 0,
+          "Z": 0.9999999999999998,
+          "mean_energy": -3.885780586188049e-16,
+          "energy_variance": 1.2656250000000007
+        },
+        {
+          "beta": 0.5,
+          "Z": 1.1659147224022808,
+          "mean_energy": -0.5962867414786053,
+          "energy_variance": 1.0585381666043423
+        },
+        {
+          "beta": 1,
+          "Z": 1.765128883822181,
+          "mean_energy": -1.0309123204919945,
+          "energy_variance": 0.6832973218570295
+        },
+        {
+          "beta": 2,
+          "Z": 6.352234099608173,
+          "mean_energy": -1.4597969004690465,
+          "energy_variance": 0.25464082318954473
+        }
+      ],
+      "kernel_tails": [
+        {
+          "L": 8,
+          "HS_squared_upper": 1.1030737946334126e-18,
+          "sum_300_diagnostic": 1.0341316824838049e-18
+        },
+        {
+          "L": 16,
+          "HS_squared_upper": 2.13257566057832e-37,
+          "sum_300_diagnostic": 1.999289681792175e-37
+        },
+        {
+          "L": 32,
+          "HS_squared_upper": 2.360986838105761e-75,
+          "sum_300_diagnostic": 2.2134251607241506e-75
+        }
+      ]
+    },
+    {
+      "q": 0.25,
+      "gamma": 0.7071067811865476,
+      "support_radius": 2.3094010767585034,
+      "density_mass": 0.9999999999999898,
+      "density_second": 0.9999999999999458,
+      "selected_mass": 0.9999999999999996,
+      "time_rows": [
+        {
+          "t": 0,
+          "vacuum_real": 0.9999999999999993,
+          "selected_real": 0.9999999999999996,
+          "imaginary_roundoff": 0.0,
+          "L160_L240_difference": 1.1102230246251565e-16,
+          "exact_arithmetic_quadrature_tail_log10": -Infinity
+        },
+        {
+          "t": 0.5,
+          "vacuum_real": 0.8807161231301919,
+          "selected_real": 0.808214547338031,
+          "imaginary_roundoff": 2.220446049250313e-16,
+          "L160_L240_difference": 4.577566798522237e-16,
+          "exact_arithmetic_quadrature_tail_log10": -638.6488270243232
+        },
+        {
+          "t": 1,
+          "vacuum_real": 0.584989877917517,
+          "selected_real": 0.35463102081170217,
+          "imaginary_roundoff": 3.885780586188048e-16,
+          "L160_L240_difference": 8.95090418262362e-16,
+          "exact_arithmetic_quadrature_tail_log10": -542.4198083311082
+        },
+        {
+          "t": 2,
+          "vacuum_real": 0.029022526923897986,
+          "selected_real": -0.29509076440363424,
+          "imaginary_roundoff": 2.7755575615628914e-16,
+          "L160_L240_difference": 4.619448428525918e-16,
+          "exact_arithmetic_quadrature_tail_log10": -445.68930956582466
+        },
+        {
+          "t": 4,
+          "vacuum_real": 0.02310861424206962,
+          "selected_real": 0.07549673131476325,
+          "imaginary_roundoff": 6.245004513516506e-17,
+          "L160_L240_difference": 9.973679442793454e-16,
+          "exact_arithmetic_quadrature_tail_log10": -347.9558506564033
+        }
+      ],
+      "preparation_rows": [
+        {
+          "beta": 0,
+          "Z": 0.9999999999999996,
+          "mean_energy": -6.661338147750942e-16,
+          "energy_variance": 1.625000000000001
+        },
+        {
+          "beta": 0.5,
+          "Z": 1.2151115577219251,
+          "mean_energy": -0.7486799469172767,
+          "energy_variance": 1.270257386053454
+        },
+        {
+          "beta": 1,
+          "Z": 2.0211522810212785,
+          "mean_energy": -1.2403079019697945,
+          "energy_variance": 0.7209763639696036
+        },
+        {
+          "beta": 2,
+          "Z": 8.978930804995224,
+          "mean_energy": -1.6651660989492367,
+          "energy_variance": 0.24370473232263112
+        }
+      ],
+      "kernel_tails": [
+        {
+          "L": 8,
+          "HS_squared_upper": 1.021667763038918e-08,
+          "sum_300_diagnostic": 7.66253573175735e-09
+        },
+        {
+          "L": 16,
+          "HS_squared_upper": 8.423303207202345e-18,
+          "sum_300_diagnostic": 6.317477405749826e-18
+        },
+        {
+          "L": 32,
+          "HS_squared_upper": 1.713832451090424e-36,
+          "sum_300_diagnostic": 1.285374338317818e-36
+        }
+      ]
+    },
+    {
+      "q": 0.64,
+      "gamma": 0.8944271909999159,
+      "support_radius": 3.3333333333333335,
+      "density_mass": 0.9999999999999997,
+      "density_second": 0.9999999999999993,
+      "selected_mass": 0.9999999999999991,
+      "time_rows": [
+        {
+          "t": 0,
+          "vacuum_real": 0.9999999999999996,
+          "selected_real": 0.9999999999999991,
+          "imaginary_roundoff": 0.0,
+          "L160_L240_difference": 1.3322676295501878e-15,
+          "exact_arithmetic_quadrature_tail_log10": -Infinity
+        },
+        {
+          "t": 0.5,
+          "vacuum_real": 0.8816556491567459,
+          "selected_real": 0.7329939948591429,
+          "imaginary_roundoff": 3.3306690738754696e-16,
+          "L160_L240_difference": 1.1957467920563633e-15,
+          "exact_arithmetic_quadrature_tail_log10": -587.7438397026049
+        },
+        {
+          "t": 1,
+          "vacuum_real": 0.596835177261312,
+          "selected_real": 0.15665989941846878,
+          "imaginary_roundoff": 2.7755575615628914e-16,
+          "L160_L240_difference": 5.79553433516819e-16,
+          "exact_arithmetic_quadrature_tail_log10": -491.29247694495353
+        },
+        {
+          "t": 2,
+          "vacuum_real": 0.09594498216586206,
+          "selected_real": -0.374452932960293,
+          "imaginary_roundoff": 1.8041124150158794e-16,
+          "L160_L240_difference": 1.2658490090568385e-15,
+          "exact_arithmetic_quadrature_tail_log10": -394.1172900507966
+        },
+        {
+          "t": 4,
+          "vacuum_real": 0.0005485784426184706,
+          "selected_real": 0.005011978525265231,
+          "imaginary_roundoff": 3.5735303605122226e-16,
+          "L160_L240_difference": 6.976004485091715e-16,
+          "exact_arithmetic_quadrature_tail_log10": -295.494454883629
+        }
+      ],
+      "preparation_rows": [
+        {
+          "beta": 0,
+          "Z": 0.9999999999999991,
+          "mean_energy": -8.88178419700126e-16,
+          "energy_variance": 2.311999999999999
+        },
+        {
+          "beta": 0.5,
+          "Z": 1.3128486563166017,
+          "mean_energy": -1.028823950372583,
+          "energy_variance": 1.6286132271258673
+        },
+        {
+          "beta": 1,
+          "Z": 2.588156451732154,
+          "mean_energy": -1.6174026306943814,
+          "energy_variance": 0.8098326538275487
+        },
+        {
+          "beta": 2,
+          "Z": 17.36649512963454,
+          "mean_energy": -2.1157408066310643,
+          "energy_variance": 0.3337576496443626
+        }
+      ],
+      "kernel_tails": [
+        {
+          "L": 8,
+          "HS_squared_upper": 0.10214227503678704,
+          "sum_300_diagnostic": 0.037269149301721614
+        },
+        {
+          "L": 16,
+          "HS_squared_upper": 0.00026728245190782093,
+          "sum_300_diagnostic": 9.625917896351106e-05
+        },
+        {
+          "L": 32,
+          "HS_squared_upper": 6.067508580483586e-10,
+          "sum_300_diagnostic": 2.1843037766685842e-10
+        }
+      ]
+    }
+  ],
+  "parameters": {
+    "q": [
+      0.0625,
+      0.25,
+      0.64
+    ],
+    "Jacobi_sizes": [
+      160,
+      240
+    ],
+    "density_theta_points": 8193,
+    "q_product_terms": 256,
+    "time": [
+      0,
+      0.5,
+      1,
+      2,
+      4
+    ],
+    "beta": [
+      0,
+      0.5,
+      1,
+      2
+    ],
+    "figure_q": 0.25
+  },
+  "environment": {
+    "python": "3.14.5",
+    "numpy": "2.4.6",
+    "scipy": "1.18.0",
+    "matplotlib": "3.11.0",
+    "dtype": "float64"
+  },
+  "input_sha256": {
+    "code/compute_slater_transfer_spectrum.py": "450516e269e82e000b700defa82c5ee6f671885c156f0ecb135e7cb25a5cdaa5",
+    "results/susskind-slater-transfer/exact-checks.json": "9169dc569325988ee624bc5cae80b0935737cda4b058c7a3025167e338441c6a"
+  },
+  "figure_sha256": {
+    "results/susskind-slater-transfer/selected-spectrum.png": "2d0aed06b6286ccf55be25dda914f2e5287f046476cc99b2a4593598832f8dd2"
+  },
+  "scope": "Floating-point spectral calculations with independent density normalization and quadrature-size comparisons. Analytic Gaussian-quadrature Taylor tail bounds apply in exact arithmetic; no interval enclosure of eigensolver roundoff is claimed. Euclidean filtering is vector preparation, not a KMS-state identification."
+}
