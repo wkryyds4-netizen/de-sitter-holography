@@ -1,5 +1,17 @@
 # de Sitter 全息研究
 
+## 当前进展：带权 Mehler 极限与一阶修正相消（2026-11-08）
+
+[七页 PDF](output/pdf/de-sitter-susskind-weighted-mehler-limit.pdf)、[LaTeX](manuscript/susskind-weighted-mehler-limit/main.tex)、[中文笔记](notes/susskind-weighted-mehler-limit.md)和[来源](literature/susskind-weighted-mehler-limit-sources.md)已完成。整数参数的精确移位与 theta 模变换给全谱支配及带多项式权的 O(epsilon²) 余项，将上一阶段的选态预测补为固定紧时间区间、任意固定有限导数阶的渐近结论。物理曲率 d=2 的迹态和单选态首阶修正相反，等权混合后关联为 sech⁴u+O(epsilon²)。
+
+27 个乘积表示、6 个边缘层、18 个局部展开、12 个 Fourier 积分及16个精确迹态系数已核；复用旧28点而未重跑旧科学输出。[证据清单](results/susskind-weighted-mehler-limit/local-evidence.json)绑定12当前/364父科学文件，七页双遍编译并全页目检。本次按用户要求与上一阶段集中 Git，[发布入口](notes/research-release-2026-11-08-weighted-mehler.md)。下一步是完整双局域的 e,W 混合源，继而空间/质量生成元；有限 G 仍开放。以下历史“本地”“未 Git”保留当时含义。
+
+## 当前进展：选态与 Rindler 时间响应（2026-11-08，本地）
+
+[五页 PDF](output/pdf/de-sitter-susskind-selected-rindler-response.pdf)、[LaTeX](manuscript/susskind-selected-rindler-response/main.tex)、[中文笔记](notes/susskind-selected-rindler-response.md)和[来源](literature/susskind-selected-rindler-response-sources.md)已保存。既有单选态密度给精确源响应：带电子代数的制备修正等于归一热关联的二阶逆温导数；完整双局域必须保留 e−W 源。利用已有热鞍点得到 sech⁴u[u tanh u−5tanh²u] 的首阶形状预测，不能被常数时间重标度吸收。
+
+8个精确时间系数、36个Laurent相消及28个有限变形时间点支持该预测；完整实时间结论仍需二阶源导数的统一余项控制，尚未列为已证渐近定理。[证据清单](results/susskind-selected-rindler-response/local-evidence.json)核10当前/349父科学文件，五页双遍编译及全页检查完成。本轮只本地，上一轮83ff027和issue回复已完成。
+
 ## 当前进展：固定电荷实际双局域（2026-11-08）
 
 [十页 PDF](output/pdf/de-sitter-susskind-sector-bilocal.pdf)、[LaTeX](manuscript/susskind-sector-bilocal/main.tex)、[中文推导](notes/susskind-sector-bilocal.md)及[来源](literature/susskind-sector-bilocal-sources.md)已完成。有限 alpha 的带电接口、实际中性尾及守恒返回先给总记忆的全部固定有限范数界；半填充多色 Fourier 源与整块 replica 接通四辅助场条件回归。实际双局域到记忆积分的重建误差为 O_r(p^-1)，并得到已控制固定多项式制备之间的有限协变双局域词极限。

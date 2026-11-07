@@ -1,4 +1,23 @@
-# 当前继续位置：2026-11-08 固定电荷实际双局域
+# 当前继续位置：2026-11-08 带权 Mehler 紧时间极限
+
+先读 manuscript/susskind-weighted-mehler-limit/main.tex、notes/susskind-weighted-mehler-limit.md、literature/susskind-weighted-mehler-limit-sources.md 与本地 journal/2026-11-08-susskind-weighted-mehler-limit.md。七页 PDF 双遍编译、90dpi逐页目检完成。此次用户要求集中 Git 与 issue 回复，包含上一阶段源响应；发布入口 notes/research-release-2026-11-08-weighted-mehler.md，回执位于 tmp/publication-2026-11-08-weighted-mehler。长期 goal active；本阶段是 progress。
+
+- 已证：q=e^-epsilon，固定正整数 d 的 normalized q^d Mehler，g=sech^(2d)u，R=(d/2)g[u tanh u−(2d+1)tanh²u]。trace C=g−epsilon R/2+O_Ck(epsilon²)，energy-tilted Ctilde=g+epsilon R/2+O_Ck(epsilon²)。仅 d=2 在本稿接实际曲率单选态；一般 d 不自动宣称选态微观解释。先 finiteN exact projection，再 fixedlambda DS，最后 epsilon→0；无 N 一致率。
+- 证明：a=√epsilon y、delta=epsilon z；反射 Gaussian 像的端点商给全谱 p≤C phi f_d。首相对密度 A=(4d+1)/8−(2d+1)y²/8−z²/2，带所有固定多项式权的 L1 余项 O(epsilon²)。对称能量权 W0=y²−1、W1=z²+y²/2−y⁴/12，相位 −2z[1+epsilon(1/4−y²/8)]；Gaussian 首项为 z²−d/2+iuz/2，Fourier 后为 R。中心矩形展开与外部 epsilon^8 对数幂尾控制所有固定有限 u 导数。
+- 构造结果：物理 d2 的正混合 (tau+sigma1)/2 有 sech⁴u+O(epsilon²)；不等同体真空。上一稿的条件性预测已由本稿提升，历史 sealed 文件不追改。
+- science封存：modular-checks SHA28364b9e42da4844c38fd03c9062ccafcf820c08f4578ca1b81246d56c11c07f；trace-mixture SHA d86cbb8f250434f72d1cc7d39086fafc8a106bfc0f286f31463908e46d802463。27乘积/6边缘/18展开/12Fourier/16精确系数，旧28点只读分析。manifest SHA1934e00ded1dacec9455541a1d50bd96e11649b87a6cb26b8be5eefd687368f2；12当前/364父科学文件。所有成功driver/recorder不重跑，科学输入与manifest不修改。首次编译括号错误日志保留。
+- 下一首任务：完整 bilocal 的混合 chi=e−W 源。先读 sector-bilocal、slater-selected-state、selected-rindler-response 与共同 memory 代数，提取中性项的真实响应；不能用 charged 能量权替代。再接微观空间/质量生成元及 finiteG。非整数 d、增长时间、联合 N/epsilon 极限与任意 selected 交错仍开放。KS issue 独立全量复算与9890旧端点差异定位未完成，不以主线进展替代。
+
+## 上一阶段：2026-11-08 选态 Rindler 源响应（本地）
+
+先读 manuscript/susskind-selected-rindler-response/main.tex、notes/susskind-selected-rindler-response.md、literature/susskind-selected-rindler-response-sources.md 与 journal/2026-11-08-susskind-selected-rindler-response.md。上一轮和本轮均progress，goal active，无活跃进程。本轮不Git；83ff027与issue6712951203已完成。
+
+- 精确接口：epsilon=4lambda，e=H/√C，K=H/(2Js)=e/√epsilon，u=2Js t。charged restriction f(e)=1−√q+√q e²给 C1−C0=√q epsilon ∂beta² G_(epsilon,beta)|0，G为归一unsplit thermal kernel。全covariant塔改用chi=e−W：sigma1(Y)−tauY=√q ∂z²[tau(e^-zchi Y)/tau(e^-zchi)]0，不能丢W或称全态为Gibbs。
+- 半经典预测：Lin–Stanford beta=2theta/cos theta，g=(cos theta/cosh(u cos theta+i theta))^(2d)。d2给(C1−C0)/epsilon→R=sech⁴u[u tanh u−5tanh²u]。此箭头以二阶beta导数收敛为条件，目前未证统一余项。R的−4u²+11u⁴区别于时间重标度的−4u²+(28/3)u⁴。
+- 新science首次成功后封存，SHA814039c5cc5e3366db8d6957bfef66e80efee02adf409c7e1df0ac59e587fee0；manifest SHA0ce48b849a009bb0734b1aed4316b281e6daecf5e3239c7a54976d615b69c8ac。8 Taylor、36 Laurent、28实时间点；10当前/349父文件、五页双遍与全页目检。不要重跑checker/recorder或改封存输入。
+- 下一首任务：读取真正q-Mehler两能量积分与热鞍点原文，证明带二次能量插入的fixed-u紧集小epsilon极限。可走直接中心能量/能隙的weighted saddle，或复beta邻域一致解析展开再Cauchy；点态G收敛不足以求二阶导数。不要只扩大同一Jacobi扫描。随后推进全bilocal e,W混合源、空间/质量生成元与finiteG。
+
+## 上一阶段：2026-11-08 固定电荷实际双局域
 
 先读 manuscript/susskind-sector-bilocal/main.tex、notes/susskind-sector-bilocal.md、literature/susskind-sector-bilocal-sources.md 和 journal/2026-11-08-susskind-sector-bilocal.md。十页 PDF 双遍编译、全页目检完成。新 science SHA 0442b1715b4d80fb55703aaf6f474773e98f7708765e2bb4cd6e2ef671ea80f3；manifest SHA 87b5cb2414faa7512d5d5e4accba00f1241c5f51ea6df6f67c2172d841141740。10当前/336父科学文件核验通过。成功科学 driver 与 recorder 均不重跑，封存文件不修改；无活跃计算，goal active。
 

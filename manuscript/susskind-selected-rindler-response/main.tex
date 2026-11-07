@@ -1,0 +1,290 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=24mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,microtype}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue,citecolor=blue]{hyperref}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\sech}{\operatorname{sech}}
+\newtheorem{proposition}{Proposition}
+\title{Selected preparations and the Rindler time kernel\\
+\large Exact source response and a semiclassical shape correction}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{8 November 2026\quad Local research note}
+\begin{document}\maketitle
+\begin{abstract}
+The fixed-charge bilocal construction gives access to observables
+between controlled selected preparations. We express the single-selected
+functional as the second response of a normalized source state. On the
+charged subalgebra the source is the physical Hamiltonian. Applying the
+known thermal chord saddle predicts a first-order change in the
+curvature two-point function which cannot be absorbed into a constant
+rescaling of time. Exact gap-moment expansions through time degree
+fourteen and finite-deformation calculations test this prediction.
+The source identity is exact; differentiating the semiclassical saddle
+requires an additional uniform remainder estimate not proved here.
+\end{abstract}
+
+\section{Physical question, normalization and existing input}
+The Susskind program asks for a quantitative comparison of derivative
+singlets with the bulk meson spectrum \cite{mss}. Its singlets are
+$\sum_i\psi_i^\dagger\partial_t^n\psi_i$. Our earlier work has
+identified their nonconserved components and reconstructed the actual
+centered bilocal in a fixed charge sector \cite{bilocal}. Before using
+its time spectrum in a bulk dictionary, we ask how the choice of
+preparation changes that spectrum.
+
+Use the standard overlapping complex Gaussian p-body CAR model,
+the same disorder in all fields, $\hbar=1$, string time t, and
+$p^2/N\to\lambda>0$ at half filling. First take this double-scaled
+limit. Subsequent small-$\lambda$ statements keep string time fixed.
+Write
+\[
+ \varepsilon=4\lambda,\quad q=e^{-\varepsilon},\quad
+ C=J_s^2/\lambda,\quad e=H/\sqrt C,\quad
+ K=H/(2J_s)=e/\sqrt\varepsilon,\quad u=2J_st.
+\]
+The energy e has unit variance and K has variance $1/\varepsilon$.
+Let x be the normalized nonconserved curvature singlet of
+\cite{selected}. In its limiting tracial algebra,
+$\tau(x^2)=1$ and its two-energy kernel is the q-Mehler kernel
+with parameter $r=q^2$. Define
+\[
+ x(u)=e^{iuK}xe^{-iuK},\quad
+ C_0(u)=\tau(x(u)x),\qquad C_1(u)=\sigma_1(x(u)x).
+\]
+The previously proved single-selected restriction is
+\begin{equation}\label{density}
+ \sigma_1(Y)=\tau(f_q(e)Y),\qquad
+ f_q(e)=1-\sqrt q+\sqrt q\,e^2,
+ \quad Y\in W^*(e,x).
+\end{equation}
+It is normalized, positive and stationary on this subalgebra.
+The corresponding finite-N statement is the sequential limit of
+actual exactly pinched observables in the specified preparation.
+No rate uniform in $\lambda\to0$ is assumed.
+
+\newpage
+\section{Exact source-response identities}
+For a centered self-adjoint A in a tracial algebra define
+\[
+ F_A(z;Y)=\frac{\tau(e^{-zA}Y)}{\tau(e^{-zA})}.
+\]
+For bounded A this is analytic near zero. Direct differentiation,
+with $\tau(A)=0$, gives
+\begin{equation}\label{source}
+ F_A''(0;Y)=\tau(A^2Y)-\tau(A^2)\tau(Y).
+\end{equation}
+No commutation of A and Y is needed. This is the usual normalized
+source susceptibility, applied here to the known selected density.
+
+For each fixed $q<1$, K is bounded. Let
+\begin{equation}\label{thermal}
+ G_{\varepsilon,\beta}(u)=
+ \frac{\tau(e^{-\beta K}x(u)x)}{Z_\varepsilon(\beta)},
+ \qquad Z_\varepsilon(\beta)=\tau(e^{-\beta K}).
+\end{equation}
+Here $\beta$ is dimensionless and conjugate to K; physical inverse
+string energy is $\beta/(2J_s)$. This is a limiting tracial Gibbs
+functional, not an assumed bulk Rindler state or an assertion about
+quenched finite-N normalization.
+\begin{proposition}
+At every fixed $\varepsilon>0$ and real u,
+\begin{equation}\label{exact}
+ C_1(u)-C_0(u)=e^{-\varepsilon/2}\varepsilon
+   \left.\partial_\beta^2G_{\varepsilon,\beta}(u)\right|_{\beta=0}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Equation \eqref{density} gives the difference as
+$\sqrt q[\varepsilon\tau(K^2x(u)x)-\tau(x(u)x)]$.
+Apply \eqref{source} and $\tau(K^2)=1/\varepsilon$.
+\end{proof}
+
+The full covariant tower contains a size field W and has the
+different density established in \cite{selected,bilocal}:
+\[
+ \rho_1=\sqrt q\,(e-W)^2+[1-\sqrt q(1+\lambda)]I,
+ \quad\tau((e-W)^2)=1+\lambda.
+\]
+Consequently, for the controlled integrable covariant observables,
+\begin{equation}\label{full}
+ \sigma_1(Y)-\tau(Y)=\sqrt q\,F_{e-W}''(0;Y).
+\end{equation}
+At fixed q, e and W are bounded. The actual bilocal limit has all
+fixed moments, so the differentiation is also valid for those
+integrable Y. This identity retains the terms
+$-\tau((eW+We)Y)+\tau((W^2-\lambda)Y)$ absent from the charged
+restriction. The source $e-W$ is not the physical time generator.
+It supplies a source response for the full bilocal, not a thermal
+interpretation of its generally nonstationary selected state.
+
+\newpage
+\section{The thermal saddle and a testable shape correction}
+The leading thermal matter correlator is known from large-p SYK
+and the semiclassical chord theory \cite{ls}. In its conventions,
+put $\theta=\pi v/2$; the thermal equation and real-time continuation are
+\begin{equation}\label{saddle}
+ \beta=\frac{2\theta}{\cos\theta},\qquad
+ g_{\beta,d}(u)=
+ \left[\frac{\cos\theta}{\cosh(u\cos\theta+i\theta)}\right]^{2d}.
+\end{equation}
+The Hamiltonian in these units is K, whose variance is
+$1/\varepsilon$. Our curvature channel has $d=2$ because its
+Hamiltonian crossing weight is $q^2$, not because its bulk mass
+has been identified. Equation \eqref{saddle} is the unsplit
+thermal correlator; a midpoint thermal correlator has different
+source derivatives.
+
+Since $\theta=\beta/2+O(\beta^3)$, with $T=\tanh u$,
+\[
+ \log g_{\beta,d}
+ =-2d\log\cosh u-id\beta T
+       +\frac{d\beta^2}{4}(uT-T^2)+O(\beta^3).
+\]
+Therefore
+\begin{equation}\label{response}
+ \left.\partial_\beta^2g_{\beta,d}\right|_0
+ =\frac d2\sech^{2d}u\,[u\tanh u-(1+2d)\tanh^2u].
+\end{equation}
+Combining \eqref{response} with the exact \eqref{exact} predicts
+\begin{equation}\label{prediction}
+ \frac{C_1(u)-C_0(u)}{\varepsilon}\longrightarrow
+ R(u):=\sech^4u\,[u\tanh u-5\tanh^2u].
+\end{equation}
+The precise sufficient hypothesis is convergence of
+$\partial_\beta^2G_{\varepsilon,\beta}|_0$ to
+$\partial_\beta^2g_{\beta,2}|_0$, locally uniformly in u.
+A locally uniform analytic saddle expansion in a complex
+$\beta$ neighborhood would imply it by Cauchy's formula.
+Pointwise thermal convergence alone does not. We do not prove
+this differentiated remainder bound in this note, and label
+\eqref{prediction} as a semiclassical prediction rather than a
+new all-time convergence theorem.
+
+Nevertheless the short-time coefficient has an independent exact
+check. Mehler conditional moments give
+\begin{equation}\label{curvature}
+ -(C_1-C_0)''(0)=
+ \frac{e^{-\varepsilon/2}(1+e^{-\varepsilon})
+                   (1-e^{-2\varepsilon})^2}{\varepsilon}
+ =8\varepsilon+O(\varepsilon^2).
+\end{equation}
+The prediction has $R(u)=-4u^2+11u^4+O(u^6)$.
+It cannot be a constant time recalibration:
+$a u(\sech^4u)'=-4a u^2+(28a/3)u^4+O(u^6)$.
+Matching the quadratic term fixes $a=1$, which fails at the
+quartic term. An overall amplitude is fixed by $C_1(0)=C_0(0)=1$.
+
+\newpage
+\section{Independent coefficients and finite-deformation evidence}
+Let $Q_j$ be the monic unit-variance q-Hermite polynomials,
+$e^a=\sum_jb_{aj}Q_j(e)$. The exact two-energy moments are
+\[
+ T_{ab}(q)=\sum_jb_{aj}b_{bj}[j]_q!\,q^{2j}.
+\]
+Thus the selected-minus-trace gap moment before physical time
+rescaling is
+\[
+ D_n(q)=\sum_{a=0}^n(-1)^{n-a}\binom na
+                 [T_{a+2,n-a}(q)-T_{a,n-a}(q)].
+\]
+All quantities here are integer polynomials in q. If
+$D_{2k}(q)=\sum_jd_jq^j$, the coefficient of $\varepsilon^\ell$
+in $e^{-\varepsilon/2}D_{2k}(e^{-\varepsilon})$ is exactly
+\[
+ \frac1{\ell!}\sum_jd_j(-j-1/2)^\ell.
+\]
+The physical time coefficient includes
+$(-1)^k/[(2k)!\varepsilon^k]$.
+For $2k=0,2,\ldots,14$, all 36 terms with $\ell\le k$ vanish
+exactly. The first surviving coefficients reproduce
+\[
+ R(u)=-4u^2+11u^4-\frac{769}{45}u^6+
+ \frac{6236}{315}u^8-\frac{1201}{63}u^{10}
+ +\frac{7551623}{467775}u^{12}
+ -\frac{529250077}{42567525}u^{14}+O(u^{16}).
+\]
+These are finite exact checks, not a proof for all Taylor orders.
+
+For real time use the Jacobi matrix T with off-diagonal
+$\sqrt{[n]_q}$ and $D=\operatorname{diag}(q^{2n})$.
+With $a=e^{iuT/\sqrt\varepsilon}|0\rangle$ and
+$b=e^{iuT/\sqrt\varepsilon}|2\rangle$, the exact infinite-matrix
+formulas inherited from \cite{selected} are
+\[
+ C_0=\langle a,Da\rangle,\qquad
+ C_1-C_0=\sqrt{q(1+q)}\langle b,Da\rangle.
+\]
+The difference is computed directly. On the seven-point grid
+$u=0,0.25,\ldots,1.5$ the finite-deformation results are
+\begin{center}\begin{tabular}{rrr}\toprule
+$\varepsilon$ & Jacobi dimensions & $\max| (C_1-C_0)/\varepsilon-R|$\\\midrule
+0.08 & 214,278 & 0.077469\\
+0.04 & 364,428 & 0.040022\\
+0.02 & 664,728 & 0.020335\\
+0.01 & 1264,1328 & 0.010249\\\bottomrule
+\end{tabular}\end{center}
+The first dimension uses $\lceil12/\varepsilon\rceil+64$.
+The displayed differences measure finite-deformation bias, not
+numerical error. The parameter $\lambda$ equals $\varepsilon/4$.
+
+\newpage
+\section{Error accounting and the next construction}
+For $z=2|u|/\sqrt{\varepsilon(1-q)}$, a common exact-arithmetic
+packet truncation bound inherited from \cite{selected} is
+\[
+ 4[1+\sqrt{q(1+q)}]e^z\frac{z^{L-2}}{(L-2)!}.
+\]
+The saved parameters satisfy $z^2\le L(L-1)$; all nonzero-time
+bounds are below $10^{-25}$. This bounds truncation, not floating
+roundoff. We compare L and L+64, retain their difference after
+division by $\varepsilon$, check packet normalization, and at
+$\varepsilon=0.08$ compare sparse exponential action against an
+independent symmetric tridiagonal eigensolver. All numerical
+comparisons use float64 and empirical tolerances, not intervals.
+
+The largest summand-cancellation ratio is about 414. For example,
+at $\varepsilon=0.01,u=0.25$ the coefficient differs from the
+prediction by about $2.68\%$, despite negligible cutoff change.
+At $u=0.5$ its error is about $1.98\%$. These differences must not
+be relabeled as numerical uncertainty or omitted by an extrapolation.
+
+The physical outcome is a source-response method for handling
+preparation dependence while retaining the actual microscopic
+observable. Under the differentiated saddle hypothesis, the
+trace and selected curvature have the same leading Rindler
+kernel, but a distinct first correction. This is state response,
+not a change in an invariant particle mass.
+
+The next analytic step is to control the twice-differentiated
+thermal q-Hermite integral near $\beta=0$, with fixed compact u.
+The full bilocal additionally needs the mixed e,W source in
+\eqref{full}; using \eqref{exact} there would drop real neutral
+terms. Spatial translations, mass generators, arbitrary selected
+interlacings and finite-G dynamics remain separate unfinished
+parts of the intended dictionary. This stage introduces no new
+Git publication or issue reply.
+
+\begin{thebibliography}{9}\small
+\bibitem{mss} S. Miyashita, Y. Sekino and L. Susskind,
+\emph{Holograms and Standard Models},
+\href{https://arxiv.org/html/2607.05678v2}{arXiv:2607.05678v2},
+Secs.~4.1--4.3. The mass-spectrum comparison is an open quantitative
+test; a boost kernel alone does not determine that spectrum.
+\bibitem{ls} H. W. Lin and D. Stanford, \emph{A symmetry algebra
+in double-scaled SYK},
+\href{https://arxiv.org/html/2307.15725}{arXiv:2307.15725},
+Eqs.~(137)--(138), Sec.~4.3 and Appendix H, Eqs.~(409)--(410).
+Their chord deformation parameter is our $\varepsilon$.
+\bibitem{selected} A. Day and Chengheng, \emph{Single-selected
+covariant density and curvature dynamics}, 8 November 2026;
+\texttt{manuscript/susskind-slater-selected-state/main.tex}.
+\bibitem{bilocal} A. Day and Chengheng, \emph{Fixed-charge bilocals
+and selected preparations}, 8 November 2026;
+\texttt{manuscript/susskind-sector-bilocal/main.tex}.
+\bibitem{target} A. Day and Chengheng, bulk meson target and
+translation notes, 6 November 2026;
+\texttt{notes/susskind-bulk-target.md},
+\texttt{notes/susskind-translations.md}.
+\end{thebibliography}
+\end{document}

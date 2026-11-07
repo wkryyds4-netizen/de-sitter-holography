@@ -1,5 +1,9 @@
 # de Sitter 全息研究规划
 
+2026-11-08 weighted-mehler-limit：用整数有限移位、theta 模变换和全谱可积主控，完成带权密度的 O(epsilon²) 展开。此前有条件的 d=2 选态预测现在有固定紧时间 C^k 证明，并得到两实际制备等权混合的一阶相消。七页稿、两份科学输出和12当前/364父文件证据已封存。按用户要求，与 selected-rindler-response 集中发布一次并回复 issue #1；没有新增 KS 全量重积分结果。下一任务改为完整实际双局域的 chi=e−W 源，先核中性项的共同代数和 Fourier/Mehler 接口，再计算能量单独倾斜遗漏的贡献。理由：曲率带权极限已解决，重复同一小 epsilon 扫描不会推进完整字典。长期目标继续 active，日常低频 Git 不变。
+
+2026-11-08 selected-rindler-response：回读MSS最新版与已有体谱/平移结果后，先检验态信息如何传到Rindler时间核。精确源响应接到Lin–Stanford热鞍点，得到有8阶偶Taylor系数和四个epsilon点支持的首阶预测；不得把这些检查当作全时间证明。下一首任务为实际q-Mehler积分带二次能量插入的统一鞍点误差，可直接做中心能量/能隙联合渐近，或证明复beta邻域的解析一致性后用Cauchy。之后处理e,W混合源与空间/质量生成元。调整原因：仅复述已知体介子谱无法消除制备依赖；该源接口给出具体、可证明的下一步。本轮无Git/issue。
+
 2026-11-08 sector-bilocal：已完成 compact-central 实际总记忆的全 fixed finite Schatten 界、半填充 four-u 条件回归、共同局域场与 actual bilocal O_r(p^-1) 重建。固定多项式制备之间的完整有限协变块可传递，包括固定阶 OTOC；不包含任意 selected 因子在多个非多项式块内部交错。十页 PDF/有限检查/证据已封存，本次与 memory-return 集中 Git 并按用户要求回复 issue #1。KS 全量复算未新增。下一阶段从已控制的实际双局域出发，回读静态观察者、singlet/非 singlet 与空间/质量生成元文献，列明同一态、能量单位与谱测度的必要匹配，再选择可计算的字典检验。已有数学接口不重复计算，日常低频 Git 继续。
 
 2026-11-08 sector-memory-return：exact inverse把旧K_n实际阶乘包络传给force defect，finite Jacobi covariance参考在有限N下即守恒；DF/R交叉项和finite Volterra remainder给compactcentral全fixedS_r的Fscr−X0=O(p^-1/2)。七页PDF/科学检查/manifest本地封存。下一首任务为central三色replica的four-u回归与Qalpha E→Q1 G接口，之后用真正allr memory界审计bilocal返回。旧two-component的central一句引文不单独代替colored-word证明；可用新的central-ordinary Fourier支配直接补接口。长期goal active，无新Git/issue。

@@ -1,0 +1,375 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=24mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,booktabs,microtype}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\sech}{\operatorname{sech}}
+\newcommand{\sinc}{\operatorname{sinc}}
+\newcommand{\norm}[1]{\lVert#1\rVert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\title{A weighted q-Mehler limit for selected preparations\\
+\large Global spectral control and the first Rindler-time correction}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{8 November 2026\quad Local research draft}
+\begin{document}\maketitle
+\begin{abstract}
+We prove the compact-time preparation correction predicted in the
+preceding source-response note. For fixed positive integer Mehler
+dimension d, finite product shifts and the theta modular transform
+give a globally dominated center-energy/gap density. Its first
+weighted expansion yields an $O(\varepsilon^2)$ remainder, including
+any fixed number of real-time derivatives. For the actual curvature
+channel d=2, the tracial and single-selected correlations have equal
+and opposite first corrections to $\sech^4u$. Their equal statistical
+mixture therefore removes this correction. The result concerns
+sequential double-scaling and small-deformation limits, not a
+particle-mass identification or finite-G dynamics.
+\end{abstract}
+
+\section{Objects and result}
+Put $q=e^{-\eps}$, $\eps=4\lambda>0$, and let $\mu_q$ be the
+unit-variance q-Hermite measure with
+$e_\theta=2\cos\theta/\sqrt{1-q}$, $0<\theta<\pi$.
+For a fixed positive integer d, let $\nu_{q,d}$ be its normalized
+two-energy Mehler measure with parameter $r=q^d$ \cite{bint}.
+Define the gap $\omega=(e_\theta-e_\phi)/\sqrt\eps$ and
+\begin{align*}
+ C_{d,\eps}(u)&=\int e^{iu\omega}\,d\nu_{q,d},\\
+ \widetilde C_{d,\eps}(u)&=
+ \int[1-\sqrt q+\sqrt q\,e_\theta^2]e^{iu\omega}\,d\nu_{q,d}.
+\end{align*}
+Both are normalized positive spectral characteristic functions.
+The second uses a positive energy tilt; for d=2 it is the already
+proved single-selected curvature correlation \cite{selected,response}.
+For other d no new identification with a microscopic selected field
+is assumed.
+\begin{theorem}\label{main}
+For fixed d, $S<\infty$ and nonnegative integer k, as $\eps\downarrow0$,
+\begin{align}
+ C_{d,\eps}&=g_d-\tfrac12\eps R_d+O_{C^k([-S,S])}(\eps^2),\nonumber\\
+ \widetilde C_{d,\eps}&=g_d+\tfrac12\eps R_d+O_{C^k([-S,S])}(\eps^2),\label{main-exp}\\
+ g_d(u)&=\sech^{2d}u,\qquad
+ R_d(u)=\tfrac d2 g_d(u)[u\tanh u-(2d+1)\tanh^2u].\nonumber
+\end{align}
+\end{theorem}
+For complex DSSYK, first take the half-filled fixed-$\lambda$
+limit with the original common disorder and standard CAR. Then
+$K=H/(2J_s)=e/\sqrt\eps$ and $u=2J_st$ use string time,
+$\hbar=1$. The theorem concerns this limiting kernel; no uniform
+finite-N rate or joint $N,\lambda$ limit is asserted.
+
+\newpage
+\section{Exact product and modular representation}
+Write $Q_\eps=(q;q)_\infty$ and
+$A_\eps(x)=|(e^{ix};q)_\infty|^2$.
+The known angular measure and Poisson kernel give
+\begin{equation}\label{product}
+ \frac{d\nu_{q,d}}{d\theta\,d\phi}
+ =\frac{Q_\eps^2}{4\pi^2}
+ \frac{A_\eps(2\theta)A_\eps(2\phi)(q^{2d};q)_\infty}
+ {|(q^de^{i(\theta+\phi)},q^de^{i(\theta-\phi)};q)_\infty|^2}.
+\end{equation}
+The multiple-argument Pochhammer denotes a product. Its finite
+shift is exact: $|(q^de^{ix};q)_\infty|^2=
+A_\eps(x)/\prod_{j=0}^{d-1}(1-2q^j\cos x+q^{2j})$.
+
+The theta product and modular transform \cite{dlmf} imply
+\begin{gather}
+ A_\eps(x)=\frac{2e^{\eps/8}\sin(x/2)}{Q_\eps}
+       \sqrt{\frac{2\pi}{\eps}}\,T_\eps(x),\nonumber\\
+ T_\eps(x)=\sum_{n\in\mathbb Z}(-1)^n
+       e^{-(x-\pi-2\pi n)^2/(2\eps)},\label{theta}\\
+ Q_\eps=\sqrt{\frac{2\pi}{\eps}}
+       e^{-\pi^2/(6\eps)+\eps/24}P_\eps,
+ \quad P_\eps=(e^{-4\pi^2/\eps};e^{-4\pi^2/\eps})_\infty.\nonumber
+\end{gather}
+Use center/gap coordinates
+\[
+ a=\theta+\phi-\pi=\sqrt\eps\,y,\quad
+ \delta=\theta-\phi=\eps z,\quad
+ d\theta d\phi=\tfrac12\eps^{3/2}dy\,dz.
+\]
+The domain is $\mathcal D_\eps=\{\sqrt\eps|y|+\eps|z|<\pi\}$.
+Let $p_{d,\eps}$ be the transformed density, extended by zero outside.
+It is even separately in y and z. Below take $z\ge0$ and extend evenly.
+Set $S_\theta=\pi+a$, $D_m=\prod_{j=1}^m(1-e^{-j\eps})$,
+and
+\[
+ B_j^+=2e^{-j\eps}(\cosh(j\eps)+\cos a),\quad
+ B_j^-=2e^{-j\eps}(\cosh(j\eps)-\cos\delta).
+\]
+Equations \eqref{product}--\eqref{theta} give exactly
+\begin{align}
+ p_{d,\eps}(y,z)&=
+ \frac{(2\pi)^{3/2}P_\eps^3}{\pi^2D_{2d-1}}
+ e^{\eps/8-y^2/2-\eps z^2/2}\,
+ \sin\theta\sin\phi\sin(S_\theta/2)\nonumber\\
+ &\qquad\times\frac{\sin(\eps z/2)}{\sinh(\pi z)}
+ \prod_{j=1}^{d-1}B_j^+B_j^-\,\mathcal E_\eps(y,z).\label{exact-density}
+\end{align}
+The diagonal quotient has limit $\eps/(2\pi)$. The factor
+$\mathcal E_\eps$ is specified next, including all reflected images.
+
+\newpage
+\section{Images, edges and a global integrable bound}
+For $0\le x\le2\pi$ set $b(x)=\min(x,2\pi-x)$,
+$F_\eps(x)=1-e^{-2\pi b(x)/\eps}$. Pairing reflected terms in
+\eqref{theta} gives
+\[
+ T_\eps(x)=e^{-(x-\pi)^2/(2\eps)}F_\eps(x)Q_\eps^{\rm im}(x),
+\]
+where the endpoint quotient is defined by its limit and
+\begin{equation}\label{image-series}
+ Q_\eps^{\rm im}(x)=\sum_{n\ge0}(-1)^n
+ e^{-2\pi n((n+1)\pi-b(x))/\eps}
+ \sum_{j=0}^{2n}e^{-2\pi b(x)j/\eps}.
+\end{equation}
+For $0<\eps\le1$ this yields the uniform relative bound
+\begin{equation}\label{image-bound}
+ |Q_\eps^{\rm im}(x)-1|\le
+ \eta_\eps:=\sum_{n\ge1}(2n+1)e^{-2\pi^2n^2/\eps}
+ \le4e^{-2\pi^2/\eps}<\tfrac12.
+\end{equation}
+The termwise bound uses $b\le\pi$; the final geometric estimate
+follows from $n^2\ge n$ and $e^{-2\pi^2}<10^{-8}$.
+Thus the image factor in \eqref{exact-density} is
+\begin{equation}\label{images}
+ \mathcal E_\eps=
+ \frac{F_\eps(2\theta)F_\eps(2\phi)}{F_\eps(S_\theta)}
+ \frac{Q_\eps^{\rm im}(2\theta)Q_\eps^{\rm im}(2\phi)}
+ {Q_\eps^{\rm im}(S_\theta)Q_\eps^{\rm im}(\delta)}.
+\end{equation}
+The factor $F_\eps(\delta)$ was absorbed into
+$2\sinh(\pi z)$ in deriving \eqref{exact-density}.
+This is essential near $z=0$.
+
+Define a positive normalized gap density and the standard Gaussian:
+\begin{equation}\label{leading}
+ f_d(z)=\frac{2^{2d-1}}{(2d-1)!}
+ \frac{z\prod_{j=1}^{d-1}(j^2+z^2)}{\sinh\pi z},\qquad
+ \varphi(y)=\frac{e^{-y^2/2}}{\sqrt{2\pi}}.
+\end{equation}
+The removable value at zero is understood. On the whole domain,
+\begin{equation}\label{majorant}
+ 0\le p_{d,\eps}(y,z)\le C_d\varphi(y)f_d(z),
+ \qquad 0<\eps\le1.
+\end{equation}
+Indeed $D_{2d-1}\ge c_d\eps^{2d-1}$,
+$B_j^+\le C_j$, $B_j^-\le C_j\eps^2(j^2+z^2)$,
+and $|\sin(\eps z/2)|\le\eps|z|/2$.
+The only apparent edge singularity is harmless:
+$\sin(S_\theta/2)/F_\eps(S_\theta)\le2$.
+For $b\ge\eps$ use $F\ge1-e^{-2\pi}$; for $b\le\eps$
+use concavity, $F\ge(1-e^{-2\pi})b/\eps$ and
+$\sin(S_\theta/2)\le b/2$. All other image factors are
+bounded by \eqref{image-bound}. This proves \eqref{majorant},
+including arbitrarily small spectral-edge layers.
+
+\newpage
+\section{A weighted density expansion with a controlled remainder}
+The first relative density coefficient is
+\begin{equation}\label{A}
+ A_d(y,z)=\frac{4d+1}{8}-\frac{2d+1}{8}y^2-\frac12z^2.
+\end{equation}
+For every fixed polynomial weight w in $|y|,|z|$,
+\begin{equation}\label{L1}
+ \int w\,\left|p_{d,\eps}-\varphi f_d(1+\eps A_d)\right|
+                 dy\,dz=O_{d,w}(\eps^2).
+\end{equation}
+Here and below weights may be replaced by nonnegative sums of monomials.
+
+To prove it, take $L=\log(1/\eps)$ and the central rectangle
+$|y|\le4\sqrt L$, $|z|\le8L/\pi$, for sufficiently small eps.
+It lies in $\mathcal D_\eps$. There $b(2\theta),b(2\phi),
+b(S_\theta)\ge\pi/2$, so \eqref{images} differs from one by
+$O(e^{-\pi^2/\eps})$, and $P_\eps=1+O(e^{-4\pi^2/\eps})$.
+The remaining ratio $p/(\varphi f_d)$ is a finite product of
+regular elementary factors. Their first coefficients are
+\begin{center}\begin{tabular}{ll}\toprule
+Factor & coefficient of eps in its normalized form\\\midrule
+$e^{\eps/8-\eps z^2/2}$ & $1/8-z^2/2$\\
+$\sin\theta\sin\phi$ & $-y^2/4$\\
+$\sin(S_\theta/2)$ & $-y^2/8$\\
+$\sinc(\eps z/2)$ & $0$\\
+$B_j^+/4$ & $-j-y^2/4$\\
+$B_j^-/[\eps^2(j^2+z^2)]$ & $-j$\\
+$(2d-1)!\eps^{2d-1}/D_{2d-1}$ & $d(2d-1)/2$\\\bottomrule
+\end{tabular}\end{center}
+The j rows range from 1 to $d-1$. Summing gives \eqref{A}.
+Taylor's formula for sine, cosine and exponentials gives a
+remainder bounded by $C_d\eps^2P_d(|y|,|z|)$ on this rectangle,
+for a fixed polynomial $P_d$. Denominators $j^2+z^2$ are bounded
+below by $j^2$, and the normalized factors $D_m/(m!\eps^m)$
+stay away from zero. Exponential remainder factors are bounded
+because $\eps(L+L^2)\to0$. Integrating against
+$w\varphi f_d$ therefore gives $O(\eps^2)$ with no logarithmic loss.
+
+Outside the rectangle, \eqref{majorant} bounds the true density.
+Both Gaussian and gap tails are $O(\eps^8)$ times powers of L,
+also with any fixed polynomial weight. The approximation in
+\eqref{L1} obeys the same tail estimate with extra polynomial
+factors. Such tails are $o(\eps^2)$. This proves \eqref{L1};
+the argument does not discard an uncontrolled spectral edge.
+
+\newpage
+\section{Energy insertion, phase and Gaussian cancellation}
+Because the density and gap are even in y, replace $e_\theta^2-1$
+by its exact y-symmetrization
+\begin{align}
+ W_\eps(y,z)&=\frac{2[1-\cos(\sqrt\eps y)\cos(\eps z)]}{1-e^{-\eps}}-1
+       =W_0+\eps W_1+O(\eps^2P),\nonumber\\
+ W_0&=y^2-1,\quad W_1=z^2+y^2/2-y^4/12,\label{weight}\\
+ \omega_\eps(y,z)&=
+ \frac{-4\cos(\sqrt\eps y/2)\sin(\eps z/2)}
+ {\sqrt{\eps(1-e^{-\eps})}}
+ =-2z[1+\eps(1/4-y^2/8)]+O(\eps^2P).\label{phase}
+\end{align}
+The remainder polynomials are independent of eps for $0<\eps\le\eps_0$.
+Real trigonometric Taylor bounds prove these estimates on the
+whole domain, with polynomial growth allowed. Also
+$|W_\eps|\le C(1+y^2+z^2)$ and $|\omega_\eps|\le C|z|$.
+Thus \eqref{L1} applies to their products. For $|u|\le S$,
+\[
+ e^{iu\omega_\eps}=e^{-2iuz}
+ [1-2iuz\eps(1/4-y^2/8)]+O_S(\eps^2P).
+\]
+The same bounds hold after any fixed number of u derivatives,
+with larger polynomial weights.
+
+The difference of the two correlations is exactly
+$e^{-\eps/2}\int p_{d,\eps}W_\eps e^{iu\omega_\eps}dy\,dz$.
+Since $\int\varphi W_0=0$, its constant term vanishes. Using
+$\int\varphi y^2=1$ and $\int\varphi y^4=3$, its first coefficient is
+\begin{align}
+ &\int\varphi(y)\left\{W_1+W_0\left[
+ A_d-\tfrac12-2iuz(\tfrac14-\tfrac18y^2)\right]\right\}dy
+ \nonumber\\
+ &\hspace{35mm}=z^2-\frac d2+\frac{iuz}{2}.\label{cancel}
+\end{align}
+Every discarded integral is $O_{S,k}(\eps^2)$ by \eqref{L1}
+and the polynomial bounds above. The term $iuz/2$ is the
+phase correction; dropping it would lose the $u\tanh u$ term.
+
+The beta integral and Fourier inversion give the familiar identity
+\begin{equation}\label{Fourier}
+ \int f_d(z)e^{-2iuz}dz=g_d(u)=\sech^{2d}u.
+\end{equation}
+For example $f_d=2^{2d-1}|\Gamma(d+iz)|^2/[\pi\Gamma(2d)]$;
+the substitution $s=(1+\tanh u)/2$ proves its Fourier pair.
+All polynomial moments of $f_d$ are finite. Equation \eqref{cancel}
+therefore yields
+\[
+ \widetilde C_{d,\eps}-C_{d,\eps}
+ =\eps[-g_d''/4-dg_d/2-ug_d'/4]+O_{C^k}(\eps^2)
+ =\eps R_d+O_{C^k}(\eps^2).
+\]
+This directly proves the formerly conditional preparation response.
+
+\newpage
+\section{Trace correction, an equal mixture, and interpretation}
+The same expansion without the weight W gives
+\[
+ C_{d,\eps}=g_d+\eps\left[\frac d4g_d+\frac18g_d''
+                            +\frac18ug_d'\right]+O_{C^k}(\eps^2)
+             =g_d-\frac12\eps R_d+O_{C^k}(\eps^2).
+\]
+Together with the preceding difference this proves Theorem~\ref{main}.
+For the physical d=2 curvature channel,
+\[
+ C_1-C_0=\eps\sech^4u[u\tanh u-5\tanh^2u]+O_{C^k}(\eps^2).
+\]
+The exact source identity of \cite{response} now implies
+$\partial_\beta^2G_{\eps,\beta}(u)|_0=R_2(u)+O_{C^k}(\eps)$.
+No differentiation of an unproved complex-temperature limit is used.
+
+An immediate constructive consequence is the positive state
+$\sigma_{\rm mix}=(\tau+\sigma_1)/2$. On the charged subalgebra
+its density is $(1+f_q(e))/2$, and
+\begin{equation}\label{mixture}
+ \tfrac12(C_0+C_1)=\sech^4u+O_{C^k([-S,S])}(\eps^2).
+\end{equation}
+This is an equal statistical mixture of two already controlled
+preparations; it is not an identified bulk vacuum. No matching
+claim for general neutral-containing bilocals follows from
+\eqref{mixture}. Their full selected density retains W.
+The coefficient changes a state-dependent boost correlation,
+not an invariant particle mass.
+
+\section{Evidence and scope}
+Fresh checks compare the unshifted Pochhammer kernel against the
+modular expression in 27 cases, with $d=1,2,3$ and
+$\eps=0.4,0.1,0.04$, including $z=0$. Six additional cases
+approach spectral endpoints and the diagonal. At 70 decimal digits
+the largest relative differences are $1.36\,10^{-68}$ and
+$6.83\,10^{-67}$. Eight paired-image terms have a relative omitted
+bound below $2.10\,10^{-1735}$ at $\eps=0.4$.
+
+Eighteen local-expansion cases test the density, energy weight and
+gap; symbolic Gaussian integration verifies \eqref{cancel} for
+general d. Twelve independent real-axis Fourier integrals at
+50/70 digits verify the final response for $d=1,2,3$,
+$u=0,0.5,1,2$. The integration cutoff $|z|=32$ has an explicit
+exponential tail; the maximum absolute discrepancy is
+$2.76\,10^{-34}$ and the largest tail bound is $2.83\,10^{-33}$.
+Quadrature roundoff is not interval-certified.
+
+A separate exact q-polynomial calculation verifies sixteen trace
+Taylor coefficients through $u^{14}$. Read-only reuse of the
+preceding 28 packet values checks the mixture's second-order
+scaling; no successful old scientific driver is rerun.
+These diagnostics check representations and coefficients. The
+global proof, not a small grid, establishes the uniform error order.
+
+\newpage
+\section{Continuation and provenance}
+This resolves the specific differentiated-response gap identified
+in the previous note, for fixed integer Mehler channels and fixed
+compact real times. The older note and its conditional wording
+are preserved as a dated record. The leading Mehler limit,
+theta identities and thermal saddle are established mathematics
+and prior SYK results; no priority claim is made for them.
+The present derivation keeps the selected energy insertion,
+the phase correction and a global spectral remainder in one normalization.
+
+The next physical task is the mixed e,W source of the full actual
+bilocal: its neutral terms cannot be represented by this energy
+tilt alone. Higher-point state response and microscopic spatial
+or mass generators remain to be built. The order of limits stays
+finite-N exact projection, fixed-$\lambda$ double scaling, then
+small lambda at fixed string time. Finite-G dynamics, growing-time
+limits and arbitrary selected interlacings are not completed here.
+
+\begin{thebibliography}{9}\small
+\bibitem{bint} M. Berkooz, M. Isachenkov, V. Narovlansky and
+G. Torrents, \emph{Towards a full solution of the large N
+double-scaled SYK model},
+\href{https://arxiv.org/html/1811.02584v2}{arXiv:1811.02584v2},
+Sec.~3.2, Eqs.~(3.11)--(3.16). The q-Mehler two-energy kernel is
+used after the separately established same-disorder curvature reduction.
+\bibitem{dlmf} NIST Digital Library of Mathematical Functions,
+\href{https://dlmf.nist.gov/20.5.E1}{20.5.1},
+\href{https://dlmf.nist.gov/20.7.E30}{20.7.30}, and
+\href{https://dlmf.nist.gov/23.18.E5}{23.18.5}:
+theta product, lattice modular transformation and Dedekind eta
+transformation. The nome in the theta product is $e^{-\eps/2}$.
+\bibitem{mukh} B. Mukhametzhanov, \emph{Large p SYK from chord
+diagrams}, \href{https://arxiv.org/html/2303.03474v3}{arXiv:2303.03474v3},
+Secs.~3--4: preceding density and two-point asymptotics.
+\bibitem{ls} H. W. Lin and D. Stanford, \emph{A symmetry algebra
+in double-scaled SYK},
+\href{https://arxiv.org/html/2307.15725}{arXiv:2307.15725},
+Eqs.~(137)--(138), (409)--(410): thermal saddle used for the
+previous prediction, not as a substitute for the present tail proof.
+\bibitem{selected} A. Day and Chengheng, single-selected
+covariant density and curvature dynamics, 8 November 2026;
+\texttt{manuscript/susskind-slater-selected-state/main.tex}.
+\bibitem{response} A. Day and Chengheng, \emph{Selected
+preparations and the Rindler time kernel}, 8 November 2026;
+\texttt{manuscript/susskind-selected-rindler-response/main.tex}.
+\bibitem{bilocal} A. Day and Chengheng, \emph{Fixed-charge
+bilocals and selected preparations}, 8 November 2026;
+\texttt{manuscript/susskind-sector-bilocal/main.tex}.
+\end{thebibliography}
+\end{document}
