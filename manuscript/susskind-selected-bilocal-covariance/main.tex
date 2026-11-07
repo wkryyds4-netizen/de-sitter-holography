@@ -1,0 +1,491 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=24mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,booktabs,microtype}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newcommand{\tr}{\tau}
+\newcommand{\PP}{\mathsf P}
+\newcommand{\sinc}{\operatorname{sinc}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\title{Preparation memory in the complete bilocal covariance\\
+\large A stationary spectral term and a neutral Gram correction}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{8 November 2026\quad Local research draft}
+\begin{document}\maketitle
+\begin{abstract}
+The single-insertion projection does not preserve the full
+bilocal fluctuations. Nevertheless the change from the
+energy-tilted state to the actual single-selected state has a
+simple two-insertion form: its uncentered part is a positive
+Mehler Gram kernel built from the projected neutral tower.
+All charged, neutral and mixed residual fluctuations remain
+in an independently specified stationary spectral term.
+The connected preparation correction includes subtraction of
+the nonzero means and need not be positive. We prove its decay
+under a common large center-time translation after double
+scaling, and compute its leading $t^6$ and $t^7$ behavior.
+\end{abstract}
+
+\section{Scope, units and state}
+Retain the overlapping complex Gaussian $p$-body CAR model with
+the same original disorder, half filling, and
+$p^2/N\to\lambda>0$. Exact finite-$N$ pinching precedes the
+double-scaling limit. Set
+\[
+ C=J_s^2/\lambda,\quad q=e^{-4\lambda},\quad\zeta=\sqrt q,
+ \quad h=H/\sqrt C,\quad W=\sqrt\lambda U,\quad\hbar=1.
+\]
+The orthogonal fields $h,U$ have unit q-Gaussian variance.
+Our times are $t=\sqrt C\,t_{\rm phys}$ and
+$T=\sqrt C\,T_{\rm phys}$, not the string variable
+$u=2\sqrt\lambda T$. The two normalized positive states are
+\begin{align}\label{states}
+ \sigma(Z)&=\tr(\rho Z),&
+ \rho&=1-\zeta(1+\lambda)+\zeta(h-W)^2,\\
+ \tau_f(Z)&=\tr(f(h)Z),&
+ f(h)&=1-\zeta+\zeta h^2.
+\end{align}
+The first is the actual single-selected preparation identified
+in \cite{higher,sector}; the second is its energy-only restriction.
+They are different states on the full neutral algebra.
+
+Let $\mathcal A$ be the closed $h,U$ polynomial subspace in the
+joint tracial $L^2$ space, and $\PP$ its orthogonal projection.
+The preceding result \cite{mean} gives, for every energy-centered
+single-mark descendant $X$ in the charged/neutral tower,
+\begin{equation}\label{symbol}
+ \PP X=\sum_{a,b}\beta_{X,ab}h^aWh^b,
+ \qquad\beta_X(x,y)=\sum_{a,b}\beta_{X,ab}x^ay^b.
+\end{equation}
+Charged $J_d$ have $\beta_{J_d}=0$; this does not make $J_d$ zero.
+Energy dressing, finite sums and the already controlled time
+limits are included. Write
+\[
+ d\nu(x,y)=K_q(x,y)d\mu_q(x)d\mu_q(y),\quad
+ (\mathcal C\beta)(x)=\int K_q(x,y)\beta(x,y)d\mu_q(y).
+\]
+The existing q-Mehler kernel is normalized and positive
+\cite{BKS}; hence $\|\mathcal C\beta\|_2\le\|\beta\|_{L^2(\nu)}$.
+The normalization \eqref{symbol} gives
+$\|\PP X\|_2^2=\lambda\|\beta_X\|_{L^2(\nu)}^2$.
+
+\newpage
+\section{The two-insertion source identity}
+\begin{theorem}\label{two}
+For energy-centered single-mark descendants $X,Y$, including
+their $h$-dressings and the controlled finite-time limits,
+\begin{equation}\label{uncentered}
+ \boxed{\sigma(X^\dagger Y)=\tau_f(X^\dagger Y)
+ +\zeta\lambda^2(1+q)
+       \langle\mathcal C\beta_X,\mathcal C\beta_Y\rangle_{\mu_q}.}
+\end{equation}
+The means and the connected covariance are therefore
+\begin{align}\label{mu}
+ \mu_X:=\sigma(X)&=-\zeta\lambda
+                 \int(x+y)\beta_X(x,y)d\nu(x,y),\\
+ \operatorname{Cov}_{\sigma}(X,Y)
+ &=\tau_f(X^\dagger Y)+\Gamma(X,Y),\label{connected}\\
+ \Gamma(X,Y)&=\zeta\lambda^2(1+q)
+      \langle\mathcal C\beta_X,\mathcal C\beta_Y\rangle
+                  -\overline{\mu_X}\mu_Y.\label{Gamma}
+\end{align}
+No replacement of $X^\dagger Y$ by $(\PP X)^\dagger\PP Y$
+is made in the first term.
+\end{theorem}
+\begin{proof}
+The state difference is
+$\rho-f=\zeta[(W^2-\lambda)-\{h,W\}]$.
+Use the established nilpotent source expansion for disjoint
+whole-Wick $D/L$ marks \cite{multi,higher}. Each centered boundary
+$W$ has no singleton source. Its only connected sources are:
+another $W$ at the opposite end of the same chord, with coefficient
+one, or an $L$ block containing that opposite end, also with
+coefficient one. Connections to $D$ vanish. A source cannot connect
+to two others, because all source cumulants of order three or
+higher vanish in this class.
+
+For two adjacent boundary $W$'s, the pairing of those two slots
+is an adjacent Gaussian chord. Its contribution is exactly
+$\lambda\tr(X^\dagger Y)$ and is canceled by $-\lambda$.
+In every remaining source partition each boundary must attach to
+a different field mark. Replacing the incident slot in each field
+by $W$ gives exactly its one-$U$ projection from \cite{mean}, with
+the same whole-Wick exclusions, crossing weights and chaos counts.
+Thus
+\begin{equation}\label{even}
+ \tr[(W^2-\lambda)X^\dagger Y]
+ =\tr[(W^2-\lambda)(\PP X)^\dagger\PP Y].
+\end{equation}
+Linear combinations and energy-regression subtractions preserve
+this identity. It includes lower-chaos terms by keeping the
+original field's outgoing-chord count in each diagram.
+
+For one boundary $W$ in $\{h,W\}$, it must attach to one field.
+That field is replaced by its one-$U$ term; the remaining field
+can then be projected against the resulting $h,U$ test word.
+Its energy regression is zero. The surviving projected word has
+three $U$'s, so its trace vanishes. Therefore
+\begin{equation}\label{odd}
+ \tr[\{h,W\}X^\dagger Y]=0.
+\end{equation}
+Finally the known adjacent-four-$U$ identity \cite{response} gives
+\[
+ \tr[(U^2-1)f(h)Ug(h)Uk(h)]
+ =(1+q)\int f(a)g(b)k(c)\,d\Pi(a,b,c),
+\]
+where $d\Pi=d\mu(a)K_q(a,b)d\mu(b)K_q(b,c)d\mu(c)$.
+Substitution of \eqref{symbol} gives the Gram term in
+\eqref{uncentered}; \eqref{mu} is the preceding one-insertion
+formula. Energy centering implies $\tau_f(X)=\tau_f(Y)=0$.
+\end{proof}
+
+\newpage
+\section{What remains outside the projection}
+Write $X=P_X+Q_X$, $P_X=\PP X$, and similarly for $Y$.
+For finite-core words, $\rho P_X^\dagger$ and
+$fP_X^\dagger$ are valid $\mathcal A$ test vectors. Orthogonality
+therefore kills the cross terms in either state. The formulas
+extend by the bounded densities and the inherited $L^2$ limits.
+Theorem~\ref{two} also applies to $Q_X,Q_Y$ by linearity,
+because they are sums of single-mark terms and their projected
+polynomials. Their projected symbols vanish. Consequently
+\begin{equation}\label{positive}
+ \operatorname{Cov}_{\sigma}(X,Y)=
+ \tau_f(Q_X^\dagger Q_Y)
+ +\operatorname{Cov}_{\sigma}(P_X,P_Y).
+\end{equation}
+Both kernels on the right are positive. The first includes the
+nontrivial charged--neutral and neutral--neutral residual sectors;
+their norms have not been discarded.
+
+For example, the centered charged curvature obeys
+\[
+ \PP J_2=0,\qquad
+ \sigma(J_2^2)=\tau_f(J_2^2)
+       =4\lambda+\frac{16\lambda^2q}{1+q}>0.
+\]
+Substituting only projected fields would lose this entire
+leading contribution to the bilocal fluctuations.
+
+\paragraph{The connected excess is not positive in general.}
+The Gram addition in \eqref{uncentered} is positive, but the
+state difference in connected covariance also subtracts means.
+Take the centered pure neutral size-two field
+$X=S_2-\kappa_2H_2$, whose projected symbol is $\beta_X=x+y$.
+Since $\mathcal C\beta_X=(1+q)x$, one obtains
+\begin{align}
+ \mu_X&=-2\zeta\lambda(1+q),\\
+ \Gamma(X,X)&=\zeta\lambda^2(1+q)^2(1+q-4\sqrt q).
+\end{align}
+This is strictly negative for $q>(2-\sqrt3)^2$ on the physical
+curve. It contradicts neither positivity of the full selected
+variance nor \eqref{positive}. An independent rational-source
+check at $q=16/81$, $\lambda=1/5$ gives exactly
+\[
+ \Gamma(X,X)=-\frac{1768892}{119574225},\qquad
+ \operatorname{Var}_{\sigma}(X)=\frac{806826868}{773246655}>0.
+\]
+This rational point checks the algebra; its parameters are not
+being claimed to satisfy $q=e^{-4\lambda}$.
+
+\paragraph{A controlled scope.}
+The proof concerns products of two fields, each linear in one
+marked insertion before taking sums and time limits. It does not
+identify a conditional expectation of arbitrary products with
+the product of their projections. Four bilocal insertions have
+additional internal source partitions and must retain them.
+
+\newpage
+\section{The complete bilocal two-point function}
+The preceding mean calculation provides the entire symbol
+\begin{align}\label{betaB}
+ \beta_{T,t}(x,y)&=-2e^{iT(x-y)}\sum_{j\ge1}\Xi_j(x,y)L_j(t;x,y),\\
+ L_j(t;x,y)&=\int_0^t(t-s)\sinc\!\left(\frac{(t-s)(x-y)}2\right)
+              e^{-is(x+y)/2}c_j(s)\,ds.
+\end{align}
+Here $\PP\mathcal B(T,t)$ has W-symbol $\beta_{T,t}$,
+$c_j(s)=\int e^{isx}H_j(x)d\mu_q(x)/[j]_q!$, and the
+lower-chaos recursion for $\Xi_j$ is kept exactly as in \cite{mean}.
+The actual double time filter and its sign are already incorporated.
+
+For completeness, the baseline in \eqref{connected} is specified
+constructively by the existing full joint spectral measure
+\cite{joint,sector}, not by a new independent-probe model.
+Let $X_a$ range over charged coefficients $L_n$ and neutral
+coefficients $N_j$, with
+\[
+ k_{L_n}(s)=\frac{(is)^n}{n!},\qquad k_{N_j}(s)=2c_j(s).
+\]
+The common matrix measure is oriented as
+\[
+ d\nu_{ab}(x,y)=\tr[X_a^\dagger P_h(dx)X_bP_h(dy)],
+\]
+so $x$ is the output energy and $y$ the input energy. Its mixed
+entries retain both $D$--$L$ connected sources and the same
+disorder. Define
+\[
+ b_a(T,t;x,y)=-e^{iT(x-y)}\int_0^t(t-s)
+ \sinc\!\left(\frac{(t-s)(x-y)}2\right)
+ e^{-is(x+y)/2}k_a(s)\,ds.
+\]
+Then the stationary energy-tilted term is
+\begin{equation}\label{base}
+ \mathcal S_f(1,2)=\sum_{a,b}\int f(y)
+ \overline{b_a(T_1,t_1;x,y)}b_b(T_2,t_2;x,y)\,d\nu_{ab}(x,y).
+\end{equation}
+It depends on the centers only through $T_2-T_1$.
+All fixed-field moments of this measure are given by the existing
+joint-source rules, and its absolute-continuity and time-tail
+construction are inherited from \cite{joint,desc,sector}.
+
+The result for the full actual bilocal is
+\begin{equation}\label{full}
+ \boxed{\operatorname{Cov}_{\sigma}(\mathcal B_1,\mathcal B_2)
+ =\mathcal S_f(1,2)+\zeta\lambda^2(1+q)
+ \langle\mathcal C\beta_1,\mathcal C\beta_2\rangle
+                -\overline{\mu_1}\mu_2.}
+\end{equation}
+The density $f$ weights the \emph{input} energy in \eqref{base}.
+No extra factor of $C$ appears: the physical memory's factor $C$
+cancels its two physical time differentials.
+The numerical results below evaluate the preparation terms and
+common-center differences, not the absolute baseline integral.
+
+\newpage
+\section{Convergence and loss of preparation memory}
+For the projected symbol, let $r=(1-q)^{-1/2}$,
+$F_q=4\lambda q/(1-q)$, $A=qr|t|$, $B=3r|t|$. The preceding proof
+gives $|c_j(s)|\le |s|^j/j!$ and
+$\|\Xi_j\|_2\le4\lambda j(qr)^j+F_q(3r)^j$.
+Thus a bound for both full and truncated W-symbols is
+\begin{equation}
+ M(t)=t^2[4\lambda A e^A+F_q(e^B-1)].
+\end{equation}
+For a degree cutoff $J$ satisfying $J+1>A$, $J+2>B$, set
+\begin{equation}\label{tail}
+ d_J(t)=t^2\left[
+ \frac{4\lambda A^{J+1}}{J!\,[1-A/(J+1)]}
+ +\frac{F_qB^{J+1}}{(J+1)!\,[1-B/(J+2)]}\right].
+\end{equation}
+Then $\|\beta-\beta_{\le J}\|_{L^2(\nu)}\le d_J(t)$,
+uniformly in real $T$. Put
+$c=\zeta\lambda^2(1+q)$ and
+$a=\zeta\lambda\sqrt{2(1+q)}$.
+The contraction of $\mathcal C$ and Cauchy--Schwarz give the
+following conservative bound for the connected preparation part:
+\begin{equation}\label{Gtail}
+ |\Gamma(1,2)-\Gamma_{\le J}(1,2)|
+ \le(c+a^2)[d_1M(t_2)+M(t_1)d_2+d_1d_2],
+ \qquad d_i=d_J(t_i).
+\end{equation}
+These are exact-arithmetic degree estimates, excluding quadrature
+and roundoff. The baseline converges by the established full-field
+tails: if $\|\mathcal B_i-\mathcal B_i^{(D)}\|_2\le\delta_i$,
+then its error is bounded by
+\[
+ \|f\|_\infty[\delta_1\|\mathcal B_2\|_2+
+                         \|\mathcal B_1^{(D)}\|_2\delta_2],
+ \qquad\|f\|_\infty=1-\zeta+\frac{4\zeta}{1-q}.
+\]
+The actual sector/preparation bridge \cite{sector} supplies the
+finite-$N$ identification. Limit-only bounds are not used to
+infer an unproved microscopic rate.
+
+\begin{theorem}\label{late}
+After the fixed-$\lambda$ double-scaling limit, for fixed internal
+times $t_i$ and fixed center offsets $T_i$,
+\begin{equation}
+ \lim_{|R|\to\infty}\Gamma(T_1+R,t_1;T_2+R,t_2)=0.
+\end{equation}
+The selected connected two-point function consequently approaches
+the stationary baseline \eqref{base} under a common translation.
+\end{theorem}
+\begin{proof}
+A common translation multiplies $\beta_i(x,y)$ by
+$e^{iR(x-y)}$. For a bounded polynomial symbol the conditional
+integral in $y$ tends to zero for each $x$ by the
+Riemann--Lebesgue lemma: $K_q(x,y)d\mu_q(y)$ has an integrable
+density. Dominated convergence gives $L^2(\mu_q)$ convergence.
+Polynomial symbols are dense in $L^2(\nu)$, and the conditional
+map is a contraction for every $R$, so approximation extends the
+claim to the complete symbols. The same argument applies to
+$y\beta_i$ because energy support is compact. Since
+$\mu_i=-\zeta\lambda\int[x\mathcal C\beta_i+
+\mathcal C(y\beta_i)]d\mu_q$, the means also vanish. Equation
+\eqref{Gamma} completes the proof.
+\end{proof}
+The order is double scaling, then large common center time.
+No finite-$N$ recurrence statement, rate, or uniform joint limit
+is asserted.
+
+\newpage
+\section{Short times and a full-variance difference}
+The projected symbol starts as
+\begin{equation}\label{shortbeta}
+ \beta_{T,t}=e^{iT(x-y)}\left[
+ -\frac{4i}{3}\lambda q\,t^3
+ -\frac{\lambda q(1-q)}3(x+y)t^4+O_{L^2}(t^5)\right].
+\end{equation}
+Define the existing two-energy correlation
+\[
+ C_2(T)=\int e^{iT(x-y)}K_{q^2}(x,y)d\mu_q(x)d\mu_q(y),
+ \qquad D_q=\frac{16}{9}\sqrt q\,\lambda^4q^2(1+q).
+\]
+By the Mehler semigroup,
+$\|e^{iTx}P_q e^{-iT\cdot}(x)\|_2^2=C_2(T)$.
+To retain the next term, use the stationary three-energy chain:
+\[
+ \int(x+z)e^{iT(y-z)}d\Pi(y,x,z)=\frac{i}{2}C_2'(T).
+\]
+Indeed its real part vanishes by simultaneous sign reversal;
+subtracting its conjugate exchanges $y,z$, leaving
+$\int(z-y)e^{iT(y-z)}d\Pi=iC_2'(T)$.
+Substitution in \eqref{Gamma} yields
+\begin{equation}\label{shortG}
+ \Gamma(T,t;T,t)=D_q\left[C_2(T)t^6+
+                 \frac{1-q}{4}C_2'(T)t^7\right]+O(t^8).
+\end{equation}
+The mean product first contributes at $t^8$. The $t^7$ term is
+generally nonzero at nonzero center; the variance must not be
+assumed even in the internal time in this nonstationary state.
+
+For equal internal times the stationary baseline is independent
+of common center. Therefore the following is a difference of
+\emph{full} bilocal variances, not merely of projected ones:
+\begin{align}\label{difference}
+ &\operatorname{Var}_{\sigma}\mathcal B(T,t)
+       -\operatorname{Var}_{\sigma}\mathcal B(0,t)\nonumber\\
+ &\quad=\Gamma(T,t;T,t)-\Gamma(0,t;0,t)\nonumber\\
+ &\quad=D_q\left[(C_2(T)-1)t^6+
+                 \frac{1-q}{4}C_2'(T)t^7\right]+O(t^8).
+\end{align}
+The q-Hermite spectral expansion gives $0<C_2(T)<1$ for
+$T\ne0$: it is a positive weighted sum of squared Fourier
+coefficients, with weights $q^{2n}$, and equality at one requires
+$e^{iTx}$ to be constant on the continuous energy support.
+Thus the leading center-time change is negative.
+
+The full variance itself starts at an earlier order,
+\[
+ \operatorname{Var}_{\sigma}\mathcal B(T,t)
+ =\frac{t^4}{4}\left(4\lambda+
+                   \frac{16\lambda^2q}{1+q}\right)+O(t^5),
+\]
+because $\mathcal B(T,t)=-t^2\alpha_T(J_2)/2+O_{L^2}(t^3)$
+and the single-selected curvature restriction is stationary.
+This leading term would be lost by multiplying single-field
+projections. The formulas above concern ensemble/model limits
+with the actual inherited preparation, not independent probes
+or finite-$G$ scattering.
+
+\newpage
+\section{Executed checks and numerical scope}
+\paragraph{Exact two-field checks.}
+The original local CAR source evaluator with the true selected
+boundary was compared against \eqref{uncentered} at
+$(q,\lambda)=(1/16,1/3),(16/81,1/5)$.
+It includes prefix neutral marks, charged $J_2,J_3$, the actual
+ordered $N_1,\ldots,N_4$ recursion, lower-chaos/OU terms, both
+field orders and inserted energy powers. The first successful
+output contains 386 full-selected comparisons, 16 separate
+odd-boundary zeros, 16 separate even-boundary identities,
+2 charged marginal checks and 2 residual Gram matrices. All 14
+principal minors of those two $3\times3$ matrices are nonnegative
+as exact rationals. A separate exact witness verifies the
+negative centered excess in Section~3. These formal rational
+parameters test algebra and do not lie on the physical curve.
+
+\paragraph{Fixed-$\lambda$ time diagnostics.}
+On the physical curve use $q=1/4,1/2$, $\lambda=-\log q/4$,
+internal times $t=1/4,1/2,1$ and centers $T=0,1/2,1,2,4$.
+We compare $(J,L,n_s)=(24,48,24)$ with $(32,64,32)$, where
+$L$ is the energy Jacobi dimension and $n_s$ the time quadrature
+order. Scalar $c_j$ coefficients are summed starting at their
+first possible Taylor order $j$; this avoids high-degree
+eigensolver subtraction. Ten old mean values are reused as
+read-only calibration and agree without rerunning the old driver.
+
+Across 30 diagonal cases the maximum absolute change in
+$\Gamma$ is $3.26\cdot10^{-19}$, and the maximum relative change
+is $8.34\cdot10^{-14}$. The largest analytic degree bound
+\eqref{Gtail} is $3.51\cdot10^{-16}$. These bounds exclude
+energy/time quadrature and floating-point error; refinement
+agreement is a diagnostic, not an interval certificate.
+Six short-time cases at $T=1/2$ check the $t^6,t^7$ terms and
+record the residual divided by $t^8$.
+
+\begin{center}
+\begin{tabular}{cccc}
+\toprule
+$q$&$t$&$T$&$\operatorname{Var}\mathcal B(T,t)-\operatorname{Var}\mathcal B(0,t)$\\
+\midrule
+$1/4$&$1/2$&$1/2$&$-3.9458574240\cdot10^{-6}$\\
+$1/4$&1&$1/2$&$-2.2970480041\cdot10^{-4}$\\
+$1/4$&1&1&$-5.0423075726\cdot10^{-4}$\\
+$1/4$&1&2&$-6.7204451036\cdot10^{-4}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The table follows from exact cancellation of the common baseline
+in \eqref{difference}; absolute total variances were not numerically
+integrated here. All complex values and refinement differences
+are retained in the output.
+
+Two $6\times6$ unequal-time uncentered correction matrices are
+Hermitian and numerically positive. Their connected excess
+matrices instead have minimum eigenvalues about
+$-8.19\cdot10^{-7}$ and $-2.21\cdot10^{-7}$, consistent with the
+exact warning in Section~3. No negative eigenvalue is clipped or
+reinterpreted as a failure of the full covariance's positivity.
+
+\newpage
+\section{Next physical comparison}
+We now have an actual selected mean and a full two-point
+reduction with the nonstationary preparation terms explicit.
+The stationary baseline still carries the entire same-disorder
+charged/neutral spectral matrix. This is a useful point to return
+to the static-patch dictionary: compare the state, time units,
+energy spectrum and candidate spatial/mass generators before
+interpreting any Mehler exponent as a bulk particle mass.
+
+Selected four-bilocal correlators require additional source
+partitions and remain part of the dynamical program. The current
+two-insertion identity cannot be iterated by treating products as
+single-mark fields. Neither it nor its large-center-time limit
+establishes finite-$G$ gravitational scattering or a complete
+de Sitter holographic dual.
+
+\begin{thebibliography}{9}\small
+\bibitem{BKS} M. Bo\.{z}ejko, B. K\"ummerer and R. Speicher,
+\emph{q-Gaussian processes: non-commutative and classical aspects},
+Commun. Math. Phys. 185 (1997), 129--154, Sections 2 and 4,
+\href{https://arxiv.org/abs/funct-an/9604010}{arXiv:funct-an/9604010}.
+\bibitem{EP} E. G. Effros and M. Popa,
+\emph{Feynman Diagrams and Wick Products Associated with q-Fock Spaces},
+\href{https://arxiv.org/abs/math/0303045}{arXiv:math/0303045}.
+\bibitem{multi} A. Day and Chengheng,
+\emph{Fixed-degree multisource moments}, local proof note
+\texttt{susskind-bilocal-multisource-proof}, 7 Nov. 2026,
+Sections 2--6; companion \texttt{susskind-bilocal-four-point} stage.
+\bibitem{higher} A. Day and Chengheng,
+\emph{Higher Wick descendants in the common selected state},
+local stage \texttt{susskind-slater-higher-wick}, 8 Nov. 2026.
+\bibitem{joint} A. Day and Chengheng,
+\emph{Charged memory: joint regression and full-time spectra},
+local proof \texttt{susskind-memory-joint-regression-proof},
+7 Nov. 2026, Sections 5--10.
+\bibitem{desc} A. Day and Chengheng,
+\emph{Ordered Wick descendants and neutral memory},
+local stage \texttt{susskind-memory-wick-descendants}, 7 Nov. 2026.
+\bibitem{sector} A. Day and Chengheng,
+\emph{Actual fixed-charge bilocals and selected preparations},
+local stage \texttt{susskind-sector-bilocal}, 8 Nov. 2026.
+\bibitem{response} A. Day and Chengheng,
+\emph{Preparation memory in the neutral slope}, local stage
+\texttt{susskind-neutral-selected-response}, 8 Nov. 2026.
+\bibitem{mean} A. Day and Chengheng,
+\emph{A two-energy formula for the selected bilocal mean},
+local stage \texttt{susskind-selected-bilocal-mean}, 8 Nov. 2026.
+\end{thebibliography}
+\end{document}

@@ -1,3 +1,34 @@
+## 当前继续位置：2026-11-08 完整双局域制备协方差
+
+先读 manuscript/susskind-selected-bilocal-covariance/main.tex、notes/susskind-selected-bilocal-covariance.md、literature/susskind-selected-bilocal-covariance-sources.md 与 journal/2026-11-08-susskind-selected-bilocal-covariance.md。本轮为progress，长期goal active，无科学进程运行。用户本次明确要求集中Git并回复issue；范围见 notes/research-release-2026-11-08-bilocal-covariance.md，实际回执保存在 tmp/publication-2026-11-08-bilocal-covariance。
+
+- 两场各线性含一个能量中心化 mark，W-symbol 归一 PX=Σ beta_ab h^a W h^b，W=√lambda U。sigma(X†Y)=tau_f(X†Y)+√q lambda²(1+q)<Ccal beta_X,Ccal beta_Y>；均值mu=−√q lambda∫(x+y)beta dnu；连通Gamma还须减conj(mu_X)mu_Y。两个边界W相互配对抵消lambda，其余各接一个L；奇边界为零。P不是乘法同态。
+- 完整bilocal baseline由same-J矩阵谱及实际Volterra滤波给，dnu_ab=tau[Xa†P(dx)XbP(dy)]的x输出/y输入，密度必须f(y)。保留charged/neutral/mixed与orthogonal residual；PJ2=0但sigma(J2²)>0，不能只乘投影。数值未积分绝对baseline。
+- 固定lambda DS之后，共同中心平移R→∞使Gamma→0，无有限N递归或统一速率结论。短时Gamma=Dq[C2(T)t6+(1−q)C2'(T)t7/4]+O(t8)，不能默认非零T时内时间偶。共同中心完整方差差精确等于Gamma差；首项负。Gamma非正核有精确见证，两6×6数值负本征值保留。
+- 三份成功科学输出封存：exact SHA2e2249e93ddbb2637676191598e6e2578343de14fdf05b96431d63feef3b8641；gram SHAd65c19537be469110424325d7eeb6ce824bad2942dc6ea7f67bf9476df3ba3d2；sign SHA0f3c3485c4f98197e9e060a7df8630c43e893c5b927314411302effc539a83a6。386+16+16+2比较、2残余Gram/14主子式；30时点/2不等时矩阵/6短时/10旧均值。max相对加密8.334e−14，degree界3.508e−16只含exact-arithmetic截断。
+- 八页最终PDF SHAe628955c31f579b24e681f393779557749093447ed6e23eabd1973bc72147aeb；manifest SHA735aa31bd3013df3ced7f6761ee83d9c8f9b54a3a53a7bbc23f7961e975a3bd9，15当前/417父科学文件。双遍、90dpi最终八页全目检，尾界改|t|及joint引文5–10节，初日志保留。成功driver/recorder不得重跑或改封存输入；pure helper可导入。
+- 下一首任务：回读 Susskind/MSS、Lin–Stanford 等原文的最新版本及已有项目体谱笔记，列同一态、Hamiltonian、string/cosmic/h时间、能量谱和空间/质量生成元。先确定本项目单选态的非平稳一二点在候选静态补丁解释中的角色，不能把Mehler指数直接当体质量。优先选择能同时检验态与生成元的一个可计算匹配，再定新计算。四bilocal额外源分区、有限G及完整对偶仍开放；不可把两场恒等式迭代到多mark乘积。
+- issue #1仍开放：21,143单元独立重积分、9,890旧端点重现差异定位尚未完成；本次主线成果不增加KS复核证据。回复只说明实际状态，不勾选全量复现。
+
+以下是历史继续位置。
+
+## 2026-11-08 完整单选态双局域均值
+
+先读 manuscript/susskind-selected-bilocal-mean/main.tex、notes/susskind-selected-bilocal-mean.md、literature/susskind-selected-bilocal-mean-sources.md 和 journal/2026-11-08-susskind-selected-bilocal-mean.md。上一轮发布/114项探索及本轮均为progress；无活跃进程，长期goal active。34349de和issue6713513854已经完成，本轮没有Git/issue。
+
+- 已证P T_vw=kappa_v H_n+√lambda Σ_(i<v)W_(i,n−1−i)，P J_d=0；这是单插入L²投影，不是原高场相等。单W source只接同弦、L-W=1、D-W=0及higher cumulants消失给任意词证明。左右h/chaos投影相容，E_j/Xi_j递推保留lowerchaos。
+- one-U符号为CKY r=q双变量连续qHermite规范；测度来自两U的Mehler。rho奇源给完整sigmaB(T,t)=2√q lambda ∫(x+y)e^(iT(x−y))ΣXi_j L_j dnu；L_j包含实际负号抵消后的(t−s)sinc和对称外相位。t,T为√C物理时间，非string u；u=2√lambda T。
+- |c_j(s)|≤|s|^j/j!由实根插值/Genocchi-Hermite证明；||Xi_j||≤4lambda j(qr)^j+Fq(3r)^j，r=(1−q)^−1/2,Fq=4lambda q/(1−q)，给稿式18/19明确尾。实际finiteN接口沿用sector/marked尾，非从极限界倒推。中心T0首项(2/3)√q lambda²q(1−q²)t4，能量单独密度给零。
+- 首次成功后封存：projection-checks SHA25b14d70ef08df4a58cf11f9638fafe408f61b5b862b304235263e16bda7099a，320项；time-checks SHA4a5c7ddb00b17ec821d46894afe4282dbaa6a1b715a876df81b2451d74263da5，72多项式/10时间系数/2个t4/12时点。manifest SHA33349572ca4c4d8b8e2f7964a9b8a3d160a6d4aff3bc597f2d739812fffffc29，12当前/404父文件。PDF SHA632d17da99a3c96a34f624b00ca8e0748b6776b3e287223bbdb06c857a75e960，七页最终双遍/90dpi全目检。不要重跑成功driver/recorder，sealed输入不改。
+- 数值max复加密差2.78e−17，相对差6.47e−14；refined解析degree尾最大2.79e−17不含求积/roundoff，相消因子至37.7。两有理源点为形式恒等式；真实时间点q=.25,.5取lambda=−logq/4。
+- 下一首任务：先回读multi-source及joint/cross谱，构造两个高阶源的条件投影/协方差。需要保留L-L、D-L连接和h,U正交补；P(XY)不能替P(X)P(Y)。用旧U两时间选态、J2-U高场cross校准，随后双重实际滤波。完整selected高点、空间/质量生成元、finiteG及任意selected非多项式交错仍未完成。
+
+## 发布后本地检查（本段不再 Git）
+
+已推送34349de4b387cd7fa9834c5c012f35cc734b891b，issue #1回复6713513854已读回确认。续研首批114项有理数检查全部通过：n=1..3、prefix v=1..n、总长度至6的h/W测试词。左右使用局部CAR多源与独立双色Wick枚举；参数gamma=1/2,lambda=1/3为形式检查，非物理指数曲线。输出tmp/neutral-tower/projection-candidate-checks.json，SHA8ec26bcc319a78da87becd2ad845d1ecbdcb764bba6eae5e718989f048341aed，成功脚本不要重跑。
+
+先读journal/2026-11-08-neutral-response-publication-projection.md。已核arXiv:2002.07895v2双变量q-Hermite递推，匹配参数r=q及单变量坐标sqrt(1-q)x/2；测度不能直接照搬。接任意次数投影证明与chaos/OU相容性，再作全时间单选态均值；未完成事项不因有限词通过而改为已证。
+
 # 本轮发布与探索入口：2026-11-08
 
 本轮用户明确要求 Git 与 issue 回复，发布范围见 notes/research-release-2026-11-08-neutral-response.md；回执保存 tmp/publication-2026-11-08-neutral-response。下方“无新Git/issue”仅指上一研究阶段。已核413个不同文件，既有科学输出/封存证据未改。

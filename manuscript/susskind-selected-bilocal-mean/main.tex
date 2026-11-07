@@ -1,0 +1,458 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=24mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,booktabs,microtype}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newcommand{\tr}{\tau}
+\newcommand{\PP}{\mathsf P}
+\newcommand{\NN}{\mathcal N}
+\newcommand{\WW}{\mathcal W}
+\newcommand{\sinc}{\operatorname{sinc}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\title{A two-energy formula for the selected bilocal mean\\
+\large Projection of the complete neutral tower}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{8 November 2026\quad Local research draft}
+\begin{document}\maketitle
+\begin{abstract}
+The single-selected first moment reads only a projection of the
+higher neutral fields. We compute this projection at every fixed
+degree using the established local source rules: the answer is an
+energy polynomial plus a one-$U$ Wick module. Its recursion retains
+all lower Gaussian chaoses. The complete bilocal mean then reduces
+to the existing positive two-energy Mehler measure, with a
+factorial truncation bound for every fixed $\lambda$ and finite time.
+This is a first-moment result; products of higher fields require
+their joint components outside the projected module.
+\end{abstract}
+
+\section{Normalization and main result}
+Use the same overlapping complex Gaussian $p$-body CAR model and
+original disorder as the preceding stages \cite{sector,higher}.
+Take exact finite-$N$ pinching first, the half-filled double scaling
+$p^2/N\to\lambda>0$ next, and keep $\lambda$ fixed here.
+Let $C=J_s^2/\lambda$, $q=e^{-4\lambda}$, $\zeta=\sqrt q$,
+$h=H/\sqrt C$, $W=\sqrt\lambda U$, where $h,U$ are orthogonal
+unit-variance q-Gaussian fields. Throughout this note
+\[
+ t=\sqrt C\,t_{\rm phys},\qquad T=\sqrt C\,T_{\rm phys},\qquad
+ \alpha_T(X)=e^{iTh}Xe^{-iTh},\qquad\hbar=1.
+\]
+These are $h$-times; the preceding string variable is
+$u=2\sqrt\lambda\,T$. Write $H_j$ for monic unit-variance
+q-Hermite polynomials and $p_j=[j]_q!$, so $\|H_j\|_2^2=p_j$.
+The inherited single-selected density on the full marked core is
+\begin{equation}\label{rho}
+ \rho=1-\zeta(1+\lambda)+\zeta(h-W)^2,
+ \qquad\sigma(X)=\tr(\rho X).
+\end{equation}
+It is the already identified positive normalized state, not an
+energy-only replacement. Put
+\[
+ d\nu(x,y)=K_q(x,y)d\mu_q(x)d\mu_q(y),\qquad
+ K_q=\sum_{n\ge0}\frac{q^nH_n(x)H_n(y)}{p_n}.
+\]
+This is a probability measure on $[-2/\sqrt{1-q},2/\sqrt{1-q}]^2$.
+The polynomials $\Xi_j(x,y)$ below define
+\begin{align}\label{Lj}
+ L_j(t;x,y)&=\int_0^t(t-s)\sinc\!\left(\frac{(t-s)(x-y)}2\right)
+ e^{-is(x+y)/2}c_j(s)\,ds,\\
+ c_j(s)&=p_j^{-1}\int e^{isx}H_j(x)\,d\mu_q(x).
+\end{align}
+Here $\sinc z=\sin z/z$, continuously extended at zero.
+\begin{theorem}\label{mean}
+For every fixed $\lambda>0$, $t\ge0$ and real $T$, the actual
+double-scaled bilocal in the inherited normalization satisfies
+\begin{equation}\label{answer}
+ \boxed{\displaystyle
+ \sigma(\mathcal B(T,t))=
+ 2\zeta\lambda\int (x+y)e^{iT(x-y)}
+       \sum_{j\ge1}\Xi_j(x,y)L_j(t;x,y)\,d\nu(x,y).}
+\end{equation}
+The sum converges in the indicated integrated sense uniformly on
+fixed compact $t$ windows. The degree-tail bound in Section~5 is
+uniform in real $T$. No $N$-uniform or growing-time limit is claimed.
+\end{theorem}
+
+\newpage
+\section{One marked insertion: an all-degree projection}
+Work in the joint tracial $L^2$ completion furnished by the marked
+moments. Let $\PP$ project onto the closed polynomial space of $h,U$.
+This definition does not require boundedness of every higher field.
+Use $C=1$ representatives
+\[
+ Z_n=\text{coupling-Wick}(h^n),\quad S_v=(vp-L)Z_v,
+ \quad T_{v,w}=S_v\diamond Z_w,
+ \quad\WW_{a,b}=\operatorname{Wick}_q(h^aUh^b).
+\]
+The whole $v+w$ block is coupling-Wick; its first $v$ slots carry
+the local-size mark. $\diamond$ retains their original order.
+The size superoperator $L$ is distinct from $L_j(t;x,y)$ in
+\eqref{Lj}. Set
+\[
+ \kappa_v=\lambda\bigl(v^2-4q\partial_q\log [v]_q!\bigr).
+\]
+\begin{theorem}\label{projection}
+For $v\ge1$, $w\ge0$, $n=v+w$,
+\begin{equation}\label{proj}
+ \PP T_{v,w}=\kappa_vH_n(h)
+       +\sqrt\lambda\sum_{i=0}^{v-1}\WW_{i,n-1-i}.
+\end{equation}
+Every centered pure charged field $J_d$ has $\PP J_d=0$.
+These are projection identities, not identities of the original
+fields with the displayed polynomials.
+\end{theorem}
+\begin{proof}
+Test against an arbitrary word in $h,W$ and expand its joint
+moments by the established disjoint-mark source rule
+\cite{multi,higher}. All source cumulants beyond degree two vanish:
+a surviving source consumes at least two of the four incidences
+of a two-label collision. A centered single-slot $W$ has zero
+singleton source. Two such slots have connected coefficient one
+exactly when they are the ends of the same Gaussian chord.
+
+The connected coefficient between the $L$ block and a $W$ slot
+is one precisely when that slot's partner lies in the marked
+prefix. It is zero otherwise. Indeed the $W$ source can survive
+only its own two-label collision. At its other end $L_i n=n-I/2$,
+giving the quadratic source coefficient one after singleton
+normalization. A whole-$D$ block instead has coefficient zero,
+since $D_i n=n$. These statements use local CAR algebra, not an
+independent probe replacement.
+
+There are now exactly two cases. If the block mark is a singleton
+in the source partition, all external $W$ slots pair among
+themselves. Fix their chords and the external partners of the
+source slots. Permuting the first $v$ source endpoints has
+Mahonian weight $[v]_q!$; crossings with outside spectator chords
+do not depend on this permutation. Averaging
+$\lambda(v^2-4\,\mathrm{cr}_{v})$ gives $\kappa_v$.
+This is exactly the known energy regression times the unmarked
+whole-Wick block. If the block mark pairs with one external $W$,
+all other $W$ slots pair among themselves. Choose the incident
+source slot $i<v$: replacing it by a $W$ gives exactly the same
+pairing, crossing factor and factor $\lambda$. Summing over $i$
+is the second term of \eqref{proj}, since $W=\sqrt\lambda U$.
+
+The multiblock q-Wick rule \cite{EP} identifies these restricted
+pairing sums with the displayed Wick polynomials. For a charged
+block the second case is absent; its known energy regression is
+$\lambda[d(d-1)-4q\partial_q\log[d]_q!]H_d$. Subtraction gives
+zero. Equality against every polynomial proves the $L^2$ projections.
+\end{proof}
+
+\newpage
+\section{Propagating the projection through the neutral tower}
+Two compatibility points matter. First, for a polynomial test $A$,
+$\tr(A^\dagger hX)=\tr((hA)^\dagger X)$, and similarly on the
+right. Thus the projected finite-degree expressions respect left
+and right multiplication by $h$. This follows at the moment core;
+it does not posit a bounded multiplication map for all higher fields.
+
+Second, the coupling-chaos grading is orthogonal already at
+finite $N$. For an ordinary field block its degree is the number
+of chords leaving it. The q-Wick cancellation of internal pairs
+identifies the $d$-slot colored Wick vector with degree $d$ in the
+joint limiting Gram space. Pairings between two whole-Wick blocks
+of unequal lengths vanish, including marked blocks. Expanding any
+test into these colored Wick vectors therefore gives
+\begin{equation}\label{commute}
+ \PP\,\mathbf1_{\NN=d}X=\mathbf1_{\NN=d}\PP X,
+ \qquad\PP q^{\NN}X=q^{\NN}\PP X
+\end{equation}
+for the finite core used here. One may also prove this directly by
+fixing all internal partial matchings before the proof of
+Theorem~\ref{projection}; each matching fixes the outgoing degree.
+In particular one must not apply $q^{\NN}$ as an energy function.
+
+The inherited local recursion \cite{desc} is
+\begin{align}
+ r_j&=4\lambda\sum_{v=1}^{j-1}q^vT_{v,j-1-v},&
+ \eta_{j+1}&=h\eta_j-[j]_q\eta_{j-1}-r_j,\\
+ V_j&=4\lambda q^jS_j+(q^j-q^{\NN})\eta_j,&
+ N_j&=V_j-v_j(h),
+\end{align}
+with $\eta_0=\eta_1=\eta_2=0$ and $v_j$ the established energy
+regression. Write $\PP\eta_j=g_j(h)+\sqrt\lambda E_j$ and define
+\begin{align}\label{rec}
+ E_0=E_1=E_2&=0,\\
+ E_{j+1}&=hE_j-[j]_qE_{j-1}
+ -4\lambda\sum_{v=1}^{j-1}q^v
+                  \sum_{i=0}^{v-1}\WW_{i,j-2-i},\\
+ \Xi_j&=4\lambda q^j\sum_{i=0}^{j-1}\WW_{i,j-1-i}
+                   +(q^j-q^{\NN})E_j.
+\end{align}
+Then \eqref{proj}--\eqref{commute} give
+\begin{equation}\label{Nj}
+ \PP N_j=\sqrt\lambda\Xi_j,\qquad
+ q^{\NN}\WW_{a,b}=q^{a+b+1}\WW_{a,b}.
+\end{equation}
+The scalar $g_j$ and all its lower chaoses cancel only after the
+final energy regression. They were not discarded inside the recursion.
+Multiplication in this module is explicit:
+\begin{equation}\label{left}
+ h\WW_{a,b}=\WW_{a+1,b}+[a]_q\WW_{a-1,b}
+                       +q^{a+1}[b]_q\WW_{a,b-1}.
+\end{equation}
+Terms with a negative index vanish. The right rule exchanges $a,b$.
+For example,
+\begin{align*}
+ E_3&=-4\lambda qU,&E_4&=-4\lambda q(1+q)(hU+Uh),\\
+ \Xi_1&=4\lambda qU,&\Xi_2&=4\lambda q^2(hU+Uh),\\
+ \Xi_3&=4\lambda q^3(\WW_{2,0}+\WW_{1,1}+\WW_{0,2})
+                     +4\lambda q^2(1-q^2)U.
+\end{align*}
+The last term is a genuine lower-chaos contribution to the projection.
+
+\newpage
+\section{Two-energy realization and the actual time filter}
+The one-$U$ module is isometric to $L^2(\nu)$ by
+$h^aUh^b\mapsto x^ay^b$: the inner product is the two-$U$
+q-Wick Mehler identity. In this representation
+\[
+ \WW_{a,b}=P_{a,b}(h_L,h_R)U,\quad P_{0,b}=H_b(y),\quad
+ P_{a+1,b}=xP_{a,b}-[a]_qP_{a-1,b}-q^{a+1}[b]_qP_{a,b-1}.
+\]
+Thus $P_{1,1}=xy-q$, $P_{2,0}=x^2-1$. These are the existing
+Casper--Kolb--Yakimov polynomials \cite{CKY}, with normalization
+\begin{equation}\label{CKY}
+ P_{a,b}(x,y)=(1-q)^{-(a+b)/2}
+ H_{a,b}^{\rm CKY}\!\left(\frac{\sqrt{1-q}x}{2},
+                         \frac{\sqrt{1-q}y}{2};q,q\right).
+\end{equation}
+Equation \eqref{CKY} follows by matching the recurrence and
+initial polynomials. Their other orthogonality measures are not
+being identified with $\nu$. Here the measure follows from the
+tracial two-$U$ inner product. Below $\Xi_j(x,y)$ means the
+polynomial obtained from \eqref{rec} by this isometry.
+
+The already controlled actual memory limit \cite{sector} is,
+in $h$ units, $\widehat{\mathcal F}(s)=\mathcal F_{\rm phys}
+(s/\sqrt C)/C$, with neutral part
+\[
+ \widehat{\mathcal F}_N(s)=
+ 2e^{-ihs/2}\sum_{j\ge1}c_j(s)N_j e^{-ihs/2}.
+\]
+The charged part is a convergent sum of $h$-dressed centered
+$J_d$'s. Its projection is zero by Theorem~\ref{projection}.
+The selected density \eqref{rho} belongs to the $h,U$ subspace,
+so it reads only $\PP\widehat{\mathcal F}$. Define
+\[
+ \Psi_s(x,y)=\sum_{j\ge1}c_j(s)\Xi_j(x,y).
+\]
+The energy-only and $\lambda(U^2-1)$ terms in $\rho$ have zero
+overlap with a one-$U$ field. Its odd term
+$-\zeta\sqrt\lambda\{h,U\}$ gives exactly
+\begin{equation}\label{force}
+ \sigma(\alpha_T\widehat{\mathcal F}(s))=
+ -2\zeta\lambda\int(x+y)e^{iT(x-y)-is(x+y)/2}
+                     \Psi_s(x,y)\,d\nu.
+\end{equation}
+Both $\sqrt\lambda$ factors are retained: one from the density,
+one from \eqref{Nj}.
+
+The actual Volterra reconstruction, including its sign, is
+\begin{equation}\label{filter}
+ \mathcal B(T,t)=-\int_0^t ds
+       \int_{-(t-s)/2}^{(t-s)/2}dv\,
+           \alpha_{T+v}\widehat{\mathcal F}(s),\qquad t\ge0.
+\end{equation}
+The change from physical to $h$ units cancels the factor $C$
+against the two time differentials. Integrating
+$e^{iv(x-y)}$ over the inner interval gives
+$(t-s)\sinc((t-s)(x-y)/2)$, proving \eqref{answer} once the
+convergence below is supplied. Negative times follow by the
+inherited adjoint convention. No multiplication of projected
+higher fields is used in this first-moment argument.
+
+\newpage
+\section{A usable all-degree tail bound}
+Put $r=(1-q)^{-1/2}$, $F_q=4\lambda q/(1-q)$ and
+$R_\rho=\sqrt{1+q(1+q)(1+\lambda)^2}=\|\rho\|_2$.
+Every one-$U$ Wick vector of length $n$ has norm at most
+$\sqrt{[n]_q!}\le r^n$, by summing its color-compatible
+permutations. The source in the $E_{j+1}$ recursion has norm at most
+\[
+ 4\lambda r^{j-1}\sum_{v\ge1}vq^v
+       =\frac{4\lambda q}{(1-q)^2}r^{j-1}.
+\]
+Multiplication by $h$ in this module has norm at most $2r$.
+Consequently $z_j=\|E_j\|_2/r^j$ obeys
+$z_{j+1}\le2z_j+z_{j-1}+F_q$, with $z_0=z_1=z_2=0$.
+Induction gives $z_j\le F_q3^j$. The multiplier
+$q^j-q^{\NN}$ has norm at most one, since its eigenvalues are
+differences of two numbers in $[0,1]$. Hence
+\begin{equation}\label{Xbound}
+ \|\Xi_j\|_{L^2(\nu)}\le 4\lambda j(qr)^j+F_q(3r)^j.
+\end{equation}
+\begin{lemma}\label{c}
+For every real $s$, $|c_j(s)|\le |s|^j/j!$.
+\end{lemma}
+\begin{proof}
+Let $x_1,\ldots,x_j$ be the real simple roots of $H_j$ and let
+$I_{j-1}f$ interpolate $f(x)=e^{isx}$ there. The interpolation
+remainder is $H_j(x)f[x_1,\ldots,x_j,x]$. Since $H_j$ is
+orthogonal to $I_{j-1}f$,
+\[
+ c_j(s)=p_j^{-1}\int H_j(x)^2
+               f[x_1,\ldots,x_j,x]d\mu_q(x).
+\]
+The Hermite--Genocchi simplex formula \cite{deBoor} bounds the
+divided difference by $\sup_{\mathbb R}|f^{(j)}|/j!=|s|^j/j!$.
+The remaining positive weight has integral one. This also applies
+at coincident nodes by continuity.
+\end{proof}
+Combining the lemma with \eqref{Xbound} proves absolute $L^2(\nu)$
+summability on $|s|\le S$. For complex $s$ the same argument adds
+only $e^{2r|\operatorname{Im}s|}$, giving locally uniform analytic
+series and justifying the short-time expansion below.
+Write $A=qrS$, $B=3rS$ and define,
+for $J+1>A$, $J+2>B$,
+\begin{equation}\label{tail}
+ \mathcal R_J(S)=\sqrt\lambda\left[
+ \frac{4\lambda A^{J+1}}{J!\,[1-A/(J+1)]}
+ +\frac{F_q B^{J+1}}{(J+1)!\,[1-B/(J+2)]}\right].
+\end{equation}
+This bounds the projected neutral sum after $J$, before its
+outer factor two. The time simplex has area $t^2/2$ and the
+phase multiplications are unitary on $L^2(\nu)$, so
+\begin{equation}\label{Btail}
+ |\sigma(\mathcal B(T,t))-\sigma(\mathcal B_{\le J}(T,t))|
+       \le t^2R_\rho\mathcal R_J(S),\qquad0\le t\le S.
+\end{equation}
+This is an analytic degree bound, not a floating-point error estimate.
+
+To identify the series with the microscopic object we use the
+already proved actual/local tails and sector/pinching bridge
+\cite{marked,desc,sector}, not just \eqref{Xbound} for its limit.
+The inherited tail is $K_S\sum_{j>J}(j+1)^2X_S^j/\sqrt{j!}$;
+it vanishes before removing the finite-$N$ cutoff. The established
+preparation-density bounds transfer that convergence to $\sigma$.
+Thus the order is fixed degree, double scaling, then removal of
+degree cutoff. No uniform small-$\lambda$ estimate is inferred.
+
+\newpage
+\section{A nonzero mean and executed checks}
+The first terms are
+\[
+ \Psi_s=4i\lambda q s
+             -2\lambda q^2s^2(x+y)+O_{L^2}(s^3).
+\]
+The common outer phase in \eqref{force} must also be expanded.
+Its linear term changes the quadratic coefficient to
+$2\lambda q(1-q)s^2(x+y)$. Put
+\[
+ H_q(T)=\int(x+y)^2e^{iT(x-y)}\,d\nu,
+ \qquad H_q(0)=2(1+q).
+\]
+Symmetry makes the linear contribution zero. The original $N_j$
+are self-adjoint, so their projected symbols are symmetric in
+$x,y$; their parity is $(-1)^{j-1}$. Together with the parity of
+$c_j$ these symmetries make the mean even in $s$ and in $T$.
+The convergent series therefore gives, uniformly on compact $T$,
+\begin{align}
+ \sigma(\alpha_T\widehat{\mathcal F}(s))
+       &=-4\zeta\lambda^2q(1-q)H_q(T)s^2+O(s^4),\\
+ \sigma(\mathcal B(T,t))
+       &=\frac{\zeta\lambda^2q(1-q)}3H_q(T)t^4+O(t^6),\\
+ \boxed{\sigma(\mathcal B(0,t))
+       =\frac23\sqrt q\,\lambda^2q(1-q^2)t^4+O(t^6).}
+\end{align}
+The coefficient is positive for physical $0<q<1$.
+An energy-only density would give zero for this complete first
+moment, since every surviving projection contains one $U$.
+
+\paragraph{Exact checks.}
+The local CAR source evaluator was compared with an independent
+colored q-Wick enumeration and the projected recursion. The first
+successful run saved 196 prefix identities, 40 charged identities,
+44 chaos-filter identities, 32 original-descendant comparisons,
+and 8 full-selected boundary checks: 320 in total.
+Parameters $(q,\lambda)=(1/16,1/3),(16/81,1/5)$ are formal rational
+tests of algebra, not points on $q=e^{-4\lambda}$.
+Another driver verified 72 polynomial identities against the CKY
+explicit sum, and 10 force/commutator Taylor coefficients against
+the original fields with selected boundary sources. It checked
+the bilocal $t^4$ coefficient and retained the $t^6$ coefficients.
+
+\paragraph{Finite-time diagnostics.}
+For physical $q=1/4,1/2$ and $\lambda=-\log q/4$, 12 time pairs
+were evaluated with $(J,L,n_s)=(24,48,24)$ and $(32,64,32)$.
+Here $L$ is the energy Jacobi size and $n_s$ the time quadrature
+order. All differences were below $2.78\cdot10^{-17}$.
+\begin{center}
+\begin{tabular}{cccc}
+\toprule
+$q$&$t$&$T$&$\operatorname{Re}\sigma(\mathcal B(T,t))$\\\midrule
+$1/4$&$1/2$&0&$0.0005532382640754$\\
+$1/4$&1&0&$0.0074594258627641$\\
+$1/4$&1&$1/2$&$0.0066385092055227$\\
+$1/2$&1&0&$0.0043015230840990$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The largest degree bound \eqref{Btail} in these refined rows is
+$2.79\cdot10^{-17}$. It excludes spectral/time quadrature and
+roundoff. Cancellation factors reach about $37.7$.
+The scalar $c_j$ sums start at order $j$, avoiding cancellation
+of tiny high-degree coefficients in eigensolver matrix elements.
+Raw values, refinement differences, exact-arithmetic degree bounds,
+versions and input hashes are saved separately. These diagnostics
+do not certify total numerical errors.
+
+\newpage
+\section{Interpretation and continuation}
+This stage closes the full neutral-tower contribution to a
+single-selected bilocal \emph{mean}. The charged part has zero
+projection for this purpose. It does not follow that charged
+fluctuations, charged--neutral covariances, or components
+orthogonal to $h,U$ vanish. In particular
+$\PP(XY)\ne\PP(X)\PP(Y)$ in general. Computing selected bilocal
+two- and four-point functions requires new multiple-mark projections
+or the full established joint source calculus.
+
+The current result is a microscopic fixed-$\lambda$ model
+calculation with the actual preparation and pinching interface.
+It is not yet a bulk mass/position dictionary, a finite-$G$
+scattering result, or a completed de Sitter dual. The next direct
+calculation is a two-insertion projection with the connected
+$L$--$L$ and $D$--$L$ source terms retained, followed by the same
+actual time filters. Its low-degree limit must reproduce the
+previous neutral-slope two-time response \cite{response}.
+
+\begin{thebibliography}{10}\small
+\bibitem{CKY} W. R. Casper, S. Kolb and M. Yakimov,
+\emph{Bivariate continuous q-Hermite polynomials and deformed
+quantum Serre relations}, v2 (2020), Introduction, Eq.~(1.1),
+\href{https://arxiv.org/abs/2002.07895v2}{arXiv:2002.07895v2}.
+\bibitem{EP} E. G. Effros and M. Popa,
+\emph{Feynman Diagrams and Wick Products Associated with
+q-Fock Spaces}, Theorems 3.2--3.3,
+\href{https://arxiv.org/abs/math/0303045}{arXiv:math/0303045}.
+\bibitem{deBoor} C. de Boor, \emph{Divided Differences},
+Surveys in Approximation Theory 1 (2005), 46--69,
+Hermite--Genocchi formula,
+\href{https://arxiv.org/abs/math/0502036}{arXiv:math/0502036}.
+\bibitem{multi} A. Day and Chengheng,
+\emph{Fixed-degree multisource moments}, local proof note
+\texttt{susskind-bilocal-multisource-proof}, 7 Nov. 2026,
+Sections 2--6; companion \texttt{susskind-bilocal-four-point} stage.
+\bibitem{higher} A. Day and Chengheng,
+\emph{Higher Wick descendants in the common selected state},
+local stage \texttt{susskind-slater-higher-wick}, 8 Nov. 2026.
+\bibitem{desc} A. Day and Chengheng,
+\emph{Ordered Wick descendants and neutral memory}, local stage
+\texttt{susskind-memory-wick-descendants}, 7 Nov. 2026.
+\bibitem{marked} A. Day and Chengheng,
+\emph{The full-time marked neutral series}, local stage
+\texttt{susskind-memory-neutral-marked-series}, 7 Nov. 2026,
+Sections 6--7 and the explicit truncation bound in Section 8.
+\bibitem{sector} A. Day and Chengheng,
+\emph{Actual fixed-charge bilocals and selected preparations},
+local stage \texttt{susskind-sector-bilocal}, 8 Nov. 2026.
+\bibitem{response} A. Day and Chengheng,
+\emph{Preparation memory in the neutral slope}, local stage
+\texttt{susskind-neutral-selected-response}, 8 Nov. 2026.
+\end{thebibliography}
+\end{document}

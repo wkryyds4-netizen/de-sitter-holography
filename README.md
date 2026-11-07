@@ -1,5 +1,18 @@
 # de Sitter 全息研究
 
+## 当前进展：完整双局域的制备协方差（2026-11-08）
+
+[八页 PDF](output/pdf/de-sitter-susskind-selected-bilocal-covariance.pdf)、[LaTeX](manuscript/susskind-selected-bilocal-covariance/main.tex)、[中文推导](notes/susskind-selected-bilocal-covariance.md)和[来源](literature/susskind-selected-bilocal-covariance-sources.md)已完成。完整选态两点函数分为保留同一原始耦合全部涨落的能量倾斜谱项，以及由中性投影确定的制备修正。未扣均值的修正是正 Gram 核；连通修正可为负，完整方差保持正。固定 lambda 双标度之后，共同中心时间推远时制备修正趋零；短时展开保留非零中心的 t⁷ 项。
+
+386个完整选态比较、独立奇偶边界及残余Gram检查、30个物理时间点和两个复不等时矩阵已保存。数值给制备修正及完整方差差，未求绝对完整谱基线。[证据](results/susskind-selected-bilocal-covariance/local-evidence.json)核15当前/417父科学文件；八页双遍编译、最终全页目检。本次按用户要求与七页均值稿集中 Git，[发布说明](notes/research-release-2026-11-08-bilocal-covariance.md)。下一步回到静态补丁的态、时间与空间/质量生成元字典。下方历史“本地”“未Git”保留原记录时点含义。
+
+## 当前进展：完整双局域的单选态均值（2026-11-08，本地）
+
+[七页 PDF](output/pdf/de-sitter-susskind-selected-bilocal-mean.pdf)、[LaTeX](manuscript/susskind-selected-bilocal-mean/main.tex)、[中文推导](notes/susskind-selected-bilocal-mean.md)和[来源](literature/susskind-selected-bilocal-mean-sources.md)已完成。任意次数单中性插入的 h,U 投影归为能量回归加 one-U Wick 后代，保留全部低 chaos 后，完整双局域的单选态均值化成可收敛的两能量积分。标准插值公式给显式阶乘尾；中心时间零的首项为 (2/3)√q lambda²q(1−q²)t⁴，t 为 h 时间。
+
+320 项投影/原始后代/选态精确比较、72 个已有双变量多项式匹配、10 个时间系数及12个物理时间点已核。[证据清单](results/susskind-selected-bilocal-mean/local-evidence.json)验证12当前/404父科学文件；七页双遍编译并逐页目检。下一步接两个高阶插入的共同涨落，投影不能直接相乘。本轮仅本地，34349de及issue回复已完成，不重复发布。
+
+
 ## 2026-11-08 集中快照：中性制备记忆
 
 按本轮要求集中整理已完成的中性选态响应，见[发布说明](notes/research-release-2026-11-08-neutral-response.md)。八页 PDF、LaTeX、代码与封存证据一并收录；只读核对413个不同文件，未重跑成功科学输出。下一步检验高阶中性插入的 h,U 投影及完整双局域均值；候选尚未作为定理。历史“本地”“未 Git”保留其原时点含义。

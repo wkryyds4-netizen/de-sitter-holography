@@ -1,5 +1,10 @@
 # de Sitter 全息研究规划
 
+2026-11-08 selected-bilocal-covariance：从真实 selected 边界的两源展开得到完整两场恒等式，保留 stationary 共同谱及投影残余；完整 bilocal 的制备修正成为显式 Mehler Gram 减均值乘积。建立固定 lambda DS 后共同中心时间衰减、t⁶/t⁷ 和负连通修正见证。八页 PDF、三份科学输出及15当前/417父文件证据封存，与均值阶段按本次要求集中 Git 并回复 issue #1；KS 独立重积分未新增。下一首任务回到 Susskind 静态补丁文献，统一态、时间/能量单位和空间/质量生成元，比较已得非平稳一、二点是否容纳同一体解释；随后处理四 bilocal 源分区及 finite-G。理由：两点制备依赖已有完整归约，继续同一低阶数值扫点不能代替体字典。长期 goal active，日常低频 Git 保持。
+
+2026-11-08 selected-bilocal-mean：由disjoint局域源直接证明任意次数单L插入的h,U投影，接chaos/OU与N_j递推；CKY已有多项式提供两能量符号。用标准插值余项给|c_j|≤|s|^j/j!，与one-U递推界及既有actual/sector桥完成固定lambda完整bilocal一阶矩。下一任务改为两插入投影/共同涨落：保留L-L及D-L连接，不能乘单插入投影。低阶检验必须恢复neutral-selected-response及已有charged-neutral cross。先文献/既有源接口，再定具体两插入核。七页PDF、两科学输出与证据本地封存，无新Git/issue；长期goal active。调整原因：单选态均值已闭合，下一障碍是被单投影舍去的协方差，不重复最低阶奇源。
+
+
 2026-11-08 本次按用户要求集中 Git 并准备回复 issue #1，范围见 notes/research-release-2026-11-08-neutral-response.md。研究顺序进一步明确：先检验高阶单中性插入对 h,U 代数的 L² 投影，再由既有尾界推进完整双局域的选态一阶矩。完整高阶场不假定等于低阶 h,U,J₂ 多项式；投影候选必须用任意测试词和 chaos 筛选检验后证明。KS 重积分未新增，日常低频 Git 不变。
 
 2026-11-08 neutral-selected-response：实际中性斜率的偶两点源归为两步Mehler Gram核，完成固定紧时间及固定导数的O(epsilon²)展开；能量—斜率反对易子检测到奇源，均值首项O(√epsilon)。等权混合保留中性制备记忆，故曲率相消不能作为全代数选态原则。下一步从既有N_j局域表达提取高阶中性响应及同J charged-neutral交叉项，将响应送进actual bilocal双重积分；同时保留奇源，不能只拼接stationary两能量谱。八页稿和证据本地封存，未Git/issue，goal active。调整原因：已给能量单独密度遗漏的显式观测后果，下一障碍是完整滤波与高场，而非再次验证最低阶斜率。
