@@ -1,0 +1,451 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=24mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,booktabs,microtype}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\sech}{\operatorname{sech}}
+\newcommand{\tr}{\tau}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\title{Preparation memory in the neutral slope\\
+\large An exact two-step Mehler kernel and its string-time limit}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{8 November 2026\quad Local research draft}
+\begin{document}\maketitle
+\begin{abstract}
+The first neutral coefficient of the actual bilocal retains
+preparation time even when its charged curvature restriction is
+stationary. We reduce its selected two-time function exactly to an
+energy-tilted two-point function plus a positive Gram kernel formed
+by two q-Mehler transitions. A weighted three-energy estimate gives
+the compact-time small-deformation expansion with an
+$O(\varepsilon^2)$ remainder. The additional term is separable at
+first order and survives the equal mixture that cancels the
+curvature correction. The complementary odd mixed source produces
+an order-$\sqrt{\varepsilon}$ energy--slope expectation.
+This establishes a concrete neutral
+contribution to the mixed source, not a complete bilocal or bulk
+particle identification.
+\end{abstract}
+
+\section{Objects, actual interface and result}
+Let $h,U$ be orthogonal unit-variance q-Gaussian fields in the
+tracial covariant algebra, and put
+\[
+ q=e^{-\eps},\quad \lambda=\eps/4,\quad s=\sqrt q,\quad
+ W=\sqrt\lambda U,\quad K=h/\sqrt\eps,\quad U(u)=e^{iuK}Ue^{-iuK}.
+\]
+The dimensionless string time is $u=2J_st$, with $\hbar=1$.
+The already established single-selected density \cite{selected} is
+\begin{equation}\label{density}
+ \rho=1-s(1+\lambda)+s(h-\sqrt\lambda U)^2,\qquad
+ \sigma(Y)=\tr(\rho Y).
+\end{equation}
+The normalized actual exact-pinched neutral slope converges to U
+inside these preparations \cite{actual}. Thus the functions below
+refer to a controlled microscopic coefficient. Take finite-N exact
+projection, then half-filled fixed-$\lambda$ double scaling with
+the original common disorder, then $\eps\downarrow0$.
+
+Write $g(u)=\sech^2u$ and
+$R(u)=\tfrac12g(u)[u\tanh u-3\tanh^2u]$.
+\begin{theorem}\label{main}
+For fixed $S,k<\infty$, uniformly on $|u|,|v|\le S$ including
+all partial derivatives of total order at most k,
+\begin{align}
+ \tr(U(u)U(v))&=g(u-v)-\tfrac{\eps}{2}R(u-v)+O(\eps^2),\nonumber\\
+ \sigma(U(u)U(v))&=g(u-v)+\tfrac{\eps}{2}
+       [R(u-v)+g(u)g(v)]+O(\eps^2).\label{result}
+\end{align}
+\end{theorem}
+U has unit \emph{tracial} variance. Its selected variance at the
+preparation time is $1+s\lambda(1+q)$, not one.
+There is no N-uniform rate or growing-time limit in this statement.
+
+\newpage
+\section{Four fields become a classical three-energy chain}
+Let $\mu_q$ be the unit-variance q-Hermite law and $P_r$ the
+q-Mehler operator,
+\[
+ P_rH_n=r^nH_n,\qquad
+ P_rf(a)=\int K_r(a,b)f(b)\,\mu_q(db).
+\]
+Its positivity, trace preservation and semigroup law are standard
+\cite{bks}. Define the probability measure
+\begin{equation}\label{chainmeasure}
+ d\Pi_q(a,b,c)=
+ \mu_q(da)K_q(a,b)\mu_q(db)K_q(b,c)\mu_q(dc).
+\end{equation}
+The subscript q on $K_q$ denotes its transition parameter, with
+the same deformation parameter q understood.
+
+\begin{lemma}\label{four}
+For bounded continuous f,g,k on the energy spectrum,
+\begin{equation}\label{fouridentity}
+ \tr[(U^2-1)f(h)U g(h)U k(h)]
+   =(1+q)\int f(a)g(b)k(c)\,d\Pi_q.
+\end{equation}
+\end{lemma}
+\begin{proof}
+It suffices first to use monomials. Label the four U endpoints
+in cyclic order by $0,1,2,3$, with no h's between 0 and 1.
+The pairing $(0,1)(2,3)$ is removed by $U^2-1$.
+The two remaining pairings are $(0,3)(1,2)$ and
+$(0,2)(1,3)$, with mutual U-crossing weights 1 and q.
+In both cases an h-chord joining the f and g blocks crosses one
+U-chord, one joining g and k crosses one, and one joining f and k
+crosses two. Within-block weights are unchanged. After summing
+the h-pairings, both contributions have the q-Gaussian three-block
+law with covariance
+\[
+ \begin{pmatrix}1&q&q^2\\q&1&q\\q^2&q&1\end{pmatrix}.
+\]
+By the known q-Gaussian Markov property this ordered three-block
+law is exactly \eqref{chainmeasure}. Equivalently, conditional
+expectation of the third block onto the first two is $P_qk$ of
+the middle field, leaving
+$\int(P_qf)(b)g(b)(P_qk)(b)\,\mu_q(db)$.
+Polynomial approximation extends the identity to the stated class,
+since h and U are bounded at fixed q.
+\end{proof}
+
+This is an application of the established q-Wick rule and
+q-Ornstein--Uhlenbeck transitions \cite{bks,eff}. The two transitions
+are an auxiliary spectral representation of this contraction;
+they do not introduce two independent physical disorder samples.
+
+\newpage
+\section{The exact selected two-time function}
+Separate the density as
+\[
+ \rho=f_q(h)+s\lambda(U^2-1)-s\sqrt\lambda\{h,U\},\qquad
+ f_q(h)=1-s+sh^2.
+\]
+The last term is odd under $U\mapsto-U$, whereas $U(u)U(v)$
+is even. It therefore vanishes for this observable, but not for
+arbitrary mixed observables. Let $\widetilde C_{1,\eps}$ denote
+the energy-tilted q-Mehler correlation from \cite{weighted}.
+Lemma~\ref{four} gives the exact identity
+\begin{align}
+ S_\eps(u,v)&:=\sigma(U(u)U(v))
+ =\widetilde C_{1,\eps}(u-v)+s\lambda(1+q)B_\eps(u,v),\label{exact}\\
+ B_\eps(u,v)&=\int
+ e^{i[u(a-b)+v(b-c)]/\sqrt\eps}\,d\Pi_q(a,b,c).\label{B}
+\end{align}
+The trace correlation is $C_{1,\eps}(u-v)$.
+In the first term of \eqref{exact}, cyclicity and $[h,f_q(h)]=0$
+combine the exterior phases; this reduction would be invalid
+for the full density.
+
+The extra kernel is positive in its two time indices. Indeed
+\[
+ A_u(b)=e^{-iub/\sqrt\eps}P_q(e^{iu\,\cdot/\sqrt\eps})(b),
+ \qquad
+ B_\eps(u,v)=\int A_u(b)\overline{A_v(b)}\,\mu_q(db).
+\]
+In particular $|A_u|\le1$ and $|B_\eps|\le1$. Spectral sign reversal
+and chain reversal imply reality and symmetry in u,v.
+The semigroup law gives two useful exact reductions:
+\begin{equation}\label{slices}
+ B_\eps(u,0)=C_{1,\eps}(u),\qquad
+ B_\eps(u,u)=C_{2,\eps}(u).
+\end{equation}
+Consequently
+\begin{equation}\label{variance}
+ S_\eps(u,u)=1+s\lambda(1+q)C_{2,\eps}(u).
+\end{equation}
+At fixed $0<q<1$, $C_{2,\eps}(u)\to0$ as $|u|\to\infty$,
+by the absolutely continuous gap measure and the
+Riemann--Lebesgue lemma. The selected variance therefore
+approaches one from its initial value $1+s\lambda(1+q)$.
+This fixed-q statement is separate from the compact-time
+small-$\eps$ expansion.
+
+The one-point function vanishes. Only the anticommutator term
+could contribute, and its two-energy integral contains
+$(a+b)e^{iu(b-a)/\sqrt\eps}K_q(a,b)\mu_q(da)\mu_q(db)$.
+Exchange of a,b removes its sine part, and simultaneous sign
+reversal removes its cosine part. Thus \eqref{variance} is a
+variance change, not the square of a nonzero mean.
+
+\newpage
+\section{A uniform three-energy estimate}
+Use angular energies $e_\theta=2\cos\theta/\sqrt{1-e^{-\eps}}$.
+For the middle angle and the two successive gaps write
+\[
+ \theta_1=\pi/2+\sqrt\eps x/2,\quad
+ \theta_0=\theta_1+\eps z_1,\quad
+ \theta_2=\theta_1-\eps z_2.
+\]
+Let $m_\eps(x)$ be the middle marginal density and
+$p_\eps(y,z)=p_{1,\eps}(y,z)$ the two-energy density in
+\cite{weighted}. Changing variables in \eqref{chainmeasure} gives
+\begin{equation}\label{density3}
+ j_\eps(x,z_1,z_2)=
+ \frac{p_\eps(x+\sqrt\eps z_1,z_1)
+       p_\eps(x-\sqrt\eps z_2,z_2)}{m_\eps(x)}
+\end{equation}
+on the angular domain, extended by zero elsewhere. The Jacobians
+in this formula are one for each pair relative to $(x,z_i)$.
+
+Let $\varphi$ be the standard Gaussian density and
+$f(z)=2z/\sinh(\pi z)$ with its removable value at zero.
+The exact modular marginal is
+\[
+ m_\eps(x)=\varphi(x)e^{\eps/8}\cos(\sqrt\eps x/2)
+ F_\eps(\pi+\sqrt\eps x)Q_\eps^{\rm im}(\pi+\sqrt\eps x).
+\]
+Here $F_\eps(t)=1-e^{-2\pi\min(t,2\pi-t)/\eps}$ and the image
+quotient obeys $|Q^{\rm im}-1|\le4e^{-2\pi^2/\eps}$.
+In particular $m_\eps\le C\varphi$.
+
+\begin{lemma}\label{L1}
+For every fixed polynomial weight w in $|x|,|z_1|,|z_2|$,
+\[
+ \int w\,\left|j_\eps-\varphi(x)f(z_1)f(z_2)
+       [1-\sqrt\eps x(z_1-z_2)]\right|=O_w(\eps).
+\]
+\end{lemma}
+\begin{proof}
+Set $L=\log(1/\eps)$ and restrict first to
+$|x|\le8\sqrt L$, $|z_i|\le32L/\pi$. This rectangle lies inside
+the angular domain for small eps. The pair expansion of
+\cite{weighted} and the marginal above give a relative
+$1+O(\eps P)$ factor, with P a fixed polynomial; the Gaussian
+ratio is exactly
+\[
+ \frac{\varphi(x+\sqrt\eps z_1)\varphi(x-\sqrt\eps z_2)}
+      {\varphi(x)^2}
+ =e^{-\sqrt\eps x(z_1-z_2)-\eps(z_1^2+z_2^2)/2}.
+\]
+Its remainder after the displayed linear term is bounded by
+$C\eps P$ on the rectangle. Integration has no logarithmic loss.
+Outside, both pair marginals have the global bound
+$p_\eps\le C\varphi f$ from \cite{weighted}; each gap marginal
+thus has exponential tails and every fixed moment uniformly.
+The middle marginal has Gaussian tails. The union tail probability
+is $O(\eps^{32})$ times powers of L. Holder gives uniform joint
+polynomial moments from these marginals; Cauchy--Schwarz then
+bounds weighted joint tails by $O(\eps^{16})$ times powers of L.
+The approximating density has the same harmless tails.
+This proves the lemma without dividing by an uncontrolled
+small edge marginal.
+\end{proof}
+
+\newpage
+\section{Time expansion and the surviving neutral memory}
+For each adjacent pair let
+$\omega_1=(e_{\theta_0}-e_{\theta_1})/\sqrt\eps$ and
+$\omega_2=(e_{\theta_1}-e_{\theta_2})/\sqrt\eps$.
+The exact trigonometric expressions, with
+$y_1=x+\sqrt\eps z_1$, $y_2=x-\sqrt\eps z_2$, are
+\[
+ \omega_i=
+ \frac{-4\cos(\sqrt\eps y_i/2)\sin(\eps z_i/2)}
+      {\sqrt{\eps(1-e^{-\eps})}}.
+\]
+On the entire domain, $|\omega_i|\le C|z_i|$ and
+$|\omega_i+2z_i|\le C\eps P(|x|,|z_i|)$.
+These follow from real sine/cosine remainders, allowing polynomial
+growth. Thus the phase and any fixed number of its time derivatives
+may be replaced by their $(-2z_1,-2z_2)$ counterparts at
+$O_{S,k}(\eps)$ cost in Lemma~\ref{L1}. The apparent
+$\sqrt\eps$ term integrates to zero because it is odd in x.
+Using $\int f(z)e^{-2iuz}dz=g(u)$ gives
+\begin{equation}\label{Blimit}
+ B_\eps(u,v)=g(u)g(v)+O_{C^k([-S,S]^2)}(\eps).
+\end{equation}
+
+The previous weighted theorem, now used at d=1, gives
+$C_{1,\eps}=g-\eps R/2+O_{C^k}(\eps^2)$ and
+$\widetilde C_{1,\eps}=g+\eps R/2+O_{C^k}(\eps^2)$.
+Since $s\lambda(1+q)=\eps/2+O(\eps^2)$,
+\eqref{exact} and \eqref{Blimit} prove Theorem~\ref{main}.
+The new response relative to the trace is
+\[
+ \frac{S_\eps(u,v)-C_{1,\eps}(u-v)}{\eps}
+   =R(u-v)+\tfrac12g(u)g(v)+O_{C^k}(\eps).
+\]
+The leading neutral addition is a positive rank-one covariance
+kernel. That describes its time dependence; it is not a new
+particle or a spatial mode identification.
+
+For the equal mixture $\sigma_{\rm mix}=(\tr+\sigma)/2$,
+\begin{equation}\label{mix}
+ \sigma_{\rm mix}(U(u)U(v))
+ =g(u-v)+\tfrac{\eps}{4}g(u)g(v)+O_{C^k}(\eps^2).
+\end{equation}
+The curvature cancellation of \cite{weighted} therefore does
+not restore all two-point functions to their leading form.
+More generally, a constant convex mixture with selected weight a
+has curvature correction $\eps(a-\tfrac12)R_2$, requiring
+$a=1/2$ to cancel it for all times; \eqref{mix} then remains.
+
+Normalizing by the initial selected variance does not remove
+this memory either:
+\[
+ \frac{S_\eps(u,u)}{S_\eps(0,0)}
+ =1+\tfrac{\eps}{2}[\sech^4u-1]+O(\eps^2).
+\]
+Thus the effect is not solely a choice of initial amplitude.
+
+\newpage
+\section{An observable that sees the odd mixed source}
+The even two-point function alone does not exhaust the source.
+Consider the Hermitian energy--slope observable
+\[
+ A(u)=\{h,U(u)\}.
+\]
+The microscopic counterpart is the anticommutator of the
+normalized Hamiltonian and actual exact-pinched slope; the
+fixed-degree preparation interface of \cite{actual} applies.
+Its trace and energy-only-tilted expectations vanish by U parity,
+but its selected mean does not:
+\begin{align}
+ \sigma(A(u))&=-s\sqrt\lambda\,H_\eps(u),\label{odd}\\
+ H_\eps(u)&=\tr(A(0)A(u))
+ =\int(a+b)^2e^{iu(b-a)/\sqrt\eps}
+               K_q(a,b)\mu_q(da)\mu_q(db).\nonumber
+\end{align}
+This follows by keeping $-s\sqrt\lambda\{h,U\}$ in
+\eqref{density}; the other terms are odd in U after insertion.
+In particular $H_\eps(0)=2(1+q)$.
+
+In the center/gap coordinates of \cite{weighted}, the weight is
+exactly
+\[
+ (e_\theta+e_\phi)^2=
+ \frac{16\sin^2(\sqrt\eps y/2)\cos^2(\eps z/2)}
+      {1-e^{-\eps}}
+ =4y^2+O(\eps P(|y|,|z|)).
+\]
+It is globally bounded by $Cy^2$. The weighted density remainder
+and phase estimate therefore give, with fixed compact-time
+derivatives,
+\[
+ H_\eps(u)=4g(u)+O_{C^k}(\eps),\qquad
+ \boxed{\ \sigma(A(u))=-2\sqrt\eps\,\sech^2u
+                         +O_{C^k}(\eps^{3/2})\ }.
+\]
+This is the odd part of the same preparation memory. It is absent
+from every energy-only density, not merely from a specific
+temperature choice. For the equal mixture its coefficient is
+halved and remains nonzero.
+
+An additional independent selected-transfer check verifies 90
+polynomial energy--slope identities; 20 physical time points
+check the formula, with spectral refinement difference below
+$4.45\,10^{-15}$. The truncation argument on the following page
+also applies to H: replace the tilted-pair factor F by
+$16/(1-q)$ and multiply by $s\sqrt\lambda$ for the mean.
+All saved science is kept separate from the analytic remainder
+argument.
+
+\newpage
+\section{Finite checks and numerical error separation}
+The new exact checker verifies \eqref{fouridentity} for every
+three-block monomial of total degree at most eight, at
+$q=1/4,2/3$ (330 identities). A separate selected open-chord
+transfer evaluates $M U\text{-word}\,M^\dagger$ for every
+three-block degree at most six, at two rational $(\gamma,\lambda)$
+points (168 identities). These are formal algebra checks; the
+rational parameters need not satisfy $\gamma=e^{-\lambda}$.
+
+For physical q=0.25,0.64, seven time pairs compare a q-Hermite
+Jacobi spectral implementation with direct angular Pochhammer
+products (160/224 nodes, 128/192 product terms).
+The maximum difference is $3.45\,10^{-14}$; quadrature refinement
+is below $3.05\,10^{-14}$. Four small deformations
+$\eps=0.16,0.08,0.04,0.02$ use 28 time pairs and Jacobi
+dimensions $L=\lceil12/\eps\rceil+64$ and $L+64$.
+The largest refinement difference is $1.27\,10^{-15}$;
+the maximum phase-sum condition is 1.118.
+Exact slices \eqref{slices}--\eqref{variance} are also checked.
+
+An independent saved-output bound calculation controls truncation
+in exact arithmetic, rather than treating refinement as a proof.
+In the L-node Gauss q-Hermite rule, take
+\[
+ m=\lfloor(2L-1)/3\rfloor,\quad
+ z=\frac{2\max(|u|,|v|,|u-v|)}{\sqrt{\eps(1-q)}},\quad
+ \eta=\frac{z^{m+1}}{(m+1)!}.
+\]
+Real exponential Taylor polynomials have uniform error at most
+eta. The q-Mehler map contracts $L^2(\mu_q)$; its finite matrix
+is orthogonally conjugate to $\operatorname{diag}(q^n)$ and also
+contracts the Gauss-weighted $L^2$ norm. For degree at most m
+the two maps agree at Gauss nodes. The product of three
+transformed polynomials has degree at most $3m\le2L-1$,
+so its quadrature is exact.
+
+Replacing the two exterior exponentials costs at most
+$2\eta+\eta^2$ in either representation; replacing the middle
+one costs at most $\eta(1+\eta)^2$. Hence
+\[
+ |B-B_L|\le6\eta+6\eta^2+2\eta^3.
+\]
+For the tilted pair, $m+2<L$, $2m+2\le2L-1$ and
+$F=1-\sqrt q+4\sqrt q/(1-q)$ give
+$|\widetilde C-\widetilde C_L|\le F(4\eta+2\eta^2)$.
+Combining these bounds with \eqref{exact}, the largest refined
+selected truncation bound is $1.44\,10^{-35}$.
+Roundoff and angular quadrature discretization are not included
+in that analytic bound. Product tails are recorded separately.
+
+The largest sampled selected second remainder increases from
+0.454 to 0.494 as eps decreases; this finite coefficient is
+consistent with, but does not prove, the error order.
+The uniform statement follows from the density proof above.
+
+\newpage
+\section{What this adds to the bilocal program}
+The actual neutral slope is the first coefficient of the
+neutral memory series entering the reconstructed bilocal.
+The exact identity \eqref{exact} supplies its previously missing
+two-time preparation response in the same microscopic state
+used for the curvature. It also produces a direct obstruction
+to selecting a universal leading state by the earlier equal
+mixture alone.
+
+The next task is to retain the higher neutral residuals $N_j$
+and their common-disorder charged cross terms inside the
+complete bilocal filter \cite{bilocal}. The odd part
+$-\sqrt\lambda\{h,U\}$ is now detected by \eqref{odd}, and must
+be retained when propagating the full response.
+No conclusion about all bilocal words, spatial generators,
+particle masses, finite-G scattering or arbitrary selected
+interlacings follows from this single neutral coefficient.
+
+All successful previous scientific outputs are reused read-only.
+The companion evidence file records source and output hashes,
+dependency versions, both successful LaTeX passes and the
+eight-page visual check. This stage is local; no new Git or
+external issue reply is performed.
+
+\begin{thebibliography}{9}\small
+\bibitem{bks} M. Bo\.zejko, B. K\"ummerer and R. Speicher,
+\emph{q-Gaussian processes: non-commutative and classical aspects},
+\href{https://arxiv.org/html/funct-an/9604010}{arXiv:funct-an/9604010},
+Theorems 2.11, 2.13, 4.4, 4.6 and Corollary 4.5:
+conditional expectations and the classical q-Mehler Markov law.
+\bibitem{eff} E. G. Effros and M. Popa,
+\emph{Feynman diagrams and Wick products associated with q-Fock space},
+\href{https://pmc.ncbi.nlm.nih.gov/articles/PMC166362/}{PNAS 100 (2003)},
+Corollary 2.1 and Theorem 3.2. The q-Wick machinery is prior work.
+\bibitem{selected} A. Day and Chengheng, \emph{Single-selected
+covariant density and curvature dynamics}, 8 November 2026;
+\texttt{manuscript/susskind-slater-selected-state/main.tex}.
+\bibitem{actual} A. Day and Chengheng, \emph{Exact energy
+projection in a single Slater excitation}, 8 November 2026;
+\texttt{manuscript/susskind-slater-orbit-density/main.tex};
+with the preceding neutral-slope normalization.
+\bibitem{weighted} A. Day and Chengheng, \emph{A weighted
+q-Mehler limit for selected preparations}, 8 November 2026;
+\texttt{manuscript/susskind-weighted-mehler-limit/main.tex}.
+Its fixed-integer-d theorem is used at d=1 and d=2.
+\bibitem{bilocal} A. Day and Chengheng, \emph{Fixed-charge
+bilocals and selected preparations}, 8 November 2026;
+\texttt{manuscript/susskind-sector-bilocal/main.tex}.
+\end{thebibliography}
+\end{document}

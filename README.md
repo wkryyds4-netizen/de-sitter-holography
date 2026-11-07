@@ -1,5 +1,15 @@
 # de Sitter 全息研究
 
+## 2026-11-08 集中快照：中性制备记忆
+
+按本轮要求集中整理已完成的中性选态响应，见[发布说明](notes/research-release-2026-11-08-neutral-response.md)。八页 PDF、LaTeX、代码与封存证据一并收录；只读核对413个不同文件，未重跑成功科学输出。下一步检验高阶中性插入的 h,U 投影及完整双局域均值；候选尚未作为定理。历史“本地”“未 Git”保留其原时点含义。
+
+## 当前进展：中性斜率的制备记忆（2026-11-08，本地）
+
+[八页 PDF](output/pdf/de-sitter-susskind-neutral-selected-response.pdf)、[LaTeX](manuscript/susskind-neutral-selected-response/main.tex)、[中文推导](notes/susskind-neutral-selected-response.md)与[来源](literature/susskind-neutral-selected-response-sources.md)已保存。实际中性斜率的选态两时间核精确分解为能量倾斜项与两个连续 Mehler 转移形成的正 Gram 核。全谱尾估计给固定紧时间 C^k 展开：多出 (epsilon/2)sech²u sech²v 的制备记忆；等权混合仍留一半，故上一阶段曲率相消不推广为所有通道的相消。
+
+奇混合源也有直接检验：能量—斜率反对易子的选态均值为 −2√epsilon sech²u+O(epsilon^(3/2))，任何仅依赖能量的密度均给零。588个精确恒等式、独立角度/谱比较和两类实时间检查通过；[证据清单](results/susskind-neutral-selected-response/local-evidence.json)核14当前/389父科学文件，八页双遍编译、全页目检完成。下一步把更高中性场及交叉项送入完整双局域滤波。本轮仅本地，已完成的3ec98f3及issue回复不重复。
+
 ## 当前进展：带权 Mehler 极限与一阶修正相消（2026-11-08）
 
 [七页 PDF](output/pdf/de-sitter-susskind-weighted-mehler-limit.pdf)、[LaTeX](manuscript/susskind-weighted-mehler-limit/main.tex)、[中文笔记](notes/susskind-weighted-mehler-limit.md)和[来源](literature/susskind-weighted-mehler-limit-sources.md)已完成。整数参数的精确移位与 theta 模变换给全谱支配及带多项式权的 O(epsilon²) 余项，将上一阶段的选态预测补为固定紧时间区间、任意固定有限导数阶的渐近结论。物理曲率 d=2 的迹态和单选态首阶修正相反，等权混合后关联为 sech⁴u+O(epsilon²)。

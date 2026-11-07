@@ -1,4 +1,22 @@
-# 当前继续位置：2026-11-08 带权 Mehler 紧时间极限
+# 本轮发布与探索入口：2026-11-08
+
+本轮用户明确要求 Git 与 issue 回复，发布范围见 notes/research-release-2026-11-08-neutral-response.md；回执保存 tmp/publication-2026-11-08-neutral-response。下方“无新Git/issue”仅指上一研究阶段。已核413个不同文件，既有科学输出/封存证据未改。
+
+研究接单个高阶中性插入的 h,U 投影。候选为 P T_(v,w)=kappa_v H_(v+w)+sqrt(lambda) sum_(i<v) Wick(h^i U h^(v+w-1-i))，C=1；尚未证明，不能当作原高阶算符恒等式。先核 whole-Wick、prefix L 标记与任意 h/W 测试词，再核左右乘 h、chaos/OU 相容性及已证全次数尾。完整双局域均值的重求和是后续目标。tmp/neutral-tower/explore.py 仅保留低阶 Gram 探索，不能据此声称新场或全阶定理。长期 goal active。
+
+# 当前继续位置：2026-11-08 中性选态响应（本地）
+
+先读 manuscript/susskind-neutral-selected-response/main.tex、notes/susskind-neutral-selected-response.md、literature/susskind-neutral-selected-response-sources.md 与 journal/2026-11-08-susskind-neutral-selected-response.md。上一轮发布收尾与本轮均progress，goal active；无活跃进程。3ec98f3和issue6713226546已完成，本轮无新Git/issue。
+
+- 对象：h,U为同J covariant两色单位方差qGaussian，W=√lambda U，epsilon=4lambda，K=h/√epsilon，u=2Js t。rho=f(h)+s lambda(U²−1)−s√lambda{h,U}，s=√q。先finiteN actual exactpinch再fixedlambda半填充DS后epsilon→0。U是已接actual中性斜率，当前只处理第一中性系数及其energy dressing，不是完整bilocal。
+- 偶核精确：四U扣前两U互配后，两剩余topology给1+q及三块covariance(q,q,q²)，故dPi=muKqmuKqmu。S(u,v)=Ctilde_d1(u−v)+s lambda(1+q)B(u,v)，B=E exp{i[u(a−b)+v(b−c)]/√epsilon}=Gram(Au,Av)。B(u,0)=C_d1(u)，B(u,u)=C_d2(u)。均值U(u)=0；selected方差=1+s lambda(1+q)C_d2(u)，固定q长时到1。初始归一化不消除其时间变化。
+- 紧时间：中间theta1=pi/2+√epsilon x/2，gap zi；j=p(x+√epsilon z1,z1)p(x−√epsilon z2,z2)/m(x)。weightedL1为phi f1f1[1−√epsilon x(z1−z2)]+O(epsilon)。x Gaussian/gap指数边缘尾与Holder避开端点分母；odd x项消失，相位O(epsilon)，故B=g(u)g(v)+O_Ck(epsilon)。S=gΔ+epsilon/2[R1Δ+g(u)g(v)]+O_Ck(epsilon²)，g=sech²，R1=g(utanh−3tanh²)/2。等权mix留下epsilon g(u)g(v)/4。不能把之前曲率相消提升为全态恢复。
+- 奇核精确：A(u)={h,U(u)}，sigma A=−s√lambda H_epsilon(u)，H=∫(a+b)² exp[iu(b−a)/√epsilon] Kq dmu²。能量权=4y²+O(epsilon P)、全谱Cy²，故H=4g+O_Ck(epsilon)，sigma A=−2√epsilon g+O_Ck(epsilon^1.5)。任何energy-only密度对A均零，初始mean=−2s√lambda(1+q)。
+- science首次成功后封存：response-checks SHA475535bab4df2947c1de0d886ae42672e478becd612ffb66338afc14b09af843（330三块、168selected、14角度/谱、28实时间）；spectral-bounds SHA f5cd67a57050f1564c25e1ceb89a25f26a47acac561945eb5d656bc1a42a9991（56解析尾）；mixed-source SHA29754be4bb5b8673cc1f76c96c07684ecfc543987f5ade90039f42cb64283b51（90精确、20时点）。manifest SHA6f488b78cb4cd94e927d017f4cd0ea6c97f131a2ceca9690e60e21a35bf532a5，14当前/389父科学文件。八页双遍/90dpi全部目检。所有成功driver/recorder勿重跑，sealed输入不改。
+- 数值界：Gauss qHermite维L，m=floor((2L−1)/3)，z=2max(|u|,|v|,|u−v|)/sqrt(epsilon(1−q))，eta=z^(m+1)/(m+1)!。两个Pq的L2收缩与3m多项式积分精确性给B误差6eta+6eta²+2eta³；tilted pair系数F(4eta+2eta²)。refined selected尾<1.44e−35仅exact arithmetic，roundoff/角度quadrature未区间包围。odd H可用16/(1−q)代替F；科学诊断不当渐近证明。
+- 下一首任务：读 memory-joint-regression/proof、neutral-marked-series、sector-neutral-transfer及sector-bilocal的N_j和实际filter。先将N2等高neutral residual在共同h,U,J代数中的表达与selected边界源对齐，保留charged-neutral交叉及odd源，再对完整bilocal积分做制备响应。不要只重复本轮U低阶检查；不要把辅助Markov链当物理新disorder。之后空间/质量生成元和finiteG，任意selected interlacing仍独立开放。
+
+## 上一阶段：2026-11-08 带权 Mehler 紧时间极限
 
 先读 manuscript/susskind-weighted-mehler-limit/main.tex、notes/susskind-weighted-mehler-limit.md、literature/susskind-weighted-mehler-limit-sources.md 与本地 journal/2026-11-08-susskind-weighted-mehler-limit.md。七页 PDF 双遍编译、90dpi逐页目检完成。此次用户要求集中 Git 与 issue 回复，包含上一阶段源响应；发布入口 notes/research-release-2026-11-08-weighted-mehler.md，回执位于 tmp/publication-2026-11-08-weighted-mehler。长期 goal active；本阶段是 progress。
 
