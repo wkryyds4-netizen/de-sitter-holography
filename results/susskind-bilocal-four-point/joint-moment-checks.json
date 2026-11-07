@@ -1,0 +1,2452 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "created_utc": "2026-11-06T20:45:13.829657+00:00",
+  "parameters": {
+    "C": 1,
+    "counts_J_W_H": [
+      [
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        4,
+        0
+      ],
+      [
+        0,
+        2,
+        2
+      ],
+      [
+        0,
+        4,
+        2
+      ],
+      [
+        0,
+        6,
+        0
+      ],
+      [
+        2,
+        2,
+        0
+      ],
+      [
+        2,
+        2,
+        2
+      ],
+      [
+        1,
+        2,
+        0
+      ],
+      [
+        1,
+        2,
+        2
+      ],
+      [
+        3,
+        2,
+        0
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        2,
+        1,
+        1
+      ],
+      [
+        0,
+        3,
+        1
+      ],
+      [
+        1,
+        1,
+        3
+      ],
+      [
+        1,
+        3,
+        1
+      ],
+      [
+        2,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        2
+      ],
+      [
+        4,
+        0,
+        0
+      ]
+    ],
+    "cyclic_representatives": true,
+    "formal_points": [
+      [
+        "1/3",
+        "1/4"
+      ],
+      [
+        "1/2",
+        "1/2"
+      ],
+      [
+        "3/4",
+        "1/8"
+      ]
+    ],
+    "source": "Exact local D/L ratios with source-dependent singleton denominators; all nilpotent orders retained",
+    "expected_rule": "Pair equal species only, lengths H=1,W=1,J=2, crossing q^(length product)",
+    "scope": "Formal rational lambda,q are independent. Physical use imposes q=exp(-4lambda)."
+  },
+  "parameter_sha256": "d97b64de07bb0462720c8a0b2612a3bf8df7a20944c8174e10748fc1318102b4",
+  "records": [
+    {
+      "word": "WW",
+      "cyclic_orbit_size": 1,
+      "actual_numerator": [
+        {
+          "lambda_degree": 1,
+          "q_degree": 0,
+          "coefficient": "1"
+        }
+      ],
+      "denominator_power": 0,
+      "expected_numerator": [
+        {
+          "lambda_degree": 1,
+          "q_degree": 0,
+          "coefficient": "1"
+        }
+      ],
+      "zero_moment": false,
+      "statistics": {
+        "accepted_diagrams": 1,
+        "negative_diagram_coefficients": 0,
+        "maximum_source_order": 2
+      },
+      "exact": true
+    },
+    {
+      "word": "WWWW",
+      "cyclic_orbit_size": 1,
+      "actual_numerator": [
+        {
+          "lambda_degree": 2,
+          "q_degree": 0,
+          "coefficient": "2"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 1,
+          "coefficient": "1"
+        }
+      ],
+      "denominator_power": 0,
+      "expected_numerator": [
+        {
+          "lambda_degree": 2,
+          "q_degree": 0,
+          "coefficient": "2"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 1,
+          "coefficient": "1"
+        }
+      ],
+      "zero_moment": false,
+      "statistics": {
+        "accepted_diagrams": 3,
+        "negative_diagram_coefficients": 0,
+        "maximum_source_order": 2
+      },
+      "exact": true
+    },
+    {
+      "word": "HHWW",
+      "cyclic_orbit_size": 4,
+      "actual_numerator": [
+        {
+          "lambda_degree": 1,
+          "q_degree": 0,
+          "coefficient": "1"
+        }
+      ],
+      "denominator_power": 0,
+      "expected_numerator": [
+        {
+          "lambda_degree": 1,
+          "q_degree": 0,
+          "coefficient": "1"
+        }
+      ],
+      "zero_moment": false,
+      "statistics": {
+        "accepted_diagrams": 3,
+        "negative_diagram_coefficients": 0,
+        "maximum_source_order": 2
+      },
+      "exact": true
+    },
+    {
+      "word": "HWHW",
+      "cyclic_orbit_size": 2,
+      "actual_numerator": [
+        {
+          "lambda_degree": 1,
+          "q_degree": 1,
+          "coefficient": "1"
+        }
+      ],
+      "denominator_power": 0,
+      "expected_numerator": [
+        {
+          "lambda_degree": 1,
+          "q_degree": 1,
+          "coefficient": "1"
+        }
+      ],
+      "zero_moment": false,
+      "statistics": {
+        "accepted_diagrams": 3,
+        "negative_diagram_coefficients": 0,
+        "maximum_source_order": 2
+      },
+      "exact": true
+    },
+    {
+      "word": "HHWWWW",
+      "cyclic_orbit_size": 6,
+      "actual_numerator": [
+        {
+          "lambda_degree": 2,
+          "q_degree": 0,
+          "coefficient": "2"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 1,
+          "coefficient": "1"
+        }
+      ],
+      "denominator_power": 0,
+      "expected_numerator": [
+        {
+          "lambda_degree": 2,
+          "q_degree": 0,
+          "coefficient": "2"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 1,
+          "coefficient": "1"
+        }
+      ],
+      "zero_moment": false,
+      "statistics": {
+        "accepted_diagrams": 15,
+        "negative_diagram_coefficients": 0,
+        "maximum_source_order": 2
+      },
+      "exact": true
+    },
+    {
+      "word": "HWHWWW",
+      "cyclic_orbit_size": 6,
+      "actual_numerator": [
+        {
+          "lambda_degree": 2,
+          "q_degree": 1,
+          "coefficient": "2"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 2,
+          "coefficient": "1"
+        }
+      ],
+      "denominator_power": 0,
+      "expected_numerator": [
+        {
+          "lambda_degree": 2,
+          "q_degree": 1,
+          "coefficient": "2"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 2,
+          "coefficient": "1"
+        }
+      ],
+      "zero_moment": false,
+      "statistics": {
+        "accepted_diagrams": 15,
+        "negative_diagram_coefficients": 0,
+        "maximum_source_order": 2
+      },
+      "exact": true
+    },
+    {
+      "word": "HWWHWW",
+      "cyclic_orbit_size": 3,
+      "actual_numerator": [
+        {
+          "lambda_degree": 2,
+          "q_degree": 0,
+          "coefficient": "1"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 2,
+          "coefficient": "1"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 3,
+          "coefficient": "1"
+        }
+      ],
+      "denominator_power": 0,
+      "expected_numerator": [
+        {
+          "lambda_degree": 2,
+          "q_degree": 0,
+          "coefficient": "1"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 2,
+          "coefficient": "1"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 3,
+          "coefficient": "1"
+        }
+      ],
+      "zero_moment": false,
+      "statistics": {
+        "accepted_diagrams": 15,
+        "negative_diagram_coefficients": 0,
+        "maximum_source_order": 2
+      },
+      "exact": true
+    },
+    {
+      "word": "WWWWWW",
+      "cyclic_orbit_size": 1,
+      "actual_numerator": [
+        {
+          "lambda_degree": 3,
+          "q_degree": 0,
+          "coefficient": "5"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 1,
+          "coefficient": "6"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 2,
+          "coefficient": "3"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 3,
+          "coefficient": "1"
+        }
+      ],
+      "denominator_power": 0,
+      "expected_numerator": [
+        {
+          "lambda_degree": 3,
+          "q_degree": 0,
+          "coefficient": "5"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 1,
+          "coefficient": "6"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 2,
+          "coefficient": "3"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 3,
+          "coefficient": "1"
+        }
+      ],
+      "zero_moment": false,
+      "statistics": {
+        "accepted_diagrams": 15,
+        "negative_diagram_coefficients": 0,
+        "maximum_source_order": 2
+      },
+      "exact": true
+    },
+    {
+      "word": "JJWW",
+      "cyclic_orbit_size": 4,
+      "actual_numerator": [
+        {
+          "lambda_degree": 2,
+          "q_degree": 0,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 1,
+          "coefficient": "8"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 2,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 1,
+          "coefficient": "16"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 2,
+          "coefficient": "16"
+        }
+      ],
+      "denominator_power": 2,
+      "expected_numerator": [
+        {
+          "lambda_degree": 2,
+          "q_degree": 0,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 1,
+          "coefficient": "8"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 2,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 1,
+          "coefficient": "16"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 2,
+          "coefficient": "16"
+        }
+      ],
+      "zero_moment": false,
+      "statistics": {
+        "accepted_diagrams": 10,
+        "negative_diagram_coefficients": 0,
+        "maximum_source_order": 2
+      },
+      "exact": true
+    },
+    {
+      "word": "JWJW",
+      "cyclic_orbit_size": 2,
+      "actual_numerator": [
+        {
+          "lambda_degree": 2,
+          "q_degree": 2,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 3,
+          "coefficient": "8"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 4,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 3,
+          "coefficient": "16"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 4,
+          "coefficient": "16"
+        }
+      ],
+      "denominator_power": 2,
+      "expected_numerator": [
+        {
+          "lambda_degree": 2,
+          "q_degree": 2,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 3,
+          "coefficient": "8"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 4,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 3,
+          "coefficient": "16"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 4,
+          "coefficient": "16"
+        }
+      ],
+      "zero_moment": false,
+      "statistics": {
+        "accepted_diagrams": 10,
+        "negative_diagram_coefficients": 0,
+        "maximum_source_order": 2
+      },
+      "exact": true
+    },
+    {
+      "word": "HHJJWW",
+      "cyclic_orbit_size": 6,
+      "actual_numerator": [
+        {
+          "lambda_degree": 2,
+          "q_degree": 0,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 1,
+          "coefficient": "8"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 2,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 1,
+          "coefficient": "16"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 2,
+          "coefficient": "16"
+        }
+      ],
+      "denominator_power": 2,
+      "expected_numerator": [
+        {
+          "lambda_degree": 2,
+          "q_degree": 0,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 1,
+          "coefficient": "8"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 2,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 1,
+          "coefficient": "16"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 2,
+          "coefficient": "16"
+        }
+      ],
+      "zero_moment": false,
+      "statistics": {
+        "accepted_diagrams": 78,
+        "negative_diagram_coefficients": 4,
+        "maximum_source_order": 2
+      },
+      "exact": true
+    },
+    {
+      "word": "HHJWJW",
+      "cyclic_orbit_size": 6,
+      "actual_numerator": [
+        {
+          "lambda_degree": 2,
+          "q_degree": 2,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 3,
+          "coefficient": "8"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 4,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 3,
+          "coefficient": "16"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 4,
+          "coefficient": "16"
+        }
+      ],
+      "denominator_power": 2,
+      "expected_numerator": [
+        {
+          "lambda_degree": 2,
+          "q_degree": 2,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 3,
+          "coefficient": "8"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 4,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 3,
+          "coefficient": "16"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 4,
+          "coefficient": "16"
+        }
+      ],
+      "zero_moment": false,
+      "statistics": {
+        "accepted_diagrams": 78,
+        "negative_diagram_coefficients": 4,
+        "maximum_source_order": 2
+      },
+      "exact": true
+    },
+    {
+      "word": "HHJWWJ",
+      "cyclic_orbit_size": 6,
+      "actual_numerator": [
+        {
+          "lambda_degree": 2,
+          "q_degree": 0,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 1,
+          "coefficient": "8"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 2,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 1,
+          "coefficient": "16"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 2,
+          "coefficient": "16"
+        }
+      ],
+      "denominator_power": 2,
+      "expected_numerator": [
+        {
+          "lambda_degree": 2,
+          "q_degree": 0,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 1,
+          "coefficient": "8"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 2,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 1,
+          "coefficient": "16"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 2,
+          "coefficient": "16"
+        }
+      ],
+      "zero_moment": false,
+      "statistics": {
+        "accepted_diagrams": 78,
+        "negative_diagram_coefficients": 4,
+        "maximum_source_order": 2
+      },
+      "exact": true
+    },
+    {
+      "word": "HHWJJW",
+      "cyclic_orbit_size": 6,
+      "actual_numerator": [
+        {
+          "lambda_degree": 2,
+          "q_degree": 0,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 1,
+          "coefficient": "8"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 2,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 1,
+          "coefficient": "16"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 2,
+          "coefficient": "16"
+        }
+      ],
+      "denominator_power": 2,
+      "expected_numerator": [
+        {
+          "lambda_degree": 2,
+          "q_degree": 0,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 1,
+          "coefficient": "8"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 2,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 1,
+          "coefficient": "16"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 2,
+          "coefficient": "16"
+        }
+      ],
+      "zero_moment": false,
+      "statistics": {
+        "accepted_diagrams": 78,
+        "negative_diagram_coefficients": 4,
+        "maximum_source_order": 2
+      },
+      "exact": true
+    },
+    {
+      "word": "HHWJWJ",
+      "cyclic_orbit_size": 6,
+      "actual_numerator": [
+        {
+          "lambda_degree": 2,
+          "q_degree": 2,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 3,
+          "coefficient": "8"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 4,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 3,
+          "coefficient": "16"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 4,
+          "coefficient": "16"
+        }
+      ],
+      "denominator_power": 2,
+      "expected_numerator": [
+        {
+          "lambda_degree": 2,
+          "q_degree": 2,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 3,
+          "coefficient": "8"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 4,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 3,
+          "coefficient": "16"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 4,
+          "coefficient": "16"
+        }
+      ],
+      "zero_moment": false,
+      "statistics": {
+        "accepted_diagrams": 78,
+        "negative_diagram_coefficients": 4,
+        "maximum_source_order": 2
+      },
+      "exact": true
+    },
+    {
+      "word": "HHWWJJ",
+      "cyclic_orbit_size": 6,
+      "actual_numerator": [
+        {
+          "lambda_degree": 2,
+          "q_degree": 0,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 1,
+          "coefficient": "8"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 2,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 1,
+          "coefficient": "16"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 2,
+          "coefficient": "16"
+        }
+      ],
+      "denominator_power": 2,
+      "expected_numerator": [
+        {
+          "lambda_degree": 2,
+          "q_degree": 0,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 1,
+          "coefficient": "8"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 2,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 1,
+          "coefficient": "16"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 2,
+          "coefficient": "16"
+        }
+      ],
+      "zero_moment": false,
+      "statistics": {
+        "accepted_diagrams": 78,
+        "negative_diagram_coefficients": 4,
+        "maximum_source_order": 2
+      },
+      "exact": true
+    },
+    {
+      "word": "HJHJWW",
+      "cyclic_orbit_size": 6,
+      "actual_numerator": [
+        {
+          "lambda_degree": 2,
+          "q_degree": 2,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 3,
+          "coefficient": "8"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 4,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 3,
+          "coefficient": "16"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 4,
+          "coefficient": "16"
+        }
+      ],
+      "denominator_power": 2,
+      "expected_numerator": [
+        {
+          "lambda_degree": 2,
+          "q_degree": 2,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 3,
+          "coefficient": "8"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 4,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 3,
+          "coefficient": "16"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 4,
+          "coefficient": "16"
+        }
+      ],
+      "zero_moment": false,
+      "statistics": {
+        "accepted_diagrams": 78,
+        "negative_diagram_coefficients": 4,
+        "maximum_source_order": 2
+      },
+      "exact": true
+    },
+    {
+      "word": "HJHWJW",
+      "cyclic_orbit_size": 6,
+      "actual_numerator": [
+        {
+          "lambda_degree": 2,
+          "q_degree": 4,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 5,
+          "coefficient": "8"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 6,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 5,
+          "coefficient": "16"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 6,
+          "coefficient": "16"
+        }
+      ],
+      "denominator_power": 2,
+      "expected_numerator": [
+        {
+          "lambda_degree": 2,
+          "q_degree": 4,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 5,
+          "coefficient": "8"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 6,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 5,
+          "coefficient": "16"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 6,
+          "coefficient": "16"
+        }
+      ],
+      "zero_moment": false,
+      "statistics": {
+        "accepted_diagrams": 78,
+        "negative_diagram_coefficients": 4,
+        "maximum_source_order": 2
+      },
+      "exact": true
+    },
+    {
+      "word": "HJHWWJ",
+      "cyclic_orbit_size": 6,
+      "actual_numerator": [
+        {
+          "lambda_degree": 2,
+          "q_degree": 2,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 3,
+          "coefficient": "8"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 4,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 3,
+          "coefficient": "16"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 4,
+          "coefficient": "16"
+        }
+      ],
+      "denominator_power": 2,
+      "expected_numerator": [
+        {
+          "lambda_degree": 2,
+          "q_degree": 2,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 3,
+          "coefficient": "8"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 4,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 3,
+          "coefficient": "16"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 4,
+          "coefficient": "16"
+        }
+      ],
+      "zero_moment": false,
+      "statistics": {
+        "accepted_diagrams": 78,
+        "negative_diagram_coefficients": 4,
+        "maximum_source_order": 2
+      },
+      "exact": true
+    },
+    {
+      "word": "HJJHWW",
+      "cyclic_orbit_size": 6,
+      "actual_numerator": [
+        {
+          "lambda_degree": 2,
+          "q_degree": 0,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 1,
+          "coefficient": "8"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 2,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 1,
+          "coefficient": "16"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 2,
+          "coefficient": "16"
+        }
+      ],
+      "denominator_power": 2,
+      "expected_numerator": [
+        {
+          "lambda_degree": 2,
+          "q_degree": 0,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 1,
+          "coefficient": "8"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 2,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 1,
+          "coefficient": "16"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 2,
+          "coefficient": "16"
+        }
+      ],
+      "zero_moment": false,
+      "statistics": {
+        "accepted_diagrams": 78,
+        "negative_diagram_coefficients": 4,
+        "maximum_source_order": 2
+      },
+      "exact": true
+    },
+    {
+      "word": "HJJWHW",
+      "cyclic_orbit_size": 6,
+      "actual_numerator": [
+        {
+          "lambda_degree": 2,
+          "q_degree": 1,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 2,
+          "coefficient": "8"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 3,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 2,
+          "coefficient": "16"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 3,
+          "coefficient": "16"
+        }
+      ],
+      "denominator_power": 2,
+      "expected_numerator": [
+        {
+          "lambda_degree": 2,
+          "q_degree": 1,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 2,
+          "coefficient": "8"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 3,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 2,
+          "coefficient": "16"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 3,
+          "coefficient": "16"
+        }
+      ],
+      "zero_moment": false,
+      "statistics": {
+        "accepted_diagrams": 78,
+        "negative_diagram_coefficients": 4,
+        "maximum_source_order": 2
+      },
+      "exact": true
+    },
+    {
+      "word": "HJWHJW",
+      "cyclic_orbit_size": 3,
+      "actual_numerator": [
+        {
+          "lambda_degree": 2,
+          "q_degree": 5,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 6,
+          "coefficient": "8"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 7,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 6,
+          "coefficient": "16"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 7,
+          "coefficient": "16"
+        }
+      ],
+      "denominator_power": 2,
+      "expected_numerator": [
+        {
+          "lambda_degree": 2,
+          "q_degree": 5,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 6,
+          "coefficient": "8"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 7,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 6,
+          "coefficient": "16"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 7,
+          "coefficient": "16"
+        }
+      ],
+      "zero_moment": false,
+      "statistics": {
+        "accepted_diagrams": 78,
+        "negative_diagram_coefficients": 4,
+        "maximum_source_order": 2
+      },
+      "exact": true
+    },
+    {
+      "word": "HJWHWJ",
+      "cyclic_orbit_size": 6,
+      "actual_numerator": [
+        {
+          "lambda_degree": 2,
+          "q_degree": 3,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 4,
+          "coefficient": "8"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 5,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 4,
+          "coefficient": "16"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 5,
+          "coefficient": "16"
+        }
+      ],
+      "denominator_power": 2,
+      "expected_numerator": [
+        {
+          "lambda_degree": 2,
+          "q_degree": 3,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 4,
+          "coefficient": "8"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 5,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 4,
+          "coefficient": "16"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 5,
+          "coefficient": "16"
+        }
+      ],
+      "zero_moment": false,
+      "statistics": {
+        "accepted_diagrams": 78,
+        "negative_diagram_coefficients": 4,
+        "maximum_source_order": 2
+      },
+      "exact": true
+    },
+    {
+      "word": "HJWJHW",
+      "cyclic_orbit_size": 6,
+      "actual_numerator": [
+        {
+          "lambda_degree": 2,
+          "q_degree": 3,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 4,
+          "coefficient": "8"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 5,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 4,
+          "coefficient": "16"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 5,
+          "coefficient": "16"
+        }
+      ],
+      "denominator_power": 2,
+      "expected_numerator": [
+        {
+          "lambda_degree": 2,
+          "q_degree": 3,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 4,
+          "coefficient": "8"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 5,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 4,
+          "coefficient": "16"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 5,
+          "coefficient": "16"
+        }
+      ],
+      "zero_moment": false,
+      "statistics": {
+        "accepted_diagrams": 78,
+        "negative_diagram_coefficients": 4,
+        "maximum_source_order": 2
+      },
+      "exact": true
+    },
+    {
+      "word": "HWHWJJ",
+      "cyclic_orbit_size": 6,
+      "actual_numerator": [
+        {
+          "lambda_degree": 2,
+          "q_degree": 1,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 2,
+          "coefficient": "8"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 3,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 2,
+          "coefficient": "16"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 3,
+          "coefficient": "16"
+        }
+      ],
+      "denominator_power": 2,
+      "expected_numerator": [
+        {
+          "lambda_degree": 2,
+          "q_degree": 1,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 2,
+          "coefficient": "8"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 3,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 2,
+          "coefficient": "16"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 3,
+          "coefficient": "16"
+        }
+      ],
+      "zero_moment": false,
+      "statistics": {
+        "accepted_diagrams": 78,
+        "negative_diagram_coefficients": 4,
+        "maximum_source_order": 2
+      },
+      "exact": true
+    },
+    {
+      "word": "HWJHWJ",
+      "cyclic_orbit_size": 3,
+      "actual_numerator": [
+        {
+          "lambda_degree": 2,
+          "q_degree": 5,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 6,
+          "coefficient": "8"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 7,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 6,
+          "coefficient": "16"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 7,
+          "coefficient": "16"
+        }
+      ],
+      "denominator_power": 2,
+      "expected_numerator": [
+        {
+          "lambda_degree": 2,
+          "q_degree": 5,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 6,
+          "coefficient": "8"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 7,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 6,
+          "coefficient": "16"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 7,
+          "coefficient": "16"
+        }
+      ],
+      "zero_moment": false,
+      "statistics": {
+        "accepted_diagrams": 78,
+        "negative_diagram_coefficients": 4,
+        "maximum_source_order": 2
+      },
+      "exact": true
+    },
+    {
+      "word": "JWW",
+      "cyclic_orbit_size": 3,
+      "actual_numerator": [],
+      "denominator_power": 1,
+      "expected_numerator": [],
+      "zero_moment": true,
+      "statistics": {
+        "accepted_diagrams": 2,
+        "negative_diagram_coefficients": 0,
+        "maximum_source_order": 1
+      },
+      "exact": true
+    },
+    {
+      "word": "HHJWW",
+      "cyclic_orbit_size": 5,
+      "actual_numerator": [],
+      "denominator_power": 1,
+      "expected_numerator": [],
+      "zero_moment": true,
+      "statistics": {
+        "accepted_diagrams": 12,
+        "negative_diagram_coefficients": 1,
+        "maximum_source_order": 2
+      },
+      "exact": true
+    },
+    {
+      "word": "HHWJW",
+      "cyclic_orbit_size": 5,
+      "actual_numerator": [],
+      "denominator_power": 1,
+      "expected_numerator": [],
+      "zero_moment": true,
+      "statistics": {
+        "accepted_diagrams": 12,
+        "negative_diagram_coefficients": 1,
+        "maximum_source_order": 2
+      },
+      "exact": true
+    },
+    {
+      "word": "HHWWJ",
+      "cyclic_orbit_size": 5,
+      "actual_numerator": [],
+      "denominator_power": 1,
+      "expected_numerator": [],
+      "zero_moment": true,
+      "statistics": {
+        "accepted_diagrams": 12,
+        "negative_diagram_coefficients": 1,
+        "maximum_source_order": 2
+      },
+      "exact": true
+    },
+    {
+      "word": "HJHWW",
+      "cyclic_orbit_size": 5,
+      "actual_numerator": [],
+      "denominator_power": 1,
+      "expected_numerator": [],
+      "zero_moment": true,
+      "statistics": {
+        "accepted_diagrams": 12,
+        "negative_diagram_coefficients": 1,
+        "maximum_source_order": 2
+      },
+      "exact": true
+    },
+    {
+      "word": "HJWHW",
+      "cyclic_orbit_size": 5,
+      "actual_numerator": [],
+      "denominator_power": 1,
+      "expected_numerator": [],
+      "zero_moment": true,
+      "statistics": {
+        "accepted_diagrams": 12,
+        "negative_diagram_coefficients": 1,
+        "maximum_source_order": 2
+      },
+      "exact": true
+    },
+    {
+      "word": "HWHWJ",
+      "cyclic_orbit_size": 5,
+      "actual_numerator": [],
+      "denominator_power": 1,
+      "expected_numerator": [],
+      "zero_moment": true,
+      "statistics": {
+        "accepted_diagrams": 12,
+        "negative_diagram_coefficients": 1,
+        "maximum_source_order": 2
+      },
+      "exact": true
+    },
+    {
+      "word": "JJJWW",
+      "cyclic_orbit_size": 5,
+      "actual_numerator": [],
+      "denominator_power": 3,
+      "expected_numerator": [],
+      "zero_moment": true,
+      "statistics": {
+        "accepted_diagrams": 68,
+        "negative_diagram_coefficients": 4,
+        "maximum_source_order": 2
+      },
+      "exact": true
+    },
+    {
+      "word": "JJWJW",
+      "cyclic_orbit_size": 5,
+      "actual_numerator": [],
+      "denominator_power": 3,
+      "expected_numerator": [],
+      "zero_moment": true,
+      "statistics": {
+        "accepted_diagrams": 68,
+        "negative_diagram_coefficients": 4,
+        "maximum_source_order": 2
+      },
+      "exact": true
+    },
+    {
+      "word": "HJW",
+      "cyclic_orbit_size": 3,
+      "actual_numerator": [],
+      "denominator_power": 1,
+      "expected_numerator": [],
+      "zero_moment": true,
+      "statistics": {
+        "accepted_diagrams": 2,
+        "negative_diagram_coefficients": 0,
+        "maximum_source_order": 1
+      },
+      "exact": true
+    },
+    {
+      "word": "HWJ",
+      "cyclic_orbit_size": 3,
+      "actual_numerator": [],
+      "denominator_power": 1,
+      "expected_numerator": [],
+      "zero_moment": true,
+      "statistics": {
+        "accepted_diagrams": 2,
+        "negative_diagram_coefficients": 0,
+        "maximum_source_order": 1
+      },
+      "exact": true
+    },
+    {
+      "word": "HJJW",
+      "cyclic_orbit_size": 4,
+      "actual_numerator": [],
+      "denominator_power": 2,
+      "expected_numerator": [],
+      "zero_moment": true,
+      "statistics": {
+        "accepted_diagrams": 10,
+        "negative_diagram_coefficients": 0,
+        "maximum_source_order": 2
+      },
+      "exact": true
+    },
+    {
+      "word": "HJWJ",
+      "cyclic_orbit_size": 4,
+      "actual_numerator": [],
+      "denominator_power": 2,
+      "expected_numerator": [],
+      "zero_moment": true,
+      "statistics": {
+        "accepted_diagrams": 10,
+        "negative_diagram_coefficients": 0,
+        "maximum_source_order": 2
+      },
+      "exact": true
+    },
+    {
+      "word": "HWJJ",
+      "cyclic_orbit_size": 4,
+      "actual_numerator": [],
+      "denominator_power": 2,
+      "expected_numerator": [],
+      "zero_moment": true,
+      "statistics": {
+        "accepted_diagrams": 10,
+        "negative_diagram_coefficients": 0,
+        "maximum_source_order": 2
+      },
+      "exact": true
+    },
+    {
+      "word": "HWWW",
+      "cyclic_orbit_size": 4,
+      "actual_numerator": [],
+      "denominator_power": 0,
+      "expected_numerator": [],
+      "zero_moment": true,
+      "statistics": {
+        "accepted_diagrams": 3,
+        "negative_diagram_coefficients": 0,
+        "maximum_source_order": 2
+      },
+      "exact": true
+    },
+    {
+      "word": "HHHJW",
+      "cyclic_orbit_size": 5,
+      "actual_numerator": [],
+      "denominator_power": 1,
+      "expected_numerator": [],
+      "zero_moment": true,
+      "statistics": {
+        "accepted_diagrams": 12,
+        "negative_diagram_coefficients": 0,
+        "maximum_source_order": 1
+      },
+      "exact": true
+    },
+    {
+      "word": "HHHWJ",
+      "cyclic_orbit_size": 5,
+      "actual_numerator": [],
+      "denominator_power": 1,
+      "expected_numerator": [],
+      "zero_moment": true,
+      "statistics": {
+        "accepted_diagrams": 12,
+        "negative_diagram_coefficients": 0,
+        "maximum_source_order": 1
+      },
+      "exact": true
+    },
+    {
+      "word": "HHJHW",
+      "cyclic_orbit_size": 5,
+      "actual_numerator": [],
+      "denominator_power": 1,
+      "expected_numerator": [],
+      "zero_moment": true,
+      "statistics": {
+        "accepted_diagrams": 12,
+        "negative_diagram_coefficients": 0,
+        "maximum_source_order": 1
+      },
+      "exact": true
+    },
+    {
+      "word": "HHWHJ",
+      "cyclic_orbit_size": 5,
+      "actual_numerator": [],
+      "denominator_power": 1,
+      "expected_numerator": [],
+      "zero_moment": true,
+      "statistics": {
+        "accepted_diagrams": 12,
+        "negative_diagram_coefficients": 0,
+        "maximum_source_order": 1
+      },
+      "exact": true
+    },
+    {
+      "word": "HJWWW",
+      "cyclic_orbit_size": 5,
+      "actual_numerator": [],
+      "denominator_power": 1,
+      "expected_numerator": [],
+      "zero_moment": true,
+      "statistics": {
+        "accepted_diagrams": 12,
+        "negative_diagram_coefficients": 0,
+        "maximum_source_order": 2
+      },
+      "exact": true
+    },
+    {
+      "word": "HWJWW",
+      "cyclic_orbit_size": 5,
+      "actual_numerator": [],
+      "denominator_power": 1,
+      "expected_numerator": [],
+      "zero_moment": true,
+      "statistics": {
+        "accepted_diagrams": 12,
+        "negative_diagram_coefficients": 0,
+        "maximum_source_order": 2
+      },
+      "exact": true
+    },
+    {
+      "word": "HWWJW",
+      "cyclic_orbit_size": 5,
+      "actual_numerator": [],
+      "denominator_power": 1,
+      "expected_numerator": [],
+      "zero_moment": true,
+      "statistics": {
+        "accepted_diagrams": 12,
+        "negative_diagram_coefficients": 0,
+        "maximum_source_order": 2
+      },
+      "exact": true
+    },
+    {
+      "word": "HWWWJ",
+      "cyclic_orbit_size": 5,
+      "actual_numerator": [],
+      "denominator_power": 1,
+      "expected_numerator": [],
+      "zero_moment": true,
+      "statistics": {
+        "accepted_diagrams": 12,
+        "negative_diagram_coefficients": 0,
+        "maximum_source_order": 2
+      },
+      "exact": true
+    },
+    {
+      "word": "JJ",
+      "cyclic_orbit_size": 1,
+      "actual_numerator": [
+        {
+          "lambda_degree": 1,
+          "q_degree": 0,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 1,
+          "q_degree": 1,
+          "coefficient": "8"
+        },
+        {
+          "lambda_degree": 1,
+          "q_degree": 2,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 1,
+          "coefficient": "16"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 2,
+          "coefficient": "16"
+        }
+      ],
+      "denominator_power": 2,
+      "expected_numerator": [
+        {
+          "lambda_degree": 1,
+          "q_degree": 0,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 1,
+          "q_degree": 1,
+          "coefficient": "8"
+        },
+        {
+          "lambda_degree": 1,
+          "q_degree": 2,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 1,
+          "coefficient": "16"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 2,
+          "coefficient": "16"
+        }
+      ],
+      "zero_moment": false,
+      "statistics": {
+        "accepted_diagrams": 2,
+        "negative_diagram_coefficients": 0,
+        "maximum_source_order": 2
+      },
+      "exact": true
+    },
+    {
+      "word": "HHJJ",
+      "cyclic_orbit_size": 4,
+      "actual_numerator": [
+        {
+          "lambda_degree": 1,
+          "q_degree": 0,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 1,
+          "q_degree": 1,
+          "coefficient": "8"
+        },
+        {
+          "lambda_degree": 1,
+          "q_degree": 2,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 1,
+          "coefficient": "16"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 2,
+          "coefficient": "16"
+        }
+      ],
+      "denominator_power": 2,
+      "expected_numerator": [
+        {
+          "lambda_degree": 1,
+          "q_degree": 0,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 1,
+          "q_degree": 1,
+          "coefficient": "8"
+        },
+        {
+          "lambda_degree": 1,
+          "q_degree": 2,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 1,
+          "coefficient": "16"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 2,
+          "coefficient": "16"
+        }
+      ],
+      "zero_moment": false,
+      "statistics": {
+        "accepted_diagrams": 10,
+        "negative_diagram_coefficients": 4,
+        "maximum_source_order": 2
+      },
+      "exact": true
+    },
+    {
+      "word": "HJHJ",
+      "cyclic_orbit_size": 2,
+      "actual_numerator": [
+        {
+          "lambda_degree": 1,
+          "q_degree": 2,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 1,
+          "q_degree": 3,
+          "coefficient": "8"
+        },
+        {
+          "lambda_degree": 1,
+          "q_degree": 4,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 3,
+          "coefficient": "16"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 4,
+          "coefficient": "16"
+        }
+      ],
+      "denominator_power": 2,
+      "expected_numerator": [
+        {
+          "lambda_degree": 1,
+          "q_degree": 2,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 1,
+          "q_degree": 3,
+          "coefficient": "8"
+        },
+        {
+          "lambda_degree": 1,
+          "q_degree": 4,
+          "coefficient": "4"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 3,
+          "coefficient": "16"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 4,
+          "coefficient": "16"
+        }
+      ],
+      "zero_moment": false,
+      "statistics": {
+        "accepted_diagrams": 10,
+        "negative_diagram_coefficients": 4,
+        "maximum_source_order": 2
+      },
+      "exact": true
+    },
+    {
+      "word": "JJJJ",
+      "cyclic_orbit_size": 1,
+      "actual_numerator": [
+        {
+          "lambda_degree": 2,
+          "q_degree": 0,
+          "coefficient": "32"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 1,
+          "coefficient": "128"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 2,
+          "coefficient": "192"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 3,
+          "coefficient": "128"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 4,
+          "coefficient": "48"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 5,
+          "coefficient": "64"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 6,
+          "coefficient": "96"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 7,
+          "coefficient": "64"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 8,
+          "coefficient": "16"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 1,
+          "coefficient": "256"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 2,
+          "coefficient": "768"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 3,
+          "coefficient": "768"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 4,
+          "coefficient": "256"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 5,
+          "coefficient": "128"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 6,
+          "coefficient": "384"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 7,
+          "coefficient": "384"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 8,
+          "coefficient": "128"
+        },
+        {
+          "lambda_degree": 4,
+          "q_degree": 2,
+          "coefficient": "512"
+        },
+        {
+          "lambda_degree": 4,
+          "q_degree": 3,
+          "coefficient": "1024"
+        },
+        {
+          "lambda_degree": 4,
+          "q_degree": 4,
+          "coefficient": "512"
+        },
+        {
+          "lambda_degree": 4,
+          "q_degree": 6,
+          "coefficient": "256"
+        },
+        {
+          "lambda_degree": 4,
+          "q_degree": 7,
+          "coefficient": "512"
+        },
+        {
+          "lambda_degree": 4,
+          "q_degree": 8,
+          "coefficient": "256"
+        }
+      ],
+      "denominator_power": 4,
+      "expected_numerator": [
+        {
+          "lambda_degree": 2,
+          "q_degree": 0,
+          "coefficient": "32"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 1,
+          "coefficient": "128"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 2,
+          "coefficient": "192"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 3,
+          "coefficient": "128"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 4,
+          "coefficient": "48"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 5,
+          "coefficient": "64"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 6,
+          "coefficient": "96"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 7,
+          "coefficient": "64"
+        },
+        {
+          "lambda_degree": 2,
+          "q_degree": 8,
+          "coefficient": "16"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 1,
+          "coefficient": "256"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 2,
+          "coefficient": "768"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 3,
+          "coefficient": "768"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 4,
+          "coefficient": "256"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 5,
+          "coefficient": "128"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 6,
+          "coefficient": "384"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 7,
+          "coefficient": "384"
+        },
+        {
+          "lambda_degree": 3,
+          "q_degree": 8,
+          "coefficient": "128"
+        },
+        {
+          "lambda_degree": 4,
+          "q_degree": 2,
+          "coefficient": "512"
+        },
+        {
+          "lambda_degree": 4,
+          "q_degree": 3,
+          "coefficient": "1024"
+        },
+        {
+          "lambda_degree": 4,
+          "q_degree": 4,
+          "coefficient": "512"
+        },
+        {
+          "lambda_degree": 4,
+          "q_degree": 6,
+          "coefficient": "256"
+        },
+        {
+          "lambda_degree": 4,
+          "q_degree": 7,
+          "coefficient": "512"
+        },
+        {
+          "lambda_degree": 4,
+          "q_degree": 8,
+          "coefficient": "256"
+        }
+      ],
+      "zero_moment": false,
+      "statistics": {
+        "accepted_diagrams": 60,
+        "negative_diagram_coefficients": 24,
+        "maximum_source_order": 2
+      },
+      "exact": true
+    }
+  ],
+  "diagnostics": [
+    {
+      "q": "1/3",
+      "lambda_value": "1/4",
+      "moments": {
+        "HH": "1",
+        "WW": "1/4",
+        "JJ": "5/4",
+        "JW": "0",
+        "WH": "0",
+        "JJWW": "5/16",
+        "JWJW": "5/144",
+        "WWWW": "7/48",
+        "JJJJ": "4075/1296",
+        "WHWH": "1/12",
+        "WWHH": "1/4"
+      },
+      "commutator_squared_JW": "5/9",
+      "product_Gram_determinant_JW": "125/1296",
+      "normalized_commutator_squared_JW": "16/9"
+    },
+    {
+      "q": "1/2",
+      "lambda_value": "1/2",
+      "moments": {
+        "HH": "1",
+        "WW": "1/2",
+        "JJ": "10/3",
+        "JW": "0",
+        "WH": "0",
+        "JJWW": "5/3",
+        "JWJW": "5/12",
+        "WWWW": "5/8",
+        "JJJJ": "275/12",
+        "WHWH": "1/4",
+        "WWHH": "1/2"
+      },
+      "commutator_squared_JW": "5/2",
+      "product_Gram_determinant_JW": "125/48",
+      "normalized_commutator_squared_JW": "3/2"
+    },
+    {
+      "q": "3/4",
+      "lambda_value": "1/8",
+      "moments": {
+        "HH": "1",
+        "WW": "1/8",
+        "JJ": "17/28",
+        "JW": "0",
+        "WH": "0",
+        "JJWW": "17/224",
+        "JWJW": "153/3584",
+        "WWWW": "11/256",
+        "JJJJ": "171377/200704",
+        "WHWH": "3/32",
+        "WWHH": "1/8"
+      },
+      "commutator_squared_JW": "17/256",
+      "product_Gram_determinant_JW": "7225/1835008",
+      "normalized_commutator_squared_JW": "7/8"
+    }
+  ],
+  "counts": {
+    "cyclic_representatives": 53,
+    "words_covered": 233,
+    "zero_representatives": 23,
+    "old_JH_interface_checks": 4,
+    "maximum_source_order_observed": 2,
+    "formal_Gram_diagnostics": 3,
+    "accepted_diagrams": 1763,
+    "negative_diagram_coefficients": 110
+  },
+  "input_sha256": {
+    "code/bilocal_multisource_chords.py": "fd1af9072cd1c7550f6a6ec24aa892ad67bb3f032821476c8baae9f063ef668f",
+    "code/check_bilocal_multisource_moments.py": "852241809befbd011a70352bc62d1658e35dac45b3a005d22f2a4707fb7235dc",
+    "code/memory_body_source_chords.py": "e0c34558f1e18684bf3a32c906f5edc13e8ab02dfe113b34eaa6936f78015b72",
+    "code/memory_size_marked_chords.py": "4b7e54c2218198ef0d8c29ed4aa6344cd3e5a24d466464c5006f49e0b6d7ec36",
+    "code/singlet_coefficient.py": "ef7d9b96f96a036ea0d9774950702a82a968b56758a778db0365e9df0c3b2e10",
+    "code/singlet_multimark.py": "5b1def3fcc893c807e416c909076c6bb8383f54975bd9ed09d5dde37f129db0d",
+    "results/susskind-singlet-multimark/local-evidence.json": "a80b511d980d5b5226f713404475f1c5310ae808a3c4acc2b2b4f1f5da1f7cde",
+    "results/susskind-memory-joint-regression/local-evidence.json": "1f4660f37829bba8aca6a16030a3f74f4ecc9a6e79891eb209f5eb34d99d4c03"
+  },
+  "environment": {
+    "python": "3.14.5",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "arithmetic": "Fraction and exact integer polynomials"
+  },
+  "elapsed_seconds": 21.024482500040904,
+  "scope": "Exact fixed-word model diagram identities, retaining all source orders. The arbitrary-word theorem and actual pinching transfer need the proofs; full finite-relative-time bilocal four-point convergence is not inferred."
+}

@@ -1,0 +1,77 @@
+{
+  "N": 5,
+  "p": 2,
+  "real_coordinates": 100,
+  "sector": [
+    {
+      "m": 0,
+      "dimension": 1,
+      "mean": "0",
+      "mu0": "0",
+      "ensemble_centered_gram": "0",
+      "mu2_cubic": "0",
+      "mu2_linear": "0",
+      "mu2": "0"
+    },
+    {
+      "m": 1,
+      "dimension": 5,
+      "mean": "0",
+      "mu0": "0",
+      "ensemble_centered_gram": "0",
+      "mu2_cubic": "0",
+      "mu2_linear": "0",
+      "mu2": "0"
+    },
+    {
+      "m": 2,
+      "dimension": 10,
+      "mean": "20",
+      "mu0": "804",
+      "ensemble_centered_gram": "404",
+      "mu2_cubic": "0",
+      "mu2_linear": "0",
+      "mu2": "0"
+    },
+    {
+      "m": 3,
+      "dimension": 10,
+      "mean": "48",
+      "mu0": "3060",
+      "ensemble_centered_gram": "756",
+      "mu2_cubic": "3960",
+      "mu2_linear": "0",
+      "mu2": "3960"
+    },
+    {
+      "m": 4,
+      "dimension": 5,
+      "mean": "72",
+      "mu0": "5976",
+      "ensemble_centered_gram": "792",
+      "mu2_cubic": "9360",
+      "mu2_linear": "0",
+      "mu2": "9360"
+    },
+    {
+      "m": 5,
+      "dimension": 1,
+      "mean": "80",
+      "mu0": "6960",
+      "ensemble_centered_gram": "560",
+      "mu2_cubic": "0",
+      "mu2_linear": "0",
+      "mu2": "0"
+    }
+  ],
+  "total": {
+    "mean": "35",
+    "mu0": "9435/4",
+    "ensemble_centered_gram": "2015/4",
+    "mu2_cubic": "2700",
+    "mu2_linear": "0",
+    "mu2": "2700"
+  },
+  "polynomial_relative_residual": 2.6040881440126733e-16,
+  "integer_contraction_max": 0.0
+}

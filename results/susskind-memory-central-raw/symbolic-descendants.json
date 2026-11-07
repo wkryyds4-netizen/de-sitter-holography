@@ -1,0 +1,142 @@
+{
+  "status": "passed",
+  "rows": [
+    {
+      "name": "E",
+      "B_leading": "2",
+      "B_finite_centered": "2*lam*(-q**2 + 2*x)",
+      "O_coefficient": "1",
+      "L_input_coefficient": "0",
+      "JhF_coefficient": "0",
+      "S_coefficient": "0",
+      "uniform_prefactors": [
+        [
+          "4*lam*x + 2/e",
+          "-2*alpha*lam + 2*lam",
+          "-2*beta*lam + 2*lam",
+          "2*alpha*lam + 2*beta*lam - 4*lam*rho + 2*lam"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "central_B_shift": "4*lam*x"
+    },
+    {
+      "name": "M",
+      "B_leading": "2",
+      "B_finite_centered": "2*lam*(-2*q + 2*x + 1)",
+      "O_coefficient": "q**2",
+      "L_input_coefficient": "0",
+      "JhF_coefficient": "0",
+      "S_coefficient": "0",
+      "uniform_prefactors": [
+        [
+          "4*lam*x + 2*lam + 2/e",
+          "-4*alpha*lam + 2*lam",
+          "-4*beta*lam + 2*lam",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1"
+        ]
+      ],
+      "central_B_shift": "4*lam*x"
+    },
+    {
+      "name": "S",
+      "B_leading": "2*q",
+      "B_finite_centered": "2*lam*(-q**2 + 2*q*x + q - 1)",
+      "O_coefficient": "q",
+      "L_input_coefficient": "4*lam*q",
+      "JhF_coefficient": "1",
+      "S_coefficient": "0",
+      "uniform_prefactors": [
+        [
+          "-2*lam",
+          "4*alpha*lam + 2*lam*x - 3*lam + 1/e",
+          "4*beta*lam + 2*lam*x - 3*lam + 1/e",
+          "-2*alpha*lam - 2*beta*lam + 2*lam"
+        ],
+        [
+          "0",
+          "1/2",
+          "1/2",
+          "0"
+        ]
+      ],
+      "central_B_shift": "4*lam*q*x"
+    },
+    {
+      "name": "C",
+      "B_leading": "2*q**2",
+      "B_finite_centered": "2*lam*(-8*lam*q**2 + 2*q**2*x + 3*q**2 - 2*q - 2)",
+      "O_coefficient": "1",
+      "L_input_coefficient": "8*lam*q**2",
+      "JhF_coefficient": "2*q",
+      "S_coefficient": "8*lam*q**2",
+      "uniform_prefactors": [
+        [
+          "-4*lam",
+          "-2*lam",
+          "-2*lam",
+          "8*lam*rho + 4*lam*x - 10*lam + 2/e"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "central_B_shift": "4*lam*q**2*x"
+    },
+    {
+      "name": "Z",
+      "B_leading": "0",
+      "B_finite_centered": "q**2 + 2*q + 3",
+      "O_coefficient": "0",
+      "L_input_coefficient": "0",
+      "JhF_coefficient": "0",
+      "S_coefficient": "0",
+      "uniform_prefactors": [
+        [
+          "3",
+          "1",
+          "1",
+          "1"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "central_B_shift": "0"
+    }
+  ],
+  "raw_Q4_B_shift": "4*lam*q**3*x*(q - 1)**2*(q + 1)*(q**2 + q + 1)/((q**2 - q + 1)*(q**4 + q**3 + q**2 + q + 1))",
+  "core_B_shift": "4*lam*x*(q - 1)**2",
+  "cubic_rank_coefficient_difference_limit": "8*lam*q*u",
+  "p_minus_1_covariance_ratio_limit": "u/lam",
+  "scope": "Exact rational prefactor expansion at general central charge. All leading dynamic coefficients equal half filling; finite corrections lie in B. Cubic centered rank slope is independent of x. Uniform tail arguments and strong replacements are given in the note, not inferred from these expansions alone.",
+  "elapsed_seconds": 105.35405087471008,
+  "environment": {
+    "python": "3.14.5",
+    "sympy": "1.14.0"
+  },
+  "input_sha256": {
+    "code/memory_central_descendants.py": "c12b708dcc49e3d5fe8bf00edccc9afe5b7eacfedcb78ad20528dbfb596a8393",
+    "code/memory_descendant_filters.py": "9f9ae0b186a4bfe585f42da2343efb376c3a74f80f99d6ddbaac1cf7e054b379",
+    "results/susskind-memory-descendants/symbolic-filters.json": "1561cc98c4710a6ec52700bd689e12d3319a1e3cf9304597908062f510753f85",
+    "code/cubic_linear_channels.py": "da867816fdac6e958d3008fcb0e5b0581de0a8313d8bb6e53fbd1d5d9a019f9f",
+    "code/cubic_linear_limit.py": "a64fbf4649489437cdd7bc1097b24bd13f67641f4efbcd95a9fad4193c8f3971"
+  }
+}

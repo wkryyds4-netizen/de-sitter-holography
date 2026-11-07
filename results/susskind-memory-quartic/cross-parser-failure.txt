@@ -1,0 +1,1 @@
+Cross-kernel first run: all 128 quartic/quadratic and 354 quartic/cubic endpoint templates vanished as expected. Parsing the saved symbolic expression then failed because lambda is a Python keyword. Rename the parser token to lam; preserve original output and do not alter the expression or tolerance.

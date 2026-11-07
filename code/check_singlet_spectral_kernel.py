@@ -1,0 +1,153 @@
+"""Exact graph identities and independent finite-CAR tests for the kernel reduction."""
+from pathlib import Path
+from functools import lru_cache
+from itertools import combinations
+from fractions import Fraction
+import hashlib,json,platform
+import numpy as np
+import sympy as sp
+from singlet_coefficient import pairings,determinant,dual_product
+from singlet_spectral_graphs import graph,centered_graphs,aggregate
+from complex_syk_dictionary import fermions,creators
+from singlet_wick_moments import gue_basis
+
+ROOT=Path(__file__).resolve().parent.parent
+OUT=ROOT/'results/susskind-singlet-kernel'
+q,lam=sp.symbols('q lambda',positive=True)
+
+def crossings(p):
+    return sum(a<c<b<d or c<a<d<b for i,(a,b) in enumerate(p) for c,d in p[i+1:])
+
+@lru_cache(None)
+def hmoment(n):
+    return sum(q**crossings(p) for p in pairings(tuple(range(n))))
+
+def probe(a,b):
+    return sum(q**(crossings(p)+2*sum(x<a<=y for x,y in p))
+               for p in pairings(tuple(range(a+b))))
+
+def check_rules(r):
+    pi={a:b for a,b in r['pairing']}|{b:a for a,b in r['pairing']}
+    def sign(m):
+        x=sorted((m[0],pi[m[0]]));y=sorted((m[1],pi[m[1]]))
+        return 1-2*int(x[0]<y[0]<x[1]<y[1] or y[0]<x[0]<y[1]<x[1])
+    assert r['alpha']==2*sign(r['marks'][0])
+    assert r['beta']==2*sign(r['marks'][1])
+    (a,b),(c,d)=r['marks']
+    assert r['delta']==4*int(pi[a]==d and pi[b]==c)
+
+def mixed_checks():
+    records=[]; count=0
+    for n in [0,2,4,6]:
+        for a in range(n+1):
+            b=n-a;marks=((0,1),(a+2,a+3));delta=alpha=0;number=0
+            for p in pairings(tuple(range(n+4))):
+                if any(m in p for m in marks):continue
+                r=graph(n+4,p,marks);check_rules(r);number+=1
+                delta+=r['delta']*q**r['crossings']
+                alpha+=r['alpha']*r['beta']*q**r['crossings']
+            P=probe(a,b);S=hmoment(n+4)-2*hmoment(n+2)+hmoment(n)
+            assert sp.expand(delta-4*P)==0
+            assert sp.cancel(alpha-16*q/(1+q)*P-4*(1-q)**2/(1+q)**2*S)==0
+            records.append(dict(a=a,b=b,graphs=number,probe_polynomial=str(sp.expand(P)),
+                                delta=str(sp.expand(delta)),alpha_beta=str(sp.expand(alpha))))
+            count+=number
+    single=[]
+    for n in [2,4,6,8]:
+        value=0
+        for p in pairings(tuple(range(n+2))):
+            if (0,1) in p:continue
+            r=graph(n+2,p,((0,1),(-2,-1)))
+            value+=r['alpha']*q**r['crossings']
+        assert sp.cancel(value-2*(1-q)/(1+q)*(hmoment(n+2)-hmoment(n)))==0
+        single.append(dict(power=n,polynomial=str(sp.factor(value))))
+    moments=[]
+    for order in [0,2,4,6]:
+        rows=centered_graphs(order);groups=aggregate(rows)
+        numerator=sum(q**c*(lam*d+lam**2*a) for c,(d,a) in groups.items())
+        moments.append(dict(order=order,graphs=len(rows),groups=groups,
+                            numerator=str(sp.factor(numerator))))
+    return dict(status='passed',mixed=records,single=single,local_rules_checked=count,moments=moments)
+
+def fixed_word(n,p,sets,pairing,marks):
+    length=len(sets);pi={a:b for a,b in pairing}|{b:a for a,b in pairing}
+    result=(1,0,0,0)
+    for mode in range(n):
+        ss=[i for i in range(length) if mode in sets[i]]
+        vals=[]
+        for h,g in [(0,0),(1,0),(0,1),(1,1)]:
+            mat=[[(1 if a<=pi[b] else -1)-2*h*int((pi[b],a)==marks[0])
+                  -2*g*int((pi[b],a)==marks[1]) for b in ss] for a in ss]
+            vals.append(determinant(mat))
+        z,h,g,hg=vals
+        result=dual_product(result,(z,h-z,g-z,hg-h-g+z))
+    return tuple(Fraction((-1)**(length//2*p)*v,2**(length*p)) for v in result)
+
+def car_checks():
+    rng=np.random.default_rng(110507);records=[];nonzero=negative=0
+    for n,p in [(4,2),(5,3)]:
+        cs=fermions(n);subsets=list(combinations(range(n),p))
+        bs=dict(zip(subsets,creators(cs,p)));d=1<<n
+        Q=np.diag([s.bit_count() for s in range(d)])
+        def deriv(x,y):
+            xy=x@y
+            return sum(c.conj().T@xy@c for c in cs)-(Q-2*p*np.eye(d))@xy
+        for pairing in pairings(tuple(range(8))):
+            pi={a:b for a,b in pairing}|{b:a for a,b in pairing}
+            sets=[subsets[i] for i in rng.integers(0,len(subsets),size=8)]
+            ops=[bs[sets[a]]@bs[sets[pi[a]]].conj().T for a in range(8)]
+            for marks in [((0,1),(2,3)),((0,1),(4,5)),((0,1),(6,7))]:
+                values=[]
+                for enabled in [(),(0,),(1,),(0,1)]:
+                    starts={marks[j][0] for j in enabled};mat=np.eye(d,dtype=complex);i=0
+                    while i<8:
+                        if i in starts:mat=mat@deriv(ops[i],ops[i+1]);i+=2
+                        else:mat=mat@ops[i];i+=1
+                    t=np.trace(mat)
+                    assert t.imag==0 and t.real==round(t.real)
+                    values.append(Fraction(int(t.real),d))
+                assert tuple(values)==fixed_word(n,p,sets,pairing,marks)
+                nonzero+=int(values[3]!=0);negative+=int(values[3]<0)
+                records.append(dict(N=n,p=p,sets=sets,pairing=pairing,marks=marks,values=list(map(str,values))))
+    assert nonzero>0, (nonzero, negative)
+    return dict(status='passed',seed=110507,word_cases=len(records),scalar_comparisons=4*len(records),
+                nonzero=nonzero,negative=negative,records=records)
+
+def finite_projection():
+    records=[]
+    for n,p in [(3,1),(4,2),(5,2)]:
+        cs,v,r=gue_basis(n,p);d=1<<n
+        deriv=np.array([[h@c-c@h for c in cs] for h in v])
+        raw=np.einsum('aiyx,biyz->abxz',deriv.conj(),deriv)
+        aa=raw+raw.swapaxes(0,1)
+        bb=v[:,None]@v[None,:]+v[None,:]@v[:,None]
+        vals=[]
+        for x,y in [(aa,aa),(aa,bb),(bb,bb)]:
+            t=np.einsum('abij,abij->ab',x.conj(),y)
+            assert np.all(t.imag==0) and np.all(t.real==np.rint(t.real))
+            total=sum(int(r[a])*int(r[b])*int(t[a,b].real) for a in range(len(r)) for b in range(len(r)))
+            vals.append(Fraction(total,8*d))
+        V,D,B=vals
+        assert D*D<=V*B
+        records.append(dict(N=n,p=p,variance=str(V),overlap=str(D),B_norm=str(B),
+                            coefficient=str(D/B),bound=str(D*D/B)))
+    assert records[1]['variance']=='483/4'
+    return records
+
+def main():
+    OUT.mkdir(exist_ok=True)
+    target=OUT/'exact-checks.json'
+    if target.exists():raise FileExistsError(target)
+    mixed=mixed_checks(); print('mixed graph identities passed',flush=True)
+    words=car_checks();print('independent CAR checks passed',flush=True)
+    finite=finite_projection();print('finite covariance projection passed',flush=True)
+    inputs=['code/singlet_spectral_graphs.py','code/check_singlet_spectral_kernel.py',
+            'code/singlet_coefficient.py','code/complex_syk_dictionary.py','code/singlet_wick_moments.py']
+    data=dict(status='passed',environment=dict(python=platform.python_version(),numpy=np.__version__,sympy=sp.__version__),
+              input_sha256={p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in inputs},
+              graph_checks=mixed,car_checks=words,finite_projection=finite)
+    with target.open('x') as f:json.dump(data,f,indent=2);f.write('\n')
+    print(json.dumps(dict(status='passed',mixed=len(mixed['mixed']),rules=mixed['local_rules_checked'],
+                         car=words['scalar_comparisons'],finite=finite)))
+
+if __name__=='__main__':main()

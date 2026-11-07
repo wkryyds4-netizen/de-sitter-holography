@@ -1,0 +1,476 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,microtype,booktabs}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\WW}{\mathcal W}
+\newcommand{\RR}{\mathcal R}
+\newcommand{\LL}{\mathcal L}
+\newcommand{\NN}{\mathcal N}
+\newcommand{\OO}{\mathsf O_q}
+\newcommand{\HH}{H^{(q,C)}}
+\newcommand{\crs}{\operatorname{cr}}
+\newcommand{\inv}{\operatorname{inv}}
+\newcommand{\Reg}{\operatorname{Reg}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\title{A constructive neutral memory kernel\\
+\large Ordered Wick descendants, energy regression, and exact static removal}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{7 November 2026\quad Local research draft}
+\begin{document}\maketitle
+\begin{abstract}
+We extend the preceding rank-marked chord rule to all ordered
+Gaussian-Wick descendants in the neutral memory field. Internal field
+pairings give an exact rule for Gaussian-chaos projections. A cut-diagram
+argument identifies deterministic energy regression and cancels all
+diagrams without a bridge between the two fields. Every surviving diagram
+has exponential suppression in the external Hermite degrees. Consequently
+each fixed descendant, after regression, has an absolutely continuous
+two-energy spectrum. This permits the limit of exact samplewise energy
+pinching. The previously proved uniform time-series tails then give a
+convergent construction of the full neutral finite-time covariance.
+The charged defect and its cross covariance remain to be computed.
+\end{abstract}
+
+\section{Setting and the remaining neutral problem}
+Use standard CAR, overlapping complex Gaussian $p$-body couplings,
+the same original couplings in all charge sectors, and the normalized
+annealed full trace at $\beta=\mu=0$. Take even $N$, $p\to\infty$,
+$\lambda_N=p^2/N\to\lambda>0$, fixed $J_s$, $\hbar=1$, and string time.
+Set $C=J_s^2/\lambda$, $q=e^{-4\lambda}\in(0,1)$ and
+\begin{equation}
+ Z_j=\WW_j(H^j),\quad U_j=(jp-\RR)Z_j,
+ \quad P_j(q)=[j]_q!,\quad \mathcal D_j=j^2-4q\partial_q.
+\end{equation}
+Here $\WW_j$ is ordinary coupling-Gaussian chaos projection.
+All polynomial degrees are fixed before the double-scale limit.
+The previous stage \cite{Size} replaces $U_j$ strongly by
+$(jp-\LL)Z_j$, where $\LL$ is half the Clifford length, and gives
+their two-mark chord moments. The preceding series \cite{Series}
+reduces the neutral memory to these fields and forced lower-chaos
+descendants, with uniform summable tails. We now compute those
+descendants and their static part. No independent-probe substitution
+is made.
+
+\newpage
+\section{Primitive descendants and the Gaussian-chaos label}
+Write
+\begin{equation}
+ T_{v,w}=U_v\diamond Z_w,\qquad
+ F_{r,v,w}=H^r T_{v,w},\quad v\ge1,\ w,r\ge0.
+\end{equation}
+The diamond is the ordinary Gaussian Wick product with ordered
+matrix coefficients. Its entire $v+w$ source block forbids internal
+Gaussian pairings; the physical size mark acts only on its first
+$v$ slots. The $r$ ordinary slots may contract among themselves or
+with the source. Taking an adjoint reverses all slots, so a prefix
+mark becomes a suffix mark. These two types of block must be stored
+separately.
+
+For two primitive fields separated by $H^a,H^b$, sum over complete
+pairings $\pi$ obeying the source-block restrictions. If $L_F=r+v+w$
+and $i_F(\pi)$ pairs have both ends in the whole field interval, put
+\begin{equation}
+ d_F(\pi)=L_F-2i_F(\pi).\label{eq:degree}
+\end{equation}
+This is the degree of the field's uncontracted Gaussian Wick tensor.
+An insertion of $\WW_dF$ keeps only $d_F=d$; an insertion of
+$\OO F=q^{\NN}F$ multiplies the diagram by $q^{d_F}$.
+External energy slots are never counted in $L_F$.
+
+Let $I_1,I_2$ be the chord sets incident to the two marked subblocks,
+and use the preceding geometrical weight
+\begin{equation}
+ K(I)=|I|^2-4\crs(\pi|_I),\quad
+ K_1=K(I_1),\ K_2=K(I_2),\ K_{12}=K(I_1\cap I_2).
+\end{equation}
+The zero-, one-, and two-mark coefficients are respectively
+\begin{equation}
+ 1,\qquad \lambda K_1,\qquad
+ \lambda K_{12}+\lambda^2K_1K_2,\label{eq:marks}
+\end{equation}
+all multiplied by $C^{L/2}q^{\crs(\pi)}$, where $L$ is the total
+number of raw Hamiltonian slots. Explicit scalar factors of $C$
+in a descendant recurrence are retained in addition to this weight.
+Odd $L$ gives zero. This is an algorithm for every fixed degree,
+including chaos projections; it is not an assumption of spectral
+$q$-Wick ordering at finite $N$.
+
+The extension from rank to local size remains strong: right Wick
+creation satisfies
+\begin{equation}
+ \|X_v\diamond Z_w\|_2\le
+ \sqrt{(v+w)!/v!}\,M^{w/2}\|X_v\|_2,
+ \qquad \sup_m C_m\le M.
+\end{equation}
+Fixed ordinary powers of $H$ are bounded on fixed Gaussian degree,
+and chaos projections and $q^{\NN}$ are contractions. Thus only the
+already proved two-field $L^2$ bridge is needed.
+
+\newpage
+\section{Energy regression from a cut field diagram}
+Let $\HH_d$ denote the monic $q$-Hermite polynomial,
+\begin{equation}
+ \HH_{d+1}(x)=x\HH_d(x)-C[d]_q\HH_{d-1}(x),
+ \qquad \|\HH_d\|_{L^2(\rho_q)}^2=C^dP_d(q),
+\end{equation}
+where $\rho_q$ is the energy law of variance $C$.
+Define $\Reg F$ by its limiting inner products with energy
+polynomials. For a pure source one obtains
+\begin{equation}
+ \boxed{\quad \Reg T_{v,w}=\kappa_v\HH_{v+w},\qquad
+ \kappa_v=\lambda\frac{\mathcal D_vP_v(q)}{P_v(q)}.\quad}
+ \label{eq:source-reg}
+\end{equation}
+Indeed, pair the source with a Wick block of length $v+w$.
+All chords are bridges. Their permutations have weight
+$q^{\inv\sigma}$. The Mahonian decomposition into the first $v$
+positions, the remaining $w$ positions, and their shuffle shows
+that the first group's internal permutation has its own
+$q^{\inv}$ law. Its conditional average of $K_1$ is
+$\mathcal D_vP_v/P_v$, independent of the selected endpoint set.
+The suffix case follows by the same decomposition.
+
+There is a finite formula for every projected primitive. Fix a
+partial matching $\gamma$ internal to $F_{r,v,w}$, respecting
+the source restriction. Its remaining $d=L_F-2|\gamma|$ slots are
+Gaussian Wick ordered. Cut open the field interval and number all
+their external partners in circular order. Crossings of internal
+chords with one another and with open legs give a number $c_\gamma$
+independent of the external assignment. Crossings between open
+legs have count $\inv\sigma$ for a suitable order convention.
+The mark has a value $K_\gamma(\sigma)$ depending only on this
+finite configuration. Thus its regression coefficient is
+\begin{equation}
+ g_{\gamma,d}=C^{|\gamma|}q^{c_\gamma}\lambda
+ \frac{\sum_{\sigma\in S_d}q^{\inv\sigma}K_\gamma(\sigma)}{P_d(q)}.
+ \label{eq:cut-reg}
+\end{equation}
+Summing over $\gamma$ and the field's scalar coefficients gives
+$\Reg(\WW_dF)=g_{F,d}\HH_d$. The case $d=0$ is included.
+Formula \eqref{eq:degree} shows that $q^{\NN}$ simply multiplies
+this group by $q^d$.
+
+This derivation can also be checked by pairing with one external
+$\HH_d$: the same permutation sum is exactly
+$\langle F,\HH_d(H)\rangle/(C^dP_d)$.
+The leading $Z_d-\HH_d(H)\to0$ bridge is used only in such linear
+inner products. It is not used to infer continuity of arbitrary
+products of marked fields.
+
+\newpage
+\section{No-bridge cancellation and the external Hermite bound}
+Consider two projected primitives after subtracting their energy
+regressions. Fix their internal matchings $\gamma,\gamma'$.
+First sum diagrams having no chord directly joining the two field
+intervals. Then $I_1\cap I_2=\varnothing$, so $K_{12}=0$.
+With all external partner positions fixed, the two open-endpoint
+permutations are independent. Reordering endpoints within one
+field does not change crossings with any chord having both endpoints
+outside that field. Therefore the two one-mark permutation sums
+factor exactly as \eqref{eq:cut-reg}.
+
+Subtracting regression cancels this entire no-bridge group,
+including all internal partial matchings. The statement remains
+true with $q^{\NN}$ or a fixed chaos projection, whose coefficients
+are constant on each internal-matching group. An individual
+no-bridge diagram need not vanish.
+
+\begin{proposition}\label{prop:HS}
+Let $R_F=F-\Reg F(H)$ and $R_G=G-\Reg G(H)$, where $F,G$ are
+finite combinations of the primitives, their chaos projections,
+and $q^{\NN}$ images. Their limiting two-energy measure has an
+$L^2(\rho_q\otimes\rho_q)$ density. In particular it has no mass
+on the diagonal $E=E'$.
+\end{proposition}
+\noindent\emph{Proof.}
+Use the normalized external basis
+$p_n=\HH_n/\sqrt{C^nP_n}$ and set
+\begin{equation}
+ M_{mn}=\lim\EE\tr[R_F^\dagger p_m(H)R_Gp_n(H)].
+\end{equation}
+The external $q$-Hermite polynomials implement the standard
+multiblock Wick cancellations \cite{EP}: no pair remains internal
+to either energy block. A deleted energy-internal chord belongs to
+neither marked incident set; deleting it changes no crossing between
+the remaining chords. Thus the marked weight is preserved as a
+coefficient in this cancellation. This is a diagram identity.
+
+Let $D$ bound the sum of the two raw field lengths. After the
+no-bridge cancellation, there is at least one field-to-field bridge.
+If $r$ chords connect the two energy blocks, endpoint counting gives
+\begin{equation}
+ |m-n|\le D,\qquad r\ge\min(m,n)-D.
+\end{equation}
+Every field bridge crosses every energy bridge, hence contributes
+at least a factor $q^r$. Choosing the finite field attachments
+costs at most a constant times $(m+n+1)^D$. The remaining energy
+bridge permutations have total weight $P_r(q)$. Since
+\begin{equation}
+ \frac{P_r(q)}{\sqrt{P_m(q)P_n(q)}}\le(q;q)_\infty^{-1},
+ \qquad r\le\min(m,n),
+\end{equation}
+the finite mark and regression coefficients give
+\begin{equation}
+ \boxed{|M_{mn}|\le K_D(m+n+1)^D
+ q^{\max(0,\min(m,n)-D)}\,1_{|m-n|\le D}.}\label{eq:HS}
+\end{equation}
+Here $K_D$ depends on the fixed fields, $C,\lambda,q$, never on
+$m,n$. In particular $\sum_{m,n}|M_{mn}|^2<\infty$.\hfill$\square$
+
+\newpage
+\section{From the bound to the spectrum and exact pinching}
+For a finite field list define the positive matrix measures by
+\begin{equation}
+ \nu_{jk,N}(A,B)=\EE\tr[R_{j,N}^\dagger P_H(B)R_{k,N}P_H(A)].
+ \label{eq:measure}
+\end{equation}
+Their fixed monomial moments follow from the finite diagram rule.
+Absolute marked weights are bounded by fixed constants times
+ordinary $q$-Gaussian moments. Positivity, higher-moment uniform
+integrability and spectral Cauchy--Schwarz give weak convergence
+to a unique measure supported on
+\begin{equation}
+ [-R_H,R_H]^2,\qquad R_H=2\sqrt{C/(1-q)}.
+\end{equation}
+As in the preceding stage, this concerns fixed field degrees and
+all fixed external degrees; no uniform finite-$N$ estimate in the
+external degree is asserted.
+
+The bound \eqref{eq:HS} gives the density constructively:
+\begin{equation}
+ f_{jk}(E,E')=\sum_{m,n\ge0}M^{jk}_{mn}p_n(E)p_m(E'),
+ \qquad d\nu_{jk}=f_{jk}\,d\rho_q(E)d\rho_q(E').\label{eq:density}
+\end{equation}
+The series converges in $L^2$. Its polynomial moments agree with
+the original measure, and polynomials are dense on the compact
+support, proving equality of measures. The matrix density is
+positive almost everywhere. This uses the Hilbert--Schmidt
+criterion also underlying \cite{BM}, not an unproved identification
+of these common-coupling fields with independent $q$-Fock probes.
+The diffuse measure $\rho_q\otimes\rho_q$ assigns zero mass to
+$\Delta=\{E=E'\}$.
+
+For a residual field with this limit, exact pinching satisfies
+\begin{equation}
+ \|\mathcal P_HR_N\|_2^2=\nu_{RR,N}(\Delta),\qquad
+ \mathcal P_HX=\sum_eP_eXP_e.
+\end{equation}
+The diagonal is closed. Weak convergence of the finite positive
+measures and Portmanteau therefore imply
+\begin{equation}
+ \limsup_N\|\mathcal P_HR_N\|_2^2
+ \le\nu_{RR}(\Delta)=0.\label{eq:pinching}
+\end{equation}
+This retains entire degenerate energy blocks and proves annealed
+$L^2$ convergence; it is not an interchange of an infinite-time
+average with the double-scale limit.
+
+An explicit coefficient-tail bound follows from \eqref{eq:HS}:
+\begin{equation}
+ \sum_{\min(m,n)\ge L}|M_{mn}|^2
+ \le2(2D+1)K_D^2\sum_{n\ge L}(2n+D+1)^{2D}q^{2(n-D)}
+ \quad(L\ge D).
+\end{equation}
+The scalar series has a geometric upper bound once its successive
+ratio is below one. Also $(q;q)_\infty^{-1}\le
+\exp[q/(1-q)^2]$ supplies a finite explicit normalization bound.
+
+\newpage
+\section{The forced descendants and their full static polynomials}
+Suppress finite-$N$ subscripts after taking each fixed-degree limit.
+The source and descendant recurrence are
+\begin{align}
+ r_j&=4\lambda C\sum_{v<j}q^vT_{v,j-1-v},\\
+ \eta_{j+1}&=H\eta_j-C[j]_q\eta_{j-1}-r_j,
+ \qquad \eta_0=\eta_1=\eta_2=0,
+\end{align}
+with $T_{0,w}=0$. Each $\eta_j$ is a finite linear combination of
+$H^rT_{v,w}$, so all its diagrams are covered above.
+If $g_j=\Reg\eta_j$, energy regression commutes with multiplying
+by $H$, giving the scalar recurrence
+\begin{equation}
+ \boxed{g_{j+1}(x)=xg_j(x)-C[j]_qg_{j-1}(x)
+ -4\lambda C\left(\sum_{v<j}q^v\kappa_v\right)\HH_{j-1}(x).}
+ \label{eq:g}
+\end{equation}
+Again $g_0=g_1=g_2=0$. Write
+$g_j=\sum_{d\le j-2}g_{j,d}\HH_d$. Self-adjointness of Gaussian
+chaos projection, or the cut rule, gives
+\begin{equation}
+ \Reg(\OO\eta_j)=\sum_dq^dg_{j,d}\HH_d.
+\end{equation}
+The unpinched coefficients of the neutral series are
+\begin{align}
+ V_j&=4\lambda q^jU_j+(q^j-\OO)\eta_j,\\
+ v_j(x):=\Reg V_j
+ &=4\lambda q^j\kappa_j\HH_j(x)
+    +\sum_{d\le j-2}(q^j-q^d)g_{j,d}\HH_d(x),\label{eq:v}\\
+ R_j&=V_j-v_j(H).
+\end{align}
+Every $R_j$ has the absolutely continuous spectrum
+\eqref{eq:density}, and its exact pinching vanishes in the limit.
+
+For calibration,
+\begin{align}
+ g_3&=-4\lambda^2Cq\HH_1,\\
+ g_4&=-\frac{8\lambda^2Cq(1+3q)}{1+q}\HH_2
+       -4\lambda^2C^2q.
+\end{align}
+The scalar in $g_4$ agrees with the previously retained chaos-zero
+term. No conserved term is removed before the recurrence or
+$q^{\NN}$ operation. Moreover
+\begin{equation}
+ R_1=4\lambda q(U_1-\lambda H),\qquad
+ d\nu_{11}=16\lambda^3Cq^2\,d\mu_q,
+\end{equation}
+where $\mu_q$ is the normalized Mehler measure of weight $q$.
+The neutral memory slope $2CR_1$ therefore reproduces the previous
+force spectrum $64\lambda^3C^3q^2\mu_q$.
+
+\newpage
+\section{The full neutral finite-time covariance}
+Let
+\begin{equation}
+ c_j(s)=\frac{\int e^{isE}\HH_j(E)\,d\rho_q(E)}{C^jP_j(q)}.
+\end{equation}
+These are the limiting Jacobi coefficients in \cite{Series}.
+That stage proved, with finite parameters retained until the limit,
+\begin{equation}
+ B_{m,N}(s)=\frac{m\epsilon_mC_m}{p}(1-\mathcal P_h)
+ e^{-ihs/2}\sum_{j\ge0}c_{j,m}(\alpha_ms)V_{j,m,N}
+ e^{-ihs/2}+o_{L^2}(1),
+\end{equation}
+uniformly on compact real memory times in the full charge sum.
+Here $\alpha_m=(1-p/m)_+$, $\epsilon_m=1-\alpha_m^2$;
+on central windows $\alpha_m\to1$, $m\epsilon_m/p\to2$ and
+$C_m\to C$. The auxiliary Jacobi entries converge and are uniformly
+bounded, so their operators converge strongly. Their exponentials
+converge strongly uniformly on compact $s$-intervals; this gives
+each $c_{j,m}(s)\to c_j(s)$. Continuity handles $\alpha_m\to1$.
+The fixed-degree field coefficients converge to \eqref{eq:v}.
+The tails are bounded uniformly by
+an explicit summable envelope of the form
+\begin{equation}
+ \|c_{j,m}(s)V_{j,m,N}\|_2
+ \le K_S(j+1)^2X_S^j/\sqrt{j!}.
+\end{equation}
+
+In the limiting joint Gram space, $\Reg$ is the orthogonal
+projection onto the energy-polynomial closure. Hence
+$\|R_j\|_2^2=\lim_N\|V_{j,N}\|_2^2-\|v_j\|_{L^2(\rho_q)}^2$
+is at most $\lim_N\|V_{j,N}\|_2^2$, so the same coefficient
+envelope controls the residual series.
+For a fixed cutoff $J$, subtract $v_j(H)$ and apply
+\eqref{eq:pinching} to every coefficient. The removed polynomials
+commute exactly with $H$. Then remove $J$ using the above tail and
+the contraction property of pinching. This proves the neutral
+covariance limit
+\begin{align}
+ &\lim_N\EE\tr[B_N(s)^\dagger e^{iTH}B_N(u)e^{-iTH}]
+ \notag\\
+ &=4C^2\sum_{j,k\ge0}\overline{c_j(s)}c_k(u)
+ \int e^{\frac i2(s-u)(E+E')+iT(E'-E)}\,d\nu_{jk}(E,E').
+ \label{eq:kernel}
+\end{align}
+The sum is absolutely convergent, uniformly for $s,u$ in compact
+sets and every real $T$: spectral Cauchy--Schwarz bounds each
+measure's total variation by $\|R_j\|_2\|R_k\|_2$.
+This all-$T$ statement concerns the series tail. The spectral
+$N\to\infty$ limit is for each fixed $T$, not uniformly on the
+whole real axis.
+All $M^{jk}_{mn}$ in \eqref{eq:density} are supplied by the finite
+diagram algorithm, so \eqref{eq:kernel} is a convergent constructive
+answer, not a finite list of Taylor coefficients.
+
+The spectral measures of the truncated time fields converge in
+total variation as $J\to\infty$. Absolute continuity is closed
+under this convergence, so the full neutral residual has no static
+spectral mass. An $L^2$ density for the infinite series is not
+required or asserted. Central uniformity and the previously proved
+binomial charge tails give the full-trace result. No finite-temperature,
+growing-time, or simultaneous $\lambda\to0$ limit is included.
+
+\newpage
+\section{Verification and the next physical calculation}
+The checks accompanying this stage retain complete finite CAR
+operators for Gaussian-chaos bookkeeping and separately test the
+limiting chord weights. They compare finite Hermite expansions
+with the internal-pair rule \eqref{eq:degree}; these are algebraic
+checks, not finite-$N$ rank--size equalities. Independent permutation
+enumeration tests \eqref{eq:source-reg}, and explicit no-bridge
+groups test the cancellation used in Proposition~\ref{prop:HS}.
+The descendant driver passed 42 complete finite comparisons
+(maximum error $6.67\cdot10^{-15}$), 12 earlier-moment calibrations,
+10 source regressions and 6 nonempty no-bridge cancellations.
+It saves 59 signed moment polynomials and 9 chaos norms;
+31 negative coefficients are retained. Finite normalized CAR
+comparisons use floating arithmetic; formal polynomials are exact.
+
+An independent driver enumerates 5,913 permutations through degree
+seven, checks 56 prefix/suffix integer-polynomial identities, and
+retains 12,316 negative mark values. Seven eight-slot no-bridge
+layouts give 168 allowed pairings and 38 partner groups, all
+with exact factorization. Their 120 nonzero centered single-diagram
+weights include 60 negative weights. This last check uses formal
+rational values $q=1/3$, $\lambda=1/4$ for polynomial identities,
+not a physical parameter pair satisfying $q=e^{-4\lambda}$.
+Both scientific drivers passed their first runs. Parameters,
+versions and input hashes are recorded with the outputs.
+
+\paragraph{What has changed.}
+The neutral branch now has fixed-degree joint moments for all
+forced descendants, their full deterministic static polynomials,
+an all-external-degree spectral bound, and a controlled finite-time
+covariance after exact energy pinching. The proof of the spectral
+bound uses the arbitrary-degree cut argument and bridge counting;
+finite enumerations alone would not establish absolute continuity.
+
+\paragraph{Literature and attribution.}
+Ordinary Gaussian Wick expansion, the multiblock $q$-Wick formulas
+of Effros--Popa \cite{EP}, and the Hilbert--Schmidt strategy for
+generator measures in Bikram--Mukherjee \cite{BM} are established
+tools. Their use here requires the physical rank-to-size bridge,
+the common-coupling local marks, and the cut-field cancellation
+above. We do not infer a $q$-Gaussian ambient algebra for the
+fluctuation fields solely from the energy law being $q$-Gaussian.
+
+\paragraph{Continuation.}
+The actual memory field remains $\mathsf F=A+B+o_{L^2}(1)$,
+where $A$ is the charged transfer defect. The next calculation
+must put its forward and reverse sources into the same common-$J$
+diagram system and determine $AA$, $AB$, and $BA$. The nonzero
+low-order mixed measure from \cite{Two} is a required calibration;
+the neutral answer does not permit deleting these cross terms.
+Once the full joint kernel is assembled, we can return to the
+Susskind bulk mass/position dictionary and interaction observables.
+The complete de Sitter dual and finite-$G$ four-point dynamics are
+not established by this microscopic neutral calculation.
+
+All artifacts remain local in this stage. There is no Git commit,
+push, archive, or external issue reply.
+
+\newpage
+\begin{thebibliography}{9}\small
+\bibitem{EP} E. G. Effros and M. Popa, \emph{Feynman Diagrams and Wick
+Products Associated with $q$-Fock Space},
+\href{https://arxiv.org/abs/math/0303045}{arXiv:math/0303045},
+Theorems 3.2--3.3.
+\bibitem{BM} P. Bikram and K. Mukherjee, \emph{Generator masas in
+$q$-deformed Araki-Woods von Neumann algebras and factoriality},
+\href{https://arxiv.org/abs/1606.04752}{arXiv:1606.04752v2},
+Section 5, especially Theorems 5.3--5.4.
+\bibitem{Size} A. Day and Chengheng, \emph{Rank marks as local
+fermion-size defects}, local stage, 7 Nov. 2026,
+\texttt{susskind-memory-size-bridge}.
+\bibitem{Series} A. Day and Chengheng, \emph{A rank-marked series for
+the neutral memory field}, local stage, 7 Nov. 2026,
+\texttt{susskind-memory-neutral-marked-series}.
+\bibitem{Two} A. Day and Chengheng, \emph{Four-field regression and a
+two-component memory field}, local stage, 7 Nov. 2026,
+\texttt{susskind-memory-two-component}.
+\end{thebibliography}
+\end{document}

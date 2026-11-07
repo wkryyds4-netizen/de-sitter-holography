@@ -1,0 +1,499 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,microtype}
+\usepackage[margin=24mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\PP}{\mathsf P_h}
+\newcommand{\MA}{\mathsf A}
+\newcommand{\BB}{\mathsf B}
+\newcommand{\FF}{\mathsf F}
+\newcommand{\Jh}{\mathcal J_h}
+\newcommand{\W}{\mathsf W}
+\title{Two components of the finite-time memory fluctuation\\A conserved four-field correction and a mixed spectral check}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Local research note --- 7 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+The four-field term in the Gaussian Dyson expansion of the ordinary
+memory force has a strong leading energy regression. Independent
+auxiliary copies, three-color chord moments and the standard
+$q$-Gaussian conditional expectation prove this in annealed $L^2$,
+uniformly on compact real-time intervals. Exact energy pinching
+therefore removes its collective contribution. The actual memory
+field reduces to two bounded components: a charged-transfer defect
+and a neutral covariance-filter residual. We identify the first two
+neutral Taylor coefficients and their mixed spectral measures with
+the charged coefficients. A nonzero second-order cross is a necessary
+calibration for the still-unknown joint finite-time kernel.
+\end{abstract}
+
+\section{Model, state and previously established input}
+Use standard CAR, $\hbar=1$, string real time, and the overlapping
+complex $p$-body Gaussian model
+\begin{align}
+ H_N&=\sum_{I,J}J_{IJ}c_I^\dagger c_J, &
+ \EE J_{IJ}J_{KL}&=w_N\delta_{IL}\delta_{JK},\\
+ w_N&=4^p\frac{J_s^2}{\lambda_N}\left(\frac{p!}{N^p}\right)^2,
+ &\lambda_N&=p^2/N.
+\end{align}
+All charges share the same original $J$. Take even $N$, fixed $J_s>0$,
+and first $\lambda_N\to\lambda>0$. The state is the normalized full
+$\beta=\mu=0$ annealed trace, with $b_m=2^{-N}\binom Nm$.
+All $L^r$ norms include this trace and the disorder average.
+At charge $m$ write $h=H_m$ and
+\begin{equation}
+ C_m=w_N\binom mp\binom{N-m+p}p,\quad
+ M=\sup_m C_m\le (J_s^2/\lambda_N)e^{2p/N}.
+\end{equation}
+Let $P_e$ be the exact spectral projections of $h$ and
+$\PP X=\sum_eP_eXP_e$, including whole degenerate blocks.
+The preceding stages \cite{Uniform,Return} prove uniform second
+moments and $\sup_{|s|\le S}\|\FF(s)-X_0(s)\|_2\to0$ for the
+actual memory field and its ordinary-propagation term. Here we
+further reduce $X_0$, keeping all common-disorder cross terms.
+
+\newpage
+\section{Exact components and the new reduction}
+For $m>0$ define
+\begin{align}
+ V\psi&=m^{-1/2}\sum_i|i\rangle c_i\psi,&
+ K&=1_N\otimes H_{m-1},&Q&=1-VV^\dagger,\\
+ R&=QKV,&D&=QKQ,&\alpha_m&=(1-p/m)_+,\\
+ \Lambda_m(s)&=R^\dagger e^{isK}R,&
+ M_m(s)&=R^\dagger e^{isD}R,&\epsilon_m&=1-\alpha_m^2.
+\end{align}
+The fields are
+\begin{equation}
+ X_{0,m}=(1-\PP)m e^{-ihs/2}\Lambda_m(s)e^{-ihs/2},\qquad
+ \FF_m=(1-\PP)m e^{-ihs/2}M_m(s)e^{-ihs/2}.
+\end{equation}
+Inactive sectors $m<p$ have zero Hamiltonian and force. At $m=0$
+all collective fields are set to zero.
+For an independent copy $u$ of $h$, let $\Phi_m(X)=\EE_u[uXu]$ and
+\begin{equation}
+ \Lambda_{{\rm OU},m}(s)
+ =\epsilon_m\EE_u[u e^{is(\alpha_mh+\sqrt{\epsilon_m}u)}u].
+\end{equation}
+The same $u$ occurs in its three positions. Define, exactly at finite $N$,
+\begin{align}
+ \MA_m(s)&=(1-\PP)m e^{-ihs/2}
+          [\Lambda_m(s)-\Lambda_{{\rm OU},m}(s)]e^{-ihs/2},\\
+ \BB_m(s)&=(1-\PP)m\epsilon_m e^{-ihs/2}
+          \Phi_m(e^{i\alpha_mhs})e^{-ihs/2}.
+\end{align}
+Both use the original $h$; auxiliary averaging does not replace
+the physical charged force by an independent probe.
+
+The prior even Dyson expansion is
+\begin{align}
+ \Lambda_{\rm OU}(s)&=\epsilon\Phi(e^{i\alpha hs})
+       -\epsilon^2\mathcal I_s^{(\alpha)}(h)+\mathcal E_s,\\
+ \mathcal I_s^{(\alpha)}(h)&=s^2\int_{0\le y\le x\le1}
+ \EE_u[uU_{s(1-x)}uU_{s(x-y)}uU_{sy}u]\,dx\,dy,\\
+ \|\mathcal I_s^{(\alpha)}\|_\infty&\le\tfrac32 C_m^2s^2,\\
+ \|\mathcal E_s\|_2&\le
+ \epsilon^3|s|^4\sqrt{10395}\,C_m^3/24.
+\end{align}
+Here $U_t=e^{i\alpha ht}$. All three fourth-moment Wick pairings occur in $\mathcal I$.
+We prove
+\begin{equation}
+ \boxed{\quad\sup_{|s|\le S}\|\FF(s)-\MA(s)-\BB(s)\|_2\to0.\quad}
+ \label{eq:reduction}
+\end{equation}
+Each of $\MA,\BB$ is uniformly $L^2$ bounded by the weighted-transfer
+and neutral-filter bounds of \cite{Uniform}. Thus their full
+four-term covariance sum replaces the actual covariance, uniformly
+for compact memory times and all real external times.
+
+\newpage
+\section{Why four auxiliary fields have strong energy regression}
+Let $h,u,v$ now denote three orthogonal $q$-Gaussian variables with
+variance $C=J_s^2/\lambda$ and $q=e^{-4\lambda}$. Write $E_h$ and
+$E_{hv}$ for their trace-preserving conditional expectations.
+The standard second-quantization construction \cite{BKS} gives
+\begin{equation}
+ E_{hv}W(h,u)=E_hW(h,u),\qquad W(h,u)\in W^*(h,u).
+ \label{eq:square}
+\end{equation}
+Indeed, the one-particle projection onto $\operatorname{span}(h,v)$
+annihilates every $u$ tensor and retains the $h$ tensors. Applied
+factorwise to Wick tensors it is the same projection as onto $h$.
+For two polynomials $W_1,W_2$ this proves
+\begin{equation}
+ \tau_q[W_1(h,u)^\dagger W_2(h,v)]
+ =\tau_q[(E_hW_1)^\dagger(E_hW_2)].
+ \label{eq:replica}
+\end{equation}
+This identity concerns two whole blocks. It does not assert
+classical independence of arbitrary interleaved colored words.
+
+For the finite model let
+\begin{equation}
+ W_N(h,u)=u f_1(h)u f_2(h)u f_3(h)u,\qquad
+ T_N(h)=\EE_u W_N(h,u),
+\end{equation}
+where the $f_i$ are fixed polynomials. Independence of auxiliary
+couplings $u,v$ gives the exact replica identity
+\begin{equation}
+ \EE_h\tau T_N^\dagger T_N
+ =\EE_{h,u,v}\tau W_N(h,u)^\dagger W_N(h,v).
+\end{equation}
+The three-color joint moments converge to those of $h,u,v$ above.
+To see the color extension, perform Gaussian Wick expansion first:
+pairings are allowed only between the same color, but every allowed
+chord has the same independent $p$-set sums and CAR trace as before.
+The fixed-word overlap rule \cite{BNR,Tall} gives $q$ per crossing,
+with the stated variance normalization. No extra covariance is
+introduced by color; finitely many pairings suffice at fixed degree.
+This argument holds for the full normalized trace. The established
+central-window trace bridge also gives its fixed-sector version
+uniformly for $m=N/2+xp$ with bounded $x$ \cite{Central}.
+
+Let $t(x)$ be the ordinary polynomial defined by $t(h)=E_hW(h,u)$.
+Mixed moments with $t(H_N)$ and \eqref{eq:replica} give
+\begin{equation}
+ \boxed{\quad\|T_N(H_N)-t(H_N)\|_2\longrightarrow0.\quad}
+ \label{eq:polynomial}
+\end{equation}
+It follows by expanding the squared norm: its three limiting terms
+are $\|t\|_2^2$, $-2\|t\|_2^2$, and $\|t\|_2^2$.
+An annealed mean alone would not establish this cancellation.
+
+\newpage
+\section{Full real time, charge weights and exact pinching}
+First set $\alpha=1$ and define
+\begin{equation}
+ T_{abc,N}(h)=\EE_u[u h^a u h^b u h^c u],\qquad
+ \mathcal I_s^{(1)}=
+ \sum_{n\ge0}\frac{s^2(is)^n}{(n+2)!}
+             \sum_{a+b+c=n}T_{abc,N}(h).
+ \label{eq:series}
+\end{equation}
+Gaussian moments and Schatten H\"older with $n+4$ factors give
+\begin{equation}
+ \|T_{abc,N}\|_2\le\sqrt{(2n+7)!!}\,M^{(n+4)/2}.
+\end{equation}
+There are $\binom{n+2}{2}$ triples. The degree-$n$ norm is therefore
+bounded, for $|s|\le S$, by
+\begin{equation}
+ \frac{S^{n+2}}{2n!}\sqrt{(2n+7)!!}\,M^{(n+4)/2}.
+ \label{eq:tail}
+\end{equation}
+The sum converges for every fixed $S$, uniformly in $N$.
+Thus fixed-degree joint moments are sufficient: first truncate,
+then take $N\to\infty$, and finally remove the degree cutoff.
+
+Define $\iota_s(h)$ by replacing the conditional average in
+$\mathcal I_s^{(1)}$ with $E_h$ in the $q$-Gaussian algebra.
+BKS's $C^*$ version \cite{BKS} makes it a continuous function on
+$[-E_*,E_*]$, where $E_*=2\sqrt{C/(1-q)}$. It obeys
+\begin{equation}
+ \|\iota_s\|_\infty\le\tfrac12s^2 E_*^4.
+\end{equation}
+Extend it to all real energies by $\widetilde\iota_s(x)=\iota_s(\chi(x))$,
+where $\chi$ clips to this interval. For each fixed polynomial
+truncation, Hamiltonian moment convergence and uniform integrability
+compare its evaluation at $H_N$ with this bounded extension.
+The polynomial limit \eqref{eq:polynomial}, the tail \eqref{eq:tail}
+and a finite time mesh consequently prove
+\begin{equation}
+ \sup_{|s|\le S}\|\mathcal I_s^{(1)}(H_N)
+                    -\widetilde\iota_s(H_N)\|_2\to0.
+ \label{eq:time}
+\end{equation}
+Time uniformity also follows directly from the normally convergent
+series; the bounded target is uniformly Lipschitz on compact $s$.
+
+On $N/4\le m\le3N/4$, $1-\alpha_m\le4p/N$.
+Telescoping the three unitaries, using their integral derivatives
+and Schatten-$10$ H\"older, bounds
+\begin{equation}
+ \|\mathcal I_s^{(\alpha_m)}-\mathcal I_s^{(1)}\|_{2,m}
+ \le\tfrac12|1-\alpha_m|\,|s|^3\sqrt{9!!}\,M^{5/2}.
+\end{equation}
+Here $m\epsilon_m^2\le16\lambda_N$. Outside that broad central
+interval, $m\epsilon_m^2\le N$ and the uniform operator bound on
+$\mathcal I$ combines with the binomial weight $2e^{-N/8}$.
+Since the bounded comparison commutes with $h$, \eqref{eq:time} proves
+\begin{equation}
+ \boxed{\quad\sup_{|s|\le S}
+ \|(1-\PP)m\epsilon_m^2e^{-ihs/2}
+                 \mathcal I_s^{(\alpha_m)}e^{-ihs/2}\|_2\to0.\quad}
+\end{equation}
+Likewise $m\mathcal E_s\to0$: centrally
+$m\epsilon_m^3\le128\lambda_N^2/p$, and the exterior tail absorbs $N^2$.
+Together with the previous return theorem this proves \eqref{eq:reduction}.
+
+\newpage
+\section{An explicit expression for the conserved background}
+Let $W_n$ be monic variance-$C$ $q$-Hermite polynomials,
+\begin{equation}
+ xW_n=W_{n+1}+C[n]_qW_{n-1},\qquad [n]_q=(1-q^n)/(1-q).
+\end{equation}
+Take $v=\alpha h+\beta u$, $\alpha^2+\beta^2=1$ and
+$\beta^2=\epsilon$. The left/right Wick tensor recursions of
+\cite{BKS}, followed by projection to pure $h$ tensors, give
+\begin{equation}
+ E_h[uW_n(v)u]=Cq^n\alpha^nW_n(h)
+ +\epsilon C^2[n]_q[n-1]_q\alpha^{n-2}W_{n-2}(h).
+ \label{eq:OUWick}
+\end{equation}
+The second term is zero for $n<2$. Only two structures survive:
+the external $u$'s pair with each other, or each contracts with
+an internal $v$. This keeps the same-copy effect in full.
+
+Set $P_rW_n=r^nW_n$, $D_qW_n=[n]_qW_{n-1}$ and
+$\mathcal N_qW_n=nW_n$. Then, for $e_s(x)=e^{isx}$,
+\begin{equation}
+ \Lambda^q_{\rm OU}(s)=\epsilon CP_{q\alpha}e_s(h)
+                +\epsilon^2C^2P_\alpha D_q^2e_s(h).
+\end{equation}
+This extends from polynomials since the $q$-Gaussian fields are
+bounded and $D_q^2$ is bounded on their $L^2$ space.
+Its norm is at most $1/[C(1-q)]$ in the normalized Hermite basis.
+
+Expanding along $\alpha=\sqrt{1-\epsilon}$ and comparing with the
+frozen-$\alpha h$ Dyson expansion gives
+\begin{equation}
+ \boxed{\quad
+ \iota_s=\frac C2P_q[(\mathcal N_q-x\partial_x)e_s]
+                   -C^2D_q^2e_s.\quad}
+ \label{eq:iota}
+\end{equation}
+The $x\partial_x$ term comes from $e_s(\alpha h)$ and cannot be
+omitted. $\mathcal N_q$ is the energy-Hermite number operator,
+not the coupling-Gaussian chaos number at finite $N$.
+Its action on $e_s$ is justified by the bounded Jacobi operator's
+factorial coefficient tail.
+
+For a direct polynomial implementation write
+$x^n=\sum_jd_{n,j}W_j(x)$, with
+\begin{equation}
+ d_{0,0}=1,\qquad d_{n+1,j}=d_{n,j-1}+C[j+1]_qd_{n,j+1}.
+\end{equation}
+If $S_k=\sum_{a+b+c=k}E_h[u h^a u h^b u h^c u]$, then
+\begin{equation}
+ [S_k]_{W_j}=\tfrac C2(k+2-j)q^j d_{k+2,j}
+            +C^2[j+2]_q[j+1]_q d_{k+2,j+2}.
+\end{equation}
+In particular,
+\begin{equation}
+ \iota_0=\iota'_0=0,\quad \iota''_0=(2+q)C^2I,\quad
+ \iota'''_0=iC^2(1+4q+3q^2+q^3)h.
+\end{equation}
+These are the leading conserved coefficients. Finite-$N$ $\mathcal I_s$
+need not commute with $h$; its dynamic part vanishes only in the
+specified double-scaling limit.
+
+\newpage
+\section{The first two neutral fluctuation coefficients}
+Write $\BB(s)=isB_1-s^2B_2/2+O(s^3)$ at finite $N$ and
+$\Jh X=\{h,X\}/2$. Direct differentiation gives
+\begin{align}
+ B_1&=m\epsilon\alpha(1-\PP)\Phi(h),\\
+ B_2&=m\epsilon(1-\PP)[\alpha^2\Phi(h^2)-\alpha\{h,\Phi(h)\}].
+\end{align}
+Use $\kappa_r=C_m\mu(r)$ on physical ranks, with the positive-part
+extension when $2p$ lies outside them:
+\begin{equation}
+ \mu(r)=\prod_{j=0}^{p-1}
+ \left(1-\frac r{m-j}\right)_+
+ \left(1-\frac r{N-m+p-j}\right)_+.
+\end{equation}
+For active $m\ge p$, define
+\begin{equation}
+ Z=h^2-C_mI,\quad h=\sum_a h_a,\quad
+ \EE\tr_m h_a^2=C_m\omega_a,\quad
+ \bar\kappa=\sum_a\omega_a\kappa_a,\quad B_Z=\Phi(h)-\bar\kappa h.
+\end{equation}
+The same coefficients can be written exactly as
+\begin{align}
+ B_1&=m\epsilon\alpha(1-\PP)B_Z,\\
+ B_2&=m\epsilon(1-\PP)
+       [\alpha^2(\Phi-\kappa_{2p})Z-2\alpha\Jh B_Z].
+ \label{eq:B2exact}
+\end{align}
+Before pinching the difference of the two $B_2/(m\epsilon)$
+expressions is the explicitly conserved polynomial
+\begin{equation}
+ (\alpha^2\kappa_{2p}-2\alpha\bar\kappa)h^2
+       +\alpha^2C_m(C_m-\kappa_{2p})I.
+\end{equation}
+
+In a central compact window $m=N/2+xp$, the exact product for
+$\mu$ gives, for fixed $k,d$,
+\begin{equation}
+ p[\mu(kp-d)-\mu(kp)]\to4\lambda q^kd,\qquad
+ 0\le p[\mu(kp-d)-\mu(kp)]\le12\lambda_Nd.
+ \label{eq:slope}
+\end{equation}
+For example, differentiate the logarithm of its two products:
+the reciprocal sum is $4p/N+O(p^2/N^2)$ at fixed deficit,
+while $\mu(kp)\to q^k$. Input factorial tails and the prior
+sixth output-deficit moment \cite{Central,Raw} make this an
+$L^2$ multiplier limit, not merely a pointwise rank estimate.
+The output squared tail is bounded by a constant times $R^{-4}$
+after a cutoff at deficit $R$.
+
+Let $D_2Z=\sum_r(2p-r)P_rZ$, $D_{\rm in}=\sum_a(p-a)h_a$,
+$\bar u=\sum_a(p-a)\omega_a$, and
+$L_{\rm in}=\W_2\{h,D_{\rm in}-\bar u h\}$.
+The exact input/output decomposition and the prior strong bridges are
+\begin{align}
+ D_2Z&=S_N+L_{\rm in}+2\bar uZ,\qquad
+ S_N=\sum_{a,b,r}(a+b-r)P_r\W_2(h_ah_b),\\
+ pB_Z&=F/2+o_{L^2}(1),&
+ \Jh F&=4\lambda CqL_{\rm in}+o_{L^2}(1),\\
+ S_N&=(O_-+O_+)/2+o_{L^2}(1).
+\end{align}
+Here $O_\pm=\W_2\sum_i[H,c_i]^\dagger[H,c_i]$ and its reverse
+ordering, respectively; $F$ is the previously defined linear
+rank-filtered field. With $Y_\pm=O_\pm-cZ$,
+$c=2\lambda(1-q)/(1+q)$, substitution into \eqref{eq:B2exact} gives
+\begin{equation}
+ \boxed{\quad B_1\to F,\qquad
+ B_2\to d(Y_-+Y_+)+b\Jh F,
+ \quad d=4\lambda Cq^2,\quad b=2(q-1).\quad}
+ \label{eq:Blimit}
+\end{equation}
+Exact pinching can be removed from the limit because these prior
+Mehler spectral measures have no mass on the energy diagonal,
+including energy-polynomial descendants with their controlled
+higher moments. Multiplication of $pB_Z-F/2$ by $\Jh$ is justified:
+for an invariant Hermitian linear Gaussian error $X$,
+$\|\Jh X\|_2^2\le3C_m\|X\|_2^2$ by its scalar variance and
+Gaussian fourth moment; independence of $X$ and $h$ is not needed.
+
+\newpage
+\section{A nonzero mixed spectral calibration}
+Use the established two-energy measures $\mu_r$ with Hamiltonian
+variance $C$ and chord parameter $q$, normalized to mass one.
+Put $e=(E+E')/2$. The needed prior data \cite{Central,Mixed} are
+\begin{align}
+ d\nu_{(Y_-,Y_+)}&=
+ \begin{pmatrix}w&\eta\\\eta&w\end{pmatrix}d\mu_{q^2},
+ &d\nu_F&=V_Fd\mu_q,\\
+ w&=4C^2\lambda+\frac{16C^2\lambda^2q}{1+q},
+ &\eta&=-4C^2\lambda q+\frac{16C^2\lambda^2q}{1+q},\\
+ V_F&=64J_s^6q^2,&\nu_{F,Y_\pm}&=0.
+\end{align}
+The first two charged coefficients $\MA(s)=A_0+isA_1+O(s^2)$
+have the previously identified limits
+\begin{equation}
+ A_0\to Y_-,\qquad A_1\to L-F=R+a\Jh Y_-,\qquad
+ a=-\frac{(1-q)^2}{1+q^2},
+\end{equation}
+where $\nu_{R,F}=\nu_{R,Y_\pm}=0$. Indeed $\BB(0)=0$, the
+four-field term starts at $s^2$, and the actual/ordinary memory
+fields have identical zeroth and first derivatives at zero.
+
+Equation \eqref{eq:Blimit} yields
+\begin{align}
+ d\nu_{B_1,B_2}&=b e V_F\,d\mu_q,\\
+ d\nu_{B_2}&=2d^2(w+\eta)d\mu_{q^2}+b^2e^2V_Fd\mu_q,\\
+ d\nu_{A_0,B_2}&=d(w+\eta)d\mu_{q^2},&
+ d\nu_{A_1,B_2}&=ad e(w+\eta)d\mu_{q^2},\\
+ \nu_{A_0,B_1}&=\nu_{A_1,B_1}=0.
+\end{align}
+In particular $w+\eta>0$ for $0<q<1$, so the second-order mixed
+measure is nonzero. Its value at zero external time is
+$d(w+\eta)>0$. This is a coefficient-level result: any joint
+time kernel admitting termwise matching must reproduce it.
+We have not exchanged differentiation with an unproved
+finite-time large-$N$ limit.
+
+The coefficient measures extend to the full trace without assuming
+an arbitrary extension of every named limiting field. For
+$K_j=2\cdot10^6(\lambda_Nj^2+\lambda_N^2j^4)$, the broad-central
+rank bounds and Gaussian fourth moments give directly
+\begin{align}
+ \|B_1\|_{2,m}&\le24\lambda_N C_m^{3/2}\sqrt{K_1},\\
+ \|B_2\|_{2,m}&\le24\lambda_N C_m^2
+                       [\sqrt{2K_2}+2\sqrt{3K_1}].
+\end{align}
+The ingredients are
+\begin{align*}
+ \|B_Z\|_2&\le C_m^{3/2}(12p/N)\sqrt{K_1},&
+ \|D_2Z\|_2&\le\sqrt2 C_m\sqrt{K_2},\\
+ \|\Jh B_Z\|_2&\le\sqrt3 C_m^2(12p/N)\sqrt{K_1}.
+\end{align*}
+All active sectors have the coarser bounds
+\begin{equation}
+ \|B_1\|_{2,m}\le2pC_m^{3/2},\qquad
+ \|B_2\|_{2,m}\le6\sqrt3 pC_m^2.
+\end{equation}
+Central annuli contribute $O(e^{-2\lambda_-L^2})$, and the far
+tail contributes $O(p^2e^{-N/8})$. The prior full-trace bounds on
+$Y,L$, together with spectral Cauchy--Schwarz, handle the mixed
+terms with $A_0,A_1$. The central coefficient limits therefore give
+the displayed full-trace spectral measures.
+
+\newpage
+\section{Verification, scope and the next calculation}
+Three new scientific outputs accompany this stage.
+Exact rational $q$-Fock calculations are compared with an independent
+colored-pairing enumeration: 2520 conditional trace equalities,
+7200 three-color replica equalities, 66 same-copy OU Wick identities,
+and 42 four-field Taylor comparisons. Parameters are
+$q=1/4,1/2,3/4$, $C=1,3/2$, and $\alpha=3/5,\beta=4/5$.
+The tests include every triple $a+b+c\le6$ and all three
+four-field Wick contractions.
+
+Complete CAR coordinate sets in four systems give 24 real-time
+integrals, with time quadrature orders 8 and 12 and both signs of
+time. The maximum refinement difference is below $2\cdot10^{-15}$.
+An interior $N=5,p=2,m=3$ sector has a nonzero finite-$N$ pinched
+residual, confirming that the asymptotic regression is not an exact
+conserved identity. Initial test systems with $p=1$ or an edge
+sector failed to supply this witness; the failed assertion and
+source are retained. No scientific output was overwritten.
+
+A third script checks 12 complete-coordinate covariance/coefficient
+identities without floating energy pinching. It retains 360 exact
+rational slope inequalities and 80/120-digit comparisons for
+$\lambda=1/4,1/2,1$, $p=16,32,64,128$, $x=-2,0,2$, $k=1,2$,
+and deficits $0,1,2,3,6$. Relative finite-size errors are retained.
+These computations check finite identities and conventions; the
+uniform limits come from the proofs above. Quadrature refinement
+is not interval certification.
+
+\paragraph{Remaining work.}
+The finite-time field now has a two-component reduction with the
+full covariance $C_{AA}+C_{AB}+C_{BA}+C_{BB}$. Its joint limiting
+kernel has not been evaluated. The next calculation must retain
+the charged defect's reverse-source contribution and the neutral
+rank-filter fluctuation with the same original $J$, then resum
+their mixed marked words in both memory times. The second-order
+cross above is a concrete check on that construction. No bulk
+mass assignment or finite-$G$ interaction law follows yet.
+If $\lambda_N$ merely stays in a positive compact interval,
+\eqref{eq:reduction} still holds by taking convergent subsequences;
+explicit $q,C$ spectral formulas assume a chosen limit $\lambda$.
+
+\begin{thebibliography}{9}\small
+\bibitem{BKS} M. Bo\.{z}ejko, B. K\"ummerer and R. Speicher,
+\emph{$q$-Gaussian processes: non-commutative and classical aspects},
+\href{https://arxiv.org/abs/funct-an/9604010}{arXiv:funct-an/9604010},
+Prop.~2.9, Theorems 2.11 and 2.13.
+\bibitem{BNR} M. Berkooz, V. Narovlansky and H. Raj,
+\emph{Complex Sachdev-Ye-Kitaev model in the double scaling limit},
+\href{https://arxiv.org/abs/2006.13983}{arXiv:2006.13983}, Sec.~3.3.
+\bibitem{Tall} J. Tall and S. Tomsovic,
+\emph{Double-scaled bosonic and fermionic embedded ensembles,
+complex SYK, and the dual Hilbert space},
+\href{https://arxiv.org/abs/2604.14522}{arXiv:2604.14522v2}, Sec.~2.1.
+\bibitem{Uniform} A. Day and Chengheng,
+\emph{Uniform second moments of finite-time memory fields}, local note (7 Nov.~2026).
+\bibitem{Return} A. Day and Chengheng,
+\emph{The conserved background of the first memory return}, local note (6 Nov.~2026).
+\bibitem{Central} A. Day and Chengheng,
+\emph{Central charge windows in the memory spectrum}, local note (6 Nov.~2026).
+\bibitem{Raw} A. Day and Chengheng,
+\emph{The raw memory coefficient in a central charge window}, local stage
+\texttt{memory-central-raw} (6 Nov.~2026).
+\bibitem{Mixed} A. Day and Chengheng,
+\emph{Mixed spectra of the first memory fields}, local note (6 Nov.~2026).
+\end{thebibliography}
+\end{document}

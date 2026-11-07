@@ -1,0 +1,128 @@
+{
+  "status": "passed",
+  "sources": [
+    {
+      "source_sine_index": 1,
+      "first_six_amplitudes": [
+        0.997346643182378,
+        -4.4271615116335445e-17,
+        -0.06773576601348937,
+        7.326362920719988e-18,
+        -0.022419021002783278,
+        9.338709535408429e-18
+      ],
+      "first_six_weights": [
+        0.9947003266671576,
+        1.959975905008941e-33,
+        0.004588133997434181,
+        5.367559364610072e-35,
+        0.0005026125027232378,
+        8.721149578672831e-35
+      ],
+      "analytic_mean_mass2_over_tau": 2.356194490192345,
+      "analytic_second_mass2_over_tau2": 6.0,
+      "mass_moment_ratio": 1.0807592921849363,
+      "omitted_modes": {
+        "norm": 0.0002089268326850302,
+        "mass2_over_tau": 0.005807090885090904,
+        "mass4_over_tau2": 0.21276877613214573
+      },
+      "quadrature_max_absolute_difference": 2.6867397195928788e-14
+    },
+    {
+      "source_sine_index": 2,
+      "first_six_amplitudes": [
+        -1.7637753240027688e-17,
+        -0.9773078807941553,
+        1.410153356275607e-16,
+        0.1894091934420222,
+        6.46827674390178e-16,
+        -0.07681815026127016
+      ],
+      "first_six_weights": [
+        3.110903393561072e-34,
+        0.9551306938623629,
+        1.9885324882153587e-32,
+        0.035875842560357384,
+        4.183860403570061e-31,
+        0.00590102820956308
+      ],
+      "analytic_mean_mass2_over_tau": 5.8904862254808625,
+      "analytic_second_mass2_over_tau2": 39.999999999999815,
+      "mass_moment_ratio": 1.1528099116639265,
+      "omitted_modes": {
+        "norm": 0.0030924353677166394,
+        "mass2_over_tau": 0.09880686167726438,
+        "mass4_over_tau2": 4.099318294894722
+      },
+      "quadrature_max_absolute_difference": 2.609024107869118e-14
+    },
+    {
+      "source_sine_index": 3,
+      "first_six_amplitudes": [
+        -0.2979815465978034,
+        -1.285384994114482e-16,
+        -0.8932517849431099,
+        5.260064158456106e-16,
+        -0.28702024069291787,
+        1.236899157093863e-16
+      ],
+      "first_six_weights": [
+        0.08879300211281888,
+        1.6522145830946869e-32,
+        0.7978987513040517,
+        2.766827495107454e-31,
+        0.0823806185674205,
+        1.529919524819509e-32
+      ],
+      "analytic_mean_mass2_over_tau": 9.16297857297023,
+      "analytic_second_mass2_over_tau2": 107.33333333333233,
+      "mass_moment_ratio": 1.27838384847017,
+      "omitted_modes": {
+        "norm": 0.03092762801570892,
+        "mass2_over_tau": 0.8394859897757083,
+        "mass4_over_tau2": 29.043286000250916
+      },
+      "quadrature_max_absolute_difference": 2.4424906541753444e-14
+    },
+    {
+      "source_sine_index": 4,
+      "first_six_amplitudes": [
+        5.8788022644280795e-18,
+        0.4884058512492065,
+        -6.388974390700035e-17,
+        0.7573621316345981,
+        4.937262203970388e-16,
+        -0.3486730996979019
+      ],
+      "first_six_weights": [
+        3.4560316064244714e-35,
+        0.23854027553446203,
+        4.0818993765020884e-33,
+        0.5735973984341023,
+        2.4376558070754536e-31,
+        0.12157293045294303
+      ],
+      "analytic_mean_mass2_over_tau": 12.370021073509811,
+      "analytic_second_mass2_over_tau2": 211.199999999997,
+      "mass_moment_ratio": 1.3802349962778853,
+      "omitted_modes": {
+        "norm": 0.06628939557849267,
+        "mass2_over_tau": 2.1000394981273196,
+        "mass4_over_tau2": 84.62621512596496
+      },
+      "quadrature_max_absolute_difference": 2.120525977034049e-14
+    }
+  ],
+  "conventions": "phi_r normalized in dx; f_k=sin(k theta)/sqrt(B_kk/2), 2x-1=cos(theta); source scale tau=1.",
+  "environment": {
+    "python": "3.14.5",
+    "numpy": "2.4.6",
+    "scipy": "1.18.0"
+  },
+  "error_scope": "Finite 256-mode bulk eigenfunctions with independent quadrature. Only six output modes retained; full source moments and omitted contributions are separately recorded. Not a DSSYK operator map.",
+  "input_sha256": {
+    "code/bilocal_meson_projection.py": "c3f881ea541813da9d79c111424684e2499a3c7b4ea074380ad3e290f7ee7506",
+    "results/susskind-bulk-target/wavefunctions.npz": "10ddc1c2e73f58e216e834467a55648cc36e4bf51abe68bc92aa356d630f6249"
+  }
+}

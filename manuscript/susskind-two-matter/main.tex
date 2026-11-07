@@ -1,0 +1,327 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,microtype}
+\usepackage[margin=24mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\Js}{\mathcal J_s}
+\newcommand{\ket}[1]{|#1\rangle}
+\newcommand{\norm}[1]{\lVert#1\rVert}
+\title{Two-singlet channels and the first interaction signal\\A chord-space resolution of the short-time commutator}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Local research note --- 6 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+We resolve the previously computed singlet commutator curvature into
+orthogonal chord channels. Four fifths of its leading small-coupling
+coefficient comes from the first relative two-matter channel, whose
+same-species norm vanishes in the free limit; one fifth comes from a
+zero-matter component proportional to the Hamiltonian. The exact
+finite-parameter sum agrees with an independent full Wick enumeration.
+We also extend the positive chord generator to ordered two-matter
+representations and give their standard Jacobi--Laguerre limiting
+realization. This separates relative-channel labels from physical masses
+and identifies the extra operator data needed for a meson spectrum.
+\end{abstract}
+
+\section{An exact decomposition of an existing observable}
+The state is the full annealed normalized trace $\tau$, with
+$\beta=\mu_{\rm chem}=0$. Take complex DSSYK double scaling first,
+then small $h=4\lambda$, $q=e^{-h}$, at fixed times or fixed chord
+degrees. Our normalized conserved-subtracted derivative singlet $X$
+has $d=2$, $\tau X^2=1$, mixed crossing weight $r=q^2$, and
+$X$--$X$ crossing weight $\chi=q^4=r^2$. Write
+\begin{equation}
+ H_s=2\Js H_{\rm src},\qquad \tau H_{\rm src}^2=h^{-1},\qquad
+ F=H_{\rm src}X^2-2XH_{\rm src}X+X^2H_{\rm src}.
+\end{equation}
+Since $[\dot X,X]=2i\Js F$, the nonnegative commutator square is
+\begin{equation}
+ \mathcal C(t)=\tau([X(t),X]^\dagger[X(t),X])
+ =4\Js^2t^2\norm F^2+O(t^4).
+\end{equation}
+Our channel calculation gives the exact fixed-$h$ decomposition
+\begin{equation}
+ \boxed{\norm F^2=\frac1h\left[
+ \underbrace{4(1-r)^2}_{\text{zero matter}}
+ +\underbrace{2(1-r)^4}_{k=0\ \text{two matter}}
+ +\underbrace{4(1-r^2)^2}_{k=1\ \text{two matter}}\right].}\label{result}
+\end{equation}
+Thus the respective leading coefficients in $\mathcal C(t)$ are
+$256\Js^2\lambda t^2$, zero at order $\lambda$, and
+$1024\Js^2\lambda t^2$. Their sum reproduces the earlier
+$1280\Js^2\lambda t^2$. This resolves the existing scalar result
+into states; it is not a new Lyapunov exponent.
+
+\newpage
+\section{Proof using the two-open-matter Gram form}
+Let $(L,M,R)$ denote one Hamiltonian chord respectively before, between,
+or after two open $X$ chords. The no-crossing and crossed matter
+pairings give
+\begin{equation}
+ G=\begin{pmatrix}1&r&r^2\\r&1&r\\r^2&r&1\end{pmatrix},\qquad
+ G_\times=\chi\begin{pmatrix}1&r&r^2\\r&r^2&r\\r^2&r&1\end{pmatrix}.
+ \label{gram}
+\end{equation}
+The middle crossed entry is $\chi r^2$, not $\chi$; the Hamiltonian
+chord crosses both matter chords. The physical two-open-$X$ norm is
+$G+G_\times$. Internal matter contractions form the separate
+zero-matter sector. This is the same-species Wick-sector decomposition,
+not the assertion that $G_\times$ is a unitary exchange matrix.
+
+In the ordered direct form $G$, the normalized first primary and the
+symmetric external descendant are
+\begin{equation}
+ u_1=\frac{(-r,1+r^2,-r)^T}{\sqrt{1-r^4}},\qquad
+ s_0=(1,0,1)^T.
+\end{equation}
+Both external annihilators kill $u_1$; it is the $d_{\rm eff}=5$
+primary. Direct multiplication proves
+\begin{gather}
+ u_1^TGu_1=1,\quad u_1^TG s_0=u_1^TG_\times s_0=0,\nonumber\\
+ u_1^TG_\times u_1=-\chi r^2,\quad
+ s_0^TG s_0=2(1+r^2),\quad s_0^TG_\times s_0=2\chi(1+r^2).
+\end{gather}
+The raw two-matter part of $\sqrt hF$ has vector $v=(1,-2,1)^T$.
+Its exact projection is
+\begin{equation}
+ v=c\,s_0+a\,u_1,\qquad
+ c=\frac{(1-r)^2}{1+r^2},\qquad
+ a=-\frac{2(1-r^2)}{\sqrt{1-r^4}}.\label{project}
+\end{equation}
+Substituting $\chi=r^2$ yields
+\begin{align}
+ \norm{c s_0}_{G+G_\times}^2&=2(1-r)^4,\nonumber\\
+ \norm{a u_1}_{G+G_\times}^2&=a^2(1-r^4)=4(1-r^2)^2.
+\end{align}
+The contraction of the two $X$'s inside $H_{\rm src}X^2$ or
+$X^2H_{\rm src}$ leaves $H_{\rm src}$; inside $XH_{\rm src}X$
+it leaves $rH_{\rm src}$. The zero-matter part is therefore
+$2(1-r)H_{\rm src}$, with squared norm $4(1-r)^2/h$.
+Orthogonality of the zero- and two-open-matter Wick sectors proves
+Eq.~\eqref{result}.
+
+The $k=1$ direct unit vector has physical squared norm
+$1-r^4=1-e^{-8h}\sim8h$. Simultaneously $a^2\sim8h$.
+Their product divided by $h$ gives an order-$h$ effect in $\norm F^2$.
+Dropping this channel because its unrescaled free-limit norm vanishes
+would discard the leading $4/5$ contribution.
+
+\newpage
+\section{Ordered two-matter representations and the positive generator}
+For dimensions $d_1,d_2>0$, the ordered chord states are
+$\ket{l,m,r}$, with $E=\bar n=d_1+d_2+l+m+r$. The coproduct gives
+\begin{align}
+ a_L\ket{l,m,r}={}&[l]_q\ket{l-1,m,r}
+ +q^{d_1+l}[m]_q\ket{l,m-1,r}\nonumber\\
+ &+q^{d_1+d_2+l+m}[r]_q\ket{l,m,r-1},\label{action}
+\end{align}
+and the reflected $a_R$ action. We use the physical Gram form, whose
+pure-middle direct norm is $[m]_q!$. These are the existing
+Lin--Stanford rules \cite{LS}, Sec.~3.3 and App.~B.2.
+
+Their decomposition is
+\begin{equation}
+ \mathcal R_{2}^{d_1,d_2}=\bigoplus_{k=0}^\infty\mathcal R_1^{D_k},
+ \qquad D_k=d_1+d_2+k.\label{irreps}
+\end{equation}
+One may construct its normalized primary $\Omega_k$ without an
+all-$k$ normalization formula. At grade $k$, take the orthogonal
+complement of the external creations from grade $k-1$. Adjointness
+then gives $a_L\Omega_k=a_R\Omega_k=0$. Inductively the already
+constructed families fill all but one dimension, since
+\begin{equation}
+ \dim\mathcal H_k=\binom{k+2}{2},\qquad
+ \sum_{j=0}^{k-1}(k-j+1)=\binom{k+2}{2}-1.
+\end{equation}
+Positivity of the chord Gram form and the one-matter irreps ensure
+nondegenerate descendant blocks and orthogonality of different
+families. This gives one new primary at each grade.
+
+Define $K_+=(a_L^\dagger-a_R^\dagger)/\sqrt h$ and
+$K_-=(a_L-a_R)/\sqrt h$ as in the preceding note, and
+\begin{equation}
+ B_h=(K_++K_-)/2,\qquad \Pi_h=(K_--K_+)/(2i),\qquad Q_h=E+\Pi_h.
+\end{equation}
+Each summand in Eq.~\eqref{irreps} has the preceding one-matter
+proof with $d=D_k$. Therefore $Q_h$ is positive and self-adjoint
+on the ordered two-matter space (domain $D(E)$ at fixed $h$).
+For every fixed $k,n$ its normalized antisymmetric descendants tend
+to $D^+_{D_k}$, with raising coefficient
+$\sqrt{(n+1)(2D_k+n)}$.
+
+The resulting contracted sector is $\bigoplus_k D^+_{D_k}$ on
+finite sums of fixed-channel descendants. It is not a uniform
+limit of all finite-$h$ chord directions. In particular it does not
+retain every singularly rescaled ordering difference automatically.
+The original concatenation coproduct is not a primitive sum on
+independent matter Hilbert spaces. Xu's factorization likewise
+requires a modified inner product \cite{Xu}.
+
+\newpage
+\section{The relative coordinate and why $k$ is not a mass}
+The standard positive discrete-series tensor decomposition
+\cite{KV,J} realizes Eq.~\eqref{irreps} after contraction as
+$D^+_{d_1}\otimes D^+_{d_2}$. An explicit unitary coordinate map is
+\begin{equation}
+ P=p_1+p_2>0,\quad x=p_1/P\in(0,1),\qquad
+ (\mathcal U f)(P,x)=\sqrt P\,f(Px,P(1-x)).
+\end{equation}
+The measure is $dP\,dx$. Let $D=d_1+d_2$, and define
+\begin{align}
+ \chi_k(x)&=\frac{x^{d_1-1/2}(1-x)^{d_2-1/2}}{\sqrt{N_k}}
+ P_k^{(2d_2-1,2d_1-1)}(2x-1),\nonumber\\
+ N_k&=\frac{\Gamma(k+2d_1)\Gamma(k+2d_2)}
+ {(2k+2D-1)k!\Gamma(k+2D-1)}.\label{jacobi}
+\end{align}
+At removable singular parameter values, take the continuous limit
+of the displayed normalization. The $\chi_k$ form an orthonormal
+basis of $L^2(0,1;dx)$. With the preceding Laguerre radial basis,
+the channel map is
+\begin{equation}
+ e_{k,n}\longmapsto\phi_n^{D_k}(P)\chi_k(x),\qquad
+ Q=P,\quad B=i(P\partial_P+\tfrac12).
+\end{equation}
+It intertwines $E,B,Q$ with the sums of their one-particle
+realizations. In particular, if $a=d_1-1/2$, $b=d_2-1/2$, the
+transformed sum $S_1+S_2$ is
+\begin{gather}
+ -P\partial_P^2-\partial_P+\frac{\mathcal T_x}{P},\qquad
+ \mathcal T_x=-\partial_x x(1-x)\partial_x+\frac{a^2}{x}
+ +\frac{b^2}{1-x}+\frac14,\nonumber\\
+ \mathcal T_x\chi_k=(D_k-\tfrac12)^2\chi_k.\label{T}
+\end{gather}
+This follows from the Jacobi differential equation. It verifies the
+tensor realization explicitly, rather than identifying a finite-$h$
+coproduct with a primitive sum.
+
+For a free positive-energy extension with equal particle masses $m$
+and common momentum scale $\mu$, light-front kinematics gives
+\begin{equation}
+ P^+=\mu P,\qquad P^-=\frac{m^2}{\mu P x(1-x)},\qquad
+ M^2=\frac{m^2}{x(1-x)}.
+\end{equation}
+At $d_1=d_2=2$, direct integration in the \emph{relative} space gives
+\begin{equation}
+ \langle\chi_0|M^2/m^2|\chi_0\rangle=\frac{14}{3},\qquad
+ \boxed{\langle\chi_0|M^2/m^2|\chi_2\rangle=\frac{\sqrt{11}}3\ne0.}
+\end{equation}
+Thus even the free mass operator mixes the discrete $k$ channels.
+Its spectrum is the continuum $[4m^2,\infty)$, not the list $D_k$.
+The $p_i,x$ here parametrize the two-singlet representation; they
+have not been identified as quark momenta inside one meson.
+
+\newpage
+\section{Higher channels, verification and the dynamical question}
+The opposite-order overlap suggested in Lin--Stanford App.~F is
+\begin{equation}
+ R_k=(-1)^k q^{d_1d_2+k(d_1+d_2)+k(k-1)/2}.
+ \label{R}
+\end{equation}
+The authors report checks through $k=25$, rather than an all-$k$
+proof of this formula. We use exact direct calculations for $k=0,1$
+in Eq.~\eqref{result}; our further tests through $k=4$ do not upgrade
+Eq.~\eqref{R} to a theorem. Its exponent can be written
+\begin{equation}
+ \tfrac12\{D_k(D_k-1)-d_1(d_1-1)-d_2(d_2-1)\}.
+\end{equation}
+This is an overlap between differently ordered states. Its modulus
+is below one at finite $h$ and it must not be interpreted as an
+elastic scattering phase. For identical slots at the verified first
+grade, the physical form $G+G_\times$ retains the norm defect that
+produces the commutator contribution on page 2.
+
+\paragraph{Independent checks.}
+The saved validation contains 38 exact identities: first-grade
+primary/projection formulas, the complete six-letter Wick sum for
+$F^2$, Jacobi orthogonality, and relative Casimir eigenfunctions.
+Three additional symbolic differential identities verify the full
+two-variable $S$ and $B$ transformations and the Jacobi conjugation
+for general parameters. A separate recursive Gram implementation
+constructs primaries through $k=4$ at
+\begin{equation}
+ (h,d_1,d_2)=(0.05,2,2),\ (0.01,2,2),\ (0.02,1.3,2.1).
+\end{equation}
+Computations at 85 and 115 decimal digits differ relatively by at
+most $2.5\times10^{-78}$ in the recorded overlaps and projections.
+The maximum 115-digit overlap residual is below $1.8\times10^{-108}$.
+These are finite-degree numerical checks, not certified error bounds
+or evidence for uniform large-$k$ limits.
+
+\paragraph{The remaining physical input.}
+In the tensor realization $Q$ and $B$ act only on $P$. Any suitable
+positive self-adjoint relative operator $\mathcal M_x^2$ therefore
+defines kinematically
+\begin{equation}
+ P^+=\mu P,\qquad P^-=\frac{\mathcal M_x^2}{\mu P}.
+\end{equation}
+The algebra alone permits either continuous or discrete relative
+spectra. To choose $\mathcal M_x^2$ requires a microscopic spatial
+dictionary or independent dynamical Ward identities; channel counting
+does not choose it. The computed commutator decomposition supplies an
+interaction constraint that a candidate must reproduce.
+
+There is also a distinction of sectors: two open $X$ chords describe
+products of our \emph{single} derivative singlet. They are useful for
+singlet interactions. The single-meson tower proposed by
+Miyashita--Sekino--Susskind instead calls for independent derivative
+fermion bilinears \cite{MSS}. Their spectral matrix is the next
+direct microscopic target; the present relative index must not be
+relabeled as that tower.
+
+\newpage
+\section{Next calculation and reproducibility}
+We now have a positive total chord generator and an exact first
+relative-channel contribution to the noncommutativity of $X$.
+The next task is to enlarge the microscopic singlet operator family
+beyond $X$, so that particle-species information can be distinguished
+from time derivatives and products of the same singlet.
+
+Start with the next derivative bilinears
+$\sum_i c_i^\dagger\operatorname{ad}_{H_s}^{n}(c_i)$ and their
+adjoints. Resolve their Hermitian components, conserved projections,
+and Liouvillian descendants before computing the remaining independent
+Gram and spectral matrix. The same disorder couplings must be retained
+inside the derivatives. Use existing complex-SYK chord/embedded-ensemble
+identities where available, followed by exact low-order checks. The
+criterion is a nonzero new independent spectral direction, not merely
+another correlator of $X$.
+
+The channel result here remains a separate constraint for the eventual
+interaction map. We have not equated it with a spatial on-shell
+amplitude. The ordinary fixed-$k,n$ contraction also leaves open
+singular ordering sectors, growing times, and the small-$P$ domain of
+inverse translations. Those questions can be addressed when a concrete
+observable requires them, rather than replacing the spectral calculation.
+
+\paragraph{Saved files.}
+The stage \texttt{susskind-two-matter} contains the LaTeX source,
+Chinese derivation, literature map, numerical outputs and SHA-256
+manifest. The numerical code is \nolinkurl{two_matter_chords.py}.
+The independent checks are \nolinkurl{check_two_matter_chords.py}
+and \nolinkurl{check_two_matter_tensor.py}.
+The build script uses two \texttt{pdflatex} passes, and all six
+rendered pages are inspected. This stage is saved locally without
+a Git commit, push, or archive.
+
+\begin{thebibliography}{9}
+\bibitem{LS} H. W. Lin and D. Stanford,
+\emph{A symmetry algebra in double-scaled SYK},
+\href{https://arxiv.org/abs/2307.15725}{arXiv:2307.15725v1}.
+Secs.~2.3, 3.3; Apps.~B.2 and F.
+\bibitem{Xu} J. Xu,
+\emph{On Chord Dynamics and Complexity Growth in Double-Scaled SYK},
+\href{https://arxiv.org/abs/2411.04251}{arXiv:2411.04251v3}, Sec.~3.2.
+\bibitem{KV} H. T. Koelink and J. Van der Jeugt,
+\emph{Convolutions for orthogonal polynomials from Lie and quantum
+algebra representations},
+\href{https://arxiv.org/abs/q-alg/9607010}{arXiv:q-alg/9607010},
+Corollary 3.6 and Remark 3.7.
+\bibitem{J} J. Van der Jeugt and R. Jagannathan,
+\emph{Realizations of $su(1,1)$ and $U_q(su(1,1))$ and generating
+functions for orthogonal polynomials},
+\href{https://arxiv.org/abs/math-ph/9807019}{arXiv:math-ph/9807019}, Eq.~(2.10).
+\bibitem{MSS} S. Miyashita, Y. Sekino and L. Susskind,
+\emph{Holograms and Standard Models},
+\href{https://arxiv.org/abs/2607.05678}{arXiv:2607.05678v2}, Secs.~4.2--4.3.
+\end{thebibliography}
+\end{document}

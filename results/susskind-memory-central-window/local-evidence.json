@@ -1,0 +1,117 @@
+{
+  "created_at_utc": "2026-11-06T09:55:21.258642+00:00",
+  "status": "Saved locally; no publication",
+  "scientific_status": "Uniform compact-central-window sixth rank-product moment; explicit sector variance drift and finite conserved gH filter correction. Full memory Gram, charge-tail integration, finite-memory remainder and bulk dictionary remain open.",
+  "current_git_head": "714d038bb605cfcffdc351e4dcc62aa95237d25f",
+  "git_commit_created": false,
+  "git_push_performed": false,
+  "archive_created": false,
+  "parent_manifest_sha256": "8e720ec19f1a2d93df2efac09ff959ef1650a20604b8067c1d8f29067de09b60",
+  "previous_stage_scientific_files_unchanged": [
+    "code/memory_raw_spectrum.py",
+    "code/check_memory_raw_restoration.py",
+    "code/memory_raw_kernel.py",
+    "code/build_memory_raw_spectrum.ps1",
+    "code/record_memory_raw_spectrum.py",
+    "manuscript/susskind-memory-raw-spectrum/main.tex",
+    "output/pdf/de-sitter-susskind-memory-raw-spectrum.pdf",
+    "notes/susskind-memory-raw-spectrum.md",
+    "literature/susskind-memory-raw-spectrum-sources.md",
+    "journal/2026-11-06-susskind-memory-raw-spectrum.md",
+    "results/susskind-memory-raw-spectrum/finite-restoration.json",
+    "results/susskind-memory-raw-spectrum/kernel-checks.json",
+    "results/susskind-memory-raw-spectrum/main.log",
+    "results/susskind-memory-raw-spectrum/symbolic-spectrum.json"
+  ],
+  "checks": {
+    "symbolic_moments": 6,
+    "negative_power_cancellations": 21,
+    "finite_full_distribution_moments": 28,
+    "central_moment_cases": 40,
+    "variance_ratios": 30,
+    "exact_filter_identities": 60,
+    "filter_convergence_cases": 30
+  },
+  "environment": {
+    "python": "3.14.5",
+    "calculations": [
+      {
+        "python": "3.14.5",
+        "sympy": "1.14.0"
+      },
+      {
+        "python": "3.14.5",
+        "sympy": "1.14.0"
+      },
+      {
+        "python": "3.14.5",
+        "sympy": "1.14.0",
+        "mpmath": "1.3.0"
+      }
+    ]
+  },
+  "build": {
+    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File code/build_memory_central_window.ps1",
+    "compiler": "This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5 Portable) (preloaded format=pdflatex 2026.9.19)  6 NOV 2026 17:52",
+    "passes_per_build": 2,
+    "final_pages": 6,
+    "render_command": "pdftoppm -r 95 -png output/pdf/de-sitter-susskind-memory-central-window.pdf tmp/pdfs/susskind-memory-central-window-build/page",
+    "visual_review": "All six final page PNGs viewed at 95 dpi; formula bounds, reference text and page boundaries clear."
+  },
+  "failures": [
+    {
+      "stage": "central symbolic recurrence",
+      "reason": "Touchard dummy z shadowed polynomial-ring charge z; renamed tvar. Exact checks retained.",
+      "resolved": true
+    },
+    {
+      "stage": "scale symbolic equality",
+      "reason": "Structural equality rejected algebraically identical factorization; changed to exact factor(difference)==0.",
+      "resolved": true
+    },
+    {
+      "stage": "first PDF build",
+      "reason": "2.36888pt overflow in parameter list; saved source/log and moved list to display.",
+      "resolved": true
+    }
+  ],
+  "evidence_scope": "Rational analyticity and polynomial-ring identities prove compact-window moment estimates. Finite five-word checks verify exact filters. No uniform full memory Gram or finite-time remainder theorem is inferred.",
+  "process_state": "All calculations, compilation and rendering terminal; no active calculation.",
+  "hashes": {
+    "code/memory_central_window.py": "c4eb19f64d26c9d0679f3eadc5f9a850751ad9fc4aaa64f232293ba8e35afc5f",
+    "code/memory_central_scale.py": "5e7f5706315526ac1cfbc6c92d66ec81530dfa339b74919d8801fd7476e556de",
+    "code/check_memory_central_filter.py": "03b3c1d0db03648eea29b2bb071f10c6b9d882d79149e95851f4758b609d3e9f",
+    "code/build_memory_central_window.ps1": "d1dc7128947d7bec04252a42a68928f1180176d715f296778abf7d43f767cd60",
+    "code/record_memory_central_window.py": "fcb9112afa57a1357d77eaa8d6a0ed398867826d958f6ae923318b0c50689a75",
+    "manuscript/susskind-memory-central-window/main.tex": "6c3a2f6f9b74ca935cb401bf0d24886fb640a627bab89b9cb957bfdc5961fd13",
+    "output/pdf/de-sitter-susskind-memory-central-window.pdf": "9cb8b67a2262ab8d271aaf975292796e9763d5d7b4f0fc8307371fd3a1b0e396",
+    "notes/susskind-memory-central-window.md": "8aa954a5a1cd6b58794a62eca8619cbb5d5a7fcd8a555ac58c571d89d1f6a1a9",
+    "literature/susskind-memory-central-window-sources.md": "4b0bae7b89de4e9eed5e2a34852c16c55882037fec55aa444e861bed83eb4d8e",
+    "journal/2026-11-06-susskind-memory-central-window.md": "c827b36872869ed09a4cc7cc2f12823d83fa8c312eea2c7bf411cc4b55756598",
+    "README.md": "7e9c0c4f48bd329285fd52bc91689bfbe6551a5c94809c0c12c3ab935b705104",
+    "PLAN.md": "a737f0bdfe3e32f5b41e775e7ce5cde71603a8ebffd22caedd8098d2df0ebb8f",
+    "NEXT.md": "5c218ffa3a4259918c83e25156cb3399c51455e3b2605add7a5d3b67b4385654",
+    "results/susskind-memory-central-window/central-filter-checks.json": "98fcf582c25d7adeff82737733aa4a7c477dbec7701db87897c16cc9ca2acdba",
+    "results/susskind-memory-central-window/central-moments.json": "9d758d5149c3296f12d6e4195e8e0077da5c0413794f380f95178ddd4556e452",
+    "results/susskind-memory-central-window/central-scale.json": "029005728efdac7e6d75d409710dae734ba5cbfdfc39252727f81949a2e22177",
+    "results/susskind-memory-central-window/diagnostics/first-build.log": "07b2ce1feb5e8374ad0d538062c2125693b0dce7943927bea26db56451c80e6c",
+    "results/susskind-memory-central-window/diagnostics/first-main.tex": "783bf78a244d2fff18d3d0d1bccc2582159042836c930e3fac525195a96dfedd",
+    "results/susskind-memory-central-window/diagnostics/initial-central-scale.py": "54794270b1a2ea02367cf3c1c5a7ad491f5cbebb5389a57bb214809b65d07ee3",
+    "results/susskind-memory-central-window/diagnostics/initial-central-window.py": "b4cdc292b4e5cb1251a20b7cd736e83313f346d390066b03ad1980321179186e",
+    "results/susskind-memory-central-window/diagnostics/initial-failure.txt": "4f4697da666911369e53b27f984d172bdae0c5597ec9adb61d526a6febad0456",
+    "results/susskind-memory-central-window/diagnostics/scale-failure.txt": "78f7280d963a82a6bfe3435f8dd6a8a733038a2fd67acd96c92b172d7b34d027",
+    "results/susskind-memory-central-window/main.log": "e7fd33152bf5a3bc65a5b8aa5b661d9aab8b22dd0c841327a3ae73050bdb5724"
+  },
+  "render_hashes": {
+    "tmp/pdfs/susskind-memory-central-window-build/page-1.png": "4d9e3583256c3bf20ee94ef8a83a5e024f3e7dfa5455568f06af142a929cb6e2",
+    "tmp/pdfs/susskind-memory-central-window-build/page-2.png": "30025ade7d7db9f611975c7374115e1e2fd857041f82bf2a33f01547debe5496",
+    "tmp/pdfs/susskind-memory-central-window-build/page-3.png": "f17b683f52ed4a7d394bbeff1321b95b1cbd90f0bf0def00621684cd249a377d",
+    "tmp/pdfs/susskind-memory-central-window-build/page-4.png": "d08597d23261c3fd17224a6ab21965250215a49153ce89c22c19d010d8891f95",
+    "tmp/pdfs/susskind-memory-central-window-build/page-5.png": "0fb09528e675580c1332df4b2736a0f3f04799dba6769b8fc7f58796d884d7b9",
+    "tmp/pdfs/susskind-memory-central-window-build/page-6.png": "f9bd37929ea64e1d041cdd2090c4e66eaf4352ee7acd395e9f8f63287077cc0c"
+  },
+  "build_pass_hashes": {
+    "pass1.txt": "b96e41f733bf67ed9e781f81f0e62e13dadec9bc0903ee505af4599f23f3ac31",
+    "pass2.txt": "9161914e75aa19e10536a32b6f480e8139bf6a240ef953be7ce9240013745ffe"
+  }
+}

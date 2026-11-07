@@ -1,0 +1,43 @@
+{
+  "p": 2,
+  "coefficients": [
+    0,
+    0,
+    0,
+    0,
+    491520,
+    8601600,
+    56655360,
+    158215680,
+    208373760,
+    127733760,
+    29030400,
+    0,
+    0
+  ],
+  "factored_raw_mu2": "N**2*(N - 3)*(N - 2)*(N - 1)*(N + 1)*(N**4 + 4*N**3 - 53*N**2 + 120*N - 16)/512",
+  "samples": [
+    {
+      "N": 16,
+      "lambda_value": "1/4",
+      "normalized_mu2": "101893155/67108864",
+      "double_scaled_prediction": 2.194417749396434,
+      "ratio": 0.6919039584064219
+    },
+    {
+      "N": 8,
+      "lambda_value": "1/2",
+      "normalized_mu2": "218295/65536",
+      "double_scaled_prediction": 4.862894599228091,
+      "ratio": 0.6849659786842118
+    },
+    {
+      "N": 4,
+      "lambda_value": "1",
+      "normalized_mu2": "15/8",
+      "double_scaled_prediction": 8.572681939323394,
+      "ratio": 0.21871801768350524
+    }
+  ],
+  "elapsed_seconds": 0.6420343000208959
+}

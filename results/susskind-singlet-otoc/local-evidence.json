@@ -1,0 +1,181 @@
+{
+  "created_at_utc": "2026-11-05T17:06:32.215370+00:00",
+  "status": "local research stage recorded, not published or globally frozen",
+  "scientific_status": "Established BINT/BNR kernels applied to the conserved-subtracted singlet, all same-species channels retained. Finite-positive-lambda alternating-time OTOC computed with analytic cutoff bounds. Known scrambling asymptotic mapped into string units. Bulk wavepacket/time dictionary and complete de Sitter duality remain open.",
+  "previous_stages": [
+    {
+      "stage": "susskind-singlet-moments",
+      "manifest_sha256": "2acb8e1619eee3855bc343ed7ffb9a5a7068164702c7653625bda6edf5f83177",
+      "unchanged_verified": [
+        "code/singlet_wick_moments.py",
+        "code/run_singlet_wick_moments.py",
+        "code/build_singlet_wick_moments.ps1",
+        "code/record_singlet_wick_local.py",
+        "manuscript/susskind-singlet-moments/main.tex",
+        "output/pdf/de-sitter-susskind-singlet-moments.pdf",
+        "notes/susskind-singlet-moments.md",
+        "literature/susskind-singlet-moments-sources.md",
+        "results/susskind-singlet-moments/build-initial.log",
+        "results/susskind-singlet-moments/main.log",
+        "results/susskind-singlet-moments/moments.json"
+      ],
+      "intentionally_updated_navigation": []
+    },
+    {
+      "stage": "susskind-singlet-double-scale",
+      "manifest_sha256": "c19142259cad894d5c0ada97e3e46e7445660b7c47adb1ff42a898239689ed25",
+      "unchanged_verified": [
+        "code/singlet_coefficient.py",
+        "code/check_singlet_coefficient.py",
+        "code/run_singlet_double_scale.py",
+        "code/run_singlet_centered_moment.py",
+        "code/finish_singlet_double_scale.py",
+        "code/build_singlet_double_scale.ps1",
+        "code/record_singlet_double_scale_local.py",
+        "manuscript/susskind-singlet-double-scale/main.tex",
+        "output/pdf/de-sitter-susskind-singlet-double-scale.pdf",
+        "notes/susskind-singlet-double-scale.md",
+        "literature/susskind-singlet-double-scale-sources.md",
+        "journal/2026-11-05-susskind-singlet-double-scale.md",
+        "results/susskind-singlet-double-scale/build-initial.log",
+        "results/susskind-singlet-double-scale/centered-gram-initial.json",
+        "results/susskind-singlet-double-scale/centered-gram.json",
+        "results/susskind-singlet-double-scale/coefficients-p1.json",
+        "results/susskind-singlet-double-scale/coefficients-p2.json",
+        "results/susskind-singlet-double-scale/coefficients-p3.json",
+        "results/susskind-singlet-double-scale/coefficients-p4.json",
+        "results/susskind-singlet-double-scale/coefficients-p5.json",
+        "results/susskind-singlet-double-scale/independent-tensor.json",
+        "results/susskind-singlet-double-scale/initial-core.py.txt",
+        "results/susskind-singlet-double-scale/initial-validation-failure.txt",
+        "results/susskind-singlet-double-scale/main.log",
+        "results/susskind-singlet-double-scale/overlap-graphs.json",
+        "results/susskind-singlet-double-scale/validation.json",
+        "results/susskind-singlet-double-scale/word-checks.json"
+      ],
+      "intentionally_updated_navigation": [
+        "README.md",
+        "PLAN.md",
+        "NEXT.md"
+      ]
+    },
+    {
+      "stage": "susskind-singlet-kernel",
+      "manifest_sha256": "059adaddc9011a118caf5656fccc42b3cb0d8ea74128b20f609c1bfac7464f25",
+      "unchanged_verified": [
+        "code/singlet_spectral_graphs.py",
+        "code/check_singlet_spectral_kernel.py",
+        "code/check_singlet_kernel_nonzero.py",
+        "code/run_singlet_kernel.py",
+        "code/build_singlet_kernel.ps1",
+        "code/record_singlet_kernel_local.py",
+        "manuscript/susskind-singlet-kernel/main.tex",
+        "output/pdf/de-sitter-susskind-singlet-kernel.pdf",
+        "notes/susskind-singlet-kernel.md",
+        "literature/susskind-singlet-kernel-sources.md",
+        "journal/2026-11-06-susskind-singlet-kernel.md",
+        "results/susskind-singlet-kernel/build-initial.log",
+        "results/susskind-singlet-kernel/correlator.png",
+        "results/susskind-singlet-kernel/exact-checks.json",
+        "results/susskind-singlet-kernel/initial-checker.py.txt",
+        "results/susskind-singlet-kernel/kernel-numerics.json",
+        "results/susskind-singlet-kernel/main.log",
+        "results/susskind-singlet-kernel/nonzero-words.json"
+      ],
+      "intentionally_updated_navigation": [
+        "README.md",
+        "PLAN.md",
+        "NEXT.md"
+      ]
+    },
+    {
+      "stage": "susskind-singlet-multimark",
+      "manifest_sha256": "a80b511d980d5b5226f713404475f1c5310ae808a3c4acc2b2b4f1f5da1f7cde",
+      "unchanged_verified": [
+        "code/singlet_multimark.py",
+        "code/check_singlet_multimark.py",
+        "code/check_multimark_car.py",
+        "code/run_singlet_fourpoint.py",
+        "code/build_singlet_multimark.ps1",
+        "code/record_singlet_multimark_local.py",
+        "manuscript/susskind-singlet-multimark/main.tex",
+        "output/pdf/de-sitter-susskind-singlet-multimark.pdf",
+        "notes/susskind-singlet-multimark.md",
+        "literature/susskind-singlet-multimark-sources.md",
+        "journal/2026-11-06-susskind-singlet-multimark.md",
+        "results/susskind-singlet-multimark/connected-fourpoint.png",
+        "results/susskind-singlet-multimark/exact-checks.json",
+        "results/susskind-singlet-multimark/finite-car.json",
+        "results/susskind-singlet-multimark/fourpoint-numerics.json",
+        "results/susskind-singlet-multimark/initial-factorial-car.py",
+        "results/susskind-singlet-multimark/initial-main.log",
+        "results/susskind-singlet-multimark/main.log"
+      ],
+      "intentionally_updated_navigation": [
+        "README.md",
+        "PLAN.md",
+        "NEXT.md"
+      ]
+    }
+  ],
+  "current_git_head": "714d038bb605cfcffdc351e4dcc62aa95237d25f",
+  "git_commit_created": false,
+  "git_push_performed": false,
+  "archive_created": false,
+  "global_project_audit_performed": false,
+  "build": {
+    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File code/build_singlet_otoc.ps1",
+    "compiler": "This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5 Portable) (preloaded format=pdflatex 2026.9.19)  6 NOV 2026 01:04",
+    "passes": 2,
+    "pages": 6,
+    "visual_review": "All six 1200px pages inspected; final amendment to Appendix A re-rendered and inspected. Formulas, plot, tables, footnote and references clear.",
+    "initial_issue": "0.95389pt abstract overflow repaired; initial log saved."
+  },
+  "source_cache": {
+    "path": "sources/mukhametzhanov-2303.03474v3.pdf",
+    "sha256": "1fc304b63af6195636100d8e04201c1e1e01e5c862d54955a6e5a39149dc6d79",
+    "url": "https://arxiv.org/pdf/2303.03474v3",
+    "inspected_page": 14,
+    "printed_page": 12,
+    "render_sha256": "bb68ba1b2e6edfbde39000ec06208607a56369e682f12f0dc764881b5749b2e1",
+    "acquisition": "Initial sandbox socket access denied; authorized public-paper download via elevated tool succeeded. No approval rejection.",
+    "text_extraction": "pdftotext reported an xref reconstruction warning; source equation page verified visually."
+  },
+  "process_state": "All numerical, checking and build commands terminal; no live process to poll.",
+  "hashes": {
+    "code/singlet_otoc.py": "d497109e719109a8e5339ed43db432f5d0e10ffdc704ee61313e1e37dfd780f9",
+    "code/check_singlet_otoc.py": "9fc78e3866157ac0b8f3c5cb3795327910d294a9ac5c67b14a7cb3c72035f271",
+    "code/run_singlet_otoc.py": "8195bdd3fe2a01613f759b8496fba6daeefcd18fe755aa889c55c3824ab893bc",
+    "code/check_otoc_representation.py": "173b2cbfce7606a4b00f19344a434ef7e1e0e478b037dbe269d114772fe31415",
+    "code/check_otoc_saved_evidence.py": "f1d36344c93f66cbaa8281845ab4fdf853518073d3785ccbe647ff72a6d237b4",
+    "code/build_singlet_otoc.ps1": "613194c89f572850adcab559ab46edf2a8e1ae9e0d701101a80c2b0932cd1e0d",
+    "code/record_singlet_otoc_local.py": "6c9307aaa1635245e5014bbba6a2a395a2898cc1c56d413061a4afbaf130a205",
+    "manuscript/susskind-singlet-otoc/main.tex": "c0c44abcafd7c40f4f7af33bf188cd5621c2bf3cc013cef1ee16528ae27a1892",
+    "output/pdf/de-sitter-susskind-singlet-otoc.pdf": "53a5a4ec099524e8286b3e343969021c4e473e1929e3a7e95718ae94b9bbed30",
+    "notes/susskind-singlet-otoc.md": "a8f55695de637796b472efadd0df49ddec99923061acb5eb21564aca20a81c4e",
+    "literature/susskind-singlet-otoc-sources.md": "9787523a7bf8897b82a11b37261370f14bc3f4e7c58af9d30df2ed55c9ab3162",
+    "journal/2026-11-06-susskind-singlet-otoc.md": "74a551e9e824045604f067219bf364a4c4a2ef480dbc4f30620d6e1a3c8199a1",
+    "README.md": "0d8d793cb7b9f380814c807b834427d5ad1ae3096f6b56adffb590c3f3d90c1c",
+    "PLAN.md": "ecd10a0f12c071ccf2a7626b36304f789c847b9064bb0b443811484309c939fd",
+    "NEXT.md": "ee4265189402b0aa1e808346d06663d4e60e3d38ef7d6987babca3b4e3b6f8f0",
+    "results/susskind-singlet-otoc/error-replay.json": "9872fcf541ab970c6a098f73a0d406a2ab6c8fd5bdd77b7599a13b79a4abd1ed",
+    "results/susskind-singlet-otoc/exact-channels.json": "b4cff1872e6452c8137d152019abc6bcd980c558f58aa1473fb6fb954a3e8c3b",
+    "results/susskind-singlet-otoc/initial-main.log": "452b0cb768168535b2ffc49f0d8f3c8861d1c8ea707f9705133621ea339e31fe",
+    "results/susskind-singlet-otoc/main.log": "fba4a1306699f5eb9f28edace4f3e3456cb3e317cdbd79b72f6902ff02b8a8a6",
+    "results/susskind-singlet-otoc/otoc-and-commutator.png": "86de881bc3d0e860aba26e0f0abcd6061b37b1fefb775b669b8f42ccebd65c22",
+    "results/susskind-singlet-otoc/otoc-numerics.json": "264bc58a2c70542724c1b1dd72fb1ae5ffe6674f088096952e6b9a09314eae26",
+    "results/susskind-singlet-otoc/representation-checks.json": "918ba923aea3c5f948c879eedeba6550bd7c030d82beb3e153cd34fbbc90d867"
+  },
+  "local_render_hashes": {
+    "tmp/pdfs/susskind-singlet-otoc-build/page-1.png": "ac6b3863791630d198eec8f13f9587fe3d199e337ac33b398d6e28411c9fc66c",
+    "tmp/pdfs/susskind-singlet-otoc-build/page-2.png": "7abddf70be16dc84fb6530102aeec9a38fb3f57ff3019658fdf7269975ae4941",
+    "tmp/pdfs/susskind-singlet-otoc-build/page-3.png": "5b6035fc580c4d741091d09cf353c49d0d8df5373303ea82e31b92bc4982b634",
+    "tmp/pdfs/susskind-singlet-otoc-build/page-4.png": "84a0cd9e142979b8fd93ce5083ef35a70195a68b6399b8579a80fb4dc0359a68",
+    "tmp/pdfs/susskind-singlet-otoc-build/page-5.png": "a125aef880139b2f67dc1a3e595a68578f04c319b37705acf812583675426830",
+    "tmp/pdfs/susskind-singlet-otoc-build/page-6.png": "6309bc823792511f4557d5dd4cd4c5e6a4e02ce4a23db90dd62446ae89d36eb4"
+  },
+  "build_pass_hashes": {
+    "pass1.txt": "2fbf91a98fee755b4e9117865242bbc28ce552375d13f21222c5cc999aeee059",
+    "pass2.txt": "2fbf91a98fee755b4e9117865242bbc28ce552375d13f21222c5cc999aeee059"
+  }
+}

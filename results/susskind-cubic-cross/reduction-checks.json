@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "records": [
+    {
+      "N": 3,
+      "p": 1,
+      "m": 2,
+      "Z_cross_M2": "0",
+      "finite_c": "1/3",
+      "exact_operator_identities": 4,
+      "scope": "Independent rank-bilinear curvature; rational matrix identities for deterministic integer couplings"
+    },
+    {
+      "N": 4,
+      "p": 2,
+      "m": 2,
+      "Z_cross_M2": "0",
+      "finite_c": "2",
+      "exact_operator_identities": 4,
+      "scope": "Independent rank-bilinear curvature; rational matrix identities for deterministic integer couplings"
+    },
+    {
+      "N": 5,
+      "p": 2,
+      "m": 3,
+      "Z_cross_M2": "-2160",
+      "finite_c": "52/41",
+      "exact_operator_identities": 4,
+      "scope": "Independent rank-bilinear curvature; rational matrix identities for deterministic integer couplings"
+    }
+  ],
+  "environment": {
+    "python": "3.14.5",
+    "numpy": "2.4.6",
+    "sympy": "1.14.0"
+  },
+  "input_sha256": {
+    "code/check_cubic_cross.py": "08011e7a5180430391492c7861f6a741b56724c52558809dc50b12017cd22f4a",
+    "code/cubic_cross_channels.py": "a0a83bc7ef59ac435d986077ce20a929e4b790ad29211e5e1b836da9cc48c0ef",
+    "code/cubic_linear_channels.py": "da867816fdac6e958d3008fcb0e5b0581de0a8313d8bb6e53fbd1d5d9a019f9f",
+    "code/cubic_linear_dynamics.py": "81d8e955107098e897637650bb7686a15fd2ff8fde6de1e1c525db398516d014",
+    "code/cubic_linear_limit.py": "a64fbf4649489437cdd7bc1097b24bd13f67641f4efbcd95a9fad4193c8f3971",
+    "code/singlet_wick_moments.py": "045f9f02e860fa8f2e402ca5162dabf035208a8d26023ada5721a5f02d47572c",
+    "code/complex_syk_dictionary.py": "96b4890a167beeadf0849ccffdbb20dd125d921af062fd291044da9024900abf",
+    "results/susskind-cubic-cross/finite-cross.json": "d2fcd41bd00e37e0dc6a6aa97d027f059d602a87a6d95aeeb209c7a93a643933"
+  }
+}

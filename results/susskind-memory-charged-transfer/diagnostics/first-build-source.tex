@@ -1,0 +1,460 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,microtype}
+\usepackage[margin=24mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\NN}{\mathcal N}
+\newcommand{\XX}{\mathscr X}
+\newcommand{\DD}{\mathfrak D}
+\title{Adjacent-charge propagation as Gaussian smoothing\\A finite-time transfer estimate with all contractions retained}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Local research note --- 7 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+The ordinary charge-removal propagator admits an approximation by
+Gaussian Ornstein--Uhlenbeck smoothing of the propagator in the original
+charge sector. Its annealed normalized Hilbert--Schmidt error is
+$O(N^{-1})$ on compact real-time intervals, after the full infinite-temperature
+charge average. We first compute both directional transfer defects,
+including the nonzero reverse contraction source. Polar normalization
+then gives a small creation defect; adjoints and Gaussian-chaos tails
+extend it to the complete ordinary evolution. The preceding rank--chaos
+bound converts the resulting rank filter to a disorder-space smoothing.
+This is a propagation result; force insertions and their energy-regressed
+fluctuations remain the next calculation.
+\end{abstract}
+
+\section{Model and principal statement}
+Use standard CAR, $\hbar=1$, string time, and
+$H=\sum_{I,J}J_{IJ}c_I^\dagger c_J$, with overlapping $p$-body index sets,
+$J=J^\dagger$, and
+\begin{equation}
+ \EE J_{IJ}J_{KL}=w_N\delta_{IL}\delta_{JK},\quad
+ w_N=4^p\frac{J_s^2}{\lambda_N}\left(\frac{p!}{N^p}\right)^2,
+ \qquad \lambda_N=p^2/N.
+\end{equation}
+All charge sectors share the same $J$. Write $h=H_m$, $k=H_{m-1}$,
+$\|X\|_{2,m}^2=\EE\tr_mX^\dagger X$, $\tr_m=\operatorname{Tr}/\binom Nm$,
+and $b_m=2^{-N}\binom Nm$. Define
+\begin{equation}
+ T_m(X)=\frac1m\sum_i c_i^\dagger Xc_i,\qquad
+ F_m(s)=T_m(e^{isk}),\qquad \alpha_m=(1-p/m)_+.
+\end{equation}
+For $0\le a\le1$, the disorder Ornstein--Uhlenbeck map is
+\begin{equation}
+ (\mathcal O_a f)(J)=\EE_{J'}f(aJ+\sqrt{1-a^2}J'),
+ \qquad J'\text{ an independent copy}.
+ \label{eq:ou}
+\end{equation}
+As $N\to\infty$, $\lambda_N$ stays in a compact subset of $(0,\infty)$,
+and $J_s$ and $S$ are fixed. We prove
+\begin{equation}
+ \boxed{\quad
+ \sup_{|s|\le S}\sum_{m=1}^N b_m
+ \|F_m(s)-\mathcal O_{\alpha_m}(e^{ish})\|_{2,m}^2
+ =O_S(N^{-2}).\quad}
+ \label{eq:main}
+\end{equation}
+The approximation preserves the original sample $J$; only the
+conditional average in \eqref{eq:ou} uses a new copy.
+
+\newpage
+\section{The channel spectrum and a forward defect}
+For the finite identities assume $m>p\ge1$. Set
+\begin{equation}
+ n=N-m+1,\quad \alpha=(m-p)/m,\quad
+ C=w_N\binom mp\binom{N-m+p}p,\quad
+ C_-=C\alpha\frac{n+p}{n}.
+\end{equation}
+Subscripts $+$ and $-$ denote the upper and lower charge operator
+spaces with their normalized Hilbert--Schmidt inner products. The
+adjoint of $T=T_m$ is
+\begin{equation}
+ A=T^\dagger,\qquad A(Y)=\frac1n\sum_i c_iYc_i^\dagger.
+\end{equation}
+Let $P_r^\pm$ be the multiplicity-free neutral $U(N)$ rank projectors,
+and $\XX_\pm=\sum_r x_rP_r^\pm$, $x_r=r(N+1-r)$. Then
+\begin{equation}
+ AT=1-\frac{\XX_-}{mn},\qquad
+ TA=1-\frac{\XX_+}{mn},\qquad T\XX_-=\XX_+T.
+ \label{eq:spectrum}
+\end{equation}
+These spectra follow from the known embedded-GUE covariance spectrum
+\cite{Kota}: the one-body case gives $TA$ directly. CAR, or the
+primitive-rank norm ratio, gives $AT$. A rank present on only one
+side has $x_r=mn$ and is killed by the corresponding map. Both
+$T$ and $A$ are unital, trace preserving in these normalized traces,
+and contractions. The spectrum itself is an existing result's application.
+
+Use an independent pair $(u,v)$ sharing one new Gaussian coupling
+in the two charges. The earlier charged-covariance interface gives
+\begin{equation}
+ Tv=\alpha u,\qquad \EE(uc_i^\dagger v)=\alpha Cc_i^\dagger,
+ \qquad \EE\,uT(vX)=\alpha C TX.
+ \label{eq:cross}
+\end{equation}
+For deterministic lower-rank input $X_r$, the one-step Casimir mean
+and \eqref{eq:spectrum} imply
+\begin{align}
+ \EE\|T(vX_r)\|_+^2
+ &=\left(\alpha^2C-\frac{\kappa_1^-x_r}{mn}\right)\|X_r\|_-^2,
+ &\kappa_1^-&=\frac{C(m-p)(m-p-1)}{m(m-1)}.
+\end{align}
+Subtracting the two cross terms using \eqref{eq:cross} proves
+\begin{equation}
+ \boxed{\ \EE\|T(vX_r)-\alpha uTX_r\|_+^2
+ =\gamma x_r\|X_r\|_-^2,\qquad
+ \gamma=\frac{Cp(m-p)}{m^3(m-1)n}.\ }
+ \label{eq:forward}
+\end{equation}
+In real Gaussian coordinates $u=\sum_\beta g_\beta B_\beta^+$,
+$v=\sum_\beta g_\beta B_\beta^-$, this is an exact coefficient
+quadratic form. Its defining positive operator is equivariant, so
+different input ranks have zero cross terms. If $X$ depends on the
+original $J$, the new copy is averaged with $X$ held fixed.
+
+\newpage
+\section{The reverse source is explicit and orthogonal}
+The reverse-adjoint direction contains a source even on the identity.
+Put
+\begin{equation}
+ V=v-\alpha A(u)=\frac{\XX_-v}{mn},\qquad
+ D_u(Y)=A(uY)-A(u)A(Y).
+\end{equation}
+There is an exact decomposition
+\begin{equation}
+ vA(Y)-\alpha A(uY)=V A(Y)-\alpha D_u(Y).
+ \label{eq:reverse-split}
+\end{equation}
+The two terms are orthogonal in mean:
+\begin{equation}
+ \EE\langle V A(Y),D_u(Y)\rangle_-=0.
+ \label{eq:orth}
+\end{equation}
+Indeed the equivariant map $Z\mapsto\EE[VZu]$ acts by one scalar
+$j_V$ on the unique fundamental charged type $c_i$. Thus
+$\EE[V A(uY)]=j_VA(Y)$ and $\EE[V A(u)]=j_VI$, proving
+\eqref{eq:orth}. No independence of the two terms is used.
+
+For clarity the remaining coefficient can also be computed without
+new recoupling data. Let $c_+=e_+(1-\mu_1^+)$ be the upper
+one-step Casimir mean from the identity, and put
+\begin{equation}
+ C_A=\EE\tr_-[A(u)]^2=C\left(1-\frac{c_+}{mn}\right).
+\end{equation}
+The fundamental charged covariance gives
+$\EE[u c_i^\dagger A(u)]=C_Ac_i^\dagger$. Consequently
+\begin{align}
+ \EE\|D_u(Y_r)\|_-^2
+ &=\left\{C\left[1-\frac{\mu_1^+x_r+c_+}{mn}\right]
+      -C_A\left[1-\frac{x_r}{mn}\right]\right\}\|Y_r\|_+^2\notag\\
+ &=\frac{Cp x_r}{m n^2(n+p-1)}\|Y_r\|_+^2.
+\end{align}
+The known second Casimir moment for $v$ gives
+\begin{equation}
+ \nu_0=\EE\tr_-V^2
+ =\frac{Cp^2(m-p)N(N+1)}{m^3n(n+p-1)}.
+\end{equation}
+Equations \eqref{eq:reverse-split}--\eqref{eq:orth} therefore determine
+the entire reverse quadratic form:
+\begin{equation}
+ \boxed{\quad
+ \EE\|vA(Y_r)-\alpha A(uY_r)\|_-^2
+ =\left[\nu_0\left(1-\frac{x_r}{mn}\right)
+  +\frac{\alpha^2Cp x_r}{mn^2(n+p-1)}\right]\|Y_r\|_+^2.
+ \quad}
+\end{equation}
+At central filling the source has norm of order $p/N$, whereas
+the centered defect on ranks $r\le kp$ has squared norm
+$O(C\lambda_N k/N^2)$. Simply copying the forward estimate to
+annihilation would lose the source. Polar normalization handles
+both directions while retaining its effect in the channel amplitude.
+
+\newpage
+\section{Polar normalization makes the dynamical defect small}
+Take the polar decomposition on normalized operator Hilbert spaces,
+\begin{equation}
+ T=\mathcal U S_-=S_+\mathcal U,\qquad
+ S_\pm=\sqrt{1-\XX_\pm/(mn)},\qquad
+ s_r=\sqrt{\frac{(m-r)(n-r)}{mn}}.
+\end{equation}
+$\mathcal U$ is a deterministic, rank-preserving partial isometry
+and $\mathcal U I=I$. We never invert $s_r$ at a zero mode.
+In this and the next section take $N\ge16$, $p\le N/16$,
+$N/4\le m\le3N/4$, and
+\begin{equation}
+ B_m=\lambda_N+\lambda_N^2+
+       \lambda_N\frac{(m-n)^2}{N}.
+\end{equation}
+For $r\le kp$ and $(k+1)p\le N/8$, all ranks reached by one
+multiplication are common to both charges, and $s_t\ge1/2$.
+Writing $E_\beta=TB_\beta^- -\alpha B_\beta^+T$ as left
+multiplication maps, the rank-$r$ to rank-$t$ identity is
+\begin{equation}
+ P_t^+(\mathcal U B_\beta^- -B_\beta^+\mathcal U)X_r
+ =\frac{P_t^+E_\beta X_r
+       +(\alpha s_r-s_t)P_t^+(B_\beta^+\mathcal U X_r)}{s_t}.
+ \label{eq:polarstep}
+\end{equation}
+The product triangle gives $\delta=p+r-t\in[0,2p]$. The preceding
+rank-chain result gives, for the upper multiplication law,
+\begin{equation}
+ \EE_r\delta^2\le10^6[\lambda_N(k+1)+\lambda_N^2(k+1)^2].
+\end{equation}
+On this interval $|s_t-s_{r+p}|\le32\delta/N$. Also, exactly,
+\begin{equation}
+ \alpha^2s_r^2-s_{r+p}^2
+ =\frac{p}{mn}\left[\alpha(m-n)+\frac{2r(n-r)}m
+                                      -\frac{p x_r}{m^2}\right],
+\end{equation}
+so that
+\begin{equation}
+ |\alpha s_r-s_{r+p}|
+ \le\frac{32p|m-n|}{N^2}+\frac{640kp^2}{N^2}.
+\end{equation}
+Combine these estimates, \eqref{eq:forward}, and
+$\gamma x_r\le4096C\lambda_N k/N^2$ in \eqref{eq:polarstep}.
+Different input-rank cross terms vanish by equivariance. For Gaussian
+creation $\mathcal C_\pm=\sum a_\beta^\dagger L_{B_\beta^\pm}$,
+symmetrization of a degree-$k$ coefficient tensor costs only $k+1$:
+\begin{equation}
+ \|(\mathcal U\mathcal C_- -\mathcal C_+\mathcal U)\psi_k\|^2
+ \le\frac{K_0 C B_m}{N^2}(k+1)^3\|\psi_k\|^2,
+ \qquad K_0=10^{12}.
+ \label{eq:creation}
+\end{equation}
+This constant is deliberately loose. The filling drift in $B_m$
+must be retained; a uniform $O(N^{-1})$ norm claim throughout the
+entire broad central interval would be incorrect.
+
+\newpage
+\section{All chaoses and the full real-time propagator}
+Work in the Gaussian $L^2$ space of equivariant matrix functions;
+$\NN$ is the chaos number. Degree $k$ has matrix rank at most $kp$.
+Put $K=\lfloor N/(8p)\rfloor-1$. On degrees at most $K+1$, the
+partial isometry is unitary between the complete equivariant
+subspaces. If $E=\mathcal U\mathcal C_- -\mathcal C_+\mathcal U$,
+the annihilation defect on these blocks is
+\begin{equation}
+ \mathcal U\mathcal C_-^\dagger-\mathcal C_+^\dagger\mathcal U
+ =\mathcal U E^\dagger\mathcal U.
+\end{equation}
+Thus \eqref{eq:creation} controls both directions. Gaussian
+creation and annihilation conventions are standard \cite{ChenLiu}.
+Let $\mathcal H_\pm=L_{H_\pm}=\mathcal C_\pm+\mathcal C_\pm^\dagger$
+and $G=\mathcal U\mathcal H_- -\mathcal H_+\mathcal U$.
+With $M=\max_j C_j$,
+\begin{align}
+ \|G\psi_{\le K}\|^2
+ &\le\frac{4K_0 M B_m}{N^2}\|(\NN+1)^{3/2}\psi_{\le K}\|^2,\\
+ \|G\psi_{>K}\|^2
+ &\le16M\|(\NN+1)^{1/2}\psi_{>K}\|^2.
+\end{align}
+The second line uses only $\|\mathcal U\|\le1$ and
+$\|\mathcal H_\pm\psi\|^2\le4C_\pm\|(\NN+1)^{1/2}\psi\|^2$.
+
+For $\psi(t)=e^{itk}$, the preceding ordinary-propagator proof gives
+\begin{align}
+ \sum_j\zeta^j\|\psi_j(t)\|^2&\le e^{C_-t^2(\zeta-1)},\quad\zeta\ge1,\\
+ \|(\NN+1)^{3/2}\psi(t)\|^2&\le P_3(C_-t^2),
+ &P_3(z)&=1+7z+6z^2+z^3.
+\end{align}
+Its factorial moments also give
+$\|(\NN+1)^{1/2}\psi_{>K}\|^2
+\le2^{-(K+1)}(1+2z)e^z$, $z=C_-t^2$.
+For $|s|\le S$, define $z_S=MS^2$ and
+\begin{equation}
+ R_m(S)=S^2\left[
+ \frac{8K_0 M B_m}{N^2}P_3(z_S)
+ +32M2^{-(K+1)}(1+2z_S)e^{z_S}\right].
+\end{equation}
+The exact Hilbert-space Duhamel formula, using $\mathcal U I=I$, is
+\begin{equation}
+ \mathcal Ue^{isk}-e^{ish}
+ =i\int_0^s e^{i(s-t)h}G(e^{itk})\,dt.
+\end{equation}
+Finite-$N$ Gaussian Sobolev domains justify the formula; the left
+factor is unitary for real time. Hence
+\begin{equation}
+ \|\mathcal Ue^{isk}-e^{ish}\|_+^2\le R_m(S),\qquad
+ \|F_m(s)-S_+e^{ish}\|_+^2\le R_m(S).
+ \label{eq:rankproxy}
+\end{equation}
+For fixed $\lambda_N>0$ the chaos-tail term is exponentially small
+in $\sqrt N$. No truncated time series is used.
+
+\newpage
+\section{From the physical-rank filter to disorder OU smoothing}
+This step uses the full ordinary rank--chaos theorem from the
+preceding stage. Define $\mathcal R=\sum_r rP_r^+$ and
+$\DD=p\NN-\mathcal R\ge0$ on equivariant functions.
+For every allowed upper rank, $u=x_r/(mn)\in[0,1]$, and
+\begin{equation}
+ 0\le1-u/2-\sqrt{1-u}\le u^2/2.
+\end{equation}
+Using $m,n\ge N/4$, $x_r=r(m+n-r)$, and $N+1\le2N$, one obtains
+\begin{equation}
+ |s_r-(1-r/m)|\le
+ \frac{8r|m-n|}{N^2}+\frac{520r^2}{N^2}.
+\end{equation}
+For integer $k\ge0$, Taylor's theorem on $0\le p/m\le1$ gives
+$|\alpha^k-1+kp/m|\le k(k-1)p^2/(2m^2)$ (zero for $k=0,1$).
+Consequently, for all $r\le kp$, without a low-rank restriction,
+\begin{equation}
+ \boxed{\quad
+ |s_r-\alpha^k|\le\frac{4(kp-r)}N
+ +\frac{8kp|m-n|}{N^2}+\frac{528k^2p^2}{N^2}.\quad}
+ \label{eq:filterbound}
+\end{equation}
+Orthogonal rank and chaos decompositions then give
+\begin{align}
+ \|(S_+-\alpha^{\NN})e^{ish}\|_+
+ &\le\frac4N\|\DD e^{ish}\|_+
+ +\frac{8p|m-n|}{N^2}\|\NN e^{ish}\|_+\notag\\
+ &\hspace{12mm}+\frac{528p^2}{N^2}\|\NN^2e^{ish}\|_+.
+\end{align}
+For $z=Cs^2$, the established bounds are
+\begin{align}
+ \|\DD e^{ish}\|_+^2&\le4\cdot10^6 C(\lambda_N+\lambda_N^2)s^2P_3(z),\\
+ \|\NN e^{ish}\|_+^2&\le z+z^2,\\
+ \|\NN^2e^{ish}\|_+^2&\le P_4(z),&
+ P_4(z)&=z+7z^2+6z^3+z^4.
+\end{align}
+Thus a finite bound for the squared filter error is
+\begin{align}
+ Q_m(S)={}&\frac{192\cdot10^6 M(\lambda_N+\lambda_N^2)S^2}{N^2}P_3(z_S)\notag\\
+ &+\frac{192\lambda_N(m-n)^2}{N^3}(z_S+z_S^2)
+ +\frac{836352\lambda_N^2}{N^2}P_4(z_S).
+\end{align}
+Since $\alpha^{\NN}=\mathcal O_\alpha$, combining with
+\eqref{eq:rankproxy} yields the central-sector bound
+\begin{equation}
+ \|F_m(s)-\mathcal O_\alpha(e^{ish})\|_+^2
+ \le2R_m(S)+2Q_m(S).
+ \label{eq:finite}
+\end{equation}
+This smoothing acts on the Gaussian coupling, not on the spectral
+energy variable. Its parameter $\alpha$ is distinct from the
+previous energy-Mehler parameter $q=e^{-4\lambda}$.
+
+\newpage
+\section{Full charge average and the next memory calculation}
+The constants remain uniform in the full-charge ensemble. Indeed
+\begin{equation}
+ C_m\le\frac{J_s^2}{\lambda_N}
+ \prod_{j=0}^{p-1}\left(1+\frac{p-2j}{N}\right)^2
+ \le\frac{J_s^2}{\lambda_N}e^{2p/N}.
+\end{equation}
+The first inequality uses $4ab\le(a+b)^2$ on each positive factor
+in the two binomials; sectors with $m<p$ have $C_m=0$.
+Under $b_m$, $\EE_b(m-n)^2=N+1$, so
+\begin{equation}
+ \sum_{m\text{ central}}b_m B_m
+ \le\lambda_N+\lambda_N^2+\lambda_N(1+1/N).
+\end{equation}
+Outside $[N/4,3N/4]$ the total binomial weight is at most
+$2e^{-N/8}$. The true $F_m$ has normalized HS norm at most one.
+The OU proxy also has annealed norm at most one. Hence the exterior
+contribution to the squared error is at most $8e^{-N/8}$.
+Use the clipped $\alpha_m$ there. Equation \eqref{eq:finite} now
+proves \eqref{eq:main}. The absent charge-zero removal term may
+equivalently be assigned zero error.
+
+\paragraph{The new interface.}
+The approximation replaces a neighboring-charge exponential by an
+explicit conditional Gaussian average in the original sector:
+\begin{equation}
+ \mathcal O_\alpha(e^{ish(J)})
+ =\EE_{J'}e^{is[\alpha h(J)+\sqrt{1-\alpha^2}h(J')]}.
+\end{equation}
+It retains every coupling chaos and the original common disorder.
+It does not assert samplewise commutation with $h(J)$.
+
+For the actual force, $a=\alpha h$ and
+\begin{equation}
+ \Lambda(s)=-F_m''(s)+i\{a,F_m'(s)\}+aF_m(s)a.
+\end{equation}
+Differentiating the \emph{OU proxy itself} is exact and gives,
+with $H'=\alpha h+\sqrt{1-\alpha^2}\,u$,
+\begin{equation}
+ \Lambda_{\mathrm{OU}}(s)
+ =(1-\alpha^2)\EE_u\big[u e^{isH'}u\big].
+ \label{eq:proxyforce}
+\end{equation}
+The independent $u$ in \eqref{eq:proxyforce} is inside the same
+exponential as its two insertions; it cannot be replaced by an
+independent covariance sandwich. This is an explicit next target.
+
+The proved error is currently unweighted $L^2$. It cannot be
+differentiated to estimate $\Lambda-\Lambda_{\mathrm{OU}}$, nor
+multiplied freely by $h$. Moreover, the collective factor $m$ makes
+an $O(N^{-1})$ force error order one. Next we must obtain the
+required derivative/energy-weighted transfer bounds and identify
+the corresponding fluctuation, before discarding any such term.
+The finite-time $X_0$ covariance and bulk meson dictionary remain open.
+
+\newpage
+\section{Evidence and literature boundary}
+The spectrum in \eqref{eq:spectrum} is the one-body specialization
+of the established embedded-GUE spectrum, not a new spectrum.
+The Gaussian creation, adjoint and OU facts are standard. This
+stage applies them to the concrete common-coupling adjacent-charge
+map: its exact directional defects, the low-degree polar estimate,
+the complete real-time propagation bound and the OU comparison.
+The proofs are written above; finite examples do not establish
+their uniform asymptotic scope.
+
+\paragraph{Saved verification.}
+Six systems $(N,p,m)=(3,1,2),(4,1,2),(4,2,3),(5,1,2),
+(5,2,3),(5,2,4)$ were constructed directly from CAR matrices.
+For each, every real Gaussian coordinate and the full matrix-input
+space were retained. Complete superoperator checks verify both
+channel Grams, the forward defect, both polar maps, the centered
+reverse defect, its full reverse quadratic form and the complex
+source--defect orthogonality. These are not Monte Carlo checks or
+fits of a large-$N$ rate. Two rational identities check the forward
+coefficient, one polynomial identity checks the polar amplitudes,
+and 230 exact rational cases check the source variance from the
+known Casimir second moment.
+
+The three scientific JSON files are saved in
+\texttt{results/susskind-memory-charged-transfer/}. Their drivers
+record parameter sets, dependency versions and input hashes and
+refuse to overwrite existing outputs. Small systems also include
+unequal operator-space dimensions and channel zero modes. The
+previous ordinary rank--chaos evidence and all older outputs remain
+unchanged. Final source, PDF, two-pass build log and page renders
+are bound by a separate local evidence record.
+
+\paragraph{Sources and next checks.}
+Kota's covariance result is read at finite $N$, without importing a
+dilute-filling approximation. Chen--Liu is used for the explicit
+Gaussian adjoint convention and Hermite structure. Standard CP
+Schwarz structure was also checked against Choi's original paper;
+the new rate is not obtained from a generic CP contraction alone.
+The complex-SYK finite-site rules remain the complementary route
+to a direct force four-point function. Their leading neutral-probe
+formula cannot replace the charged, subleading calculation.
+
+\begin{thebibliography}{9}
+\bibitem{Kota} V. K. B. Kota,
+\emph{SU(N) Wigner--Racah algebra for the matrix of second moments
+of embedded Gaussian unitary ensemble of random matrices},
+\href{https://arxiv.org/abs/nucl-th/0410069}{arXiv:nucl-th/0410069},
+Eqs.~(17), (25)--(26).
+\bibitem{ChenLiu} Y. Chen and Y. Liu,
+\emph{On the eigenfunctions of the complex Ornstein--Uhlenbeck operators},
+\href{https://arxiv.org/abs/1209.4990}{arXiv:1209.4990v3},
+Sec.~2.2 and Theorem~2.6.
+\bibitem{Choi} M.-D. Choi,
+\emph{A Schwarz inequality for positive linear maps on $C^*$-algebras},
+Illinois J. Math. \textbf{18}, 565--574 (1974),
+\href{https://doi.org/10.1215/ijm/1256051007}{doi:10.1215/ijm/1256051007}.
+\bibitem{BNR} M. Berkooz, V. Narovlansky and H. Raj,
+\emph{Complex Sachdev--Ye--Kitaev model in the double scaling limit},
+\href{https://arxiv.org/abs/2006.13983}{arXiv:2006.13983v2},
+Secs.~3.2--3.3 and 7--8.
+\end{thebibliography}
+\end{document}

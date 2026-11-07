@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "fixed_charge_trace_identities": 123,
+  "rank_mean_identities": 10,
+  "rank_mean_skipped_systems": [
+    {
+      "N": 4,
+      "p": 2,
+      "m": 3,
+      "reason": "Lower-only ranks outside the common-rank filter domain."
+    }
+  ],
+  "half_filled_log_trace_ratio_leading": "-(L**2 - 4*L*t - L + 4*t**2)/2",
+  "fourth_chaos_nuisance_determinant": "16*lam**3*(q - 1)**2*(q + 1)**4*(q**2 + 1)*(q**2 - q + 1)*(4*lam*q + q + 1)**2*(q**4 + q**3 + q**2 + q + 1)*(8*lam*q**4 - 4*lam*q**3 + 8*lam*q**2 - q**3 + 1)",
+  "V4_over_Js8": "4*(q - 1)**2*(q + 1)**2*(8*lam*q**7 + 4*lam*q**6 + 8*lam*q**5 + 4*lam*q**4 + 8*lam*q**3 + q**4 + q**3 + 2*q**2 + q + 1)/(lam**3*(q**2 + 1)*(q**2 - q + 1)*(q**4 + q**3 + q**2 + q + 1))",
+  "V2_over_Js8": "-64*q**4*(q + 1)*(-8*lam*q + q**2 - 1)/(lam*(4*lam*q + q + 1))",
+  "small_lambda_V2": "1024",
+  "small_lambda_lambda_V4": "768/5",
+  "trace_bridge_scope": "Exact occupancy-count ratio checked at finite N. Analytic bridge in manuscript uses balanced singleton modes for Wick blocks with no internal Gaussian chords, bounded intersection count, and the established absolute exponential overlap tail; numeric identities alone do not prove the limit.",
+  "environment": {
+    "python": "3.14.5",
+    "sympy": "1.14.0"
+  },
+  "input_sha256": {
+    "code/check_memory_descendant_assembly.py": "a2a3278a72d860c8a85e6f22a781e246e472d874837d5b7c6b539c9bb0a0288a",
+    "code/memory_two_charge_filter.py": "33c660733f3529990a0779cfa9a27875ec95f354dca3dc906d4c4f6b786e35f8",
+    "code/cubic_linear_dynamics.py": "81d8e955107098e897637650bb7686a15fd2ff8fde6de1e1c525db398516d014",
+    "results/susskind-memory-descendants/finite-descendants.json": "53a4f89caa641a7027df91a1c211066a4215a2606c3e691407307eb45dc05096",
+    "results/susskind-memory-descendants/symbolic-filters.json": "1561cc98c4710a6ec52700bd689e12d3319a1e3cf9304597908062f510753f85",
+    "results/susskind-memory-quartic/quartic.json": "bf28760f2674b1fe1791988527582b746212ecfc373f4d8b0a624b1d9a3195f7"
+  }
+}

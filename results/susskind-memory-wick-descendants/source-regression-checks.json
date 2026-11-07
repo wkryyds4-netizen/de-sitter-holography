@@ -1,0 +1,3598 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "created_utc": "2026-11-06T19:21:41.756252+00:00",
+  "environment": {
+    "python": "3.14.5",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "dependencies": "Python standard library only"
+  },
+  "scope": "Independent exact finite source regression and actual no-bridge grouping; no asymptotic proof or physical rational DS point claimed.",
+  "parameters": {
+    "max_degree": 7,
+    "q_exact": "1/3",
+    "lambda_exact": "1/4",
+    "b0_max_slots": 8,
+    "b0_layouts": [
+      {
+        "d1": 2,
+        "v1": 2,
+        "d2": 2,
+        "v2": 2,
+        "a": 0,
+        "b": 4,
+        "orientation1": "prefix",
+        "orientation2": "suffix"
+      },
+      {
+        "d1": 2,
+        "v1": 2,
+        "d2": 2,
+        "v2": 2,
+        "a": 1,
+        "b": 3,
+        "orientation1": "prefix",
+        "orientation2": "suffix"
+      },
+      {
+        "d1": 2,
+        "v1": 2,
+        "d2": 2,
+        "v2": 2,
+        "a": 2,
+        "b": 2,
+        "orientation1": "prefix",
+        "orientation2": "suffix"
+      },
+      {
+        "d1": 2,
+        "v1": 2,
+        "d2": 2,
+        "v2": 2,
+        "a": 3,
+        "b": 1,
+        "orientation1": "prefix",
+        "orientation2": "suffix"
+      },
+      {
+        "d1": 2,
+        "v1": 2,
+        "d2": 2,
+        "v2": 2,
+        "a": 4,
+        "b": 0,
+        "orientation1": "prefix",
+        "orientation2": "suffix"
+      },
+      {
+        "d1": 3,
+        "v1": 2,
+        "d2": 1,
+        "v2": 1,
+        "a": 1,
+        "b": 3,
+        "orientation1": "prefix",
+        "orientation2": "prefix"
+      },
+      {
+        "d1": 3,
+        "v1": 2,
+        "d2": 1,
+        "v2": 1,
+        "a": 1,
+        "b": 3,
+        "orientation1": "suffix",
+        "orientation2": "prefix"
+      }
+    ],
+    "rational_point_scope": "independent formal q and lambda, not q=exp(-4 lambda)"
+  },
+  "parameter_sha256": "29b07e2a522bc4ac7ad9e8f3eb570c6f44b759f15d27139fa847012a889c959a",
+  "input_sha256": {
+    "code/check_memory_source_regression.py": "65464a8dfa7a3a8dd7a3859c31f1985c7403fb34dd68e86c6efe593b6f8a2d0d"
+  },
+  "counts": {
+    "permutations": 5913,
+    "weighted_mark_samples": 80638,
+    "regression_cases": 56,
+    "negative_raw_mark_samples": 12316,
+    "b0_candidate_pairings": 735,
+    "b0_pairings": 168,
+    "b0_negative_centered_terms": 60,
+    "b0_nonzero_centered_terms": 120,
+    "b0_groups": 38,
+    "b0_layouts": 7
+  },
+  "permutation_rows": [
+    {
+      "d": 1,
+      "v": 1,
+      "orientation": "prefix",
+      "weighted_q_coefficients": [
+        1
+      ],
+      "cleared_polynomial": [
+        1
+      ],
+      "negative_mark_samples": 0,
+      "minimum_k": 1,
+      "maximum_k": 1,
+      "exact_identity": true
+    },
+    {
+      "d": 1,
+      "v": 1,
+      "orientation": "suffix",
+      "weighted_q_coefficients": [
+        1
+      ],
+      "cleared_polynomial": [
+        1
+      ],
+      "negative_mark_samples": 0,
+      "minimum_k": 1,
+      "maximum_k": 1,
+      "exact_identity": true
+    },
+    {
+      "d": 2,
+      "v": 1,
+      "orientation": "prefix",
+      "weighted_q_coefficients": [
+        1,
+        1
+      ],
+      "cleared_polynomial": [
+        1,
+        1
+      ],
+      "negative_mark_samples": 0,
+      "minimum_k": 1,
+      "maximum_k": 1,
+      "exact_identity": true
+    },
+    {
+      "d": 2,
+      "v": 1,
+      "orientation": "suffix",
+      "weighted_q_coefficients": [
+        1,
+        1
+      ],
+      "cleared_polynomial": [
+        1,
+        1
+      ],
+      "negative_mark_samples": 0,
+      "minimum_k": 1,
+      "maximum_k": 1,
+      "exact_identity": true
+    },
+    {
+      "d": 2,
+      "v": 2,
+      "orientation": "prefix",
+      "weighted_q_coefficients": [
+        4,
+        0
+      ],
+      "cleared_polynomial": [
+        4,
+        4,
+        0
+      ],
+      "negative_mark_samples": 0,
+      "minimum_k": 0,
+      "maximum_k": 4,
+      "exact_identity": true
+    },
+    {
+      "d": 2,
+      "v": 2,
+      "orientation": "suffix",
+      "weighted_q_coefficients": [
+        4,
+        0
+      ],
+      "cleared_polynomial": [
+        4,
+        4,
+        0
+      ],
+      "negative_mark_samples": 0,
+      "minimum_k": 0,
+      "maximum_k": 4,
+      "exact_identity": true
+    },
+    {
+      "d": 3,
+      "v": 1,
+      "orientation": "prefix",
+      "weighted_q_coefficients": [
+        1,
+        2,
+        2,
+        1
+      ],
+      "cleared_polynomial": [
+        1,
+        2,
+        2,
+        1
+      ],
+      "negative_mark_samples": 0,
+      "minimum_k": 1,
+      "maximum_k": 1,
+      "exact_identity": true
+    },
+    {
+      "d": 3,
+      "v": 1,
+      "orientation": "suffix",
+      "weighted_q_coefficients": [
+        1,
+        2,
+        2,
+        1
+      ],
+      "cleared_polynomial": [
+        1,
+        2,
+        2,
+        1
+      ],
+      "negative_mark_samples": 0,
+      "minimum_k": 1,
+      "maximum_k": 1,
+      "exact_identity": true
+    },
+    {
+      "d": 3,
+      "v": 2,
+      "orientation": "prefix",
+      "weighted_q_coefficients": [
+        4,
+        4,
+        4,
+        0
+      ],
+      "cleared_polynomial": [
+        4,
+        8,
+        8,
+        4,
+        0
+      ],
+      "negative_mark_samples": 0,
+      "minimum_k": 0,
+      "maximum_k": 4,
+      "exact_identity": true
+    },
+    {
+      "d": 3,
+      "v": 2,
+      "orientation": "suffix",
+      "weighted_q_coefficients": [
+        4,
+        4,
+        4,
+        0
+      ],
+      "cleared_polynomial": [
+        4,
+        8,
+        8,
+        4,
+        0
+      ],
+      "negative_mark_samples": 0,
+      "minimum_k": 0,
+      "maximum_k": 4,
+      "exact_identity": true
+    },
+    {
+      "d": 3,
+      "v": 3,
+      "orientation": "prefix",
+      "weighted_q_coefficients": [
+        9,
+        10,
+        2,
+        -3
+      ],
+      "cleared_polynomial": [
+        9,
+        28,
+        40,
+        30,
+        8,
+        -4,
+        -3
+      ],
+      "negative_mark_samples": 1,
+      "minimum_k": -3,
+      "maximum_k": 9,
+      "exact_identity": true
+    },
+    {
+      "d": 3,
+      "v": 3,
+      "orientation": "suffix",
+      "weighted_q_coefficients": [
+        9,
+        10,
+        2,
+        -3
+      ],
+      "cleared_polynomial": [
+        9,
+        28,
+        40,
+        30,
+        8,
+        -4,
+        -3
+      ],
+      "negative_mark_samples": 1,
+      "minimum_k": -3,
+      "maximum_k": 9,
+      "exact_identity": true
+    },
+    {
+      "d": 4,
+      "v": 1,
+      "orientation": "prefix",
+      "weighted_q_coefficients": [
+        1,
+        3,
+        5,
+        6,
+        5,
+        3,
+        1
+      ],
+      "cleared_polynomial": [
+        1,
+        3,
+        5,
+        6,
+        5,
+        3,
+        1
+      ],
+      "negative_mark_samples": 0,
+      "minimum_k": 1,
+      "maximum_k": 1,
+      "exact_identity": true
+    },
+    {
+      "d": 4,
+      "v": 1,
+      "orientation": "suffix",
+      "weighted_q_coefficients": [
+        1,
+        3,
+        5,
+        6,
+        5,
+        3,
+        1
+      ],
+      "cleared_polynomial": [
+        1,
+        3,
+        5,
+        6,
+        5,
+        3,
+        1
+      ],
+      "negative_mark_samples": 0,
+      "minimum_k": 1,
+      "maximum_k": 1,
+      "exact_identity": true
+    },
+    {
+      "d": 4,
+      "v": 2,
+      "orientation": "prefix",
+      "weighted_q_coefficients": [
+        4,
+        8,
+        12,
+        12,
+        8,
+        4,
+        0
+      ],
+      "cleared_polynomial": [
+        4,
+        12,
+        20,
+        24,
+        20,
+        12,
+        4,
+        0
+      ],
+      "negative_mark_samples": 0,
+      "minimum_k": 0,
+      "maximum_k": 4,
+      "exact_identity": true
+    },
+    {
+      "d": 4,
+      "v": 2,
+      "orientation": "suffix",
+      "weighted_q_coefficients": [
+        4,
+        8,
+        12,
+        12,
+        8,
+        4,
+        0
+      ],
+      "cleared_polynomial": [
+        4,
+        12,
+        20,
+        24,
+        20,
+        12,
+        4,
+        0
+      ],
+      "negative_mark_samples": 0,
+      "minimum_k": 0,
+      "maximum_k": 4,
+      "exact_identity": true
+    },
+    {
+      "d": 4,
+      "v": 3,
+      "orientation": "prefix",
+      "weighted_q_coefficients": [
+        9,
+        19,
+        21,
+        18,
+        9,
+        -1,
+        -3
+      ],
+      "cleared_polynomial": [
+        9,
+        37,
+        77,
+        107,
+        106,
+        74,
+        31,
+        1,
+        -7,
+        -3
+      ],
+      "negative_mark_samples": 4,
+      "minimum_k": -3,
+      "maximum_k": 9,
+      "exact_identity": true
+    },
+    {
+      "d": 4,
+      "v": 3,
+      "orientation": "suffix",
+      "weighted_q_coefficients": [
+        9,
+        19,
+        21,
+        18,
+        9,
+        -1,
+        -3
+      ],
+      "cleared_polynomial": [
+        9,
+        37,
+        77,
+        107,
+        106,
+        74,
+        31,
+        1,
+        -7,
+        -3
+      ],
+      "negative_mark_samples": 4,
+      "minimum_k": -3,
+      "maximum_k": 9,
+      "exact_identity": true
+    },
+    {
+      "d": 4,
+      "v": 4,
+      "orientation": "prefix",
+      "weighted_q_coefficients": [
+        16,
+        36,
+        40,
+        24,
+        0,
+        -12,
+        -8
+      ],
+      "cleared_polynomial": [
+        16,
+        84,
+        228,
+        420,
+        568,
+        576,
+        424,
+        192,
+        0,
+        -84,
+        -76,
+        -36,
+        -8
+      ],
+      "negative_mark_samples": 4,
+      "minimum_k": -8,
+      "maximum_k": 16,
+      "exact_identity": true
+    },
+    {
+      "d": 4,
+      "v": 4,
+      "orientation": "suffix",
+      "weighted_q_coefficients": [
+        16,
+        36,
+        40,
+        24,
+        0,
+        -12,
+        -8
+      ],
+      "cleared_polynomial": [
+        16,
+        84,
+        228,
+        420,
+        568,
+        576,
+        424,
+        192,
+        0,
+        -84,
+        -76,
+        -36,
+        -8
+      ],
+      "negative_mark_samples": 4,
+      "minimum_k": -8,
+      "maximum_k": 16,
+      "exact_identity": true
+    },
+    {
+      "d": 5,
+      "v": 1,
+      "orientation": "prefix",
+      "weighted_q_coefficients": [
+        1,
+        4,
+        9,
+        15,
+        20,
+        22,
+        20,
+        15,
+        9,
+        4,
+        1
+      ],
+      "cleared_polynomial": [
+        1,
+        4,
+        9,
+        15,
+        20,
+        22,
+        20,
+        15,
+        9,
+        4,
+        1
+      ],
+      "negative_mark_samples": 0,
+      "minimum_k": 1,
+      "maximum_k": 1,
+      "exact_identity": true
+    },
+    {
+      "d": 5,
+      "v": 1,
+      "orientation": "suffix",
+      "weighted_q_coefficients": [
+        1,
+        4,
+        9,
+        15,
+        20,
+        22,
+        20,
+        15,
+        9,
+        4,
+        1
+      ],
+      "cleared_polynomial": [
+        1,
+        4,
+        9,
+        15,
+        20,
+        22,
+        20,
+        15,
+        9,
+        4,
+        1
+      ],
+      "negative_mark_samples": 0,
+      "minimum_k": 1,
+      "maximum_k": 1,
+      "exact_identity": true
+    },
+    {
+      "d": 5,
+      "v": 2,
+      "orientation": "prefix",
+      "weighted_q_coefficients": [
+        4,
+        12,
+        24,
+        36,
+        44,
+        44,
+        36,
+        24,
+        12,
+        4,
+        0
+      ],
+      "cleared_polynomial": [
+        4,
+        16,
+        36,
+        60,
+        80,
+        88,
+        80,
+        60,
+        36,
+        16,
+        4,
+        0
+      ],
+      "negative_mark_samples": 0,
+      "minimum_k": 0,
+      "maximum_k": 4,
+      "exact_identity": true
+    },
+    {
+      "d": 5,
+      "v": 2,
+      "orientation": "suffix",
+      "weighted_q_coefficients": [
+        4,
+        12,
+        24,
+        36,
+        44,
+        44,
+        36,
+        24,
+        12,
+        4,
+        0
+      ],
+      "cleared_polynomial": [
+        4,
+        16,
+        36,
+        60,
+        80,
+        88,
+        80,
+        60,
+        36,
+        16,
+        4,
+        0
+      ],
+      "negative_mark_samples": 0,
+      "minimum_k": 0,
+      "maximum_k": 4,
+      "exact_identity": true
+    },
+    {
+      "d": 5,
+      "v": 3,
+      "orientation": "prefix",
+      "weighted_q_coefficients": [
+        9,
+        28,
+        49,
+        67,
+        76,
+        66,
+        44,
+        23,
+        5,
+        -4,
+        -3
+      ],
+      "cleared_polynomial": [
+        9,
+        46,
+        123,
+        230,
+        336,
+        401,
+        395,
+        319,
+        205,
+        96,
+        22,
+        -9,
+        -10,
+        -3
+      ],
+      "negative_mark_samples": 20,
+      "minimum_k": -3,
+      "maximum_k": 9,
+      "exact_identity": true
+    },
+    {
+      "d": 5,
+      "v": 3,
+      "orientation": "suffix",
+      "weighted_q_coefficients": [
+        9,
+        28,
+        49,
+        67,
+        76,
+        66,
+        44,
+        23,
+        5,
+        -4,
+        -3
+      ],
+      "cleared_polynomial": [
+        9,
+        46,
+        123,
+        230,
+        336,
+        401,
+        395,
+        319,
+        205,
+        96,
+        22,
+        -9,
+        -10,
+        -3
+      ],
+      "negative_mark_samples": 20,
+      "minimum_k": -3,
+      "maximum_k": 9,
+      "exact_identity": true
+    },
+    {
+      "d": 5,
+      "v": 4,
+      "orientation": "prefix",
+      "weighted_q_coefficients": [
+        16,
+        52,
+        92,
+        116,
+        116,
+        88,
+        44,
+        4,
+        -20,
+        -20,
+        -8
+      ],
+      "cleared_polynomial": [
+        16,
+        100,
+        328,
+        748,
+        1316,
+        1876,
+        2216,
+        2180,
+        1760,
+        1108,
+        456,
+        -4,
+        -204,
+        -204,
+        -120,
+        -44,
+        -8
+      ],
+      "negative_mark_samples": 20,
+      "minimum_k": -8,
+      "maximum_k": 16,
+      "exact_identity": true
+    },
+    {
+      "d": 5,
+      "v": 4,
+      "orientation": "suffix",
+      "weighted_q_coefficients": [
+        16,
+        52,
+        92,
+        116,
+        116,
+        88,
+        44,
+        4,
+        -20,
+        -20,
+        -8
+      ],
+      "cleared_polynomial": [
+        16,
+        100,
+        328,
+        748,
+        1316,
+        1876,
+        2216,
+        2180,
+        1760,
+        1108,
+        456,
+        -4,
+        -204,
+        -204,
+        -120,
+        -44,
+        -8
+      ],
+      "negative_mark_samples": 20,
+      "minimum_k": -8,
+      "maximum_k": 16,
+      "exact_identity": true
+    },
+    {
+      "d": 5,
+      "v": 5,
+      "orientation": "prefix",
+      "weighted_q_coefficients": [
+        25,
+        84,
+        153,
+        195,
+        180,
+        110,
+        20,
+        -45,
+        -63,
+        -44,
+        -15
+      ],
+      "cleared_polynomial": [
+        25,
+        184,
+        714,
+        1938,
+        4097,
+        7110,
+        10413,
+        13046,
+        14022,
+        12810,
+        9650,
+        5490,
+        1558,
+        -1186,
+        -2403,
+        -2370,
+        -1687,
+        -918,
+        -374,
+        -104,
+        -15
+      ],
+      "negative_mark_samples": 29,
+      "minimum_k": -15,
+      "maximum_k": 25,
+      "exact_identity": true
+    },
+    {
+      "d": 5,
+      "v": 5,
+      "orientation": "suffix",
+      "weighted_q_coefficients": [
+        25,
+        84,
+        153,
+        195,
+        180,
+        110,
+        20,
+        -45,
+        -63,
+        -44,
+        -15
+      ],
+      "cleared_polynomial": [
+        25,
+        184,
+        714,
+        1938,
+        4097,
+        7110,
+        10413,
+        13046,
+        14022,
+        12810,
+        9650,
+        5490,
+        1558,
+        -1186,
+        -2403,
+        -2370,
+        -1687,
+        -918,
+        -374,
+        -104,
+        -15
+      ],
+      "negative_mark_samples": 29,
+      "minimum_k": -15,
+      "maximum_k": 25,
+      "exact_identity": true
+    },
+    {
+      "d": 6,
+      "v": 1,
+      "orientation": "prefix",
+      "weighted_q_coefficients": [
+        1,
+        5,
+        14,
+        29,
+        49,
+        71,
+        90,
+        101,
+        101,
+        90,
+        71,
+        49,
+        29,
+        14,
+        5,
+        1
+      ],
+      "cleared_polynomial": [
+        1,
+        5,
+        14,
+        29,
+        49,
+        71,
+        90,
+        101,
+        101,
+        90,
+        71,
+        49,
+        29,
+        14,
+        5,
+        1
+      ],
+      "negative_mark_samples": 0,
+      "minimum_k": 1,
+      "maximum_k": 1,
+      "exact_identity": true
+    },
+    {
+      "d": 6,
+      "v": 1,
+      "orientation": "suffix",
+      "weighted_q_coefficients": [
+        1,
+        5,
+        14,
+        29,
+        49,
+        71,
+        90,
+        101,
+        101,
+        90,
+        71,
+        49,
+        29,
+        14,
+        5,
+        1
+      ],
+      "cleared_polynomial": [
+        1,
+        5,
+        14,
+        29,
+        49,
+        71,
+        90,
+        101,
+        101,
+        90,
+        71,
+        49,
+        29,
+        14,
+        5,
+        1
+      ],
+      "negative_mark_samples": 0,
+      "minimum_k": 1,
+      "maximum_k": 1,
+      "exact_identity": true
+    },
+    {
+      "d": 6,
+      "v": 2,
+      "orientation": "prefix",
+      "weighted_q_coefficients": [
+        4,
+        16,
+        40,
+        76,
+        120,
+        164,
+        196,
+        208,
+        196,
+        164,
+        120,
+        76,
+        40,
+        16,
+        4,
+        0
+      ],
+      "cleared_polynomial": [
+        4,
+        20,
+        56,
+        116,
+        196,
+        284,
+        360,
+        404,
+        404,
+        360,
+        284,
+        196,
+        116,
+        56,
+        20,
+        4,
+        0
+      ],
+      "negative_mark_samples": 0,
+      "minimum_k": 0,
+      "maximum_k": 4,
+      "exact_identity": true
+    },
+    {
+      "d": 6,
+      "v": 2,
+      "orientation": "suffix",
+      "weighted_q_coefficients": [
+        4,
+        16,
+        40,
+        76,
+        120,
+        164,
+        196,
+        208,
+        196,
+        164,
+        120,
+        76,
+        40,
+        16,
+        4,
+        0
+      ],
+      "cleared_polynomial": [
+        4,
+        20,
+        56,
+        116,
+        196,
+        284,
+        360,
+        404,
+        404,
+        360,
+        284,
+        196,
+        116,
+        56,
+        20,
+        4,
+        0
+      ],
+      "negative_mark_samples": 0,
+      "minimum_k": 0,
+      "maximum_k": 4,
+      "exact_identity": true
+    },
+    {
+      "d": 6,
+      "v": 3,
+      "orientation": "prefix",
+      "weighted_q_coefficients": [
+        9,
+        37,
+        86,
+        153,
+        229,
+        295,
+        330,
+        325,
+        281,
+        210,
+        131,
+        65,
+        21,
+        -2,
+        -7,
+        -3
+      ],
+      "cleared_polynomial": [
+        9,
+        55,
+        178,
+        408,
+        744,
+        1145,
+        1531,
+        1804,
+        1886,
+        1752,
+        1438,
+        1028,
+        623,
+        301,
+        96,
+        0,
+        -22,
+        -13,
+        -3
+      ],
+      "negative_mark_samples": 120,
+      "minimum_k": -3,
+      "maximum_k": 9,
+      "exact_identity": true
+    },
+    {
+      "d": 6,
+      "v": 3,
+      "orientation": "suffix",
+      "weighted_q_coefficients": [
+        9,
+        37,
+        86,
+        153,
+        229,
+        295,
+        330,
+        325,
+        281,
+        210,
+        131,
+        65,
+        21,
+        -2,
+        -7,
+        -3
+      ],
+      "cleared_polynomial": [
+        9,
+        55,
+        178,
+        408,
+        744,
+        1145,
+        1531,
+        1804,
+        1886,
+        1752,
+        1438,
+        1028,
+        623,
+        301,
+        96,
+        0,
+        -22,
+        -13,
+        -3
+      ],
+      "negative_mark_samples": 120,
+      "minimum_k": -3,
+      "maximum_k": 9,
+      "exact_identity": true
+    },
+    {
+      "d": 6,
+      "v": 4,
+      "orientation": "prefix",
+      "weighted_q_coefficients": [
+        16,
+        68,
+        160,
+        276,
+        392,
+        480,
+        508,
+        460,
+        348,
+        212,
+        88,
+        0,
+        -44,
+        -48,
+        -28,
+        -8
+      ],
+      "cleared_polynomial": [
+        16,
+        116,
+        444,
+        1192,
+        2508,
+        4384,
+        6584,
+        8664,
+        10096,
+        10456,
+        9596,
+        7716,
+        5296,
+        2912,
+        1032,
+        -120,
+        -584,
+        -580,
+        -376,
+        -172,
+        -52,
+        -8
+      ],
+      "negative_mark_samples": 120,
+      "minimum_k": -8,
+      "maximum_k": 16,
+      "exact_identity": true
+    },
+    {
+      "d": 6,
+      "v": 4,
+      "orientation": "suffix",
+      "weighted_q_coefficients": [
+        16,
+        68,
+        160,
+        276,
+        392,
+        480,
+        508,
+        460,
+        348,
+        212,
+        88,
+        0,
+        -44,
+        -48,
+        -28,
+        -8
+      ],
+      "cleared_polynomial": [
+        16,
+        116,
+        444,
+        1192,
+        2508,
+        4384,
+        6584,
+        8664,
+        10096,
+        10456,
+        9596,
+        7716,
+        5296,
+        2912,
+        1032,
+        -120,
+        -584,
+        -580,
+        -376,
+        -172,
+        -52,
+        -8
+      ],
+      "negative_mark_samples": 120,
+      "minimum_k": -8,
+      "maximum_k": 16,
+      "exact_identity": true
+    },
+    {
+      "d": 6,
+      "v": 5,
+      "orientation": "prefix",
+      "weighted_q_coefficients": [
+        25,
+        109,
+        262,
+        457,
+        637,
+        747,
+        742,
+        613,
+        397,
+        158,
+        -37,
+        -147,
+        -167,
+        -122,
+        -59,
+        -15
+      ],
+      "cleared_polynomial": [
+        25,
+        209,
+        923,
+        2861,
+        6958,
+        14068,
+        24456,
+        37318,
+        50626,
+        61498,
+        67051,
+        65431,
+        56576,
+        42344,
+        25919,
+        10739,
+        -598,
+        -7006,
+        -8938,
+        -7856,
+        -5468,
+        -3098,
+        -1411,
+        -493,
+        -119,
+        -15
+      ],
+      "negative_mark_samples": 174,
+      "minimum_k": -15,
+      "maximum_k": 25,
+      "exact_identity": true
+    },
+    {
+      "d": 6,
+      "v": 5,
+      "orientation": "suffix",
+      "weighted_q_coefficients": [
+        25,
+        109,
+        262,
+        457,
+        637,
+        747,
+        742,
+        613,
+        397,
+        158,
+        -37,
+        -147,
+        -167,
+        -122,
+        -59,
+        -15
+      ],
+      "cleared_polynomial": [
+        25,
+        209,
+        923,
+        2861,
+        6958,
+        14068,
+        24456,
+        37318,
+        50626,
+        61498,
+        67051,
+        65431,
+        56576,
+        42344,
+        25919,
+        10739,
+        -598,
+        -7006,
+        -8938,
+        -7856,
+        -5468,
+        -3098,
+        -1411,
+        -493,
+        -119,
+        -15
+      ],
+      "negative_mark_samples": 174,
+      "minimum_k": -15,
+      "maximum_k": 25,
+      "exact_identity": true
+    },
+    {
+      "d": 6,
+      "v": 6,
+      "orientation": "prefix",
+      "weighted_q_coefficients": [
+        36,
+        160,
+        392,
+        696,
+        980,
+        1136,
+        1080,
+        808,
+        404,
+        0,
+        -284,
+        -392,
+        -348,
+        -224,
+        -100,
+        -24
+      ],
+      "cleared_polynomial": [
+        36,
+        340,
+        1696,
+        5940,
+        16352,
+        37544,
+        74472,
+        130504,
+        205020,
+        291528,
+        377424,
+        446096,
+        481152,
+        471500,
+        415384,
+        321672,
+        207692,
+        94300,
+        0,
+        -63728,
+        -94356,
+        -97176,
+        -82008,
+        -59320,
+        -37236,
+        -20216,
+        -9344,
+        -3564,
+        -1060,
+        -220,
+        -24
+      ],
+      "negative_mark_samples": 169,
+      "minimum_k": -24,
+      "maximum_k": 36,
+      "exact_identity": true
+    },
+    {
+      "d": 6,
+      "v": 6,
+      "orientation": "suffix",
+      "weighted_q_coefficients": [
+        36,
+        160,
+        392,
+        696,
+        980,
+        1136,
+        1080,
+        808,
+        404,
+        0,
+        -284,
+        -392,
+        -348,
+        -224,
+        -100,
+        -24
+      ],
+      "cleared_polynomial": [
+        36,
+        340,
+        1696,
+        5940,
+        16352,
+        37544,
+        74472,
+        130504,
+        205020,
+        291528,
+        377424,
+        446096,
+        481152,
+        471500,
+        415384,
+        321672,
+        207692,
+        94300,
+        0,
+        -63728,
+        -94356,
+        -97176,
+        -82008,
+        -59320,
+        -37236,
+        -20216,
+        -9344,
+        -3564,
+        -1060,
+        -220,
+        -24
+      ],
+      "negative_mark_samples": 169,
+      "minimum_k": -24,
+      "maximum_k": 36,
+      "exact_identity": true
+    },
+    {
+      "d": 7,
+      "v": 1,
+      "orientation": "prefix",
+      "weighted_q_coefficients": [
+        1,
+        6,
+        20,
+        49,
+        98,
+        169,
+        259,
+        359,
+        455,
+        531,
+        573,
+        573,
+        531,
+        455,
+        359,
+        259,
+        169,
+        98,
+        49,
+        20,
+        6,
+        1
+      ],
+      "cleared_polynomial": [
+        1,
+        6,
+        20,
+        49,
+        98,
+        169,
+        259,
+        359,
+        455,
+        531,
+        573,
+        573,
+        531,
+        455,
+        359,
+        259,
+        169,
+        98,
+        49,
+        20,
+        6,
+        1
+      ],
+      "negative_mark_samples": 0,
+      "minimum_k": 1,
+      "maximum_k": 1,
+      "exact_identity": true
+    },
+    {
+      "d": 7,
+      "v": 1,
+      "orientation": "suffix",
+      "weighted_q_coefficients": [
+        1,
+        6,
+        20,
+        49,
+        98,
+        169,
+        259,
+        359,
+        455,
+        531,
+        573,
+        573,
+        531,
+        455,
+        359,
+        259,
+        169,
+        98,
+        49,
+        20,
+        6,
+        1
+      ],
+      "cleared_polynomial": [
+        1,
+        6,
+        20,
+        49,
+        98,
+        169,
+        259,
+        359,
+        455,
+        531,
+        573,
+        573,
+        531,
+        455,
+        359,
+        259,
+        169,
+        98,
+        49,
+        20,
+        6,
+        1
+      ],
+      "negative_mark_samples": 0,
+      "minimum_k": 1,
+      "maximum_k": 1,
+      "exact_identity": true
+    },
+    {
+      "d": 7,
+      "v": 2,
+      "orientation": "prefix",
+      "weighted_q_coefficients": [
+        4,
+        20,
+        60,
+        136,
+        256,
+        420,
+        616,
+        820,
+        1000,
+        1124,
+        1168,
+        1124,
+        1000,
+        820,
+        616,
+        420,
+        256,
+        136,
+        60,
+        20,
+        4,
+        0
+      ],
+      "cleared_polynomial": [
+        4,
+        24,
+        80,
+        196,
+        392,
+        676,
+        1036,
+        1436,
+        1820,
+        2124,
+        2292,
+        2292,
+        2124,
+        1820,
+        1436,
+        1036,
+        676,
+        392,
+        196,
+        80,
+        24,
+        4,
+        0
+      ],
+      "negative_mark_samples": 0,
+      "minimum_k": 0,
+      "maximum_k": 4,
+      "exact_identity": true
+    },
+    {
+      "d": 7,
+      "v": 2,
+      "orientation": "suffix",
+      "weighted_q_coefficients": [
+        4,
+        20,
+        60,
+        136,
+        256,
+        420,
+        616,
+        820,
+        1000,
+        1124,
+        1168,
+        1124,
+        1000,
+        820,
+        616,
+        420,
+        256,
+        136,
+        60,
+        20,
+        4,
+        0
+      ],
+      "cleared_polynomial": [
+        4,
+        24,
+        80,
+        196,
+        392,
+        676,
+        1036,
+        1436,
+        1820,
+        2124,
+        2292,
+        2292,
+        2124,
+        1820,
+        1436,
+        1036,
+        676,
+        392,
+        196,
+        80,
+        24,
+        4,
+        0
+      ],
+      "negative_mark_samples": 0,
+      "minimum_k": 0,
+      "maximum_k": 4,
+      "exact_identity": true
+    },
+    {
+      "d": 7,
+      "v": 3,
+      "orientation": "prefix",
+      "weighted_q_coefficients": [
+        9,
+        46,
+        132,
+        285,
+        514,
+        809,
+        1139,
+        1455,
+        1699,
+        1823,
+        1801,
+        1637,
+        1363,
+        1031,
+        699,
+        415,
+        205,
+        74,
+        9,
+        -12,
+        -10,
+        -3
+      ],
+      "cleared_polynomial": [
+        9,
+        64,
+        242,
+        650,
+        1394,
+        2539,
+        4070,
+        5865,
+        7696,
+        9270,
+        10300,
+        10584,
+        10062,
+        8832,
+        7124,
+        5238,
+        3464,
+        2013,
+        982,
+        359,
+        58,
+        -38,
+        -38,
+        -16,
+        -3
+      ],
+      "negative_mark_samples": 840,
+      "minimum_k": -3,
+      "maximum_k": 9,
+      "exact_identity": true
+    },
+    {
+      "d": 7,
+      "v": 3,
+      "orientation": "suffix",
+      "weighted_q_coefficients": [
+        9,
+        46,
+        132,
+        285,
+        514,
+        809,
+        1139,
+        1455,
+        1699,
+        1823,
+        1801,
+        1637,
+        1363,
+        1031,
+        699,
+        415,
+        205,
+        74,
+        9,
+        -12,
+        -10,
+        -3
+      ],
+      "cleared_polynomial": [
+        9,
+        64,
+        242,
+        650,
+        1394,
+        2539,
+        4070,
+        5865,
+        7696,
+        9270,
+        10300,
+        10584,
+        10062,
+        8832,
+        7124,
+        5238,
+        3464,
+        2013,
+        982,
+        359,
+        58,
+        -38,
+        -38,
+        -16,
+        -3
+      ],
+      "negative_mark_samples": 840,
+      "minimum_k": -3,
+      "maximum_k": 9,
+      "exact_identity": true
+    },
+    {
+      "d": 7,
+      "v": 4,
+      "orientation": "prefix",
+      "weighted_q_coefficients": [
+        16,
+        84,
+        244,
+        520,
+        912,
+        1392,
+        1900,
+        2344,
+        2624,
+        2676,
+        2488,
+        2096,
+        1572,
+        1016,
+        528,
+        172,
+        -40,
+        -128,
+        -128,
+        -84,
+        -36,
+        -8
+      ],
+      "cleared_polynomial": [
+        16,
+        132,
+        576,
+        1768,
+        4276,
+        8660,
+        15244,
+        23892,
+        33872,
+        43884,
+        52288,
+        57496,
+        58408,
+        54736,
+        47104,
+        36888,
+        25848,
+        15672,
+        7580,
+        2112,
+        -852,
+        -1892,
+        -1772,
+        -1188,
+        -608,
+        -232,
+        -60,
+        -8
+      ],
+      "negative_mark_samples": 840,
+      "minimum_k": -8,
+      "maximum_k": 16,
+      "exact_identity": true
+    },
+    {
+      "d": 7,
+      "v": 4,
+      "orientation": "suffix",
+      "weighted_q_coefficients": [
+        16,
+        84,
+        244,
+        520,
+        912,
+        1392,
+        1900,
+        2344,
+        2624,
+        2676,
+        2488,
+        2096,
+        1572,
+        1016,
+        528,
+        172,
+        -40,
+        -128,
+        -128,
+        -84,
+        -36,
+        -8
+      ],
+      "cleared_polynomial": [
+        16,
+        132,
+        576,
+        1768,
+        4276,
+        8660,
+        15244,
+        23892,
+        33872,
+        43884,
+        52288,
+        57496,
+        58408,
+        54736,
+        47104,
+        36888,
+        25848,
+        15672,
+        7580,
+        2112,
+        -852,
+        -1892,
+        -1772,
+        -1188,
+        -608,
+        -232,
+        -60,
+        -8
+      ],
+      "negative_mark_samples": 840,
+      "minimum_k": -8,
+      "maximum_k": 16,
+      "exact_identity": true
+    },
+    {
+      "d": 7,
+      "v": 5,
+      "orientation": "prefix",
+      "weighted_q_coefficients": [
+        25,
+        134,
+        396,
+        853,
+        1490,
+        2237,
+        2979,
+        3567,
+        3855,
+        3751,
+        3257,
+        2473,
+        1559,
+        695,
+        23,
+        -389,
+        -547,
+        -510,
+        -363,
+        -196,
+        -74,
+        -15
+      ],
+      "cleared_polynomial": [
+        25,
+        234,
+        1157,
+        4018,
+        10976,
+        25044,
+        49500,
+        86793,
+        137210,
+        197785,
+        261975,
+        320448,
+        362956,
+        380844,
+        369445,
+        329558,
+        267462,
+        193405,
+        119036,
+        54604,
+        6792,
+        -22225,
+        -34375,
+        -34270,
+        -27383,
+        -18460,
+        -10604,
+        -5136,
+        -2038,
+        -627,
+        -134,
+        -15
+      ],
+      "negative_mark_samples": 1218,
+      "minimum_k": -15,
+      "maximum_k": 25,
+      "exact_identity": true
+    },
+    {
+      "d": 7,
+      "v": 5,
+      "orientation": "suffix",
+      "weighted_q_coefficients": [
+        25,
+        134,
+        396,
+        853,
+        1490,
+        2237,
+        2979,
+        3567,
+        3855,
+        3751,
+        3257,
+        2473,
+        1559,
+        695,
+        23,
+        -389,
+        -547,
+        -510,
+        -363,
+        -196,
+        -74,
+        -15
+      ],
+      "cleared_polynomial": [
+        25,
+        234,
+        1157,
+        4018,
+        10976,
+        25044,
+        49500,
+        86793,
+        137210,
+        197785,
+        261975,
+        320448,
+        362956,
+        380844,
+        369445,
+        329558,
+        267462,
+        193405,
+        119036,
+        54604,
+        6792,
+        -22225,
+        -34375,
+        -34270,
+        -27383,
+        -18460,
+        -10604,
+        -5136,
+        -2038,
+        -627,
+        -134,
+        -15
+      ],
+      "negative_mark_samples": 1218,
+      "minimum_k": -15,
+      "maximum_k": 25,
+      "exact_identity": true
+    },
+    {
+      "d": 7,
+      "v": 6,
+      "orientation": "prefix",
+      "weighted_q_coefficients": [
+        36,
+        196,
+        588,
+        1284,
+        2264,
+        3400,
+        4480,
+        5252,
+        5496,
+        5104,
+        4124,
+        2752,
+        1268,
+        -36,
+        -944,
+        -1372,
+        -1372,
+        -1088,
+        -696,
+        -348,
+        -124,
+        -24
+      ],
+      "cleared_polynomial": [
+        36,
+        376,
+        2072,
+        8012,
+        24364,
+        61908,
+        136380,
+        266848,
+        471528,
+        761360,
+        1132844,
+        1562588,
+        2006196,
+        2403224,
+        2688104,
+        2804756,
+        2720920,
+        2437796,
+        1991700,
+        1446820,
+        880964,
+        368404,
+        -35276,
+        -302288,
+        -433824,
+        -454040,
+        -399656,
+        -308864,
+        -212748,
+        -130960,
+        -71664,
+        -34428,
+        -14212,
+        -4868,
+        -1304,
+        -244,
+        -24
+      ],
+      "negative_mark_samples": 1183,
+      "minimum_k": -24,
+      "maximum_k": 36,
+      "exact_identity": true
+    },
+    {
+      "d": 7,
+      "v": 6,
+      "orientation": "suffix",
+      "weighted_q_coefficients": [
+        36,
+        196,
+        588,
+        1284,
+        2264,
+        3400,
+        4480,
+        5252,
+        5496,
+        5104,
+        4124,
+        2752,
+        1268,
+        -36,
+        -944,
+        -1372,
+        -1372,
+        -1088,
+        -696,
+        -348,
+        -124,
+        -24
+      ],
+      "cleared_polynomial": [
+        36,
+        376,
+        2072,
+        8012,
+        24364,
+        61908,
+        136380,
+        266848,
+        471528,
+        761360,
+        1132844,
+        1562588,
+        2006196,
+        2403224,
+        2688104,
+        2804756,
+        2720920,
+        2437796,
+        1991700,
+        1446820,
+        880964,
+        368404,
+        -35276,
+        -302288,
+        -433824,
+        -454040,
+        -399656,
+        -308864,
+        -212748,
+        -130960,
+        -71664,
+        -34428,
+        -14212,
+        -4868,
+        -1304,
+        -244,
+        -24
+      ],
+      "negative_mark_samples": 1183,
+      "minimum_k": -24,
+      "maximum_k": 36,
+      "exact_identity": true
+    },
+    {
+      "d": 7,
+      "v": 7,
+      "orientation": "prefix",
+      "weighted_q_coefficients": [
+        49,
+        270,
+        820,
+        1813,
+        3234,
+        4901,
+        6475,
+        7539,
+        7735,
+        6903,
+        5157,
+        2865,
+        531,
+        -1365,
+        -2513,
+        -2849,
+        -2535,
+        -1862,
+        -1127,
+        -540,
+        -186,
+        -35
+      ],
+      "cleared_polynomial": [
+        49,
+        564,
+        3420,
+        14534,
+        48544,
+        135486,
+        328079,
+        706650,
+        1377552,
+        2461028,
+        4066525,
+        6257466,
+        9012475,
+        12194232,
+        15538509,
+        18673086,
+        21169131,
+        22617930,
+        22716629,
+        21341320,
+        18586791,
+        14759920,
+        10325995,
+        5820360,
+        1747433,
+        -1507862,
+        -3735729,
+        -4913970,
+        -5179503,
+        -4771656,
+        -3965489,
+        -3012854,
+        -2103375,
+        -1349596,
+        -793136,
+        -423990,
+        -203941,
+        -86850,
+        -31968,
+        -9802,
+        -2356,
+        -396,
+        -35
+      ],
+      "negative_mark_samples": 1416,
+      "minimum_k": -35,
+      "maximum_k": 49,
+      "exact_identity": true
+    },
+    {
+      "d": 7,
+      "v": 7,
+      "orientation": "suffix",
+      "weighted_q_coefficients": [
+        49,
+        270,
+        820,
+        1813,
+        3234,
+        4901,
+        6475,
+        7539,
+        7735,
+        6903,
+        5157,
+        2865,
+        531,
+        -1365,
+        -2513,
+        -2849,
+        -2535,
+        -1862,
+        -1127,
+        -540,
+        -186,
+        -35
+      ],
+      "cleared_polynomial": [
+        49,
+        564,
+        3420,
+        14534,
+        48544,
+        135486,
+        328079,
+        706650,
+        1377552,
+        2461028,
+        4066525,
+        6257466,
+        9012475,
+        12194232,
+        15538509,
+        18673086,
+        21169131,
+        22617930,
+        22716629,
+        21341320,
+        18586791,
+        14759920,
+        10325995,
+        5820360,
+        1747433,
+        -1507862,
+        -3735729,
+        -4913970,
+        -5179503,
+        -4771656,
+        -3965489,
+        -3012854,
+        -2103375,
+        -1349596,
+        -793136,
+        -423990,
+        -203941,
+        -86850,
+        -31968,
+        -9802,
+        -2356,
+        -396,
+        -35
+      ],
+      "negative_mark_samples": 1416,
+      "minimum_k": -35,
+      "maximum_k": 49,
+      "exact_identity": true
+    }
+  ],
+  "b0_rows": [
+    {
+      "layout": {
+        "d1": 2,
+        "v1": 2,
+        "d2": 2,
+        "v2": 2,
+        "a": 0,
+        "b": 4,
+        "orientation1": "prefix",
+        "orientation2": "suffix"
+      },
+      "slots": 8,
+      "kappa1": "3/4",
+      "kappa2": "3/4",
+      "groups": [
+        {
+          "external_partner_sets": [
+            [
+              4,
+              5
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "background_pairing": [],
+          "count": 4,
+          "zero": "16/729",
+          "one1": "4/243",
+          "one2": "4/243",
+          "two": "1/81",
+          "centered": "0"
+        },
+        {
+          "external_partner_sets": [
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "background_pairing": [],
+          "count": 4,
+          "zero": "16/243",
+          "one1": "4/81",
+          "one2": "4/81",
+          "two": "1/27",
+          "centered": "0"
+        },
+        {
+          "external_partner_sets": [
+            [
+              4,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "background_pairing": [],
+          "count": 4,
+          "zero": "16/81",
+          "one1": "4/27",
+          "one2": "4/27",
+          "two": "1/9",
+          "centered": "0"
+        },
+        {
+          "external_partner_sets": [
+            [
+              5,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "background_pairing": [],
+          "count": 4,
+          "zero": "16/81",
+          "one1": "4/27",
+          "one2": "4/27",
+          "two": "1/9",
+          "centered": "0"
+        },
+        {
+          "external_partner_sets": [
+            [
+              5,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "background_pairing": [],
+          "count": 4,
+          "zero": "16/27",
+          "one1": "4/9",
+          "one2": "4/9",
+          "two": "1/3",
+          "centered": "0"
+        },
+        {
+          "external_partner_sets": [
+            [
+              6,
+              7
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "background_pairing": [],
+          "count": 4,
+          "zero": "16/9",
+          "one1": "4/3",
+          "one2": "4/3",
+          "two": "1",
+          "centered": "0"
+        }
+      ],
+      "negative_centered_examples": [
+        {
+          "pairing": [
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              6
+            ]
+          ],
+          "k1": 0,
+          "k2": 4,
+          "q_crossings": 5,
+          "centered_weight": "-1/1296"
+        },
+        {
+          "pairing": [
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "k1": 0,
+          "k2": 4,
+          "q_crossings": 4,
+          "centered_weight": "-1/432"
+        }
+      ],
+      "exact_factorization": true,
+      "exact_group_centering": true
+    },
+    {
+      "layout": {
+        "d1": 2,
+        "v1": 2,
+        "d2": 2,
+        "v2": 2,
+        "a": 1,
+        "b": 3,
+        "orientation1": "prefix",
+        "orientation2": "suffix"
+      },
+      "slots": 8,
+      "kappa1": "3/4",
+      "kappa2": "3/4",
+      "groups": [
+        {
+          "external_partner_sets": [
+            [
+              2,
+              5
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "background_pairing": [],
+          "count": 4,
+          "zero": "16/81",
+          "one1": "4/27",
+          "one2": "4/27",
+          "two": "1/9",
+          "centered": "0"
+        },
+        {
+          "external_partner_sets": [
+            [
+              2,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "background_pairing": [],
+          "count": 4,
+          "zero": "16/27",
+          "one1": "4/9",
+          "one2": "4/9",
+          "two": "1/3",
+          "centered": "0"
+        },
+        {
+          "external_partner_sets": [
+            [
+              2,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "background_pairing": [],
+          "count": 4,
+          "zero": "16/9",
+          "one1": "4/3",
+          "one2": "4/3",
+          "two": "1",
+          "centered": "0"
+        },
+        {
+          "external_partner_sets": [
+            [
+              5,
+              6
+            ],
+            [
+              2,
+              7
+            ]
+          ],
+          "background_pairing": [],
+          "count": 4,
+          "zero": "16/81",
+          "one1": "4/27",
+          "one2": "4/27",
+          "two": "1/9",
+          "centered": "0"
+        },
+        {
+          "external_partner_sets": [
+            [
+              5,
+              7
+            ],
+            [
+              2,
+              6
+            ]
+          ],
+          "background_pairing": [],
+          "count": 4,
+          "zero": "16/27",
+          "one1": "4/9",
+          "one2": "4/9",
+          "two": "1/3",
+          "centered": "0"
+        },
+        {
+          "external_partner_sets": [
+            [
+              6,
+              7
+            ],
+            [
+              2,
+              5
+            ]
+          ],
+          "background_pairing": [],
+          "count": 4,
+          "zero": "16/9",
+          "one1": "4/3",
+          "one2": "4/3",
+          "two": "1",
+          "centered": "0"
+        }
+      ],
+      "negative_centered_examples": [
+        {
+          "pairing": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "k1": 0,
+          "k2": 4,
+          "q_crossings": 3,
+          "centered_weight": "-1/144"
+        },
+        {
+          "pairing": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "k1": 0,
+          "k2": 4,
+          "q_crossings": 2,
+          "centered_weight": "-1/48"
+        }
+      ],
+      "exact_factorization": true,
+      "exact_group_centering": true
+    },
+    {
+      "layout": {
+        "d1": 2,
+        "v1": 2,
+        "d2": 2,
+        "v2": 2,
+        "a": 2,
+        "b": 2,
+        "orientation1": "prefix",
+        "orientation2": "suffix"
+      },
+      "slots": 8,
+      "kappa1": "3/4",
+      "kappa2": "3/4",
+      "groups": [
+        {
+          "external_partner_sets": [
+            [
+              2,
+              3
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "background_pairing": [],
+          "count": 4,
+          "zero": "16/9",
+          "one1": "4/3",
+          "one2": "4/3",
+          "two": "1",
+          "centered": "0"
+        },
+        {
+          "external_partner_sets": [
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "background_pairing": [],
+          "count": 4,
+          "zero": "16/27",
+          "one1": "4/9",
+          "one2": "4/9",
+          "two": "1/3",
+          "centered": "0"
+        },
+        {
+          "external_partner_sets": [
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              6
+            ]
+          ],
+          "background_pairing": [],
+          "count": 4,
+          "zero": "16/9",
+          "one1": "4/3",
+          "one2": "4/3",
+          "two": "1",
+          "centered": "0"
+        },
+        {
+          "external_partner_sets": [
+            [
+              3,
+              6
+            ],
+            [
+              2,
+              7
+            ]
+          ],
+          "background_pairing": [],
+          "count": 4,
+          "zero": "16/81",
+          "one1": "4/27",
+          "one2": "4/27",
+          "two": "1/9",
+          "centered": "0"
+        },
+        {
+          "external_partner_sets": [
+            [
+              3,
+              7
+            ],
+            [
+              2,
+              6
+            ]
+          ],
+          "background_pairing": [],
+          "count": 4,
+          "zero": "16/27",
+          "one1": "4/9",
+          "one2": "4/9",
+          "two": "1/3",
+          "centered": "0"
+        },
+        {
+          "external_partner_sets": [
+            [
+              6,
+              7
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "background_pairing": [],
+          "count": 4,
+          "zero": "16/9",
+          "one1": "4/3",
+          "one2": "4/3",
+          "two": "1",
+          "centered": "0"
+        }
+      ],
+      "negative_centered_examples": [
+        {
+          "pairing": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "k1": 0,
+          "k2": 4,
+          "q_crossings": 1,
+          "centered_weight": "-1/16"
+        },
+        {
+          "pairing": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "k1": 0,
+          "k2": 4,
+          "q_crossings": 2,
+          "centered_weight": "-1/48"
+        }
+      ],
+      "exact_factorization": true,
+      "exact_group_centering": true
+    },
+    {
+      "layout": {
+        "d1": 2,
+        "v1": 2,
+        "d2": 2,
+        "v2": 2,
+        "a": 3,
+        "b": 1,
+        "orientation1": "prefix",
+        "orientation2": "suffix"
+      },
+      "slots": 8,
+      "kappa1": "3/4",
+      "kappa2": "3/4",
+      "groups": [
+        {
+          "external_partner_sets": [
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "background_pairing": [],
+          "count": 4,
+          "zero": "16/9",
+          "one1": "4/3",
+          "one2": "4/3",
+          "two": "1",
+          "centered": "0"
+        },
+        {
+          "external_partner_sets": [
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "background_pairing": [],
+          "count": 4,
+          "zero": "16/27",
+          "one1": "4/9",
+          "one2": "4/9",
+          "two": "1/3",
+          "centered": "0"
+        },
+        {
+          "external_partner_sets": [
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "background_pairing": [],
+          "count": 4,
+          "zero": "16/9",
+          "one1": "4/3",
+          "one2": "4/3",
+          "two": "1",
+          "centered": "0"
+        },
+        {
+          "external_partner_sets": [
+            [
+              3,
+              4
+            ],
+            [
+              2,
+              7
+            ]
+          ],
+          "background_pairing": [],
+          "count": 4,
+          "zero": "16/81",
+          "one1": "4/27",
+          "one2": "4/27",
+          "two": "1/9",
+          "centered": "0"
+        },
+        {
+          "external_partner_sets": [
+            [
+              3,
+              7
+            ],
+            [
+              2,
+              4
+            ]
+          ],
+          "background_pairing": [],
+          "count": 4,
+          "zero": "16/27",
+          "one1": "4/9",
+          "one2": "4/9",
+          "two": "1/3",
+          "centered": "0"
+        },
+        {
+          "external_partner_sets": [
+            [
+              4,
+              7
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "background_pairing": [],
+          "count": 4,
+          "zero": "16/81",
+          "one1": "4/27",
+          "one2": "4/27",
+          "two": "1/9",
+          "centered": "0"
+        }
+      ],
+      "negative_centered_examples": [
+        {
+          "pairing": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "k1": 0,
+          "k2": 4,
+          "q_crossings": 1,
+          "centered_weight": "-1/16"
+        },
+        {
+          "pairing": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "k1": 0,
+          "k2": 4,
+          "q_crossings": 2,
+          "centered_weight": "-1/48"
+        }
+      ],
+      "exact_factorization": true,
+      "exact_group_centering": true
+    },
+    {
+      "layout": {
+        "d1": 2,
+        "v1": 2,
+        "d2": 2,
+        "v2": 2,
+        "a": 4,
+        "b": 0,
+        "orientation1": "prefix",
+        "orientation2": "suffix"
+      },
+      "slots": 8,
+      "kappa1": "3/4",
+      "kappa2": "3/4",
+      "groups": [
+        {
+          "external_partner_sets": [
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "background_pairing": [],
+          "count": 4,
+          "zero": "16/9",
+          "one1": "4/3",
+          "one2": "4/3",
+          "two": "1",
+          "centered": "0"
+        },
+        {
+          "external_partner_sets": [
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "background_pairing": [],
+          "count": 4,
+          "zero": "16/27",
+          "one1": "4/9",
+          "one2": "4/9",
+          "two": "1/3",
+          "centered": "0"
+        },
+        {
+          "external_partner_sets": [
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "background_pairing": [],
+          "count": 4,
+          "zero": "16/81",
+          "one1": "4/27",
+          "one2": "4/27",
+          "two": "1/9",
+          "centered": "0"
+        },
+        {
+          "external_partner_sets": [
+            [
+              3,
+              4
+            ],
+            [
+              2,
+              5
+            ]
+          ],
+          "background_pairing": [],
+          "count": 4,
+          "zero": "16/81",
+          "one1": "4/27",
+          "one2": "4/27",
+          "two": "1/9",
+          "centered": "0"
+        },
+        {
+          "external_partner_sets": [
+            [
+              3,
+              5
+            ],
+            [
+              2,
+              4
+            ]
+          ],
+          "background_pairing": [],
+          "count": 4,
+          "zero": "16/243",
+          "one1": "4/81",
+          "one2": "4/81",
+          "two": "1/27",
+          "centered": "0"
+        },
+        {
+          "external_partner_sets": [
+            [
+              4,
+              5
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "background_pairing": [],
+          "count": 4,
+          "zero": "16/729",
+          "one1": "4/243",
+          "one2": "4/243",
+          "two": "1/81",
+          "centered": "0"
+        }
+      ],
+      "negative_centered_examples": [
+        {
+          "pairing": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "k1": 0,
+          "k2": 4,
+          "q_crossings": 1,
+          "centered_weight": "-1/16"
+        },
+        {
+          "pairing": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "k1": 0,
+          "k2": 4,
+          "q_crossings": 2,
+          "centered_weight": "-1/48"
+        }
+      ],
+      "exact_factorization": true,
+      "exact_group_centering": true
+    },
+    {
+      "layout": {
+        "d1": 3,
+        "v1": 2,
+        "d2": 1,
+        "v2": 1,
+        "a": 1,
+        "b": 3,
+        "orientation1": "prefix",
+        "orientation2": "prefix"
+      },
+      "slots": 8,
+      "kappa1": "3/4",
+      "kappa2": "1/4",
+      "groups": [
+        {
+          "external_partner_sets": [
+            [
+              3,
+              5,
+              6
+            ],
+            [
+              7
+            ]
+          ],
+          "background_pairing": [],
+          "count": 6,
+          "zero": "52/243",
+          "one1": "13/81",
+          "one2": "13/243",
+          "two": "13/324",
+          "centered": "0"
+        },
+        {
+          "external_partner_sets": [
+            [
+              3,
+              5,
+              7
+            ],
+            [
+              6
+            ]
+          ],
+          "background_pairing": [],
+          "count": 6,
+          "zero": "52/81",
+          "one1": "13/27",
+          "one2": "13/81",
+          "two": "13/108",
+          "centered": "0"
+        },
+        {
+          "external_partner_sets": [
+            [
+              3,
+              6,
+              7
+            ],
+            [
+              5
+            ]
+          ],
+          "background_pairing": [],
+          "count": 6,
+          "zero": "52/27",
+          "one1": "13/9",
+          "one2": "13/27",
+          "two": "13/36",
+          "centered": "0"
+        },
+        {
+          "external_partner_sets": [
+            [
+              5,
+              6,
+              7
+            ],
+            [
+              3
+            ]
+          ],
+          "background_pairing": [],
+          "count": 6,
+          "zero": "52/27",
+          "one1": "13/9",
+          "one2": "13/27",
+          "two": "13/36",
+          "centered": "0"
+        }
+      ],
+      "negative_centered_examples": [],
+      "exact_factorization": true,
+      "exact_group_centering": true
+    },
+    {
+      "layout": {
+        "d1": 3,
+        "v1": 2,
+        "d2": 1,
+        "v2": 1,
+        "a": 1,
+        "b": 3,
+        "orientation1": "suffix",
+        "orientation2": "prefix"
+      },
+      "slots": 8,
+      "kappa1": "3/4",
+      "kappa2": "1/4",
+      "groups": [
+        {
+          "external_partner_sets": [
+            [
+              3,
+              5,
+              6
+            ],
+            [
+              7
+            ]
+          ],
+          "background_pairing": [],
+          "count": 6,
+          "zero": "52/243",
+          "one1": "13/81",
+          "one2": "13/243",
+          "two": "13/324",
+          "centered": "0"
+        },
+        {
+          "external_partner_sets": [
+            [
+              3,
+              5,
+              7
+            ],
+            [
+              6
+            ]
+          ],
+          "background_pairing": [],
+          "count": 6,
+          "zero": "52/81",
+          "one1": "13/27",
+          "one2": "13/81",
+          "two": "13/108",
+          "centered": "0"
+        },
+        {
+          "external_partner_sets": [
+            [
+              3,
+              6,
+              7
+            ],
+            [
+              5
+            ]
+          ],
+          "background_pairing": [],
+          "count": 6,
+          "zero": "52/27",
+          "one1": "13/9",
+          "one2": "13/27",
+          "two": "13/36",
+          "centered": "0"
+        },
+        {
+          "external_partner_sets": [
+            [
+              5,
+              6,
+              7
+            ],
+            [
+              3
+            ]
+          ],
+          "background_pairing": [],
+          "count": 6,
+          "zero": "52/27",
+          "one1": "13/9",
+          "one2": "13/27",
+          "two": "13/36",
+          "centered": "0"
+        }
+      ],
+      "negative_centered_examples": [],
+      "exact_factorization": true,
+      "exact_group_centering": true
+    }
+  ],
+  "elapsed_seconds": 0.4638814000063576
+}

@@ -1,0 +1,120 @@
+{
+  "status": "computed",
+  "scope": "finite-N ensemble cross moments F H^u W3(C) H^(2-u); exact bounded Gaussian-integer contractions",
+  "records": [
+    {
+      "N": 3,
+      "p": 1,
+      "m": 2,
+      "covariance": "w=1",
+      "moments": {
+        "T": {
+          "two_arc_moments": [
+            "24",
+            "24",
+            "24"
+          ],
+          "cross_M2": "0"
+        },
+        "S": {
+          "two_arc_moments": [
+            "-48",
+            "-48",
+            "-48"
+          ],
+          "cross_M2": "0"
+        },
+        "Z": {
+          "two_arc_moments": [
+            "-96",
+            "-96",
+            "-96"
+          ],
+          "cross_M2": "0"
+        }
+      },
+      "max_integer_cubic_entry": 12.0,
+      "max_integer_trace_abs": 192.0
+    },
+    {
+      "N": 4,
+      "p": 2,
+      "m": 2,
+      "covariance": "w=1",
+      "moments": {
+        "T": {
+          "two_arc_moments": [
+            "280",
+            "280",
+            "280"
+          ],
+          "cross_M2": "0"
+        },
+        "S": {
+          "two_arc_moments": [
+            "-280",
+            "-280",
+            "-280"
+          ],
+          "cross_M2": "0"
+        },
+        "Z": {
+          "two_arc_moments": [
+            "-140",
+            "-140",
+            "-140"
+          ],
+          "cross_M2": "0"
+        }
+      },
+      "max_integer_cubic_entry": 24.0,
+      "max_integer_trace_abs": 1088.0
+    },
+    {
+      "N": 5,
+      "p": 2,
+      "m": 3,
+      "covariance": "w=1",
+      "moments": {
+        "T": {
+          "two_arc_moments": [
+            "4590",
+            "5400",
+            "4590"
+          ],
+          "cross_M2": "-1620"
+        },
+        "S": {
+          "two_arc_moments": [
+            "-6570",
+            "-5760",
+            "-6570"
+          ],
+          "cross_M2": "-1620"
+        },
+        "Z": {
+          "two_arc_moments": [
+            "-4680",
+            "-3600",
+            "-4680"
+          ],
+          "cross_M2": "-2160"
+        }
+      },
+      "max_integer_cubic_entry": 24.0,
+      "max_integer_trace_abs": 1152.0
+    }
+  ],
+  "environment": {
+    "python": "3.14.5",
+    "numpy": "2.4.6"
+  },
+  "input_sha256": {
+    "code/cubic_cross_probe.py": "141e7d38e16f56ad2ad2141d25106c76fbe1b1267441b2849e7fb0816ac0eba1",
+    "code/cubic_linear_channels.py": "da867816fdac6e958d3008fcb0e5b0581de0a8313d8bb6e53fbd1d5d9a019f9f",
+    "code/cubic_linear_dynamics.py": "81d8e955107098e897637650bb7686a15fd2ff8fde6de1e1c525db398516d014",
+    "code/cubic_linear_limit.py": "a64fbf4649489437cdd7bc1097b24bd13f67641f4efbcd95a9fad4193c8f3971",
+    "code/singlet_wick_moments.py": "045f9f02e860fa8f2e402ca5162dabf035208a8d26023ada5721a5f02d47572c",
+    "code/complex_syk_dictionary.py": "96b4890a167beeadf0849ccffdbb20dd125d921af062fd291044da9024900abf"
+  }
+}

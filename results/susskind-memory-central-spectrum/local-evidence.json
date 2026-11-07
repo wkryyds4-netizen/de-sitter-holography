@@ -1,0 +1,103 @@
+{
+  "created_at_utc": "2026-11-06T11:11:43.142864+00:00",
+  "status": "Saved locally; no publication",
+  "scientific_status": "Compact central window: quantitative fixed marked-graph trace bridge, general-charge orientation identity, force matrix measure and actual projected W2 core spectrum V2 mu_q2. Raw central U2 descendants/counterterm and F interfaces remain to be extended, followed by charge tails, finite-memory and the bulk dictionary.",
+  "current_git_head": "714d038bb605cfcffdc351e4dcc62aa95237d25f",
+  "git_commit_created": false,
+  "git_push_performed": false,
+  "archive_created": false,
+  "parent_manifest_sha256": "00c7a3d6aa8587a73b1444fb5235df1c60a86af92660583e3cd586284fe257dc",
+  "previous_stage_scientific_files_unchanged": [
+    "code/memory_central_polarization.py",
+    "code/check_memory_polarization_car.py",
+    "code/memory_central_gram_assembly.py",
+    "code/build_memory_central_gram.ps1",
+    "code/record_memory_central_gram.py",
+    "manuscript/susskind-memory-central-gram/main.tex",
+    "output/pdf/de-sitter-susskind-memory-central-gram.pdf",
+    "notes/susskind-memory-central-gram.md",
+    "literature/susskind-memory-central-gram-sources.md",
+    "journal/2026-11-06-susskind-memory-central-gram.md",
+    "results/susskind-memory-central-gram/diagnostics/first-build.log",
+    "results/susskind-memory-central-gram/diagnostics/first-failure.txt",
+    "results/susskind-memory-central-gram/diagnostics/first-main.tex",
+    "results/susskind-memory-central-gram/diagnostics/first-polarization.py",
+    "results/susskind-memory-central-gram/gram-assembly.json",
+    "results/susskind-memory-central-gram/main.log",
+    "results/susskind-memory-central-gram/neutral-drift.json",
+    "results/susskind-memory-central-gram/polarization-car.json"
+  ],
+  "checks": {
+    "exact_trace_ratios": 24,
+    "central_trace_cases": 324,
+    "precisions": [
+      90,
+      130
+    ],
+    "CAR_systems": 6,
+    "CAR_inputs": 18,
+    "exact_force_identities": 108,
+    "reused_reverse_templates": 128,
+    "reused_reverse_words": 6072
+  },
+  "environment": {
+    "python": "3.14.5",
+    "calculations": [
+      {
+        "python": "3.14.5",
+        "mpmath": "1.3.0"
+      },
+      {
+        "python": "3.14.5",
+        "numpy": "2.4.6",
+        "sympy": "1.14.0"
+      },
+      {
+        "python": "3.14.5",
+        "sympy": "1.14.0"
+      }
+    ]
+  },
+  "build": {
+    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File code/build_memory_central_spectrum.ps1",
+    "compiler": "This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5 Portable) (preloaded format=pdflatex 2026.9.19)  6 NOV 2026 19:07",
+    "passes_in_final_build": 2,
+    "final_pages": 6,
+    "render_command": "pdftoppm -r 95 -png output/pdf/de-sitter-susskind-memory-central-spectrum.pdf tmp/pdfs/susskind-memory-central-spectrum-build/page",
+    "visual_review": "All six final page PNGs viewed at 95 dpi; checked formulas, references and margins."
+  },
+  "failures": [],
+  "evidence_scope": "Analytic balanced-occupation and exponential-overlap bounds transfer existing fixed marked graph results. Exact general-charge CAR supports the strong orientation bridge. Reused endpoint certificates retain their original scope; no new diagonal kernel scan was needed. L2 replacement transfers bounded spectral tests; unbounded moments require uniform integrability.",
+  "process_state": "All calculations, compilation and rendering terminal; no active calculation.",
+  "hashes": {
+    "code/memory_central_trace.py": "383ce6ce34068d3aa3d75a5325dc0e48c7c160d723fb83e57924e84c2336aa5c",
+    "code/memory_central_force_bridge.py": "0b3c52358032a5f529f4fd2ac016984a85add08e8290c54c9f364f7c78a25444",
+    "code/memory_central_spectrum.py": "33bfdbfe518f88dc18018bc7462b379dc1413474fde16c231e4011b366e41512",
+    "code/build_memory_central_spectrum.ps1": "b90709f4c3f8d099d04f08b651d3ee31b031409de9684d4f2a215599b8202f9f",
+    "code/record_memory_central_spectrum.py": "dc3374518a877e451b698b1554316ba9822a06d3711887533855755e54a519d5",
+    "manuscript/susskind-memory-central-spectrum/main.tex": "a3d8a9f368e8fb9407049f06fdbd1fd7268f6d7c09423b5989cdbb36f951cff8",
+    "output/pdf/de-sitter-susskind-memory-central-spectrum.pdf": "9eca3e0dfb6469e0e6e2b6d9f8441bad6e04b12133f23bef5b25005a3ee82b07",
+    "notes/susskind-memory-central-spectrum.md": "aabad24b55705fff97588964921f92dede676040992f644e211dd8af76693a93",
+    "literature/susskind-memory-central-spectrum-sources.md": "631e502fa5dc5bac27b2b422833be9bb5af23400b640287f4f2dc802dca8ef68",
+    "journal/2026-11-06-susskind-memory-central-spectrum.md": "8d4c5f409dbf391eceea0c660118deec4946441a490d89058197b2f928c52958",
+    "README.md": "0ccf2f4ab8a27b570d4cb0fec86d6dda0f1ebbd600992f813de4266ceabc7ccf",
+    "PLAN.md": "bc50ec02bf07c9fe9e3e3c20a99c5af3b19daab47a949755bb6128fd5d18c91a",
+    "NEXT.md": "c8a82a79f3aa1b8c1bb773dfac4286c589f22cf152448de631d5cf8fc61bd559",
+    "results/susskind-memory-central-spectrum/force-bridge.json": "03424072840e257eb5ec6fcdc60a0706186e424e27ab4b276b2e1801b8f1c493",
+    "results/susskind-memory-central-spectrum/main.log": "051157137049c936b1a60b8fab06b87fbc5b61fd8aeebed51057d4629b1f2c16",
+    "results/susskind-memory-central-spectrum/spectrum-assembly.json": "9523efc3cabaca28a1ca826388a3c4340731a460eeceb240e2084319403b6e44",
+    "results/susskind-memory-central-spectrum/trace-ratio.json": "f71f20e460db4ab4bbe14a7c063c9e7de9641ccde29a4807bd862a22ff09f5c2"
+  },
+  "render_hashes": {
+    "tmp/pdfs/susskind-memory-central-spectrum-build/page-1.png": "c1e8c1567fc27fd88e3d9ebe5c5d039568736dc689c98b46246e9fa1ccebbfbb",
+    "tmp/pdfs/susskind-memory-central-spectrum-build/page-2.png": "0b314be6ed61a5049efa82e4251384a48ba1fa770e1d1803a78d91291ae954d5",
+    "tmp/pdfs/susskind-memory-central-spectrum-build/page-3.png": "5bf460920029939a8b9040367b7b93b0055e74c5222429fc1e52dffa96c31e97",
+    "tmp/pdfs/susskind-memory-central-spectrum-build/page-4.png": "b0791ce7277251051379dcb75a3a93cca32d72a5e7af222217ae16b38ad9967b",
+    "tmp/pdfs/susskind-memory-central-spectrum-build/page-5.png": "b13750d0f074cb3d0c516bbfd4fad98e9c492feadc56576ad0c0099248a6150e",
+    "tmp/pdfs/susskind-memory-central-spectrum-build/page-6.png": "c588cf08ef50151d839058dbf4a6a078f9428dc8c8771d7689d0b149390a359c"
+  },
+  "build_pass_hashes": {
+    "pass1.txt": "f418719e05db4de226c5cee42af9e3dfd533bf7b07e54ef1f3748d434c384290",
+    "pass2.txt": "6c148fe869e25c447facf9b994cc368e9cf2c9cc2c48051332ffea5e5b363936"
+  }
+}

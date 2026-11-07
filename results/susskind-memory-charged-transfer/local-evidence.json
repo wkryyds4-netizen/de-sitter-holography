@@ -1,0 +1,143 @@
+{
+  "status": "Local research progress; full research goal remains active",
+  "created_at_utc": "2026-11-06T17:10:48.200375+00:00",
+  "scientific_status": "Actual adjacent-charge ordinary propagator approximated by same-original-disorder Gaussian OU smoothing with full-charge annealed L2 error O_S(1/N). Derivative/energy-weighted transfer, collective force defects, X0 covariance and bulk dictionary remain open.",
+  "git_commit_created": false,
+  "git_push_performed": false,
+  "archive_created": false,
+  "external_reply_sent": false,
+  "previous_evidence": {
+    "results/susskind-memory-wick-rank/local-evidence.json": {
+      "sha256": "9890d5e71df835aba8bf44d71eb5f7e1a82c8f073c28754b4fa50cb6fcf946f9",
+      "unchanged_scientific_files": [
+        "code/memory_wick_rank.py",
+        "code/check_memory_wick_interface.py",
+        "code/check_memory_chaos_creation.py",
+        "code/build_memory_wick_rank.ps1",
+        "code/record_memory_wick_rank.py",
+        "manuscript/susskind-memory-wick-rank/main.tex",
+        "output/pdf/de-sitter-susskind-memory-wick-rank.pdf",
+        "notes/susskind-memory-wick-rank.md",
+        "literature/susskind-memory-wick-rank-sources.md",
+        "journal/2026-11-07-susskind-memory-wick-rank.md",
+        "results/susskind-memory-wick-rank/rank-chain-checks.json",
+        "results/susskind-memory-wick-rank/chaos-and-probe-checks.json",
+        "results/susskind-memory-wick-rank/creation-commutator-checks.json",
+        "results/susskind-memory-wick-rank/main.log",
+        "results/susskind-memory-wick-rank/diagnostics/first-render-source.tex",
+        "results/susskind-memory-wick-rank/diagnostics/first-render.pdf"
+      ]
+    },
+    "results/susskind-memory-wick-rank/continuation-seed.json": {
+      "sha256": "9ebeb561791c08bf9d521af593e6515d1781d48add5e4a2cd8b3792769e5304c",
+      "unchanged_scientific_files": [
+        "journal/2026-11-07-charged-transfer-seed.md"
+      ]
+    }
+  },
+  "verified_scientific_inputs": {
+    "transfer-checks.json": {
+      "code/memory_charged_transfer.py": "155392a862098a9aa1119085629bca5b2467e0de9f1610c009273e66fa80455a",
+      "code/complex_syk_dictionary.py": "96b4890a167beeadf0849ccffdbb20dd125d921af062fd291044da9024900abf"
+    },
+    "polar-and-reverse-checks.json": {
+      "code/check_memory_polar_transfer.py": "6c27b10e66cbafdb2fc9e3c791149bc7ace50f6451ac766b3595b1d6b2ae28b8",
+      "code/memory_charged_transfer.py": "155392a862098a9aa1119085629bca5b2467e0de9f1610c009273e66fa80455a",
+      "code/complex_syk_dictionary.py": "96b4890a167beeadf0849ccffdbb20dd125d921af062fd291044da9024900abf"
+    },
+    "closure-checks.json": {
+      "code/verify_memory_transfer_closure.py": "db178075bf25141cb02e853d83a598cbcb42f30958504fb2104d3bd8099cd1bd",
+      "code/memory_charged_transfer.py": "155392a862098a9aa1119085629bca5b2467e0de9f1610c009273e66fa80455a",
+      "code/memory_wick_rank.py": "7adf10a9d087a24ec84215dd0f95ccc832a5cefc8e8f833d7ca3521231d81525",
+      "code/cubic_linear_dynamics.py": "81d8e955107098e897637650bb7686a15fd2ff8fde6de1e1c525db398516d014",
+      "code/cubic_linear_channels.py": "da867816fdac6e958d3008fcb0e5b0581de0a8313d8bb6e53fbd1d5d9a019f9f",
+      "code/cubic_linear_limit.py": "a64fbf4649489437cdd7bc1097b24bd13f67641f4efbcd95a9fad4193c8f3971",
+      "code/complex_syk_dictionary.py": "96b4890a167beeadf0849ccffdbb20dd125d921af062fd291044da9024900abf"
+    }
+  },
+  "checks": {
+    "complete_CAR_systems": 6,
+    "scientific_outputs": 3,
+    "symbolic_identities": 3,
+    "exact_rational_source_variance_cases": 230,
+    "max_matrix_errors": {
+      "transfer-checks.json": 2.198129442157285e-15,
+      "polar-and-reverse-checks.json": 1.592237824842358e-14,
+      "closure-checks.json": 1.3224009942160549e-15
+    }
+  },
+  "environment": {
+    "python": "3.14.5",
+    "numpy": "2.4.6",
+    "scipy": "1.18.0",
+    "sympy": "1.14.0",
+    "mpmath": "1.3.0"
+  },
+  "parameters": "Finite systems recorded in each JSON; C_upper=1 for CAR checks. Analytic DS result assumes lambda_N in a positive compact interval, fixed Js and compact real time; central finite estimates assume N>=16, p<=N/16, N/4<=m<=3N/4.",
+  "evidence_scopes": {
+    "transfer-checks.json": "Complete deterministic superoperator Grams over every Gaussian coordinate and every matrix input. Reverse scalar blocks are measured, not presumed zero. These finite checks do not prove a uniform memory-field bound.",
+    "polar-and-reverse-checks.json": "Complete centered reverse-defect Grams and polar partial-isometry maps at finite N; exact amplitude polynomial identity. No Monte Carlo or truncated propagator approximation.",
+    "closure-checks.json": "Complete complex source-defect orthogonality, full reverse Gram, and rational Casimir second-moment reduction. No inference from finite fits to a uniform propagation rate."
+  },
+  "proof_scope": "Analytic Sections 2-7 with independent read-only mathematical reviews. Small-system superoperator checks are not fits or substitutes for the uniform proof. The OU parameter alpha is not the energy-Mehler parameter q; no time differentiation of an unweighted error is asserted.",
+  "build": {
+    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File code/build_memory_charged_transfer.ps1",
+    "pages": 8,
+    "passes": 2,
+    "compiler_header": "This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5 Portable) (preloaded format=pdflatex 2026.9.19)  7 NOV 2026 01:06",
+    "render_command": "pdftoppm -r 95 -png output/pdf/de-sitter-susskind-memory-charged-transfer.pdf tmp/pdfs/susskind-memory-charged-transfer-build/page",
+    "final_pages_visually_inspected": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "visual_result": "Final eight pages have legible equations, clean margins and references, and no clipping or overlaps."
+  },
+  "diagnostics": [
+    "First compile failed because mathscr was not defined; source and log retained. Changed notation to mathcal; final two-pass compile clean.",
+    "One context-mismatched apply_patch was rejected without edits; re-read exact lines and applied corrected patch.",
+    "Root DOI open for Choi returned Internal Error; collaborator checked the author-uploaded original. Root directly read Kota and Chen-Liu formulas.",
+    "All three scientific drivers passed first execution; no old scientific JSON was overwritten."
+  ],
+  "process_state": "All scientific and build shell commands terminal; no live computation handles.",
+  "hashes": {
+    "code/memory_charged_transfer.py": "155392a862098a9aa1119085629bca5b2467e0de9f1610c009273e66fa80455a",
+    "code/check_memory_polar_transfer.py": "6c27b10e66cbafdb2fc9e3c791149bc7ace50f6451ac766b3595b1d6b2ae28b8",
+    "code/verify_memory_transfer_closure.py": "db178075bf25141cb02e853d83a598cbcb42f30958504fb2104d3bd8099cd1bd",
+    "code/build_memory_charged_transfer.ps1": "7abcfc4d0342adcc7d2a0d5fb4579310f2fec7edd8fdb6b633713f4652e38e42",
+    "code/record_memory_charged_transfer.py": "c701778a9729c0998e379948c91b4b22680ffcf6a867fd5875cf6d6bcdb8fb9c",
+    "manuscript/susskind-memory-charged-transfer/main.tex": "fc0d73219df28e34ca9b92fb351c7b027a03899f29aa8692e4520589149b46a2",
+    "output/pdf/de-sitter-susskind-memory-charged-transfer.pdf": "4ae23fcd5bd7bed47241b819b852c6e35f8a73849a8caa18946c11c153d3d949",
+    "notes/susskind-memory-charged-transfer.md": "36c94995616a9c42066096a28e6f59f89b202336332631184df2c67cf54ecb03",
+    "literature/susskind-memory-charged-transfer-sources.md": "f355d2eba1a99693644188fa381604bca13a0008d517735f485952496e2232a4",
+    "journal/2026-11-07-susskind-memory-charged-transfer.md": "a0534455d2db1ea63ec602040c591d9cd435dc84d96a8b542e4415407b8d621f",
+    "README.md": "1e813d0bf5455c52f94f8edb707de886f3c7d6d2280b9dbd485bc4780853e8c0",
+    "PLAN.md": "ef0bb817fd9ff2a6a3c0bb748f8c828f763e64541d7849d6db00ab806f3b029c",
+    "NEXT.md": "9a2db65452e36aa1bfcf39f03dd9e6d7f2141256ae6b33e1c365943bb189ce76",
+    "results/susskind-memory-charged-transfer/transfer-checks.json": "a7b20809356103d1127e29f4a09dffe0f705864565b83c795ca539c16ac5f4b2",
+    "results/susskind-memory-charged-transfer/polar-and-reverse-checks.json": "5da980c368b3c91ced0d1caa888b388ac35fa314c1075cf9c913037ff46abaa0",
+    "results/susskind-memory-charged-transfer/closure-checks.json": "17b32a456f291fc5783981d90747bab2e84d7cb3b4b39ef9a2769a3f00544f7a",
+    "results/susskind-memory-charged-transfer/main.log": "d3b2d76de24f34e27efd8eb9245bb2ce2cd23b54c627c00f7d7a800eb757af00",
+    "results/susskind-memory-charged-transfer/diagnostics/first-build-source.tex": "8e6504141480b3ef213bb920d123d714032f872cfdb756cfada2c6dbed9a61b3",
+    "results/susskind-memory-charged-transfer/diagnostics/first-build.log": "99f1dcd171fefe8cabb602329060583683a4052ea5925304a6e4862005bde054"
+  },
+  "render_hashes": {
+    "tmp/pdfs/susskind-memory-charged-transfer-build/page-1.png": "f61731784d6d19a5c4aa67a15ea2c8dbcff458c8559061b3d27f626e548a3f8e",
+    "tmp/pdfs/susskind-memory-charged-transfer-build/page-2.png": "6a5f6fcfc44d9525580e77f03f381385a5339cef4689ca1002ed3e6619cc893b",
+    "tmp/pdfs/susskind-memory-charged-transfer-build/page-3.png": "817af085f17270a15e452a0dee5f547a19c572152c683b717ec7950a0c9a1cc6",
+    "tmp/pdfs/susskind-memory-charged-transfer-build/page-4.png": "2c466b0d310e41decd82b1c4f3357cd2eafd29db880fc64cae7e5bf8bc222e37",
+    "tmp/pdfs/susskind-memory-charged-transfer-build/page-5.png": "df6c012f058a9cec98395195f76fcd90c8016394f4e5514347980f33fe61014d",
+    "tmp/pdfs/susskind-memory-charged-transfer-build/page-6.png": "48be0b6d216e325a67776c737e0ea2620720d95bccdc404890dec410284aeb51",
+    "tmp/pdfs/susskind-memory-charged-transfer-build/page-7.png": "358165a5ef8df4316562ffcc7d29fa46155b16b6fcf4e5cdaca53110f8c6a97c",
+    "tmp/pdfs/susskind-memory-charged-transfer-build/page-8.png": "881fcf9c8d147a8b2ab2676ef2fc6f64f6a8c6e1722c4f1836d6492b945f792a"
+  },
+  "build_pass_hashes": {
+    "tmp/pdfs/susskind-memory-charged-transfer-build/pass1.txt": "68376b58d53750b87aa5127254bc1354ac9d70a35d09fed721331351e3a17789",
+    "tmp/pdfs/susskind-memory-charged-transfer-build/pass2.txt": "68376b58d53750b87aa5127254bc1354ac9d70a35d09fed721331351e3a17789"
+  }
+}

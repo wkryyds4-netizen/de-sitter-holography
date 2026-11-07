@@ -1,0 +1,330 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,microtype}
+\usepackage[margin=24mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\core}{\mathcal E}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Rem}{Rem}
+\title{An exact two-charge formula for the memory core\\Charged covariance transfer and its double-scaled filter}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Local research note --- 6 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+A charged-covariance transfer identity reduces the full quadratic
+Gaussian contraction of the quartic memory core to two coherent
+products in adjacent charge sectors. The resulting finite-$N$
+coefficients are explicit, including the channels forbidden to
+ordinary multiplication at half filling. After an exact cancellation,
+the $H^2$ coefficient has a linear rank-deficit limit. Existing positive
+product tails promote this part to an annealed $L^2$ approximation.
+The weighted $A$ part and the output-deficit cross spectrum remain
+the next steps toward the full memory observable.
+\end{abstract}
+
+\section{Conventions and the transfer identity}
+Use standard CAR and the overlapping complex Gaussian $p$-body
+ensemble, $\EE J_{IJ}J_{KL}=w\delta_{IL}\delta_{JK}$, $\hbar=1$.
+The state is maximally mixed at fixed charge, with normalized trace
+$\tr_m$ and $\|X\|_2^2=\EE\tr_m X^\dagger X$.
+Set $h=H_m$, $k=H_{m-1}$, $c_i:\mathcal H_m\to\mathcal H_{m-1}$,
+and $\Rem X=\sum_i c_i^\dagger Xc_i$. All finite formulas below assume
+$m>p\ge1$; the double-scaled regime satisfies this condition.
+Write $d=m-p$, $n=N-m+1$, and
+\begin{align}
+ C&=w\binom mp\binom{N-m+p}p,&
+ C_-&=w\binom{m-1}p\binom{N-m+p+1}p,\\
+ j_c&=w\binom{m-1}p\binom{N-m+p}p,&
+ \kappa_r&=w\binom{m-r}p\binom{N-m+p-r}p,\\
+ e_r&=\frac{w}{p}\binom{m-r-1}{p-1}
+                  \binom{N-m+p-r}{p-1}.
+\end{align}
+Out-of-range binomials are zero. In the interior,
+$e_r=p\kappa_r/[(m-r)(n-r)]$.
+
+For an independent copy $(u,v)$ sharing the same new couplings in
+the two sectors, define $\Psi(X)=\EE uXv$. For arbitrary rectangular
+matrices $Y_i:\mathcal H_{m-1}\to\mathcal H_m$, the key identity is
+\begin{equation}
+ \boxed{P_r\sum_i\Psi(Y_i)c_i
+ =\kappa_r P_r\sum_iY_ic_i
+       -e_rP_r\Rem\!\left(\sum_i c_iY_i\right).}
+ \label{eq:transfer}
+\end{equation}
+No rank restriction on $Y_i$ is required. The output rank is
+$0\le r\le\min(m,N-m)$.
+
+\newpage
+\section{Why only two charged components are needed}
+Let $T_r^\pm$ be the same primitive traceless rank tensor restricted
+to charges $m$ and $m-1$. Introduce vector-valued operators
+\begin{equation}
+ V_i=T_r^+c_i^\dagger,\qquad U_i=c_i^\dagger T_r^-.
+\end{equation}
+Their difference is a commutator with one creation operator; it is
+the traceless charged tensor of type $(r,r-1)$. The remaining
+component has type $(r+1,r)$. Normal ordering with a single extra
+creation operator permits precisely these two types. Their known
+embedded-covariance eigenvalues are
+\begin{align}
+ L_r&=w\binom{m-r}p\binom{N-m+p-r+1}p,\\
+ U_r^{\rm eig}&=w\binom{m-r-1}p\binom{N-m+p-r}p.
+\end{align}
+Put $D_r=N+1-2r$. Then
+\begin{equation}
+ L_r-U_r^{\rm eig}=D_r e_r,\qquad
+ U_r^{\rm eig}+(n-r)e_r=\kappa_r.
+\end{equation}
+Use unnormalized HS norms in this paragraph, and set
+$A_+=\|T_r^+\|^2$, $A_-=\|T_r^-\|^2$. Removal and addition give
+\begin{equation}
+ \frac{A_-}{A_+}=\frac{m-r}{n-r},\quad
+ \|V-U\|^2=\frac{rD_r}{n-r}A_+,\quad
+ \langle V,V-U\rangle=rA_+.
+\end{equation}
+Thus the low component of $V$ is $(n-r)(V-U)/D_r$, and
+\begin{equation}
+ \Psi(V_i)=\kappa_r V_i-(n-r)e_rU_i.
+\end{equation}
+At $r=0$ the difference is zero; endpoints follow by the surviving
+component or the binomial formula.
+
+Define $\mathsf S(Y)=\sum_iY_ic_i$ and
+$\mathsf T(Y)=\sum_i c_iY_i$. Their HS adjoints are
+$\mathsf S^*(X)_i=Xc_i^\dagger$ and
+$\mathsf T^*(Z)_i=c_i^\dagger Z$. Also
+$\sum_i c_iT_r^+c_i^\dagger=(n-r)T_r^-$.
+Taking the adjoint of the preceding eigenvector identity, using
+self-adjointness of $\Psi$, proves Eq.~\eqref{eq:transfer} on every
+$Y$, including all product multiplicities.
+
+For the embedded Hamiltonian ranks $h_a,k_a$, the useful consequences
+are
+\begin{align}
+ \Psi(h_ac_i^\dagger)&=\kappa_a h_ac_i^\dagger
+                   -\frac{p\kappa_a}{d}c_i^\dagger k_a,\\
+ \Psi(c_i^\dagger k_a)&=-de_a h_ac_i^\dagger
+                   +[\kappa_a+(m-n)e_a]c_i^\dagger k_a,\\
+ \kappa_a(m-1)&=\kappa_a+(m-n-p)e_a.
+\end{align}
+These preserve the same couplings across the two charges.
+
+\newpage
+\section{The complete finite-$N$ quadratic core}
+Recall
+\begin{equation}
+ \core=\sum_i(\operatorname{ad}_H^2c_i)^\dagger
+                \operatorname{ad}_H^2c_i+\tfrac14[H,[H,A]],
+ \qquad Q_{\core}=\tfrac12\Delta\core.
+\end{equation}
+The old exact contraction is
+$Q_{\core}=D_4-2D_{13}+5D_{22}/4+7D_{121}/2+(4p-3m)D_{40}$,
+with $D$ the contractions of the five raw words.
+
+For $a<b$ use $X\odot Y=\{X,Y\}$; for $a=b$ use $X\odot X=X^2$.
+Set
+\begin{equation}
+ Z^+_{ab;r}=P_r(h_a\odot h_b),\quad
+ Z^-_{ab;r}=P_r\Rem(k_a\odot k_b),\quad
+ x_a=a(N+1-a).
+\end{equation}
+Then, with all sums over allowed $a\le b,r$,
+\begin{equation}
+ \boxed{Q_{\core}=\sum_{a\le b,r}
+          \left(g^+_{ab;r}Z^+_{ab;r}+g^-_{ab;r}Z^-_{ab;r}\right).}
+ \label{eq:core}
+\end{equation}
+The coefficients are
+\begin{align}
+ g^+={}&(8p-2m)C_-+\frac{19}{2}d j_c+(12p-9m)C\notag\\
+       &+m(\kappa_a+\kappa_b)+\frac{3p-m}{2}\kappa_r
+                  -\frac{11}{4}dn(e_a+e_b),\label{eq:gp}\\
+ g^-={}&3C_-+\frac52 C-4j_c
+        -\frac{4m+p}{4d}(\kappa_a+\kappa_b)+\frac12\kappa_r\notag\\
+       &-(m-n+p)(e_a+e_b)
+        +\left[m+3n-p-\frac{5(2mn-x_a-x_b)}{4d}\right]e_r.
+ \label{eq:gm}
+\end{align}
+No division by $Z^+$ occurs. The previously found $(2,2;1)$ channel
+at $N=6,m=3$ is consequently retained.
+
+To see the reduction, put $v_a=\kappa_a-ne_a$ and
+$u_a=d(j_c+v_a)$. The old linear $U$ is $\sum_a u_ah_a$.
+For its apparently new quadratic term, Eq.~\eqref{eq:transfer} gives
+\begin{equation}
+ P_r\sum_i\Psi(h_ac_i^\dagger k_b)c_i
+ =d\kappa_rP_rh_ah_b
+  -\frac{e_r(m-a)(n-a)}d P_r\Rem(k_ak_b).
+\end{equation}
+All other terms use the three consequences on the preceding page.
+Adding their Hermitian conjugates produces the symmetric products
+and yields Eqs.~\eqref{eq:gp}--\eqref{eq:gm}.
+
+Gaussian centering acts after this identity:
+$W_2\core=\sum(g^+W_2Z^++g^-W_2Z^-)$, since
+$W_2\core=Q_{\core}-2\EE\core$.
+The boundary $m=p$ is separate: $k=0$, $\core=p h^4$, and
+$Q_{\core}=pD_{40}$.
+
+\newpage
+\section{The finite part after merging the large terms}
+Since $A_{ab;r}=Z^-_{ab;r}+(2p-m)Z^+_{ab;r}$, define
+\begin{equation}
+ g_A=g^-,\qquad g_H=g^++(m-2p)g^-,\qquad
+ Q_{\core}=\sum(g_HZ^++g_AA_{ab;r}).
+\end{equation}
+Now impose exact half filling $m=N/2$, $N=p^2/\lambda$, with fixed
+$\lambda>0$, and only afterwards consider small $\lambda$.
+For fixed nonnegative deficits,
+\begin{equation}
+ a=p-u,\qquad b=p-v,\qquad r=a+b-S,\qquad q=e^{-4\lambda}.
+\end{equation}
+The explicit coefficients give
+\begin{align}
+ \frac{g_A}{C}&=\frac{3-4q+q^2}{2}+O(p^{-1}),\label{eq:ga-limit}\\
+ \frac{g_H}{C}&=2p(1-q)^2+K_0
+     +8\lambda(q^2-q)(u+v)+8\lambda q^2S+O(p^{-1}),\label{eq:gh-limit}\\
+ K_0&=\lambda\left[1-10q+9q^2+16\lambda q-32\lambda q^2\right].
+\end{align}
+In particular, the order-$m$ terms cancel before the limit is taken.
+The remaining order-$p$ coefficient is independent of ranks and
+multiplies the conserved operator $H^2-CI$ after centering.
+
+Here is a direct derivation of the finite term. Write
+$g_H/C=B_0+B_a\kappa_a/C+B_b\kappa_b/C+B_r\kappa_r/C$ using
+$C_-/C=d(n+p)/(mn)$ and $j_c/C=d/m$. For fixed deficits the exact
+rational coefficients expand as
+\begin{equation}
+ (B_0,B_a,B_b,B_r)
+ =(2p+\lambda,-2p-5\lambda,-2p-5\lambda,2p+9\lambda)
+       +O(p^{-1}).
+\end{equation}
+For $j=tp-s$, the terminating binomial product gives
+\begin{align}
+ \frac{\kappa_j}{C}
+ &=\prod_{l=0}^{p-1}
+       \left(1-\frac{j}{m-l}\right)
+       \left(1-\frac{j}{m+p-l}\right),\\
+ \log\frac{\kappa_j}{C}
+ &=-4\lambda t+\frac{4\lambda s-4\lambda^2t^2}{p}
+       +O(p^{-2}).
+\end{align}
+Taylor's remainder for the logarithm is uniform on any fixed deficit
+window. Substituting $(t,s)=(1,u),(1,v),(2,u+v+S)$ gives
+Eq.~\eqref{eq:gh-limit}. This is a coefficient expansion; treating
+the entire $A$ contribution requires an additional weighted estimate.
+
+\newpage
+\section{An $L^2$ result for the $H^2$ contribution}
+The $H^2$ part can already be controlled beyond fixed rank windows.
+For $a=\alpha p$, $b=\beta p$, $r=\rho p$, the rational coefficients
+have the uniform expansions
+\begin{align}
+ B_0&=2p+\lambda+O(p^{-1}),\\
+ B_a&=-2p+\lambda(6-11\alpha)+O(p^{-1}),\\
+ B_b&=-2p+\lambda(6-11\beta)+O(p^{-1}),\\
+ B_r&=2p+\lambda(5\alpha+5\beta+6\rho-13)+O(p^{-1}).
+\end{align}
+Uniformity holds for $\alpha,\beta\in[0,1]$, $\rho\in[0,2]$:
+after scaling, every rational denominator stays away from zero.
+The binomial product and its rank finite differences satisfy
+$|\kappa_{j+1}/C-\kappa_j/C|\le K_\lambda/p$ throughout this window.
+Comparison with $j=p,2p$ therefore gives
+\begin{equation}
+ \left|\frac{g_H}{C}-2p(1-q)^2\right|
+       \le K_\lambda(1+u+v+S).
+ \label{eq:bound}
+\end{equation}
+
+Let $C_aI=\EE h_a^2$, $\omega_a=C_a/C$. Different input-rank pairs
+are orthogonal in second Gaussian chaos, and output ranks are HS
+orthogonal. The previous independent-product law $\pi_{ab}^{(m)}(r)$
+and symmetrization bound imply, for any real filter $f$,
+\begin{equation}
+ \left\|C\sum_{a\le b,r} f_{ab;r}W_2Z^+_{ab;r}\right\|_2^2
+ \le4C^4\sum_{a,b}\omega_a\omega_b
+                  \sum_r\pi_{ab}^{(m)}(r)|f_{ab;r}|^2.
+\end{equation}
+The established input-deficit factorial tail and uniform third moment
+of $S$ make the square of Eq.~\eqref{eq:bound} uniformly integrable.
+First restrict $u,v$, then use the $O(K^{-1})$ squared tail for $S$;
+the complementary input tail vanishes by the factorial bound and
+the uniform conditional second moment of $S$.
+
+In the physical normalization $C\to J_s^2/\lambda$, define
+\begin{equation}
+ D_N=\sum_a(p-a)h_a,\qquad
+ \mathcal S_N=\sum_{a\le b,r}(a+b-r)W_2Z^+_{ab;r},\qquad
+ \mathcal H_N=\sum_{a\le b,r}g_HW_2Z^+_{ab;r}.
+\end{equation}
+Fixed-window convergence and the preceding tails prove
+\begin{align}
+ \mathcal H_N={}&C[2p(1-q)^2+K_0]W_2h^2\notag\\
+ &+8\lambda C(q^2-q)W_2\{h,D_N\}
+       +8\lambda Cq^2\mathcal S_N+o_{L^2}(1).
+ \label{eq:l2}
+\end{align}
+This result is at exact half filling. It does not yet include the
+weighted $A$ contribution or the full charge-window average.
+
+\newpage
+\section{The remaining spectral problem and verification}
+Equation~\eqref{eq:l2} separates a conserved background, an
+input-deficit insertion, and an output-deficit insertion. The former
+input-filter work identifies the centered linear deficit with the
+existing $F$ direction. The new task is the coherent norm and cross
+spectrum of $\mathcal S_N$ with $A$ and $J_hF$.
+
+At half filling the exact selection rule supplies a useful starting
+point. For independent normalized pure-rank Hermitian $U_a,V_b$,
+\begin{equation}
+ P_r(V_bU_a)=(-1)^{a+b-r}P_r(U_aV_b),
+\end{equation}
+and therefore
+\begin{equation}
+ \EE\|P_r\{U_a,V_b\}\|_m^2
+   =4\,\mathbf1_{\{a+b-r\ {m even}\}}\,
+                       \pi_{ab}^{(m)}(r).
+\end{equation}
+Thus the same-charge symmetric Gram requires parity-weighted
+deficit moments. The previous first three ordinary moments do not
+alone determine them. The lower-charge and mixed Gram retain their
+coherent recoupling data; existing reduced-product formulas
+\cite{KV} explicitly retain multiplicity and adjacent-sector phases.
+
+The $A$ coefficient in Eq.~\eqref{eq:ga-limit} is bounded and has a
+fixed-deficit limit, but replacing it by that limit under the full
+operator sum still needs a weighted tail estimate for $A_{ab;r}$.
+The crude bound on $Z^-$ separately loses the cancellation of its
+order-$m$ part against $Z^+$. We have not used that crude bound to
+claim convergence of the entire memory core. The final raw $Z_2$
+also requires restoring the low-chaos terms of the fourth-chaos
+descendants before its spectrum can be assembled.
+
+\paragraph{Evidence.}
+Five systems, $(N,p,m)=(4,1,2),(5,2,3),(6,2,3),(6,2,4),(6,3,4)$,
+give 522 exact rank-projected checks of the five individual
+contractions and their core sum on complex, pure-rank inputs.
+Separately, Eq.~\eqref{eq:transfer} is checked as a complete linear
+map for every external index and output rank: 87 map identities,
+5,470,368 complex-entry equalities, maximum cleared integer 60.
+These exhaustive transfer checks complement the analytic proof;
+the product checks alone are not a full quadratic-tensor audit.
+
+Symbolic algebra independently merges the five coefficients,
+derives the finite term and the uniform rational expansions.
+Twenty-four finite cases use exact binomial fractions and 80/120
+digit evaluations, with actual finite-$p$ deviations retained. For
+$\lambda=1/2,p=128,(u,v,S)=(2,1,3)$, the $g_A/C$ deviation is about
+$0.02487$; the finite $g_H/C$ deviation is about $-0.02144$.
+Precision agreement is not interval certification. All outputs and
+the six-page compiled note are saved locally, without Git publication.
+
+\begin{thebibliography}{9}
+\bibitem{KV} V. K. B. Kota and M. Vyas,
+\emph{Random Matrix Theory for Transition Strength Densities in Finite
+Quantum Systems}, Secs.~3, 7, Eqs.~(34)--(35), (113),
+\href{https://arxiv.org/abs/1504.00759}{arXiv:1504.00759}.
+\end{thebibliography}
+\end{document}

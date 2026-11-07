@@ -1,0 +1,76 @@
+{
+  "status": "Saved locally; goal remains active",
+  "created_at_utc": "2026-11-06T15:14:15.003406+00:00",
+  "scientific_status": "Finite-return field O(p^-2) and absolute covariance O(p^-1) reduction. Finite-memory tightness and limiting kernel still to compute.",
+  "git_commit_created": false,
+  "git_push_performed": false,
+  "archive_created": false,
+  "parent_manifest_sha256": "e1641bc637b9d28a3c06356736931f68de6386140e8ee43b8b1b57ff09139e24",
+  "previous_scientific_files_unchanged": [
+    "code/memory_charge_global_checks.py",
+    "code/memory_charge_growing_window.py",
+    "code/assemble_memory_charge_sum.py",
+    "code/build_memory_charge_sum.ps1",
+    "code/record_memory_charge_sum.py",
+    "manuscript/susskind-memory-charge-sum/main.tex",
+    "output/pdf/de-sitter-susskind-memory-charge-sum.pdf",
+    "notes/susskind-memory-charge-sum.md",
+    "literature/susskind-memory-charge-sum-sources.md",
+    "journal/2026-11-06-susskind-memory-charge-sum.md",
+    "results/susskind-memory-charge-sum/charge-sum-assembly.json",
+    "results/susskind-memory-charge-sum/diagnostics/first-build-failure.txt",
+    "results/susskind-memory-charge-sum/diagnostics/second-build-layout.log",
+    "results/susskind-memory-charge-sum/global-sector-checks.json",
+    "results/susskind-memory-charge-sum/growing-window-checks.json",
+    "results/susskind-memory-charge-sum/main.log"
+  ],
+  "checks": {
+    "force_diagonal_entries": 864,
+    "rational_bounds": 118132,
+    "finite_remainder_bounds": 48,
+    "common_coupling_CAR_systems": 4,
+    "scalar_cases": 5
+  },
+  "environment": {
+    "python": "3.14.5",
+    "numpy": "2.4.6",
+    "scipy": "1.18.0"
+  },
+  "build": {
+    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File code/build_memory_return_expansion.ps1",
+    "pages": 6,
+    "passes": 2,
+    "render_command": "pdftoppm -r 95 -png output/pdf/de-sitter-susskind-memory-return-expansion.pdf tmp/pdfs/susskind-memory-return-expansion-build/page",
+    "all_six_pages_visually_inspected": true
+  },
+  "failures": [
+    "First layout had three overfull lines; first-layout.log preserved. Scientific driver passed on its first run."
+  ],
+  "evidence_scope": "Exact CAR covariance counts and finite-matrix identities; asymptotic rates follow the written inequalities, not finite-size fits.",
+  "process_state": "Calculation and final build terminal; no active return-expansion process.",
+  "hashes": {
+    "code/memory_return_expansion.py": "f696fa8fcac67d629d0ac1f0cea09c080e0170f1e9308467c9332ce9cb8b17cd",
+    "code/build_memory_return_expansion.ps1": "be18edae3cae83385e075232a036d972888a87bbf03910215dc090901a910bde",
+    "code/record_memory_return_expansion.py": "ed46831fa907c4dbf7cd8535d87f475c04cbab06fb489efcddab92f98479aa62",
+    "manuscript/susskind-memory-return-expansion/main.tex": "69bac95f696654f51ec9153ae9fd2d839cf7fc1ddfd5c4356535c3df9caae6ee",
+    "output/pdf/de-sitter-susskind-memory-return-expansion.pdf": "18109e86891e4976e4829d4b80360409659092e02f0cbdf753d19809151a5e1d",
+    "notes/susskind-memory-return-expansion.md": "83d0edf3a9f95dc17a150bc1a3e29b5d4c2ad176f1d752ee57519a5d27b0d750",
+    "literature/susskind-memory-return-expansion-sources.md": "670eb47ab450c6b9b0011eac5c7dd0c254cac050363b74cc19ac16f09e7b098c",
+    "journal/2026-11-06-susskind-memory-return-expansion.md": "c618ce7e9543d573506c7b8d02230d33370b311c8944b9adf97bdd59cd2d4d30",
+    "results/susskind-memory-return-expansion/finite-checks.json": "f18476b6325258dbbeaf5db9fec316a1c81896b9121b3cd445d1ac4f08dd900d",
+    "results/susskind-memory-return-expansion/main.log": "ec9a104e5a1c3abec152caaa3eea66274112fb0f2c9307b3455ab0f76fcf2855",
+    "results/susskind-memory-return-expansion/diagnostics/first-layout.log": "0e42139c37d7ccda7d6466ce704391c743e7ffbaefd6c1695657b140ca72479c"
+  },
+  "render_hashes": {
+    "tmp/pdfs/susskind-memory-return-expansion-build/page-1.png": "bd258a1e169805008a4447b5922922ae3ec84eb9ee2e8486ea04d6408e760a87",
+    "tmp/pdfs/susskind-memory-return-expansion-build/page-2.png": "71b7bf6f1e21c11a5053ab223b37864139ca08d511e631b9fc4b16f0920e135d",
+    "tmp/pdfs/susskind-memory-return-expansion-build/page-3.png": "2a4743d557c6fead7f876a704046da498f8d099a9a4d621bdb281b782d92370b",
+    "tmp/pdfs/susskind-memory-return-expansion-build/page-4.png": "218f51cfe6687f3941c9378c3aa30415cd693033024e386a330a203072f23964",
+    "tmp/pdfs/susskind-memory-return-expansion-build/page-5.png": "9e73055f0ff91d7a1175f1027edbe1eb7f0d2ab110994c9e08d465b068816735",
+    "tmp/pdfs/susskind-memory-return-expansion-build/page-6.png": "d774e6626c9c535de568ebebb7e12efbf36ffe95cd33f862113a6b70f1eedabe"
+  },
+  "build_pass_hashes": {
+    "tmp/pdfs/susskind-memory-return-expansion-build/pass1.txt": "1a0aa369f94f8a0d8d6308da17865fa61af8b7cf043f57c780abea36676b545a",
+    "tmp/pdfs/susskind-memory-return-expansion-build/pass2.txt": "1a0aa369f94f8a0d8d6308da17865fa61af8b7cf043f57c780abea36676b545a"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "status": "passed",
+  "rows": [
+    {
+      "N": 4,
+      "m": 2,
+      "pairs": 4,
+      "minimum_coherent_weight": "0"
+    },
+    {
+      "N": 6,
+      "m": 3,
+      "pairs": 9,
+      "minimum_coherent_weight": "0"
+    },
+    {
+      "N": 8,
+      "m": 4,
+      "pairs": 16,
+      "minimum_coherent_weight": "0"
+    },
+    {
+      "N": 10,
+      "m": 5,
+      "pairs": 25,
+      "minimum_coherent_weight": "0"
+    },
+    {
+      "N": 12,
+      "m": 6,
+      "pairs": 36,
+      "minimum_coherent_weight": "0"
+    },
+    {
+      "N": 14,
+      "m": 7,
+      "pairs": 49,
+      "minimum_coherent_weight": "0"
+    }
+  ],
+  "embedded_covariance_identities": 1925,
+  "orthogonality_identities": 139,
+  "signed_unsigned_moments": 556,
+  "difference_equations": 139,
+  "elapsed_seconds": 0.04741668701171875,
+  "scope": "Exact finite rational identities; coherent weights are not assumed positive. These tests are finite checks of the derivation, not a proof by extrapolation.",
+  "environment": {
+    "python": "3.14.5"
+  },
+  "input_sha256": {
+    "code/memory_coherent_cross.py": "557f5124649be17d9a2c5f35536e6354ad69c46a1c4993783dae0b6e92e2566f",
+    "code/check_memory_coherent_transform.py": "ebea03cd397129f22c39a40da72059a32d1b9844d479f4f8352bbc37a3fa75c1",
+    "code/cubic_linear_dynamics.py": "81d8e955107098e897637650bb7686a15fd2ff8fde6de1e1c525db398516d014"
+  }
+}

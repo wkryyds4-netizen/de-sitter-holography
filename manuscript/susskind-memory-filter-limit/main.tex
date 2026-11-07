@@ -1,0 +1,305 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,microtype}
+\usepackage[margin=24mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\Rem}{\operatorname{Rem}}
+\newcommand{\W}{\mathsf W_2}
+\newcommand{\core}{\mathcal E}
+\title{The quadratic memory core in the double-scaled limit\\A strong filter limit from sixth Racah moments}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Local research note --- 6 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+We complete the ordinary Gaussian second-chaos limit of the quartic
+memory core at half filling. A uniform sixth moment of the positive
+rank-product distribution controls a growing output window. Together
+with the preceding coherent norm calculation, it proves the missing
+$A$-filter replacement in $L^2$. The core then has an explicit expansion
+in four directions and a strictly positive residual after projecting
+onto the three previously retained directions.
+\end{abstract}
+\section{Setting and completed core}
+Use standard CAR, the full overlapping complex Gaussian $p$-body
+Hamiltonian, $\hbar=1$, and the normalized maximally mixed trace at
+$m=N/2$. All norms are annealed Hilbert--Schmidt norms,
+$\|X\|^2=\EE\tr_m X^\dagger X$. Let $h=H_m$, $k=H_{m-1}$
+have the same couplings and put
+\begin{equation}
+ C_N=\EE\tr_m h^2,\quad B=\W h^2,\quad
+ O=\W A,\quad A=\Rem(k^2)+(2p-m)h^2.
+\end{equation}
+Here $\Rem(X)=\sum_i c_i^\dagger Xc_i$ and $\W$ projects onto
+ordinary Gaussian second chaos. The quartic core is
+$\core=B_{22}^f+[h,[h,A]]/4$, with
+$B_{22}^f=\sum_i(\mathcal L^2c_i)^\dagger\mathcal L^2c_i$
+and $\mathcal L=[H,\cdot]$ on full Fock space.
+Set $\lambda_N=p^2/N\to\lambda>0$, $q_N=e^{-4\lambda_N}$,
+$C_N\to J_s^2/\lambda$. In formulas below $C,\lambda_N,q_N$
+retain their finite-$N$ values ($C=C_N$). The result is
+\begin{align}
+ \W\core={}&C[2p(1-q_N)^2+\overline K_N]B+C\gamma_N O\notag\\
+ &+2(q_N-1)J_hF+8\lambda_N Cq_N^2\mathcal S_N+o_{L^2}(1),\label{core}\\
+ \gamma_N={}&(3-4q_N+q_N^2)/2,\notag\\
+ \overline K_N={}&\lambda_N(1-10q_N+9q_N^2)-16\lambda_N^2q_N^2.\notag
+\end{align}
+$\mathcal S_N$ inserts the output-rank deficit, and $J_hF=\{h,F\}/2$
+is the preceding centered linear-field descendant. Their precise
+definitions and the assembly are given below. The retained $C_N,q_N$
+in the term proportional to $p$ are essential.
+
+\newpage
+\section{Positive product weights and a finite recurrence}
+At charge $M$, take independent isotropic Hermitian rank-$a,b$
+matrices $U,V$ normalized by $\EE U^2=\EE V^2=I$. Define
+\begin{equation}
+ \pi^{(M)}_{ab}(r)=\EE\tr_M[P_r(UV)]^\dagger P_r(UV),\qquad
+ \sum_r\pi^{(M)}_{ab}(r)=1.
+\end{equation}
+These are positive, vanish for $r>a+b$, and incorporate all
+multiplicities. The established covariance/Racah framework
+\cite{kota,ks} gives
+\begin{align}
+ \sum_r\pi^{(M)}_{ab}(r)\chi_r(n)&=\chi_a(n)\chi_b(n),\label{product}\\
+ \chi_a(n)&={}_4F_3\!\left[\begin{matrix}-a,a-N-1,-n,n-N-1\\
+                 -M,M-N,-N-1\end{matrix};1\right].\notag
+\end{align}
+This is the previously used composition of covariance maps, not a
+new probability ansatz. Introduce $x_j=j(N+1-j)$,
+$P_j(x)=\prod_{\ell=0}^{j-1}(x-x_\ell)$, and
+\begin{equation}
+ c_{nj}=\frac{(-n)_j(n-N-1)_j}
+ {(-M)_j(M-N)_j(-N-1)_j j!}.
+\end{equation}
+Since $\chi_r(n)=\sum_{j=0}^n c_{nj}P_j(x_r)$, (\ref{product})
+is triangular. Writing $F_j=\EE_\pi P_j(x_r)$ gives the exact recursion
+\begin{equation}
+ F_0=1,\qquad
+ F_n=\frac{\chi_a(n)\chi_b(n)-\sum_{j<n}c_{nj}F_j}{c_{nn}}.
+ \label{recursion}
+\end{equation}
+Raw moments follow by triangular conversion from $P_j$ to $x^j$.
+Thus every moment of $X=x_{a+b}-x_r$ through degree six is an
+explicit rational function of $N,M,a,b$.
+
+For uniform asymptotics use $\epsilon=N^{-1/2}$,
+$a=A_0/\epsilon$, $b=B_0/\epsilon$, and
+$M=1/(2\epsilon^2)+\delta$, with bounded $A_0,B_0,\delta$.
+The two charges needed here have $\delta=0,-1$. Scale the polynomial
+variable to $Y=\epsilon^3x_r$. Its roots and input values are
+\begin{align}
+ \epsilon^3x_\ell&=\ell\epsilon+\ell(1-\ell)\epsilon^3,\\
+ Y_a&=A_0-A_0^2\epsilon+A_0\epsilon^2.
+\end{align}
+In this scaled basis the leading coefficient at degree $n$ is
+$(-4)^n\epsilon^n+O(\epsilon^{n+2})$. After extracting
+$\epsilon^n$, all divisors stay away from zero on compact parameter
+sets. This makes the formal calculation an analytic uniform estimate.
+
+\newpage
+\section{Sixth-moment bound and the growing output window}
+The exact polynomial-ring calculation in
+\texttt{memory\_sixth\_moment.py} expands (\ref{recursion}) through
+$\epsilon^{12}$ over $\mathbb Q[A_0,B_0,\delta]$. For each $1\leq j\leq6$,
+all $j$ negative Laurent coefficients in $\EE_\pi(X/N)^j$ vanish.
+The constant coefficient is $T_j(2A_0B_0)$, where
+$T_0(t)=1$, $T_{j+1}(t)=t[T_j(t)+T'_j(t)]$. In particular,
+\begin{equation}
+ T_6(t)=t^6+15t^5+65t^4+90t^3+31t^2+t.\label{touchard}
+\end{equation}
+The certificate is a polynomial identity, not a parameter sample.
+The rational analyticity just established makes the remainders
+uniform, including $A_0=0$ or $B_0=0$. Consequently
+\begin{equation}
+ \sup_{a,b\leq p,\ M=m,m-1}\EE_{\pi^{(M)}_{ab}}(X/N)^6\leq K_\lambda.
+\end{equation}
+Put $S=a+b-r\geq0$. Since
+\begin{equation}
+ X=S[N+1-2(a+b)+S]\geq S(N+1-4p),
+\end{equation}
+and $N+1-4p>0$ eventually, both charges satisfy
+\begin{equation}
+ \sup_{a,b\leq p}\EE_{\pi^{(M)}_{ab}}S^6\leq K_\lambda.\label{sixth}
+\end{equation}
+Throughout, constants may depend on a compact positive interval of
+$\lambda_N$ and on fixed $J_s$.
+
+Decompose $h=\sum_a h_a$, $k=\sum_a k_a$ using the same rank
+coordinates. Write $C_a=\EE\tr_m h_a^2$, $\omega_a=C_a/C$,
+and $n=m+1$. The preceding transfer calculation gives
+\begin{equation}
+ R_a:=\frac{C_a^-}{C_a}
+ =\frac{(m-p)^2n}{m(mn-x_a)}\leq K_\lambda,\qquad
+ \|\Rem\|_{2,m-1\to2,m}\leq m.
+\end{equation}
+For $a<b$, let $Z^+=P_r\{h_a,h_b\}$ and
+$Z^-=P_r\Rem\{k_a,k_b\}$; for $a=b$ use squares. Set
+$A_{ab;r}=Z^-_{ab;r}+(2p-m)Z^+_{ab;r}$.
+Symmetrized independent products have strength at most $4\pi$;
+Gaussian decoupling gives the same bound for the diagonal input pair,
+up to an absolute factor. Markov's inequality in (\ref{sixth}) gives
+\begin{equation}
+ \sum_{a\leq b,\ S>R}\|\W A_{ab;r}\|^2
+ \leq K_\lambda C^2m^2R^{-6}
+ \leq K_\lambda C^2p^4R^{-6}.\label{tail}
+\end{equation}
+Here separate upper bounds on the two charges are used only outside
+a growing window; their large prefactors are explicitly retained.
+
+\newpage
+\section{Uniform filter and strong replacement}
+The exact two-charge contraction gives
+$\W\core=\sum(g_H\W Z^++g_A\W A_{ab;r})$. With $d=m-p$,
+\begin{align}
+ \frac{g_A}{C}&=U_0+U_a\frac{\kappa_a}{C}
+                   +U_b\frac{\kappa_b}{C}+U_r\frac{\kappa_r}{C},\\
+ \kappa_j&=w\binom{m-j}{p}\binom{N-m+p-j}{p},\quad C=\kappa_0,\notag\\
+ U_0&=\frac{3d(n+p)}{mn}+\frac52-\frac{4d}{m},\notag\\
+ U_a&=-\frac{4m+p}{4d}-\frac{(m-n+p)p}{(m-a)(n-a)},\quad U_b=U_a|_{a\to b},\notag\\
+ U_r&=\frac12+\left[m+3n-p-\frac{5(2mn-x_a-x_b)}{4d}\right]
+                    \frac{p}{(m-r)(n-r)}.\notag
+\end{align}
+For $a=\alpha p,b=\beta p,r=\rho p$, with
+$0\leq\alpha,\beta\leq1$, $0\leq\rho\leq2$, the uniform expansion is
+\begin{equation}
+ (U_0,U_a,U_b,U_r)=
+ (3/2,-1,-1,1/2)+\frac{\lambda_N}{p}(8,-5/2,-5/2,3)+O(p^{-2}).
+\end{equation}
+The scaled rational denominators stay nonzero. The exact binomial
+product gives, uniformly for $0\leq j\leq2p$,
+\begin{equation}
+ |\kappa_{j+1}-\kappa_j|/C\leq K_\lambda/p,\quad
+ \kappa_p/C=q_N+O(p^{-1}),\quad\kappa_{2p}/C=q_N^2+O(p^{-1}).
+\end{equation}
+With $u=p-a,v=p-b$, this proves
+\begin{equation}
+ |g_A/C|\leq K_\lambda,\qquad
+ |g_A/C-\gamma_N|\leq\frac{K_\lambda}{p}(1+u+v+S).\label{lip}
+\end{equation}
+The preceding coherent norm proof supplies the indispensable bound
+\begin{equation}
+ \sum_{a\leq b,r}(1+u+v)^2\|\W A_{ab;r}\|^2\leq K_\lambda C^2.\label{input}
+\end{equation}
+Different unordered input pairs are orthogonal in Gaussian second
+chaos; different output ranks are orthogonal in trace norm. Define
+$E_A=\sum(g_A-C\gamma_N)\W A_{ab;r}$. On $S\leq R$, use
+(\ref{lip}) and (\ref{input}); on $S>R$, use the uniform bound and
+(\ref{tail}). Since $C$ remains bounded, this yields
+\begin{equation}
+ \|E_A\|^2\leq K_\lambda[p^{-2}+R^2/p^2+p^4/R^6].
+\end{equation}
+Choosing $R=p^{3/4}$ proves
+\begin{equation}
+ \boxed{\ \sum g_A\W A_{ab;r}=C\gamma_N O+O_{L^2}(p^{-1/4}).\ }\label{strong}
+\end{equation}
+This argument does not require tightness in a fixed output window.
+
+\newpage
+\section{Assembly and a positive projected core}
+Define
+\begin{align}
+ D_N&=\sum_a(p-a)h_a,\quad \bar s_N=\sum_a(p-a)\omega_a,\\
+ L_{\rm in}&=\W\{h,D_N-\bar s_Nh\},\qquad
+ \mathcal S_N=\sum_{a\leq b,r}(a+b-r)\W Z^+_{ab;r}.
+\end{align}
+The preceding $H$-part limit, uniform on compact positive
+$\lambda_N$ intervals, reads
+\begin{align}
+ \sum g_H\W Z^+={}&C[2p(1-q_N)^2+K_{0,N}]B\notag\\
+ &+8\lambda_NC(q_N^2-q_N)\W\{h,D_N\}
+ +8\lambda_NCq_N^2\mathcal S_N+o_{L^2}(1),\\
+ K_{0,N}={}&\lambda_N[1-10q_N+9q_N^2
+                    +16\lambda_Nq_N-32\lambda_Nq_N^2].\notag
+\end{align}
+Here $\bar s_N-\lambda_N\to0$ and
+$\W\{h,D_N\}=L_{\rm in}+2\bar s_NB$.
+The established linear-field bridge is
+\begin{equation}
+ J_hF-4\lambda_Nq_N C L_{\rm in}\longrightarrow0\quad\hbox{in }L^2.
+\end{equation}
+Explicitly, $F=\mathsf W_1T_3-\bar t h$,
+$\bar t=\langle h,\mathsf W_1T_3\rangle/C$, where $T_3$ is the
+previous cubic derivative singlet. Substitution together with
+(\ref{strong}) gives (\ref{core}), since
+$\overline K_N=K_{0,N}+16\lambda_N^2(q_N^2-q_N)$.
+Only the $A$-part has the rate proved in (\ref{strong}); the assembled
+remainder is stated as $o_{L^2}(1)$.
+
+Let $\Pi_N$ be the actual finite-$N$ orthogonal projection onto
+$\operatorname{span}\{B,O,J_hF\}$. The preceding four-direction
+Gram is nondegenerate in the limit at every fixed $\lambda>0$ and gives
+\begin{equation}
+ \|(1-\Pi_N)\mathcal S_N\|^2\longrightarrow V_{\rm new}
+ =\frac{J_s^4(1+q)(1-q^2+8\lambda q)}{\lambda(1+q+4\lambda q)},
+ \quad q=e^{-4\lambda}.
+\end{equation}
+Projecting (\ref{core}) removes the term of order $p$ exactly.
+The projection is a contraction, so its action on the remainder
+vanishes without a rate assumption. Therefore
+\begin{equation}
+ \boxed{\ \lim\|(1-\Pi_N)\W\core\|^2
+ =\frac{64J_s^8q^4(1+q)(1-q^2+8\lambda q)}
+ {\lambda(1+q+4\lambda q)}>0.\ }\label{residual}
+\end{equation}
+After the double-scaled limit, $\lambda\to0^+$ gives $1024J_s^8$.
+The dimensions are consistent: $A,B,\mathcal S_N$ have energy squared,
+$C$ has energy squared, $J_hF$ and $\core$ have energy to the fourth,
+and (\ref{residual}) has energy to the eighth.
+
+\newpage
+\section{Evidence, scope, and the next calculation}
+Three saved computation records support the derivation. The symbolic
+sixth-moment certificate checks 21 vanishing negative powers and all
+six constant coefficients in an exact polynomial ring. Four complete
+finite Racah probability tables independently check 28 moments,
+including order zero. A further 48 parameter sets use exact rational
+moments followed by 80- and 120-digit evaluations. The filter record
+checks 130 exact identities against the earlier independent
+five-word contraction and checks the core assembly algebra.
+
+Finite convergence is not especially fast. For $\lambda=1/2$,
+$u=v=0$, $M=N/2$, the sixth moments of $X/N$ at
+$p=16,32,64,128$ are approximately
+$75.6892,123.1213,157.8280,178.9193$, while their limit is $203$.
+The corresponding exact rational upper bounds on $\EE S^6$ have
+decimal values $166.4086,180.7793,190.8031,196.6133$.
+These are proxy moments and upper bounds, respectively; the large
+system calculation does not evaluate the actual $S$ moment.
+Decimal agreement is not an interval-rounding certificate.
+
+The strategic change is that a growing window suffices for the
+filter problem. The coarse bound $p^4/R^6$ is useful at
+$R=p^{3/4}$, although it cannot establish tightness at fixed $R$.
+The coherent cancellation from the preceding norm proof is still
+used inside the window through (\ref{input}). We have not proved
+a full Poisson law, or fixed-window tightness of $A$, by matching
+six moments of the ordinary product distribution.
+
+The result completes $\W\core$ in the fixed half-filled state.
+The projected direction is independent of the specified three
+directions at equal time. The next calculation must restore the low
+chaos pieces of the fourth-chaos descendants and assemble the raw
+second memory coefficient $Z_2$. Extension to a central charge window,
+energy-resolved joint measures, and finite-time memory remain to be
+done before a bulk meson interpretation can be extracted.
+
+\begin{thebibliography}{9}
+\bibitem{kota} V. K. B. Kota and M. Vyas,
+\emph{Random Matrix Theory for Transition Strength Densities in Finite
+Quantum Systems: Results from Embedded Unitary Ensembles},
+\href{https://arxiv.org/abs/1504.00759}{arXiv:1504.00759},
+Sec.~2, Eqs.~(7)--(10).
+\bibitem{ks} R. Koekoek and R. F. Swarttouw,
+\emph{The Askey-scheme of hypergeometric orthogonal polynomials and
+its $q$-analogue},
+\href{https://tudelft.roelofkoekoek.nl/documents/as98.pdf}{report 98-17},
+Sec.~1.2, Eq.~(1.2.1).
+\bibitem{local} Alan Day and Chengheng, local project notes (6 November 2026):
+\emph{The two-charge memory formula}; \emph{Parity-weighted output
+moments}; \emph{Coherent adjacent-charge cross};
+\emph{A positive residual in the quadratic memory sector}.
+See the accompanying source record for repository paths.
+\end{thebibliography}
+\end{document}

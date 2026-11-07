@@ -1,0 +1,96 @@
+{
+  "created_at_utc": "2026-11-06T07:45:06.867896+00:00",
+  "status": "Saved locally; no publication",
+  "scientific_status": "Uniform ordinary sixth moments at charges m,m-1 and a growing output window prove the A-filter L2 replacement. The complete half-filled quadratic chaos of the quartic memory core has a four-direction expansion and a positive residual relative to B,O,J_hF. Raw Z2, central-charge window, energy-resolved spectra and the bulk dictionary remain open.",
+  "current_git_head": "714d038bb605cfcffdc351e4dcc62aa95237d25f",
+  "git_commit_created": false,
+  "git_push_performed": false,
+  "archive_created": false,
+  "parent_manifest_sha256": "d38a0bd7860e0721689f3a4baa3b04b875ad441becfe3d541c842917b137be3a",
+  "previous_stage_scientific_files_unchanged": [
+    "code/memory_residual_norm.py",
+    "code/check_memory_residual_norm.py",
+    "code/check_exchange_casimir.py",
+    "code/memory_norm_asymptotic.py",
+    "code/check_memory_norm_limit.py",
+    "code/build_memory_residual_norm.ps1",
+    "code/record_memory_residual_norm.py",
+    "manuscript/susskind-memory-residual-norm/main.tex",
+    "output/pdf/de-sitter-susskind-memory-residual-norm.pdf",
+    "notes/susskind-memory-residual-norm.md",
+    "literature/susskind-memory-residual-norm-sources.md",
+    "journal/2026-11-06-susskind-memory-residual-norm.md",
+    "results/susskind-memory-residual-norm/exchange-casimir.json",
+    "results/susskind-memory-residual-norm/finite-norm.json",
+    "results/susskind-memory-residual-norm/limit-checks.json",
+    "results/susskind-memory-residual-norm/main.log",
+    "results/susskind-memory-residual-norm/symbolic-limit.json"
+  ],
+  "checks": {
+    "negative_laurent_coefficients": 21,
+    "constant_moment_coefficients": 6,
+    "full_probability_tables": 4,
+    "finite_moment_identities": 28,
+    "large_parameter_cases": 48,
+    "finite_filter_identities": 130
+  },
+  "environment": {
+    "python": "3.14.5",
+    "calculations": [
+      {
+        "python": "3.14.5",
+        "sympy": "1.14.0"
+      },
+      {
+        "python": "3.14.5",
+        "mpmath": "1.3.0"
+      },
+      {
+        "python": "3.14.5",
+        "sympy": "1.14.0"
+      }
+    ]
+  },
+  "build": {
+    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File code/build_memory_filter_limit.ps1",
+    "compiler": "This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5 Portable) (preloaded format=pdflatex 2026.9.19)  6 NOV 2026 15:40",
+    "passes": 2,
+    "pages": 6,
+    "render_command": "pdftoppm -r 95 -png output/pdf/de-sitter-susskind-memory-filter-limit.pdf tmp/pdfs/susskind-memory-filter-limit-build/page",
+    "visual_review": "All six final pages viewed individually at 95 dpi; readable equations and references, no clipping or overlap."
+  },
+  "failures": [],
+  "process_state": "All computations, compilation and rendering terminal; no background calculation.",
+  "evidence_scope": "Exact polynomial-ring cancellations plus uniform rational analyticity, positive sixth-moment tails, prior coherent input-weighted norm and explicit growing-window proof. Finite decimals are X/N proxy moments, not actual large-system S moments. No full Poisson law, fixed-window A tightness, decimal interval certificate or new particle claim.",
+  "hashes": {
+    "code/memory_sixth_moment.py": "3b4a7882284827dbb56042a6d9dcff64654e20ee3433dee1703026fbb2fc3125",
+    "code/check_memory_sixth_moment.py": "0df3bb11a1df213de8295227b94a73f45340fa7e91a0b8a519cac9345ce466c1",
+    "code/memory_A_filter_uniform.py": "c2bc5f8b2ab73d25364086c7f0751b8fc0a3f9f72bb2a6d4763975cb9313bcab",
+    "code/build_memory_filter_limit.ps1": "4c6cef787961dda6e225b126b0316382109402e0ac2d66500aa63c16ad116c79",
+    "code/record_memory_filter_limit.py": "5c73010938d33bfc2a1b395179fe19cd26dde40af979ea41bee56f0f492787c8",
+    "manuscript/susskind-memory-filter-limit/main.tex": "c58c9fdaf7bba132023fc87890076b2d3ffb55479ce69cc4bfdfbfb316834645",
+    "output/pdf/de-sitter-susskind-memory-filter-limit.pdf": "c06f3663dd0e4732fb77fa6189ebb31fef0ae850a1cf49bd36d7d4a4d8351fb1",
+    "notes/susskind-memory-filter-limit.md": "c790a5d9b5b38750251707b60d48cb1e6af969bb63e035ffef5a360f210ad87b",
+    "literature/susskind-memory-filter-limit-sources.md": "de523ffe28fc87599d7a4ebb0bcbc2fd9c9c3f1632d8b3c6ba067143a8fd0e12",
+    "journal/2026-11-06-susskind-memory-filter-limit.md": "0c765ee72b9c6add853990b76373ac77baa40c7d26b616928f2456aea85d686c",
+    "README.md": "bcc424b1124c1fe62f21e3b7806f6e4625cf4ece002bd207c85b855056d59036",
+    "PLAN.md": "52797588d732b876166498c8b1b1be0f279cf177b44002d36fbb13ddd3e72cee",
+    "NEXT.md": "ac49aacf3726f121e78182957d2157f13481fdd82c7fd49ca951defa0bf6eb2d",
+    "results/susskind-memory-filter-limit/filter-certificate.json": "d0ca67d440b28408772ef98e0f1c567aca6b1643198675fbe5927480683e8cd2",
+    "results/susskind-memory-filter-limit/main.log": "528a5cab5700456fba1b359f60ba3586bf3ed2b54afcc53965986e7bb9495503",
+    "results/susskind-memory-filter-limit/sixth-moment-certificate.json": "9ee1f53ac28b179719c65362d6d34f72ab7d4772fcbf654307c351134aa784b7",
+    "results/susskind-memory-filter-limit/sixth-moment-checks.json": "19faf86d7fba08acc7db7bb2b50eb2f804734e507eceb665002e9d32932d9924"
+  },
+  "render_hashes": {
+    "tmp/pdfs/susskind-memory-filter-limit-build/page-1.png": "3949aedcd567e59f2d9b4d0aea084777efcca900f87640eb841add7c8f5f1221",
+    "tmp/pdfs/susskind-memory-filter-limit-build/page-2.png": "216c736e1ee6a6693336d1ed461fe8ceb67f3a4a027e116656c1f9582d2eabbb",
+    "tmp/pdfs/susskind-memory-filter-limit-build/page-3.png": "c50a58f37099ee204944d62f65f217183f71641bd78e4924a14753032d50a21f",
+    "tmp/pdfs/susskind-memory-filter-limit-build/page-4.png": "27157aaa671afeef671d58d9f5f5ef8cc925bdf92730d086f772d20cdea8cdb0",
+    "tmp/pdfs/susskind-memory-filter-limit-build/page-5.png": "66fbfb7970601c6089057bebddfb3e49417a615909db521d02f4eef3fa49a916",
+    "tmp/pdfs/susskind-memory-filter-limit-build/page-6.png": "e19ea1c04b76f0d3d3ba43ba9aa3fc307e1abf6b0fe644c5fa0b666b5115cf18"
+  },
+  "build_pass_hashes": {
+    "pass1.txt": "156581c5edba7d534be96092b4aa9035df7f235acc877df916c901d81aee916f",
+    "pass2.txt": "212916b0957d37e347f06b89d667894bf902f60d979b83ac1f141f1225d09d8e"
+  }
+}

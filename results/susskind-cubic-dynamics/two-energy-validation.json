@@ -1,0 +1,100 @@
+{
+  "status": "passed",
+  "all_pairings": [
+    {
+      "N": 3,
+      "p": 1,
+      "m": 2,
+      "norm": "8",
+      "B20_pairings": [
+        "32",
+        "-8",
+        "0"
+      ],
+      "B11_pairings": [
+        "24",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "N": 4,
+      "p": 2,
+      "m": 2,
+      "norm": "70/3",
+      "B20_pairings": [
+        "140",
+        "-35/9",
+        "0"
+      ],
+      "B11_pairings": [
+        "1225/9",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "N": 5,
+      "p": 2,
+      "m": 3,
+      "norm": "180",
+      "B20_pairings": [
+        "3240",
+        "180",
+        "0"
+      ],
+      "B11_pairings": [
+        "1800",
+        "0",
+        "0"
+      ]
+    }
+  ],
+  "aggregate_vs_exact": [
+    {
+      "N": 160,
+      "p": 4,
+      "lambda_value": "0.1",
+      "max_absolute_error": "6.7252466019925665495e-66"
+    },
+    {
+      "N": 640,
+      "p": 8,
+      "lambda_value": "0.1",
+      "max_absolute_error": "2.1568058711129215068e-65"
+    },
+    {
+      "N": 64,
+      "p": 4,
+      "lambda_value": "0.25",
+      "max_absolute_error": "2.8661638583373522055e-65"
+    },
+    {
+      "N": 256,
+      "p": 8,
+      "lambda_value": "0.25",
+      "max_absolute_error": "3.7208701625969962365e-65"
+    },
+    {
+      "N": 32,
+      "p": 4,
+      "lambda_value": "0.5",
+      "max_absolute_error": "4.9561947495949884784e-65"
+    },
+    {
+      "N": 128,
+      "p": 8,
+      "lambda_value": "0.5",
+      "max_absolute_error": "3.8564555752730535528e-65"
+    }
+  ],
+  "max_integer_trace_abs": 13120.0,
+  "input_sha256": {
+    "code/check_cubic_dynamics_moments.py": "a6d081f2c4854a4a8a24cfa1ca7af2d0195c32480595f34981f9aed946eb7ebd",
+    "code/cubic_linear_dynamics.py": "81d8e955107098e897637650bb7686a15fd2ff8fde6de1e1c525db398516d014",
+    "code/cubic_linear_channels.py": "da867816fdac6e958d3008fcb0e5b0581de0a8313d8bb6e53fbd1d5d9a019f9f",
+    "code/cubic_linear_limit.py": "a64fbf4649489437cdd7bc1097b24bd13f67641f4efbcd95a9fad4193c8f3971",
+    "code/singlet_wick_moments.py": "045f9f02e860fa8f2e402ca5162dabf035208a8d26023ada5721a5f02d47572c",
+    "code/complex_syk_dictionary.py": "96b4890a167beeadf0849ccffdbb20dd125d921af062fd291044da9024900abf"
+  }
+}

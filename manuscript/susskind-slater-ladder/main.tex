@@ -1,0 +1,498 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,microtype,booktabs}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\Om}{\Omega_O}
+\newcommand{\nn}{\hat n}
+\newcommand{\KK}{\mathcal K}
+\newcommand{\ff}[2]{(#1)_{\underline{#2}}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\title{A Slater-adapted oscillator in complex double-scaled SYK\\
+\large Same-disorder polarization, all fixed vacuum words, and the first Hamiltonian defect}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{7 November 2026\quad Local research draft}
+\begin{document}\maketitle
+\begin{abstract}
+We select the pure particle--hole creation block of the original complex
+SYK Hamiltonian relative to a half-filled Slater state. All fixed ordered
+vacuum moments of its normalized creation and annihilation operators
+converge to a single dressed bosonic oscillator,
+$M=q^{\hat n/2}b$, $[b,b^\dagger]=1$, with $q=e^{-4\lambda}$.
+The proof counts all forward Gaussian pairings and bounds the finite-size
+backward pairings rather than discarding them. The construction implements
+the state-adapted strategy of recent pure-state DSSYK work in a
+charge-conserving, same-disorder model. Microscopic occupation-number
+undressing gives asymptotic canonical commutators on a fixed polynomial
+core. The original Hamiltonian has
+additional directions: its first action has a Poisson$(2\lambda)$
+particle--hole deficit and only a fraction $\sqrt q$ of its squared norm
+lies in the pure-creation direction. This identifies a concrete next
+calculation, the joint $(H,M,M^\dagger)$ law.
+\end{abstract}
+
+\section{Literature-led question and microscopic conventions}
+The Susskind static-patch program motivates deriving particle operators
+from the hologram. The quantitative singlet/meson correspondence remains
+a target in \cite[Sec.~4.3]{MSS}. Here we pursue the state and polarization
+input following the state-adapted construction of Rajgadia--Xu
+\cite[Sec.~3.2]{RX}. Their dressed oscillator representation is a
+predecessor, not a new general construction claimed in this note. Our
+task is to derive a microscopic realization with the original complex
+SYK couplings and then test its Hamiltonian closure.
+
+Use $N$ complex fermions, $\{c_i,c_j^\dagger\}=\delta_{ij}$, and
+\begin{equation}\label{ham}
+ H_N=\sqrt{w_N}\sum_{|A|=|B|=p}J_{AB}C_A^\dagger C_B,
+ \quad w_N=\frac{4^pJ_s^2}{\lambda_N}\left(\frac{p!}{N^p}\right)^2,
+ \quad \lambda_N=\frac{p^2}{N}.
+\end{equation}
+$C_A^\dagger$ is the product of creators in increasing site order and
+$C_A=(C_A^\dagger)^\dagger$. The centered Hermitian Gaussian matrix has
+$\EE J_{AB}J_{CD}=\delta_{AD}\delta_{BC}$; overlapping $A,B$ are included.
+All operators below use this same $J$. Take even $N$, $m=N/2$,
+$1\le p\le m$, $p\to\infty$, $\lambda_N\to\lambda>0$, fixed $J_s>0$,
+and $\hbar=1$.
+The Hamiltonian uses string-energy units. All word lengths are fixed
+before this limit; no long-time or growing-excitation limit is taken.
+
+\newpage
+\section{Keep the reference polarization in the operator}
+Fix an occupied set $O$, $|O|=m$, and its empty complement $E$,
+$|E|=a=N-m$. Write $\Om=|O\rangle$ and
+\begin{equation}\label{state}
+ \phi_{O,N}(X)=\EE_J\langle O|X(J)|O\rangle.
+\end{equation}
+This is an annealed vector state; it is not the full-Fock trace of the
+preceding bilocal calculations. The reference state is not asserted
+to be stationary under $H_N$.
+
+\paragraph{Why changing only the state is insufficient.}
+For a jointly $U(N)$-covariant word $W(J)$, $\EE W$ commutes with
+the $U(N)$ action on $\wedge^m\mathbb C^N$. Irreducibility and Schur's
+lemma give the exact finite-size identity
+\begin{equation}\label{schur}
+ \phi_{O,N}(W)=\EE_J\tr_m W,
+ \qquad \tr_m=\binom Nm^{-1}\operatorname{Tr}_{\mathcal H_m}.
+\end{equation}
+No Haar average of $|O\rangle$ is needed. In particular all annealed
+$H$-only moments are unchanged. This explains why the operator must
+retain information about $O$.
+
+Define the original Hamiltonian's pure-excitation block and its normalization:
+\begin{align}
+ V_N^\dagger&=\sqrt{w_N}
+ \sum_{\substack{A\subset E,\ B\subset O\\|A|=|B|=p}}
+ J_{AB}C_A^\dagger C_B,\label{block}\\
+ L_N&=\binom ap\binom mp,\qquad
+ \sigma_N^2=w_NL_N,\qquad
+ M_N^\dagger=V_N^\dagger/\sigma_N,\quad M_N=(M_N^\dagger)^\dagger.
+ \label{normalize}
+\end{align}
+The selected $J_{AB}$ are independent circular complex Gaussians of
+unit variance. Their conjugates occur in $V_N$. These are a subfamily
+of the original disorder, not an independent probe ensemble.
+Every selected monomial preserves the physical total charge $Q$,
+while creating $p$ particles in $E$ and $p$ holes in $O$. Exactly,
+\begin{equation}\label{vac}
+ M_N\Om=0,\qquad
+ \phi_{O,N}(M_NM_N^\dagger)=1,\qquad
+ \phi_{O,N}(M_N^\dagger M_N)=0.
+\end{equation}
+The occupation projector is additional reference data. Equation
+\eqref{schur} does not apply to a word that keeps this projector fixed
+while rotating the fermions and couplings.
+
+This choice differs from taking the empty physical complex-fermion
+vacuum: the number-conserving $H_N$ annihilates that vacuum. In the
+Majorana KM construction of \cite{RX}, the analogous spin-flip number
+is not the conserved charge of \eqref{ham}. The two microscopic
+constructions therefore require separate pairing derivations.
+
+\newpage
+\section{All fixed words: active intervals and backward corrections}
+Read a word in $M_N,M_N^\dagger$ from right to left. A creation raises
+the particle--hole block count by one; an annihilation lowers it by one.
+A balanced word gives a Dyck path if every intermediate height is
+nonnegative. For a creation at height $h$, set
+\begin{equation}\label{ratio}
+ R_N(h)=\frac{\binom{a-hp}{p}\binom{m-hp}{p}}{L_N},
+ \qquad q=e^{-4\lambda},
+\end{equation}
+with out-of-range binomials zero.
+
+\begin{theorem}[Fixed-word limit]\label{wordthm}
+For each fixed word $w$, $\phi_{O,N}(w(M_N,M_N^\dagger))$ tends to
+the vacuum moment of the weighted shift
+\begin{equation}\label{shift}
+ M|n\rangle=\sqrt{nq^{n-1}}\,|n-1\rangle,\qquad
+ M^\dagger|n\rangle=\sqrt{(n+1)q^n}\,|n+1\rangle
+\end{equation}
+on $\ell^2(\mathbb N_0)$. For a balanced Dyck word of length $2k$,
+its finite-size forward-pairing contribution is exactly
+\begin{equation}\label{forward}
+ F_N(w)=\left(\prod_{\text{annihilations}}h\right)
+                  \prod_{\text{creations}}R_N(h).
+\end{equation}
+The remaining contribution satisfies
+\begin{equation}\label{backbound}
+ |\phi_{O,N}(w)-F_N(w)|\le k!\rho_N(k),\quad
+ \rho_N(k)=\frac{\binom{kp}{p}}{\binom ap}
+           \frac{\binom{kp}{p}}{\binom mp}\longrightarrow0.
+\end{equation}
+An unbalanced or non-Dyck word has zero vacuum moment already at
+finite size.
+\end{theorem}
+
+\paragraph{Forward pairings.}
+Complex Gaussian Wick expansion matches each creation coefficient
+to an annihilation coefficient. A pair is forward if its creation acts
+first. For an all-forward matching, a label is active between its two
+endpoints. At each creation, both its particle set and its hole set
+must avoid every active set. This condition is necessary and sufficient
+for a nonzero CAR word. Legal active sets are pairwise disjoint; each
+composite monomial has even degree $2p$, so active monomials commute.
+Each annihilation removes its own active monomial with positive
+amplitude. Thus every allowed assignment contributes exactly $+1$.
+
+With $h$ labels active, the next creation has exactly
+$\binom{a-hp}{p}\binom{m-hp}{p}$ choices. A closing endpoint has $h$
+choices of partner. Normalizing every pair by $L_N$ proves
+\eqref{forward}. Both nested and crossed intervals impose exclusion
+when simultaneously active. Counting only crossing chords would give
+the wrong law.
+
+\newpage
+\subsection*{Backward pairings are small, not identically zero}
+In a matching with a backward pair, choose the first annihilation
+whose matched creation has not yet acted. Before this endpoint, every
+nonzero action is an all-forward history. Its particle and hole sets
+must each lie inside the unions already excited, each of size at most
+$kp$. This newly encountered Gaussian label is independent of all
+previous labels. Its conditional allowed fraction is at most
+$\rho_N(k)$. All later CAR amplitudes have absolute value at most one.
+There are at most $k!$ matchings, proving \eqref{backbound}.
+For fixed $k$ and sufficiently large $N$,
+\begin{equation}
+ \rho_N(k)\le
+ \left(\frac{kp}{a-p+1}\frac{kp}{m-p+1}\right)^p\longrightarrow0.
+\end{equation}
+This argument also allows different Gaussian labels to take the same
+site subsets; they are not excluded by hand.
+
+For example, the alternating fourth moment has the finite correction
+\begin{equation}\label{backexample}
+ \phi_{O,N}(M_NM_N^\dagger M_NM_N^\dagger)=1+\frac1{L_N}.
+\end{equation}
+The extra matching repeats the same particle and hole sets. It is an
+explicit check against replacing all finite-size pairings by forward
+ones prematurely.
+
+\paragraph{Taking the limit.}
+For each fixed $h$,
+\begin{equation}
+ \log R_N(h)
+ =-hp^2\left(\frac1a+\frac1m\right)+O_h(p^3/N^2)
+ \longrightarrow -4\lambda h.
+\end{equation}
+Consequently \eqref{forward} tends to
+\begin{equation}\label{dycklimit}
+ F(w)=\left(\prod_{\text{annihilations}}h\right)
+ q^{\sum_{\text{creations}}h}
+ =\prod_{\text{annihilations}}h q^{h-1}.
+\end{equation}
+The two height sums agree because each upward edge of a Dyck path
+has a downward edge at the same level. The shift \eqref{shift} has
+exactly these moments. Together with \eqref{backbound}, this proves
+Theorem~\ref{wordthm} for all fixed words, not only creation norms.
+
+The creation norms themselves are exact at finite size:
+\begin{equation}\label{creationnorm}
+ s_{k,N}=\phi_{O,N}\bigl(M_N^k(M_N^\dagger)^k\bigr)
+ =k!\prod_{j=0}^{k-1}R_N(j)
+ \longrightarrow k!q^{k(k-1)/2}=:s_k.
+\end{equation}
+There is no backward matching in this ordering. In particular,
+$\phi(M^2(M^\dagger)^2)=2q$, whereas
+$\phi(MM^\dagger MM^\dagger)=1$. These distinguish the dressed mode
+from a bare canonical oscillator.
+
+\newpage
+\section{Canonical variable and the new vacuum representation}
+On the standard bosonic finite-particle core, with
+$b|n\rangle=\sqrt n|n-1\rangle$ and $\nn=b^\dagger b$, the shift is
+\begin{equation}\label{dress}
+ M=q^{\nn/2}b,\qquad M^\dagger=b^\dagger q^{\nn/2}.
+\end{equation}
+The order matters: $M$ acts with $q^{(n-1)/2}$, not $q^{n/2}$.
+Conversely, on that core,
+\begin{equation}\label{undress}
+ b=q^{-\nn/2}M,\qquad b^\dagger=M^\dagger q^{-\nn/2},
+ \qquad [b,b^\dagger]=I.
+\end{equation}
+The inverse dressing is unbounded. Equation \eqref{undress} is first
+a statement about the limiting representation and its dense domain.
+There is also an actual microscopic realization on fixed excitation
+levels, as follows.
+
+The bare canonical/dressed distinction already appears in
+\cite[HTML Eqs.~(75), (85)--(86)]{RX}; the corresponding PDF equations
+are (3.43), (3.53)--(3.54). Here the single-mode law was obtained from
+\eqref{ham}--\eqref{block}, not from the Majorana mixed-chord rules.
+
+\subsection*{An actual finite-size canonical sequence}
+Let $Q_E=\sum_{i\in E}c_i^\dagger c_i$, $n_N=Q_E/p$, and
+$q_N=e^{-4\lambda_N}$. Define finite-size operators
+\begin{equation}\label{microb}
+ b_N=q_N^{-n_N/2}M_N,\qquad
+ b_N^\dagger=M_N^\dagger q_N^{-n_N/2}.
+\end{equation}
+They are adjoints, and $[n_N,M_N^\dagger]=M_N^\dagger$ exactly.
+Every intermediate state obtained from $\Om$ along a word has
+$n_N$ equal to that word's height. This remains true when $M_N$
+has components outside the span of pure-creation vectors.
+For a Dyck word define $A(w)=\sum_{\rm annihilation}(h-1)$.
+Each creation contributes $q_N^{-h/2}$ and each annihilation
+$q_N^{-(h-1)/2}$, so, sample by sample,
+\begin{equation}\label{microword}
+ \langle O|w(b_N,b_N^\dagger)|O\rangle
+ =q_N^{-A(w)}\langle O|w(M_N,M_N^\dagger)|O\rangle.
+\end{equation}
+Theorem~\ref{wordthm} then yields all fixed canonical vacuum moments:
+\begin{equation}
+ \lim_N\phi_{O,N}(w(b_N,b_N^\dagger))
+ =\prod_{\rm annihilation}h.
+\end{equation}
+Non-Dyck or unbalanced words remain zero. Expanding a squared norm
+in finitely many such words proves, for every fixed noncommutative
+polynomial $P$,
+\begin{equation}\label{coreccr}
+ \EE_J\left\|([b_N,b_N^\dagger]-I)
+        P(b_N,b_N^\dagger)\Om\right\|^2\longrightarrow0.
+\end{equation}
+Thus the canonical sequence is microscopic, with convergence on the
+specified Slater polynomial core. The norm of the inverse dressing
+on the full Fock space grows with $N$; no uniform operator-norm
+limit or exact finite-matrix CCR is asserted.
+
+\newpage
+\subsection*{Actual ladder vectors and the limiting algebra}
+For fixed $k$ and sufficiently large $N$ such that $kp\le\min(a,m)$, normalize
+$|k;N\rangle=(M_N^\dagger)^k\Om/\sqrt{s_{k,N}}$ in the annealed
+state/disorder Hilbert space. Different $k$ are orthogonal by their
+particle--hole excitation numbers. Creation maps one to the next
+exactly, with coefficient $\sqrt{s_{k+1,N}/s_{k,N}}$.
+The all-word theorem gives
+\begin{equation}\label{strongladder}
+ \left\|M_N|k;N\rangle
+       -\sqrt{s_{k,N}/s_{k-1,N}}\,|k-1;N\rangle\right\|^2
+ \longrightarrow0\qquad(k\ge1).
+\end{equation}
+Indeed, the overlap with $|k-1;N\rangle$ equals
+$\sqrt{s_{k,N}/s_{k-1,N}}$ exactly, and the norm squared of the
+first term tends to $kq^{k-1}$ by a fixed word of length $2k+2$.
+Their difference therefore vanishes. This is fixed-level annealed
+norm convergence, not operator-norm convergence on the entire
+microscopic Hilbert space.
+
+\paragraph{Algebra generated by the adapted mode.}
+The weights in \eqref{shift} are positive and tend to zero; $M$ is a
+compact bounded operator. Its kernel is exactly $\mathbb C|0\rangle$,
+so the vacuum projection $P_0=1_{\{0\}}(M^\dagger M)$ belongs to
+$W^*(M)$. The operators $(M^\dagger)^nP_0M^j$ are nonzero multiples
+of every matrix unit $|n\rangle\langle j|$. Thus
+\begin{equation}
+ W^*(M)=B(\ell^2(\mathbb N_0)).
+\end{equation}
+The vacuum is cyclic and not separating. This is a new adapted
+algebra; it does not split the old tracial field algebra into physical
+annihilators. The separating tracial chord vacuum of \cite{Xu} refers
+to its specified field algebra, not all auxiliary Fock ladders.
+
+The difference of states is already visible at finite size. Averaging
+the Gaussian coefficients and taking the normalized full-Fock trace
+gives
+\begin{equation}\label{invisible}
+ \EE_J\tr_{\rm full}(M_N^\dagger M_N)=4^{-p},\qquad
+ \phi_{O,N}(M_NM_N^\dagger)=1.
+\end{equation}
+Each diagonal term imposes $p$ occupied and $p$ empty sites, so its
+normalized trace is $2^{-2p}$. The same microscopic sequence therefore
+vanishes in the old tracial $L^2$ norm and survives in the adapted
+state. It is not an observable identified by a state-preserving map
+from the old tracial limiting algebra.
+
+\paragraph{Fixed scalar words also concentrate.}
+This is not needed for the annealed theorem, but follows from the same
+label argument. For $F_{w,N}(J)=\langle O|w(M_N,M_N^\dagger)|O\rangle$
+of length $2k$, expand the variance in two vacuum copies. Wick
+matchings internal to each copy cancel. In every remaining matching
+a shared label appears only once in each copy. All of its sites
+must occur in the other labels, or that copy cannot return to the
+vacuum. Conditioning on at most $2k-1$ other labels gives
+\begin{equation}
+ \operatorname{Var}F_{w,N}\le (2k)!\rho_N(2k-1)\longrightarrow0.
+\end{equation}
+For the microscopic $b_N$ words, \eqref{microword} multiplies this
+bound by a fixed-word factor tending to $q^{-2A(w)}$.
+No concentration claim for the joint Hamiltonian dynamics is needed
+or inferred here.
+
+\newpage
+\section{The full Hamiltonian: a Poisson family of missing directions}
+The adapted mode captures an actual part of $H_N\Om$. To measure the
+rest, let $k$ be the number of particles placed in $E$ by a term of
+$H_N$ (and thus the number of holes in $O$). The exact annealed squared
+norm in this sector is
+\begin{equation}\label{weights}
+ W_{k,N}=w_N\binom mp\binom pk\binom ak,
+ \qquad 0\le k\le p.
+\end{equation}
+To see this, $B$ must be an occupied $p$-set. After removing it,
+the creator set $A$ can fill $p-k$ of its $p$ holes and $k$ of the
+$a$ empty sites. Squaring and averaging pairs a term only with its
+Hermitian reverse; no independent-probe approximation is made.
+Vandermonde's identity gives
+\begin{equation}\label{cm}
+ C_{m,N}=\phi_{O,N}(H_N^2)
+ =w_N\binom mp\binom{a+p}p\longrightarrow C=J_s^2/\lambda.
+\end{equation}
+
+For the deficit $r=p-k$, the normalized weights and their falling
+factorial moments are
+\begin{align}
+ \Pr_N(r)&=\frac{\binom pr\binom a{p-r}}{\binom{a+p}p},\label{deficit}\\
+ \EE_N\ff rt&=\frac{\ff pt^2}{\ff{a+p}t}
+       \longrightarrow(2\lambda)^t.\label{factmom}
+\end{align}
+This is a hypergeometric law: choose $p$ items from $a+p$, of which
+$p$ are marked. For $t\le p$, its factorial moments are bounded by
+$(p^2/a)^t$. Hence for every fixed $z\ge1$,
+$\EE_N z^r\le\exp[(z-1)p^2/a]$.
+The factorial-moment expansion is uniformly dominated, identifying
+the limit as Poisson$(2\lambda)$. In particular,
+\begin{equation}\label{captured}
+ \frac{\sigma_N^2}{C_{m,N}}
+ =\frac{\binom ap}{\binom{a+p}p}
+ \longrightarrow e^{-2\lambda}=\sqrt q.
+\end{equation}
+This is a squared-norm fraction. The normalized overlap amplitude
+between $H_N\Om$ and $M_N^\dagger\Om$ tends to
+$e^{-\lambda}=q^{1/4}$.
+
+Let $\KK_N$ be the closed span of $(M_N^\dagger)^j\Om$ in the
+annealed joint Hilbert space. At finite $N$, $H_N\Om$ overlaps only
+its one-block vector: the mean vacuum overlap vanishes and higher
+vectors have more than $p$ excited particles. Therefore exactly
+\begin{align}
+ P_{\KK_N}H_N\Om&=\sigma_N M_N^\dagger\Om,\label{project}\\
+ \|(1-P_{\KK_N})H_N\Om\|^2
+ &=C_{m,N}-\sigma_N^2\longrightarrow C(1-\sqrt q)>0.\label{leak}
+\end{align}
+The physical $H_N$ does not close on this single ladder. A guessed
+number Hamiltonian would lose the nonzero norm in \eqref{leak}.
+
+\newpage
+\section{Exact checks and the next constructive calculation}
+The new driver \texttt{code/check\_slater\_ladder.py} uses integer CAR
+actions and rational Gaussian Wick sums. Its first successful output
+is preserved in the stage's \texttt{exact-checks.json}; it was not
+rerun to overwrite an earlier result.
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+Finite fixtures $(N,p;k_{\max})$ & $(4,1;4),(6,1;3),(6,2;3),(8,2;3)$\\
+\midrule
+Gaussian label assignments & 1,537,310\\
+Forward CAR/active-interval comparisons & 754,030\\
+Complete Dyck-word moments & 46\\
+Non-Dyck words vanishing by right action & 136\\
+Words with nonzero backward corrections & 25\\
+Exact hypergeometric diagnostic rows & 6\\
+Mixed-$Q$ linear-cumulant checks & 189\\
+\bottomrule
+\end{tabular}
+\end{center}
+The fixtures also enumerate every original $p$-body monomial in
+$H_N\Om$, independently checking \eqref{weights} and \eqref{cm}.
+The hypergeometric rows use $\lambda_N=1/2$, $p=2,4,8,16,32,64$,
+$N=2p^2$. Saved total-variation distances to Poisson$(1)$ are
+floating-point diagnostics; the exact factorial moments and the
+analytic bound above supply the convergence argument. Small fixtures
+test identities and signs; they do not prove the double-scaling limit.
+
+The next microscopic object is now specified: preserve the same
+$J$ and compute the joint ordered moments of $H_N,M_N,M_N^\dagger$,
+including the $r\ge1$ sectors of \eqref{deficit}. The first target is a
+positive representation that reproduces \eqref{project}--\eqref{leak}
+and the interleaved fourth moments. A subsequent step must connect
+this adapted algebra to the already constructed singlet bilocal
+observables. The chosen Slater state is not stationary, so its
+preparation and real-time evolution are part of that calculation.
+
+Only after these steps can one test a space/boost generator and a
+meson mass operator against the proposed bulk theory. The reference
+polarization needed for canonical bilocals in light-front QCD is
+explicit in Itakura and Rajeev \cite{Itakura,Rajeev}; it supplies a
+useful comparison, not an identification of our block number with
+their momentum or mass variables. Neither a finite-$G$ interaction
+nor a complete de Sitter dictionary has been derived here.
+
+\paragraph{Reproducibility.}
+The JSON records parameters, versions, parameter digest, driver hash
+and parent-manifest hashes. The local evidence recorder additionally
+binds sources, proofs, manuscript, two compiler passes and all final
+page renders. It verifies preserved files and saved arithmetic; it
+does not certify a theorem. The prior bilocal scientific outputs,
+including historical failures in the separate KS branch, are retained.
+
+\newpage
+\appendix
+\section{A supporting check on the old tracial low fields}
+The preceding three-species law has normalized self-adjoint fields
+$(h,u,x)$ with covariance $I$ and
+\begin{equation}
+ Q=\begin{pmatrix}q&q&q^2\\q&q&q^2\\q^2&q^2&q^4\end{pmatrix}.
+\end{equation}
+For real $Y=\alpha h+\beta u+\gamma x$, set
+$A=\alpha^2+\beta^2$, $B=\gamma^2$. Its fourth classical cumulant is
+the direct mixed-$Q$ Wick consequence
+\begin{equation}\label{cum}
+ \tau(Y^4)-3\tau(Y^2)^2
+ =-(1-q)A^2-2(1-q^2)AB-(1-q^4)B^2.
+\end{equation}
+It is strictly negative for every nonzero $Y$ at fixed $0<q<1$,
+and lies between $(q^4-1)(A+B)^2$ and $(q-1)(A+B)^2$.
+Thus no nonzero linear whitening of this triple is a Gaussian field
+in a quasifree canonical state. This is an elementary implication of
+the previously obtained law, not a new mixed-$Q$ theorem and not an
+obstruction to every nonlinear or nonquasifree representation.
+It motivates retaining explicit polarization rather than only
+changing a low-field Gram matrix.
+
+The companion KMS note separately treats joint annealed Gibbs
+tilting, exact thermofield realization, and smooth frequency filters.
+Its Gaussian dilation matches two-point functions only. None of
+these constructions is substituted for the same-$J$ Slater derivation
+in the main text.
+
+\begin{thebibliography}{9}
+\bibitem{MSS} S. Miyashita, Y. Sekino and L. Susskind,
+\emph{Holograms and Standard Models},
+\href{https://arxiv.org/abs/2607.05678v2}{arXiv:2607.05678v2} (2026).
+\bibitem{RX} H. Rajgadia and J. Xu,
+\emph{Emergent States and Algebras from the Double-Scaling limit of
+Pure States in SYK},
+\href{https://arxiv.org/abs/2604.14387v3}{arXiv:2604.14387v3} (2026).
+\bibitem{Xu} J. Xu, \emph{Von Neumann Algebras in Double-Scaled SYK},
+\href{https://arxiv.org/abs/2403.09021v7}{arXiv:2403.09021v7} (2026 revision).
+\bibitem{Itakura} K. Itakura,
+\emph{Boson Expansion Methods in (1+1)-dimensional Light-Front QCD},
+\href{https://arxiv.org/abs/hep-th/9604032v2}{arXiv:hep-th/9604032v2} (1996).
+\bibitem{Rajeev} S. G. Rajeev, \emph{Quantum Hadrondynamics in Two Dimensions},
+\href{https://arxiv.org/abs/hep-th/9401115}{arXiv:hep-th/9401115} (1994).
+\end{thebibliography}
+\end{document}

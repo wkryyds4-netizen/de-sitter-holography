@@ -1,0 +1,323 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,microtype}
+\usepackage[margin=24mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\Js}{\mathcal J_s}
+\newcommand{\av}[1]{\tau\!\left(#1\right)}
+\newcommand{\W}{\mathcal W}
+\newcommand{\DD}{\mathfrak D}
+\newcommand{\Rh}{\widehat R}
+\newcommand{\sig}{\sigma}
+\DeclareMathOperator{\tr}{tr}
+\title{Mixed quadratic and cubic derivative singlets\\A local reduction to the multiprobe chord law}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Local research note --- 6 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+The quadratic and cubic derivative singlets constructed in the preceding
+notes obey the same joint fixed-degree moment rule as two independent
+probe species of lengths two and three. The microscopic operators share
+the Hamiltonian couplings; the reduction follows from cancellations of
+marked Wick diagrams. We classify every local component into fourteen
+templates and give an exact polynomial certificate. This supplies the
+missing interface to the existing multiprobe four-point function. We
+evaluate the mixed out-of-time-order correlator, restore its mutual
+crossing factor $q^6$, and obtain its short-time commutator growth.
+\end{abstract}
+\section{Joint law and physical target}
+Use standard CAR, the complex Gaussian number-preserving $p$-body
+Hamiltonian including overlapping index sets, and the annealed normalized
+trace $\tau=\mathbb E\tr$ at $\beta=\mu_{\rm chem}=0$. With $\hbar=1$, take
+\[
+ N,p\longrightarrow\infty,\quad\lambda=p^2/N>0,\qquad
+ q=e^{-4\lambda},\qquad \sig^2=\Js^2/\lambda.
+\]
+Let $h=H/\sig$, $X=Y/\sqrt W$ and $\Rh=R/\sqrt{V_R}$ be the normalized
+Hamiltonian, quadratic singlet, and cubic residual defined on page~2.
+Their joint limiting moments are
+\begin{equation}
+ \boxed{\av{A_1\cdots A_n}
+ =\sum_{\substack{\pi\text{ pairs identical species}}}
+       \prod_{\substack{\{e,f\}\subset\pi\\ e\text{ crosses }f}}
+       q^{d_e d_f},\qquad (d_h,d_X,d_{\Rh})=(1,2,3).}\label{law}
+\end{equation}
+In particular,
+\begin{equation}
+ \av{X\Rh^2}=0,\quad \av{X^2\Rh^2}=1,\quad
+ \av{X\Rh X\Rh}=q^6,\quad \av{\Rh^4}=2+q^9.\label{moments}
+\end{equation}
+Thus distinct singlets already have a nonzero equal-time commutator:
+$\av{[X,\Rh]^\dagger[X,\Rh]}=2(1-q^6)$.
+The established multiprobe framework \cite{bint,bnr} now applies to these
+specific composite insertions. Our task is the reduction to that framework,
+not a replacement four-point kernel.
+
+\newpage
+\section{Operators and local marked weights}
+Put $L=[H,\cdot]$, $\mathsf J_H B=\{H,B\}/2$ and
+\[
+ A=\sum_i(Lc_i)^\dagger Lc_i,\quad
+ M_3=\sum_i c_i^\dagger L^3c_i,\quad T_3=(M_3+M_3^\dagger)/2.
+\]
+The preceding construction \cite{local} uses ordinary Gaussian coupling
+chaos $\W_j$, not energy normal ordering. At finite $N$,
+$Y_N=A-a_0-c_N(H^2-C)$ subtracts the scalar expectation and its quadratic
+Hamiltonian projection, with the coefficients defined sector by sector.
+Its DS limit is $Y$, and
+\[
+ c_N\longrightarrow\frac{2\lambda(1-q)}{1+q},\qquad
+ W=4\Js^4\left[\lambda^{-1}+\frac{4q}{1+q}\right].
+\]
+For $(T,S,Z)=\W_3(T_3,\mathsf J_H A,H^3)$ set
+\begin{align}
+ R&=T-aS-bZ,&a&=-\frac{(1-q)^2}{1+q^2},\\
+ b&=\frac{2\lambda(1-q)(1+q^3)}{(1+q^2)(1+q+q^2)},&
+ D&=(1+q^2)(1+q+q^2).
+\end{align}
+Its variance is $V_R=\sig^6G_R/D^2$, where
+\begin{align}
+ G_X&=(1+q)^2W/\sig^4=4\lambda(1+q)^2+16\lambda^2q(1+q),\\
+ G_R&=4\lambda(1-q^2)(1+q^2)(1+q+q^2)^2\notag\\
+ &\quad+16\lambda^2q^2(1+q)(1+q^2)(1+q+q^2)(2q^2-q+2).
+\end{align}
+The symbol \texttt{X} in the raw polynomial code denotes $Y$, with the
+denominator $1+q$ cleared; \texttt{R} has denominator $D$ cleared.
+Every underlying Hamiltonian slot contributes $\sig$.
+
+Expand a composite into consecutive slots. A quadratic vertex has one
+possible mark, $12$; a cubic vertex has marks $12,23,13$. After clearing
+denominators their weights are
+\begin{center}
+\begin{tabular}{ccl}
+\toprule
+vertex&mark coefficients&unmarked coefficient\\\midrule
+$Y$&$1+q$&$-2\lambda(1-q)$\\
+$R$&$-q(1+q+q^2),\ -q(1+q+q^2),\ D$&$-2\lambda(1-q)(1+q^3)$\\
+\bottomrule
+\end{tabular}
+\end{center}
+There is at most one mark per vertex. Internal Gaussian pairings within
+each composite block are deleted before the DS limit. The exact identity
+$A=(2p-\DD)H^2$, $\DD B=QB-\sum_i c_i^\dagger Bc_i$, and its three-slot
+counterpart produce these marks, including the nonadjacent $13$ choice.
+
+\newpage
+\section{Why fourteen local templates suffice}
+For an underlying pairing $\pi$, let $c(\pi)$ count ordinary chord
+crossings. The previously established fixed-word determinant expansion
+\cite{local} gives, for selected marks $j=(a,b)$,
+\begin{equation}
+ q^{c(\pi)}\exp\!\left[\lambda\sum_j\alpha_j z_j+
+                 \lambda\sum_{j<k}\delta_{jk}z_jz_k\right],\qquad
+ \alpha_j=2-4\chi_j.\label{marks}
+\end{equation}
+Here $\chi_j$ tests whether the two marked chords cross. For
+$j=(a,b)$ and $k=(c,d)$, $\delta_{jk}=4$ precisely when
+$\pi(a)=d,\pi(b)=c$; otherwise it is zero. Extract each selected mark
+once and insert the coefficients on page~2. The exponential has no
+higher connected mark term: triple set overlaps vanish in the fixed-word
+DS limit. Fixed-order overlap exponential bounds justify the derivatives.
+
+\paragraph{Component classification.}
+Make a graph whose vertices are the composite blocks, joining two blocks
+when at least two Hamiltonian chords connect them. A vertex has two or
+three slots, so it has at most one such neighbor. Every component is a
+singleton or a pair. Ordinary one-slot $H$ vertices remain spectators.
+Fix the component's external endpoints and sum over all assignments to
+its internal slots. All crossings with chords having no endpoint in the
+component factor out: the component slots are consecutive blocks.
+
+An outside mark cannot change under these assignments. If both of its
+chords ended in one component vertex, it would itself be a double-bridge
+neighbor, already in that component. If the partners end in distinct
+vertices, their cyclic block order is fixed. A delta term connecting the
+component to an outside mark would likewise require a double bridge.
+Thus all outside marked factors are constant during the local sum.
+Crossings among the component's own incident chords are retained in the
+local template, including its residual external endpoints.
+
+\begin{center}
+\begin{tabular}{lrrl}
+\toprule
+local component&templates&local pairings&sum\\\midrule
+singleton $Y$&1&2&0\\
+singleton $R$&1&6&0\\
+$YY$, two bridges&1&2&$G_X$\\
+$YR$ or $RY$, two bridges&4&24&0\\
+$RR$, two bridges&6&108&0\\
+$RR$, three bridges&1&6&$G_R$\\\bottomrule
+\end{tabular}
+\end{center}
+For two blocks, external endpoints can lie on either separating arc.
+The six partial $RR$ templates are two endpoint color orders times three
+arc splits. These possibilities exhaust the topology. Exact determinant
+polynomials give the displayed sums for independent symbols $q,\lambda$.
+Every incomplete component cancels. The survivors pair whole equal-species
+blocks. Compressing such pairs gives $d_e d_f$ elementary crossings,
+and dividing by $G_X,G_R$ proves \eqref{law} for every fixed word.
+
+\newpage
+\section{Real-time mixed interaction observable}
+Define $X(t)=e^{itH}Xe^{-itH}$ and
+\begin{equation}
+ F_{23}(t)=\av{X(t)\Rh X(t)\Rh},\qquad
+ D_{23}(t)=\av{[X(t),\Rh]^\dagger[X(t),\Rh]}.
+\end{equation}
+The uncrossed mixed pair is $\av{X(t)^2\Rh^2}=1$. Trace cyclicity and
+Hermiticity therefore give $D_{23}(t)=2[1-\operatorname{Re}F_{23}(t)]$.
+For distinct species there is only the single allowed crossed pairing
+in $F_{23}$, rather than the three channels of a same-species correlator.
+
+Here is a positive-series form of BINT Eq.~(4.10) \cite{bint}, in symmetric
+Jacobi normalization. Write $a=q^2$, $b=q^3$, $Q_{23}=q^6$ and
+\begin{align}
+ J_{n-1,n}&=\sig\sqrt{\frac{1-q^n}{1-q}},&U(t)&=e^{-itJ},&v_n&=U_{n0}(t),\\
+ c_i&=\frac{(b^2;q)_i}{(q;q)_i}a^i,&
+ V_{li}&=\sqrt{c_i}\,b^l
+       \sqrt{\frac{(q;q)_{l+i}}{(q;q)_l}}v_{l+i}.
+\end{align}
+With $(x;q)_i=\prod_{j=0}^{i-1}(1-xq^j)$,
+\begin{equation}
+ \boxed{F_{23}(t)=Q_{23}\sum_{n,i\ge0}a^n
+                    |(U(t)^\dagger V)_{ni}|^2.}\label{series}
+\end{equation}
+BINT explicitly suppresses the overall mutual-probe factor in that
+section. Restoring $Q_{23}$ is essential: $F_{23}(0)=q^6$, not one.
+BNR Section~8.1 \cite{bnr} supplies the neutral complex-model interface.
+In \eqref{series}, the four alternating real-time propagators have
+combined into a modulus square; this is not an extra approximation.
+
+Direct compressed chord enumeration gives
+\begin{align}
+ F_{23}(t)&=q^6-2q^6(1-q^2)(1-q^3)(\sig t)^2
+                +c_4(q)(\sig t)^4+O(t^6),\\
+ c_4(q)&=\frac{q^6(q-1)^3(q+1)(q^2+q+1)}6\notag\\
+ &\qquad\times(9q^5+12q^4+9q^3-3q^2-12q-11),\\
+ D_{23}(t)&=2(1-q^6)+4\sig^2q^6(1-q^2)(1-q^3)t^2+O(t^4).
+\end{align}
+In particular $D_{23}(0)=48\lambda+O(\lambda^2)$, and the coefficient
+of $t^2$ is $384\lambda\Js^2+O(\lambda^2)$. The noncommutativity and its
+initial growth both survive at the first deformation order. A
+species-preserving Wick law does not make these ordinary commuting
+Gaussian variables.
+
+\newpage
+\section{Verification and numerical results}
+The initial mixed enumeration covers twelve words, 15,392 pairings and
+433,964 local-minor checks, including
+$X\Rh^2$, $X\Rh X\Rh$, $X^2\Rh^2$, $\Rh^4$, and words with two external
+Hamiltonians. All differences from \eqref{law} are exact zero polynomials.
+The separate fourteen-template certificate uses the older determinant
+implementation, not the new geometric weight evaluator. It shares the
+pairing generator. The factorization argument on page~3 is what extends
+these finite checks to arbitrary fixed degree.
+
+An independent finite-CAR computation tests all choices of local mark
+or no mark on 64 mixed words at $(N,p)=(3,1),(4,2)$. All 6,656 normalized
+matrix traces equal the finite determinant coefficients exactly. Among
+them 1,031 are nonzero, including two negative values. Coherent repeated
+index sets are included to avoid an all-zero sparse test. These checks
+validate the mark algebra, not finite-size convergence rates.
+
+The real-time code uses $\Js=1$. It independently sums all four-arc
+Hamiltonian insertions through order $t^6$ and compares with
+\eqref{series} at $t=.01$, swaps the two probe labels, and enlarges each
+Jacobi cutoff by 16. Results at $t=1$ are
+\begin{center}
+\begin{tabular}{rrrr}
+\toprule
+$\lambda$&cutoff&$F_{23}(1)$&$D_{23}(1)$\\\midrule
+.20&52&$4.26855521\,10^{-6}$&1.99999146\\
+.10&90&$5.71877829\,10^{-5}$&1.99988562\\
+.05&167&$5.68948591\,10^{-4}$&1.99886210\\\bottomrule
+\end{tabular}
+\end{center}
+These are finite-$\lambda$ values, not estimates of a first-order
+small-$\lambda$ coefficient.
+Across all fifteen points, the largest cutoff and species-swap changes
+are $6.39\,10^{-16}$ and $3.34\,10^{-16}$, respectively. The small-time
+Taylor comparison differs by at most $1.27\,10^{-15}$.
+
+\paragraph{Analytic truncation control.}
+For $b=q^{d_2}$, put
+\[
+ C_b=\prod_{j=1}^{2d_2-1}(1-q^j)^{-1},\quad K=C_b/(1-a),\quad
+ R_H=2\sig/\sqrt{1-q}.
+\]
+Then $c_i\le C_ba^i$, the map $v\mapsto V$ has norm at most $\sqrt K$,
+and its rows $l\ge M$ have norm at most $\sqrt K b^M$. A cutoff of size
+$L$ agrees with powers of the infinite Jacobi matrix up to the first
+path reaching the boundary. Define $T_k(z)=\sum_{j\ge k}z^j/j!$ and
+\[
+ \delta=2T_L(R_H|t|)+2T_{L-M}(R_H|t|)+2b^M.
+\]
+Splitting low and high source rows, unitarity gives
+$|F_{23}-F_{23}^{(L)}|\le2Q_{23}K\delta$.
+We choose the larger cutoff needed for the two species orders; the
+reported analytic bounds are below $10^{-11}$ for $|\Js t|\le1$.
+This bounds truncation in exact arithmetic. Floating-point accuracy is
+assessed by the separate comparisons, not certified by interval arithmetic.
+
+\newpage
+\appendix
+\section{Fixed times, limits, and the next calculation}
+Equation \eqref{law} is a fixed-degree DS statement. It also determines
+fixed real-time correlators. Here is a moment-based justification that
+does not assume a uniform finite-$N$ operator norm. For a finite real-time
+word, approximate each unitary by its degree-$k$ Taylor polynomial.
+The scalar spectral theorem bounds its $L^r(\tau_N)$ remainder by
+$|t|^{k+1}\|H^{k+1}\|_r/(k+1)!$ for even integer $r$. Noncommutative
+H\"older bounds the rest of the word by fixed moments of the probes.
+For each fixed $k$, all these moments converge by \eqref{law}. The
+limiting Hamiltonian has the compact $q$-Hermite support
+$[-R_H,R_H]$, so the limiting remainder is bounded by a constant times
+$(|t|R_H)^{k+1}/(k+1)!$ (and fixed polynomial factors from the other
+Taylor approximants). It vanishes as $k\to\infty$. Thus DS is taken
+first, followed by polynomial degree. No growing-time or uniform
+$\lambda\to0$ estimate is used here.
+
+The local determinant limit uses fixed numbers of slots and marks.
+At $\mu_{\rm chem}=0$, the central charge window and its exponentially
+small complement are handled as in the preceding notes. The two-body
+overlap exponent and its mark derivatives are uniform in that window.
+Gaussian chaos subtraction removes internal pairings before the limit.
+The remainder coefficients in $Y_N$ converge in the fixed moment bounds;
+replacing them by their limiting values therefore preserves the theorem.
+
+\paragraph{Next constructive step.}
+The saved exact coefficients through $t^6$ give, coefficient by coefficient,
+\[
+ \frac{D_{23}(t)}\lambda:
+ \quad48+384(\Js t)^2+512(\Js t)^4+
+                  \frac{4096}{15}(\Js t)^6+\cdots
+ \qquad(\lambda\to0).
+\]
+These are the first four terms of $48\cosh(4\Js t)$. This suggests a
+concrete next target: use the existing unequal-probe first-order
+four-point expansion to determine the entire fixed-time coefficient,
+then match it to the two-species Rindler construction. Finite Taylor
+agreement alone is not the derivation of that function.
+
+The present theorem covers $H,X,\Rh$. It does not yet include arbitrary
+high-point insertions of the linear rank-filter residual $F$. The
+time-dependent mixed commutator is microscopic interaction data; selecting
+a bulk mass, local vertex, or spatial dictionary remains a separate
+physical construction. All statements here use the ensemble-averaged
+infinite-temperature state and the specified order of limits.
+
+\begin{thebibliography}{9}
+\bibitem{bint} M. Berkooz, M. Isachenkov, V. Narovlansky and G. Torrents,
+\emph{Towards a full solution of the large N double-scaled SYK model},
+\href{https://arxiv.org/abs/1811.02584}{arXiv:1811.02584v2},
+Sections 4.1--4.2, especially Eq.~(4.10) and footnote~8.
+\bibitem{bnr} M. Berkooz, V. Narovlansky and H. Raj,
+\emph{Complex Sachdev-Ye-Kitaev model in the double scaling limit},
+\href{https://arxiv.org/abs/2006.13983}{arXiv:2006.13983v2},
+Section 8.1, Eqs.~(8.1)--(8.7).
+\bibitem{local} A. Day and Chengheng, local project notes:
+\emph{Singlet multimark}, \emph{Cubic singlet}, \emph{Cubic kernel},
+and \emph{Filtered spectrum} (November 2026).
+Exact scripts and certificates: \texttt{results/susskind-mixed-cubic}.
+\end{thebibliography}
+\end{document}

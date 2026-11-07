@@ -1,0 +1,363 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,microtype}
+\usepackage[margin=24mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\Js}{\mathcal J_s}
+\newcommand{\av}[1]{\langle #1\rangle}
+\newcommand{\W}{\mathcal W}
+\title{The missing linear component of the cubic singlet\\Exact charge-sector channels and their double-scaling weight}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Local research note --- 6 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+We calculate the first Gaussian coupling chaos of the raw Hermitian
+cubic derivative singlet. It is not generally a conserved function
+of the Hamiltonian. Its exact finite-size map is diagonal in
+standard $U(N)$ irreducible tensor channels, with coefficients
+given below by binomial expressions. After subtracting the
+ensemble projection onto the Hamiltonian in each charge sector,
+the residual has double-scaled norm
+$64\mathcal J_s^6 e^{-8\lambda}$. This identifies a surviving
+component omitted by the third-chaos projection and sets the
+next spectral calculation.
+\end{abstract}
+\section{What is added to the cubic construction}
+Use standard CAR, $H=H_s$, $L=[H,\cdot]$, and
+\[
+ A=\sum_i(Lc_i)^\dagger Lc_i,\quad
+ T_3=\tfrac12\left(\sum_i c_i^\dagger L^3c_i+\mathrm{h.c.}\right).
+\]
+The exact identity $M_3=T_3+\tfrac32LA$ and the previously
+constructed $q^3$ channel $R$ give
+\begin{equation}
+ \boxed{M_3=R+aS+bZ+\bar t(Q_f)H+F+\tfrac32LA,}       \label{decomp}
+\end{equation}
+where $S=\W_3\{H,A\}/2$, $Z=\W_3H^3$,
+$R=\W_3T_3-aS-bZ$, and
+\[
+ a=-\frac{(1-q)^2}{1+q^2},\qquad
+ b=\frac{2\lambda(1-q)(1+q^3)}{(1+q^2)(1+q+q^2)},
+ \quad q=e^{-4\lambda}.
+\]
+The new terms are defined exactly at finite $N$:
+\begin{equation}
+ \W_1T_3=\bar t(Q_f)H+F,\qquad
+ \mathbb E_J\operatorname{tr}_m(HF)=0.                \label{F}
+\end{equation}
+Here $\operatorname{tr}_m$ is the normalized trace on charge $m$;
+$\bar t(m)$ is a deterministic projection coefficient.
+It follows that $\bar t(Q_f)H$ is conserved in each realization.
+$F$ can still contain static components; (\ref{F}) is not a
+projection onto the entire commutant.
+
+In the full $\beta=\mu_{\rm chem}=0$ annealed trace, first take
+$N,p\to\infty$ at $\lambda=p^2/N>0$, with
+$\av{H^2}\to\sigma^2=\Js^2/\lambda$. Our norm result is
+\begin{equation}
+ \boxed{\lim_{\rm DS}\av{F^2}=64\Js^6q^2>0.}         \label{norm}
+\end{equation}
+The earlier $R$ has $\av{R^2}\sim32\Js^6/\lambda$ as
+$\lambda\to0^+$, so $\av{F^2}/\av{R^2}\sim2\lambda$.
+The raw derivative family therefore has an additional component
+at the first relative order in this limit.
+
+\newpage
+\section{Exact coefficients from covariance channels}
+Write the coupling covariance in standard CAR units as
+$\mathbb E J_{IJ}J_{KL}=w\delta_{IL}\delta_{JK}$.
+The normal-ordered $p$-body Hamiltonian decomposes into the
+established, multiplicity-free $U(N)$ tensor sectors
+\[
+ H_m=\sum_{\nu=0}^{\min(p,m,N-m)}H_m^{(\nu)} .
+\]
+Define the following quantities; every binomial is zero outside
+its allowed range:
+\begin{align}
+ C_m&=w\binom mp\binom{N-m+p}{p},\\
+ \kappa_\nu(m)&=w\binom{m-\nu}{p}\binom{N-m+p-\nu}{p},\\
+ j_c(m)&=w\binom{m-1}{p}\binom{N-m+p}{p},\\
+ j_-(m,\nu)&=w\binom{m-\nu}{p}\binom{N-m+p-\nu+1}{p},\\
+ j_+(m,\nu)&=w\binom{m-\nu-1}{p}\binom{N-m+p-\nu}{p},\\
+ \ell_\nu&=\frac{\nu(N-\nu-p+1)}{N-2\nu+1}.
+\end{align}
+$C_m=\mathbb E K_m^2$ is scalar, and
+$\mathbb E K_m H_m^{(\nu)}K_m=\kappa_\nu(m)H_m^{(\nu)}$
+for an independent copy $K$ of $H$. These covariance eigenvalues
+are standard embedded-ensemble results \cite{TT,Kota}.
+The $j_\pm$ are the corresponding particle-removal channels.
+
+The first Gaussian chaos is
+\begin{equation}
+ (\W_1T_3)_m=\sum_\nu t_\nu(m)H_m^{(\nu)},             \label{map}
+\end{equation}
+with the exact coefficient
+\begin{align}
+ t_\nu(m)={}&-(m+2p)C_{m-1}+(m-3p)C_m+3p\,j_c(m)
+ \nonumber\\
+ &+(m-p)\kappa_\nu(m-1)-m\kappa_\nu(m)
+ \nonumber\\
+ &+3\{\ell_\nu j_-(m,\nu)+(p-\ell_\nu)j_+(m,\nu)\}.
+                                                               \label{t}
+\end{align}
+This result keeps the finite-$N$ rank dependence. Replacing all
+$\kappa_\nu/C_m$ by the common leading crossing factor too early
+would erase the residual (\ref{norm}).
+
+For example, at $(N,p,m)=(5,2,3)$ and $w=1$,
+\[
+ (t_0,t_1,t_2)=(-96,-167/2,-88).
+\]
+Distinct coefficients on noncentral sectors allow nonconservation.
+A deterministic Gaussian-integer Hamiltonian specified with the
+saved validation data gives the exact witness
+\begin{equation}
+ \operatorname{tr}_3
+ [H,\W_1T_3]^\dagger[H,\W_1T_3]=\frac{8933634}{5}>0. \label{witness}
+\end{equation}
+Since the subtraction in (\ref{F}) commutes with $H$, the same
+witness applies to $[H,F]$. It tests a finite system, not a
+double-scaling dynamical limit.
+
+\newpage
+\section{Derivation through particle-removal tensors}
+For a cubic polynomial $P$, $\W_1P(H)$ is the sum of its three
+terms containing two copies of an independent Gaussian $K$ and
+one $H$, averaged over $K$. Apply this to
+\[
+ L^3c=H^3c-3H^2cH+3HcH^2-cH^3 .
+\]
+Let
+$\mathcal J_m(Y)=\mathbb E K_{m-1}YK_m$ and
+$\Phi(Y)=\sum_i c_i^\dagger Yc_i$.
+Homogeneity gives $\Phi(H_{m-1})=(m-p)H_m$ and
+$\mathcal J_m(c_i)=j_c(m)c_i$. Grouping the three contractions
+in each monomial gives
+\begin{align}
+ (\W_1M_3)_m={}&
+ [-(m+2p)C_{m-1}+(m-3p)C_m+3p j_c]H_m \nonumber\\
+ &+\Phi(\mathbb E K_{m-1}H_{m-1}K_{m-1})
+      -m\mathbb E K_mH_mK_m \nonumber\\
+ &+3\sum_i c_i^\dagger\mathcal J_m([c_i,H]).
+                                                               \label{operator}
+\end{align}
+For a traceless charged tensor with $r$ creations and $s$ annihilations,
+input charge $m$, the covariance multiplier is
+\begin{equation}
+ \mathcal J(Y)=
+ w\binom{m-s}{p}\binom{N-m+p-r}{p}\,Y.                \label{charged}
+\end{equation}
+It follows by normal ordering a highest-weight disjoint-index
+tensor: the paired $K$ indices have $m-s$ available occupied
+slots and $N-m+p-r$ available complementary slots. Equivariance
+extends the result to its irreducible tensor space.
+
+To resolve $[c_i,H^{(\nu)}]$, write
+$H_m^{(\nu)}=f_m O_\nu$ with
+$f_m=\binom{m-\nu}{p-\nu}$ and $O_\nu$ a primitive traceless
+$\nu$-body tensor. Set $u_i=c_iO_\nu$, $v_i=O_\nu c_i$.
+The difference $u_i-v_i$ belongs to the lower charged sector
+$(r,s)=(\nu-1,\nu)$. Only this and the upper sector
+$(\nu,\nu+1)$ occur; multiplicity freedom makes the lower
+projection proportional to $u-v$.
+In unnormalized sector trace, dividing
+all inner products by $\operatorname{Tr}_m O_\nu^\dagger O_\nu$,
+\[
+ \|u\|^2=m,\quad (u,v)=m-\nu,\quad
+ \|v\|^2=\frac{(N-m+1)(m-\nu)}{N-m-\nu+1}.
+\]
+Thus the lower projection of $u$ is
+$(N-m-\nu+1)(u-v)/(N-2\nu+1)$.
+Since $f_{m-1}/f_m=(m-p)/(m-\nu)$, contraction with
+$\sum_i c_i^\dagger$ gives weights
+$\ell_\nu$ and $p-\ell_\nu$ in the lower and upper charged
+sectors. Using (\ref{charged}) in (\ref{operator}) proves
+(\ref{t}). For $\nu=0$ the lower weight is zero, understood
+without a negative-rank tensor.
+
+All coefficients are real. The resulting map preserves Hermiticity,
+so $\W_1M_3=\W_1T_3$ and $\W_1LA=0$. The displayed derivation
+therefore also checks that the exact time-descendant subtraction
+does not hide another first-chaos term.
+
+\newpage
+\section{Rank weights and the surviving norm}
+Let $d_\nu=\binom N\nu^2-\binom N{\nu-1}^2$, and use the
+standard covariance eigenvalue notation \cite{Kota}
+\[
+ \Lambda^\nu(N,m,r)=\binom{m-\nu}{r}
+                         \binom{N-m+r-\nu}{r}.
+\]
+The normalized Hamiltonian weight of channel $\nu$ is
+\begin{equation}
+ \omega_\nu=
+ \frac{d_\nu\Lambda^\nu(N,m,m-p)}
+      {\binom Nm\Lambda^0(N,m,p)},\qquad \sum_\nu\omega_\nu=1 .
+\end{equation}
+Different tensor components are independent Gaussian variables
+and orthogonal in the ensemble Hilbert--Schmidt inner product.
+Consequently
+\begin{align}
+ \bar t(m)&=\sum_\nu\omega_\nu t_\nu(m),\\
+ \mathbb E\operatorname{tr}_m F^2
+ &=C_m^3\,\operatorname{Var}_{\omega}
+          \left(\frac{t_\nu(m)}{C_m}\right).           \label{variance}
+\end{align}
+
+At half filling $m=N/2$, put $s=p-\nu$. The exact adjacent-weight
+ratio is
+\begin{equation}
+ \frac{\omega_{\nu-1}}{\omega_\nu}
+ =\left(\frac{\nu}{N-\nu+1}\right)^2
+ \frac{1-\left(\frac{\nu-1}{N-\nu+2}\right)^2}
+      {1-\left(\frac{\nu}{N-\nu+1}\right)^2}
+ \frac{m-\nu+1}{p-\nu+1}
+ \frac{N-p-\nu+1}{N-m-\nu+1}.                         \label{ratio}
+\end{equation}
+For fixed $s$ this tends to $\lambda/(s+1)$. For sufficiently
+large $N$ and all $0\le s<p$, it is bounded by
+$32\lambda/(s+1)$. Normalization and this factorial tail give
+\begin{equation}
+ s\ \Longrightarrow\ {\rm Poisson}(\lambda)
+\end{equation}
+with convergence of every polynomial moment.
+
+Writing $c_\nu=t_\nu/C_m$, direct expansion of (\ref{t}) gives
+\begin{equation}
+ c_{p-s}-c_p\longrightarrow 8\lambda q\,s.             \label{slope}
+\end{equation}
+One way to see the coefficient is to write $c_\nu=B_0+
+(\kappa_\nu/C_m)E_\nu$, where $B_0$ is independent of $\nu$.
+At half filling
+$E_p/p\to2$, $E_{p-s}-E_p=O_s(p/N)$,
+$\kappa_p/C_m\to q$, and
+$\kappa_{p-s}/\kappa_p=1+4\lambda s/p+O_s(p^{-2})$.
+The rational factors in (\ref{t}) also bound
+$|c_{p-s}-c_p|\le C_\lambda(1+s)$ uniformly for $s\le p$.
+Together with the factorial tail, this justifies taking the
+variance, rather than only a pointwise coefficient limit:
+\begin{equation}
+ \operatorname{Var}_\omega(c_\nu)\longrightarrow
+                  64\lambda^3q^2 .                  \label{varlimit}
+\end{equation}
+
+\newpage
+\section{Full trace, scale comparison, and numerical checks}
+The half-filled result extends to the full
+$2^{-N}\operatorname{Tr}$ state. For $m/N$ in a compact
+neighborhood of $1/2$, the ratio and slope estimates above are
+uniform, with continuous density dependence.
+The binomial charge distribution concentrates at $1/2$.
+Also $C_m$ is maximal near $m=(N+p)/2$ and
+$C_{\max}/C_{N/2}=\exp[O(p^3/N^2)]\to1$.
+Hence $C_m/\sigma^2\to1$ on the concentrating charge window.
+Outside a fixed density window the binomial charge tail is
+exponentially small, while (\ref{t}) bounds the coefficients
+by $O(N C_{\max})$; these tails do not contribute to
+(\ref{variance}). Equations (\ref{variance}) and (\ref{varlimit})
+then give (\ref{norm}).
+
+The cubic-chaos result from the preceding stages is
+\[
+ \av{R^2}_{\rm DS}=\sigma^6V,\qquad
+ V=\frac{4\lambda(1+q)[1-q^3+4\lambda q^2(2q^2-q+2)]}
+ {(1+q^2)(1+q+q^2)}.
+\]
+Therefore the exact double-scaled equal-time ratio is
+\begin{equation}
+ \frac{\av{F^2}_{\rm DS}}{\av{R^2}_{\rm DS}}
+ =\frac{64\lambda^3q^2}{V}=2\lambda+O(\lambda^2).
+\end{equation}
+Gaussian chaos makes the linear and cubic components orthogonal
+at equal time. Real-time evolution depends on the same random
+$H$ and does not preserve that chaos decomposition; their
+time-dependent cross correlators must be computed.
+
+The channel formula was checked against direct Gaussian
+polarization in occupation-basis CAR matrices for
+$(N,p)=(3,1),(4,2),(5,2),(6,2),(6,3)$: 42 allowed sector/rank
+coefficients agree exactly with bounded Gaussian-integer
+arithmetic. Independent tests cover 31 charged covariance
+eigenvalues, 199 exact rational weight normalizations and ratios,
+three symbolic projection identities, and the nonzero witness
+(\ref{witness}).
+
+The full rank sum, with no rank cutoff, was evaluated at 80 and
+110 decimal digits for three $\lambda$ values and
+$p=16,32,64,128$. The table shows the relative difference
+of the variance from (\ref{varlimit}):
+\begin{center}
+\begin{tabular}{rrrrr}
+\toprule
+$\lambda$ & $p=16$ & $p=32$ & $p=64$ & $p=128$\\
+\midrule
+0.10 & $-13.97\%$ & $-6.94\%$ & $-3.45\%$ & $-1.72\%$\\
+0.25 & $-7.76\%$ & $-3.51\%$ & $-1.66\%$ & $-0.81\%$\\
+0.50 & $+3.54\%$ & $+2.50\%$ & $+1.41\%$ & $+0.74\%$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The finite-$p$ differences are retained rather than treated as
+numerical error. Precision comparisons are below $10^{-55}$ in
+relative variance. The limiting statement is supported by the
+ratio and uniform-bound argument, not inferred from this table.
+
+\newpage
+\section{Physical interpretation and the next calculation}
+The original derivative operator is now decomposed into explicit
+pieces in (\ref{decomp}). The known $q^3$ channel remains intact.
+The missing linear part has an exactly known finite-$N$ map;
+its energy-orthogonal remainder survives double scaling in norm,
+and finite-size examples demonstrate nonconservation.
+
+The next question is its \emph{dynamical} spectral measure.
+A positive equal-time residual alone does not establish a new
+propagating particle or rule out additional conserved projections.
+In particular, identifying a $q$-probe kernel for $F$ requires
+same-coupling mixed moments or an explicit covariance reduction.
+It cannot be concluded merely because $\nu/p\to1$.
+The rank-dependent terms in (\ref{t}) show exactly which
+subleading coefficients must be kept in that calculation.
+
+The concrete next step is to evaluate
+$\mathbb E\operatorname{tr}(F L^2F)$ and the two-energy strength
+density using the resolved covariance channels, including
+$H$--$F$ cross contractions. This will determine how the residual
+fits into the full raw-$M_3$ correlator. We can then compute mixed
+correlators with the already established $d=2$ and $d=3$ singlets,
+to supply new interaction data for the Susskind program.
+Their physical mass assignment still needs the spatial dictionary.
+
+\paragraph{Source boundary.}
+The irreducible decomposition, covariance eigenvalues, dimensions
+and channel weights used here come from embedded-ensemble
+representation theory \cite{Kota,TT}. The charged multiplier
+was obtained by the same normal-order counting and explicitly
+checked. The new calculation recorded in this note is the
+application to $\W_1T_3$, its finite-sector coefficients,
+and the energy-orthogonal residual limit.
+The source papers' spectral-density correlation functions are
+not confused with the transition-strength correlator of $F$.
+No priority claim is made for standard representation theory.
+
+All scripts and raw outputs are local. Earlier cubic-kernel
+and other scientific artifacts were preserved byte-for-byte.
+The six-page PDF was actually compiled and visually checked.
+No Git commit, push or archive was made; the complete
+de Sitter research objective remains active.
+
+\begin{thebibliography}{9}
+\bibitem{Kota}
+V. K. B. Kota,
+\emph{Bivariate moments of the two-point correlation function
+for embedded Gaussian unitary ensemble with $k$-body interactions},
+\href{https://arxiv.org/html/2208.11312}{arXiv:2208.11312v2},
+Sec.~IV, Eqs.~(28)--(39).
+\bibitem{TT}
+J. Tall and S. Tomsovic,
+\emph{Double-scaled bosonic and fermionic embedded ensembles,
+complex SYK, and the dual Hilbert space},
+\href{https://arxiv.org/html/2604.14522v2}{arXiv:2604.14522v2},
+Sec.~2.1, Eqs.~(2.8)--(2.19).
+\end{thebibliography}
+\end{document}

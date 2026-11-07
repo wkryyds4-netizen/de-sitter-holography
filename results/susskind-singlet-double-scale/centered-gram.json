@@ -1,0 +1,232 @@
+{
+  "status": "passed",
+  "definition": "E tr(A-E[A]|Q)^2, retaining any sample-dependent conserved part",
+  "double_scaled": "4 Js^4 (1/lambda+1+exp(-4lambda))",
+  "rows": [
+    {
+      "p": 1,
+      "coefficients": [
+        0,
+        16,
+        40,
+        24,
+        0
+      ],
+      "samples": [
+        {
+          "N": 4,
+          "lambda_value": "1/4",
+          "normalized_centered_gram": "25/16",
+          "prediction": 1.3419698602928607,
+          "ratio": 1.164333153994243,
+          "curvature_over_Js_squared": "0"
+        },
+        {
+          "N": 2,
+          "lambda_value": "1/2",
+          "normalized_centered_gram": "9/2",
+          "prediction": 3.135335283236613,
+          "ratio": 1.4352532005300056,
+          "curvature_over_Js_squared": "0"
+        },
+        {
+          "N": 1,
+          "lambda_value": "1",
+          "normalized_centered_gram": "16",
+          "prediction": 8.073262555554937,
+          "ratio": 1.9818505703113725,
+          "curvature_over_Js_squared": "0"
+        }
+      ]
+    },
+    {
+      "p": 2,
+      "coefficients": [
+        0,
+        0,
+        512,
+        3840,
+        12480,
+        23040,
+        19440,
+        5040,
+        0
+      ],
+      "samples": [
+        {
+          "N": 16,
+          "lambda_value": "1/4",
+          "normalized_centered_gram": "2647635/2097152",
+          "prediction": 1.3419698602928607,
+          "ratio": 0.9407742950975181,
+          "curvature_over_Js_squared": "6792877/1412072"
+        },
+        {
+          "N": 8,
+          "lambda_value": "1/2",
+          "normalized_centered_gram": "46529/16384",
+          "prediction": 3.135335283236613,
+          "ratio": 0.9057738737991079,
+          "curvature_over_Js_squared": "31185/13294"
+        },
+        {
+          "N": 4,
+          "lambda_value": "1",
+          "normalized_centered_gram": "483/64",
+          "prediction": 8.073262555554937,
+          "ratio": 0.934798657676165,
+          "curvature_over_Js_squared": "40/161"
+        }
+      ]
+    },
+    {
+      "p": 3,
+      "coefficients": [
+        0,
+        0,
+        0,
+        9216,
+        168960,
+        1378560,
+        5740800,
+        13198080,
+        18332160,
+        15523200,
+        6955200,
+        1108800,
+        0
+      ],
+      "samples": [
+        {
+          "N": 36,
+          "lambda_value": "1/4",
+          "normalized_centered_gram": "330737894165/264479053824",
+          "prediction": 1.3419698602928607,
+          "ratio": 0.9318583741511648,
+          "curvature_over_Js_squared": "185170762435483/32823095651343"
+        },
+        {
+          "N": 18,
+          "lambda_value": "1/2",
+          "normalized_centered_gram": "704708531/258280326",
+          "prediction": 3.135335283236613,
+          "ratio": 0.8702303253408543,
+          "curvature_over_Js_squared": "6932136900640/2447784355707"
+        },
+        {
+          "N": 9,
+          "lambda_value": "1",
+          "normalized_centered_gram": "790300672/129140163",
+          "prediction": 8.073262555554937,
+          "ratio": 0.7580222339121665,
+          "curvature_over_Js_squared": "2440499200/3255194223"
+        }
+      ]
+    },
+    {
+      "p": 4,
+      "coefficients": [
+        0,
+        0,
+        0,
+        0,
+        131072,
+        4751360,
+        74158080,
+        584192000,
+        2642769920,
+        7422750720,
+        13533811200,
+        16490073600,
+        13582800000,
+        7284076800,
+        2203000800,
+        252252000,
+        0
+      ],
+      "samples": [
+        {
+          "N": 64,
+          "lambda_value": "1/4",
+          "normalized_centered_gram": "23769410750831271086883/18889465931478580854784",
+          "prediction": 1.3419698602928607,
+          "ratio": 0.9376828533234018,
+          "curvature_over_Js_squared": "5887791381005867565914175/991819073943609031000064"
+        },
+        {
+          "N": 32,
+          "lambda_value": "1/2",
+          "normalized_centered_gram": "1584756057312749295/576460752303423488",
+          "prediction": 3.135335283236613,
+          "ratio": 0.8768164448042562,
+          "curvature_over_Js_squared": "8930027955261744639/3042680559657549824"
+        },
+        {
+          "N": 16,
+          "lambda_value": "1",
+          "normalized_centered_gram": "106218306078885/17592186044416",
+          "prediction": 8.073262555554937,
+          "ratio": 0.747877530500127,
+          "curvature_over_Js_squared": "403261126053/476966305792"
+        }
+      ]
+    },
+    {
+      "p": 5,
+      "coefficients": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1638400,
+        102727680,
+        2669936640,
+        34706882560,
+        260815564800,
+        1236747939840,
+        3933518561280,
+        8724442890240,
+        13780373967360,
+        15641023157760,
+        12767906511360,
+        7397239449600,
+        2887901976960,
+        657651234240,
+        58663725120,
+        0
+      ],
+      "samples": [
+        {
+          "N": 100,
+          "lambda_value": "1/4",
+          "normalized_centered_gram": "154720768491062143555517159751/122070312500000000000000000000",
+          "prediction": 1.3419698602928607,
+          "ratio": 0.944486588694457,
+          "curvature_over_Js_squared": "125613124167320985823774509465592407/20647116142791329120346069335937500"
+        },
+        {
+          "N": 50,
+          "lambda_value": "1/2",
+          "normalized_centered_gram": "1296338579154618829108209/465661287307739257812500",
+          "prediction": 3.135335283236613,
+          "ratio": 0.8879005431700776,
+          "curvature_over_Js_squared": "3425767076495242997719321279104/1152581729780759738922119140625"
+        },
+        {
+          "N": 25,
+          "lambda_value": "1",
+          "normalized_centered_gram": "142900050642017765031936/23283064365386962890625",
+          "prediction": 8.073262555554937,
+          "ratio": 0.7602267854919558,
+          "curvature_over_Js_squared": "815282557944675151896576/929232434711456298828125"
+        }
+      ]
+    }
+  ],
+  "input_sha256": {
+    "code/run_singlet_centered_moment.py": "69ad0be4ae98aac139619bf4af6342c6b9584215512a8574759977de69e8c3a0",
+    "code/singlet_coefficient.py": "ef7d9b96f96a036ea0d9774950702a82a968b56758a778db0365e9df0c3b2e10",
+    "results/susskind-singlet-moments/moments.json": "a6e3ccbdfc1ec5490e3ce458ad9398742c7cbd9e6902ea72600feb0e319ffde3"
+  }
+}

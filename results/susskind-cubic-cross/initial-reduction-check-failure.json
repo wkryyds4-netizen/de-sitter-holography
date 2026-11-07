@@ -1,0 +1,10 @@
+{
+  "status": "failed",
+  "command": "python code/check_cubic_cross.py",
+  "failure": "AssertionError at S == cn*Z + JY - G in first deterministic case N=3,p=1,m=2",
+  "cause": "SymPy structural matrix equality on algebraically equal but unexpanded Gaussian-integer expressions",
+  "diagnostic": "All nine entries of the exact first-case residual simplify to zero",
+  "correction": "Expand each exact residual entry before comparing to zero; no numerical tolerance introduced",
+  "original_code": "results/susskind-cubic-cross/initial-reduction-check.py.txt",
+  "successful_replacement": "results/susskind-cubic-cross/reduction-checks.json"
+}

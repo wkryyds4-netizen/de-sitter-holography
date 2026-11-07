@@ -1,0 +1,292 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,microtype}
+\usepackage[margin=24mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\trn}{\operatorname{tr}_0}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\Kop}{\mathsf K}
+\title{From temporal bilocals to bulk mesons\\A concrete reconstruction interface}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Local research note --- 6 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+We use an existing light-front bilocal-to-meson transform to formulate
+the next microscopic matching problem in the Susskind programme.
+Internal source profiles give calculable mass mixtures, including tails
+invisible to a ground-state overlap alone. On the microscopic side we
+derive exact degree-resolved norms of the first unequal-time CAR
+corrections in complex SYK. Their collective zero-time curvature remains
+finite in double scaling. These are inputs for constructing a dressed
+bilocal map; the map itself remains to be determined.
+\end{abstract}
+\section{The known bulk transformation}
+Itakura's boson expansion \cite{Itakura}, especially (4.25)--(4.26)
+and (5.1)--(5.9), supplies canonical bilocal bosons and their meson
+projection. Write $P>0$ for total light-front momentum and $0<x<1$
+for the internal quark fraction. For real orthonormal wavefunctions,
+\begin{equation}\label{eq:map}
+ b_r^\dagger(P)=\sqrt P\int_0^1dx\,\varphi_r(x)
+ B^\dagger(Px,P(1-x)),\qquad
+ \int_0^1\varphi_r\varphi_s\,dx=\delta_{rs}.
+\end{equation}
+The Jacobian $dp_1dp_2=P\,dPdx$ gives
+$[b_r(P),b_s^\dagger(P')]=\delta_{rs}\delta(P-P')$ from canonical
+$B$ commutators. The bosonic pair variables are related nonlinearly
+to the quark bilocals, with a physical-subspace restriction; they are
+not simply the raw quark products at finite colour number.
+
+We retain the mass conventions of our preceding FLZ calculation
+\cite{FLZ}: $\mathsf M^2=(\tau/\pi)\Kop_0$,
+$\Kop_0\varphi_r=2\pi^2\nu_r\varphi_r$, and
+$M_r^2=2\pi\tau\nu_r$, where $\tau$ is the bulk tension scale.
+Our external light-cone convention is $M^2=P^+P^-$; Itakura uses
+$M^2=2P^+P^-$. Equation \eqref{eq:map} is used as an internal
+projection, without importing his Hamiltonian prefactors.
+
+\newpage
+\section{A source is a calculable mass mixture}
+For any normalized $f\in L^2(dx)$, the same construction has
+amplitudes $a_r=\int\varphi_r f\,dx$. In our convention its mass
+moments are $\sum_r|a_r|^2(M_r^2)^j$. This is an ordinary spectral
+decomposition of the existing bulk operator, not yet a SYK dictionary.
+
+Take $2x-1=\cos\theta$, and define internal test profiles
+\begin{equation}
+ f_k(x)=\frac{\sin(k\theta)}{\sqrt{B_{kk}/2}},\quad
+ B_{mn}=\begin{cases}
+ \dfrac1{1-(m-n)^2}-\dfrac1{1-(m+n)^2},&m+n\text{ even},\\
+ 0,&m+n\text{ odd}.
+ \end{cases}
+\end{equation}
+The physical Gram matrix is $B/2$. The FLZ Chebyshev representation
+implies $\Kop_0\sin(k\theta)=\pi k U_{k-1}(\cos\theta)$.
+Consequently the full, untruncated moments are
+\begin{align}
+ \frac{\langle M^2\rangle_k}{\tau}&=\frac{\pi k}{B_{kk}},
+ &B_{kk}&=1+\frac1{4k^2-1},\\
+ \frac{\langle M^4\rangle_k}{\tau^2}&=\frac{4k^2 C_{kk}}{B_{kk}},
+ &C_{kk}&=\int_{-1}^1 U_{k-1}(z)^2\,dz.
+\end{align}
+For example, the first formula follows from
+$\int_0^\pi\sin^2(k\theta)d\theta=\pi/2$; the second is the
+norm squared of $\mathsf M^2 f_k$.
+\begin{center}
+\begin{tabular}{crrr}
+\toprule
+$k$ & dominant weight & $\langle M^2\rangle/\tau$
+& $\langle M^4\rangle/\langle M^2\rangle^2$\\
+\midrule
+1 & $|a_0|^2=0.99470033$ & $3\pi/4$ & $32/(3\pi^2)$\\
+2 & $|a_1|^2=0.95513069$ & $15\pi/8$ & $512/(45\pi^2)$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The ratios are $1.08075929$ and $1.15280991$, respectively, both
+strictly larger than the single-mass value one. For $k=1$, keeping
+only the first six levels misses norm $0.00020893$, but misses
+$0.21276878$ in $\langle M^4\rangle/\tau^2=6$.
+For $k=2$ the corresponding omissions are $0.00309244$ and
+$4.09931829$ out of $40$. Small norm tails need not be small
+relative errors in high moments.
+
+The saved 256-mode eigenvectors give these overlaps; independent
+400-node angular integration agrees within $2\times10^{-12}$.
+The source index $k$ has not been identified with a microscopic
+time-derivative order. Internal $x$, external boost rapidity, and the
+relative fraction of two mesons remain different variables.
+
+\newpage
+\section{The exact temporal algebra to be matched}
+Use standard complex CAR, $\{c_i,c_j^\dagger\}=\delta_{ij}$,
+the infinite-temperature state $\trn=2^{-N}\operatorname{Tr}$,
+and $\|O\|_2^2=\trn(O^\dagger O)$. Let
+\begin{equation}
+ H=2^p\sum_{|I|=|J|=p}J_{IJ}C_I^\dagger C_J,
+ \quad \EE J_{IJ}J_{KL}=v\delta_{IL}\delta_{JK},\quad
+ v=\frac{J_s^2N}{p^2}\left(\frac{p!}{N^p}\right)^2.
+\end{equation}
+Here $J$ is a centred Hermitian Gaussian matrix on ordered subsets,
+and $C_I^\dagger$ is the ordered product of creators. Time obeys
+$c_i(t)=e^{iHt}c_i e^{-iHt}$, with $J_st$ dimensionless.
+Define
+\begin{equation}
+ D_i=[H,c_i],\qquad T_{ij}=\{D_i,c_j^\dagger\},\qquad
+ U_{ij}=\{D_i,c_j\}.
+\end{equation}
+For finite $N$,
+\begin{align}
+ \{c_i(t),c_j^\dagger\}&=\delta_{ij}+itT_{ij}+O(t^2),\\
+ \{c_i(t),c_j\}&=itU_{ij}+O(t^2).
+\end{align}
+Thus unequal-time CAR cannot be replaced by equal-time scalar CAR
+without checking the operator corrections. For four odd operators,
+ordinary multiplication gives the exact identity
+\begin{equation}\label{eq:four}
+ [ab,cd]=a\{b,c\}d-c\{d,a\}b+ca\{d,b\}-\{a,c\}bd.
+\end{equation}
+Set $a=c_i^\dagger(t_1)$, $b=c_i(t_2)$,
+$c=c_j^\dagger(t_3)$, $d=c_j(t_4)$ and sum over $i,j$ to obtain
+the raw temporal singlet bilocal commutator. Both mixed and anomalous
+anticommutators occur. At coincident times standard cancellations
+recover the familiar number-bilinear algebra.
+
+To quantify the corrections, resolve the neutral Hamiltonian into
+orthogonal Majorana degrees $2k$: $H=\sum_k H_k$ and
+$w_k=\|H_k\|_2^2$. This degree is neither the $U(N)$ covariance
+rank of earlier notes nor the Gaussian degree in the couplings.
+The exact identities are
+\begin{align}\label{eq:norms}
+ \sum_i\|D_i\|_2^2&=2\sum_k k w_k,&
+ \sum_{ij}\|T_{ij}\|_2^2&=4\sum_k k^2w_k,\\
+ \sum_{ij}\|U_{ij}\|_2^2&=4\sum_k k(k-1)w_k,&
+ \sum_{ij}|\trn T_{ij}|^2&=4w_1.\nonumber
+\end{align}
+These are complex-fermion versions of the operator-size counting
+used in infinite-temperature SYK diagnostics \cite{RSS}.
+
+\newpage
+\section{Degree counting and its double-scaling limit}
+For completeness, use the exterior-algebra realization of the
+Hilbert--Schmidt Clifford basis, with orthonormal one-forms
+$\sqrt2c_i,\sqrt2c_i^\dagger$. A neutral degree-$2k$ vector has
+$k$ forms of each charge. Commutation with $c_i$ on the even
+sector is a contraction with factor $\sqrt2$, giving total squared
+norm $2k$. The resulting odd vector has $k$ annihilation forms and
+$k-1$ creation forms. Anticommutation with $c_j^\dagger$ or $c_j$
+contracts these with another factor $\sqrt2$. Summing all ordered
+contractions gives $4k^2$ or $4k(k-1)$. Orthogonality between degrees
+removes cross terms. Only $k=1$ reaches degree zero after two
+contractions, proving the last identity in \eqref{eq:norms}.
+
+The Gaussian covariance reduces each ensemble norm to a sum over
+single monomials. For $r=|I\cap J|$, expand each shared occupation
+factor as $n_i=(1+z_i)/2$, where $z_i=2n_i-1$.
+Choosing $s$ factors $z_i$ gives degree $2k=2(p-r+s)$.
+In $2^pC_I^\dagger C_J$ every such choice has squared norm one:
+the factors from the disjoint ladder operators cancel $2^{2(p-r)}$.
+Counting pairs of subsets therefore yields
+\begin{align}
+ \frac{\EE w_k}{v}
+ &=\binom Np\sum_r\binom pr\binom{N-p}{p-r}\binom r{p-k}
+ =\binom Np\binom pk\binom{N-p+k}{k}.\label{eq:weight}
+\end{align}
+The last step is Vandermonde's identity after extracting
+$\binom p{p-k}$. Impossible binomial coefficients vanish.
+
+Put $\overline w_k=\EE w_k$ and $\ell=p-k$. Then exactly
+\begin{equation}
+ \frac{\overline w_{p-\ell}}{\overline w_p}
+ =\frac{(p)_\ell^2}{\ell!(N)_\ell},\qquad
+ \frac{r_{\ell+1}}{r_\ell}
+ =\frac{(p-\ell)^2}{(\ell+1)(N-\ell)}
+ \leq\frac{p^2}{(N-p)(\ell+1)}.
+\end{equation}
+Here $(a)_\ell$ denotes a falling factorial and $N>p$.
+For $p,N\to\infty$ with $p^2/N\to\lambda>0$, the bound supplies
+a summable Poisson-type majorant, including every fixed moment.
+The normalized deficit law tends to $e^{-\lambda}\lambda^\ell/\ell!$.
+Also $\overline w_p=v\binom Np^2\to
+(J_s^2/\lambda)e^{-\lambda}$, so
+\begin{equation}
+ \EE\|H\|_2^2\longrightarrow J_s^2/\lambda,\qquad
+ \EE_{\rm degree}(k^2)/p^2\longrightarrow1.
+\end{equation}
+The expectation labelled ``degree'' uses the normalized ensemble
+weights, not a new disorder ensemble.
+
+\newpage
+\section{A finite microscopic matching datum}
+Combining the preceding formulas gives
+\begin{equation}\label{eq:limits}
+ \frac1N\EE\sum_{ij}\|T_{ij}\|_2^2\ \longrightarrow\ 4J_s^2,
+ \qquad
+ \frac1N\EE\sum_{ij}\|U_{ij}\|_2^2\ \longrightarrow\ 4J_s^2.
+\end{equation}
+The first limit is unchanged on replacing $T_{ij}$ by
+$T_{ij}-\trn(T_{ij})\mathbf1$, because
+\begin{equation}
+ \frac{\overline w_1}{\sum_k k^2\overline w_k}
+ \leq\frac{N-p+1}{p\binom Np}\longrightarrow0.
+\end{equation}
+Thus a scalar replacement discards the leading collective curvature.
+More precisely, for example,
+\begin{equation}
+ \lim_{\rm DS}\lim_{t\to0}\frac1{Nt^2}
+ \EE\sum_{ij}\|\{c_i(t),c_j\}\|_2^2=4J_s^2.
+\end{equation}
+The order of limits is part of the result. It is not a uniform
+finite-time estimate. Nor does it determine what survives after all
+four terms in \eqref{eq:four} are multiplied, summed and projected
+onto a particular singlet subspace.
+
+\begin{center}
+\begin{tabular}{crr}
+\toprule
+$\lambda$, $p=128$, $J_s=1$ & mixed norm$/N$ & anomalous norm$/N$\\
+\midrule
+0.25 & 3.98972538 & 3.95849537\\
+0.50 & 3.97446219 & 3.94329182\\
+1.00 & 3.92938402 & 3.89844955\\
+\bottomrule
+\end{tabular}
+\end{center}
+Finite-$p$ deviations are retained rather than reported as numerical
+error. The saved calculations include five exact integer-matrix
+Hamiltonians, 77 combinatorial cases, 54 direct monomial covariance
+checks, and 15 evaluations at 80-digit precision. The four-operator
+identity was also checked on explicit odd matrices. These validate
+the stated formulas; no real-time double-scaling extrapolation is used.
+
+\section{The next construction}
+The immediate target is the projected algebra and covariance of
+$S(t_1,t_2)=\sum_i c_i^\dagger(t_1)c_i(t_2)$, retaining all four
+terms in \eqref{eq:four}. We should identify its physical polarization
+and any required nonlinear dressing before applying a meson
+projection. The known bulk collective-action route \cite{CDP}
+provides another concrete comparison: match its quadratic internal
+operator and then interaction vertices. The familiar SYK bilocal
+construction \cite{JSY} provides useful methods, but its conformal
+infrared saddle does not supply this infinite-temperature complex
+double-scaled map. This is where the next calculation begins.
+
+\newpage
+\section*{Reproducibility and scope}
+The bulk calculation uses the preceding stage's 256-mode wavefunctions
+at $a=0$ and retains only six output eigenstates. Full source moments
+are evaluated analytically; omitted contributions are recorded
+separately. They are differences from a converged finite-basis result,
+not interval-certified spectral bounds.
+
+The microscopic calculation uses normalized trace, standard CAR,
+centred Gaussian couplings, and the variance specified above. Exact
+matrix tests use Gaussian-integer entries with seed 110630; their
+integer bounds are checked before conversion to rational norms.
+The general proofs use Clifford contractions and subset combinatorics,
+not a fit to these small systems. No finite-gravity interaction kernel
+or microscopic bulk translation is inferred from these norms alone.
+
+The canonical bulk transform and operator-size method are established
+literature. The formulas here apply them to the present normalization
+and matching question; no priority claim is made. The next test must
+address the full singlet projection rather than merely repeat the
+unprojected positive-norm calculation.
+
+\begin{thebibliography}{9}
+\bibitem{Itakura} K.~Itakura, \emph{Boson Expansion Methods in
+(1+1)-dimensional Light-Front QCD},
+\href{https://arxiv.org/abs/hep-th/9604032}{hep-th/9604032v2}.
+\bibitem{FLZ} V.~A.~Fateev, S.~L.~Lukyanov and A.~B.~Zamolodchikov,
+\emph{On mass spectrum in 't Hooft's 2D model of mesons},
+\href{https://arxiv.org/abs/0905.2280}{arXiv:0905.2280v2}.
+\bibitem{RSS} D.~A.~Roberts, D.~Stanford and A.~Streicher,
+\emph{Operator growth in the SYK model},
+\href{https://arxiv.org/abs/1802.02633}{arXiv:1802.02633}.
+\bibitem{CDP} M.~Cavicchi, P.~Di Vecchia and I.~Pesando,
+\emph{The Master Field of QCD$_2$ and the 't Hooft Equation},
+\href{https://arxiv.org/abs/hep-th/9306091}{hep-th/9306091}.
+\bibitem{JSY} A.~Jevicki, K.~Suzuki and J.~Yoon,
+\emph{Bi-Local Holography in the SYK Model},
+\href{https://arxiv.org/abs/1603.06246}{arXiv:1603.06246}.
+\end{thebibliography}
+\end{document}

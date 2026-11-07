@@ -1,0 +1,120 @@
+{
+  "created_at_utc": "2026-11-06T06:58:21.554216+00:00",
+  "status": "Saved locally; no publication",
+  "scientific_status": "Adjacent-charge coherent transform and exact signed first moments; full same-J half-filled S-A cross derived. Its energy-square-subtracted cross equals the S residual variance. The fixed-sector norm of W2 A minus S, weighted A tails and complete old-span projection remain open.",
+  "current_git_head": "714d038bb605cfcffdc351e4dcc62aa95237d25f",
+  "git_commit_created": false,
+  "git_push_performed": false,
+  "archive_created": false,
+  "parent_manifest_sha256": "c9e7c29533cac72ea1514fcb0aa75f093db43c57dc431bac5f36ee5cc995ae01",
+  "previous_stage_scientific_files_unchanged": [
+    "code/memory_parity_moments.py",
+    "code/check_memory_parity_gram.py",
+    "code/check_memory_parity_limit.py",
+    "code/build_memory_parity_gram.ps1",
+    "code/record_memory_parity_gram.py",
+    "manuscript/susskind-memory-parity-gram/main.tex",
+    "output/pdf/de-sitter-susskind-memory-parity-gram.pdf",
+    "notes/susskind-memory-parity-gram.md",
+    "literature/susskind-memory-parity-gram-sources.md",
+    "journal/2026-11-06-susskind-memory-parity-gram.md",
+    "results/susskind-memory-parity-gram/car-gram.json",
+    "results/susskind-memory-parity-gram/initial-memory_parity_moments.py",
+    "results/susskind-memory-parity-gram/limit-checks.json",
+    "results/susskind-memory-parity-gram/main.log",
+    "results/susskind-memory-parity-gram/signed-moments.json",
+    "results/susskind-memory-parity-gram/verification-issues.txt"
+  ],
+  "checks": {
+    "embedded_covariance_identities": 1925,
+    "signed_unsigned_moments": 556,
+    "full_charged_maps": 10,
+    "complex_entries": 306152,
+    "full_car_coordinate_pairs": 26227,
+    "contiguous_identities": 384,
+    "full_rank_high_precision_cases": 12
+  },
+  "environment": {
+    "python": "3.14.5",
+    "calculations": [
+      {
+        "python": "3.14.5"
+      },
+      {
+        "python": "3.14.5",
+        "numpy": "2.4.6",
+        "sympy": "1.14.0"
+      },
+      {
+        "python": "3.14.5",
+        "numpy": "2.4.6",
+        "sympy": "1.14.0"
+      },
+      {
+        "python": "3.14.5",
+        "mpmath": "1.3.0",
+        "sympy": "1.14.0"
+      }
+    ]
+  },
+  "build": {
+    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File code/build_memory_coherent_cross.ps1",
+    "compiler": "This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5 Portable) (preloaded format=pdflatex 2026.9.19)  6 NOV 2026 14:53",
+    "passes": 2,
+    "pages": 6,
+    "render_command": "pdftoppm -r 95 -png output/pdf/de-sitter-susskind-memory-coherent-cross.pdf tmp/pdfs/susskind-memory-coherent-cross-build/page",
+    "visual_review": "All six final page PNGs viewed individually at 95 dpi. Equations, citations and pagination readable without overlap or clipping."
+  },
+  "failures": [
+    {
+      "record": "results/susskind-memory-coherent-cross/verification-issues.txt",
+      "scope": "Two LaTeX failures: undefined mathscr, then unavailable mathrsfs. Switched to standard mathcal. Scientific calculations all passed first execution."
+    }
+  ],
+  "process_state": "All computations, compilation and rendering terminal; CAR session 90090 exited zero.",
+  "evidence_scope": "Analytic finite transform and cross limits with uniform input tails; Casimir proxy converted using a weak positive fixed-sector norm bound. Full-Fock norm is not identified with the exact half-filled norm. Decimal refinement is not an interval certificate; no time-dependent spectrum claimed.",
+  "reference_hashes": {
+    "notes/susskind-singlet-kernel.md": "330a6875d4d937dede75bf907afaee7694eb3384aeb0b61f4e73704e6b417d93",
+    "manuscript/susskind-singlet-kernel/main.tex": "d456ee9ad5d236c30df0158fbab099aff1f27901e90c49d04cd1537b247d041a",
+    "notes/susskind-memory-parity-gram.md": "6c8dc551ecec7b0207629e9794af13bdabc6dcea298995c5abde9a616577f1dc",
+    "notes/susskind-memory-two-charge.md": "7d49a333d6205454eb60b2e37d989aaf183944937d8e6216dbd2e2d82242ea60"
+  },
+  "hashes": {
+    "code/memory_coherent_cross.py": "557f5124649be17d9a2c5f35536e6354ad69c46a1c4993783dae0b6e92e2566f",
+    "code/check_memory_coherent_transform.py": "ebea03cd397129f22c39a40da72059a32d1b9844d479f4f8352bbc37a3fa75c1",
+    "code/check_memory_coherent_car.py": "13b2c0cd70ae5ace5d733595b53bbca8295d8c73a4c66445341a9c16dda6e296",
+    "code/check_memory_coherent_channels.py": "e9a94505c3d03084ac61e80ce7749b35177a19988df2e8fe2452cc13c87af200",
+    "code/check_memory_coherent_limit.py": "91e1c237e19cfa2da924a30610863fdcce5117130f369998a29a62f1ba415391",
+    "code/build_memory_coherent_cross.ps1": "93636047193d58ad17bb2eb90d600ac852d206580776af7e4d4e689684628c64",
+    "code/record_memory_coherent_cross.py": "2d64e1fe973e2c7c6df2dede52c230ece8db7d3ad5780ae8f1d73417ecf1d120",
+    "manuscript/susskind-memory-coherent-cross/main.tex": "aa42f2c60e134bfb8d5a02f0a8abdc2672687b469314621b8c8aeeb32110d5a2",
+    "output/pdf/de-sitter-susskind-memory-coherent-cross.pdf": "07ca8e9b83989b97e1e3a54b6b1edde557dc0ebaa5607e6e48a33f958b3e0c79",
+    "notes/susskind-memory-coherent-cross.md": "cfa9af76412a22fbfe432656fdf7548c2bd18fe754408f5fc6f7f9bb151c35e8",
+    "literature/susskind-memory-coherent-cross-sources.md": "d820ef624a821736f7b1ec1bf1ae12f8941c4c1fdf7feec1e9bd4dbf9fe9a113",
+    "journal/2026-11-06-susskind-memory-coherent-cross.md": "3db7d76cd7d82d71c9698f9effd77707e61f8d758ea3d2485868627df9df0efc",
+    "README.md": "b603a479b87f8c07f351adadfe409c93fb82eea1a5ce470240474c8070416ed3",
+    "PLAN.md": "2d2e276cf875c58b9acdebbefd4da32945b254fa6f6420d10dc0411258b3fadd",
+    "NEXT.md": "113cb384e6cd282db29e77b49c06d3749155ff9ea94a5b82a794dc58db0960ac",
+    "results/susskind-memory-coherent-cross/car-cross.json": "d959c89cfdff4c57b1ba2c1cb5def0f76c7e45e51a55584123e8aabc6ea021b4",
+    "results/susskind-memory-coherent-cross/charged-map-checks.json": "a9e2771cadf583813f382a46b4624c1a406e308b0a5c09954cddec6bb9c5e308",
+    "results/susskind-memory-coherent-cross/initial-main.tex": "1e893d8257a1e3b762135b3310e3bc3bea73ae71354014a48f39e8d11cfef91d",
+    "results/susskind-memory-coherent-cross/initial-pass1.txt": "7b0c47fb4822f4d3a217f138b1af3f8c9ce197b90014b576897f48c23505bff9",
+    "results/susskind-memory-coherent-cross/limit-checks.json": "4d348e5b0087b11fb9f4126f9ce7749bad83c89e07f0eaacb4f4abeff8b0ea40",
+    "results/susskind-memory-coherent-cross/main.log": "a294800dc13024491d3dc876e8602b80a53b910a01e9bdb67f0341b6a32225fe",
+    "results/susskind-memory-coherent-cross/missing-package-pass1.txt": "a21bd12e36f7e2daf9f13216240ec377410ec3629de35a390925dcf28b26937a",
+    "results/susskind-memory-coherent-cross/transform-checks.json": "1c08f70eae40dc360daec467c0133673e98b2f7dff0843e307ef2e9c61724433",
+    "results/susskind-memory-coherent-cross/verification-issues.txt": "3d776494515df81e32e57f3db01dc8d781f8e7adfdb8b837921c8b19e9827dd5"
+  },
+  "render_hashes": {
+    "tmp/pdfs/susskind-memory-coherent-cross-build/page-1.png": "64a36e69d39cfa922698ff2494195f820baa161b1871bad1048d90fbdd047628",
+    "tmp/pdfs/susskind-memory-coherent-cross-build/page-2.png": "46ea8361a9d51e249f1397d39df118e533d177158033c257977333dc92b5edc1",
+    "tmp/pdfs/susskind-memory-coherent-cross-build/page-3.png": "03e43cf301fb7ce7894b9903cd39cd54051ef6651492ced44ea35677312fd1b6",
+    "tmp/pdfs/susskind-memory-coherent-cross-build/page-4.png": "76f6b84003e8fb5efc1632246b1b4fcd773a80a924a2858555ac47ada907b22c",
+    "tmp/pdfs/susskind-memory-coherent-cross-build/page-5.png": "263b21cea0f192105e3a6e3ef240fb86ed305665f6a6cb651163910cb4b69333",
+    "tmp/pdfs/susskind-memory-coherent-cross-build/page-6.png": "3a11ecb0e161cd439d217d7d7e1677f027d75caa1bb26e395e15dd38c1abb318"
+  },
+  "build_pass_hashes": {
+    "pass1.txt": "dfa306aad800853924646a8e4f488a2d756ca137c4b8ce85121fa659c94222df",
+    "pass2.txt": "da8f3e7876019d3c72c1ee237b6da25aed81bd007d699c32820f6d98940cc8b1"
+  }
+}

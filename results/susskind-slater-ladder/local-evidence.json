@@ -1,0 +1,367 @@
+{
+  "status": "Local research milestone; long-term de Sitter research remains open",
+  "created_at_utc": "2026-11-06T22:15:39.150678+00:00",
+  "scientific_status": "Saved finite CAR/Wick fixtures accompany the fixed-word pure Slater-ladder proof, its full-H first-step return decomposition, and the literature interface.",
+  "proof_scope": "Analytic conclusions and hypotheses are in the hash-bound stage documents. This recorder verifies provenance, saved scalar arithmetic and finite coverage; it does not prove an analytic limit or rerun CAR/Wick science.",
+  "proof_documents": [
+    "notes/susskind-slater-ladder.md",
+    "notes/susskind-slater-ladder-proof.md",
+    "notes/susskind-slater-ladder-literature-interface.md",
+    "notes/susskind-bilocal-polarization-interface.md",
+    "notes/susskind-bilocal-kms-polarization.md",
+    "manuscript/susskind-slater-ladder/main.tex"
+  ],
+  "parameters": "Standard complex CAR, m=N/2, unit Gaussian variance in finite fixtures, reference Slater state and saved normalization. Analytic fixed-word double-scaling and self-averaging scopes are given separately in the proof.",
+  "previous_evidence": {
+    "results/susskind-bilocal-fourth-tail/local-evidence.json": {
+      "sha256": "9055c2f1249cec6e4b2347a639532dd2f39ea8bcb381a880d77dd748a58692c8",
+      "unchanged_scientific_files": [
+        "PROJECT.md",
+        "code/build_bilocal_fourth_tail.ps1",
+        "code/check_bilocal_charged_reassembly.py",
+        "code/check_bilocal_coherence_channel.py",
+        "code/check_bilocal_tagged_covariance.py",
+        "code/record_bilocal_fourth_tail.py",
+        "code/record_bilocal_reconstruction.py",
+        "journal/2026-11-07-susskind-bilocal-fourth-tail.md",
+        "literature/susskind-bilocal-clifford-riesz-sources.md",
+        "literature/susskind-bilocal-fourth-tail-sources.md",
+        "manuscript/susskind-bilocal-fourth-tail/main.tex",
+        "notes/susskind-bilocal-charged-tail-audit.md",
+        "notes/susskind-bilocal-four-point-transfer.md",
+        "notes/susskind-bilocal-fourth-tail-charged-proof.md",
+        "notes/susskind-bilocal-fourth-tail-diagram-draft.md",
+        "notes/susskind-bilocal-fourth-tail-operator-draft.md",
+        "notes/susskind-bilocal-fourth-tail.md",
+        "notes/susskind-bilocal-full-four-point-transfer.md",
+        "output/pdf/de-sitter-susskind-bilocal-fourth-tail.pdf",
+        "results/susskind-bilocal-fourth-tail/charged-reassembly-checks.json",
+        "results/susskind-bilocal-fourth-tail/coherence-channel-checks.json",
+        "results/susskind-bilocal-fourth-tail/main.log",
+        "results/susskind-bilocal-fourth-tail/tagged-covariance-checks.json",
+        "results/susskind-bilocal-fourth-tail/diagnostics/initial-failed-main.log",
+        "results/susskind-bilocal-fourth-tail/diagnostics/initial-failed-pass1.txt",
+        "results/susskind-bilocal-fourth-tail/diagnostics/initial-overfull-main.log"
+      ],
+      "excluded_mutable_plans": [
+        "NEXT.md",
+        "PLAN.md",
+        "README.md"
+      ]
+    },
+    "results/susskind-bilocal-four-point/local-evidence.json": {
+      "sha256": "85701857a8e6f0040f837168dbf32077716505b11d36389ef48f9be0efb8ed21",
+      "unchanged_scientific_files": [
+        "PROJECT.md",
+        "code/bilocal_four_point_transfer_check.py",
+        "code/bilocal_multisource_chords.py",
+        "code/build_bilocal_four_point.ps1",
+        "code/check_bilocal_four_sources.py",
+        "code/check_bilocal_mixed_otoc.py",
+        "code/check_bilocal_multisource_moments.py",
+        "code/complex_syk_dictionary.py",
+        "code/memory_body_source_chords.py",
+        "code/memory_size_marked_chords.py",
+        "code/mixed_cubic_otoc.py",
+        "code/record_bilocal_four_point.py",
+        "code/record_bilocal_reconstruction.py",
+        "code/singlet_coefficient.py",
+        "code/singlet_multimark.py",
+        "code/singlet_otoc.py",
+        "journal/2026-11-07-susskind-bilocal-four-point.md",
+        "literature/susskind-bilocal-four-point-sources.md",
+        "manuscript/susskind-bilocal-four-point/main.tex",
+        "manuscript/susskind-mixed-cubic/main.tex",
+        "notes/susskind-bilocal-four-point-transfer.md",
+        "notes/susskind-bilocal-four-point.md",
+        "notes/susskind-bilocal-multisource-proof.md",
+        "output/pdf/de-sitter-susskind-bilocal-four-point.pdf",
+        "results/susskind-bilocal-four-point/finite-four-source-checks.json",
+        "results/susskind-bilocal-four-point/joint-moment-checks.json",
+        "results/susskind-bilocal-four-point/main.log",
+        "results/susskind-bilocal-four-point/mixed-otoc-checks.json",
+        "results/susskind-bilocal-four-point/normalized-commutator.png",
+        "results/susskind-bilocal-four-point/transfer-checks.json",
+        "results/susskind-memory-joint-regression/local-evidence.json",
+        "results/susskind-singlet-multimark/local-evidence.json"
+      ],
+      "excluded_mutable_plans": [
+        "NEXT.md",
+        "PLAN.md",
+        "README.md"
+      ]
+    }
+  },
+  "checks": {
+    "replay": "Complete right-action Dyck-word coverage, scalar forward moments, pairing/count arithmetic and full-H first-step hypergeometric weights.",
+    "saved_certification": "Full CAR/Wick moments, finite backward corrections and the nonzero backward-pair CAR witness are bound original driver outputs; CAR actions and label assignments are not rerun.",
+    "saved_backward_witnesses": 4,
+    "counts": {
+      "non_Dyck_words_zero_by_right_action": 136,
+      "Gaussian_label_assignments": 1537310,
+      "forward_CAR_interval_comparisons": 754030,
+      "word_moments": 46,
+      "nonzero_backward_word_corrections": 25,
+      "finite_systems": 4,
+      "asymptotic_rows": 6,
+      "linear_cumulant_checks": 189
+    },
+    "asymptotic_replay": "Six saved scalar hypergeometric distributions, factorial moments and finite total-variation diagnostics; not a proof of convergence.",
+    "cumulant_replay": "All 189 saved rational linear-combination variances and fourth cumulants, including both analytic bounds."
+  },
+  "sealed_scientific_output_hashes_verified": {
+    "exact-checks.json": "c3ffab60baf7b8302dfe73312bd5a386d9a5b942a893bc34d4dc5ba956b18ac1"
+  },
+  "input_hashes_verified": {
+    "exact-checks.json": {
+      "code/check_slater_ladder.py": "78d9a7a7ae45b636de7efe53e175dedca97844d473cab675fba24677523b0787",
+      "results/susskind-bilocal-fourth-tail/local-evidence.json": "9055c2f1249cec6e4b2347a639532dd2f39ea8bcb381a880d77dd748a58692c8",
+      "results/susskind-bilocal-four-point/local-evidence.json": "85701857a8e6f0040f837168dbf32077716505b11d36389ef48f9be0efb8ed21"
+    }
+  },
+  "parameter_hashes_recorded": {
+    "exact-checks.json": {
+      "origin": "Verified against original saved parameter digest",
+      "sha256": "babd1b557801241b185ab2632ee270137dae0a2ee33d96a90eb8e7706c288d7e",
+      "parameters": {
+        "fixtures_N_p_maximum_pairs": [
+          [
+            4,
+            1,
+            4
+          ],
+          [
+            6,
+            1,
+            3
+          ],
+          [
+            6,
+            2,
+            3
+          ],
+          [
+            8,
+            2,
+            3
+          ]
+        ],
+        "filling": "m=N/2",
+        "normalization": "unit Gaussian variance, sigma_squared=L=binom(m,p)binom(N-m,p)",
+        "CAR": "{c_i,c_j^dagger}=delta_ij",
+        "creators": "ascending operator order",
+        "word_order": "left to right product; rightmost acts first; + creates a particle-hole block",
+        "expected_maximum_label_assignments": 1600000,
+        "asymptotic_parameters": {
+          "lambda_N": "1/2",
+          "p_values": [
+            2,
+            4,
+            8,
+            16,
+            32,
+            64
+          ],
+          "maximum_r": 8
+        },
+        "scope": "Finite exact CAR and Wick identities; large-p points are diagnostics, not proof of convergence"
+      }
+    }
+  },
+  "evidence_scopes": {
+    "exact-checks.json": "Finite exact CAR and Wick identities; large-p points are diagnostics, not proof of convergence"
+  },
+  "recorded_driver_environments": {
+    "exact-checks.json": {
+      "python": "3.14.5",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "arithmetic": "exact integers/Fraction; asymptotic decimal summaries use Python float"
+    }
+  },
+  "git_commit_created": false,
+  "git_push_performed": false,
+  "archive_created": false,
+  "external_reply_sent": false,
+  "build": {
+    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File code/build_slater_ladder.ps1",
+    "pages": 9,
+    "passes": 2,
+    "pass_records": [
+      {
+        "pass_number": 1,
+        "path": "tmp/pdfs/susskind-slater-ladder-build/pass1.txt",
+        "sha256": "c3d2c5f3772cb21d19e0bc0d019fc89e88d163ec773ca69eb3e82b53c038daf9"
+      },
+      {
+        "pass_number": 2,
+        "path": "tmp/pdfs/susskind-slater-ladder-build/pass2.txt",
+        "sha256": "c3d2c5f3772cb21d19e0bc0d019fc89e88d163ec773ca69eb3e82b53c038daf9"
+      }
+    ],
+    "compiler_header": "This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5 Portable) (preloaded format=pdflatex 2026.9.19)  7 NOV 2026 06:15",
+    "render_command": "pdftoppm -r 95 -png output/pdf/de-sitter-susskind-slater-ladder.pdf tmp/pdfs/susskind-slater-ladder-render/page",
+    "final_render_filenames": [
+      "page-1.png",
+      "page-2.png",
+      "page-3.png",
+      "page-4.png",
+      "page-5.png",
+      "page-6.png",
+      "page-7.png",
+      "page-8.png",
+      "page-9.png"
+    ],
+    "render_metadata": {
+      "tmp/pdfs/susskind-slater-ladder-render/page-1.png": {
+        "width_pixels": 786,
+        "height_pixels": 1111,
+        "pixels_per_metre": [
+          3740,
+          3740
+        ],
+        "density_units": "metres",
+        "nominal_dpi": 95
+      },
+      "tmp/pdfs/susskind-slater-ladder-render/page-2.png": {
+        "width_pixels": 786,
+        "height_pixels": 1111,
+        "pixels_per_metre": [
+          3740,
+          3740
+        ],
+        "density_units": "metres",
+        "nominal_dpi": 95
+      },
+      "tmp/pdfs/susskind-slater-ladder-render/page-3.png": {
+        "width_pixels": 786,
+        "height_pixels": 1111,
+        "pixels_per_metre": [
+          3740,
+          3740
+        ],
+        "density_units": "metres",
+        "nominal_dpi": 95
+      },
+      "tmp/pdfs/susskind-slater-ladder-render/page-4.png": {
+        "width_pixels": 786,
+        "height_pixels": 1111,
+        "pixels_per_metre": [
+          3740,
+          3740
+        ],
+        "density_units": "metres",
+        "nominal_dpi": 95
+      },
+      "tmp/pdfs/susskind-slater-ladder-render/page-5.png": {
+        "width_pixels": 786,
+        "height_pixels": 1111,
+        "pixels_per_metre": [
+          3740,
+          3740
+        ],
+        "density_units": "metres",
+        "nominal_dpi": 95
+      },
+      "tmp/pdfs/susskind-slater-ladder-render/page-6.png": {
+        "width_pixels": 786,
+        "height_pixels": 1111,
+        "pixels_per_metre": [
+          3740,
+          3740
+        ],
+        "density_units": "metres",
+        "nominal_dpi": 95
+      },
+      "tmp/pdfs/susskind-slater-ladder-render/page-7.png": {
+        "width_pixels": 786,
+        "height_pixels": 1111,
+        "pixels_per_metre": [
+          3740,
+          3740
+        ],
+        "density_units": "metres",
+        "nominal_dpi": 95
+      },
+      "tmp/pdfs/susskind-slater-ladder-render/page-8.png": {
+        "width_pixels": 786,
+        "height_pixels": 1111,
+        "pixels_per_metre": [
+          3740,
+          3740
+        ],
+        "density_units": "metres",
+        "nominal_dpi": 95
+      },
+      "tmp/pdfs/susskind-slater-ladder-render/page-9.png": {
+        "width_pixels": 786,
+        "height_pixels": 1111,
+        "pixels_per_metre": [
+          3740,
+          3740
+        ],
+        "density_units": "metres",
+        "nominal_dpi": 95
+      }
+    },
+    "final_pages_visually_inspected": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "visual_review_attestation": "Caller supplied --visual-review-complete after final-page inspection. Recorder checks hashes, page counts, 95dpi PNG metadata and freshness; it does not see the pages."
+  },
+  "diagnostics": {
+    "preserved_files": []
+  },
+  "environment": {
+    "python": "3.14.5",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "dependencies": "Python standard library only"
+  },
+  "process_state": "Saved science/build/render artifacts only; recorder executes no scientific main, compiler, renderer or Git.",
+  "hashes": {
+    "NEXT.md": "fd0c37ee1f6b1dcdba32c9432982e4d01c999aab564ea7f2afd2669b9bf5733b",
+    "PLAN.md": "ca328dca01438f7e6f0fb568541b1df7f88fb7196c45f552295c2c5b110a2f97",
+    "PROJECT.md": "5c7cab9a9abd28d354b07a94aee40aedcca351bb4eff8b0cb07e8428058fd00a",
+    "README.md": "2337b98e14063c8ca8af2afd14688ca50f4e630428c70466ed4dfe493c5f95ce",
+    "code/build_slater_ladder.ps1": "8023efef4b567af470b2d078155ad1ac810679714a2ec0310c4062bc008aad20",
+    "code/check_slater_ladder.py": "78d9a7a7ae45b636de7efe53e175dedca97844d473cab675fba24677523b0787",
+    "code/record_bilocal_reconstruction.py": "aa112ed1799410a4cf210939fbd9052035218effd533bf86b2f89ce22e7b11a6",
+    "code/record_slater_ladder_evidence.py": "d9d2722aa12b7c6dd4d4320555fc9c8e754c7a982261a5da3ceefae7bcb85a0c",
+    "journal/2026-11-07-susskind-slater-ladder.md": "4c2662b929522f8221e2d7c90c581f19a2d7174319b368fee04dc243fd8034e8",
+    "literature/susskind-bilocal-canonical-sources.md": "0ae84c9fb947fd781a31d8a90d754165bdd78f7bbf4efd50467e8d45e23a5188",
+    "literature/susskind-bilocal-polarization-sources.md": "5bfc2493174dca5f16811af8bf42b9c151e35ab25f1b1320a284f764f550e3ac",
+    "manuscript/susskind-slater-ladder/main.tex": "138a4f0a0ecaf940a39eccb668084fa64548a34d5927ac1c079844d85de60c30",
+    "notes/susskind-bilocal-kms-polarization.md": "e62c0205684d1896a7ad878d420bc58d39f100236f0f200644edd01d8fa887fa",
+    "notes/susskind-bilocal-polarization-interface.md": "80064ffea78093f16c7045a6f3ff3953448df834f9b4e426b7ed7d1f11db7023",
+    "notes/susskind-slater-ladder-literature-interface.md": "c1b71206443f1a2b539a727d7dd62c38e308d368b925e15b3623daf36cb920ee",
+    "notes/susskind-slater-ladder-proof.md": "721c65f368ed9bab747a9c66e78a156633c640323246b2c7f88257c3477ca8f9",
+    "notes/susskind-slater-ladder.md": "a372092029c41f18075a7f6c7f98d890a8e7359019430eea27bae08cd7b483ab",
+    "output/pdf/de-sitter-susskind-slater-ladder.pdf": "67dd39ad14bc5445833e74cdfa7c9e24838570332a897be861f62249aecbc782",
+    "results/susskind-bilocal-four-point/local-evidence.json": "85701857a8e6f0040f837168dbf32077716505b11d36389ef48f9be0efb8ed21",
+    "results/susskind-bilocal-fourth-tail/local-evidence.json": "9055c2f1249cec6e4b2347a639532dd2f39ea8bcb381a880d77dd748a58692c8",
+    "results/susskind-slater-ladder/exact-checks.json": "c3ffab60baf7b8302dfe73312bd5a386d9a5b942a893bc34d4dc5ba956b18ac1",
+    "results/susskind-slater-ladder/main.log": "58434e140a8589f26734ca025320c3020c56764ee3152a5efe54f56de71de7ce"
+  },
+  "render_hashes": {
+    "tmp/pdfs/susskind-slater-ladder-render/page-1.png": "ff595c462d0700bd1041d715c19bf374a9781fc12a6b754636459b8499a241a2",
+    "tmp/pdfs/susskind-slater-ladder-render/page-2.png": "e6f4b6c4f2f00914b21a11fe36a418d5b20fa419309f65f625d45bba6b12c5d2",
+    "tmp/pdfs/susskind-slater-ladder-render/page-3.png": "674fc90a6c64f2088a9f4cbd5e093d8bbdf04e14fa2c484f11a8fc80ed40408f",
+    "tmp/pdfs/susskind-slater-ladder-render/page-4.png": "030302c825473690e91a7592de3b490a65bdb9b9518f45fdc8a8674366a83a35",
+    "tmp/pdfs/susskind-slater-ladder-render/page-5.png": "0c27cc61d281208b261e0c9d0c40b2c9b1b4ab62c6c1331d7d48fe4004079dbd",
+    "tmp/pdfs/susskind-slater-ladder-render/page-6.png": "c93fe9384773ef2b054f25e174db1499835ee22a3fd7ee71150249a533c45b4f",
+    "tmp/pdfs/susskind-slater-ladder-render/page-7.png": "43b581ce95888c22de8d3edf0f3633e40ab4f6ce68e868bdf0f20cb38a416a1d",
+    "tmp/pdfs/susskind-slater-ladder-render/page-8.png": "30a0bae5ce0026a84407d3d9dafb691b59be7cf412628a190c4f7f466997b66c",
+    "tmp/pdfs/susskind-slater-ladder-render/page-9.png": "39e4e793a666b5569dc87b5e398608f383b6be8d8d0c7d9ce3e65be402062703"
+  },
+  "build_pass_hashes": {
+    "tmp/pdfs/susskind-slater-ladder-build/pass1.txt": "c3d2c5f3772cb21d19e0bc0d019fc89e88d163ec773ca69eb3e82b53c038daf9",
+    "tmp/pdfs/susskind-slater-ladder-build/pass2.txt": "c3d2c5f3772cb21d19e0bc0d019fc89e88d163ec773ca69eb3e82b53c038daf9"
+  }
+}

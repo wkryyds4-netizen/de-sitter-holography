@@ -1,0 +1,368 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,microtype}
+\usepackage[margin=24mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\trm}{\operatorname{tr}_m}
+\newcommand{\trz}{\operatorname{tr}_0}
+\DeclareMathOperator{\tr}{tr}
+\newcommand{\mcM}{\mathcal M}
+\newcommand{\mcR}{\mathcal R}
+\newcommand{\Jh}{\mathcal J_h}
+\title{From the charged force to the mean memory kernel\\A fixed-time bridge for the temporal singlet}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Local research note --- 6 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+The projected memory of the complex SYK temporal singlet has a
+controlled scalar limit. After energy centering, its annealed trace,
+multiplied by the interaction order $p$, converges to $4J_s^2$ times
+the existing $q$-Mehler probe kernel with probe parameter $q$.
+A marked-site contraction argument retains the dependence of the
+charged force on the same Hamiltonian. Two finite-system bounds
+connect this force to orthogonal propagation. Integration gives the
+first $1/p$ correction to the elementary fermion propagator, recovering
+the known $\log\cosh$ form in the subsequent small-$\lambda$ limit.
+Exact renewal coefficients provide an interface to the operator
+fluctuations that remain to be calculated.
+\end{abstract}
+\section{Conventions and the result}
+Use $\{c_i,c_j^\dagger\}=\delta_{ij}$, $\hbar=1$, string Hamiltonian
+$H=H_s$, and the full infinite-temperature, zero-chemical-potential
+trace $\trz=2^{-N}\operatorname{Tr}$. The neutral Hamiltonian is
+$H=\sum_{I,J}J_{IJ}C_I^\dagger C_J$, with increasing $p$-subsets,
+$C_I=(C_I^\dagger)^\dagger$, Hermitian Gaussian $J$ and covariance
+\begin{equation}
+ \EE J_{IJ}J_{KL}=w\delta_{IL}\delta_{JK},\qquad
+ w=4^p\frac{J_s^2N}{p^2}\left(\frac{p!}{N^p}\right)^2.
+\end{equation}
+Overlapping $I,J$ are included. Take $N,p\to\infty$ first, with
+$p^2/N\to\lambda>0$; set $q=e^{-4\lambda}$ and
+$\sigma^2=J_s^2/\lambda$. Time stays in a fixed compact interval.
+The charge-block memory below has the scalar limit
+\begin{equation}\label{eq:main}
+ p\,\EE\trz\widehat{\mcM}(s)\longrightarrow4J_s^2G_q(s),\qquad
+ \widehat{\mcM}_m(s)=e^{-ihs/2}\mcM_m(s)e^{-ihs/2}.
+\end{equation}
+Here $G_q(0)=1$; its two-energy measure is specified on page~5.
+Equation~\eqref{eq:main} concerns a mean, not an operator limit.
+
+\newpage
+\section{Exact first-return coefficients}
+For $m>0$, let $h=H_m$, $K=1_N\otimes H_{m-1}$, and
+\begin{equation}
+ V\psi=m^{-1/2}\sum_i|i\rangle c_i\psi,\quad
+ P=VV^\dagger,\quad Q=1-P,\quad
+ \mcR=QKV,\quad K_\perp=QKQ .
+\end{equation}
+Then $V^\dagger V=1$ and $h_{\rm eff}=V^\dagger KV=(1-r)h$,
+where $r=p/m$. The preceding bilocal construction gives
+\begin{align}
+ F(s)&=V^\dagger e^{iKs}V,&
+ F'(s)&=ih_{\rm eff}F(s)-\int_0^s\mcM(s-u)F(u)\,du,\\
+ \mcM(s)&=\mcR^\dagger e^{iK_\perp s}\mcR,&
+ G=\mcM(0)&=\frac{A_m}{m}-r^2h^2\geq0,\label{eq:G}\\
+ A&=\sum_i[H,c_i]^\dagger[H,c_i].\nonumber
+\end{align}
+Define $B_n=V^\dagger K^nV$, $B_0=1$, and the ordered recursion
+\begin{equation}\label{eq:renewal}
+ b_1=B_1,\qquad b_n=B_n-\sum_{j=1}^{n-1}b_jB_{n-j}.
+\end{equation}
+Insert $1=P+Q$ between consecutive factors of $K$ and split at the
+first return to $P$. This proves the recursion and
+\begin{equation}
+ b_n=V^\dagger K(QK)^{n-1}V,\qquad
+ b_{j+2}=\mcR^\dagger K_\perp^j\mcR\quad(j\geq0).
+\end{equation}
+This is the standard noncommuting first-return construction
+\cite{renewal}, applied to powers of this self-adjoint generator;
+it avoids building the full orthogonal space.
+
+For an explicit bridge to the derivative singlets, write
+$M_3=\sum_i c_i^\dagger\operatorname{ad}_H^3(c_i)$,
+$T_3=(M_3+M_3^\dagger)/2$ and $\Jh X=(hX+Xh)/2$. Direct expansion gives
+\begin{align}
+ B_2&=A_m/m+(1-2r)h^2,\\
+ B_3&=T_{3,m}/m+3\Jh A_m/m+(1-3r)h^3,\\
+ b_3&=T_{3,m}/m+(1+2r)\Jh A_m/m-r^2(1+r)h^3.
+\end{align}
+Consequently $\widehat{\mcM}(s)=G+isZ_1+O(s^2)$, with
+\begin{equation}\label{eq:Z}
+ mZ_1=m(b_3-\Jh G)=T_{3,m}+2r\Jh A_m-mr^3h^3.
+\end{equation}
+These are finite-$N$ operator identities. They do not identify the
+memory parameter $s$ with an external Heisenberg centre time.
+
+\newpage
+\section{A same-Hamiltonian force contraction}
+Let $D_i=[H,c_i]$, $D_i(s)=e^{iHs}D_ie^{-iHs}$ and
+\begin{equation}\label{eq:force}
+ \mathcal F_N(s)=\frac{2p}{N}\sum_i\EE\trz D_i^\dagger D_i(s).
+\end{equation}
+Its two-energy measure is positive: in an energy basis its weights are
+$(2p/N)2^{-N}\sum_i\EE|(D_i)_{ba}|^2$ at $(E_a,E_b)$.
+We claim convergence of every fixed polynomial moment to
+$4J_s^2\mu_q$, where $\mu_q$ is the normalized probe measure below.
+
+\paragraph{Paired force endpoints.}
+Expand $\sum_i\EE\trz D_i^\dagger H^uD_iH^v$ by Gaussian Wick
+contraction, keeping the site $i$ in the two commutators. In graphs
+where the force endpoints pair together, the corresponding oriented
+$p$-set has $p$ choices for $i$. Except for an expected $O(1)$ choices,
+this site lies in no other set, including the opposite set on its own
+chord. Isolate that one-site CAR factor. The unmodified Hamiltonian
+word contains either $n_i$ or $1-n_i$, of normalized trace $1/2$.
+The two commutators remove its creation/annihilation pair and leave
+the identity there. The remaining odd monomials have the same order;
+commuting the isolated site through the intervening even word adds
+no sign. Thus the force trace is exactly twice the original trace.
+
+Deleting one tagged site changes a set size from $p$ to $p-1$.
+For any fixed word length the pair-overlap means change by $O(p/N)$,
+and the probability of a triple overlap is $O(p^3/N^2)$.
+The remaining chord therefore has the Hamiltonian crossing weight
+$q$, including all of its crossings with the exterior chords.
+It is constrained to join the two force endpoints.
+
+\paragraph{Separately paired force endpoints.}
+If the two endpoints pair with different exterior insertions, the
+same derivative site must belong to the relevant sets of two
+independent chords. There are only $O(p^2/N)=O(1)$ such sites on
+average, instead of $p$. These diagrams vanish after normalization.
+For a fixed number of sets, hypergeometric factorial-moment bounds
+give uniformly bounded exponential moments of all pair overlaps.
+They control the extra local trace factors $2^{\text{overlap}}$.
+With one specified coincidence the same bounds leave an $O(1)$
+weighted count; without it they leave $p+O(1)$. Thus exceptional
+tags and different-chord pairings are $o(p)$ even after local-trace
+weighting. This also supplies uniform bounds for every fixed higher
+energy moment. The overlap method is the one underlying the complex
+chord rules \cite{BNR}; no independent randomness for $D_i$ is assumed.
+
+The surviving factor is $2p\sigma^2$ times the unit-normalized
+matter-chord moments. Multiplication by $2p/N$ gives
+$4\lambda\sigma^2=4J_s^2$. Positivity, higher even moment bounds
+and compact support of the candidate $\mu_q$ imply weak convergence
+by moment determinacy and uniform integrability. The bounded second
+frequency moment gives equicontinuity, hence convergence of
+$\mathcal F_N(s)$ uniformly on compact time intervals.
+
+\newpage
+\section{Removing the orthogonal propagation}
+On a fixed block put $D=KV-Vh=\mcR-rVh$, $g=\trm G$,
+$c=\trm h^2$. Two useful deterministic bounds are
+\begin{align}
+ \left|\trm e^{-ihs}\mcR^\dagger
+ (e^{iK_\perp s}-e^{iKs})\mcR\right|
+ &\leq\tfrac12s^2\trm G^2,\label{eq:orth}\\
+ \left|\trm e^{-ihs}
+ (\mcR^\dagger e^{iKs}\mcR-D^\dagger e^{iKs}D)\right|
+ &\leq2r\sqrt{gc}+r^2c.\label{eq:parallel}
+\end{align}
+For \eqref{eq:orth}, compare $K$ with the block-diagonal
+$K_0=Vh_{\rm eff}V^\dagger+QKQ$. A $Q$-to-$Q$ difference requires
+two off-diagonal transitions. Two Duhamel insertions give a triangle
+of area $s^2/2$. Including the exterior $\mcR$ factors, each integrand
+has four rectangular factors with the singular values of $\mcR$;
+the other factors are unitary or contractions. Schatten--4 H\"older
+therefore bounds the normalized trace by $\trm G^2$.
+Equation~\eqref{eq:parallel} follows by expanding
+$D=\mcR-rVh$ and using Hilbert--Schmidt Cauchy--Schwarz.
+
+The exact second moments, with normalized block trace, are
+\begin{align}
+ C_m=\EE\trm h^2&=w\binom mp\binom{N-m+p}p,\\
+ \EE\trm G&=C_m\frac{p(m-p)(N+1)}{m^2(N-m+1)}.
+\end{align}
+In the central window $|m-N/2|\leq N^{2/3}$ these imply
+$\EE g=O(p^{-1})$ and $r=O(p^{-1})$ uniformly. Also
+$\EE\trm A_m=C_mp(N+1-p)/(N-m+1)=O(p)$ there.
+The preceding singlet calculation gives the full-trace estimate
+$\EE\trz(A-a(Q_f))^2=O(1)$, with $a(m)=\EE\trm A_m$.
+Since $0\leq G\leq A_m/m$, the central-window average obeys
+$\EE\tr G^2=O(p^{-2})$.
+
+For completeness the charge tails are controlled, not discarded.
+Writing $T(X)=\sum_i c_i^\dagger Xc_i$, one has
+$A_m\leq2T(H_{m-1}^2)+2mh^2$ and
+$T(X)^2\leq mT(X^2)$. Gaussian fourth-moment bounds
+$\EE\trm h^4\leq3C_m^2$ then give the conservative estimate
+\begin{equation}
+ \EE\trm G^2\leq24(C_{m-1}^2+C_m^2).
+\end{equation}
+The uniform bound $C_m\leq(J_s^2/\lambda_N)e^{2\lambda_N}$ and
+binomial tail $2e^{-2N^{1/3}}$ absorb all polynomial factors;
+$m<p$ has $H_m=0$, and the $m=0$ memory is defined to vanish.
+
+After multiplication by $p$, \eqref{eq:orth} is $O(s^2/p)$ and
+\eqref{eq:parallel} is $O(p^{-1/2})$. Finally
+$D\psi=m^{-1/2}\sum_i|i\rangle D_i\psi$.
+Replacing $1/m$ by $2/N$ in the central window has relative error
+$O(N^{-1/3})$ and is controlled by the positive force mass.
+This proves \eqref{eq:main} from \eqref{eq:force}.
+
+\newpage
+\section{The existing kernel and a second route to its coefficient}
+In the standard continuous $q$-Hermite notation,
+$(a;q)_\infty=\prod_{n\geq0}(1-aq^n)$, set
+\begin{align}
+ E(\theta)&=\frac{2\sigma\cos\theta}{\sqrt{1-q}},&
+ \rho_q(\theta)&=\frac{(q;q)_\infty|(e^{2i\theta};q)_\infty|^2}{2\pi},\\
+ K_r(\theta,\phi)&=\frac{(r^2;q)_\infty}
+ {|(re^{i(\theta+\phi)};q)_\infty
+   (re^{i(\theta-\phi)};q)_\infty|^2},\\
+ d\mu_r&=\rho_q(\theta)\rho_q(\phi)K_r(\theta,\phi)\,d\theta\,d\phi,\\
+ G_r(s)&=\int_{[0,\pi]^2}e^{is[E(\phi)-E(\theta)]}\,d\mu_r.
+\end{align}
+This is the established probe kernel \cite{BNR}. The calculation
+above specifies why the present same-$J$ force selects $r=q$.
+
+There is an independent identity of weighted measures:
+\begin{equation}\label{eq:mehlerlimit}
+ \lim_{r\uparrow1}\frac{[E(\theta)-E(\phi)]^2}{1-r}\,d\mu_r
+ =2\sigma^2\,d\mu_q.
+\end{equation}
+To verify it, isolate the $n=0$ denominator factors and use
+\begin{equation}
+ |1-e^{i(\theta+\phi)}|^2|1-e^{i(\theta-\phi)}|^2
+ =4(\cos\theta-\cos\phi)^2.
+\end{equation}
+The numerator divided by $1-r$ tends to $2(q;q)_\infty$;
+the remaining denominator is precisely the one at $r=q$.
+Since $(q;q)_\infty=(1-q)(q^2;q)_\infty$, the factor in
+\eqref{eq:mehlerlimit} follows. This is an almost-everywhere density
+limit and a weak measure limit, not equality on the diagonal:
+the left density is zero there for every $r<1$.
+For $r$ near one, $|1-re^{i\alpha}|^2\geq
+r|1-e^{i\alpha}|^2$ bounds the cancelled factors, and the remaining
+$q$ products are bounded away from zero. Dominated convergence
+rules out a residual diagonal delta mass.
+
+This identity checks the coefficient and kernel independently; it
+does not justify substituting a size-one fermion into a formula
+derived for double-scaled independent probes. The tagged-force
+argument on page~3 establishes the required microscopic limit.
+
+For numerical evaluation use the Jacobi operator
+$(T_q)_{n-1,n}=\sigma\sqrt{(1-q^n)/(1-q)}$. Then
+\begin{equation}
+ G_q(s)=\sum_{n\geq0}q^n
+ |\langle n|e^{-isT_q}|0\rangle|^2.
+\end{equation}
+In the subsequent small-$\lambda$ limit, the known probe contraction
+with $\Delta=1$ and energy scale $\sigma\sqrt{-\log q}=2J_s$ gives
+$G_q(s)\to\operatorname{sech}^2(2J_ss)$.
+
+\newpage
+\section{The first correction to elementary propagation}
+Define the averaged propagator with unit equal-time normalization,
+\begin{equation}
+ f_N(t)=\frac2N\sum_i\EE\trz c_i^\dagger c_i(t),\qquad f_N(0)=1.
+\end{equation}
+The commutator $\operatorname{ad}_H$ is self-adjoint in the trace
+Hilbert space. Twice differentiating the finite-system expression
+therefore gives the exact identity
+\begin{equation}
+ -p f_N''(t)=\mathcal F_N(t).
+\end{equation}
+Gaussian sign symmetry gives $\EE f_N'(0)=0$ and an even real
+averaged correlator. Compact-time convergence of the force can now
+be integrated, with no exchange of an infinite Taylor series:
+\begin{equation}\label{eq:fermion}
+ p[1-f_N(t)]\longrightarrow
+ 4J_s^2\int_0^{|t|}(|t|-s)G_q(s)\,ds.
+\end{equation}
+Taking $\lambda\downarrow0$ afterwards yields
+\begin{equation}
+ \lim_{\lambda\downarrow0}\lim_{\rm DS}p[1-f_N(t)]
+ =\log\cosh(2J_st).
+\end{equation}
+This recovers the established large-interaction-order propagator
+structure \cite{MS}. In that comparison the interaction order is
+$q_{\rm MS}=2p$, whereas our $q=e^{-4\lambda}$ is the chord
+deformation parameter. The energy scale in the hyperbolic function
+is $2J_s$. The result is a fixed-time first correction; exponentiating
+it does not establish a resummed formula on times of order $p$.
+
+\section{Checks and finite-$\lambda$ values}
+Three exact rational-complex CAR systems verify the ordered renewal
+recursion through order six and both first-memory-moment formulas.
+Three additional systems check \eqref{eq:orth}--\eqref{eq:parallel}
+at four times each. An independent isolated-tag test has 130 words,
+including 17 nonzero traces. These check the local algebra; the
+all-order contraction proof is on page~3.
+
+The weighted Mehler identity passes 25 exact chord-polynomial tests
+with $u+v\leq8$ and nine off-diagonal product checks at 65 digits.
+For $J_s=1$, the normalized memory values are:
+\begin{center}\begin{tabular}{lrrr}\toprule
+$\lambda$ & $s=0.25$ & $s=0.5$ & $s=1$ \\\midrule
+0.25 & 0.8540298823 & 0.5342098536 & 0.0949863857 \\
+0.10 & 0.8166877704 & 0.4634948525 & 0.0780373626 \\
+0.025 & 0.7943841554 & 0.4304109293 & 0.0722466308 \\
+0.01 & 0.7896505803 & 0.4241100990 & 0.0712705372 \\
+$\lambda\to0$ & 0.7864477330 & 0.4199743416 & 0.0706508249 \\\bottomrule
+\end{tabular}\end{center}
+
+\newpage
+\section{The next operator problem}
+The scalar mean has now been separated from the fluctuations that
+can carry collective singlet information. At zero memory time the
+known conserved subtraction gives
+\begin{equation}
+ mG-\bigl[a_m+c_m(h^2-C_m)-mr^2h^2\bigr]=Y_m,
+\end{equation}
+where $Y=A-a(Q_f)-c(Q_f)(H^2-C(Q_f))$ is the previously computed
+dynamic quadratic singlet. At first order, Eq.~\eqref{eq:Z}
+supplies the exact combination of the cubic singlet, an energy
+descendant of $A$, and a conserved cubic polynomial. Thus the
+memory expansion starts from already identified microscopic fields.
+
+The next calculation is a covariance of the centered memory with
+two independent memory arguments and an external centre time,
+after specifying the conserved projection and normalization.
+One should first obtain its first-return moment coefficients from
+\eqref{eq:renewal}, retain the same-$J$ contractions between the two
+insertions, and then establish spectral bounds for finite memory
+arguments. Replacing either insertion by its annealed mean would
+erase precisely this collective information.
+
+This supplies a concrete route towards the temporal-bilocal to bulk
+meson interface. The present mean kernel alone fixes neither a spatial
+translation generator nor a meson mass spectrum. The memory argument,
+external centre time and bulk internal light-front variable remain
+distinct. The full de Sitter holographic construction is still open.
+
+\paragraph{Reproducibility.}
+The stage directory stores the two calculation records, versions,
+seeds and input SHA-256 values. Jacobi calculations use a vacuum
+Taylor truncation bound below $10^{-13}$ and a size increase of 12;
+for $\lambda=0.25,0.1$ they are also checked against independent
+128/192-node Mehler quadrature. Refinement assesses floating-point
+and quadrature error, not interval certification. The table retains
+finite-$\lambda$ deviations from the limiting function.
+
+Two initial failures are preserved: an integer conversion lost
+half-integral coefficients in an exact-matrix helper, and random
+tagged words did not meet the nonzero-coverage target. The helper
+now preserves exact dyadic rationals, and ten directed nonzero words
+were added without lowering the target. No failed output was replaced
+by a passing claim. This stage is saved locally, without Git commit,
+push or a release archive.
+
+\begin{thebibliography}{9}
+\bibitem{renewal} J.~Bourgain, F.~A.~Gr\"unbaum, L.~Vel\'azquez
+and J.~Wilkening, \emph{Quantum recurrence of a subspace and
+operator-valued Schur functions},
+\href{https://arxiv.org/abs/1302.7286}{arXiv:1302.7286}, pp.~6--7.
+\bibitem{BNR} M.~Berkooz, V.~Narovlansky and H.~Raj,
+\emph{Complex Sachdev--Ye--Kitaev model in the double scaling limit},
+\href{https://arxiv.org/abs/2006.13983v2}{arXiv:2006.13983v2},
+Secs.~4 and 7.
+\bibitem{MS} J.~Maldacena and D.~Stanford,
+\emph{Comments on the Sachdev--Ye--Kitaev model},
+\href{https://arxiv.org/abs/1604.07818}{arXiv:1604.07818},
+Sec.~2.4 and Eq.~(3.161).
+\end{thebibliography}
+\end{document}

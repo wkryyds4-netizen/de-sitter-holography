@@ -1,0 +1,201 @@
+{
+  "status": "passed",
+  "dps": 50,
+  "quadrature": "mpmath tanh-sinh, intervals 0,2,...,40; empirical comparison; finite radial box [-8,3] Simpson, no certified spatial tail",
+  "radial": [
+    {
+      "log_x": -8,
+      "epsilon": 0.1,
+      "value_50dps": "0.000000097583345045632040502260892948916298759323372343665",
+      "reference": 9.75832405991639e-08,
+      "absolute_difference": 1.0444646813980524e-13,
+      "relative_difference": 1.0703308857773205e-06,
+      "passed": true
+    },
+    {
+      "log_x": -8,
+      "epsilon": 0.2,
+      "value_50dps": "0.00000012081908479719429226891020791805338215405249676854",
+      "reference": 1.2081910583106037e-07,
+      "absolute_difference": 2.10338660771137e-14,
+      "relative_difference": 1.7409390339631307e-07,
+      "passed": true
+    },
+    {
+      "log_x": 0,
+      "epsilon": 0.2,
+      "value_50dps": "3.7109115968444700700964856973143927329280188178556",
+      "reference": 3.710911596844246,
+      "absolute_difference": 2.2419570282164425e-13,
+      "relative_difference": 6.041526373527368e-14,
+      "passed": true
+    },
+    {
+      "log_x": 1,
+      "epsilon": 0.1,
+      "value_50dps": "23.436775040290954334356939631387942010832298150333",
+      "reference": 23.436775040290392,
+      "absolute_difference": 5.620652857771859e-13,
+      "relative_difference": 2.398219400113371e-14,
+      "passed": true
+    }
+  ],
+  "oscillators": [
+    {
+      "nu": 0.4,
+      "eta": 0,
+      "dimension": 40,
+      "matrix_value": [
+        1.4958720238845302,
+        0.0
+      ],
+      "wick_value": 1.4958720238845298,
+      "absolute_difference": 4.440892098500626e-16,
+      "passed": true
+    },
+    {
+      "nu": 0.4,
+      "eta": 0.5,
+      "dimension": 40,
+      "matrix_value": [
+        1.4383585937263013,
+        2.7755575615628914e-17
+      ],
+      "wick_value": 1.4383585937263004,
+      "absolute_difference": 8.886119947416683e-16,
+      "passed": true
+    },
+    {
+      "nu": 0.4,
+      "eta": 2,
+      "dimension": 40,
+      "matrix_value": [
+        0.7460171948672831,
+        8.326672684688674e-17
+      ],
+      "wick_value": 0.7460171948672829,
+      "absolute_difference": 2.3714374201337736e-16,
+      "passed": true
+    },
+    {
+      "nu": 1,
+      "eta": 0,
+      "dimension": 40,
+      "matrix_value": [
+        0.10190904061903389,
+        0.0
+      ],
+      "wick_value": 0.10190904061903391,
+      "absolute_difference": 2.7755575615628914e-17,
+      "passed": true
+    },
+    {
+      "nu": 1,
+      "eta": 0.5,
+      "dimension": 40,
+      "matrix_value": [
+        0.06195508457772565,
+        2.0599841277224584e-18
+      ],
+      "wick_value": 0.06195508457772567,
+      "absolute_difference": 2.0918359689363708e-17,
+      "passed": true
+    },
+    {
+      "nu": 1,
+      "eta": 2,
+      "dimension": 40,
+      "matrix_value": [
+        -0.041814987974903496,
+        -2.2768245622195593e-18
+      ],
+      "wick_value": -0.041814987974903524,
+      "absolute_difference": 2.784880442392493e-17,
+      "passed": true
+    },
+    {
+      "nu": 2,
+      "eta": 0,
+      "dimension": 40,
+      "matrix_value": [
+        0.003762823471551503,
+        0.0
+      ],
+      "wick_value": 0.0037628234715515038,
+      "absolute_difference": 8.673617379884035e-19,
+      "passed": true
+    },
+    {
+      "nu": 2,
+      "eta": 0.5,
+      "dimension": 40,
+      "matrix_value": [
+        -0.0015263780978436335,
+        1.3526057376467109e-20
+      ],
+      "wick_value": -0.0015263780978436348,
+      "absolute_difference": 1.301112915704185e-18,
+      "passed": true
+    },
+    {
+      "nu": 2,
+      "eta": 2,
+      "dimension": 40,
+      "matrix_value": [
+        -0.0005155327131328869,
+        7.171589736385746e-19
+      ],
+      "wick_value": -0.0005155327131328871,
+      "absolute_difference": 7.492241103322992e-19,
+      "passed": true
+    }
+  ],
+  "finite_box_norms": [
+    {
+      "epsilon": 0.5,
+      "finite_box_simpson": 26.73736826272864,
+      "exact_full_norm": 26.73736826273067,
+      "relative_difference": 7.582823258189819e-14,
+      "passed": true
+    },
+    {
+      "epsilon": 0.2,
+      "finite_box_simpson": 224.58854686429117,
+      "exact_full_norm": 224.58854686434057,
+      "relative_difference": 2.199351811782435e-13,
+      "passed": true
+    },
+    {
+      "epsilon": 0.1,
+      "finite_box_simpson": 1195.7314590157132,
+      "exact_full_norm": 1195.7314594982245,
+      "relative_difference": 4.035280998238022e-10,
+      "passed": true
+    }
+  ],
+  "kms": [
+    {
+      "nu": "0.2",
+      "commutator_relative_error": "1.3363823550460978230702682335757409394075984400525e-51",
+      "detailed_balance_ratio": "0.28460954333602928011556859842253483190704784301206",
+      "passed": true
+    },
+    {
+      "nu": "1.0",
+      "commutator_relative_error": "0.0",
+      "detailed_balance_ratio": "0.0018674427317079888144302129348270303934228050024753",
+      "passed": true
+    },
+    {
+      "nu": "3.0",
+      "commutator_relative_error": "2.672764710092195646140536467151481878815196880105e-51",
+      "detailed_balance_ratio": "0.0000000065124121360799007282121633167170371464033223419689",
+      "passed": true
+    }
+  ],
+  "input_sha256": {
+    "code/check_rindler_singlet_packet.py": "5b7df5cbfcd5de59b3d26c52b892905cc343e07bc646661ba10dacd2a6f9e193",
+    "results/susskind-rindler-packet/study.json": "0724bab722a69846c9e4b2c746ae8dfb14dbc6836aa3f354db4b3f5378f687c5",
+    "results/susskind-rindler-packet/radial-grid.npz": "c79fc810449e3b83ae55d02b3467cb2248de66b1ff375aa32e15a86a5e18b3bf"
+  }
+}

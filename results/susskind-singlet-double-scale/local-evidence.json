@@ -1,0 +1,67 @@
+{
+  "created_at_utc": "2026-11-05T15:30:11.887165+00:00",
+  "status": "local increment recorded; not frozen or published",
+  "scientific_status": "Double-scaled equal-time variance and second frequency moment; full spectrum and bulk dictionary remain open.",
+  "current_git_head": "714d038bb605cfcffdc351e4dcc62aa95237d25f",
+  "git_commit_created": false,
+  "git_push_performed": false,
+  "archive_created": false,
+  "checks": "Prior-stage hashes and current validation input hashes verified; final build checked. No global project audit or archive rehash.",
+  "previous_stage": {
+    "record_sha256": "2acb8e1619eee3855bc343ed7ffb9a5a7068164702c7653625bda6edf5f83177",
+    "bound_files_verified": 11
+  },
+  "build": {
+    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File code/build_singlet_double_scale.ps1",
+    "compiler": "MiKTeX-pdfTeX 4.27 (MiKTeX 26.5 Portable)",
+    "passes": 2,
+    "pages": 7,
+    "visual_review": "All seven 1200-pixel PNG pages inspected earlier in this research turn; no clipping or overlap.",
+    "initial_issue": "Long filename overflow repaired; initial log retained."
+  },
+  "hashes": {
+    "code/singlet_coefficient.py": "ef7d9b96f96a036ea0d9774950702a82a968b56758a778db0365e9df0c3b2e10",
+    "code/check_singlet_coefficient.py": "3eb13b7d91af37b1f1b12eff40c3a074e466661118287d989ba78d6a10d21150",
+    "code/run_singlet_double_scale.py": "6f30491120364d4dbf913271a4b24b2e326db6286518dd8579d300b231ace644",
+    "code/run_singlet_centered_moment.py": "69ad0be4ae98aac139619bf4af6342c6b9584215512a8574759977de69e8c3a0",
+    "code/finish_singlet_double_scale.py": "efd8ef591a8db0ad5ef850378c0f2a8ca58b8627c085da6f4fd5e35464f4eca6",
+    "code/build_singlet_double_scale.ps1": "89709233224ee99d20da5432ca8453973af2882f7bafe27f96a4f53cbbb613c6",
+    "code/record_singlet_double_scale_local.py": "cf14122426d796c815223ffd27848e8a8aa51489cd1a4da4f779c1e0add0f53b",
+    "manuscript/susskind-singlet-double-scale/main.tex": "2fd5a04b856c243b9f54b8fe93c392d4e78b9bb7a0f248a6498d9a4ffa22ac84",
+    "output/pdf/de-sitter-susskind-singlet-double-scale.pdf": "a3ab2214aeda659d56e351a98d176149b08cf3436c79badd8426186a2322373f",
+    "notes/susskind-singlet-double-scale.md": "cad9b3360588eae400a58516297530321f3d54da840ddb497da244950e26676e",
+    "literature/susskind-singlet-double-scale-sources.md": "25c15f0fad29097154049ecd6ebfaa7d4a4c03b882f2fa2957b18cddcf9cc0c3",
+    "journal/2026-11-05-susskind-singlet-double-scale.md": "a9bf5e5bf91b8794f5b5388d6b5c57a4068aec5ded9f5d8ca825b1221a1e0773",
+    "README.md": "29804ecd92ce3ff5807e5a6e4d69dd4b98929f199cefe03e26f8c12c6ef71a99",
+    "PLAN.md": "db84a8624c177893187f8db466a84968aca79d9a5b3710272366f0868c54e44e",
+    "NEXT.md": "236d387c0f0799cbff114f4641bbbf331c71f308aa65610630eb82ccb42b4926",
+    "results/susskind-singlet-double-scale/build-initial.log": "3dfdb8a335b2329e45c09dc9b706e821691d815f2dfc23cfc719ba5b1ed85f59",
+    "results/susskind-singlet-double-scale/centered-gram-initial.json": "dd33c21b30d0d4c8472636319301f8b510ab2313cb4deccb33a3d5d083092d24",
+    "results/susskind-singlet-double-scale/centered-gram.json": "5a9bab01c137226ce745ff8819355fd408fdd4a65f6342a4577bba48f46754b8",
+    "results/susskind-singlet-double-scale/coefficients-p1.json": "29c06f7e5f83753458ddc5485ec582ef195df62e5e6c0e26976f86b0ba79b43a",
+    "results/susskind-singlet-double-scale/coefficients-p2.json": "800914d2cbecb02c7082a74917e8c69a4e09a0f22852fe164542dbacf89e46eb",
+    "results/susskind-singlet-double-scale/coefficients-p3.json": "1236f650d2dbcdd8780aec3b8067d98c666bdfcdf5e3183cda3e7349260e19ed",
+    "results/susskind-singlet-double-scale/coefficients-p4.json": "bbd89168366eeee3cbfb24b1c8da6cd46fb5165718aabd29951b785cc920ae59",
+    "results/susskind-singlet-double-scale/coefficients-p5.json": "41797474de7e4dc99e9153cdeaa8a7e7b57dc85b2a64d1562eed3fc4df67f6bb",
+    "results/susskind-singlet-double-scale/independent-tensor.json": "b638a019a025d68123c09ea8951d81c6e07bb347ae962e54a39c1b3a7e9e2b86",
+    "results/susskind-singlet-double-scale/initial-core.py.txt": "70c16dd03efbdc87169aff9505085b16833f4514e5e07ff9b252bcdf4986780b",
+    "results/susskind-singlet-double-scale/initial-validation-failure.txt": "d6ffc7f71a844cd4d703dce8e0b8874bb08048e3dfed9ad49f0f343f64c4ff5c",
+    "results/susskind-singlet-double-scale/main.log": "b5d603812a01b4fdad37479620a63ca9c626323a9207cb75c455420677bbbe23",
+    "results/susskind-singlet-double-scale/overlap-graphs.json": "aa38acd9691cdda51d23c5b7cf0615f302ecc57ffd154ce9ca72e5f93e0345f2",
+    "results/susskind-singlet-double-scale/validation.json": "729bb7079394f203f84682b0a6d3046d3b25974fff6742463efdd69b6490f0ae",
+    "results/susskind-singlet-double-scale/word-checks.json": "07f66cb4a0c7b1fc647cbfdb4875ea8a1948feff5272ddd18eb22f703a869191"
+  },
+  "local_render_hashes": {
+    "tmp/pdfs/susskind-singlet-double-scale-build/page-1.png": "867dff420691bc69ef75c82ad6f286e125564eac2a6fb22829435b089b340e46",
+    "tmp/pdfs/susskind-singlet-double-scale-build/page-2.png": "4f881f2f01a967032c7c976fbe1f13bf187e07b311d6250cfa3f29aae114485a",
+    "tmp/pdfs/susskind-singlet-double-scale-build/page-3.png": "95b3c79819e3a145a3eaf930417c89aca9d412fde1f523fcf14c3bf03cdd942f",
+    "tmp/pdfs/susskind-singlet-double-scale-build/page-4.png": "8dab955c0a0752ca009e2b0a29ca2aaf5c8e8fdd333f04e23deb62f468bcf78e",
+    "tmp/pdfs/susskind-singlet-double-scale-build/page-5.png": "a0e738d89f161fec8544dd5493dfa4b7453d7c4fd443a187fd59a86bb63862b2",
+    "tmp/pdfs/susskind-singlet-double-scale-build/page-6.png": "c657bbd30ec75351039664829f1c5582e12fc55c13ec6c4ffc464b167e69794c",
+    "tmp/pdfs/susskind-singlet-double-scale-build/page-7.png": "d33a20b6278954bd3e4e79866a287a2d6a377bcc06c5aa958cbb86843a486494"
+  },
+  "build_pass_hashes": {
+    "pass1.txt": "6a4bff0bbb4aef850935cd640ac904d46433aa3d424ab4191edc9a5d9f3d2738",
+    "pass2.txt": "6a4bff0bbb4aef850935cd640ac904d46433aa3d424ab4191edc9a5d9f3d2738"
+  }
+}

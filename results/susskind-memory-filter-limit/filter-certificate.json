@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "exact_prefactors": [
+    "5/2 - (4*m - 4*p)/m + (3*m - 3*p)*(n + p)/(m*n)",
+    "-p*(m - n + p)/((-a + m)*(-a + n)) + (-4*m - p)/(4*m - 4*p)",
+    "-p*(m - n + p)/((-b + m)*(-b + n)) + (-4*m - p)/(4*m - 4*p)",
+    "p*(m + 3*n - p - (-5*a*(-a + m + n) - 5*b*(-b + m + n) + 10*m*n)/(4*m - 4*p))/((m - r)*(n - r)) + 1/2"
+  ],
+  "uniform_rank_proportion_expansions": [
+    "(16*e*lam + 3)/2",
+    "-(5*e*lam + 2)/2",
+    "-(5*e*lam + 2)/2",
+    "(6*e*lam + 1)/2"
+  ],
+  "finite_filter_identities": 130,
+  "gA_over_C_limit": "q**2/2 - 2*q + 3/2",
+  "centered_core_B_finite_coefficient": "-lam*(16*lam*q**2 - 9*q**2 + 10*q - 1)",
+  "core_new_residual_over_Js_eight": "-64*q**4*(q + 1)*(-8*lam*q + q**2 - 1)/(lam*(4*lam*q + q + 1))",
+  "small_lambda_core_residual_over_Js_eight": "1024",
+  "analytic_domain": "Fixed positive lambda in a compact set; a,b<=p,r<=a+b<=2p; p sufficiently large so all scaled rational denominators are bounded away from zero.",
+  "analytic_bound": "gA/C is uniformly bounded; its deviation from gamma is <= K_lambda*(1+u+v+S)/p using the binomial-product adjacent-rank bound. Window S<=p^(3/4) and sixth ordinary moments give L2 error O(p^(-1/4)) with prior input weighted norms.",
+  "environment": {
+    "python": "3.14.5",
+    "sympy": "1.14.0"
+  },
+  "input_sha256": {
+    "code/memory_A_filter_uniform.py": "c2bc5f8b2ab73d25364086c7f0751b8fc0a3f9f72bb2a6d4763975cb9313bcab",
+    "code/memory_two_charge_filter.py": "33c660733f3529990a0779cfa9a27875ec95f354dca3dc906d4c4f6b786e35f8"
+  }
+}

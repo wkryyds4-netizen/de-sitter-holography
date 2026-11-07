@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "uniform_H_prefactors": [
+    "(4*e*lam*x + e*lam + 2)/e",
+    "-(11*alpha*e*lam + 4*e*lam*x - 6*e*lam + 2)/e",
+    "-(11*beta*e*lam + 4*e*lam*x - 6*e*lam + 2)/e",
+    "(5*alpha*e*lam + 5*beta*e*lam + 6*e*lam*rho + 4*e*lam*x - 13*e*lam + 2)/e"
+  ],
+  "centered_core_B_finite_coefficient": "lam*(-16*lam*q**2 + 4*q**2*x + 9*q**2 - 8*q*x - 10*q + 4*x + 1)",
+  "gram_B_Linput_O": [
+    [
+      "q + 1",
+      "0",
+      "2*lam*(1 - q)"
+    ],
+    [
+      "0",
+      "2*lam*(q + 1)",
+      "0"
+    ],
+    [
+      "2*lam*(1 - q)",
+      "0",
+      "4*lam**2*(q + 1) + 4*lam"
+    ]
+  ],
+  "Y_variance_over_C_squared": "4*lam*(4*lam*q + q + 1)/(q + 1)",
+  "gram_determinant": "8*lam**2*(q + 1)*(4*lam*q + q + 1)",
+  "analytic_domain": "Bounded x and positive compact lambda, a,b<=p,r<=a+b; scaled rational denominators uniformly nonzero.",
+  "strong_A_filter_bound": "||sum(gA-C*gamma)W2A_ab;r||^2 <= K*C^4*(p^-2+R^2/p^2+p^4/R^6); R=p^(3/4).",
+  "scope": "Coefficient identities and Gram algebra; proof of strong replacement uses general coherent norm, factorial input tail and central sixth output moment.",
+  "environment": {
+    "python": "3.14.5",
+    "sympy": "1.14.0"
+  },
+  "input_sha256": {
+    "code/memory_central_core_assembly.py": "a5d946ef8c2015a9ab3d682c015f098ecb171fe09aa47708ebbe0d87d5b6ec3e",
+    "results/susskind-memory-two-charge/symbolic-filter.json": "63849f41398b248e8ff3b585847b05b5a55fb200aa83831482d1c9c2da919f7e"
+  }
+}

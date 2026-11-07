@@ -1,0 +1,329 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,microtype}
+\usepackage[margin=24mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\av}[1]{\langle #1\rangle}
+\newcommand{\MM}{\widehat{\mathcal M}}
+\newcommand{\Jh}{\mathcal J_h}
+\DeclareMathOperator{\tr}{tr}
+\title{Resolving the memory background by energy\\Conserved subtraction and the first fluctuation pair}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Local research note --- 6 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+The scalar mean of the temporal-singlet memory is insufficient as a
+fluctuation counterterm. We determine its limiting regression against
+energy functions using the established $q$-Mehler Markov operator.
+An explicit positive variance gives a lower bound showing why scalar
+centering fails at the collective normalization. Exact conserved
+polynomials instead yield a finite pair of memory coefficients. Their
+complete two-energy spectral matrix follows from the previously
+computed quadratic, cubic and rank-filtered singlet channels. Energy
+centering removes the time descendant present in the raw cubic
+insertion; the normalized memory tangent tends to the cubic
+$\operatorname{sech}^6$ kernel at small coupling.
+\end{abstract}
+\section{What the energy-weighted mean determines}
+Use the same standard CAR complex $p$-body Gaussian Hamiltonian
+$H=H_s$, including overlapping index sets, with
+$w=4^p(J_s^2N/p^2)(p!/N^p)^2$. Brackets denote the annealed full
+normalized trace at $\beta=\mu=0$, and $\hbar=1$. First take
+$N,p\to\infty$, $p^2/N\to\lambda>0$, then optionally
+$\lambda\downarrow0$. Set $q=e^{-4\lambda}$,
+$\sigma^2=J_s^2/\lambda$; all times use string units.
+
+The preceding stage defined, in each nonzero charge block,
+\begin{equation}
+ h=H_m,\quad K=1_N\otimes H_{m-1},\quad
+ V\psi=m^{-1/2}\sum_i|i\rangle c_i\psi,\quad Q=1-VV^\dagger,
+\end{equation}
+and $\mathcal R=QKV$, $K_\perp=QKQ$. The energy-centered memory is
+\begin{equation}
+ \MM_m(s)=e^{-ihs/2}\mathcal R^\dagger e^{iK_\perp s}
+ \mathcal R e^{-ihs/2},\qquad \MM_0(s)=0.
+\end{equation}
+Its scalar mean satisfies $p\av{\MM(s)}\to4J_s^2G_q(s)$.
+For every bounded continuous energy test $f$, the stronger statement is
+\begin{equation}\label{eq:regression}
+ p\av{f(H)^\dagger\MM(s)}\longrightarrow
+ 4J_s^2\int\overline{f(x)}g_s(x)\,d\nu_q(x),\qquad
+ g_s(x)=e^{-isx}(\mathsf P_q e^{is\cdot})(x).
+\end{equation}
+Here $\nu_q$ is the variance-$\sigma^2$ Hamiltonian law and
+$\mathsf P_r$ is the established Mehler transition operator.
+
+\newpage
+\section{A nonconstant conserved background}
+Write $d\mu_r(x,y)=d\nu_q(x)\,\mathsf P_r(x,dy)$, using the
+same normalized two-energy probe measure as in the preceding stage.
+For monic $q$-Hermite polynomials with
+$H_{n+1}(x)=xH_n(x)-\sigma^2[n]_qH_{n-1}(x)$, the known Markov
+operator obeys \cite{BKS}
+\begin{equation}
+ \mathsf P_rH_n=r^nH_n,\qquad
+ \mathsf P_r^*=\mathsf P_r,\qquad \mathsf P_r\mathsf P_t=\mathsf P_{rt}.
+\end{equation}
+These are energy-space transition operators. Their parameter is not
+the real memory time $s$. The Hamiltonian support is
+$[-2\sigma/\sqrt{1-q},2\sigma/\sqrt{1-q}]$.
+
+To prove \eqref{eq:regression}, insert $f(h)^\dagger$ into the two
+memory--force comparison bounds from the preceding note. Their
+right-hand sides acquire at most $\|f\|_\infty$. The charge-window
+and tail estimates are unchanged. The resulting force expression is
+an integral of $\overline{f(x)}e^{is(y-x)}$ against its positive
+two-energy measure, which converges to $4J_s^2\mu_q$. This proves
+the stated weighted mean. It does not prove strong operator
+convergence to $4J_s^2g_s(H)$.
+
+Nevertheless the nonconstant background is measurable exactly:
+\begin{align}
+ \int g_s\,d\nu_q&=G_q(s),\\
+ V_{\rm bg}(s):=\int|g_s-G_q(s)|^2\,d\nu_q
+ &=G_{q^2}(s)-G_q(s)^2\geq0.\label{eq:variance}
+\end{align}
+Indeed multiplication by $e^{-isx}$ preserves the norm, and
+$\|\mathsf P_q e^{isx}\|_2^2
+=\av{e^{isx},\mathsf P_{q^2}e^{isx}}_{L^2(\nu_q)}=G_{q^2}(s)$.
+The kernels are real by simultaneous energy reflection. Low moments give
+\begin{align}
+ g_s(x)&=1+is(q-1)x
+ -\tfrac12s^2\bigl[(1-q)^2x^2+(1-q^2)\sigma^2\bigr]+O(s^3),\\
+ V_{\rm bg}(s)&=\sigma^2(1-q)^2s^2+O(s^4).
+\end{align}
+Thus it is strictly positive for sufficiently small nonzero $s$.
+
+Let $X_N=p\MM(s)$ and $\|B\|_2^2=\av{B^\dagger B}$. Taking the
+test $g_s-G_q(s)$ in \eqref{eq:regression}, with a bounded continuous
+extension outside the limiting support, and applying Cauchy--Schwarz,
+\begin{equation}
+ \liminf_{\rm DS}\|X_N-\av{X_N}1\|_2^2
+ \geq16J_s^4V_{\rm bg}(s).\label{eq:lower}
+\end{equation}
+The full-trace charge number is $Q_f$. Central-window concentration
+and $\|\MM\|_2^2\leq\av{G^2}=O(p^{-2})$ give
+\begin{equation}\label{eq:divergence}
+ \liminf_{\rm DS}\frac{\|Q_f\MM-\av{Q_f\MM}1\|_2^2}{p^2}
+ \geq\frac{4J_s^4}{\lambda^2}V_{\rm bg}(s).
+\end{equation}
+Scalar centering therefore leaves a divergent collective background.
+
+\newpage
+\section{Exact subtraction at the first two memory orders}
+At finite $N$, set $r=p/m$ and expand
+\begin{equation}
+ \MM_m(s)=G+isZ_1+O(s^2),\qquad
+ G=A_m/m-r^2h^2,\qquad
+ mZ_1=T_{3,m}+2r\Jh A_m-mr^3h^3.\label{eq:jet}
+\end{equation}
+Here $A=\sum_i[H,c_i]^\dagger[H,c_i]$,
+$M_3=\sum_i c_i^\dagger\operatorname{ad}_H^3c_i$,
+$T_3=(M_3+M_3^\dagger)/2$, and $\Jh B=(hB+Bh)/2$.
+Let $C_m=\av{h^2}_m$, $a_m=\av{A_m}_m$, and use the previously
+defined ensemble projection coefficient
+\begin{equation}
+ c_m=\frac{\av{(A_m-a_m)(h^2-C_m)}_m}
+ {\av{(h^2-C_m)^2}_m},\qquad
+ Y_m=A_m-a_m-c_m(h^2-C_m).
+\end{equation}
+All scalar coefficients here are deterministic charge-block functions.
+For the already calculated cubic channels put
+\begin{align}
+ a&=-\frac{(1-q)^2}{1+q^2},&
+ b&=\frac{2\lambda(1-q)(1+q^3)}{(1+q^2)(1+q+q^2)},\\
+ R&=W_3T_3-aW_3(\Jh A)-bW_3h^3,\\
+ F&=W_1T_3-\bar t_mh,&
+ B_S&=W_1(\Jh A)-\bar s_mh,\quad B_Z=W_1h^3-\bar z_mh.
+\end{align}
+$W_j$ denotes ordinary Gaussian coupling chaos; bars are projections
+of the respective linear-chaos operator onto $h$. The earlier exact
+cubic reduction gives
+\begin{align}
+ P_m&=(ac_m+b)h^3+[\bar t_m-(ac_m+b)\bar z_m]h,\\
+ T_{3,m}-P_m&=R+a\Jh Y_m+F-aB_S-bB_Z.\label{eq:cubic}
+\end{align}
+The required two conserved counterterms are consequently explicit:
+\begin{align}
+ C_{0,m}&=a_m+c_m(h^2-C_m)-mr^2h^2,\\
+ C_{1,m}&=P_m+2r[a_mh+c_m(h^3-C_mh)]-mr^3h^3.\label{eq:C1}
+\end{align}
+Both commute with $h$. Subtracting them gives the exact pair
+\begin{align}
+ X_{0,N}&=mG-C_{0,m}=Y_m,\\
+ X_{1,N}&=mZ_1-C_{1,m}
+ =R+(a+2r)\Jh Y_m+F-aB_S-bB_Z.\label{eq:X1}
+\end{align}
+At fixed $\lambda$, the previous rank-tail bounds imply
+$B_S,B_Z=O_{L^2}(p^{-1})$ and $r\Jh Y\to0$. Hence the second
+coefficient has limiting representative $L=R+a\mathcal J_HY+F$.
+This names a limit of moments and two-point spectra, not an identification
+of Hilbert spaces at different $N$.
+
+\newpage
+\section{The full two-energy spectral matrix of the pair}
+Use the established vanishing cross measures for $F,Y,R$ and their
+diagonal measures $V_F\mu_q$, $W\mu_{q^2}$, $V_R\mu_{q^3}$.
+For $e=(x+y)/2$ the pair $(Y,L)$ has the positive spectral matrix
+\begin{equation}\label{eq:matrix}
+ d\boldsymbol\nu=
+ \begin{pmatrix}
+ W\,d\mu_{q^2}&a eW\,d\mu_{q^2}\\
+ a eW\,d\mu_{q^2}&V_F\,d\mu_q+V_R\,d\mu_{q^3}
+                  +a^2e^2W\,d\mu_{q^2}
+ \end{pmatrix}.
+\end{equation}
+Relative to the product Hamiltonian measure, its determinant equals
+$WK_{q^2}(V_FK_q+V_RK_{q^3})\geq0$. The coefficients are
+\begin{align}
+ W&=4J_s^4\left(\lambda^{-1}+\frac{4q}{1+q}\right),&
+ V_F&=64J_s^6q^2,\\
+ V_R&=\sigma^6\frac{\lambda A_1+\lambda^2A_2}{D^2},&
+ D&=(1+q^2)(1+q+q^2),\\
+ A_1&=4(1-q^2)(1+q^2)(1+q+q^2)^2,\nonumber\\
+ A_2&=16q^2(1+q)(1+q^2)(1+q+q^2)(2q^2-q+2).\nonumber
+\end{align}
+These diagonal channel results are inherited from the preceding
+singlet calculations, not recalculated as new probe formulas.
+The application here is the exact memory-coefficient combination.
+
+At any external centre time $T$, the off-diagonal ordinary correlator
+vanishes. The transformation $(x,y)\mapsto(-y,-x)$ preserves $y-x$
+and the measure but reverses $e$. Therefore
+\begin{align}
+ \av{Y^\dagger L(T)}_{\rm DS}&=0,\\
+ \av{Y^\dagger Y(T)}_{\rm DS}&=WG_{q^2}(T),\\
+ \av{L^\dagger L(T)}_{\rm DS}&=V_FG_q(T)+V_RG_{q^3}(T)+a^2WJ_2(T),\\
+ J_2(T)&=\int e^2e^{iT(y-x)}\,d\mu_{q^2}(x,y).
+\end{align}
+Ordinary-time orthogonality does not erase the nonzero energy-resolved
+cross entry in \eqref{eq:matrix}. Its energy-weighted integral is
+$aW\sigma^2(1+q^2)/2$.
+
+The first-degree memory polynomial $\Xi(s)=Y+isL$ now has the
+complete centre-time covariance
+\begin{equation}
+ \av{\Xi(s)^\dagger\Xi(u;T)}=
+ WG_{q^2}(T)+su\,[V_FG_q(T)+V_RG_{q^3}(T)+a^2WJ_2(T)].
+\end{equation}
+This is an exact covariance of the limiting pair. For the actual
+finite-memory field it specifies the $(0,0),(1,0),(0,1),(1,1)$
+Taylor coefficients, with derivatives taken before double scaling.
+Terms of degree two in either memory argument remain uncomputed.
+
+\newpage
+\section{What energy centering selects at small coupling}
+The original non-Hermitian derivative has
+\begin{equation}
+ M_3-P_m\longrightarrow R+a\mathcal J_HY+F+\tfrac32[H,Y].
+\end{equation}
+The memory tangent $L$ has no final time-descendant term. This follows
+from the exact centered memory expansion, not from manually discarding
+a large contribution to the raw cubic spectrum.
+
+Its squared norm and second frequency moment are
+\begin{align}
+ N_L&=V_R+V_F+a^2W\sigma^2(1+q^2)/2,\\
+ D_L&=2\sigma^2\{V_R(1-q^3)+V_F(1-q)\}
+       +\tfrac12 a^2W\sigma^4(1+q)(1-q^4).
+\end{align}
+In the subsequent $\lambda\downarrow0$ limit,
+\begin{equation}
+ \lambda W\to4J_s^4,\qquad \lambda N_L\to32J_s^6,
+ \qquad D_L/N_L\to24J_s^2.
+\end{equation}
+The $F$ fraction is $2\lambda+o(\lambda)$; the energy-descendant
+fraction is $8\lambda^3+o(\lambda^3)$. Thus
+\begin{equation}
+ \frac{\av{L^\dagger L(T)}}{N_L}\longrightarrow
+ \operatorname{sech}^6(2J_sT),\qquad
+ \frac{\av{Y^\dagger Y(T)}}W\longrightarrow
+ \operatorname{sech}^4(2J_sT).
+\end{equation}
+This applies the established small-coupling probe kernels to the
+specific memory coefficients. The two labels do not by themselves
+determine bulk meson masses.
+
+\section{Verification and actual finite-coupling effects}
+Three finite CAR systems verify five exact rational-complex matrix
+identities each: the two subtractions, conservation of both
+counterterms, and Hermiticity of the tangent. The calculation obtains
+the first-return coefficient directly from $V^\dagger K^nV$ and obtains
+the cubic chaos components separately by Gaussian polarization.
+Twenty-eight exact polynomial tests verify the conditional
+$q$-Hermite action through total degree six; symbolic Laurent limits
+give $4,32,768$ for $J_s=1$ and the three unnormalized limits above.
+
+For four positive couplings we evaluate the background variance and
+tangent kernel by Jacobi evolution, with a larger truncation as a
+check. At $\lambda=0.25,0.1$, independent 128/192-node Mehler
+integration also checks the conditional variance directly, the zero
+ordinary cross and nonzero energy-weighted cross, and the tangent
+kernel. Finite-$\lambda$ differences from $\operatorname{sech}^6$
+are retained; they are not numerical errors.
+
+One initial independent comparison failed: the quadrature code had
+omitted $K_{q^2}$ on the $e^2$ descendant term, giving a nonunit
+normalized tangent already at $T=0$. The original source and values
+are preserved. Restoring that factor fixes the formula; no tolerance
+was relaxed. Floating-point refinement is not interval certification.
+
+\newpage
+\section{From the tangent pair to finite memory}
+The next unknown is the full covariance after conserved subtraction,
+with two finite memory parameters and an independent centre time.
+The present work determines its first pair of coefficients and proves
+that a purely scalar subtraction cannot yield the desired scaling.
+Equation~\eqref{eq:regression} also gives the full leading
+energy-dependent counterterm as a regression functional, at every
+fixed memory time.
+
+Three requirements now have a concrete form. First, compute the
+next centered return coefficient, including the $G^2$ return term
+and the fourth derivative singlet, then determine its conserved
+polynomial and its mixed spectra with $Y,L$. Second, control the
+operator remainder with two memory insertions at the collective
+normalization. The single-insertion comparison used for the mean
+does not provide this bound. Third, match the resulting microscopic
+kernel with the bulk internal collective operator and spatial
+insertions, preserving the distinction between memory time, centre
+time and a light-front quark fraction.
+
+The energy-dependent regression $g_s$ alone is not the full finite-$N$
+conditional expectation onto the commutant. Nor does subtracting its
+leading $1/p$ term automatically fix all subleading conserved pieces
+at the $m\sim p^2$ normalization. Equations~\eqref{eq:C1}--\eqref{eq:X1}
+show explicitly how such pieces are fixed at the first two orders.
+At those orders the limiting spectra are absolutely continuous and
+have no zero-frequency atom. Finite-memory tightness remains an
+additional problem.
+
+The complete fluctuation field and the spatial holographic dictionary
+remain open. The useful advance is a specified conserved background,
+an obstruction to scalar centering, and a positive spectral matrix
+for the actual first two memory coefficients.
+
+\paragraph{Local record.}
+Source, exact checks, numerical parameters, dependency versions,
+initial failure and input hashes are retained in the project stage
+directory. The PDF is compiled twice and reviewed page by page;
+its source/output hashes are bound to the local evidence record.
+No Git commit, push or release archive is created in this stage.
+
+\begin{thebibliography}{9}
+\bibitem{BKS} M.~Bo\.{z}ejko, B.~K\"ummerer and R.~Speicher,
+\emph{$q$-Gaussian processes: non-commutative and classical aspects},
+\href{https://arxiv.org/abs/funct-an/9604010}{arXiv:funct-an/9604010},
+Theorems~1.10 and 4.6, especially pp.~20--22.
+\bibitem{BNR} M.~Berkooz, V.~Narovlansky and H.~Raj,
+\emph{Complex Sachdev--Ye--Kitaev model in the double scaling limit},
+\href{https://arxiv.org/abs/2006.13983v2}{arXiv:2006.13983v2}.
+\bibitem{local} A.~Day and Chengheng, local project notes:
+\emph{From the charged force to the mean memory kernel};
+\emph{Conserved-subtracted cubic spectrum}; and the associated
+singlet-kernel, cubic-cross and filtered-spectrum calculations,
+6 November 2026. These supply the model-specific precursor identities
+and measures used here; no priority claim is made.
+\end{thebibliography}
+\end{document}

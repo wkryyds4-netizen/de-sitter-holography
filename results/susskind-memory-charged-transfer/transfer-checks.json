@@ -1,0 +1,349 @@
+{
+  "systems": [
+    {
+      "N": 3,
+      "p": 1,
+      "m": 2,
+      "C_upper": 1,
+      "dimensions": [
+        3,
+        3
+      ],
+      "real_Gaussian_coordinates": 9,
+      "errors": {
+        "lower_channel_gram": 0.0,
+        "upper_channel_gram": 0.0,
+        "casimir_intertwining": 0.0,
+        "forward_gram": 5.551115123125783e-17,
+        "vacuum_source": 2.7755575615628914e-17,
+        "Hamiltonian_intertwining": 0.0
+      },
+      "forward_ranks": [
+        {
+          "rank": 0,
+          "dimension": 1,
+          "eigenvalue": 0.0,
+          "scalar_block_error": 0.0
+        },
+        {
+          "rank": 1,
+          "dimension": 8,
+          "eigenvalue": 0.1875,
+          "scalar_block_error": 8.666675708199898e-17
+        }
+      ],
+      "reverse_ranks": [
+        {
+          "rank": 0,
+          "dimension": 1,
+          "eigenvalue": 0.37500000000000006,
+          "scalar_block_error": 1.1443916996305594e-16
+        },
+        {
+          "rank": 1,
+          "dimension": 8,
+          "eigenvalue": 0.140625,
+          "scalar_block_error": 8.155045578788738e-17
+        }
+      ],
+      "reverse_vacuum_norm_squared": 0.375,
+      "gamma": 0.0625
+    },
+    {
+      "N": 4,
+      "p": 1,
+      "m": 2,
+      "C_upper": 1,
+      "dimensions": [
+        6,
+        4
+      ],
+      "real_Gaussian_coordinates": 16,
+      "errors": {
+        "lower_channel_gram": 3.8459253727671276e-16,
+        "upper_channel_gram": 6.080941944488118e-16,
+        "casimir_intertwining": 3.1401849173675503e-16,
+        "forward_gram": 1.3877787807814457e-16,
+        "vacuum_source": 3.024593730708204e-17,
+        "Hamiltonian_intertwining": 2.4037033579794548e-17
+      },
+      "forward_ranks": [
+        {
+          "rank": 0,
+          "dimension": 1,
+          "eigenvalue": -8.673617379884005e-18,
+          "scalar_block_error": 6.938742914005066e-17
+        },
+        {
+          "rank": 1,
+          "dimension": 15,
+          "eigenvalue": 0.16666666666666669,
+          "scalar_block_error": 1.482927533397759e-16
+        }
+      ],
+      "reverse_ranks": [
+        {
+          "rank": 0,
+          "dimension": 1,
+          "eigenvalue": 0.2777777777777778,
+          "scalar_block_error": 7.076311083754595e-17
+        },
+        {
+          "rank": 1,
+          "dimension": 15,
+          "eigenvalue": 0.11111111111111113,
+          "scalar_block_error": 1.6699632500667758e-16
+        },
+        {
+          "rank": 2,
+          "dimension": 20,
+          "eigenvalue": 0.02777777777777778,
+          "scalar_block_error": 2.0945644594559285e-16
+        }
+      ],
+      "reverse_vacuum_norm_squared": 0.27777777777777785,
+      "gamma": 0.041666666666666664
+    },
+    {
+      "N": 4,
+      "p": 2,
+      "m": 3,
+      "C_upper": 1,
+      "dimensions": [
+        4,
+        6
+      ],
+      "real_Gaussian_coordinates": 36,
+      "errors": {
+        "lower_channel_gram": 6.377745716588144e-16,
+        "upper_channel_gram": 4.54378355600607e-16,
+        "casimir_intertwining": 3.1401849173675503e-16,
+        "forward_gram": 2.250598976658976e-16,
+        "vacuum_source": 2.023017827855918e-17,
+        "Hamiltonian_intertwining": 9.813077866773595e-18
+      },
+      "forward_ranks": [
+        {
+          "rank": 0,
+          "dimension": 1,
+          "eigenvalue": 1.3455759976406175e-17,
+          "scalar_block_error": 2.4130745567083674e-17
+        },
+        {
+          "rank": 1,
+          "dimension": 15,
+          "eigenvalue": 0.07407407407407403,
+          "scalar_block_error": 1.0423458424979666e-16
+        },
+        {
+          "rank": 2,
+          "dimension": 20,
+          "eigenvalue": 0.11111111111111105,
+          "scalar_block_error": 1.363750281882974e-16
+        }
+      ],
+      "reverse_ranks": [
+        {
+          "rank": 0,
+          "dimension": 1,
+          "eigenvalue": 0.4938271604938269,
+          "scalar_block_error": 2.2059286277077621e-16
+        },
+        {
+          "rank": 1,
+          "dimension": 15,
+          "eigenvalue": 0.1893004115226337,
+          "scalar_block_error": 2.859625767672247e-16
+        }
+      ],
+      "reverse_vacuum_norm_squared": 0.49382716049382724,
+      "gamma": 0.018518518518518517
+    },
+    {
+      "N": 5,
+      "p": 1,
+      "m": 2,
+      "C_upper": 1,
+      "dimensions": [
+        10,
+        5
+      ],
+      "real_Gaussian_coordinates": 25,
+      "errors": {
+        "lower_channel_gram": 2.7755575615628914e-16,
+        "upper_channel_gram": 3.7238012298709097e-16,
+        "casimir_intertwining": 1.4895204919483639e-15,
+        "forward_gram": 0.0,
+        "vacuum_source": 3.925231146709438e-17,
+        "Hamiltonian_intertwining": 0.0
+      },
+      "forward_ranks": [
+        {
+          "rank": 0,
+          "dimension": 1,
+          "eigenvalue": 2.3273757686693185e-18,
+          "scalar_block_error": 4.654751537338637e-18
+        },
+        {
+          "rank": 1,
+          "dimension": 24,
+          "eigenvalue": 0.15625,
+          "scalar_block_error": 0.0
+        }
+      ],
+      "reverse_ranks": [
+        {
+          "rank": 0,
+          "dimension": 1,
+          "eigenvalue": 0.23437500000000025,
+          "scalar_block_error": 2.6588516421903086e-16
+        },
+        {
+          "rank": 1,
+          "dimension": 24,
+          "eigenvalue": 0.09765625000000001,
+          "scalar_block_error": 3.797125037573378e-16
+        },
+        {
+          "rank": 2,
+          "dimension": 75,
+          "eigenvalue": 0.015625,
+          "scalar_block_error": 4.115475964002569e-16
+        }
+      ],
+      "reverse_vacuum_norm_squared": 0.234375,
+      "gamma": 0.03125
+    },
+    {
+      "N": 5,
+      "p": 2,
+      "m": 3,
+      "C_upper": 1,
+      "dimensions": [
+        10,
+        10
+      ],
+      "real_Gaussian_coordinates": 100,
+      "errors": {
+        "lower_channel_gram": 9.28879225241625e-16,
+        "upper_channel_gram": 9.28879225241625e-16,
+        "casimir_intertwining": 2.198129442157285e-15,
+        "forward_gram": 5.81145310005622e-16,
+        "vacuum_source": 9.813077866773595e-18,
+        "Hamiltonian_intertwining": 0.0
+      },
+      "forward_ranks": [
+        {
+          "rank": 0,
+          "dimension": 1,
+          "eigenvalue": 7.487949507198756e-17,
+          "scalar_block_error": 1.0059489861890674e-16
+        },
+        {
+          "rank": 1,
+          "dimension": 24,
+          "eigenvalue": 0.06172839506172847,
+          "scalar_block_error": 2.8886931281069733e-16
+        },
+        {
+          "rank": 2,
+          "dimension": 75,
+          "eigenvalue": 0.09876543209876547,
+          "scalar_block_error": 3.716535068639678e-16
+        }
+      ],
+      "reverse_ranks": [
+        {
+          "rank": 0,
+          "dimension": 1,
+          "eigenvalue": 0.3703703703703708,
+          "scalar_block_error": 4.120592425443573e-16
+        },
+        {
+          "rank": 1,
+          "dimension": 24,
+          "eigenvalue": 0.17489711934156382,
+          "scalar_block_error": 5.607437949326172e-16
+        },
+        {
+          "rank": 2,
+          "dimension": 75,
+          "eigenvalue": 0.05761316872427986,
+          "scalar_block_error": 6.452149043274342e-16
+        }
+      ],
+      "reverse_vacuum_norm_squared": 0.37037037037036996,
+      "gamma": 0.012345679012345678
+    },
+    {
+      "N": 5,
+      "p": 2,
+      "m": 4,
+      "C_upper": 1,
+      "dimensions": [
+        5,
+        10
+      ],
+      "real_Gaussian_coordinates": 100,
+      "errors": {
+        "lower_channel_gram": 3.7238012298709097e-16,
+        "upper_channel_gram": 2.7755575615628914e-16,
+        "casimir_intertwining": 1.4895204919483639e-15,
+        "forward_gram": 2.768827348332944e-16,
+        "vacuum_source": 1.471961680016039e-17,
+        "Hamiltonian_intertwining": 9.813077866773595e-18
+      },
+      "forward_ranks": [
+        {
+          "rank": 0,
+          "dimension": 1,
+          "eigenvalue": -6.81595403860399e-17,
+          "scalar_block_error": 1.5132847222696152e-17
+        },
+        {
+          "rank": 1,
+          "dimension": 24,
+          "eigenvalue": 0.052083333333333294,
+          "scalar_block_error": 1.6172895120453305e-16
+        },
+        {
+          "rank": 2,
+          "dimension": 75,
+          "eigenvalue": 0.08333333333333333,
+          "scalar_block_error": 2.891107469673288e-16
+        }
+      ],
+      "reverse_ranks": [
+        {
+          "rank": 0,
+          "dimension": 1,
+          "eigenvalue": 0.6249999999999997,
+          "scalar_block_error": 1.1102230246251565e-16
+        },
+        {
+          "rank": 1,
+          "dimension": 24,
+          "eigenvalue": 0.28645833333333304,
+          "scalar_block_error": 3.725901740570495e-16
+        }
+      ],
+      "reverse_vacuum_norm_squared": 0.6249999999999996,
+      "gamma": 0.010416666666666666
+    }
+  ],
+  "symbolic": {
+    "exact_identities": 2,
+    "forward_gram_coefficient": "C*p*(m - p)/(m**3*n*(m - 1))"
+  },
+  "scope": "Complete deterministic superoperator Grams over every Gaussian coordinate and every matrix input. Reverse scalar blocks are measured, not presumed zero. These finite checks do not prove a uniform memory-field bound.",
+  "environment": {
+    "python": "3.14.5",
+    "numpy": "2.4.6",
+    "sympy": "1.14.0"
+  },
+  "input_sha256": {
+    "code/memory_charged_transfer.py": "155392a862098a9aa1119085629bca5b2467e0de9f1610c009273e66fa80455a",
+    "code/complex_syk_dictionary.py": "96b4890a167beeadf0849ccffdbb20dd125d921af062fd291044da9024900abf"
+  },
+  "elapsed_seconds": 0.35504603385925293
+}

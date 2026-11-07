@@ -1,0 +1,282 @@
+{
+  "status": "Local research progress; long-term objective remains active",
+  "created_at_utc": "2026-11-06T19:24:59.232543+00:00",
+  "scientific_status": "Ordered common-coupling Gaussian-Wick descendants have a constructive fixed-degree moment algorithm and deterministic energy regressions. The cut-diagram no-bridge cancellation and all-external-degree bound give absolutely continuous residual two-energy measures; exact samplewise pinching is then controlled. The established time-series tails yield a convergent neutral finite-time covariance construction. The charged defect, AA/AB/BA and bulk dictionary remain open.",
+  "parameters": "Standard CAR, overlapping complex Gaussian p-body, common original J across charges, normalized annealed beta=mu=0 full trace, hbar=1/string real time, even N and lambda_N=p^2/N tending to positive lambda, fixed Js. Polynomial degrees and external real time are fixed before the double-scale limit.",
+  "proof_scope": "Finite checks verify complete Gaussian bookkeeping and exact low-degree diagram formulas. They do not by themselves prove the arbitrary-degree spectral bound or energy-pinching limit. Those use the manuscript cut-field argument, Hermite bridge suppression, positive-measure convergence and the predecessor uniform summable tails. The series tail bound is uniform in compact memory times and all external real times; this is not a claim of uniform-in-external-time convergence of the finite-N spectral measures.",
+  "continuation": "Compute charged forward/reverse sources and the AA, AB and BA kernels in the same original-J diagram system, recovering the previously nonzero low-order mixed spectral calibration. The saved oriented-transfer seed starts from the exact full-Fock D identity; its proposed weighted whole-exponential limit has not been established in this stage. Then return to the Susskind bulk mass/position dictionary and interaction observables.",
+  "external_scope": "Earlier Issue 1 review retained; no new issue reply, Git publication or reintegration of the historical audit is made by this stage.",
+  "git_commit_created": false,
+  "git_push_performed": false,
+  "archive_created": false,
+  "external_reply_sent": false,
+  "previous_evidence": {
+    "results/susskind-memory-size-bridge/local-evidence.json": {
+      "sha256": "11dcaafedc8d9f4049c0c64d507d6e9b85333c95e4bb863f75a274c50d5eaa72",
+      "unchanged_scientific_files": [
+        "code/check_neutral_size_bridge.py",
+        "code/memory_size_marked_chords.py",
+        "code/check_size_chord_geometry.py",
+        "code/check_size_rank_law.py",
+        "code/plot_size_deficit_law.py",
+        "code/build_memory_size_bridge.ps1",
+        "code/record_memory_size_bridge.py",
+        "manuscript/susskind-memory-size-bridge/main.tex",
+        "output/pdf/de-sitter-susskind-memory-size-bridge.pdf",
+        "notes/susskind-memory-size-bridge.md",
+        "literature/susskind-memory-size-bridge-sources.md",
+        "journal/2026-11-07-susskind-memory-size-bridge.md",
+        "PROJECT.md",
+        "results/susskind-memory-size-bridge/finite-bridge.json",
+        "results/susskind-memory-size-bridge/marked-chord-checks.json",
+        "results/susskind-memory-size-bridge/geometry-checks.json",
+        "results/susskind-memory-size-bridge/rank-law-checks.json",
+        "results/susskind-memory-size-bridge/main.log",
+        "results/susskind-memory-size-bridge/deficit-law-plot.json",
+        "results/susskind-memory-size-bridge/deficit-law.png",
+        "results/susskind-memory-size-bridge/diagnostics/first-main.log",
+        "results/susskind-memory-size-bridge/diagnostics/first-main.tex",
+        "results/susskind-memory-size-bridge/diagnostics/first-pass1.txt",
+        "results/susskind-memory-size-bridge/diagnostics/pre-subscript-main.tex",
+        "results/susskind-memory-size-bridge/diagnostics/pre-subscript-page-04.png"
+      ],
+      "excluded_mutable_plans": [
+        "NEXT.md",
+        "PLAN.md",
+        "README.md"
+      ]
+    },
+    "results/susskind-memory-neutral-marked-series/local-evidence.json": {
+      "sha256": "9202670c3b64f44d0dbad43fbf5aff8f264cadec1cbead54ddaa00364ef69940",
+      "unchanged_scientific_files": [
+        "code/check_neutral_marked_series.py",
+        "code/check_neutral_marked_rank.py",
+        "code/build_neutral_marked_series.ps1",
+        "code/record_neutral_marked_series.py",
+        "manuscript/susskind-memory-neutral-marked-series/main.tex",
+        "output/pdf/de-sitter-susskind-memory-neutral-marked-series.pdf",
+        "notes/susskind-memory-neutral-marked-series.md",
+        "literature/susskind-memory-neutral-marked-series-sources.md",
+        "journal/2026-11-07-susskind-memory-neutral-marked-series.md",
+        "results/susskind-memory-neutral-marked-series/coefficient-checks.json",
+        "results/susskind-memory-neutral-marked-series/rank-checks.json",
+        "results/susskind-memory-neutral-marked-series/main.log"
+      ],
+      "excluded_mutable_plans": [
+        "NEXT.md",
+        "PLAN.md",
+        "README.md"
+      ]
+    },
+    "results/susskind-memory-two-component/local-evidence.json": {
+      "sha256": "4f96fd71d5df254857ebf12089d67b34862e37225732ac126e7dc4907f3aeed9",
+      "unchanged_scientific_files": [
+        "code/memory_four_copy_background.py",
+        "code/check_four_copy_finite_time.py",
+        "code/check_neutral_memory_coefficients.py",
+        "code/build_memory_two_component.ps1",
+        "code/record_memory_two_component.py",
+        "manuscript/susskind-memory-two-component/main.tex",
+        "output/pdf/de-sitter-susskind-memory-two-component.pdf",
+        "notes/susskind-memory-two-component.md",
+        "notes/susskind-memory-neutral-series-seed.md",
+        "literature/susskind-memory-two-component-sources.md",
+        "journal/2026-11-07-susskind-memory-two-component.md",
+        "results/susskind-memory-two-component/four-copy-q-checks.json",
+        "results/susskind-memory-two-component/four-copy-finite-time-checks.json",
+        "results/susskind-memory-two-component/neutral-coefficient-checks.json",
+        "results/susskind-memory-two-component/main.log",
+        "results/susskind-memory-two-component/diagnostics/first-build.log",
+        "results/susskind-memory-two-component/diagnostics/first-build.tex",
+        "results/susskind-memory-two-component/diagnostics/first-finite-driver-failure.txt",
+        "results/susskind-memory-two-component/diagnostics/first-finite-driver.py",
+        "results/susskind-memory-two-component/diagnostics/second-build.log",
+        "results/susskind-memory-two-component/diagnostics/second-build.tex"
+      ],
+      "excluded_mutable_plans": [
+        "NEXT.md",
+        "PLAN.md",
+        "README.md"
+      ]
+    }
+  },
+  "input_hashes_verified": {
+    "descendant-checks.json": {
+      "code/check_memory_wick_descendants.py": "b3a3e6a49c1c3d1a4bcbc2e29d9543863783aa3b7dc725f3eb56f7163fdc0087",
+      "code/complex_syk_dictionary.py": "96b4890a167beeadf0849ccffdbb20dd125d921af062fd291044da9024900abf",
+      "code/cubic_linear_channels.py": "da867816fdac6e958d3008fcb0e5b0581de0a8313d8bb6e53fbd1d5d9a019f9f",
+      "code/cubic_linear_dynamics.py": "81d8e955107098e897637650bb7686a15fd2ff8fde6de1e1c525db398516d014",
+      "code/cubic_linear_limit.py": "a64fbf4649489437cdd7bc1097b24bd13f67641f4efbcd95a9fad4193c8f3971",
+      "code/memory_charged_transfer.py": "155392a862098a9aa1119085629bca5b2467e0de9f1610c009273e66fa80455a",
+      "code/memory_jacobi_bridge.py": "da16585afe38456af7b7bed421a3f8c87d97b1f9bf9e5210967c87dcea7794b6",
+      "code/memory_size_marked_chords.py": "4b7e54c2218198ef0d8c29ed4aa6344cd3e5a24d466464c5006f49e0b6d7ec36",
+      "code/memory_wick_descendant_chords.py": "e6f8199a41dda6b3a81c91f49afa20441a6270ca86de227658d5e72d9557d660",
+      "code/memory_wick_rank.py": "7adf10a9d087a24ec84215dd0f95ccc832a5cefc8e8f833d7ca3521231d81525",
+      "code/singlet_coefficient.py": "ef7d9b96f96a036ea0d9774950702a82a968b56758a778db0365e9df0c3b2e10",
+      "code/singlet_multimark.py": "5b1def3fcc893c807e416c909076c6bb8383f54975bd9ed09d5dde37f129db0d",
+      "code/singlet_wick_moments.py": "045f9f02e860fa8f2e402ca5162dabf035208a8d26023ada5721a5f02d47572c"
+    },
+    "source-regression-checks.json": {
+      "code/check_memory_source_regression.py": "65464a8dfa7a3a8dd7a3859c31f1985c7403fb34dd68e86c6efe593b6f8a2d0d"
+    }
+  },
+  "parameter_hashes_verified": {
+    "descendant-checks.json": "c0fcf4f03c52d8c09dc3d81f921243ded1e2a40de5c39efa13e79a79b13dd318",
+    "source-regression-checks.json": "29b07e2a522bc4ac7ad9e8f3eb570c6f44b759f15d27139fa847012a889c959a"
+  },
+  "checks": {
+    "descendants": {
+      "counts": {
+        "finite_OU_Hermite_comparisons": 42,
+        "prior_V1_V2_calibrations": 12,
+        "composite_source_regressions": 10,
+        "nonvacuous_centered_no_bridge_cases": 6,
+        "formal_moment_polynomials": 59,
+        "eta_chaos_norms": 9
+      },
+      "maximum_finite_absolute_error": 6.661338147750939e-15,
+      "signed_polynomial_rows": 19,
+      "retained_negative_coefficients": 31,
+      "parameter_sha256": "c0fcf4f03c52d8c09dc3d81f921243ded1e2a40de5c39efa13e79a79b13dd318",
+      "finite_scope": "Full-Fock halfsize before charge restriction; floating complete Gaussian-Hermite comparisons, not finite rank=size or interval arithmetic.",
+      "exact_scope": "Signed formal polynomial, regression and no-bridge cancellation checks at the recorded fixed degrees. The manuscript supplies the all-degree proof."
+    },
+    "source_regression": {
+      "counts": {
+        "permutations": 5913,
+        "weighted_mark_samples": 80638,
+        "regression_cases": 56,
+        "negative_raw_mark_samples": 12316,
+        "b0_candidate_pairings": 735,
+        "b0_pairings": 168,
+        "b0_negative_centered_terms": 60,
+        "b0_nonzero_centered_terms": 120,
+        "b0_groups": 38,
+        "b0_layouts": 7
+      },
+      "counts_reconstructed_from_saved_rows": {
+        "permutations": 5913,
+        "weighted_mark_samples": 80638,
+        "regression_cases": 56,
+        "negative_raw_mark_samples": 12316,
+        "b0_layouts": 7,
+        "b0_groups": 38,
+        "b0_pairings": 168,
+        "b0_candidate_pairings": 735
+      },
+      "negative_centered_examples_verified": 10,
+      "parameter_sha256": "29b07e2a522bc4ac7ad9e8f3eb570c6f44b759f15d27139fa847012a889c959a",
+      "exact_scope": "Independent standard-library permutation and no-bridge enumeration; saved polynomial identities and rational group sums rechecked here. Signed individual terms are retained before group cancellation.",
+      "rational_scope": "q=1/3 and lambda=1/4 are independent formal evaluation values, not a physical pair satisfying q=exp(-4 lambda).",
+      "limitations": "Fixed degrees through 7 and no-bridge layouts with 8 slots; no arbitrary-degree or asymptotic theorem follows from these counts."
+    }
+  },
+  "evidence_scopes": {
+    "descendant-checks.json": "Full finite Gaussian-Hermite versus coordinate-pairing comparisons use full-Fock half-size and floating normalized CAR matrices. The formal signed lambda/q polynomials and centered no-bridge cancellations are exact fixed-degree chord computations under the established pair-Poisson rule. No finite-N rank=size substitution, arbitrary-degree proof by finite enumeration, interval arithmetic, or full-time pinched/charged memory kernel is claimed.",
+    "source-regression-checks.json": "Independent exact finite source regression and actual no-bridge grouping; no asymptotic proof or physical rational DS point claimed."
+  },
+  "recorded_driver_environments": {
+    "descendant-checks.json": {
+      "python": "3.14.5",
+      "numpy": "2.4.6",
+      "sympy": "1.14.0",
+      "mpmath": "1.3.0"
+    },
+    "source-regression-checks.json": {
+      "python": "3.14.5",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "dependencies": "Python standard library only"
+    }
+  },
+  "environment": {
+    "python": "3.14.5",
+    "numpy": "2.4.6",
+    "sympy": "1.14.0",
+    "mpmath": "1.3.0"
+  },
+  "build": {
+    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File code/build_memory_wick_descendants.ps1",
+    "pages": 9,
+    "passes": 2,
+    "pass_records": [
+      {
+        "pass_number": 1,
+        "path": "tmp/pdfs/susskind-memory-wick-descendants-build/pass1.txt",
+        "sha256": "bdd1b292052a6376a2dbd971b40139546d23b2b351e998ea04393d5c04a71b32",
+        "compiler_header": "pdflatex.exe : log4cxx: setFile(C:\\Users\\weiji\\MiKTeX\\texmfs/data\\miktex\\log/pdflatex.log,true) call failed."
+      },
+      {
+        "pass_number": 2,
+        "path": "tmp/pdfs/susskind-memory-wick-descendants-build/pass2.txt",
+        "sha256": "bdd1b292052a6376a2dbd971b40139546d23b2b351e998ea04393d5c04a71b32",
+        "compiler_header": "pdflatex.exe : log4cxx: setFile(C:\\Users\\weiji\\MiKTeX\\texmfs/data\\miktex\\log/pdflatex.log,true) call failed."
+      }
+    ],
+    "compiler_header": "This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5 Portable) (preloaded format=pdflatex 2026.9.19)  7 NOV 2026 03:23",
+    "render_command": "pdftoppm -r 95 -png output/pdf/de-sitter-susskind-memory-wick-descendants.pdf tmp/pdfs/susskind-memory-wick-descendants-build/page",
+    "render_number_width": 1,
+    "final_render_filenames": [
+      "page-1.png",
+      "page-2.png",
+      "page-3.png",
+      "page-4.png",
+      "page-5.png",
+      "page-6.png",
+      "page-7.png",
+      "page-8.png",
+      "page-9.png"
+    ],
+    "final_pages_visually_inspected": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "visual_result": "Coordinating agent inspected every final render after the last build, including equations, references and page boundaries. Only the naming width selected by the final page count is bound."
+  },
+  "diagnostics": {
+    "preserved_files": [],
+    "scope": "Earlier source/build/render diagnostics, if any, are preserved separately from the validated final PDF and renders."
+  },
+  "process_state": "Scientific checks, both final LaTeX passes and rendering are terminal when this recorder is run. The recorder executes none of them.",
+  "hashes": {
+    "code/memory_wick_descendant_chords.py": "e6f8199a41dda6b3a81c91f49afa20441a6270ca86de227658d5e72d9557d660",
+    "code/check_memory_wick_descendants.py": "b3a3e6a49c1c3d1a4bcbc2e29d9543863783aa3b7dc725f3eb56f7163fdc0087",
+    "code/build_memory_wick_descendants.ps1": "0a00e81aea1b4c3e508300e8a57788c609b973160b3e55185f4baa327b629540",
+    "code/record_memory_wick_descendants.py": "d218da0247c3fa9b3853f65f29401b74ce87382f113c87aa41fe17cb74b84d10",
+    "manuscript/susskind-memory-wick-descendants/main.tex": "a370a3feb30eff642431a6d11a3df5a11d412929d403a5f4b2ab56eaeedab36c",
+    "output/pdf/de-sitter-susskind-memory-wick-descendants.pdf": "f3586b00307d0df1e9eafc5dfb2077d9b133bb7497494abf7ec6db72ada33178",
+    "notes/susskind-memory-wick-descendants.md": "e92a6ab0e2f76affe235a730f7b7a818eaa413a8554ed3905712dd42ad89bed8",
+    "literature/susskind-memory-wick-descendants-sources.md": "f069c4550e69167b663cf64bfbe85cebcf3f9c92d012fe683da9cc1e6b12b814",
+    "notes/susskind-memory-oriented-transfer-seed.md": "bd36a1efcd12cccc0e8849227e53480c00778e220bcf52190cc329358b3a89be",
+    "journal/2026-11-07-susskind-memory-wick-descendants.md": "d61676e44e94d0f6d99712229eb14bb0f483f22c26ecbf49247146377fa1998d",
+    "README.md": "79c64d0c76ad40b244ef0650926eaa209763f93290ff42d0073b5661d3b35594",
+    "PROJECT.md": "5c7cab9a9abd28d354b07a94aee40aedcca351bb4eff8b0cb07e8428058fd00a",
+    "PLAN.md": "bf40874caa56bcefd040f0707619042e7658a82e833cf7712a46f918eeba073d",
+    "NEXT.md": "c7b1d4f75277e8b10f681fe6fdffcd7f0b9044fdd68940fbc6b37db367697169",
+    "code/check_memory_source_regression.py": "65464a8dfa7a3a8dd7a3859c31f1985c7403fb34dd68e86c6efe593b6f8a2d0d",
+    "results/susskind-memory-wick-descendants/descendant-checks.json": "ac3cd3979227fe295028563c71f50e69d4baee33b962f88a77e933ffb95c47b1",
+    "results/susskind-memory-wick-descendants/source-regression-checks.json": "75fb4db80aaa3d665d915bd66f3f9051a0fd0861b5eacecc8add43697f323fcd",
+    "results/susskind-memory-wick-descendants/main.log": "cd2a5d62ddef72284747143eb6de7d0b8e765ff3beee070afe974cba2bff50ca"
+  },
+  "render_hashes": {
+    "tmp/pdfs/susskind-memory-wick-descendants-build/page-1.png": "0eea20d291625f50d1acee3e3b6698fbec20fb1ed2a463ab1d7edd2711edf49b",
+    "tmp/pdfs/susskind-memory-wick-descendants-build/page-2.png": "46a573d933753c2a24e9ac6ab129929dbc3e705841b5ee0b6e98f8ea44a60f9f",
+    "tmp/pdfs/susskind-memory-wick-descendants-build/page-3.png": "149f2e1165b53c6d564a19b5e3af2c56daae52c9286f703a0da873d9dcd62a32",
+    "tmp/pdfs/susskind-memory-wick-descendants-build/page-4.png": "6e9995ddcbe259da39b13ffd7bd45527bf95920ae19ed109626b04a82093dc75",
+    "tmp/pdfs/susskind-memory-wick-descendants-build/page-5.png": "ceda66d100d45171cb88913679a53fad1cab94a9ad993cc67a6131551483489f",
+    "tmp/pdfs/susskind-memory-wick-descendants-build/page-6.png": "26fd5dcaaf3628ac97ef677eb41b038c649fce7ace1d30c5563fc437cf92e387",
+    "tmp/pdfs/susskind-memory-wick-descendants-build/page-7.png": "5a991f1b6ff5c1d467dc7a637579ddd5cc0cb74e5897a2a3ad6406b43ff38531",
+    "tmp/pdfs/susskind-memory-wick-descendants-build/page-8.png": "841855e98714f7dd2162e9001e05e491c12a6a4487b5e908998bf003886c9db5",
+    "tmp/pdfs/susskind-memory-wick-descendants-build/page-9.png": "7a712f1f22c08df57870f8349fa2dc0bebdd9d8732e5197b239e7f7cc5b9a353"
+  },
+  "build_pass_hashes": {
+    "tmp/pdfs/susskind-memory-wick-descendants-build/pass1.txt": "bdd1b292052a6376a2dbd971b40139546d23b2b351e998ea04393d5c04a71b32",
+    "tmp/pdfs/susskind-memory-wick-descendants-build/pass2.txt": "bdd1b292052a6376a2dbd971b40139546d23b2b351e998ea04393d5c04a71b32"
+  }
+}

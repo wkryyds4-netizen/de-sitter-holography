@@ -1,0 +1,323 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,microtype}
+\usepackage[margin=24mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\Rem}{\operatorname{Rem}}
+\newcommand{\W}{\mathsf W_2}
+\title{Coherent adjacent-charge products in the memory core\\The cross with the derivative singlet}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Local research note --- 6 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+We compute the previously missing equal-time cross between the
+output-rank deficit and the derivative singlet $A$. Adjacent-charge
+covariance composition gives a coherent Racah transform. Its signed
+first moment has an exact contiguous reduction, which preserves the
+cancellation of two terms of order $m$. At half filling the cross,
+after the energy-square subtraction, equals the previously obtained
+output-deficit variance. The next calculation is the norm of their
+difference in this same sector.
+\end{abstract}
+\section{Operators and the result}
+Use standard CAR, the full overlapping complex Gaussian $p$-body
+ensemble, $\hbar=1$, and the normalized maximally mixed trace in
+charge $m=N/2$. Inner products are $\langle U,V\rangle_m=
+\EE\tr_m(U^\dagger V)$. Write $h=H_m$, $k=H_{m-1}$ for the
+\emph{same} couplings, $C=\EE h^2$, and
+\begin{align}
+ A&=\Rem(k^2)+(2p-m)h^2,
+ &\Rem(X)&=\sum_i c_i^\dagger Xc_i,\notag\\
+ O&=\W A, &B&=\W h^2=h^2-CI.\label{ops}
+\end{align}
+Here $\W$ denotes ordinary Gaussian second chaos, so $O=A-\EE A$.
+For input ranks $a\leq b$, let $Z^+_{ab;r}=P_r(h_a\odot h_b)$,
+where $\odot$ is a square for $a=b$ and an anticommutator otherwise.
+Set $S=a+b-r$ and $\mathcal S_N=\sum S\W Z^+_{ab;r}$.
+Let $D_N=\sum_a(p-a)h_a$, $\bar s=\sum_a(p-a)C_a/C$, and
+$L_N=\W\{h,D_N-\bar s h\}$.
+
+First take $p^2/N\to\lambda>0$, with physical $C\to J_s^2/\lambda$;
+put $\theta=2\lambda$, $q=e^{-4\lambda}$. We obtain
+\begin{align}
+ C^{-2}\langle B,O\rangle_m&\longrightarrow\theta(1-q),\notag\\
+ C^{-2}\langle L_N,O\rangle_m&\longrightarrow0,\notag\\
+ C^{-2}\langle\mathcal S_N,O\rangle_m
+ &\longrightarrow\theta^2(1+q)+\theta(1-q).\label{main}
+\end{align}
+The final line is the output-deficit norm from the preceding note.
+The proof below computes the actual cross; it does not substitute an
+independent disorder copy for the two factors of $A$.
+
+\newpage
+\section{A coherent covariance transform}
+Temporarily allow general $m$, and use independent, isotropic
+Hermitian rank-$a$ and rank-$b$ tensors $U,V$. Their restrictions
+$U^\pm,V^\pm$ to charges $m,m-1$ are coherently related primitive
+tensors, each normalized to $\EE(U^\pm)^2=I$.
+Let $R=\min(m-1,N-m)$, $D_+=\binom Nm$, $D_-=\binom N{m-1}$,
+and define
+\begin{align}
+ d_r&=\binom Nr^2-\binom N{r-1}^2,
+ &e_t&=\binom Nt\left[\binom N{t+1}-\binom N{t-1}\right],\notag\\
+ \ell_r^2&=\frac{m(m-r)(N-m+1-r)}{N-m+1}.\label{dims}
+\end{align}
+The charged $(t+1,t)$ covariance eigenvalue of
+$\Psi_a(X)=\EE U^+XU^-$ is $\zeta_a(t)=\ell_a T_a(t)/m$, where
+\begin{equation}
+ T_a(t)={}_4F_3\!\left(\begin{matrix}-a,a-N-1,-t,t-N\\
+ 1-m,m-N,-N-1\end{matrix};1\right).\label{T}
+\end{equation}
+One way to fix this normalization uses the known embedded-ensemble
+charged covariance, $\binom{m-t-1}{p}\binom{N-m+p-t}{p}$.
+If $\omega_a^{(p)}$ are the usual upper-sector rank weights, its
+triangular pure-rank decomposition reads
+\begin{equation}
+ \sum_{a=0}^p\omega_a^{(p)}T_a(t)=
+ \frac{m\binom{m-t-1}{p}\binom{N-m+p-t}{p}}
+ {(m-p)\binom mp\binom{N-m+p}{p}}.\label{triangular}
+\end{equation}
+Substitution of the terminating series and interchange of the finite
+$(a,j)$ sums gives this binomial identity (Vandermonde summation).
+The coefficient of $T_p$ is nonzero, so the triangular system fixes
+all pure-rank eigenvalues. This uses established embedded-ensemble
+recoupling machinery, not a new ensemble prescription \cite{kota}.
+
+Define the coherent output contraction
+\begin{equation}
+ M_{ab}(r)=\EE\langle P_r(U^+V^+),\Rem P_r(U^-V^-)\rangle_m,
+ \qquad \mu_{ab}(r)=\frac{mM_{ab}(r)}{\ell_a\ell_b}.
+\end{equation}
+Composition of $\Psi_a,\Psi_b$, followed by covariance reshuffling,
+gives
+\begin{align}
+ T_a(t)T_b(t)&=\sum_r\mu_{ab}(r)T_r(t),\notag\\
+ \mu_{ab}(r)&=\frac{d_r\ell_r^2}{m^2D_+D_-}
+       \sum_{t=0}^R e_tT_a(t)T_b(t)T_r(t).\label{mu}
+\end{align}
+Indeed reshuffling is an HS isometry and
+$\sum_t e_t\zeta_r(t)\zeta_s(t)=D_+D_-\delta_{rs}/d_r$.
+This proves the inversion without selecting tensor-product
+multiplicity bases or discarding their phases. We only use
+$\sum_r\mu_{ab}(r)=1$; no positivity assumption is needed.
+
+\newpage
+\section{Exact unsigned and signed first moments}
+Return to $N=2m$, $a,b<m$. Put $x_r=r(N+1-r)$,
+$X=x_{a+b}-x_r$, and let $\chi_{ab}$ be the previous neutral
+Racah kernel, with lower parameters $(-m,-m,-N-1)$.
+Write
+\begin{equation}
+ \xi_{ab}={}_4F_3\!\left(\begin{matrix}-a,a-N-1,-b,b-N-1\\
+ 1-m,-m,-N-1\end{matrix};1\right),\quad
+ C_f=\frac{m^2(N+1)}N,\quad
+ C_t=\frac{m(m-1)(N+1)}{N-1}.
+\end{equation}
+With $\varepsilon=(-1)^{a+b-r}$, the four moments are
+\begin{align}
+ \sum_r\mu_{ab}(r)&=1,&
+ \sum_rX\mu_{ab}(r)&=-2ab+\frac{x_ax_b}{C_t},\notag\\
+ \sum_r\varepsilon\mu_{ab}(r)&=\xi_{ab},&
+ \sum_r\varepsilon X\mu_{ab}(r)
+ &=-2ab\xi_{ab}+m(\xi_{ab}-\chi_{ab}).\label{moments}
+\end{align}
+The unsigned identity follows by evaluating \eqref{mu} at $t=1$,
+since $T_a(1)=1-x_a/C_t$.
+
+Here is a difference-equation derivation of the signed identities.
+The Racah equation \cite{ks}, with
+$(\alpha,\beta,\gamma,\delta)=(-m,-m-1,-N-2,0)$, yields
+\begin{align}
+ (\mathcal Lf)_a&=B_a(f_a-f_{a+1})+D_a(f_a-f_{a-1}),\notag\\
+ B_a&=\frac{(a+1-m)(a-N-1)^2}{2(2a-N-1)},&
+ D_a&=\frac{a^2(a-m-2)}{2(2a-N-1)},\label{rates}
+\end{align}
+with $B_{m-1}=D_0=0$. Its eigenvalue on $T_a(t)$ is $y_t=t(N-t)$.
+In particular $2(B_a+D_a)=(m-1)(N+1)-x_a$.
+The alternating completeness sum, obtained by substituting the
+terminating series in \eqref{T}, is
+\begin{equation}
+ F(t):=\sum_r(-1)^rd_r\ell_r^2T_r(t)
+   =(-1)^{m-1+t}mD_-(m-t).
+\end{equation}
+The same sum with $x_r$ inserted is
+$[(m-1)(N+1)-y_t]F(t)$. Substitution in \eqref{mu} gives the
+signed zeroth moment and the signed $x_r$ moment
+$(x_a+\mathcal L_a)\xi_{ab}$.
+
+For explicit reduction, the two charged components of a neutral
+rank-$b$ tensor give
+\begin{equation}
+ \xi_{ab}=T_a(b)-\frac b{N+1-2b}[T_a(b-1)-T_a(b)].
+\end{equation}
+Thus $(\mathcal L_a-x_b)\xi_{ab}=
+\frac{x_b}{N+1-2b}[T_a(b-1)-T_a(b)]$.
+If $c_j$ is the $j$th summand of $\chi_{ab}$, the corresponding
+summand of $\xi_{ab}$ is $mc_j/(m-j)$. Termwise subtraction shows
+\begin{equation}
+ \frac{x_b[T_a(b-1)-T_a(b)]}{N+1-2b}
+ =-\sum_j\frac{jm}{m-j}c_j=-m(\xi_{ab}-\chi_{ab}),
+\end{equation}
+which proves the last formula in \eqref{moments}, including $b=0$.
+
+\newpage
+\section{Same-disorder cross and cancellation}
+In the actual $p$-body ensemble let $d=m-p>0$, $C_a=\EE h_a^2$,
+and $\omega_a=C_a/C$. Primitive embedding gives
+\begin{equation}
+ \sqrt{\frac{C_a^-}{C_a}}\sqrt{\frac{C_b^-}{C_b}}
+       \frac{\ell_a\ell_b}{m}=\frac{d^2}{m}=:g.
+\end{equation}
+This independence of $a,b$ is useful. The upper half-filled product
+obeys $P_r(V_bU_a)=\varepsilon P_r(U_aV_b)$.
+Consequently the same-$J$ cross, including the $a=b$ Gaussian
+decoupling coefficient, is
+\begin{equation}
+ \left\langle\sum f_{ab;r}\W Z^+_{ab;r},O\right\rangle_m
+ =C^2\sum_{a,b}\omega_a\omega_b\sum_r f_{ab;r}(1+\varepsilon)
+       [g\mu_{ab}(r)+(2p-m)\pi_{ab}(r)].\label{cross}
+\end{equation}
+Here $\pi$ is the previous upper-sector ordered-product probability;
+pad $\mu$ by zero at $r=m$. The two terms in brackets must be
+combined before an asymptotic expansion.
+
+Set $\eta=p^2/m$, $\Delta=\xi_{ab}-\chi_{ab}$, and
+$u_X=-2ab+x_ax_b/C_f$. The cross for $f=1$ and $f=X/N$,
+per ordered input pair and divided by $C_aC_b$, is exactly
+\begin{align}
+ b_{ab}&=\eta(1+\chi_{ab})+g\Delta,\label{bexact}\\
+ z_{ab}&=\frac1N\left\{
+ \eta(u_X-2ab\chi_{ab})+
+ g\left[\frac{x_ax_b}{m(m-1)(N+1)}+(m-2ab)\Delta\right]
+ \right\}.\label{zexact}
+\end{align}
+We used $g+2p-m=\eta$ and
+$C_t^{-1}-C_f^{-1}=[m(m-1)(N+1)]^{-1}$.
+
+For fixed input deficits $p-a,p-b$ the terminating-series bounds
+give
+\begin{equation}
+ \chi_{ab}\to q,\qquad
+ m\Delta=\sum_j\frac{jm}{m-j}c_j\to-4\lambda q.
+\end{equation}
+Each $|c_j|$ is bounded by $K_\lambda^j/j!$, uniformly for
+$0\leq a,b\leq p$ at sufficiently large $p$. Also $m/(m-j)$ is
+uniformly bounded. Dominated summation therefore applies to the
+series and its first $j$ moment. Equations \eqref{bexact}--\eqref{zexact}
+then imply
+\begin{equation}
+ b_{ab}\to\theta(1-q),\qquad
+ z_{ab}\to\theta^2(1+q)+\theta(1-q).
+\end{equation}
+They also give uniform bounds $|b_{ab}|+|z_{ab}|\leq K_\lambda$.
+The previous factorial input-deficit tail passes these limits through
+the full $\omega_a\omega_b$ sum. Multiplication by
+$2\bar a-a-b$, with $\bar a=\sum a\omega_a$, gives the $L_N$ cross;
+its limit vanishes by the same weighted-tail bound.
+
+\newpage
+\section{From the Casimir proxy to the actual deficit}
+Define $\mathcal X_N=\sum X\W Z^+_{ab;r}$. The finite numerical
+quantity in \eqref{zexact} is $\langle\mathcal X_N/N,O\rangle$.
+To obtain \eqref{main}, use the exact identity
+\begin{equation}
+ X=S[N+1-2(a+b)+S].
+\end{equation}
+Orthogonality of input-pair and output-rank blocks, together with
+the preceding positive parity Gram, gives
+\begin{equation}
+ \|\mathcal S_N-\mathcal X_N/N\|_{2,m}
+ \leq\frac{4p}{N}\|\mathcal S_N\|_{2,m}=O(N^{-1/2}).\label{proxy}
+\end{equation}
+We need only a weak bound on the other factor. The previous
+full-Fock, $\beta=\mu_{\rm chem}=0$ calculation bounds
+$\|\W A\|_{2,\mathrm F}^2$ at fixed positive $\lambda$.
+All sector contributions to this positive norm are nonnegative, so
+\begin{equation}
+ \|O\|_{2,m}^2\leq
+ \frac{\|\W A\|_{2,\mathrm F}^2}{2^{-N}\binom N{N/2}}
+ =O(N^{1/2}).\label{weakbound}
+\end{equation}
+Cauchy--Schwarz applied to \eqref{proxy} and \eqref{weakbound}
+bounds the cross error by $O(N^{-1/4})\to0$.
+This step does not identify the full-Fock norm with a fixed-sector
+norm. The existing full-Fock result is used only as a positive bound.
+
+\section{What the cross tells us}
+Let $c=\theta(1-q)/(1+q)$, $\mathcal S_\perp=\mathcal S_N-cB$,
+and $Y=O-cB$. The preceding parity Gram and \eqref{main} yield
+\begin{align}
+ \lim\langle\mathcal S_\perp,Y\rangle_m
+ &=\lim\|\mathcal S_\perp\|_{2,m}^2=V_S,\notag\\
+ V_S&=J_s^4\left[\frac{2(1-q)}\lambda+
+                         \frac{16q}{1+q}\right]>0.\label{VS}
+\end{align}
+In particular $\langle\mathcal S_\perp,O-\mathcal S_N\rangle_m\to0$.
+The output deficit is not orthogonal to the derivative singlet.
+The remaining scalar quantity for this part of the projection is
+\begin{equation}
+ \Delta_N=\|O-\mathcal S_N\|_{2,m}^2.
+\end{equation}
+If it has a finite limit $\Delta_*$, the norm remaining after the
+$B,O$ projection tends to $V_S\Delta_* /(V_S+\Delta_*)$.
+This is a conditional projection formula, not an evaluation of
+$\Delta_*$. The already controlled input direction is orthogonal
+in this limiting Gram. Weighted $A$ tails, the fixed-sector $A$ norm,
+and the low-chaos terms of the raw memory coefficient remain to be
+computed. Only afterwards should the full energy-resolved spectrum
+and bulk mass dictionary be assembled.
+
+\newpage
+\section{Verification and continuation}
+All calculations here use the same CAR and covariance normalization
+as the earlier memory notes. The validation includes:
+\begin{itemize}
+ \item 1,925 finite embedded/pure charged covariance identities at
+ general charge, plus 139 orthogonality identities, 139 difference
+ equations, and 556 signed/unsigned moments at half filling.
+ \item Ten complete rectangular covariance maps, with 306,152
+ complex entries, checked using exact CAR and Casimir projectors.
+ These test the map, not merely selected highest-weight vectors.
+ \item The full Gaussian quadratic-coefficient Gram on
+ $(N,p,m)=(4,1,2),(6,1,3),(6,2,3)$: respectively 136, 666, and
+ 25,425 symmetric coordinate pairs. The $B$, $\mathcal S_N$, and
+ $\mathcal X_N/N$ crosses with $O$ agree with \eqref{cross}.
+ \item 384 contiguous first-moment identities and two symbolic
+ rational identities; three complete input-rank sums compared with
+ an independent exact pair summation.
+ \item Twelve complete-rank double-scale calculations at
+ $\lambda=0.1,0.25,0.5$ and $p=16,32,64,128$, evaluated at 80 and
+ 120 decimal digits. Every rank and every terminating-series term
+ is retained; the cancellation factor is recorded.
+\end{itemize}
+The last calculation uses the Casimir proxy. For example at
+$\lambda=0.5,p=128$, its cross divided by $C^2$ differs from its
+limit by about $-0.0548285$; the $B$ and $L_N$ cross deviations
+are about $1.95318\,10^{-5}$ and $3.32957\,10^{-5}$.
+These are finite-$p$ deviations, not numerical errors. Precision
+refinement is not an interval-rounding certificate. The proxy is
+replaced by the actual deficit using the analytic bound on page 5.
+
+The finite Gram gives positive residuals after projection onto
+$B,O$ in all three test systems. This does not decide the
+double-scaled residual. The next calculation should evaluate
+$\Delta_N$ while preserving adjacent-charge interference, then
+control the $g_A$ weighted tail from the previous core formula.
+No new time-dependent spectral measure or new bulk particle is
+claimed by this equal-time calculation.
+
+\begin{thebibliography}{9}
+\bibitem{kota} V. K. B. Kota and M. Vyas,
+\emph{Random Matrix Theory for Transition Strength Densities in
+Finite Quantum Systems: Results from Embedded Unitary Ensembles},
+\href{https://arxiv.org/abs/1504.00759}{arXiv:1504.00759},
+Secs. 3 and 7. The recoupling structure is used; its dilute limit
+is not our half-filled double scaling.
+\bibitem{ks} R. Koekoek and R. F. Swarttouw,
+\emph{The Askey-scheme of hypergeometric orthogonal polynomials
+and its $q$-analogue}, report 98-17 (1998), Sec. 1.2,
+\href{https://tudelft.roelofkoekoek.nl/documents/as98.pdf}{Eq. (1.2.5)}.
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,111 @@
+{
+  "status": "Saved locally; overall research goal remains active",
+  "created_at_utc": "2026-11-06T15:54:24.535061+00:00",
+  "scientific_status": "Strong leading ordinary-kernel approximation and conserved first-return limit. Pinched field L2 equivalence; uniform L2 boundedness and finite-memory covariance remain open.",
+  "git_commit_created": false,
+  "git_push_performed": false,
+  "archive_created": false,
+  "external_reply_sent": false,
+  "previous_evidence": {
+    "results/susskind-memory-return-expansion/local-evidence.json": {
+      "sha256": "d4ec2831e0da4d5f07380f10cdc9308cc9bebd46296e083b71ab59cd51baa712",
+      "unchanged_scientific_files": [
+        "code/memory_return_expansion.py",
+        "code/build_memory_return_expansion.ps1",
+        "code/record_memory_return_expansion.py",
+        "manuscript/susskind-memory-return-expansion/main.tex",
+        "output/pdf/de-sitter-susskind-memory-return-expansion.pdf",
+        "notes/susskind-memory-return-expansion.md",
+        "literature/susskind-memory-return-expansion-sources.md",
+        "journal/2026-11-06-susskind-memory-return-expansion.md",
+        "results/susskind-memory-return-expansion/finite-checks.json",
+        "results/susskind-memory-return-expansion/main.log",
+        "results/susskind-memory-return-expansion/diagnostics/first-layout.log"
+      ]
+    },
+    "results/issue-1-review/local-evidence.json": {
+      "sha256": "67cc2897de1112c32c82173760e80071d53482007e422eeb36a5dcac90c06262",
+      "unchanged_scientific_files": [
+        "code/review_issue1_evidence.py",
+        "code/build_issue1_review.ps1",
+        "code/record_issue1_review.py",
+        "manuscript/issue-1-review/main.tex",
+        "output/pdf/de-sitter-issue-1-review.pdf",
+        "notes/issue-1-review.md",
+        "literature/issue-1-review-sources.md",
+        "journal/2026-11-06-issue-1-review.md",
+        "sources/external-reviews/issue-1/issue.json",
+        "sources/external-reviews/issue-1/pentagon-query.pdf",
+        "sources/external-reviews/issue-1/pentagon-review-evidence.zip",
+        "results/issue-1-review/independent-assembly.json",
+        "results/issue-1-review/main.log",
+        "results/issue-1-review/attachment-text.txt",
+        "results/issue-1-review/diagnostics/first-layout.log"
+      ]
+    }
+  },
+  "checks": {
+    "exact_fixed_bubble_equalities": 2373,
+    "scalar_values": 27,
+    "max_scalar_order_difference": 1.3255300427371534e-13
+  },
+  "environment": {
+    "python": "3.14.5",
+    "numpy": "2.4.6",
+    "scipy": "1.18.0"
+  },
+  "parameters": {
+    "q": "exp(-4 lambda)",
+    "variance": "Js^2/lambda",
+    "spectral_orders": [
+      64,
+      96
+    ],
+    "simplex_orders": [
+      20,
+      32
+    ]
+  },
+  "build": {
+    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File code/build_memory_return_background.ps1",
+    "pages": 6,
+    "passes": 2,
+    "render_command": "pdftoppm -r 95 -png output/pdf/de-sitter-susskind-memory-return-background.pdf tmp/pdfs/susskind-memory-return-background-build/page",
+    "all_six_final_pages_visually_inspected": true
+  },
+  "failures": [
+    "First layout had three overfull lines; diagnostics/first-layout.log preserved. Scientific driver passed its first run.",
+    "BKS web find requests failed after a successful open; earlier source reading and collaborator theorem-location checks retained.",
+    "Initial literature-note Xu title mismatch corrected against arXiv abstract before final save."
+  ],
+  "evidence_scope": "Exact rational chord identities and float64 conserved-background quadrature; no finite-N asymptotic fit or certified quadrature error.",
+  "process_state": "All current scientific and build processes terminal; no active shell handle.",
+  "hashes": {
+    "code/memory_return_background.py": "eec86b68719f57b6ef0891a20f3043ef74adc188e0c0795a8d7c587778dd61af",
+    "code/build_memory_return_background.ps1": "9bbbba1ef4a163c783fcdf050789175f3bca0249036393b10c6c06bf22112779",
+    "code/record_memory_return_background.py": "72fa712b81641009650bc68c8b2d1d175b5744ee6850bcb3717100832edab693",
+    "manuscript/susskind-memory-return-background/main.tex": "c8a8fb01b0046ee03b5e7ed0d788de742b65fc65d75a56f39bec6f1e65e88ba8",
+    "output/pdf/de-sitter-susskind-memory-return-background.pdf": "3f47608edcc346194c59d266569a19f44f16f4a90fe1921f8c956587c260afad",
+    "notes/susskind-memory-return-background.md": "54618729f3c0b1cf33fa8789facc10c5ecc0813984de837b5a1ef2a61306a015",
+    "literature/susskind-memory-return-background-sources.md": "eec29ab564f7cd16b55325a0f9ef46338ef504cb77a55ffc78ad7ff47dc55548",
+    "journal/2026-11-06-susskind-memory-return-background.md": "66c4c29a773180c46a79176d32f484f3273cde71685d08af01cc46627fe51001",
+    "README.md": "e69e73756cbe16bbe427dab63649e8389f971a967d00f76ca2dd552cedd7c75d",
+    "PLAN.md": "f7b30d3aa759bb15a79f1563a8da50437ede3503cade5a2ec039e1d2b1c00839",
+    "NEXT.md": "230ce971884caa046377bde9bc6119b01dbed11892994311787ff50523b49e28",
+    "results/susskind-memory-return-background/bubble-and-return-checks.json": "ed98a991a7030eee6e84b1fc5f1b61a91d9c9b63bb12d84408e47030da3f8584",
+    "results/susskind-memory-return-background/main.log": "642756a81524b7a26454c1273671843b31137f6d49d8ee010ede9ac90d82c2c5",
+    "results/susskind-memory-return-background/diagnostics/first-layout.log": "91319517137b5ae7905efb30c7b5620a1bd383fa77f7ca31d0d4ef2f74685569"
+  },
+  "render_hashes": {
+    "tmp/pdfs/susskind-memory-return-background-build/page-1.png": "2c05c0d5ffae71eed5655009b6d882e802a6f2c6a9cf7c87163ebfb11db79d87",
+    "tmp/pdfs/susskind-memory-return-background-build/page-2.png": "5ecccbf4ddbd57c0e00a88a8cef19d20086bc9723ea7fe7032c0ea56a9e81e58",
+    "tmp/pdfs/susskind-memory-return-background-build/page-3.png": "913e0696b4874d70cb83a5b145d1d7ee6ffa7ce773ddd15dff4bc070f5e728a9",
+    "tmp/pdfs/susskind-memory-return-background-build/page-4.png": "8dff402a4f200d657b4ac08b8f501df992f57b56ceea098956aa558c990606a7",
+    "tmp/pdfs/susskind-memory-return-background-build/page-5.png": "605dd3d21fed770d10277e48c02d209852bf3f8770e0281e6196f8b4073618eb",
+    "tmp/pdfs/susskind-memory-return-background-build/page-6.png": "e715750a5434546a0091df546e60edfde6bacbe99e290c7d728f421bfeaf4f2e"
+  },
+  "build_pass_hashes": {
+    "tmp/pdfs/susskind-memory-return-background-build/pass1.txt": "c471b910f78d82e32540a65271f0c6609424e302112d4a32e54e3931f6005210",
+    "tmp/pdfs/susskind-memory-return-background-build/pass2.txt": "c471b910f78d82e32540a65271f0c6609424e302112d4a32e54e3931f6005210"
+  }
+}

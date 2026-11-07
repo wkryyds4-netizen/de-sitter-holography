@@ -1,0 +1,406 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,microtype}
+\usepackage[margin=24mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\W}[1]{\mathsf W_{#1}}
+\newcommand{\Db}{\overline D}
+\newcommand{\J}{J_s}
+\title{Two orientations of the fermionic force\\The projected second memory coefficient in energy space}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Local research note --- 6 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+The output-rank deficit in the second memory coefficient is asymptotic
+to the average of the annihilation and creation force intensities.
+We prove this reduction using an exact Casimir identity and overlap
+bounds. The two force orientations have a positive matrix of
+$q^2$ probe measures. An endpoint certificate proves that their
+cross measures with the fourth-chaos residual vanish at every fixed
+energy order. The second memory coefficient, after the previously
+specified eight-direction projection, therefore has a positive sum
+of the existing $q^4$ and $q^2$ Mehler kernels.
+\end{abstract}
+\section{State, conventions, and result}
+Use standard CAR, the full overlapping complex Gaussian $p$-body
+Hamiltonian, fixed charge $m=N/2$, and the normalized maximally mixed
+trace. All inner products are annealed:
+$\langle X,Y\rangle=\EE\tr_m X^\dagger Y$. Set $\hbar=1$ and
+\begin{equation}
+ h=H_m,\quad \lambda_N=p^2/N\longrightarrow\lambda>0,\quad
+ q=e^{-4\lambda},\quad C_N=\EE\tr_mh^2\longrightarrow C=\J^2/\lambda.
+\end{equation}
+The variance convention and the same-coupling charge lifts are those
+of the preceding notes. $\W j$ denotes ordinary Gaussian-coordinate
+chaos, not the spectral $q$-Wick polynomial of Ref.~\cite{TT}.
+Define $d_i=[H,c_i]$ on full Fock space and restrict neutral operators
+to charge $m$:
+\begin{equation}
+ A_- =\sum_i d_i^\dagger d_i,\qquad A_+=\sum_i d_id_i^\dagger,
+ \quad O_\pm=\W2 A_\pm,\quad B=\W2h^2.
+\end{equation}
+Let $\widehat\Pi_N$ be the actual finite-$N$ orthogonal projection onto
+$\operatorname{span}\{I,B,O_-,J_hF,E_0,M_0,S_0,Z_0\}$, as in
+Ref.~\cite{desc}. For $X_N=(1-\widehat\Pi_N)mZ_2$, our result is
+\begin{equation}
+ \boxed{\quad d\nu_X=V_4\,d\mu_{q^4}+V_2\,d\mu_{q^2},\qquad
+ C_X(t)=V_4G_{q^4}(t)+V_2G_{q^2}(t).\quad} \label{result}
+\end{equation}
+Here $\mu_r$ is the normalized, existing two-energy probe measure,
+$G_r(0)=1$, and both weights are positive. This is the full
+two-point spectrum of this specified projected coefficient; the
+finite-time memory operator remains a separate problem.
+
+\newpage
+\section{An exact bridge from output rank to force orientation}
+Let $Q=\sum_i c_i^\dagger c_i$ and define on neutral full-Fock operators
+\begin{equation}
+ DX=QX-\sum_i c_i^\dagger Xc_i,\qquad
+ \Db X=(N-Q)X-\sum_i c_iXc_i^\dagger.
+\end{equation}
+For the neutral quadratic Casimir $\mathcal C_x$, with eigenvalues
+$x_a=a(N+1-a)$ on rank $a$, CAR gives at half filling
+\begin{equation}
+ \mathcal C_xX=(m+1)DX+m\Db X-D\Db X,\qquad DH=pH.
+ \label{casimir}
+\end{equation}
+The compositions on the right are formed before charge restriction.
+Write $h=\sum_a h_a$, $u=p-a$, and
+\begin{equation}
+ D_{\rm in}h=\sum_a u h_a,\qquad
+ E_{\rm in}=\sum_a\frac{u(u-1)}{m-p+1}h_a.
+\end{equation}
+Equation~\eqref{casimir} implies the exact relation
+\begin{equation}
+ (p-\Db)h=2D_{\rm in}h+E_{\rm in}.
+ \label{input}
+\end{equation}
+Indeed $\Db h_a=(x_a-pm)h_a/(m-p+1)$, and
+$(x_p-x_a)/(m-p+1)=2u+u(u-1)/(m-p+1)$.
+
+Let $Z^+_{ab;r}$ be the rank-$r$ component of
+$h_ah_b+h_bh_a$ for $a<b$, and of $h_a^2$ for $a=b$.
+Define the actual deficit and its Casimir proxy by
+\begin{align}
+ \mathcal S_N&=\sum_{a\leq b,r}(a+b-r)\W2Z^+_{ab;r},\\
+ \widetilde{\mathcal S}_N
+ &=\sum_{a\leq b,r}\frac{x_{a+b}-x_r}{N}\W2Z^+_{ab;r}.
+\end{align}
+The earlier positive rank-moment bounds give
+$\|\mathcal S_N-\widetilde{\mathcal S}_N\|_2=O(p^{-1})$.
+Introduce full-Fock operators and then restrict:
+\begin{align}
+ \overline A&=(2p-\Db)H^2
+       =A_++\{H,(p-\Db)H\},\\
+ E_{\rm dbl}&=(2p-D)\overline A,\qquad
+ U_{{\rm in},2}=\{h,D_{\rm in}^2h\}+2(D_{\rm in}h)^2.
+\end{align}
+Substitution into~\eqref{casimir}, with
+$A_-=(2p-D)H^2$, gives an exact finite-$N$ identity:
+\begin{align}
+ N\left(\widetilde{\mathcal S}_N-\frac{O_-+O_+}{2}\right)
+ ={}&(1-2p)O_--2pO_+-\W2\{h,D_{\rm in}h\}\notag\\
+ &-\W2 U_{{\rm in},2}+\W2 E_{\rm dbl}
+ +(m-2p)\W2\{h,E_{\rm in}\}. \label{bridge}
+\end{align}
+It follows either by collecting $x_a+x_b-2ab-x_r$, or by applying
+the Casimir directly to $h^2$. No division by a possibly vanishing
+rank product is used.
+
+\newpage
+\section{Controlling the bridge error}
+The only new bound needed in~\eqref{bridge} is the normal/reverse
+double mark. We give its local reason explicitly. On a neutral word,
+the sitewise maps in $D=\sum_iD_i$, $\Db=\sum_i\Db_i$ have the table
+below; fermion signs in odd local factors are fixed by the original
+global ordering. Put $n=c^\dagger c$.
+\begin{center}
+\begin{tabular}{c|ccccc}
+local factor&$I$&$c$&$c^\dagger$&$n$&$1-n$\\\hline
+$D_i$&$0$&$0$&$c^\dagger$&$n$&$-n$\\
+$\Db_i$&$0$&$c$&$0$&$n-1$&$1-n$
+\end{tabular}
+\end{center}
+Consider one two-slot monomial in $H^2$, before summing indices.
+Let $a_i,b_i$ count its original creation and annihilation factors
+at site $i$. Then $\sum_i a_i=\sum_i b_i=2p$ and
+\begin{equation}
+ (2p-D)(2p-\Db)=
+ \left[\sum_i(a_i-D_i)\right]\left[\sum_j(b_j-\Db_j)\right].
+\end{equation}
+At a site used by just one of the four original index sets, both
+deficits annihilate its local factor. The remaining sites number
+at most $K$, the sum of pairwise index-set overlaps. Each local
+map has a bounded coefficient norm. Thus one deficit has coefficient
+bound $K_0K$, and two deficits have bound $K_0^2K^2$ on the overlap
+sites. A prior deficit does not modify a singleton site, so the
+second operation creates no hidden factor of $p$ there.
+
+In the Gaussian second chaos, internal contractions of a two-slot
+block are absent. For each fixed Wick graph, its distinct $p$-sets
+have uniformly bounded $\EE e^{aK}$ for every fixed $a$ at fixed
+$p^2/N$. This follows from the hypergeometric factorial-moment bound
+for each pair and H\"older for the finite number of pairs. After local
+occupation expansion, absolute trace coefficients are bounded by
+$K_1(1+K)^j e^{K_2K}$ times the singleton normalization.
+The same argument treats any fixed number of blocks and marks.
+
+For the half-filled trace, the exact local/full-Fock ratio is
+\begin{equation}
+ R_N(L,t)=2^L\frac{(m)_t^\downarrow(m)_{L-t}^\downarrow}
+ {(N)_L^\downarrow}\leq e^{K_3p^2/N}.
+\end{equation}
+On fixed overlap windows the balanced singletons give
+$|2t-L|\leq K_4K$, hence $R_N\to1$. The exponential overlap
+bound controls the complementary window, as in Ref.~\cite{desc}.
+Consequently $\|O_\pm\|_2$ and $\|\W2E_{\rm dbl}\|_2$ are bounded.
+The earlier factorial input-rank tails also bound every fixed
+moment of $D_{\rm in}^j h$, while those of $E_{\rm in}$ are
+$O(N^{-1})$ in norm. Gaussian fourth-moment bounds and H\"older
+therefore bound the products in~\eqref{bridge}. We obtain
+\begin{equation}
+ \boxed{\ \mathcal S_N=\tfrac12(O_-+O_+)+O_{L^2}(p^{-1}).\ } \label{strong}
+\end{equation}
+The limits and constants here keep $\lambda>0$ fixed.
+
+\newpage
+\section{The oriented two-energy spectral matrix}
+For two marked pairs $(a,b)$ and $(c,d)$ in a Wick word, let
+$\pi$ be the Gaussian pairing. The local determinant calculation
+gives the same single-mark coefficient for either orientation,
+$\alpha=2-4\,\mathbf1_{\rm incident\ crossing}$. The mixed coefficient is
+\begin{equation}
+ \delta=\begin{cases}
+ 4\,\mathbf1_{\pi(a)=d,\,\pi(b)=c},&\text{equal orientations},\\
+ -4\,\mathbf1_{\pi(a)=c,\,\pi(b)=d},&\text{opposite orientations}.
+ \end{cases} \label{minor}
+\end{equation}
+The determinant entry for a normal mark $(x,y)$ changes by $-2$
+at $(\pi(j),i)=(x,y)$; for a reverse mark it changes by $+2$
+at $(\pi(j),i)=(y,x)$. These statements hold before any spectrum
+is postulated. The two-mark weight is
+$q^{\rm cr}(\lambda\delta+\lambda^2\alpha\beta)$ times the
+appropriate power of $C$.
+
+For arbitrary nonnegative $a,b$, put $n=a+b$. In unit-variance
+energy variables let $P_{ab}$ be the mixed moment of $\mu_{q^2}$,
+let $m_j$ be the $q$-Gaussian moment, and put
+\begin{equation}
+ u_q=\frac{1-q}{1+q},\qquad S_n=m_{n+4}-2m_{n+2}+m_n.
+\end{equation}
+Swapping the two adjacent endpoints of each force insertion changes
+only their mutual crossing. The usual four-member exchange orbits
+give $u_q^2$; the completely connected double bridge has two
+members. For opposite orientations only its crossing member
+contributes to $\delta$. Thus for all two-arc words
+\begin{align}
+ \sum q^{\rm cr}\delta_{--}&=4P_{ab},&
+ \sum q^{\rm cr}\delta_{-+}&=-4qP_{ab},\\
+ \sum q^{\rm cr}\alpha\beta&=4u_q^2S_n+
+                  \frac{16q}{1+q}P_{ab},&
+ \sum q^{\rm cr}\alpha&=2u_qS_n.
+\end{align}
+The last identity also fixes both crosses with the conserved $B$.
+Set $c=2\lambda u_q$ and $Y_\pm=O_\pm-cB$. Subtracting this common
+background yields the two-energy matrix
+\begin{equation}
+ d\nu_{(Y_-,Y_+)}=
+ \begin{pmatrix}w&x\\x&w\end{pmatrix}d\mu_{q^2},\quad
+ \begin{aligned}
+ w&=4C^2\lambda+\frac{16C^2\lambda^2q}{1+q},\\
+ x&=-4C^2\lambda q+\frac{16C^2\lambda^2q}{1+q}.
+ \end{aligned} \label{matrix}
+\end{equation}
+Both eigenvalues are positive:
+\begin{equation}
+ w+x=4C^2\lambda(1-q)+\frac{32C^2\lambda^2q}{1+q},\qquad
+ w-x=4C^2\lambda(1+q).
+\end{equation}
+The symmetric and antisymmetric force combinations consequently
+have the same normalized two-point kernel but different strengths.
+
+\newpage
+\section{The projected deficit and its cross with the quartic field}
+Put $v=2\lambda(1-q)+16\lambda^2q/(1+q)$, $d=2\lambda(1+q)$,
+and $\rho=v/(v+d)$. The preceding equal-time Gram and its
+nondegenerate finite-$N$ limit give, for
+$\Pi_N=\operatorname{proj}_{\{I,B,O_-,J_hF\}}$,
+\begin{equation}
+ T_N=(1-\Pi_N)\mathcal S_N
+ =\frac{Y_-+Y_+}{2}-\rho Y_-+o_{L^2}(1). \label{T}
+\end{equation}
+The coefficient of the additional $J_hF$ direction tends to zero;
+its norm is bounded and its limiting Gram is nondegenerate.
+No unproved energy-resolved $F$ cross is needed for this replacement.
+Equation~\eqref{matrix} now gives
+\begin{equation}
+ d\nu_T=V_{\rm new}\,d\mu_{q^2},\qquad
+ V_{\rm new}=\frac{C^2vd}{v+d}
+ =\frac{C^2\lambda(1+q)(1-q^2+8\lambda q)}{1+q+4\lambda q}.
+\end{equation}
+
+The remaining issue is the cross with $Q_4$. To make the finite
+certificate reproducible, define
+\begin{equation}
+ d_3=q^2-q+1,\quad d_5=1+q+q^2+q^3+q^4,\quad D_4=(1+q^2)d_3d_5.
+\end{equation}
+In the four-slot mark order $01,02,03,12,13,23$, the numerator
+weights for $Q_4$ are
+\begin{align}
+ \boldsymbol w_4=\big(&q^3(1+q^2),-q(1+q^2)d_5,D_4,\notag\\
+ &q^2(1+q+q^2)(1+q^2),-q(1+q^2)d_5,q^3(1+q^2)\big).
+\end{align}
+The unmarked numerator is
+$2\lambda(q-1)^3(1+q)(1+q+q^2)d_3$.
+For $Y_+$, the marked and unmarked numerators are
+$1+q$ and $-2\lambda(1-q)$, with denominator $1+q$.
+
+Pair a four-slot block with a two-slot block. If they share
+$k=0,1,2$ bridges, the remaining $6-2k$ endpoints have an $A/B$
+color word and one split between the two exterior arcs. There are
+\begin{equation}
+ \sum_{k=0}^2\binom{6-2k}{4-k}(7-2k)=128
+\end{equation}
+templates, each with $4!2!/k!$ pairings. Substituting the
+opposite-orientation rule~\eqref{minor}, all 128 coefficients of
+$\lambda$ and $\lambda^2$ vanish as integer polynomials in $q$.
+The certificate retains all 6072 words' template aggregates.
+Arbitrary spectator chords contribute a common factor on each
+endpoint orbit: continuous block permutations preserve crossings
+with all exterior chords except the explicitly retained endpoints.
+Thus this finite classification proves cancellation for arbitrary
+fixed two-arc energy degrees, not just the nine low moments checked
+separately. Together with the old normal-orientation certificate,
+\begin{equation}
+ \nu_{Q_4,Y_-}=\nu_{Q_4,Y_+}=0,\qquad \nu_{Q_4,T}=0. \label{zero}
+\end{equation}
+Equation~\eqref{matrix} also gives $\nu_{T,Y_-}=0$ at every energy,
+not only after energy integration. Thus $\nu_{X,Y_-}=0$, including
+crosses with all fixed left/right energy descendants of $Y_-$.
+
+\newpage
+\section{From moments to the full memory spectrum}
+For Hermitian fields $X_i$, the finite-system matrix measure is
+\begin{equation}
+ \nu_{ij,N}(dE,dE')=
+ \EE\tr_m\big[X_i\Pi_h(dE)X_j\Pi_h(dE')\big].
+\end{equation}
+It is a positive matrix-valued measure, as seen in an energy
+eigenbasis. The fixed-word overlap bounds give all diagonal energy
+moments, tightness, and uniform integrability of any fixed moment.
+Spectral Cauchy--Schwarz bounds every off-diagonal total variation
+by the diagonal measures. The candidate measures have compact
+energy support, so their full moment sequence is determinate.
+Polarization therefore gives joint weak convergence for
+$(Q_4,Y_-,Y_+)$. In particular~\eqref{zero} is a statement about
+the entire cross measure, not merely the equal-time inner product.
+
+An $L^2$ replacement $X-X'$ changes the self measure by total
+variation at most $\|X-X'\|_2(\|X\|_2+\|X'\|_2)$, by spectral
+Cauchy--Schwarz on partitions. Hence~\eqref{strong} and~\eqref{T}
+also apply to bounded spectral functions without interchanging an
+unbounded exponential series and the limit.
+
+Ref.~\cite{desc} established the actual raw-coefficient reduction
+\begin{equation}
+ (1-\widehat\Pi_N)mZ_2
+ =Q_{4,N}+8\lambda_N C_Nq_N^2T_N+o_{L^2}(1).
+\end{equation}
+The old fourth-chaos theorem and~\eqref{zero} prove~\eqref{result},
+with
+\begin{align}
+ V_2&=64\J^8q^4
+ \frac{(1+q)(1-q^2+8\lambda q)}{\lambda(1+q+4\lambda q)},\\
+ V_4&=C^4\frac{4\lambda(1-q)^2(1+q)^2
+ [P(q)+4\lambda q^3 U(q)]}{(1+q^2)d_3d_5},\\
+ P(q)&=1+q+2q^2+q^3+q^4,\qquad
+ U(q)=2+q+2q^2+q^3+2q^4.
+\end{align}
+For completeness, the existing probe kernel~\cite{TT,BNR} is
+\begin{align}
+ d\mu_r&=\rho_q(\theta)\rho_q(\phi)K_r(\theta,\phi)
+                      \,d\theta\,d\phi,\\
+ \rho_q(\theta)&=\frac{(q;q)_\infty
+                  |(e^{2i\theta};q)_\infty|^2}{2\pi},\\
+ K_r(\theta,\phi)&=\frac{(r^2;q)_\infty}
+ {\prod_{s,t=\pm1}(re^{i(s\theta+t\phi)};q)_\infty},\\
+ E(\theta)&=\frac{2\sqrt C\cos\theta}{\sqrt{1-q}},\qquad
+ G_r(t)=\int e^{it(E-E')}\,d\mu_r.
+\end{align}
+Here $\theta,\phi\in[0,\pi]$ and $(z;q)_\infty=\prod_{j\geq0}(1-zq^j)$.
+For fixed $0<q<1$ the measures are positive and absolutely continuous;
+there is no limiting static atom. Their use here follows the
+same-coupling composite-field reduction, rather than assuming an
+independent random probe at the outset.
+
+\newpage
+\section{Small deformation, evidence, and continuation}
+After the double-scaled limit, take $\lambda\downarrow0$ at fixed
+string time. The known probe limit gives
+\begin{align}
+ G_{q^2}(t)&\longrightarrow\operatorname{sech}^4(2\J t),&
+ G_{q^4}(t)&\longrightarrow\operatorname{sech}^8(2\J t),\\
+ V_2&\longrightarrow1024\J^8,&
+ V_4&\sim\frac{768\J^8}{5\lambda},\\
+ \frac{V_2}{V_4+V_2}&=\frac{20}{3}\lambda+o(\lambda),&
+ \frac{C_X(t)}{V_4+V_2}&\longrightarrow\operatorname{sech}^8(2\J t).
+\end{align}
+Thus the lower-chaos contribution survives with finite absolute
+strength while its fraction vanishes in this ordered limit.
+The coefficient $20/3$ describes the weight fraction only; it is
+not the complete first correction to the time kernel, which also
+receives the deformation of $G_{q^4}$.
+
+\paragraph{Executed checks.}
+The local normal/reverse determinant rule was checked in 1688
+four-, six-, and eight-slot cases. Direct CAR matrices supplied
+640 words and 2560 comparisons, including 115 nonzero double-mark
+values and three negative values. Five small half-filled systems,
+each with three deterministic nonzero Hermitian samples, supplied
+90 exact bridge identities. Cleared complex-integer entries stayed
+below $2^{48}$; the Casimir implementation uses $2\mathcal C_x$.
+
+The new opposite-orientation endpoint certificate has 128 templates
+and no nonzero polynomial. A separate direct pairing enumeration
+checks nine $(a,b)$ mixed moments through $a+b=4$, including the
+single-mark and double-mark sums. Symbolic checks reproduce the
+previous deficit Gram and the Schur residual $V_{\rm new}$, both
+positive eigenvalues, and the two small-$\lambda$ coefficients.
+
+For $\J=1$, $\lambda=0.25,0.1,0.025$ and
+$t=0,0.25,0.5,1$, a symmetric $q$-Jacobi evolution evaluates both
+kernels and their mixture. A Taylor bound controls normalized
+truncation below $10^{-13}$; twelve extra Jacobi levels check
+refinement. At the first two couplings, independent 128- and
+192-node Mehler quadrature agrees within $2\times10^{-10}$.
+The numerical file retains all weights, values, cutoffs, and errors.
+Floating rounding and quadrature are refinement checks, not
+interval certificates. Source hashes and dependency versions are
+stored alongside each result.
+
+\paragraph{Next physical step.}
+The specified raw $mZ_2$ projection is now closed at two points.
+The next tasks are its mixed spectra with earlier memory fields,
+a uniform central-charge-window extension, and a finite-memory
+two-parameter remainder. These feed the Susskind singlet/meson
+program. A chord label $2$ or $4$ alone does not fix a bulk meson
+mass or a spatial reconstruction map.
+
+\begin{thebibliography}{9}\small
+\bibitem{TT} J. Tall and S. Tomsovic,
+\emph{Double-scaled bosonic and fermionic embedded ensembles,
+complex SYK, and the dual Hilbert space},
+\href{https://arxiv.org/html/2604.14522v2}{arXiv:2604.14522v2},
+Secs.~3.1 and 4.1. Spectral $q$-Wick products and existing strength kernels.
+\bibitem{BNR} M. Berkooz, V. Narovlansky and H. Raj,
+\href{https://arxiv.org/abs/2006.13983}{arXiv:2006.13983}.
+Complex-SYK chord and probe conventions, as recorded in the project source notes.
+\bibitem{desc} A. Day and Chengheng, project notes:
+\emph{Restoring the raw memory descendants} (2026-11-06);
+\emph{Second memory coefficient and fourth singlet};
+\emph{From derivative singlet to its full two-point spectrum}.
+Local derivations and machine-readable certificates are preserved in the project.
+\end{thebibliography}
+\end{document}

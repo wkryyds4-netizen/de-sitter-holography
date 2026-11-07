@@ -1,0 +1,173 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,microtype}
+\usepackage[margin=24mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\title{Local review of GitHub issue 1\\Analytic objections and rational certificate assembly}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{6 November 2026 --- local review, no external response sent}
+\begin{document}\maketitle
+\begin{abstract}
+We inspect the external review by GitHub user \texttt{wc72449},
+compare its claims with the specified Kim--Scarinci version and
+the project's earlier records, and independently reassemble its
+supplied interval data using exact rational arithmetic. Both reported
+conservative positive margins survive this recomposition. The
+21,143 cubature cells have not been reintegrated in this review.
+\end{abstract}
+\section{What was inspected and what it establishes}
+Issue \href{https://github.com/wkryyds4-netizen/de-sitter-holography/issues/1}{\#1}
+was opened on 6 November 2026 and targets commit
+\href{https://github.com/wkryyds4-netizen/de-sitter-holography/commit/714d038bb605cfcffdc351e4dcc62aa95237d25f}{\texttt{714d038}}.
+Its eight-page attachment and evidence ZIP were downloaded from the
+public issue, saved unchanged, and read locally. All 43 entries in
+its package hash manifest match; all 18 specified upstream files
+match the local files. The attached PDF also matches its ZIP copy.
+No supplied script was executed.
+
+The original paper explicitly uses ordinary joint spectral calculus
+and states Proposition 6.15 for Weyl relations \cite{KS}. In its
+positive-curvature proof before (74), it asserts a cross strong
+commutation; after (75), it uses fixed-vector analytic continuation.
+These are the locations identified in the issue. They match the
+project's earlier flip-domain, weak-continuation and representation
+analyses. The external report therefore reinforces an existing
+objection; it does not concern the current Susskind memory calculation.
+
+For the precise realization, use $\hbar=1$ and
+\begin{equation}
+ \mathcal H=L^2(\mathbb R^2,dx\,dy/(2\pi^2)),\quad
+ P_x=-\pi i\partial_x,\quad P_y=-\pi i\partial_y.
+\end{equation}
+The assignment $(\mathbf x,\mathbf y,\mathbf x',\mathbf y')=(X,Y,P_y,P_x)$
+satisfies the regular Weyl hypotheses. With the paired function
+$F=F_1^1$ of the paper, put
+\begin{equation}
+ A=F(X,Y),\quad B=F(P_y,P_x),\quad M=e^{iXY/\pi},\quad
+ D=AB-BM^{-1}BMA.
+\end{equation}
+Differentiation on a core gives $M^{-1}P_yM=P_y+X$ and
+$M^{-1}P_xM=P_x+Y$; joint spectral calculus then identifies the
+sum factor with $M^{-1}BM$. The test vector
+$f=\sqrt2\exp[-(x^2+y^2)/(2\pi)]$ has norm one.
+All factors in $D$ are bounded unitaries. Intermediate chiral
+domains cannot exclude $f$ from this final bounded identity.
+
+\newpage
+\section{Analytic assessment}
+For $\tau>0$ consider the normal operators
+$N=X-i\tau Y$ and $T=P_y+i\tau P_x$. Their formal commutator
+vanishes on the Schwartz core, whereas $[N,T^*]=2\pi\tau I$.
+The decisive bounded witness follows from the Weyl relation:
+\begin{equation}
+ e^{iX}e^{iP_x}=-e^{iP_x}e^{iX},\qquad
+ \|[e^{iX},e^{iP_x}]u\|=2\|u\|.
+\end{equation}
+Since these unitaries are bounded Borel functions of $N$ and $T$,
+the claimed cross strong commutation is false in this realization.
+This is an analytic conclusion independent of the interval certificate.
+It does not by itself disprove every identity for particular chiral
+functions on a specially chosen domain.
+
+The first pole $z_0(h)=-\pi i(1+h)$, with $h=a+ib$, $b>0$, has
+real spectral preimage
+\begin{equation}
+ x_h=\frac{\pi(a^2+b^2+a)}b,\qquad
+ y_h=-\frac{\pi(1+a)}b.
+\end{equation}
+At $h=i$ this is $(\pi,-\pi)$, with residue $-1$ in the compact
+product normalization. A Gaussian nonzero there is outside the
+single chiral multiplication domain: its squared norm contains
+a nonzero multiple of $\int_0^\epsilon dr/r$.
+The pole map has positive Jacobian
+$\pi^2((a+1)^2+b^2)/b^3$, so the fixed-domain obstruction persists
+over an open parameter set. This supports the issue's objection
+to literal fixed-vector holomorphy. A different contour prescription
+would require an endpoint identification with the stated spectral
+operator. The coefficient in (75) also needs the factor $i$:
+$e^{\pi i h}$ becomes $e^{-\pi\tau}$ at $h=i\tau$.
+
+\section{Why the 9,890 audit failures require two separate verdicts}
+The external saved audit has \texttt{passed=false}. Inspection of
+all its failure strings finds only the following categories:
+\begin{center}
+\begin{tabular}{lr}\toprule
+Overlap & changed bound endpoints\\\midrule
+Gaussian &255\\
+Left step 1&256\\
+Left step 2&3016\\
+Right step 3&2969\\
+Right step 5&3394\\\midrule
+Total&9890\\\bottomrule
+\end{tabular}
+\end{center}
+The local audit's line 74 compares the new bound interval with a
+saved singleton upper endpoint. Such overlap is an exact regression
+condition; two valid conservative bounds need not satisfy it.
+The external portability summary reports no changed cell types.
+This inspection verifies what the stored failure report says, not
+the origin of its platform-dependent differences. We retain the
+failed regression status and assess the rebuilt certificate separately.
+
+\newpage
+\section{Independent endpoint recomposition}
+The local driver \texttt{review\_issue1\_evidence.py} reads the ZIP
+as data. Each binary64 Hermite coefficient is lifted to its exact
+dyadic rational. Norms and inner products are then summed in
+\texttt{Fraction} arithmetic. For positive rational $q$, use
+\begin{equation}
+ k=\left\lfloor\sqrt{\lfloor2^{640}q\rfloor}\right\rfloor,
+ \qquad 2^{-320}k\leq\sqrt q\leq2^{-320}(k+1).
+\end{equation}
+The integer square root and rational inequalities certify these
+enclosures without using the supplied assembly code or Arb.
+
+For each of the five nonlinear overlaps we recompute
+\begin{equation}
+ e_j^2\leq\|v_j\|^2+\|w_j\|^2
+ -2\big(I_{j,\mathrm{low}}-E_{j,\mathrm{up}}
+             -T_{j,\mathrm{up}}-P_{j,\mathrm{up}}\big),
+\end{equation}
+using the saved integral, cubature-error, spatial-tail and product-tail
+endpoints. The two chirp bounds use their saved overlap endpoints.
+All seven saved upper bounds cover the corresponding independently
+reconstructed squared-error upper values. We nevertheless use our
+own square-root upper bounds for the final recomposition.
+
+Writing $l,r$ for the terminal trial vectors and $E$ for the seven
+step bounds, the independently checked inequalities are
+\begin{align}
+ \|Df\|&\geq\|l-r\|-E>0.04489650872,\\
+ \inf_\theta\|ABf-e^{i\theta}BM^{-1}BMAf\|
+ &\geq\sqrt{\|l\|^2+\|r\|^2-2|\langle r,l\rangle|}-E
+ >0.04489650465.
+\end{align}
+These conclusions are conditional on the supplied overlap enclosures
+and their analytic error estimates being correct. The local calculation
+verifies the final rational assembly, not fresh integration of every
+cell, and is not formal verification of the numerical libraries.
+The original local certificate gave a margin approximately
+$0.04489650872660254$; the external recomposition agrees at the
+reported conservative threshold.
+
+\paragraph{Research decision.}
+Treat the issue as substantive corroboration with a useful phase
+test and a reproducibility diagnostic. Preserve the old evidence;
+do not relabel its failed external replay as passed. Full independent
+cubature and the cause of the endpoint changes remain follow-up
+checks. No external reply or author contact has been sent. Continue
+the Susskind main line from the completed two-return reduction to
+the finite-memory products; the positive-curvature construction in
+the older branch remains unrepaired.
+
+\begin{thebibliography}{9}
+\bibitem{KS} H.~Kim and C.~Scarinci, \emph{A quantization of moduli
+spaces of 3-dimensional gravity},
+\href{https://arxiv.org/html/2112.13329v2}{arXiv:2112.13329v2},
+Secs.~6.3--6.5, especially the proof around (74)--(75) and Prop.~6.15.
+\bibitem{issue} GitHub user \texttt{wc72449},
+\href{https://github.com/wkryyds4-netizen/de-sitter-holography/issues/1}{issue 1},
+6 November 2026. External eight-page technical attachment and
+43-file evidence manifest, archived locally with SHA-256 hashes.
+\end{thebibliography}
+\end{document}

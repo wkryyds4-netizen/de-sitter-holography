@@ -1,0 +1,105 @@
+{
+  "created_at_utc": "2026-11-06T09:43:40.166451+00:00",
+  "status": "Saved locally; no publication",
+  "scientific_status": "At fixed half filling, restore dynamic descendants of the raw second memory coefficient after an explicit conserved subtraction. Complete two-energy self and cross spectra assembled; ordered small-lambda normalized shape is (9 sech^8 - 2 sech^6)/7. Uniform central-charge extension, finite-memory remainder and bulk dictionary remain open.",
+  "current_git_head": "714d038bb605cfcffdc351e4dcc62aa95237d25f",
+  "git_commit_created": false,
+  "git_push_performed": false,
+  "archive_created": false,
+  "parent_manifest_sha256": "3b06116be79a58b592c8c5f73127200ae116935012a216a380e960f9cdc0911c",
+  "previous_stage_scientific_files_unchanged": [
+    "code/memory_mixed_cross.py",
+    "code/memory_mixed_lift.py",
+    "code/memory_mixed_assembly.py",
+    "code/build_memory_mixed_spectrum.ps1",
+    "code/record_memory_mixed_spectrum.py",
+    "manuscript/susskind-memory-mixed-spectrum/main.tex",
+    "output/pdf/de-sitter-susskind-memory-mixed-spectrum.pdf",
+    "notes/susskind-memory-mixed-spectrum.md",
+    "literature/susskind-memory-mixed-spectrum-sources.md",
+    "journal/2026-11-06-susskind-memory-mixed-spectrum.md",
+    "results/susskind-memory-mixed-spectrum/charged-lift.json",
+    "results/susskind-memory-mixed-spectrum/cubic-force-cross.json",
+    "results/susskind-memory-mixed-spectrum/failures/initial-main.log",
+    "results/susskind-memory-mixed-spectrum/failures/initial-main.tex",
+    "results/susskind-memory-mixed-spectrum/failures/initial-mixed-lift.py",
+    "results/susskind-memory-mixed-spectrum/failures/lift-coverage.txt",
+    "results/susskind-memory-mixed-spectrum/failures/overflow-main.log",
+    "results/susskind-memory-mixed-spectrum/main.log",
+    "results/susskind-memory-mixed-spectrum/matrix-assembly.json"
+  ],
+  "checks": {
+    "exact_finite_identities": 16,
+    "finite_systems": 4,
+    "probe_moments": 8,
+    "kernel_cutoffs": [
+      38,
+      57,
+      146,
+      314
+    ],
+    "refined_levels_added": 12
+  },
+  "environment": {
+    "python": "3.14.5",
+    "calculations": [
+      {
+        "python": "3.14.5",
+        "sympy": "1.14.0"
+      },
+      {
+        "python": "3.14.5",
+        "numpy": "2.4.6",
+        "sympy": "1.14.0"
+      },
+      {
+        "python": "3.14.5",
+        "numpy": "2.4.6",
+        "sympy": "1.14.0"
+      }
+    ]
+  },
+  "build": {
+    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File code/build_memory_raw_spectrum.ps1",
+    "compiler": "This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5 Portable) (preloaded format=pdflatex 2026.9.19)  6 NOV 2026 17:38",
+    "passes_per_successful_build": 2,
+    "successful_builds": 1,
+    "pages": 6,
+    "render_command": "pdftoppm -r 95 -png output/pdf/de-sitter-susskind-memory-raw-spectrum.pdf tmp/pdfs/susskind-memory-raw-spectrum-build/page",
+    "visual_review": "All six final page PNGs viewed at 95 dpi; equations, citations, table and page boundaries clear."
+  },
+  "failures": [],
+  "process_state": "Scientific calculations, compilation and rendering terminal; no active calculation.",
+  "evidence_scope": "Exact algebra checks and weighted spectral checks supplement established asymptotic input proofs. Finite CAR checks do not establish finite-N spectral equality; floating checks are not interval certification. Second Taylor polynomial is not a finite-memory kernel.",
+  "hashes": {
+    "code/memory_raw_spectrum.py": "8133d20dea94de8bc1eb3e89f8753e6c52c1468e030fa93707a41d3baabad382",
+    "code/check_memory_raw_restoration.py": "46cd15907248074ec98cfe77e7949fdc7cb4a97b6031c3ccb56fe6ef8f7416cc",
+    "code/memory_raw_kernel.py": "2777e8f10f941519d24b824314c95b9a26d36d51aa0f166b58d71ce7a725e985",
+    "code/build_memory_raw_spectrum.ps1": "fa8f362c18a21b8ceed2ec59bbacbeabd20294a58951fbe823b0cc2eca546025",
+    "code/record_memory_raw_spectrum.py": "85c3cf140067efc49c6360333efd77f78ca9632e2c800a86c8168aad3db5986a",
+    "manuscript/susskind-memory-raw-spectrum/main.tex": "9b99940e593ca41f0bcea76a3339f76149c72a3a10eecd52fbd2d9557beaa3f4",
+    "output/pdf/de-sitter-susskind-memory-raw-spectrum.pdf": "d2103b04ed2099ad0483a63efb0591be21c4ddcfe7410c9bb9a2ea1eb8960635",
+    "notes/susskind-memory-raw-spectrum.md": "42005d08003972b68c3a20e17ccb58e6506f2c3ace737954b43d46782825af92",
+    "literature/susskind-memory-raw-spectrum-sources.md": "4931b921efeb794116e9b12ca3b5bfd2c4a8aed43280b8a8557718f618c3b6a3",
+    "journal/2026-11-06-susskind-memory-raw-spectrum.md": "043e3143c0ff5bb98cba8f109086f6aa4560810a05a68e09cb767ec3df8ce61e",
+    "README.md": "0ef2639098d7fc15293dc56140403a7220da79f50e115697c21767ddc6cdf9c4",
+    "PLAN.md": "efb76d4bfa97103ff7d1532668410838527286f02a6fe95140c54cfa2e6a2f3e",
+    "NEXT.md": "d0ea6a4a91ee60c389ecefcd560a8cef9292a0c34ff245c5725891b56e1ebfe4",
+    "results/susskind-memory-raw-spectrum/finite-restoration.json": "02d654601acdd2394367e65fb27c12daa3f72e51bd7283b238f2b13d09938d5f",
+    "results/susskind-memory-raw-spectrum/kernel-checks.json": "52135dd3686cee1e5979d055df2f4ea19ce65506c9584f35ca1b8eceb98a3d88",
+    "results/susskind-memory-raw-spectrum/main.log": "fe2e90d64d38956847b3cf4fa7dd900fd27b01aad227d7c9236b12102e0eed38",
+    "results/susskind-memory-raw-spectrum/symbolic-spectrum.json": "4b4eba0dc663106e86ffa4d2b92d929aa2809444fb9bf4a5e19cbc375e12c9f9"
+  },
+  "render_hashes": {
+    "tmp/pdfs/susskind-memory-raw-spectrum-build/page-1.png": "c9989603954e68efc06bbf1bad2e93a36a223b593c45986a8d71256d17ab71dd",
+    "tmp/pdfs/susskind-memory-raw-spectrum-build/page-2.png": "e62512168acd997cf637c3a2d1e13e212990f993101f75657c3744d2e3f048ad",
+    "tmp/pdfs/susskind-memory-raw-spectrum-build/page-3.png": "f40b498883aba8be0b63b7489387b2ca31ba010293bcc4b29c7910a99fb5f785",
+    "tmp/pdfs/susskind-memory-raw-spectrum-build/page-4.png": "0a2edfc4f577a8a389017fb14ede3f8802680a6eb956ced66e14e9b87f459aab",
+    "tmp/pdfs/susskind-memory-raw-spectrum-build/page-5.png": "e4e17a001bcb30bc4b7d2828c5b98a8e0eed6ebe10236322930589654f3380b7",
+    "tmp/pdfs/susskind-memory-raw-spectrum-build/page-6.png": "356668818a64f69fdbe45d8ee4a368557e0a39360b3116748bf298ee63d6844f"
+  },
+  "build_pass_hashes": {
+    "pass1.txt": "fd21677e835c22724a64ae24f7b52e960d6565188cd2a311a452611b9e85d9fb",
+    "pass2.txt": "fe29048e18c85cc3b5d12b4b3fb677748d89e0d825853bd5b9d9502976792805"
+  }
+}

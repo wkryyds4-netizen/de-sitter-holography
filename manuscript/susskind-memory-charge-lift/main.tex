@@ -1,0 +1,224 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,microtype}
+\usepackage[margin=24mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\core}{\mathcal E}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Rem}{Rem}
+\title{Charge removal opens product-forbidden rank channels\\An exact correction to the memory-filter ansatz}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Local research note --- 6 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+The collinearity of four quadratic maps in the previously tested
+$N=5,p=2,m=3$ system does not extend to general charge sectors.
+At half filling, particle-hole transposition imposes an exact parity
+selection rule on symmetrized products. Charge removal can populate
+the forbidden channels. We give an analytic family for the force norm
+$A$ and an independently verified counterexample for the actual
+quadratic contraction of the quartic memory core. A two-charge
+amplitude representation and an exact norm identity for charge
+removal supply the corrected starting point for the spectral limit.
+\end{abstract}
+
+\section{A selection rule for the multiplication map}
+Use standard CAR and the full overlapping complex Gaussian $p$-body
+Hamiltonian, $\EE J_{IJ}J_{KL}=w\delta_{IL}\delta_{JK}$, with
+$\hbar=1$. On charge $m$, $\tr_m$ denotes normalized trace and $P_r$
+the neutral $U(N)$ rank projector. All statements through Section 4
+are finite-dimensional identities, with no double-scaling limit.
+
+For $N=2m$, let $\star$ be the signed complement map on
+$\wedge^m\mathbb C^N$, and define the linear anti-automorphism
+\begin{equation}
+ \tau(X)=\star X^{\mathsf T}\star^{-1},\qquad
+ \tau(XY)=\tau(Y)\tau(X),\qquad \tau^2=1.
+\end{equation}
+It sends $E_{ij}=c_i^\dagger c_j$ to $\delta_{ij}-E_{ij}$.
+Consequently it commutes with the adjoint $U(N)$ action.
+The neutral operator representation is multiplicity-free in rank.
+On a disjoint, traceless rank-$r$ highest-weight monomial, reversing
+and normal ordering gives $(-1)^r$. Thus
+\begin{equation}
+ \tau P_r=(-1)^r P_r.
+ \label{eq:parity}
+\end{equation}
+For arbitrary pure-rank $X_a,Y_b$, it follows that
+\begin{equation}
+ P_r\{X_a,Y_b\}=0\quad\hbox{if }a+b-r\text{ is odd}.
+ \label{eq:zero}
+\end{equation}
+This is a statement about the multiplication map, not the absence of
+the irrep from the tensor product. In particular, every odd-rank
+component of $H_a^2$ vanishes. An equivariant quadratic map need not
+satisfy the same selection rule.
+
+\newpage
+\section{A family of pure-rank counterexamples}
+Let $n_i=c_i^\dagger c_i$, $1\le p<m=N/2$, and choose the deterministic
+$p$-body input
+\begin{equation}
+ H=\prod_{a=1}^p d_a,\qquad
+ d_a=n_{2a-1}-n_{2a},\quad
+ t_a=n_{2a-1}+n_{2a},\quad b_a=d_a^2.
+\end{equation}
+Every partial contraction of its $p$-body coefficient tensor vanishes:
+the two choices in the omitted pair cancel. Hence this input is pure
+rank $p$ wherever its embedding is nonzero. Also
+$\tau H=(-1)^pH$ and $H^2=\prod_a b_a$ is even.
+
+Direct removal of an occupied mode gives
+\begin{equation}
+ A=\sum_i[H,c_i]^\dagger[H,c_i]
+   =\sum_{a=1}^p t_a\prod_{b\ne a}b_b.
+\end{equation}
+Under complementation, $t_a\mapsto2-t_a$ and $b_a\mapsto b_a$.
+Its odd part is therefore
+\begin{equation}
+ A_{\rm odd}:=\frac{A-\tau A}{2}
+       =\sum_{a=1}^p(t_a-1)\prod_{b\ne a}b_b\ne0.
+ \label{eq:odd}
+\end{equation}
+A configuration with one double-occupied pair and all other selected
+pairs singly occupied has value $+1$; an empty exceptional pair gives
+$-1$. The $N-2p$ remaining modes can accommodate the required charge
+because $m>p$. Every other configuration gives zero.
+
+Counting these configurations yields exact normalized HS norms:
+\begin{align}
+ \|H^2\|_m^2
+ &=\frac{2^p\binom{N-2p}{m-p}}{\binom Nm},\\
+ \|A_{\rm odd}\|_m^2
+ &=\frac{p\,2^p\binom{N-2p}{m-p-1}}{\binom Nm},\\
+ \frac{\|A_{\rm odd}\|_m^2}{\|H^2\|_m^2}
+ &=p\,\frac{m-p}{m-p+1}.
+ \label{eq:ratio}
+\end{align}
+Thus no scalar coefficients multiplying the channels $P_rH_p^2$
+can reproduce $A$ for this family. It exists along half-filled
+double-scaled sequences as well, but these are deterministic inputs;
+Eq.~\eqref{eq:ratio} is not an annealed memory-strength calculation.
+
+The checker exhausts all charge-$m$ configurations in 15 systems,
+$N=4,6,8,10,12$ and every $1\le p<m$. It verifies the removal formula,
+both norm counts, and the rank eigenvalue
+$\mathcal C H=2p(N+1-p)H$ using the diagonal Casimir action.
+
+\newpage
+\section{The actual quadratic memory contraction}
+The target is still the previously defined core
+\begin{equation}
+ \core=\sum_i(\operatorname{ad}_H^2c_i)^\dagger
+                   \operatorname{ad}_H^2c_i
+                  +\tfrac14[H,[H,A]],\qquad
+ Q_{\core}=\tfrac12\Delta\core.
+\end{equation}
+For this homogeneous quartic polynomial, ordinary Gaussian chaos
+gives $W_2\core=Q_{\core}-2\EE\core$. The ensemble mean is scalar in
+each charge sector, so $P_1W_2\core=P_1Q_{\core}$.
+
+Take $N=6,p=2,m=3,w=1$ and
+\begin{equation}
+ h=(n_1-n_2)(n_3-n_4)\big|_3,\qquad
+ k=(n_1-n_2)(n_3-n_4)\big|_2,\qquad
+ D=n_1+n_2+n_3+n_4-2I.
+\end{equation}
+Both inputs have Casimir eigenvalue $20$, hence rank two. Exact
+projection gives
+\begin{equation}
+ \boxed{P_1h^2=0,\qquad P_1A=D,\qquad P_1Q_{\core}=99D.}
+ \label{eq:witness}
+\end{equation}
+Here $D$ has eigenvalues $+1$ on four states, $-1$ on four states,
+and zero on twelve states. In the normalized charge-three trace,
+\begin{equation}
+ \|P_1A\|_3^2=\frac25,\qquad
+ \|P_1Q_{\core}\|_3^2=\frac{19602}{5}.
+\end{equation}
+The old $J_hF$ direction cannot repair this zero within the $(2,2;1)$
+block: on a pure input rank, the equivariant linear $F$ is a scalar
+multiple of $h$, so $P_1J_hF=0$ as well.
+
+The calculation uses the existing explicit $\Phi_\pm,\Psi,\Rem$
+single-contraction formula. Independently, full quartic polarization
+of the commutator-defined core over all 225 real Gaussian coordinates
+reproduces $Q_{\core}$ exactly. The raw-word identity is checked too.
+Four full matrix Casimir projectors verify
+Eq.~\eqref{eq:parity}, not only its diagonal restriction.
+
+This disproves the general scalar-filter ansatz. It does not disprove
+the previous $N=5$ calculation or its exact Gram reconstruction.
+The present diagonal realization commutes with its projected $D$;
+it is not a new noncommuting dynamical witness. Neither a general
+multiplicity rank nor the double-scaled stochastic weight follows
+from this one realization.
+
+\newpage
+\section{The corrected two-charge interface}
+Write $h_a=H_m^{(a)}$, $k_a=H_{m-1}^{(a)}$ using the same coupling
+irrep. Define symmetric products as $X\odot Y=\{X,Y\}$ for distinct
+input ranks, and $X\odot X=X^2$ for equal ranks. Keep both maps
+\begin{equation}
+ Z^+_{ab;r}=P_r(h_a\odot h_b),\qquad
+ Z^-_{ab;r}=P_r\Rem(k_a\odot k_b).
+\end{equation}
+Then the exact old identity $A=\Rem(k^2)+(2p-m)h^2$ becomes
+\begin{equation}
+ A_{ab;r}=Z^-_{ab;r}+(2p-m)Z^+_{ab;r}.
+\end{equation}
+No division by $Z^+$ is allowed. In reduced-tensor notation, choose
+primitive normal-ordered rank tensors $T_a^{(m)}$ with consistent
+normalization across charges, so
+$h_a=e_a(m)T_a^{(m)}$, $e_a(m)=\binom{m-a}{p-a}$.
+If $K^{(m)}_{ab;r,\rho}$ denotes their symmetrized product coefficient
+in a common intertwiner basis, the amplitude of $A$ is
+\begin{align}
+ \mathsf A_{ab;r,\rho}
+ ={}&(m-r)e_a(m-1)e_b(m-1)K^{(m-1)}_{ab;r,\rho}\notag\\
+ &+(2p-m)e_a(m)e_b(m)K^{(m)}_{ab;r,\rho}.
+ \label{eq:twocharge}
+\end{align}
+This uses $\Rem(T_r^{(m-1)})=(m-r)T_r^{(m)}$. The two reduced
+coefficients include their relative signs and multiplicity label
+$\rho$; the recoupling framework already exists in
+Kota--Vyas~\cite{KV}. Their dilute limit is not the present limit.
+
+There is also an exact norm transfer for every rank-$r$ lower-sector
+operator $X_r$ in the common rank range:
+\begin{equation}
+ \|\Rem X_r\|_m^2=\ell_r^2\|X_r\|_{m-1}^2,\qquad
+ \ell_r^2=\frac{m(m-r)(N-m+1-r)}{N-m+1}\le m^2.
+ \label{eq:lift}
+\end{equation}
+To prove it, a disjoint rank-$r$ monomial has norm proportional to
+$\binom{N-2r}{m-r}/\binom Nm$. Taking the ratio between adjacent
+charges and multiplying by $(m-r)^2$ gives Eq.~\eqref{eq:lift}.
+Equivariance and irreducibility extend it to the full rank space.
+Eight direct CAR checks confirm it. Components outside the common
+rank range are killed by the equivariant removal map.
+
+For $a<b$, the previous positive ordered-product law now gives
+\begin{equation}
+ \EE\|Z^-_{ab;r}\|_m^2
+ \le4\ell_r^2 C_a^-C_b^-\pi^{(m-1)}_{ab}(r),
+ \qquad C_a^-I=\EE k_a^2.
+\end{equation}
+For $a=b$ after $W_2$ centering, replace $4C_a^-C_b^-$ by
+$2(C_a^-)^2$. These are bounds; the same-coupling cross term
+$\EE\langle Z^+,Z^-\rangle_m$ remains essential. The next calculation
+is therefore the coherent two-charge amplitudes of $Q_{\core}$,
+including $\Psi$ insertions, before taking rank-deficit limits.
+
+\begin{thebibliography}{9}
+\bibitem{KV} V. K. B. Kota and M. Vyas,
+\emph{Random Matrix Theory for Transition Strength Densities in Finite
+Quantum Systems}, Sec.~3, Eqs.~(34)--(35),
+\href{https://arxiv.org/abs/1504.00759}{arXiv:1504.00759}.
+\bibitem{Kota} V. K. B. Kota,
+\emph{Bivariate moments of the two-point correlation function for
+embedded Gaussian unitary ensemble with $k$-body interactions},
+Sec.~IV, \href{https://arxiv.org/abs/2208.11312}{arXiv:2208.11312v2}.
+\end{thebibliography}
+\end{document}

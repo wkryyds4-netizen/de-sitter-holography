@@ -1,0 +1,155 @@
+{
+  "status": "passed",
+  "rows": [
+    {
+      "N": 4,
+      "p": 1,
+      "m": 2,
+      "coordinate_pairs": 136,
+      "basis": [
+        "W2 H^2",
+        "S_N",
+        "X_N/N",
+        "W2 A"
+      ],
+      "exact_gram": [
+        [
+          "52",
+          "20/3",
+          "5",
+          "16"
+        ],
+        [
+          "20/3",
+          "40/3",
+          "10",
+          "10"
+        ],
+        [
+          "5",
+          "10",
+          "15/2",
+          "15/2"
+        ],
+        [
+          "16",
+          "10",
+          "15/2",
+          "28"
+        ]
+      ],
+      "predicted_cross": [
+        "16",
+        "10",
+        "15/2"
+      ],
+      "S_residual_after_B_A": "263/27"
+    },
+    {
+      "N": 6,
+      "p": 1,
+      "m": 3,
+      "coordinate_pairs": 666,
+      "basis": [
+        "W2 H^2",
+        "S_N",
+        "X_N/N",
+        "W2 A"
+      ],
+      "exact_gram": [
+        [
+          "225",
+          "63/5",
+          "21/2",
+          "33"
+        ],
+        [
+          "63/5",
+          "126/5",
+          "21",
+          "21"
+        ],
+        [
+          "21/2",
+          "21",
+          "35/2",
+          "35/2"
+        ],
+        [
+          "33",
+          "21",
+          "35/2",
+          "81"
+        ]
+      ],
+      "predicted_cross": [
+        "33",
+        "21",
+        "35/2"
+      ],
+      "S_residual_after_B_A": "33453/1700"
+    },
+    {
+      "N": 6,
+      "p": 2,
+      "m": 3,
+      "coordinate_pairs": 25425,
+      "basis": [
+        "W2 H^2",
+        "S_N",
+        "X_N/N",
+        "W2 A"
+      ],
+      "exact_gram": [
+        [
+          "981",
+          "4473/5",
+          "11487/50",
+          "1266"
+        ],
+        [
+          "4473/5",
+          "45486/25",
+          "2373/5",
+          "6783/5"
+        ],
+        [
+          "11487/50",
+          "2373/5",
+          "8519/50",
+          "18641/50"
+        ],
+        [
+          "1266",
+          "6783/5",
+          "18641/50",
+          "2010"
+        ]
+      ],
+      "predicted_cross": [
+        "1266",
+        "6783/5",
+        "18641/50"
+      ],
+      "S_residual_after_B_A": "131081391/146450"
+    }
+  ],
+  "elapsed_seconds": 68.32313847541809,
+  "method": "All symmetric Gaussian coordinate pairs; exact integer CAR and Fraction 4x4 Gram. Independent comparison with the mixed Racah formula, including S and Casimir-deficit insertions.",
+  "scope": "Finite half-filled systems; no DS conclusion from small systems alone.",
+  "environment": {
+    "python": "3.14.5",
+    "numpy": "2.4.6",
+    "sympy": "1.14.0"
+  },
+  "input_sha256": {
+    "code/check_memory_coherent_car.py": "13b2c0cd70ae5ace5d733595b53bbca8295d8c73a4c66445341a9c16dda6e296",
+    "code/memory_coherent_cross.py": "557f5124649be17d9a2c5f35536e6354ad69c46a1c4993783dae0b6e92e2566f",
+    "code/memory_quadratic_contraction.py": "d9e7722e5c13ca64a26b9e79a06e0a3fcaf07060ac1c6133d5eb04f4a1ad2139",
+    "code/memory_rank_blocks.py": "1a73c01439efe7f7b6221ccb151a42bc988284f0e1e53137f5fa29d824a681f9",
+    "code/memory_parity_moments.py": "3472bda725ff87618e648197139fd2c31c68532787e77d82ce021162b712c229",
+    "code/cubic_linear_dynamics.py": "81d8e955107098e897637650bb7686a15fd2ff8fde6de1e1c525db398516d014",
+    "code/singlet_wick_moments.py": "045f9f02e860fa8f2e402ca5162dabf035208a8d26023ada5721a5f02d47572c",
+    "code/complex_syk_dictionary.py": "96b4890a167beeadf0849ccffdbb20dd125d921af062fd291044da9024900abf"
+  }
+}

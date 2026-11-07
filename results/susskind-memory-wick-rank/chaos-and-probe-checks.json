@@ -1,0 +1,160 @@
+{
+  "highest_chaos": [
+    {
+      "N": 3,
+      "p": 1,
+      "m": 2,
+      "k": 1,
+      "real_Gaussian_coordinates": 9,
+      "coefficient_tensor_entries": 81,
+      "normalized_highest_chaos_deficit_norm_squared": 0.3333333333333334,
+      "independent_bound": 0.3333333333333333,
+      "independent_rank_probability_error": 1.1102230246251565e-16
+    },
+    {
+      "N": 3,
+      "p": 1,
+      "m": 2,
+      "k": 2,
+      "real_Gaussian_coordinates": 9,
+      "coefficient_tensor_entries": 729,
+      "normalized_highest_chaos_deficit_norm_squared": 2.5000000000000004,
+      "independent_bound": 3.0,
+      "independent_rank_probability_error": 2.220446049250313e-16
+    },
+    {
+      "N": 3,
+      "p": 1,
+      "m": 2,
+      "k": 3,
+      "real_Gaussian_coordinates": 9,
+      "coefficient_tensor_entries": 6561,
+      "normalized_highest_chaos_deficit_norm_squared": 15.125000000000014,
+      "independent_bound": 27.75,
+      "independent_rank_probability_error": 0.0
+    },
+    {
+      "N": 4,
+      "p": 1,
+      "m": 2,
+      "k": 1,
+      "real_Gaussian_coordinates": 16,
+      "coefficient_tensor_entries": 576,
+      "normalized_highest_chaos_deficit_norm_squared": 0.16666666666666666,
+      "independent_bound": 0.16666666666666666,
+      "independent_rank_probability_error": 0.0
+    },
+    {
+      "N": 4,
+      "p": 1,
+      "m": 2,
+      "k": 2,
+      "real_Gaussian_coordinates": 16,
+      "coefficient_tensor_entries": 9216,
+      "normalized_highest_chaos_deficit_norm_squared": 1.1481481481481481,
+      "independent_bound": 1.7037037037037037,
+      "independent_rank_probability_error": 3.3306690738754696e-16
+    },
+    {
+      "N": 4,
+      "p": 1,
+      "m": 2,
+      "k": 3,
+      "real_Gaussian_coordinates": 16,
+      "coefficient_tensor_entries": 147456,
+      "normalized_highest_chaos_deficit_norm_squared": 7.42592592592593,
+      "independent_bound": 16.40740740740741,
+      "independent_rank_probability_error": 1.7763568394002505e-15
+    },
+    {
+      "N": 4,
+      "p": 2,
+      "m": 2,
+      "k": 1,
+      "real_Gaussian_coordinates": 36,
+      "coefficient_tensor_entries": 1296,
+      "normalized_highest_chaos_deficit_norm_squared": 0.5277777777777778,
+      "independent_bound": 0.5277777777777778,
+      "independent_rank_probability_error": 0.0
+    },
+    {
+      "N": 4,
+      "p": 2,
+      "m": 2,
+      "k": 2,
+      "real_Gaussian_coordinates": 36,
+      "coefficient_tensor_entries": 46656,
+      "normalized_highest_chaos_deficit_norm_squared": 6.861111111111115,
+      "independent_bound": 12.833333333333334,
+      "independent_rank_probability_error": 3.552713678800501e-15
+    },
+    {
+      "N": 4,
+      "p": 2,
+      "m": 2,
+      "k": 3,
+      "real_Gaussian_coordinates": 36,
+      "coefficient_tensor_entries": 1679616,
+      "normalized_highest_chaos_deficit_norm_squared": 23.997685185185187,
+      "independent_bound": 121.83333333333334,
+      "independent_rank_probability_error": 1.4210854715202004e-14
+    }
+  ],
+  "charged_probes": [
+    {
+      "N": 4,
+      "p": 1,
+      "m": 2,
+      "time_parameters": [
+        0.61,
+        -0.37,
+        0.29
+      ],
+      "fourpoint_absolute_error": 4.441434166503682e-16,
+      "derivative_matrix_error": 9.072759321131037e-17,
+      "coupling_sha256": "08ae65a6f96ebd9be4777c55369d28878c667cc889c61031b6cda35b74f9f7f5",
+      "Hamiltonian_scale": 8.90473752872799
+    },
+    {
+      "N": 5,
+      "p": 2,
+      "m": 3,
+      "time_parameters": [
+        0.61,
+        -0.37,
+        0.29
+      ],
+      "fourpoint_absolute_error": 4.443059973708341e-16,
+      "derivative_matrix_error": 1.5495023578911232e-16,
+      "coupling_sha256": "f08fd200f08225a07cb60a35adbedea365fd821de1dec7ae85fc59b7db75ca03",
+      "Hamiltonian_scale": 18.680202620560426
+    },
+    {
+      "N": 6,
+      "p": 2,
+      "m": 3,
+      "time_parameters": [
+        0.61,
+        -0.37,
+        0.29
+      ],
+      "fourpoint_absolute_error": 6.661902812449847e-16,
+      "derivative_matrix_error": 1.6026134754123849e-16,
+      "coupling_sha256": "ad4e9e5ad38dda18786be1279c012ec2a3fc705d127c118bdb6e9c1a6f7d43df",
+      "Hamiltonian_scale": 29.607986622272325
+    }
+  ],
+  "seed": 1107001,
+  "scope": "Complete finite highest-chaos coefficient tensors through degree three and deterministic charged-probe endpoint identities; no asymptotic fit.",
+  "environment": {
+    "python": "3.14.5",
+    "numpy": "2.4.6",
+    "scipy": "1.18.0"
+  },
+  "input_sha256": {
+    "code/check_memory_wick_interface.py": "6fa204d6518166be3e5bf210ded0ba796cee8179466aafacad287d1c0b165c85",
+    "code/memory_wick_rank.py": "7adf10a9d087a24ec84215dd0f95ccc832a5cefc8e8f833d7ca3521231d81525",
+    "code/bilocal_channel.py": "408944aa559f4438e2e75c85075ed8d10767223bbc50828496644264e8cb11da",
+    "code/complex_syk_dictionary.py": "96b4890a167beeadf0849ccffdbb20dd125d921af062fd291044da9024900abf"
+  }
+}

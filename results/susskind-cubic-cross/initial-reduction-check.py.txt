@@ -1,0 +1,82 @@
+"""Independent rank curvature and exact deterministic operator reductions."""
+from pathlib import Path
+from fractions import Fraction as F
+import json,hashlib,platform
+import numpy as np
+import sympy as sp
+from cubic_cross_channels import channel
+from cubic_linear_channels import choose,coeff
+from cubic_linear_dynamics import weights,crossing
+from singlet_wick_moments import gue_basis
+
+ROOT=Path(__file__).resolve().parent.parent
+OUT=ROOT/'results/susskind-cubic-cross'
+
+def matrix(a):
+    assert np.max(abs(a))<2**40
+    assert np.all(a.real==np.rint(a.real)) and np.all(a.imag==np.rint(a.imag))
+    return sp.Matrix([[int(z.real)+sp.I*int(z.imag) for z in row] for row in a])
+
+def case(N,p,m):
+    ww=weights(N,m,p);C=choose(m,p)*choose(N-m+p,p)
+    tt=[coeff(N,p,m,a) for a in range(p+1)]
+    zz,ss=map(list,zip(*(channel(N,p,m,a) for a in range(p+1))))
+    avg=lambda v:sum(x*y for x,y in zip(ww,v))
+    ft=[x-avg(tt) for x in tt];bz=[x-avg(zz) for x in zz]
+    curvature=-C*C*sum(ww[a]*ww[b]*(ft[a]-ft[b])*(bz[a]-bz[b])*(1-crossing(N,m,a,b))
+        for a in range(p+1) for b in range(p+1))
+    prior=json.loads((OUT/'finite-cross.json').read_text())
+    row=next(r for r in prior['records'] if (r['N'],r['p'],r['m'])==(N,p,m))
+    assert str(curvature)==row['moments']['Z']['cross_M2']
+    cs,vs,rs=gue_basis(N,p);d=1<<N;charges=np.array([i.bit_count() for i in range(d)])
+    Q=np.diag(charges);ix=np.flatnonzero(charges==m)
+    H=sum(((i%5)-2)*v for i,v in enumerate(vs))
+    D=lambda b:Q@b-sum(c.conj().T@b@c for c in cs)
+    def raws(h):
+        z=h@h@h;a=2*p*h@h-D(h@h);s2=h@a+a@h
+        return [2*(3*p*z-D(z))-3*s2,s2,2*z]
+    r0=raws(H);lin=[np.zeros_like(H) for _ in range(3)]
+    for v,r in zip(vs,rs):
+        plus,minus=raws(H+v),raws(H-v)
+        for i in range(3):lin[i]+=int(r)*(plus[i]+minus[i]-2*r0[i])
+    # raws is twice the cubic observable; polarization gives 8 W1.
+    L=[matrix(x[np.ix_(ix,ix)])/8 for x in lin]
+    T3,Sraw,Zraw=[matrix(x[np.ix_(ix,ix)])/2 for x in r0]
+    h=matrix(H[np.ix_(ix,ix)]);eye=sp.eye(len(ix))
+    A=matrix((2*p*H@H-D(H@H))[np.ix_(ix,ix)])
+    a0=(2*p-m)*C+m*choose(m-1,p)*choose(N-m+p+1,p)
+    cn=sp.Rational(avg(ss)-a0,avg(zz)-C)
+    Y=A-a0*eye-cn*(h*h-C*eye)
+    Z=Zraw-L[2];S=Sraw-L[1];T=T3-L[0]
+    BZ=L[2]-sp.Rational(avg(zz))*h;BS=L[1]-sp.Rational(avg(ss))*h
+    f=L[0]-sp.Rational(avg(tt))*h;G=BS-cn*BZ;JY=(h*Y+Y*h)/2
+    assert S==cn*Z+JY-G
+    # Arbitrary rational a,b: this verifies the exact algebra without DS input.
+    aa,bb=sp.Rational(-2,7),sp.Rational(3,11)
+    R=T-aa*S-bb*Z
+    P=(aa*cn+bb)*h**3+(sp.Rational(avg(tt))-(aa*cn+bb)*sp.Rational(avg(zz)))*h
+    assert T3-P==R+aa*JY+f-aa*BS-bb*BZ
+    assert h*A-A*h==h*Y-Y*h
+    # Direct definition of M3, independent of its D-polynomial representation.
+    M=np.zeros_like(H)
+    for c in cs:
+        b=c.copy()
+        for _ in range(3):b=H@b-b@H
+        M+=c.conj().T@b
+    M=matrix(M[np.ix_(ix,ix)])
+    assert M-T3==sp.Rational(3,2)*(h*A-A*h)
+    return dict(N=N,p=p,m=m,Z_cross_M2=str(curvature),finite_c=str(cn),
+        exact_operator_identities=4,scope='Independent rank-bilinear curvature; rational matrix identities for deterministic integer couplings')
+
+def main():
+    target=OUT/'reduction-checks.json'
+    if target.exists():raise FileExistsError(target)
+    rows=[case(*args) for args in [(3,1,2),(4,2,2),(5,2,3)]]
+    names=['code/check_cubic_cross.py','code/cubic_cross_channels.py','code/cubic_linear_channels.py',
+        'code/cubic_linear_dynamics.py','code/cubic_linear_limit.py','code/singlet_wick_moments.py',
+        'code/complex_syk_dictionary.py','results/susskind-cubic-cross/finite-cross.json']
+    target.write_text(json.dumps(dict(status='passed',records=rows,
+        environment=dict(python=platform.python_version(),numpy=np.__version__,sympy=sp.__version__),
+        input_sha256={n:hashlib.sha256((ROOT/n).read_bytes()).hexdigest() for n in names}),indent=2)+'\n')
+    print(json.dumps(rows))
+if __name__=='__main__':main()

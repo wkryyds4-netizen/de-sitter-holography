@@ -1,0 +1,39 @@
+{
+  "scope": "Visualization of the verified limiting probability law, not finite-N simulation.",
+  "rows": [
+    {
+      "j": 1,
+      "lambda_value": "1/4",
+      "display_cutoff": 28,
+      "saved_summation_cutoff": 25,
+      "saved_probability_beyond_display": 0
+    },
+    {
+      "j": 2,
+      "lambda_value": "1/4",
+      "display_cutoff": 28,
+      "saved_summation_cutoff": 36,
+      "saved_probability_beyond_display": 3.1464841406781445e-32
+    },
+    {
+      "j": 4,
+      "lambda_value": "1/4",
+      "display_cutoff": 28,
+      "saved_summation_cutoff": 57,
+      "saved_probability_beyond_display": 2.1572675944876673e-16
+    },
+    {
+      "j": 6,
+      "lambda_value": "1/4",
+      "display_cutoff": 28,
+      "saved_summation_cutoff": 82,
+      "saved_probability_beyond_display": 1.3753060193767578e-08
+    }
+  ],
+  "matplotlib_version": "3.11.0",
+  "input_sha256": {
+    "results/susskind-memory-size-bridge/rank-law-checks.json": "7fdcc9e89d73e377ad1c29f599a76f4fe8815189c61f080ebfef7be9579beb3b",
+    "code/plot_size_deficit_law.py": "6d7f0997d87fe437f6f72d1f1efe2930a9fe8337ea129d8e1fb8c1f2c4017f2b"
+  },
+  "output_sha256": "cb4dc247bebb145b161d9dfec62dc8aa65eba89765a28a5187d073bd7c2c86ab"
+}

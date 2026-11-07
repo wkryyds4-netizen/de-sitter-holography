@@ -1,0 +1,11 @@
+{
+  "status": "failed",
+  "command": "python code/check_filtered_spectrum.py",
+  "failure": "Structural SymPy equality failed for expanded moment(3,1) versus r*(2+q).expand()",
+  "cause": "The expand method was applied to 2+q rather than the whole product; qr+2r and r(q+2) are algebraically equal",
+  "original_code": "results/susskind-filtered-spectrum/initial-spectral-check.py.txt",
+  "correction": "Expand the difference and compare exactly to zero",
+  "scientific_formulas_changed": false,
+  "tolerances_changed": false,
+  "successful_result": "results/susskind-filtered-spectrum/spectral-checks.json"
+}

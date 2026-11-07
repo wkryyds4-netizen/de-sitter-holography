@@ -1,0 +1,348 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,microtype}
+\usepackage[margin=24mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\W}[1]{\mathsf W_{#1}}
+\newcommand{\Jh}{\mathcal J_h}
+\newcommand{\Lh}{\mathcal L_h}
+\newcommand{\Db}{\overline D}
+\title{The raw memory coefficient in a central charge window\\Conserved shifts and the filtered linear field}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Local research note --- 6 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+We extend the project's second memory coefficient from exact half
+filling to a compact central charge window. The five raw quartic
+contractions acquire a finite charge-dependent correction entirely
+along the conserved quadratic polynomial. The linear rank filter
+has the same centered slope and limiting variance. Uniform rank
+tails and the existing charged lifts then transfer the complete
+conserved-subtracted two-energy spectrum. All finite-sector
+coefficients in growing counterterms are retained.
+\end{abstract}
+\section{State and the central descendant table}
+Use standard CAR, the overlapping complex Gaussian $p$-body
+Hamiltonian, $\hbar=1$, and the normalized maximally mixed trace
+in charge $m$. Norms mean $\|A\|_2^2=\EE\tr_m A^\dagger A$.
+Let $h=H_m$, $\Jh A=\{h,A\}/2$, $\Lh A=[h,A]$, and
+\begin{equation}
+ N\text{ even},\quad m=N/2+xp,\quad |x|\leq L,\quad
+ \lambda_N=p^2/N\to\lambda>0,\quad q_N=e^{-4\lambda_N}.
+\end{equation}
+Integer admissible charges are understood; $\lambda_N$ lies in a
+positive compact set. Put $C_m=\EE\tr_mh^2\to C=J_s^2/\lambda$,
+$B=h^2-C_m I$, $A=\sum_i[H,c_i]^\dagger[H,c_i]$, $O=\W2A$.
+All $\W j$ are Gaussian coupling chaos, not spectral Wick products.
+The output-deficit field $\mathcal S_N$ weights each quadratic
+product block with input ranks $a,b$ and output rank $r$ by $S=a+b-r$.
+With $D X=QX-\sum c_i^\dagger Xc_i$ and
+$\mathcal T_j=(jp-D)H^j$ before restriction, define
+\begin{align}
+ E_0&=\{A,h^2\}/2,&M_0&=hAh,\notag\\
+ S_0&=\Jh\mathcal T_3-E_0-M_0,&
+ C_0&=\mathcal T_4-2E_0-M_0-2S_0,\qquad Z_0=h^4.
+\end{align}
+For each row $P$, the central extension of the old table is
+\begin{equation}
+ \W2P=C_m[p\ell_P+k_P+2\lambda_Nx\ell_P]B
+       +C_m o_PO+j_P\Jh F+C_m s_P\mathcal S_N+o_{L^2}(1).
+ \label{table}
+\end{equation}
+The old coefficients, listed on the next page, remain evaluated at
+finite $\lambda_N,q_N$. In particular the extra term is conserved;
+this statement concerns the central limit, not exact charge
+independence at finite $N$.
+
+\newpage
+\section{Why no dynamic charge correction survives}
+\begin{center}\small
+\begin{tabular}{cclccc}\toprule
+ $P$&$\ell_P$&$k_P$&$o_P$&$j_P$&$s_P$\\\midrule
+ $E_0$&2&$-2\lambda q^2$&1&0&0\\
+ $M_0$&2&$-2\lambda(2q-1)$&$q^2$&0&0\\
+ $S_0$&$2q$&$-2\lambda(q^2-q+1)$&$q$&1&0\\
+ $C_0$&$2q^2$&$-2\lambda(8\lambda q^2-3q^2+2q+2)$&1&$2q$&$8\lambda q^2$\\
+ $Z_0$&0&$q^2+2q+3$&0&0&0\\\bottomrule
+\end{tabular}
+\end{center}
+The exact two-charge contraction filters are those of the prior
+descendant calculation~\cite{desc}. They use $n=N-m+1$,
+two input ranks $a=p-u,b=p-v$, and output rank
+$r=2p-u-v-S$. No charge-trace approximation is made in these filters.
+For covariance eigenvalue $\kappa_j$ the central product expansion is
+\begin{equation}
+ \frac{\kappa_{tp-d}}{C_m}
+ =e^{-4\lambda_Nt}\left[1+
+ \frac{4\lambda_Nd-4\lambda_N^2t^2}{p}
+ +O_{L,\lambda}\!\left(\frac{(1+d)^2}{p^2}\right)\right],
+ \quad t=1,2.\label{kap}
+\end{equation}
+It follows by summing the logarithms of
+$\prod_{j=0}^{p-1}(1-\nu/(m-j))(1-\nu/(N-m+p-j))$.
+The $x$ terms cancel at order $p^{-1}$ in this ratio. Substitution
+in the exact rational filters gives the five finite $B$ shifts
+\begin{equation}
+ 4\lambda x\,(1,1,q,q^2,0)=2\lambda x(\ell_E,\ell_M,\ell_S,\ell_C,\ell_Z).
+\end{equation}
+All $O$, input-deficit and output-deficit coefficients agree with
+the half-filled values. For the raw core
+$\mathcal E=C_0-2S_0+(E_0+M_0)/2$, the net shift is
+$4\lambda x(1-q)^2C_mB$, consistent with its independent filter.
+
+Here are the norm controls promoting the expansions to
+\eqref{table}. In the whole allowed rank domain the rational
+denominators have size bounded below by a constant times $N$ or
+$N^2$. The $A$ filters satisfy
+\begin{equation}
+ |g_{A,P}/C_m-o_P|\leq K(1+u+v+S)/p,\qquad |g_{A,P}/C_m|\leq K.
+\end{equation}
+The established central weighted $A$ norm and sixth output moment
+give a squared error at most
+$KC_m^4(p^{-2}+R^2/p^2+p^4/R^6)$; set $R=p^{3/4}$.
+For the $H^2$ filter, subtraction of $p\ell_P$ leaves a bound
+$K(1+u+v+S)$. The factorial input tail and central sixth output
+moment give uniform integrability of its square. Equation
+\eqref{kap} on fixed windows, followed by removal of the tails,
+therefore proves strong convergence. The conversion of its
+input-deficit part to $\Jh F$ is proved next.
+
+\newpage
+\section{The central linear filter and its covariance bridge}
+Write $h=\sum_{a=0}^p h_a$ with
+$\EE\tr_m h_a^2=C_m\omega_a$. The existing exact first-chaos
+coefficient $t_a$ of $T_3=\mathcal T_3-3\Jh A$ gives
+\begin{equation}
+ F=\sum_a(t_a-\bar t)h_a,\qquad \bar t=\sum_a\omega_a t_a.
+\end{equation}
+For completeness set $k_a=\kappa_a/C_m$, $A_a=m-a$,
+$B_a=N-m-a+1$, and $\alpha_a=a(N-a-p+1)/(N-2a+1)$.
+The entire rank-dependent part of $t_a/C_m$ is $k_a E_a$, where
+\begin{equation}
+ E_a=(m-p)(1-p/A_a)(1+p/B_a)-m
+ +3[\alpha_a(1+p/B_a)+(p-\alpha_a)(1-p/A_a)].
+\end{equation}
+Thus the exact formula, rather than a trace transfer multiplied
+by $p$, gives for each fixed deficit $u$
+\begin{equation}
+ (t_{p-u}-t_p)/C_m\to8\lambda q u.\label{slope}
+\end{equation}
+Uniformly on $0\leq a\leq p$, $|E_a|\leq Kp$,
+$|\partial_a E_a|\leq K$, $0\leq k_a\leq1$,
+and $|\partial_a k_a|\leq K/p$. Hence the left side of
+\eqref{slope} is bounded by $Ku$ over the entire rank range.
+The exact probability recurrence has ratio at most $K/(u+1)$
+and tends to $\lambda/(u+1)$. Consequently
+$\omega_{p-u}\Rightarrow\operatorname{Pois}(\lambda)$ with
+uniform factorial tails, and centering is justified in every
+fixed polynomially weighted $L^2$ norm. In particular
+\begin{align}
+ F-8\lambda_Nq_NC_m(D_{\rm in}-\bar u h)&\to0\quad(L^2),\\
+ \|F\|_2^2&\to64\lambda^3C^3q^2=64J_s^6q^2,\label{VF}\\
+ \Jh F-4\lambda_Nq_NC_m L_{\rm in}&\to0\quad(L^2).
+\end{align}
+Here $D_{\rm in}=\sum u h_{p-u}$,
+$\bar u=\sum u\omega_{p-u}$ and
+$L_{\rm in}=\W2\{h,D_{\rm in}-\bar u h\}$.
+The final multiplication is controlled by Gaussian fourth moments:
+for an invariant linear Gaussian error $X$, $\EE X^2=vI$ and
+$\EE\tr_m X^4\leq3v^2$. Thus $\|hX\|_2\leq\sqrt{3C_m v}$.
+
+The exact body-shift ratio is
+\begin{equation}
+ R_j(u)=\frac{(u)_{\downarrow j}(N-2p+u+1)_{\uparrow j}
+ (N-m+p-j+1)_{\uparrow j}}
+ {(m-p+1)_{\uparrow j}[(p)_{\downarrow j}]^2}
+ \longrightarrow\frac{(u)_{\downarrow j}}{\lambda^j}.
+\end{equation}
+It has a uniform polynomial bound for fixed $j$. Thus the old
+signed $p,p-1,p-2$ covariance bridge and its whole-graph
+total-variation estimate apply uniformly in the central window.
+In particular $F/\|F\|_2$ is strongly approximated by
+$\sqrt{\lambda_N}\sum_a[R_1(p-a)-1]h_a/\sqrt{C_m}$.
+
+\newpage
+\section{Charged marks and the full spectral interface}
+The lift of a $(p-1)$-body field $U$ is $g(Q)U$, with
+$d=m-p+1$ and $g(n)=(n-p+1)/d$. The reduced-rank binomial
+identity and the direct CAR identities are valid at general charge:
+\begin{align}
+ \mathcal M_+(gU,V)&=(1+d^{-1})\mathcal M_+(U,V)-d^{-1}U\Db V,\\
+ \mathcal M_-(gU,V)&=(1-d^{-1})\mathcal M_-(U,V)+d^{-1}UDV,\label{lift}\\
+ [(kp-D)(gB')]_m&=(1-d^{-1})[(kp-1-D)B']_m
+                       +(k-1)pB'_m/d.
+\end{align}
+Here $\mathcal M_-=-\sum[U,c_i^\dagger][V,c_i]$,
+$\mathcal M_+=-\sum[U,c_i][V,c_i^\dagger]$, and $B'$ contains
+one shifted slot in a fixed-length neutral product.
+Reversing the order in \eqref{lift} puts $DV$ or $\Db V$ on
+the left. These formulas were already derived and checked in
+the mixed-spectrum note~\cite{mixed}; no new lift is postulated.
+
+The preceding central Casimir identity gives, for a $p$-body slot,
+\begin{equation}
+ DV=pV,\qquad \Db V=pV-2D_{\rm in}V-E_{\rm in}V,\qquad
+ (E_{\rm in}V)_a=\frac{u(u-1+N-2m)}{m-p+1}V_a.
+\end{equation}
+Factorial tails bound the input terms in every fixed moment.
+Since $N-2m=-2xp$, the last term is $O(p^{-1})$,
+and all lift corrections are $O(p/N)=O(p^{-1})$ in the
+fixed-degree mixed traces. The quartic identity also has this size.
+
+The existing oriented chord rule permits unequal index-set
+sizes~\cite{BNR}; changing $p$ to $p-1$ preserves its limiting
+overlap parameters. The central marked-graph trace theorem
+and exponential overlap bounds transfer its fixed derivatives.
+Every graph in a cross with one $F$ therefore has two signed
+terms with the same limit, and cancels. The lower/upper force
+and quartic lifts cover $F$--$Y_-$, $F$--$Y_+$, $F$--$R$ and
+$F$--$Q_4$. The existing endpoint certificates transfer the
+remaining crosses. In applying them, one first combines the raw
+words into bounded marked Wick blocks; one never multiplies
+an $O(p^{-1})$ trace error by an unremoved $p$ counterterm.
+
+We obtain the same diagonal two-energy basis $(Y,F,R,T,Q_4)$
+as at half filling, with parameters $q,C$. In particular
+\begin{equation}
+ d\nu_F=64\lambda^3C^3q^2\,d\mu_q,\qquad
+ \nu_{F,Y_\pm}=\nu_{F,R}=\nu_{F,Q_4}=0.
+\end{equation}
+For marked representatives these follow from all fixed energy
+moments, tightness, and compact moment uniqueness. Strong
+replacements transfer bounded spectral tests by Cauchy--Schwarz.
+Energy-weighted uses additionally employ the factorial weighted
+errors and fixed-degree Gaussian/marked moment bounds above.
+Ordinary chaos orthogonality alone would not give these statements.
+
+\newpage
+\section{The conserved subtraction and restored raw coefficient}
+Put $d_3=q^2-q+1$, $d_5=1+q+q^2+q^3+q^4$, and
+\begin{align}
+ \alpha&=-2q^3/(d_3d_5),&\beta&=-q^2(1+q+q^2)/(d_3d_5),&
+ \gamma&=2q/d_3,\notag\\
+ \delta&=\frac{2\lambda(1-q)^3(1+q)(1+q+q^2)}{(1+q^2)d_5},&
+ g_J&=\alpha+\beta+\gamma-1.&
+\end{align}
+Let $\mathcal Q=C_0-\alpha E_0-\beta M_0-\gamma S_0-\delta Z_0$,
+$Q_4=\W4\mathcal Q$, $e_{\mathcal Q}=\EE\tr_m\mathcal Q$.
+For any table column set $f_Q=f_C-\alpha f_E-\beta f_M-
+\gamma f_S-\delta f_Z$. Its central correction is exactly
+$2\lambda_Nx\ell_Q C_mB$ to the order under consideration.
+
+Use actual finite-sector $a_m=\EE\tr_m A$,
+$c_m=\langle O,B\rangle/\langle B,B\rangle$,
+$K_A=a_m I+c_mB$, $Y=A-K_A$. Define
+\begin{align}
+ a&=-(1-q)^2/(1+q^2),&
+ b&=\frac{2\lambda(1-q)(1+q^3)}{(1+q^2)(1+q+q^2)},\notag\\
+ P_m&=(ac_m+b)h^3+[\bar t-(ac_m+b)\bar z]h,
+ &\bar z&=\langle h,\W1h^3\rangle/C_m.
+\end{align}
+The exact cubic reduction has the same central strong remainder:
+$T_3-P_m=R+a\Jh Y+F+o_{L^2}(1)$.
+Here $R=\W3(T_3-a\Jh A-bh^3)$.
+Indeed $B_Z,B_S=O_{L^2}(p^{-1})$ follow from the centered
+$k_a$ and $k_aJ_a$ slopes, as in the preceding cubic calculation.
+Their limits are $pB_Z-F/2\to0$ and
+$pB_S-(1-2\lambda)F/2\to0$, also with fixed energy weights.
+
+With $r_N=p/m$, $c=2\lambda(1-q)/(1+q)$, set
+\begin{align}
+ D_{2,m}&=2r_NhP_m+3r_N^2h^2K_A-K_A^2/m-mr_N^4h^4,\notag\\
+ \mathcal C_{2,m}&=D_{2,m}+e_{\mathcal Q}I+\delta h^4
+                 +g_Jh^2K_A+b_RhP_m\notag\\
+ &\quad+C_m[p\ell_Q+k_Q+2\lambda_Nx\ell_Q+o_Qc_m
+                           +8\lambda_Nq_N^2c]B.\label{counter}
+\end{align}
+Every term commutes with $h$ sample by sample. All $q,\lambda$
+in this finite-$N$ definition mean $q_N,\lambda_N$; $C_m,c_m,
+\bar t,\bar z,e_{\mathcal Q}$ remain exact sector quantities.
+The renewal identity and \eqref{table} give
+\begin{equation}
+ U_{2,m}:=mZ_2-\mathcal C_{2,m}
+ =X+b_R\Jh R+b_F\Jh F+b_J\Jh^2Y+b_D\Lh^2Y+C\kappa Y+o_{L^2}(1),
+\end{equation}
+Here $\widehat M(s)=G+isZ_1-s^2Z_2/2+O(s^3)$ defines the
+finite-$N$ centered memory coefficients. Also
+$T=(1-\Pi_N)\mathcal S_N$ with
+$\Pi_N=\operatorname{proj}_{\{B,L_{\rm in},O\}}$,
+$X=Q_4+8\lambda Cq^2T$, and
+\begin{align}
+ b_R&=-2(1-q)^2/d_3,& b_F&=2(q-1),& b_D&=q^2/(4d_5),\notag\\
+ b_J&=g_J+ab_R,&\kappa&=(1-q)(1+q)^2/d_5+8\lambda q^2\rho,
+\end{align}
+$\rho=v/(v+\Delta)$, $v=2\lambda(1-q)+16\lambda^2q/(1+q)$,
+$\Delta=2\lambda(1+q)$. The renewal error is $O_{L^2}(p^{-1})$:
+its terms have factors $r_N$, $r_N^2$, or $a_m/m=O(p^{-1})$
+and bounded centered higher moments. The finite conserved
+$K_A^2/m$ term is retained in \eqref{counter}.
+
+\newpage
+\section{Spectrum, evidence, and continuation}
+Let $e=(E+E')/2$, $\omega=E-E'$,
+$H_2=b_Je^2+b_D\omega^2+C\kappa$. The result is
+\begin{equation}
+ d\nu_{U_2}=V_4d\mu_{q^4}+V_2d\mu_{q^2}
+ +b_R^2e^2V_Rd\mu_{q^3}+b_F^2e^2V_Fd\mu_q
+ +WH_2^2d\mu_{q^2}.\label{spectrum}
+\end{equation}
+These are the same explicit weights as in the raw-spectrum
+note~\cite{raw}, with $W=4C^2\lambda+16C^2\lambda^2q/(1+q)$,
+$V_F$ in \eqref{VF}, and $V_2=64\lambda^2C^4q^4v\Delta/(v+\Delta)$.
+The existing Mehler measure $\mu_r$ has variance-$C$ marginals.
+The cross measures are
+\begin{equation}
+ d\nu_{Y,U_2}=WH_2d\mu_{q^2},\qquad
+ d\nu_{L,U_2}=aeWH_2d\mu_{q^2}+b_FeV_Fd\mu_q+b_ReV_Rd\mu_{q^3}.
+\end{equation}
+For densities $w=WK_2$, $f=V_FK_1$, $r=V_RK_3$,
+$z=V_4K_4+V_2K_2$, the $(Y,L,U_2)$ matrix is
+\begin{equation}
+ M\operatorname{diag}(w,f,r,z)M^T,\qquad
+ M=\begin{pmatrix}1&0&0&0\\ae&1&1&0\\H_2&b_Fe&b_Re&1\end{pmatrix}.
+\end{equation}
+Its determinant is $w[(f+r)z+e^2fr(b_F-b_R)^2]$.
+Thus the compact central window changes the required subtraction,
+but not the limiting dynamic spectral matrix. The ordered
+small-$\lambda$ shape already derived in Ref.~\cite{raw} is
+inherited after this central double-scaled limit.
+
+\paragraph{Executed evidence.}
+The restored symbolic certificate checks all five central filters,
+the cubic slope, and the one-body-shift ratio. Its recorded source
+hashes were verified before reuse. A new calculation checks
+123 exact rational coefficient references and 36 full-rank sums
+at $\lambda=0.1,0.25,0.5$, $p=16,32,64,128$, $x=-2,0,2$,
+each at 80 and 120 decimal digits. All $p+1$ ranks are included;
+finite variance differences, signed-covariance errors, weighted
+tails, and both cubic remainders are saved. Agreement of numerical
+precisions is not a convergence proof or an interval certificate.
+The assembly verifies seven prior/current certificates and the
+positive matrix algebra, without repeating old endpoint scans.
+
+\paragraph{Next calculation.}
+The next issue is charge summation: obtain bounds outside every
+fixed central window for the \emph{conserved-subtracted} fields,
+then combine them with the binomial charge law. Compact-$x$
+uniformity alone cannot interchange that sum with the limit.
+Afterwards control the two-insertion finite-memory remainder and
+connect the bilocal to the Susskind bulk meson dictionary. This
+note identifies fixed Taylor coefficients, not the finite-memory kernel.
+
+\begin{thebibliography}{9}\small
+\bibitem{BNR} M. Berkooz, V. Narovlansky and H. Raj,
+\emph{Complex Sachdev--Ye--Kitaev model in the double scaling limit},
+\href{https://arxiv.org/html/2006.13983v2}{arXiv:2006.13983v2}, Sec.~3.3.
+\bibitem{desc} A. Day and Chengheng, local notes:
+\emph{Restoring the raw memory descendants};
+\emph{Central coherent norms}; \emph{Central force spectrum} (2026).
+\bibitem{mixed} A. Day and Chengheng, local notes:
+\emph{Mixed spectra of the first memory fields};
+\emph{Linear rank-filter covariance bridge} (2026).
+\bibitem{raw} A. Day and Chengheng,
+\emph{The second coefficient after a conserved subtraction},
+local six-page note, 6 November 2026.
+\end{thebibliography}
+\end{document}

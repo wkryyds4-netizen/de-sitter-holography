@@ -1,0 +1,470 @@
+           A query concerning the positive-curvature pentagon
+                   and its analytic-continuation proof
+                        Technical note for discussion with the authors
+
+                                          6 November 2026
+
+
+                                               Abstract
+          This note concerns the ordinary spectral-calculus interpretation of the operators in Kim–
+      Scarinci, arXiv:2112.13329v2 [KS]. We identify a false cross strong-commutation assertion in
+      the proof of Proposition 6.11, a moving-pole obstruction to the stated analytic-continuation
+      argument, and an apparent missing factor of i in (75). A fresh interval recomputation of a
+      public certificate supports a counterexample to the Λ = 1 part of Proposition 6.15, including
+      equality up to a scalar phase. We give a conservative replacement of that proposition
+      for Λ = −1, 0, with proofs. We have not constructed a replacement positive-curvature
+      quantization. We would welcome correction of any mismatch with the authors’ intended
+      operator realization.
+
+
+1     Scope, locations, and evidential status
+The version under review is specifically arXiv:2112.13329v2. Equation and proposition numbers
+below refer to that version. Source-line numbers refer to the file quantization.tex in its arXiv
+source archive, not to a journal pagination. The main locations are:
+
+    Location                        Issue to be addressed
+    Prop. 6.11, before (74); line   Cross strong commutation of two normal operators is asserted to
+    2416                            justify moving and cancelling a chiral factor. Section 3 disproves
+                                    that assertion.
+    Equation (75); line 2424        Its coefficient eπh should apparently be eπih ; see Section 4.
+    Immediately after (75); line    Fixed-vector holomorphy is asserted without resolving moving
+    2426                            spectral poles and domains; see Section 5.
+    Thm. 6.14, positive-curvature   Operator consistency is inferred using the same continuation
+    proof; line 2546                method. This inference needs replacement.
+    Prop. 6.15                      The positive-curvature pentagon is stated as an equality of uni-
+                                    tary operators. Section 6 supplies the computational evidence
+                                    against this particular statement.
+
+The strong-commutation objection is an exact analytic argument. The final pentagon coun-
+terexample is a computer-assisted conclusion, conditional on correctness of the checked interval
+algorithms and their implementation. The periodic-grid experiment is only a diagnostic. Neither
+these observations nor the proposed correction is a claim about the impossibility of de Sitter
+holography or every positive-curvature construction.
+
+
+2     Exact correspondence with Proposition 6.15
+Put
+                    H = L2 (R2 , dx dy/(2π 2 )),       Px = −πi∂x ,    Py = −πi∂y ,
+
+
+                                                   1
+Query concerning arXiv:2112.13329v2                                                      Technical attachment
+
+
+with the usual self-adjoint closures. Take
+
+                                       (x, y, x′ , y′ ) = (X, Y, Py , Px ).
+
+The two nontrivial canonical pairs obey the full regular Weyl relations; for example,
+
+                                        eisX eirPx = e−πisr eirPx eisX .                                  (1)
+
+All four other pairs required to commute in Proposition 6.15 strongly commute. Thus the
+hypothesis is satisfied at the Weyl level, not merely through formal differential commutators.
+The sum pair (X + Py , Y + Px ) also strongly commutes, as follows from the conjugation below.
+    At ℏ = 1, the scalar function used is precisely the paired function F = F11 defined in [KS],
+namely
+
+                                       Φi (x + iy)
+                          F (x, y) =
+                                       Φi (x + iy)
+                                       ∞
+                                       Y 1 + ex−(2j+1)π−iy 1 + ey−(2j+1)π−ix
+                                  =                                                .                      (2)
+                                       j=0
+                                             1 + ex−(2j+1)π+iy 1 + ey−(2j+1)π+ix
+
+This follows from the compact-product expression in [KS], with ψq (z) = j≥0 (1 + q 2j+1 z)−1
+                                                                                          Q
+
+and Φi (z) = ψe−π (ez )/ψe−π (e−iz ). The function has modulus one almost everywhere. Assigning
+arbitrary unit-modulus values at its discrete exceptional points leaves the Lebesgue spectral
+operators unchanged. Define the bounded unitaries
+
+                        A = F (X, Y ),          B = F (Py , Px ),        M = eiXY /π .
+
+Since M −1 Py M = Py + X and M −1 Px M = Px + Y , joint spectral calculus gives
+
+                                C := F (X + Py , Y + Px ) = M −1 BM.
+
+Consequently the asserted pentagon is exactly AB = BCA, and the residual tested below is
+                                                   √      2  2
+           D = AB − BM −1 BM A,          f (x, y) = 2 e−(x +y )/(2π) , ∥f ∥ = 1.         (3)
+
+In particular, f is an admissible vector for the final bounded identity, whether or not it belongs
+to domains of the separate unbounded chiral factors used in an intermediate proof. Tensoring all
+operators with IC2 , as in [KS], does not alter this residual.
+     For the local seed in the proof of Proposition 6.11 with εik = −1, formula (47) gives
+(xk , yk , xi , yi ) = (Ps , t, Pt , −s). A partial Fourier transform in s gives the realization above. The
+analytic objection is therefore also present in the seed realization used in that proof.
+
+
+3    The cross strong-commutation assertion is false
+For τ > 0, let
+                                  N = X − iτ Y,             T = Py + iτ Px .
+Both are normal operators, defined by the joint spectral calculus of their respective commuting
+self-adjoint components. On the Schwartz core,
+
+                                    [N, T ] = 0,         [N, T ∗ ] = 2πτ I.
+
+The first equality is only formal commutation; it is not spectral strong commutation. There is a
+direct bounded-operator obstruction avoiding unbounded-product domain questions. If N and
+T strongly commuted, all their bounded Borel functions would commute. In particular, since
+
+                                                        2
+Query concerning arXiv:2112.13329v2                                          Technical attachment
+
+
+Re N = X and Im T /τ = Px , the unitaries eiX and eiPx would commute. Equation (1) instead
+gives
+                      eiX eiPx = −eiPx eiX ,   ∥[eiX , eiPx ]u∥ = 2∥u∥.
+Thus the cross strong-commutation assertion immediately before (74) is false in this representation.
+The other assertion in that sentence, strong commutation of X − iτ Y with X + iτ Y , is valid.
+    More generally, for h = a + ib, the formally commuting pair Nh = X − hY , Th = Py + hPx
+has [Nh , Th∗ ] = 2πbI on the Schwartz core. This explains the loss of spectral commutation when
+moving from real to nonreal parameters. It invalidates the stated reason for moving the chiral
+factor; it does not, by itself, exclude an exceptional identity for some particular functions on a
+specially chosen domain. Such an identity would need a different proof. Section 6 concerns the
+separate question of the final bounded pentagon.
+
+
+4     An apparent coefficient typo in (75)
+Writing U = X + hY and V = Py + hPx gives [U, V ] = 2πih formally. For real h > 0, the known
+difference relation for Φh , with the usual domain justification for the real-parameter intertwiner,
+yields
+
+                                Φh (U )eV = eV Φh (U + 2πih)
+                                          = eV (1 + eπih eU )Φh (U ).
+
+Accordingly the factor eπh in (75) should be eπih . The original TeX contains the former, so this
+is not an HTML conversion issue. At h = iτ , the corrected factor becomes e−πτ , consistently
+with (74). This local correction does not repair either strong commutation or the continuation
+argument. The residual calculation uses (2), not the coefficient in (75).
+
+
+5     Moving poles obstruct the stated continuation
+5.1   Failure of the literal fixed-vector interpretation
+Near h = i, the meromorphic scalar function has a simple pole
+
+                                       z0 (h) = −πi(1 + h).
+
+For h = a + ib, b > 0, its real spectral preimage under z = x + hy is
+
+                                  π(a2 + b2 + a)                π(1 + a)
+                           xh =                  ,     yh = −            .                      (4)
+                                        b                          b
+At h = i it is (π, −π). Directly from the compact products,
+
+                                         Res Φi (z) = −1.
+                                        z=π−πi
+
+Indeed the zeroth denominator factor of j≥0 (1 + e−(2j+1)π−iz )/ j≥0 (1 + e−(2j+1)π+z ) has
+                                             Q                           Q
+
+derivative −1 at this point; the remaining numerator and denominator products cancel there.
+    The real-linear map (x, y) 7→ x + hy is invertible for b > 0. Hence the multiplier Φh (x + hy)
+has local magnitude comparable to 1/|(x, y) − (xh , yh )|. A smooth Gaussian nonzero at the pole
+is not inR its multiplication-operator domain: the squared norm contains the divergent radial
+integral 0ϵ dr/r. For a Gaussian g, the left side of (75) has the same obstruction, because
+
+                               ePy +hPx g(x, y) = g(x − πih, y − πi)
+
+
+
+                                                 3
+Query concerning arXiv:2112.13329v2                                                   Technical attachment
+
+
+is still a square-integrable complex Gaussian with no zeros, before the chiral multiplier is
+applied. The individual operators in that formula cannot simply be treated as everywhere-defined
+Hilbert-space vector-valued holomorphic functions of h.
+    There is also a local common-domain obstruction. The map p(a, b) = (xh , yh ) has
+
+                                                   π 2 ((a + 1)2 + b2 )
+                                      det Dp =                          > 0.
+                                                            b3
+For a sufficiently small open neighborhood U of i, p(U ) is open and the pole residue stays nonzero.
+Any u lying in the domains of all these chiral multipliers must vanish      almost everywhere on
+p(U ). To see this, a positive Lebesgue point p of |u|2 would give |u(q)|2 /|q − p|2 dq = ∞:
+                                                                        R
+
+on sufficiently small dyadic annuli each integral is bounded below by a fixed positive number.
+But p is the pole for some h ∈ U . Thus this common domain is contained in a proper closed
+subspace and is not dense in H. This statement concerns the chiral family, not every conceivable
+regularization of a combined operator.
+
+5.2    Ordinary weak integration is not a holomorphy argument
+Local integrability of 1/|z| in two dimensions does not justify holomorphy of integrals with a
+moving pole. A simple example is
+                                      2                        2
+                             e−|z| 2     π(1 − e−|a| )
+                           Z
+                                                                                          2
+                 G(a) :=           d z=−               ,                ∂ā G(a) = −πe−|a| .
+                           C z−a              a
+The value at a = 0 is obtained by continuity. A local version applies to the actual chiral function.
+Choose a fixed smooth cutoff χ, supported sufficiently close to (π, −π), equal to one there, so
+that no other pole branch enters the support for h close to i. Locally write
+
+                                           R(h)
+                  Φh (x + hy) =                         + H(h, x, y),           R(i) = −1,
+                                     x + hy + πi(1 + h)
+
+where the remainder is holomorphic in h and smooth on this compact spectral neighborhood.
+The pole as a function of h is h0 (x,Ry) = −(x + πi)/(y + πi). Using ∂h̄ (h − h0 )−1 = πδ (2) (h − h0 ),
+the ordinary area integral J(h) = χ(x, y)Φh (x + hy) dx dy satisfies
+
+                                            πR(i) det Dp(0, 1)
+                               ∂h̄ J(i) =                      = π 2 (1 + i) ̸= 0.
+                                                −π + πi
+
+For measure dx dy/(2π 2 ) the result is (1 + i)/2. This is an ordinary weak integral, not a
+Hilbert-space matrix element of a defined vector if that vector is outside the operator domain. It
+demonstrates why merely taking a weak integral does not supply the asserted analytic continuation.
+A contour prescription with residue terms might define another object, but its agreement with
+the stated endpoint spectral operator would have to be proved.
+
+
+6     Numerical evidence and its limits
+6.1    Source, fresh computations, and lower bounds
+The public certificate was taken from [R], fixed commit
+                               714d038bb605cfcffdc351e4dcc62aa95237d25f.
+
+Its saved finite Hermite coefficient vectors were treated as exact dyadic data. Five nonlinear
+overlaps were recomputed over all 21,143 saved integration cells, including new local error
+bounds, spatial tails and infinite-product tails. The two chirp overlaps were recomputed by
+
+
+                                                         4
+Query concerning arXiv:2112.13329v2                                               Technical attachment
+
+
+interval Gaussian moments. The final finite-vector algebra and triangle-inequality assembly were
+independently implemented. The test vector is exactly (3).
+    The bound uses only unitarity and overlap enclosures. For any trial vectors v, w and unitary
+U,
+                          ∥U v − w∥2 = ∥v∥2 + ∥w∥2 − 2 Re⟨w, U v⟩.
+The sum E of the seven step-error upper bounds bounds the accumulated error in the two words.
+If l, r are the final finite vectors, then
+                                         ∥Df ∥ ≥ ∥l − r∥ − E.
+It is unnecessary to assume the saved vectors are exact Galerkin projections. They are simply
+explicit approximants with certified errors. The recomputed values are:
+
+                  Quantity                                             Approximate value
+                  Finite-vector separation                       0.11963092513989593233
+                  Sum of step-error upper bounds                 0.07473441640996762058
+                  Resulting lower-bound margin                   0.04489650872992831175
+                  Phase-optimized lower-bound margin             0.04489650465926383921
+These displayed decimals are summaries. Exact rational endpoints are in the accompanying file
+fresh-certificate-summary.json. Conservatively, those endpoints give
+
+                                       ∥Df ∥ > 0.04489650872.                                      (5)
+
+The same step bounds apply after any unit scalar multiplies the right word. Using
+                                                   q
+                               inf ∥l − eiθ r∥ =       ∥l∥2 + ∥r∥2 − 2|⟨r, l⟩|
+                                θ
+
+therefore gives
+                         inf ∥ABf − eiθ BM −1 BM Af ∥ > 0.04489650465.                             (6)
+                         θ∈R
+
+This excludes a missing constant phase as a repair of this example.
+
+6.2    Independence and a reproducibility caveat
+The interval integrator and chirp-moment implementation were reused from the repository after
+inspection; the interval run is a fresh recomputation, not a wholly independent implementation or
+a proof-assistant verification. The partition and coefficient data were also reused. The finite-vector
+assembly, FFT diagnostic, scalar Barnes-integral comparison and binary64 cell cross-check were
+written separately. All fresh analytic-cell integral enclosures overlapped the saved enclosures.
+Independent 32-point quadrature sums differed from the corresponding saved 24-point sums by
+at most approximately 3.4 × 10−16 ; this comparison itself is not certified.
+    The original replay audit did not pass unchanged on this machine: 9,890 checks failed when
+comparing freshly computed error-bound upper endpoints with saved singleton upper endpoints
+(audit_tensor_chain.py, line 74). No other failure category was reported. The largest change
+in a summed local-bound budget was about 2.32 × 10−14 ; no cell classification changed. Two
+valid upper bounds need not have identical endpoints, but this does not excuse silently accepting
+an audit failure. Accordingly, all those bounds were recomputed and the final certificate was
+rebuilt using the new bounds. The precise cause of the endpoint discrepancy was not isolated.
+This distinction between exact regression reproducibility and validity of a freshly enclosed bound
+should remain explicit.
+    The recomputation used Python 3.12.7, NumPy 1.26.4 and python-flint 0.9.0 on macOS ARM,
+256-bit cell arithmetic, 1024-bit chirp arithmetic and 512-bit final assembly. The implementation
+and its mathematical error estimates remain open to independent review.
+
+                                                        5
+Query concerning arXiv:2112.13329v2                                                         Technical attachment
+
+
+6.3   Non-certified diagnostics
+An independent periodic FFT implementation of the same operator word gave residuals 0.12168478
+at N = 1024, L = 32 and 0.12169681 at N = 2048, L = 32, on [−L, L)2 . A flat-case control gave
+approximately 3.0 × 10−12 at N = 1024, L = 32. The grid values are not continuum error bars
+and are not used to derive (5). Separately, a slanted Barnes-integral evaluation at five nonsingular
+points agreed with (2) to about 1.2 × 10−34 or better. This is a finite-point normalization check,
+not a global analytic proof. Neither diagnostic substitutes for the interval argument.
+
+
+7     A conservative replacement with proofs
+The following corrects the scope of the pentagon proposition; it does not claim to reprove every
+other assertion of [KS].
+
+Proposition 1 (Restricted replacement of Proposition 6.15). Let x, y, x′ , y ′ be self-adjoint
+operators on a separable Hilbert space satisfying the full regular Weyl relations corresponding to
+
+                 [x, x′ ] = [y, y ′ ] = [x, y] = [x′ , y ′ ] = 0,      [x, y ′ ] = [y, x′ ] = πiI.
+
+Sums of canonical linear combinations are understood by their self-adjoint closures. For τ > 0,
+set
+                                                                       t log(1 + es )
+                                                                                     
+            τ
+           F−1 (s, t) = Φτ (s + τ t)Φτ (s − τ t)−1 , F0 (s, t) = exp                    .
+                                                                             πi
+For Λ = −1, 0, these functions, in joint spectral calculus, satisfy
+
+                     FΛ (x, y)FΛ (x′ , y ′ ) = FΛ (x′ , y ′ )FΛ (x + x′ , y + y ′ )FΛ (x, y)
+
+as bounded unitary operators. For Λ = −1, Φτ has the real-parameter Faddeev normalization
+used in [KS].
+
+Proof for Λ = −1. Use the established real-parameter Faddeev pentagon in the normalization of
+[KS]: for a regular self-adjoint Weyl pair with [u, v] = 2πiτ I,
+
+                                 Φτ (u)Φτ (v) = Φτ (v)Φτ (u + v)Φτ (u).                                      (7)
+
+This known one-variable theorem is the input to the present proof; we do not derive it anew by
+complex-parameter continuation. Set
+
+                    u = x + τ y,       v = x′ + τ y ′ ,       a = x − τ y,    b = x′ − τ y ′ .
+
+The real linear combinations give [u, v] = 2πiτ I and [a, b] = −2πiτ I. Every member of the (u, v)
+pair strongly commutes with every member of the (a, b) pair: their symplectic pairings vanish, so
+their Weyl unitaries commute. Apply (7) to (u, v) and also to (b, a); invert the latter to obtain
+
+                          Φτ (a)−1 Φτ (b)−1 = Φτ (b)−1 Φτ (a + b)−1 Φτ (a)−1 .
+
+Multiplication of these two identities and the cross strong commutation give exactly the claimed
+              τ . All factors here are bounded unitaries because their arguments are self-adjoint
+identity for F−1
+and the real-parameter scalar function has modulus one on the real axis. No domain cancellation
+or nonreal-parameter continuation is involved.
+
+Proof for Λ = 0. The regular finite-dimensional Weyl representation theorem reduces the question
+to the Schrödinger representation, with an arbitrary multiplicity factor. Use
+
+                  x = −t,       y = πi∂s ,     x′ = s,        y ′ = πi∂t   on L2 (R2 , dt ds).
+
+                                                          6
+Query concerning arXiv:2112.13329v2                                           Technical attachment
+
+
+Write T = et , S = es and identify the space with L2 ((0, ∞)2 , dT dS/(T S)). Direct spectral
+calculus gives the following pullback operators, denoted A0 , B0 , C0 respectively:
+
+                               (A0 η)(T, S) = η(T, S(1 + 1/T )),
+                               (B0 η)(T, S) = η(T (1 + S), S),
+                               (C0 η)(T, S) = η(T + S, S(T + S)/T ).
+
+For the third formula, in logarithmic variables the vector field is log(1 + es−t )(∂t + ∂s ). Its
+coefficient is constant along its flow, giving translation of both t, s by log(1 + es−t ). These three
+maps preserve dt ds and are invertible; thus their pullbacks are unitary.
+    Both A0 B0 η and B0 C0 A0 η evaluate η at
+
+                                    (T + T S + S, S(T + 1)/T ).
+
+For the second word, its second coordinate simplifies by T + T S + S + 1 = (T + 1)(S + 1).
+Equality first for test functions and then by boundedness proves the identity on the whole space,
+and tensoring with the multiplicity identity proves the general case. This is a direct version of
+the flat-case proof already given in [KS].
+
+
+8     Updated assessment and proposed correction
+The present evidence goes beyond an unverified numerical discrepancy. The cross
+strong-commutation assertion is analytically false in the stated regular Weyl realization, and the
+continuation proof cannot stand as written. Separately, the checked correspondence in Section
+2 and the fresh interval bounds in Section 6 give a computer-assisted counterexample to the
+Λ = 1 part of Proposition 6.15 at ℏ = 1, under the ordinary spectral-calculus interpretation.
+This latter conclusion depends on the validity of the interval estimates and their implementation;
+it is not a wholly analytic or formally verified counterexample. If that certificate is valid, a
+different proof cannot restore the same universally quantified statement: its scope or its operator
+construction must change. A counterexample at one parameter suffices for this conclusion; it
+does not establish failure at every positive parameter.
+    Section 7 proves the restricted pentagon for Λ = −1, 0, using the known real-parameter Fad-
+deev theorem in the negative-curvature case. It does not repair the Λ = 1 branch. Theorem 6.14
+and other downstream claims relying on the disputed continuation require separate reassessment;
+we have not refuted each of them individually.
+    A conservative correction would make the following distinctions, while inviting the authors
+to identify any error in our matching or certificate:
+
+    1. Correct the coefficient in (75), and remove the cross strong-commutation assertion preceding
+       (74).
+
+    2. Restrict Proposition 6.15, with its present scalar functions and ordinary spectral-calculus
+       meaning, to Λ = −1, 0. For Λ = 1, the computation above is evidence of failure of the
+       stated identity, not only an omitted proof detail.
+
+    3. Mark the positive-curvature proofs of Proposition 6.11 and Theorem 6.14, and claims
+       explicitly relying on that continuation, as requiring new justification. This note does not
+       independently refute every one of those statements or every constrained surface realization.
+
+A possible corrigendum paragraph, offered as a draft rather than as an attributed author
+statement, is:
+
+
+
+
+                                                  7
+Query concerning arXiv:2112.13329v2                                             Technical attachment
+
+
+     The positive-curvature analytic-continuation argument in Section 6 requires correction. Formal
+     commutation of the chiral operators does not imply the cross strong commutation used before
+     (74). Moreover, the fixed-vector holomorphy assertion following (75) is not justified for the
+     stated spectral realization, which encounters moving poles. The coefficient in (75) should be
+     eπih . Proposition 6.15 is retained here for Λ = −1, 0; its Λ = 1 statement for the specified
+     paired spectral function is withdrawn, pending resolution of the reported counterexample.
+     Positive-curvature conclusions using this proof require separate analysis.
+
+Adding cross strong commutation as a hypothesis would contradict the nontrivial Weyl relations
+in this representation. Restricting the final bounded identity to a dense domain would not help,
+since it would extend to all of H by continuity. Changes at measure-zero spectral points, unitary
+changes of polarization, and a constant phase likewise do not address this example. A different
+spectral space, scalar function, or contour prescription might lead to a different valid theorem;
+no such positive-curvature repair is proved here.
+    We would particularly appreciate clarification of the following:
+
+  1. Is ordinary joint spectral calculus the intended meaning of the positive-curvature factors
+     and of Proposition 6.15, or is an additional contour or regularization prescription intended?
+
+  2. Is there a specific additional hypothesis in Proposition 6.15 that excludes the regular Weyl
+     representation and Gaussian in Section 2?
+
+  3. If a different continuation is intended, what is its domain, and why does its endpoint equal
+     the bounded paired multiplier F1τ used in the proposition?
+
+  4. Can the explicit certificate and phase-independent bound be recomputed independently, or
+     can an error in their normalization, ordering, error estimates, or representation matching
+     be identified?
+
+Provenance. This technical draft and the associated checking scripts were prepared with
+AI assistance. The residual construction and certificate data originate in the public repository
+[R]; the fresh recomputation and additional checks are described above to make the extent of
+independence explicit. This is a request for mathematical verification, not a claim of author
+endorsement or completed peer review.
+
+
+References
+[1] [KS] H. Kim and C. Scarinci, A quantization of moduli spaces of 3-dimensional gravity,
+    arXiv:2112.13329v2. Version record; TeX source; proof before (74); continuation near (75);
+    Proposition 6.15.
+
+[2] [R] wkryyds4-netizen, de-sitter-holography, public GitHub repository, fixed commit reviewed.
+    Relevant files are in code/ and results/stage4/residual-certificate/, together with
+    results/stage4/flip-domain/coefficients-06.npz.
+
+
+
+
+                                                   8
+

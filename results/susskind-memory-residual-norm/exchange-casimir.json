@@ -1,0 +1,171 @@
+{
+  "status": "passed",
+  "rows": [
+    {
+      "N": 4,
+      "m": 1,
+      "a": 0,
+      "b": 0,
+      "ordered_gaussian_pairs": 256,
+      "exchange": "1",
+      "exchange_x": "0",
+      "ordered_x": "0"
+    },
+    {
+      "N": 4,
+      "m": 1,
+      "a": 0,
+      "b": 1,
+      "ordered_gaussian_pairs": 256,
+      "exchange": "1",
+      "exchange_x": "4",
+      "ordered_x": "4"
+    },
+    {
+      "N": 4,
+      "m": 1,
+      "a": 1,
+      "b": 1,
+      "ordered_gaussian_pairs": 256,
+      "exchange": "-1/15",
+      "exchange_x": "-8/15",
+      "ordered_x": "56/15"
+    },
+    {
+      "N": 4,
+      "m": 2,
+      "a": 0,
+      "b": 0,
+      "ordered_gaussian_pairs": 1296,
+      "exchange": "1",
+      "exchange_x": "0",
+      "ordered_x": "0"
+    },
+    {
+      "N": 4,
+      "m": 2,
+      "a": 0,
+      "b": 1,
+      "ordered_gaussian_pairs": 1296,
+      "exchange": "1",
+      "exchange_x": "4",
+      "ordered_x": "4"
+    },
+    {
+      "N": 4,
+      "m": 2,
+      "a": 0,
+      "b": 2,
+      "ordered_gaussian_pairs": 1296,
+      "exchange": "1",
+      "exchange_x": "6",
+      "ordered_x": "6"
+    },
+    {
+      "N": 4,
+      "m": 2,
+      "a": 1,
+      "b": 1,
+      "ordered_gaussian_pairs": 1296,
+      "exchange": "1/5",
+      "exchange_x": "8/5",
+      "ordered_x": "24/5"
+    },
+    {
+      "N": 4,
+      "m": 2,
+      "a": 1,
+      "b": 2,
+      "ordered_gaussian_pairs": 1296,
+      "exchange": "-1/5",
+      "exchange_x": "-2",
+      "ordered_x": "26/5"
+    },
+    {
+      "N": 4,
+      "m": 2,
+      "a": 2,
+      "b": 2,
+      "ordered_gaussian_pairs": 1296,
+      "exchange": "1/10",
+      "exchange_x": "6/5",
+      "ordered_x": "24/5"
+    },
+    {
+      "N": 5,
+      "m": 2,
+      "a": 0,
+      "b": 0,
+      "ordered_gaussian_pairs": 10000,
+      "exchange": "1",
+      "exchange_x": "0",
+      "ordered_x": "0"
+    },
+    {
+      "N": 5,
+      "m": 2,
+      "a": 0,
+      "b": 1,
+      "ordered_gaussian_pairs": 10000,
+      "exchange": "1",
+      "exchange_x": "5",
+      "ordered_x": "5"
+    },
+    {
+      "N": 5,
+      "m": 2,
+      "a": 0,
+      "b": 2,
+      "ordered_gaussian_pairs": 10000,
+      "exchange": "1",
+      "exchange_x": "8",
+      "ordered_x": "8"
+    },
+    {
+      "N": 5,
+      "m": 2,
+      "a": 1,
+      "b": 1,
+      "ordered_gaussian_pairs": 10000,
+      "exchange": "11/36",
+      "exchange_x": "55/18",
+      "ordered_x": "235/36"
+    },
+    {
+      "N": 5,
+      "m": 2,
+      "a": 1,
+      "b": 2,
+      "ordered_gaussian_pairs": 10000,
+      "exchange": "-1/9",
+      "exchange_x": "-13/9",
+      "ordered_x": "67/9"
+    },
+    {
+      "N": 5,
+      "m": 2,
+      "a": 2,
+      "b": 2,
+      "ordered_gaussian_pairs": 10000,
+      "exchange": "1/45",
+      "exchange_x": "16/45",
+      "ordered_x": "64/9"
+    }
+  ],
+  "identities": 45,
+  "ordered_coordinate_pairs": 68544,
+  "elapsed_seconds": 0.7045624256134033,
+  "scope": "Exact general-charge products; complete Gaussian coordinate sums, no sampled input tensors.",
+  "environment": {
+    "python": "3.14.5",
+    "numpy": "2.4.6",
+    "sympy": "1.14.0"
+  },
+  "input_sha256": {
+    "code/check_exchange_casimir.py": "d815ac897c3c18001562c8a72998382c7a70d705fbfb69b6af454487409680ac",
+    "code/memory_rank_blocks.py": "1a73c01439efe7f7b6221ccb151a42bc988284f0e1e53137f5fa29d824a681f9",
+    "code/cubic_linear_dynamics.py": "81d8e955107098e897637650bb7686a15fd2ff8fde6de1e1c525db398516d014",
+    "code/singlet_wick_moments.py": "045f9f02e860fa8f2e402ca5162dabf035208a8d26023ada5721a5f02d47572c",
+    "code/complex_syk_dictionary.py": "96b4890a167beeadf0849ccffdbb20dd125d921af062fd291044da9024900abf"
+  }
+}

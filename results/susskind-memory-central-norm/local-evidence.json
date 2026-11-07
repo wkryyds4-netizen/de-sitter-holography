@@ -1,0 +1,141 @@
+{
+  "created_at_utc": "2026-11-06T10:12:32.879450+00:00",
+  "status": "Saved locally; no publication",
+  "scientific_status": "General-charge coherent A norm, compact-central uniform input tails, B/L_input/O Gram, strong A-filter replacement and full W2 core expansion. Output-deficit cross, dynamical spectrum extension, charge-tail integration, finite-memory remainder and bulk dictionary remain open.",
+  "current_git_head": "714d038bb605cfcffdc351e4dcc62aa95237d25f",
+  "git_commit_created": false,
+  "git_push_performed": false,
+  "archive_created": false,
+  "parent_manifest_sha256": "863783b737a36161512dd55c88f2e38645ad45fbd740e36f3fc0851b8db154e2",
+  "previous_stage_scientific_files_unchanged": [
+    "code/memory_central_window.py",
+    "code/memory_central_scale.py",
+    "code/check_memory_central_filter.py",
+    "code/build_memory_central_window.ps1",
+    "code/record_memory_central_window.py",
+    "manuscript/susskind-memory-central-window/main.tex",
+    "output/pdf/de-sitter-susskind-memory-central-window.pdf",
+    "notes/susskind-memory-central-window.md",
+    "literature/susskind-memory-central-window-sources.md",
+    "journal/2026-11-06-susskind-memory-central-window.md",
+    "results/susskind-memory-central-window/central-filter-checks.json",
+    "results/susskind-memory-central-window/central-moments.json",
+    "results/susskind-memory-central-window/central-scale.json",
+    "results/susskind-memory-central-window/diagnostics/first-build.log",
+    "results/susskind-memory-central-window/diagnostics/first-main.tex",
+    "results/susskind-memory-central-window/diagnostics/initial-central-scale.py",
+    "results/susskind-memory-central-window/diagnostics/initial-central-window.py",
+    "results/susskind-memory-central-window/diagnostics/initial-failure.txt",
+    "results/susskind-memory-central-window/diagnostics/scale-failure.txt",
+    "results/susskind-memory-central-window/main.log"
+  ],
+  "checks": {
+    "general_rank_pairs": 1331,
+    "CAR_coordinate_pairs": 31466,
+    "CAR_systems": 4,
+    "all_rank_central_cases": 36,
+    "precisions": [
+      80,
+      120
+    ],
+    "finite_exact_gram_entries": 16
+  },
+  "environment": {
+    "python": "3.14.5",
+    "calculations": [
+      {
+        "python": "3.14.5",
+        "sympy": "1.14.0"
+      },
+      {
+        "python": "3.14.5",
+        "numpy": "2.4.6"
+      },
+      {
+        "python": "3.14.5",
+        "mpmath": "1.3.0"
+      },
+      {
+        "python": "3.14.5",
+        "sympy": "1.14.0"
+      }
+    ]
+  },
+  "build": {
+    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File code/build_memory_central_norm.ps1",
+    "compiler": "This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5 Portable) (preloaded format=pdflatex 2026.9.19)  6 NOV 2026 18:09",
+    "passes_per_build": 2,
+    "successful_builds": 2,
+    "final_pages": 6,
+    "render_command": "pdftoppm -r 95 -png output/pdf/de-sitter-susskind-memory-central-norm.pdf tmp/pdfs/susskind-memory-central-norm-build/page",
+    "visual_review": "All six final page PNGs viewed at 95 dpi. Explicit raw core and symmetric-product definitions added before final double build and full visual review."
+  },
+  "failures": [
+    {
+      "stage": "symbolic adaptation",
+      "reason": "Casimir helper shadowed central charge x; helper renamed.",
+      "resolved": true
+    },
+    {
+      "stage": "symbolic polynomial collection",
+      "reason": "eta=p^2/m is rational in central charge scaling; expanded eta^2 e^2 consistently.",
+      "resolved": true
+    },
+    {
+      "stage": "scope cleanup",
+      "reason": "Removed inherited half-filled four-field Gram from authoritative central result; preserved original source and output.",
+      "resolved": true
+    },
+    {
+      "stage": "terminal print",
+      "reason": "Print referenced removed variable small after scientific checks passed; preserved source/output and reran after print correction.",
+      "resolved": true
+    }
+  ],
+  "evidence_scope": "Analytic general-charge identities, uniform logarithmic expansion and factorial tails support the operator estimates; finite CAR and high-precision all-rank sums independently verify formulas. Only B/L_input/O Gram is established centrally here, not the S-containing full Gram.",
+  "process_state": "All calculations, compilation and rendering terminal; no active calculation.",
+  "hashes": {
+    "code/memory_central_norm.py": "d9056515fe42c5ca154cefe8f61dca6e2674c1cb0a0fe502d57f5d458c2a74f9",
+    "code/memory_central_norm_asymptotic.py": "1aa9eb5b97b860f71878b1167e2c0a7b9ac7ad65c8d2cbe107ae4d7271a71d1e",
+    "code/check_memory_central_norm.py": "01de71ac7463faabb14650cd4c3924a98c19c9766b7bdd1c7ded10e7ca0f0628",
+    "code/check_memory_central_norm_limit.py": "6817a5cbc8095a2bd4e11d415ccb0228c1d414dd669994ad631acd7b62078a8c",
+    "code/memory_central_core_assembly.py": "a5d946ef8c2015a9ab3d682c015f098ecb171fe09aa47708ebbe0d87d5b6ec3e",
+    "code/build_memory_central_norm.ps1": "2e0f5aaf583b946a11752e74f6ffb5d270727252405a351b7a6b556497a9be94",
+    "code/record_memory_central_norm.py": "c1a3fba9d0706f2dc752d30d1db73760e89226711018782c89d12a7d37e0b4a1",
+    "manuscript/susskind-memory-central-norm/main.tex": "33302665712112ef691d8739dcfb43cfc932dc93d0dd043bbe74da73a26cc221",
+    "output/pdf/de-sitter-susskind-memory-central-norm.pdf": "5c3294d459df138ddc907c2b8b1650db6239d31e8fe079da75c4d36c95378859",
+    "notes/susskind-memory-central-norm.md": "6870e5f8daaa3c16d041e75086c392927268292f3f480f3a5d5ae38d2b43d5f0",
+    "literature/susskind-memory-central-norm-sources.md": "31e797cbc4589c37e910ecc3dc7a5cd013665a9395f11148438eb02486adbb94",
+    "journal/2026-11-06-susskind-memory-central-norm.md": "1b739271996d41e812e9df6a59f61cf91c8023fde50c37541dcc17df2fa2f04f",
+    "README.md": "3d32f5c5cbebdd2e6ee6a56a84f02a51c0a9e13659112995dfcd193fdc1d6fbc",
+    "PLAN.md": "d69c7a2f141e71ca3bbd194844d185b51c199016cb719f6bd95069030310ad44",
+    "NEXT.md": "ad17ec7c790d00b0d02e728d197106b12630120fb22aea2305aaa82aa1e2da22",
+    "results/susskind-memory-central-norm/core-assembly.json": "ee5875eb622eca4a9d97346fee4a98825a6cd67f83c189926b7102de385aef38",
+    "results/susskind-memory-central-norm/diagnostics/initial-symbolic-failure.txt": "c4b6d40a4e2774d9922cd71f107f3a1e6625c2fe5a00581f58d5cd145e437ca9",
+    "results/susskind-memory-central-norm/diagnostics/initial-symbolic.py": "a5f3f05fda8213ab44f82e4796d4e25c5c5a1b7230ef6c6b0f1efbb079a7eb3f",
+    "results/susskind-memory-central-norm/diagnostics/pre-print-fix.json": "88a0bb035ea61e50ba137aaed7044dfd0ba61ff0c9ace45d53e40a1bfbaf3357",
+    "results/susskind-memory-central-norm/diagnostics/pre-print-fix.py": "c303329d8a974caece209cc2728378ded5a64fdeb0334b288436398165460366",
+    "results/susskind-memory-central-norm/diagnostics/print-failure.txt": "6e66622a88e38a0f93bb8c99205f92241f26d251bd542a19e80171c584815794",
+    "results/susskind-memory-central-norm/diagnostics/scope-cleanup.txt": "ee26ea9d0e915fb06d9c9f6221275806ed7d5048be98c10cee1ef4c90bdaf57b",
+    "results/susskind-memory-central-norm/diagnostics/second-symbolic-failure.txt": "c26f2eec60829ecbaaf89fc8f2057b5eec5db693100eee9f2baaa4b2c6796874",
+    "results/susskind-memory-central-norm/diagnostics/second-symbolic.py": "6329b6a757710a8d3da883a016c7ce2ea3d4210f77b2033a99a4822a56946719",
+    "results/susskind-memory-central-norm/diagnostics/with-inherited-half-gram.json": "7ab1c2951d8493aeee009cc73d3825054314384e0f0fa74c5e40f5c4557e536b",
+    "results/susskind-memory-central-norm/diagnostics/with-inherited-half-gram.py": "5901233ce92e5d6842783ff625350b7abbccb3860d5f7fdd54099eca874f7529",
+    "results/susskind-memory-central-norm/finite-norm.json": "acf46b22a97833865ef426a62b1b600a090c2d1dbb56e05b9a001fb1f4c95c45",
+    "results/susskind-memory-central-norm/limit-checks.json": "387307819f338ac55b9a9010351494fd593454427a7053100d5e83f033dcf78e",
+    "results/susskind-memory-central-norm/main.log": "06310e5f414229a3ea73ab3c340fdfee69bb1dd84fa464f2243b799b7f65fdd1",
+    "results/susskind-memory-central-norm/symbolic-limit.json": "63b159492333bf9dc98cd5cbd3c4d1fc1ef3f8be8db1272e60ff0907ffe77472"
+  },
+  "render_hashes": {
+    "tmp/pdfs/susskind-memory-central-norm-build/page-1.png": "09faf027188cc3fc4494bdd753f0099151ec73ecabbc0419cb70162bc2e7bbcb",
+    "tmp/pdfs/susskind-memory-central-norm-build/page-2.png": "1a3aaad2568af27c4944b6568eaa7169b7a91ad0fcd766900fab54650a058670",
+    "tmp/pdfs/susskind-memory-central-norm-build/page-3.png": "5132cbb2bed005699ee9fd406965a49aaf7377d011366140bd9fbacbaf4a46bf",
+    "tmp/pdfs/susskind-memory-central-norm-build/page-4.png": "af5a8195637294c49433726970853e0ff45624ec2c81cf33c3b428eb53582f57",
+    "tmp/pdfs/susskind-memory-central-norm-build/page-5.png": "379389f3debc63aa5f8a7b3e9665b82e81cb612fe5e5edb5fa70c9bbcd54a95d",
+    "tmp/pdfs/susskind-memory-central-norm-build/page-6.png": "af321e5c8ffcbf54c10db8679952d0d9c42a0c5363721419fd1731fa6efbbe3c"
+  },
+  "build_pass_hashes": {
+    "pass1.txt": "ace24c105e0da9ae874eb472f15cc85706183248898b6b370fd47a957579a3dc",
+    "pass2.txt": "ace24c105e0da9ae874eb472f15cc85706183248898b6b370fd47a957579a3dc"
+  }
+}

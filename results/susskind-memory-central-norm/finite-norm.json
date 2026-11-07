@@ -1,0 +1,91 @@
+{
+  "status": "passed",
+  "general_pair_checks": 1331,
+  "rows": [
+    {
+      "N": 5,
+      "p": 1,
+      "m": 2,
+      "coordinate_pairs": 325,
+      "gram": [
+        [
+          "92",
+          "28"
+        ],
+        [
+          "28",
+          "44"
+        ]
+      ],
+      "C": 8
+    },
+    {
+      "N": 5,
+      "p": 2,
+      "m": 3,
+      "coordinate_pairs": 5050,
+      "gram": [
+        [
+          "369",
+          "468"
+        ],
+        [
+          "468",
+          "756"
+        ]
+      ],
+      "C": 18
+    },
+    {
+      "N": 6,
+      "p": 1,
+      "m": 4,
+      "coordinate_pairs": 666,
+      "gram": [
+        [
+          "232",
+          "16"
+        ],
+        [
+          "16",
+          "88"
+        ]
+      ],
+      "C": 12
+    },
+    {
+      "N": 6,
+      "p": 2,
+      "m": 4,
+      "coordinate_pairs": 25425,
+      "gram": [
+        [
+          "1584",
+          "1332"
+        ],
+        [
+          "1332",
+          "2592"
+        ]
+      ],
+      "C": 36
+    }
+  ],
+  "exact_CAR_coordinate_pairs": 31466,
+  "elapsed_seconds": 2.685948133468628,
+  "scope": "General-charge all-coordinate same-disorder 2x2 Gram for W2H2 and W2A. Rational pair checks include contiguous relation and norm positivity. Not a proof of a general formula by sampling alone.",
+  "environment": {
+    "python": "3.14.5",
+    "numpy": "2.4.6"
+  },
+  "input_sha256": {
+    "code/check_memory_central_norm.py": "01de71ac7463faabb14650cd4c3924a98c19c9766b7bdd1c7ded10e7ca0f0628",
+    "code/memory_central_norm.py": "d9056515fe42c5ca154cefe8f61dca6e2674c1cb0a0fe502d57f5d458c2a74f9",
+    "code/memory_quadratic_contraction.py": "d9e7722e5c13ca64a26b9e79a06e0a3fcaf07060ac1c6133d5eb04f4a1ad2139",
+    "code/memory_rank_blocks.py": "1a73c01439efe7f7b6221ccb151a42bc988284f0e1e53137f5fa29d824a681f9",
+    "code/check_memory_coherent_car.py": "13b2c0cd70ae5ace5d733595b53bbca8295d8c73a4c66445341a9c16dda6e296",
+    "code/cubic_linear_dynamics.py": "81d8e955107098e897637650bb7686a15fd2ff8fde6de1e1c525db398516d014",
+    "code/singlet_wick_moments.py": "045f9f02e860fa8f2e402ca5162dabf035208a8d26023ada5721a5f02d47572c",
+    "code/complex_syk_dictionary.py": "96b4890a167beeadf0849ccffdbb20dd125d921af062fd291044da9024900abf"
+  }
+}

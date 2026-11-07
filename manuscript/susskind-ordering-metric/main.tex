@@ -1,0 +1,307 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,microtype}
+\usepackage[margin=24mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\Js}{\mathcal J_s}
+\newcommand{\Aop}{\mathcal A}
+\newcommand{\HH}{\mathcal H}
+\newcommand{\MM}{\mathcal M^2}
+\DeclareMathOperator{\sech}{sech}
+\title{The ordering-odd inner product\\A relative Casimir and its translation test}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Local research note --- 6 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+The known leading commutator four-point function determines a positive
+two-particle quadratic form: the difference between the total and the
+two one-particle Casimirs. We derive this directly from coherent-state
+matrix elements, without assuming the conjectured all-degree finite-$q$
+ordering overlap. For the quadratic and cubic singlets the relative
+eigenvalues are $k(k+9)+12$. We construct self-adjoint light-front
+translations in this weighted space and then test the stronger condition
+that they preserve the microscopic product vertex. An explicit norm
+calculation distinguishes these two requirements.
+\end{abstract}
+\section{The leading inner product}
+Use the annealed normalized trace of complex Gaussian $p$-body DSSYK,
+standard CAR including overlapping index sets, and
+$\beta=\mu_{\rm chem}=0$. First take $N,p\to\infty$ at
+$\lambda=p^2/N>0$, then small $h=4\lambda$, with
+$q=e^{-h}$, $u=2\Js t$ and $\hbar=1$. The normalized derivative
+singlets of the preceding notes have labels $d=2,e=3$ \cite{local}.
+
+The free limiting product representation is
+$\HH_0=D_d^+\otimes D_e^+$. Write its generators as $E_j,B_j,\Pi_j$,
+with $C_j=E_j^2-B_j^2-\Pi_j^2=d_j(d_j-1)$ and primitive total
+generators. The leading norm of the rescaled commutator is
+\begin{equation}
+ \boxed{\langle f,g\rangle_{\rm odd}=\langle f,\Aop g\rangle_0,
+ \qquad \Aop=C_{\rm tot}-C_1-C_2
+ =2(E_1E_2-B_1B_2-\Pi_1\Pi_2).}\label{metric}
+\end{equation}
+For $d=2,e=3$, the relative-channel spectrum is
+\begin{equation}
+ \boxed{\Aop_k=k(k+9)+12,\qquad k=0,1,\ldots.}\label{spectrum}
+\end{equation}
+This is the entire positive quadratic form of the leading theory, not
+a finite-$q$ all-$k$ overlap formula. It identifies the norm required
+by the extra ordering channel before a spatial dynamics is chosen.
+
+Lin--Stanford already give the leading commutator kernel and its block
+weights \cite{LS}. We establish their operator realization for the
+present singlets and use it to examine translations. No priority claim
+for the commutator sector or the discrete-series decomposition is made.
+
+\newpage
+\section{Direct identification from the known kernel}
+Realize $D_d^+$ on $L^2(\mathbb R_+,dp)$ with
+\begin{gather}
+ Q=p,\qquad B=i(p\partial_p+\tfrac12),\qquad
+ S=-p\partial_p^2-\partial_p+(d-\tfrac12)^2/p,\nonumber\\
+ E=(Q+S)/2,\qquad \Pi=(Q-S)/2,\qquad
+ \psi_d(p)=\frac{2^d}{\sqrt{\Gamma(2d)}}p^{d-1/2}e^{-p}.
+\end{gather}
+The states $|u\rangle=e^{-2iuB}\psi_d$ have real wavefunctions
+$e^u\psi_d(e^{2u}p)$ and overlap
+$g_d(u-u')=\sech^{2d}(u-u')$.
+Elementary gamma integrals give
+\begin{align}
+ \frac{\langle u'|E|u\rangle}{g_d(u-u')}
+ &=d\frac{\cosh(u+u')}{\cosh(u-u')},&
+ \frac{\langle u'|B|u\rangle}{g_d(u-u')}
+ &=-id\tanh(u-u'),\nonumber\\
+ \frac{\langle u'|\Pi|u\rangle}{g_d(u-u')}
+ &=-d\frac{\sinh(u+u')}{\cosh(u-u')}.
+\end{align}
+Taking tensor products and substituting in \eqref{metric} yields
+\begin{align}
+ \langle u',v'|\Aop|u,v\rangle
+ &=2de\,\sech^{2d+1}(u-u')\sech^{2e+1}(v-v')\nonumber\\
+ &\quad\times\bigl[\cosh(u+u'-v-v')
+             +\sinh(u-u')\sinh(v-v')\bigr].\label{kernel}
+\end{align}
+This reproduces the covariance derived in the preceding note from
+Lin--Stanford Eqs.~(170), (205) and (388):
+\[
+ B_h(u,v)=-i[V(u),W(v)]/\sqrt h,\qquad
+ \lim_{h\to0}\tau\bigl(B_h(u',v')B_h(u,v)\bigr)
+ =\langle u',v'|\Aop|u,v\rangle.
+\]
+The equality includes arbitrary finite linear combinations of time
+insertions. It uses the sourced leading fixed-time kernel, and does
+not require differentiating a numerically fitted function.
+
+\paragraph{Closure and completeness.}
+The tensor decomposition \cite{KV} reads
+$D_d^+\otimes D_e^+=\bigoplus_{k\ge0}D_{d+e+k}^+$.
+Thus $\Aop_k=k(k+2d+2e-1)+2de\ge2de>0$.
+Its spectral realization defines a positive self-adjoint operator.
+Finite tensor descendant sums are a form core. Derivatives at zero of
+the boost orbits span these descendants: $B^n\psi_d$ is triangular in
+the ladder basis with a nonzero top coefficient. The analytic orbit
+vectors admit these difference quotients also in the form norm.
+Consequently their span is form-dense, and the kernel identifies the
+closed leading form uniquely. This is not a claim of convergence
+uniform in channel number or in times growing with $h^{-1}$.
+
+\newpage
+\section{An explicit relative differential operator}
+Use $P=p_1+p_2>0$, $x=p_1/P\in(0,1)$. After extracting the square root
+of the beta weight, the product Hilbert space is
+\begin{equation}
+ \HH_0=L^2(dP\,w(x)dx),\qquad
+ w(x)=\frac{x^{2d-1}(1-x)^{2e-1}}{\mathrm B(2d,2e)}.
+\end{equation}
+The Jacobi--Laguerre tensor map \cite{KV,local} gives
+\begin{equation}
+ \Aop=-x(1-x)\partial_x^2-[2d-2(d+e)x]\partial_x+2de.\label{diff}
+\end{equation}
+Its closed quadratic form, initially on finite Jacobi sums, is
+\begin{equation}
+ \|f\|_{\rm odd}^2=\int dP\int_0^1w(x)
+ \left[x(1-x)|\partial_x f|^2+2de|f|^2\right]dx.\label{form}
+\end{equation}
+The normalized relative eigenfunctions are Jacobi polynomials
+$p_k(x)\propto P_k^{(2e-1,2d-1)}(2x-1)$. At $d=2,e=3$,
+\[
+ w(x)=504x^3(1-x)^5,\quad
+ \Aop=-x(1-x)\partial_x^2-(4-10x)\partial_x+12,
+\]
+and its first six eigenvalues are $12,22,34,48,64,82$.
+The equal-time normalized commutator of the last note is the $k=0$
+seed, divided by $\sqrt{12}$ in this form norm.
+
+Define $\HH_{\rm odd}=D(\Aop^{1/2})$, completed in \eqref{form}.
+Since $\Aop\ge12$, it is already complete in that norm, and
+\begin{equation}
+ U_{\Aop}:\HH_{\rm odd}\to\HH_0,\qquad U_{\Aop}f=\Aop^{1/2}f
+\end{equation}
+is unitary and onto. Its inverse is bounded on $\HH_0$.
+The total generators $E,B,Q$ commute strongly with $\Aop$ in the
+direct-sum representation. Their actions therefore carry over unchanged
+to the weighted space; specifically
+$Q=P$ and $B=i(P\partial_P+\tfrac12)$.
+
+\paragraph{The product vertex in normalized coordinates.}
+Writing an ordered product as half the anticommutator plus half the
+commutator, the leading map into the normalized odd copy is
+\begin{equation}
+ \mathcal V_h f=\frac{i\sqrt h}{2}\Aop^{1/2}f.\label{vertex}
+\end{equation}
+On $k=0$ it is $i\sqrt{3h}=i\sqrt{12\lambda}$, reproducing the
+previous three-point overlap. The amplitude grows with relative $k$;
+the fixed-channel expansion is not uniform for $hk^2$ of order one.
+The closed form specifies which wave packets have finite leading
+production norm: exactly $f\in D(\Aop^{1/2})$.
+
+\newpage
+\section{A norm-preserving translation construction}
+For positive constituent masses $m_1,m_2$ the standard free light-front
+mass profile \cite{Pauli} is
+\begin{equation}
+ M(x)=\frac{m_1^2}{x}+\frac{m_2^2}{1-x},\qquad
+ P^+=\mu P,\qquad P^-_0=\frac{M(x)}{\mu P},\qquad \mu>0.
+\end{equation}
+Here $P,x$ are dimensionless, whereas $m_j,\mu$ have energy units.
+Multiplication by $M$ is positive self-adjoint in $\HH_0$, with spectrum
+$[(m_1+m_2)^2,\infty)$. It cannot simply be reused in the odd metric:
+\begin{align}
+ [\Aop,M]f={}&-2x(1-x)M'f'\nonumber\\
+ &-\bigl[x(1-x)M''+(4-10x)M'\bigr]f.\label{defect}
+\end{align}
+This is nonzero for the free profile. The coefficient of $f'$ shows
+that a smooth multiplication profile commuting with $\Aop$ must be constant.
+
+There is an explicit self-adjoint construction in the weighted space:
+\begin{equation}
+ \boxed{\MM_{\rm odd}=\Aop^{-1/2}M\Aop^{1/2},\qquad
+        P^-_{\rm odd}=\frac{\MM_{\rm odd}}{\mu P}.}\label{transport}
+\end{equation}
+Its domain is the inverse image under $U_{\Aop}$ of the multiplication
+domain of $M$ (and of $M/(\mu P)$ for $P^-$). Unitary transport proves
+self-adjointness, positivity, and the same mass spectrum. It also gives
+strongly commuting $P^+,P^-$ and
+\[
+ [B,P^+]=iP^+,\qquad [B,P^-]=-iP^-,\qquad [P^+,P^-]=0
+\]
+on transported smooth cores. This solves the Hilbert-space consistency
+of a candidate free translation; it does not yet match the product vertex.
+
+\paragraph{An exact diagnostic.}
+Set $m_1=m_2=1$ in a fixed-$P$ fiber, and use
+$p_0=1$, $p_1=(10x-4)/\sqrt{24/11}$.
+Then $\langle p_0,Mp_0\rangle_0=24/5$ and
+$\langle p_0,Mp_1\rangle_0=-\sqrt{66}/10$.
+For $f=(p_0+ip_1)/\sqrt2$, direct integration gives
+\begin{equation}
+ \boxed{\|e^{-isM}f\|_{\rm odd}^2=17+\sqrt{66}\,s+181s^2.}\label{norm}
+\end{equation}
+Thus the undressed multiplication phase genuinely fails to preserve
+the physical odd norm; this is not a finite matrix truncation effect.
+The transported evolution \eqref{transport} preserves it exactly.
+
+\newpage
+\section{The stronger product-compatibility condition}
+Let $T=\Aop^{1/2}$, so the microscopic leading vertex in normalized
+coordinates is $i\sqrt h\,T/2$. Suppose it is to be a translation
+intertwiner between an ordinary two-particle mass $M$ and some
+self-adjoint odd-sector mass $N$:
+\begin{equation}
+ e^{-isN}Tf=Te^{-isM}f,\qquad f\in D(T),\label{intertwine}
+\end{equation}
+with domain invariance. Taking norms forces
+$\|Te^{-isM}f\|_0=\|Tf\|_0$, i.e. invariance of the $\Aop$ form under
+the even-sector evolution. Equation \eqref{norm} contradicts this
+for the primitive free profile. No choice of self-adjoint $N$ on this
+closed target sector can fix that particular intertwining requirement.
+
+Equivalently, on a suitable common core the necessary condition is
+$[\Aop,M]=0$. In normalized relative coordinates,
+\begin{equation}
+ [\Aop,M]_{01}=\sqrt{66},\qquad
+ [T,M]_{01}=(\sqrt{12}-\sqrt{22})(-\sqrt{66}/10)\ne0.
+\end{equation}
+The transported odd mass on page~4 becomes simply $M$ after applying
+$U_{\Aop}$. It therefore preserves norms but fails \eqref{intertwine}.
+The two statements have different requirements and must not be conflated.
+
+\paragraph{What can satisfy both conditions?}
+A positive relative mass operator $F(\Aop)$ commutes with the vertex,
+and yields kinematically consistent translations and intertwining on
+both copies. Its masses $F(k(k+9)+12)$ remain arbitrary; choosing such
+a function is not a derivation of meson dynamics. More generally the
+assumptions behind \eqref{intertwine} may have to change: the microscopic
+product insertion need not already be an on-shell transition map, and
+physical translations may involve additional sectors or a different
+spatial operator dictionary. The conditional incompatibility concerns
+the specified free-pair identification, not the existence of a bulk dual.
+
+\section{Checks of the actual claims}
+Fifty exact symbolic identities verify the coherent Casimir kernel,
+general differential commutator, Jacobi conjugation, six relative
+eigenfunctions, their full orthogonality matrix, and the translation
+diagnostic. The $6\times6$ free mass matrix is retained.
+Five independent relative-coordinate integrals at 55 and 85 digits
+reproduce the four-time kernel; the largest 85-digit absolute residual
+is $5.15\,10^{-85}$. Four 70-digit integrals check \eqref{norm}, with
+residual below $2.90\,10^{-70}$. These assess numerical precision;
+the displayed identities also have analytic derivations.
+
+\newpage
+\appendix
+\section{Finite-$h$ controls and the next physical input}
+Independent finite-$q$ direct/cross Gram recursions construct primaries
+through $k=4$ for $d=2,e=3$, at $h=.04,.02,.01$. For the parity-adjusted
+overlap $\rho_k$, compare $2(1-\rho_k)/h$ with \eqref{spectrum}.
+At $h=.01$ the results are
+\begin{center}
+\begin{tabular}{rrr}
+\toprule
+$k$&finite-$h$ odd norm divided by $h$&leading eigenvalue\\\midrule
+0&11.64709328&12\\
+1&20.83317294&22\\
+2&31.26703668&34\\
+3&42.67442779&48\\
+4&54.77019259&64\\\bottomrule
+\end{tabular}
+\end{center}
+Increasing precision from 85 to 115 digits changes the coefficients
+relatively by at most $4.37\,10^{-79}$. Nevertheless the finite-$h$
+deviation at $k=4$ is still $14.42\%$. Numerical precision does not
+remove the finite-deformation correction.
+
+Lin--Stanford Appendix F describes its general finite-$q$ overlap
+formula, Eq.~(355), as inferred from small-degree calculations.
+Our all-$k$ leading form is instead obtained from the independently
+available leading commutator kernel, its coherent-state realization,
+and the standard tensor Casimir. The low-degree finite-$q$ comparisons
+are checks, not the proof of that limiting operator. We make no uniform
+large-$k$ or finite-$h$ operator-norm convergence assertion.
+
+\paragraph{Next research step.}
+The leading ordering metric and its domain are now explicit. A free
+translation can be made unitary, but its compatibility with the
+microscopic multiplication data requires extra physics. The next step
+is to return to the Susskind bulk gauge/meson construction and identify
+which spatial insertions or interacting translation generators its
+dictionary actually proposes. The tests are the norm \eqref{form},
+the vertex \eqref{vertex}, and the conditional Ward relation
+\eqref{intertwine}. We should derive or test that map, rather than choose
+an arbitrary function of the Casimir and call it a mass spectrum.
+
+\begin{thebibliography}{9}
+\bibitem{LS} H. W. Lin and D. Stanford, \emph{A symmetry algebra in
+double-scaled SYK}, \href{https://arxiv.org/abs/2307.15725}{arXiv:2307.15725},
+Section 4.3, Eq.~(170), and Appendix F.1.
+\bibitem{KV} H. T. Koelink and J. Van der Jeugt,
+\emph{Convolutions for orthogonal polynomials from Lie and quantum algebra
+representations}, \href{https://arxiv.org/abs/q-alg/9607010}{q-alg/9607010},
+Section 3, Eq.~(3.2), Corollary 3.6 and Remark 3.7.
+\bibitem{Pauli} H.-C. Pauli, \emph{A compendium of light-cone quantization},
+\href{https://arxiv.org/abs/hep-ph/0103106}{hep-ph/0103106}, Eq.~(87).
+\bibitem{local} A. Day and Chengheng, local notes \emph{Two matter},
+\emph{Antisymmetric descendants}, and \emph{Commutator primary}
+(November 2026). Evidence: \texttt{results/susskind-ordering-metric}.
+\end{thebibliography}
+\end{document}

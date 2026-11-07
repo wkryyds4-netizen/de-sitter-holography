@@ -1,0 +1,1 @@
+First run failed before rank projections: ix was a Python list, so ix[:,None] raised TypeError. Changed ix to a NumPy integer array; no scientific output existed or was overwritten.

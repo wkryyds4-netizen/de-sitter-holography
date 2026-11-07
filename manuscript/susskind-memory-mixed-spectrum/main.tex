@@ -1,0 +1,350 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,microtype}
+\usepackage[margin=24mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\W}[1]{\mathsf W_{#1}}
+\newcommand{\Db}{\overline D}
+\newcommand{\J}{J_s}
+\title{Mixed spectra of the first memory fields\\An upper-charge lift and a positive three-field measure}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Local research note --- 6 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+We close the two-energy cross measure between the first memory
+tangent and the projected second memory coefficient. The cubic
+residual has vanishing cross with the creation-force direction,
+as proved by a complete endpoint certificate. A direct commutator
+lift handles the upper-charge sector in its cross with the linear
+rank-filtered field; the same signed-covariance argument extends
+to the quartic residual. These results yield a positive spectral
+matrix for three memory fields and the covariance of an explicitly
+projected quadratic polynomial in memory time.
+\end{abstract}
+\section{The completed mixed object}
+We use standard CAR, the full overlapping complex Gaussian
+$p$-body ensemble, $h=H_m$, fixed half filling $m=N/2$, normalized
+maximally mixed trace, and annealed inner product
+$\langle U,V\rangle=\EE\tr_m U^\dagger V$. Set $\hbar=1$ and take
+\begin{equation}
+ \lambda_N=p^2/N\longrightarrow\lambda>0,\qquad
+ q=e^{-4\lambda},\qquad C_N=\EE\tr_mh^2\longrightarrow C=\J^2/\lambda.
+\end{equation}
+The fields $Y=Y_-$, $R$, $F$, and $Q_4$ are those of the preceding
+notes~\cite{local}. In particular, with $J_hU=\{h,U\}/2$,
+\begin{equation}
+ L_N=R_N+aJ_hY_N+F_N+o_{L^2}(1),\qquad
+ a=-\frac{(1-q)^2}{1+q^2}.
+\end{equation}
+$L_N=mZ_1-C_{1,m}$ is the conserved-subtracted first memory
+coefficient. Here $L$ names a field, not the commutator with $h$.
+For the projected second coefficient,
+\begin{equation}
+ X_N=(1-\widehat\Pi_N)mZ_2
+     =Q_{4,N}+8\lambda_N C_Nq_N^2T_N+o_{L^2}(1),
+\end{equation}
+where $\widehat\Pi_N$ projects onto
+$\operatorname{span}\{I,B,O_-,J_hF,E_0,M_0,S_0,Z_0\}$.
+The main result is the full two-energy statement
+\begin{equation}
+ \boxed{\ d\nu_{XL}=d\nu_{XY}=0.\ } \label{main}
+\end{equation}
+The $Y$ cross was established previously; this note supplies the
+three missing ingredients for the $L$ cross. Multiplication by
+any fixed polynomial of the left and right energies preserves
+these zero cross measures.
+
+\newpage
+\section{Creation force versus the cubic residual}
+Write $d_i=[H,c_i]$, $A_- =\sum_i d_i^\dagger d_i$,
+$A_+=\sum_i d_id_i^\dagger$,
+$O_\pm=\W2 A_\pm$, $B=\W2h^2$, and
+\begin{equation}
+ Y_\pm=O_\pm-cB,\qquad c=\frac{2\lambda(1-q)}{1+q}.
+\end{equation}
+All $\W j$ in this note are coupling-coordinate Gaussian chaos.
+The earlier strong output-deficit bridge gives
+\begin{equation}
+ T_N=\frac{Y_-+Y_+}{2}-\rho Y_-+o_{L^2}(1),\qquad
+ \rho=\frac{v}{v+d_v},
+\end{equation}
+with $v=2\lambda(1-q)+16\lambda^2q/(1+q)$ and $d_v=2\lambda(1+q)$.
+Thus $\nu_{TR}$ reduces to the two oriented force crosses.
+
+For the cubic field put $D_3=(1+q^2)(1+q+q^2)$. In the
+lexicographic three-slot mark order $01,02,12$, the numerator
+weights of $R$ are
+\begin{equation}
+ [-q(1+q+q^2),\ D_3,\ -q(1+q+q^2)],
+\end{equation}
+and its unmarked numerator is $-2\lambda(1-q)(1+q^3)$.
+For $Y_+$ the two-slot mark numerator is $1+q$ and the unmarked
+numerator is $-2\lambda(1-q)$, with denominator $1+q$.
+
+Take a cubic normal mark $(a,b)$ and a quadratic reverse mark
+$(c,d)$. For Gaussian pairing $\pi$, the established local rule is
+\begin{equation}
+ \alpha=2-4\mathbf1_{\rm incident\ crossing},\qquad
+ \delta_{-+}=-4\mathbf1_{\pi(a)=c,\,\pi(b)=d}.
+\end{equation}
+The quadratic coefficient is $\alpha\beta$ in both orientations;
+the equal-orientation linear coefficient is instead
+$\delta_{--}=4\mathbf1_{\pi(a)=d,\pi(b)=c}$.
+After the Gaussian chaos restrictions, the three- and two-slot
+blocks share $k=0,1,2$ bridges. Classify the remaining endpoints
+by their $A/B$ colors and the split between exterior arcs. The
+number of templates is
+\begin{equation}
+ \sum_{k=0}^2\binom{5-2k}{3-k}(6-2k)=74.
+\end{equation}
+Each contains $3!2!/k!$ pairings, for 876 words altogether.
+Every coefficient of $\lambda$ and $\lambda^2$ vanishes as an
+integer polynomial in $q$, for either force orientation.
+The code also checks all 2628 local two-mark minors per orientation
+against the determinant implementation.
+
+Exterior spectator chords contribute the same factor on each
+endpoint orbit. The certificate therefore covers arbitrary fixed
+two-arc energy degrees, not just bounded word lengths. Positive
+matrix-measure compactness and moment uniqueness, using the
+established diagonal kernels, give
+\begin{equation}
+ \boxed{\ \nu_{R,Y_+}=\nu_{R,Y_-}=\nu_{R,T}=0.\ } \label{Rcross}
+\end{equation}
+
+\newpage
+\section{The filtered edge must also reach the upper charge}
+Write the neutral rank decomposition $h=\sum_a h_a$, with
+$\EE\tr_m h_a^2=C_N\omega_a^{(p)}$, and put $u=p-a$.
+The earlier normalized linear residual satisfies
+\begin{align}
+ f_N&=F_N/\sqrt{V_{F,N}},&
+ \widehat f_N&=\sqrt{\lambda_N}\sum_a[R_1(p-a)-1]h_a/\sqrt{C_N},\\
+ R_1(u)&=\frac{u(N-2p+u+1)(N-m+p)}{(m-p+1)p^2},&
+ \|f_N-\widehat f_N\|_2&\longrightarrow0. \label{fbridge}
+\end{align}
+This uses the exact rank-weight ratio, factorial input tails, and
+the Poisson deficit limit; it is an operator $L^2$ replacement.
+A Wick edge from $\widehat f_N$ is
+$\sqrt{\lambda_N}(\mathsf K_{p-1}-\mathsf K_p)$ at charge $m$.
+
+Let $U$ be a $(p-1)$-body ensemble normalized at $m$, and set
+\begin{equation}
+ d=m-p+1,\qquad g(n)=\frac{n-p+1}{d},\qquad \widetilde U=g(Q)U.
+\end{equation}
+For every allowed charge $n$, the exact reduced rank factors obey
+\begin{equation}
+ g(n)\frac{\binom{n-a}{p-1-a}}{\binom{m-a}{p-1-a}}
+ =\frac{\binom{n-a}{p-a}}{\binom{m-a}{p-a}}.
+\end{equation}
+Together with $R_1$, this extends the signed covariance to
+$m\leftrightarrow n$. The new finite tensor check explicitly
+includes $n=m+1$, which the creation-force vertex requires.
+
+Define bilinear commutator marks for neutral $U,V$:
+\begin{equation}
+ \mathcal M_-(U,V)=-\sum_i[U,c_i^\dagger][V,c_i],\qquad
+ \mathcal M_+(U,V)=-\sum_i[U,c_i][V,c_i^\dagger].
+\end{equation}
+For $D V=QV-\sum c_i^\dagger Vc_i$ and
+$\Db V=(N-Q)V-\sum c_iVc_i^\dagger$, direct CAR gives at charge $m$
+\begin{align}
+ \mathcal M_+(gU,V)&=(1+d^{-1})\mathcal M_+(U,V)-d^{-1}U\Db V,\\
+ \mathcal M_+(V,gU)&=(1+d^{-1})\mathcal M_+(V,U)-d^{-1}(\Db V)U,\label{rev}\\
+ \mathcal M_-(gU,V)&=(1-d^{-1})\mathcal M_-(U,V)+d^{-1}UDV,\\
+ \mathcal M_-(V,gU)&=(1-d^{-1})\mathcal M_-(V,U)+d^{-1}(DV)U.
+\end{align}
+These formulas preserve operator ordering. For example
+$[gU,c]=g[U,c]-d^{-1}cU$; the sum in the remaining term reduces
+to $(\Db U)V-\Db(UV)$, proving the first equation.
+For a $p$-body $V$, $DV=pV$ and $\Db V=pV-\Delta_V$.
+At half filling $\Delta_V$ has bounded fixed moments by the
+previous input-deficit formula. Hence every correction in
+\eqref{rev} is $O_{L^2}(p/N)=O_{L^2}(p^{-1})$, also inside each
+fixed-degree trace by higher-moment bounds.
+
+\newpage
+\section{Why the filtered crosses vanish at all energy orders}
+It is essential to apply the preceding identities to the actual
+reverse commutator mark. The general superoperator formula is
+\begin{equation}
+ \Db[f(Q)B]_m=f(m+1)(\Db B)_m
+              +(N-m)[f(m)-f(m+1)]B_m.
+\end{equation}
+Replacing a normal body-count mark mechanically by $\Db$ would
+leave a correction of order one. Equation~\eqref{rev} includes
+the needed terms directly and has the smaller error just proved.
+
+For normal marks in $Q_4$, the old lifting identity extends to
+every fixed product degree $k$. If $B$ contains one $(p-1)$-body
+factor and $k-1$ factors of body order $p$, then
+\begin{equation}
+ [(kp-D)(gB)]_m
+ =(1-d^{-1})[(kp-1-D)B]_m+\frac{(k-1)p}{d}B_m. \label{quartic}
+\end{equation}
+In particular $k=4$ treats the quartic vertex. Nonadjacent pair
+marks can be written as finite sums of total marks on contiguous
+subproducts, so~\eqref{quartic} also treats each of its six pair
+positions. If the shifted slot lies outside the mark, the scalar
+lift evaluates to one at the exterior charge. No growing number
+of factors is used.
+
+The mixed-body chord limit in Ref.~\cite{BNR} applies to index
+sizes $p$ and $p-1$: their pair-overlap means have the same
+limit, and triple overlaps vanish. The project's marked
+determinant calculation, together with absolute exponential
+overlap bounds, permits fixed mark derivatives of this limit.
+The half-filled trace bridge transfers the argument to the
+present state. Consequently each fixed marked graph has the
+same leading value when one covariance edge is shifted from
+$p$ to the lifted $p-1$ ensemble. Equations~\eqref{rev} and
+\eqref{quartic} control the additional vertex terms.
+
+For $B_N=Y_{+,N}$ or $Q_{4,N}$ and fixed $r,s$, replacing $F_N$
+by its normalized proxy in~\eqref{fbridge} is legitimate because
+\begin{equation}
+ |\langle(f_N-\widehat f_N)h^rB_Nh^s\rangle|
+ \leq\|f_N-\widehat f_N\|_2
+       \big(\EE\tr_m B_Nh^{2r}B_Nh^{2s}\big)^{1/2}\longrightarrow0.
+\end{equation}
+The second factor is bounded by the already established diagonal
+energy moments. Gaussian centering deletes internal pairings of
+the $Y_+$ block; $\W4$ deletes those of the quartic block.
+Each surviving Wick graph has exactly one signed filtered edge.
+Its two lifted terms have identical limits and cancel. Thus all
+fixed mixed moments vanish. The positive spectral matrix,
+diagonal high moments, and compact candidate support then imply
+\begin{equation}
+ \boxed{\ \nu_{F,Y_+}=\nu_{F,Q_4}=0,\qquad \nu_{F,T}=0.\ } \label{Fcross}
+\end{equation}
+The last statement uses the already known $\nu_{F,Y_-}=0$.
+Equations~\eqref{Rcross} and~\eqref{Fcross}, the old
+$\nu_{Q_4,R}=0$, and the preceding $\nu_{X,Y_-}=0$ prove~\eqref{main}.
+
+\newpage
+\section{A positive three-field matrix and its projected polynomial}
+Let $\mu_r$ be the existing normalized Mehler two-energy measure,
+with the variance-$C$ energy marginal, and put $e=(E+E')/2$.
+The complete matrix for $(Y,L,X)$ is
+\begin{equation}
+ d\boldsymbol\nu=
+ \begin{pmatrix}
+ W\,d\mu_{q^2}&aeW\,d\mu_{q^2}&0\\
+ aeW\,d\mu_{q^2}&d\nu_L&0\\
+ 0&0&d\nu_X
+ \end{pmatrix}, \label{matrix}
+\end{equation}
+where
+\begin{align}
+ d\nu_L&=V_Fd\mu_q+V_Rd\mu_{q^3}+a^2e^2W d\mu_{q^2},\\
+ d\nu_X&=V_4d\mu_{q^4}+V_2d\mu_{q^2},\\
+ W&=4\J^4\left(\lambda^{-1}+\frac{4q}{1+q}\right),\qquad
+ V_F=64\J^6q^2,\\
+ V_R&=\frac{C^3}{D_3^2}(\lambda A_1+\lambda^2 A_2),\\
+ A_1&=4(1-q^2)(1+q^2)(1+q+q^2)^2,\\
+ A_2&=16q^2(1+q)(1+q^2)(1+q+q^2)(2q^2-q+2).
+\end{align}
+The previous note gives the positive $V_4,V_2$ explicitly.
+Relative to the common product energy marginal, write
+$K_j=d\mu_{q^j}/d(\nu_q\otimes\nu_q)$. Then~\eqref{matrix}
+has the exact positive factorization
+\begin{equation}
+ M\,\operatorname{diag}(WK_2,V_FK_1,V_RK_3,V_4K_4,V_2K_2)M^T,
+ \quad
+ M=\begin{pmatrix}1&0&0&0&0\\ae&1&1&0&0\\0&0&0&1&1\end{pmatrix}.
+\end{equation}
+The determinant is positive:
+\[
+ WK_2(V_FK_1+V_RK_3)(V_4K_4+V_2K_2)>0.
+\]
+The five fields $Y,T,F,R,Q_4$ have diagonal
+two-point measures; $Y$ and $T$ share the normalized $q^2$ kernel.
+
+Define the explicitly filtered polynomial
+$\Phi(s)=Y+isL-s^2X/2$. Its energy-resolved covariance is
+\begin{align}
+ d\nu_{\Phi(s),\Phi(u)}={}&
+ W[1+iae(u-s)+a^2e^2su]d\mu_{q^2}\notag\\
+ &+su(V_Fd\mu_q+V_Rd\mu_{q^3})
+ +\frac{s^2u^2}{4}d\nu_X. \label{poly}
+\end{align}
+At ordinary center time $T$, reflection $(E,E')\mapsto(-E',-E)$
+preserves the frequency and reverses $e$. Thus
+\begin{equation}
+ \langle\Phi(s)^\dagger\Phi(u;T)\rangle
+ =WG_{q^2}(T)+suC_L(T)+\frac{s^2u^2}{4}C_X(T).
+\end{equation}
+Since $X$ has an additional, partly nonconserved projection,
+$\Phi$ is not the raw memory Taylor polynomial. Formula~\eqref{poly}
+does not assert a finite-memory remainder bound. Such a bound must
+also restore the removed dynamic descendants.
+
+\newpage
+\section{Checks, scope, and the next reconstruction step}
+\paragraph{Endpoint certificate.}
+Both orientations were computed, rather than extrapolating the
+new result from the old normal one: 74 templates and 876 words
+per orientation, 5256 determinant-minor comparisons in total.
+All integer polynomial arrays vanish. The direct certificate
+also gives a shorter route to the previously known $R$--$Y_-$
+cross; it is used here as a control, not claimed as a new kernel.
+
+\paragraph{Upper-charge and operator checks.}
+The exact rank-Casimir covariance tensors were evaluated for
+$(N,p,m)=(4,2,2),(5,2,3),(6,2,3)$, now explicitly including
+$m+1$. Their 93076 entries agree after clearing denominators.
+The previous normal quadratic/cubic controls were retained.
+Independent integer Hermitian samples test both locations of a
+lifted factor in each CAR orientation, the reverse superoperator
+identity, and all four locations in a noncommuting quartic product:
+81 exact identities, with 80 nonzero witnesses. Cleared entries
+remain below $2^{48}$. No Gaussian sampling is used to estimate
+ensemble expectations; the samples only check operator identities.
+
+The first checker required every witness to be nonzero. It stopped
+on the auxiliary $\Db(gU)$ identity for one traceless one-body
+sample at $(6,2,3)$. Here $\Db U=U-\tr(J)I$ and its cleared
+identity reduces to $-3\tr(J)I$, so zero is correct. The original
+checker and diagnosis are preserved. The revised checker records
+this zero and still requires all reverse/normal commutator and
+quartic witnesses to be nonzero. No algebraic tolerance was relaxed.
+
+\paragraph{Assembly checks.}
+An independent symbolic multiplication verifies the positive
+factorization, determinant, all nine polynomial coefficients in
+$(s,u)$, the conjugation symmetry, and the energy-reflection
+reduction. Existing diagonal-kernel calculations supply the time
+kernels; no new diagonal numerical scan is needed. Every new
+scientific output records its inputs, hashes, and environment.
+
+\paragraph{What follows.}
+The missing mixed spectra of the specified three fields are now
+closed at fixed half filling. The next work must extend the
+projection and bounds uniformly in a central charge window,
+restore the removed dynamic descendants when constructing the
+actual second memory coefficient, and control the two-parameter
+finite-memory remainder. The resulting kernel, rather than the
+projected polynomial alone, is the object to connect to the
+Susskind singlet/meson spatial reconstruction program.
+Two-point spectral orthogonality does not establish mixed
+higher-point independence or a bulk mass dictionary.
+
+\begin{thebibliography}{9}\small
+\bibitem{BNR} M. Berkooz, V. Narovlansky and H. Raj,
+\emph{Complex Sachdev--Ye--Kitaev model in the double scaling limit},
+\href{https://arxiv.org/html/2006.13983v2}{arXiv:2006.13983v2},
+Sec.~3.3, Eqs.~(3.11)--(3.13): oriented words with generic index-set lengths.
+\bibitem{TT} J. Tall and S. Tomsovic,
+\emph{Double-scaled bosonic and fermionic embedded ensembles,
+complex SYK, and the dual Hilbert space},
+\href{https://arxiv.org/html/2604.14522v2}{arXiv:2604.14522v2}.
+Existing spectral Wick and strength-density framework.
+\bibitem{local} A. Day and Chengheng, local project notes (2026-11-06):
+\emph{Closing the cubic singlet two-point spectrum};
+\emph{Energy-resolved memory background and first fluctuations};
+\emph{Two orientations of the fermionic force}.
+The corresponding source, exact certificates, and PDFs remain in the project.
+\end{thebibliography}
+\end{document}

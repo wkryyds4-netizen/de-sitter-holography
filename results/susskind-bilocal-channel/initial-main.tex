@@ -1,0 +1,308 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,microtype}
+\usepackage[margin=24mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\trm}{\operatorname{tr}_m}
+\newcommand{\Qc}{\mathcal Q}
+\newcommand{\Pc}{\mathcal P}
+\title{The temporal singlet as a compressed evolution\\An exact memory kernel and its fluctuation seed}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Local research note --- 6 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+The full temporal singlet admits a finite-system isometric dilation
+through the adjacent charge sector. This gives its positive kernel,
+an exact composition defect and a closed equation with memory, without
+replacing unequal-time fermion anticommutators by scalars. The initial
+memory operator contains the previously computed dynamical singlet.
+A Duhamel bound proves that the ordinarily normalized bilocal tends
+to the identity uniformly on bounded string-time intervals in double
+scaling. The physical reconstruction problem therefore concerns its
+renormalized fluctuations and the full orthogonal memory dynamics.
+\end{abstract}
+\section{A charge-removal isometry}
+Use the standard complex CAR and the neutral $p$-body Hamiltonian
+of the preceding notes. Let $\mathcal H_m$ be the $m$-fermion sector,
+$h=H_m$, and $H_-=H_{m-1}$. For $m>0$, define
+\begin{equation}
+ V:\mathcal H_m\longrightarrow\mathbb C^N\otimes\mathcal H_{m-1},
+ \qquad V\psi=\frac1{\sqrt m}\sum_i|i\rangle c_i\psi,
+ \qquad K=1_N\otimes H_- .
+\end{equation}
+Since $\sum_i c_i^\dagger c_i=m$, $V^\dagger V=1$.
+The unital completely positive map $\Phi(Z)=V^\dagger(1\otimes Z)V$
+is explicit; no emergent spatial coordinate has been assumed.
+For $S(t_a,t_b)=\sum_i c_i^\dagger(t_a)c_i(t_b)$, set
+\begin{equation}\label{eq:W}
+ W(t)=e^{iKt}Ve^{-iht},\qquad
+ B_{ab}=\frac{S_m(t_a,t_b)}m=W(t_a)^\dagger W(t_b).
+\end{equation}
+Thus $B_{aa}=1$, $B_{ab}^\dagger=B_{ba}$, and $\|B_{ab}\|\leq1$.
+For arbitrary vectors $\psi_a$, positivity is exact:
+\begin{equation}
+ \sum_{a,b}\langle\psi_a,B_{ab}\psi_b\rangle
+ =\left\|\sum_bW(t_b)\psi_b\right\|^2\geq0.
+\end{equation}
+This is a concrete representation of the entire two-time object,
+including the same-sample correlation between neighbouring charge
+Hamiltonians. A generic independent-probe kernel would lose it.
+
+\newpage
+\section{Composition and the full projected algebra}
+Let $P_b=W(t_b)W(t_b)^\dagger$. The common-middle-time product is
+\begin{equation}\label{eq:composition}
+ B_{ab}B_{bd}=B_{ad}-W(t_a)^\dagger(1-P_b)W(t_d).
+\end{equation}
+In particular $1-B_{ab}B_{ba}\geq0$. The defect describes amplitude
+outside the charge-removal image. For arbitrary times the product is
+$B_{ab}B_{cd}=W_a^\dagger W_bW_c^\dagger W_d$; subtracting the
+reversed product gives the exact projected commutator. This expression
+keeps the operator insertions that were left unresolved by the previous
+unprojected CAR-norm calculation.
+
+There is also a useful energy-space expression. In the eigenbasis of
+$h$ and $H_-$ write $c^i_{\alpha a}=\langle\alpha,m-1|c_i|a,m\rangle$.
+For the centred bilocal $S_c(\delta)=S(-\delta/2,\delta/2)$,
+\begin{equation}\label{eq:spectral}
+ (S_c(\delta))_{ab}
+ =\sum_{i,\alpha}(c^i_{\alpha a})^*c^i_{\alpha b}
+ e^{i\delta[E_\alpha-(E_a+E_b)/2]}.
+\end{equation}
+Consequently its covariance is a positive Gram kernel in $\delta$,
+obtained by summing $S_c(\delta)_{ab}^*S_c(\epsilon)_{ab}$ over $a,b$.
+The intermediate amplitudes must be added coherently before taking
+absolute squares. Their internal frequency is an adjacent-sector
+energy combination, not yet a quark momentum fraction or meson mass.
+
+\section{The exact memory equation}
+Put $\Pc=VV^\dagger$, $\Qc=1-\Pc$ and
+\begin{equation}
+ h_{\rm eff}=V^\dagger KV=\left(1-\frac pm\right)h,
+ \qquad R=\Qc KV,\qquad K_\perp=\Qc K\Qc.
+\end{equation}
+The effective Hamiltonian follows from
+$\sum_i c_i^\dagger Hc_i=(m-p)h$. Resolve $e^{iKt}V$ into its
+image and orthogonal components. The latter has zero initial value;
+integrating it and substituting back yields
+\begin{align}\label{eq:memory}
+ F(t)&=V^\dagger e^{iKt}V,\qquad F(0)=1,\\
+ \dot F(t)&=ih_{\rm eff}F(t)-\int_0^t\mathcal M(t-s)F(s)\,ds,
+ &\mathcal M(s)&=R^\dagger e^{iK_\perp s}R.\nonumber
+\end{align}
+This is the standard projection-memory construction \cite{Mori},
+here applied to explicit finite matrices. No infinite-dimensional
+domain assumption is required. The associated Schur complement is
+\begin{equation}
+ V^\dagger(z-K)^{-1}V=
+ [z-h_{\rm eff}-R^\dagger(z-K_\perp)^{-1}R]^{-1},
+ \quad\operatorname{Im}z\ne0.
+\end{equation}
+
+\newpage
+\section{The existing singlet is the initial memory fluctuation}
+Let $A=\sum_i[H,c_i]^\dagger[H,c_i]$. The known CAR identity
+$\sum_i c_i^\dagger H^2c_i=(m-2p)h^2+A_m$ gives
+\begin{equation}\label{eq:G}
+ G:=\mathcal M(0)=R^\dagger R
+ =\frac{A_m}{m}-\frac{p^2}{m^2}h^2\geq0.
+\end{equation}
+In particular $A_m\geq p^2h^2/m$ and
+$[h,G]=[h,A_m]/m$. For $m=p$, $H_-=0$, $G=0$ and the
+compression is exactly autonomous. For general interacting sectors
+it has nonzero memory. Even the free $p=1$ model can have $G\ne0$:
+memory of a compression does not by itself diagnose interacting mesons.
+
+At finite $N$, expansion of the full bilocal gives
+\begin{equation}
+ S_c(\delta)=m-ip\delta h-\tfrac12\delta^2 A_m+O(\delta^3),
+ \qquad
+ \frac{S_c(\delta)+S_c(-\delta)}2
+ =m-\tfrac12\delta^2 A_m+O(\delta^4).
+\end{equation}
+Thus the first nonconserved even-relative-time coefficient is exactly
+the previously studied $A$, after the full flavour sum. At two centre
+times, the coefficient of $\delta^2\epsilon^2$ in the commutator of
+the even bilocals is $[A(T),A(T')]/4$. This is a local expansion,
+not an assertion of uniformity of the derivative expansion in $p$.
+
+To connect to the existing dynamical channel, on each sector use
+$C_m=\EE\trm h^2$, $a_m=\EE\trm A_m$, and the earlier ensemble
+projection coefficient $c_m$ onto $h^2-C_m$. Define
+\begin{equation}
+ Y_m=A_m-a_m1-c_m(h^2-C_m1).
+\end{equation}
+Equation \eqref{eq:G} becomes the exact decomposition
+\begin{equation}\label{eq:decomp}
+ G=\left(\frac{a_m}m-\frac{p^2C_m}{m^2}\right)1
+ +\left(\frac{c_m}m-\frac{p^2}{m^2}\right)(h^2-C_m1)
+ +\frac{Y_m}m.
+\end{equation}
+Applying this sector by sector, $mG_{\rm residual}=Y$ is precisely
+the earlier singlet after its specified conserved subtraction.
+In the full annealed trace its DS covariance is already known:
+\begin{equation}
+ \EE\tr_0[Y(T)Y(0)]\longrightarrow W_dG_{q^2}(T),\quad
+ W_d=4J_s^4\left[\lambda^{-1}+\frac{4q}{1+q}\right],\quad
+ q=e^{-4\lambda}.
+\end{equation}
+This is an external centre-time correlation of the initial memory
+operator. It is \emph{not} the orthogonal-time memory function
+$\mathcal M(s)$ in \eqref{eq:memory}; computing that function is the
+next substantive problem. The distinction prevents replacing the
+unknown dynamics by a previously known two-point function.
+
+\newpage
+\section{A controlled finite-time double-scaling statement}
+Use the earlier Gaussian model with standard-CAR coefficient variance
+\begin{equation}
+ w=4^p\frac{J_s^2N}{p^2}\left(\frac{p!}{N^p}\right)^2,
+ \qquad C_m=w\binom mp\binom{N-m+p}{p}.
+\end{equation}
+The sector second moment is an existing embedded-ensemble formula
+\cite{Tall}. Taking a trace of the CAR identity gives
+$a_m=(2p-m)C_m+mC_{m-1}$. Since
+\begin{equation}
+ \frac{C_{m-1}}{C_m}=\frac{m-p}{m}\frac{N-m+p+1}{N-m+1},
+\end{equation}
+the initial memory has the positive exact mean
+\begin{equation}\label{eq:mean}
+ \EE\trm G=C_m\frac{p(m-p)(N+1)}{m^2(N-m+1)}.
+\end{equation}
+For $m<p$, both $h$ and $G$ vanish. At half filling and
+$p^2/N\to\lambda>0$, $C_m\to J_s^2/\lambda$ and
+\begin{equation}
+ p\,\EE\trm G\longrightarrow4J_s^2.
+\end{equation}
+For $N$ even and $m=N/2$, the first limit follows explicitly from
+\begin{equation}
+ C_{N/2}=\frac{J_s^2}{\lambda_N}
+ \prod_{j=0}^{p-1}\left(1-\frac{2j}N\right)
+ \prod_{j=1}^{p}\left(1+\frac{2j}N\right),\qquad
+ \lambda_N=p^2/N.
+\end{equation}
+The leading logarithms cancel; the remainder is
+$O(p/N+p^3/N^2)$.
+
+More than a curvature limit is available. The intertwining defect
+$KV-Vh_{\rm eff}=R$ gives the exact Duhamel formula
+\begin{equation}
+ e^{iKt}V-Ve^{ih_{\rm eff}t}
+ =i\int_0^t e^{iK(t-s)}R e^{ih_{\rm eff}s}\,ds.
+\end{equation}
+Using the normalized Hilbert--Schmidt norm on the source sector,
+unitarity and $V^\dagger$ contractivity imply
+\begin{align}
+ \|F(t)-e^{ih_{\rm eff}t}\|_{2,m}^2&\leq t^2\trm G,\\
+ \EE\|B_{0t}-1\|_{2,m}^2
+ &\leq2t^2\left[\EE\trm G+\frac{p^2}{m^2}C_m\right].\label{eq:bound}
+\end{align}
+The right-hand side is $O(J_s^2t^2/p)$ at half filling. It controls
+the supremum over any fixed compact time interval. It does not extend
+to times growing like $\sqrt p$ or to a rescaled fluctuation field
+without additional estimates.
+
+\newpage
+\section{Full-trace limit and the reconstruction variable}
+The same conclusion holds for the original infinite-temperature full
+trace. Set $B_m=S_m/m$ for $m>0$ and $B_0=1$. Charge weights are
+$2^{-N}\binom Nm$. In the central window
+$|m-N/2|\leq N^{2/3}$, the product expansions above are uniform:
+\begin{equation}
+ C_m\to J_s^2/\lambda,\qquad
+ p\,\EE\trm G\to4J_s^2,\qquad (p/m)^2C_m=O(p^{-2}).
+\end{equation}
+For example, the extra logarithmic errors are bounded by constants
+times $p(m-N/2)^2/N^2+p^2|m-N/2|/N^2$, both tending to zero.
+Outside this window the binomial probability is at most
+$2e^{-2N^{1/3}}$. Uniform polynomial bounds suffice there:
+\begin{equation}
+ C_m\leq\frac{J_s^2}{\lambda_N}(1+p/N)^{2p}
+ \leq\frac{J_s^2}{\lambda_N}e^{2\lambda_N},\qquad
+ \EE\trm G\leq(N+1)C_m.
+\end{equation}
+The first inequality bounds the falling and rising products by
+$[m(N-m+p)]^p\leq[(N+p)^2/4]^p$.
+Hence averaging \eqref{eq:bound} gives
+$\EE\|B_{0t}-1\|_{2,0}^2=O(t^2/p)$.
+For the conventional normalized singlet,
+\begin{equation}
+ \EE\left\|\frac{2S(0,t)}N-1\right\|_{2,0}^2
+ \leq8\EE\|B_{0t}-1\|_{2,0}^2+\frac2N
+ \longrightarrow0.
+\end{equation}
+This uses $0\leq2Q/N\leq2$ and
+$\tr_0(2Q/N-1)^2=1/N$. Centre-time conjugation preserves the norm,
+so the statement is uniform when $|t_b-t_a|$ is bounded.
+
+The ordinary normalized bilocal therefore has a trivial leading
+limit, while the conserved-subtracted even derivative gives the
+nontrivial $Y$ field in \eqref{eq:decomp}. A meson map must retain
+such fluctuations. This establishes a normalization requirement,
+not the complete fluctuation limit at finite relative time.
+
+The polarization question also has useful existing guidance.
+Xu's tracial chord representation \cite{Xu} separates field operators
+from auxiliary creation/annihilation operators. A nonzero bounded
+annihilator of a separating trace vector cannot belong to that same
+observable algebra. Rajgadia--Xu \cite{RX} construct state-adapted
+observables in a different KM-state setting. These are concrete
+routes to examine, but their state and Hamiltonian must be matched
+before transferring them to this charge-conserving model.
+
+\newpage
+\section*{Validation and the next calculation}
+Four deterministic Hamiltonians verify twenty Gaussian-integer matrix
+identities, including the positive factorization
+\begin{equation}
+ Z^\dagger Z=m^2 A_m-mp^2h^2,\qquad
+ Z=mK\mathsf C-(m-p)\mathsf C h,\qquad \mathsf C=\sqrt m V.
+\end{equation}
+The same systems test the full bilocal against the dilation, positive
+block kernels, the composition defect, the resolvent Schur complement,
+24/48-node memory integration, and twelve finite-time bounds.
+Five exact monomial covariance sums verify \eqref{eq:mean}.
+Eighteen 80-digit evaluations retain finite-$p$ deviations. For example,
+at $p=256$, $J_s=1$, the values of $p\EE\tr_mG$ are
+$3.99867524$, $3.99473404$, $3.97903814$ for
+$\lambda=0.25,0.5,1$.
+
+An independent script checks the complete four-anticommutator formula
+at unequal times in two interacting sectors, and reconstructs the
+centred bilocal from coherent charged eigenstate amplitudes.
+Even-relative-time difference quotients converge quadratically to
+$A_m$. The four contributions individually have squared norms much
+larger than their summed commutator, explicitly verifying the need
+to keep cancellations. These finite-system examples do not establish
+a nonzero DS limit of that commutator.
+
+The next task is to calculate the covariance and spectral structure of
+$R^\dagger e^{iK_\perp s}R$ after the required conserved subtraction
+and normalization. This retains the explicit neighbouring-charge
+correlation and supplies an actual kernel to compare with bulk
+internal dynamics. Its memory parameter $s$, the external centre time,
+and the light-front quark fraction must remain distinct until a
+reconstruction is derived. No bulk mass has been assigned by fiat.
+
+The dilation, Schur complement and projection-memory methods are
+standard mathematics. The present result is their application to the
+specified complex SYK bilocal; no priority claim is made. Numerical
+checks use ordinary floating point where indicated, not certified
+interval arithmetic. Analytic bounds support the finite-time limit.
+
+\begin{thebibliography}{9}
+\bibitem{Mori} C.~Widder, J.~Zimmer and T.~Schilling,
+\emph{On the generalized Langevin equation and the Mori projection
+operator technique}, \href{https://arxiv.org/abs/2503.20457}{arXiv:2503.20457}.
+\bibitem{Tall} G.~Tall and S.~Tomsovic,
+\href{https://arxiv.org/abs/2604.14522}{arXiv:2604.14522},
+sector covariance formula, as recorded in the dictionary-stage source note.
+\bibitem{Xu} J.~Xu, \emph{Von Neumann Algebras in Double-Scaled SYK},
+\href{https://arxiv.org/abs/2403.09021v7}{arXiv:2403.09021v7}, Sec.~3.3.
+\bibitem{RX} H.~Rajgadia and J.~Xu,
+\emph{Emergent States and Algebras from the Double-Scaling limit of
+Pure States in SYK}, \href{https://arxiv.org/abs/2604.14387v3}{arXiv:2604.14387v3},
+Sec.~3.2.
+\end{thebibliography}
+\end{document}

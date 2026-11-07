@@ -1,0 +1,1181 @@
+{
+  "status": "passed",
+  "model": "1+1D free massive scalar, Minkowski vacuum, right-wedge boost beta=2pi, midpoint correlator; DS then small lambda target, eta=4 Js t as candidate normalization",
+  "parameters": {
+    "dps": 40,
+    "radial_dps": 25,
+    "radial_order": 128,
+    "radial_cutoff": 32,
+    "refinement_order": 256,
+    "refinement_cutoff": 40,
+    "log_x_range": [
+      -8,
+      3
+    ],
+    "radial_points": 111
+  },
+  "errors": "Quadrature refinements are empirical, not interval bounds. Analytic uniform time-kernel regulator error <= epsilon. Full radial norm analytic; radial spatial tails not numerically certified.",
+  "environment": {
+    "python": "3.14.5",
+    "numpy": "2.4.6",
+    "scipy": "1.18.0",
+    "mpmath": "1.3.0",
+    "matplotlib": "3.11.0"
+  },
+  "input_sha256": {
+    "code/rindler_singlet_packet.py": "72fec564a0e3408cc77b305e475d5b50045b5702f8666d379139dc21d0393afc",
+    "code/run_rindler_singlet_packet.py": "01c8f79cca86608fe4b5c670e78b4cb069e135170cfa57731409f948f7cec877"
+  },
+  "kernel": [
+    {
+      "epsilon": 0.5,
+      "C0": 0.71737986160311,
+      "C_ipi2": 1.2924011811775107,
+      "regulated_fourpoint_at_zero": 3.8552354920517464,
+      "normalized_fourpoint_at_zero": 7.491219968212425,
+      "radial_norm_squared": 26.737368262730673,
+      "times": [
+        {
+          "eta": 0,
+          "midpoint": 0.71737986160311,
+          "target": 1.0,
+          "absolute_difference": 0.28262013839689004
+        },
+        {
+          "eta": 0.5,
+          "midpoint": 0.6763922418609309,
+          "target": 0.8836279159764776,
+          "absolute_difference": 0.2072356741155467
+        },
+        {
+          "eta": 1,
+          "midpoint": 0.567462716808918,
+          "target": 0.6185000366872466,
+          "absolute_difference": 0.05103731987832861
+        },
+        {
+          "eta": 2,
+          "midpoint": 0.28494965809865697,
+          "target": 0.17637844761413468,
+          "absolute_difference": 0.10857121048452228
+        },
+        {
+          "eta": 4,
+          "midpoint": 0.02246815721679732,
+          "target": 0.0049915390524325216,
+          "absolute_difference": 0.017476618164364795
+        }
+      ]
+    },
+    {
+      "epsilon": 0.2,
+      "C0": 0.849207068406472,
+      "C_ipi2": 2.0256916997630645,
+      "regulated_fourpoint_at_zero": 8.928006370009461,
+      "normalized_fourpoint_at_zero": 12.380189452982325,
+      "radial_norm_squared": 224.5885468643406,
+      "times": [
+        {
+          "eta": 0,
+          "midpoint": 0.849207068406472,
+          "target": 1.0,
+          "absolute_difference": 0.150792931593528
+        },
+        {
+          "eta": 0.5,
+          "midpoint": 0.7801628694726022,
+          "target": 0.8836279159764776,
+          "absolute_difference": 0.10346504650387542
+        },
+        {
+          "eta": 1,
+          "midpoint": 0.6070449039968628,
+          "target": 0.6185000366872466,
+          "absolute_difference": 0.011455132690383805
+        },
+        {
+          "eta": 2,
+          "midpoint": 0.23397034355460802,
+          "target": 0.17637844761413468,
+          "absolute_difference": 0.05759189594047336
+        },
+        {
+          "eta": 4,
+          "midpoint": 0.009931128064961029,
+          "target": 0.0049915390524325216,
+          "absolute_difference": 0.004939589012528507
+        }
+      ]
+    },
+    {
+      "epsilon": 0.1,
+      "C0": 0.914388281189338,
+      "C_ipi2": 2.620032938409479,
+      "regulated_fourpoint_at_zero": 14.565251125477612,
+      "normalized_fourpoint_at_zero": 17.420341877964297,
+      "radial_norm_squared": 1195.7314594982247,
+      "times": [
+        {
+          "eta": 0,
+          "midpoint": 0.914388281189338,
+          "target": 1.0,
+          "absolute_difference": 0.08561171881066203
+        },
+        {
+          "eta": 0.5,
+          "midpoint": 0.8272006748340592,
+          "target": 0.8836279159764776,
+          "absolute_difference": 0.05642724114241834
+        },
+        {
+          "eta": 1,
+          "midpoint": 0.6164355761178206,
+          "target": 0.6185000366872466,
+          "absolute_difference": 0.0020644605694260455
+        },
+        {
+          "eta": 2,
+          "midpoint": 0.20771861458857666,
+          "target": 0.17637844761413468,
+          "absolute_difference": 0.031340166974441995
+        },
+        {
+          "eta": 4,
+          "midpoint": 0.007121880973602717,
+          "target": 0.0049915390524325216,
+          "absolute_difference": 0.0021303419211701952
+        }
+      ]
+    },
+    {
+      "epsilon": 0.05,
+      "C0": 0.9539421775534921,
+      "C_ipi2": 3.130512260936205,
+      "regulated_fourpoint_at_zero": 20.510219709859317,
+      "normalized_fourpoint_at_zero": 22.538562344284795,
+      "radial_norm_squared": 6552.701132041937,
+      "times": [
+        {
+          "eta": 0,
+          "midpoint": 0.9539421775534921,
+          "target": 1.0,
+          "absolute_difference": 0.046057822446507884
+        },
+        {
+          "eta": 0.5,
+          "midpoint": 0.8540961319470847,
+          "target": 0.8836279159764776,
+          "absolute_difference": 0.029531784029392976
+        },
+        {
+          "eta": 1,
+          "midpoint": 0.6188153431459952,
+          "target": 0.6185000366872466,
+          "absolute_difference": 0.00031530645874855423
+        },
+        {
+          "eta": 2,
+          "midpoint": 0.19263204211649698,
+          "target": 0.17637844761413468,
+          "absolute_difference": 0.016253594502362304
+        },
+        {
+          "eta": 4,
+          "midpoint": 0.005976944152738528,
+          "target": 0.0049915390524325216,
+          "absolute_difference": 0.0009854051003060065
+        }
+      ]
+    },
+    {
+      "epsilon": 0.01,
+      "C0": 0.9901711847992696,
+      "C_ipi2": 3.777554801608676,
+      "regulated_fourpoint_at_zero": 29.52027953352032,
+      "normalized_fourpoint_at_zero": 30.109247265791375,
+      "radial_norm_squared": 356854.04198231053,
+      "times": [
+        {
+          "eta": 0,
+          "midpoint": 0.9901711847992696,
+          "target": 1.0,
+          "absolute_difference": 0.009828815200730394
+        },
+        {
+          "eta": 0.5,
+          "midpoint": 0.8774987048257333,
+          "target": 0.8836279159764776,
+          "absolute_difference": 0.006129211150744251
+        },
+        {
+          "eta": 1,
+          "midpoint": 0.6188395778225547,
+          "target": 0.6185000366872466,
+          "absolute_difference": 0.0003395411353080462
+        },
+        {
+          "eta": 2,
+          "midpoint": 0.1797114071355152,
+          "target": 0.17637844761413468,
+          "absolute_difference": 0.0033329595213805407
+        },
+        {
+          "eta": 4,
+          "midpoint": 0.005176500391998712,
+          "target": 0.0049915390524325216,
+          "absolute_difference": 0.0001849613395661902
+        }
+      ]
+    }
+  ],
+  "matrix_dressing": [
+    {
+      "t": 0,
+      "trace_two": [
+        1.0,
+        0.0
+      ],
+      "midpoint_two": [
+        1.0000000000000002,
+        0.0
+      ],
+      "trace_four": [
+        1.5000000000000002,
+        -1.1424908149981059e-18
+      ],
+      "fixed_A2_four": [
+        1.9889467582999072,
+        -4.7594931653254344e-18
+      ],
+      "A4_four": [
+        1.5,
+        -1.3481625911237788e-18
+      ]
+    },
+    {
+      "t": 0.4,
+      "trace_two": [
+        0.9238523949906015,
+        9.25185853854297e-18
+      ],
+      "midpoint_two": [
+        0.9238523949906017,
+        9.25185853854297e-18
+      ],
+      "trace_four": [
+        1.187012572589627,
+        2.7755575615628914e-17
+      ],
+      "fixed_A2_four": [
+        1.6297240530703738,
+        -2.0354088784794536e-16
+      ],
+      "A4_four": [
+        1.1870125725896274,
+        -1.850371707708594e-17
+      ]
+    },
+    {
+      "t": 1.1,
+      "trace_two": [
+        0.4886378564942509,
+        -3.700743415417188e-17
+      ],
+      "midpoint_two": [
+        0.48863785649425096,
+        3.700743415417188e-17
+      ],
+      "trace_four": [
+        -0.05246430453220924,
+        6.938893903907228e-17
+      ],
+      "fixed_A2_four": [
+        0.20083175841888892,
+        0.0
+      ],
+      "A4_four": [
+        -0.05246430453220911,
+        2.3129646346357426e-17
+      ]
+    }
+  ],
+  "radial_refinement": [
+    {
+      "log_x": -8.0,
+      "epsilon": 0.5,
+      "low": 2.299379444625771e-07,
+      "high": 2.2993791731762414e-07,
+      "absolute_difference": 2.7144952952085077e-14,
+      "cancellation": 21413540.345641084
+    },
+    {
+      "log_x": -8.0,
+      "epsilon": 0.2,
+      "low": 1.2081910583106037e-07,
+      "high": 1.208191773316959e-07,
+      "absolute_difference": 7.150063553407624e-14,
+      "cancellation": 145453626.45837125
+    },
+    {
+      "log_x": -8.0,
+      "epsilon": 0.1,
+      "low": 9.75832405991639e-08,
+      "high": 9.758354957696185e-08,
+      "absolute_difference": 3.089777979521283e-13,
+      "cancellation": 492187604.67479604
+    },
+    {
+      "log_x": -4.0,
+      "epsilon": 0.5,
+      "low": 0.001062727174711675,
+      "high": 0.00106272717463185,
+      "absolute_difference": 7.982503547054876e-14,
+      "cancellation": 4596.72614299856
+    },
+    {
+      "log_x": -4.0,
+      "epsilon": 0.2,
+      "low": 0.000525933112837329,
+      "high": 0.000525933112732255,
+      "absolute_difference": 1.0507404408360843e-13,
+      "cancellation": 33504.82768698622
+    },
+    {
+      "log_x": -4.0,
+      "epsilon": 0.1,
+      "low": 0.0004178109348407233,
+      "high": 0.0004178109347278706,
+      "absolute_difference": 1.1285270678021431e-13,
+      "cancellation": 114934.63359716668
+    },
+    {
+      "log_x": -1.0,
+      "epsilon": 0.5,
+      "low": 0.7821443454568369,
+      "high": 0.782144345457042,
+      "absolute_difference": 2.0516921495072893e-13,
+      "cancellation": 6.505704566662555
+    },
+    {
+      "log_x": -1.0,
+      "epsilon": 0.2,
+      "low": 0.40726865435526793,
+      "high": 0.4072686543556664,
+      "absolute_difference": 3.984590435379687e-13,
+      "cancellation": 44.15636660533979
+    },
+    {
+      "log_x": -1.0,
+      "epsilon": 0.1,
+      "low": 0.31476480592045064,
+      "high": 0.31476480592110956,
+      "absolute_difference": 6.589173651150304e-13,
+      "cancellation": 154.9795652040395
+    },
+    {
+      "log_x": 0.0,
+      "epsilon": 0.5,
+      "low": 3.7542393679576858,
+      "high": 3.754239367957566,
+      "absolute_difference": 1.199040866595169e-13,
+      "cancellation": 1.4523582023314132
+    },
+    {
+      "log_x": 0.0,
+      "epsilon": 0.2,
+      "low": 3.710911596844246,
+      "high": 3.7109115968439768,
+      "absolute_difference": 2.6911806116913795e-13,
+      "cancellation": 5.057916097792259
+    },
+    {
+      "log_x": 0.0,
+      "epsilon": 0.1,
+      "low": 3.154169400171712,
+      "high": 3.1541694001713667,
+      "absolute_difference": 3.455014052633487e-13,
+      "cancellation": 15.85609417760511
+    },
+    {
+      "log_x": 1.0,
+      "epsilon": 0.5,
+      "low": 3.318742745040903,
+      "high": 3.3187427450408364,
+      "absolute_difference": 6.661338147750939e-14,
+      "cancellation": 1.0039809540718785
+    },
+    {
+      "log_x": 1.0,
+      "epsilon": 0.2,
+      "low": 14.944973228411083,
+      "high": 14.944973228410898,
+      "absolute_difference": 1.8474111129762605e-13,
+      "cancellation": 1.2419110263849589
+    },
+    {
+      "log_x": 1.0,
+      "epsilon": 0.1,
+      "low": 23.436775040290392,
+      "high": 23.436775040290023,
+      "absolute_difference": 3.694822225952521e-13,
+      "cancellation": 2.257596530799392
+    },
+    {
+      "log_x": 2.0,
+      "epsilon": 0.5,
+      "low": 0.06966988142690142,
+      "high": 0.06966988142690078,
+      "absolute_difference": 6.38378239159465e-16,
+      "cancellation": 1.0000000000129334
+    },
+    {
+      "log_x": 2.0,
+      "epsilon": 0.2,
+      "low": 2.1044847435437943,
+      "high": 2.1044847435438014,
+      "absolute_difference": 7.105427357601002e-15,
+      "cancellation": 1.0002115576753008
+    },
+    {
+      "log_x": 2.0,
+      "epsilon": 0.1,
+      "low": 20.0911044856102,
+      "high": 20.09110448561024,
+      "absolute_difference": 4.263256414560601e-14,
+      "cancellation": 1.0280865212725905
+    },
+    {
+      "log_x": 3.0,
+      "epsilon": 0.5,
+      "low": 2.517099133786436e-07,
+      "high": 2.517099133786424e-07,
+      "absolute_difference": 1.2176098616780567e-21,
+      "cancellation": 1.0
+    },
+    {
+      "log_x": 3.0,
+      "epsilon": 0.2,
+      "low": 3.271138778060721e-05,
+      "high": 3.2711387780607286e-05,
+      "absolute_difference": 7.453889935837843e-20,
+      "cancellation": 1.0
+    },
+    {
+      "log_x": 3.0,
+      "epsilon": 0.1,
+      "low": 0.0036121200500171535,
+      "high": 0.0036121200500171704,
+      "absolute_difference": 1.691355389077387e-17,
+      "cancellation": 1.0000000015103103
+    }
+  ],
+  "checks": [
+    {
+      "name": "Fourier transform",
+      "error": 0.0,
+      "tolerance": 1e-25,
+      "passed": true,
+      "nu": 0
+    },
+    {
+      "name": "Fourier transform",
+      "error": 0.0,
+      "tolerance": 1e-25,
+      "passed": true,
+      "nu": 0.3
+    },
+    {
+      "name": "Fourier transform",
+      "error": 2.2958874039497803e-41,
+      "tolerance": 1e-25,
+      "passed": true,
+      "nu": 1
+    },
+    {
+      "name": "Fourier transform",
+      "error": 0.0,
+      "tolerance": 1e-25,
+      "passed": true,
+      "nu": 2
+    },
+    {
+      "name": "Fourier transform",
+      "error": 1.6142958309021893e-42,
+      "tolerance": 1e-25,
+      "passed": true,
+      "nu": 4
+    },
+    {
+      "name": "spectral variance",
+      "error": 0.0,
+      "tolerance": 1e-30,
+      "passed": true
+    },
+    {
+      "name": "KL spectral norm",
+      "error": 1.1479437019748901e-41,
+      "tolerance": 1e-30,
+      "passed": true,
+      "epsilon": 0.5
+    },
+    {
+      "name": "spectral vs heat convolution",
+      "error": 0.0,
+      "tolerance": 1e-25,
+      "passed": true,
+      "epsilon": 0.5,
+      "eta": 0
+    },
+    {
+      "name": "uniform regulator bound",
+      "error": 0.0,
+      "tolerance": 1e-30,
+      "passed": true,
+      "epsilon": 0.5,
+      "eta": 0
+    },
+    {
+      "name": "spectral vs heat convolution",
+      "error": 0.0,
+      "tolerance": 1e-25,
+      "passed": true,
+      "epsilon": 0.5,
+      "eta": 0.5
+    },
+    {
+      "name": "uniform regulator bound",
+      "error": 0.0,
+      "tolerance": 1e-30,
+      "passed": true,
+      "epsilon": 0.5,
+      "eta": 0.5
+    },
+    {
+      "name": "spectral vs heat convolution",
+      "error": 0.0,
+      "tolerance": 1e-25,
+      "passed": true,
+      "epsilon": 0.5,
+      "eta": 1
+    },
+    {
+      "name": "uniform regulator bound",
+      "error": 0.0,
+      "tolerance": 1e-30,
+      "passed": true,
+      "epsilon": 0.5,
+      "eta": 1
+    },
+    {
+      "name": "spectral vs heat convolution",
+      "error": 0.0,
+      "tolerance": 1e-25,
+      "passed": true,
+      "epsilon": 0.5,
+      "eta": 2
+    },
+    {
+      "name": "uniform regulator bound",
+      "error": 0.0,
+      "tolerance": 1e-30,
+      "passed": true,
+      "epsilon": 0.5,
+      "eta": 2
+    },
+    {
+      "name": "spectral vs heat convolution",
+      "error": 0.0,
+      "tolerance": 1e-25,
+      "passed": true,
+      "epsilon": 0.5,
+      "eta": 4
+    },
+    {
+      "name": "uniform regulator bound",
+      "error": 0.0,
+      "tolerance": 1e-30,
+      "passed": true,
+      "epsilon": 0.5,
+      "eta": 4
+    },
+    {
+      "name": "KL spectral norm",
+      "error": 0.0,
+      "tolerance": 1e-30,
+      "passed": true,
+      "epsilon": 0.2
+    },
+    {
+      "name": "spectral vs heat convolution",
+      "error": 0.0,
+      "tolerance": 1e-25,
+      "passed": true,
+      "epsilon": 0.2,
+      "eta": 0
+    },
+    {
+      "name": "uniform regulator bound",
+      "error": 0.0,
+      "tolerance": 1e-30,
+      "passed": true,
+      "epsilon": 0.2,
+      "eta": 0
+    },
+    {
+      "name": "spectral vs heat convolution",
+      "error": 0.0,
+      "tolerance": 1e-25,
+      "passed": true,
+      "epsilon": 0.2,
+      "eta": 0.5
+    },
+    {
+      "name": "uniform regulator bound",
+      "error": 0.0,
+      "tolerance": 1e-30,
+      "passed": true,
+      "epsilon": 0.2,
+      "eta": 0.5
+    },
+    {
+      "name": "spectral vs heat convolution",
+      "error": 0.0,
+      "tolerance": 1e-25,
+      "passed": true,
+      "epsilon": 0.2,
+      "eta": 1
+    },
+    {
+      "name": "uniform regulator bound",
+      "error": 0.0,
+      "tolerance": 1e-30,
+      "passed": true,
+      "epsilon": 0.2,
+      "eta": 1
+    },
+    {
+      "name": "spectral vs heat convolution",
+      "error": 0.0,
+      "tolerance": 1e-25,
+      "passed": true,
+      "epsilon": 0.2,
+      "eta": 2
+    },
+    {
+      "name": "uniform regulator bound",
+      "error": 0.0,
+      "tolerance": 1e-30,
+      "passed": true,
+      "epsilon": 0.2,
+      "eta": 2
+    },
+    {
+      "name": "spectral vs heat convolution",
+      "error": 0.0,
+      "tolerance": 1e-25,
+      "passed": true,
+      "epsilon": 0.2,
+      "eta": 4
+    },
+    {
+      "name": "uniform regulator bound",
+      "error": 0.0,
+      "tolerance": 1e-30,
+      "passed": true,
+      "epsilon": 0.2,
+      "eta": 4
+    },
+    {
+      "name": "KL spectral norm",
+      "error": 0.0,
+      "tolerance": 1e-30,
+      "passed": true,
+      "epsilon": 0.1
+    },
+    {
+      "name": "spectral vs heat convolution",
+      "error": 0.0,
+      "tolerance": 1e-25,
+      "passed": true,
+      "epsilon": 0.1,
+      "eta": 0
+    },
+    {
+      "name": "uniform regulator bound",
+      "error": 0.0,
+      "tolerance": 1e-30,
+      "passed": true,
+      "epsilon": 0.1,
+      "eta": 0
+    },
+    {
+      "name": "spectral vs heat convolution",
+      "error": 0.0,
+      "tolerance": 1e-25,
+      "passed": true,
+      "epsilon": 0.1,
+      "eta": 0.5
+    },
+    {
+      "name": "uniform regulator bound",
+      "error": 0.0,
+      "tolerance": 1e-30,
+      "passed": true,
+      "epsilon": 0.1,
+      "eta": 0.5
+    },
+    {
+      "name": "spectral vs heat convolution",
+      "error": 0.0,
+      "tolerance": 1e-25,
+      "passed": true,
+      "epsilon": 0.1,
+      "eta": 1
+    },
+    {
+      "name": "uniform regulator bound",
+      "error": 0.0,
+      "tolerance": 1e-30,
+      "passed": true,
+      "epsilon": 0.1,
+      "eta": 1
+    },
+    {
+      "name": "spectral vs heat convolution",
+      "error": 0.0,
+      "tolerance": 1e-25,
+      "passed": true,
+      "epsilon": 0.1,
+      "eta": 2
+    },
+    {
+      "name": "uniform regulator bound",
+      "error": 0.0,
+      "tolerance": 1e-30,
+      "passed": true,
+      "epsilon": 0.1,
+      "eta": 2
+    },
+    {
+      "name": "spectral vs heat convolution",
+      "error": 0.0,
+      "tolerance": 1e-25,
+      "passed": true,
+      "epsilon": 0.1,
+      "eta": 4
+    },
+    {
+      "name": "uniform regulator bound",
+      "error": 0.0,
+      "tolerance": 1e-30,
+      "passed": true,
+      "epsilon": 0.1,
+      "eta": 4
+    },
+    {
+      "name": "KL spectral norm",
+      "error": 0.0,
+      "tolerance": 1e-30,
+      "passed": true,
+      "epsilon": 0.05
+    },
+    {
+      "name": "spectral vs heat convolution",
+      "error": 0.0,
+      "tolerance": 1e-25,
+      "passed": true,
+      "epsilon": 0.05,
+      "eta": 0
+    },
+    {
+      "name": "uniform regulator bound",
+      "error": 0.0,
+      "tolerance": 1e-30,
+      "passed": true,
+      "epsilon": 0.05,
+      "eta": 0
+    },
+    {
+      "name": "spectral vs heat convolution",
+      "error": 0.0,
+      "tolerance": 1e-25,
+      "passed": true,
+      "epsilon": 0.05,
+      "eta": 0.5
+    },
+    {
+      "name": "uniform regulator bound",
+      "error": 0.0,
+      "tolerance": 1e-30,
+      "passed": true,
+      "epsilon": 0.05,
+      "eta": 0.5
+    },
+    {
+      "name": "spectral vs heat convolution",
+      "error": 0.0,
+      "tolerance": 1e-25,
+      "passed": true,
+      "epsilon": 0.05,
+      "eta": 1
+    },
+    {
+      "name": "uniform regulator bound",
+      "error": 0.0,
+      "tolerance": 1e-30,
+      "passed": true,
+      "epsilon": 0.05,
+      "eta": 1
+    },
+    {
+      "name": "spectral vs heat convolution",
+      "error": 0.0,
+      "tolerance": 1e-25,
+      "passed": true,
+      "epsilon": 0.05,
+      "eta": 2
+    },
+    {
+      "name": "uniform regulator bound",
+      "error": 0.0,
+      "tolerance": 1e-30,
+      "passed": true,
+      "epsilon": 0.05,
+      "eta": 2
+    },
+    {
+      "name": "spectral vs heat convolution",
+      "error": 0.0,
+      "tolerance": 1e-25,
+      "passed": true,
+      "epsilon": 0.05,
+      "eta": 4
+    },
+    {
+      "name": "uniform regulator bound",
+      "error": 0.0,
+      "tolerance": 1e-30,
+      "passed": true,
+      "epsilon": 0.05,
+      "eta": 4
+    },
+    {
+      "name": "KL spectral norm",
+      "error": 0.0,
+      "tolerance": 1e-30,
+      "passed": true,
+      "epsilon": 0.01
+    },
+    {
+      "name": "spectral vs heat convolution",
+      "error": 0.0,
+      "tolerance": 1e-25,
+      "passed": true,
+      "epsilon": 0.01,
+      "eta": 0
+    },
+    {
+      "name": "uniform regulator bound",
+      "error": 0.0,
+      "tolerance": 1e-30,
+      "passed": true,
+      "epsilon": 0.01,
+      "eta": 0
+    },
+    {
+      "name": "spectral vs heat convolution",
+      "error": 0.0,
+      "tolerance": 1e-25,
+      "passed": true,
+      "epsilon": 0.01,
+      "eta": 0.5
+    },
+    {
+      "name": "uniform regulator bound",
+      "error": 0.0,
+      "tolerance": 1e-30,
+      "passed": true,
+      "epsilon": 0.01,
+      "eta": 0.5
+    },
+    {
+      "name": "spectral vs heat convolution",
+      "error": 0.0,
+      "tolerance": 1e-25,
+      "passed": true,
+      "epsilon": 0.01,
+      "eta": 1
+    },
+    {
+      "name": "uniform regulator bound",
+      "error": 0.0,
+      "tolerance": 1e-30,
+      "passed": true,
+      "epsilon": 0.01,
+      "eta": 1
+    },
+    {
+      "name": "spectral vs heat convolution",
+      "error": 0.0,
+      "tolerance": 1e-25,
+      "passed": true,
+      "epsilon": 0.01,
+      "eta": 2
+    },
+    {
+      "name": "uniform regulator bound",
+      "error": 0.0,
+      "tolerance": 1e-30,
+      "passed": true,
+      "epsilon": 0.01,
+      "eta": 2
+    },
+    {
+      "name": "spectral vs heat convolution",
+      "error": 0.0,
+      "tolerance": 1e-25,
+      "passed": true,
+      "epsilon": 0.01,
+      "eta": 4
+    },
+    {
+      "name": "uniform regulator bound",
+      "error": 0.0,
+      "tolerance": 1e-30,
+      "passed": true,
+      "epsilon": 0.01,
+      "eta": 4
+    },
+    {
+      "name": "finite trace midpoint",
+      "error": 2.220446049250313e-16,
+      "tolerance": 1e-12,
+      "passed": true,
+      "t": 0
+    },
+    {
+      "name": "fixed A2 fourpoint formula",
+      "error": 2.2214048816139943e-16,
+      "tolerance": 1e-12,
+      "passed": true,
+      "t": 0
+    },
+    {
+      "name": "n-specific A4 fourpoint",
+      "error": 2.2204470017812346e-16,
+      "tolerance": 1e-12,
+      "passed": true,
+      "t": 0
+    },
+    {
+      "name": "finite trace midpoint",
+      "error": 2.220446049250313e-16,
+      "tolerance": 1e-12,
+      "passed": true,
+      "t": 0.4
+    },
+    {
+      "name": "fixed A2 fourpoint formula",
+      "error": 2.0354088784794536e-16,
+      "tolerance": 1e-12,
+      "passed": true,
+      "t": 0.4
+    },
+    {
+      "name": "n-specific A4 fourpoint",
+      "error": 4.464920474831362e-16,
+      "tolerance": 1e-12,
+      "passed": true,
+      "t": 0.4
+    },
+    {
+      "name": "finite trace midpoint",
+      "error": 9.251858538542972e-17,
+      "tolerance": 1e-12,
+      "passed": true,
+      "t": 1.1
+    },
+    {
+      "name": "fixed A2 fourpoint formula",
+      "error": 4.19502498186753e-17,
+      "tolerance": 1e-12,
+      "passed": true,
+      "t": 1.1
+    },
+    {
+      "name": "n-specific A4 fourpoint",
+      "error": 1.3319142130770613e-16,
+      "tolerance": 1e-12,
+      "passed": true,
+      "t": 1.1
+    },
+    {
+      "name": "radial refinement",
+      "error": 2.7144952952085077e-14,
+      "tolerance": 2e-07,
+      "passed": true,
+      "log_x": -8.0,
+      "epsilon": 0.5
+    },
+    {
+      "name": "radial refinement",
+      "error": 7.150063553407624e-14,
+      "tolerance": 2e-07,
+      "passed": true,
+      "log_x": -8.0,
+      "epsilon": 0.2
+    },
+    {
+      "name": "radial refinement",
+      "error": 3.089777979521283e-13,
+      "tolerance": 2e-07,
+      "passed": true,
+      "log_x": -8.0,
+      "epsilon": 0.1
+    },
+    {
+      "name": "radial refinement",
+      "error": 7.982503547054876e-14,
+      "tolerance": 2e-07,
+      "passed": true,
+      "log_x": -4.0,
+      "epsilon": 0.5
+    },
+    {
+      "name": "radial refinement",
+      "error": 1.0507404408360843e-13,
+      "tolerance": 2e-07,
+      "passed": true,
+      "log_x": -4.0,
+      "epsilon": 0.2
+    },
+    {
+      "name": "radial refinement",
+      "error": 1.1285270678021431e-13,
+      "tolerance": 2e-07,
+      "passed": true,
+      "log_x": -4.0,
+      "epsilon": 0.1
+    },
+    {
+      "name": "radial refinement",
+      "error": 2.0516921495072893e-13,
+      "tolerance": 2e-07,
+      "passed": true,
+      "log_x": -1.0,
+      "epsilon": 0.5
+    },
+    {
+      "name": "radial refinement",
+      "error": 3.984590435379687e-13,
+      "tolerance": 2e-07,
+      "passed": true,
+      "log_x": -1.0,
+      "epsilon": 0.2
+    },
+    {
+      "name": "radial refinement",
+      "error": 6.589173651150304e-13,
+      "tolerance": 2e-07,
+      "passed": true,
+      "log_x": -1.0,
+      "epsilon": 0.1
+    },
+    {
+      "name": "radial refinement",
+      "error": 1.199040866595169e-13,
+      "tolerance": 2e-07,
+      "passed": true,
+      "log_x": 0.0,
+      "epsilon": 0.5
+    },
+    {
+      "name": "radial refinement",
+      "error": 2.6911806116913795e-13,
+      "tolerance": 2e-07,
+      "passed": true,
+      "log_x": 0.0,
+      "epsilon": 0.2
+    },
+    {
+      "name": "radial refinement",
+      "error": 3.455014052633487e-13,
+      "tolerance": 2e-07,
+      "passed": true,
+      "log_x": 0.0,
+      "epsilon": 0.1
+    },
+    {
+      "name": "radial refinement",
+      "error": 6.661338147750939e-14,
+      "tolerance": 2e-07,
+      "passed": true,
+      "log_x": 1.0,
+      "epsilon": 0.5
+    },
+    {
+      "name": "radial refinement",
+      "error": 1.8474111129762605e-13,
+      "tolerance": 2e-07,
+      "passed": true,
+      "log_x": 1.0,
+      "epsilon": 0.2
+    },
+    {
+      "name": "radial refinement",
+      "error": 3.694822225952521e-13,
+      "tolerance": 2e-07,
+      "passed": true,
+      "log_x": 1.0,
+      "epsilon": 0.1
+    },
+    {
+      "name": "radial refinement",
+      "error": 6.38378239159465e-16,
+      "tolerance": 2e-07,
+      "passed": true,
+      "log_x": 2.0,
+      "epsilon": 0.5
+    },
+    {
+      "name": "radial refinement",
+      "error": 7.105427357601002e-15,
+      "tolerance": 2e-07,
+      "passed": true,
+      "log_x": 2.0,
+      "epsilon": 0.2
+    },
+    {
+      "name": "radial refinement",
+      "error": 4.263256414560601e-14,
+      "tolerance": 2e-07,
+      "passed": true,
+      "log_x": 2.0,
+      "epsilon": 0.1
+    },
+    {
+      "name": "radial refinement",
+      "error": 1.2176098616780567e-21,
+      "tolerance": 2e-07,
+      "passed": true,
+      "log_x": 3.0,
+      "epsilon": 0.5
+    },
+    {
+      "name": "radial refinement",
+      "error": 7.453889935837843e-20,
+      "tolerance": 2e-07,
+      "passed": true,
+      "log_x": 3.0,
+      "epsilon": 0.2
+    },
+    {
+      "name": "radial refinement",
+      "error": 1.691355389077387e-17,
+      "tolerance": 2e-07,
+      "passed": true,
+      "log_x": 3.0,
+      "epsilon": 0.1
+    }
+  ]
+}

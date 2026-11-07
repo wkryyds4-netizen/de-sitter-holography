@@ -1,0 +1,308 @@
+{
+  "systems": [
+    {
+      "N": 3,
+      "p": 1,
+      "m": 2,
+      "C_upper": 1,
+      "common_HS_dimension": 9,
+      "errors": {
+        "centered_reverse_gram": 1.3877787807814457e-17,
+        "polar_partial_isometry": 1.039408153387614e-15,
+        "polar_casimir_intertwining": 1.3005049746509484e-15,
+        "polar_identity": 1.609317506356351e-16
+      },
+      "centered_reverse_coefficient": 0.015625,
+      "polar_forward_ranks": [
+        {
+          "rank": 0,
+          "dimension": 1,
+          "eigenvalue": 0.08333333333333334,
+          "scalar_block_error": 1.3255369324359045e-16
+        },
+        {
+          "rank": 1,
+          "dimension": 8,
+          "eigenvalue": 0.9166666666666663,
+          "scalar_block_error": 9.08421327497245e-16
+        }
+      ],
+      "polar_reverse_ranks": [
+        {
+          "rank": 0,
+          "dimension": 1,
+          "eigenvalue": 0.08333333333333345,
+          "scalar_block_error": 2.085556664066261e-16
+        },
+        {
+          "rank": 1,
+          "dimension": 8,
+          "eigenvalue": 0.9166666666666664,
+          "scalar_block_error": 8.684317192319308e-16
+        }
+      ]
+    },
+    {
+      "N": 4,
+      "p": 1,
+      "m": 2,
+      "C_upper": 1,
+      "common_HS_dimension": 16,
+      "errors": {
+        "centered_reverse_gram": 4.6579828820786206e-17,
+        "polar_partial_isometry": 1.8238384264471247e-15,
+        "polar_casimir_intertwining": 2.1546556540163e-15,
+        "polar_identity": 6.018879950626364e-16
+      },
+      "centered_reverse_coefficient": 0.004629629629629629,
+      "polar_forward_ranks": [
+        {
+          "rank": 0,
+          "dimension": 1,
+          "eigenvalue": 0.056624327025935506,
+          "scalar_block_error": 2.8497887778070896e-16
+        },
+        {
+          "rank": 1,
+          "dimension": 15,
+          "eigenvalue": 0.737108288468396,
+          "scalar_block_error": 2.0395307091502577e-15
+        }
+      ],
+      "polar_reverse_ranks": [
+        {
+          "rank": 0,
+          "dimension": 1,
+          "eigenvalue": 0.05662432702593569,
+          "scalar_block_error": 1.9335574625230688e-16
+        },
+        {
+          "rank": 1,
+          "dimension": 15,
+          "eigenvalue": 0.29266384402395135,
+          "scalar_block_error": 1.0096159415149314e-15
+        },
+        {
+          "rank": 2,
+          "dimension": 20,
+          "eigenvalue": 0.33333333333333337,
+          "scalar_block_error": 6.853147026060803e-16
+        }
+      ]
+    },
+    {
+      "N": 4,
+      "p": 2,
+      "m": 3,
+      "C_upper": 1,
+      "common_HS_dimension": 16,
+      "errors": {
+        "centered_reverse_gram": 7.013304871480146e-17,
+        "polar_partial_isometry": 1.4384989739575138e-15,
+        "polar_casimir_intertwining": 2.6804916522426325e-15,
+        "polar_identity": 4.051804952705718e-16
+      },
+      "centered_reverse_coefficient": 0.006172839506172839,
+      "polar_forward_ranks": [
+        {
+          "rank": 0,
+          "dimension": 1,
+          "eigenvalue": 0.2229347365358091,
+          "scalar_block_error": 2.1389214656068502e-16
+        },
+        {
+          "rank": 1,
+          "dimension": 15,
+          "eigenvalue": 0.6765907108307818,
+          "scalar_block_error": 1.8541618948966527e-15
+        },
+        {
+          "rank": 2,
+          "dimension": 20,
+          "eigenvalue": 0.2962962962962961,
+          "scalar_block_error": 1.2014540348934812e-15
+        }
+      ],
+      "polar_reverse_ranks": [
+        {
+          "rank": 0,
+          "dimension": 1,
+          "eigenvalue": 0.5933051069061789,
+          "scalar_block_error": 3.242280517905884e-16
+        },
+        {
+          "rank": 1,
+          "dimension": 15,
+          "eigenvalue": 1.0469610812011523,
+          "scalar_block_error": 1.3750833189922346e-15
+        }
+      ]
+    },
+    {
+      "N": 5,
+      "p": 1,
+      "m": 2,
+      "C_upper": 1,
+      "common_HS_dimension": 25,
+      "errors": {
+        "centered_reverse_gram": 1.4818311129599194e-17,
+        "polar_partial_isometry": 2.81869894230059e-15,
+        "polar_casimir_intertwining": 3.212173148406015e-15,
+        "polar_identity": 2.171992030724219e-16
+      },
+      "centered_reverse_coefficient": 0.001953125,
+      "polar_forward_ranks": [
+        {
+          "rank": 0,
+          "dimension": 1,
+          "eigenvalue": 0.0553061543300932,
+          "scalar_block_error": 1.263929619887336e-16
+        },
+        {
+          "rank": 1,
+          "dimension": 24,
+          "eigenvalue": 0.6637627564304202,
+          "scalar_block_error": 2.453444720188193e-15
+        }
+      ],
+      "polar_reverse_ranks": [
+        {
+          "rank": 0,
+          "dimension": 1,
+          "eigenvalue": 0.05530615433009316,
+          "scalar_block_error": 1.3817265889232162e-16
+        },
+        {
+          "rank": 1,
+          "dimension": 24,
+          "eigenvalue": 0.14292942309708714,
+          "scalar_block_error": 9.17389630095739e-16
+        },
+        {
+          "rank": 2,
+          "dimension": 75,
+          "eigenvalue": 0.1666666666666666,
+          "scalar_block_error": 6.808055669910358e-16
+        }
+      ]
+    },
+    {
+      "N": 5,
+      "p": 2,
+      "m": 3,
+      "C_upper": 1,
+      "common_HS_dimension": 100,
+      "errors": {
+        "centered_reverse_gram": 8.615089837920355e-17,
+        "polar_partial_isometry": 1.5502490614340958e-14,
+        "polar_casimir_intertwining": 1.592237824842358e-14,
+        "polar_identity": 6.313708723754101e-16
+      },
+      "centered_reverse_coefficient": 0.0020576131687242796,
+      "polar_forward_ranks": [
+        {
+          "rank": 0,
+          "dimension": 1,
+          "eigenvalue": 0.1555555555555559,
+          "scalar_block_error": 1.2012652431989942e-15
+        },
+        {
+          "rank": 1,
+          "dimension": 24,
+          "eigenvalue": 0.6222222222222221,
+          "scalar_block_error": 5.4828815039674515e-15
+        },
+        {
+          "rank": 2,
+          "dimension": 75,
+          "eigenvalue": 1.0888888888888888,
+          "scalar_block_error": 1.6769166647737068e-14
+        }
+      ],
+      "polar_reverse_ranks": [
+        {
+          "rank": 0,
+          "dimension": 1,
+          "eigenvalue": 0.15555555555555595,
+          "scalar_block_error": 6.430210275945882e-16
+        },
+        {
+          "rank": 1,
+          "dimension": 24,
+          "eigenvalue": 0.6222222222222222,
+          "scalar_block_error": 3.5090767479469812e-15
+        },
+        {
+          "rank": 2,
+          "dimension": 75,
+          "eigenvalue": 1.0888888888888888,
+          "scalar_block_error": 8.737156286049831e-15
+        }
+      ]
+    },
+    {
+      "N": 5,
+      "p": 2,
+      "m": 4,
+      "C_upper": 1,
+      "common_HS_dimension": 25,
+      "errors": {
+        "centered_reverse_gram": 9.06714588506384e-17,
+        "polar_partial_isometry": 3.0791575480906002e-15,
+        "polar_casimir_intertwining": 8.334960701964611e-15,
+        "polar_identity": 7.200451293970923e-16
+      },
+      "centered_reverse_coefficient": 0.010416666666666666,
+      "polar_forward_ranks": [
+        {
+          "rank": 0,
+          "dimension": 1,
+          "eigenvalue": 0.07693880384897198,
+          "scalar_block_error": 3.2156414223149254e-16
+        },
+        {
+          "rank": 1,
+          "dimension": 24,
+          "eigenvalue": 0.38630763534555923,
+          "scalar_block_error": 2.923834095671614e-15
+        },
+        {
+          "rank": 2,
+          "dimension": 75,
+          "eigenvalue": 0.21296296296296313,
+          "scalar_block_error": 1.8418185627519518e-15
+        }
+      ],
+      "polar_reverse_ranks": [
+        {
+          "rank": 0,
+          "dimension": 1,
+          "eigenvalue": 0.4936054705156386,
+          "scalar_block_error": 6.047322770145346e-16
+        },
+        {
+          "rank": 1,
+          "dimension": 24,
+          "eigenvalue": 1.0344557834937078,
+          "scalar_block_error": 3.997014811270413e-15
+        }
+      ]
+    }
+  ],
+  "symbolic": {
+    "exact_squared_amplitude_identity": true,
+    "alpha_squared_Sr_squared_minus_Srp_squared": "p*(m**3 - m**2*n - m**2*p + m*n*p + 2*m*n*r - m*p*r - 2*m*r**2 - n*p*r + p*r**2)/(m**3*n)"
+  },
+  "scope": "Complete centered reverse-defect Grams and polar partial-isometry maps at finite N; exact amplitude polynomial identity. No Monte Carlo or truncated propagator approximation.",
+  "environment": {
+    "python": "3.14.5",
+    "numpy": "2.4.6",
+    "sympy": "1.14.0"
+  },
+  "input_sha256": {
+    "code/check_memory_polar_transfer.py": "6c27b10e66cbafdb2fc9e3c791149bc7ace50f6451ac766b3595b1d6b2ae28b8",
+    "code/memory_charged_transfer.py": "155392a862098a9aa1119085629bca5b2467e0de9f1610c009273e66fa80455a",
+    "code/complex_syk_dictionary.py": "96b4890a167beeadf0849ccffdbb20dd125d921af062fd291044da9024900abf"
+  },
+  "elapsed_seconds": 0.40894055366516113
+}

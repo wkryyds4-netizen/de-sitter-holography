@@ -1,0 +1,410 @@
+{
+  "status": "Local research progress; long-term objective remains active",
+  "created_at_utc": "2026-11-06T19:54:36.423214+00:00",
+  "scientific_status": "Exact full-Fock adjacent-charge transfer is represented by the body-loss operator D. Weighted compact-time replacement by the whole-field G source and summable ordinary-power/force tails are established in the manuscript. Nilpotent source normalization retains internal Gaussian contractions and identifies the charge-static background already present in G2. Full joint charge-energy regression and charged AA/AB/BA spectra remain open.",
+  "parameters": "Standard CAR, overlapping complex Gaussian p-body model, same original J across charges, annealed normalized beta=mu=0 full trace, hbar=1/string time; even N, p to infinity, lambda_N=p^2/N tending to positive lambda, fixed Js. Memory times are in fixed compact intervals; polynomial degrees are fixed before the double-scale limit. Finite integer checks use a separate 2/1 variance.",
+  "proof_scope": "Saved finite identities, selected CAR words, signed local graph coefficients and full-binomial numerical sums check the recorded assertions at their specified parameters. They do not by themselves prove weighted all-time bounds, arbitrary-degree Poisson geometry or a static-subtraction theorem. Those manuscript arguments and the unresolved joint charge-energy regression are distinguished explicitly. No-Gaussian-bridge does not remove charge-static correlations in whole-field oriented sources.",
+  "continuation": "Construct the joint charge-energy regression of G_n and K_n, recover the known low-order A0 and nonzero A0/B2 mixed calibration after proper static subtraction, and determine AA/AB/BA. Then combine with the neutral kernel before returning to the Susskind bulk dictionary and interactions.",
+  "external_scope": "Earlier Issue 1 audit retained; no new issue reply or historical reintegration.",
+  "git_commit_created": false,
+  "git_push_performed": false,
+  "archive_created": false,
+  "external_reply_sent": false,
+  "previous_evidence": {
+    "results/susskind-memory-wick-descendants/local-evidence.json": {
+      "sha256": "fa7fc78e8fe64611fb22322d5d46f611b69473ffaf973a48f313d349376c3e42",
+      "unchanged_scientific_files": [
+        "code/memory_wick_descendant_chords.py",
+        "code/check_memory_wick_descendants.py",
+        "code/build_memory_wick_descendants.ps1",
+        "code/record_memory_wick_descendants.py",
+        "manuscript/susskind-memory-wick-descendants/main.tex",
+        "output/pdf/de-sitter-susskind-memory-wick-descendants.pdf",
+        "notes/susskind-memory-wick-descendants.md",
+        "literature/susskind-memory-wick-descendants-sources.md",
+        "notes/susskind-memory-oriented-transfer-seed.md",
+        "journal/2026-11-07-susskind-memory-wick-descendants.md",
+        "PROJECT.md",
+        "code/check_memory_source_regression.py",
+        "results/susskind-memory-wick-descendants/descendant-checks.json",
+        "results/susskind-memory-wick-descendants/source-regression-checks.json",
+        "results/susskind-memory-wick-descendants/main.log"
+      ],
+      "excluded_mutable_plans": [
+        "NEXT.md",
+        "PLAN.md",
+        "README.md"
+      ]
+    },
+    "results/susskind-memory-uniform-bound/local-evidence.json": {
+      "sha256": "a781c8597c70af9c81ea91c5379996d1572e85366328eeebc6edece7d0b7e379",
+      "unchanged_scientific_files": [
+        "code/memory_jacobi_bridge.py",
+        "code/check_memory_dyson_force.py",
+        "code/check_memory_jacobi_entire.py",
+        "code/build_memory_uniform_bound.ps1",
+        "code/record_memory_uniform_bound.py",
+        "manuscript/susskind-memory-uniform-bound/main.tex",
+        "output/pdf/de-sitter-susskind-memory-uniform-bound.pdf",
+        "notes/susskind-memory-uniform-bound.md",
+        "notes/susskind-memory-joint-kernel-seed.md",
+        "literature/susskind-memory-uniform-bound-sources.md",
+        "journal/2026-11-07-susskind-memory-uniform-bound.md",
+        "results/susskind-memory-uniform-bound/jacobi-recurrence-checks.json",
+        "results/susskind-memory-uniform-bound/dyson-force-checks.json",
+        "results/susskind-memory-uniform-bound/jacobi-entire-checks.json",
+        "results/susskind-memory-uniform-bound/main.log",
+        "results/susskind-memory-uniform-bound/diagnostics/pre-visual-fix-page-8.png",
+        "results/susskind-memory-uniform-bound/diagnostics/pre-visual-fix.log",
+        "results/susskind-memory-uniform-bound/diagnostics/pre-visual-fix.tex"
+      ],
+      "excluded_mutable_plans": [
+        "NEXT.md",
+        "PLAN.md",
+        "README.md"
+      ]
+    },
+    "results/susskind-memory-charged-transfer/local-evidence.json": {
+      "sha256": "d2889368a3138728905d79b3cb97df0fe9ef369063b29373c28e408852a1b046",
+      "unchanged_scientific_files": [
+        "code/memory_charged_transfer.py",
+        "code/check_memory_polar_transfer.py",
+        "code/verify_memory_transfer_closure.py",
+        "code/build_memory_charged_transfer.ps1",
+        "code/record_memory_charged_transfer.py",
+        "manuscript/susskind-memory-charged-transfer/main.tex",
+        "output/pdf/de-sitter-susskind-memory-charged-transfer.pdf",
+        "notes/susskind-memory-charged-transfer.md",
+        "literature/susskind-memory-charged-transfer-sources.md",
+        "journal/2026-11-07-susskind-memory-charged-transfer.md",
+        "results/susskind-memory-charged-transfer/transfer-checks.json",
+        "results/susskind-memory-charged-transfer/polar-and-reverse-checks.json",
+        "results/susskind-memory-charged-transfer/closure-checks.json",
+        "results/susskind-memory-charged-transfer/main.log",
+        "results/susskind-memory-charged-transfer/diagnostics/first-build-source.tex",
+        "results/susskind-memory-charged-transfer/diagnostics/first-build.log"
+      ],
+      "excluded_mutable_plans": [
+        "NEXT.md",
+        "PLAN.md",
+        "README.md"
+      ]
+    },
+    "results/susskind-memory-two-component/local-evidence.json": {
+      "sha256": "4f96fd71d5df254857ebf12089d67b34862e37225732ac126e7dc4907f3aeed9",
+      "unchanged_scientific_files": [
+        "code/memory_four_copy_background.py",
+        "code/check_four_copy_finite_time.py",
+        "code/check_neutral_memory_coefficients.py",
+        "code/build_memory_two_component.ps1",
+        "code/record_memory_two_component.py",
+        "manuscript/susskind-memory-two-component/main.tex",
+        "output/pdf/de-sitter-susskind-memory-two-component.pdf",
+        "notes/susskind-memory-two-component.md",
+        "notes/susskind-memory-neutral-series-seed.md",
+        "literature/susskind-memory-two-component-sources.md",
+        "journal/2026-11-07-susskind-memory-two-component.md",
+        "results/susskind-memory-two-component/four-copy-q-checks.json",
+        "results/susskind-memory-two-component/four-copy-finite-time-checks.json",
+        "results/susskind-memory-two-component/neutral-coefficient-checks.json",
+        "results/susskind-memory-two-component/main.log",
+        "results/susskind-memory-two-component/diagnostics/first-build.log",
+        "results/susskind-memory-two-component/diagnostics/first-build.tex",
+        "results/susskind-memory-two-component/diagnostics/first-finite-driver-failure.txt",
+        "results/susskind-memory-two-component/diagnostics/first-finite-driver.py",
+        "results/susskind-memory-two-component/diagnostics/second-build.log",
+        "results/susskind-memory-two-component/diagnostics/second-build.tex"
+      ],
+      "excluded_mutable_plans": [
+        "NEXT.md",
+        "PLAN.md",
+        "README.md"
+      ]
+    }
+  },
+  "checks": {
+    "finite-transfer-checks.json": {
+      "counts": {
+        "matrix_identities": 17465,
+        "integer_component_equalities": 468408,
+        "Hermite_transfer_coefficient_cases": 4368,
+        "complete_OU_polynomial_cases": 46
+      },
+      "taylor": {
+        "cases": 12582,
+        "endpoint_m_equals_p": 1026,
+        "k_zero_to_three": 1272,
+        "zero_remainder": 954,
+        "upper_equality": 1272
+      },
+      "complete_neutral_matrix_units": 116,
+      "setup_matrix_identities": 232,
+      "setup_integer_components": 74248,
+      "scope": "Complete small-system Gaussian coordinates and Hermite coefficients. Variance 2/1 integer normalization is distinct from physical Js units."
+    },
+    "oriented-mark-checks.json": {
+      "counts": {
+        "local_deficit_comparisons": 381,
+        "local_words": 127,
+        "local_nonzero_odd_words": 6,
+        "geometry_pairings": 85,
+        "geometry_coefficient_comparisons": 6120,
+        "geometry_cases": 765,
+        "negative_single_coefficients": 312,
+        "negative_connected_coefficients": 184,
+        "legal_two_slot_cases": 446,
+        "finite_neutral_loss_comparisons": 480,
+        "finite_words": 80,
+        "finite_type_cases": 720,
+        "finite_trace_comparisons": 5760,
+        "finite_negative_double_marks": 4,
+        "finite_zero_base_nonzero_mark": 8,
+        "pair_site_table_rows": 27,
+        "p_minus_D_H_calibrations": 45
+      },
+      "invalid_shortcut_preserved": true,
+      "scope": "Coupling-Wick blocks without internal pairs; seeded selected finite words are recorded explicitly and are not an exhaustive index-set enumeration."
+    },
+    "body-source-checks.json": {
+      "counts": {
+        "finite_scalar_coefficients": 6408,
+        "no_bridge_diagrams": 294,
+        "nonzero_no_bridge_connected": 80
+      },
+      "scope": "Fixed CAR index assignments include internal contractions; the larger cases use listed deterministic assignments. The nonzero static connected terms are retained, not treated as a dynamic residual kernel."
+    },
+    "charge-background-checks.json": {
+      "counts": {
+        "exact_systems": 81,
+        "exact_sector_identities": 1643,
+        "cross_collision_types": 4,
+        "own_collision_types": 2,
+        "exponential_checks": 4,
+        "high_precision_systems": 12,
+        "central_cases": 72
+      },
+      "maximum_precision_difference": "9.62575023348e-69",
+      "scope": "Every charge sector is included; 70/110-digit agreement is not interval certification. The charge-static limit uses the separate analytic L2 proof."
+    },
+    "body-geometry-checks.json": {
+      "counts": {
+        "coefficient_comparisons": 18944,
+        "geometry_cases": 2368,
+        "cases_with_internal_pairs": 724,
+        "mixed_D_L_with_D_internal": 277,
+        "negative_linear_coefficients": 1454,
+        "negative_connected_coefficients": 178,
+        "negative_G_linear_coefficients": 1946,
+        "no_bridge_positive_charge_connected": 80,
+        "pure_Wick_cases": 1644,
+        "pure_Wick_comparisons": 6576,
+        "G2_diagrams": 3,
+        "G2_formal_rational_checks": 3,
+        "cases_DD": 858,
+        "cases_DL": 572,
+        "cases_LD": 527,
+        "cases_LL": 411
+      },
+      "same_stage_input_links": {
+        "results/susskind-memory-oriented-transfer/body-source-checks.json": {
+          "sha256": "02fd8ca2e7f5e105b9fb5461727270ba976c6cb1e1689102cf8ab55504e1066c",
+          "input_hashes_verified": true
+        },
+        "results/susskind-memory-oriented-transfer/oriented-mark-checks.json": {
+          "sha256": "3dd51ef1af621df16f92aab52a9c37acf2815aaf31d0c8c85609184391e6a2be",
+          "input_hashes_verified": true
+        },
+        "results/susskind-memory-oriented-transfer/charge-background-checks.json": {
+          "sha256": "a3c9cdec6d82e9d0a1c5b271ef9ca5437006be4edb0f4802a90bafb6780d4b36",
+          "input_hashes_verified": true
+        }
+      },
+      "G2_energy_only_equals_old_w": false,
+      "G2_joint_subtraction_recovers_old_w": true,
+      "scope": "Signed finite diagrams compare whole-field D with Wick-restricted L. Formal rational lambda/q checks are independent algebraic substitutions, not physical q=exp(-4 lambda) parameter pairs. The G2 subtraction is a low-degree calibration and not a general pinching theorem."
+    }
+  },
+  "input_hashes_verified": {
+    "finite-transfer-checks.json": {
+      "code/check_memory_oriented_transfer.py": "2cc850380a84c58f38da88cc6dde849c487bcd273f0d75dad644acb9411685c7"
+    },
+    "oriented-mark-checks.json": {
+      "code/memory_oriented_marked_chords.py": "3e18a622a1d1944b63be9218a2f61f506e6170c953ad49e16eb4357309c9d3d8",
+      "code/check_memory_oriented_marks.py": "03d45e387916f8fe276fff0f340ef3d33d17859173c5db213b3a30c02d171116",
+      "code/complex_syk_dictionary.py": "96b4890a167beeadf0849ccffdbb20dd125d921af062fd291044da9024900abf",
+      "code/singlet_multimark.py": "5b1def3fcc893c807e416c909076c6bb8383f54975bd9ed09d5dde37f129db0d",
+      "code/singlet_coefficient.py": "ef7d9b96f96a036ea0d9774950702a82a968b56758a778db0365e9df0c3b2e10"
+    },
+    "body-source-checks.json": {
+      "code/check_memory_body_sources.py": "784ada3c2b5b07651747a5dc5c12ce4b27f32386f18c3b178296936198dfae00",
+      "code/memory_body_source_chords.py": "e0c34558f1e18684bf3a32c906f5edc13e8ab02dfe113b34eaa6936f78015b72",
+      "code/memory_size_marked_chords.py": "4b7e54c2218198ef0d8c29ed4aa6344cd3e5a24d466464c5006f49e0b6d7ec36",
+      "code/singlet_coefficient.py": "ef7d9b96f96a036ea0d9774950702a82a968b56758a778db0365e9df0c3b2e10",
+      "code/singlet_multimark.py": "5b1def3fcc893c807e416c909076c6bb8383f54975bd9ed09d5dde37f129db0d",
+      "code/complex_syk_dictionary.py": "96b4890a167beeadf0849ccffdbb20dd125d921af062fd291044da9024900abf"
+    },
+    "charge-background-checks.json": {
+      "code/check_memory_charge_background.py": "9668ec1144b02e906add6523184fde6c1febb3505e7ac855fd0914773596771b"
+    },
+    "body-geometry-checks.json": {
+      "code/check_memory_body_geometry.py": "7b21a318c360440526b6725e59dbc019f17cd02a511faadb37b1f8fd5424d96b",
+      "code/memory_body_source_chords.py": "e0c34558f1e18684bf3a32c906f5edc13e8ab02dfe113b34eaa6936f78015b72",
+      "code/memory_oriented_marked_chords.py": "3e18a622a1d1944b63be9218a2f61f506e6170c953ad49e16eb4357309c9d3d8",
+      "code/memory_size_marked_chords.py": "4b7e54c2218198ef0d8c29ed4aa6344cd3e5a24d466464c5006f49e0b6d7ec36",
+      "code/singlet_coefficient.py": "ef7d9b96f96a036ea0d9774950702a82a968b56758a778db0365e9df0c3b2e10",
+      "code/singlet_multimark.py": "5b1def3fcc893c807e416c909076c6bb8383f54975bd9ed09d5dde37f129db0d",
+      "code/complex_syk_dictionary.py": "96b4890a167beeadf0849ccffdbb20dd125d921af062fd291044da9024900abf",
+      "results/susskind-memory-oriented-transfer/body-source-checks.json": "02fd8ca2e7f5e105b9fb5461727270ba976c6cb1e1689102cf8ab55504e1066c",
+      "results/susskind-memory-oriented-transfer/oriented-mark-checks.json": "3dd51ef1af621df16f92aab52a9c37acf2815aaf31d0c8c85609184391e6a2be",
+      "results/susskind-memory-oriented-transfer/charge-background-checks.json": "a3c9cdec6d82e9d0a1c5b271ef9ca5437006be4edb0f4802a90bafb6780d4b36"
+    }
+  },
+  "parameter_hashes_verified": {
+    "finite-transfer-checks.json": "82d533506c7a54ce96ed63cd048c6d82b7fd0ad4c74d8008fcb0ae0ea66bfcd7",
+    "oriented-mark-checks.json": "38f70b0e5829d98761ac72d83073f7c66ca5a40d2a8f2057862a3507ad4f15c0",
+    "body-source-checks.json": "e75fdccc43bc62590f712cafded804236a8154d23f2bda98996f05adcd49cb3f",
+    "charge-background-checks.json": "bebdec5c656476e7592e31f7f295f7eba88111abc417ccd98eeb37575bf28ade",
+    "body-geometry-checks.json": "ead78616bad5ccb73ed6995b16dbc7b94df02ec5c6d3ef4ccb338d786a468adb"
+  },
+  "evidence_scopes": {
+    "finite-transfer-checks.json": "Complete finite neutral matrix units and every Gaussian-Hermite coefficient of the recorded ordinary powers, exact common-J transfer/D/OU identities, DH=pH, E(0)=E-prime(0)=0, m=0 convention, m<p vanishing and m=p boundary. Direct conditional Gaussian integration independently checks the number filter. Finite tests do not prove a double-scaling rate, a full-time weighted estimate or an AA/AB/BA spectral kernel; physical Js units require separate rescaling.",
+    "oriented-mark-checks.json": "Neutral even coupling-Wick source blocks, no internal source pairings; asym/sym loss agree with their respective incidence assignments. Not whole-field Gaussian-degree marks with internal contractions; not global odd source blocks.",
+    "body-source-checks.json": "Exact local CAR checks and fixed-diagram no-bridge identity checks. The all-degree pair-Poisson and no-bridge proofs are separate. No charged dynamic spectrum or exact pinching result is inferred from this file.",
+    "charge-background-checks.json": "Static charge background only, in beta=mu=0 normalized full-Fock trace; C_m uses the same w_N in every charge. G2 Gaussian-chaos zero is -D C_Q. This checks why two internal-only Gaussian fields can retain connected charge fluctuations. It does not construct the charged AA/AB/BA kernel or establish a general energy-plus-charge regression/pinching theorem.",
+    "body-geometry-checks.json": "Exact finite-diagram closed geometry versus singleton-normalized local algorithm, including internal D pairs and mixed D/L. L remains coupling-Wick restricted. Signed terms are retained; this finite set does not replace the all-degree proof."
+  },
+  "recorded_driver_environments": {
+    "finite-transfer-checks.json": {
+      "python": "3.14.5",
+      "numpy": "2.4.6",
+      "platform": "Windows-11-10.0.26200-SP0"
+    },
+    "oriented-mark-checks.json": {
+      "python": "3.14.5",
+      "numpy": "2.4.6",
+      "platform": "Windows-11-10.0.26200-SP0"
+    },
+    "body-source-checks.json": {
+      "python": "3.14.5",
+      "numpy": "2.4.6",
+      "platform": "Windows-11-10.0.26200-SP0"
+    },
+    "charge-background-checks.json": {
+      "python": "3.14.5",
+      "mpmath": "1.3.0",
+      "platform": "Windows-11-10.0.26200-SP0"
+    },
+    "body-geometry-checks.json": {
+      "python": "3.14.5",
+      "numpy": "2.4.6",
+      "platform": "Windows-11-10.0.26200-SP0"
+    }
+  },
+  "environment": {
+    "python": "3.14.5",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "recorder_dependencies": "Python standard library only"
+  },
+  "build": {
+    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File code/build_memory_oriented_transfer.ps1",
+    "pages": 8,
+    "passes": 2,
+    "pass_records": [
+      {
+        "pass_number": 1,
+        "path": "tmp/pdfs/susskind-memory-oriented-transfer-build/pass1.txt",
+        "sha256": "6bbbdfe5b2673e7cf399fbe1c0bd35e252ef31372464ef855564758fb585cf5a",
+        "compiler_header": "pdflatex.exe : log4cxx: setFile(C:\\Users\\weiji\\MiKTeX\\texmfs/data\\miktex\\log/pdflatex.log,true) call failed."
+      },
+      {
+        "pass_number": 2,
+        "path": "tmp/pdfs/susskind-memory-oriented-transfer-build/pass2.txt",
+        "sha256": "6bbbdfe5b2673e7cf399fbe1c0bd35e252ef31372464ef855564758fb585cf5a",
+        "compiler_header": "pdflatex.exe : log4cxx: setFile(C:\\Users\\weiji\\MiKTeX\\texmfs/data\\miktex\\log/pdflatex.log,true) call failed."
+      }
+    ],
+    "compiler_header": "This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5 Portable) (preloaded format=pdflatex 2026.9.19)  7 NOV 2026 03:52",
+    "render_command": "pdftoppm -r 95 -png output/pdf/de-sitter-susskind-memory-oriented-transfer.pdf tmp/pdfs/susskind-memory-oriented-transfer-render/page",
+    "render_number_width": 1,
+    "final_render_filenames": [
+      "page-1.png",
+      "page-2.png",
+      "page-3.png",
+      "page-4.png",
+      "page-5.png",
+      "page-6.png",
+      "page-7.png",
+      "page-8.png"
+    ],
+    "final_pages_visually_inspected": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "visual_result": "Root inspected every final 95dpi render after the last build, including formula line lengths, reference text and page boundaries."
+  },
+  "diagnostics": {
+    "preserved_files": [
+      "results/susskind-memory-oriented-transfer/diagnostics/first-layout/main.log",
+      "results/susskind-memory-oriented-transfer/diagnostics/first-layout/main.pdf",
+      "results/susskind-memory-oriented-transfer/diagnostics/first-layout/main.tex"
+    ],
+    "scope": "Earlier failures/layouts remain separate from the verified final build."
+  },
+  "process_state": "The five scientific checks, both final LaTeX passes and final rendering are terminal when this recorder is run; it executes none of them.",
+  "hashes": {
+    "NEXT.md": "18093d3277f1cb64664634a864aa908d30c9fd7e33cf7f6cd9d4ccafa4dc07b5",
+    "PLAN.md": "02c63c80e2f230d09bcba8520e6882dee703ad44279c7387ff37779a06306915",
+    "PROJECT.md": "5c7cab9a9abd28d354b07a94aee40aedcca351bb4eff8b0cb07e8428058fd00a",
+    "README.md": "c8a3e21c1a604e70ea65ddb64e55b41def83b7bc4da569ceb7190aea35b3571a",
+    "code/build_memory_oriented_transfer.ps1": "350b13c56374b76b8fc618678833bb372c0cbf98a30a9df602fb313826127846",
+    "code/check_memory_body_geometry.py": "7b21a318c360440526b6725e59dbc019f17cd02a511faadb37b1f8fd5424d96b",
+    "code/check_memory_body_sources.py": "784ada3c2b5b07651747a5dc5c12ce4b27f32386f18c3b178296936198dfae00",
+    "code/check_memory_charge_background.py": "9668ec1144b02e906add6523184fde6c1febb3505e7ac855fd0914773596771b",
+    "code/check_memory_oriented_marks.py": "03d45e387916f8fe276fff0f340ef3d33d17859173c5db213b3a30c02d171116",
+    "code/check_memory_oriented_transfer.py": "2cc850380a84c58f38da88cc6dde849c487bcd273f0d75dad644acb9411685c7",
+    "code/complex_syk_dictionary.py": "96b4890a167beeadf0849ccffdbb20dd125d921af062fd291044da9024900abf",
+    "code/memory_body_source_chords.py": "e0c34558f1e18684bf3a32c906f5edc13e8ab02dfe113b34eaa6936f78015b72",
+    "code/memory_oriented_marked_chords.py": "3e18a622a1d1944b63be9218a2f61f506e6170c953ad49e16eb4357309c9d3d8",
+    "code/memory_size_marked_chords.py": "4b7e54c2218198ef0d8c29ed4aa6344cd3e5a24d466464c5006f49e0b6d7ec36",
+    "code/record_memory_oriented_transfer.py": "e4b2f4d8f90990b34839866d4c64530fcd05793ef058a901097fac3505e97d78",
+    "code/singlet_coefficient.py": "ef7d9b96f96a036ea0d9774950702a82a968b56758a778db0365e9df0c3b2e10",
+    "code/singlet_multimark.py": "5b1def3fcc893c807e416c909076c6bb8383f54975bd9ed09d5dde37f129db0d",
+    "journal/2026-11-07-susskind-memory-oriented-transfer.md": "2c454990d86fa7a42a25e28c2c3ca2c154fe0745250e2440603a1f811cff24d4",
+    "literature/susskind-memory-oriented-transfer-sources.md": "53f3c83857e6a59be0694c96c9ad43cb3f7128518b1d94e861f892e448fcac31",
+    "manuscript/susskind-memory-oriented-transfer/main.tex": "36420f1a27c2b568980aebb9085dae1436a094c24cc3e0d98fa1d0e90ce1f64e",
+    "notes/susskind-memory-charge-background.md": "7ee79015be3ca1c6c0069b87c09493c0a9012fad27f15f33130b8d4033c51422",
+    "notes/susskind-memory-oriented-transfer-proof-draft.md": "ef3c01c244afbce1397ef5272489fb30acc01ca6f860bfe13f48ea755b6ee52e",
+    "notes/susskind-memory-oriented-transfer-seed.md": "bd36a1efcd12cccc0e8849227e53480c00778e220bcf52190cc329358b3a89be",
+    "notes/susskind-memory-oriented-transfer.md": "ba70dd5517bfcba3066e1066b734ec64b6659cae5e6b637ee5845a2f194beef8",
+    "output/pdf/de-sitter-susskind-memory-oriented-transfer.pdf": "3a32a08ea375ce25573ccd02e818e2f8ddc6d327401dc25a53bb757a8a967e67",
+    "results/susskind-memory-oriented-transfer/body-geometry-checks.json": "e3900d9ce5c1a2d4cbfebb0071e8e9f61f0db6c18f618f04196c4a543f07c8d9",
+    "results/susskind-memory-oriented-transfer/body-source-checks.json": "02fd8ca2e7f5e105b9fb5461727270ba976c6cb1e1689102cf8ab55504e1066c",
+    "results/susskind-memory-oriented-transfer/charge-background-checks.json": "a3c9cdec6d82e9d0a1c5b271ef9ca5437006be4edb0f4802a90bafb6780d4b36",
+    "results/susskind-memory-oriented-transfer/finite-transfer-checks.json": "9c7e781db273c564cf1835155f6c76d1d50d0b262fbc8a96338d11978dd0304e",
+    "results/susskind-memory-oriented-transfer/main.log": "098b8ec7af94fe4658c247556123077295ec8d53ce22ddf35cceb34b745de494",
+    "results/susskind-memory-oriented-transfer/oriented-mark-checks.json": "3dd51ef1af621df16f92aab52a9c37acf2815aaf31d0c8c85609184391e6a2be",
+    "results/susskind-memory-oriented-transfer/diagnostics/first-layout/main.log": "8921edcca851ace74426146fceba596d49f53a8a06eb8e62f188a3d2b4068dee",
+    "results/susskind-memory-oriented-transfer/diagnostics/first-layout/main.pdf": "fca56fdc9b9864a85654800fd7deb9b6b8cdd3c5053bed6cb5754b4566ac0bf2",
+    "results/susskind-memory-oriented-transfer/diagnostics/first-layout/main.tex": "72a869c0d098a33a8fa373aa4ec6bd744f5f59e0a3f5725bf42247774332ef44"
+  },
+  "render_hashes": {
+    "tmp/pdfs/susskind-memory-oriented-transfer-render/page-1.png": "7130f2796b29f4fcabcb9d91cbc91f6e3b2f4c29221e1d4922eefcbd923bf23c",
+    "tmp/pdfs/susskind-memory-oriented-transfer-render/page-2.png": "a68679646213dbe6f853e0cfc4750df156117c39c5c79c12e69f87f882614478",
+    "tmp/pdfs/susskind-memory-oriented-transfer-render/page-3.png": "04df7885e6dadc808d7ae33b5137a4cbf4e682b7b808cb850efd0e35a51d431d",
+    "tmp/pdfs/susskind-memory-oriented-transfer-render/page-4.png": "5fc0079bf3fc0f1574e0d9d3e31d79ee4126800e4c4d0800a62115d0e33d75b1",
+    "tmp/pdfs/susskind-memory-oriented-transfer-render/page-5.png": "1af5f0d2df9d5c89e1c46e03cbf9f84bcc3d1b19cfc07b3eb112df53e168b7ce",
+    "tmp/pdfs/susskind-memory-oriented-transfer-render/page-6.png": "0fd190a3ee61e53994fe64f1dde2aadc68a046224f8af8f3792656f5c618de89",
+    "tmp/pdfs/susskind-memory-oriented-transfer-render/page-7.png": "53a9c55da7b35a6b75e60add02ddcec2bcabaa5d9fca01ab3efa805e99fdac3c",
+    "tmp/pdfs/susskind-memory-oriented-transfer-render/page-8.png": "d31b6c9d373ea24baa79f2d1f6d889a740f5bd47d996a9c0754c34d004e35211"
+  },
+  "build_pass_hashes": {
+    "tmp/pdfs/susskind-memory-oriented-transfer-build/pass1.txt": "6bbbdfe5b2673e7cf399fbe1c0bd35e252ef31372464ef855564758fb585cf5a",
+    "tmp/pdfs/susskind-memory-oriented-transfer-build/pass2.txt": "6bbbdfe5b2673e7cf399fbe1c0bd35e252ef31372464ef855564758fb585cf5a"
+  }
+}

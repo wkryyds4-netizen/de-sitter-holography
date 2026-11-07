@@ -1,0 +1,115 @@
+{
+  "created_at_utc": "2026-11-06T08:09:32.186253+00:00",
+  "status": "Saved locally; no publication",
+  "scientific_status": "Raw quartic descendants restored through all ordinary chaos degrees; uniform second-chaos table, marked Wick-block half-filled trace bridge, and the eight-direction equal-time projection of collective raw mZ2 assembled. Residual is Q4 plus the second-chaos output-deficit residual; their energy-resolved cross and complete spectrum remain open.",
+  "current_git_head": "714d038bb605cfcffdc351e4dcc62aa95237d25f",
+  "git_commit_created": false,
+  "git_push_performed": false,
+  "archive_created": false,
+  "parent_manifest_sha256": "d4fda0f7081ac8945ddbc2fee543d94e12608c2fcea0f97091d678dbed4a56bf",
+  "previous_stage_scientific_files_unchanged": [
+    "code/memory_sixth_moment.py",
+    "code/check_memory_sixth_moment.py",
+    "code/memory_A_filter_uniform.py",
+    "code/build_memory_filter_limit.ps1",
+    "code/record_memory_filter_limit.py",
+    "manuscript/susskind-memory-filter-limit/main.tex",
+    "output/pdf/de-sitter-susskind-memory-filter-limit.pdf",
+    "notes/susskind-memory-filter-limit.md",
+    "literature/susskind-memory-filter-limit-sources.md",
+    "journal/2026-11-06-susskind-memory-filter-limit.md",
+    "results/susskind-memory-filter-limit/filter-certificate.json",
+    "results/susskind-memory-filter-limit/main.log",
+    "results/susskind-memory-filter-limit/sixth-moment-certificate.json",
+    "results/susskind-memory-filter-limit/sixth-moment-checks.json"
+  ],
+  "checks": {
+    "raw_core_identities": 720,
+    "single_contraction_identities": 3600,
+    "full_quadratic_tensors": 2,
+    "larger_half_filled_directions": 3,
+    "fixed_charge_trace_identities": 123,
+    "common_rank_scalar_means": 10
+  },
+  "environment": {
+    "python": "3.14.5",
+    "calculations": [
+      {
+        "python": "3.14.5",
+        "sympy": "1.14.0"
+      },
+      {
+        "python": "3.14.5",
+        "numpy": "2.4.6",
+        "sympy": "1.14.0"
+      },
+      {
+        "python": "3.14.5",
+        "sympy": "1.14.0"
+      }
+    ]
+  },
+  "build": {
+    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File code/build_memory_descendants.ps1",
+    "compiler": "This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5 Portable) (preloaded format=pdflatex 2026.9.19)  6 NOV 2026 16:02",
+    "passes_per_build": 2,
+    "successful_builds": 3,
+    "pages": 7,
+    "render_command": "pdftoppm -r 95 -png output/pdf/de-sitter-susskind-memory-descendants.pdf tmp/pdfs/susskind-memory-descendants-build/page",
+    "visual_review": "All seven final page PNGs viewed individually at 95 dpi. A tab-plus-imes typo was detected on an earlier page 5 and corrected to the multiplication symbol before final render review."
+  },
+  "failures": [
+    {
+      "stage": "symbolic projection parsing",
+      "reason": "Saved symbol lambda is a Python keyword; renamed to lam before parsing.",
+      "resolved": true
+    },
+    {
+      "stage": "rank scalar mean check",
+      "reason": "N4p2m3 has a lower-only rank outside the common-rank formula domain; exact CAR checks remain valid. Domain now explicit and skipped case recorded.",
+      "resolved": true
+    },
+    {
+      "stage": "visual review",
+      "reason": "One multiplication command was entered as a tab plus imes; fixed and all final pages reviewed.",
+      "resolved": true
+    }
+  ],
+  "process_state": "All computations, compilation and rendering terminal; no background calculation.",
+  "evidence_scope": "Finite tensor polarization checks support exact raw contractions; uniform filters and positive tail estimates prove the strong limits. Fixed-charge bridge uses balanced singleton occupations and absolute overlap tails, not numerical extrapolation. Raw mZ2 conclusion is equal-time and for the specified finite span, not a full commutant or spectral theorem.",
+  "hashes": {
+    "code/memory_descendant_filters.py": "9f9ae0b186a4bfe585f42da2343efb376c3a74f80f99d6ddbaac1cf7e054b379",
+    "code/check_memory_descendants.py": "0229d3dc2969ba64fd4d68d01b20ab32835520e5d4dfa006d47e31ae0e5b6a0e",
+    "code/check_memory_descendant_assembly.py": "a2a3278a72d860c8a85e6f22a781e246e472d874837d5b7c6b539c9bb0a0288a",
+    "code/build_memory_descendants.ps1": "b1b943ba4c294106033aea75d3231344d84ebba782fd9864c97dab790457daf5",
+    "code/record_memory_descendants.py": "d82b0aff5b694efdf6a17c0382628b430e1661501054a5a50da3509269212563",
+    "manuscript/susskind-memory-descendants/main.tex": "604d9fc6d09185af1235a3955b0a75f365d47dbebaa5f45f4aeaa2feaecc3e50",
+    "output/pdf/de-sitter-susskind-memory-descendants.pdf": "f68264809c8ca6622b64a32ab70ab0e2682dd5cb32fc87b3077b6db39a056e49",
+    "notes/susskind-memory-descendants.md": "671167e154e480aa532803be106e6199d857573d3c4f7d5492657899c1ecfb45",
+    "literature/susskind-memory-descendants-sources.md": "5fb0109ff7a96974e261749db6a7296c449ed44ad54e1e9b9182ad684f69c48d",
+    "journal/2026-11-06-susskind-memory-descendants.md": "f7b47938bb0f093bff70952c5890b48d3d2f53ee4773cf322b300de403cadb63",
+    "README.md": "d50e19fb07ca9eda537965ef6470115296d3130923e4d59d10a96adcd2125ecf",
+    "PLAN.md": "28ac30a9e8487be93aebacdbf71005ebe0b0aca963e095c8305e66959ed81273",
+    "NEXT.md": "7a21244a0f89689abaeb2d09e1c60e834790a9f1798599fe9595e2d44e2ca848",
+    "results/susskind-memory-descendants/assembly-certificate.json": "3220d50021ea456034f3935d7adce370310c9be58fca16e8f044736b9380df3c",
+    "results/susskind-memory-descendants/failures/initial-assembly.py": "cb988a926e83b4232a2aafe52a4391e328706271a63d13d1591eb08654545b5c",
+    "results/susskind-memory-descendants/failures/initial-parse.txt": "dcc528f6a91bbcd7ba847a34e6d46c1dadba6168582791b54be39bad197db480",
+    "results/susskind-memory-descendants/failures/rank-range.txt": "6ac778106bdcdabec49295645532e32531f7b4a3d2dec8659f69b633456ed0ae",
+    "results/susskind-memory-descendants/finite-descendants.json": "53a4f89caa641a7027df91a1c211066a4215a2606c3e691407307eb45dc05096",
+    "results/susskind-memory-descendants/main.log": "a64cb602c486444b9cb5dbcfa8892ebe72d3fa276b6e937efb42073c5d89b2c9",
+    "results/susskind-memory-descendants/symbolic-filters.json": "1561cc98c4710a6ec52700bd689e12d3319a1e3cf9304597908062f510753f85"
+  },
+  "render_hashes": {
+    "tmp/pdfs/susskind-memory-descendants-build/page-1.png": "b7ea522108df71de2bc4d81433c39651eb8aa716e9e3de0bac5825df327eb188",
+    "tmp/pdfs/susskind-memory-descendants-build/page-2.png": "7090506d13c0f913f8952bfe4c6bcda57b03345561349b06f270a803c3c91d74",
+    "tmp/pdfs/susskind-memory-descendants-build/page-3.png": "6fee1e69f94d8e100a1588f03adebe6e344cf29ddd71f29b4865a2a988e974a1",
+    "tmp/pdfs/susskind-memory-descendants-build/page-4.png": "d3503b1906dbfdf3a0ac17a42ba53b9b9566e1d2a5641ead5c414416fceffa67",
+    "tmp/pdfs/susskind-memory-descendants-build/page-5.png": "7d5d47bb001b71aa7340c7eb84ce31e3dfeadd53561d3bf309e2dc6f98de2704",
+    "tmp/pdfs/susskind-memory-descendants-build/page-6.png": "1f19a22b155fbf1d995fc64f1b55601f0f36e5bd8a2b614c434be56851a03440",
+    "tmp/pdfs/susskind-memory-descendants-build/page-7.png": "553472964ec48ef6d1da1eb43a05fe4efb4acc0a61c05eb095aae794d0b5fea7"
+  },
+  "build_pass_hashes": {
+    "pass1.txt": "d50eb863642a91534350c402c7dc032c156eb58b85846ba099b0888625164fa3",
+    "pass2.txt": "d50eb863642a91534350c402c7dc032c156eb58b85846ba099b0888625164fa3"
+  }
+}

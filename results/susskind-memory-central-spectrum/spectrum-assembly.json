@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "oriented_matrix": [
+    [
+      "16*C**2*lambda**2*q/(q + 1) + 4*C**2*lambda",
+      "16*C**2*lambda**2*q/(q + 1) - 4*C**2*lambda*q"
+    ],
+    [
+      "16*C**2*lambda**2*q/(q + 1) - 4*C**2*lambda*q",
+      "16*C**2*lambda**2*q/(q + 1) + 4*C**2*lambda"
+    ]
+  ],
+  "spectral_parameter": "q^2",
+  "T_coefficients": [
+    "-(16*lambda**2*q/(q + 1) + 2*lambda*(1 - q))/(16*lambda**2*q/(q + 1) + 2*lambda*(1 - q) + 2*lambda*(q + 1)) + 1/2",
+    "1/2"
+  ],
+  "T_variance": "-C**2*lambda*(q + 1)*(-8*lambda*q + q**2 - 1)/(4*lambda*q + q + 1)",
+  "projected_W2_core_variance": "-64*C**4*lambda**3*q**4*(q + 1)*(-8*lambda*q + q**2 - 1)/(4*lambda*q + q + 1)",
+  "normalized_curvature": "-2*C*(q - 1)*(q + 1)",
+  "cross_measures_zero": [
+    "T--Y_minus",
+    "Q4--Y_minus",
+    "Q4--Y_plus",
+    "Q4--T",
+    "projected_W2_core--Q4"
+  ],
+  "reused_reverse_templates": 128,
+  "reused_reverse_words": 6072,
+  "scope": "Uses the new uniform central trace theorem and general-charge orientation bridge. Reuses existing marked graph kernels and endpoint certificates, verifying their recorded source hashes without rerunning them. Proves the projected W2 core spectrum; does not yet restore all central raw U2 descendants or filtered F crosses.",
+  "environment": {
+    "python": "3.14.5",
+    "sympy": "1.14.0"
+  },
+  "input_sha256": {
+    "code/memory_central_spectrum.py": "33bfdbfe518f88dc18018bc7462b379dc1413474fde16c231e4011b366e41512",
+    "results/susskind-memory-oriented-kernel/reverse-cross.json": "0baf6df047e168803dabe7b265e515066dc2c2d194b514d8372d22a9e79caa1e",
+    "results/susskind-memory-oriented-kernel/oriented-marks.json": "ff6ff138fe7179c9ac5df6a1b8a15d56c7b55fff5a7a752ba0815a7a59ed9153",
+    "results/susskind-memory-oriented-kernel/spectral-checks.json": "02763578e415c707dd2ba7413549675041d8b1732fe0280030cfb463a529d72e",
+    "results/susskind-memory-quartic/cross-kernel.json": "475b7c59d678086479972555a4bd785830e778f35bd8a596fcfa602180f1fa94",
+    "results/susskind-memory-quartic/quartic.json": "bf28760f2674b1fe1791988527582b746212ecfc373f4d8b0a624b1d9a3195f7"
+  }
+}

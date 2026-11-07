@@ -1,0 +1,327 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,microtype}
+\usepackage[margin=24mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\core}{\mathcal E}
+\DeclareMathOperator{\tr}{tr}
+\title{Rank filters in the quadratic memory core\\Positive product channels and double-scaled tail control}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Local research note --- 6 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+The previously identified finite dynamical residual is resolved into
+input and output irreducible ranks. In the tested system, all eleven
+nonzero blocks of the four quadratic maps are collinear: the residual
+reflects different channel weights, rather than another multiplication
+direction within a block. Independently, covariance composition gives
+a positive output-rank law for products of isotropic rank channels.
+Three exact Casimir moments imply double-scaled concentration and a
+tail bound that can control filters of at most linear deficit growth.
+The full memory filter and its spectral limit remain to be evaluated.
+\end{abstract}
+
+\section{Rank resolution without discarding multiplicity}
+Use the standard-CAR, overlapping complex Gaussian $p$-body ensemble,
+with $\EE J_{IJ}J_{KL}=w\delta_{IL}\delta_{JK}$ and $\hbar=1$.
+At charge $m$, the scalar product is $\EE\tr_m X^\dagger Y$,
+where $\tr_m$ is normalized. The target remains
+\begin{equation}
+ \core=\sum_i(\operatorname{ad}_H^2c_i)^\dagger
+                    \operatorname{ad}_H^2c_i
+              +\tfrac14[H,[H,A]],\quad
+ A=\sum_i[H,c_i]^\dagger[H,c_i].
+\end{equation}
+The preceding exact contraction gives $Q_\core=\Delta\core/2$ and
+$W_2\core=Q_\core-2\EE\core$. Here $W_2$ is coupling chaos.
+
+Let $E_{ij}=c_i^\dagger c_j$. On neutral operators the Casimir is
+\begin{equation}
+ \mathcal C X=\sum_{ij}[E_{ij},[E_{ji},X]],\qquad
+ c_r=2r(N+1-r),\quad 0\le r\le R:=\min(m,N-m).
+\end{equation}
+The exact orthogonal projector is
+\begin{equation}
+ P_r=\prod_{s\ne r}\frac{\mathcal C-c_s}{c_r-c_s},\qquad
+ d_r=\binom Nr^2-\binom N{r-1}^2.
+\end{equation}
+Use the analogous projectors in the $p$-particle coupling space on
+both indices of the symmetric quadratic coefficient tensor.
+Together with $P_r$ on the output they give orthogonal blocks
+$(a,b;r)$, with $a\le b$. The sum of their positive Gram matrices
+is the original Gram. Tensor-product multiplicities are retained
+inside each block. This is essential in the established reduced
+product formula of Kota--Vyas \cite{KV}, Eq. (35): a triple of
+rank labels alone does not generally specify an intertwiner.
+
+\newpage
+\section{What the finite residual actually contains}
+For $N=5,p=2,m=3,w=1$, resolve the four maps
+\begin{equation}
+ B=H^2-CI,\quad O=A-a_0I,\quad J_HF=\{H,F\}/2,
+ \quad W_2\core.
+\end{equation}
+Here $C=18$, $a_0=\EE\tr_m A$, and $F=W_1T_3+86H$ is the
+previous linear rank-filtered field. All 18 blocks are evaluated
+without choosing Clebsch--Gordan bases. Seven vanish. In every
+nonzero block the Gram of these four maps has rank one.
+
+Define $H_a$ by projecting the same coupling realization onto
+rank $a$. Put
+$Z_{aa;r}=P_r(H_a^2)$ and
+$Z_{ab;r}=P_r(\{H_a,H_b\})$ for $a<b$.
+Then the raw maps have the exact realization-wise reconstruction
+\begin{equation}
+ (H^2,A,J_HF,Q_\core)
+      =\sum_{a\le b,r}(1,o_{ab;r},f_{ab;r},g_{ab;r})Z_{ab;r}.
+ \label{eq:filters}
+\end{equation}
+The complete table is
+\begin{center}
+\begin{tabular}{ccrrrr}
+\toprule
+$(a,b)$ & $r$ & $\|W_2Z_{ab;r}\|^2$ & $o_{ab;r}$ & $f_{ab;r}$ & $g_{ab;r}$\\
+\midrule
+$(0,0)$&0&$81/50$&$4/3$&$-10$&$128$\\
+$(0,1)$&1&$864/25$&$4/3$&$-15/4$&$334/3$\\
+$(0,2)$&2&$27$&$4/3$&$-6$&$352/3$\\
+$(1,1)$&0&$192/25$&$7/4$&$5/2$&$148$\\
+$(1,1)$&1&$448/75$&$1/2$&$5/2$&$88$\\
+$(1,1)$&2&$320/3$&$5/4$&$5/2$&$409/4$\\
+$(1,2)$&1&$160/3$&$2$&$1/4$&$595/4$\\
+$(1,2)$&2&$224/3$&$1/2$&$1/4$&$647/8$\\
+$(2,2)$&0&$3/2$&$4$&$-2$&$400$\\
+$(2,2)$&1&$28/3$&$-1$&$-2$&$-20$\\
+$(2,2)$&2&$140/3$&$2$&$-2$&$154$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Subtracting the old three global directions leaves a positive norm
+because $g$ is not one global linear combination of $1,o,f$ across
+all $r>0$ blocks. Its squared norm remains
+$248945355/14903$, agreeing exactly with the preceding calculation.
+Output rank zero is precisely the sample-dependent scalar part.
+
+The rank-one assertion follows from the full coefficient Gram,
+not a fit to a few matrices. Two separate integer realizations
+also verify all eight operator identities in \eqref{eq:filters}.
+This result does not make the representation tensor products
+multiplicity-free, and does not establish collinearity at general
+$N,p,m$. It identifies the source of the known finite witness.
+
+\newpage
+\section{A positive law for the output rank of a product}
+Now consider independent isotropic Hermitian rank-$a$ and rank-$b$
+operators $U,V$ on $\mathcal H_m$, normalized by
+$\EE U^2=\EE V^2=I$. Write $d=\binom Nm$ and define
+\begin{equation}
+ \pi_{ab}(r)=\EE\|P_r(UV)\|_{\tr_m}^2.
+\end{equation}
+These are nonnegative, sum to one, and vanish for $r>a+b$.
+This auxiliary product is used to control ranks; it is not being
+substituted for the same-coupling memory operator.
+
+Let $\Phi_a(X)=\EE UXU$. Its rank-$s$ eigenvalue is the known
+Racah crossing factor, in the conventions of our earlier covariance
+calculation and the terminating definition \cite{DLMF},
+\begin{equation}
+ \chi_a(s)={}_4F_3\!\left(\begin{matrix}-a,a-N-1,-s,s-N-1\\
+                                  -m,m-N,-N-1\end{matrix};1\right).
+ \label{eq:chi}
+\end{equation}
+Since $\EE (UV)^\dagger X(UV)=\Phi_b\Phi_a(X)$, isotropy gives
+\begin{equation}
+ \chi_a(s)\chi_b(s)=\sum_r\pi_{ab}(r)\chi_r(s).
+ \label{eq:composition}
+\end{equation}
+Orthogonality of the covariance maps is equivalently
+\begin{equation}
+ \sum_{s=0}^R d_s\chi_a(s)\chi_b(s)=\frac{d^2}{d_a}\delta_{ab}.
+\end{equation}
+It follows either from the standard Racah transform or by reshuffling
+the orthogonal rank projectors in their Choi matrices. Therefore
+\begin{equation}
+ \boxed{\pi_{ab}(r)=\frac{d_r}{d^2}
+       \sum_{s=0}^R d_s\chi_a(s)\chi_b(s)\chi_r(s).}
+ \label{eq:law}
+\end{equation}
+The positivity in \eqref{eq:law} follows from the matrix-product
+construction even though the displayed summands need not be positive.
+This is the standard covariance/Racah machinery applied to the
+output-rank distribution; it does not require individual multiplicity
+amplitudes or their phases.
+
+For $N=5,m=3$, independent full CAR calculations give
+\begin{equation}
+ \pi_{12}=(0,5/27,22/27),\qquad
+ \pi_{22}=(1/75,176/675,98/135).
+\end{equation}
+They agree with \eqref{eq:law} using all 10,000 ordered coordinate
+pairs in each case and every output rank.
+
+\newpage
+\section{Exact moments and the double-scaled deficit}
+Set $x_r=r(N+1-r)$ and $C_f=m(N-m)(N+1)/N$. The $s=1$ case of
+\eqref{eq:composition} gives the exact identity
+\begin{equation}
+ \EE x_r=x_a+x_b-\frac{x_ax_b}{C_f}.
+\end{equation}
+For higher moments define the monic polynomials and coefficients
+\begin{align}
+ L_j(x)&=\prod_{\ell=0}^{j-1}[x-\ell(N+1-\ell)],\\
+ A_{nj}&=\frac{(-n)_j(n-N-1)_j}
+ {(-m)_j(m-N)_j(-N-1)_j\,j!},\qquad
+ \chi_r(n)=\sum_{j=0}^n A_{nj}L_j(x_r).
+\end{align}
+Writing $M_j=\EE L_j(x_r)$ gives a triangular exact recursion
+\begin{equation}
+ M_0=1,\qquad
+ M_n=\frac{\chi_a(n)\chi_b(n)-\sum_{j<n}A_{nj}M_j}{A_{nn}},
+ \quad n\le R. \label{eq:recursion}
+\end{equation}
+No unknown recoupling amplitude occurs in these summed moments.
+
+Take $N=p^2/\lambda$, $m=\zeta N$,
+$a=\alpha p$, $b=\beta p$, along admissible integer sequences.
+Here $\lambda>0$ is fixed, $0\le\alpha,\beta\le1$, and $\zeta$
+stays in a compact subset of $(0,1)$. Put
+\begin{equation}
+ t=a+b,\quad S=t-r,\quad D_x=x_t-x_r,
+ \quad \theta=\alpha\beta\lambda
+            \left[\frac1{\zeta(1-\zeta)}-2\right].
+\end{equation}
+Evaluation of \eqref{eq:recursion} through order three yields
+\begin{equation}
+ \left(\frac{\EE D_x}{N},\frac{\EE D_x^2}{N^2},
+                    \frac{\EE D_x^3}{N^3}\right)
+ \longrightarrow(\theta,\theta^2+\theta,
+                         \theta^3+3\theta^2+\theta).
+ \label{eq:three}
+\end{equation}
+This follows by exact rational algebra, retaining symbolic
+$\alpha,\beta,\zeta,\lambda$. The denominators depend only on
+$N,m$; after scaling they are bounded away from zero on the stated
+compact sets. The rational degree comparison therefore also gives
+uniform convergence in the two input-rank fractions and filling.
+
+Moreover $0\le S\le t\le2p$ and
+\begin{equation}
+ D_x=S(N+1-2t+S).
+\end{equation}
+For $S>0$, $D_x/(NS)=1+O(p/N)$ uniformly. Thus \eqref{eq:three}
+also gives the first three moments of $S$. In particular, with fixed
+input deficits $a=p-u,b=p-v$ and half filling,
+\begin{equation}
+ \EE S\to2\lambda,\qquad
+ \operatorname{Var}S\to2\lambda,\qquad
+ \EE S^3\to8\lambda^3+12\lambda^2+2\lambda.
+\end{equation}
+These three moments agree with a Poisson law, but do not prove that law.
+
+\newpage
+\section{Tail control for the same-coupling quadratic problem}
+The preceding moments imply the useful uniform estimates
+\begin{align}
+ \limsup\PP(S\ge K)&\le\frac{\theta^2+\theta}{K^2},\\
+ \limsup\EE\big[(1+S)^2\mathbf1_{S\ge K}\big]
+ &\le\frac{4(\theta^3+3\theta^2+\theta)}K,
+ \qquad K\ge1.
+ \label{eq:tails}
+\end{align}
+The second line uses $(1+S)^2\le4S^2\le4S^3/K$ on the indicated
+tail. It controls squared filters with at most linear growth in $S$.
+
+To connect this independent-product bound to the actual Gaussian
+quadratic tensor, decompose $H=\sum_a H_a$ into its independent
+irreducible Gaussian components, with $\EE H_a^2=C_aI$.
+For $a<b$, the triangle inequality in each output-rank subspace gives
+\begin{equation}
+ \EE\|P_r\{H_a,H_b\}\|^2
+       \le4C_aC_b\pi_{ab}(r).
+\end{equation}
+For $a=b$, Gaussian quadratic decoupling introduces an independent
+copy $H_a'$ and gives
+\begin{align}
+ \EE\|P_rW_2(H_a^2)\|^2
+ &=\tfrac12\EE\|P_r\{H_a,H_a'\}\|^2\\
+ &\le2C_a^2\pi_{aa}(r).
+\end{align}
+These inequalities retain the exchange interference rather than
+equating an ordered product with a symmetrized same-coupling field.
+The known input weights $C_a/C=\omega_a$ have factorial tails in
+the rank deficit $p-a$. Combining that input bound with
+\eqref{eq:tails} shows tightness of the output deficit $2p-r$ for
+the unfiltered $W_2(H^2)$ coefficient measure: first truncate the
+input deficits, then the conditional output deficit.
+
+For the memory problem this provides a concrete conditional route.
+If its reduced filter amplitudes on bounded input-deficit windows
+are uniformly at most linear in $S$, then \eqref{eq:tails} controls
+their squared output tails by $O(K^{-1})$. The exact finite table
+does not yet prove this growth estimate at general $N,p,m$.
+Nor does the independent-product law determine exchange phases
+or multiplicity-resolved amplitudes of the full memory core.
+
+The next calculation is therefore the general reduced filter,
+including multiplicity where present, followed by its weighted
+norm limit. Only after that step can the fourth-chaos descendants
+be restored and combined into the genuine $Z_2$ spectrum. The
+two finite-memory-parameter covariance, spatial reconstruction,
+and the bulk meson mass dictionary remain subsequent objectives.
+
+\newpage
+\section{Evidence, conventions and retained corrections}
+All numerical records are local and use the same physical conventions
+as the preceding contraction note. The finite tensor calculation uses
+$w=1$; the product probabilities are variance-normalized. Neither is
+a direct assignment of de Sitter masses or finite-$G$ dynamics.
+
+The exact rank computation checks all projectors for idempotence,
+orthogonality, eigenvalue and dimension. Its 18 block Grams sum
+exactly to both the preceding full Gram and, after removing $r=0$,
+the preceding sample-traceless Gram. The largest saved integer
+intermediate is $710400$. Gram summation uses bounded integer
+chunks and rational denominators. The full coefficient tensors,
+not disorder samples, establish the eleven collinearity identities.
+
+The output law is checked by four finite Racah transforms and
+their orthogonality relations. The factorial recursion is checked
+only at admissible probe orders. Two independent projected-CAR
+product calculations verify all output probabilities and the
+symmetrization bound. Eight large-$p$ cases evaluate the exact
+moment formulas at 80 and 120 decimal digits; saved 65-digit
+upper bounds agree to the specified $10^{-60}$ relative threshold.
+These precision checks are not interval rounding certificates.
+
+For example, at $\lambda=1/4$, $a=b=p$, the exact-arithmetic upper
+bound $\EE S^2\le\EE D_x^2/(N+1-4p)^2$ is approximately
+$0.73772646$ at $p=16$ and $0.74809847$ at $p=128$; its limit
+is $3/4$. The actual finite deviations are retained.
+
+Three verification corrections are preserved with their original
+sources. A list was first used as a NumPy advanced index. A symbolic
+reconstruction initially used structural equality before expanding
+its exact zero residuals. A moment check initially requested probe
+order three when $R=2$; its admissible domain was corrected, while
+the larger systems retain the full third-order check. No saved
+scientific result or tolerance was changed to obtain agreement.
+
+\begin{thebibliography}{9}
+\bibitem{KV} V. K. B. Kota and M. Vyas,
+\emph{Random Matrix Theory for Transition Strength Densities in Finite
+Quantum Systems: Results from Embedded Unitary Ensembles},
+\href{https://arxiv.org/pdf/1504.00759}{arXiv:1504.00759},
+Sec. 3, Eqs. (34)--(35). The reduced product retains a multiplicity label.
+\bibitem{Kota} V. K. B. Kota,
+\emph{Bivariate moments of the two-point correlation function for embedded
+Gaussian unitary ensemble with $k$-body interactions},
+\href{https://arxiv.org/html/2208.11312}{arXiv:2208.11312v2},
+Sec. IV, covariance decomposition.
+\bibitem{DLMF} NIST Digital Library of Mathematical Functions,
+\href{https://dlmf.nist.gov/18.26.E3}{Eq. 18.26.3},
+terminating Racah-polynomial definition. The parameter identification
+is the one used in the project's earlier rank-covariance calculation.
+\end{thebibliography}
+\end{document}

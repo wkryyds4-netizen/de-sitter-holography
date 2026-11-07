@@ -1,0 +1,282 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,microtype}
+\usepackage[margin=24mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\cc}{\mathcal C}
+\newcommand{\rr}{\mathcal R}
+\newcommand{\core}{\mathcal E}
+\newcommand{\JJ}{\mathcal J}
+\DeclareMathOperator{\tr}{tr}
+\title{Quadratic contractions of the memory core\\An exact adjacent-charge covariance formula}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Local research note --- 6 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+We evaluate the ordinary second Gaussian-chaos part of the quartic
+operator entering the second centered memory coefficient. The answer
+uses neutral and adjacent-charge embedded-ensemble covariance maps,
+retaining the same couplings on both charge sectors. A finite example
+has a nonzero dynamical residual after removing sample-dependent
+scalar parts and the previously available quadratic descendants.
+The formula supplies the missing finite-$N$ contraction interface;
+its double-scaled residual strength is the next calculation.
+\end{abstract}
+
+\section{Model, target and the correct Gaussian subtraction}
+Use standard CAR and the full overlapping complex Gaussian $p$-body
+Hamiltonian, with $\EE J_{IJ}J_{KL}=w\delta_{IL}\delta_{JK}$. All
+results here are exact at finite $N$, fixed charge $m\ge p$, with
+annealed normalized Hilbert--Schmidt inner product
+$\langle X,Y\rangle_m=\EE\tr_m(X^\dagger Y)$. Take $\hbar=1$.
+The physical variance is
+$w=4^p(J_s^2N/p^2)(p!/N^p)^2$; explicit finite tests use $w=1$.
+No large-$N$ or small-$\lambda$ approximation is used below.
+
+Write $\mathcal L=[H,\cdot]$ and
+\begin{equation}
+ A=\sum_i(\mathcal Lc_i)^\dagger\mathcal Lc_i,\qquad
+ \core=\sum_i(\mathcal L^2c_i)^\dagger\mathcal L^2c_i
+                  +\tfrac14\mathcal L^2A.
+\end{equation}
+The preceding memory calculation identified $\core$ as the core of
+$mZ_2$ after its explicit first-return counterterm, up to a vanishing
+double-scaled remainder. This note evaluates its lower coupling chaos.
+
+Choose independent real Gaussian coordinates $x_a$ with variances
+$v_a$, so that $H=\sum_a x_a V_a$. For any homogeneous quartic
+matrix polynomial $P$, put $\Delta=\sum_a v_a\partial_{x_a}^2$ and
+\begin{equation}
+ Q_P=\tfrac12\Delta P,\qquad e_P=\EE P.
+ \label{eq:heat}
+\end{equation}
+The Gaussian normal-ordering identity gives exactly
+\begin{equation}
+ W_0P=e_P,\qquad W_2P=Q_P-2e_P,\qquad W_4P=P-Q_P+e_P.
+ \label{eq:chaos}
+\end{equation}
+Indeed $\Delta^2P=8e_P$ and $\EE Q_P=2e_P$.
+These are coordinate-chaos projections. The $q$-Hermite Wick
+polynomials of the spectral law in \cite{TT} have a different
+definition; an equality between them requires a separate limit argument.
+
+\newpage
+\section{Charge removal and the covariance primitives}
+On neighboring sectors write $h=H_m$, $k=H_{m-1}$ and
+$c_i:\mathcal H_m\to\mathcal H_{m-1}$. Define
+\begin{equation}
+ \rr(X)=\sum_i c_i^\dagger Xc_i,\quad R_j=\rr(k^j),\quad
+ R_0=mI,\quad R_1=(m-p)h.
+\end{equation}
+Directly expanding the two fermion derivatives gives
+\begin{align}
+ A&=R_2+(2p-m)h^2,\\
+ \core&=R_4-2\{h,R_3\}+\tfrac54\{h^2,R_2\}
+                  +\tfrac72 hR_2h+(4p-3m)h^4. \label{eq:raw}
+\end{align}
+For example the square of
+$k^2c_i-2kc_ih+c_ih^2$ yields the coefficients
+$1,-2,1,4,4p-3m$ before adding $\mathcal L^2A/4$.
+
+Let $(u,v)$ be an independent copy of $(h,k)$, using the same
+independent couplings on the two sectors. Set
+\begin{align}
+ \Phi_+(X)&=\EE_u[uXu],&\Phi_-(X)&=\EE_v[vXv],\\
+ \Psi(X)&=\EE_{u,v}[uXv],&
+ \Gamma(X,Y)&=\sum_i\Psi(c_i^\dagger X)Yc_i. \label{eq:maps}
+\end{align}
+Here $\Psi$ acts on $d_m\times d_{m-1}$ matrices, while $X,Y$
+in $\Gamma$ act on $\mathcal H_{m-1}$. The neutral constants are
+\begin{equation}
+ C=w\binom mp\binom{N-m+p}p,\quad
+ C_-=w\binom{m-1}p\binom{N-m+p+1}p,\quad
+ a=(2p-m)C+mC_-.
+\end{equation}
+Thus $\Phi_+(I)=CI$, $\Phi_-(I)=C_-I$, $\EE A=aI$.
+All binomial coefficients outside their range vanish.
+
+These are the standard embedded-ensemble covariance operations
+\cite{Kota,TT}, not new independent random probes. If
+$T^{ab}_{IJ}=(a_I^\dagger a_J)|_{\mathcal H_b\to\mathcal H_a}$
+denotes the relevant charge-preserving block, the mixed map is more
+simply written using its two diagonal blocks as
+\begin{equation}
+ \Psi(X)=w\sum_{I,J} T^{mm}_{IJ}\,X\,T^{m-1,m-1}_{JI}.
+ \label{eq:mixed}
+\end{equation}
+Neutral maps are obtained by using the same block on both sides.
+In a neutral irreducible rank-$\nu$ channel,
+\begin{equation}
+ \Phi_m(O_\nu)=\kappa_\nu(m)O_\nu,\qquad
+ \kappa_\nu(m)=w\binom{m-\nu}p\binom{N-m+p-\nu}p.
+\end{equation}
+The cross-sector map in \eqref{eq:mixed} must be retained before
+taking an asymptotic limit.
+
+\newpage
+\section{The closed single-contraction formula}
+For a polynomial $P(h,k)$ let
+$\cc P=\EE_{u,v}[t^2]P(h+tu,k+tv)$. This equals $Q_P$ in
+\eqref{eq:heat}. Introduce
+\begin{align}
+ P_+&=\Phi_+(h),&P_-&=\Phi_-(k),\\
+ U&=\Gamma(k,I)+\Gamma(I,k),\\
+ V&=\Gamma(I,k^2)+\Gamma(k,k)+\Gamma(k^2,I),\\
+ U_h&=\sum_i\big[\Psi(hc_i^\dagger k)c_i
+                         +\Psi(hc_i^\dagger)kc_i\big].
+\end{align}
+Every quantity on the right contains only the original $h,k$ and
+the deterministic covariance maps. The five contractions in
+\eqref{eq:raw} are
+\begin{align}
+ D_4:=\cc R_4
+   &=\rr\big(3C_-k^2+\{k,P_-\}+\Phi_-(k^2)\big),\\
+ D_{13}:=\cc\{h,R_3\}
+   &=\{h,\rr(2C_-k+P_-)\}+V+V^\dagger,\\
+ D_{22}:=\cc\{h^2,R_2\}
+   &=2CR_2+2mC_-h^2+hU+U_h+U^\dagger h+U_h^\dagger,\\
+ D_{121}:=\cc(hR_2h)
+   &=\Phi_+(R_2)+Uh+hU^\dagger+mC_-h^2,\\
+ D_{40}:=\cc h^4
+   &=3Ch^2+\{h,P_+\}+\Phi_+(h^2).
+\end{align}
+Consequently the answer is the Hermitian quadratic polynomial
+\begin{equation}
+ \boxed{Q_{\core}=D_4-2D_{13}+\tfrac54D_{22}
+                  +\tfrac72D_{121}+(4p-3m)D_{40}.}
+ \label{eq:answer}
+\end{equation}
+The scalar $e=\EE\core=e_mI$ follows either by a second contraction
+or by the original fourth moment. Equation \eqref{eq:chaos} then
+recovers $W_2\core$ and $W_4\core$ exactly.
+
+To check the ordering, write
+$R_2(h+tu,k+tv)=R_2+tB+t^2\rr(v^2)$ with
+$B=\rr(kv+vk)$. Then $\EE uB=U$,
+$\EE uhB=U_h$, and $\EE Bu=U^\dagger$. These three expectations
+generate the mixed terms in $D_{22}$ and $D_{121}$. For $R_3$, the
+coefficient linear in $v$ is $\rr(vk^2+kvk+k^2v)$;
+its left contraction with $u$ is $V$. This proves the mixed
+formulas without an independence assumption between neighboring sectors.
+
+The formula is also an interface for restoring the low-chaos
+parts of the four-slot descendant basis: all of its members are
+linear combinations of the five raw words in \eqref{eq:raw}.
+
+\newpage
+\section{Projection onto old directions and a dynamical residual}
+Put $B=h^2-CI$ and $O=A-aI$. The exact projection coefficient
+onto the energy quadratic is
+\begin{equation}
+ c_E=\frac{\langle B,W_2\core\rangle_m}{\langle B,B\rangle_m}.
+\end{equation}
+Also retain $J_hF=\{h,F\}/2$, where
+$F=W_1T_3-\bar t h$ and $\bar t=\langle h,W_1T_3\rangle_m/C$
+are the previously defined linear rank-filtered field and its energy
+projection. For direct evaluation in the same covariance primitives,
+\begin{align}
+ U_A&=U+(2p-m)(P_++Ch),\\
+ W_1T_3&=\rr(2C_-k+P_-)+(3p-m)(2Ch+P_+)\nonumber\\
+ &\hspace{12mm}-3\big(ah+(U_A+U_A^\dagger)/2\big).
+\end{align}
+All Gram entries can be evaluated without disorder sampling.
+If a Hermitian quadratic polynomial has symmetric coefficients
+$P=\sum_{ab}x_ax_bP_{ab}$, then
+\begin{equation}
+ \langle W_2P,W_2S\rangle_m
+       =2\sum_{ab}v_av_b\tr_m(P_{ab}^\dagger S_{ab}).
+ \label{eq:gram}
+\end{equation}
+
+At finite $N$, an additional conserved piece can be a random scalar
+matrix. Remove it sample by sample with
+$\pi X=X-\tr_m(X)I$. Project $\pi W_2\core$ onto the span of
+$\pi B,\pi O,\pi J_hF$ and call the residual $\mathcal D$.
+This removes a specified conserved subspace, not the full commutant.
+Exact results at $w=1$ are
+\begin{center}
+\begin{tabular}{cccc}
+\toprule
+$(N,p,m)$ & $e_m$ & $c_E$ & $\langle\mathcal D,\mathcal D\rangle_m$\\
+\midrule
+$(3,1,2)$ & $38$ & $5$ & $0$\\
+$(4,2,3)$ & $684$ & $1089/17$ & $0$\\
+$(5,2,3)$ & $2268$ & $4596/41$ & $248945355/14903$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The coefficient $c_E$ refers to the unmodified $B$ projection;
+the last column includes $\pi$ and all three old directions.
+For the last system their coefficients are, respectively,
+\begin{equation}
+ \left(\frac{2106991}{44709},\frac{1499753}{29806},
+                 -\frac{77111}{89418}\right).
+\end{equation}
+The saved deterministic integer coupling vector gives
+\begin{equation}
+ \tr_m[h,\mathcal D]^\dagger[h,\mathcal D]
+        =\frac{12991771132439678939}{2220994090}>0.
+\end{equation}
+Thus the extra finite-$N$ residual is genuinely dynamical in this
+example. A positive finite residual alone does not determine its
+double-scaled norm or spectral measure.
+
+\newpage
+\section{Analytic control and the next asymptotic calculation}
+There is an all-$N$ one-body control. For $p=1$, let $J$ be the
+fundamental $N\times N$ GUE matrix and $H=d\Gamma(J)$. The CAR give
+$\mathcal L^2c=J^2c$, so
+\begin{equation}
+ A=d\Gamma(J^2),\quad [H,A]=0,\quad \core=d\Gamma(J^4).
+\end{equation}
+At $w=1$, $\EE KXK=\tr(X)I$ for the fundamental independent
+matrix $K$, where this trace is unnormalized. The six contractions give
+\begin{equation}
+ Q_{\core}=3NA+2\tr(J)H+m\tr(J^2)I,\qquad
+ e_m=m(2N^2+1).
+\end{equation}
+Every term commutes with $H$. This proves why a small one-body
+example cannot establish a new dynamical mode, even when an
+incomplete Gram subtraction leaves a positive norm.
+
+The saved verification comprises three full finite-sector Gram
+calculations (45, 666 and 5050 symmetric coefficient blocks),
+807 independent quartic polarization directions, and 56 one-body
+identities in 14 charge sectors. Polarization evaluates the original
+commutator-defined core, independently of the charged covariance
+expression. Gaussian coordinate variances are $1$ on diagonal
+couplings and $1/2$ on each real or imaginary off-diagonal coordinate.
+The Gram sums use rational arithmetic after checking dyadic matrix
+coefficients; no Monte Carlo fit or charge truncation is used.
+
+Restoring the physical variance rescales $W_2\core$ by $w^2$,
+its squared norm by $w^4$, and the commutator witness by $w^5$.
+For the intended double-scaled problem, first set $p^2/N\to\lambda>0$
+at the physical $w$, then study small $\lambda$. The exact maps in
+\eqref{eq:answer} should now be decomposed in their irreducible
+input and output ranks. In particular, the $O(p)$ and $O(m)$
+coefficients must be combined before discarding covariance differences.
+
+The immediate target is the limiting norm and mixed energy moments
+of the residual after restoring all fourth-chaos descendants. That
+will decide whether it vanishes, joins existing filtered quadratic
+channels, or supplies another direction. Next come its full two-energy
+measure, the genuine $Z_2$ spectrum, and the covariance at two finite
+memory parameters. Spatial reconstruction and the bulk mass dictionary
+remain the subsequent physical objectives. No finite-$N$ channel
+count is being identified here with a de Sitter particle spectrum.
+
+\begin{thebibliography}{9}
+\bibitem{Kota} V. K. B. Kota,
+\emph{Bivariate moments of the two-point correlation function for embedded
+Gaussian unitary ensemble with $k$-body interactions},
+\href{https://arxiv.org/html/2208.11312}{arXiv:2208.11312v2},
+Sec. IV, Eqs. (29)--(32).
+\bibitem{TT} J. Tall and S. Tomsovic,
+\emph{Double-scaled bosonic and fermionic embedded ensembles,
+complex SYK, and the dual Hilbert space},
+\href{https://arxiv.org/html/2604.14522v2}{arXiv:2604.14522v2},
+Secs. 2.1 and 3.1.
+\end{thebibliography}
+\end{document}

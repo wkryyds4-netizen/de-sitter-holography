@@ -1,0 +1,104 @@
+{
+  "created_at_utc": "2026-11-06T06:30:38.476043+00:00",
+  "status": "Saved locally; no publication",
+  "scientific_status": "Exact signed moments and the half-filled double-scaled (B, input deficit, output deficit) equal-time Gram. Output residual is positive after B projection and orthogonal to J_H F. Cross with A, weighted A tail, full old-span projection and dynamics remain open.",
+  "current_git_head": "714d038bb605cfcffdc351e4dcc62aa95237d25f",
+  "git_commit_created": false,
+  "git_push_performed": false,
+  "archive_created": false,
+  "parent_manifest_sha256": "e63f5ac61b6b3f1d8559c92cbda197bfdf4a792e27908f7addf552ceb10b1de9",
+  "previous_stage_scientific_files_unchanged": [
+    "code/memory_two_charge_filter.py",
+    "code/check_memory_two_charge_filter.py",
+    "code/check_charged_covariance_transfer.py",
+    "code/memory_two_charge_asymptotic.py",
+    "code/check_memory_filter_limit.py",
+    "code/check_memory_filter_uniform.py",
+    "code/build_memory_two_charge.ps1",
+    "code/record_memory_two_charge.py",
+    "manuscript/susskind-memory-two-charge/main.tex",
+    "output/pdf/de-sitter-susskind-memory-two-charge.pdf",
+    "notes/susskind-memory-two-charge.md",
+    "literature/susskind-memory-two-charge-sources.md",
+    "journal/2026-11-06-susskind-memory-two-charge.md",
+    "results/susskind-memory-two-charge/filter-checks.json",
+    "results/susskind-memory-two-charge/limit-checks.json",
+    "results/susskind-memory-two-charge/main.log",
+    "results/susskind-memory-two-charge/symbolic-filter.json",
+    "results/susskind-memory-two-charge/transfer-checks.json",
+    "results/susskind-memory-two-charge/uniform-prefactors.json"
+  ],
+  "checks": {
+    "signed_moments": 417,
+    "recurrences": 139,
+    "full_car_coordinate_pairs": 1468,
+    "high_precision_cases": 24
+  },
+  "environment": {
+    "python": "3.14.5",
+    "calculations": [
+      {
+        "python": "3.14.5",
+        "sympy": "1.14.0"
+      },
+      {
+        "python": "3.14.5",
+        "numpy": "2.4.6",
+        "sympy": "1.14.0"
+      },
+      {
+        "python": "3.14.5",
+        "mpmath": "1.3.0"
+      }
+    ]
+  },
+  "build": {
+    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File code/build_memory_parity_gram.ps1",
+    "compiler": "This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5 Portable) (preloaded format=pdflatex 2026.9.19)  6 NOV 2026 14:19",
+    "passes": 2,
+    "pages": 5,
+    "render_command": "pdftoppm -r 95 -png output/pdf/de-sitter-susskind-memory-parity-gram.pdf tmp/pdfs/susskind-memory-parity-gram-build/page",
+    "visual_review": "All five final page PNGs viewed at 95 dpi during this stage before recording. Equations, references and pagination readable without clipping or overlapping."
+  },
+  "failures": [
+    {
+      "record": "results/susskind-memory-parity-gram/verification-issues.txt",
+      "cause": "Negative integer exponents in parity introduced floats into Fraction sums.",
+      "resolution": "Integer conditional parity; formulas and tolerances unchanged; final exact checks passed."
+    }
+  ],
+  "process_state": "All computations, compilation and rendering terminal.",
+  "evidence_scope": "Exact finite checks support the accompanying analytic derivation. Finite high-precision values concern Delta x/N, not S itself, and are not interval certificates. No full Poisson law or time-dependent spectrum asserted.",
+  "hashes": {
+    "code/memory_parity_moments.py": "3472bda725ff87618e648197139fd2c31c68532787e77d82ce021162b712c229",
+    "code/check_memory_parity_gram.py": "5f7885fc7390c75d919ad9c932ee6018c46892c030325bef86fde8204fd43f74",
+    "code/check_memory_parity_limit.py": "d52f5b97595255e2f9b093aa7587bce5cccadb5a0a4f214da3500fa51870bd48",
+    "code/build_memory_parity_gram.ps1": "ae2d5134c6c17ba3342f9d401c909736db57166b6430f51b3f0ff8fbf3c2935f",
+    "code/record_memory_parity_gram.py": "2ccf8cc3d484a24e4fdde26e7d94d3bc94e7711acb59428b0fc756e54e080667",
+    "manuscript/susskind-memory-parity-gram/main.tex": "481f852ab05f9386f2d53b38d665c9b6f8393a89ff87e6a629ffea6c88f37b3e",
+    "output/pdf/de-sitter-susskind-memory-parity-gram.pdf": "31f7c5633a32872ab7df1ed8533fb646dcfb12b969b1f8448c8f41b520576ff3",
+    "notes/susskind-memory-parity-gram.md": "6c8dc551ecec7b0207629e9794af13bdabc6dcea298995c5abde9a616577f1dc",
+    "literature/susskind-memory-parity-gram-sources.md": "3400576aff19b229935cd6b7f9919c1adcbe6f6b8f282542d8e17247a00660e2",
+    "journal/2026-11-06-susskind-memory-parity-gram.md": "f0c68d136440be7c84464dc8be68bc46667f43b1d29607ba88198606f80dcc7d",
+    "README.md": "6edf0391c9f368df5e132cc62eb9290f0fa97fee4148825daf4f62b25257dcf9",
+    "PLAN.md": "666f17aefc71ea4e28a56d76e66fda34d1480cd29a25955f318a496652918812",
+    "NEXT.md": "c3700269c1e901f8110d37dc673c6f6d344eb3c23bf952cab2b3f9ec64ef8b3b",
+    "results/susskind-memory-parity-gram/car-gram.json": "4e7e234fb710115b4da5751bd7dcaaa923d971bb07308502f2b8e60b5f73dccf",
+    "results/susskind-memory-parity-gram/initial-memory_parity_moments.py": "024e845b1758a08fc66e40d67055b6a85453c12a109fecd064fd09e0f021e4e4",
+    "results/susskind-memory-parity-gram/limit-checks.json": "9a9b4b289ad94a81942e7090a4c9c00b011f28c460e888ccea63ab00f6d667ec",
+    "results/susskind-memory-parity-gram/main.log": "d06847d12886679f74e6f7d58f1c7771acd5cf31ca844d7f267edac261f42849",
+    "results/susskind-memory-parity-gram/signed-moments.json": "71bbaeaadb4eebcb1c9acef231c738b174e3fae590ff59754f96a355ff9ec34e",
+    "results/susskind-memory-parity-gram/verification-issues.txt": "1caf6750962ae8938f839ff9af34de54660f046ec07905acd9cab3a5d7931e9f"
+  },
+  "render_hashes": {
+    "tmp/pdfs/susskind-memory-parity-gram-build/page-1.png": "e398db16ae3d700965e01030c621c2707f950a7d79a5d5aaa27b085e0116e4a2",
+    "tmp/pdfs/susskind-memory-parity-gram-build/page-2.png": "e80514a7409cee45a1f336ac2f4b0ee93b117d56cd263fa3f4a651d20ea058ab",
+    "tmp/pdfs/susskind-memory-parity-gram-build/page-3.png": "b5ef115ff29b22b6de356450c5c427bf4566fa3ee0ea94e85af9fb9976302042",
+    "tmp/pdfs/susskind-memory-parity-gram-build/page-4.png": "b9f87a7c2b45f4ac325e5eb1069abc238c0232e999efac35db593a277c4a5006",
+    "tmp/pdfs/susskind-memory-parity-gram-build/page-5.png": "fd4b357e63eadd7acdb80b52493fa0892e67ef444b68d2a893da57d9c62e81ff"
+  },
+  "build_pass_hashes": {
+    "pass1.txt": "6efde0966b57f4f1c25e80d09cc39b96d38f42ef6a958b10d532ed1b1820f475",
+    "pass2.txt": "6a99a535803c306cbf6903f5a0ed60bbddae7539929576f363fce0b92f62743a"
+  }
+}

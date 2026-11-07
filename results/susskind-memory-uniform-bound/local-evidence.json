@@ -1,0 +1,178 @@
+{
+  "status": "Local research progress; overall goal remains active",
+  "created_at_utc": "2026-11-06T17:43:29.253803+00:00",
+  "scientific_status": "Uniform annealed L2 bounds for the actual finite-time pinched memory field and ordinary term X0. The two covariances are asymptotically equivalent uniformly on compact memory times and all real external times. The common limiting kernel and bulk dictionary remain open.",
+  "git_commit_created": false,
+  "git_push_performed": false,
+  "archive_created": false,
+  "external_reply_sent": false,
+  "previous_evidence": {
+    "results/susskind-memory-charged-transfer/local-evidence.json": {
+      "sha256": "d2889368a3138728905d79b3cb97df0fe9ef369063b29373c28e408852a1b046",
+      "unchanged_scientific_files": [
+        "code/memory_charged_transfer.py",
+        "code/check_memory_polar_transfer.py",
+        "code/verify_memory_transfer_closure.py",
+        "code/build_memory_charged_transfer.ps1",
+        "code/record_memory_charged_transfer.py",
+        "manuscript/susskind-memory-charged-transfer/main.tex",
+        "output/pdf/de-sitter-susskind-memory-charged-transfer.pdf",
+        "notes/susskind-memory-charged-transfer.md",
+        "literature/susskind-memory-charged-transfer-sources.md",
+        "journal/2026-11-07-susskind-memory-charged-transfer.md",
+        "results/susskind-memory-charged-transfer/transfer-checks.json",
+        "results/susskind-memory-charged-transfer/polar-and-reverse-checks.json",
+        "results/susskind-memory-charged-transfer/closure-checks.json",
+        "results/susskind-memory-charged-transfer/main.log",
+        "results/susskind-memory-charged-transfer/diagnostics/first-build-source.tex",
+        "results/susskind-memory-charged-transfer/diagnostics/first-build.log"
+      ]
+    },
+    "results/susskind-memory-wick-rank/local-evidence.json": {
+      "sha256": "9890d5e71df835aba8bf44d71eb5f7e1a82c8f073c28754b4fa50cb6fcf946f9",
+      "unchanged_scientific_files": [
+        "code/memory_wick_rank.py",
+        "code/check_memory_wick_interface.py",
+        "code/check_memory_chaos_creation.py",
+        "code/build_memory_wick_rank.ps1",
+        "code/record_memory_wick_rank.py",
+        "manuscript/susskind-memory-wick-rank/main.tex",
+        "output/pdf/de-sitter-susskind-memory-wick-rank.pdf",
+        "notes/susskind-memory-wick-rank.md",
+        "literature/susskind-memory-wick-rank-sources.md",
+        "journal/2026-11-07-susskind-memory-wick-rank.md",
+        "results/susskind-memory-wick-rank/rank-chain-checks.json",
+        "results/susskind-memory-wick-rank/chaos-and-probe-checks.json",
+        "results/susskind-memory-wick-rank/creation-commutator-checks.json",
+        "results/susskind-memory-wick-rank/main.log",
+        "results/susskind-memory-wick-rank/diagnostics/first-render-source.tex",
+        "results/susskind-memory-wick-rank/diagnostics/first-render.pdf"
+      ]
+    },
+    "results/susskind-memory-return-background/local-evidence.json": {
+      "sha256": "d8e2c148696815a376e0f264b8a1afe2a37abd9f853b71909fa736136eeac799",
+      "unchanged_scientific_files": [
+        "code/memory_return_background.py",
+        "code/build_memory_return_background.ps1",
+        "code/record_memory_return_background.py",
+        "manuscript/susskind-memory-return-background/main.tex",
+        "output/pdf/de-sitter-susskind-memory-return-background.pdf",
+        "notes/susskind-memory-return-background.md",
+        "literature/susskind-memory-return-background-sources.md",
+        "journal/2026-11-06-susskind-memory-return-background.md",
+        "results/susskind-memory-return-background/bubble-and-return-checks.json",
+        "results/susskind-memory-return-background/main.log",
+        "results/susskind-memory-return-background/diagnostics/first-layout.log"
+      ]
+    }
+  },
+  "verified_scientific_inputs": {
+    "jacobi-recurrence-checks.json": {
+      "code/memory_jacobi_bridge.py": "da16585afe38456af7b7bed421a3f8c87d97b1f9bf9e5210967c87dcea7794b6",
+      "code/memory_charged_transfer.py": "155392a862098a9aa1119085629bca5b2467e0de9f1610c009273e66fa80455a",
+      "code/memory_wick_rank.py": "7adf10a9d087a24ec84215dd0f95ccc832a5cefc8e8f833d7ca3521231d81525",
+      "code/cubic_linear_dynamics.py": "81d8e955107098e897637650bb7686a15fd2ff8fde6de1e1c525db398516d014",
+      "code/complex_syk_dictionary.py": "96b4890a167beeadf0849ccffdbb20dd125d921af062fd291044da9024900abf"
+    },
+    "dyson-force-checks.json": {
+      "code/check_memory_dyson_force.py": "11141a28ebb154edd0d37d9e7b06bb9d6b47828333f311b6e98b9c45369752eb"
+    },
+    "jacobi-entire-checks.json": {
+      "code/check_memory_jacobi_entire.py": "7862114e12a275628eadbe4963a260a6f62e0ab781a84df37466d96749a80d52",
+      "code/memory_wick_rank.py": "7adf10a9d087a24ec84215dd0f95ccc832a5cefc8e8f833d7ca3521231d81525",
+      "code/cubic_linear_dynamics.py": "81d8e955107098e897637650bb7686a15fd2ff8fde6de1e1c525db398516d014",
+      "code/complex_syk_dictionary.py": "96b4890a167beeadf0849ccffdbb20dd125d921af062fd291044da9024900abf"
+    }
+  },
+  "checks": {
+    "complete_CAR_systems": 3,
+    "complete_Hermite_cases": 12,
+    "full_fourth_moment_words": 3,
+    "finite_time_Dyson_rows": 9,
+    "exact_geometric_inequalities": 105,
+    "entire_series_rows": 6,
+    "max_annihilation_identity_error": 7.782344084869769e-16,
+    "max_Gaussian_order_difference": 4.610449796251904e-15,
+    "max_entire_error": "1.06915927061867587125926462979259725616193521336932898999552382774466195307326692164675980750489404635054624486913627693E-56",
+    "max_entire_precision_difference": "5.14416785097846927168381038752646085178256878131323538003767794779027421024943412039314337991347764999412156353057730121E-80"
+  },
+  "environment": {
+    "python": "3.14.5",
+    "numpy": "2.4.6",
+    "scipy": "1.18.0",
+    "sympy": "1.14.0",
+    "mpmath": "1.3.0"
+  },
+  "parameters": "Same J across all charge sectors; standard CAR overlapping complex p-body; beta=mu=0 normalized full trace; hbar=1 and string real time; even N, lambda_N in a fixed positive compact interval, fixed Js and S. Finite test parameters and dependency versions appear in the scientific JSONs.",
+  "evidence_scopes": {
+    "jacobi-recurrence-checks.json": "Complete Hermite coefficients, independent covariance-word reconstruction of annihilation, one factorial normalization and finite positive-rank tensor bounds. Small systems verify finite identities, not the uniform double-scaling theorem.",
+    "dyson-force-checks.json": "Three complete fourth-moment Wick comparisons and nine finite-real-time remainder checks. Quadrature order comparisons are reproducibility checks, not interval-certified quadrature errors. Uniform remainder is proved analytically.",
+    "jacobi-entire-checks.json": "Auxiliary finite-parameter Jacobi expansion evaluated at x=+-6 outside its compact spectral bound, with 80/120 digit repeat. This checks cancellation and whole-plane evaluation, not a substitute for the normal-convergence/ODE proof; no interval-rounding certification."
+  },
+  "proof_scope": "Weighted Gaussian Sobolev Duhamel, even common-copy Dyson expansion, finite-parameter Jacobi chaos-to-energy comparison and whole-complex-plane expansion; binomial charge tail and Cauchy-Schwarz. Small tests do not replace the uniform proof. No path-space tightness or finite-G bulk dynamics claim.",
+  "continuation_seed_status": "Read-only collaborator proposals for four-u leading strong regression and neutral low Taylor coefficients; q quadratic/cubic background algebra checked manually, but no finite-N strong-limit proof or new computation claimed.",
+  "build": {
+    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File code/build_memory_uniform_bound.ps1",
+    "pages": 9,
+    "passes": 2,
+    "compiler_header": "This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5 Portable) (preloaded format=pdflatex 2026.9.19)  7 NOV 2026 01:37",
+    "render_command": "pdftoppm -r 95 -png output/pdf/de-sitter-susskind-memory-uniform-bound.pdf tmp/pdfs/susskind-memory-uniform-bound-build/page",
+    "final_pages_visually_inspected": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "visual_result": "Final nine pages inspected after the last rebuild: legible equations and references, corrected differentials/central-sector sum, no clipping or overlap."
+  },
+  "diagnostics": [
+    "All three scientific drivers passed their first execution; no scientific output rerun or overwritten.",
+    "Initial compilation succeeded, but visual inspection found a literal qquad and malformed central subscript; corrected with the integration differential spacing. Original source, log and page 8 image retained in diagnostics.",
+    "Final mathematical review added a compactness subsequence argument linking the previous convergent-lambda return theorem to the present positive-compact-lambda hypothesis.",
+    "Final two-pass build and all-page rendering completed with exit 0; no undefined/overfull/fatal warnings."
+  ],
+  "process_state": "All scientific, build and rendering commands terminal; no live calculation handles.",
+  "hashes": {
+    "code/memory_jacobi_bridge.py": "da16585afe38456af7b7bed421a3f8c87d97b1f9bf9e5210967c87dcea7794b6",
+    "code/check_memory_dyson_force.py": "11141a28ebb154edd0d37d9e7b06bb9d6b47828333f311b6e98b9c45369752eb",
+    "code/check_memory_jacobi_entire.py": "7862114e12a275628eadbe4963a260a6f62e0ab781a84df37466d96749a80d52",
+    "code/build_memory_uniform_bound.ps1": "f1c5e7a35cf1425e5497096109c4a05418c5d2b10631bb56d65039869190c8a5",
+    "code/record_memory_uniform_bound.py": "099cacdfa3257febec4de157a2ffddf2af262b88cdd36ba773c6784087e57f7a",
+    "manuscript/susskind-memory-uniform-bound/main.tex": "b39a58bcd77cf67dc69897221caac4d708c1017d3e6e249cd2d9dfc6f449f7ef",
+    "output/pdf/de-sitter-susskind-memory-uniform-bound.pdf": "abc67f7c2ffac63ea274536b717a789d42caf6b92bc2d8bfef5951035dfa44ff",
+    "notes/susskind-memory-uniform-bound.md": "9b8942faf7e098931bb3f18e738b4af98963171f42c12af2ab860cf6eb869573",
+    "notes/susskind-memory-joint-kernel-seed.md": "f769d8ff9b1816649632da850027e9ea53007cd06332c947d6d490692f62be51",
+    "literature/susskind-memory-uniform-bound-sources.md": "079ddb01b7fff5f57bb660c1daf6ee6bd5097376944a3d5819d0bd7331364022",
+    "journal/2026-11-07-susskind-memory-uniform-bound.md": "41d4d05bbf921e47870963585043b03647dea6645ed8b3a4c462bb9e05faef8e",
+    "README.md": "638dcd91eb6eebc9fcc1dc57467ccc3ca1510f40cc093059551a1de86f7f816f",
+    "PLAN.md": "97ad8ca1a91a03d1c4c8cefe5236ccc8410d38ad186322bbacca410ba472091c",
+    "NEXT.md": "a8626ef4f70a6bb5437eb281ce3eff29fdbf5796a1899bee458714e5e513dd6f",
+    "results/susskind-memory-uniform-bound/jacobi-recurrence-checks.json": "f577e041da02df3bf8c8c950d467d05a48754ee6f89f9984ecef20f58545a369",
+    "results/susskind-memory-uniform-bound/dyson-force-checks.json": "a4ec2c36125b64077b35893298011445264e0fe803e52baa0122fd014c19f9fc",
+    "results/susskind-memory-uniform-bound/jacobi-entire-checks.json": "3c57ee4401124dc01a40e47b588a672bc44dd9854e2123a8fff61245b3c5ce81",
+    "results/susskind-memory-uniform-bound/main.log": "230ac9755c62b80c4eb0a8f64ec3c985b6ae0dd2bb9f26ccf8926942a0499b2c",
+    "results/susskind-memory-uniform-bound/diagnostics/pre-visual-fix-page-8.png": "845a4d1ecd4f8f3ca6768f16f6f7da395052e9ba9bb361b6400c8fcb81e5df64",
+    "results/susskind-memory-uniform-bound/diagnostics/pre-visual-fix.log": "15183e146519c4d166a358b3027797f202336d52287513146039729bd194a51f",
+    "results/susskind-memory-uniform-bound/diagnostics/pre-visual-fix.tex": "49a5be5785894153f54d30d453c4a61186d237a483a8847b66c9b3a40982a1c6"
+  },
+  "render_hashes": {
+    "tmp/pdfs/susskind-memory-uniform-bound-build/page-1.png": "75a47f4a22ab57324f0fc1d381869a49f493d3744132fb7d10a52222d34ccb07",
+    "tmp/pdfs/susskind-memory-uniform-bound-build/page-2.png": "3b3efa0013087b8ecec114c4a578b35aae522ad620235f96aec6730469abfbb4",
+    "tmp/pdfs/susskind-memory-uniform-bound-build/page-3.png": "51102fc7adaacd3f222c25ed4006673218978f7255377e2da383d6ca3db0883f",
+    "tmp/pdfs/susskind-memory-uniform-bound-build/page-4.png": "2157825534a207bb8ed17d5e4198b310ef0c458e0a798995e88504a300360f5a",
+    "tmp/pdfs/susskind-memory-uniform-bound-build/page-5.png": "c641db2a1a1b8f59f7f632bd0ed13853cff75a28f4fa6009218148a93559a090",
+    "tmp/pdfs/susskind-memory-uniform-bound-build/page-6.png": "dbe4ab0948985eb5023ca02ae45ebb5ee006ae1529f9263e167b0deaa2037522",
+    "tmp/pdfs/susskind-memory-uniform-bound-build/page-7.png": "80a9f63db56bb86cfb598c057a376fb65b43a6203d997e131a04c8c2048edc90",
+    "tmp/pdfs/susskind-memory-uniform-bound-build/page-8.png": "eee126dddaaf00c93d2f3864fbf52f4b76b46eb3d734242b279a22f4a270044d",
+    "tmp/pdfs/susskind-memory-uniform-bound-build/page-9.png": "bc93d942bf71f8701de7dc5420a670370e9cc74d2183ce1b629a44cf4c6670ea"
+  },
+  "build_pass_hashes": {
+    "tmp/pdfs/susskind-memory-uniform-bound-build/pass1.txt": "b4066cac13dc500aea78c9709d91a22e62fd626fbe648268870e6c67b8715fd4",
+    "tmp/pdfs/susskind-memory-uniform-bound-build/pass2.txt": "b4066cac13dc500aea78c9709d91a22e62fd626fbe648268870e6c67b8715fd4"
+  }
+}

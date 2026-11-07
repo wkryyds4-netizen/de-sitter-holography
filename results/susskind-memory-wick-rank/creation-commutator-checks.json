@@ -1,0 +1,178 @@
+{
+  "systems": [
+    {
+      "N": 3,
+      "p": 1,
+      "m": 2,
+      "C_normalized": 1,
+      "Gaussian_coordinates": 9,
+      "cases": [
+        {
+          "power": 0,
+          "chaos_degree": 0,
+          "coefficient_matrices": 1,
+          "commutator_norm_squared": 0.33333333333333337,
+          "raw_tensor_bound": 0.33333333333333365,
+          "rank_cross_max": 1.1555579666323415e-31
+        },
+        {
+          "power": 1,
+          "chaos_degree": 1,
+          "coefficient_matrices": 9,
+          "commutator_norm_squared": 1.166666666666666,
+          "raw_tensor_bound": 1.88888888888889,
+          "rank_cross_max": 1.9081958235744878e-17
+        },
+        {
+          "power": 2,
+          "chaos_degree": 0,
+          "coefficient_matrices": 1,
+          "commutator_norm_squared": 0.33333333333333337,
+          "raw_tensor_bound": 0.33333333333333365,
+          "rank_cross_max": 1.1555579666323415e-31
+        },
+        {
+          "power": 2,
+          "chaos_degree": 2,
+          "coefficient_matrices": 45,
+          "commutator_norm_squared": 2.8749999999999893,
+          "raw_tensor_bound": 4.708333333333327,
+          "rank_cross_max": 1.5612511283791264e-17
+        },
+        {
+          "power": 3,
+          "chaos_degree": 1,
+          "coefficient_matrices": 9,
+          "commutator_norm_squared": 6.781249999999999,
+          "raw_tensor_bound": 10.4375,
+          "rank_cross_max": 1.8041124150158794e-16
+        },
+        {
+          "power": 3,
+          "chaos_degree": 3,
+          "coefficient_matrices": 165,
+          "commutator_norm_squared": 7.645833333333332,
+          "raw_tensor_bound": 12.708333333333249,
+          "rank_cross_max": 9.540979117872439e-18
+        },
+        {
+          "power": 4,
+          "chaos_degree": 0,
+          "coefficient_matrices": 1,
+          "commutator_norm_squared": 2.083333333333333,
+          "raw_tensor_bound": 2.0833333333333353,
+          "rank_cross_max": 3.7647878435563536e-31
+        },
+        {
+          "power": 4,
+          "chaos_degree": 2,
+          "coefficient_matrices": 45,
+          "commutator_norm_squared": 58.03385416666652,
+          "raw_tensor_bound": 92.39843750000007,
+          "rank_cross_max": 4.718447854656915e-16
+        },
+        {
+          "power": 4,
+          "chaos_degree": 4,
+          "coefficient_matrices": 495,
+          "commutator_norm_squared": 23.507812499999837,
+          "raw_tensor_bound": 39.62239583333319,
+          "rank_cross_max": 3.903127820947816e-18
+        }
+      ]
+    },
+    {
+      "N": 4,
+      "p": 1,
+      "m": 2,
+      "C_normalized": 1,
+      "Gaussian_coordinates": 16,
+      "cases": [
+        {
+          "power": 0,
+          "chaos_degree": 0,
+          "coefficient_matrices": 1,
+          "commutator_norm_squared": 0.16666666666666674,
+          "raw_tensor_bound": 0.16666666666666657,
+          "rank_cross_max": 1.8538386114771343e-31
+        },
+        {
+          "power": 1,
+          "chaos_degree": 1,
+          "coefficient_matrices": 16,
+          "commutator_norm_squared": 0.5648148148148153,
+          "raw_tensor_bound": 1.2592592592592595,
+          "rank_cross_max": 3.37072701449937e-17
+        },
+        {
+          "power": 2,
+          "chaos_degree": 0,
+          "coefficient_matrices": 1,
+          "commutator_norm_squared": 0.16666666666666682,
+          "raw_tensor_bound": 0.16666666666666663,
+          "rank_cross_max": 1.532713447704897e-31
+        },
+        {
+          "power": 2,
+          "chaos_degree": 2,
+          "coefficient_matrices": 136,
+          "commutator_norm_squared": 2.862139917695467,
+          "raw_tensor_bound": 5.722222222222216,
+          "rank_cross_max": 8.83759163326986e-18
+        },
+        {
+          "power": 3,
+          "chaos_degree": 1,
+          "coefficient_matrices": 16,
+          "commutator_norm_squared": 3.27263374485597,
+          "raw_tensor_bound": 7.053497942386826,
+          "rank_cross_max": 2.4322832544825267e-16
+        },
+        {
+          "power": 3,
+          "chaos_degree": 3,
+          "coefficient_matrices": 816,
+          "commutator_norm_squared": 6.289094650205825,
+          "raw_tensor_bound": 12.47736625514403,
+          "rank_cross_max": 2.3027470929003388e-18
+        },
+        {
+          "power": 4,
+          "chaos_degree": 0,
+          "coefficient_matrices": 1,
+          "commutator_norm_squared": 0.9958847736625531,
+          "raw_tensor_bound": 0.9958847736625521,
+          "rank_cross_max": 9.698931572073378e-31
+        },
+        {
+          "power": 4,
+          "chaos_degree": 2,
+          "coefficient_matrices": 136,
+          "commutator_norm_squared": 43.86465477823511,
+          "raw_tensor_bound": 87.9753086419741,
+          "rank_cross_max": 1.5748219588444387e-16
+        },
+        {
+          "power": 4,
+          "chaos_degree": 4,
+          "coefficient_matrices": 3876,
+          "commutator_norm_squared": 15.059442158207922,
+          "raw_tensor_bound": 31.865569273001753,
+          "rank_cross_max": 6.273844210968188e-19
+        }
+      ]
+    }
+  ],
+  "exact_step_cases": 43,
+  "scope": "Complete Hermite coefficient recurrences through H^4, including lower chaoses; creation-block and deterministic rank-cross checks. No truncated exponential is used as proof of the real-time bound.",
+  "environment": {
+    "python": "3.14.5",
+    "numpy": "2.4.6"
+  },
+  "input_sha256": {
+    "code/check_memory_chaos_creation.py": "bcf8c5cdf69b01c127377f21a39f95b9836229aae950e7e4bd05f4f9c03e1535",
+    "code/memory_wick_rank.py": "7adf10a9d087a24ec84215dd0f95ccc832a5cefc8e8f833d7ca3521231d81525",
+    "code/cubic_linear_dynamics.py": "81d8e955107098e897637650bb7686a15fd2ff8fde6de1e1c525db398516d014",
+    "code/complex_syk_dictionary.py": "96b4890a167beeadf0849ccffdbb20dd125d921af062fd291044da9024900abf"
+  }
+}

@@ -1,0 +1,342 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,microtype}
+\usepackage[margin=24mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\W}[1]{\mathsf W_{#1}}
+\newcommand{\J}{J_s}
+\newcommand{\Jh}{\mathcal J_h}
+\newcommand{\Lh}{\mathcal L_h}
+\DeclareMathOperator{\sech}{sech}
+\title{Restoring the dynamic memory descendants\\The second coefficient after a conserved subtraction}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Local research note --- 6 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+The previously projected second memory coefficient omits dynamic
+descendants of the lower fields. We restore them using the exact
+raw five-word identity and the established second-chaos table.
+An explicit polynomial commuting with the Hamiltonian removes the
+conserved terms. The remaining coefficient has a positive spectrum
+containing the quartic residual, the output-deficit residual, and
+energy-weighted lower fields. Its normalized small-deformation
+correlator is $(9\sech^8-2\sech^6)/7$, rather than the isolated
+projected $\sech^8$ kernel.
+\end{abstract}
+\section{State, scale, and the restored field}
+Use standard CAR, the full overlapping complex Gaussian $p$-body
+Hamiltonian, fixed charge $m=N/2$, normalized maximally mixed trace,
+and $\langle A,B\rangle=\EE\tr_mA^\dagger B$. Set $\hbar=1$,
+$h=H_m$, $\Jh A=\{h,A\}/2$, $\Lh A=[h,A]$, and
+\begin{equation}
+ \lambda_N=p^2/N\to\lambda>0,\quad q=e^{-4\lambda},\quad
+ C_N=\EE\tr_mh^2\to C=\J^2/\lambda.
+\end{equation}
+All chaos symbols refer to ordinary Gaussian coupling coordinates.
+The existing fields $Y,F,R,T,Q_4$ have diagonal two-energy
+measures~\cite{mixed}. The projected second coefficient was
+$X_N=(1-\widehat\Pi_N)mZ_2=Q_{4,N}+8\lambda_NC_Nq_N^2T_N+o_{L^2}(1)$.
+We now define an explicit conserved polynomial $\mathcal C_{2,N}$,
+given in Sec.~3, such that the actual remaining coefficient is
+\begin{equation}
+ \boxed{\ U_{2,N}:=mZ_2-\mathcal C_{2,N}
+ =X_N+b_R\Jh R+b_F\Jh F+b_J\Jh^2Y+b_D\Lh^2Y+C\kappa Y
+ +o_{L^2}(1).\ } \label{result}
+\end{equation}
+Coefficients on the right can be evaluated at finite
+$\lambda_N,q_N,C_N$ without changing the limit. This restoration
+subtracts only an operator commuting with $h$; the dynamic
+descendants have not been projected away. The constants are
+dimensionless, $Y$ has energy dimension two, $R,F$ have dimension
+three, and $U_2$ has dimension four.
+
+\newpage
+\section{The exact raw identity behind the restoration}
+Let $A=\sum_i[H,c_i]^\dagger[H,c_i]$ restricted to $m$ and let
+$T_3$ be the Hermitian third fermion-derivative insertion. On full
+Fock space define $D B=QB-\sum_i c_i^\dagger Bc_i$ and
+$\mathcal T_j=(jp-D)H^j$. The five raw words are
+\begin{align}
+ E_0&=\{A,h^2\}/2,& M_0&=hAh,\\
+ S_0&=\Jh\mathcal T_3-E_0-M_0,&
+ C_0&=\mathcal T_4-2E_0-M_0-2S_0,\qquad Z_0=h^4.
+\end{align}
+Restriction follows the full-Fock operations. Since
+$T_3=\mathcal T_3-3\Jh A$, one has exactly
+\begin{equation}
+ S_0=\Jh T_3+\Jh^2 A,\quad
+ E_0=\Jh^2A+\Lh^2A/4,\quad M_0=\Jh^2A-\Lh^2A/4.
+\end{equation}
+Set $d_3=q^2-q+1$, $d_5=1+q+q^2+q^3+q^4$. The old quartic
+projection coefficients are
+\begin{align}
+ \alpha&=-\frac{2q^3}{d_3d_5},&
+ \beta&=-\frac{q^2(1+q+q^2)}{d_3d_5},&
+ \gamma&=\frac{2q}{d_3},\\
+ \delta&=\frac{2\lambda(1-q)^3(1+q)(1+q+q^2)}{(1+q^2)d_5}.
+\end{align}
+Define $\mathcal Q=C_0-\alpha E_0-\beta M_0-\gamma S_0-\delta h^4$
+and $Q_4=\W4\mathcal Q$. For the raw memory core
+$\mathcal E=C_0-2S_0+(E_0+M_0)/2$, the exact identity is
+\begin{equation}
+ \mathcal E=\mathcal Q+g_J\Jh^2A+b_D\Lh^2A+b_R\Jh T_3+\delta h^4,
+ \label{exact}
+\end{equation}
+where $g_J=\alpha+\beta+\gamma-1$,
+$b_D=(\alpha-\beta)/4$, and $b_R=\gamma-2$.
+This is an identity of five raw words, before any asymptotic limit.
+
+Let $B=h^2-C_NI$, $O=\W2A$, and $e_{\mathcal Q}=\EE\tr_m\mathcal Q$.
+The previously established lower-chaos table~\cite{desc} gives
+\begin{equation}
+ \mathcal Q=Q_4+e_{\mathcal Q}I
+ +C_N[p\ell_Q+k_Q]B+C_No_QO+j_Q\Jh F
+ +8\lambda_NC_Nq_N^2\mathcal S_N+o_{L^2}(1). \label{low}
+\end{equation}
+All coefficients in growing terms retain their finite-$N$ parameters.
+In terms of the five table rows,
+\begin{align}
+ \ell_Q&=2q^2-2\alpha-2\beta-2q\gamma,&
+ o_Q&=1-\alpha-q^2\beta-q\gamma=\frac{(1-q)(1+q)^2}{d_5},\\
+ j_Q&=2q-\gamma,&
+ k_Q&=k_C-\alpha k_E-\beta k_M-\gamma k_S-\delta k_Z,
+\end{align}
+with $k_E=-2\lambda q^2$, $k_M=-2\lambda(2q-1)$,
+$k_S=-2\lambda(q^2-q+1)$,
+$k_C=-2\lambda(8\lambda q^2-3q^2+2q+2)$,
+and $k_Z=q^2+2q+3$.
+
+\newpage
+\section{An explicit commuting counterterm and controlled errors}
+Use the exact finite-sector definitions
+\begin{equation}
+ a_N=\EE\tr_mA,\qquad
+ c_N=\frac{\langle O,B\rangle}{\langle B,B\rangle},\qquad
+ K_A=a_NI+c_NB,\qquad Y=A-K_A.
+\end{equation}
+The earlier cubic subtraction is $T_3-P_N=R+a\Jh Y+F-aB_S-bB_Z$,
+where $B_S,B_Z=O_{L^2}(p^{-1})$ and
+\begin{align}
+ a&=-\frac{(1-q)^2}{1+q^2},&
+ b&=\frac{2\lambda(1-q)(1+q^3)}{(1+q^2)(1+q+q^2)},\\
+ P_N&=(ac_N+b)h^3+[\bar t-(ac_N+b)\bar z]h.
+\end{align}
+Here $\bar t$ and $\bar z$ are the exact projections of
+$\W1T_3$ and $\W1h^3$ onto $h$ in the annealed inner product.
+Let $r_N=p/m$ and define the already verified renewal counterterm
+\begin{equation}
+ D_{2,N}=2r_NhP_N+3r_N^2h^2K_A-K_A^2/m-mr_N^4h^4.
+\end{equation}
+The exact renewal identity implies
+$mZ_2=D_{2,N}+\mathcal E+O_{L^2}(p^{-1})$ at fixed $\lambda$.
+In particular the finite contribution from $A^2/m$ remains in $D_{2,N}$.
+
+Put $c=2\lambda(1-q)/(1+q)$,
+$v=2\lambda(1-q)+16\lambda^2q/(1+q)$,
+$d_v=2\lambda(1+q)$, and $\rho=v/(v+d_v)$.
+The true finite-span projection gives
+$\mathcal S_N=cB+\rho Y+T_N+o_{L^2}(1)$.
+Now choose
+\begin{align}
+ \mathcal C_{2,N}={}&D_{2,N}+e_{\mathcal Q}I+\delta h^4
+        +g_Jh^2K_A+b_RhP_N\notag\\
+ &+C_N[p\ell_Q+k_Q+o_Qc_N+8\lambda_Nq_N^2c]B. \label{counter}
+\end{align}
+Every term commutes with $h$ for each sample. The expectation
+$e_{\mathcal Q}$ is a finite Gaussian quartic contraction, not a
+fitted random scalar. Equation~\eqref{counter} keeps the exact
+$C_N,c_N,e_{\mathcal Q}$ and finite $q_N,\lambda_N$ in all
+potentially growing subtractions.
+
+Substituting into~\eqref{exact}--\eqref{low} proves~\eqref{result}, with
+\begin{align}
+ b_R&=-\frac{2(1-q)^2}{d_3},& b_F&=2(q-1),&b_D&=\frac{q^2}{4d_5},\\
+ b_J&=\frac{(1-q)^2(q^4-q^3-2q^2-q+1)}{(1+q^2)d_5},&
+ \kappa&=\frac{(1-q)(1+q)^2}{d_5}+8\lambda q^2\rho.
+\end{align}
+Here $b_J=g_J+ab_R$ and $b_F=b_R+j_Q$.
+The raw table has a proved $o_{L^2}(1)$ error. Multiplication of
+$B_S,B_Z$ by $h$ is controlled by the established factorial rank
+tails and Gaussian fourth-moment bounds. The renewal remainder
+uses fixed-degree marked overlap moments and H\"older. Thus the
+restoration uses actual strong remainders, not just formal chaos
+bookkeeping. It makes no claim of a simultaneous $\lambda\to0$ limit.
+
+\newpage
+\section{Complete two-energy spectrum and the raw Taylor interface}
+Write $e=(E+E')/2$, $\omega=E-E'$, and
+\begin{equation}
+ H_2(E,E')=b_Je^2+b_D\omega^2+C\kappa. \label{mult}
+\end{equation}
+The diagonal basis $Y,F,R,T,Q_4$ and~\eqref{result} give the positive measure
+\begin{equation}
+ \boxed{\ d\nu_{U_2}=V_4d\mu_{q^4}+V_2d\mu_{q^2}
+       +b_R^2e^2V_Rd\mu_{q^3}+b_F^2e^2V_Fd\mu_q
+       +W H_2^2d\mu_{q^2}.\ } \label{spectrum}
+\end{equation}
+All $\mu_r$ are the existing normalized Mehler measures~\cite{TT,BNR}.
+The weights $W,V_F,V_R,V_4,V_2$ are the explicit positive weights
+of the preceding notes~\cite{mixed}; $W=4\J^4[\lambda^{-1}+4q/(1+q)]$.
+The lower-field cross measures are now generally nonzero:
+\begin{align}
+ d\nu_{Y,U_2}&=W H_2d\mu_{q^2},\\
+ d\nu_{L,U_2}&=aeW H_2d\mu_{q^2}
+                  +b_FeV_Fd\mu_q+b_ReV_Rd\mu_{q^3}.
+\end{align}
+For the common product energy marginal let $K_j$ be the density
+of $\mu_{q^j}$. Put $w=WK_2$, $f=V_FK_1$, $r=V_RK_3$, and
+$z=V_4K_4+V_2K_2$. The full $(Y,L,U_2)$ matrix factorizes as
+\begin{equation}
+ M\operatorname{diag}(w,f,r,z)M^T,\qquad
+ M=\begin{pmatrix}1&0&0&0\\ae&1&1&0\\H_2&b_Fe&b_Re&1\end{pmatrix}.
+\end{equation}
+Its determinant is $w[(f+r)z+e^2fr(b_F-b_R)^2]>0$.
+All measures are absolutely continuous at fixed $0<q<1$, so the
+conserved-subtracted limiting field has no static atom.
+The $L$ cross vanishes at ordinary center time by oddness under
+$(E,E')\mapsto(-E',-E)$; its energy-resolved measure must be retained.
+
+Unlike the previous projected polynomial, the polynomial
+\begin{equation}
+ \Psi_N(s)=Y_N+isL_N-s^2U_{2,N}/2
+\end{equation}
+is exactly the second-order Taylor polynomial of $m\widehat M(s)$
+after subtracting $\mathcal C_{0,N}+is\mathcal C_{1,N}
+-s^2\mathcal C_{2,N}/2$. The first two counterterms are those
+defined previously. At center time $T$ its limiting covariance is
+\begin{equation}
+ WG_{q^2}(T)+suC_L(T)
+ -\frac{s^2+u^2}{2}C_{Y,U_2}(T)+\frac{s^2u^2}{4}C_{U_2}(T).
+\end{equation}
+This identifies the actual Taylor coefficients. It does not yet
+bound the finite-memory remainder, nor determine other Taylor
+contributions such as the cubic coefficient paired with the
+linear one at the same total degree.
+
+\newpage
+\section{The ordered small-deformation limit changes the shape}
+After taking the fixed-$\lambda$ double-scaled limit, let
+$\lambda\downarrow0$ at fixed string time. The exact coefficients give
+\begin{align}
+ b_J&=-16\lambda^2/5+O(\lambda^3),&
+ b_R&=-32\lambda^2+O(\lambda^3),\\
+ b_F&=-8\lambda+O(\lambda^2),&
+ b_D&\longrightarrow1/20,& C\kappa&\longrightarrow16\J^2/5.
+\end{align}
+The $C\kappa Y$ term is of leading size: $\kappa$ starts at
+$16\lambda/5$, not at order $\lambda^2$.
+The energy-sum term is negligible in the relevant weighted norm,
+since $e$ has moments of order $\lambda^{-1/2}$, while $b_J=O(\lambda^2)$.
+The $R,F$ descendants and $V_2$ are also subleading after multiplying
+the total covariance by $\lambda$. Thus the two leading pieces are
+\begin{equation}
+ Q_4,\qquad \frac{\Lh^2+64\J^2}{20}\,Y.
+\end{equation}
+Their leading norm squares, in units $\J^8/\lambda$, are
+$768/5$ and $352/5$. The retained quartic residual carries $24/35$
+of the total; the restored $Y$ descendant carries $11/35$.
+
+Let $f_j(T)=\sech^{2j}(2\J T)$. The known probe limit and the
+uniform sixth frequency moment justify the fourth-derivative
+weighting of $f_2$. In particular
+\begin{align}
+ f_2''/\J^2&=64f_2-80f_3,\\
+ f_2^{(4)}/\J^4&=4096f_2-16640f_3+13440f_4.
+\end{align}
+Equation~\eqref{spectrum} then gives
+\begin{align}
+ \lambda C_{U_2}(T)/\J^8
+ &\longrightarrow\frac{768}{5}f_4+
+ \frac{f_2^{(4)}/\J^4-128f_2''/\J^2+4096f_2}{100}\notag\\
+ &=288f_4-64f_3,\\
+ \boxed{\ \frac{C_{U_2}(T)}{C_{U_2}(0)}
+ \longrightarrow\frac{9\sech^8(2\J T)-2\sech^6(2\J T)}7.\ }\label{small}
+\end{align}
+The corresponding norm and normalized curvature are
+\begin{equation}
+ \lambda\|U_2\|_2^2\longrightarrow224\J^8,\qquad
+ \frac{\|[h,U_2]\|_2^2}{\|U_2\|_2^2}
+ \longrightarrow\frac{240}{7}\J^2.
+\end{equation}
+Also $\lambda C_{Y,U_2}(T)/\J^6\to16f_3(T)$.
+The sign change of~\eqref{small} at late time is compatible with
+spectral positivity: the underlying measure is the positive sum
+in~\eqref{spectrum}, with the $Y$ contribution weighted by
+$(\omega^2+64\J^2)^2/400$. Small $\lambda$ is taken after the
+double-scaled limit; the estimates here are not uniform in $N$ and $\lambda$
+jointly.
+
+\newpage
+\section{Executed checks and the remaining finite-memory task}
+\paragraph{Algebra and moments.}
+The old raw contraction table was read directly from its saved
+certificate. A five-coordinate free-algebra check verifies
+\eqref{exact}; the simplified coefficients, all eight required
+unit-variance Mehler moments through degree six, and the Laurent
+coefficients are saved. For example, with probe parameter $r$,
+\begin{equation}
+ \langle e^2\rangle_r=(1+r)/2,\quad
+ \langle\omega^2\rangle_r=2(1-r),\quad
+ \langle e^2\omega^2\rangle_r=(1+q)(1-r^2)/2.
+\end{equation}
+The leading norm pieces sum to $224$ and curvature pieces to $7680$;
+the latter divided by the former gives $240/7$.
+
+Independent finite CAR matrices and compressed-operator renewal
+give 16 exact identities across four nonzero systems, including
+$(N,p,m)=(6,2,3)$. They check the raw reconstruction, the renewal
+counterterm, and its commutation with $h$. Rational projection
+coefficients and arbitrary commuting $K_A,P$ test the algebra;
+these checks do not assume finite-$N$ equality to the limiting spectrum.
+
+\paragraph{Weighted kernels.}
+For $\J=1$, the actual normalized raw correlators are
+\begin{center}\small
+\begin{tabular}{r|rrrr}
+\toprule
+$\lambda$&$T=0.25$&$T=0.5$&$T=0.75$&$T=1$\\\midrule
+0.25&0.80095935&0.40558907&0.12737586&0.02987611\\
+0.10&0.61782913&0.14910489&0.02044030&0.00477960\\
+0.025&0.44492456&0.05075047&0.00420429&0.00082201\\
+0.010&0.39448117&0.03253403&0.00153618&0.00023278\\
+\bottomrule
+\end{tabular}
+\end{center}
+Jacobi cutoffs $38,57,146,314$ have a weighted Taylor truncation
+bound below $10^{-12}$ for the normalized self kernel, with twelve
+extra levels for refinement. Independent 128/192-node Mehler
+integrals at $\lambda=0.25,0.1$ agree to $3.52\times10^{-14}$.
+They also verify the norm, curvature, and $Y$ cross. The finite
+values at $T=1$ remain positive even at $\lambda=0.01$; they are
+not presented as already equal to the negative asymptotic tail.
+Absolute errors and phase-cancellation condition numbers are saved;
+floating and quadrature checks are not interval certification.
+
+\paragraph{Continuation.}
+The dynamic descendants are now restored, and the actual
+conserved-subtracted second coefficient is spectrally identified
+at half filling. The next tasks are a uniform central-charge
+extension and a two-insertion finite-memory remainder after an
+appropriate energy-dependent subtraction. The Taylor polynomial
+above supplies fixed coefficients but cannot justify exchanging
+the memory-time expansion with the double-scaled limit. Its
+connection to the Susskind meson spatial and mass dictionary
+remains a later reconstruction step.
+
+\begin{thebibliography}{9}\small
+\bibitem{TT} J. Tall and S. Tomsovic,
+\href{https://arxiv.org/html/2604.14522v2}{arXiv:2604.14522v2},
+Sec.~4: strength density and energy-basis two-point functions.
+\bibitem{BNR} M. Berkooz, V. Narovlansky and H. Raj,
+\href{https://arxiv.org/abs/2006.13983}{arXiv:2006.13983}.
+Existing complex-SYK chord and probe kernels.
+\bibitem{desc} A. Day and Chengheng, local notes:
+\emph{Restoring the raw memory descendants};
+\emph{Second memory coefficient and fourth singlet} (2026-11-06).
+\bibitem{mixed} A. Day and Chengheng, local notes:
+\emph{Two orientations of the fermionic force};
+\emph{Mixed spectra of the first memory fields} (2026-11-06).
+\end{thebibliography}
+\end{document}

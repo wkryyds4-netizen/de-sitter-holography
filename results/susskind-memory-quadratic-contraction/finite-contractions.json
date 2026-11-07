@@ -1,0 +1,410 @@
+{
+  "status": "passed",
+  "rows": [
+    {
+      "N": 3,
+      "p": 1,
+      "m": 2,
+      "real_gaussian_coordinates": 9,
+      "quadratic_coefficients": 45,
+      "covariance_w": 1,
+      "core_mean": "38",
+      "tbar": "-7",
+      "exact_gram": [
+        [
+          "24",
+          "8",
+          "-8",
+          "120"
+        ],
+        [
+          "8",
+          "16",
+          "-8",
+          "184"
+        ],
+        [
+          "-8",
+          "-8",
+          "24",
+          "-104"
+        ],
+        [
+          "120",
+          "184",
+          "-104",
+          "2184"
+        ]
+      ],
+      "basis": [
+        "H^2-C",
+        "A-a",
+        "J_H F",
+        "W2 core"
+      ],
+      "projections": [
+        {
+          "basis": [
+            0
+          ],
+          "coefficients": [
+            "5"
+          ],
+          "residual_norm_squared": "1584"
+        },
+        {
+          "basis": [
+            0,
+            1
+          ],
+          "coefficients": [
+            "7/5",
+            "54/5"
+          ],
+          "residual_norm_squared": "144/5"
+        },
+        {
+          "basis": [
+            0,
+            1,
+            2
+          ],
+          "coefficients": [
+            "4/3",
+            "32/3",
+            "-1/3"
+          ],
+          "residual_norm_squared": "80/3"
+        }
+      ],
+      "deterministic_commutator_norm_squared": "0",
+      "deterministic_couplings": [
+        -2,
+        5,
+        1,
+        -3,
+        4,
+        0,
+        -4,
+        3,
+        -1
+      ],
+      "max_scaled_coefficient": 176.0,
+      "raw_identity_and_independent_polarization": true
+    },
+    {
+      "N": 4,
+      "p": 2,
+      "m": 3,
+      "real_gaussian_coordinates": 36,
+      "quadratic_coefficients": 666,
+      "covariance_w": 1,
+      "core_mean": "684",
+      "tbar": "-49",
+      "exact_gram": [
+        [
+          "102",
+          "126",
+          "-60",
+          "6534"
+        ],
+        [
+          "126",
+          "213",
+          "-90",
+          "9942"
+        ],
+        [
+          "-60",
+          "-90",
+          "345",
+          "-4050"
+        ],
+        [
+          "6534",
+          "9942",
+          "-4050",
+          "486468"
+        ]
+      ],
+      "basis": [
+        "H^2-C",
+        "A-a",
+        "J_H F",
+        "W2 core"
+      ],
+      "projections": [
+        {
+          "basis": [
+            0
+          ],
+          "coefficients": [
+            "1089/17"
+          ],
+          "residual_norm_squared": "1154430/17"
+        },
+        {
+          "basis": [
+            0,
+            1
+          ],
+          "coefficients": [
+            "309/13",
+            "424/13"
+          ],
+          "residual_norm_squared": "89670/13"
+        },
+        {
+          "basis": [
+            0,
+            1,
+            2
+          ],
+          "coefficients": [
+            "1177/49",
+            "1612/49",
+            "50/49"
+          ],
+          "residual_norm_squared": "322410/49"
+        }
+      ],
+      "deterministic_commutator_norm_squared": "955463850",
+      "deterministic_couplings": [
+        -2,
+        5,
+        1,
+        -3,
+        4,
+        0,
+        -4,
+        3,
+        -1,
+        -5,
+        2,
+        -2,
+        5,
+        1,
+        -3,
+        4,
+        0,
+        -4,
+        3,
+        -1,
+        -5,
+        2,
+        -2,
+        5,
+        1,
+        -3,
+        4,
+        0,
+        -4,
+        3,
+        -1,
+        -5,
+        2,
+        -2,
+        5,
+        1
+      ],
+      "max_scaled_coefficient": 832.0,
+      "raw_identity_and_independent_polarization": true
+    },
+    {
+      "N": 5,
+      "p": 2,
+      "m": 3,
+      "real_gaussian_coordinates": 100,
+      "quadratic_coefficients": 5050,
+      "covariance_w": 1,
+      "core_mean": "2268",
+      "tbar": "-86",
+      "exact_gram": [
+        [
+          "369",
+          "468",
+          "-90",
+          "41364"
+        ],
+        [
+          "468",
+          "756",
+          "-180",
+          "61362"
+        ],
+        [
+          "-90",
+          "-180",
+          "2610",
+          "-15795"
+        ],
+        [
+          "41364",
+          "61362",
+          "-15795",
+          "10350513/2"
+        ]
+      ],
+      "basis": [
+        "H^2-C",
+        "A-a",
+        "J_H F",
+        "W2 core"
+      ],
+      "projections": [
+        {
+          "basis": [
+            0
+          ],
+          "coefficients": [
+            "4596/41"
+          ],
+          "residual_norm_squared": "44153145/82"
+        },
+        {
+          "basis": [
+            0,
+            1
+          ],
+          "coefficients": [
+            "7882/185",
+            "20273/370"
+          ],
+          "residual_norm_squared": "18790983/370"
+        },
+        {
+          "basis": [
+            0,
+            1,
+            2
+          ],
+          "coefficients": [
+            "75161/1755",
+            "31859/585",
+            "-575/702"
+          ],
+          "residual_norm_squared": "3189421/65"
+        }
+      ],
+      "deterministic_commutator_norm_squared": "153531602576",
+      "deterministic_couplings": [
+        -2,
+        5,
+        1,
+        -3,
+        4,
+        0,
+        -4,
+        3,
+        -1,
+        -5,
+        2,
+        -2,
+        5,
+        1,
+        -3,
+        4,
+        0,
+        -4,
+        3,
+        -1,
+        -5,
+        2,
+        -2,
+        5,
+        1,
+        -3,
+        4,
+        0,
+        -4,
+        3,
+        -1,
+        -5,
+        2,
+        -2,
+        5,
+        1,
+        -3,
+        4,
+        0,
+        -4,
+        3,
+        -1,
+        -5,
+        2,
+        -2,
+        5,
+        1,
+        -3,
+        4,
+        0,
+        -4,
+        3,
+        -1,
+        -5,
+        2,
+        -2,
+        5,
+        1,
+        -3,
+        4,
+        0,
+        -4,
+        3,
+        -1,
+        -5,
+        2,
+        -2,
+        5,
+        1,
+        -3,
+        4,
+        0,
+        -4,
+        3,
+        -1,
+        -5,
+        2,
+        -2,
+        5,
+        1,
+        -3,
+        4,
+        0,
+        -4,
+        3,
+        -1,
+        -5,
+        2,
+        -2,
+        5,
+        1,
+        -3,
+        4,
+        0,
+        -4,
+        3,
+        -1,
+        -5,
+        2,
+        -2
+      ],
+      "max_scaled_coefficient": 1440.0,
+      "raw_identity_and_independent_polarization": true
+    }
+  ],
+  "elapsed_seconds": 5.701898813247681,
+  "conventions": "Finite N; fixed charge; annealed normalized trace; standard CAR; full overlapping embedded GUE; w=1. No DS extrapolation.",
+  "method": "Exact dyadic coordinate coefficients and Fraction Gram. Independent quartic polarization of commutator-defined core.",
+  "environment": {
+    "python": "3.14.5",
+    "numpy": "2.4.6",
+    "scipy": "1.18.0",
+    "sympy": "1.14.0"
+  },
+  "input_sha256": {
+    "code/memory_quadratic_contraction.py": "d9e7722e5c13ca64a26b9e79a06e0a3fcaf07060ac1c6133d5eb04f4a1ad2139",
+    "code/singlet_wick_moments.py": "045f9f02e860fa8f2e402ca5162dabf035208a8d26023ada5721a5f02d47572c",
+    "code/complex_syk_dictionary.py": "96b4890a167beeadf0849ccffdbb20dd125d921af062fd291044da9024900abf"
+  }
+}

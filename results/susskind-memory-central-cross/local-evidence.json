@@ -1,0 +1,130 @@
+{
+  "created_at_utc": "2026-11-06T10:38:04.411704+00:00",
+  "status": "Saved locally; no publication",
+  "scientific_status": "Even N, compact central window: adjacent product transport O(1/p), output-deficit transport O(p^-2/3), and B/L_input/S Gram proved from prior norm/tail results. General-charge S--O remains conditional on the exchanged gradient recoupling lemma, despite finite checks; no completed four-field Gram or dynamical extension claimed.",
+  "current_git_head": "714d038bb605cfcffdc351e4dcc62aa95237d25f",
+  "git_commit_created": false,
+  "git_push_performed": false,
+  "archive_created": false,
+  "parent_manifest_sha256": "0aa64b4e35e14cc4dea79cb7555abf352cca0161acaef630274bf208440d6bfc",
+  "previous_stage_scientific_files_unchanged": [
+    "code/memory_central_norm.py",
+    "code/memory_central_norm_asymptotic.py",
+    "code/check_memory_central_norm.py",
+    "code/check_memory_central_norm_limit.py",
+    "code/memory_central_core_assembly.py",
+    "code/build_memory_central_norm.ps1",
+    "code/record_memory_central_norm.py",
+    "manuscript/susskind-memory-central-norm/main.tex",
+    "output/pdf/de-sitter-susskind-memory-central-norm.pdf",
+    "notes/susskind-memory-central-norm.md",
+    "literature/susskind-memory-central-norm-sources.md",
+    "journal/2026-11-06-susskind-memory-central-norm.md",
+    "results/susskind-memory-central-norm/core-assembly.json",
+    "results/susskind-memory-central-norm/diagnostics/initial-symbolic-failure.txt",
+    "results/susskind-memory-central-norm/diagnostics/initial-symbolic.py",
+    "results/susskind-memory-central-norm/diagnostics/pre-print-fix.json",
+    "results/susskind-memory-central-norm/diagnostics/pre-print-fix.py",
+    "results/susskind-memory-central-norm/diagnostics/print-failure.txt",
+    "results/susskind-memory-central-norm/diagnostics/scope-cleanup.txt",
+    "results/susskind-memory-central-norm/diagnostics/second-symbolic-failure.txt",
+    "results/susskind-memory-central-norm/diagnostics/second-symbolic.py",
+    "results/susskind-memory-central-norm/diagnostics/with-inherited-half-gram.json",
+    "results/susskind-memory-central-norm/diagnostics/with-inherited-half-gram.py",
+    "results/susskind-memory-central-norm/finite-norm.json",
+    "results/susskind-memory-central-norm/limit-checks.json",
+    "results/susskind-memory-central-norm/main.log",
+    "results/susskind-memory-central-norm/symbolic-limit.json"
+  ],
+  "checks": {
+    "pure_rank_pairs": 15,
+    "exact_casimir_identities": 60,
+    "ordered_CAR_pairs": 66531,
+    "symmetric_CAR_pairs": 31466,
+    "transport_coordinate_pairs": 1296,
+    "contiguous_identities": 624,
+    "central_all_rank_cases": 36,
+    "precisions": [
+      80,
+      120
+    ],
+    "stored_significant_digits": 65
+  },
+  "environment": {
+    "python": "3.14.5",
+    "calculations": [
+      {
+        "python": "3.14.5",
+        "numpy": "2.4.6",
+        "sympy": "1.14.0"
+      },
+      {
+        "python": "3.14.5",
+        "numpy": "2.4.6",
+        "sympy": "1.14.0"
+      },
+      {
+        "python": "3.14.5",
+        "numpy": "2.4.6",
+        "sympy": "1.14.0"
+      },
+      {
+        "python": "3.14.5",
+        "mpmath": "1.3.0"
+      }
+    ]
+  },
+  "build": {
+    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File code/build_memory_central_cross.ps1",
+    "compiler": "This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5 Portable) (preloaded format=pdflatex 2026.9.19)  6 NOV 2026 18:34",
+    "passes_in_final_build": 2,
+    "final_pages": 6,
+    "render_command": "pdftoppm -r 95 -png output/pdf/de-sitter-susskind-memory-central-cross.pdf tmp/pdfs/susskind-memory-central-cross-build/page",
+    "visual_review": "All six final page PNGs viewed at 95 dpi; no clipping, overlaps or unreadable formula labels."
+  },
+  "failures": [
+    {
+      "stage": "initial LaTeX build",
+      "reason": "Single rather than double backslashes at align row endings produced overflow and multiple labels. First source/log retained in diagnostics; corrected final double build passed.",
+      "resolved": true
+    }
+  ],
+  "evidence_scope": "Transport proof relies on already established common-rank removal isometry, coherent A weighted norm, factorial input tails and positive sixth output moment. Finite CAR and all-rank sums are supporting checks. Candidate Casimir cross is not upgraded to a theorem.",
+  "process_state": "All calculations, compilation and rendering terminal; no active calculation.",
+  "hashes": {
+    "code/explore_memory_central_cross.py": "4f9c7a1b673ea100a5210f46c42fde87d8a71a057989322d613e4f5a345783d2",
+    "code/memory_central_cross.py": "dec74779481379a18f7e4537bcab33c99c0234f1a0239ab13255ec1139f56d25",
+    "code/check_central_charged_casimir.py": "5269acd0d0dfd1e0075af5bfd99d03b08403c6d59009bf10c7e47950ffa759bc",
+    "code/check_memory_central_transport.py": "d74c4c7d9a254746ce3fefac07f1357413f3619481491f44f2c60907e8808ea9",
+    "code/check_memory_central_cross_limit.py": "375ac4d2e008d6ad5a61348a19c351450d97c72ccfbbcd2a90fa59c72a6e3209",
+    "code/build_memory_central_cross.ps1": "7f39ab2a2fbd9133dce3fdea0fc4c03fce5045da1b397fab8d0823697542d9c6",
+    "code/record_memory_central_cross.py": "7b012491f2cce08ef3acbb755554e70679e9526906505aa3dbc09a0fa28e8b6a",
+    "manuscript/susskind-memory-central-cross/main.tex": "64076dc57d3db921f9b837f0f0de11a644a5532fcadd1f3365a9edb6be0c6624",
+    "output/pdf/de-sitter-susskind-memory-central-cross.pdf": "06c5a27afd5bd71e8d5d4ce442f0c48fd383237169bf05bbc017e067481b22ee",
+    "notes/susskind-memory-central-cross.md": "c62e99bb5df17406b29df57e30b1551671c349a1879ff840d6723fd6bbdb37a9",
+    "literature/susskind-memory-central-cross-sources.md": "4a4af6c5de900b8de1f9b12a021f19967e648308574f0707274a23cf85807ca0",
+    "journal/2026-11-06-susskind-memory-central-cross.md": "13eccea626d82a690908111b097c2ae79851724de2de59954fe928fd2ee17e38",
+    "README.md": "10c0d6c118986316e336fa1d2f7db695f9cf7ec3267adacf7585fcc9d95ff2c6",
+    "PLAN.md": "4ad39a38e6f2f1ab9116866e9676e4e3f32ad97533282f72e3f26cc6bd27419c",
+    "NEXT.md": "eecf1c396645aa4dbc0de2b9af97ad6a43b8bc383cf357c44bb6ae6a345deef5",
+    "results/susskind-memory-central-cross/car-exploration.json": "5304f67214d0c07f2f431396487327b693392ac3e819c8763d4583c76626be14",
+    "results/susskind-memory-central-cross/charged-casimir.json": "9cdf53b14f56078853a3656cc7a003232aee8999ab6f4a898f70a88c13e0d4c1",
+    "results/susskind-memory-central-cross/cross-limit.json": "854873772da79aa6b5718c782d4c3ea35967593fb9b66165af14d8f518662293",
+    "results/susskind-memory-central-cross/diagnostics/first-build.log": "35a76f1cdfc5c715829dc220ed6214ae8dc70fbb47ab3fbf9e381f962cc790e0",
+    "results/susskind-memory-central-cross/diagnostics/first-main.tex": "2fe5cef6a78527360e8875dcf606a6e043c6c9793cb0d4ece3a0038163169511",
+    "results/susskind-memory-central-cross/main.log": "3a9848e9c877dcaac4c9901b4b413e4bd9bc7e4c48f57b3b521039aeb89752b7",
+    "results/susskind-memory-central-cross/transport.json": "b9b324f8824b13fb72b9287e860ce147846a9aeeaf053dd53d1a9256ed1b40a7"
+  },
+  "render_hashes": {
+    "tmp/pdfs/susskind-memory-central-cross-build/page-1.png": "cc8aa557a8f5a0153c6f2a9bcdfb2f73d981542a45387e71bcfe5dc46046dfbb",
+    "tmp/pdfs/susskind-memory-central-cross-build/page-2.png": "6a146ae3294005a95e1a9dc3e978a96b3133612dd34b6d28e4b39270667a1070",
+    "tmp/pdfs/susskind-memory-central-cross-build/page-3.png": "4fc691348d8b473dda099c4dedebc600025be9b6d0c87574535b66dfe4e77dcf",
+    "tmp/pdfs/susskind-memory-central-cross-build/page-4.png": "1b94348c9aa54c229d91bb81fb2b3fbb83d5669e4b988603db5a2f964d5d43cc",
+    "tmp/pdfs/susskind-memory-central-cross-build/page-5.png": "698d87c6903508ff68b623101f62267c7e887f277cea9485901bb2e4a9df7af3",
+    "tmp/pdfs/susskind-memory-central-cross-build/page-6.png": "cda712c69b02eb4ef34dbbd10acfa91b7950d97f2677d3fc9b94577e0503c850"
+  },
+  "build_pass_hashes": {
+    "pass1.txt": "0f47e99f98bf92bba614fbac7aeb91e6e5468856e261f447e1c21251bb296392",
+    "pass2.txt": "2ba85c8c1769f94174cd95b0707b8931ff304d6793e2e9eb41eb32c219f2f800"
+  }
+}

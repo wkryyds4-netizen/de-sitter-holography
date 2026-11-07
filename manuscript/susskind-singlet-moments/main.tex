@@ -1,0 +1,240 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,microtype}
+\usepackage[margin=25mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\E}{\mathbb E}
+\newcommand{\HH}{\mathcal H}
+\title{A dynamical singlet moment in complex DSSYK\\Gaussian contractions and a symmetry reduction}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Local research note --- 5 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+The static-patch programme needs singlet dynamics that can be compared with
+bulk propagation. We organize the first derivative singlet's equal-time
+strength and second frequency moment as exact Gaussian contractions.
+Applying the established multiplicity-free decomposition of fermionic
+operator spaces eliminates the linear Gaussian component of its time
+derivative. The dynamical moment consequently reduces to a positive cubic
+tensor norm. A complete finite-system contraction supplies a reproducible
+benchmark for the subsequent double-scaled calculation.
+\end{abstract}
+
+\section{The physical quantity to calculate}
+Our target remains the singlet-to-bulk-particle step of the Susskind
+programme \cite{mss}. In the conventions of the preceding dictionary note,
+\begin{equation}
+ H=\sum_{I,J}G_{IJ}c_I^\dagger c_J,\quad
+ \E G_{IJ}G_{KL}=w\delta_{IL}\delta_{JK},\quad
+ w=4^p\frac{\mathcal J_s^2}{\lambda}
+             \left(\frac{p!}{N^p}\right)^2,\quad \lambda=\frac{p^2}{N}.
+\end{equation}
+Here $G$ is Hermitian, each index set has size $p$, the CAR is standard,
+and $H=H_s$ is in string units. At infinite temperature
+$\tr=2^{-N}\Tr$. Define
+\begin{equation}
+ A=\sum_i[H,c_i]^\dagger[H,c_i],\qquad K=[H,A].
+\end{equation}
+With $C(t)=\E\tr(A(t)A)$ and $S(\omega)=\int dt\,e^{i\omega t}C(t)$,
+\begin{equation}
+ \mu_0=\E\tr A^2,\qquad
+ \boxed{\mu_2=\int\frac{d\omega}{2\pi}\omega^2S(\omega)
+             =\E\tr K^\dagger K=-C''(0).}\label{moment}
+\end{equation}
+The $\omega^2$ weight removes every zero-frequency contribution. Thus
+$\mu_2$ is a direct measure of singlet dynamics even when the equal-time
+strength is dominated by conserved components. The next physical target is
+its double-scaled size, followed by enough further moments to resolve the
+frequency dependence. A mass assignment will then require the bulk
+propagation kernel, rather than identifying a frequency moment with a mass.
+
+\newpage
+\section{A contraction formula that keeps the same couplings}
+Choose real standard Gaussian coordinates $x_a$ for the GUE and absorb
+their variances into Hermitian matrices $V_a$, so $H=\sum_a x_aV_a$ and
+$\E x_ax_b=\delta_{ab}$. The same coordinates occur in $A$:
+\begin{align}
+ D_{ai}&=[V_a,c_i],\\
+ B_{ab}&=\frac12\sum_i(D_{ai}^\dagger D_{bi}+D_{bi}^\dagger D_{ai}),
+ & A&=\sum_{ab}x_ax_bB_{ab},\\
+ C_{abc}&=\frac13\bigl([V_a,B_{bc}]+[V_b,B_{ac}]+[V_c,B_{ab}]\bigr),
+ & K&=\sum_{abc}x_ax_bx_c C_{abc}.
+\end{align}
+$B$ is symmetric and Hermitian; $C$ is fully symmetric and
+anti-Hermitian. Write $\|X\|^2=\tr X^\dagger X$, and set
+\begin{equation}
+ \overline A=\sum_a B_{aa},\qquad L_c=\sum_a C_{aac}.
+\end{equation}
+Ordinary Gaussian Wick contraction, with no large-$N$ approximation, gives
+\begin{align}
+ \mu_0&=\|\overline A\|^2+2\sum_{ab}\|B_{ab}\|^2,\label{mu0}\\
+ \mu_2&=6\sum_{abc}\|C_{abc}\|^2+9\sum_c\|L_c\|^2.\label{mu2general}
+\end{align}
+The factors $6$ and $9$ count, respectively, the pairings with three
+cross-contractions and the pairings with one internal contraction in each
+cubic factor. Equivalently,
+\begin{equation}
+ K=\sum_{abc}C_{abc}:x_ax_bx_c:+3\sum_cL_cx_c,
+\end{equation}
+where the colons denote ordinary Gaussian normal ordering of the
+\emph{couplings}. Orthogonality of these two Gaussian degrees proves
+\eqref{mu2general} without subtracting large signed contributions.
+
+\paragraph{Symmetry reduction.}
+For the full complex-SYK GUE ensemble,
+\begin{equation}
+ \boxed{L_c=0,\qquad \mu_2=6\sum_{abc}\|C_{abc}\|^2.}\label{reduction}
+\end{equation}
+Appendix A proves this by applying the known multiplicity-free $U(N)$
+operator decomposition \cite{kota}. The reduction concerns degree in
+Gaussian couplings, not a statement about a number of propagating bulk
+particles. It holds sector by sector before taking a large-$N$ limit.
+
+\newpage
+\section{A complete finite-system benchmark}
+For $N=4,p=2$, a full covariance sum gives the following rational values.
+The table uses $w=1$; multiply the last two columns by $w^2,w^3$ to restore
+the physical variance. Each sector trace is divided by $d_m=\binom Nm$.
+\begin{center}
+\begin{tabular}{rrrrr}\toprule
+$m$ & $d_m$ & $\E\tr_m A$ & $\E\tr_m A^2$ & $\E\tr_m K^\dagger K$\\\midrule
+0 & 1 & 0 & 0 & 0\\
+1 & 4 & 0 & 0 & 0\\
+2 & 6 & 12 & 292 & 0\\
+3 & 4 & 27 & 942 & 480\\
+4 & 1 & 36 & 1488 & 0\\\midrule
+full & 16 & $27/2$ & 438 & 120\\\bottomrule
+\end{tabular}
+\end{center}
+The only dynamical sector here is $m=3$. At $\mathcal J_s=1$ one has
+$w=1/4$, hence
+\begin{equation}
+ \mu_0=\frac{219}{8},\qquad \boxed{\mu_2=\frac{15}{8}}.
+\end{equation}
+This positive value is an ensemble moment, not a random-sample estimate.
+The $m=p$ block is a useful physical control: $A_p=pH_p^2$ is conserved.
+The full $p=1$ model is another control, with
+$A=c^\dagger h^2c$ for $H=c^\dagger hc$ and $\mu_2=0$.
+
+An independent expansion of the unsymmetrized cubic expression into all
+15 Wick pairings yields nine zero terms, two terms $645$, and four terms
+$-585/2$, summing to $120$. Their absolute sum is $20.5$ times the
+answer; the positive expression \eqref{reduction} avoids this cancellation.
+The integer contraction $L_c$ vanishes exactly in the finite calculation.
+
+As an additional check, a three-coordinate restriction of this same
+matrix model breaks the full ensemble symmetry. Both Gaussian degrees
+then contribute: $\mu_2^{(3)}=1/8$ and $\mu_2^{(1)}=1/32$.
+A 64-node product Gaussian quadrature, exact through degree six, agrees
+with their sum to scaled error below $10^{-15}$. This checks the term
+eliminated by symmetry as well as the surviving term.
+
+\section{The next analytic step}
+Existing $q$-Hermite and chord techniques solve substantial parts of
+embedded-ensemble spectral theory \cite{tt}. Here we first reduce the
+finite-$N$ tensor norm to body-rank sums using the covariance eigenchannels
+of \cite{kota}. The target is the leading dependence on $N,p$ at fixed
+$p^2/N$, then its small positive-$\lambda$ expansion. The benchmark above
+fixes the normalization and signed contractions of that calculation.
+
+\newpage
+\appendix
+\section{Why the linear Gaussian component vanishes}
+This is an application of the standard fermionic operator decomposition,
+not a new representation-theoretic theorem. Let
+$\HH_r=\bigwedge^r\mathbb C^N$ and let $\mathcal E_m$ embed a $p$-particle
+coupling matrix into the $m$-particle Hamiltonian. The known decomposition
+\cite{kota}, Section II, is
+\begin{equation}
+ \operatorname{End}(\HH_r)=
+ \bigoplus_{s=0}^{\min(r,N-r)}\mathcal R_s.
+\end{equation}
+Each $\mathcal R_s$ occurs once; different $s$ are inequivalent. The
+summands are preserved by adjoint and entrywise complex conjugation.
+Normal-ordered embedding $\mathcal E_m$ commutes with both operations
+and is nonzero on every irrep common to source and target for $m\ge p$.
+For example its highest-weight rank-$s$ monomial is multiplied by a
+nonzero real spectator factor proportional to $\binom{m-s}{p-s}$.
+For $m<p$, both $H_m$ and $A_m$ vanish.
+
+For a Hermitian source matrix $X$, form the linear map
+\begin{equation}
+ \mathcal F_m(X)=\E\left[K_m(G)\,\Tr_{\HH_p}(GX)\right].
+\end{equation}
+The GUE measure and the sum over fermion labels in $A$ are $U(N)$
+covariant. Thus $\mathcal F_m$ is an equivariant real-linear map on
+Hermitian matrices, with a complex-linear extension to their full matrix
+space. Multiplicity freedom implies that on each common irrep
+\begin{equation}
+ \mathcal F_m|_{\mathcal R_s}=\alpha_s\mathcal E_m|_{\mathcal R_s}.
+\end{equation}
+All CAR matrices may be chosen real in the occupation basis. Conjugating
+$G$ therefore conjugates $K$, and the GUE law is unchanged. Consequently
+$\mathcal F_m(\overline X)=\overline{\mathcal F_m(X)}$, which makes
+$\alpha_s$ real. On the other hand $K_m$ is anti-Hermitian, whereas
+$\mathcal E_m(X)$ is Hermitian for Hermitian $X$; this makes $\alpha_s$
+purely imaginary. Hence $\alpha_s=0$. Irreps absent from the target have
+zero image by equivariance. We conclude $\mathcal F_m=0$.
+
+Every real Gaussian coordinate is a real linear functional of $G$.
+It follows that $\E[x_cK_m]=0$. Ordinary Gaussian integration gives
+$\E[x_cK_m]=3\sum_a(C_{aac})_m$, proving \eqref{reduction} in every
+sector. A restricted set of GUE coordinates is not invariant under
+$U(N)$, which explains why the independent three-coordinate test retains
+a nonzero linear component.
+
+\section{Conventions, verification and scope}
+The calculation uses finite $N$, $1\le p\le N$, the full Hermitian
+Gaussian covariance, $\beta=\mu=0$, and no spectral truncation. It is
+ordinary Wick ordering in coupling space; it is not an identification
+with the $q$-Hermite normal ordering of the limiting Hamiltonian.
+For $H_c=pH_s$, $A_c=p^2A_s$, the corresponding moments obey
+$\mu_{0,c}=p^4\mu_{0,s}$ and $\mu_{2,c}=p^6\mu_{2,s}$.
+
+\newpage
+The tensor sum has not yet been reduced to a closed combinatorial
+expression at general $N,p$. Its present matrix implementation scales
+poorly and is a calibration tool, not the proposed large-$N$ algorithm.
+A nonzero finite-$N$ moment alone does not establish its double-scaled
+limit or a particle mass. Subtracting $\E A$ or the sample trace of $A$
+also does not remove every conserved operator. Equation \eqref{moment}
+is insensitive to all such zero-frequency contributions.
+
+\paragraph{Reproducibility.}
+\texttt{code/singlet\_wick\_moments.py} constructs all coupling directions,
+the quadratic and cubic tensors, and their sector norms.
+\texttt{code/run\_singlet\_wick\_moments.py} records full contractions
+for $(N,p)=(3,1),(3,2),(4,2)$, the 15-pairing check, independent
+quadrature, and a spectral-moment comparison. Integer-valued matrix
+operations are checked before rational normalization; the control
+quadrature and diagonalization use floating point. Parameters, dependency
+versions, exact fractions and code hashes are stored in
+\texttt{moments.json} in the corresponding results directory.
+No disorder samples are added to the previous stage.
+
+\paragraph{Literature use.}
+We reuse the covariance decomposition of \cite{kota} and the Wick-method
+perspective of \cite{tt}. The latter's independent-probe final kernel
+does not itself evaluate the coupling-dependent $A$. The particle-removal
+moments in \cite{kv} are a further route to the adjacent-sector sums and
+are the next reading target. The original coupled four-point density
+from the dictionary note remains the all-frequency object to solve.
+
+\begin{thebibliography}{9}
+\bibitem{mss} S. Miyashita, Y. Sekino and L. Susskind,
+\href{https://arxiv.org/html/2506.18054v3}{arXiv:2506.18054v3}.
+\bibitem{kota} V. K. B. Kota, \emph{SU(N) Wigner--Racah algebra for the
+matrix of second moments of embedded Gaussian unitary ensemble of
+random matrices}, J. Math. Phys. \textbf{46}, 033514 (2005),
+\href{https://arxiv.org/html/nucl-th/0410069v1}{arXiv:nucl-th/0410069v1}.
+\bibitem{tt} J. Tall and S. Tomsovic,
+\href{https://arxiv.org/html/2604.14522v2}{arXiv:2604.14522v2},
+Sections 2--4 and Appendix A.
+\bibitem{kv} V. K. B. Kota and M. Vyas, \emph{Random Matrix Theory for
+Transition Strength Densities in Finite Quantum Systems: Results from
+Embedded Unitary Ensembles},
+\href{https://arxiv.org/html/1504.00759v1}{arXiv:1504.00759v1}.
+\end{thebibliography}
+\end{document}

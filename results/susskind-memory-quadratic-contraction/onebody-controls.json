@@ -1,0 +1,100 @@
+{
+  "status": "passed",
+  "rows": [
+    {
+      "N": 2,
+      "m": 1,
+      "core_mean": 9,
+      "identities": 4
+    },
+    {
+      "N": 2,
+      "m": 2,
+      "core_mean": 18,
+      "identities": 4
+    },
+    {
+      "N": 3,
+      "m": 1,
+      "core_mean": 19,
+      "identities": 4
+    },
+    {
+      "N": 3,
+      "m": 2,
+      "core_mean": 38,
+      "identities": 4
+    },
+    {
+      "N": 3,
+      "m": 3,
+      "core_mean": 57,
+      "identities": 4
+    },
+    {
+      "N": 4,
+      "m": 1,
+      "core_mean": 33,
+      "identities": 4
+    },
+    {
+      "N": 4,
+      "m": 2,
+      "core_mean": 66,
+      "identities": 4
+    },
+    {
+      "N": 4,
+      "m": 3,
+      "core_mean": 99,
+      "identities": 4
+    },
+    {
+      "N": 4,
+      "m": 4,
+      "core_mean": 132,
+      "identities": 4
+    },
+    {
+      "N": 5,
+      "m": 1,
+      "core_mean": 51,
+      "identities": 4
+    },
+    {
+      "N": 5,
+      "m": 2,
+      "core_mean": 102,
+      "identities": 4
+    },
+    {
+      "N": 5,
+      "m": 3,
+      "core_mean": 153,
+      "identities": 4
+    },
+    {
+      "N": 5,
+      "m": 4,
+      "core_mean": 204,
+      "identities": 4
+    },
+    {
+      "N": 5,
+      "m": 5,
+      "core_mean": 255,
+      "identities": 4
+    }
+  ],
+  "identities": 56,
+  "analytic_result": "For p=1: core=dGamma(J^4); Q=3N A+2 tr(J) H+m tr(J^2) I; E core=m(2N^2+1) I. Every realization commutes with H.",
+  "environment": {
+    "python": "3.14.5",
+    "numpy": "2.4.6"
+  },
+  "input_sha256": {
+    "code/check_quadratic_onebody.py": "352f5a4ccf2136e128f38e61a4616bbceaa704cc7cbfdf5e938cb2fad0fe5936",
+    "code/memory_quadratic_contraction.py": "d9e7722e5c13ca64a26b9e79a06e0a3fcaf07060ac1c6133d5eb04f4a1ad2139",
+    "code/complex_syk_dictionary.py": "96b4890a167beeadf0849ccffdbb20dd125d921af062fd291044da9024900abf"
+  }
+}

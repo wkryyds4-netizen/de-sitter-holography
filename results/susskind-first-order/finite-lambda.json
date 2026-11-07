@@ -1,0 +1,1304 @@
+{
+  "status": "passed",
+  "status_scope": "Algorithmic checks passed; asymptotic discrepancies are measured, not asserted zero or rigorously bounded",
+  "units": "Js=1, h=4 lambda, u_j=2t_j, beta=mu=0, fixed-time small lambda after DS",
+  "groups": [
+    {
+      "lambda_value": 0.04,
+      "h": 0.16,
+      "cutoff": {
+        "L": 169,
+        "inner": 104,
+        "K": 236.5702177131369,
+        "RH": 26.006398535571474,
+        "vacuum_vector_bound": 2.3368280797122286e-103,
+        "low_source_propagator_bound": 1.1531648170797013e-13,
+        "source_tail_bound": 3.5211104017624948e-15,
+        "total_otoc_truncation_bound": 3.1015895907665954e-11,
+        "crossed_reduced_truncation_bound": 5.789284978448271e-11,
+        "uncrossed_truncation_bound": 2.4471740502299026e-13
+      },
+      "alternating": [
+        {
+          "time": 0.1,
+          "raw": {
+            "time": 0.1,
+            "uncrossed": 0.8564822430021368,
+            "uncrossed_imag": 2.3097843698897097e-16,
+            "crossed_reduced": 0.9630439680595289,
+            "crossed_weighted": 0.5078057883781452,
+            "g2": 0.9340596449859964,
+            "g4": 0.8887276260887996,
+            "otoc": 2.220770274382419,
+            "f22": 2.357346970363187,
+            "commutator_squared": 0.2731533919615359,
+            "connected_otoc": -0.5241645664003123,
+            "vacuum_norm_residual": 1.3322676295501878e-15
+          },
+          "reused_previous": false,
+          "commutator_over_h": 1.7072086997595992,
+          "commutator_first": 2.887655008938,
+          "commutator_coefficient_error": -1.180446309178401,
+          "adjacent_over_h": -2.422424190122152,
+          "adjacent_first": -3.1463182671250625,
+          "adjacent_coefficient_error": 0.7238940770029103
+        },
+        {
+          "time": 0.2,
+          "raw": {
+            "time": 0.2,
+            "uncrossed": 0.5428919451530462,
+            "uncrossed_imag": 2.423068879248438e-16,
+            "crossed_reduced": 0.8585855162217686,
+            "crossed_weighted": 0.45272563809682853,
+            "g2": 0.7634376101724454,
+            "g4": 0.6254517799776335,
+            "otoc": 1.5385095284029209,
+            "f22": 1.9552477651640792,
+            "commutator_squared": 0.8334764735223166,
+            "connected_otoc": -0.6271644408487085,
+            "vacuum_norm_residual": 1.3322676295501878e-15
+          },
+          "reused_previous": false,
+          "commutator_over_h": 5.209227959514479,
+          "commutator_first": 8.887575369494442,
+          "commutator_coefficient_error": -3.6783474099799633,
+          "adjacent_over_h": -1.3151637755471888,
+          "adjacent_first": -1.5249687979755118,
+          "adjacent_coefficient_error": 0.209805022428323
+        },
+        {
+          "time": 0.35,
+          "raw": {
+            "time": 0.35,
+            "uncrossed": 0.1652021922758961,
+            "uncrossed_imag": 2.0887248132714643e-16,
+            "crossed_reduced": 0.6181381009661115,
+            "crossed_weighted": 0.3259395376517876,
+            "g2": 0.4480666042926862,
+            "g4": 0.24294972404656584,
+            "otoc": 0.6563439222035798,
+            "f22": 1.3710552729596692,
+            "commutator_squared": 1.4294227015121788,
+            "connected_otoc": -0.7451834415611774,
+            "vacuum_norm_residual": 1.5543122344752192e-15
+          },
+          "reused_previous": false,
+          "commutator_over_h": 8.933891884451118,
+          "commutator_first": 17.805892173496236,
+          "commutator_coefficient_error": -8.872000289045118,
+          "adjacent_over_h": -0.19045056753180037,
+          "adjacent_first": -0.17497159724814812,
+          "adjacent_coefficient_error": -0.01547897028365225
+        },
+        {
+          "time": 0.5,
+          "raw": {
+            "time": 0.5,
+            "uncrossed": 0.030886619439163862,
+            "uncrossed_imag": 6.872105665909852e-17,
+            "crossed_reduced": 0.3610063648605199,
+            "crossed_weighted": 0.19035592122227277,
+            "g2": 0.208332430923909,
+            "g4": 0.05990551473280935,
+            "otoc": 0.2521291601006005,
+            "f22": 1.0914932388098189,
+            "commutator_squared": 1.6787281574184367,
+            "connected_otoc": -0.8346756434487301,
+            "vacuum_norm_residual": 1.1102230246251565e-15
+          },
+          "reused_previous": false,
+          "commutator_over_h": 10.49205098386523,
+          "commutator_first": 30.426105879203405,
+          "commutator_coefficient_error": -19.934054895338175,
+          "adjacent_over_h": 0.029302720378051456,
+          "adjacent_first": 0.019916374068043963,
+          "adjacent_coefficient_error": 0.009386346310007492
+        }
+      ],
+      "general": [
+        {
+          "times": [
+            0.3,
+            0.1,
+            -0.1,
+            0
+          ],
+          "arcs": [
+            0.1,
+            -0.2,
+            -0.19999999999999998,
+            0.3
+          ],
+          "channels": [
+            0.739318372609902,
+            0.46553528427404,
+            0.1994065154863972
+          ],
+          "channel_imag": [
+            3.2349132178677214e-18,
+            -1.9882396030472437e-17,
+            -5.348196747576021e-18
+          ],
+          "pair_products": [
+            0.7130962631266317,
+            0.4204097006924439,
+            0.3318011865599413
+          ],
+          "total": 1.4042601723703392,
+          "connected": -0.061046978008677755,
+          "crossed_internal_cancellation": 1.6088459564630768,
+          "connected_subtraction_condition": 47.005886554146066,
+          "first_order_channels": [
+            0.20283581974155118,
+            0.3025695962035276,
+            -0.8633408314802612
+          ],
+          "connected_channels_over_h": [
+            0.1638881842704394,
+            0.2820348973849758,
+            -0.8274666942096505
+          ],
+          "channel_coefficient_errors": [
+            -0.03894763547111177,
+            -0.0205346988185518,
+            0.03587413727061073
+          ],
+          "first_order_total": -0.3579354155351825,
+          "connected_over_h": -0.38154361255423597
+        },
+        {
+          "times": [
+            0.2,
+            -0.05,
+            0.35,
+            0.1
+          ],
+          "arcs": [
+            -0.24999999999999997,
+            0.39999999999999997,
+            -0.25,
+            0.1
+          ],
+          "channels": [
+            0.38892502949735963,
+            0.31039417878019304,
+            0.3212734278768028
+          ],
+          "channel_imag": [
+            1.2894229603766617e-16,
+            -1.61013895821504e-16,
+            -1.2781980837610178e-16
+          ],
+          "pair_products": [
+            0.43311746665323214,
+            0.33180118655994134,
+            0.7366933829695519
+          ],
+          "total": 1.0205926361543556,
+          "connected": -0.48101940002836985,
+          "crossed_internal_cancellation": 1.0,
+          "connected_subtraction_condition": 5.2434572746719255,
+          "first_order_channels": [
+            -0.32677109766108303,
+            -0.15133518928714498,
+            -3.9616772847377857
+          ],
+          "connected_channels_over_h": [
+            -0.27620273222420316,
+            -0.13379379862342686,
+            -2.596374719329682
+          ],
+          "channel_coefficient_errors": [
+            0.05056836543687987,
+            0.017541390663718126,
+            1.3653025654081037
+          ],
+          "first_order_total": -4.4397835716860135,
+          "connected_over_h": -3.0063712501773114
+        },
+        {
+          "times": [
+            0.15,
+            0.15,
+            -0.15,
+            -0.15
+          ],
+          "arcs": [
+            0.0,
+            -0.3,
+            0.0,
+            0.3
+          ],
+          "channels": [
+            1.000000000000002,
+            0.3513294108757099,
+            0.18525333669826938
+          ],
+          "channel_imag": [
+            0.0,
+            9.860761315262648e-32,
+            1.6411086328496843e-32
+          ],
+          "pair_products": [
+            1.0000000000000018,
+            0.30324828571025125,
+            0.30324828571025125
+          ],
+          "total": 1.5365827475739813,
+          "connected": -0.0699138238465229,
+          "crossed_internal_cancellation": 1.0000000000000004,
+          "connected_subtraction_condition": 44.95647850551381,
+          "first_order_channels": [
+            -0.0,
+            0.2957864009678667,
+            -0.7297461780078325
+          ],
+          "connected_channels_over_h": [
+            1.3877787807814457e-15,
+            0.30050703228411657,
+            -0.7374684313248867
+          ],
+          "channel_coefficient_errors": [
+            1.3877787807814457e-15,
+            0.00472063131624989,
+            -0.0077222533170542285
+          ],
+          "first_order_total": -0.4339597770399658,
+          "connected_over_h": -0.4369613990407681
+        }
+      ]
+    },
+    {
+      "lambda_value": 0.02,
+      "h": 0.08,
+      "cutoff": {
+        "L": 332,
+        "inner": 223,
+        "K": 2788.3618380171383,
+        "RH": 51.00326647512666,
+        "vacuum_vector_bound": 1.3176487563443411e-201,
+        "low_source_propagator_bound": 1.6972869182047296e-14,
+        "source_tail_bound": 3.194279289539452e-16,
+        "total_otoc_truncation_bound": 7.1389700312702e-11,
+        "crossed_reduced_truncation_bound": 9.82157240061238e-11,
+        "uncrossed_truncation_bound": 3.522345007991037e-14
+      },
+      "alternating": [
+        {
+          "time": 0.1,
+          "raw": {
+            "time": 0.1,
+            "uncrossed": 0.8539845785924886,
+            "uncrossed_imag": -1.9716290618134928e-16,
+            "crossed_reduced": 0.9782103792940703,
+            "crossed_weighted": 0.710326524979879,
+            "g2": 0.9290786446040494,
+            "g4": 0.8724845574890401,
+            "otoc": 2.4182956821648562,
+            "f22": 2.506038378771372,
+            "commutator_squared": 0.17548539321303114,
+            "connected_otoc": -0.308078573553739,
+            "vacuum_norm_residual": 0.0
+          },
+          "reused_previous": true,
+          "commutator_over_h": 2.1935674151628892,
+          "commutator_first": 2.887655008938,
+          "commutator_coefficient_error": -0.694087593775111,
+          "adjacent_over_h": -2.7541984618402933,
+          "adjacent_first": -3.1463182671250625,
+          "adjacent_coefficient_error": 0.3921198052847692
+        },
+        {
+          "time": 0.2,
+          "raw": {
+            "time": 0.2,
+            "uncrossed": 0.5377249327504503,
+            "uncrossed_imag": -1.9919642059191544e-16,
+            "crossed_reduced": 0.9138196880222974,
+            "crossed_weighted": 0.6635692865163718,
+            "g2": 0.748289595190261,
+            "g4": 0.5830138181945719,
+            "otoc": 1.7390191520172724,
+            "f22": 2.0063687408772157,
+            "commutator_squared": 0.5346991777198866,
+            "connected_otoc": -0.38085548452273676,
+            "vacuum_norm_residual": 4.440892098500626e-16
+          },
+          "reused_previous": true,
+          "commutator_over_h": 6.683739721498583,
+          "commutator_first": 8.887575369494442,
+          "commutator_coefficient_error": -2.2038356479958594,
+          "adjacent_over_h": -1.418823695784918,
+          "adjacent_first": -1.5249687979755118,
+          "adjacent_coefficient_error": 0.1061451021905937
+        },
+        {
+          "time": 0.35,
+          "raw": {
+            "time": 0.35000000000000003,
+            "uncrossed": 0.1627109839734907,
+            "uncrossed_imag": -1.132302931612651e-16,
+            "crossed_reduced": 0.7466662488118552,
+            "crossed_weighted": 0.5421909775901534,
+            "g2": 0.4255204563071182,
+            "g4": 0.20128091729763592,
+            "otoc": 0.8676129455371349,
+            "f22": 1.3474408615746234,
+            "commutator_squared": 0.9596558320749771,
+            "connected_otoc": -0.4945223719345013,
+            "vacuum_norm_residual": 5.551115123125783e-16
+          },
+          "reused_previous": true,
+          "commutator_over_h": 11.995697900937213,
+          "commutator_first": 17.805892173496236,
+          "commutator_coefficient_error": -5.810194272559023,
+          "adjacent_over_h": -0.1836806987126599,
+          "adjacent_first": -0.17497159724814812,
+          "adjacent_coefficient_error": -0.008709101464511787
+        },
+        {
+          "time": 0.5,
+          "raw": {
+            "time": 0.5,
+            "uncrossed": 0.030824044456768417,
+            "uncrossed_imag": -2.797608107551107e-17,
+            "crossed_reduced": 0.5258071392329388,
+            "crossed_weighted": 0.3818143478404706,
+            "g2": 0.1919161308843233,
+            "g4": 0.04380044685688136,
+            "otoc": 0.4434624367540074,
+            "f22": 1.075606099165403,
+            "commutator_squared": 1.2642873248227913,
+            "connected_otoc": -0.63020116583321,
+            "vacuum_norm_residual": 6.661338147750939e-16
+          },
+          "reused_previous": true,
+          "commutator_over_h": 15.803591560284891,
+          "commutator_first": 30.426105879203405,
+          "commutator_coefficient_error": -14.622514318918514,
+          "adjacent_over_h": 0.024281207227320502,
+          "adjacent_first": 0.019916374068043963,
+          "adjacent_coefficient_error": 0.004364833159276538
+        }
+      ],
+      "general": [
+        {
+          "times": [
+            0.3,
+            0.1,
+            -0.1,
+            0
+          ],
+          "arcs": [
+            0.1,
+            -0.2,
+            -0.19999999999999998,
+            0.3
+          ],
+          "channels": [
+            0.7098349329860573,
+            0.41921615528197553,
+            0.24213892714533583
+          ],
+          "channel_imag": [
+            -8.51401284121871e-18,
+            -6.755412013097801e-17,
+            -2.6684970596170648e-17
+          ],
+          "pair_products": [
+            0.6952198828706818,
+            0.3956875964918985,
+            0.3100305632034845
+          ],
+          "total": 1.3711900154133687,
+          "connected": -0.0297480271526962,
+          "crossed_internal_cancellation": 1.879486318891395,
+          "connected_subtraction_condition": 93.18695467602406,
+          "first_order_channels": [
+            0.20283581974155118,
+            0.3025695962035276,
+            -0.8633408314802612
+          ],
+          "connected_channels_over_h": [
+            0.18268812644219312,
+            0.29410698487596293,
+            -0.8486454507268582
+          ],
+          "channel_coefficient_errors": [
+            -0.02014769329935806,
+            -0.00846261132756465,
+            0.014695380753403042
+          ],
+          "first_order_total": -0.3579354155351825,
+          "connected_over_h": -0.3718503394087025
+        },
+        {
+          "times": [
+            0.2,
+            -0.05,
+            0.35,
+            0.1
+          ],
+          "arcs": [
+            -0.24999999999999997,
+            0.39999999999999997,
+            -0.25,
+            0.1
+          ],
+          "channels": [
+            0.3840070758927809,
+            0.29864884929399205,
+            0.46756747629381334
+          ],
+          "channel_imag": [
+            -9.482040183194861e-18,
+            -4.615353894171418e-17,
+            -6.053619342953777e-17
+          ],
+          "pair_products": [
+            0.40802024737630094,
+            0.3100305632034845,
+            0.7196441633141227
+          ],
+          "total": 1.1502234014805863,
+          "connected": -0.2874715724133219,
+          "crossed_internal_cancellation": 1.0,
+          "connected_subtraction_condition": 9.002345357660715,
+          "first_order_channels": [
+            -0.32677109766108303,
+            -0.15133518928714498,
+            -3.9616772847377857
+          ],
+          "connected_channels_over_h": [
+            -0.3001646435440007,
+            -0.14227142386865552,
+            -3.150958587753867
+          ],
+          "channel_coefficient_errors": [
+            0.026606454117082345,
+            0.009063765418489467,
+            0.8107186969839186
+          ],
+          "first_order_total": -4.4397835716860135,
+          "connected_over_h": -3.5933946551665237
+        },
+        {
+          "times": [
+            0.15,
+            0.15,
+            -0.15,
+            -0.15
+          ],
+          "arcs": [
+            0.0,
+            -0.3,
+            0.0,
+            0.3
+          ],
+          "channels": [
+            1.0000000000000013,
+            0.30368699412220473,
+            0.2205220183536426
+          ],
+          "channel_imag": [
+            0.0,
+            -4.930380657631324e-32,
+            -1.1773561088002341e-31
+          ],
+          "pair_products": [
+            1.0000000000000018,
+            0.2796182160197382,
+            0.2796182160197382
+          ],
+          "total": 1.5242090124758487,
+          "connected": -0.035027419563629536,
+          "crossed_internal_cancellation": 1.000000000000001,
+          "connected_subtraction_condition": 88.02947756154438,
+          "first_order_channels": [
+            -0.0,
+            0.2957864009678667,
+            -0.7297461780078325
+          ],
+          "connected_channels_over_h": [
+            -5.551115123125783e-15,
+            0.30085972628083185,
+            -0.7387024708261948
+          ],
+          "channel_coefficient_errors": [
+            -5.551115123125783e-15,
+            0.005073325312965171,
+            -0.0089562928183623
+          ],
+          "first_order_total": -0.4339597770399658,
+          "connected_over_h": -0.4378427445453692
+        }
+      ]
+    },
+    {
+      "lambda_value": 0.01,
+      "h": 0.04,
+      "cutoff": {
+        "L": 672,
+        "inner": 478,
+        "K": 38154.414755437465,
+        "RH": 101.00164997552824,
+        "vacuum_vector_bound": 0.0,
+        "low_source_propagator_bound": 1.3808628241317237e-15,
+        "source_tail_bound": 2.4693293138125843e-17,
+        "total_otoc_truncation_bound": 9.300925519124456e-11,
+        "crossed_reduced_truncation_bound": 1.0914065841685158e-10,
+        "uncrossed_truncation_bound": 2.860498820815951e-15
+      },
+      "alternating": [
+        {
+          "time": 0.1,
+          "raw": {
+            "time": 0.1,
+            "uncrossed": 0.8532837832381746,
+            "uncrossed_imag": 4.2490714928908726e-17,
+            "crossed_reduced": 0.9881278734484593,
+            "crossed_weighted": 0.842027030063495,
+            "g2": 0.9264058138306124,
+            "g4": 0.8631996067182611,
+            "otoc": 2.548594596539844,
+            "f22": 2.5987697902213034,
+            "commutator_squared": 0.10035038736291835,
+            "connected_otoc": -0.16786086725847427,
+            "vacuum_norm_residual": 2.4424906541753444e-15
+          },
+          "reused_previous": true,
+          "commutator_over_h": 2.5087596840729587,
+          "commutator_first": 2.887655008938,
+          "commutator_coefficient_error": -0.3788953248650415,
+          "adjacent_over_h": -2.942141839425377,
+          "adjacent_first": -3.1463182671250625,
+          "adjacent_coefficient_error": 0.20417642769968536
+        },
+        {
+          "time": 0.2,
+          "raw": {
+            "time": 0.2,
+            "uncrossed": 0.536370021368574,
+            "uncrossed_imag": 6.312884784469525e-17,
+            "crossed_reduced": 0.9519664179206179,
+            "crossed_weighted": 0.8112122703354671,
+            "g2": 0.740332402180593,
+            "g4": 0.5600595419153993,
+            "otoc": 1.8839523130726152,
+            "f22": 2.037310802009868,
+            "commutator_squared": 0.3067169778745056,
+            "connected_otoc": -0.21223181836435945,
+            "vacuum_norm_residual": 2.4424906541753444e-15
+          },
+          "reused_previous": true,
+          "commutator_over_h": 7.6679244468626395,
+          "commutator_first": 8.887575369494442,
+          "commutator_coefficient_error": -1.2196509226318026,
+          "adjacent_over_h": -1.4718332356776664,
+          "adjacent_first": -1.5249687979755118,
+          "adjacent_coefficient_error": 0.05313556229784533
+        },
+        {
+          "time": 0.35,
+          "raw": {
+            "time": 0.35000000000000003,
+            "uncrossed": 0.1622387583939176,
+            "uncrossed_imag": -1.2444050078214805e-17,
+            "crossed_reduced": 0.8496093813912315,
+            "crossed_weighted": 0.7239893573999628,
+            "g2": 0.4142076989147476,
+            "g4": 0.18138555494561748,
+            "otoc": 1.048466874187798,
+            "f22": 1.3359521290007148,
+            "commutator_squared": 0.5749705096258335,
+            "connected_otoc": -0.2946691614927024,
+            "vacuum_norm_residual": 2.4424906541753444e-15
+          },
+          "reused_previous": true,
+          "commutator_over_h": 14.374262740645838,
+          "commutator_first": 17.805892173496236,
+          "commutator_coefficient_error": -3.4316294328503982,
+          "adjacent_over_h": -0.17959766699464086,
+          "adjacent_first": -0.17497159724814812,
+          "adjacent_coefficient_error": -0.004626069746492739
+        },
+        {
+          "time": 0.5,
+          "raw": {
+            "time": 0.5,
+            "uncrossed": 0.030924428463141772,
+            "uncrossed_imag": 1.3971330093848145e-18,
+            "crossed_reduced": 0.6902576026574064,
+            "crossed_weighted": 0.5881987288912158,
+            "g2": 0.1840352871417203,
+            "g4": 0.03704787096989677,
+            "otoc": 0.6500475858174993,
+            "f22": 1.068617984111316,
+            "commutator_squared": 0.8371407965876332,
+            "connected_otoc": -0.4176903880091716,
+            "vacuum_norm_residual": 2.6645352591003757e-15
+          },
+          "reused_previous": true,
+          "commutator_over_h": 20.928519914690828,
+          "commutator_first": 30.426105879203405,
+          "commutator_coefficient_error": -9.497585964512577,
+          "adjacent_over_h": 0.022000257116126104,
+          "adjacent_first": 0.019916374068043963,
+          "adjacent_coefficient_error": 0.0020838830480821406
+        }
+      ],
+      "general": [
+        {
+          "times": [
+            0.3,
+            0.1,
+            -0.1,
+            0
+          ],
+          "arcs": [
+            0.1,
+            -0.2,
+            -0.19999999999999998,
+            0.3
+          ],
+          "channels": [
+            0.6935527401705479,
+            0.39517072300655987,
+            0.2650124178166055
+          ],
+          "channel_imag": [
+            -3.26005553270003e-17,
+            2.871923677529733e-17,
+            2.4688975022067145e-17
+          ],
+          "pair_products": [
+            0.6858482415472799,
+            0.3832166032024964,
+            0.2992886689038449
+          ],
+          "total": 1.3537358809937132,
+          "connected": -0.014617632659907898,
+          "crossed_internal_cancellation": 2.0774813685707247,
+          "connected_subtraction_condition": 186.2195786403409,
+          "first_order_channels": [
+            0.20283581974155118,
+            0.3025695962035276,
+            -0.8633408314802612
+          ],
+          "connected_channels_over_h": [
+            0.1926124655817013,
+            0.2988529951015867,
+            -0.8569062771809854
+          ],
+          "channel_coefficient_errors": [
+            -0.010223354159849873,
+            -0.0037166011019408862,
+            0.006434554299275752
+          ],
+          "first_order_total": -0.3579354155351825,
+          "connected_over_h": -0.36544081649769744
+        },
+        {
+          "times": [
+            0.2,
+            -0.05,
+            0.35,
+            0.1
+          ],
+          "arcs": [
+            -0.24999999999999997,
+            0.39999999999999997,
+            -0.25,
+            0.1
+          ],
+          "channels": [
+            0.38279336284477095,
+            0.2934198863512272,
+            0.570066434660175
+          ],
+          "channel_imag": [
+            1.639732841447376e-17,
+            -4.900698233065181e-18,
+            6.439599404648942e-17
+          ],
+          "pair_products": [
+            0.39531733392327756,
+            0.2992886689038451,
+            0.7106606799902612
+          ],
+          "total": 1.2462796838561732,
+          "connected": -0.1589869989612107,
+          "crossed_internal_cancellation": 1.0000000000000002,
+          "connected_subtraction_condition": 16.677755942298624,
+          "first_order_channels": [
+            -0.32677109766108303,
+            -0.15133518928714498,
+            -3.9616772847377857
+          ],
+          "connected_channels_over_h": [
+            -0.3130992769626653,
+            -0.14671956381544782,
+            -3.5148561332521533
+          ],
+          "channel_coefficient_errors": [
+            0.013671820698417714,
+            0.004615625471697166,
+            0.4468211514856324
+          ],
+          "first_order_total": -4.4397835716860135,
+          "connected_over_h": -3.974674974030268
+        },
+        {
+          "times": [
+            0.15,
+            0.15,
+            -0.15,
+            -0.15
+          ],
+          "arcs": [
+            0.0,
+            -0.3,
+            0.0,
+            0.3
+          ],
+          "channels": [
+            0.999999999999998,
+            0.2798994449860023,
+            0.23851457357991143
+          ],
+          "channel_imag": [
+            0.0,
+            -1.232595164407831e-32,
+            7.762143244520723e-32
+          ],
+          "pair_products": [
+            0.9999999999999956,
+            0.26793849821115384,
+            0.26793849821115384
+          ],
+          "total": 1.5184140185659118,
+          "connected": -0.017462977856391504,
+          "crossed_internal_cancellation": 1.0000000000000007,
+          "connected_subtraction_condition": 174.90092698424485,
+          "first_order_channels": [
+            -0.0,
+            0.2957864009678667,
+            -0.7297461780078325
+          ],
+          "connected_channels_over_h": [
+            6.106226635438361e-14,
+            0.2990236693712109,
+            -0.7355981157810603
+          ],
+          "channel_coefficient_errors": [
+            6.106226635438361e-14,
+            0.0032372684033442067,
+            -0.005851937773227789
+          ],
+          "first_order_total": -0.4339597770399658,
+          "connected_over_h": -0.4365744464097876
+        }
+      ]
+    },
+    {
+      "lambda_value": 0.005,
+      "h": 0.02,
+      "cutoff": {
+        "L": 1383,
+        "inner": 1022,
+        "K": 564042.7797688124,
+        "RH": 201.00082916357442,
+        "vacuum_vector_bound": 0.0,
+        "low_source_propagator_bound": 4.8561417099801653e-17,
+        "source_tail_bound": 1.7621447478644127e-18,
+        "total_otoc_truncation_bound": 5.423987871463375e-11,
+        "crossed_reduced_truncation_bound": 5.875713346873155e-11,
+        "uncrossed_truncation_bound": 1.0417141319106095e-16
+      },
+      "alternating": [
+        {
+          "time": 0.1,
+          "raw": {
+            "time": 0.1,
+            "uncrossed": 0.8531010695961871,
+            "uncrossed_imag": 9.848274872668143e-17,
+            "crossed_reduced": 0.9937973387544132,
+            "crossed_weighted": 0.9173905683997357,
+            "g2": 0.9250212619307305,
+            "g4": 0.8582351796055909,
+            "otoc": 2.6235927075921097,
+            "f22": 2.650486102943582,
+            "commutator_squared": 0.053786790702944565,
+            "connected_otoc": -0.08773596245573256,
+            "vacuum_norm_residual": 2.220446049250313e-16
+          },
+          "reused_previous": false,
+          "commutator_over_h": 2.6893395351472282,
+          "commutator_first": 2.887655008938,
+          "commutator_coefficient_error": -0.19831547379077197,
+          "adjacent_over_h": -3.042128355213014,
+          "adjacent_first": -3.1463182671250625,
+          "adjacent_coefficient_error": 0.1041899119120484
+        },
+        {
+          "time": 0.2,
+          "raw": {
+            "time": 0.2,
+            "uncrossed": 0.5360520030469044,
+            "uncrossed_imag": 1.372285814839809e-16,
+            "crossed_reduced": 0.9745668878380648,
+            "crossed_weighted": 0.8996386248104685,
+            "g2": 0.736257295776456,
+            "g4": 0.5481629766439432,
+            "otoc": 1.9717426309042771,
+            "f22": 2.0541811808679227,
+            "commutator_squared": 0.16487709992729105,
+            "connected_otoc": -0.11240698026384255,
+            "vacuum_norm_residual": 6.661338147750939e-16
+          },
+          "reused_previous": false,
+          "commutator_over_h": 8.243854996364552,
+          "commutator_first": 8.887575369494442,
+          "commutator_coefficient_error": -0.6437203731298897,
+          "adjacent_over_h": -1.4984215150098512,
+          "adjacent_first": -1.5249687979755118,
+          "adjacent_coefficient_error": 0.026547282965660557
+        },
+        {
+          "time": 0.35,
+          "raw": {
+            "time": 0.35,
+            "uncrossed": 0.16220950575168155,
+            "uncrossed_imag": 6.467119412527641e-17,
+            "crossed_reduced": 0.917175824183525,
+            "crossed_weighted": 0.8466599958144468,
+            "g2": 0.4085498844177432,
+            "g4": 0.17174150688558615,
+            "otoc": 1.17107900731781,
+            "f22": 1.3302788992447436,
+            "commutator_squared": 0.31839978385386747,
+            "connected_otoc": -0.16274700879769277,
+            "vacuum_norm_residual": 2.220446049250313e-16
+          },
+          "reused_previous": false,
+          "commutator_over_h": 15.919989192693373,
+          "commutator_first": 17.805892173496236,
+          "commutator_coefficient_error": -1.8859029808028627,
+          "adjacent_over_h": -0.17735584353795186,
+          "adjacent_first": -0.17497159724814812,
+          "adjacent_coefficient_error": -0.002384246289803743
+        },
+        {
+          "time": 0.5,
+          "raw": {
+            "time": 0.5,
+            "uncrossed": 0.031006547433738523,
+            "uncrossed_imag": 3.074828549994757e-18,
+            "crossed_reduced": 0.8177014794994842,
+            "crossed_weighted": 0.7548336021905103,
+            "g2": 0.18017866757128098,
+            "g4": 0.03397992548243053,
+            "otoc": 0.8168466970579874,
+            "f22": 1.0653473501442619,
+            "commutator_squared": 0.4970013061725489,
+            "connected_otoc": -0.24808200743753694,
+            "vacuum_norm_residual": 0.0
+          },
+          "reused_previous": false,
+          "commutator_over_h": 24.850065308627443,
+          "commutator_first": 30.426105879203405,
+          "commutator_coefficient_error": -5.576040570575962,
+          "adjacent_over_h": 0.020932282436874478,
+          "adjacent_first": 0.019916374068043963,
+          "adjacent_coefficient_error": 0.0010159083688305141
+        }
+      ],
+      "general": [
+        {
+          "times": [
+            0.3,
+            0.1,
+            -0.1,
+            0
+          ],
+          "arcs": [
+            0.1,
+            -0.2,
+            -0.19999999999999998,
+            0.3
+          ],
+          "channels": [
+            0.685007448188762,
+            0.38298046449879675,
+            0.2767539478683574
+          ],
+          "channel_imag": [
+            2.330099795422342e-17,
+            9.673612475383554e-18,
+            1.8869517861940036e-17
+          ],
+          "pair_products": [
+            0.6810536528448449,
+            0.3769635143027806,
+            0.29396122808618896
+          ],
+          "total": 1.3447418605559163,
+          "connected": -0.007236534677898199,
+          "crossed_internal_cancellation": 2.199756066981897,
+          "connected_subtraction_condition": 372.6535387201343,
+          "first_order_channels": [
+            0.20283581974155118,
+            0.3025695962035276,
+            -0.8633408314802612
+          ],
+          "connected_channels_over_h": [
+            0.19768976719585774,
+            0.30084750980080843,
+            -0.8603640108915789
+          ],
+          "channel_coefficient_errors": [
+            -0.005146052545693447,
+            -0.0017220864027191474,
+            0.0029768205886823162
+          ],
+          "first_order_total": -0.3579354155351825,
+          "connected_over_h": -0.36182673389490994
+        },
+        {
+          "times": [
+            0.2,
+            -0.05,
+            0.35,
+            0.1
+          ],
+          "arcs": [
+            -0.24999999999999997,
+            0.39999999999999997,
+            -0.25,
+            0.1
+          ],
+          "channels": [
+            0.38254056377023016,
+            0.29098112968189005,
+            0.6315263016406454
+          ],
+          "channel_imag": [
+            3.1677679199151247e-17,
+            -4.874851080663797e-17,
+            -4.345758823714054e-17
+          ],
+          "pair_products": [
+            0.38893731477010113,
+            0.2939612280861891,
+            0.7060522663857463
+          ],
+          "total": 1.3050479950927656,
+          "connected": -0.08390281414927081,
+          "crossed_internal_cancellation": 1.0,
+          "connected_subtraction_condition": 32.108563123305146,
+          "first_order_channels": [
+            -0.32677109766108303,
+            -0.15133518928714498,
+            -3.9616772847377857
+          ],
+          "connected_channels_over_h": [
+            -0.3198375499935485,
+            -0.14900492021495126,
+            -3.7262982372550435
+          ],
+          "channel_coefficient_errors": [
+            0.006933547667534512,
+            0.002330269072193719,
+            0.2353790474827422
+          ],
+          "first_order_total": -4.4397835716860135,
+          "connected_over_h": -4.1951407074635405
+        },
+        {
+          "times": [
+            0.15,
+            0.15,
+            -0.15,
+            -0.15
+          ],
+          "arcs": [
+            0.0,
+            -0.3,
+            0.0,
+            0.3
+          ],
+          "channels": [
+            1.0,
+            0.2680953184678362,
+            0.24748317086739047
+          ],
+          "channel_imag": [
+            0.0,
+            -2.465190328815662e-32,
+            -3.9402302576103937e-31
+          ],
+          "pair_products": [
+            1.0,
+            0.2621436924418485,
+            0.2621436924418485
+          ],
+          "total": 1.5155784893352267,
+          "connected": -0.00870889554847043,
+          "crossed_internal_cancellation": 1.0000000000000009,
+          "connected_subtraction_condition": 349.05297202155845,
+          "first_order_channels": [
+            -0.0,
+            0.2957864009678667,
+            -0.7297461780078325
+          ],
+          "connected_channels_over_h": [
+            0.0,
+            0.297581301299385,
+            -0.7330260787229009
+          ],
+          "channel_coefficient_errors": [
+            0.0,
+            0.001794900331518301,
+            -0.003279900715068451
+          ],
+          "first_order_total": -0.4339597770399658,
+          "connected_over_h": -0.4354447774235215
+        }
+      ]
+    }
+  ],
+  "validations": [
+    {
+      "kind": "L+16",
+      "lambda_value": 0.04,
+      "channel_absolute_errors": [
+        1.1102230246251565e-15,
+        6.661338147750939e-16,
+        3.885780586188048e-16
+      ],
+      "reference": {
+        "times": [
+          0.3,
+          0.1,
+          -0.1,
+          0
+        ],
+        "arcs": [
+          0.1,
+          -0.2,
+          -0.19999999999999998,
+          0.3
+        ],
+        "channels": [
+          0.7393183726099009,
+          0.46553528427403934,
+          0.19940651548639682
+        ],
+        "channel_imag": [
+          -9.545620280479995e-17,
+          1.1349535741157707e-16,
+          1.388579960042665e-17
+        ],
+        "pair_products": [
+          0.7130962631266308,
+          0.42040970069244304,
+          0.3318011865599407
+        ],
+        "total": 1.404260172370337,
+        "connected": -0.06104697800867753,
+        "crossed_internal_cancellation": 1.6088459564630768,
+        "connected_subtraction_condition": 47.00588655414616
+      },
+      "connected_absolute_difference": 2.220446049250313e-16
+    },
+    {
+      "kind": "alternating reduction",
+      "absolute_difference": 6.661338147750939e-16
+    },
+    {
+      "kind": "cyclic",
+      "absolute_difference": 0.0
+    },
+    {
+      "kind": "reversal",
+      "absolute_difference": 0.0
+    },
+    {
+      "kind": "shift",
+      "absolute_difference": 0.0
+    },
+    {
+      "kind": "L+16",
+      "lambda_value": 0.02,
+      "channel_absolute_errors": [
+        1.2212453270876722e-15,
+        8.881784197001252e-16,
+        6.661338147750939e-16
+      ],
+      "reference": {
+        "times": [
+          0.3,
+          0.1,
+          -0.1,
+          0
+        ],
+        "arcs": [
+          0.1,
+          -0.2,
+          -0.19999999999999998,
+          0.3
+        ],
+        "channels": [
+          0.709834932986056,
+          0.41921615528197465,
+          0.24213892714533516
+        ],
+        "channel_imag": [
+          5.545795665522926e-18,
+          -1.5495885186352742e-17,
+          -2.2599105948102285e-17
+        ],
+        "pair_products": [
+          0.6952198828706809,
+          0.3956875964918977,
+          0.31003056320348427
+        ],
+        "total": 1.3711900154133658,
+        "connected": -0.029748027152697087,
+        "crossed_internal_cancellation": 1.8794863188913942,
+        "connected_subtraction_condition": 93.1869546760211
+      },
+      "connected_absolute_difference": 8.881784197001252e-16
+    },
+    {
+      "kind": "L+16",
+      "lambda_value": 0.01,
+      "channel_absolute_errors": [
+        2.220446049250313e-16,
+        3.885780586188048e-16,
+        2.7755575615628914e-16
+      ],
+      "reference": {
+        "times": [
+          0.3,
+          0.1,
+          -0.1,
+          0
+        ],
+        "arcs": [
+          0.1,
+          -0.2,
+          -0.19999999999999998,
+          0.3
+        ],
+        "channels": [
+          0.6935527401705477,
+          0.3951707230065595,
+          0.26501241781660523
+        ],
+        "channel_imag": [
+          -5.197703896259752e-17,
+          2.2084183128983937e-17,
+          5.330608671098028e-17
+        ],
+        "pair_products": [
+          0.68584824154728,
+          0.3832166032024963,
+          0.29928866890384487
+        ],
+        "total": 1.3537358809937126,
+        "connected": -0.014617632659908564,
+        "crossed_internal_cancellation": 2.077481368570726,
+        "connected_subtraction_condition": 186.2195786403324
+      },
+      "connected_absolute_difference": 6.661338147750939e-16
+    },
+    {
+      "kind": "L+16",
+      "lambda_value": 0.005,
+      "channel_absolute_errors": [
+        1.1102230246251565e-16,
+        2.220446049250313e-16,
+        0.0
+      ],
+      "reference": {
+        "times": [
+          0.3,
+          0.1,
+          -0.1,
+          0
+        ],
+        "arcs": [
+          0.1,
+          -0.2,
+          -0.19999999999999998,
+          0.3
+        ],
+        "channels": [
+          0.6850074481887619,
+          0.38298046449879697,
+          0.2767539478683574
+        ],
+        "channel_imag": [
+          1.1722923393381216e-17,
+          -6.9007542683391385e-18,
+          1.4377798463221612e-17
+        ],
+        "pair_products": [
+          0.6810536528448441,
+          0.37696351430278047,
+          0.29396122808618846
+        ],
+        "total": 1.3447418605559163,
+        "connected": -0.0072365346778968664,
+        "crossed_internal_cancellation": 2.1997560669818976,
+        "connected_subtraction_condition": 372.6535387202027
+      },
+      "connected_absolute_difference": 1.3322676295501878e-15
+    }
+  ],
+  "richardson": [
+    {
+      "time": 0.1,
+      "commutator_richardson": 2.869919386221498,
+      "commutator_first": 2.887655008938,
+      "adjacent_richardson": -3.142114871000651,
+      "adjacent_first": -3.1463182671250625
+    },
+    {
+      "time": 0.2,
+      "commutator_richardson": 8.819785545866466,
+      "commutator_first": 8.887575369494442,
+      "adjacent_richardson": -1.525009794342036,
+      "adjacent_first": -1.5249687979755118
+    },
+    {
+      "time": 0.35,
+      "commutator_richardson": 17.46571564474091,
+      "commutator_first": 17.805892173496236,
+      "adjacent_richardson": -0.17511402008126287,
+      "adjacent_first": -0.17497159724814812
+    },
+    {
+      "time": 0.5,
+      "commutator_richardson": 28.771610702564058,
+      "commutator_first": 30.426105879203405,
+      "adjacent_richardson": 0.01986430775762285,
+      "adjacent_first": 0.019916374068043963
+    }
+  ],
+  "environment": {
+    "python": "3.14.5",
+    "numpy": "2.4.6",
+    "matplotlib": "3.11.0"
+  },
+  "error_scope": "Previous cutoff parameters reused conservatively. L+16 and symmetry checks assess truncation and floating arithmetic empirically; the general four-time total bound is not certified here. No uniform h remainder certification.",
+  "input_sha256": {
+    "code/singlet_first_order.py": "31e1e08165aeafbe4bc0bfc68127c102c8604d9004974b4abd019ec1d6daf2b7",
+    "code/singlet_general_fourpoint.py": "dd05f72a2789c4b9a18c15faeedd2e773fe5913187d73a1560e88299dc8dbbee",
+    "code/run_singlet_first_order.py": "5d6ecdf2a8ce7d2a113f1f0514423bc16b8bc8d9ea523b2ff08ef7ccfb4bb3a8",
+    "code/singlet_otoc.py": "d497109e719109a8e5339ed43db432f5d0e10ffdc704ee61313e1e37dfd780f9",
+    "results/susskind-singlet-otoc/otoc-numerics.json": "264bc58a2c70542724c1b1dd72fb1ae5ffe6674f088096952e6b9a09314eae26"
+  }
+}

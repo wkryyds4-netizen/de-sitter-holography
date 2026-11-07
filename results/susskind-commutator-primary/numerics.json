@@ -1,0 +1,273 @@
+{
+  "status": "passed",
+  "scope": "Numerical representation checks passed; finite-lambda errors measured, not asserted zero",
+  "conventions": "Js=1, infinite temperature normalized trace, DS before fixed-time small lambda",
+  "records": [
+    {
+      "lambda_value": 0.02,
+      "cutoff": {
+        "L": 244,
+        "inner": 168,
+        "K": 30884.623900292252,
+        "RH": 51.00326647512666,
+        "vacuum_bound": 3.9102179772758436e-173,
+        "propagator_bound": 1.8482799244579394e-16,
+        "source_tail": 3.0849383516278706e-18,
+        "otoc_truncation_bound": 7.300279425775526e-12
+      },
+      "points": [
+        {
+          "time": 0.0,
+          "otoc": 0.6187833918061407,
+          "commutator_squared": 0.7624332163877185,
+          "vacuum_residual": 0.0,
+          "coefficient": 38.12166081938593,
+          "first_order": 48.0,
+          "relative_coefficient_error": -0.20579873292945983,
+          "subtraction_condition": 4.246361142227424,
+          "coefficient_truncation_bound": 7.300279425775526e-10
+        },
+        {
+          "time": 0.1,
+          "otoc": 0.5994388971743786,
+          "commutator_squared": 0.8011222056512428,
+          "vacuum_residual": 2.220446049250313e-16,
+          "coefficient": 40.05611028256214,
+          "first_order": 51.89147384824582,
+          "relative_coefficient_error": -0.22807915613065166,
+          "subtraction_condition": 3.9929960395347512,
+          "coefficient_truncation_bound": 7.300279425775526e-10
+        },
+        {
+          "time": 0.2,
+          "otoc": 0.5435968404778516,
+          "commutator_squared": 0.9128063190442968,
+          "vacuum_residual": 4.440892098500626e-16,
+          "coefficient": 45.640315952214834,
+          "first_order": 64.19687742263255,
+          "relative_coefficient_error": -0.28905707279581205,
+          "subtraction_condition": 3.3820906106215154,
+          "coefficient_truncation_bound": 7.300279425775526e-10
+        },
+        {
+          "time": 0.35,
+          "otoc": 0.4079547706464758,
+          "commutator_squared": 1.1840904587070484,
+          "vacuum_residual": 0.0,
+          "coefficient": 59.20452293535242,
+          "first_order": 103.24312633887072,
+          "relative_coefficient_error": -0.42655240077651446,
+          "subtraction_condition": 2.378120286829898,
+          "coefficient_truncation_bound": 7.300279425775526e-10
+        }
+      ],
+      "refined_cutoff": 260,
+      "refinement_absolute_difference": 6.661338147750939e-16,
+      "refinement_relative_difference": 1.632861931531011e-15
+    },
+    {
+      "lambda_value": 0.01,
+      "cutoff": {
+        "L": 497,
+        "inner": 368,
+        "K": 1423577.4274291457,
+        "RH": 101.00164997552824,
+        "vacuum_bound": 0.0,
+        "propagator_bound": 3.056720552794408e-18,
+        "source_tail": 6.6306435104068e-20,
+        "otoc_truncation_bound": 7.142994854130453e-12
+      },
+      "points": [
+        {
+          "time": 0.0,
+          "otoc": 0.7866278610665567,
+          "commutator_squared": 0.4267442778668866,
+          "vacuum_residual": 2.220446049250313e-15,
+          "coefficient": 42.67442778668866,
+          "first_order": 48.0,
+          "relative_coefficient_error": -0.11094942111065287,
+          "subtraction_condition": 8.37329498592061,
+          "coefficient_truncation_bound": 1.4285989708260906e-09
+        },
+        {
+          "time": 0.1,
+          "otoc": 0.7729392850093467,
+          "commutator_squared": 0.45412142998130656,
+          "vacuum_residual": 1.9984014443252818e-15,
+          "coefficient": 45.412142998130655,
+          "first_order": 51.89147384824582,
+          "relative_coefficient_error": -0.12486311082748713,
+          "subtraction_condition": 7.808216780618911,
+          "coefficient_truncation_bound": 1.4285989708260906e-09
+        },
+        {
+          "time": 0.2,
+          "otoc": 0.7318242227248073,
+          "commutator_squared": 0.5363515545503854,
+          "vacuum_residual": 1.3322676295501878e-15,
+          "coefficient": 53.63515545503854,
+          "first_order": 64.19687742263255,
+          "relative_coefficient_error": -0.1645208052420083,
+          "subtraction_condition": 6.45779510857041,
+          "coefficient_truncation_bound": 1.4285989708260906e-09
+        },
+        {
+          "time": 0.35,
+          "otoc": 0.6201681929960562,
+          "commutator_squared": 0.7596636140078876,
+          "vacuum_residual": 8.881784197001252e-16,
+          "coefficient": 75.96636140078876,
+          "first_order": 103.24312633887072,
+          "relative_coefficient_error": -0.26419933128092754,
+          "subtraction_condition": 4.265488469161388,
+          "coefficient_truncation_bound": 1.4285989708260906e-09
+        }
+      ],
+      "refined_cutoff": 513,
+      "refinement_absolute_difference": 2.7755575615628914e-15,
+      "refinement_relative_difference": 4.47549163744448e-15
+    },
+    {
+      "lambda_value": 0.005,
+      "cutoff": {
+        "L": 1032,
+        "inner": 802,
+        "K": 77092444.00208916,
+        "RH": 201.00082916357442,
+        "vacuum_bound": 0.0,
+        "propagator_bound": 2.755083978404966e-20,
+        "source_tail": 1.264007150658089e-21,
+        "otoc_truncation_bound": 4.113275120857096e-12
+      },
+      "points": [
+        {
+          "time": 0.0,
+          "otoc": 0.8869204367171588,
+          "commutator_squared": 0.22615912656568238,
+          "vacuum_residual": 8.881784197001252e-16,
+          "coefficient": 45.231825313136476,
+          "first_order": 48.0,
+          "relative_coefficient_error": -0.05767030597632339,
+          "subtraction_condition": 16.68666186831199,
+          "coefficient_truncation_bound": 1.6453100483428386e-09
+        },
+        {
+          "time": 0.1,
+          "otoc": 0.8787651756946726,
+          "commutator_squared": 0.2424696486106548,
+          "vacuum_residual": 1.5543122344752192e-15,
+          "coefficient": 48.49392972213096,
+          "first_order": 51.89147384824582,
+          "relative_coefficient_error": -0.06547403405905994,
+          "subtraction_condition": 15.496910120173403,
+          "coefficient_truncation_bound": 1.6453100483428386e-09
+        },
+        {
+          "time": 0.2,
+          "otoc": 0.8536741703761788,
+          "commutator_squared": 0.29265165924764247,
+          "vacuum_residual": 1.3322676295501878e-15,
+          "coefficient": 58.530331849528494,
+          "first_order": 64.19687742263255,
+          "relative_coefficient_error": -0.08826824295205238,
+          "subtraction_condition": 12.668126845011978,
+          "coefficient_truncation_bound": 1.6453100483428386e-09
+        },
+        {
+          "time": 0.35,
+          "otoc": 0.7805252376765455,
+          "commutator_squared": 0.43894952464690906,
+          "vacuum_residual": 8.881784197001252e-16,
+          "coefficient": 87.7899049293818,
+          "first_order": 103.24312633887072,
+          "relative_coefficient_error": -0.14967796847576498,
+          "subtraction_condition": 8.11266506830734,
+          "coefficient_truncation_bound": 1.6453100483428386e-09
+        }
+      ],
+      "refined_cutoff": 1048,
+      "refinement_absolute_difference": 6.661338147750939e-16,
+      "refinement_relative_difference": 8.534430183936517e-16
+    }
+  ],
+  "nonsymmetric_checks": [
+    {
+      "lambda_value": ".25",
+      "time": ".2",
+      "L": 18,
+      "dps": 50,
+      "nonsymmetric_value": "(0.0019035360220721346493977671924306684868693267594775 + 0.0j)",
+      "absolute_difference": "4.5491598937404893752190932715643444863634470090191e-18",
+      "relative_difference": "0.0000000000000023898470220639189974668178245867126482257214282497",
+      "sum_condition": "1.0"
+    },
+    {
+      "lambda_value": ".25",
+      "time": ".7",
+      "L": 18,
+      "dps": 50,
+      "nonsymmetric_value": "(0.000083036657385921514223616560539362155285410111293206 + 0.0j)",
+      "absolute_difference": "4.9273827732144284411162640667195617203196595218271e-19",
+      "relative_difference": "0.0000000000000059339849752307631687337855468509624514540674923867",
+      "sum_condition": "1.0000000000000000000000000000000000000000000040169"
+    },
+    {
+      "lambda_value": ".1",
+      "time": ".2",
+      "L": 18,
+      "dps": 50,
+      "nonsymmetric_value": "(0.066688912665275218639918462709569874893824023441983 + 0.0j)",
+      "absolute_difference": "1.9630056256797356335189143580631924225009369048879e-17",
+      "relative_difference": "2.9435262133189175168102504343450389491004553397345e-16",
+      "sum_condition": "1.0"
+    },
+    {
+      "lambda_value": ".1",
+      "time": ".7",
+      "L": 18,
+      "dps": 50,
+      "nonsymmetric_value": "(0.0021961451482672849318687292964737585377528747472398 + 0.0j)",
+      "absolute_difference": "1.8906141464981997719830482682141892417101266609219e-18",
+      "relative_difference": "8.6087850249326959335243400823260384064662901584498e-16",
+      "sum_condition": "1.000003466392049146012258491402815295431945956236"
+    }
+  ],
+  "richardson": [
+    {
+      "time": 0.0,
+      "value": 47.78922283958429,
+      "first_order": 48.0,
+      "relative_error": -0.004391190841993908
+    },
+    {
+      "time": 0.1,
+      "value": 51.57571644613126,
+      "first_order": 51.89147384824582,
+      "relative_error": -0.006084957290632742
+    },
+    {
+      "time": 0.2,
+      "value": 63.425508244018445,
+      "first_order": 64.19687742263255,
+      "relative_error": -0.012015680662096573
+    },
+    {
+      "time": 0.35,
+      "value": 99.61344845797485,
+      "first_order": 103.24312633887072,
+      "relative_error": -0.035156605670602414
+    }
+  ],
+  "error_scope": "Analytic infinite-cutoff Taylor bound; 50-digit original transfer checks at same finite L; no interval roundoff or uniform small-lambda remainder bound",
+  "environment": {
+    "python": "3.14.5",
+    "numpy": "2.4.6",
+    "mpmath": "1.3.0",
+    "matplotlib": "3.11.0"
+  },
+  "input_sha256": {
+    "code/run_commutator_primary.py": "873b4cc7be23fed15f4b6ea57ca15bbcd31b470acfaf3de7c46d501a7345f4f2",
+    "code/mixed_cubic_otoc.py": "e4cdb9f6293867fbafb56581acf8bdf01edcf7782abfc0ca504291f5cac7ae80",
+    "code/singlet_otoc.py": "d497109e719109a8e5339ed43db432f5d0e10ffdc704ee61313e1e37dfd780f9"
+  }
+}

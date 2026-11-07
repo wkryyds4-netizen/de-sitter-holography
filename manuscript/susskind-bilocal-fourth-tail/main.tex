@@ -1,0 +1,617 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,microtype,booktabs}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\LL}{\mathcal L}
+\newcommand{\NN}{\mathcal N}
+\newcommand{\WW}{\mathcal W}
+\newcommand{\PP}{\mathcal P_H}
+\newcommand{\BB}{\mathcal B}
+\newcommand{\FF}{\mathcal F}
+\newcommand{\ad}{\operatorname{ad}}
+\newtheorem{theorem}{Theorem}
+\title{Summable fourth-norm tails for the complete singlet bilocal\\
+\large Common-disorder finite-time four-point functions in complex DSSYK}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{7 November 2026\quad Local research draft}
+\begin{document}\maketitle
+\begin{abstract}
+We close the finite-time fourth-norm tail left open by the preceding
+bilocal reconstruction. Restricted Gaussian covariances and an ancilla
+contraction bound control pure marked words at every degree. An exact
+sequence of completely positive charge-transfer maps then controls the
+actual neutral covariance residual. Clifford Riesz inequalities,
+charge finite differences and an inverse Jacobi expansion give the
+corresponding bound for ordinary charged powers. The resulting tails
+are uniform at finite size. Together with the previously established
+same-disorder strong replacements and return estimate, they construct
+the full finite-time bilocal four-point function by convergent finite
+pairing sums. The result concerns the specified microscopic model and
+tracial state; the state/polarization and bulk-generator dictionary are
+the next physical questions.
+\end{abstract}
+
+\section{Objects and result}
+Use standard CAR, $\{c_i,c_j^\dagger\}=\delta_{ij}$, and
+\begin{equation}
+ H_N=\sqrt{w_N}\sum_{|I|=|J|=p}J_{IJ}C_I^\dagger C_J,
+ \qquad w_N=\frac{4^pJ_s^2}{\lambda_N}\left(\frac{p!}{N^p}\right)^2.
+\end{equation}
+The Gaussian matrix $J$ is Hermitian, with
+$\EE J_{IJ}J_{KL}=\delta_{IL}\delta_{JK}$; $I,J$ may overlap.
+Every sector uses this same $J$. Set
+$\tau_N=\EE_J2^{-N}\operatorname{Tr}$ and
+$\|X\|_r=(\tau_N|X|^r)^{1/r}$. The state is $\beta=\mu=0$.
+Take even $N$, $p\to\infty$, $\lambda_N=p^2/N\to\lambda>0$
+in a positive compact set, fixed $J_s$, $\hbar=1$, and string time.
+All norm orders and real time windows below are fixed.
+
+For neutral operators define $D=Q-\sum_i c_i^\dagger(\cdot)c_i$
+and the half-Clifford length $\LL\Gamma_A=|A|\Gamma_A/2$.
+$\NN$ and $\WW_j$ instead denote coupling Gaussian number and chaos
+projection. Write $Z_j=\WW_j(H^j)$ and $C=J_s^2/\lambda$.
+The actual bilocal is the previously defined
+$\BB_N(t)=(1-\PP)m e^{-iH_mt/2}F_m(t)e^{-iH_mt/2}$,
+where $F_m(t)=m^{-1}\sum_i c_i^\dagger e^{itH_{m-1}}c_i$;
+inactive sectors have zero dynamic field. Pinching $\PP$ retains
+whole degenerate energy blocks.
+
+\newpage
+\begin{theorem}[Finite-time four-point construction]\label{thm}
+The charged and neutral series in the two-component memory reduction
+have uniformly summable tails in every fixed finite $S_r$ norm,
+$r\ge2$. In particular their
+degree-$n$ building blocks admit bounds of the form
+\begin{equation}\label{envelope}
+ \|X_{n,N}\|_r\le K_r(1+n)^{b_r}L_r^n\sqrt{n!},
+\end{equation}
+with constants independent of $N,n$. Consequently the joint ordered
+four-point functions of $\BB_N(t)$ and its adjoint, with arbitrary
+fixed center-time conjugations, converge locally uniformly in all
+these real times. Their limit is the convergent pairing construction
+in Section~\ref{construction}.
+\end{theorem}
+The complete compressed-bath memory is connected by an $S_r$ strong
+approximation; no separate claim about its own Taylor tail is needed.
+This is a model theorem assembled from the new estimates below and
+the explicit preceding strong interfaces \cite{Four,Joint,Recon}.
+It does not assert a uniform growing-time limit or interchange the
+double-scaling limit with $\lambda\downarrow0$.
+
+\section{Restricted covariances without absolute CAR weights}
+Let $A_{IJ}=\sqrt{w_N}C_I^\dagger C_J$. On charge $m$,
+\begin{equation}
+ \EE H_m^2=C_mI,\qquad
+ C_m=w_N\binom mp\binom{N-m+p}p\le C_*,
+ \quad C_*:=\frac{J_s^2}{\lambda_-}e^{2\lambda_+}.
+\end{equation}
+Impose finitely many site requirements $T_I\subset I,T_J\subset J$.
+On occupation $O$, $|O|=m$, the diagonal of the column covariance
+vanishes unless $T_J\subset O$. Otherwise, with
+$K=T_J\cup(T_I\cap O)$, it equals
+\begin{equation}
+ w_N\binom{m-|K|}{p-|K|}
+       \binom{N-m+p-|T_I|}{p-|T_I|}.
+\end{equation}
+Invalid binomial coefficients are zero. Thus, on an interior charge
+interval, with $t=|T_I|+|T_J|$ fixed, the row and column covariances
+are bounded by
+\begin{equation}\label{restricted}
+ C_m\frac{(p)_{|T_J|}}{(m)_{|T_J|}}
+       \frac{(p)_{|T_I|}}{(N-m+p)_{|T_I|}}
+ \le C_* (K_t p/N)^t.
+\end{equation}
+The row version swaps the two label roles.
+
+For a fixed Gaussian pairing, scan the matrix word from right to left.
+At the first endpoint of an index use the column map
+$V\psi=\sum_\alpha A_\alpha\psi\otimes e_\alpha$; at its second
+endpoint use the row map. Their norms are the square roots of the
+corresponding covariance norms. Open indices occupy distinct ancillas;
+crossings only permute these ancillas unitarily. Fixed CAR sandwiches
+are contractions. The complete pairing contraction is therefore
+bounded by the product of endpoint norms. Requirements at both
+endpoints are first combined into the same allowed index family.
+This argument retains the CAR signs until the matrix contraction is
+bounded. Taking absolute local weights first would lose a factor
+exponential in the square of the degree.
+
+\newpage
+\section{Pure marks, repeated deficits and Gaussian projection}
+The exact body product rule is
+\begin{equation}
+ D(XY)=(DX)Y+X(DY)-\sum_i[c_i^\dagger,X][Y,c_i].
+\end{equation}
+Since $DA_{IJ}=pA_{IJ}$, a deficit $(np-D)$ on a product of $n$
+slots selects two slots and one site. The two commutators require
+$i\in J_a$ and $i\in I_b$. In a pure Wick block those slots cannot
+pair with each other, so these are two independent set labels.
+The single-slot part of $p-\LL$ requires $i\in I\cap J$ and has
+the same property. For $s$ distinct sites,
+\begin{equation}
+ N^s(p/N)^{2s}=\lambda_N^s.
+\end{equation}
+Combining this count with \eqref{restricted}, a word with $L$ slots
+and $k$ fixed pure marks satisfies
+\begin{equation}\label{word}
+ |\tau_N(\text{marked word})|
+ \le K_k(1+L)^{2k}C_*^{L/2}(L-1)!!.
+\end{equation}
+The outside-charge estimate uses at worst $N^k$ and the binomial
+tail; its exponential decay absorbs this fixed power. For four
+copies of a one-mark degree-$n$ field,
+$(4n-1)!!\le16^n(n!)^2$, giving \eqref{envelope}.
+
+Repeated deficits on one pure block also obey this bound. Extend
+the body operator to a homogeneous parity-$a$ word by
+\begin{equation}
+ D_gX=\tfrac12\{Q,X\}-(-1)^a\sum_i c_i^\dagger Xc_i.
+\end{equation}
+A normal ordered word with $r_c+r_a$ letters has eigenvalue
+$(r_c+r_a)/2$. Each contraction removes two letters. Applying the
+next deficit either counts the already removed pairs or adds another
+tagged contraction. The multiplicity depends on the fixed number of
+marks, with no new $p$ loss. Therefore any fixed sequence of $k$
+$D/\LL$ deficits has bound
+$K_{k,r}(1+n)^{2k}L_{k,r}^n\sqrt{n!}$.
+
+There is also a dimension independent, same-norm Gaussian tool.
+For $\deg P\le n$, the contraction
+$\mathsf O_tP=\sum_{j\le n}t^j\WW_jP$, $-1\le t\le1$, has a
+Chebyshev expansion whose coefficients have norm at most $2\|P\|_r$.
+Leading coefficients and absolute coefficient sums give
+\begin{align}\label{topchaos}
+ \|\WW_nP\|_r&\le2^n\|P\|_r,\\
+ \left\|\sum_{j\le n}\theta_j\WW_jP\right\|_r
+ &\le K(1+\sqrt2)^n\max_j|\theta_j|\,\|P\|_r.\label{chaos}
+\end{align}
+Linear Gaussian matrix moments \cite{Tropp} yield
+$\|H_m^n\|_r\le K_r^n\sqrt{n!}$; hence the same envelope holds
+for $Z_n$. No matrix-valued $S_2$ to $S_4$ hypercontractivity is assumed.
+
+\newpage
+\section{The covariance is an exact completely positive path}
+On $\mathcal H_k=\wedge^k\mathbb C^N$ define
+\begin{equation}
+ T_kX=\frac1k\sum_i c_i^\dagger Xc_i,
+ \qquad S_kX=\frac1{N-k}\sum_i c_iXc_i^\dagger.
+\end{equation}
+$T_k$ maps charge $k-1$ to $k$ and $S_k$ maps $k+1$ to $k$.
+Both are unital and preserve their respective normalized sector
+traces. Thus they contract every Schatten norm, also after disorder
+averaging. The deterministic covariance map has the exact factorization
+\begin{equation}\label{path}
+ \Phi_m(X)=w_N\sum_{I,J} C_I^\dagger C_JX C_J^\dagger C_I,
+ \qquad
+ \frac{\Phi_m}{C_m}
+ =T_m\cdots T_{m-p+1}S_{m-p}\cdots S_{m-1}.
+\end{equation}
+Expanding the Kraus products proves this identity: each unordered
+$p$-set has $p!$ orders on each side, the reordering signs cancel,
+and the path denominators give
+$(m)_p(N-m+p)_p=(p!)^2\binom mp\binom{N-m+p}p$.
+
+Put $\bar D=2\LL-D$. For any neutral full-Fock section $X$,
+\begin{align}\label{step}
+ T_kX_{k-1}-(1-b/k)X_k&=((b-D)X)_k/k,\\
+ S_kX_{k+1}-(1-b/(N-k))X_k&=((b-\bar D)X)_k/(N-k).
+\end{align}
+Set
+\begin{align}
+ \theta_{v,m}&=\prod_{a=0}^{p-1}
+  (1-vp/(m-a))_+(1-vp/(N-m+p-a))_+,\\
+ A_{v,m}&=p(\Phi_m-C_m\theta_{v,m})Z_{v,m}.
+\end{align}
+Inactive sectors are defined separately by zero covariance. In
+$N/3\le m\le2N/3$, the path stays in a wider interior interval.
+If $vp\le N/8$, telescope \eqref{step} over $2p$ steps. Every
+source has coefficient at most $Kp/N$ after multiplying by $pC_m$;
+their sum costs $p^2/N=\lambda_N$. The pure marked bound therefore
+proves \eqref{envelope} for $A_v$. If $vp>N/8$, then
+$p<8\lambda_Nv$, and the coarse CP estimate
+$\|A_v\|_r\le2pC_*\|Z_v\|_r$ suffices. Outside the central
+interval the same estimate is absorbed by the binomial tail.
+
+This supplies a bound for the actual covariance residual, before
+taking any degree or size limit. A coefficientwise occupation
+Markov estimate alone would not control its summed Gaussian
+Schatten norm; the full CP factorization is the needed bridge.
+
+\newpage
+\section{The actual neutral time series}
+Retain finite-sector parameters in the Jacobi recurrence:
+\begin{equation}
+ a_{j,m}=\sum_{v<j}\theta_{v,m},\qquad
+ Q_{j+1}(x)=xQ_j(x)-C_ma_{j,m}Q_{j-1}(x),
+ \qquad \eta_j=p[Z_j-Q_j(H)].
+\end{equation}
+The exact Gaussian creation/annihilation identity from the previous
+neutral stage \cite{Neutral} is
+\begin{equation}\label{eta}
+ pr_j=\sum_{v+w=j-1}A_v\diamond Z_w,
+ \qquad \eta_{j+1}=H\eta_j-C_ma_j\eta_{j-1}-pr_j.
+\end{equation}
+Since $A_v$ is pure coupling degree $v$,
+\begin{equation}
+ A_v\diamond Z_w=\WW_{v+w}(A_vH^w).
+\end{equation}
+Equation~\eqref{topchaos} and fixed $2r$ H\"older give an exponential
+times $\sqrt{(v+w)!}$ envelope. Unroll \eqref{eta} before taking
+norms. Its terms are bounded Jacobi path coefficients times
+$H^a\WW_{v+w}(A_vH^w)$. Only a fixed $4r$ input is needed,
+independent of the degree. The path count is exponential and
+$\sqrt{a!v!w!}\le\sqrt{j!}$, giving \eqref{envelope} for $\eta_j$.
+Outer charges can instead use $p(Z_j-Q_j(H))$ and the binomial tail.
+
+The exact finite-parameter expansion
+$e^{isH_m}=\sum_jc_{j,m}(s)Q_{j,m}(H_m)$ obeys
+$|c_{j,m}(s)|\le K_S L_S^j/j!$. Subtracting a function of $H_m$
+and using exact pinching gives
+\begin{align}\label{neutral}
+ p(1-\PP)\Phi_m(e^{isH_m})
+ &=(1-\PP)\sum_{j\ge0}c_{j,m}(s)T_{j,m},\\
+ T_{j,m}&=A_{j,m}+(C_m\theta_{j,m}-\Phi_m)\eta_{j,m}.
+\end{align}
+The normalized covariance is a contraction, so $T_j$ satisfies
+\eqref{envelope}. With $\alpha_m=1-p/m$ and
+$\epsilon_m=1-\alpha_m^2$, the actual neutral memory is
+\begin{equation}
+ B_{m,N}(s)=\frac{m\epsilon_m}{p}(1-\PP)e^{-iH_ms/2}
+ \sum_jc_{j,m}(\alpha_ms)T_{j,m}e^{-iH_ms/2}.
+\end{equation}
+Here $0\le m\epsilon_m/p\le2$ on active sectors, and the phases
+are unitary. Thus the actual remainder, uniformly at finite $N$, is
+bounded by
+\begin{equation}\label{tail}
+ K_{r,S}\sum_{j>K}(j+1)^{b_r}L_{r,S}^j/\sqrt{j!}
+ \longrightarrow0.
+\end{equation}
+The previously constructed local-size/ordered-Wick proxy has the
+same bound by Section~3. The old compact-time $L^2$ strong bridge
+therefore upgrades by interpolation to every fixed $S_r$.
+
+\newpage
+\section{Differentiating the CP path without a size loss}
+Use distinct notation for unnormalized maps
+$K_-X=\sum c_i^\dagger Xc_i$, $K_+X=\sum c_iXc_i^\dagger$,
+and normalized maps $t=Q^{-1}K_-$, $s=(N-Q)^{-1}K_+$.
+Direct CAR give
+\begin{align}\label{comm}
+ [D,t]&=t-t^2,&[\bar D,s]&=s-s^2,\\
+ [D,s]&=-s+\frac Q{N-Q}ts-\frac{2Q-N}{N-Q}I,\\
+ [\bar D,t]&=-t+\frac{N-Q}{Q}st+\frac{2Q-N}{Q}I.
+\end{align}
+For a scalar charge function, retain the finite differences:
+\begin{align}\label{diff}
+ [D,f(Q)]&=[f(Q)-f(Q-1)]K_-,\\
+ [\bar D,f(Q)]&=[f(Q)-f(Q+1)]K_+.
+\end{align}
+Commuting $D/p$ or $\LL/p$ through at most $2p$ normalized
+steps costs only a bounded factor on the interior interval.
+Apply this to the telescope for $A_v$, not to its coarse difference.
+Each term is $pC(Q)f_h(Q)P_hE_h$, with a pure deficit $E_h$,
+$|f_h|\le K/N$, and
+$|\Delta f_h|\le K(1+v\lambda_N)/N^2$.
+Repeated pure marks control derivatives of $E_h$; \eqref{diff}
+controls all scalar coefficients. For $vp>N/8$, use
+$p\le8\lambda_+v$ and $N\le64\lambda_+v^2$ instead.
+Outer charges are controlled before applying any full-trace theorem.
+The result is
+\begin{equation}\label{Ader}
+ \|A_v\|_r+\|DA_v/p\|_r+\|\LL A_v/p\|_r
+ \le K_r(v+1)^{b_r}L_r^v\sqrt{v!}.
+\end{equation}
+
+The Clifford Riesz theorem of Ben Efraim--Lust-Piquard,
+Theorem 6.8(1),(3), and its semigroup interpolation Lemma 5.6
+\cite{Riesz}, supply the product bridge. In the present convention
+$N_{\rm Clifford}=2\LL$. For either physical product-rule cross
+term $\Gamma_\sigma(X,Y)$, $\sigma=D,\LL$,
+\begin{equation}\label{riesz}
+ \|\Gamma_\sigma(X,Y)/p\|_r
+ \le K_r\bigl[\|X\|_{2r}\|\LL X/p\|_{2r}
+                   \|Y\|_{2r}\|\LL Y/p\|_{2r}\bigr]^{1/2}.
+\end{equation}
+These are normalized annealed \emph{full-Fock} norms. The theorem
+is not applied within a fixed charge sector. Its row and column
+square functions must both be kept for non-Hermitian inputs.
+
+\newpage
+\section{Ordinary derivatives and the Jacobi error}
+A useful independent CP estimate avoids auxiliary dimension factors.
+If $\Phi$ is completely positive, with trace adjoint $\Phi^\dagger$,
+then scalar H\"older on the spectral decompositions of positive $X,Y$
+gives, for conjugate $u,v$,
+\begin{equation}
+ \tr Y\Phi(X)\le
+ [\tr X^u\Phi^\dagger(I)]^{1/u}
+ [\tr Y^v\Phi(I)]^{1/v}.
+\end{equation}
+Disorder can be included in that same H\"older inequality. Duality
+with $u=2r$ then gives
+\begin{equation}
+ \|\Phi(X)\|_r\le
+ \|X\|_{4r}\|\Phi^\dagger(I)\|_2^{1/(2r)}
+                 \|\Phi(I)\|_{2r-1}^{1-1/(2r)}.
+\end{equation}
+For arbitrary $X$ an absolute factor at most four suffices.
+For the force map
+\begin{equation}
+ \Gamma_H(X)=\sum_i[c_i^\dagger,H]X[H,c_i],
+\end{equation}
+the Clifford square-function bound controls both Grams by $O_r(p)$.
+Consequently $\|\Gamma_H(X)\|_r\le K_rp\|X\|_{4r}$.
+The exact ordered identity
+\begin{equation}
+ DH^w=pwH^w-
+ \sum_{a+b+c=w-2}H^a\Gamma_H(H^b)H^c
+\end{equation}
+and the analogous $\LL$ formula imply
+\begin{equation}\label{ordinaryder}
+ \|H^w\|_r+\|DH^w/p\|_r+\|\LL H^w/p\|_r
+ \le K_r(w+1)^{b_r}L_r^w\sqrt{w!}.
+\end{equation}
+Alternatively, the tagged proof gives this independently: ordinary
+internal pairs may leave only one independent set requirement per
+site, but each normalized deficit supplies $1/p$. For $s\le k$
+distinct sites in $k$ marks, $p^{-k}N^s(p/N)^s=p^{s-k}\le1$.
+
+Now unroll \eqref{eta}. Its terms have the form
+\begin{equation}
+ b(Q)H^a\WW_{v+w}(A_vH^w).
+\end{equation}
+Use \eqref{riesz} once inside the projection and once outside it;
+physical derivatives commute with Gaussian projection. The needed
+norm order is a fixed multiple of $r$, not one that grows at each
+recursive step. Coefficient derivatives use \eqref{diff} separately.
+The central Jacobi path weights and their normalized differences
+grow at most exponentially times a degree polynomial. The outer
+estimate follows directly from $p(Z_j-Q_j(H))$ and its derivatives.
+It follows that
+\begin{equation}\label{etader}
+ \|\eta_j\|_r+\|D\eta_j/p\|_r+\|\LL\eta_j/p\|_r
+ \le K_r(j+1)^{b_r}L_r^j\sqrt{j!}.
+\end{equation}
+
+\newpage
+\section{The ordinary charged tail: keep the charge differences}
+The inverse Jacobi expansion is exact:
+\begin{equation}
+ H^n=\sum_{j=0}^nh_{nj}(Q)[Z_j-\eta_j/p].
+\end{equation}
+Its coefficients are weighted up/down paths. On an interior charge
+interval the recurrence weights $\beta_j=C_m\sum_{v<j}\theta_v$
+are bounded. The sharper difference estimate needed here follows
+from
+\begin{equation}
+ \frac{C_m}{C_{m-1}}=
+ \frac m{m-p}\frac{N-m+1}{N-m+p+1},\qquad
+ N|\Delta C_m|\le K\lambda_N(1+|X_m|),
+ \quad X_m=\frac{m-N/2}{p}.
+\end{equation}
+Each positive-part factor in $\theta_v$ is Lipschitz, including
+across its cutoff. All central denominators are at least $cN$, so
+\begin{equation}
+ N|\Delta\theta_{v,m}|\le K\lambda_Nv
+ \quad\text{for every }v.
+\end{equation}
+Taking one difference along each path, rather than differentiating
+every coefficient simultaneously, gives
+\begin{equation}\label{hdiff}
+ \sum_j|h_{nj,m}|\le K^n,\qquad
+ \sum_jN|\Delta h_{nj,m}|
+ \le K(n+1)^3L^n(1+|X_m|).
+\end{equation}
+Binomial full-Fock charge has bounded fixed moments of $X_m$.
+
+Define the actual ordinary charged coefficient
+\begin{equation}
+ G_{n,N}=[p\NN-D-\lambda_N\NN(\NN-1)]H^n.
+\end{equation}
+With $\Delta h_m=h_m-h_{m-1}$, its non-counterterm part is
+\begin{align}\label{reassembly}
+ (p\NN-D)H^n=\sum_j\bigl[&h_{nj}(pj-D)Z_j
+       -(\Delta h_{nj})K_-Z_j-h_{nj}\NN\eta_j\notag\\
+       &+h_{nj}D\eta_j/p
+       +(\Delta h_{nj})K_-\eta_j/p\bigr].
+\end{align}
+This retains all internally contracted Gaussian terms. The first
+term is pure marked; the second uses \eqref{hdiff}; the third uses
+\eqref{chaos}; the last two use \eqref{etader} and coefficient
+differences. On outer charges use the original $G_n$ and the coarse
+$D=O(N)$ bound with exponential binomial tails. Finally
+$\lambda_N\NN(\NN-1)$ is controlled by \eqref{chaos}.
+Thus \eqref{envelope} holds for $G_n$ and for
+\begin{equation}
+ K_n=G_{n+2}-\{H,G_{n+1}\}+HG_nH.
+\end{equation}
+The actual series $\sum_n(is)^nG_n/n!$ and its fixed derivatives
+and energy insertions therefore have the finite-$N$ tail
+\eqref{tail}. This supplies the missing ordinary, rather than
+only pure-Wick, bound.
+
+\newpage
+\section{Returning to the actual fields}
+The preceding memory reduction \cite{Transfer,Joint} is also valid
+in every fixed $S_r$ norm. Here is the required upgrade, specifying
+which bounds are used.
+
+First, the charged OU remainder is exactly
+\begin{equation}
+ E_m-G_N=R_m(\NN)e^{isH},\qquad
+ E_m=[m(1-\alpha_m^{\NN})-D]e^{isH}|_m.
+\end{equation}
+The physical derivative cancels. The central bound
+$|R_m(k)|\le a_m(k+1)^3$, with
+$\|a_m\|_{L^r(\mathrm{binomial})}=O_r(p^{-1})$, combines with
+\eqref{chaos} and the ordinary moment envelope to give $O(p^{-1})$
+for fixed derivatives and energy insertions. The other $\alpha_m-1$
+terms vanish by the new charged bounds (or by the earlier coarse
+high-moment interpolation).
+
+Second, the old positive-force estimates bound $p\Lambda(s)$ in
+every fixed norm. Its $L^2$ convergence to the energy regression
+therefore upgrades by interpolation. Fixed-order H\"older transfers
+this to the first return; the next return is $O(p^{-1})$.
+The four-auxiliary-Gaussian energy regression and the next OU
+remainder are treated at fixed higher norm orders in the same way.
+This gives the actual memory to charged-plus-neutral strong bridge.
+
+Third, for each fixed $n$, the joint-regression result uses the same
+original disorder:
+\begin{equation}\label{Rbridge}
+ R_{n,N}:=G_{n,N}-g_n(X_N,H_N)
+ \longrightarrow \sum_d a_{nd}J_{d,N}\quad\text{strongly in }L^2.
+\end{equation}
+The new $G_n$ bounds, the fixed-degree charge/energy polynomial
+bounds, and pure marked bounds upgrade this to $S_r$.
+Ordinary internal pairs are removed through \eqref{Rbridge}; they
+are not silently treated as forbidden pure-Wick pairs.
+
+The neutral local proxy is a finite sum of ordered pure marked
+blocks and ordinary outside powers at each fixed degree. Its
+previous strong bridge and the new two-sided high bounds give the
+same upgrade. Fixed residuals have no diagonal spectral mass by the
+preceding two-point argument. Exact pinching first vanishes in
+$L^2$, then in $S_r$ by interpolation and contraction. Only then
+are the finite-degree common-source moments used.
+
+Here $\FF_N(s)$ is the actual centered memory field:
+$m(1-\PP)e^{-iH_ms/2}M_m(s)e^{-iH_ms/2}$, with the compressed-bath
+memory $M_m$ of the preceding reconstruction. The established
+bilocal return estimate \cite{Four} is
+\begin{align}\label{return}
+ \sup_{|t|\le S}\|\BB_N(t)-\widetilde\BB_N(t)\|_r
+ &\le K_{r,S}p^{-1/(2r-1)}+K_{r,S}pe^{-N/(8r)},\\
+ \widetilde\BB_N(t)&=-\int_0^t ds
+ \int_{-(t-s)/2}^{(t-s)/2}du\,
+ e^{iH_Nu}\FF_N(s)e^{-iH_Nu},\quad t\ge0.\label{filter}
+\end{align}
+At $r=4$ the return error is $O(p^{-1/7})$.
+
+\newpage
+\section{A constructive complete four-point function}\label{construction}
+Let $\tau_\infty$ be the limiting common-source tracial functional.
+At fixed degree it is explicitly evaluated as follows. Expand all
+fields and counterterms into ordinary outside powers and pure marked
+blocks; keep the whole-block Wick restrictions and the true matrix
+order. For every allowed pairing, form the local two-label CAR
+polynomial $T_{uv}(z)$ and divide by its source-dependent singleton
+factors, obtaining $R_{uv}(z)$. Extract the required nilpotent source
+coefficient from
+\begin{equation}\label{pairing}
+ (Ce^{-\lambda})^\ell
+ \exp\left\{\lambda\sum_{u<v}[R_{uv}(z)-1]\right\},
+\end{equation}
+then sum the allowed pairings. Counterterms and chaos projectors
+are expanded with their actual coefficients. The prefactor follows
+from $w_N\binom Np^2 2^{-2p}\to Ce^{-\lambda}$ per chord.
+Finite-size overlap exponential moments justify this fixed-word
+Poisson limit \cite{Four}; Section~3, separately, gives summable
+degree bounds. General descendants are not replaced by the
+three-species low-field mixed-$q$ law.
+
+Write $R_n^\infty=\sum_d a_{nd}J_d$ and
+$L_n=R_{n+2}^\infty-\{H,R_{n+1}^\infty\}+HR_n^\infty H$.
+Let $N_j$ be the centered neutral ordered descendant. For
+$q=e^{-4\lambda}$, let $H_j$ be the monic $q$-Hermite polynomial
+of squared norm $C^j[j]_q!$ in $\rho_q$, and put
+$c_j(s)=\int e^{isx}H_j(x)d\rho_q(x)/(C^j[j]_q!)$. Define
+\begin{equation}
+ \FF^{[K]}(s)=e^{-iHs/2}\left[
+ \sum_{n=0}^K\frac{(is)^n}{n!}L_n
+       +2C\sum_{j=1}^Kc_j(s)N_j\right]e^{-iHs/2}.
+\end{equation}
+The neutral sign is positive. Apply the filter in \eqref{filter}
+to define $\BB^{[K]}(t)$, and extend to negative times by adjoints.
+Fixed-degree strong replacement and $\|1-\PP\|_r\le2$ make the
+limiting centered blocks inherit the degree envelope; this does not
+rely on $L^2$ regression being an $S_r$ contraction.
+For $\varepsilon_i\in\{1,*\}$, center times $T_i$, and relative
+times $t_i$, the answer is
+\begin{equation}\label{four}
+ \boxed{\lim_{K\to\infty}\tau_\infty
+ \prod_{i=1}^4
+ \left(e^{iHT_i}\BB^{[K]}(t_i)e^{-iHT_i}\right)^{\varepsilon_i}.}
+\end{equation}
+At fixed $K$, expand the energy exponentials into polynomials and
+evaluate them by \eqref{pairing}; Gaussian energy moments control
+this auxiliary truncation. Thus \eqref{four} is a convergent
+algorithm, without requiring a closed four-field spectral kernel.
+
+For completeness, the filter norm is at most $S^2/2$. The new
+$S_4$ tails make its truncated fields Cauchy, and all actual fields
+are bounded in $S_4$. Telescoping a four-factor product and using
+H\"older bounds its error by one $S_4$ difference times three
+$S_4$ bounds. First pass $N\to\infty$ at fixed truncation using
+the strong interfaces; then remove truncation using \eqref{tail}.
+The return contribution is controlled by \eqref{return}. All these
+steps are locally uniform in the fixed time windows. Unitary
+insertions preserve strong-error bounds for arbitrary center times,
+but spectral convergence itself is only asserted on compact windows.
+
+\newpage
+\section{Checks, provenance and the next physical step}
+Three independent finite algebra checks accompany the proof. They
+test exact identities and nontrivial CAR signs; they do not substitute
+for the all-degree estimates.
+\begin{itemize}
+\item Restricted covariance and ancilla contraction:
+42,336 covariance comparisons, 564 networks (452 crossed),
+94,743 label assignments, and 1,776 exact rational sector bounds.
+There are 113 nonzero crossed CAR-sandwich cases.
+\item Coherence/CP channel:
+340 coherence identities, 265 normalized path identities,
+75 inactive cases, 2,609 kernel entries and 1,305 tagged-site bounds,
+including 132 nonconstant inputs and 14 nontrivial CAR gauges.
+\item Charged reassembly: 3,312 matrix identities, 9,949 entry
+comparisons and 84 polynomial identities, including 16 nonzero
+charge-difference fixtures. The polynomial fixtures use one Gaussian
+coordinate to check algebra, not the full ensemble's moments.
+\end{itemize}
+Drivers and outputs are stored under \texttt{code/} and
+\texttt{results/susskind-bilocal-fourth-tail/}. The local evidence
+manifest binds the input/output hashes, parameters, dependency
+versions, parent manifests, build logs and final page renders.
+The two preceding checks were first successful runs; old scientific
+outputs and failed records are preserved. The new third check is
+also saved independently, rather than overwriting a predecessor.
+
+The theoretical increment is precise: complete finite-relative-time
+four-point functions now follow from actual finite-size uniform
+tails, rather than from a formal limiting Taylor series. The next
+question is which state and polarization can turn this tracial
+collective algebra into a physical particle construction, and how
+the microscopic Hamiltonian supplies spatial/internal generators.
+The positive low-channel commutator remains a useful calibration.
+It is not by itself a finite-$G$ gravitational scattering amplitude.
+No new issue reply, Git commit or push accompanies this local stage.
+
+\begin{thebibliography}{9}\setlength{\itemsep}{2pt}
+\bibitem{Riesz} L. Ben Efraim and F. Lust-Piquard,
+\emph{Poincar\'e type inequalities on the discrete cube and in the
+CAR algebra}, Probab. Theory Relat. Fields \textbf{141} (2008),
+569--602, \href{https://arxiv.org/abs/math/0702233}{math/0702233}.
+Theorem 6.8(1),(3) and Lemma 5.6.
+\bibitem{Tropp} J. A. Tropp,
+\emph{User-Friendly Tail Bounds for Sums of Random Matrices},
+Found. Comput. Math. \textbf{12} (2012), 389--434,
+\href{https://arxiv.org/abs/1004.4389}{arXiv:1004.4389}, Sec. 4.7.
+\bibitem{Four} A. Day and Chengheng, \emph{A common-disorder algebra
+for two bilocal channels}, local draft (7 Nov. 2026), with its
+multisource and actual-transfer proof notes.
+\bibitem{Neutral} A. Day and Chengheng, \emph{The neutral marked
+series}, local draft and proof notes (7 Nov. 2026).
+\bibitem{Transfer} A. Day and Chengheng, \emph{The oriented memory
+transfer} and \emph{Two-component memory reduction}, local drafts
+and proof notes (7 Nov. 2026).
+\bibitem{Joint} A. Day and Chengheng, \emph{Joint charge/energy
+regression and the complete memory kernel}, local draft and proof
+notes (7 Nov. 2026).
+\bibitem{Recon} A. Day and Chengheng, \emph{Strong reconstruction
+of the complete bilocal fluctuation}, local draft (7 Nov. 2026).
+\end{thebibliography}
+\end{document}

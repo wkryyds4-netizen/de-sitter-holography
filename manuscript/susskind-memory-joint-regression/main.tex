@@ -1,0 +1,521 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,microtype,booktabs}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\NN}{\mathcal N}
+\newcommand{\HH}{H^{(q,C)}}
+\newcommand{\WW}{\mathcal W}
+\newcommand{\LL}{\mathcal L}
+\newcommand{\PP}{\mathcal P_H}
+\newcommand{\crs}{\operatorname{cr}}
+\newcommand{\Reg}{\operatorname{Reg}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\title{The joint finite-time memory kernel\\
+\large Charge--energy regression, exact static removal, and mixed spectra}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{7 November 2026\quad Local research draft}
+\begin{document}\maketitle
+\begin{abstract}
+We complete a convergent construction of the charged and neutral
+finite-time memory covariance in the common-coupling complex DSSYK
+model. A joint charge source identifies the conserved fluctuations
+left by internal Gaussian contractions. Subtracting their explicit
+charge--energy regression gives a strong reduction to pure oriented
+Wick sources in the same disorder sample. The residual two-energy
+spectra are absolutely continuous, permitting the limit of exact
+samplewise energy pinching. Uniform ordinary-power tails and a
+subsequent Hermite resummation give the full AA, AB, BA, and BB kernel.
+The construction retains the previously nonzero mixed calibration.
+The bulk de Sitter interpretation remains a separate next problem.
+\end{abstract}
+
+\section{Setting and the actual memory observable}
+Use standard CAR, overlapping complex Gaussian $p$-body couplings,
+the same original disorder in every charge sector, and normalized
+annealed full-Fock trace at $\beta=\mu=0$. Take even $N$, $p\to\infty$,
+$\lambda_N=p^2/N\to\lambda>0$, fixed $J_s$, $\hbar=1$, and string time.
+Set
+\begin{equation}
+ C=J_s^2/\lambda,\quad q=e^{-4\lambda},\quad
+ X_N=(Q-N/2)/p,\quad b_{N,m}=2^{-N}\binom Nm.
+\end{equation}
+The exact memory field from the preceding reduction is
+\begin{equation}
+ \mathsf F_{m,N}(s)=(1-\PP)
+ [m e^{-ihs/2}M_m(s)e^{-ihs/2}],\quad
+ \PP Y=\sum_eP_eYP_e,\quad h=H_N|_m.
+\end{equation}
+For $m>0$, its finite-dimensional definition is
+\begin{align}
+ V\psi&=m^{-1/2}\sum_i|i\rangle c_i\psi,\quad
+ K=I_N\otimes H_{m-1},\quad Q_\perp=1-VV^\dagger,\\
+ R&=Q_\perp KV,\quad K_\perp=Q_\perp KQ_\perp,\quad
+ M_m(s)=R^\dagger e^{isK_\perp}R.
+\end{align}
+The $m=0$ field is zero. Pinching retains entire degenerate energy
+blocks. The established
+two-component reduction is $\mathsf F_N=A_N+B_N+o_{L^2}(1)$,
+uniformly on compact memory-time intervals, with both components
+uniformly bounded. The neutral component $B_N$ is constructed in
+\cite{Neutral}; the missing charged and mixed limits are the subject here.
+
+Write $DY=QY-\sum c_i^\dagger Yc_i$, and let $\NN$ be coupling
+Gaussian number. The preceding oriented-transfer result \cite{Body}
+supplies the complete coefficients
+\begin{equation}
+ G_{n,N}=[p\NN-D-\lambda_N\NN(\NN-1)]H_N^n.
+\end{equation}
+All polynomial degrees and real times in the limiting statements are
+fixed before $N\to\infty$. We do not take a joint $\lambda\to0$ limit.
+
+\newpage
+\section{A charge source identifies the conserved component}
+For a complex charge source $t$ in a fixed disk,
+\begin{equation}
+ \tr e^{tX_N}=\cosh(t/(2p))^N\longrightarrow e^{t^2/(8\lambda)},
+ \qquad \pi_t=\frac{e^{t/p}}{1+e^{t/p}}.
+\end{equation}
+The local product-state method is the chemical-potential construction
+of \cite[Sec.~4.2]{BNR}, applied at a source of order $1/p$.
+The marked loss source is the new ingredient inherited from \cite{Body}.
+For $z^2=0$,
+\begin{equation}
+ e^{-zD_i}c_i^{(\dagger)}=e^{-z/2}c_i^{(\dagger)},\quad
+ e^{-zD_i}n_i=(1-z)n_i,\quad
+ e^{-zD_i}(1-n_i)=1-n_i+zn_i.
+\end{equation}
+An internal Gaussian chord has one $n$ and one $1-n$ singleton.
+Their normalized source product, repeated at $p$ sites, is exactly
+\begin{equation}
+ [1+(e^{t/p}-1)z]^p=1+p(e^{t/p}-1)z\longrightarrow e^{tz}.
+\end{equation}
+Open-leg source factors cancel exactly against $e^{pdz}$. A neutral
+size mark on a Wick subblock has only open legs and adds no charge term.
+For $\ell$ unmarked chords the remaining singleton correction is
+\begin{equation}
+ [4\pi_t(1-\pi_t)]^{p\ell}
+ =\cosh(t/(2p))^{-2p\ell}=1+O_T(p^{-1}).
+\end{equation}
+This factor is discarded only after the source cancellation.
+
+For two whole-field $G$ insertions, let $i_a$ count internal chords,
+$O_a$ the chords with exactly one field endpoint, and $B=O_1\cap O_2$.
+Put $k_a=-4\crs(O_a)-2i_a$ and
+$K_D(B)=2|B|(|B|-1)-4\crs(B)$. Their joint tilted weight is
+\begin{equation}
+ C^\ell q^{\crs\pi}e^{t^2/(8\lambda)}
+ \left\{\lambda[4i_1i_2+K_D(B)]
+       +(\lambda k_1+i_1t)(\lambda k_2+i_2t)\right\}.\label{eq:tilt}
+\end{equation}
+Equivalently, average over $X\sim\gamma_\lambda=N(0,1/(4\lambda))$
+the conditional single-source weights $\lambda(k_a+4i_aX)$ and
+connected weight $\lambda K_D(B)$. The former reproduce the previously
+found $4\lambda i_1i_2$ static covariance.
+
+For completeness, the convergence is locally uniform in complex $t$.
+After singleton cancellation, each fixed coefficient is bounded by
+$K(1+R)^r e^{cR}$, where $R$ is the total overlap of finitely many
+$p$-sets. Hypergeometric exponential moments are uniformly bounded;
+triple intersections vanish under this domination. Singleton
+denominators remain bounded away from zero. Cauchy's formula then
+gives every fixed $X_N$-power moment. Positive squared norms tilted
+at $t=\pm a$ control their charge tails. Thus the commuting scalar
+law is $\gamma_\lambda\otimes\rho_q$, with the required weighted
+uniform integrability; this does not assert independence of all
+dynamic fields.
+
+\newpage
+\section{Explicit joint regression and a strong common-copy reduction}
+Let $\HH_d$ be monic $q$-Hermite polynomials with
+\begin{equation}
+ \HH_{d+1}(x)=x\HH_d(x)-C[d]_q\HH_{d-1}(x),\quad
+ P_d=[d]_q!,\quad \|\HH_d\|_{\rho_q}^2=C^dP_d,
+\end{equation}
+and set $m_d=q\partial_q\log P_d$, $m_0=m_1=0$. Define
+\begin{equation}
+ x^n=\sum_d a_{nd}\HH_d(x),\qquad
+ a_{n+1,d}=a_{n,d-1}+C[d+1]_q a_{n,d+1},\quad a_{00}=1.
+\end{equation}
+Only $0\le d\le n$ of matching parity occur, and $a_{nd}\ge0$.
+
+\begin{proposition}
+The limiting orthogonal regression onto the commuting charge/energy
+space is
+\begin{equation}
+ \boxed{g_n(X,H)=\sum_d a_{nd}
+ [-4\lambda m_d-\lambda(n-d)(1-2X)]\HH_d(H).}\label{eq:g}
+\end{equation}
+If $Z_{d,N}=\WW_d(H_N^d)$ is highest coupling chaos and
+\begin{align}
+ J_{d,N}&=(dp-D)Z_{d,N}-\kappa_d^-\HH_d(H_N),\\
+ \kappa_d^-&=\lambda[d(d-1)-4m_d],\qquad
+ R_{n,N}=G_{n,N}-g_n(X_N,H_N),
+\end{align}
+then, with fixed left/right energy weights allowed,
+\begin{equation}
+ \left\|R_{n,N}-\sum_d a_{nd}J_{d,N}\right\|_2\longrightarrow0.
+ \label{eq:strong}
+\end{equation}
+Here $J_0=J_1=0$; this $J_d$ is a field, not the disorder label.
+\end{proposition}
+\begin{proof}
+Fix an internal partial matching $\gamma$ of the $n$-slot field,
+with $i$ internal chords and $d=n-2i$ open slots. Its weight is
+$C^i q^{c_\gamma}$, where $c_\gamma$ includes internal--open crossings.
+The open endpoint permutations have weight $q^{\operatorname{inv}\sigma}$.
+Their conditional source is $\lambda[-4\operatorname{inv}\sigma-2i+4iX]$,
+whose average is $\lambda[-4m_d-2i+4iX]$.
+Summing internal matchings gives \eqref{eq:g}. Charge and energy
+polynomials are dense in $L^2(\gamma_\lambda\otimes\rho_q)$,
+so the calculated orthogonality is the stated projection.
+
+After subtracting this regression, the conditional source is
+$-4\lambda(\operatorname{inv}\sigma-m_d)$, with connected weight
+$\lambda K_D(B)$. This is precisely the centered pure $J_d$ rule;
+all $i$ and $X$ terms have canceled. Internal matchings leave only
+$a_{nd}$. The same argument computes the mixed $R_n$--$J_e$ Gram
+terms in the same disorder sample. Expanding the squared norm of
+their difference proves \eqref{eq:strong}, rather than only equality
+of two marginal laws. Fixed Gaussian-degree multiplication bounds
+permit energy weights. No loss operator is applied to an uncontrolled
+$Z_d-\HH_d(H_N)$ error.
+\end{proof}
+
+\newpage
+\section{Pure residuals and the absence of extra static mass}
+With $v_d=(q\partial_q)^2\log P_d$, the pure-source rule gives
+\begin{equation}
+ \|J_d\|_2^2=C^dP_d
+ \{\lambda[2d(d-1)-4m_d]+16\lambda^2v_d\}.\label{eq:norm}
+\end{equation}
+These are limiting norms. The Mahonian inversion bound implies
+\begin{equation}
+ \|J_d\|_2\le K(\sqrt\lambda\,d+\lambda d^2)\sqrt{C^dP_d}.
+ \label{eq:Jbound}
+\end{equation}
+In $J_d^\dagger H^aJ_eH^b$, fix all external partner positions.
+If there is no direct field bridge, $K_D(B)=0$. The two open
+permutation sums are independent and centered, so this entire group
+cancels. Individual diagrams need not vanish.
+
+Let $p_m=\HH_m/\sqrt{C^mP_m}$ and
+$M_{mn}^{de}=\lim\EE\tr[J_d^\dagger p_m(H)J_ep_n(H)]$.
+External Hermite blocks remove their own internal pairs by the
+multiblock Wick identity \cite{EP}. Deleted chords belong to no
+marked incident set, so this cancellation preserves the marks.
+Each remaining field bridge crosses every energy bridge. For a
+fixed $D=d+e$, endpoint counting and the remaining permutation sum
+give the same estimate as in \cite{Neutral}:
+\begin{equation}
+ |M_{mn}^{de}|\le K_D(m+n+1)^D
+ q^{\max(0,\min(m,n)-D)}\mathbf1_{|m-n|\le D}.\label{eq:HS}
+\end{equation}
+Here the energy-bridge count is at least $\min(m,n)-D$, and
+$P_r/\sqrt{P_mP_n}\le(q;q)_\infty^{-1}$. Thus the coefficients
+are square summable over both external degrees.
+
+Use the positive matrix measures
+\begin{equation}
+ \nu_{ab,N}(A,B)=\EE\tr[\mathcal X_{a,N}^\dagger
+ P_H(B)\mathcal X_{b,N}P_H(A)].\label{eq:nu}
+\end{equation}
+Fixed marked moments, positivity, and energy-moment uniform
+integrability give a weak limit. Its compact support follows explicitly
+from the fixed-mark bound and ordinary $q$-Gaussian moments:
+\begin{equation}
+ \int E^{2m}\,d\nu_{dd}\le K_dR_H^{2m},\quad
+ \int (E')^{2m}\,d\nu_{dd}\le K_dR_H^{2m},\quad
+ R_H=2\sqrt{C/(1-q)}.
+\end{equation}
+The constants absorb the fixed field degrees and are independent of
+$m$. Positivity extends support to cross measures; compact moment
+determinacy gives uniqueness. Equation \eqref{eq:HS} constructs its density:
+\begin{equation}
+ d\nu_{de}=f_{de}\,d\rho_q(E)d\rho_q(E'),\qquad
+ f_{de}=\sum_{m,n\ge0}M_{mn}^{de}p_n(E)p_m(E').\label{eq:density}
+\end{equation}
+The series converges in $L^2$. Since $\rho_q$ is diffuse, the diagonal
+$\Delta=\{E=E'\}$ has zero mass. The same holds for $R_n$ and its
+fixed energy multiples by \eqref{eq:strong}. Portmanteau on this
+closed diagonal now gives
+\begin{equation}
+ \limsup_N\|\PP R_{n,N}\|_2^2
+ =\limsup_N\nu_{R_nR_n,N}(\Delta)\le0.\label{eq:pinch}
+\end{equation}
+Because $g_n(X_N,H_N)$ commutes with $H_N$ exactly, this proves the
+actual static subtraction, including degeneracies. It exchanges
+neither an infinite-time average nor a growing-time limit with $N$.
+
+\newpage
+\section{Neutral descendants and the common matrix spectrum}
+For a self-contained specification of the combined field list, recall
+the neutral construction \cite{Neutral}. With $Z_j=\WW_j(H^j)$,
+let $U_j=(jp-\LL)Z_j$, where $\LL$ is half Clifford size, and
+\begin{align}
+ T_{v,w}&=U_v\diamond Z_w,\\
+ r_j&=4\lambda C\sum_{1\le v<j}q^vT_{v,j-1-v},\\
+ \eta_{j+1}&=H\eta_j-C[j]_q\eta_{j-1}-r_j,
+ \qquad \eta_0=\eta_1=\eta_2=0,\\
+ V_j&=4\lambda q^jU_j+(q^j-q^{\NN})\eta_j,\qquad
+ N_j=V_j-v_j(H),\quad v_j=\Reg V_j.
+\end{align}
+The diamond is coupling-Gaussian Wick multiplication, with ordered
+matrix coefficients. The entire $v+w$ source forbids internal
+pairing, while the physical size mark acts only on its $v$ subblock.
+The whole-field internal-pair count selects the degree on which
+$q^{\NN}$ acts. An adjoint reflects every interval.
+
+The scalar regressions are also finite recurrences. Put
+$\kappa_v^L=\lambda[v^2-4m_v]$ and $g_j^\eta=\Reg\eta_j$. Then
+\begin{align}
+ g_{j+1}^\eta(x)&=xg_j^\eta(x)-C[j]_qg_{j-1}^\eta(x)
+ -4\lambda C\Big(\sum_{v<j}q^v\kappa_v^L\Big)\HH_{j-1}(x),\\
+ v_j(x)&=4\lambda q^j\kappa_j^L\HH_j(x)
+       +\sum_d(q^j-q^d)g_{j,d}^\eta\HH_d(x),
+\end{align}
+where $g_j^\eta=\sum_dg_{j,d}^\eta\HH_d$ and the first three $g_j^\eta$
+vanish. Terms at $v=0$ are zero.
+
+All $\nu_{ab}$ for $\mathcal X_a\in\{J_d,N_j\}$ are now determined
+by a single algorithm: expand these finite recurrences, impose their
+Wick restrictions, insert the local oriented/size marks, and sum
+common-disorder pairings. For a mixed pair the connected coefficient is
+\begin{equation}
+ K_{DL}=|B_{DL}|(|B_{DL}|-1)-4\crs(B_{DL}),\qquad
+ B_{DL}=O_D\cap I_L.
+\end{equation}
+Here $I_L$ is incident to the smaller neutral marked subblock; it may
+contain chords internal to the larger neutral field. It must not be
+replaced by that larger field's open set. Neutral--neutral weights
+and their regression use the established size rule.
+
+The fixed neutral diagonal densities are already $L^2$.
+The combined matrix measure is positive, so its mixed density satisfies
+$|f_{ab}|^2\le f_{aa}f_{bb}$. Cauchy--Schwarz gives mixed $L^2$
+integrability as well. Thus \eqref{eq:density}, with the computed
+mixed Hermite moments, constructs the entire fixed-field matrix.
+No mixed block is set to zero by an independence assumption.
+
+\newpage
+\section{Finite-time passage before Hermite resummation}
+The actual charged transfer is controlled by the already proved
+ordinary coefficients
+\begin{align}
+ K_{n,N}&=G_{n+2,N}-\{H_N,G_{n+1,N}\}+H_NG_{n,N}H_N,\\
+ \|K_{n,N}\|_2&\le K'(n+3)^4L^{n+2}\sqrt{n!}.
+\end{align}
+On a compact real-time interval, the charged field is strongly
+approximated by
+\begin{equation}
+ (1-\PP)e^{-iH_Ns/2}
+ \sum_{n\ge0}\frac{(is)^n}{n!}K_{n,N}e^{-iH_Ns/2}.\label{eq:ordinary}
+\end{equation}
+First truncate this series at finite $N$. Subtract the exactly
+commuting polynomial
+$k_n=g_{n+2}-2Hg_{n+1}+H^2g_n$, then use \eqref{eq:pinch}.
+The limiting residual coefficient is
+\begin{equation}
+ L_n=R_{n+2}-\{H,R_{n+1}\}+HR_nH.
+\end{equation}
+The joint limiting regression is an orthogonal $H$-bimodule projection,
+so $\|L_n\|_2\le\|K_n\|_2$. This and the finite-$N$ projected tail
+allow the cutoff to tend to infinity. We never require the limiting
+$g_n$ to be a finite-$N$ conditional expectation.
+
+Only now work in the limiting Hilbert space. Nonnegativity of $a_{nd}$,
+orthogonality of $\HH_d$, and compact energy support yield
+\begin{equation}
+ \sum_d a_{nd}\sqrt{C^dP_d}
+ \le\sqrt{n+1}\|H^n\|_{\rho_q}\le\sqrt{n+1}R_H^n.
+\end{equation}
+Together with \eqref{eq:Jbound}, this proves absolute summability
+of the double series and its required derivatives:
+\begin{equation}
+ \sum_{n,d}\frac{S^n}{n!}a_{nd}\|J_d\|_2
+ \le K\sum_n\frac{(SR_H)^n}{n!}(n+1)^{5/2}<\infty.
+\end{equation}
+Define the computable time coefficients
+\begin{equation}
+ c_d(s)=\frac{\int e^{isE}\HH_d(E)\,d\rho_q(E)}{C^dP_d}
+       =\sum_n\frac{(is)^n}{n!}a_{nd}.
+\end{equation}
+Then $\sum_n(is)^nR_n/n!=\sum_dc_d(s)J_d$.
+Left/right energy actions are bounded by $R_H$, so the charged
+force amplitude is
+\begin{equation}
+ D_d(s;E,E')=-c_d''(s)+i(E+E')c_d'(s)+EE'c_d(s).\label{eq:amplitude}
+\end{equation}
+The neutral amplitude is $+2C c_j(s)$, with its previously proved
+summable descendant tail. Both carry the same centering phase
+$e^{-is(E+E')/2}$. This resummation includes all lower coupling
+chaoses rather than dropping them from the original exponential.
+
+\newpage
+\section{The complete joint covariance}
+Use the field list $\mathcal X_a\in\{J_d\ (d\ge2),N_j\ (j\ge1)\}$,
+the common positive matrix spectrum \eqref{eq:nu}, and amplitudes
+\begin{equation}
+ f_{J_d}(s;E,E')=D_d(s;E,E'),\qquad
+ f_{N_j}(s;E,E')=2C c_j(s).
+\end{equation}
+Our convention is $E=$ input/column and $E'=$ output/row.
+
+\begin{theorem}
+For fixed real $s,u,T$, the actual full-trace memory covariance has
+the convergent representation
+\begin{align}
+ &\lim_N\EE\tr[\mathsf F_N(s)^\dagger
+ e^{iTH_N}\mathsf F_N(u)e^{-iTH_N}]\notag\\
+ &\quad=\sum_{a,b}\int
+ e^{\frac i2(s-u)(E+E')+iT(E'-E)}
+ \overline{f_a(s;E,E')}f_b(u;E,E')\,d\nu_{ab}(E,E').
+ \label{eq:full}
+\end{align}
+All AA, AB, BA, and BB terms are included. Fixed-field densities
+are $L^2(\rho_q\otimes\rho_q)$; the full finite-time spectral
+matrix is absolutely continuous and has no diagonal static mass.
+\end{theorem}
+\begin{proof}
+For finite field cutoffs the common moment construction determines
+the positive spectral matrix; exact static removal follows from
+\eqref{eq:pinch}. Weighted transfer, the ordinary tails, and the
+neutral reduction identify this with the actual field's covariance.
+Section~6 then resums the charged component.
+Spectral Cauchy--Schwarz bounds the variation of a cross measure by
+the product of the corresponding vector norms. The charged and
+neutral summable tails therefore make the double sum absolutely
+convergent in spectral total variation, uniformly for $s,u$ in
+compact intervals. Multiplication by the external real-time phase
+does not change these tail bounds. Absolute continuity is preserved
+under total-variation limits, completing the argument.
+\end{proof}
+
+The positive matrix construction gives a nonnegative equal-time
+norm and the conjugation relation
+$\mathcal K(s,u;T)^*=\mathcal K(u,s;-T)$.
+The infinite density is only asserted to be $L^1$; the fixed-field
+$L^2$ constants need not be uniform as the field degree grows.
+Likewise, uniformity over all real $T$ applies to the series tails,
+not to convergence of the original finite-$N$ spectra.
+
+Equation \eqref{eq:full} is a constructive full kernel, not a finite
+Taylor fit. Every matrix coefficient is given by finite common-$J$
+pairing sums, its energy dependence by a convergent Hermite expansion,
+and its time dependence by \eqref{eq:amplitude}. A short special-function
+closed form is not required for this construction. Extracting the
+bulk particle content and gravitational interaction dictionary from
+this spectrum is the next physical task.
+
+\newpage
+\section{Low-order contact with the earlier spectra}
+The time coefficients immediately give
+\begin{align}
+ A_0&=J_2,\\
+ A_1&=J_3-\tfrac32\{H,J_2\},\\
+ B_1&=2C N_1,\qquad
+ B_2=2C[N_2-\{H,N_1\}],
+\end{align}
+where $A(s)=A_0+isA_1+\cdots$ and
+$B(s)=isB_1-s^2B_2/2+\cdots$.
+For $G_2$ the joint regression is
+\begin{equation}
+ g_2=-\frac{4\lambda q}{1+q}\HH_2(H)-2\lambda C+4\lambda CX.
+\end{equation}
+The last term carries variance $4\lambda C^2$. Removing the energy
+regression alone leaves that term; removing both gives
+\begin{equation}
+ \nu_{A_0A_0}=w\mu_{q^2},\qquad
+ w=4C^2\lambda+\frac{16C^2\lambda^2q}{1+q},
+\end{equation}
+in agreement with the previously identified $Y_-$ spectrum \cite{Two}.
+The new common-source moments also recover the nonzero mixed channel
+\begin{equation}
+ \nu_{A_0B_2}=d_0(w+\eta)\mu_{q^2},\quad
+ d_0=4\lambda Cq^2,\quad
+ \eta=-4C^2\lambda q+\frac{16C^2\lambda^2q}{1+q}.\label{eq:mixed}
+\end{equation}
+Here $\mu_r$ is the probability $q$-Mehler measure characterized by
+\begin{equation}
+ \int\HH_a(E)\HH_b(E')\,d\mu_r
+   =\delta_{ab}r^a C^aP_a.
+\end{equation}
+For physical $\lambda>0$, $d_0(w+\eta)>0$.
+The $A_0$--$B_1$ channel vanishes. Independent saved checks test
+\eqref{eq:mixed} through total external energy degree four, while
+the general all-degree measure is supplied by the construction.
+
+The previous named decomposition $A_1=R+a\{H,Y_-\}/2$, with
+$a=-(1-q)^2/(1+q^2)$, can now be compared through the explicit target
+\begin{equation}
+ J_3=R+\frac{2(1+q+q^2)}{1+q^2}\frac{\{H,Y_-\}}2.
+\end{equation}
+We retain this as a remaining naming/calibration cross-check, not an
+assumption in the full-kernel proof.
+
+The present result closes the finite-time joint memory calculation
+in this stated model and limit. It does not yet establish its de Sitter
+mass/position interpretation, a finite-temperature extension, a
+uniform small-$\lambda$ limit, or finite-$G$ gravitational four-point
+dynamics. The next stage should use the constructed spectral matrix
+to test the physical dictionary rather than repeat its existence proof.
+
+\newpage
+\section{Validation and provenance}
+Three new scientific outputs accompany the proof; each refuses to
+overwrite an existing result. The stage evidence records parameters,
+dependency versions, predecessor hashes, build logs, and final page
+renders. No predecessor scientific main was rerun.
+\begin{itemize}
+\item Joint regression: 68 charge/energy projection checks, 39
+two-energy Gram layouts with 117 equalities, 30 no-bridge grouped
+cancellations (28 had nonzero uncentered values), 44 mixed-neutral
+layouts, and 16 comparisons with the sealed neutral engine. There
+are 18 nonzero $A_0B_2$ Mehler tests and 12 zero $A_0B_1$ tests.
+The recorded maximum is ten raw slots, $G_n$ through $n=5$ and
+neutral $V_j$ through $j=4$. Rational $q,\lambda$ are formal
+independent variables, not asserted to satisfy $q=e^{-4\lambda}$.
+\item Charge tilt: complete finite CAR is compared with the local
+charge-generating polynomial: 19,502 support/pairing/layout cases
+and 315,192 coefficients, including smaller neutral mark intervals
+and whole-field internal contractions. There are 16 exact singleton
+and 16 collision-ratio checks, 216 complex scalar tilts, and 20
+full-charge $G_2$ tilts compared at 70 and 110 digits. Finite errors
+are retained; these high-precision comparisons are not interval certificates.
+\item Time coefficients: 90 rational ordinary/Hermite identities,
+1782 centered-force coefficient identities, and 405 physical-parameter
+quadrature coefficients for $c_d,c_d',c_d''$. Independent Jacobi
+sizes 48 and 72 differ by at most $1.281\times10^{-14}$.
+The recorded analytic bound controls Taylor/quadrature truncation
+only; floating roundoff is not interval-certified. These calculations
+evaluate the limiting coefficient functions, not finite-$N$ dynamics.
+\end{itemize}
+The tests check the claimed interfaces. The arbitrary-degree
+regression, static removal, and time-limit interchange rely on the
+proofs above and the cited predecessor bounds. All outputs remain
+local; this stage makes no Git publication or external issue reply.
+
+\begin{thebibliography}{9}
+\bibitem{BNR} M. Berkooz, V. Narovlansky, and H. Raj,
+\emph{Complex Sachdev-Ye-Kitaev model in the double scaling limit},
+\href{https://arxiv.org/abs/2006.13983}{arXiv:2006.13983},
+Secs.~3--4. The original CAR normalization differs from ours.
+\bibitem{EP} E. G. Effros and M. Popa,
+\emph{Feynman diagrams and Wick products associated with $q$-Fock space},
+\href{https://arxiv.org/abs/math/0303045}{arXiv:math/0303045},
+Theorems 3.2--3.3.
+\bibitem{Body} A. Day and Chengheng,
+\emph{Oriented sources for the charged memory field}, local project
+stage \texttt{susskind-memory-oriented-transfer} (2026).
+\bibitem{Neutral} A. Day and Chengheng,
+\emph{A constructive neutral memory kernel}, local project stage
+\texttt{susskind-memory-wick-descendants} (2026).
+\bibitem{Two} A. Day and Chengheng,
+\emph{Two-component finite-memory reduction}, local project stage
+\texttt{susskind-memory-two-component} (2026); see also the preceding
+projected-memory and uniform-bound stages.
+\end{thebibliography}
+\end{document}

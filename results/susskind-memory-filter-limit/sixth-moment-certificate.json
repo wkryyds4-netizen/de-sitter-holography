@@ -1,0 +1,59 @@
+{
+  "status": "passed",
+  "symbolic_rows": [
+    {
+      "order": 1,
+      "cancelled_negative_powers": 1,
+      "limit": "2*A*B",
+      "coefficient_parameter_domain": "QQ[A,B,d]",
+      "charge_shift_d_cancels": true
+    },
+    {
+      "order": 2,
+      "cancelled_negative_powers": 2,
+      "limit": "4*A**2*B**2 + 2*A*B",
+      "coefficient_parameter_domain": "QQ[A,B,d]",
+      "charge_shift_d_cancels": true
+    },
+    {
+      "order": 3,
+      "cancelled_negative_powers": 3,
+      "limit": "8*A**3*B**3 + 12*A**2*B**2 + 2*A*B",
+      "coefficient_parameter_domain": "QQ[A,B,d]",
+      "charge_shift_d_cancels": true
+    },
+    {
+      "order": 4,
+      "cancelled_negative_powers": 4,
+      "limit": "16*A**4*B**4 + 48*A**3*B**3 + 28*A**2*B**2 + 2*A*B",
+      "coefficient_parameter_domain": "QQ[A,B,d]",
+      "charge_shift_d_cancels": true
+    },
+    {
+      "order": 5,
+      "cancelled_negative_powers": 5,
+      "limit": "32*A**5*B**5 + 160*A**4*B**4 + 200*A**3*B**3 + 60*A**2*B**2 + 2*A*B",
+      "coefficient_parameter_domain": "QQ[A,B,d]",
+      "charge_shift_d_cancels": true
+    },
+    {
+      "order": 6,
+      "cancelled_negative_powers": 6,
+      "limit": "64*A**6*B**6 + 480*A**5*B**5 + 1040*A**4*B**4 + 720*A**3*B**3 + 124*A**2*B**2 + 2*A*B",
+      "coefficient_parameter_domain": "QQ[A,B,d]",
+      "charge_shift_d_cancels": true
+    }
+  ],
+  "formal_series_order": 12,
+  "total_cancelled_negative_powers": 21,
+  "scope": "Exact polynomial-ring identities for all A,B,d. Analytic rational denominators stay nonzero near e=0 on compact A,B,d sets; hence scaled moments through sixth are uniformly bounded. Does not assert a full Poisson law.",
+  "elapsed_seconds": 0.18457770347595215,
+  "environment": {
+    "python": "3.14.5",
+    "sympy": "1.14.0"
+  },
+  "input_sha256": {
+    "code/memory_sixth_moment.py": "3b4a7882284827dbb56042a6d9dcff64654e20ee3433dee1703026fbb2fc3125",
+    "code/cubic_linear_dynamics.py": "81d8e955107098e897637650bb7686a15fd2ff8fde6de1e1c525db398516d014"
+  }
+}

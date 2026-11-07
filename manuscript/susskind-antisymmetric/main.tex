@@ -1,0 +1,313 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,microtype}
+\usepackage[margin=24mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\DeclareMathOperator{\sech}{sech}
+\newcommand{\Js}{\mathcal J_s}
+\newcommand{\norm}[1]{\lVert#1\rVert}
+\newcommand{\ket}[1]{|#1\rangle}
+\title{A positive chord generator from the tracial seed\\Fixed-degree contraction of antisymmetric descendants}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Local research note --- 6 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+We connect the singlet boost realization to explicit operators in the
+one-matter chord Hilbert space. A grade-wise operator bound controls the
+nearly null antisymmetric descendants at every fixed degree. Their limit
+is the positive discrete series with label $d=2$. The same bound proves
+positivity of a two-sided chord operator $Q_h$ already at finite $h$.
+Its seed spectral measures converge to the gamma law of the preceding
+translation construction. This is a model-level construction with the
+correct microscopic boost; selecting physical momentum units and the
+interacting multiparticle dynamics remains the next step.
+\end{abstract}
+
+\section{The construction and its microscopic clock}
+Use the full annealed trace at $\beta=\mu_{\rm chem}=0$, first the
+complex DSSYK double scaling limit at fixed $\lambda=p^2/N$, then
+$h=4\lambda\to0$. The conserved-subtracted derivative singlet of our
+previous notes has matter weight $q^d$, with $q=e^{-h}$ and $d=2$.
+We work in its one-matter chord representation, not in a finite-$N$
+sample Hilbert space. The proof below applies to every fixed $d>0$.
+Let $\mathcal H_n$ be the grade-$n$ space and $\Omega=\ket{d;0,0}$,
+with $\norm\Omega=1$. Define
+\begin{gather}
+ E_h=\bar n,\quad E_h|_{\mathcal H_n}=d+n,\quad
+ C=a_L^\dagger-a_R^\dagger,\quad D=C^\dagger=a_L-a_R,\nonumber\\
+ K_+=C/\sqrt h,\quad K_-=D/\sqrt h,\qquad
+ B_h=\frac{K_++K_-}{2},\quad
+ \Pi_h=\frac{K_--K_+}{2i},\quad \boxed{Q_h=E_h+\Pi_h.}\label{def}
+\end{gather}
+With $H_{\rm src}=H_s/(2\Js)=(a^\dagger+a)/\sqrt h$,
+\begin{equation}
+ B_h=\frac{H_{{\rm src},L}-H_{{\rm src},R}}2
+ =\frac{H_{s,L}-H_{s,R}}{4\Js},\qquad \eta=4\Js t.\label{clock}
+\end{equation}
+Thus $B_h$ is the actual singlet Liouvillian in boost units. The main
+claims proved below are $Q_h\ge0$ for every $h>0$, and convergence on
+each finite descendant span to $[B,Q]=iQ$ with $Q=p$ on
+$L^2(\mathbb R_+,dp)$. Here $p,Q,E,B$ are dimensionless.
+
+\newpage
+\section{A bound that survives the degenerate Gram limit}
+The starting identities are the chord algebra of Lin--Stanford
+\cite{LS}, Eqs.~(22)--(25):
+\begin{gather}
+ [a_j,a_j^\dagger]_q=1,\quad
+ [a_L,a_R^\dagger]=[a_R,a_L^\dagger]=q^{E_h},\nonumber\\
+ [E_h,a_j^\dagger]=a_j^\dagger,\quad a_j\Omega=0.
+\end{gather}
+All norms below use the physical chord Gram inner product. Set
+$\delta=1-q$, $[n]_q=(1-q^n)/(1-q)$ and
+$A=a_L^\dagger a_L+a_R^\dagger a_R\ge0$. Direct subtraction gives
+\begin{equation}
+ [D,C]=2(1-q^{E_h})-\delta A.\label{comm}
+\end{equation}
+First, $\norm{a_j|_{\mathcal H_n}}^2\le[n]_q\le n$.
+Indeed the adjoint block and $a_ja_j^\dagger=1+q a_j^\dagger a_j$
+give the induction $s_{n+1}\le1+q s_n$, starting at $s_0=0$.
+The same argument makes $a_j$ bounded on the full direct sum, with
+$\norm{a_j}\le\delta^{-1/2}$ at fixed $h>0$.
+
+Let $t_n=\norm{C:\mathcal H_n\to\mathcal H_{n+1}}^2$ and
+$t_{-1}=0$. Since $D|_{\mathcal H_n}$ is the adjoint of the preceding
+creation block, Eq.~\eqref{comm} implies
+\begin{align}
+ \norm{Cf}^2&=\norm{Df}^2+2(1-q^{d+n})\norm f^2
+             -\delta\langle f,Af\rangle,\nonumber\\
+ t_n&\le t_{n-1}+2(1-q^{d+n})
+ \le2\sum_{j=0}^n(1-q^{d+j})
+ \le h(n+1)(2d+n).\label{bound}
+\end{align}
+Consequently $K_\pm$ are uniformly bounded between any fixed pair of
+grades as $h\to0$, including directions whose coordinate Gram matrices
+become singular. This is the step a coefficient-wise Taylor expansion
+alone cannot supply.
+
+Put $w_n=K_+^n\Omega=h^{-n/2}C^n\Omega$. Equation~\eqref{bound} gives
+$\norm{w_n}^2\le n!(2d)_n$. Moreover,
+\begin{equation}
+ [a_L,K_+]=\frac{1-q^{E_h}-\delta a_L^\dagger a_L}{\sqrt h},
+ \quad
+ \norm{[a_L,K_+]|_{\mathcal H_k}}\le(d+2k)\sqrt h.\label{small}
+\end{equation}
+The $a_R$ commutator has the opposite sign with $L$ replaced by $R$.
+Commuting either annihilator through the finite product $K_+^n$, using
+Eq.~\eqref{bound} at each step, proves
+\begin{equation}
+ \norm{a_Lw_n}+\norm{a_Rw_n}=O_{n,d}(\sqrt h),\qquad
+ \norm{Aw_n}=O_{n,d}(\sqrt h).\label{A}
+\end{equation}
+The last estimate also uses the bounded creation blocks on fixed grades.
+These are norm estimates, not cancellations inferred from coordinates.
+
+\newpage
+\section{The fixed-degree discrete-series limit}
+From Eqs.~\eqref{comm} and \eqref{A},
+\begin{equation}
+ \bigl([K_-,K_+]-2(d+n)\bigr)w_n=O_{n,d}(\sqrt h)
+ \quad\hbox{in Hilbert norm}.\label{limcomm}
+\end{equation}
+Here $2(1-e^{-h(d+n)})/h=2(d+n)+O(h)$ and $\delta/h\le1$.
+Expand $[K_-,K_+^n]$ into $n$ terms. Every error remains small under
+the remaining creation blocks by Eq.~\eqref{bound}, giving
+\begin{equation}
+ K_-w_n=n(2d+n-1)w_{n-1}+O_{n,d}(\sqrt h).\label{lower}
+\end{equation}
+Taking its inner product with $w_{n-1}$ proves inductively
+\begin{equation}
+ \norm{w_n}^2=n!(2d)_n+O_{n,d}(\sqrt h),\qquad
+ \lim_{h\to0}h^{-n}\norm{C^n\Omega}^2=n!(2d)_n.\label{norm}
+\end{equation}
+Different grades are orthogonal. Hence $e_n(h)=w_n/\norm{w_n}$
+defines an orthonormal family and, for every fixed $n$,
+\begin{align}
+ K_+e_n(h)&=\sqrt{(n+1)(2d+n)}\,e_{n+1}(h)+O(\sqrt h),\nonumber\\
+ K_-e_n(h)&=\sqrt{n(2d+n-1)}\,e_{n-1}(h)+O(\sqrt h),\label{ladder}\\
+ E_he_n(h)&=(d+n)e_n(h).\nonumber
+\end{align}
+The lowering error can have components outside this family at finite
+$h$. We have controlled those components in the full Hilbert norm.
+Any fixed polynomial word in $K_\pm,E_h$ therefore converges on a
+fixed finite span. The limiting operators obey
+\begin{equation}
+ [K_-,K_+]=2E,\quad [E,K_\pm]=\pm K_\pm,\qquad
+ E^2-B^2-\Pi^2=d(d-1).
+\end{equation}
+In particular the boost Jacobi coefficients are
+$b_n=\tfrac12\sqrt{n(2d+n-1)}$.
+
+\paragraph{Relation to the existing Krylov construction.}
+The signed binomial vectors $C^n\Omega$ are already the vectors of
+Ambrosini et al.~\cite{ARS}, Eq.~(81), up to orientation. Their exact
+lowering coefficients, Eq.~(91), are
+\begin{equation}
+ c_k(n)=n\frac{[n-k]_q}{n-k}(1-q^{d+k})
+       +n\frac{[k+1]_q}{k+1}(1-q^{d+n-1-k}).\label{ck}
+\end{equation}
+They expand as $hn(2d+n-1)+O(h^2)$ at fixed $n,d$. Their
+finite-$q$ binomial Krylov ansatz develops tails from level four.
+Their fixed-$\widetilde q$ heavy limit and fixed-$hn$ semiclassical
+limit differ from ours. We use their established vectors and give
+the norm control for the fixed-$d$, fixed-degree application here;
+we do not claim discovery of the binomial basis or the discrete series.
+
+\newpage
+\section{Positive $Q_h$ and its explicit limiting representation}
+Define the normalized real Laguerre functions and their phased version
+\begin{equation}
+ g_n(p)=\sqrt{\frac{n!}{(2d)_n}}\,
+ \frac{2^d p^{d-1/2}e^{-p}}{\sqrt{\Gamma(2d)}}
+ L_n^{(2d-1)}(2p),\qquad \phi_n=i^n g_n.\label{lag}
+\end{equation}
+They form a complete orthonormal basis of $L^2(\mathbb R_+,dp)$.
+The three-term Laguerre recurrence and its derivative identity give
+\begin{equation}
+ E\phi_n=(d+n)\phi_n,\qquad
+ B=i(p\partial_p+\tfrac12),\qquad Q=E+\Pi=p.\label{rep}
+\end{equation}
+The matrix elements agree with Eq.~\eqref{ladder}, with
+$\Pi=(K_--K_+)/(2i)$ and the phases fixed by Eq.~\eqref{lag}.
+The Jacobi off-diagonals grow linearly, so their reciprocal sum
+diverges. Carleman's criterion gives essential self-adjointness of
+$B,Q$ on the finite basis span; $Q$ closes to positive multiplication
+by $p$. For $B$, logarithmic coordinates give the usual translation
+generator. This also fixes the domains of the limiting observables.
+
+\paragraph{Finite-$h$ positivity.}
+Write $f=\sum_n f_n$ with finitely many nonzero grades and set
+$r_n=\norm{f_n}$. For $c_n=\sqrt{(n+1)(2d+n)}$,
+Eq.~\eqref{bound} implies
+\begin{equation}
+ \langle f,Q_h f\rangle\ge
+ \sum_n(d+n)r_n^2-\sum_n c_n r_n r_{n+1}
+ =\int_0^\infty p\left|\sum_n r_n g_n(p)\right|^2dp\ge0.\label{positive}
+\end{equation}
+At fixed $h$, $\Pi_h$ is bounded and symmetric, whereas $E_h$ is
+self-adjoint on the direct-sum number domain. Thus $Q_h=E_h+\Pi_h$
+is self-adjoint on $D(E_h)$, finite-grade vectors are a core, and
+Eq.~\eqref{positive} proves $Q_h\ge0$ on the full one-matter space.
+
+The exact covariance defect is
+\begin{equation}
+ [B_h,Q_h]-iQ_h=i\left\{\frac{1-q^{E_h}}h-E_h
+                         -\frac{\delta}{2h}A\right\}.\label{defect}
+\end{equation}
+It tends to zero on fixed descendants by Eq.~\eqref{A}. Positivity is
+exact at finite $h$; dilation covariance is a limiting statement on
+the specified domain. $Q_h$ is a two-sided chord operator, so this
+does not contradict the previous obstruction for a positive
+one-sided observable with exact trace-preserving dilation.
+
+\newpage
+\section{A spectral prediction and numerical checks}
+The seed is $\phi_0=\psi_d$. Its limiting $Q$ measure and characteristic
+function are explicit:
+\begin{equation}
+ d\nu(p)=\frac{2^{2d}}{\Gamma(2d)}p^{2d-1}e^{-2p}dp,
+ \quad \langle Q^k\rangle=\frac{(2d)_k}{2^k},\quad
+ \langle e^{-isQ}\rangle=(1+is/2)^{-2d}.\label{gamma}
+\end{equation}
+Polynomial-word convergence proves convergence of every seed moment
+of $Q_h$. Positivity and the bounded first moment give tightness;
+bounded higher moments give uniform integrability for each fixed
+moment. The gamma law is moment-determinate (its moment generating
+function is finite near zero). Hence the entire seed spectral measure
+converges weakly to Eq.~\eqref{gamma}, including its characteristic
+function at every fixed real $s$. An exact finite-$h$ check is
+\begin{equation}
+ \langle Q_h\rangle=d,\qquad
+ \operatorname{Var}_\Omega(Q_h)=\frac{1-q^d}{2h}\longrightarrow\frac d2.
+\end{equation}
+The limiting boost gives $\langle e^{-i\eta B}\rangle=
+\sech^{2d}(\eta/2)$. Within this limiting representation its
+descendant probabilities are the standard discrete-series result
+\begin{equation}
+ p_n(\eta)=\frac{(2d)_n}{n!}\tanh^{2n}(\eta/2)
+                    \sech^{4d}(\eta/2),\quad
+ \sum_n np_n=2d\sinh^2(\eta/2).
+\end{equation}
+This last formula describes the limiting representation; no uniform
+finite-$h$, growing-time chord-number theorem is asserted.
+
+\paragraph{Checks saved with this note.}
+Exact Gram polynomials at $d=2$, $1\le n\le6$ give leading norms
+$4,40,720,20160,806400,43545600$ multiplying $(1-q)^n$.
+Their normalized lowering residuals are $O(h)$ at these tested
+degrees, stronger than the sufficient $O(\sqrt h)$ bound above.
+Independent recursive Gram computations at $d=0.7,2$ and
+$h=0.1,0.02,0.005$ check whole-grade creation bounds ($n\le4$),
+descendant norms ($n\le6$), and $Q_h$ moments ($k\le8$), using
+80 and 110 decimal digits. Eighteen exact symbolic identities check
+the $B,Q$ Laguerre actions through $n=8$.
+\begin{center}
+\begin{tabular}{ccc}\toprule
+$h$ & $\norm{w_6}^2/[6!(4)_6]$ & relative error in $\langle Q_h^8\rangle$\\
+\midrule
+0.1 & 0.2705804 & 0.216685\\
+0.02 & 0.7646896 & 0.049444\\
+0.005 & 0.9348279 & 0.012686\\\bottomrule
+\end{tabular}
+\end{center}
+The largest relative change on precision refinement is below
+$2.1\times10^{-69}$. This is an empirical arithmetic check, not
+interval certification. Finite-$h$ discrepancies in the table are
+physical approximation errors, not numerical rounding errors.
+
+\newpage
+\section{What this adds to the Susskind research route}
+The previous stage built $Q=p$ as an extension of the boost kernel.
+We now have an explicit positive chord representative $Q_h$, a
+controlled descendant limit, and convergence of its seed spectral
+law. Thus the candidate is anchored to the correct microscopic
+Liouvillian and number operator, rather than only to a scalar
+two-point fit. Equations~\eqref{bound}--\eqref{positive} are the
+argument developed in this note from the cited chord algebra.
+Priority for these consequences has not been established by an
+exhaustive literature search.
+
+In the limiting one-particle representation one can again set
+\begin{equation}
+ P^+=\mu Q,\quad P^-=\frac{m^2}{\mu Q},\quad
+ P^{0,1}=\tfrac12(P^+\pm P^-),\qquad m,\mu>0.
+\end{equation}
+Both $m$ and $\mu$ have energy units. This is the preceding standard
+positive-energy mass-family construction, not a mass prediction.
+The existence of $Q_h$ does not establish convergence of its inverse:
+weak spectral convergence does not control the singular endpoint
+$p=0$. Nor does the one-matter construction specify the interacting
+two-matter $P^-$ or a meson spectrum.
+
+The next calculation is therefore the action of this construction on
+two-matter states, using the actual Lin--Stanford coproduct and Gram
+inner product. Their creation maps are
+$D(a_L^\dagger)=a_L^\dagger\otimes1$ and
+$D(a_R^\dagger)=1\otimes a_R^\dagger$; annihilation maps contain
+$q^{\bar n}$ factors. A primitive sum of independently postulated
+particle momenta cannot simply be substituted. We should determine
+which combinations survive on relative descendants, then confront
+them with the already derived three-channel singlet four-point
+function. This is where a kinematic construction can begin to test
+interaction and mass data.
+
+\paragraph{Reproducibility and scope.}
+The exact exploratory output, independent validation, source mapping,
+and input/output SHA-256 hashes are saved under the
+\texttt{susskind-antisymmetric} stage. The manuscript is built by
+\texttt{code/build\_antisymmetric\_chords.ps1}, using two
+\texttt{pdflatex} passes. The source and numerical records remain
+local; no Git commit, push, or archive was made in this stage.
+
+\begin{thebibliography}{9}
+\bibitem{LS} H. W. Lin and D. Stanford,
+\emph{A symmetry algebra in double-scaled SYK},
+\href{https://arxiv.org/abs/2307.15725}{arXiv:2307.15725}.
+Used: Secs.~2.2, 2.3 and 3.2, chord algebra, coproduct and one-matter action.
+\bibitem{ARS} M. Ambrosini, E. Rabinovici, A. S\'anchez-Garrido,
+R. Shir and J. Sonner,
+\emph{Operator K-complexity in DSSYK: Krylov complexity equals bulk length},
+\href{https://arxiv.org/abs/2412.15318}{arXiv:2412.15318v2}.
+Used: Secs.~3.1, 3.2 and 3.4, especially Eqs.~(81), (90)--(95).
+\end{thebibliography}
+\end{document}

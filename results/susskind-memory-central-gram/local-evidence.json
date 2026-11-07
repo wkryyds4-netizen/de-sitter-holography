@@ -1,0 +1,118 @@
+{
+  "created_at_utc": "2026-11-06T10:54:43.836095+00:00",
+  "status": "Saved locally; no publication",
+  "scientific_status": "Even N compact central window: neutral drift O(1/(N p)), polarization proof of S--O, full four-field equal-time Gram, and projected W2 core variance. No assumption of the optional exact charged Casimir candidate. Energy-inserted spectra, full charge integration, finite-memory remainders and bulk dictionary remain open.",
+  "current_git_head": "714d038bb605cfcffdc351e4dcc62aa95237d25f",
+  "git_commit_created": false,
+  "git_push_performed": false,
+  "archive_created": false,
+  "parent_manifest_sha256": "5bc3371157f2da0ed8d7eb5ee94c82896eb4da645083152e758ebe0af324bb70",
+  "previous_stage_scientific_files_unchanged": [
+    "code/explore_memory_central_cross.py",
+    "code/memory_central_cross.py",
+    "code/check_central_charged_casimir.py",
+    "code/check_memory_central_transport.py",
+    "code/check_memory_central_cross_limit.py",
+    "code/build_memory_central_cross.ps1",
+    "code/record_memory_central_cross.py",
+    "manuscript/susskind-memory-central-cross/main.tex",
+    "output/pdf/de-sitter-susskind-memory-central-cross.pdf",
+    "notes/susskind-memory-central-cross.md",
+    "literature/susskind-memory-central-cross-sources.md",
+    "journal/2026-11-06-susskind-memory-central-cross.md",
+    "results/susskind-memory-central-cross/car-exploration.json",
+    "results/susskind-memory-central-cross/charged-casimir.json",
+    "results/susskind-memory-central-cross/cross-limit.json",
+    "results/susskind-memory-central-cross/diagnostics/first-build.log",
+    "results/susskind-memory-central-cross/diagnostics/first-main.tex",
+    "results/susskind-memory-central-cross/main.log",
+    "results/susskind-memory-central-cross/transport.json"
+  ],
+  "checks": {
+    "exact_weight_ratios": 758,
+    "finite_rational_moments": 4,
+    "all_rank_cases": 36,
+    "precisions": [
+      80,
+      120
+    ],
+    "CAR_systems": 3,
+    "ordered_CAR_pairs": 3217,
+    "rank_blocks": 18
+  },
+  "environment": {
+    "python": "3.14.5",
+    "calculations": [
+      {
+        "python": "3.14.5",
+        "sympy": "1.14.0",
+        "mpmath": "1.3.0"
+      },
+      {
+        "python": "3.14.5",
+        "numpy": "2.4.6"
+      },
+      {
+        "python": "3.14.5",
+        "sympy": "1.14.0"
+      }
+    ]
+  },
+  "build": {
+    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File code/build_memory_central_gram.ps1",
+    "compiler": "This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5 Portable) (preloaded format=pdflatex 2026.9.19)  6 NOV 2026 18:51",
+    "passes_in_final_build": 2,
+    "final_pages": 6,
+    "render_command": "pdftoppm -r 95 -png output/pdf/de-sitter-susskind-memory-central-gram.pdf tmp/pdfs/susskind-memory-central-gram-build/page",
+    "visual_review": "All six final page PNGs viewed at 95 dpi; formulas, citations and page boundaries checked."
+  },
+  "failures": [
+    {
+      "stage": "symbolic score assertion",
+      "reason": "Structural equality rejected algebraically identical factorizations; exact factored difference is zero. Preserved source/diagnostic, replaced structural comparison.",
+      "resolved": true
+    },
+    {
+      "stage": "first LaTeX build",
+      "reason": "One unescaped fraction command became a form-feed character. Preserved source/log; escaped command correctly and completed two passes.",
+      "resolved": true
+    }
+  ],
+  "evidence_scope": "Analytic uniform neutral bounds and exact polarization establish the limiting cross; finite independent CAR and arbitrary-precision full sums check the formulas. The earlier optional finite charged identity remains unproved and is not used here.",
+  "process_state": "All calculations, compilation and rendering terminal. Session 89893 confirmed exit 0.",
+  "hashes": {
+    "code/memory_central_polarization.py": "ab578f94d42cb9f89e1e5d2520a5bdfc736867480fb4c4396c5e86cbb8b87228",
+    "code/check_memory_polarization_car.py": "d2f5290503a01681c39b0329ed9e5812a0f2ce6398a176a16fd1556b95cbfe72",
+    "code/memory_central_gram_assembly.py": "20e8db8eb21291e4ac9e90d9e8557545504a36a8b7f096815a99695dff90bebd",
+    "code/build_memory_central_gram.ps1": "f06606f5e1378d58df640977d9ef181a207f318d5fdaa2b9f0c620e93649f6a7",
+    "code/record_memory_central_gram.py": "b13014f1cabdd3f5cb9593343aecefdd360e6d2236be6bb316fd467695597540",
+    "manuscript/susskind-memory-central-gram/main.tex": "d1039e6ea8f92e7b51c462ef4b71feaff574a313079d9ba13ac7f7275910e713",
+    "output/pdf/de-sitter-susskind-memory-central-gram.pdf": "3ca1992d0625f9ba96a44dfc542f5f0e84aad67060348421b1a778246e796a82",
+    "notes/susskind-memory-central-gram.md": "e4fe54b1b4ce2a3f1e131165a77dcebb93601a5fa863c9150a86dfb487e25f49",
+    "literature/susskind-memory-central-gram-sources.md": "7b7ae71d50a73feb97493371560fa4be5db935815ae94d0ee8ef24facf6b10b3",
+    "journal/2026-11-06-susskind-memory-central-gram.md": "b8ef7c39cbec224ce2edd690c8d90066973c75f78de6c00be1b71cbe65b32764",
+    "README.md": "925f334fd3ff11f3d646ad7063f4cc07e3578dabf651a2e9fce327aa508ee596",
+    "PLAN.md": "0ae6e82790594de6bae3f0f245d84b1a699985bdfd3193c475dd81b20ed42a92",
+    "NEXT.md": "b0abea1a5f7ec1fb410a0c47f26a8248489157c8ea4835ff8db35e3cabe10805",
+    "results/susskind-memory-central-gram/diagnostics/first-build.log": "36f16f9d921602b9a9e1d0481a520c88d93dc99b0351b427a4ead0f46b310ca1",
+    "results/susskind-memory-central-gram/diagnostics/first-failure.txt": "66912fec65c8092bb216339e2e7372f99809bee9baa4591104450e481b976cc5",
+    "results/susskind-memory-central-gram/diagnostics/first-main.tex": "f201994e5ccc55eb8b84fb27041c0b565f4230070fa79922dd2a5fa9ebbfd867",
+    "results/susskind-memory-central-gram/diagnostics/first-polarization.py": "b04bc16943e2fea3546586c3280a3fad761885ce29d8a5924daa596dd189ab1d",
+    "results/susskind-memory-central-gram/gram-assembly.json": "5de0be18da5ebd9652998bcb7e89d050e73465445a34a0b5c36dc88b51f67e23",
+    "results/susskind-memory-central-gram/main.log": "c941233cb2ae3784a8716708465767b8f97a55d0b0afd3a3767eb3b5c0ed0ecd",
+    "results/susskind-memory-central-gram/neutral-drift.json": "ebec637897f8217148b4db3f276dba926992df07596cc2238c18050e1574da8a",
+    "results/susskind-memory-central-gram/polarization-car.json": "e192a3cec7f870a0963a832bcea05c4efda95a4e0f259a0e4de540033f057330"
+  },
+  "render_hashes": {
+    "tmp/pdfs/susskind-memory-central-gram-build/page-1.png": "7b2371fabc290a8dd6afc26d110185297df7a172e3cc5ef38d7560deec6ad117",
+    "tmp/pdfs/susskind-memory-central-gram-build/page-2.png": "ceb853c56185a78bfd58c0589818133410053c7cb2198ed5a7eb5bdaef3ba2c7",
+    "tmp/pdfs/susskind-memory-central-gram-build/page-3.png": "43d2eb1e5c832aea918465e652dd978a132d6011f0a12624688dc74128b5b26b",
+    "tmp/pdfs/susskind-memory-central-gram-build/page-4.png": "d33e192a057b0c9053386e2c827481caee32a8e82b18822eaa4a232221810b5d",
+    "tmp/pdfs/susskind-memory-central-gram-build/page-5.png": "5a59eb60d708bc8467154776178e33ca75ebe91b558dc6c03f9f34ecb525ebde",
+    "tmp/pdfs/susskind-memory-central-gram-build/page-6.png": "25988d5f86ea9e3f751130e920aa63ec7796864f5ebcb39e0b416c617dd70e62"
+  },
+  "build_pass_hashes": {
+    "pass1.txt": "706dd5f7075528863a42beb608b394ef7a48fb4aa34a9c2a4945426361eae82e",
+    "pass2.txt": "4bcb1a6166c2bee15b464f46b8731f1297d77e9bbb923d55cb0cb3138f915a4b"
+  }
+}

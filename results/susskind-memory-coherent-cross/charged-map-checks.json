@@ -1,0 +1,139 @@
+{
+  "status": "passed",
+  "rows": [
+    {
+      "N": 4,
+      "p": 1,
+      "m": 2,
+      "input_rank": 0,
+      "map_entries": 576,
+      "eigenvalues": [
+        "1/2",
+        "1/2"
+      ]
+    },
+    {
+      "N": 4,
+      "p": 1,
+      "m": 2,
+      "input_rank": 1,
+      "map_entries": 576,
+      "eigenvalues": [
+        "5/2",
+        "-1/2"
+      ]
+    },
+    {
+      "N": 5,
+      "p": 1,
+      "m": 2,
+      "input_rank": 0,
+      "map_entries": 2500,
+      "eigenvalues": [
+        "2/5",
+        "2/5"
+      ]
+    },
+    {
+      "N": 5,
+      "p": 1,
+      "m": 2,
+      "input_rank": 1,
+      "map_entries": 2500,
+      "eigenvalues": [
+        "18/5",
+        "-2/5"
+      ]
+    },
+    {
+      "N": 5,
+      "p": 2,
+      "m": 3,
+      "input_rank": 0,
+      "map_entries": 10000,
+      "eigenvalues": [
+        "3/10",
+        "3/10",
+        "3/10"
+      ]
+    },
+    {
+      "N": 5,
+      "p": 2,
+      "m": 3,
+      "input_rank": 1,
+      "map_entries": 10000,
+      "eigenvalues": [
+        "16/5",
+        "8/15",
+        "-4/5"
+      ]
+    },
+    {
+      "N": 5,
+      "p": 2,
+      "m": 3,
+      "input_rank": 2,
+      "map_entries": 10000,
+      "eigenvalues": [
+        "5/2",
+        "-5/6",
+        "1/2"
+      ]
+    },
+    {
+      "N": 6,
+      "p": 2,
+      "m": 3,
+      "input_rank": 0,
+      "map_entries": 90000,
+      "eigenvalues": [
+        "1/5",
+        "1/5",
+        "1/5"
+      ]
+    },
+    {
+      "N": 6,
+      "p": 2,
+      "m": 3,
+      "input_rank": 1,
+      "map_entries": 90000,
+      "eigenvalues": [
+        "7/2",
+        "1",
+        "-1/2"
+      ]
+    },
+    {
+      "N": 6,
+      "p": 2,
+      "m": 3,
+      "input_rank": 2,
+      "map_entries": 90000,
+      "eigenvalues": [
+        "63/10",
+        "-6/5",
+        "3/10"
+      ]
+    }
+  ],
+  "complete_maps": 10,
+  "complex_entries": 306152,
+  "elapsed_seconds": 1.899975299835205,
+  "scope": "Complete rectangular covariance maps; exact CAR, neutral input and charged output Casimir projectors. No random test vectors.",
+  "environment": {
+    "python": "3.14.5",
+    "numpy": "2.4.6",
+    "sympy": "1.14.0"
+  },
+  "input_sha256": {
+    "code/check_memory_coherent_channels.py": "e9a94505c3d03084ac61e80ce7749b35177a19988df2e8fe2452cc13c87af200",
+    "code/memory_coherent_cross.py": "557f5124649be17d9a2c5f35536e6354ad69c46a1c4993783dae0b6e92e2566f",
+    "code/memory_quadratic_contraction.py": "d9e7722e5c13ca64a26b9e79a06e0a3fcaf07060ac1c6133d5eb04f4a1ad2139",
+    "code/memory_rank_blocks.py": "1a73c01439efe7f7b6221ccb151a42bc988284f0e1e53137f5fa29d824a681f9",
+    "code/cubic_linear_dynamics.py": "81d8e955107098e897637650bb7686a15fd2ff8fde6de1e1c525db398516d014",
+    "code/singlet_wick_moments.py": "045f9f02e860fa8f2e402ca5162dabf035208a8d26023ada5721a5f02d47572c",
+    "code/complex_syk_dictionary.py": "96b4890a167beeadf0849ccffdbb20dd125d921af062fd291044da9024900abf"
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "systems": [
+    {
+      "N": 3,
+      "p": 1,
+      "m": 2,
+      "C": 1,
+      "Gaussian_coordinates": 9,
+      "max_degree": 5,
+      "cases": [
+        {
+          "n": 1,
+          "chaos_matrices": 9,
+          "a_n": 1.0,
+          "annihilation_identity_error": 0.0,
+          "residual_norm": 0.0,
+          "independent_tensor_bound": 0.0,
+          "polynomial_bridge_error": 0.0,
+          "cancelled_top_degree_error": 0.0
+        },
+        {
+          "n": 2,
+          "chaos_matrices": 45,
+          "a_n": 1.25,
+          "annihilation_identity_error": 9.064933036736789e-17,
+          "residual_norm": 0.4330127018922193,
+          "independent_tensor_bound": 0.5773502691896257,
+          "polynomial_bridge_error": 0.0,
+          "cancelled_top_degree_error": 0.0
+        },
+        {
+          "n": 3,
+          "chaos_matrices": 165,
+          "a_n": 1.25,
+          "annihilation_identity_error": 2.0955000055363634e-16,
+          "residual_norm": 1.0752906583803286,
+          "independent_tensor_bound": 2.5485473884966034,
+          "polynomial_bridge_error": 0.4330127018922193,
+          "cancelled_top_degree_error": 0.0
+        },
+        {
+          "n": 4,
+          "chaos_matrices": 495,
+          "a_n": 1.25,
+          "annihilation_identity_error": 2.6331251014325263e-16,
+          "residual_norm": 2.3601509485624024,
+          "independent_tensor_bound": 9.682040438799463,
+          "polynomial_bridge_error": 1.5712256362470665,
+          "cancelled_top_degree_error": 0.0
+        },
+        {
+          "n": 5,
+          "chaos_matrices": 1287,
+          "a_n": 1.25,
+          "annihilation_identity_error": 7.782344084869769e-16,
+          "residual_norm": 5.117754023983564,
+          "independent_tensor_bound": 34.70194252777689,
+          "polynomial_bridge_error": 4.911323014219288,
+          "cancelled_top_degree_error": 0.0
+        }
+      ]
+    },
+    {
+      "N": 4,
+      "p": 1,
+      "m": 2,
+      "C": 1,
+      "Gaussian_coordinates": 16,
+      "max_degree": 4,
+      "cases": [
+        {
+          "n": 1,
+          "chaos_matrices": 16,
+          "a_n": 1.0,
+          "annihilation_identity_error": 0.0,
+          "residual_norm": 2.220446049250313e-16,
+          "independent_tensor_bound": 0.0,
+          "polynomial_bridge_error": 0.0,
+          "cancelled_top_degree_error": 0.0
+        },
+        {
+          "n": 2,
+          "chaos_matrices": 136,
+          "a_n": 1.3333333333333333,
+          "annihilation_identity_error": 2.6233546591995e-16,
+          "residual_norm": 0.272165526975909,
+          "independent_tensor_bound": 0.3402069087198858,
+          "polynomial_bridge_error": 2.220446049250313e-16,
+          "cancelled_top_degree_error": 0.0
+        },
+        {
+          "n": 3,
+          "chaos_matrices": 816,
+          "a_n": 1.3333333333333333,
+          "annihilation_identity_error": 3.1145251890505554e-16,
+          "residual_norm": 0.7027283689263079,
+          "independent_tensor_bound": 1.5688419025164226,
+          "polynomial_bridge_error": 0.2721655269759091,
+          "cancelled_top_degree_error": 0.0
+        },
+        {
+          "n": 4,
+          "chaos_matrices": 3876,
+          "a_n": 1.3333333333333333,
+          "annihilation_identity_error": 5.431895540331168e-16,
+          "residual_norm": 1.3728705920630084,
+          "independent_tensor_bound": 6.092818723749275,
+          "polynomial_bridge_error": 0.9813067629253182,
+          "cancelled_top_degree_error": 0.0
+        }
+      ]
+    },
+    {
+      "N": 4,
+      "p": 2,
+      "m": 3,
+      "C": 1,
+      "Gaussian_coordinates": 36,
+      "max_degree": 3,
+      "cases": [
+        {
+          "n": 1,
+          "chaos_matrices": 36,
+          "a_n": 1.0,
+          "annihilation_identity_error": 0.0,
+          "residual_norm": 0.0,
+          "independent_tensor_bound": 0.0,
+          "polynomial_bridge_error": 0.0,
+          "cancelled_top_degree_error": 0.0
+        },
+        {
+          "n": 2,
+          "chaos_matrices": 666,
+          "a_n": 1.0,
+          "annihilation_identity_error": 4.509747244882934e-16,
+          "residual_norm": 0.42065987746668654,
+          "independent_tensor_bound": 2.449489742783178,
+          "polynomial_bridge_error": 0.0,
+          "cancelled_top_degree_error": 0.0
+        },
+        {
+          "n": 3,
+          "chaos_matrices": 8436,
+          "a_n": 1.0,
+          "annihilation_identity_error": 4.4241400719484246e-16,
+          "residual_norm": 0.7815897180910841,
+          "independent_tensor_bound": 12.190392244503029,
+          "polynomial_bridge_error": 0.42065987746668654,
+          "cancelled_top_degree_error": 0.0
+        }
+      ]
+    }
+  ],
+  "scope": "Complete Hermite coefficients, independent covariance-word reconstruction of annihilation, one factorial normalization and finite positive-rank tensor bounds. Small systems verify finite identities, not the uniform double-scaling theorem.",
+  "environment": {
+    "python": "3.14.5",
+    "numpy": "2.4.6"
+  },
+  "input_sha256": {
+    "code/memory_jacobi_bridge.py": "da16585afe38456af7b7bed421a3f8c87d97b1f9bf9e5210967c87dcea7794b6",
+    "code/memory_charged_transfer.py": "155392a862098a9aa1119085629bca5b2467e0de9f1610c009273e66fa80455a",
+    "code/memory_wick_rank.py": "7adf10a9d087a24ec84215dd0f95ccc832a5cefc8e8f833d7ca3521231d81525",
+    "code/cubic_linear_dynamics.py": "81d8e955107098e897637650bb7686a15fd2ff8fde6de1e1c525db398516d014",
+    "code/complex_syk_dictionary.py": "96b4890a167beeadf0849ccffdbb20dd125d921af062fd291044da9024900abf"
+  },
+  "elapsed_seconds": 1.7661497592926025
+}

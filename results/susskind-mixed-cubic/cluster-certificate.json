@@ -1,0 +1,129 @@
+{
+  "status": "passed",
+  "templates": 14,
+  "pairings": 148,
+  "records": [
+    {
+      "kinds": "X",
+      "bridges": 0,
+      "colors": "",
+      "split": 0,
+      "pairings": 2,
+      "polynomial": "0"
+    },
+    {
+      "kinds": "R",
+      "bridges": 0,
+      "colors": "",
+      "split": 0,
+      "pairings": 6,
+      "polynomial": "0"
+    },
+    {
+      "kinds": "XX",
+      "bridges": 2,
+      "colors": "",
+      "split": 0,
+      "pairings": 2,
+      "polynomial": "4*lambda*(q + 1)*(4*lambda*q + q + 1)"
+    },
+    {
+      "kinds": "XR",
+      "bridges": 2,
+      "colors": "B",
+      "split": 0,
+      "pairings": 6,
+      "polynomial": "0"
+    },
+    {
+      "kinds": "XR",
+      "bridges": 2,
+      "colors": "B",
+      "split": 1,
+      "pairings": 6,
+      "polynomial": "0"
+    },
+    {
+      "kinds": "RX",
+      "bridges": 2,
+      "colors": "A",
+      "split": 0,
+      "pairings": 6,
+      "polynomial": "0"
+    },
+    {
+      "kinds": "RX",
+      "bridges": 2,
+      "colors": "A",
+      "split": 1,
+      "pairings": 6,
+      "polynomial": "0"
+    },
+    {
+      "kinds": "RR",
+      "bridges": 2,
+      "colors": "AB",
+      "split": 0,
+      "pairings": 18,
+      "polynomial": "0"
+    },
+    {
+      "kinds": "RR",
+      "bridges": 2,
+      "colors": "AB",
+      "split": 1,
+      "pairings": 18,
+      "polynomial": "0"
+    },
+    {
+      "kinds": "RR",
+      "bridges": 2,
+      "colors": "AB",
+      "split": 2,
+      "pairings": 18,
+      "polynomial": "0"
+    },
+    {
+      "kinds": "RR",
+      "bridges": 2,
+      "colors": "BA",
+      "split": 0,
+      "pairings": 18,
+      "polynomial": "0"
+    },
+    {
+      "kinds": "RR",
+      "bridges": 2,
+      "colors": "BA",
+      "split": 1,
+      "pairings": 18,
+      "polynomial": "0"
+    },
+    {
+      "kinds": "RR",
+      "bridges": 2,
+      "colors": "BA",
+      "split": 2,
+      "pairings": 18,
+      "polynomial": "0"
+    },
+    {
+      "kinds": "RR",
+      "bridges": 3,
+      "colors": "",
+      "split": 0,
+      "pairings": 6,
+      "polynomial": "4*lambda*(q + 1)*(q**2 + 1)*(q**2 + q + 1)*(8*lambda*q**4 - 4*lambda*q**3 + 8*lambda*q**2 - q**3 + 1)"
+    }
+  ],
+  "scope": "All singleton and >=2-bridge two-vertex clusters for degree2/3; proof requires external-mark invariance in manuscript",
+  "environment": {
+    "python": "3.14.5",
+    "sympy": "1.14.0"
+  },
+  "input_sha256": {
+    "code/mixed_cubic_clusters.py": "72df8ebcca85b6cc8359334a14d460f5a72148ea65bdda62f885d398ab174e34",
+    "code/singlet_coefficient.py": "ef7d9b96f96a036ea0d9774950702a82a968b56758a778db0365e9df0c3b2e10",
+    "code/singlet_spectral_graphs.py": "cfb50d1e4aafe8822878cbf895a2d33a9e12d8fb1afb76a4fec23307c5001163"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "status": "passed",
+  "records": [
+    {
+      "N": 4,
+      "p": 2,
+      "m": 3,
+      "seed": 110636,
+      "times": [
+        -0.47,
+        0.13,
+        0.71,
+        -0.22
+      ],
+      "commutator_HS_squared": 3.2640936311746835,
+      "four_term_HS_squared": [
+        10.16010767248727,
+        7.691208820333571,
+        0.9949254859702666,
+        9.617905453589003
+      ],
+      "four_term_error": 5.213865553719819e-16,
+      "coherent_spectral_error": 1.4915062420350966e-15,
+      "minimum_covariance_gram_eigenvalue": 0.35274270581338474,
+      "jet_steps": [
+        0.04,
+        0.02,
+        0.01
+      ],
+      "jet_relative_errors": [
+        0.0014454273338543049,
+        0.0003616293947518857,
+        9.042439505682132e-05
+      ]
+    },
+    {
+      "N": 5,
+      "p": 2,
+      "m": 3,
+      "seed": 110637,
+      "times": [
+        -0.47,
+        0.13,
+        0.71,
+        -0.22
+      ],
+      "commutator_HS_squared": 2.018770777554771,
+      "four_term_HS_squared": [
+        10.154759798150755,
+        8.43246339185637,
+        0.6867856967188347,
+        7.544307971134652
+      ],
+      "four_term_error": 1.1262647911967418e-15,
+      "coherent_spectral_error": 2.040091375389124e-15,
+      "minimum_covariance_gram_eigenvalue": 0.327042275169671,
+      "jet_steps": [
+        0.04,
+        0.02,
+        0.01
+      ],
+      "jet_relative_errors": [
+        0.0010515237794945348,
+        0.00026300705060251214,
+        6.575964753018119e-05
+      ]
+    }
+  ],
+  "error_scope": "Finite-system floating-point check of full projected four-term algebra, coherent spectral reconstruction and quadratic jet convergence. Does not extrapolate projected commutators to DS.",
+  "environment": {
+    "python": "3.14.5",
+    "numpy": "2.4.6",
+    "scipy": "1.18.0"
+  },
+  "input_sha256": {
+    "code/check_bilocal_projection.py": "0be4a772fac7b9028593951b946783180bdfc832de2bc8e2addfd3bab42ab718",
+    "code/complex_syk_dictionary.py": "96b4890a167beeadf0849ccffdbb20dd125d921af062fd291044da9024900abf"
+  }
+}

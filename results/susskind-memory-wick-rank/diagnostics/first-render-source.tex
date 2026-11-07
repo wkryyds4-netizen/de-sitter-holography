@@ -1,0 +1,347 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,microtype}
+\usepackage[margin=24mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\W}{\mathsf W}
+\title{Uniform rank bounds for the memory fluctuation problem\\All degrees of the highest coupling chaos}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Local research note --- 7 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+We turn the established rank-product covariance formula into a
+positive Markov chain. Its first two conditional Casimir moments
+give a rank-deficit bound uniform in the number of factors, not
+merely at fixed polynomial degree. Gaussian tensor symmetrization
+transfers the bound to the highest coupling chaos and yields an
+entire, uniformly controlled Wick series. A finite-parameter
+covariance-filter estimate follows. We also identify an exact
+charged-probe four-point interface and a positive regression
+remainder sufficient for the actual memory-field bound. The lower
+coupling-chaos contractions of ordinary time evolution remain to
+be controlled.
+\end{abstract}
+\section{State, model and the all-degree statement}
+Use standard CAR, $\hbar=1$, string time, and the overlapping
+complex Gaussian model $H=\sum_{I,J}J_{IJ}c_I^\dagger c_J$, with
+\begin{equation}
+ \EE J_{IJ}J_{KL}=w_N\delta_{IL}\delta_{JK},\quad
+ w_N=4^p\frac{J_s^2}{\lambda_N}\left(\frac{p!}{N^p}\right)^2,
+ \qquad \lambda_N=p^2/N.
+\end{equation}
+$J=J^\dagger$; all charge sectors use the same coupling.
+At charge $m$, $\tr_m=\operatorname{Tr}/\binom Nm$ and
+$\|X\|_{2,m}^2=\EE\tr_mX^\dagger X$. Put
+\begin{equation}
+ C=C_m=w_N\binom mp\binom{N-m+p}p,\qquad
+ \Phi(X)=\EE HXH.
+\end{equation}
+The neutral operator algebra has multiplicity-free $U(N)$ ranks
+$0\le r\le R_m=\min(m,N-m)$, with orthogonal projectors $P_r$.
+These are representation ranks, not matrix ranks.
+
+For independent copies $H_1,\ldots,H_k$ in this sector define
+\begin{equation}
+ \pi_k(r)=C^{-k}\EE\tr_m|P_r(H_1\cdots H_k)|^2,\qquad D_k(r)=kp-r.
+\end{equation}
+For $N\ge8$, $1\le p\le N/8$, $N/4\le m\le3N/4$, and every
+integer $k\ge1$, we prove
+\begin{equation}
+ \boxed{\ \EE_{\pi_k}D_k^2
+ \le A\big(\lambda_N k^2+\lambda_N^2k^4\big),\qquad A=2\cdot10^6.\ }
+ \label{eq:main}
+\end{equation}
+The constant is deliberately unoptimized. The result is a finite
+parameter bound. For double scaling take even $N\to\infty$,
+$\lambda_N\to\lambda>0$ in a positive compact interval. The full
+$\beta=\mu=0$ state uses $b_m=2^{-N}\binom Nm$.
+
+\newpage
+\section{An exact rank-convolution Markov chain}
+The existing covariance and Racah interfaces \cite{Kota,DLMF} give
+\begin{align}
+ \Phi(P_sX)&=\kappa_sP_sX,&
+ \kappa_s&=w_N\binom{m-s}p\binom{N-m+p-s}p,\\
+ \chi_r(s)&={}_4F_3\!\left(\begin{matrix}-r,r-N-1,-s,s-N-1\\
+                  -m,m-N,-N-1\end{matrix};1\right),&
+ \mu_s&=\kappa_s/C.
+\end{align}
+Invalid binomials are zero. Let $d=\binom Nm$ and
+$d_r=\binom Nr^2-\binom N{r-1}^2$. Covariance composition gives
+\begin{equation}
+ \sum_r\pi_k(r)\chi_r(s)=\mu_s^k,qquad
+ \pi_k(r)=\frac{d_r}{d^2}\sum_s d_s\chi_r(s)\mu_s^k.
+ \label{eq:transform}
+\end{equation}
+Positivity is not inferred from the signs of this sum. Decompose
+$H=\sum_a H_a$ into independent isotropic rank components and let
+$\omega_a=C^{-1}\EE\tr_mH_a^2$. If $\pi_{ra}(t)$ is the known
+positive output law of two independent normalized pure-rank
+inputs, the transition kernel is
+\begin{equation}
+ P(r,t)=\sum_a\omega_a\pi_{ra}(t),\qquad
+ \pi_{k+1}(t)=\sum_r\pi_k(r)P(r,t),\qquad \pi_0=\delta_0.
+\end{equation}
+Indeed the sesquilinear coefficient covariance of $H_1\cdots H_k$
+is $U(N)$ invariant and therefore scalar on each neutral rank.
+No Hermiticity of that product is required. Its covariance map is
+$\Phi^k$, and the invariant Choi decomposition gives
+\eqref{eq:transform}. Multiplication implies $r\le kp$ on its
+support, hence $D_k\ge0$ even when $kp>R_m$.
+
+Write $x_r=r(N+1-r)$, $X_j=x_{r_j}$ and $n=N-m$. Define
+\begin{align}
+ e&=mn(N+1)/N,&u&=\mu_1=\frac{(m-p)n}{m(n+p)},\\
+ v&=\mu_2=u\frac{(m-p-1)(n-1)}{(m-1)(n+p-1)},&
+ c&=e(1-u)=\frac{pn(N+1)}{n+p},\\
+ b&=\frac{(N-1)(N-2)}{m(m-1)n(n-1)N(N+1)},&
+ d_2&=\frac{2(N-1)}{Ne}+bN.
+\end{align}
+The first two characters are $\chi_r(1)=1-x_r/e$ and
+$\chi_r(2)=1-d_2x_r+bx_r^2$. Applying the transition to them gives
+\begin{align}
+ \EE[X_{j+1}\mid X_j=x]&=ux+c,\label{eq:meanstep}\\
+ \operatorname{Var}(X_{j+1}\mid X_j=x)
+   &=(v-u^2)x^2+Bx+V_1,\label{eq:varstep}\\
+ B&=\frac{d_2}{b}(u-v)-2uc,&
+ V_1&=\frac{p^2n^2(N+1)(m-p+1)}{(n+p)^2(n+p-1)}.
+\end{align}
+In particular $\EE X_k=e(1-u^k)$ and
+$\EE X_k^2=(v^k-1+d_2\EE X_k)/b$, exactly at finite $N$.
+
+\newpage
+\section{Uniform control without large-order cancellations}
+The sign $0\le v\le u^2\le1$ follows by comparing the two factors
+in $v/u$ to those in $u$. Direct simplification also gives
+\begin{equation}
+ B=\frac{up\{n(m^2+n^2-2)-p(m^2+2mn-n^2-2n)\}}
+            {(m-1)(n+p)(n+p-1)}.
+\end{equation}
+Under the central-sector assumptions of \eqref{eq:main}, bound
+the numerator termwise and use $m-1,n+p-1\ge N/8$. For example,
+the following conservative bounds all hold:
+\begin{equation}
+ |B|\le102400p,\quad V_1\le512p^2N,\quad
+ c\le8pN,\quad1-u\le16p/N.\label{eq:coarse}
+\end{equation}
+The total-variance recurrence, with $M_j=\EE X_j$, is
+\begin{equation}
+ \operatorname{Var}X_{j+1}
+ =v\operatorname{Var}X_j+(v-u^2)M_j^2+BM_j+V_1.
+\end{equation}
+Since $M_j\le jc$, discarding the nonpositive quadratic term and
+summing \eqref{eq:coarse} yields, for every $k$,
+\begin{equation}
+ \operatorname{Var}X_k\le410112\,k^2p^2N.\label{eq:variance}
+\end{equation}
+If $t=kp\le N/8$, use
+\begin{align}
+ x_t&=kx_p-k(k-1)p^2,&
+ x_p-c&=\frac{p^2(m-p+1)}{n+p},\\
+ kc-M_k&=c\sum_{j<k}(1-u^j)
+ & &\le\tfrac12k(k-1)c(1-u).
+\end{align}
+Together with support $r\le t$, these imply
+$0\le x_t-M_k\le73k^2p^2$.
+Furthermore $x_t-x_r=(t-r)(N+1-t-r)\ge(N/2)(t-r)$.
+Thus
+\begin{equation}
+ \EE D_k^2\le\frac4{N^2}\big[\operatorname{Var}X_k+(x_t-M_k)^2\big]
+ \le1640448\lambda_Nk^2+21316\lambda_N^2k^4.
+\end{equation}
+For $kp>N/8$, do not use monotonicity of $x_{kp}$:
+simply $D_k^2\le k^2p^2\le64\lambda_N^2k^4$.
+This proves \eqref{eq:main} uniformly over all degrees.
+
+At half filling and fixed $k$, the exact formulas also give
+\begin{equation}
+ \EE D_k\to\lambda k^2,\qquad
+ \operatorname{Var}D_k\to\lambda k^2,\qquad
+ \EE D_k^2\to\lambda^2k^4+\lambda k^2.\label{eq:DS}
+\end{equation}
+For the mean, expand the exact $e(1-u^k)$ at fixed $k$.
+For variance, $B/p\to2$, $V_1/N^2\to\lambda$,
+$(v-u^2)p^2\to0$, and $M_j/(Np)\to j$ turn the recurrence into
+increments $\lambda(2j+1)$. Finally
+$(x_{kp}-X_k)/N=D_k[1+O(kp/N)]$ uniformly on its support.
+These two moments match a Poisson law, but do not prove that law.
+
+\newpage
+\section{Highest chaos, Wick series and a covariance-filter bound}
+Now return to the same coupling in every factor. Let
+$Z_k=\W_k(H^k)$, where $\W_k$ is the orthogonal projection onto
+degree-$k$ Gaussian coupling chaos. In real Gaussian coordinates,
+let $T$ be the ordered $k$-linear coefficient tensor of the product.
+For any deterministic rank weight $w$, the Gaussian isometry gives
+\begin{equation}
+ \|wZ_k\|_{2,m}^2=k!\|\operatorname{Sym}(wT)\|^2
+ \le k!\|wT\|^2=k!C^k\EE_{\pi_k}|w(r)|^2.\label{eq:chaos}
+\end{equation}
+Symmetrization is an orthogonal projection on the input tensor;
+it commutes with the output rank filter. There is only one $k!$.
+
+Let $\mathcal D_k=\sum_r(kp-r)P_r$. Distinct coupling chaoses
+are orthogonal. Therefore the series
+\begin{equation}
+ \mathcal D(s)=\sum_{k\ge0}\frac{(is)^k}{k!}\mathcal D_k Z_k
+\end{equation}
+is entire in annealed $L^2$. With $x=C|s|^2$, its squared norm obeys
+\begin{equation}
+ \|\mathcal D(s)\|_{2,m}^2\le A e^x
+ \left[\lambda_N(x^2+x)
+ +\lambda_N^2(x^4+6x^3+7x^2+x)\right].\label{eq:wick}
+\end{equation}
+This is an all-degree sum, using the exact exponential generating
+functions for $k^2$ and $k^4$, not a time truncation.
+For full charge summation use the previously established
+$C_m\le M$ uniformly in $m,N$. Outside the central region,
+$D_k\le kp$ and \eqref{eq:chaos} give the total tail bound
+\begin{equation}
+ 2p^2e^{-N/8}e^x(x^2+x),\qquad x=M|s|^2.
+\end{equation}
+It vanishes on compact time sets. Inactive sectors are zero.
+
+There is a useful finite-parameter filter consequence. Extend the
+exact covariance eigenvalue to $z\ge0$ by
+\begin{equation}
+ \mu(z)=\prod_{j=0}^{p-1}
+ \left(1-\frac z{m-j}\right)_+
+ \left(1-\frac z{N-m+p-j}\right)_+.
+\end{equation}
+This agrees with $\mu_r$ at every allowed integer rank. The product
+is globally Lipschitz with constant at most
+$p/(m-p+1)+p/(N-m+1)\le12p/N$. Consequently
+\begin{align}
+ |p(\mu_r-\mu(kp))|&\le12\lambda_ND_k(r),\\
+ \|p(\Phi/C-\mu(kp))Z_k\|_{2,m}^2
+ &\le144\lambda_N^2 k!C^k\EE_{\pi_k}D_k^2.\label{eq:filter}
+\end{align}
+Its corresponding Wick series is bounded by $144\lambda_N^2$
+times \eqref{eq:wick}. Keeping $\mu(kp)$ exact avoids amplifying
+the finite-parameter error of an early replacement by $q^k$.
+Neither $Z_k$ nor this comparison term is asserted to commute with $H$.
+
+\newpage
+\section{The actual finite-time target and a positive interface}
+For the charge-removal dilation, let $h=H_m$, $K=1_N\otimes H_{m-1}$,
+$V\psi=m^{-1/2}\sum_i|i\rangle c_i\psi$, $a=(1-p/m)h$, and
+$R=KV-Va$. Write $F(s)=V^\dagger e^{iKs}V$ and
+$\Lambda(s)=R^\dagger e^{iKs}R$.
+The preceding stage showed that the actual pinched memory field
+differs in $L^2$ by $o(1)$ from
+\begin{equation}
+ X_0(s)=(1-\mathsf P_h)m e^{-ihs/2}\Lambda(s)e^{-ihs/2},
+ \qquad \mathsf P_hX=\sum_eP_eXP_e.
+\end{equation}
+Its uniform second moment is still the target.
+
+Independent circular Gaussian vectors $\xi,\eta$, independent of
+$J$, give linear charged probes $M_\xi=\sum_i\xi_i c_i$ with
+$\EE_\xi\bar\xi_i\xi_j=\delta_{ij}$. Exactly at finite $N$,
+\begin{equation}
+ F(s)=\frac1m\EE_\xi M_\xi^\dagger e^{iH_{m-1}s}M_\xi.
+\end{equation}
+Two $F$ insertions are therefore a four-point function with two
+independent probe colors. Define
+\begin{equation}
+ B_a(t_1,t_2)=e^{iat_1}F(t_2-t_1)e^{-iat_2}.
+\end{equation}
+Direct differentiation, using $\Lambda=-F''+i\{a,F'\}+aFa$, gives
+\begin{equation}
+ \partial_{t_1}\partial_{t_2}B_a(t_1,t_2)
+ =e^{iat_1}\Lambda(t_2-t_1)e^{-iat_2}.\label{eq:probe}
+\end{equation}
+Thus four endpoint derivatives recover two ordinary force kernels
+while retaining their common $J$. This does not model the forces
+themselves as independent probes.
+
+A positive subtraction avoids differentiating pinching. Define the
+probability measure and its conditional function
+\begin{align}
+ \rho(dx,dy)&=\EE\tr_m[P_h(dx)V^\dagger P_K(dy)V],&
+ \mu(dx)&=\rho(dx,\mathbb R),\\
+ \ell_s(x)&=\EE_\rho[(y-(1-p/m)x)^2e^{isy}\mid x].
+\end{align}
+By the spectral expansion of $R$, $\ell_s(h)$ is the exact annealed
+regression of $\Lambda(s)$ onto deterministic energy functions.
+The Hilbert-space projection identity and pinching contraction give
+\begin{align}
+ \mathcal V_{N,m}(s)&=\EE\tr_m\Lambda^\dagger\Lambda
+                  -\int|\ell_s|^2d\mu\ \ge0,\\
+ \|X_0(s)\|_2^2&\le\sum_m b_m m^2\mathcal V_{N,m}(s).\label{eq:target}
+\end{align}
+The difference is residual sample-dependent conserved variance;
+this bound is sufficient, not necessary. In central sectors it
+requires $\mathcal V=O(p^{-4})$, whereas the established leading
+strong approximation supplies only $o(p^{-2})$.
+The fixed-degree Wick estimates above do not fill this gap yet.
+
+\newpage
+\section{Literature boundary, verification and next calculation}
+The finite-index trace rule in BNR \cite{BNR}, Eqs. (3.11)--(3.12),
+retains all intersections. Its subsequent leading double-scale
+simplification drops triple intersections. For a size-one charged
+probe, one marked site lies in two independent Hamiltonian index
+sets with probability $(p/N)^2=\lambda_N/N$; two probe indices
+coincide with probability $1/N$. Both matter at connected order.
+The published neutral-probe four-point formula cannot simply be
+specialized to this charged, subleading problem. Endpoint
+derivatives and regression subtraction must be controlled together.
+
+The Wick series in Section 4 is not ordinary time evolution:
+\begin{equation}
+ e^{isH}=\sum_{n\ge0}\frac{(is)^n}{n!}
+          \sum_{k=0}^n\W_k(H^n),
+ \qquad
+ :e^{isH}:=\sum_{k\ge0}\frac{(is)^k}{k!}\W_k(H^k).
+\end{equation}
+The terms with $k<n$ contain the lower-chaos contractions.
+Already $\W_1(H^3)=2CH+\Phi(H)$, which is generally not a scalar
+multiple of $H$. A scalar Gaussian prefactor therefore does not
+close the noncommuting problem. The next task is to control these
+contractions with rank-dependent covariance maps, preserving the
+charged four-point and the positive subtraction \eqref{eq:target}.
+Every proposed limiting kernel must recover the earlier equal-time
+dynamic variance
+\begin{equation}
+ W=4J_s^4\left[\frac1\lambda+\frac{4q}{1+q}\right],
+ \qquad q=e^{-4\lambda}.
+\end{equation}
+An independent-site approximation that retains only the first term
+misses the coherent common-coupling contribution.
+
+\paragraph{Saved evidence.}
+Exact rational Racah inversion and transition checks give 252
+equalities over six finite systems and product lengths one through
+eight. The rational bounds are checked in 1800 parameter instances;
+four symbolic identities hold for general $N,p,m$. Six fixed-$k$
+symbolic limits check \eqref{eq:DS}, whose general proof is the
+recurrence above. Independently constructed CAR channels in three
+systems reproduce the rank law through five factors. Nine complete
+Gaussian coefficient tensors through degree three verify the
+single-$k!$ bound. Three finite charged-probe systems verify the
+four-point second-moment sum and endpoint derivative identity.
+Five exact-formula evaluations at 80/120 digits agree within
+$10^{-60}$; the large-$k$ case checks numerical evaluation, not a
+fixed-$k$ asymptotic. These are reproducibility checks, not substitutes
+for the uniform proof and not interval-certified rounding bounds.
+
+\begin{thebibliography}{9}\small
+\bibitem{Kota} V. K. B. Kota, \emph{Bivariate moments of the two-point
+correlation function for embedded Gaussian unitary ensemble with
+$k$-body interactions},
+\href{https://arxiv.org/abs/2208.11312}{arXiv:2208.11312}, Sec. IV.
+Used for covariance representation; spectral-density correlations
+are distinct from the present operator covariance.
+\bibitem{DLMF} NIST Digital Library of Mathematical Functions,
+\href{https://dlmf.nist.gov/18.26.E3}{Eq. 18.26.3}, Racah polynomials.
+The positive convolution and two-input interface were established
+in the project's earlier rank-product note.
+\bibitem{BNR} M. Berkooz, V. Narovlansky and H. Raj,
+\emph{Complex Sachdev-Ye-Kitaev model in the double scaling limit},
+\href{https://arxiv.org/abs/2006.13983}{arXiv:2006.13983},
+Secs. 3.2--3.3, 7 and 8.1.
+\end{thebibliography}
+\end{document}

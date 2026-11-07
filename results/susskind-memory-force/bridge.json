@@ -1,0 +1,271 @@
+{
+  "status": "passed",
+  "integer_renewal": [
+    {
+      "N": 3,
+      "p": 1,
+      "m": 2,
+      "renewal_orders": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "exact_first_memory_moment": true,
+      "exact_centered_first_moment": true
+    },
+    {
+      "N": 3,
+      "p": 2,
+      "m": 2,
+      "renewal_orders": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "exact_first_memory_moment": true,
+      "exact_centered_first_moment": true
+    },
+    {
+      "N": 4,
+      "p": 2,
+      "m": 3,
+      "renewal_orders": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "exact_first_memory_moment": true,
+      "exact_centered_first_moment": true
+    }
+  ],
+  "comparison_bounds": [
+    {
+      "N": 3,
+      "p": 1,
+      "m": 2,
+      "mean_G": 2.3562119936674164,
+      "mean_G_squared": 8.327602438653274,
+      "values": [
+        {
+          "time": 0,
+          "memory": [
+            2.3562119936674164,
+            -1.6984563942376352e-18
+          ],
+          "force": [
+            3.5818898394440035,
+            3.592077762696534e-18
+          ],
+          "orthogonal_difference": 0.0,
+          "orthogonal_bound": 0.0,
+          "parallel_difference": 1.2256778457765871,
+          "parallel_bound": 4.6244757748045755
+        },
+        {
+          "time": 0.2,
+          "memory": [
+            2.342448299504847,
+            0.12021352430014344
+          ],
+          "force": [
+            3.2571905035754085,
+            0.7633173661611475
+          ],
+          "orthogonal_difference": 0.16409852059551502,
+          "orthogonal_bound": 0.1665520487730655,
+          "parallel_difference": 1.2601296412110434,
+          "parallel_bound": 4.6244757748045755
+        },
+        {
+          "time": 0.7,
+          "memory": [
+            2.2012019030487417,
+            0.37780494213040594
+          ],
+          "force": [
+            0.3396136975866691,
+            1.4773485768394665
+          ],
+          "orthogonal_difference": 1.6960907017919682,
+          "orthogonal_bound": 2.040262597470052,
+          "parallel_difference": 1.4073065675450211,
+          "parallel_bound": 4.6244757748045755
+        },
+        {
+          "time": 1.3,
+          "memory": [
+            1.9249075984365658,
+            0.5404146913338461
+          ],
+          "force": [
+            -2.715716388051931,
+            -0.4372371389096797
+          ],
+          "orthogonal_difference": 3.611313217735572,
+          "orthogonal_bound": 7.036824060662018,
+          "parallel_difference": 1.1820376672208126,
+          "parallel_bound": 4.6244757748045755
+        }
+      ]
+    },
+    {
+      "N": 4,
+      "p": 2,
+      "m": 3,
+      "mean_G": 0.8997946053688608,
+      "mean_G_squared": 0.8972084094664825,
+      "values": [
+        {
+          "time": 0,
+          "memory": [
+            0.8997946053688608,
+            0.0
+          ],
+          "force": [
+            1.5107998446493602,
+            0.0
+          ],
+          "orthogonal_difference": 0.0,
+          "orthogonal_bound": 0.0,
+          "parallel_difference": 0.6110052392804994,
+          "parallel_bound": 2.0939472046408474
+        },
+        {
+          "time": 0.2,
+          "memory": [
+            0.8636206880537174,
+            -0.012984937195881317
+          ],
+          "force": [
+            1.3856348120941337,
+            0.0008983193525681915
+          ],
+          "orthogonal_difference": 0.017425961682006268,
+          "orthogonal_bound": 0.017944168189329653,
+          "parallel_difference": 0.5396210914421652,
+          "parallel_bound": 2.0939472046408474
+        },
+        {
+          "time": 0.7,
+          "memory": [
+            0.5323650507444251,
+            -0.0036975091180873262
+          ],
+          "force": [
+            0.29636294392691653,
+            0.05781802923102658
+          ],
+          "orthogonal_difference": 0.1516384053359992,
+          "orthogonal_bound": 0.2198160603192882,
+          "parallel_difference": 0.1082321090075023,
+          "parallel_bound": 2.0939472046408474
+        },
+        {
+          "time": 1.3,
+          "memory": [
+            0.12381636325309989,
+            0.11794781840703294
+          ],
+          "force": [
+            -0.7351760215859198,
+            0.1801224752705352
+          ],
+          "orthogonal_difference": 0.18579699594530583,
+          "orthogonal_bound": 0.7581411059991778,
+          "parallel_difference": 0.6910188794301164,
+          "parallel_bound": 2.0939472046408474
+        }
+      ]
+    },
+    {
+      "N": 5,
+      "p": 2,
+      "m": 3,
+      "mean_G": 1.0785489041618683,
+      "mean_G_squared": 1.4330575963044736,
+      "values": [
+        {
+          "time": 0,
+          "memory": [
+            1.0785489041618683,
+            3.912562086886996e-19
+          ],
+          "force": [
+            2.3883823945435956,
+            3.912562086886996e-19
+          ],
+          "orthogonal_difference": 0.0,
+          "orthogonal_bound": 0.0,
+          "parallel_difference": 1.3098334903817273,
+          "parallel_bound": 3.6869910162396367
+        },
+        {
+          "time": 0.2,
+          "memory": [
+            1.0048748963466396,
+            -0.1393778657798673
+          ],
+          "force": [
+            2.0654505651047574,
+            -0.6898784803357099
+          ],
+          "orthogonal_difference": 0.02738599242380521,
+          "orthogonal_bound": 0.02866115192608948,
+          "parallel_difference": 1.220700259333699,
+          "parallel_bound": 3.6869910162396367
+        },
+        {
+          "time": 0.7,
+          "memory": [
+            0.41139148723428315,
+            -0.2512856412356384
+          ],
+          "force": [
+            -0.26952556071394757,
+            -0.9897791508994989
+          ],
+          "orthogonal_difference": 0.19590154099911775,
+          "orthogonal_bound": 0.35109911109459596,
+          "parallel_difference": 0.9725854734145147,
+          "parallel_bound": 3.6869910162396367
+        },
+        {
+          "time": 1.3,
+          "memory": [
+            -0.05402585120770867,
+            -0.079327436128915
+          ],
+          "force": [
+            -1.029150435406465,
+            0.21770547008780744
+          ],
+          "orthogonal_difference": 0.13104580544107897,
+          "orthogonal_bound": 1.2109336688772803,
+          "parallel_difference": 0.9768451623408618,
+          "parallel_bound": 3.6869910162396367
+        }
+      ]
+    }
+  ],
+  "environment": {
+    "python": "3.14.5",
+    "numpy": "2.4.6",
+    "sympy": "1.14.0",
+    "scipy": "1.18.0"
+  },
+  "error_scope": "Exact noncommuting matrix renewal through order six, and finite-system float tests of analytic scalar memory-force bounds. No fit of finite systems to the DS kernel.",
+  "input_sha256": {
+    "code/memory_force_bridge.py": "df01200636305d0b919f2d6a1d528569ac6387f1aa9f92de50b942ae82530e60",
+    "code/bilocal_channel.py": "408944aa559f4438e2e75c85075ed8d10767223bbc50828496644264e8cb11da",
+    "code/complex_syk_dictionary.py": "96b4890a167beeadf0849ccffdbb20dd125d921af062fd291044da9024900abf"
+  }
+}

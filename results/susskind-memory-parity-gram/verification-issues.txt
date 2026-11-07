@@ -1,0 +1,4 @@
+Initial memory_parity_moments.py failed at N=6,a=b=1: actual values were floating-point approximations of 3/7,-6/7,-12/7, while the target was exact Fraction.
+Cause: (-1)**(a+b-r) with a negative exponent converts to float even when that output rank has probability zero. The sum then loses exact Fraction arithmetic.
+Correction: evaluate parity by an integer conditional, (-1 if deficit%2 else 1). The initial source is retained as initial-memory_parity_moments.py.
+No mathematical formula, expected result, or tolerance was changed. Final exact run passed 417 signed moments and 139 recurrences.

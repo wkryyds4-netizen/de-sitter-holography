@@ -1,0 +1,75 @@
+{
+  "status": "passed",
+  "scope": "Same finite L=18; independently verifies diagonal similarity, all three channel factors, and Tricomi normalization. Does not certify infinite-cutoff roundoff.",
+  "dps": 50,
+  "records": [
+    {
+      "lambda_value": "0.25",
+      "time": "0.2",
+      "L": 18,
+      "crossed_mp": "(0.78666075173051559623100022594573347296795343401012 + 0.0j)",
+      "uncrossed_mp": "(0.66855652488793779819099451542179317471465120345964 + 0.0j)",
+      "crossed_absolute_difference": 1.3322676295501878e-15,
+      "uncrossed_absolute_difference": 1.5543122344752192e-15,
+      "nonsymmetric_sum_condition": "1.0"
+    },
+    {
+      "lambda_value": "0.25",
+      "time": "0.7",
+      "L": 18,
+      "crossed_mp": "(0.048027990505718741410255199320509177041123581481586 + 0.0j)",
+      "uncrossed_mp": "(-0.0014957243389107219691615169037783610616955332419614 + 0.0j)",
+      "crossed_absolute_difference": 2.3592239273284576e-16,
+      "uncrossed_absolute_difference": 1.3097162243624894e-16,
+      "nonsymmetric_sum_condition": "1.0000000000000000000000000000000000000676771726644"
+    },
+    {
+      "lambda_value": "0.1",
+      "time": "0.2",
+      "L": 18,
+      "crossed_mp": "(0.78436110021631732101216660007617235101172351467313 + 0.0j)",
+      "uncrossed_mp": "(0.57154129324825206856980043968831250892269341144844 + 0.0j)",
+      "crossed_absolute_difference": 2.220446049250313e-16,
+      "uncrossed_absolute_difference": 3.3306690738754696e-16,
+      "nonsymmetric_sum_condition": "1.0"
+    },
+    {
+      "lambda_value": "0.1",
+      "time": "0.7",
+      "L": 18,
+      "crossed_mp": "(0.050868578439901111547508654758453593082341197195857 + 0.0j)",
+      "uncrossed_mp": "(0.0015934549856517001422867907021533303278581951386872 + 0.0j)",
+      "crossed_absolute_difference": 6.245004513516506e-17,
+      "uncrossed_absolute_difference": 2.6020852139652106e-18,
+      "nonsymmetric_sum_condition": "1.0000172576940600114063754341991072801016883067135"
+    }
+  ],
+  "tricomi_normalization": [
+    {
+      "z": "0.025",
+      "tricomi": "0.69622689606797129919439814882862929002537693761269",
+      "gamma_integral": "0.69622689606797129919439814882862929002537693761269",
+      "difference": "1.3363823550460978230702682335757409394075984400525e-51"
+    },
+    {
+      "z": "0.05",
+      "tricomi": "0.51290963303007715406555041183016301995466996294389",
+      "gamma_integral": "0.51290963303007715406555041183016301995466996294389",
+      "difference": "1.3363823550460978230702682335757409394075984400525e-51"
+    },
+    {
+      "z": "0.1",
+      "tricomi": "0.30961066609410930045435799739030190249776712466734",
+      "gamma_integral": "0.30961066609410930045435799739030190249776712466757",
+      "difference": "2.3386691213306711903729694087575466439632972700919e-49"
+    }
+  ],
+  "environment": {
+    "python": "3.14.5",
+    "mpmath": "1.3.0"
+  },
+  "input_sha256": {
+    "code/check_otoc_representation.py": "173b2cbfce7606a4b00f19344a434ef7e1e0e478b037dbe269d114772fe31415",
+    "code/singlet_otoc.py": "d497109e719109a8e5339ed43db432f5d0e10ffdc704ee61313e1e37dfd780f9"
+  }
+}

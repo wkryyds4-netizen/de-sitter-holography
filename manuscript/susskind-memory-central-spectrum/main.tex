@@ -1,0 +1,324 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,microtype}
+\usepackage[margin=24mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\W}{\mathsf W_2}
+\newcommand{\Db}{\overline D}
+\title{Central charge windows in the memory spectrum\\A uniform trace bridge and the two force orientations}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Local research note --- 6 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+Balanced occupation constraints transfer each fixed marked Wick graph
+from the full-Fock trace to a compact central charge window with an
+$O(p^{-1})$ absolute error in its normalized graph weight. An exact
+general-charge Casimir identity then bridges the output deficit to
+the two physical force orientations. Existing marked-chord kernels
+therefore determine the central oriented spectral matrix and the
+complete two-energy measure of the projected second-chaos memory
+core. The raw second memory coefficient still requires restoration
+of its other descendants at central charge.
+\end{abstract}
+\section{State and the dynamical result}
+Use standard CAR, the full overlapping complex Gaussian $p$-body
+Hamiltonian, common couplings in all sectors, and $\hbar=1$.
+Let $N$ be even, $\lambda_N=p^2/N\to\lambda>0$,
+$m=N/2+xp$, $|x|\le L_0$, and
+$C_m=\EE\tr_mH_m^2\to C=J_s^2/\lambda$.
+The trace is normalized maximally mixed at charge $m$; all norms
+include the Gaussian average. Constants below are uniform for
+$x$ in this window and $\lambda_N$ in positive compact sets.
+
+Define $d_i=[H,c_i]$ before restricting neutral operators, and
+\begin{equation}
+ A_-=\sum_i d_i^\dagger d_i,\quad A_+=\sum_i d_id_i^\dagger,
+ \quad O_\pm=\W A_\pm,\quad B=\W h^2,\quad h=H_m.
+\end{equation}
+Here $\W$ is ordinary coupling-coordinate second chaos.
+Put $q=e^{-4\lambda}$, $c=2\lambda(1-q)/(1+q)$ and
+$Y_\pm=O_\pm-cB$. The central two-energy limit is
+\begin{equation}
+ \boxed{\ d\nu_{(Y_-,Y_+)}=
+ \begin{pmatrix}w&\eta\\\eta&w\end{pmatrix}d\mu_{q^2},\quad
+ \begin{aligned}
+ w&=4C^2\lambda+\frac{16C^2\lambda^2q}{1+q},\\
+ \eta&=-4C^2\lambda q+\frac{16C^2\lambda^2q}{1+q}.
+ \end{aligned}\ }\label{matrix}
+\end{equation}
+The normalized Mehler measure $\mu_r$ is the existing probe
+measure with Hamiltonian variance $C$ and chord parameter $q$.
+Its support in each energy is $[-2\sqrt{C/(1-q)},2\sqrt{C/(1-q)}]$.
+It is the prior chord kernel, now applied to the present state.
+For the output-deficit residual $T$ defined on page 5,
+\begin{equation}
+ d\nu_T=\frac{C^2v\Delta}{v+\Delta}\,d\mu_{q^2},\quad
+ v=2\lambda(1-q)+\frac{16\lambda^2q}{1+q},\quad
+ \Delta=2\lambda(1+q).\label{Tmain}
+\end{equation}
+Both this variance and the eigenvalues of \eqref{matrix} are positive.
+
+\newpage
+\section{The occupation ratio on a central window}
+For a term fixing $t$ occupied and $L-t$ empty sites, the exact
+sector/full-Fock trace ratio is
+\begin{equation}
+ R_{N,m}(L,t)=2^L\frac{(m)_t^\downarrow(N-m)_{L-t}^\downarrow}
+                         {(N)_L^\downarrow}
+       =2^L\frac{\binom{N-L}{m-t}}{\binom Nm}.\label{ratio}
+\end{equation}
+Let $s=L-t$, $d=2t-L$ and $\epsilon=(m-N/2)/N$.
+For $L\le kp$ at fixed $k$, all relevant falling factorials are
+positive for sufficiently large $p$. An explicit first approximation is
+\begin{align}
+ A={}&t\log(2m/N)+s\log(2(N-m)/N)\notag\\
+ &-\frac{t(t-1)}{2m}-\frac{s(s-1)}{2(N-m)}+\frac{L(L-1)}{2N}.
+\end{align}
+The elementary log remainder gives
+\begin{equation}
+ |\log R-A|\le E(m,t)+E(N-m,s)+E(N,L),\quad
+ E(a,j)=\frac{j(j-1)(2j-1)}{12a^2[1-(j-1)/a]},\label{error}
+\end{equation}
+with $E(a,0)=0$. This follows by summing
+$|\log(1-y)+y|\le y^2/[2(1-y)]$ for the three factorials.
+The denominator alone also gives the global upper bound
+\begin{equation}
+ \log R\le L\log(1+2|\epsilon|)
+                 +\frac{L(L-1)}{2(N-L+1)}\le K_{k,L_0,\lambda}.
+ \label{upper}
+\end{equation}
+
+Expanding only the inverse denominators in $A$ yields
+\begin{align}
+ \log R={}&\frac L2\log(1-4\epsilon^2)
+       +\frac d2\log\frac{1+2\epsilon}{1-2\epsilon}
+       +\frac{L-d^2}{2N}\notag\\
+       &+O\left(|\epsilon|L^2/N+L^3/N^2\right).
+\end{align}
+Since $|\epsilon|\le L_0p/N$, this proves, uniformly in $0\le t\le L$,
+\begin{equation}
+ |\log R|\le K\left[\frac{1+|d|}{p}+\frac{d^2}{N}\right],\quad
+ |R-1|\le e^K|\log R|.\label{balanced}
+\end{equation}
+The last inequality uses the bounded positive part of $\log R$;
+no lower bound on $R$ is needed. A balance estimate on $d$ will
+turn this into an integrable error for the actual marked graphs.
+
+\newpage
+\section{Transferring fixed marked energy moments}
+Fix a Gaussian pairing and a finite number of normal or reverse
+commutator marks. Each Gaussian chord carries two $p$-element sets
+of opposite orientation. Let $K_{\rm ov}$ be the sum of pairwise
+intersection sizes of the distinct sets in this fixed graph.
+For a nonzero local occupation term, singleton sites on the two
+sets of a chord have opposite occupations and equal original
+cardinalities. Removing the multiply used sites changes this
+balance by at most a graph-dependent multiple of $K_{\rm ov}$.
+Thus
+\begin{equation}
+ |2t-L|\le c_kK_{\rm ov},\qquad L\le kp.\label{balance}
+\end{equation}
+For the Wick blocks used here there is no Gaussian chord internal
+to a marked block. A force mark, or a fixed number of body-deficit
+marks, is supported on intersections and annihilates singleton
+sites. Expanding multiply used sites into occupation projectors
+has absolute coefficient bound
+$(1+K_{\rm ov})^j e^{c_kK_{\rm ov}}$ relative to the common
+singleton normalization. Fermionic signs and the orientations are
+retained; this is an absolute error estimate on their sum.
+
+The previously used exponential overlap bound can be seen from
+the hypergeometric factorial moments of a pair overlap $K_{ij}$:
+\begin{equation}
+ \EE(K_{ij})_r^\downarrow
+ =\frac{(p)_r^{\downarrow,2}}{(N)_r^\downarrow}
+ \le\left(\frac{p^2}{N-p}\right)^r.
+\end{equation}
+Its factorial-moment generating function bounds
+$\EE e^{aK_{ij}}$ uniformly for each fixed $a$; H\"older handles
+the finite sum of pair overlaps. Combining \eqref{upper},
+\eqref{balanced} and \eqref{balance} consequently gives
+\begin{equation}
+ \left|\mathcal G_{m,N}-\mathcal G_{{\rm Fock},N}\right|
+ \le\frac Kp\EE\left[(1+K_{\rm ov})^{j+2}e^{c_kK_{\rm ov}}\right]
+ \le\frac{K'}p.\label{graph}
+\end{equation}
+Here $\mathcal G$ denotes the graph weight with its Gaussian
+couplings and singleton powers normalized. Apply this also to
+$H^2$ to see that the sector and full-Fock variance normalizations
+agree up to $O(p^{-1})$. This does not require summing over all
+charge sectors or assuming a tail estimate outside the window.
+
+The oriented-word and Poisson-overlap rules are prior results
+\cite{BNR}; their marked versions and endpoint certificates are
+already recorded in this project \cite{oriented}. Equation
+\eqref{graph} transfers those results to the central trace for
+every fixed left/right energy degree. It applies to bounded
+coefficient combinations of fixed marked Wick blocks, including
+$O_\pm$, $B$ and the previously defined fourth-chaos $Q_4$.
+It does not automatically control a raw counterterm multiplied
+by a growing factor of $p$, nor a number of energy insertions
+growing with $N$.
+
+\newpage
+\section{The output deficit and the actual reverse force}
+For neutral full-Fock operators define
+\begin{equation}
+ DX=QX-\sum_i c_i^\dagger Xc_i,\qquad
+ \Db X=(N-Q)X-\sum_i c_iXc_i^\dagger.
+\end{equation}
+At arbitrary charge $m$, CAR gives the exact identities
+\begin{equation}
+ \mathcal C_xX=(N-m+1)DX+m\Db X-D\Db X,\quad DH=pH,
+ \quad (\Db h)_a=\frac{x_a-p(N-m)}{m-p+1}h_a.\label{casimir}
+\end{equation}
+The compositions are evaluated before restriction. For $u=p-a$ put
+\begin{equation}
+ D_{\rm in}h=\sum_a uh_a,\quad
+ E_{\rm in}=\sum_a\frac{u(u-1+N-2m)}{m-p+1}h_a.
+ \qquad (p-\Db)h=2D_{\rm in}h+E_{\rm in}.\label{ein}
+\end{equation}
+Unlike exact half filling, $E_{\rm in}$ is now $O_{L^r}(p^{-1})$
+for every fixed trace/Gaussian moment order needed here. The
+factorial input-rank tail proves this from \eqref{ein}; the half-filled
+$O(N^{-1})$ bound must not be substituted.
+
+Let $\mathcal S=\sum(a+b-r)\W Z^+_{ab;r}$ and let
+$\widetilde{\mathcal S}$ use $(x_{a+b}-x_r)/N$ instead.
+Define, before restriction,
+\begin{align}
+ \overline A&=(2p-\Db)H^2=A_++\{H,(p-\Db)H\},\\
+ E_{\rm dbl}&=(2p-D)\overline A,\qquad
+ U_{{\rm in},2}=\{h,D_{\rm in}^2h\}+2(D_{\rm in}h)^2.
+\end{align}
+Substituting into \eqref{casimir} gives the general-charge bridge
+\begin{align}
+ N\left(\widetilde{\mathcal S}-\frac{O_-+O_+}{2}\right)
+ ={}&(N/2-m+1-2p)O_-+(m-N/2-2p)O_+\notag\\
+ &+(2m-N-1)\W\{h,D_{\rm in}h\}-\W U_{{\rm in},2}
+   +\W E_{\rm dbl}\notag\\
+ &+(m-2p)\W\{h,E_{\rm in}\}.\label{bridge}
+\end{align}
+The double mark is supported on overlap sites: each deficit
+annihilates a singleton and a preceding deficit does not create
+a new singleton contribution. Its coefficient bound is
+$K(1+K_{\rm ov})^2$, so \eqref{graph} bounds its fixed moments.
+All other terms are controlled by the established input tails
+and Gaussian product bounds. Divide \eqref{bridge} by $N$ and
+use $m-N/2=O(p)$. The positive output moments also give
+$\|\mathcal S-\widetilde{\mathcal S}\|_2=O(p^{-1})$. Hence
+\begin{equation}
+ \boxed{\quad\mathcal S=(O_-+O_+)/2+O_{L^2}(p^{-1})\quad}
+ \label{strong}
+\end{equation}
+uniformly on the central window, with bounded physical $C_m$.
+
+\newpage
+\section{The spectral measure of the projected quadratic core}
+The transferred force graph calculation gives \eqref{matrix} for
+all fixed mixed energy moments. The existing $Q_4$ endpoint
+certificates also give $\nu_{Q_4,Y_-}=\nu_{Q_4,Y_+}=0$ centrally.
+These are entire cross measures: finite-system matrix measures
+\begin{equation}
+ \nu_{ij,N}(dE,dE')=\EE\tr_m[X_i\Pi_h(dE)X_j\Pi_h(dE')]
+\end{equation}
+are positive. Uniform diagonal moments give tightness and uniform
+integrability, and the candidate compactly supported measures
+are moment determinate. Spectral Cauchy--Schwarz controls the
+off-diagonal measures. A subsequence argument gives convergence
+uniformly over the stated central parameters.
+
+Let $\Pi_N$ be the actual finite-$N$ orthogonal projector onto
+$\operatorname{span}(B,L_{\rm in},O_-)$ and
+$T_N=(1-\Pi_N)\mathcal S$. The previous complete central Gram
+has a nondegenerate limiting inverse. With $\rho=v/(v+\Delta)$,
+\begin{equation}
+ T_N=\left(\frac12-\rho\right)Y_-+\frac12Y_++o_{L^2}(1).
+\end{equation}
+The $L_{\rm in}$ projection coefficient tends to zero. Multiplying
+the $2\times2$ matrix in \eqref{matrix} proves \eqref{Tmain} and
+\begin{equation}
+ \nu_{T,Y_-}=0,\qquad \nu_{T,Q_4}=0.
+\end{equation}
+For an $L^2$ replacement the difference of self measures is bounded
+in total variation by
+$\|X-X'\|_2(\|X\|_2+\|X'\|_2)$. Thus \eqref{strong} and the
+projection replacement transfer the weak spectral limit and all
+bounded spectral tests, without expanding a time exponential.
+Unbounded polynomial tests on a replaced field require their own
+uniform integrability; the marked fields have it from \eqref{graph}.
+
+Recall the actual raw core
+\begin{equation}
+ \mathcal E=\sum_i[H,[H,c_i]]^\dagger[H,[H,c_i]]+[h,[h,A_-]]/4.
+\end{equation}
+The established central strong expansion implies
+$\mathcal R_{2,N}:=(1-\Pi_N)\W\mathcal E
+=8\lambda_NC_mq_N^2T_N+o_{L^2}(1)$. Therefore
+\begin{equation}
+ \boxed{\ d\nu_{\mathcal R_2}=V_2\,d\mu_{q^2},\quad
+ V_2=64\lambda^2C^4q^4\frac{v\Delta}{v+\Delta},\quad
+ C_{\mathcal R_2}(t)=V_2G_{q^2}(t).\ }\label{core}
+\end{equation}
+The limiting measure has no static atom at fixed $0<q<1$.
+Its normalized second frequency moment is $2C(1-q^2)$.
+With $C=J_s^2/\lambda$, after DS and then $\lambda\downarrow0$,
+$V_2\to1024J_s^8$ and $G_{q^2}(t)\to\operatorname{sech}^4(2J_st)$.
+Equation \eqref{core} identifies the projected second-chaos core;
+it is not yet a restoration of the complete central raw $U_2$.
+
+\newpage
+\section{Executed checks and continuation}
+Three new scientific records are stored in
+\texttt{results/susskind-memory-central-spectrum}:
+\begin{itemize}
+ \item \texttt{trace-ratio.json}: 24 exact finite binomial ratios
+ and 324 central cases, with $\lambda=0.1,0.25,0.5$,
+ $p=16,32,64,128$, $x=-2,0,2$, $L/p=2,4,8$, and imbalance
+ $2t-L=0,2,6$. Every case satisfies the explicit log remainder
+ \eqref{error} and upper bound \eqref{upper}. The 90/130-digit
+ refinement differs by at most $2.23\,10^{-85}$.
+ \item \texttt{force-bridge.json}: 108 exact cleared-rational
+ identities on six non-half-filled $(N,p,m)$ systems and three
+ integer Hermitian inputs each. The checks use full CAR and
+ complete Casimir projectors, including the general $E_{\rm in}$
+ correction and the pre-restriction compositions in \eqref{casimir}.
+ \item \texttt{spectrum-assembly.json}: symbolic oriented matrix,
+ residual projection, zero cross with $Y_-$, and core normalization.
+ It verifies the hashes of the prior local-mark and endpoint
+ certificates rather than rerunning them. The reverse certificate
+ retains 128 templates and 6,072 words; its coefficients vanish
+ for arbitrary fixed energy degrees by the original endpoint proof.
+\end{itemize}
+For $\lambda=0.5$, $x=2$, $L=4p$ and $2t-L=2$, the actual trace
+ratios at $p=16,32,64,128$ are approximately
+$0.7985081$, $0.9027791$, $0.9522632$, $0.9763479$.
+The corresponding $p(R-1)$ values approach a finite number near
+$-3$ in this example. Finite-size differences are retained.
+The analytic remainder bounds are not interval-rounding certificates;
+the numerical evaluations use precision refinement.
+
+The next missing pieces for the raw central $U_2$ are its lower-chaos
+descendant table and exact conserved subtraction, and the filtered
+linear-field interfaces needed in its mixed spectral matrix.
+The new trace theorem handles fixed marked blocks but must not
+silently be multiplied by a divergent counterterm. These tasks
+precede the charge tails, finite-memory two-insertion remainder,
+and Susskind's bulk meson space/mass reconstruction.
+No bound uniform in growing word length, growing $|x|$, or joint
+small $\lambda$ and finite $N$ is asserted.
+
+\begin{thebibliography}{9}\small
+\bibitem{BNR} M. Berkooz, V. Narovlansky and H. Raj,
+\emph{Complex Sachdev--Ye--Kitaev model in the double scaling limit},
+\href{https://arxiv.org/html/2006.13983v2}{arXiv:2006.13983v2},
+Sec. 3.3, Eqs. (3.11)--(3.15). Existing oriented trace and overlap rules.
+\bibitem{oriented} A. Day and Chengheng, local project notes
+\emph{Two orientations of the fermionic force},
+\emph{Central charge windows}, and
+\emph{Closing the central-window memory Gram} (6 November 2026).
+Their formulas and executed certificates are inputs to this extension.
+\end{thebibliography}
+\end{document}

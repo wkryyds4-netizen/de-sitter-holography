@@ -1,0 +1,49 @@
+{
+  "status": "passed",
+  "scalar_drift": "-2*lam*(rho*x - 2*x + 1)",
+  "variance_ratio_second": "4*lam**2*(2*x - 1)",
+  "candidate_cross_limit": "2*lam*(2*lam*q + 2*lam - q + 1)",
+  "finite": {
+    "N": 6,
+    "p": 1,
+    "m": 3,
+    "rank_map_checks": [
+      {
+        "rank": 0,
+        "dimension": 1,
+        "ell_squared": "9",
+        "entries": 50625
+      },
+      {
+        "rank": 1,
+        "dimension": 35,
+        "ell_squared": "9/2",
+        "entries": 50625
+      },
+      {
+        "rank": 2,
+        "dimension": 189,
+        "ell_squared": "3/2",
+        "entries": 50625
+      }
+    ],
+    "ordered_gaussian_pairs": 1296,
+    "max_isometry_norm_error": 2.220446049250313e-16,
+    "max_transport_identity_error": 3.469446951953614e-17,
+    "adjacent_product_norm_squared": 0.1582956202880193
+  },
+  "scope": "Exact symbolic scalar asymptotics and complete rational isometry on common output ranks 0..2p. Floating full Gaussian-coefficient transport identity uses square roots. Uniform telescoping/tail proof is in the note. The candidate cross limit does not prove its general-charge recoupling lemma.",
+  "elapsed_seconds": 3.27121639251709,
+  "environment": {
+    "python": "3.14.5",
+    "numpy": "2.4.6",
+    "sympy": "1.14.0"
+  },
+  "input_sha256": {
+    "code/check_memory_central_transport.py": "d74c4c7d9a254746ce3fefac07f1357413f3619481491f44f2c60907e8808ea9",
+    "code/memory_quadratic_contraction.py": "d9e7722e5c13ca64a26b9e79a06e0a3fcaf07060ac1c6133d5eb04f4a1ad2139",
+    "code/memory_rank_blocks.py": "1a73c01439efe7f7b6221ccb151a42bc988284f0e1e53137f5fa29d824a681f9",
+    "code/complex_syk_dictionary.py": "96b4890a167beeadf0849ccffdbb20dd125d921af062fd291044da9024900abf",
+    "code/singlet_wick_moments.py": "045f9f02e860fa8f2e402ca5162dabf035208a8d26023ada5721a5f02d47572c"
+  }
+}

@@ -1,0 +1,374 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,microtype}
+\usepackage[margin=24mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\Js}{\mathcal J_s}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\E}{\mathbb E}
+\newcommand{\W}{\mathcal W}
+\newcommand{\av}[1]{\langle #1\rangle}
+\title{Dynamics of the linear cubic residual\\A rank-resolved crossing formula and surviving spectral weight}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Local research note --- 6 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+The energy-orthogonal first coupling-chaos component of the cubic
+derivative singlet has a nonzero double-scaled dynamical moment.
+We obtain its exact finite-sector moment by retaining the correlations
+between the observable and its Hamiltonian. Standard embedded-ensemble
+covariances reduce the calculation to a terminating Racah polynomial.
+The normalized second frequency moment tends to
+$2\Js^2(1-e^{-4\lambda})/\lambda$, and then to $8\Js^2$ at small
+$\lambda$. A uniform fourth-moment bound shows that the result is
+carried by spectral weight that survives at finite frequencies.
+\end{abstract}
+
+\section{Physical result and conventions}
+Use standard CAR, the number-preserving complex Gaussian $p$-body
+Hamiltonian $H=H_s$, and coupling covariance
+$\E J_{IJ}J_{KL}=w\delta_{IL}\delta_{JK}$, including overlapping
+index sets. The state is infinite temperature and zero chemical
+potential. Time is conjugate to $H_s$; $\hbar=1$ and $\Js$ has energy
+units. The sector trace $\tr_m$ is normalized by $D_m=\binom Nm$.
+Write $L=[H,\cdot]$ and
+\[
+ T_3=\tfrac12\left(\sum_i c_i^\dagger L^3c_i+\mathrm{h.c.}\right),
+ \qquad F=\W_1 T_3-\bar t(Q_f)H.
+\]
+Here $\W_1$ means ordinary Gaussian \emph{coupling} chaos, and $\bar t$
+is the ensemble projection coefficient in each charge sector.
+The preceding note gives $\av{F^2}_{\rm DS}=64\Js^6q^2$,
+where $\lambda=p^2/N>0$, $q=e^{-4\lambda}$ and
+$C=\av{H^2}_{\rm DS}=\Js^2/\lambda$ \cite{previous}.
+
+The present result is
+\begin{equation}
+ \boxed{\av{FL^2F}_{\rm DS}
+ =\frac{128\Js^8}{\lambda}q^2(1-q),\qquad
+ \mu_{2,F}=\frac{\av{FL^2F}}{\av{F^2}}
+ =\frac{2\Js^2}{\lambda}(1-q).}                 \label{main}
+\end{equation}
+In particular $\mu_{2,F}\to8\Js^2$ after the DS limit.
+The corresponding previously obtained values for $X$ and $R$ are
+$16\Js^2$ and $24\Js^2$. This motivates testing a $q$-probe kernel
+for $F$ at all orders. This note establishes the curvature and
+surviving dynamics; the complete kernel is the next calculation.
+
+\newpage
+\section{Exact rank covariance}
+Initially take $p\leq\min(m,N-m)$. In the standard multiplicity-free
+$U(N)$ decomposition, $H=\sum_{a=0}^p H_a$ and the Gaussian $H_a$
+are independent. Define
+\begin{align}
+ C_r&=\binom mr\binom{N-m+r}{r},&
+ d_a&=\binom Na^2-\binom N{a-1}^2,\\
+ \omega_a^{(r)}&=
+ \frac{d_a\binom{m-a}{m-r}\binom{N-r-a}{m-r}}{D_m C_r},&
+ \sum_{a=0}^r\omega_a^{(r)}&=1.                 \label{weights}
+\end{align}
+The physical variance is $C_m=wC_p$, and
+$v_a=\E\tr_m H_a^2=C_m\omega_a^{(p)}$.
+For an irreducible tensor $Y_b$, introduce the normalized map
+\begin{equation}
+ \E H_aY_bH_a=v_a g_{ab}Y_b.                  \label{map}
+\end{equation}
+The known full $r$-body covariance gives \cite{kota,tall}
+\begin{equation}
+ \sum_{a=0}^r\omega_a^{(r)}g_{ab}
+ =\frac{\binom{m-b}{r}\binom{N-m+r-b}{r}}{C_r}.
+                                                               \label{triangular}
+\end{equation}
+Since the diagonal weight is positive, this triangular system
+uniquely specifies the pure-rank map. Its explicit solution is
+\begin{equation}
+ \boxed{g_{ab}={}_4F_3\!\left(
+ \begin{matrix}-a,a-N-1,-b,b-N-1\\-m,m-N,-N-1\end{matrix};1\right).}
+                                                               \label{racah}
+\end{equation}
+The sum ends at $\min(a,b)$, before any denominator vanishes.
+It is a standard Racah polynomial, with parameters
+$(\alpha,\beta,\gamma,\delta)=(-m-1,m-N-1,-N-2,0)$
+in DLMF 18.26.3 \cite{racah}. No general positive-parameter
+orthogonality formula is required here.
+
+For completeness, let $z_k(a)=(-a)_k(a-N-1)_k$. Direct substitution
+of \eqref{weights} and the terminating Rogers--Dougall sum gives
+\begin{equation}
+ \sum_a\omega_a^{(r)}z_k(a)
+ =\frac{(-r)_k(m-N)_k(-N-1)_k}{(m-N-r)_k}.       \label{factorial}
+\end{equation}
+One explicit way to check the summation is to write
+$A=-N-1$ and
+\[
+ \frac{\omega_a^{(r)}}{\omega_0^{(r)}}=
+ \frac{A+2a}{A}
+ \frac{(A)_a^2(-r)_a(m-N)_a}
+ {(a!)^2(-m)_a(r-N)_a}.
+\]
+After multiplying by $z_k(a)$ and shifting $a=k+j$, the
+very-well-poised parameters are
+$A'=A+2k$, $b'=A+k$, $c'=m-N+k$, $d'=-(r-k)$.
+Apply DLMF 16.4.9 in its terminating, rational form \cite{sums}.
+Inserting \eqref{factorial} into \eqref{racah} leaves
+${}_3F_2(-b,b-N-1,-r;-m,m-N-r;1)$.
+Pfaff--Saalschutz, DLMF 16.4.3, gives exactly
+\eqref{triangular}. This proves the stated covariance solution.
+
+\newpage
+\section{Same-disorder Wick contractions}
+The previous finite-sector result is
+$\W_1T_3=\sum_a t_aH_a$, so set
+\begin{equation}
+ \bar t=\sum_a\omega_a t_a,\qquad f_a=t_a-\bar t,
+ \qquad F=\sum_a f_aH_a,\qquad V_F=\sum_a v_af_a^2.
+                                                               \label{filter}
+\end{equation}
+Here and below $\omega_a=\omega_a^{(p)}$. The coefficients $t_a$,
+including their factor $w$, are fixed by the formula and code in
+\cite{previous}; no fit or independence assumption is made.
+In particular $\sum_a v_af_a=0$ and $\E FH=\E HF=0$ as matrices.
+
+Let
+$B_{20}=\E\tr_m F^2H^2$ and
+$B_{11}=\E\tr_m FHFH$. All three Gaussian pairings give
+\begin{align}
+ B_{20}&=C_m V_F+\sum_{a,b}v_av_b f_af_b g_{ab},\label{b20}\\
+ B_{11}&=\sum_{a,b}v_av_b f_a^2g_{ab}.         \label{b11}
+\end{align}
+The other noncrossing pairings vanish because $\sum v_af_a=0$.
+The second term of \eqref{b20} is the same-disorder contraction
+that an independent-probe substitution would omit.
+By cyclicity $\av{FL^2F}=2(B_{20}-B_{11})$.
+The symmetry $g_{ab}=g_{ba}$, manifest in \eqref{racah}, therefore yields
+\begin{equation}
+ \boxed{\av{FL^2F}_m
+ =\sum_{a,b}v_av_b(f_a-f_b)^2(1-g_{ab}).}       \label{positive}
+\end{equation}
+This also follows from
+$[H,F]=\sum_{a<b}(f_b-f_a)[H_a,H_b]$.
+The map in \eqref{map}, divided by $v_a$, is completely positive,
+unital and trace preserving. Its Hilbert--Schmidt contraction
+property gives $|g_{ab}|\leq1$. Thus every summand in
+\eqref{positive} is nonnegative. Adding a common constant to all
+$t_a$ leaves the dynamic moment unchanged. The scalar channel has
+$g_{0b}=1$ and contributes no commutator.
+
+An exact small-system example, with $w=1$, is
+\begin{equation}
+ (N,p,m)=(5,2,3):\quad
+ C_m=18,\quad V_F=180,\quad B_{20}=3420,\quad B_{11}=1800,
+ \quad \av{FL^2F}=3240.                         \label{example}
+\end{equation}
+Here the extra term in \eqref{b20} is $180$, so it cannot be
+discarded at finite size. This is an ensemble moment, distinct
+from the earlier deterministic noncommutation witness.
+
+For evaluation one need not perform a cubic-cost rank sum.
+With $c_a=t_a/C_m$, $\delta_a=c_a-\sum\omega c$, define
+\[
+ A_{j,k}=\sum_a\omega_a\delta_a^j z_k(a),\qquad
+ h_k=\frac1{(-m)_k(m-N)_k(-N-1)_k k!}.
+\]
+Then the two extra contractions, divided by $C_m^4$, are
+$\sum_k h_k A_{1,k}^2$ and $\sum_k h_k A_{2,k}A_{0,k}$,
+respectively. These finite sums retain all ranks and signs.
+
+\newpage
+\section{Taking the double-scaled limit}
+At half filling let $a=p-s$, $b=p-u$, with fixed nonnegative
+$s,u$, and hold $p^2/N=\lambda>0$. The $k$th summand $T_k$
+in \eqref{racah} satisfies
+\[
+ \frac{T_{k+1}}{T_k}=
+ -\frac{(a-k)(N+1-a-k)(b-k)(N+1-b-k)}
+ {(m-k)(N-m-k)(N+1-k)(k+1)}.
+\]
+For each fixed $k$ this tends to $-4\lambda/(k+1)$.
+For all allowed $k$, sufficiently large $N$ gives
+$|T_{k+1}/T_k|\leq16\lambda/(k+1)$, by bounding $a,b\leq p$
+and all three denominator factors away from zero.
+The factorial majorant permits termwise summation:
+\begin{equation}
+ g_{p-s,p-u}\longrightarrow
+ \sum_{k\geq0}\frac{(-4\lambda)^k}{k!}=q.       \label{glimit}
+\end{equation}
+This step controls the \emph{pure-rank} covariance, not just the
+average over ranks in \eqref{triangular}.
+
+The preceding note proves, with polynomial-moment convergence,
+\begin{equation}
+ s\ \Longrightarrow\ \operatorname{Poisson}(\lambda),\qquad
+ c_{p-s}-c_p\longrightarrow 8\lambda q s,
+ \qquad \operatorname{Var}_{\omega}c\longrightarrow
+ W=64\lambda^3q^2.                            \label{poisson}
+\end{equation}
+Its bounds $\omega_{p-s}\leq K_\lambda(32\lambda)^s/s!$
+and $|c_{p-s}-c_p|\leq K_\lambda(1+s)$ are enough here.
+In particular $|g_{ab}|\leq1$ controls the tails of both rank
+sums, including their coefficient differences. Combining
+\eqref{positive}--\eqref{poisson} gives
+\begin{equation}
+ \frac{\av{FL^2F}_m}{C_m^4}\longrightarrow
+ (1-q)\E\!\left[(8\lambda q(s-u))^2\right]
+ =128\lambda^3q^2(1-q),                       \label{momentlimit}
+\end{equation}
+where $s,u$ are independent Poisson variables in this sum.
+Since $V_F=C_m^3\operatorname{Var}c$, \eqref{main} follows.
+
+The same argument supplies two separate energy moments:
+\begin{equation}
+ \frac{B_{20}}{C_mV_F}\to1,\qquad
+ \frac{B_{11}}{C_mV_F}\to q.                  \label{bilimits}
+\end{equation}
+The same-disorder term tends to zero because its limiting
+value is $q(\E\delta)^2=0$, \emph{after} the covariance and
+rank-tail limits have been justified.
+
+For the full infinite-temperature trace, the charge distribution
+is $2^{-N}\binom Nm$. The preceding concentration estimates are
+uniform for $m/N\to1/2$. For example restrict first to
+$|m-N/2|\leq N^{2/3}$, use the same rank and hypergeometric
+bounds there, and then remove the exponentially small complement.
+The rough global bounds $|t_a|\leq K N C_{\max}$ and
+$C_{\max}/C_{N/2}\to1$ control that complement. Fixed-sector
+formulas outside $p\leq\min(m,N-m)$ are not needed for this tail
+bound. The full-trace limits in \eqref{main} and
+\eqref{bilimits} follow. The order is DS first, small $\lambda$ second.
+
+\newpage
+\section{Why a nonzero moment represents surviving dynamics}
+The normalized positive frequency measure in sector $m$ is
+\begin{equation}
+ P_N(d\omega)=\frac1{D_mV_F}\E\sum_{i,j}|F_{ij}|^2
+ \delta_{E_i-E_j}(d\omega).
+\end{equation}
+It is symmetric, has total mass one, and its second moment is
+$\mu_{2,N}$. To rule out a vanishing amount of weight escaping to
+infinite frequency, we bound its fourth moment uniformly.
+
+For a Hermitian Gaussian matrix series $Y$ with
+$\E Y^2=s^2\mathbf1$, integration by parts gives
+\begin{equation}
+ \E\tr_m Y^{2k}\leq(2k-1)!!\,s^{2k}.         \label{gaussian}
+\end{equation}
+A short proof is useful. Write $Y=\sum x_\alpha A_\alpha$,
+$\sum A_\alpha^2=s^2\mathbf1$, and differentiate
+$\tr A_\alpha Y^{2k-1}$. Each of the $2k-1$ resulting terms,
+summed over $\alpha$, is bounded in absolute value by
+$s^2\tr |Y|^{2k-2}$. In an eigenbasis of $Y$ this follows
+from weighted Young's inequality applied to
+$|y_i|^\ell|y_j|^{2k-2-\ell}$ and
+$\sum_{\alpha,j}|(A_\alpha)_{ij}|^2=s^2$.
+Induction proves \eqref{gaussian}, without independence between
+$H$ and $F$.
+
+Apply this separately to $H$ and $F$; the latter is also a
+Gaussian series and $\E F^2=V_F\mathbf1$ by $U(N)$ invariance.
+Cauchy--Schwarz in ensemble times normalized trace gives
+\begin{align}
+ \mu_{4,N}
+ &\leq \frac{16}{V_F}\E\tr_m F^2H^4\\
+ &\leq\frac{16}{V_F}
+ \sqrt{\E\tr_m F^4\;\E\tr_m H^8}
+ \leq16\sqrt{315}\,C_m^2.                    \label{tail}
+\end{align}
+The first inequality uses $(x-y)^4\leq8(x^4+y^4)$.
+Thus $P_N$ is tight and its second moments are uniformly
+integrable. Every subsequential DS limit $P$ has
+\[
+ \int\omega^2P(d\omega)=2C(1-q)>0.
+\]
+It cannot be concentrated at zero frequency. More quantitatively,
+Paley--Zygmund applied to $\omega^2$ yields
+\begin{equation}
+ P\!\left(|\omega|\geq\sqrt{C(1-q)}\right)
+ \geq\frac{(1-q)^2}{16\sqrt{315}}>0.           \label{weightbound}
+\end{equation}
+This conservative bound is for fixed $\lambda>0$. It proves
+surviving dynamics, not absence of an additional static atom.
+The full-trace version follows by the same central charge window;
+the Gaussian bounds and polynomial bounds on $t_a$ suppress
+the exterior contribution as well.
+
+The normalized correlator consequently has the uniform local
+expansion $C_{F,N}(t)=1-\mu_{2,N}t^2/2+O(\mu_{4,N}t^4)$,
+with remainder at most $\mu_{4,N}t^4/24$.
+The quadratic coefficient matches a $q$ probe. Establishing a
+unique complete limiting measure requires higher two-energy
+moments; the mixed correlators with $R,S,Z$ are also still to be
+computed. Neither curvature nor the rank label specifies a bulk mass.
+
+\newpage
+\section{Verification, provenance and continuation}
+The exact covariance and special-function identities used here
+are established mathematical tools \cite{kota,tall,sums,racah}.
+Our calculation applies them to the previously constructed
+same-disorder rank filter $F$. We do not claim a new Racah
+polynomial identity or an independent discovery of embedded-ensemble
+covariances.
+
+The saved checks are:
+\begin{itemize}
+\item 1,515 exact rational comparisons of the triangular covariance
+inverse with \eqref{racah}, 928 factorial-moment identities, and
+symmetry and contraction bounds for $3\leq N\leq14$.
+\item Five finite CAR sectors in $(N,p)=(3,1),(4,2),(5,2)$.
+Direct cubic polarization and the complete quadratic Gaussian
+Wick contraction reproduce \eqref{positive}, including the
+nonzero value \eqref{example}. Matrix entries are bounded Gaussian
+integers and final sums are exact rational numbers.
+\item Three separate CAR checks of all three pairings of each of
+$B_{20}$ and $B_{11}$, and six comparisons of the accelerated
+finite sum with exact rational double-rank sums.
+\item Twelve full-rank DS calculations, $\lambda=.1,.25,.5$ and
+$p=16,32,64,128$, with 80 and 120 decimal working digits.
+The 65-digit stored normalized moments agree; this precision
+comparison is not interval certification.
+\end{itemize}
+The numerical convention sets the finite-sector variance exactly
+to $C_m=\Js^2/\lambda$ and $\Js=1$. It therefore isolates the
+dimensionless finite-rank correction from a normalization change.
+At $p=128$ the results are
+\begin{center}
+\begin{tabular}{rrrr}
+\toprule
+$\lambda$ & finite $\mu_2$ & DS $\mu_2$ & relative deviation\\
+\midrule
+0.10 & 6.55161515 & 6.59359908 & $-0.63674\%$\\
+0.25 & 5.03380082 & 5.05696447 & $-0.45805\%$\\
+0.50 & 3.45001236 & 3.45865887 & $-0.25000\%$\\
+\bottomrule
+\end{tabular}
+\end{center}
+All ranks and every terminating-series term are included. The
+alternating contraction sums and their cancellation factors are
+recorded in the JSON output. Dependencies and input/output hashes
+are stored with the local evidence. No Git commit or push was made.
+
+The next task is to calculate $\av{FH^uFH^v}$ beyond total degree
+two, retaining the $H$--$F$ pairings. A full $q$-kernel theorem
+would then permit a direct comparison of this channel with the
+known $q^2$ and $q^3$ singlets, before combining the raw cubic
+operator or constructing its mixed interactions.
+
+\begin{thebibliography}{9}\small
+\bibitem{previous} A. Day and Chengheng, \emph{The missing linear
+component of the cubic singlet}, local note, 6 November 2026,
+\texttt{manuscript/susskind-cubic-linear/main.tex}.
+\bibitem{kota} V. K. B. Kota, \emph{Bivariate moments of the two-point
+correlation function for embedded Gaussian unitary ensemble with
+$k$-body interactions}, \href{https://arxiv.org/html/2208.11312}{arXiv:2208.11312v2},
+Sec. IV, Eqs. (28)--(31), (37)--(39).
+\bibitem{tall} J. Tall and S. Tomsovic, \emph{Double-scaled bosonic
+and fermionic embedded ensembles, complex SYK, and the dual Hilbert
+space}, \href{https://arxiv.org/html/2604.14522v2}{arXiv:2604.14522v2},
+Sec. 2.1, especially Eq. (2.12).
+\bibitem{sums} NIST DLMF,
+\href{https://dlmf.nist.gov/16.4.E3}{16.4.3} and
+\href{https://dlmf.nist.gov/16.4.E9}{16.4.9}, terminating
+Pfaff--Saalschutz and Rogers--Dougall sums.
+\bibitem{racah} NIST DLMF,
+\href{https://dlmf.nist.gov/18.26.E3}{18.26.3}, Racah polynomial representation.
+\end{thebibliography}
+\end{document}

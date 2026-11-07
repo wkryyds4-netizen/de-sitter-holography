@@ -1,0 +1,257 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,microtype}
+\usepackage[margin=24mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\Kop}{\mathsf K}
+\newcommand{\Aop}{\mathcal A}
+\DeclareMathOperator{\sech}{sech}
+\title{A concrete bulk mass target\\Connecting the singlet programme to the 't Hooft equation}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Local research note --- 6 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+We connect the current singlet programme to the precise planar meson
+problem selected by the proposed Susskind parameter dictionary. The
+target has zero renormalized quark mass, not zero bare mass. Its known
+mass gap and first six levels are reproduced in two independent integral
+representations. A quadratic-form comparison controls the approach to
+this target at finite interaction order. We then formulate a spatial
+response test that would distinguish a single meson from a mixture,
+while retaining the previously computed boost correlators.
+\end{abstract}
+\section{The mass parameter selected by the proposal}
+Write $\tau=g_{\rm YM}^2N$ for the bulk tension scale and distinguish
+the renormalized quark mass $m_R$ from the bare mass $m_b$.
+The proposed dictionary in \cite{MSS26,MSS25} gives
+\begin{equation}
+ m_R^2=m_b^2-\frac{\tau}{\pi},\qquad
+ \frac{\tau}{m_R^2}=p^2,\qquad
+ \lambda_{\rm SYK}=\frac{p^2}{N}.
+\end{equation}
+In the fixed-tension limit, $m_R^2=\tau/p^2\to0$ but
+$m_b^2\to\tau/\pi$. This is the special case solved in detail by
+Fateev--Lukyanov--Zamolodchikov (FLZ) \cite{FLZ}.
+To avoid the two different uses of lambda, denote their spectral
+parameter by $\nu$ and their dimensionless quark parameter by $a$:
+\begin{equation}
+ a=\frac{\pi m_b^2}{\tau}-1=\frac{\pi}{p^2},\qquad
+ M_r^2=2\pi\tau\nu_r,\qquad r=0,1,\ldots.
+\end{equation}
+The limiting target is $a=0$. The bare-massless, chiral problem is
+$a=-1$ and has different infrared physics.
+
+This is a bulk planar spectral target. Using it as the leading small
+$\lambda_{\rm SYK}$ spectrum remains a matching task: it is not a
+derivation of a microscopic spatial generator or of finite-coupling
+meson interactions. The original proposal itself identifies quantitative
+spectral agreement as a test still to be performed.
+
+\newpage
+\section{The actual internal mass operator}
+On $L^2((0,1),dx)$ use FLZ's finite-part equation
+\begin{equation}
+ \Kop_a\varphi(x)=\frac{a}{x(1-x)}\varphi(x)
+ -\operatorname{FP}\!\int_0^1\frac{\varphi(y)}{(y-x)^2}\,dy
+ =2\pi^2\nu\varphi(x).\label{eq:thooft}
+\end{equation}
+Here $x$ is a quark momentum fraction \emph{inside one meson}.
+It is not the fraction shared by the two composite singlets in the
+preceding ordering-metric note. All masses in this section are bulk
+Minkowski masses; SYK time instead generates a boost.
+
+Subtracting the diagonal singularity yields the positive form at $a=0$,
+\begin{align}
+ q_0[f]&=\frac12\int_0^1\!\!\int_0^1
+       \frac{|f(x)-f(y)|^2}{(x-y)^2}\,dx\,dy
+       +\int_0^1\frac{|f(x)|^2}{x(1-x)}\,dx,\label{eq:form}\\
+ q_a[f]&=q_0[f]+a\int_0^1\frac{|f(x)|^2}{x(1-x)}\,dx.
+\end{align}
+The positive closure defines the self-adjoint operator. The endpoint
+potential alone gives $q_0[f]\ge4\|f\|^2$. Thus setting $m_R=0$
+does not remove the mass gap. At $a=-1$ that endpoint term cancels;
+the constant solution has zero mass in the chiral form domain.
+
+\paragraph{A controlled approach to the bulk target.}
+Since the last integral in \eqref{eq:form} is at most $q_0[f]$,
+the closed forms have the same domain for $a\ge0$ and obey
+\begin{equation}
+ q_0\le q_a\le(1+a)q_0.
+\end{equation}
+The min--max principle, applied to the known discrete spectrum, gives
+\begin{equation}
+ \boxed{0\le\frac{\nu_r(a)}{\nu_r(0)}-1\le a=\frac{\pi}{p^2}.}
+ \label{eq:bound}
+\end{equation}
+This is a form-comparison consequence of the standard equation, not a
+new meson solution. It controls every fixed level, indeed the relative
+bound is independent of $r$, in this planar family at fixed $\tau$.
+It controls neither the SYK double-scaling error nor nonplanar corrections.
+
+\paragraph{Where the previous translation test applies.}
+The earlier $\Aop=C_{\rm tot}-C_1-C_2$ acts on two \emph{composite}
+singlets. Replacing its relative variable by the internal quark variable
+in \eqref{eq:thooft} has no justification. Likewise the insertion vertex
+$i\sqrt{h}\sqrt{\Aop}/2$ has not been shown to be an on-shell transition
+map between invariant sectors. Its conditional free-translation
+incompatibility remains valid, but does not test the operator
+\eqref{eq:thooft} by itself.
+
+\newpage
+\section{Reproducing the known spectrum}
+We use the Chebyshev method cited in FLZ Section 5. Put $2x-1=\cos\theta$
+and expand $\varphi=\sum_{n\ge1}c_n\sin(n\theta)$. The finite-part identity is
+\begin{equation}
+ -\operatorname{FP}\!\int_0^1
+ \frac{\sin(n\arccos(2y-1))}{(y-x)^2}\,dy
+ =2\pi n\,U_{n-1}(2x-1).
+\end{equation}
+Let $D_{mn}=n\delta_{mn}$. Projecting the equation gives
+\begin{equation}
+ Dc=2\nu Bc,\qquad
+ B_{mn}=\begin{cases}
+ \displaystyle\frac1{1-(m-n)^2}-\frac1{1-(m+n)^2},&m+n\text{ even},\\
+ 0,&m+n\text{ odd}.
+ \end{cases}
+\end{equation}
+The matrix $2D^{-1/2}BD^{-1/2}$ has eigenvalues $1/\nu$.
+The physical norm is $c^*Bc/2$, not the unweighted coefficient norm.
+Reflection $x\mapsto1-x$ acts on mode $n$ by $(-1)^{n+1}$.
+
+\begin{center}
+\begin{tabular}{rrrr}
+\toprule
+$r$ & $2\nu_r$ (reproduced) & $M_r^2/\tau=2\pi\nu_r$ & reflection\\
+\midrule
+0 & 0.737061746293 & 2.315548 & $+$\\
+1 & 1.753731336918 & 5.509509 & $-$\\
+2 & 2.748160912371 & 8.633602 & $+$\\
+3 & 3.751057581705 & 11.784295 & $-$\\
+4 & 4.749295381038 & 14.920351 & $+$\\
+5 & 5.750492623649 & 18.065705 & $-$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The first numerical column agrees with FLZ Tables 1 and 2; it is not an
+independent prediction of DSSYK. The labels are FLZ labels, starting
+at zero. Identifying individual derivative operators with these
+eigenstates requires their overlaps, not just matching their ordering.
+
+For an analytic check, $B\le(\pi/2)I$ gives
+$\Kop_0\ge2\pi$ in the sine basis. The trial $\sin\theta$ gives
+$\nu_0\le3/8$. Hence
+\begin{equation}
+ 2\tau\le M_0^2\le\frac{3\pi}{4}\tau,
+\end{equation}
+consistent with the reproduced gap. These are elementary variational
+bounds, not numerical error bars on the tabulated eigenvalues.
+
+\newpage
+\section{A spatial observable that can test the dictionary}
+Given the bulk spectrum, the one-meson space can be represented as
+$L^2(\mathbb R_+,dp)\otimes\ell^2(r)$. With dimensionless $p$ and an
+energy unit $\mu>0$, define
+\begin{equation}
+ P^+=\mu p,\qquad P^-|r\rangle=\frac{M_r^2}{\mu p}|r\rangle,
+ \qquad B=i(p\partial_p+\tfrac12).
+\end{equation}
+These standard positive-energy generators obey the Poincare relations.
+They are now supplied with masses from a specific bulk equation, rather
+than an arbitrary function of a boost representation label.
+
+Take the explicitly separable candidate wave packet
+\begin{equation}
+ |a\rangle=\psi_d(p)\sum_r c_{ar}|r\rangle,\qquad
+ \psi_d(p)=\frac{2^d}{\sqrt{\Gamma(2d)}}p^{d-1/2}e^{-p},\qquad
+ \sum_r|c_{ar}|^2=1.
+\end{equation}
+Every such packet has
+$\langle a|e^{-2iuB}|a\rangle=\sech^{2d}u$, regardless of its mass
+weights. Thus the known singlet time kernels alone cannot select the
+coefficients $c_{ar}$.
+
+The opposite-null translation probes the mass distribution; $s$ has
+units of inverse energy:
+\begin{equation}
+ F_a(s)=\langle a|e^{-isP^-}|a\rangle
+ =\sum_r|c_{ar}|^2\int_0^\infty |\psi_d(p)|^2
+                 e^{-isM_r^2/(\mu p)}\,dp.\label{eq:response}
+\end{equation}
+For $d>1$ and finite fourth mass moment,
+\begin{align}
+ \langle M^2\rangle_a&=\frac{i\mu(2d-1)}2F_a'(0),\\
+ \langle M^4\rangle_a&=-\frac{\mu^2(2d-1)(2d-2)}4F_a''(0).
+\end{align}
+In particular
+\begin{equation}
+ \boxed{\mathcal R_a=\frac{2d-2}{2d-1}
+              \frac{-F_a''(0)}{|F_a'(0)|^2}
+       =\frac{\langle M^4\rangle_a}{\langle M^2\rangle_a^2}\ge1.}
+\end{equation}
+Equality means support at one mass, within this separable construction.
+This supplies a concrete test of the proposed lowest-singlet/lowest-meson
+identification. A microscopic definition of the translation in
+\eqref{eq:response} is still required; inserting bulk values by hand
+would only define a model, not establish a duality.
+
+\newpage
+\appendix
+\section{Independent checks and the next construction}
+FLZ Appendix B gives another representation, with
+\begin{equation}
+ K(t,t')=\frac{(t-t')/\sinh(t-t')}
+ {\sqrt{t\coth t}\sqrt{t'\coth t'}},\qquad
+ K\chi=\nu^{-1}\chi.
+\end{equation}
+We discretize it with weighted Gauss--Legendre quadrature on $[-L,L]$.
+The six-level maximum relative errors against the published values are
+\begin{center}
+\begin{tabular}{rrr}
+\toprule
+$L$ & nodes & maximum relative error\\\midrule
+16&160&$1.5020\,10^{-2}$\\
+24&240&$2.9125\,10^{-5}$\\
+24&360&$2.9125\,10^{-5}$\\
+32&480&$8.1708\,10^{-9}$\\
+40&600&$8.0381\,10^{-13}$\\
+40&800&$7.8071\,10^{-13}$\\\bottomrule
+\end{tabular}
+\end{center}
+Increasing nodes at fixed $L=24$ does not remove the tail error. The
+initial $L=32$ run failed the planned $2\,10^{-9}$ threshold; the record
+was retained and the domain enlarged without relaxing the threshold.
+
+Chebyshev sizes $32,64,128,256$ give maximum reference errors
+$1.51\,10^{-8}$, $2.81\,10^{-10}$, $4.74\,10^{-12}$ and
+$8.80\,10^{-14}$. The final two representations differ relatively by
+$6.93\,10^{-13}$. Saved physical Gram and parity checks use the
+correct $dx$ measure. At 65 digits, twelve subtracted finite-part
+integrals, 36 angular Gram entries and four inverse-momentum moments
+check the analytic formulas. The initial hypergeometric Chebyshev
+evaluation failed; a finite polynomial recurrence fixed that evaluation.
+Eight finite-basis comparisons at $p=4,8,16,32$ also check the form
+bound. All original failures are retained. These controls are not certified
+continuum eigenvalue enclosures.
+
+The next task is to identify a microscopic spatial insertion or a
+bilocal-to-meson reconstruction kernel. It must reproduce the singlet
+boost data and the sourced mass operator together, and then the
+nonzero multiplication data. The one-meson internal coordinate, the
+two-meson relative coordinate, and the boost wave-packet label must
+remain distinct in that construction.
+
+\begin{thebibliography}{9}
+\bibitem{MSS26} S. Miyashita, Y. Sekino and L. Susskind,
+\emph{Holograms and Standard Models},
+\href{https://arxiv.org/abs/2607.05678v2}{arXiv:2607.05678v2},
+Secs.~4.1--4.3.
+\bibitem{MSS25} S. Miyashita, Y. Sekino and L. Susskind,
+\emph{DSSYK at Infinite Temperature: The Flat-Space Limit and the
+'t Hooft Model}, \href{https://arxiv.org/abs/2506.18054v3}{arXiv:2506.18054v3},
+Secs.~5.2--5.3 and 6.2.
+\bibitem{FLZ} V. A. Fateev, S. L. Lukyanov and A. B. Zamolodchikov,
+\emph{On mass spectrum in 't Hooft's 2D model of mesons},
+\href{https://arxiv.org/abs/0905.2280v2}{arXiv:0905.2280v2},
+Eqs.~(1.1)--(1.5), Sec.~5 and Appendix B.
+\end{thebibliography}
+\end{document}

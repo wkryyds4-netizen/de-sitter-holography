@@ -1,0 +1,118 @@
+{
+  "created_at_utc": "2026-11-06T09:19:27.670530+00:00",
+  "status": "Saved locally; no publication",
+  "scientific_status": "Fixed-half-filled R/Y_plus, F/Y_plus and F/Q4 cross measures vanish. The explicitly projected second memory coefficient X is spectrally orthogonal to L and Y; positive three-field matrix and projected polynomial covariance assembled. Raw dynamic descendants, uniform central-charge extension, finite-memory remainder and bulk dictionary remain open.",
+  "current_git_head": "714d038bb605cfcffdc351e4dcc62aa95237d25f",
+  "git_commit_created": false,
+  "git_push_performed": false,
+  "archive_created": false,
+  "parent_manifest_sha256": "e843ecfa0be768f160930ac7639eeaf4f0ffaac735a46cfdb0e1ab0d4ffda4a2",
+  "previous_stage_scientific_files_unchanged": [
+    "code/memory_oriented_marks.py",
+    "code/memory_force_orientation_bridge.py",
+    "code/memory_oriented_cross.py",
+    "code/memory_oriented_spectrum.py",
+    "code/build_memory_oriented_kernel.ps1",
+    "code/record_memory_oriented_kernel.py",
+    "manuscript/susskind-memory-oriented-kernel/main.tex",
+    "output/pdf/de-sitter-susskind-memory-oriented-kernel.pdf",
+    "notes/susskind-memory-oriented-kernel.md",
+    "literature/susskind-memory-oriented-kernel-sources.md",
+    "journal/2026-11-06-susskind-memory-oriented-kernel.md",
+    "results/susskind-memory-oriented-kernel/force-bridge.json",
+    "results/susskind-memory-oriented-kernel/main.log",
+    "results/susskind-memory-oriented-kernel/oriented-marks.json",
+    "results/susskind-memory-oriented-kernel/reverse-cross.json",
+    "results/susskind-memory-oriented-kernel/spectral-checks.json"
+  ],
+  "checks": {
+    "endpoint_templates": 148,
+    "orbit_words": 1752,
+    "local_minor_checks": 5256,
+    "upper_charge_covariance_entries": 93076,
+    "direct_CAR_identities": 81,
+    "nonzero_direct_witnesses": 80,
+    "projected_polynomial_coefficients": 9
+  },
+  "environment": {
+    "python": "3.14.5",
+    "calculations": [
+      {
+        "python": "3.14.5",
+        "sympy": "1.14.0"
+      },
+      {
+        "python": "3.14.5",
+        "numpy": "2.4.6"
+      },
+      {
+        "python": "3.14.5",
+        "sympy": "1.14.0"
+      }
+    ]
+  },
+  "build": {
+    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File code/build_memory_mixed_spectrum.ps1",
+    "compiler": "This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5 Portable) (preloaded format=pdflatex 2026.9.19)  6 NOV 2026 17:15",
+    "passes_per_successful_build": 2,
+    "successful_builds": 2,
+    "pages": 6,
+    "render_command": "pdftoppm -r 95 -png output/pdf/de-sitter-susskind-memory-mixed-spectrum.pdf tmp/pdfs/susskind-memory-mixed-spectrum-build/page",
+    "visual_review": "All six final page PNGs viewed at 95 dpi; equations, references and page boundaries clear. A_minus/A_plus definitions made explicit and lift d distinguished from spectral d_v."
+  },
+  "failures": [
+    {
+      "stage": "finite witness coverage",
+      "reason": "One auxiliary Dbar(gU) is exactly zero for a traceless one-body sample. All identities passed; blanket nonzero assertion was too strong. Zero index recorded; all commutator and quartic witnesses still nonzero.",
+      "resolved": true
+    },
+    {
+      "stage": "LaTeX first build",
+      "reason": "One frac command was serialized as a form-feed. Original source/log saved; corrected.",
+      "resolved": true
+    },
+    {
+      "stage": "LaTeX overflow gate",
+      "reason": "0.57117pt inline determinant overflow; changed to display. Original log saved.",
+      "resolved": true
+    }
+  ],
+  "process_state": "All calculations, compilation and rendering terminal; no active calculation.",
+  "evidence_scope": "All-order endpoint coverage plus exact lifted covariance and CAR identities; asymptotic cancellation also requires established rank-filter L2 and fixed-word overlap bounds. Three-field result uses an extra projection on the second coefficient and does not establish a raw finite-memory kernel.",
+  "hashes": {
+    "code/memory_mixed_cross.py": "34d2737097c0283faaf0e0984813df3317910fc94a426cdb2475c4a7182532b7",
+    "code/memory_mixed_lift.py": "86ab2c41e453ea4ea9d543e480fbe500d8cde4f35f5c095380c8925a968ddc99",
+    "code/memory_mixed_assembly.py": "e398889127d86c5542adb93266ab54662e0e123bd759fd4c0121ddf7cf4f06b2",
+    "code/build_memory_mixed_spectrum.ps1": "99a2f8bbdb49bcae0ac52b69fd8d0ace1daefb270fcc64f95355cafec92ff1fe",
+    "code/record_memory_mixed_spectrum.py": "6e3cdb811827123c415b24de2e524018dc8773b0f33c3373d730403a99fc877b",
+    "manuscript/susskind-memory-mixed-spectrum/main.tex": "3a47131902c4dd54dd83a6a2025989d6eb97e9b34bd21f99ca6636538d1846f9",
+    "output/pdf/de-sitter-susskind-memory-mixed-spectrum.pdf": "f0a19b7082e8c072caa803d46562350d03606edb18b72d4c2579c41d5e7ee7f9",
+    "notes/susskind-memory-mixed-spectrum.md": "d813678d088f6e697b9b299b38ab65a2bf425d2620ee09e467a410dcac04181e",
+    "literature/susskind-memory-mixed-spectrum-sources.md": "4d52b28f8f98b09cfc953397c6a61b0033a13b94f306f90009b555b58f95ddf2",
+    "journal/2026-11-06-susskind-memory-mixed-spectrum.md": "bafab06e952127316968a70a07d6c696c5764e848046d483f195d5044d536fa6",
+    "README.md": "f713f33ff19d25b7d9e96c8879c5478a5ab2c6c31411f09990dc1575eeb81004",
+    "PLAN.md": "f323d2654dea281d80ff9d3383fd5742e5361fa8c3f2c554326293c620881425",
+    "NEXT.md": "e15d518b71fd05e5e2ce8afdf925a7af37c6711bb2cd36294158d7ffd2d8cc39",
+    "results/susskind-memory-mixed-spectrum/charged-lift.json": "2c39b04cd101b4093ff9cf2da87401b39aad8d7ffc9956b82200d16ec0f5858d",
+    "results/susskind-memory-mixed-spectrum/cubic-force-cross.json": "6023918e428fa00e1f527ac18f27fdef7864adecfd8b138c42cdc2c7b5216f94",
+    "results/susskind-memory-mixed-spectrum/failures/initial-main.log": "165dff006979644f8da6f05a62a5fda2cbdc2338e3fafe638f3c3c7ebfd9901e",
+    "results/susskind-memory-mixed-spectrum/failures/initial-main.tex": "379674e56257576c20a58926a3189a4c4f966a8b88ac17b7a1dfdb7853259876",
+    "results/susskind-memory-mixed-spectrum/failures/initial-mixed-lift.py": "bdb75876b497d5e59d694ef47801de358b19edf655ec315779de31728285504b",
+    "results/susskind-memory-mixed-spectrum/failures/lift-coverage.txt": "4cf926126824c50959efa9c82e815a47d77b94c08a9322f3717586f805fbc1f4",
+    "results/susskind-memory-mixed-spectrum/failures/overflow-main.log": "9aa644b6c64bb73c9e2d48f3fc925fd54f4503a64a5d6cdb69bbcc47307e999f",
+    "results/susskind-memory-mixed-spectrum/main.log": "0c893bbef11b6a426aa3165df96104b36bc0e54b84947004060cf4f2b503c4c5",
+    "results/susskind-memory-mixed-spectrum/matrix-assembly.json": "47379636f4b375a5d8f07860b3eefb4ac702c6012be2f09d6788409da92b6aaf"
+  },
+  "render_hashes": {
+    "tmp/pdfs/susskind-memory-mixed-spectrum-build/page-1.png": "675fab9de574d3d70f410999120383ccdf1a6bd88955165c326e6d16466c5da0",
+    "tmp/pdfs/susskind-memory-mixed-spectrum-build/page-2.png": "4353f80a1c659a7ed1d48aab533c12eae2979aa803178a9d93f9881ddf7ad05b",
+    "tmp/pdfs/susskind-memory-mixed-spectrum-build/page-3.png": "a55c2493b4058452c099b8d0000a2846be06883bae9ead5cfc0cab681c09174c",
+    "tmp/pdfs/susskind-memory-mixed-spectrum-build/page-4.png": "3f2ac0c620fe9fb8604e17549bfc803c2975f000b2724741118a119579224008",
+    "tmp/pdfs/susskind-memory-mixed-spectrum-build/page-5.png": "fab96cf0ea6222a867f440089eee693b77c9ede78a64d9a1c322c0f71ba5b233",
+    "tmp/pdfs/susskind-memory-mixed-spectrum-build/page-6.png": "f6ea5c4b898020d10eb709253a5a2f6912aa92866a2d1685bf8579d0850be67f"
+  },
+  "build_pass_hashes": {
+    "pass1.txt": "a2603a358d56b5e3f9083e3367464b5ecb92e15f816f6775f1ce482444c46666",
+    "pass2.txt": "b3fd3e426c4ae202d0723fddfda5f78513f03d5e3cc8530248682f44c8661175"
+  }
+}

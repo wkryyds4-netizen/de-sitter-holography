@@ -1,5 +1,249 @@
 # de Sitter 全息研究
 
+## 当前进展：同一 J 的 Slater 极化与微观 canonical 阶梯（2026-11-07，本地）
+
+[九页PDF](output/pdf/de-sitter-susskind-slater-ladder.pdf)、[LaTeX](manuscript/susskind-slater-ladder/main.tex)、[主推导](notes/susskind-slater-ladder.md)、[完整证明](notes/susskind-slater-ladder-proof.md)及[文献接口](notes/susskind-slater-ladder-literature-interface.md)已保存。先核纯态DSSYK前驱，再从原H取半填充Slater适配creation块；forward精确计数与backward余项给全部固定word的dressed boson律。实际占据数去dressing得到指定态固定激发core的渐近CCR。完整H首步仍有Poisson(2lambda)缺额，单ladder只捕获sqrt(q)范数平方；下一步同J联合(H,M)动力学。1,537,310个精确标签项、一份科学JSON、双遍编译及九页目检完成。完整体字典仍开放；仅本地、不Git，见[NEXT](NEXT.md)。
+
+## 当前进展：完整有限时间双局域四点（2026-11-07，本地）
+
+[十一页PDF](output/pdf/de-sitter-susskind-bilocal-fourth-tail.pdf)、[LaTeX](manuscript/susskind-bilocal-fourth-tail/main.tex)、[主推导](notes/susskind-bilocal-fourth-tail.md)及[实际四点传递](notes/susskind-bilocal-full-four-point-transfer.md)已保存。受限covariance/ancilla界、精确CP通道链及Clifford Riesz接普通带电重组，补齐有限N一致的全次数高范数尾；共同源图与旧强返回因此构造完整finite-time bilocal四点。三组科学检查、双遍编译和十一页目检完成。下一步转到态/极化与微观体生成元，有限G与完整体字典仍开放。本轮仅本地；GitHub仍为已核issue #1，暂无新评论。见[NEXT](NEXT.md)。
+
+## 当前进展：低双局域通道的共同四点代数（2026-11-07，本地）
+
+[九页PDF](output/pdf/de-sitter-susskind-bilocal-four-point.pdf)、[LaTeX](manuscript/susskind-bilocal-four-point/main.tex)、[推导](notes/susskind-bilocal-four-point.md)、[多源证明](notes/susskind-bilocal-multisource-proof.md)、[实际算符接口](notes/susskind-bilocal-four-point-transfer.md)已保存。核清旧J2定理的共同样本接口，将中性W1接入长度(1,1,2)的三字母mixed-q代数；实际曲率/中性斜率的高范数强桥给固定实时间四点及严格正交换子。四科学输出、双遍编译及九页目检完成。返回误差升至L4的O(p^-1/7)，下一步完整时间级数L4可和尾，再态/极化和微观体生成元；完整bilocal四点仍未宣称完成。仅本地、不Git，见[NEXT](NEXT.md)。
+
+## 当前进展：完整双局域涨落的强重建（2026-11-07，本地）
+
+[七页PDF](output/pdf/de-sitter-susskind-bilocal-reconstruction.pdf)、[LaTeX](manuscript/susskind-bilocal-reconstruction/main.tex)、[推导](notes/susskind-bilocal-reconstruction.md)、[完整证明](notes/susskind-bilocal-reconstruction-proof.md)、[来源](literature/susskind-bilocal-reconstruction-sources.md)已保存。静态memory的收缩dilation加旧正力八阶矩/集体二阶界，给实际bilocal到完整memory滤波的O(p^−1/3)全电荷强误差；charged幅度精确化简，neutral写成重节点连续的指数差商。两科学输出、双遍编译及七页目检完成。下一步共同J四点/交换子、适用态和canonical结构，再构造体空间/质量生成元；仅本地、不Git，见[NEXT](NEXT.md)。
+
+## 当前进展：完整有限时间联合记忆核（2026-11-07，本地）
+
+[九页PDF](output/pdf/de-sitter-susskind-memory-joint-regression.pdf)、[LaTeX](manuscript/susskind-memory-joint-regression/main.tex)、[推导](notes/susskind-memory-joint-regression.md)、[完整证明](notes/susskind-memory-joint-regression-proof.md)、[来源](literature/susskind-memory-joint-regression-sources.md)已保存。联合电荷/能量回归与same-copy强归约补齐charged谱；无对角质量传递exact pinching，ordinary尾后再Hermite重求和，完成指定模型内AA/AB/BA/BB的收敛构造。三份科学输出、双遍编译和九页目检完成。下一步从记忆核重建完整bilocal涨落，接体空间/质量与canonical dressing；体字典和有限G动力学仍开放。仅本地、不Git，见[NEXT](NEXT.md)。
+
+## 当前进展：完整带电局部源与电荷静态背景（2026-11-07，本地）
+
+[八页PDF](output/pdf/de-sitter-susskind-memory-oriented-transfer.pdf)、[LaTeX](manuscript/susskind-memory-oriented-transfer/main.tex)、[推导](notes/susskind-memory-oriented-transfer.md)、[来源](literature/susskind-memory-oriented-transfer-sources.md)已保存。精确full-Fock loss接口接上全时间加权替换与可和尾；带源singleton归一给所有内部Gaussian收缩的闭式图规则。识别无直接桥仍存在的charge静态背景，扣除后恢复旧Y₋方差。五份科学输出、双遍编译及八页目检已完成。下一步联合电荷/能量回归、AA/AB/BA谱，再接体字典。当前仅本地、不Git，见[NEXT](NEXT.md)。
+
+## 当前进展：完整中性记忆核与精确去静态（2026-11-07，本地）
+
+[PDF](output/pdf/de-sitter-susskind-memory-wick-descendants.pdf)、[LaTeX](manuscript/susskind-memory-wick-descendants/main.tex)、[推导](notes/susskind-memory-wick-descendants.md)、[来源](literature/susskind-memory-wick-descendants-sources.md)已保存。有序Wick后代及chaos投影接入共同J图；切图回归使无桥组抵消，剩余桥给所有外部Hermite次数的指数界，因此残量谱绝对连续，能传递exact pinching。旧时间级数尾给完整neutral B协方差的收敛构造。42有限OU/Hermite、6非空抵消、59矩多项式已核。下一步charged A的forward/reverse及AA/AB/BA，完整联合核和体字典仍开放。只本地、不Git，见[NEXT](NEXT.md)。
+
+## 当前进展：秩标记的局域大小桥与离散分布（2026-11-07，本地）
+
+[十页PDF](output/pdf/de-sitter-susskind-memory-size-bridge.pdf)、[LaTeX](manuscript/susskind-memory-size-bridge/main.tex)、[推导](notes/susskind-memory-size-bridge.md)、[来源](literature/susskind-memory-size-bridge-sources.md)已保存。接上已有非Abelian大小代数与Clifford semigroup，证明固定次数rank/half-length桥，得到两标记共同J弦图、全部等时矩和完整离散缺额分布；实际rank law在TV下收敛。5716合法图的25884精确比较及有限CAR/分布检查通过，PDF含分布图并逐页核版。下一步有序Wick后代、全时间中性核及零频质量；完整联合核和体字典仍开放。只本地、不Git，见[NEXT](NEXT.md)。
+
+## 当前进展：中性记忆场的全时间标记级数（2026-11-07，本地）
+
+[九页PDF](output/pdf/de-sitter-susskind-memory-neutral-marked-series.pdf)、[LaTeX](manuscript/susskind-memory-neutral-marked-series/main.tex)、[推导](notes/susskind-memory-neutral-marked-series.md)已保存。固定次数高矩与实际指数的rank尾接上有限参数Jacobi递推，将整个中性分量表示为最高chaos标记场及其全部收缩后代；有显式可和尾和全电荷L²误差控制。87完整CAR系数比较及450精确斜率支配通过。下一步求与charged defect的共同极限矩，并控制精确pinching的零频质量；完整联合核仍待计算。仅本地，无Git发布，见[NEXT](NEXT.md)。
+
+## 当前进展：实际记忆场的两分量归约（2026-11-07，本地）
+
+[八页PDF](output/pdf/de-sitter-susskind-memory-two-component.pdf)、[LaTeX](manuscript/susskind-memory-two-component/main.tex)、[推导](notes/susskind-memory-two-component.md)已保存。三色条件期望与全实时间可和尾证明four-u修正趋守恒背景，pinching后消失；实际field归约为charged defect+neutral residual。neutral前两系数接旧谱，二阶mixed cross严格非零，作为全时间核的校准。9828有理q恒等式、24CAR积分、12有限差式及360rank斜率已核。下一步共同J全时间联合核，见[NEXT](NEXT.md)；仅本地，无Git发布。
+
+## 当前进展：实际有限时间记忆场的统一二阶界（2026-11-07，本地）
+
+[九页PDF](output/pdf/de-sitter-susskind-memory-uniform-bound.pdf)、[LaTeX](manuscript/susskind-memory-uniform-bound/main.tex)、[推导](notes/susskind-memory-uniform-bound.md)已保存。加权charged传递、同副本Dyson展开与有限参数Jacobi桥证明实际X0的全charge统一L²界；结合首返守恒结果，实际记忆场与X0的两点函数可渐近替换。12完整Hermite案例、9实时间余项、105有理式及6高精度谱外展开已核。下一步求三个有界分量的共同J联合涨落核及cross；完整核和体字典仍开放。仅本地保存，见[NEXT](NEXT.md)。
+
+## 当前进展：真实相邻电荷传播的OU近似（2026-11-07，本地）
+
+[八页PDF](output/pdf/de-sitter-susskind-memory-charged-transfer.pdf)、[LaTeX](manuscript/susskind-memory-charged-transfer/main.tex)、[推导](notes/susskind-memory-charged-transfer.md)已保存。正反向缺陷与polar传递接全部Gaussian chaos，证明实际F_m=T_m exp(isH_{m−1})到同一原J的OU平滑传播子的全charge L²误差为O_S(1/N)。六完整CAR系统、230有理源方差及三JSON已核。下一步加时间导数/能量权重，求m放大后的力核缺陷；OU参考尚非samplewise conserved。仅本地保存，见[NEXT](NEXT.md)。
+
+## 外部复核：issue #1（2026-11-06，本地）
+
+已读[issue #1](https://github.com/wkryyds4-netizen/de-sitter-holography/issues/1)及8页附件，核对KS原文，独立有理算术重组支持所提供区间的普通/整体相位优化正下界。9890项旧端点重现失败保留，未在本机重积分21143单元。见[三页核查PDF](output/pdf/de-sitter-issue-1-review.pdf)、[记录](notes/issue-1-review.md)。无外部回复/提交/推送；主线继续下面的有限记忆计算。
+
+## 当前进展：完整普通传播子的全次数rank界（2026-11-07，本地）
+
+[八页PDF](output/pdf/de-sitter-susskind-memory-wick-rank.pdf)、[LaTeX](manuscript/susskind-memory-wick-rank/main.tex)、[推导](notes/susskind-memory-wick-rank.md)已保存。正rank链的全k二矩接Gaussian creation/annihilation和逐样本Duhamel导数，证明实际exp(isH)的rank–chaos缺额在固定实时间窗统一有界，覆盖所有低chaos。独立线性charged probe四点及精确能量回归给X0的正充分上界。下一步接实际相邻charge force；μ(pNcal)尚不是逐样本守恒函数，未宣布X0已紧。三JSON、八页核版与哈希本地保存，见[NEXT](NEXT.md)。
+
+## 前一进展：第一次返回的守恒背景（2026-11-06，本地）
+
+[六页PDF](output/pdf/de-sitter-susskind-memory-return-background.pdf)、[LaTeX](manuscript/susskind-memory-return-background/main.tex)、[推导](notes/susskind-memory-return-background.md)已保存。双tag计数接已有q-Mehler条件期望，把普通核的领先能量回归升为固定有限时间L²强近似；第一次返回趋守恒函数，精确去能量块后实际场与普通项X0的L²差趋零。下一步集中于X0次领先涨落的统一二阶界与极限；协方差替换仍需该界，旧六产品归约保留。2373精确恒等式、27数值和六页核版本地保存，见[NEXT](NEXT.md)。
+
+## 前一进展：有限记忆的两次返回归约（2026-11-06，本地）
+
+[六页PDF](output/pdf/de-sitter-susskind-memory-return-expansion.pdf)、[LaTeX](manuscript/susskind-memory-return-expansion/main.tex)、[推导](notes/susskind-memory-return-expansion.md)已保存。Gaussian力矩与有限Volterra迭代给集体场O(p^-2)、协方差O(p^-1)误差，保留完整时间指数；下一步计算六个共同J、pinched普通传播产品的极限。旧KS支线issue初核见上方独立记录。仅本地保存，见[NEXT](NEXT.md)。
+
+## 当前进展：全电荷记忆谱与精确去静态接口（2026-11-06，本地）
+
+[六页PDF](output/pdf/de-sitter-susskind-memory-charge-sum.pdf)、[LaTeX](manuscript/susskind-memory-charge-sum/main.tex)、[推导](notes/susskind-memory-charge-sum.md)已保存。全sector正回归分母、增长窗余项及binomial尾将(Y,L,U2)谱接到β=μ=0全迹；charge Gaussian与该双能量matrix因子化。精确samplewise pinching保留前三个Taylor极限系数。6766精确方差案例、15CAR sectors、12全rank组及4尾求和已核。下一步实际finite-memory covariance，仅本地、不commit/push/ZIP，见[NEXT](NEXT.md)。
+
+## 当前进展：中央原始记忆系数与线性滤波场（2026-11-06，本地）
+
+[六页PDF](output/pdf/de-sitter-susskind-memory-central-raw.pdf)、[LaTeX](manuscript/susskind-memory-central-raw/main.tex)、[推导](notes/susskind-memory-central-raw.md)已保存。五个raw后代新增电荷项均为守恒B修正；中央F的斜率、范数及双向lift接上完整(Y,L,U2)谱。123个有限系数参考、36组全rank高精度及旧证书hash已核。下一步窗外charge求和，再finite-memory与体字典。仅本地，不commit/push/ZIP，见[NEXT](NEXT.md)。
+
+## 当前进展：中央双向力谱与投影二次core（2026-11-06，本地）
+
+[六页PDF](output/pdf/de-sitter-susskind-memory-central-spectrum.pdf)、[LaTeX](manuscript/susskind-memory-central-spectrum/main.tex)、[推导](notes/susskind-memory-central-spectrum.md)已保存。中央迹相对fullFock每个固定marked图有O(1/p)误差；一般charge force桥接补N−2m项，得到中央双向力谱和实际投影W2core的V2 μ_q²两能量测度。324高精度迹点、108精确CAR恒等式和旧证书hash已核。下一步中央raw U2后代/守恒项与F接口，只本地、无commit/push/ZIP，见[NEXT](NEXT.md)。
+
+## 当前进展：中央四方向Gram与正记忆残量（2026-11-06，本地）
+
+[六页PDF](output/pdf/de-sitter-susskind-memory-central-gram.pdf)、[LaTeX](manuscript/susskind-memory-central-gram/main.tex)、[推导](notes/susskind-memory-central-gram.md)已保存。相邻charge极化加neutral矩O(1/(Np))漂移独立证明S–O交叉，完成偶N中央紧窗四Gram及正W2core投影残量；不依赖此前待证的有限Ncharged候选式。758精确比、36全秩组及3217完整CAR坐标对已核。下一步中央energy insertions/raw谱，仅本地、无commit/push/ZIP，见[NEXT](NEXT.md)。
+
+## 当前进展：中央产品传递与输出缺额范数（2026-11-06，本地）
+
+[六页PDF](output/pdf/de-sitter-susskind-memory-central-cross.pdf)、[LaTeX](manuscript/susskind-memory-central-cross/main.tex)、[推导](notes/susskind-memory-central-cross.md)已保存。相邻charge等距传递与两端六阶尾给输出缺额O(p^−2/3)传递，完成偶N中央紧窗(B,L_in,S)Gram。S–O候选通过60精确CAR恒等式及36全秩组；general charged gradient解析步骤仍待补，完整四Gram未标为完成。继续仅本地、不commit/push/ZIP，见[NEXT](NEXT.md)。
+
+## 当前进展：中央窗口的相干范数与core强展开（2026-11-06，本地）
+
+[六页PDF](output/pdf/de-sitter-susskind-memory-central-norm.pdf)、[LaTeX](manuscript/susskind-memory-central-norm/main.tex)、[推导](notes/susskind-memory-central-norm.md)已保存。一般charge相干A范数与输入尾接上中央输出六阶矩，完成gA的L²强替换、(B,L_in,O)三方向Gram和含charge守恒修正的完整W2core展开。四JSON、31466完整CAR坐标对及36全秩高精度组本地保存。下一步S_N相关Gram及动态插入，见[NEXT](NEXT.md)。
+
+## 当前进展：中央电荷窗口的秩尾与守恒修正（2026-11-06，本地）
+
+[六页PDF](output/pdf/de-sitter-susskind-memory-central-window.pdf)、[LaTeX](manuscript/susskind-memory-central-window/main.tex)、[推导](notes/susskind-memory-central-window.md)已保存。正rank乘积六阶矩扩至m=N/2+z√N的紧窗口；共同方差留下p(Cm/C0−1)→4λ²x(1−x)，raw gH另增4λx(1−q)²守恒项。三JSON、60精确filter恒等式和六页核版仅本地保存。下一步实际memory的charged范数及Gram，见[NEXT](NEXT.md)。
+
+## 当前进展：恢复只扣守恒项的二次记忆谱（2026-11-06，本地）
+
+[六页PDF](output/pdf/de-sitter-susskind-memory-raw-spectrum.pdf)、[LaTeX](manuscript/susskind-memory-raw-spectrum/main.tex)、[推导](notes/susskind-memory-raw-spectrum.md)已保存。恢复旧投影去掉的动态后代，得到U2完整正谱及Y/L交叉谱；有序小λ归一形状为(9sech⁸−2sech⁶)/7，恢复的Y后代占领先强度11/35。三个科学JSON、六页核版与哈希仅本地保存。下一步中央charge窗及finite-memory余项，见[NEXT](NEXT.md)。继续减少Git频率，本轮无commit/push。
+
+## 当前进展：三个记忆场的完整混合谱（2026-11-06，本地）
+
+[六页PDF](output/pdf/de-sitter-susskind-memory-mixed-spectrum.pdf)、[LaTeX](manuscript/susskind-memory-mixed-spectrum/main.tex)、[推导](notes/susskind-memory-mixed-spectrum.md)已保存。74类reverse端点结构和上电荷lift补齐Y+–R/Y+–F/Q4–F，得到X–L完整双能量cross0与(Y,L,X)正3×3谱。下一步恢复raw二次系数被投影掉的动态后代，再中央charge窗/finite-memory。3JSON、失败证据与六页核版本地保存，无commit/push/ZIP，见[NEXT](NEXT.md)。
+
+## 当前进展：双向费米子力与完整投影记忆谱（2026-11-06，本地）
+
+[七页PDF](output/pdf/de-sitter-susskind-memory-oriented-kernel.pdf)、[LaTeX](manuscript/susskind-memory-oriented-kernel/main.tex)、[推导](notes/susskind-memory-oriented-kernel.md)已保存。输出缺额强桥接到产生/湮灭force平均，128模板证书补齐Q4–Y+全能量cross；raw mZ2在指定八方向span外的完整两点谱为V4 μ_q4+V2 μ_q2，并与Y−全部能量后代cross0。下一步求与三阶memory场L的mixed谱，再中央charge窗、finite-memory与体字典。4JSON/七页核版本地保存，无commit/push/ZIP，见[NEXT](NEXT.md)。
+
+## 当前进展：raw 记忆系数的双 chaos 残量（2026-11-06，本地）
+
+[七页PDF](output/pdf/de-sitter-susskind-memory-descendants.pdf)、[LaTeX](manuscript/susskind-memory-descendants/main.tex)、[推导](notes/susskind-memory-descendants.md)已保存。恢复四个raw后代低chaos，证明旧W4 Gram的半填充迹桥接；完整mZ2在指定八方向span外保留Q4与二次输出缺额两部分，等时方差V4+V2。下一步求两者联合能量谱，不能由chaos等时正交推出时间cross0。3600收缩、3JSON和七页核版本地保存，无commit/push/ZIP，见[NEXT](NEXT.md)。
+
+## 当前进展：完整二次记忆 core 的强极限（2026-11-06，本地）
+
+[六页PDF](output/pdf/de-sitter-susskind-memory-filter-limit.pdf)、[LaTeX](manuscript/susskind-memory-filter-limit/main.tex)、[推导](notes/susskind-memory-filter-limit.md)已保存。正rank乘积六阶矩加增长窗口给g_A的L²替换，完成固定半填充W2core四方向分解；扣(B,O,JhF)后残量严格正，后小λ趋1024Js8。下一步恢复W4后代低chaos、组装rawZ2并扩中央charge窗。3JSON及六页核版本地保存，继续降低Git频率，不commit/push/ZIP，见[NEXT](NEXT.md)。
+
+## 当前进展：半填充范数与正记忆残量（2026-11-06，本地）
+
+[六页PDF](output/pdf/de-sitter-susskind-memory-residual-norm.pdf)、[LaTeX](manuscript/susskind-memory-residual-norm/main.tex)、[推导](notes/susskind-memory-residual-norm.md)已保存。独立求固定半填充A范数，补齐四方向等时Gram；扣H²/A/JhF后输出缺额仍有正残量，小λ趋16Js4。输入尾已控制，下一步A的输出rank尾及g_A极限。68544全CAR坐标对、符号相消和12组全rank高精度验证本地保存，不commit/push/ZIP，见[NEXT](NEXT.md)。
+
+## 当前进展：相邻电荷的相干交叉项（2026-11-06，本地）
+
+[六页PDF](output/pdf/de-sitter-susskind-memory-coherent-cross.pdf)、[LaTeX](manuscript/susskind-memory-coherent-cross/main.tex)、[推导](notes/susskind-memory-coherent-cross.md)已保存。求出真实S–A等时cross；扣H²后cross恰等于S残量范数，下一步求固定半填充的A−S范数及A加权尾。10完整charged maps、26227全CAR坐标对和12组全rank高精度核对通过。只本地保存，不commit/push/ZIP，见[NEXT](NEXT.md)。
+
+## 当前进展：输出缺额的奇偶矩与 Gram（2026-11-06，本地）
+
+[五页PDF](output/pdf/de-sitter-susskind-memory-parity-gram.pdf)、[LaTeX](manuscript/susskind-memory-parity-gram/main.tex)、[推导](notes/susskind-memory-parity-gram.md)已保存。由既有Racah差分式求signed前二矩，得到(B、输入缺额、输出缺额)完整等时DS Gram。输出缺额扣H²后仍有正范数，小λ趋16Js4，并与JhF正交；A cross尚未求出。417矩、1468全CAR坐标对及五页核版本地保存，无commit/push/ZIP，见[NEXT](NEXT.md)。
+
+## 当前进展：记忆 core 的一般双电荷公式（2026-11-06，本地）
+
+[六页PDF](output/pdf/de-sitter-susskind-memory-two-charge.pdf)、[LaTeX](manuscript/susskind-memory-two-charge/main.tex)、[推导](notes/susskind-memory-two-charge.md)已保存。普适charged transfer给完整Q_Ecal两个显式有限N振幅；合并O(m)项后，H²部分的三个deficit线性极限具有L²控制。下一步求output-deficit奇偶加权Gram、A加权尾及cross，再组装raw Z2谱。解析证明、87个完整linear maps、522个收缩核对及六页核版本地保存，无commit/push/ZIP，见[NEXT](NEXT.md)。
+
+## 当前进展：相邻电荷打开乘积禁戒通道（2026-11-06，本地）
+
+[四页PDF](output/pdf/de-sitter-susskind-memory-charge-lift.pdf)、[LaTeX](manuscript/susskind-memory-charge-lift/main.tex)、[推导](notes/susskind-memory-charge-lift.md)已保存。半填充选择规则和一般解析族证明：普通 H² 的 rank 滤波不足以表示记忆算符；N6p2m3 精确见证 P1H²=0、P1Q=99D，独立225方向收缩核对。改用两个电荷的相干乘法幅，另得 charge-removal 精确范数传递。下一步求包含 Ψ 的一般幅及 DS cross。四页核版/计算本地保存，无 commit/push/ZIP，见[NEXT](NEXT.md)。
+
+## 当前进展：rank 滤波与双标度尾控制（2026-11-06，本地）
+
+[六页PDF](output/pdf/de-sitter-susskind-memory-rank-blocks.pdf)、[LaTeX](manuscript/susskind-memory-rank-blocks/main.tex)、[推导](notes/susskind-memory-rank-blocks.md)和[来源](literature/susskind-memory-rank-blocks-sources.md)已保存。既有有限残量被分成11个共线rank块，差别来自通道权重；协方差复合另给正输出rank律和一般填充的前三矩极限，半填充偏移均值/方差均2λ。尾界接same-J对称乘积上界，下一步求真实memory的general reduced filter及DS残量权重。5份JSON及六页核版本地保存，不commit/push/ZIP，见[NEXT](NEXT.md)。
+
+## 当前进展：记忆 core 的二次收缩（2026-11-06，本地）
+
+[五页PDF](output/pdf/de-sitter-susskind-memory-quadratic-contraction.pdf)、[LaTeX](manuscript/susskind-memory-quadratic-contraction/main.tex)、[推导](notes/susskind-memory-quadratic-contraction.md)及[来源](literature/susskind-memory-quadratic-contraction-sources.md)已保存。相邻charge协方差给W2Ecal有限N精确式；完整Gram和逐样本scalar分离显示N5p2m3仍有旧方向之外的动态残量，而两个小系统闭合。下一步求该残量的DS强度与rank分解，不由有限N断言新粒子。四个计算JSON、五页核版与哈希本地保存；不commit/push/ZIP，见[NEXT](NEXT.md)。
+
+## 当前进展：二次记忆系数与第四阶singlet（2026-11-06，本地）
+
+[六页PDF](output/pdf/de-sitter-susskind-memory-quartic.pdf)、[LaTeX](manuscript/susskind-memory-quartic/main.tex)、[中文推导](notes/susskind-memory-quartic.md)及[来源](literature/susskind-memory-quartic-sources.md)已保存。精确求Z2及首返项分离；第四chaos扣旧后代后得到正动态Q4，807端点模板全阶相消接已有q⁴ Mehler核，另482模板给Q4–Y/R双能量cross0。小λ归一核sech⁸。下一步补core第二chaos与低阶收缩，完成raw Z2谱；未把纯Q4当完整memory。六页核版、计算及失败证据本地保存，无commit/push/ZIP，见[NEXT](NEXT.md)。
+
+## 当前进展：能量背景与首对记忆涨落（2026-11-06，本地）
+
+[六页PDF](output/pdf/de-sitter-susskind-memory-fluctuations.pdf)、[LaTeX](manuscript/susskind-memory-fluctuations/main.tex)、[中文推导](notes/susskind-memory-fluctuations.md)和[来源](literature/susskind-memory-fluctuations-sources.md)已保存。已有Mehler条件算符给能量回归背景及Vbg=G_(q²)−G_q²，证明集体尺度只扣scalar mean不足。明确零/一次守恒counterterms，得到首对memory系数的完整正谱矩阵；居中去掉raw三阶时间后代，smallλ tangent核为sech⁶。下一步二次memory、第四singlet及有限memory余项。六页核版、计算和失败证据仅本地保存，无commit/push/ZIP，见[NEXT](NEXT.md)。
+
+## 当前进展：平均记忆核与费米子首阶修正（2026-11-06，本地）
+
+[七页PDF](output/pdf/de-sitter-susskind-memory-force.pdf)、[LaTeX](manuscript/susskind-memory-force/main.tex)、[中文推导](notes/susskind-memory-force.md)及[来源](literature/susskind-memory-force-sources.md)已保存。同J带电force的标记收缩与两次Duhamel界给能量居中平均记忆p Etr Mhat(s)→4Js²G_q(s)，固定紧时间一致；积分给原始fermion首个1/p项，小λ恢复既有log cosh。精确renewal与一阶记忆系数接旧导数singlet。下一步求两个memory参数的算符涨落协方差，再接体介子内部核。本轮计算、七页核版与证据仅本地保存，不commit/push/ZIP，见[NEXT](NEXT.md)。
+
+## 当前进展：完整bilocal的压缩演化与记忆核（2026-11-06，本地）
+
+[六页PDF](output/pdf/de-sitter-susskind-bilocal-channel.pdf)、[LaTeX](manuscript/susskind-bilocal-channel/main.tex)、[中文推导](notes/susskind-bilocal-channel.md)和[来源](literature/susskind-bilocal-channel-sources.md)已保存。charge-removal等距构造给完整双时singlet的正核、组合偏差和精确记忆方程；记忆初值减守恒部分接旧Y通道。Duhamel界证明普通归一bilocal在固定紧时间DS趋单位，重建须保留涨落。下一步求完整正交记忆核及减背景涨落；本轮核版与证据本地保存，无commit/push/ZIP，见[NEXT](NEXT.md)。
+
+## 当前进展：双局域到介子的重建接口（2026-11-06，本地）
+
+[六页PDF](output/pdf/de-sitter-susskind-bilocal-interface.pdf)、[LaTeX](manuscript/susskind-bilocal-interface/main.tex)、[中文推导](notes/susskind-bilocal-interface.md)和[来源](literature/susskind-bilocal-interface-sources.md)已保存。接入Itakura已有投影，计算内部源的介子质量混合与高矩尾；推导complex SYK双时CAR导数的精确次数权重，集体零时曲率在DS保留。下一步求完整singlet投影及极化/dressing，不将未投影范数当作代数不闭合证明。计算、六页核版与哈希证据本地保存，继续降低Git频率，无commit/push/ZIP，见[NEXT](NEXT.md)。
+
+## 当前进展：接入已知体介子谱与空间响应靶标（2026-11-06，本地）
+
+[五页PDF](output/pdf/de-sitter-susskind-bulk-target.pdf)、[LaTeX](manuscript/susskind-bulk-target/main.tex)、[中文记录](notes/susskind-bulk-target.md)与[来源](literature/susskind-bulk-target-sources.md)已保存。MSS重整化质量字典明确接到FLZ的a=0有隙介子方程；两种独立表示复现前六级，差约6.93e−13。正二次型比较给平面谱相对位移≤π/p²，构造反向光锥响应的质量方差判据。下一步求微观bilocal/空间插入映射；既有体谱不当作DSSYK质量结果。五页核版、原始失败和证据保存，无commit/push/ZIP，见[NEXT](NEXT.md)。
+
+## 当前进展：排序奇内积与空间平移检验（2026-11-06，本地）
+
+[六页PDF](output/pdf/de-sitter-susskind-ordering-metric.pdf)、[LaTeX](manuscript/susskind-ordering-metric/main.tex)、[中文推导](notes/susskind-ordering-metric.md)与[来源](literature/susskind-ordering-metric-sources.md)已保存。从已有commutator核直接确定领先Casimir内积 A=Ctot−C1−C2，d2/d3相对谱为k(k+9)+12。构造保持范数的正自伴平移，并以精确范数变化证明普通自由两粒子质量与既有乘法顶点的条件性交织不相容。下一步回到Susskind体规范理论的实际空间字典。50条符号检查、独立积分及有限h Gram保存，六页核版完成；无commit/push/ZIP，见[NEXT](NEXT.md)。
+
+## 当前进展：混合增长与排序反对称复合态（2026-11-06，本地）
+
+[六页PDF](output/pdf/de-sitter-susskind-commutator-primary.pdf)、[LaTeX](manuscript/susskind-commutator-primary/main.tex)、[推导](notes/susskind-commutator-primary.md)与[来源](literature/susskind-commutator-primary-sources.md)已保存。应用LS现有公式得固定时间D23=48λcosh(4Js t)+O(λ²)；归一commutator K具有精确q⁵两点、非零三点顶点和可计算第四矩额外项。将文献既有排序奇primary落实到两个导数singlet。精确弦矩、三λ实时与50位独立和式核对完成；下一步把排序扇区内积接相对Casimir和体平移。无commit/push/ZIP，见[NEXT](NEXT.md)。
+
+## 当前进展：二阶/三阶联合弦规则与混合对易子（2026-11-06，本地）
+
+[六页PDF](output/pdf/de-sitter-susskind-mixed-cubic.pdf)、[LaTeX](manuscript/susskind-mixed-cubic/main.tex)、[推导](notes/susskind-mixed-cubic.md)与[原文接口](literature/susskind-mixed-cubic-sources.md)已保存。14类局部组件相消给(H,X,Rhat)任意固定阶的已有多probe规则，互交叉q⁶；接BINT不等长核得到mixed OTOC和D23。有限CAR6656项、局部精确多项式、三λ实时核对及六页核版完成。下一步求固定时间首阶并接两species体字典；无commit/push/ZIP，见[NEXT](NEXT.md)。
+
+## 当前进展：扣除守恒部分后的三阶两点谱闭合（2026-11-06，本地）
+
+[七页PDF](output/pdf/de-sitter-susskind-filtered-spectrum.pdf)、[LaTeX](manuscript/susskind-filtered-spectrum/main.tex)、[推导](notes/susskind-filtered-spectrum.md)和[来源](literature/susskind-filtered-spectrum-sources.md)已保存。精确charged lift把rank-filter桥接接入导数mark，证明ν_FY=ν_FR=0；结合旧ν_RY=0，得到U=M₃−P_N完整正双能量测度。小λ归一time核为(47sech⁶−36sech⁴)/11，二阶时间后代占领先等时强度9/11。下一步转mixed三/四点与体字典。CAR、full-rank、Jacobi/Mehler/Fourier及七页核版完成；无commit/push/ZIP，见[NEXT](NEXT.md)。
+
+## 当前进展：原始三阶归约与交叉谱（2026-11-06，本地）
+
+[七页PDF](output/pdf/de-sitter-susskind-cubic-cross.pdf)、[LaTeX](manuscript/susskind-cubic-cross/main.tex)、[推导](notes/susskind-cubic-cross.md)和[来源](literature/susskind-cubic-cross-sources.md)已保存。精确求出S/Z线性反项及1/p极限，把raw M₃扣守恒多项式后归为F、R和二阶singlet的能量/时间后代；177端点模板相消与谱绝对连续性给R–Y完整交叉谱为零。F–R及能量分辨F–Y仍待算，下一步直接接rank-filter与marked chord。有限交叉、全rank高精度及独立矩阵恒等式保存；按降低Git频率的要求，无提交/推送/ZIP，见[NEXT](NEXT.md)。
+
+## 当前进展：三阶一次残量的完整q核（2026-11-06，本地）
+
+[七页PDF](output/pdf/de-sitter-susskind-linear-kernel.pdf)、[LaTeX](manuscript/susskind-linear-kernel/main.tex)、[推导](notes/susskind-linear-kernel.md)和[来源](literature/susskind-linear-kernel-sources.md)已保存。以p/p−1/p−2系综协方差总变差桥接，控制任意固定Wick图，证明(H,F)正交q-Gaussian联合矩；F完整两点接已有r=q Mehler核，小λ为sech²(2Js t)，DS无静态atom。下一步求F与R/S/Z实时cross，完成raw三阶谱再做混合相互作用。精确比、six-slot收缩、联合四次矩与双核计算保存；无Git提交/推送/ZIP，见[NEXT](NEXT.md)。
+
+## 当前进展：三阶一次残量的动态谱矩（2026-11-06，本地）
+
+[六页PDF](output/pdf/de-sitter-susskind-cubic-dynamics.pdf)、[LaTeX](manuscript/susskind-cubic-dynamics/main.tex)、[中文推导](notes/susskind-cubic-dynamics.md)和[来源](literature/susskind-cubic-dynamics-sources.md)已保存。用已有Racah求和工具得到纯rank交叉协方差，完整保留同J收缩，证明F的归一动态曲率为2Js²(1−q)/λ，小λ趋8Js²。第四矩统一界进一步证明动态频率权重在DS中保留。下一步求F高阶双能量矩及全核，再接raw三阶交叉与混合相互作用。精确CAR、组合数和全rank高精度核对完成；无Git提交/推送/ZIP，见[NEXT](NEXT.md)。
+
+## 当前进展：三阶算符的一次 Gaussian 分量（2026-11-06，本地）
+
+[六页PDF](output/pdf/de-sitter-susskind-cubic-linear.pdf)、[LaTeX](manuscript/susskind-cubic-linear/main.tex)、[中文推导](notes/susskind-cubic-linear.md)与[来源](literature/susskind-cubic-linear-sources.md)已保存。求出W₁T₃的有限N不可约通道系数，精确反例证明它不总守恒；扣除逐电荷H投影后的F在DS中范数为64Js⁶q²，相对R小λ弱2λ。下一步求F的动态谱与同J交叉项，不能由正范数直接认定新粒子。42个通道、31个charged map、199个权重核对和六页核版完成；无Git提交/推送/ZIP，见[NEXT](NEXT.md)。
+
+## 当前进展：三阶 singlet 的完整两点核（2026-11-06，本地）
+
+[六页PDF](output/pdf/de-sitter-susskind-cubic-kernel.pdf)、[LaTeX](manuscript/susskind-cubic-kernel/main.tex)、[中文推导](notes/susskind-cubic-kernel.md)及[来源](literature/susskind-cubic-kernel-sources.md)已保存。任意图归约为177端点模板，独立整数枚举证实所有不足三桥通道相消，由此证明全阶q³探针等价并接已有Mehler核；固定时间小λ得到sech⁶(2Js t)。五组有限λ曲线与精度证据已保存，λ=.005,t1仍偏极限7.09%。下一步raw T₃一次chaos与d2/d3混合高点；无Git提交/推送/ZIP，见[NEXT](NEXT.md)。
+
+## 当前进展：三阶导数 singlet 的独立方向（2026-11-06，本地）
+
+[五页PDF](output/pdf/de-sitter-susskind-cubic-singlet.pdf)、[LaTeX](manuscript/susskind-cubic-singlet/main.tex)、[中文推导](notes/susskind-cubic-singlet.md)与[来源](literature/susskind-cubic-singlet-sources.md)已保存。精确分离 M₃ 的既有时间后代，在第三 coupling chaos 中扣 S、Z 后得到正范数动态 R；μ₂=2Js²(1−q³)/λ，μ₄及九个双边矩至四个外部H均匹配q³探针。下一步证明任意阶归约，接已有完整核；当前未把低阶矩当质量谱。独立精确CAR、3072个标记对照和五页核版完成；继续降低Git频率，无提交、推送或ZIP，见[NEXT](NEXT.md)。
+
+## 当前进展：两 singlet 通道与对易子增长（2026-11-06，本地）
+
+[六页PDF](output/pdf/de-sitter-susskind-two-matter.pdf)、[LaTeX](manuscript/susskind-two-matter/main.tex)、[中文推导](notes/susskind-two-matter.md)与[文献对应](literature/susskind-two-matter-sources.md)已保存。把领先对易子曲率1280分成256的H投影与1024的第一相对通道，独立完整Wick验证通过；构造两物质正Q及标准相对坐标，实现中自由质量也混合k通道。下一步回到独立导数fermion bilinear谱矩阵，区分单介子种类与两个既有X的乘积。41项精确核对、三组高精度Gram及六页核版完成；无Git提交或推送，见[NEXT](NEXT.md)。
+
+## 当前进展：反对称弦后代与正生成元（2026-11-06，本地）
+
+[六页PDF](output/pdf/de-sitter-susskind-antisymmetric.pdf)、[LaTeX](manuscript/susskind-antisymmetric/main.tex)、[中文推导](notes/susskind-antisymmetric.md)和[文献对应](literature/susskind-antisymmetric-sources.md)已保存。从既有 chord 代数证明所有固定阶后代的规范化极限，并构造有限 h 下正自伴 Q_h，其初态谱测度趋于上一轮的 Gamma 分布；boost 使用真实 Liouvillian。下一步研究两物质表示、实际 coproduct 和相互作用。精确 Gram、独立高精度核对与六页核版完成；只本地保存，继续降低 Git 频率，见[NEXT](NEXT.md)。
+
+## 当前进展：候选空间平移与质量族（2026-11-06，本地）
+
+[六页PDF](output/pdf/de-sitter-susskind-translations.pdf)、[LaTeX](manuscript/susskind-translations/main.tex)、[中文推导](notes/susskind-translations.md)及[文献对应](literature/susskind-translations-sources.md)已保存。构造共享singlet boost核的任意正质量Poincare表示，得到可区分质量的Bessel位移核及自由两粒子连续谱；有限q种子测试表明LS长度保持boost不能直接认同当前Liouvillian。下一步从左右弦差的双侧生成元与Gram极限构造微观null平移。9个精确算符恒等式、8个高精度核和六页核版完成；无commit/push/ZIP，见[NEXT](NEXT.md)。
+
+## 当前进展：固定时间首阶四点（2026-11-06，本地）
+
+[五页PDF](output/pdf/de-sitter-susskind-first-order.pdf)、[LaTeX](manuscript/susskind-first-order/main.tex)、[中文记录](notes/susskind-first-order.md)与[来源对应](literature/susskind-first-order-sources.md)已保存。应用Lin–Stanford/Streicher已有公式，保留同种singlet三个通道，取得任意固定四时间连通系数及C(t)、κ22(t)的首阶λ闭式。22个精确Taylor系数、72个Laurent相消、12个50位通道比较通过，有限λ实际偏差完整保留。下一步构造独立空间/平移观测量以推进介子质量字典；无commit/push/ZIP，见[NEXT](NEXT.md)。
+
+## 当前进展：Rindler 波包构造与四点轮廓（2026-11-06，本地）
+
+[五页PDF](output/pdf/de-sitter-susskind-rindler-packet.pdf)、[LaTeX](manuscript/susskind-rindler-packet/main.tex)、[中文记录](notes/susskind-rindler-packet.md)和[来源对应](literature/susskind-rindler-packet-sources.md)完成。用已有KL逆变换构造任意正质量的调节体波包，midpoint两点一致误差≤ε，径向范数有闭式；质量与空间尺度的自由度明确。普通等间隔热四点的零实时间极限为33，微观第四矩为3，下一步沿Lin–Stanford已有fake-circle多点映射确定插入方式。91项主核对、19项独立核对及相消精度已保存。仅本地记录，无commit/push/ZIP，见[NEXT](NEXT.md)。
+
+## 当前进展：singlet 的 OTOC 与 scrambling（2026-11-06，本地）
+
+[六页PDF](output/pdf/de-sitter-susskind-singlet-otoc.pdf)、[LaTeX](manuscript/susskind-singlet-otoc/main.tex)、[中文记录](notes/susskind-singlet-otoc.md)及[原文对应](literature/susskind-singlet-otoc-sources.md)已完成。直接调用已有BINT/BNR四点核，保留两个uncrossed及q⁴加权crossed通道，算出完整同种singlet OTOC与对易子平方；小λ长时间接到已有Tricomi scrambling函数，在string时间中增长率4J_s。780项有理通道比较、独立高精度和解析截断界已保存。下一步将这个具体微观四点接到Rindler体波包观测量。只作本地记录，无commit/push，见[NEXT](NEXT.md)。
+
+## 当前进展：多 singlet 联合矩与实时连通四点（2026-11-06，本地）
+
+[七页PDF](output/pdf/de-sitter-susskind-singlet-multimark.pdf)、[LaTeX](manuscript/susskind-singlet-multimark/main.tex)、[中文推导](notes/susskind-singlet-multimark.md)和[文献接入](literature/susskind-singlet-multimark-sources.md)已完成。扣除守恒分量后，任意固定阶联合矩化到HH:q、HX:q²、XX:q⁴的已有多弦规则；得到κ₄(t)=(1+q⁴)G_{q⁴}(t)−2G_{q²}(t)²，并计算五组λ的实时曲线。95组精确联合矩、3584项独立CAR等式及Jacobi/Mehler核对已保存。下一步使用现成crossed四点核及实际Rindler字典。遵照降低Git频率的要求，本轮无commit/push，见[NEXT](NEXT.md)。
+
+## 当前进展：首个 singlet 的完整双标度两点核（2026-11-06，本地）
+
+[八页PDF](output/pdf/de-sitter-susskind-singlet-kernel.pdf)、[LaTeX](manuscript/susskind-singlet-kernel/main.tex)、[中文推导](notes/susskind-singlet-kernel.md)及[来源](literature/susskind-singlet-kernel-sources.md)已完成。任意阶端点交换证明给出“守恒二次通道＋已有r=q²探针核”的完整两点谱，并确定零频权重；小λ接到sech⁴(2J_s t)。4320项精确CAR对照及独立Jacobi/Mehler核校验保存。下一步进入实际Rindler体传播字典与高点相互作用；遵照用户要求，本轮不提交或推送Git，见[NEXT](NEXT.md)。
+
+## 当前进展：首个 singlet 的双标度谱矩（2026-11-05，本地）
+
+[七页PDF](output/pdf/de-sitter-susskind-singlet-double-scale.pdf)、[LaTeX](manuscript/susskind-singlet-double-scale/main.tex)、[中文记录](notes/susskind-singlet-double-scale.md)和[来源](literature/susskind-singlet-double-scale-sources.md)已完成。通过局部Wick行列式与交叠极限，求得中心化singlet的等时强度和第二频率矩；归一初始曲率在随后小λ极限趋16J_s²。一般N,p系数式、独立CAR与全协方差检查已保存。下一步求零频投影、第四频率矩和完整谱；当前仅本地保存，未提交/推送，见[NEXT](NEXT.md)。
+
+## 当前进展：singlet 动态谱矩的对称性化简（2026-11-05，本地）
+
+[五页PDF](output/pdf/de-sitter-susskind-singlet-moments.pdf)、[LaTeX](manuscript/susskind-singlet-moments/main.tex)、[中文推导](notes/susskind-singlet-moments.md)及[来源](literature/susskind-singlet-moments-sources.md)已保存。用标准 Gaussian Wick 方法与已有 U(N) 无重数分解，把首个动态谱矩化为纯三次张量正范数；完整有限系统收缩、独立15配对及打破对称性的求积控制已核对。下一步将张量和压缩为一般 N,p 的组合数表达，求双标度行为。当前为本地阶段稿，尚未提交或发布；继续位置见[NEXT](NEXT.md)。
+
 ## 当前进展：规范已统一，singlet谱化为带电四点问题（2026-11-05）
 
 [六页推导PDF](output/pdf/de-sitter-susskind-dictionary.pdf)、[LaTeX](manuscript/susskind-dictionary/main.tex)、[中文记录](notes/susskind-dictionary.md)与[来源](literature/susskind-dictionary-sources.md)完成。直接复用BNR的complex chord谱与embedded-ensemble二阶矩，统一CAR、方差和时间单位。首个候选A₂已写成相邻电荷扇区的四点谱密度；18个样本及独立相干重建完成校验。下一步研究该特定四点对象的大N矩与重求和，见[NEXT](NEXT.md)。

@@ -1,0 +1,473 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,microtype,booktabs}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\NN}{\mathcal N}
+\newcommand{\WW}{\mathcal W}
+\newcommand{\LL}{\mathcal L}
+\newcommand{\PP}{\mathcal P_H}
+\newcommand{\QQ}{\mathcal Q}
+\newcommand{\crs}{\operatorname{cr}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\title{Oriented sources for the charged memory field\\
+\large Exact transfer, whole-time bounds, and a conserved charge background}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{7 November 2026\quad Local research draft}
+\begin{document}\maketitle
+\begin{abstract}
+The actual adjacent-charge transfer defect admits an exact full-Fock
+loss-generator representation. We prove its weighted, compact-time
+replacement by a Gaussian-number/body-loss field and give summable
+ordinary-power tails. A source-dependent local normalization then
+computes fixed-degree common-coupling moments, including contractions
+internal to each field. Such contractions produce a conserved charge
+background: even diagrams with no direct Gaussian bridge between the
+fields can have a nonzero connected coefficient. We identify this
+coefficient and independently verify its lowest-degree realization.
+These results supply the charged input to the previously constructed
+neutral kernel; the complete charged static subtraction and joint
+dynamic kernel are left for the next stage.
+\end{abstract}
+
+\section{Setting and the exact adjacent-charge identity}
+Use standard CAR, overlapping complex Gaussian $p$-body interactions,
+the same original couplings $J$ across every charge sector, and normalized
+annealed full-Fock trace at $\beta=\mu=0$. Take even $N$, $p\to\infty$,
+$\lambda_N=p^2/N\to\lambda>0$, fixed $J_s$, $\hbar=1$, and string time.
+Write $C=J_s^2/\lambda$, $q=e^{-4\lambda}$, and
+$b_{N,m}=2^{-N}\binom Nm$. Polynomial degrees and real times are fixed
+before this limit. Gaussian number $\NN$ refers to coupling chaos,
+not spectral $q$-Hermite degree.
+
+On neutral full-Fock operators define
+\begin{equation}
+ DX=QX-\sum_i c_i^\dagger Xc_i,\qquad Q=\sum_i c_i^\dagger c_i.
+\end{equation}
+For $m>0$, $h=H|_m$ and $T_mX=\sum c_i^\dagger Xc_i/m$, hence
+\begin{align}
+ F_m(s)&=T_m e^{isH_{m-1}}=e^{ish}-[De^{isH}]_m/m,\\
+ E_m(s)&=m(F_m-\alpha_m^{\NN}e^{ish})
+       =[m(1-\alpha_m^{\NN})-D]e^{isH}|_m, \label{eq:exact}\\
+ \alpha_m&=(1-p/m)_+.
+\end{align}
+We set $E_0=0$; $m<p$ is inactive and $E_m=0$.
+At $m=p$ the convention $0^0=1$ preserves the constant chaos.
+Since $DI=0$ and $DH=pH$, $E(0)=E'(0)=0$.
+
+\newpage
+\section{Weighted replacement for the entire exponential}
+Retain the finite parameter $\lambda_N$ and put
+\begin{equation}
+ G_N(s)=[p\NN-D-\lambda_N\NN(\NN-1)]e^{isH}.\label{eq:G}
+\end{equation}
+All its restrictions to $m<p$, including $m=0$, vanish.
+For Gaussian matrix-valued functions use
+$\|\psi\|_r=\|(\NN+1)^{r/2}\psi\|_2$, summed with $b_{N,m}$.
+This is a Gaussian Sobolev norm. The preceding weighted-transfer
+estimates \cite{Uniform} give, sectorwise with $C_m\le M$,
+\begin{equation}
+ \|H_{L/R}\psi\|_r\le A_r\sqrt M\|\psi\|_{r+1},\qquad
+ \|e^{itH_L}\psi\|_r\le e^{q_r\sqrt M|t|}\|\psi\|_r,
+\end{equation}
+where $A_r=1+2^{r/2}$ and $q_r=r2^{\max(r-1,0)}$.
+
+\begin{proposition}
+For fixed $r,j,a,b\ge0$, $S<\infty$, and $\lambda_N$ in a positive
+compact interval,
+\begin{equation}
+ \sup_{|s|\le S}\|H^a\partial_s^j(E-G_N)(s)H^b\|_r=O(p^{-1}).
+ \label{eq:weighted}
+\end{equation}
+\end{proposition}
+\begin{proof}
+The $D$ terms cancel exactly. For $k\ge0$ and $u=p/m\le1$,
+Taylor's integral remainder gives
+\begin{equation}
+0\le m[1-(1-u)^k]-kp+\binom k2p^2/m
+ \le\binom k3p^3/m^2.\label{eq:Taylor}
+\end{equation}
+For $k<3$ the right side is zero. On $N/4\le m\le3N/4$ the
+remaining number multiplier $R_m(k)=m(1-\alpha_m^k)-kp+
+\lambda_Nk(k-1)$ obeys
+\begin{equation}
+ |R_m(k)|\le
+ \left(\frac{4\lambda_+|m-N/2|}{N}
+       +\frac{8\lambda_+^2}{3p}\right)(k+1)^3.\label{eq:R}
+\end{equation}
+Apply the Sobolev estimates to $H^je^{isH}$, and then the left/right
+energy multipliers. The binomial identity
+$\sum_m b_{N,m}(m-N/2)^2=N/4$ gives the squared error $O(p^{-2})$.
+On the active complement, $|R_m(k)|\le(p+\lambda_+)(k+1)^2$;
+its binomial weight is at most $2e^{-N/8}$. These estimates also
+give the stated uniformity in $s$.
+\end{proof}
+
+The force interface is exact:
+\begin{align}
+ \QQ_\alpha f&=-f''+i\alpha\{h,f'\}+\alpha^2hfh,\\
+ m(\Lambda-\Lambda_{\rm OU})&=\QQ_{\alpha_m}E_m,\\
+ \mathsf A_m(s)&=(1-\PP)e^{-ihs/2}(\QQ_{\alpha_m}E_m)(s)e^{-ihs/2}.
+\end{align}
+Here $\PP X=\sum_e P_eXP_e$ retains each full samplewise energy
+eigenspace, including degeneracies, within the relevant charge sector.
+Weighted transfer bounds $E$ and $G_N$; $\alpha_m-1=O(1/p)$ on
+the broad central window. Thus $\QQ_{\alpha_m}E_m$ may be replaced
+by $\QQ_1G_N$ in full-trace $L^2$. Replacing $\lambda_N$ by $\lambda$
+would require the separate error $O(|\lambda_N-\lambda|)$.
+
+\newpage
+\section{An ordinary-power expansion that retains lower chaos}
+Define the complete coefficients
+\begin{equation}
+ G_n=[p\NN-D-\lambda_N\NN(\NN-1)]H^n,\qquad
+ G_N(s)=\sum_{n\ge0}\frac{(is)^n}{n!}G_n.\label{eq:rawseries}
+\end{equation}
+Write $E_{n,m}=m[T_mH_{m-1}^n-\alpha_m^{\NN}h^n]$ for the
+corresponding exact transfer coefficients, with the preceding inactive
+sector conventions. Here $G_0=G_1=0$. We do not replace this series by its highest-chaos
+terms. In particular, $D$ differentiates charge-dependent contraction
+coefficients.
+
+The polar map $T=\mathcal U S_-=S_+\mathcal U$ from \cite{Transfer}
+has a Gaussian-field defect bounded on chaos $k$ by
+$K\sqrt{MB_m}(k+1)^{5/2}/N$, where
+\begin{equation}
+ B_m=\lambda_N+\lambda_N^2+
+        \lambda_N(2m-N-1)^2/N.
+\end{equation}
+Telescoping ordinary products and using the Gaussian creation/annihilation
+bound, with $L=2\sqrt M$, gives
+\begin{equation}
+ \|\mathcal U H_-^n-H^n\|_2
+ \le\frac{K\sqrt{MB_m}}N L^{n-1}\sqrt{n!}
+       \sum_{a<n}(a+1)^2.\label{eq:polar}
+\end{equation}
+The rank-filter estimate for $S_+-\alpha^{\NN}$ is applied to the
+whole $H^n$. Multiplication by $m\le N$, followed by binomial summation,
+therefore yields
+\begin{equation}
+ \|E_n\|_2+\|G_n\|_2\le K(n+1)^3L^n\sqrt{n!}.\label{eq:tail}
+\end{equation}
+The difference $E_n-G_n=R(\NN)H^n$ obeys the same type of bound by
+\eqref{eq:R}. Outside the central window, polynomial factors in $N,p$
+are absorbed by $e^{-N/8}$. Fixed Sobolev orders, derivatives, or
+left/right energy powers only add a fixed power of $n+1$.
+
+Consequently the force coefficients are
+\begin{align}
+ K_n&=G_{n+2}-\{H,G_{n+1}\}+HG_nH,\\
+ (\QQ_1G_N)(s)&=\sum_{n\ge0}\frac{(is)^n}{n!}K_n,\\
+ \|K_n\|_2&\le K'(n+3)^4L^{n+2}\sqrt{n!}.\label{eq:forcetail}
+\end{align}
+For every fixed $S$ the corresponding tails are bounded by sums of
+$\operatorname{poly}(n)(LS)^n/\sqrt{n!}$, which converge. The same
+tails hold after exact energy pinching, a Hilbert-space contraction.
+They allow a fixed-degree spectral construction to be extended to
+finite memory times once its static sector has been identified.
+
+The small-time calibration is also transparent: $\mathsf A(0)$ is the
+pinched $G_2$. The preceding results require this to reproduce $Y_-$;
+higher coefficients must reproduce the nonzero mixed spectra in
+\cite{Two}. Bounds alone do not establish those spectral identities.
+
+\newpage
+\section{Oriented marks on pure coupling-Wick sources}
+The neutral size operator is
+$\LL X=NX/2-\tfrac12\sum_i(c_i^\dagger Xc_i+c_iXc_i^\dagger)$,
+half the Clifford length, as in the preceding neutral construction.
+For a globally neutral even source, the loss generator may be written
+as a sum of symmetric local generators:
+\begin{equation}
+ D_i x=\tfrac12\{n_i,x\}-c_i^\dagger xc_i,
+ \qquad x=\begin{pmatrix}a&b\\c&d\end{pmatrix},\qquad
+ D_i x=\begin{pmatrix}0&b/2\\c/2&d-a\end{pmatrix}.\label{eq:localD}
+\end{equation}
+The asymmetric table is $n_ix-c_i^\dagger xc_i$; its sum agrees
+on $[Q,X]=0$. The asymmetric deficit uses the raw creation count
+$n_c$, whereas the symmetric one uses $(n_c+n_a)/2$.
+Their equality follows from $[n_i,x]=(n_c-n_a)x$.
+All fermion reordering signs must be retained before local traces.
+
+For a $j$-slot source with no internal Gaussian pairing, let $I$ be
+its incident chords. The one-mark exponents for $jp-D$, $jp-\LL$,
+and $jp-\bar D$, with $\bar D=2\LL-D$, are
+\begin{equation}
+ A_D=j(j-1)-4\crs(I),\quad
+ A_L=j^2-4\crs(I),\quad
+ A_{\bar D}=j(j+1)-4\crs(I).\label{eq:pure}
+\end{equation}
+If two such marked sources share $b$ chords with $c$ mutual crossings,
+the connected exponent $K_{12}$ is
+\begin{center}
+\begin{tabular}{ll}
+\toprule Pair & $K_{12}$\\\midrule
+$DD$ & $2b(b-1)-4c$\\
+$DL$ or $LD$ & $b(b-1)-4c$\\
+$LL$ & $b^2-4c$\\
+$D\bar D$ & $-4c$\\
+$L\bar D$ & $b(b+1)-4c$\\
+$\bar D\bar D$ & $2b(b+1)-4c$\\\bottomrule
+\end{tabular}
+\end{center}
+The double-mark weight of a complete pairing is
+\begin{equation}
+ C^{\#\mathrm{pairs}}q^{\crs\pi}
+       [\lambda K_{12}+\lambda^2A_1A_2].\label{eq:pureweight}
+\end{equation}
+The one-chord $D$ deficit is identically zero, as required by $DH=pH$.
+Negative mixed terms and zero unmarked traces with nonzero marked
+coefficients are retained. The pure-source regression coefficients
+obey $\kappa_j^D=\kappa_j^L-\lambda j$ and
+$\kappa_j^{\bar D}=\kappa_j^L+\lambda j$.
+
+These formulas are derived here using the finite-CAR and pair-Poisson
+framework of \cite[Sec.~3.2--3.3]{BNR}; they are not quoted as formulas
+of that paper. A nonadjacent two-slot determinant shortcut fails if
+the whole source permits internal contractions. The next construction
+handles exactly that case.
+
+\newpage
+\section{Whole-field sources and singleton normalization}
+Fix a complete Gaussian pairing $\pi$ of $2\ell$ ordered slots.
+There are $2\ell$ independent $p$-set labels; label $a$ supplies the
+creator at slot $a$ and the annihilator at slot $\pi(a)$.
+For a marked whole-field interval $F$ let
+\begin{equation}
+ i_F=\#\{\text{pairs internal to }F\},\qquad d_F=|F|-2i_F.
+\end{equation}
+Gaussian Wick decomposition selects degree $d_F$, including its
+internal contractions. Introduce commuting nilpotents $z_F^2=0$.
+The source is $\exp[z_F(pd_F-D_F)]$.
+The local semigroup follows from \eqref{eq:localD}:
+\begin{align}
+ e^{-zD_i}c_i^{(\dagger)}&=e^{-z/2}c_i^{(\dagger)},&
+ e^{-zD_i}n_i&=e^{-z}n_i,\\
+ e^{-zD_i}(1-n_i)&=1-e^{-z}n_i.&
+\end{align}
+
+\paragraph{Cancel singleton factors before taking the limit.}
+A chord open at $F$ gives two labels, each with factor $e^{-z_F/2}$
+at each of its $p$ sites. This cancels $e^{pd_Fz_F}$.
+An internal chord gives the normalized singleton factors
+$e^{-z_F}$ and $2-e^{-z_F}$, whose product is $1$ in the nilpotent
+ring. This cancellation is exact, not an expansion leaving an $O(p)$
+error. With several disjoint fields it holds in each source variable.
+
+Let $t_a(z)$ denote the full local trace when only label $a$ occupies
+a site, and $t_{ab}(z)$ the merged-site trace. Then $t_a(0)=1/2$ and
+the ratio for a collision is
+\begin{equation}
+ R_{ab}(z)=\epsilon_{ab}\frac{t_{ab}(z)}{t_a(z)t_b(z)},\qquad
+ \mathcal K_\pi(z)=\sum_{a<b}[R_{ab}(z)-1]-\ell.\label{eq:ratio}
+\end{equation}
+Here $\epsilon_{ab}$ is the exact fermion-grouping sign. Division is
+only by singleton polynomials with nonzero constant term, never by
+a possibly zero merged trace. The $-\ell$ fixes the unmarked variance
+normalization. One obtains $\mathcal K_\pi(0)=-4\crs\pi$.
+
+Pair intersections converge jointly to independent Poisson variables
+of mean $\lambda$. Triple intersections vanish; fixed-degree source
+coefficients are dominated by a polynomial times an exponential of
+the total overlap count, whose moments are uniformly bounded.
+Thus the diagram weight is $C^\ell\exp(\lambda\mathcal K_\pi)$.
+For $G$ insertions shift each one-source coefficient by
+$-d_F(d_F-1)$; the connected coefficients are unchanged. For two
+$G$ fields this gives the explicit rule
+\begin{equation}
+ C^\ell q^{\crs\pi}
+ \left[\lambda\kappa_{12}+
+ \lambda^2(\kappa_1-d_1(d_1-1))(\kappa_2-d_2(d_2-1))\right].
+ \label{eq:wholeweight}
+\end{equation}
+External energy slots are excluded from $d_F$. Mixed neutral marks
+use their own Wick-source restrictions and the local $\LL$ table.
+
+\newpage
+\section{A closed geometric rule for all ordinary powers}
+The local construction admits a useful simplification. For field $a$,
+let $O_a$ be the chords with exactly one endpoint in that field, and
+let $i_a$ count its internal chords. Thus $d_a=|O_a|$. For two fields
+put $B=O_1\cap O_2$, the direct bridge chords, and $b=|B|$. Then
+\begin{align}
+ \kappa_a&=d_a(d_a-1)-4\crs(O_a)-2i_a,\\
+ \kappa_{12}^{DD}&=4i_1i_2+2b(b-1)-4\crs(B).\label{eq:closed}
+\end{align}
+In particular the one-source exponent for $G$ is simply
+$-4\crs(O_a)-2i_a$. The $G$ shift does not change the connected
+exponent. For a neutral Wick subblock let $I_L$ be the chords incident
+to that marked subblock, and $B_{DL}=O_D\cap I_L$. Then
+\begin{equation}
+ \kappa_{12}^{DL}=|B_{DL}|(|B_{DL}|-1)-4\crs(B_{DL}).
+\end{equation}
+Its own single-source exponent is $|I_L|^2-4\crs(I_L)$.
+The set $I_L$ may include chords internal to the larger neutral field;
+it equals that field's open set only when the field itself is pure Wick.
+
+For the single-source identity, the two labels of an internal chord
+give $-2$, whereas those of an open chord give zero. Two open
+incident chords give the pure-source oriented rule. For two internal
+chords, or one internal and one open chord, the four possible label
+collisions have zero total single-source coefficient: crossing
+configurations have the relevant local zero word, and the nonzero
+noncrossing contributions cancel with opposite signs. The same
+cancellation holds for an internal chord and a spectator chord.
+An open leg and a spectator cancel against the singleton denominator.
+Thus spectator pairings contribute no extra derivative of the base
+$q$ weight. For two sources, the internal--internal contribution is
+$4i_1i_2$, and the remaining connected part comes from shared bridge
+chords, where the pure-source table applies.
+
+This is a fixed-degree common-$J$ moment rule, with arbitrary external
+energy insertions. It retains all lower-chaos contractions. Ordered
+energy multipliers on $G_n$ do not belong to its source interval.
+Likewise, a neutral descendant has a whole Wick-source restriction
+and possibly a smaller marked subblock; these intervals must remain
+distinct, as in the preceding neutral construction \cite{Neutral}.
+
+\paragraph{Lowest dynamic calibration.}
+Let $H_2^{(q,C)}(H)=H^2-C$. The three diagrams for $\|G_2\|_2^2$
+give
+\begin{align}
+ \lim\|G_2\|_2^2/C^2&=8\lambda+4\lambda^2+16\lambda^2q,\\
+ g_{2,\mathrm{energy}}(H)&=-2\lambda C
+               -\frac{4\lambda q}{1+q}H_2^{(q,C)}(H).
+\end{align}
+After subtracting this deterministic energy regression, the squared
+norm is $C^2[8\lambda+16\lambda^2q/(1+q)]$. Removing the conserved
+charge residual identified on the next page subtracts another
+$4\lambda C^2$. The result is
+\begin{equation}
+ w=4C^2\left[\lambda+\frac{4\lambda^2q}{1+q}\right]
+   =4J_s^4\left[\frac1\lambda+\frac{4q}{1+q}\right],
+\end{equation}
+exactly the preceding $Y_-$ variance. This calibrates the norm; it
+does not by itself prove the full two-energy measure or general
+pinching statement.
+
+\newpage
+\section{No direct field bridge does not mean no correlation}
+Suppose two whole-field $D$ sources have no Gaussian chord directly
+connecting their intervals. Their connected exponent nevertheless is
+\begin{equation}
+ \boxed{\ \kappa_{12}=4i_1i_2.\ }\label{eq:b0}
+\end{equation}
+To see this, a two-label collision can touch both fields only through
+internal--internal, internal--open, or open--open chords. An open
+leg scales by $e^{-z/2}$, which cancels against its source-dependent
+singleton denominator; hence the latter two cases have zero mixed
+coefficient. For each pair of internal chords, the four possible
+label collisions have mixed coefficients $0,4,0,0$. Their sum is $4$.
+This local classification is unaffected by spectator endpoints.
+It also shows that a pure neutral Wick subblock has no such mixed
+connected contribution in a diagram without a field bridge.
+
+The smallest example has two $H^2$ fields, each paired internally.
+It gives
+\begin{equation}
+ \mathcal K=-2z_1-2z_2+4z_1z_2,
+ \qquad [z_1z_2]e^{\lambda\mathcal K}=4\lambda+4\lambda^2.
+ \label{eq:counterexample}
+\end{equation}
+Subtracting only the averaged scalar leaves the positive term
+$4\lambda C^2$. It is a conserved charge fluctuation, not a dynamic
+correlation.
+
+Indeed $\WW_0H^2=C_QI$ and the zero-chaos part of $G_2$ is exactly
+$-DC_Q$. For the common sector variance
+$C_m=w_N\binom mp\binom{N-m+p}p$, where
+$w_N=4^p(J_s^2/\lambda_N)(p!/N^p)^2$, direct algebra gives
+\begin{equation}
+ (DC_Q)_m=m(C_m-C_{m-1})
+     =C_m\frac{p(N-2m+p+1)}{N-m+1}.\label{eq:chargeexact}
+\end{equation}
+The formula includes $m=p$; inactive sectors are zero.
+In the central window $m=N/2+xp$,
+\begin{equation}
+ -DC_Q=-2\lambda C(1-2x)+o(1).
+\end{equation}
+Under $b_{N,m}$, $X_N=(Q-N/2)/p$ tends to a centered Gaussian
+with variance $1/(4\lambda)$. A uniform central linear bound and
+the binomial tail give convergence of the first two moments:
+\begin{equation}
+ \EE\tr(-DC_Q)\to-2\lambda C,\quad
+ \EE\tr(DC_Q)^2\to4C^2(\lambda+\lambda^2),\quad
+ \operatorname{Var}(-DC_Q)\to4\lambda C^2.\label{eq:chargemom}
+\end{equation}
+This independently reproduces \eqref{eq:counterexample}. Since
+$[Q,H]=0$, exact energy pinching removes this background samplewise,
+including degenerate energy blocks. The general charged field still
+requires a joint charge/energy regression before the neutral
+no-bridge argument can be extended.
+
+\newpage
+\section{Checks, provenance, and the next calculation}
+Five new scientific outputs are exclusive-create; no predecessor
+driver was rerun. Their input and output hashes, dependency versions,
+parameters, build logs, and final rendered pages are recorded in the
+stage evidence file.
+\begin{itemize}
+\item Complete finite transfer: four CAR systems, 116 neutral matrix
+units, 4368 Gaussian-Hermite coefficient cases, 46 independent
+conditional-Gaussian OU polynomials, and 12582 exact Taylor cases.
+There are 17465 matrix equalities across 468408 integer components.
+The finite normalization is $C_m=2\binom mp\binom{N-m+p}p$,
+distinct from the physical $J_s$ convention.
+\item Oriented Wick marks: 765 geometry cases, 6120 exact coefficient
+comparisons, 27 pair-site rows, 446 legal two-slot cases, and
+5760 finite trace comparisons. Selected finite words include a
+recorded random seed; this is not exhaustive over all index sets.
+The invalid raw nonadjacent shortcut is retained as an expected
+failure, with its hypothesis violation identified.
+\item Whole-field sources: 6408 exact finite-CAR scalar coefficients,
+with internal contractions allowed. Small systems use every index
+assignment; larger cases use specified deterministic assignments.
+All 294 tested no-bridge diagrams satisfy \eqref{eq:b0}; 80 have a
+nonzero connected coefficient. These finite checks accompany the
+local proof, not an extrapolation from a handful of large-$N$ points.
+\item Charge background: 81 exact $(N,p)$ systems and 1643 sectors;
+12 full binomial sums at 70 and 110 decimal digits, and 72 central
+points. No charge cutoff is used in these sums. At $p=128$, the
+variance relative error is still about $1.73\%$ for $\lambda=1/4$
+and $8.65\%$ for $\lambda=1$. Precision agreement is not an
+interval certificate or a substitute for the analytic limit.
+\item Closed geometry: 2368 diagrams and 18944 source/$G$ coefficient
+comparisons, including 724 diagrams with internal pairs and 277
+mixed cases with internal $D$ pairs. Pure-Wick checks give 6576
+further comparisons. Negative coefficients are retained; the three
+distinct $G_2$ norm subtractions are recorded separately.
+\end{itemize}
+
+The immediate next task is the full joint charge/energy regression
+of $G_n$ and $K_n$, followed by the charged residual two-energy
+measures and their mixed measures with the neutral descendants.
+In particular, the known nonzero $\nu_{A_0,B_2}$ must survive.
+The uniform tails \eqref{eq:tail}--\eqref{eq:forcetail} then provide
+the finite-memory-time passage. The complete joint memory kernel,
+the de Sitter bulk dictionary, and finite-$G$ gravitational dynamics
+are not claimed here. Work remains local; this stage makes no Git
+commit, push, or external issue reply.
+
+\begin{thebibliography}{9}
+\bibitem{BNR} M. Berkooz, V. Narovlansky, and H. Raj,
+\emph{Complex Sachdev-Ye-Kitaev model in the double scaling limit},
+\href{https://arxiv.org/abs/2006.13983}{arXiv:2006.13983},
+Secs.~3.2--3.3 and Eq.~(4.3). Original fermions have anticommutator
+$2$; our finite checks use standard CAR.
+\bibitem{Transfer} A. Day and Chengheng,
+\emph{Adjacent-charge transfer and Gaussian OU propagation},
+local project stage \texttt{susskind-memory-charged-transfer} (2026).
+\bibitem{Uniform} A. Day and Chengheng,
+\emph{Uniform finite-memory bounds}, local project stage
+\texttt{susskind-memory-uniform-bound} (2026).
+\bibitem{Two} A. Day and Chengheng,
+\emph{Two-component finite-memory reduction}, local project stage
+\texttt{susskind-memory-two-component} (2026).
+\bibitem{Neutral} A. Day and Chengheng,
+\emph{A constructive neutral memory kernel}, local project stage
+\texttt{susskind-memory-wick-descendants} (2026).
+\end{thebibliography}
+\end{document}

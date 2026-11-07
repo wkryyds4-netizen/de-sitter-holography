@@ -1,0 +1,41 @@
+{
+  "status": "passed after recorded audit repair",
+  "environment": {
+    "python": "3.14.5",
+    "numpy": "2.4.6",
+    "sympy": "1.14.0"
+  },
+  "input_sha256": {
+    "code/singlet_coefficient.py": "ef7d9b96f96a036ea0d9774950702a82a968b56758a778db0365e9df0c3b2e10",
+    "code/check_singlet_coefficient.py": "3eb13b7d91af37b1f1b12eff40c3a074e466661118287d989ba78d6a10d21150",
+    "code/run_singlet_double_scale.py": "6f30491120364d4dbf913271a4b24b2e326db6286518dd8579d300b231ace644",
+    "code/run_singlet_centered_moment.py": "69ad0be4ae98aac139619bf4af6342c6b9584215512a8574759977de69e8c3a0",
+    "code/finish_singlet_double_scale.py": "efd8ef591a8db0ad5ef850378c0f2a8ca58b8627c085da6f4fd5e35464f4eca6",
+    "code/singlet_wick_moments.py": "045f9f02e860fa8f2e402ca5162dabf035208a8d26023ada5721a5f02d47572c",
+    "code/complex_syk_dictionary.py": "96b4890a167beeadf0849ccffdbb20dd125d921af062fd291044da9024900abf",
+    "results/susskind-singlet-moments/moments.json": "a6e3ccbdfc1ec5490e3ce458ad9398742c7cbd9e6902ea72600feb0e319ffde3"
+  },
+  "exact_checks": {
+    "marked_words": 720,
+    "scalar_comparisons": 2880,
+    "nonzero_mixed_words": 56,
+    "negative_mixed_words": 7,
+    "finite_coefficients_p": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "all15_cross_equal_p": [
+      1,
+      2,
+      3
+    ],
+    "independent_full_tensor_N5_p2": "2700",
+    "overlap_graphs": 24,
+    "known_chord_weights": 15
+  },
+  "repair": "Missing -1 contributions for zero minors in exponent audit; initial code and record retained. Coefficient extraction and all computed moments were unchanged.",
+  "scope": "Finite coefficients exact; double-scaled limit from the written overlap proof. Finite-p ratios have no claimed asymptotic error bar."
+}

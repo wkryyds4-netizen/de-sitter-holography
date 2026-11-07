@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "simplified_g_plus": "C*(-9*m + 12*p) + Cm*(-2*m + 8*p) + jc*(19*m/2 - 19*p/2) + kr*(-m + 3*p)/2 + m*(ka + kb) - n*(ea + eb)*(11*m/4 - 11*p/4)",
+  "simplified_g_minus": "5*C/2 + 3*Cm + er*(m + 3*n - p - (5*(-a + m)*(-a + n) + 5*(-b + m)*(-b + n))/(4*m - 4*p)) - 4*jc + kr/2 - (ea + eb)*(m - n + p) - (ka + kb)*(4*m + p)/(4*m - 4*p)",
+  "H_squared_coefficients": [
+    "(2*m**2*p + 2*m*n*p + 2*m*p**2 - n*p**2 - 4*p**3)/(2*m*n)",
+    "(-3*a**2*m*p - 2*a**2*p**2 + 3*a*m**2*p + 3*a*m*n*p + 2*a*m*p**2 + 2*a*n*p**2 + 4*m**3*p + 4*m**2*n*p - 8*m**2*p**2 - 12*m*n*p**2 - 4*m*p**3 + 3*n*p**3 + 8*p**4)/(-4*a**2*m + 4*a**2*p + 4*a*m**2 + 4*a*m*n - 4*a*m*p - 4*a*n*p - 4*m**2*n + 4*m*n*p)",
+    "(-3*b**2*m*p - 2*b**2*p**2 + 3*b*m**2*p + 3*b*m*n*p + 2*b*m*p**2 + 2*b*n*p**2 + 4*m**3*p + 4*m**2*n*p - 8*m**2*p**2 - 12*m*n*p**2 - 4*m*p**3 + 3*n*p**3 + 8*p**4)/(-4*b**2*m + 4*b**2*p + 4*b*m**2 + 4*b*m*n - 4*b*m*p - 4*b*n*p - 4*m**2*n + 4*m*n*p)",
+    "(5*a**2*m*p - 10*a**2*p**2 - 5*a*m**2*p - 5*a*m*n*p + 10*a*m*p**2 + 10*a*n*p**2 + 5*b**2*m*p - 10*b**2*p**2 - 5*b*m**2*p - 5*b*m*n*p + 10*b*m*p**2 + 10*b*n*p**2 - 4*m**3*p - 4*m**2*n*p + 16*m**2*p**2 + 2*m**2*p*r + 18*m*n*p**2 + 2*m*n*p*r - 20*m*p**3 - 2*m*p**2*r - 2*m*p*r**2 - 24*n*p**3 - 2*n*p**2*r + 8*p**4 + 2*p**2*r**2)/(-4*m**2*n + 4*m**2*r + 4*m*n*p + 4*m*n*r - 4*m*p*r - 4*m*r**2 - 4*n*p*r + 4*p*r**2)"
+  ],
+  "half_filling_rational_coefficient_expansions": [
+    "(eps*lam + 2)/eps",
+    "-(5*eps*lam + 2)/eps",
+    "-(5*eps*lam + 2)/eps",
+    "(9*eps*lam + 2)/eps"
+  ],
+  "gA_over_C_limit": "(q - 3)*(q - 1)/2",
+  "gH_over_C_leading": "2*(q - 1)**2",
+  "gH_over_C_finite": "lam*(8*S*q**2 - 32*lam*q**2 + 16*lam*q + 8*q**2*u + 8*q**2*v + 9*q**2 - 8*q*u - 8*q*v - 10*q + 1)",
+  "constant_finite_part": "-lam*(32*lam*q**2 - 16*lam*q - 9*q**2 + 10*q - 1)",
+  "scope": "Fixed deficits at exact half filling; coefficient asymptotics only, not an annealed operator limit.",
+  "environment": {
+    "python": "3.14.5",
+    "sympy": "1.14.0"
+  },
+  "input_sha256": {
+    "code/memory_two_charge_asymptotic.py": "57f5b5280ad29702257fb112cd107efde86dc4aceaf82debeb7262e00dc5b1b5",
+    "code/memory_two_charge_filter.py": "33c660733f3529990a0779cfa9a27875ec95f354dca3dc906d4c4f6b786e35f8"
+  }
+}

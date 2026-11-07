@@ -1,0 +1,9 @@
+First execution exited 1 at the last assertion:
+assert max(row['pinched_residual_HS_norm'] for row in records)>1e-5
+AssertionError
+
+All preceding finite integrals and operator bounds had passed. No scientific
+JSON was written. The initial systems only used p=1 or an edge sector with
+operator ranks 0 and 1. These highly symmetric cases do not witness a finite-N
+dynamic residual. Preserve this failed witness selection; test an interior
+p=2 sector before making a general nonconservation claim.

@@ -1,0 +1,298 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,microtype}
+\usepackage[margin=24mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\Js}{\mathcal J_s}
+\newcommand{\W}{\mathcal W_3}
+\newcommand{\av}[1]{\langle #1\rangle}
+\title{An independent cubic derivative singlet\\Gram projection and the first spectral moments}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Local research note --- 6 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+The cubic fermion bilinear contains an exact derivative of the quadratic
+singlet. We isolate its Hermitian part, retain its third Gaussian chaos,
+and project out the cubic energy polynomial and the energy-weighted
+quadratic singlet. The remaining operator has strictly positive norm
+and nonzero dynamics in complex DSSYK double scaling. Its second and
+fourth frequency moments, and all nine two-arc moments through four
+external Hamiltonians, agree with a probe of crossing weight $q^3$.
+This gives a concrete candidate for the next independent singlet channel
+and a finite-degree target for an all-order kernel reduction.
+\end{abstract}
+\section{Result and physical direction}
+Use standard CAR $\{c_i,c_j^\dagger\}=\delta_{ij}$, a Hermitian
+Hamiltonian $H=H_s$ with $p$ creations and $p$ annihilations in every
+normal-ordered monomial, and the full annealed trace
+$\av{Y}=\mathbb E_J 2^{-N}\operatorname{Tr}Y$ at
+$\beta=\mu_{\rm chem}=0$. The complex Gaussian ensemble includes
+overlapping index sets. First take $N,p\to\infty$ at fixed
+\[
+ \lambda=p^2/N>0,\qquad q=e^{-4\lambda},\qquad
+ \sigma^2=\av{H^2}=\Js^2/\lambda .
+\]
+Write $L=[H,\,\cdot\,]$, $A=\sum_i(Lc_i)^\dagger Lc_i$,
+$M_3=\sum_i c_i^\dagger L^3c_i$, and
+$T_3=(M_3+M_3^\dagger)/2$. Our operator is
+\begin{equation}
+ R=T-aS-bZ,\quad
+ (T,S,Z)=\W\bigl(T_3,\{H,A\}/2,H^3\bigr),                 \label{R}
+\end{equation}
+where $\W$ means third \emph{Gaussian coupling chaos}, not fermion
+normal ordering. The coefficients are
+\begin{equation}
+ a=-\frac{(1-q)^2}{1+q^2},\qquad
+ b=\frac{2\lambda(1-q)(1+q^3)}
+              {(1+q^2)(1+q+q^2)}.                       \label{ab}
+\end{equation}
+For $\widehat R=R/\sqrt{\av{R^2}}$, the frequency moments are
+\begin{align}
+ \mu_2&=\av{\widehat R L^2\widehat R}
+       =\frac{2\Js^2}{\lambda}(1-q^3),                 \label{mu2}\\
+ \mu_4&=\frac{2\Js^4}{\lambda^2}(1-q)^2(1+q+q^2)
+                   (3q^3+6q^2+6q+5).                 \label{mu4}
+\end{align}
+Thus $\mu_2\to24\Js^2$ and $\mu_4\to1920\Js^4$ as
+$\lambda\to0^+$. These are microscopic frequency data for the
+Susskind singlet program \cite{MSS}; they do not yet fix a bulk mass.
+
+\newpage
+\section{Removing the exact time descendant}
+Define $B_{ab}=\sum_i(L^ac_i)^\dagger L^bc_i$. Since
+$(LY)^\dagger=-L(Y^\dagger)$, the product rule gives
+\begin{equation}
+ LB_{ab}=-B_{a+1,b}+B_{a,b+1}.                           \label{rec}
+\end{equation}
+Homogeneity in the fermions implies $B_{01}=-pH$, so
+$B_{02}=B_{11}=A$. Applying (\ref{rec}) twice gives
+\begin{align}
+ M_3&=2B_{12}-B_{21},&
+ M_3^\dagger&=2B_{21}-B_{12},\\
+ T_3&=\tfrac12(B_{12}+B_{21}),&
+ \boxed{M_3=T_3+\tfrac32 LA.}                         \label{split}
+\end{align}
+These are exact finite-$N$ identities for each realization. In real
+time $\partial_t^n c=i^nL^nc$; retaining these factors is essential
+when comparing the schematic derivative family in \cite{MSS}.
+
+For a direct construction let $Q_f=\sum_i c_i^\dagger c_i$ and
+\[
+ \mathfrak D(Y)=Q_fY-\sum_i c_i^\dagger Yc_i .
+\]
+On a normal-ordered number-conserving monomial with $k$ creation
+operators, $\mathfrak D$ multiplies by $k$. Expanding the commutators
+therefore gives
+\begin{align}
+ A&=(2p-\mathfrak D)H^2,\\
+ T_3&=(3p-\mathfrak D)H^3-\tfrac32\{H,A\}.             \label{rank}
+\end{align}
+This also explains the contraction marks used below. For three
+individually $p$-body factors $V_1,V_2,V_3$, set
+\begin{align}
+ K_{12}&=((2p-\mathfrak D)(V_1V_2))V_3,\\
+ K_{23}&=V_1((2p-\mathfrak D)(V_2V_3)),\\
+ K_{13}&=(3p-\mathfrak D)(V_1V_2V_3)-K_{12}-K_{23}.
+\end{align}
+Each normal-order contraction reduces the total body rank by one.
+Consequently $K_{ij}$ counts contractions between those two factors,
+including the nonadjacent pair $13$. With all $V_i=H$,
+\begin{equation}
+ T_3=K_{13}-\tfrac12(K_{12}+K_{23}),\qquad
+ \{H,A\}/2=\tfrac12(K_{12}+K_{23}).                    \label{marks}
+\end{equation}
+
+There is also an exact ensemble selection rule:
+$\av{T_3L^nA}=0$ for every $n$. For even $n$, use $H\mapsto-H$.
+For odd $n$, the trace is purely imaginary by Hermiticity, but its
+average is real by complex conjugation of the couplings in the real
+occupation basis. The same argument applies to $R$ and the previously
+constructed even quadratic singlet $X$. This removes the simple
+$X$ time-descendant sector; energy-weighted composites still require
+the explicit projection (\ref{R}).
+
+\newpage
+\section{A positive residual from the six-slot Gram form}
+For Gaussian coordinates $J_\alpha$ with covariance $C_{\alpha\beta}$,
+\[
+ \W(J_\alpha J_\beta J_\gamma)
+ =J_\alpha J_\beta J_\gamma
+ -C_{\alpha\beta}J_\gamma-C_{\alpha\gamma}J_\beta
+ -C_{\beta\gamma}J_\alpha .
+\]
+When computing a product of such insertions, Wick pairings internal
+to either three-slot insertion are excluded. This specifies the
+operator before taking double scaling. The lower, linear chaos of
+the raw $T_3$ has not been identified here with a conserved operator.
+
+The Gram matrix $G_{ij}=\av{Y_iY_j}/\sigma^6$, for $Y=(T,S,Z)$,
+is the sum of the six cross pairings. Its independent entries are
+\begin{align}
+ G_{TT}&=2\lambda(4\lambda q^2+4\lambda q+q^2-4q+3),\\
+ G_{TS}&=-2\lambda(q-1)^2,&G_{TZ}&=-4\lambda q(q-1),\\
+ G_{SS}&=2\lambda(2\lambda q^3+2\lambda+q^2+1),\\
+ G_{SZ}&=-2\lambda(q-1)(q^2+q+1),\\
+ G_{ZZ}&=(q+1)(q^2+q+1).
+\end{align}
+Solving $\av{RS}=\av{RZ}=0$ yields (\ref{ab}). Define
+\[
+ \mathcal B=1-q^3+4\lambda q^2(2q^2-q+2).
+\]
+The Schur complement is
+\begin{equation}
+ V:=\frac{\av{R^2}}{\sigma^6}
+   =\frac{4\lambda(1+q)\mathcal B}{(1+q^2)(1+q+q^2)}
+   =32\lambda^2-96\lambda^3+O(\lambda^4).              \label{V}
+\end{equation}
+Since $0<q<1$ and $2q^2-q+2>0$, $V>0$. In physical units
+$\av{R^2}\sim32\Js^6/\lambda$. The direction therefore survives
+normalization even though its dimensionless Gram weight is small.
+
+\paragraph{How the sums are evaluated.}
+For a pairing involution $\pi$ on $\ell$ Hamiltonian slots and two
+marks $m_1,m_2$, form the local entries
+\[
+ E_{uv}=\operatorname{sgn}(\pi(v)-u+\tfrac12)
+       -2x\,\mathbf1_{(\pi(v),u)=m_1}
+       -2y\,\mathbf1_{(\pi(v),u)=m_2}.
+\]
+Expand principal two-by-two minors with $x^2=y^2=0$ and divide by
+their singleton signs. Adding the normalization contribution
+$-\binom{\ell}{2}-\ell/2$ gives
+$-4\,{\rm cr}+\alpha x+\beta y+\delta xy$.
+The fixed-degree double-scaling weight is consequently
+\[
+ q^{\rm cr}(\lambda\delta+\lambda^2\alpha\beta)
+\]
+for two marks, $q^{\rm cr}\lambda\alpha$ for one, and $q^{\rm cr}$
+for none. This follows from the Poisson pair-overlap limit; higher
+mode coincidences vanish at fixed degree. Equations (\ref{marks})
+then give the displayed matrix. The nonadjacent mark is checked
+separately against finite CAR products, rather than inferred from
+an independent-probe formula.
+
+\newpage
+\section{Dynamics and a finite-degree kernel reduction}
+Define $K_{ij}=\av{(LY_i)^\dagger LY_j}/\sigma^8$.
+Cyclic trace gives the computable real symmetric expression
+\begin{equation}
+ \sigma^8K_{ij}
+ =\av{Y_iY_jH^2}+\av{Y_jY_iH^2}-2\av{Y_iHY_jH}.
+\end{equation}
+All Gaussian pairings are retained except those internal to a
+Wick-ordered insertion. There are 42 allowed pairings in each
+eight-slot arrangement, not just $4!$ fully cross pairings.
+The nonzero entries are
+\begin{align}
+ K_{TT}&=2\lambda(1-q^2)
+ [4\lambda q^3+16\lambda q^2+4\lambda q+q^3-3q^2-3q+5],\\
+ K_{TS}&=2\lambda(q-1)^3(q+1)(4\lambda q+q+1),\\
+ K_{SS}&=2\lambda(1-q^2)(1+q^2)(4\lambda q+q+1).
+\end{align}
+The $Z$ row vanishes. For $v=(1,-a,-b)^T$ one obtains the
+particularly simple exact identity
+\begin{equation}
+ v^TKv=2(1-q^3)V,\qquad
+ v^TKv=768\lambda^3+O(\lambda^4).                      \label{ratio}
+\end{equation}
+This proves (\ref{mu2}) and nonzero dynamics at every $\lambda>0$.
+
+More information is available than this single ratio. Let
+\[
+ F_{uv}=\frac{\av{RH^uRH^v}}{\av{R^2}\sigma^{u+v}} .
+\]
+Exact marked enumeration gives the following complete set through
+four external Hamiltonians (with $F_{uv}=F_{vu}$):
+\begin{center}
+\begin{tabular}{ccl}
+\toprule
+$u+v$ & $(u,v)$ & $F_{uv}$\\
+\midrule
+0 & $(0,0)$ & $1$\\
+2 & $(2,0)$ & $1$\\
+2 & $(1,1)$ & $q^3$\\
+4 & $(4,0)$ & $2+q$\\
+4 & $(3,1)$ & $q^3(2+q)$\\
+4 & $(2,2)$ & $1+q^6+q^7$\\
+\bottomrule
+\end{tabular}
+\end{center}
+All corresponding $\av{RH^uSH^v}$ and
+$\av{RH^uZH^v}$ vanish. Combining the fourth-order row with
+the binomial expansion of $L^4$ gives (\ref{mu4}).
+
+These nine two-arc values coincide with the existing independent
+probe rule \cite{BNR}: each Hamiltonian crossing of the probe carries
+$r=q^3$. This is a tested finite-degree reduction for a
+\emph{coupling-dependent composite}; independence of its couplings
+has not been assumed. An all-order proof would permit use of the
+known $q$-Mehler two-point kernel. It would also predict
+$\av{\widehat R(t)\widehat R(0)}\to\operatorname{sech}^{6}(2\Js t)$
+at fixed string time as $\lambda\to0^+$. At this stage that full
+function is a conjecture supported by the computed moments.
+
+\newpage
+\section{Evidence, provenance, and the next calculation}
+The motivation is the derivative singlet family in
+Miyashita--Sekino--Susskind, Sec.~4.3 \cite{MSS}. Their proposed
+$n=3$ assignment motivates this test but does not supply the
+quantitative correlator. Berkooz--Narovlansky--Raj,
+Sec.~7 and Eqs.~(7.1)--(7.3) \cite{BNR}, solve a probe whose random
+couplings are uncorrelated with those of $H$. We use their kernel
+as a comparison target; the new work here is the explicit
+same-coupling composite and its finite-degree reduction.
+No priority claim is made for the polynomial identities.
+
+The saved checks comprise:
+\begin{itemize}
+\item Twelve operator identities in independent exact
+integer-complex SymPy CAR matrices for $(N,p)=(3,1),(4,2)$.
+The same identities also pass the direct occupation-basis code.
+\item 192 fixed six-slot words, including coherent repeated index
+sets, with all 16 choices of zero, adjacent, or nonadjacent marks:
+3072 finite CAR/determinant comparisons.
+\item Six exact symbolic projection, positivity-form, kinetic,
+and small-$\lambda$ certificates; nine two-arc equalities and
+18 vanishing cross moments through degree four.
+\end{itemize}
+The analytic positivity follows from (\ref{V}), rather than from
+a parameter scan. Double scaling is justified at fixed word degree;
+finite CAR checks test the contraction interpretation and signs,
+not convergence in $N$. The scripts record dependencies and input
+hashes. A parsing failure caused by the reserved word
+\texttt{lambda} was fixed before the higher-moment output was
+written; no earlier scientific output was replaced.
+
+\paragraph{Next research step.}
+Prove or disprove the $q^3$ reduction for arbitrary two-arc words.
+The useful target is cancellation of diagrams in which one of the
+three insertion slots contracts with an external $H$ after the
+$S,Z$ subtraction. A finite local endpoint identity, analogous to
+the earlier quadratic construction, could reduce the remaining
+three lines to one probe line. This is preferable to merely
+extending the moment table. In parallel with that analytic step,
+the linear Gaussian chaos of raw $T_3$ should be identified so
+that the relation to the unprojected derivative operator is complete.
+
+The present positive residual establishes independence from the
+displayed cubic composites and from the simple $X$ time-descendant
+sector in the ensemble inner product. A complete particle
+classification still requires the full operator dictionary and
+spatial dynamics. In particular, neither the derivative index nor
+the $r=q^3$ candidate label is by itself a mass eigenvalue.
+Local manuscript and PDF only; no Git commit, push, or archive
+was made in this stage.
+
+\begin{thebibliography}{9}
+\bibitem{MSS}
+S. Miyashita, Y. Sekino and L. Susskind,
+\emph{Holograms and Standard Models},
+\href{https://arxiv.org/html/2607.05678v2}{arXiv:2607.05678v2},
+Sec.~4.3, Eqs.~(4.19)--(4.26).
+\bibitem{BNR}
+M. Berkooz, V. Narovlansky and H. Raj,
+\emph{Complex Sachdev--Ye--Kitaev model in the double scaling limit},
+\href{https://arxiv.org/html/2006.13983v2}{arXiv:2006.13983v2},
+Sec.~7, Eqs.~(7.1)--(7.3).
+\end{thebibliography}
+\end{document}

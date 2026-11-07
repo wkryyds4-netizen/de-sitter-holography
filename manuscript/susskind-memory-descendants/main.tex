@@ -1,0 +1,365 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,microtype}
+\usepackage[margin=24mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\Rem}{\operatorname{Rem}}
+\newcommand{\W}[1]{\mathsf W_{#1}}
+\newcommand{\core}{\mathcal E}
+\title{Restoring the raw memory descendants\\A two-chaos residual for the second memory coefficient}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Local research note --- 6 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+We restore the lower Gaussian-chaos components of the four previously
+retained quartic descendants. Their second-chaos limits contain no
+output-deficit direction. A fixed-charge trace argument transfers
+the earlier fourth-chaos Gram to half filling. Consequently the raw
+second memory coefficient, after projection onto a specified finite
+span, retains both the known fourth-chaos residual and the newly
+resolved second-chaos residual. This completes their equal-time
+assembly without assuming that their energy-resolved cross vanishes.
+\end{abstract}
+\section{State, scale, and result}
+Use standard CAR and the full overlapping complex Gaussian $p$-body
+Hamiltonian, $\hbar=1$, fixed charge $m=N/2$, normalized maximally
+mixed trace, and $\langle X,Y\rangle=\EE\tr_m X^\dagger Y$.
+All projections use this annealed inner product. Write $h=H_m$,
+$k=H_{m-1}$ with the same couplings, $R_j=\Rem(k^j)$, and
+\begin{equation}
+ A=R_2+(2p-m)h^2,\quad B=\W2h^2,\quad O=\W2A,
+ \qquad J_hX=\{h,X\}/2.
+\end{equation}
+Take $\lambda_N=p^2/N\to\lambda>0$, $q_N=e^{-4\lambda_N}$,
+$C_N=\EE\tr_mh^2\to\sigma^2=J_s^2/\lambda$. Lower-chaos
+coefficients retain $C_N,\lambda_N,q_N$ until after their growing
+terms are subtracted. Let
+\begin{equation}
+ \mathcal V_N=\operatorname{span}
+ \{I,B,O,J_hF,E_0,M_0,S_0,Z_0\},
+ \qquad \widehat\Pi_N=\operatorname{proj}_{\mathcal V_N},
+\end{equation}
+where the four raw quartic descendants are defined on the next page.
+With $\Pi_N=\operatorname{proj}_{\{I,B,O,J_hF\}}$ and
+$T_N=(1-\Pi_N)\mathcal S_N$, the result is
+\begin{equation}
+ (1-\widehat\Pi_N)mZ_2
+ =Q_{4,N}+8\lambda_N C_Nq_N^2T_N+o_{L^2}(1).\label{main}
+\end{equation}
+$Q_{4,N}$ is the preceding fourth-chaos residual and
+$\mathcal S_N$ is the second-chaos output-deficit insertion.
+Their equal-time inner product is exactly zero by Gaussian-chaos
+orthogonality. Thus the limiting norm squared is $V_4+V_2>0$,
+with explicit expressions below. The claim concerns this operator
+span, not the full algebra of conserved quantities.
+
+\newpage
+\section{Five raw words and exact low-chaos restoration}
+Define $\mathcal T_j=R_j+(jp-m)h^j$. The five raw operators are
+\begin{align}
+ E_0&=\{A,h^2\}/2,&M_0&=hAh,\notag\\
+ S_0&=\{h,\mathcal T_3\}/2-E_0-M_0,
+ &C_0&=\mathcal T_4-2E_0-M_0-2S_0,\\
+ Z_0&=h^4.\notag
+\end{align}
+They are linear combinations of
+$\mathbf R=(R_4,\{h,R_3\},\{h^2,R_2\},hR_2h,h^4)^T$:
+\begin{equation}
+ \begin{pmatrix}E_0\\M_0\\S_0\\C_0\\Z_0\end{pmatrix}
+ =\begin{pmatrix}
+ 0&0&1/2&0&2p-m\\
+ 0&0&0&1&2p-m\\
+ 0&1/2&-1/2&-1&m-p\\
+ 1&-1&0&1&0\\
+ 0&0&0&0&1
+ \end{pmatrix}\mathbf R.\label{matrix}
+\end{equation}
+In particular, the memory core satisfies the exact identity
+\begin{equation}
+ \core=C_0-2S_0+(E_0+M_0)/2.
+\end{equation}
+The single-contraction map for a homogeneous quartic polynomial is
+$\mathfrak C=\frac12\sum_i v_i\partial_{x_i}^2$, where $x_i$ are
+independent real coupling coordinates of variance $v_i$. Hence
+\begin{equation}
+ e_P=\EE P,\qquad \W2P=\mathfrak CP-2e_P,
+ \qquad \W4P=P-\mathfrak CP+e_P.\label{chaos}
+\end{equation}
+Apply (\ref{matrix}) to the preceding five exact contractions
+$(D_4,D_{13},D_{22},D_{121},D_{40})^T$ to obtain every
+$\mathfrak CP$. This uses the same-coupling adjacent-charge
+covariance, not independent Hamiltonians \cite{kota,local}.
+
+For clarity, each scalar mean can also be recovered from the rank
+filters. If $\mathfrak CP=\sum(g_P^+Z^++g_P^-Z^-)$, then in the
+common-rank domain $p\leq\min(m-1,N-m)$,
+\begin{equation}
+ e_P=\frac12\sum_{a=0}^p
+ \left[C_a g_P^+(a,a,0)+mC_a^-g_P^-(a,a,0)\right]I.\label{mean}
+\end{equation}
+Here $C_a=\EE\tr_m h_a^2$ and $C_a^-=\EE\tr_{m-1}k_a^2$.
+The common-rank condition holds eventually in the present limit.
+Equations (\ref{matrix})--(\ref{mean}) restore $\W0,\W2,\W4$
+at finite $N$; scalar subtraction is not left implicit.
+
+\newpage
+\section{The complete second-chaos descendant table}
+For $P=E_0,M_0,S_0,C_0,Z_0$, write
+\begin{equation}
+ \W2P=C_N[p\ell_P+k_P]B+C_No_PO+j_PJ_hF
+                         +C_Ns_P\mathcal S_N+o_{L^2}(1).\label{tableformula}
+\end{equation}
+The table uses $\lambda=\lambda_N$ and $q=q_N$ on its right-hand
+side, so the coefficients of order $p$ retain finite-$N$ parameters.
+\begin{center}\small
+\begin{tabular}{cclccc}\toprule
+ $P$&$\ell_P$&$k_P$&$o_P$&$j_P$&$s_P$\\\midrule
+ $E_0$&$2$&$-2\lambda q^2$&$1$&$0$&$0$\\
+ $M_0$&$2$&$-2\lambda(2q-1)$&$q^2$&$0$&$0$\\
+ $S_0$&$2q$&$-2\lambda(q^2-q+1)$&$q$&$1$&$0$\\
+ $C_0$&$2q^2$&$-2\lambda(8\lambda q^2-3q^2+2q+2)$&$1$&$2q$&$8\lambda q^2$\\
+ $Z_0$&$0$&$q^2+2q+3$&$0$&$0$&$0$\\\bottomrule
+\end{tabular}
+\end{center}
+This is obtained by applying (\ref{matrix}) to the exact filters,
+then changing from $(Z^+,Z^-)$ to $(Z^+,A_{ab;r})$ before expanding.
+The full rational coefficients and both fixed-deficit and
+rank-proportion expansions are saved in the symbolic certificate.
+
+Here is the limit justification for all five rows. Each $A$-filter
+has bounded rational prefactors multiplying
+$1,\kappa_a/C_N,\kappa_b/C_N,\kappa_r/C_N$.
+Their adjacent-rank difference is $O(p^{-1})$, giving
+\begin{equation}
+ |g_{A,P}/C_N-o_P|\leq K_\lambda(1+u+v+S)/p,
+ \quad |g_{A,P}/C_N|\leq K_\lambda.
+\end{equation}
+The preceding input-weighted $A$ norm and sixth ordinary-product
+moment bound therefore apply unchanged: a window $S\leq p^{3/4}$
+gives an $O_{L^2}(p^{-1/4})$ error for this part.
+
+Each $H$-filter, after subtracting its leading $p\ell_P$, has a
+uniform bound $K_\lambda(1+u+v+S)$ and a fixed-deficit affine limit.
+The previous factorial input tail and third output moment give
+uniform integrability of its square. Thus the $H$-part converges
+in $L^2$. Finally,
+$\W2\{h,D_N\}=L_{\rm in}+2\bar s_NB$ and
+$J_hF-4\lambda_Nq_NC_NL_{\rm in}\to0$ give the centered coefficients
+$k_P,j_P$. The total remainder in (\ref{tableformula}) is only
+claimed to be $o_{L^2}(1)$.
+
+The decisive entry is the last column. Every old raw descendant
+has $s_P=0$; restoring them cannot absorb the output-deficit
+direction through an additional second-chaos component.
+
+\newpage
+\section{Transferring Wick-block moments to half filling}
+The earlier marked-word calculation used $2^{-N}\operatorname{Tr}$.
+A bridge is required before using its fourth-chaos Gram here.
+For a diagonal occupation constraint on $L$ distinct sites, with
+$t$ occupied and $L-t$ empty, the ratio of fixed half-filled trace
+to full-Fock trace is exactly
+\begin{equation}
+ \mathcal R_N(L,t)=
+ \frac{2^L(m)_t^{\downarrow}(m)_{L-t}^{\downarrow}}
+ {(N)_L^{\downarrow}}
+ =2^L\frac{\binom{N-L}{m-t}}{\binom Nm}.\label{ratio}
+\end{equation}
+Uniformly for $L\leq kp=O(\sqrt N)$ and allowed $t$,
+\begin{equation}
+ \log\mathcal R_N(L,t)
+ =\frac{L-(2t-L)^2}{2N}+O(L^3/N^2),\qquad
+ \mathcal R_N(L,t)\leq \exp(K_kp^2/N).\label{ratioexpand}
+\end{equation}
+The expansion follows from the three falling factorials; the upper
+bound also follows directly by dropping their numerator factors
+after extracting powers of $m$. It is valid for large $N$ at fixed
+word length $k$.
+
+In a Gaussian-paired word, every chord carries two independent
+$p$-element index sets. At a site belonging to only one such set,
+the paired creation/annihilation entries force its initial occupation.
+The two sets of each chord have opposite singleton occupations and
+equal cardinality. If $K$ is the total pairwise intersection count,
+deleting the multiply used sites changes their balance by at most
+a constant times $K$. Therefore $|2t-L|\leq c_kK$ for every
+nonzero local occupation term. The unmarked word has $L\leq kp$.
+
+For the marked Wick blocks used here, no Gaussian chord is internal
+to a block. Each body-rank mark hence contracts indices from
+different chords. It is supported on their intersections and leaves
+the singleton argument intact. Expanding the multiply used sites
+in occupation projectors has absolute coefficients bounded by
+$e^{c_kK}$ times a fixed polynomial in $K$. This is also the
+absolute overlap bound used in the preceding marked-word derivation.
+
+First restrict $K\leq K_0$. Equations (\ref{ratio})--(\ref{ratioexpand})
+give $\mathcal R_N\to1$ uniformly. The established exponential
+moment bounds for intersections of a fixed number of random
+$p$-element sets control the complementary absolute tail, including
+the marks; the global bound in (\ref{ratioexpand}) preserves it.
+Letting $K_0\to\infty$ proves equality of the two trace limits.
+
+This transfers the fourth-chaos Gram and its fixed energy moments.
+It also transfers the bounded fixed-degree marked Wick-block
+moments needed for the centered fields below. It does not identify
+ordinary coupling chaos with the spectral $q$-Wick polynomials of
+\cite{tt}; those are different constructions.
+
+\newpage
+\section{Projection after restoring both chaos sectors}
+Let $D_i=(1-\Pi_N)P_i$ for $P_i=E_0,M_0,S_0,Z_0$.
+Their means are scalar and their second-chaos parts lie in
+$\operatorname{span}\{B,O,J_hF\}$ up to $o_{L^2}(1)$. Thus
+\begin{equation}
+ D_i=\W4P_i+o_{L^2}(1).
+\end{equation}
+Their limiting Gram is the previously computed fourth-chaos
+nuisance Gram, now justified in the same half-filled trace.
+It is strictly positive. With Gram entries divided by $\sigma^8$,
+its determinant is
+\begin{align}
+ 16\lambda^3(1-q)^2(1+q)^4(1+q^2)d_3d_5
+ (1+q+4\lambda q)^2\notag\\
+ {}\times[1-q^3+4\lambda q^2(2q^2-q+2)]>0,\quad
+ d_3=q^2-q+1,\ d_5=1+q+q^2+q^3+q^4.\label{det}
+\end{align}
+The fourth-chaos residual is
+\begin{align}
+ Q_{4,N}&=\W4(C_0-\alpha E_0-\beta M_0-\gamma S_0-\delta Z_0),\\
+ \alpha&=-\frac{2q^3}{d_3d_5},\quad
+ \beta=-\frac{q^2(1+q+q^2)}{d_3d_5},\quad\gamma=\frac{2q}{d_3},\notag\\
+ \delta&=\frac{2\lambda(1-q)^3(1+q)(1+q+q^2)}{(1+q^2)d_5}.\notag
+\end{align}
+These coefficients can be evaluated at $\lambda_N,q_N$.
+After applying $1-\Pi_N$, the core is bounded and equals its
+fourth-chaos component plus $8\lambda_N C_Nq_N^2T_N+o_{L^2}(1)$.
+The latter component is exactly orthogonal to every $\W4P_i$.
+Invertibility of the Gram and continuity of this finite-dimensional
+projection prove (\ref{main}) for $\core$ in place of $mZ_2$.
+
+The two limiting contributions are
+\begin{align}
+ V_4&=\frac{J_s^8}{\lambda^4}
+ \frac{4\lambda(1-q)^2(1+q)^2[P(q)+4\lambda q^3U(q)]}
+ {(1+q^2)d_3d_5},\label{V4}\\
+ P(q)&=1+q+2q^2+q^3+q^4,\quad
+ U(q)=2+q+2q^2+q^3+2q^4,\notag\\
+ V_2&=\frac{64J_s^8q^4(1+q)(1-q^2+8\lambda q)}
+ {\lambda(1+q+4\lambda q)}.\label{V2}
+\end{align}
+Both are positive for fixed $\lambda>0$. After the double-scaled
+limit, $V_4\sim768J_s^8/(5\lambda)$ and $V_2\to1024J_s^8$.
+These are energy-to-the-eighth variances of the collective
+coefficient $mZ_2$, not of unscaled $Z_2$.
+
+\newpage
+\section{From the core to the raw second memory coefficient}
+For completeness, the second centered memory coefficient is defined
+from $\widehat M(s)=G+isZ_1-s^2Z_2/2+O(s^3)$ at finite $N$.
+The exact first-return calculation gives, with $r=p/m$,
+\begin{equation}
+ mZ_2=B_{22}^f+\frac{(1+r)^2}{4}[h,[h,A]]
+       +2rJ_hT_3+3r^2J_h^2A-A^2/m-mr^4h^4.
+\end{equation}
+Here $T_3$ is the Hermitian cubic derivative singlet and
+$B_{22}^f=\sum_i(\mathcal L^2c_i)^\dagger\mathcal L^2c_i$.
+Use the previous centered fields
+\begin{equation}
+ K_A=a_m+c_m(h^2-C_N),\quad Y=A-K_A,\quad
+ P_m=t_{3,m}h^3+t_{1,m}h,\quad U=T_3-P_m.
+\end{equation}
+$c_m$ is the exact energy-quadratic regression coefficient; $P_m$
+is the preceding cubic conserved subtraction. Its precise scalar
+coefficients do not enter the projection below. Define
+\begin{equation}
+ D_{2,m}=2rJ_hP_m+3r^2J_h^2K_A-K_A^2/m-mr^4h^4.
+\end{equation}
+It belongs exactly to $\operatorname{span}\{I,h^2,h^4\}\subset
+\mathcal V_N$. The remaining identity is
+\begin{align}
+ mZ_2-D_{2,m}-\core={}&(r/2+r^2/4)[h,[h,Y]]
+                       +2rJ_hU+3r^2J_h^2Y\notag\\
+ &-\bigl(\{K_A,Y\}+Y^2\bigr)/m.\label{remainder}
+\end{align}
+The centered Wick-block representations of $Y,U$ transfer by the
+argument on page 4. Their linear filtered pieces are also bounded:
+for an invariant Hermitian Gaussian field $X$ with $\EE X^2=vI$,
+Wick pairing and Cauchy--Schwarz give $\EE\tr X^4\leq3v^2$;
+their $v$ is controlled by the previous input-rank tails. The
+cubic Wick blocks and the products with $Y$ have the preceding
+absolute marked-word bounds. Thus the fixed-sector moments needed
+for $h^2Y,hU,Y^2$ are bounded. Noncommutative H\"older uses, for
+example, $\EE\tr h^8$, $\EE\tr Y^4$, and $\EE\tr U^4$;
+unweighted $L^2$ bounds alone would not suffice.
+
+Since $r=O(p^{-1})$, $a_m=O(p)$, $c_m=O(1)$, and $m=O(p^2)$,
+every term on the right of (\ref{remainder}) is $O_{L^2}(p^{-1})$
+or smaller. In particular $a_mY/m=O_{L^2}(p^{-1})$;
+the potentially finite conserved contribution of $A^2/m$ was
+already included in $D_{2,m}$ and has not been dropped.
+Projection is contractive and annihilates $D_{2,m}$, completing
+(\ref{main}) for the raw coefficient.
+
+Ordinary chaos is orthogonal only for the equal-time annealed
+inner product. Inserting $e^{ith}$ or powers of $h$ changes the
+Gaussian degree bookkeeping. Thus the $Q_4$ autocorrelation known
+from the earlier work does not by itself determine the full residual
+spectrum: the $T_N$ autocorrelation and its energy-resolved cross
+with $Q_{4,N}$ must still be calculated.
+
+\newpage
+\section{Checks and the next spectral question}
+The symbolic record contains the exact five-word matrix, all
+rational filters, their full rank-proportion expansions, and the
+completed second-chaos table. Independent even polarization of
+the raw quartic definitions verifies 3,600 contractions in 720
+directions. The first two systems, $(N,p,m)=(3,1,2),(4,2,3)$,
+cover every quadratic Gaussian coefficient; three additional
+directions use the larger half-filled system $(6,2,3)$.
+All entries are checked dyadic integers within the exact arithmetic
+range before comparison. A further 720 identities check the raw
+core decomposition.
+
+Second contraction gives the five scalar means. Their independent
+rank sums agree in 10 cases. The $(4,2,3)$ sector has a lower-only
+rank absent from the upper sector, so it is outside the common-rank
+filter domain; the attempted mean check exposed this and was
+recorded. Its direct CAR contractions remain valid. The eventual
+half-filled limit lies inside the common-rank domain.
+
+The assembly certificate also checks 123 exact charge-trace
+identities, the leading logarithm in (\ref{ratioexpand}), the
+fourth-chaos projection equations, the determinant (\ref{det}), and
+the two small-$\lambda$ limits. The trace-limit proof uses the
+balanced-singleton and absolute-tail argument, not these finite
+identity checks alone. An initial symbolic parsing failure involving
+the name \texttt{lambda} is retained alongside the corrected run.
+
+The next task is the fixed-half-filled joint two-energy measure of
+$T_N$ and $Q_{4,N}$. This will decide how the two positive equal-time
+pieces combine in the actual memory spectrum. A central-charge
+extension of the second-chaos filter and the finite-memory remainder
+are subsequent steps toward the bulk singlet/meson dictionary.
+
+\begin{thebibliography}{9}
+\bibitem{kota} V. K. B. Kota and M. Vyas,
+\emph{Random Matrix Theory for Transition Strength Densities in Finite
+Quantum Systems: Results from Embedded Unitary Ensembles},
+\href{https://arxiv.org/abs/1504.00759}{arXiv:1504.00759}, Sec.~2.
+\bibitem{tt} J. Tall and S. Tomsovic,
+\emph{Double-scaled bosonic and fermionic embedded ensembles,
+complex SYK, and the dual Hilbert space},
+\href{https://arxiv.org/html/2604.14522v2}{arXiv:2604.14522v2},
+Secs.~2.1 and 3.1. The spectral Wick product is defined in Eq.~(3.2).
+\bibitem{local} Alan Day and Chengheng, local project notes:
+\emph{Second memory coefficient and quartic singlet};
+\emph{Quadratic contractions of the memory core};
+\emph{Two-charge memory filters}; \emph{Fixed-charge residual norm};
+\emph{The quadratic memory core in the double-scaled limit}
+(6 November 2026). Source paths are listed in the accompanying
+literature record.
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "method": "all perfect matchings, determinant-minor rule and integer coefficient arrays; no orbit generator or symbolic factorizer imported",
+  "templates": 177,
+  "matching_words": 6234,
+  "minor_calls": 56106,
+  "cancelled_templates": 176,
+  "nonzero_linear_coefficients": [
+    4,
+    8,
+    12,
+    8,
+    0,
+    -8,
+    -12,
+    -8,
+    -4
+  ],
+  "nonzero_quadratic_coefficients": [
+    0,
+    0,
+    32,
+    48,
+    96,
+    112,
+    112,
+    96,
+    48,
+    32
+  ],
+  "input_sha256": {
+    "code/check_cubic_kernel_orbits.py": "e5e0c74ced46c215552a70367b93f40cf598d11a9460d18a95dd483681ba448d",
+    "code/singlet_coefficient.py": "ef7d9b96f96a036ea0d9774950702a82a968b56758a778db0365e9df0c3b2e10",
+    "code/singlet_spectral_graphs.py": "cfb50d1e4aafe8822878cbf895a2d33a9e12d8fb1afb76a4fec23307c5001163",
+    "results/susskind-cubic-kernel/orbit-certificate.json": "1481b0c557cb103fb29bfb481059f91eb1d8cd564b91b8a78ef28c20cf918956"
+  }
+}

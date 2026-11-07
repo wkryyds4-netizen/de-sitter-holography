@@ -1,0 +1,289 @@
+{
+  "status": "Local research progress; full objective remains active",
+  "created_at_utc": "2026-11-06T18:04:57.535554+00:00",
+  "scientific_status": "Four-u conditional force term has a strong leading energy regression and vanishes after collective energy pinching. Actual memory field reduces to charged defect A plus neutral residual B in full-trace L2 on compact real memory times; the covariance is their full four-term sum. First two neutral Taylor coefficients and nonzero second-order cross measures identified. The joint finite-time kernel and bulk dictionary remain open.",
+  "git_commit_created": false,
+  "git_push_performed": false,
+  "archive_created": false,
+  "external_reply_sent": false,
+  "previous_evidence": {
+    "results/susskind-memory-uniform-bound/local-evidence.json": {
+      "sha256": "a781c8597c70af9c81ea91c5379996d1572e85366328eeebc6edece7d0b7e379",
+      "unchanged_scientific_files": [
+        "code/memory_jacobi_bridge.py",
+        "code/check_memory_dyson_force.py",
+        "code/check_memory_jacobi_entire.py",
+        "code/build_memory_uniform_bound.ps1",
+        "code/record_memory_uniform_bound.py",
+        "manuscript/susskind-memory-uniform-bound/main.tex",
+        "output/pdf/de-sitter-susskind-memory-uniform-bound.pdf",
+        "notes/susskind-memory-uniform-bound.md",
+        "notes/susskind-memory-joint-kernel-seed.md",
+        "literature/susskind-memory-uniform-bound-sources.md",
+        "journal/2026-11-07-susskind-memory-uniform-bound.md",
+        "results/susskind-memory-uniform-bound/jacobi-recurrence-checks.json",
+        "results/susskind-memory-uniform-bound/dyson-force-checks.json",
+        "results/susskind-memory-uniform-bound/jacobi-entire-checks.json",
+        "results/susskind-memory-uniform-bound/main.log",
+        "results/susskind-memory-uniform-bound/diagnostics/pre-visual-fix-page-8.png",
+        "results/susskind-memory-uniform-bound/diagnostics/pre-visual-fix.log",
+        "results/susskind-memory-uniform-bound/diagnostics/pre-visual-fix.tex"
+      ]
+    },
+    "results/susskind-memory-return-background/local-evidence.json": {
+      "sha256": "d8e2c148696815a376e0f264b8a1afe2a37abd9f853b71909fa736136eeac799",
+      "unchanged_scientific_files": [
+        "code/memory_return_background.py",
+        "code/build_memory_return_background.ps1",
+        "code/record_memory_return_background.py",
+        "manuscript/susskind-memory-return-background/main.tex",
+        "output/pdf/de-sitter-susskind-memory-return-background.pdf",
+        "notes/susskind-memory-return-background.md",
+        "literature/susskind-memory-return-background-sources.md",
+        "journal/2026-11-06-susskind-memory-return-background.md",
+        "results/susskind-memory-return-background/bubble-and-return-checks.json",
+        "results/susskind-memory-return-background/main.log",
+        "results/susskind-memory-return-background/diagnostics/first-layout.log"
+      ]
+    },
+    "results/susskind-memory-charged-transfer/local-evidence.json": {
+      "sha256": "d2889368a3138728905d79b3cb97df0fe9ef369063b29373c28e408852a1b046",
+      "unchanged_scientific_files": [
+        "code/memory_charged_transfer.py",
+        "code/check_memory_polar_transfer.py",
+        "code/verify_memory_transfer_closure.py",
+        "code/build_memory_charged_transfer.ps1",
+        "code/record_memory_charged_transfer.py",
+        "manuscript/susskind-memory-charged-transfer/main.tex",
+        "output/pdf/de-sitter-susskind-memory-charged-transfer.pdf",
+        "notes/susskind-memory-charged-transfer.md",
+        "literature/susskind-memory-charged-transfer-sources.md",
+        "journal/2026-11-07-susskind-memory-charged-transfer.md",
+        "results/susskind-memory-charged-transfer/transfer-checks.json",
+        "results/susskind-memory-charged-transfer/polar-and-reverse-checks.json",
+        "results/susskind-memory-charged-transfer/closure-checks.json",
+        "results/susskind-memory-charged-transfer/main.log",
+        "results/susskind-memory-charged-transfer/diagnostics/first-build-source.tex",
+        "results/susskind-memory-charged-transfer/diagnostics/first-build.log"
+      ]
+    },
+    "results/susskind-memory-wick-rank/local-evidence.json": {
+      "sha256": "9890d5e71df835aba8bf44d71eb5f7e1a82c8f073c28754b4fa50cb6fcf946f9",
+      "unchanged_scientific_files": [
+        "code/memory_wick_rank.py",
+        "code/check_memory_wick_interface.py",
+        "code/check_memory_chaos_creation.py",
+        "code/build_memory_wick_rank.ps1",
+        "code/record_memory_wick_rank.py",
+        "manuscript/susskind-memory-wick-rank/main.tex",
+        "output/pdf/de-sitter-susskind-memory-wick-rank.pdf",
+        "notes/susskind-memory-wick-rank.md",
+        "literature/susskind-memory-wick-rank-sources.md",
+        "journal/2026-11-07-susskind-memory-wick-rank.md",
+        "results/susskind-memory-wick-rank/rank-chain-checks.json",
+        "results/susskind-memory-wick-rank/chaos-and-probe-checks.json",
+        "results/susskind-memory-wick-rank/creation-commutator-checks.json",
+        "results/susskind-memory-wick-rank/main.log",
+        "results/susskind-memory-wick-rank/diagnostics/first-render-source.tex",
+        "results/susskind-memory-wick-rank/diagnostics/first-render.pdf"
+      ]
+    },
+    "results/susskind-memory-central-spectrum/local-evidence.json": {
+      "sha256": "069b2d39296cd152b45f3dec53c924e82d18b03461988d9f3b383243fd383629",
+      "unchanged_scientific_files": [
+        "code/memory_central_trace.py",
+        "code/memory_central_force_bridge.py",
+        "code/memory_central_spectrum.py",
+        "code/build_memory_central_spectrum.ps1",
+        "code/record_memory_central_spectrum.py",
+        "manuscript/susskind-memory-central-spectrum/main.tex",
+        "output/pdf/de-sitter-susskind-memory-central-spectrum.pdf",
+        "notes/susskind-memory-central-spectrum.md",
+        "literature/susskind-memory-central-spectrum-sources.md",
+        "journal/2026-11-06-susskind-memory-central-spectrum.md",
+        "results/susskind-memory-central-spectrum/force-bridge.json",
+        "results/susskind-memory-central-spectrum/main.log",
+        "results/susskind-memory-central-spectrum/spectrum-assembly.json",
+        "results/susskind-memory-central-spectrum/trace-ratio.json"
+      ]
+    },
+    "results/susskind-memory-central-raw/local-evidence.json": {
+      "sha256": "b9df368ef51224356ea1f06e8d30ce746025b8af0aa23962035a5742e864c0b7",
+      "unchanged_scientific_files": [
+        "PROJECT.md",
+        "code/memory_central_descendants.py",
+        "code/check_memory_central_raw.py",
+        "code/assemble_memory_central_raw.py",
+        "code/build_memory_central_raw.ps1",
+        "code/record_memory_central_raw.py",
+        "manuscript/susskind-memory-central-raw/main.tex",
+        "output/pdf/de-sitter-susskind-memory-central-raw.pdf",
+        "notes/susskind-memory-central-raw.md",
+        "literature/susskind-memory-central-raw-sources.md",
+        "journal/2026-11-06-susskind-memory-central-raw.md",
+        "results/susskind-memory-central-raw/central-assembly.json",
+        "results/susskind-memory-central-raw/central-filter-checks.json",
+        "results/susskind-memory-central-raw/diagnostics.json",
+        "results/susskind-memory-central-raw/main.log",
+        "results/susskind-memory-central-raw/symbolic-descendants.json"
+      ]
+    },
+    "results/susskind-memory-mixed-spectrum/local-evidence.json": {
+      "sha256": "3b06116be79a58b592c8c5f73127200ae116935012a216a380e960f9cdc0911c",
+      "unchanged_scientific_files": [
+        "code/memory_mixed_cross.py",
+        "code/memory_mixed_lift.py",
+        "code/memory_mixed_assembly.py",
+        "code/build_memory_mixed_spectrum.ps1",
+        "code/record_memory_mixed_spectrum.py",
+        "manuscript/susskind-memory-mixed-spectrum/main.tex",
+        "output/pdf/de-sitter-susskind-memory-mixed-spectrum.pdf",
+        "notes/susskind-memory-mixed-spectrum.md",
+        "literature/susskind-memory-mixed-spectrum-sources.md",
+        "journal/2026-11-06-susskind-memory-mixed-spectrum.md",
+        "results/susskind-memory-mixed-spectrum/charged-lift.json",
+        "results/susskind-memory-mixed-spectrum/cubic-force-cross.json",
+        "results/susskind-memory-mixed-spectrum/failures/initial-main.log",
+        "results/susskind-memory-mixed-spectrum/failures/initial-main.tex",
+        "results/susskind-memory-mixed-spectrum/failures/initial-mixed-lift.py",
+        "results/susskind-memory-mixed-spectrum/failures/lift-coverage.txt",
+        "results/susskind-memory-mixed-spectrum/failures/overflow-main.log",
+        "results/susskind-memory-mixed-spectrum/main.log",
+        "results/susskind-memory-mixed-spectrum/matrix-assembly.json"
+      ]
+    },
+    "results/susskind-memory-charge-sum/local-evidence.json": {
+      "sha256": "e1641bc637b9d28a3c06356736931f68de6386140e8ee43b8b1b57ff09139e24",
+      "unchanged_scientific_files": [
+        "code/memory_charge_global_checks.py",
+        "code/memory_charge_growing_window.py",
+        "code/assemble_memory_charge_sum.py",
+        "code/build_memory_charge_sum.ps1",
+        "code/record_memory_charge_sum.py",
+        "manuscript/susskind-memory-charge-sum/main.tex",
+        "output/pdf/de-sitter-susskind-memory-charge-sum.pdf",
+        "notes/susskind-memory-charge-sum.md",
+        "literature/susskind-memory-charge-sum-sources.md",
+        "journal/2026-11-06-susskind-memory-charge-sum.md",
+        "results/susskind-memory-charge-sum/charge-sum-assembly.json",
+        "results/susskind-memory-charge-sum/diagnostics/first-build-failure.txt",
+        "results/susskind-memory-charge-sum/diagnostics/second-build-layout.log",
+        "results/susskind-memory-charge-sum/global-sector-checks.json",
+        "results/susskind-memory-charge-sum/growing-window-checks.json",
+        "results/susskind-memory-charge-sum/main.log"
+      ]
+    }
+  },
+  "verified_scientific_inputs": {
+    "four-copy-q-checks.json": {
+      "code/memory_four_copy_background.py": "4fbc66e132e08306e96b51dee55ce376052f042e206ebb1c5093424a02941c00"
+    },
+    "four-copy-finite-time-checks.json": {
+      "code/check_four_copy_finite_time.py": "98be2f215b62af826a02e377905855e0975db430dfda660060d024bf6fbe488a",
+      "code/memory_charged_transfer.py": "155392a862098a9aa1119085629bca5b2467e0de9f1610c009273e66fa80455a",
+      "code/complex_syk_dictionary.py": "96b4890a167beeadf0849ccffdbb20dd125d921af062fd291044da9024900abf"
+    },
+    "neutral-coefficient-checks.json": {
+      "code/check_neutral_memory_coefficients.py": "57e7a195140240738af9764200ae001b0680018a21ab0b3301e3b91e7aab96c8",
+      "code/memory_charged_transfer.py": "155392a862098a9aa1119085629bca5b2467e0de9f1610c009273e66fa80455a",
+      "code/memory_wick_rank.py": "7adf10a9d087a24ec84215dd0f95ccc832a5cefc8e8f833d7ca3521231d81525",
+      "code/cubic_linear_dynamics.py": "81d8e955107098e897637650bb7686a15fd2ff8fde6de1e1c525db398516d014",
+      "code/complex_syk_dictionary.py": "96b4890a167beeadf0849ccffdbb20dd125d921af062fd291044da9024900abf"
+    }
+  },
+  "checks": {
+    "q_parameter_sets": 6,
+    "exact_q_equalities": {
+      "conditional_trace_checks": 2520,
+      "three_color_replica_checks": 7200,
+      "OU_Wick_degrees": 66,
+      "Taylor_checks": 42
+    },
+    "finite_CAR_integrals": 24,
+    "max_integral_order_difference": 1.9318406978655184e-15,
+    "max_finite_N_pinched_norm": 0.052155765115007455,
+    "CAR_coefficient_cases": 12,
+    "max_CAR_coefficient_error": 1.8650126445613328e-16,
+    "rank_slope_cases": 360,
+    "max_relative_slope_error_at_p128": 0.08669780975639718
+  },
+  "parameters": "Analytic result: standard CAR, same original J across charges, overlapping complex p-body, full normalized beta=mu=0 trace, hbar=1/string real time, even N, fixed Js and compact memory times. Explicit spectra assume lambda_N->lambda>0; reduction also holds for positive compact lambda sequences. All finite fixtures and relative errors are in the scientific JSON.",
+  "environment": {
+    "python": "3.14.5",
+    "numpy": "2.4.6",
+    "mpmath": "1.3.0"
+  },
+  "evidence_scopes": {
+    "four-copy-q-checks.json": "Exact q-Fock conditional polynomials versus independent colored pairings, three-color block replica factorization, same-copy OU Wick identity and four-u Taylor background. No finite-N fit, asymptotic proof or independent-probe replacement of the real charged force.",
+    "four-copy-finite-time-checks.json": "24 finite CAR word integrals using every Gaussian coordinate and all Wick pairings; two time quadrature orders, adjoint symmetry, scalar zero-time fourth moment, and an interior p=2 finite-N nonconservation witness. No DS fit or certified quadrature error; asymptotic vanishing is an analytic result.",
+    "neutral-coefficient-checks.json": "12 complete-coordinate CAR coefficient/covariance identities and 360 exact-rational slope inequalities with 80/120-digit comparisons. Finite slope errors, including relative errors, are retained; they are not a proof or fit of the DS limit. No floating energy pinching needed for the conserved-polynomial difference."
+  },
+  "proof_scope": "Fixed colored chord moments and the q-Fock commuting square yield strong polynomial regression; a total-degree Gaussian moment tail gives uniform real time. Bounded extension, alpha drift and binomial tails imply weighted pinching. Exact neutral coefficient identities and existing marked spectra supply the cross calibration. No derivative exchange with an unproved finite-time limit is claimed.",
+  "literature_scope": "BKS conditional expectations and q-Wick/Hermite structure are established results. Colored extension and the specified finite-memory reduction are derived applications; no originality priority claim.",
+  "continuation_seed_status": "Neutral-series exact algebraic rearrangement and scaled Jacobi error recurrence saved as next calculation interface. No new all-degree joint fluctuation limit is claimed there; independent finite-polynomial check and rank-tail control remain next.",
+  "build": {
+    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File code/build_memory_two_component.ps1",
+    "pages": 8,
+    "passes": 2,
+    "compiler_header": "This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5 Portable) (preloaded format=pdflatex 2026.9.19)  7 NOV 2026 01:59",
+    "render_command": "pdftoppm -r 95 -png output/pdf/de-sitter-susskind-memory-two-component.pdf tmp/pdfs/susskind-memory-two-component-build/page",
+    "final_pages_visually_inspected": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "visual_result": "Final eight pages inspected after the last build; readable equations, correct references, clean margins and no clipping or overlaps."
+  },
+  "diagnostics": [
+    "The first finite-time driver failed its final nonconservation-witness assertion after all integral tests passed; no JSON was written. Initial p=1/edge sectors were too symmetric. Source and failure text retained; adding the interior N5p2m3 fixture supplied the nonzero witness.",
+    "The q exact driver and neutral coefficient driver passed first execution. Existing scientific outputs were not overwritten.",
+    "First LaTeX build failed because AA is a built-in macro. Second build had two overfull boxes. Sources and logs retained; renaming the macro and wrapping equations fixed them.",
+    "Read-only mathematical review added positive-part kappa_2p definition, the linear-Gaussian multiplication bound and the scope of pinching for energy descendants. Final two-pass compile and all-page rendering passed."
+  ],
+  "process_state": "All scientific, build and rendering commands terminal; no live calculation handles.",
+  "hashes": {
+    "code/memory_four_copy_background.py": "4fbc66e132e08306e96b51dee55ce376052f042e206ebb1c5093424a02941c00",
+    "code/check_four_copy_finite_time.py": "98be2f215b62af826a02e377905855e0975db430dfda660060d024bf6fbe488a",
+    "code/check_neutral_memory_coefficients.py": "57e7a195140240738af9764200ae001b0680018a21ab0b3301e3b91e7aab96c8",
+    "code/build_memory_two_component.ps1": "83b8e615121e21f37d453edd7d06d01e43b7971b3e2e2cdf7ca45b8d7b07394d",
+    "code/record_memory_two_component.py": "d8744e084d5e57ae8ef1b27862b4a49dedea7e7075b96efe280592de3e415e46",
+    "manuscript/susskind-memory-two-component/main.tex": "dec86d31a77cd75b3de657a1a56aa55109228b481bf30c8c50e3eba1744d5d16",
+    "output/pdf/de-sitter-susskind-memory-two-component.pdf": "4a4a1cabd292489fdf6b50d5ef90b63858253120c8c7c0f9c3fcb874649199ab",
+    "notes/susskind-memory-two-component.md": "a4e34d5480f0754ecc260747fbc4663ee7983a85ece252d943a11957bd9f7c3c",
+    "notes/susskind-memory-neutral-series-seed.md": "d99d4b07efc7495f044d5d71b766f5321c5ba48b3722bcf05380017e74bfbbaa",
+    "literature/susskind-memory-two-component-sources.md": "cc5cb9d581948303eed5f2d663c0ad98ae77a1535dcad0ce428125946ea0c8c6",
+    "journal/2026-11-07-susskind-memory-two-component.md": "90c0d7cf118d686de497d342c149b8d02bbda0892d68bb80cc3352731f2da74d",
+    "README.md": "ee78f3624dd0f7d9bc6e9c00cedfcee1ec227f098182f3bbcf1b4a94da6d06f1",
+    "PLAN.md": "7c77c23a5777119e874fdf532a7467b8d4b9c73ca1a8ac526eba81e51869b956",
+    "NEXT.md": "dd6023f32f7481532b8955d0fa81c0fd01d521a8ed75f4a666ea47d1b374faaf",
+    "results/susskind-memory-two-component/four-copy-q-checks.json": "13c6ec19fc09a8220751ebf98d5f3900862fe30b1fc5fb71b4343d84850ba0be",
+    "results/susskind-memory-two-component/four-copy-finite-time-checks.json": "597158b6680442740019a2370083fe97aed769af74bbabd903e0f33b55be6e5e",
+    "results/susskind-memory-two-component/neutral-coefficient-checks.json": "372959c5fbd887367da75e951c315c7b24fb0dcd093fc2e700781e5a1dc7d0a5",
+    "results/susskind-memory-two-component/main.log": "c39a2681dbbb85978ee05ec78f6a76ac0226bf323ded3480902afe4c36455b94",
+    "results/susskind-memory-two-component/diagnostics/first-build.log": "513e81813f110e5c01f5895905321c889096e5a125b503cfdb25dbe20fd30cd9",
+    "results/susskind-memory-two-component/diagnostics/first-build.tex": "fc14020e1cd4b18348037adb1ea72a0948c976dbd938168713f0279dfca8ff24",
+    "results/susskind-memory-two-component/diagnostics/first-finite-driver-failure.txt": "0b110bfe0dcc86843b315c25b4f5dfeeacae3db4c5ddb77af519d16db4cc3069",
+    "results/susskind-memory-two-component/diagnostics/first-finite-driver.py": "40a6dbfdb591bd72e30899a36a5664958997359ac5b03de0bce07ad823bb8dc1",
+    "results/susskind-memory-two-component/diagnostics/second-build.log": "b46aa85317afbf3e56ac6db9a52765088ffec50df0075c6762cba8d6853d7836",
+    "results/susskind-memory-two-component/diagnostics/second-build.tex": "37f56f7079ffbfa2f553fd91183725396dc16087c8571761220ee6231c9d1939"
+  },
+  "render_hashes": {
+    "tmp/pdfs/susskind-memory-two-component-build/page-1.png": "9965bef4a2d4dc296e5d9be8354c9a3785e284d5ee0eab50e16112f786fd7854",
+    "tmp/pdfs/susskind-memory-two-component-build/page-2.png": "24338c4d4df9300508abc59256ebef655224fff64d9cfa089c1b4797f503f5ff",
+    "tmp/pdfs/susskind-memory-two-component-build/page-3.png": "d2f26a7894352d89937830b608b047c56ececdadea5ec78a6df015182dd207d4",
+    "tmp/pdfs/susskind-memory-two-component-build/page-4.png": "cc01227dff25ff9d9d4edc6840cc840113350f2bf58ceacb177369702dd084f7",
+    "tmp/pdfs/susskind-memory-two-component-build/page-5.png": "9e8008e6d9dda201a7d2441680f096fb31000a611f824eefa75d6b72038f7110",
+    "tmp/pdfs/susskind-memory-two-component-build/page-6.png": "127f1d3162d5c4f3c1f914321cbe545d0170eff45d6967897637917f5d57a92e",
+    "tmp/pdfs/susskind-memory-two-component-build/page-7.png": "fca40f2942beabf3cf0ca03c2c6aca896ecd016e46fca1781d586bad69e8892e",
+    "tmp/pdfs/susskind-memory-two-component-build/page-8.png": "c9939160b182d94925abe5cccdb4a7d15382e3887294af7eb8355eff61925271"
+  },
+  "build_pass_hashes": {
+    "tmp/pdfs/susskind-memory-two-component-build/pass1.txt": "90e822d3ce595298fb42ba0097219592a63721ce96e6c2dbd4d2fea316984b06",
+    "tmp/pdfs/susskind-memory-two-component-build/pass2.txt": "4e385cf62a70c308e51fe01dc954e799646f9f974948cef728fe92f099915ad9"
+  }
+}

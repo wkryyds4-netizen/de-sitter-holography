@@ -1,0 +1,368 @@
+{
+  "chords": {
+    "rows": [
+      {
+        "q": "1/4",
+        "source_word_configurations": 791,
+        "max_H_degree": 8
+      },
+      {
+        "q": "1/2",
+        "source_word_configurations": 791,
+        "max_H_degree": 8
+      },
+      {
+        "q": "3/4",
+        "source_word_configurations": 791,
+        "max_H_degree": 8
+      }
+    ],
+    "total_exact_equalities": 2373,
+    "all_four_slots_same_probe_moment": "2+q; fixed two internal bubbles contribute only 1",
+    "note": "Tests q-conditional identity for prescribed chords, not the same-J DS counting itself."
+  },
+  "return_background": [
+    {
+      "lambda_value": 0.25,
+      "Js": 1.0,
+      "energy_fraction_of_edge": 0.0,
+      "s": 0.5,
+      "kappa": [
+        3.470663654888751,
+        -1.1329090994462432e-15
+      ],
+      "absolute_order_difference": 5.7732807420548506e-15,
+      "conservative_unitarity_bound": 4.0
+    },
+    {
+      "lambda_value": 0.25,
+      "Js": 1.0,
+      "energy_fraction_of_edge": 0.0,
+      "s": 1.0,
+      "kappa": [
+        9.336386008157255,
+        -8.524341076408366e-15
+      ],
+      "absolute_order_difference": 1.2948806020498904e-14,
+      "conservative_unitarity_bound": 16.0
+    },
+    {
+      "lambda_value": 0.25,
+      "Js": 1.0,
+      "energy_fraction_of_edge": 0.0,
+      "s": 2.0,
+      "kappa": [
+        12.600282450176701,
+        -2.981199605974214e-14
+      ],
+      "absolute_order_difference": 5.729746957447334e-14,
+      "conservative_unitarity_bound": 64.0
+    },
+    {
+      "lambda_value": 0.25,
+      "Js": 1.0,
+      "energy_fraction_of_edge": 0.4,
+      "s": 0.5,
+      "kappa": [
+        3.156068703306733,
+        -1.3541549785407005
+      ],
+      "absolute_order_difference": 6.233089088255905e-15,
+      "conservative_unitarity_bound": 4.0
+    },
+    {
+      "lambda_value": 0.25,
+      "Js": 1.0,
+      "energy_fraction_of_edge": 0.4,
+      "s": 1.0,
+      "kappa": [
+        6.9229074050838015,
+        -5.831092967443807
+      ],
+      "absolute_order_difference": 1.7852165294699933e-14,
+      "conservative_unitarity_bound": 16.0
+    },
+    {
+      "lambda_value": 0.25,
+      "Js": 1.0,
+      "energy_fraction_of_edge": 0.4,
+      "s": 2.0,
+      "kappa": [
+        8.505668276274848,
+        -9.267828751962844
+      ],
+      "absolute_order_difference": 7.360636315603365e-14,
+      "conservative_unitarity_bound": 64.0
+    },
+    {
+      "lambda_value": 0.25,
+      "Js": 1.0,
+      "energy_fraction_of_edge": 0.85,
+      "s": 0.5,
+      "kappa": [
+        2.1495047875358266,
+        -2.515419882147927
+      ],
+      "absolute_order_difference": 8.62265274246159e-15,
+      "conservative_unitarity_bound": 4.0
+    },
+    {
+      "lambda_value": 0.25,
+      "Js": 1.0,
+      "energy_fraction_of_edge": 0.85,
+      "s": 1.0,
+      "kappa": [
+        0.4864926060638556,
+        -8.051905909123255
+      ],
+      "absolute_order_difference": 3.641874218307537e-14,
+      "conservative_unitarity_bound": 16.0
+    },
+    {
+      "lambda_value": 0.25,
+      "Js": 1.0,
+      "energy_fraction_of_edge": 0.85,
+      "s": 2.0,
+      "kappa": [
+        -4.4725673264791155,
+        -10.26367534764442
+      ],
+      "absolute_order_difference": 1.3255300427371534e-13,
+      "conservative_unitarity_bound": 64.0
+    },
+    {
+      "lambda_value": 0.5,
+      "Js": 1.0,
+      "energy_fraction_of_edge": 0.0,
+      "s": 0.5,
+      "kappa": [
+        1.843301936268514,
+        3.4516081880367653e-16
+      ],
+      "absolute_order_difference": 3.0167185852094032e-15,
+      "conservative_unitarity_bound": 2.0
+    },
+    {
+      "lambda_value": 0.5,
+      "Js": 1.0,
+      "energy_fraction_of_edge": 0.0,
+      "s": 1.0,
+      "kappa": [
+        5.791273640480411,
+        2.1924761979567974e-15
+      ],
+      "absolute_order_difference": 9.812354378240197e-15,
+      "conservative_unitarity_bound": 8.0
+    },
+    {
+      "lambda_value": 0.5,
+      "Js": 1.0,
+      "energy_fraction_of_edge": 0.0,
+      "s": 2.0,
+      "kappa": [
+        9.684347837981827,
+        6.156503492219789e-15
+      ],
+      "absolute_order_difference": 2.2986847671038904e-14,
+      "conservative_unitarity_bound": 32.0
+    },
+    {
+      "lambda_value": 0.5,
+      "Js": 1.0,
+      "energy_fraction_of_edge": 0.4,
+      "s": 0.5,
+      "kappa": [
+        1.7221269585224483,
+        -0.6166000246121529
+      ],
+      "absolute_order_difference": 3.1401849173675502e-15,
+      "conservative_unitarity_bound": 2.0
+    },
+    {
+      "lambda_value": 0.5,
+      "Js": 1.0,
+      "energy_fraction_of_edge": 0.4,
+      "s": 1.0,
+      "kappa": [
+        4.496062102520137,
+        -3.3719289558234307
+      ],
+      "absolute_order_difference": 1.4383281002407285e-14,
+      "conservative_unitarity_bound": 8.0
+    },
+    {
+      "lambda_value": 0.5,
+      "Js": 1.0,
+      "energy_fraction_of_edge": 0.4,
+      "s": 2.0,
+      "kappa": [
+        5.789107303976926,
+        -7.159365276479103
+      ],
+      "absolute_order_difference": 6.236252290229756e-14,
+      "conservative_unitarity_bound": 32.0
+    },
+    {
+      "lambda_value": 0.5,
+      "Js": 1.0,
+      "energy_fraction_of_edge": 0.85,
+      "s": 0.5,
+      "kappa": [
+        1.324319385002151,
+        -1.1896914928596694
+      ],
+      "absolute_order_difference": 4.0943002132167226e-15,
+      "conservative_unitarity_bound": 2.0
+    },
+    {
+      "lambda_value": 0.5,
+      "Js": 1.0,
+      "energy_fraction_of_edge": 0.85,
+      "s": 1.0,
+      "kappa": [
+        0.9783823787514938,
+        -4.950968195478974
+      ],
+      "absolute_order_difference": 1.7413521654047194e-14,
+      "conservative_unitarity_bound": 8.0
+    },
+    {
+      "lambda_value": 0.5,
+      "Js": 1.0,
+      "energy_fraction_of_edge": 0.85,
+      "s": 2.0,
+      "kappa": [
+        -2.8539368661080604,
+        -6.665120567681758
+      ],
+      "absolute_order_difference": 7.461359543254155e-14,
+      "conservative_unitarity_bound": 32.0
+    },
+    {
+      "lambda_value": 1.0,
+      "Js": 1.0,
+      "energy_fraction_of_edge": 0.0,
+      "s": 0.5,
+      "kappa": [
+        0.9592103050354619,
+        -2.304093236480885e-16
+      ],
+      "absolute_order_difference": 1.797506067112508e-15,
+      "conservative_unitarity_bound": 1.0
+    },
+    {
+      "lambda_value": 1.0,
+      "Js": 1.0,
+      "energy_fraction_of_edge": 0.0,
+      "s": 1.0,
+      "kappa": [
+        3.3867555093387622,
+        -1.5522634981255634e-15
+      ],
+      "absolute_order_difference": 7.331092940879571e-15,
+      "conservative_unitarity_bound": 4.0
+    },
+    {
+      "lambda_value": 1.0,
+      "Js": 1.0,
+      "energy_fraction_of_edge": 0.0,
+      "s": 2.0,
+      "kappa": [
+        8.281806183732641,
+        -5.733896495682042e-15
+      ],
+      "absolute_order_difference": 2.3861661225697128e-14,
+      "conservative_unitarity_bound": 16.0
+    },
+    {
+      "lambda_value": 1.0,
+      "Js": 1.0,
+      "energy_fraction_of_edge": 0.4,
+      "s": 0.5,
+      "kappa": [
+        0.9224123666395397,
+        -0.247357757980168
+      ],
+      "absolute_order_difference": 1.7235296186091125e-15,
+      "conservative_unitarity_bound": 1.0
+    },
+    {
+      "lambda_value": 1.0,
+      "Js": 1.0,
+      "energy_fraction_of_edge": 0.4,
+      "s": 1.0,
+      "kappa": [
+        2.9032844806759592,
+        -1.624003414664047
+      ],
+      "absolute_order_difference": 5.773159728050814e-15,
+      "conservative_unitarity_bound": 4.0
+    },
+    {
+      "lambda_value": 1.0,
+      "Js": 1.0,
+      "energy_fraction_of_edge": 0.4,
+      "s": 2.0,
+      "kappa": [
+        4.885245877438174,
+        -5.977044495094156
+      ],
+      "absolute_order_difference": 1.9479273482635503e-14,
+      "conservative_unitarity_bound": 16.0
+    },
+    {
+      "lambda_value": 1.0,
+      "Js": 1.0,
+      "energy_fraction_of_edge": 0.85,
+      "s": 0.5,
+      "kappa": [
+        0.7980379956637031,
+        -0.4973419334597073
+      ],
+      "absolute_order_difference": 1.4895204919483639e-15,
+      "conservative_unitarity_bound": 1.0
+    },
+    {
+      "lambda_value": 1.0,
+      "Js": 1.0,
+      "energy_fraction_of_edge": 0.85,
+      "s": 1.0,
+      "kappa": [
+        1.449826545491221,
+        -2.7645122850542396
+      ],
+      "absolute_order_difference": 3.6418022968069345e-15,
+      "conservative_unitarity_bound": 4.0
+    },
+    {
+      "lambda_value": 1.0,
+      "Js": 1.0,
+      "energy_fraction_of_edge": 0.85,
+      "s": 2.0,
+      "kappa": [
+        -1.8774737217911315,
+        -5.646388083686544
+      ],
+      "absolute_order_difference": 1.8288713016877624e-14,
+      "conservative_unitarity_bound": 16.0
+    }
+  ],
+  "environment": {
+    "python": "3.14.5",
+    "numpy": "2.4.6",
+    "scipy": "1.18.0"
+  },
+  "parameters": {
+    "q": "exp(-4 lambda)",
+    "variance": "Js^2/lambda",
+    "spectral_orders": [
+      64,
+      96
+    ],
+    "simplex_orders": [
+      20,
+      32
+    ]
+  },
+  "scope": "Exact rational chord identities and float64 conserved-background quadrature; no finite-N asymptotic fit or certified quadrature error."
+}

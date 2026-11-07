@@ -1,0 +1,347 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,microtype}
+\usepackage[margin=24mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\PP}{\mathsf P_h}
+\newcommand{\FF}{\mathsf F}
+\title{Finite-time memory from two returns\\A controlled reduction to ordinary charge propagation}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Local research note --- 6 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+For the common-coupling complex SYK charge-removal dilation, we
+reduce the actual finite-memory covariance to an auxiliary kernel
+with ordinary Hamiltonian propagation. A finite Volterra iteration
+and uniform Gaussian force moments give a two-return approximation
+with collective-field error $O(p^{-2})$ and absolute covariance error
+$O(p^{-1})$. Time exponentials are kept intact. The remaining task
+is the limit of the resulting pinched, common-coupling products.
+\end{abstract}
+\section{State, operators and the result}
+Use standard CAR, $\hbar=1$, string-time units, and
+$H=\sum_{I,J}J_{IJ}c_I^\dagger c_J$, where $I,J$ are increasing
+$p$-subsets, $c_J=(c_J^\dagger)^\dagger$, $J=J^\dagger$ is Gaussian, and
+\begin{equation}
+ \EE J_{IJ}J_{KL}=w_N\delta_{IL}\delta_{JK},\qquad
+ w_N=4^p\frac{J_s^2}{\lambda_N}\left(\frac{p!}{N^p}\right)^2,
+ \quad \lambda_N=p^2/N.
+\end{equation}
+Take even $N\to\infty$, $\lambda_N\in[\lambda_-,\lambda_+]\subset(0,\infty)$,
+with $J_s$ fixed. The annealed state is the normalized full trace
+at $\beta=\mu=0$: sector weights are $b_m=2^{-N}\binom Nm$.
+Write $h=H_m$, $d_m=\binom Nm$, $\tr_m=\operatorname{Tr}/d_m$. For $m>0$ set
+\begin{align}
+ V\psi&=m^{-1/2}\sum_i|i\rangle c_i\psi,&
+ K&=1_N\otimes H_{m-1},& Q&=1-VV^\dagger,\\
+ a&=V^\dagger KV=(1-p/m)h,& R&=QKV,& D&=QKQ,\\
+ G&=R^\dagger R,& M(s)&=R^\dagger e^{iDs}R,&
+ \Lambda(s)&=R^\dagger e^{iKs}R.
+\end{align}
+All sectors use the same $J$. Let $\PP X=\sum_eP_eXP_e$, including
+whole degenerate energy blocks. The actual dynamic field is
+\begin{equation}
+ \FF_m(s)=(1-\PP)\big[m e^{-ihs/2}M(s)e^{-ihs/2}\big].
+\end{equation}
+Inactive $m<p$ sectors, including $m=0$, are zero. Define convolution
+$A*B(s)=\int_0^s A(s-t)B(t)\,dt$, $U(s)=e^{ias}$ and
+$J_n=\Lambda*(U*\Lambda)^{*n}$, with $J_0=\Lambda$.
+Replacing $M$ by $J_0+J_1+J_2$ defines $\FF^{[2]}$.
+We prove, uniformly for $|s|,|u|\leq S$ and all real $T$,
+\begin{align}
+ \|\FF(s)-\FF^{[2]}(s)\|_{2,\mathrm{ann}}&=O_S(p^{-2}),\label{eq:mainfield}\\
+ |C_N(s,u;T)-C_N^{[2]}(s,u;T)|&=O_S(p^{-1}),\label{eq:maincov}
+\end{align}
+where $C_N=\sum_m b_m\EE\tr_m\FF_m(s)^\dagger
+e^{iTh}\FF_m(u)e^{-iTh}$ and $C_N^{[2]}$ uses the proxy fields.
+
+\newpage
+\section{Exact finite iteration, not a time Taylor truncation}
+Removing projected propagation by auxiliary kernels is an established
+Mori method \cite{MR,WZS}. Here finite matrices allow a direct proof.
+In $P\oplus Q$, identify $P$ with the source space using $V$:
+\begin{equation}
+ K=\begin{pmatrix}a&R^\dagger\\R&D|_Q\end{pmatrix}.
+\end{equation}
+The $Q$-block Duhamel equations give two transitions and hence $i^2=-1$:
+\begin{equation}
+ \Lambda=M-M*U*\Lambda,\qquad M=\Lambda+M*U*\Lambda.\label{eq:volterra}
+\end{equation}
+For example, eliminating the $P$-block of $e^{iKs}R$ yields a
+convolution of $e^{iDs}$, $R$, $U$, $R^\dagger$, and the full
+$Q$-block. Multiplying by $R^\dagger$ and $R$ gives
+\eqref{eq:volterra}, preserving the matrix order.
+Associativity gives, for any fixed integer $j\geq0$,
+\begin{equation}
+ M=\sum_{n=0}^jJ_n+\mathcal E_j,\qquad
+ \mathcal E_j=M*(U*\Lambda)^{*(j+1)}.\label{eq:finite}
+\end{equation}
+This is a finite identity with an exact remainder. No convergence
+of an infinite Neumann or Taylor series is assumed.
+
+Normalize every rectangular Schatten trace by the \emph{same}
+source dimension $d_m$. An integrand in $\mathcal E_j$ contains
+$2j+4$ factors $R$ or $R^\dagger$, separated by unitary
+propagators. Schatten H\"older with exponent $4j+8$ bounds its
+Hilbert--Schmidt norm by $(\tr_mG^{2j+4})^{1/2}$.
+The $2j+2$ integrations have simplex volume
+$|s|^{2j+2}/(2j+2)!$. Therefore, samplewise,
+\begin{align}
+ \|\mathcal E_j(s)\|_{2,m}
+ &\leq\frac{|s|^{2j+2}}{(2j+2)!}(\tr_mG^{2j+4})^{1/2},\label{eq:rem}\\
+ \|J_n(s)\|_{2,m}
+ &\leq\frac{|s|^{2n}}{(2n)!}(\tr_mG^{2n+2})^{1/2},\label{eq:term}\\
+ \|M(s)\|_{2,m}&\leq(\tr_mG^2)^{1/2}.
+\end{align}
+For negative times use adjoints: reversing the simplex order gives
+$J_n(-s)=J_n(s)^\dagger$. Equivalently the oriented convolutions
+contain an even number of integrations. Thus all bounds apply to
+both time signs.
+
+An elementary sign check is $K=\sigma_x$, $V=(1,0)^t$:
+$a=0$, $R=(0,1)^t$, $M=1$. The first terms are
+\begin{equation}
+ J_0=\cos s,\qquad J_1=\frac{s\sin s}{2},\qquad
+ J_2=\frac{s\sin s-s^2\cos s}{8}.
+\end{equation}
+In particular $M-\Lambda=s^2G^2/2+O(s^3)$ for general matrices.
+The finite-return expressions themselves retain all time orders.
+
+\newpage
+\section{Force square functions and uniform high moments}
+Let $F_i=[H,c_i]$, $\mathcal A=\sum_iF_i^\dagger F_i$.
+The exact dilation identity already used in the project is
+\begin{equation}
+ G=\mathcal A_m/m-(p/m)^2h^2,\qquad 0\leq G\leq\mathcal A_m/m.
+\end{equation}
+Here a direct Gaussian bound replaces any need to count high-order
+marked chord diagrams. For $T_{IJ}=c_I^\dagger c_J$,
+$[T_{IJ},c_i]$ vanishes unless $i\in I$; otherwise it is
+$\pm c_{I\setminus i}^\dagger c_J$.
+The covariance maps of $F_i$ are diagonal in occupation states.
+At charge $m$ and occupation $\eta=n_i$, their eigenvalues divided
+by $w_N$ are
+\begin{align}
+ f_{\rm in}(m,0)&=\binom mp\binom{N-m+p-1}{p-1},\\
+ f_{\rm in}(m,1)&=\binom{m-1}p\binom{N-m+p}{p-1}
+ +\binom{m-1}{p-1}\binom{N-m+p-1}{p-1},\\
+ f_{\rm out}(m,\eta)&=\binom{m-\eta}{p-1}\binom{N-m+p-1}p.
+\end{align}
+Invalid binomials are zero. Count the annihilated $J$ first for
+$f_{\rm in}$, separating whether it includes $i$; count the occupied
+$I\setminus i$ first for $f_{\rm out}$. Overlaps $I\cap J$ are retained.
+Both counts are at most
+$(N+p)^{2p-1}/[4^{p-1}p!(p-1)!]$: bound binomials by powers,
+pair $p-1$ powers with $xy\leq(x+y)^2/4$, and bound the remaining
+power by $N+p$. Hence
+\begin{equation}
+ \EE F_i^\dagger F_i,\ \EE F_iF_i^\dagger\ \leq v_N1,\quad
+ v_N=\frac{4J_s^2}{\lambda_N}\frac pN(1+p/N)^{2p-1}
+ \leq\frac{4J_s^2}{\lambda_N}\frac pN e^{2\lambda_N}.\label{eq:v}
+\end{equation}
+
+For clarity, the Gaussian matrix moment step is also explicit.
+If $X=\sum_\alpha g_\alpha B_\alpha=X^\dagger$ and
+$\sum B_\alpha^2\leq v1$, Gaussian integration by parts gives
+\begin{equation}
+ \EE\operatorname{Tr}X^{2k}
+ =\sum_{\ell=0}^{2k-2}\EE\sum_\alpha
+ \operatorname{Tr}B_\alpha X^\ell B_\alpha X^{2k-2-\ell}
+ \leq(2k-1)v\EE\operatorname{Tr}X^{2k-2}.
+\end{equation}
+To see the inequality, diagonalize $X$, take absolute values and
+apply weighted arithmetic--geometric mean to
+$|x_b|^\ell|x_a|^{2k-2-\ell}$. Symmetry of
+$|(B_\alpha)_{ab}|^2$ gives
+$\operatorname{Tr}(\sum B_\alpha^2)|X|^{2k-2}$.
+Apply the recurrence to the Hermitian dilation of the rectangular
+$F_i:\mathcal H_m\to\mathcal H_{m-1}$, stopping at its second moment.
+The factor two from the dilation cancels, so
+\begin{equation}
+ \EE\tr_m(F_i^\dagger F_i)^k\leq(2k-1)!!v_N^k,
+ \qquad \EE\tr_m\mathcal A_m^k\leq(2k-1)!!(Nv_N)^k.\label{eq:amom}
+\end{equation}
+The last step is Minkowski in the annealed Schatten $k$ norm;
+independence between the different $F_i$ is unnecessary.
+
+\newpage
+\section{Charge summation and the collective covariance error}
+Equations \eqref{eq:v}--\eqref{eq:amom} hold uniformly in charge.
+For $k\geq2$, eigenvalue monotonicity of $0\leq G\leq\mathcal A_m/m$
+gives $\tr_mG^k\leq m^{-k}\tr_m\mathcal A_m^k$; this does not
+assert that the power map is operator monotone. Eventually $p\leq N/4$.
+Split the binomial sum at $m=N/4$ and use
+$\Pr(m<N/4)\leq e^{-N/8}$. Since active sectors have $m\geq p$,
+\begin{align}
+ B_{k,N}&:=\sum_m b_m\EE m^2\tr_mG^k\\
+ &\leq(2k-1)!!(Nv_N)^k
+ \left[(N/4)^{2-k}+p^{2-k}e^{-N/8}\right]
+ =O_k(p^{4-k}).\label{eq:weighted}
+\end{align}
+There is no central-window limit exchange in this argument.
+Only $k=2,4,6,8$ are needed below. Exterior centering is unitary
+on both sides and $1-\PP$ is an orthogonal Hilbert--Schmidt
+projection. Thus, denoting the centered, pinched $mJ_n$ by $X_n$,
+\begin{align}
+ \|\FF(s)\|_{2,\mathrm{ann}}&\leq\sqrt{B_{2,N}}=O(p),\\
+ \|X_n(s)\|_{2,\mathrm{ann}}&\leq
+ \frac{S^{2n}}{(2n)!}\sqrt{B_{2n+2,N}}=O_S(p^{1-n}),\\
+ \|\FF(s)-\FF^{[j]}(s)\|_{2,\mathrm{ann}}&\leq
+ \epsilon_{j,N}:=\frac{S^{2j+2}}{(2j+2)!}\sqrt{B_{2j+4,N}}
+ =O_S(p^{-j}).\label{eq:scaled}
+\end{align}
+Here $\FF^{[j]}=\sum_{n=0}^jX_n$. The exact finite-$N$ energy
+pinching is retained in every term.
+
+Conjugation by $e^{iTh}$ is an isometry, including for sample-dependent
+fields. Cauchy--Schwarz on the direct sum and Gaussian probability
+space gives
+\begin{equation}
+ |C_N-C_N^{[j]}|\leq
+ 2\sqrt{B_{2,N}}\,\epsilon_{j,N}+\epsilon_{j,N}^2.\label{eq:covbound}
+\end{equation}
+At $j=1$, the field error is $O(p^{-1})$, but this only proves
+an $O(1)$ covariance error using the available field bound.
+At $j=2$, \eqref{eq:covbound} is $O(p^{-1})$, proving
+\eqref{eq:mainfield}--\eqref{eq:maincov}. An $O(1)$ bound on
+the true finite-time field was not presumed.
+
+There is also a six-product form of the remaining calculation.
+Define
+\[
+ \langle X,Y\rangle_T=\sum_m b_m\EE\tr_m
+ X_m^\dagger e^{iTh}Y_me^{-iTh}.
+\]
+Then
+\begin{equation}
+ C_N(s,u;T)=
+ \sum_{\substack{n,l\geq0\\n+l\leq2}}
+ \langle X_n(s),X_l(u)\rangle_T+O_S(p^{-1}).\label{eq:six}
+\end{equation}
+The omitted pairs $(1,2),(2,1),(2,2)$ are bounded by
+$O(p^{-1}),O(p^{-1}),O(p^{-2})$. For numerical positivity,
+the full nine-product $C_N^{[2]}$ remains preferable.
+All estimates fix $S$ and $\lambda_->0$; they do not cover
+growing memory times or a simultaneous $\lambda\to0$ limit.
+
+\newpage
+\section{Ordinary propagation and a stable spectral formula}
+Let $F(s)=V^\dagger e^{iKs}V$ (this $F$ is a compressed propagator).
+Expanding $R=KV-Va$ gives the exact identity
+\begin{equation}
+ \Lambda(s)=-F''(s)+i\{a,F'(s)\}+aF(s)a.\label{eq:derivative}
+\end{equation}
+The sign of the last term follows directly from this expansion;
+it should not be copied from a different Mori projection convention.
+Keep $a=(1-p/m)h$ exactly.
+
+Choose eigenbases $h|a\rangle=E_a|a\rangle$ and
+$H_{m-1}|\alpha\rangle=\varepsilon_\alpha|\alpha\rangle$.
+Put $a_a=(1-p/m)E_a$, $c^i_{\alpha a}=\langle\alpha|c_i|a\rangle$, and
+\begin{equation}
+ W^\alpha_{ab}=\frac1m\sum_i(c^i_{\alpha a})^*c^i_{\alpha b}
+ (\varepsilon_\alpha-a_a)(\varepsilon_\alpha-a_b).
+\end{equation}
+Then $\Lambda_{ab}(s)=\sum_\alpha W^\alpha_{ab}e^{i\varepsilon_\alpha s}$.
+For $r\geq0$, define the time-simplex integral
+\begin{equation}
+ \mathcal I_r(s;\xi_0,\ldots,\xi_r)=
+ \int_{\substack{t_j\geq0\\\sum t_j=s}}
+ e^{i\sum_j\xi_jt_j}\,dt_0\cdots dt_{r-1}
+ =i^{-r}[e^{is\,\cdot}]^{[r]}(\xi_0,\ldots,\xi_r),\label{eq:simplex}
+\end{equation}
+initially for $s\geq0$ and then continued to real $s$.
+The first two returns are the finite spectral paths
+\begin{align}
+ (J_1)_{ab}&=\sum_{\alpha,\beta,c}W^\alpha_{ac}W^\beta_{cb}
+ \mathcal I_2(s;\varepsilon_\alpha,a_c,\varepsilon_\beta),\\
+ (J_2)_{ab}&=\sum_{\alpha,\beta,\gamma,c,d}
+ W^\alpha_{ac}W^\beta_{cd}W^\gamma_{db}
+ \mathcal I_4(s;\varepsilon_\alpha,a_c,\varepsilon_\beta,a_d,
+ \varepsilon_\gamma).
+\end{align}
+Coincident energies use confluent divided differences.
+One stable evaluation is the top-right entry of $e^{sB}$,
+where $B$ has diagonal $i\xi_j$ and unit superdiagonal. It
+automatically gives $s^re^{i\xi s}/r!$ when all nodes coincide.
+
+Set $L=J_0+J_1+J_2$. For one sector and one realization the
+proxy covariance is
+\begin{equation}
+ \frac{m^2}{d_m}\sum_{E_a\ne E_b}
+ e^{iT(E_a-E_b)+i(s-u)(E_a+E_b)/2}
+ \overline{L_{ab}(s)}L_{ab}(u).\label{eq:phase}
+\end{equation}
+Summing with $b_m$ and averaging gives $C_N^{[2]}$. Equal-energy
+blocks, not merely diagonal entries, are omitted. The phase in
+\eqref{eq:phase} keeps both the center time and the two memory times.
+No independent-copy replacement of $J$, annealed spectral factorization,
+or replacement of the exact pinching has been made.
+
+\newpage
+\section{Checks and the next calculation}
+The new driver \texttt{memory\_return\_expansion.py} in \texttt{code/}
+stores \texttt{finite-checks.json} in the stage results directory,
+without overwriting existing evidence. It checks:
+\begin{itemize}
+ \item Five complete CAR systems through $N=5$, including $p=3$:
+ 864 force-covariance diagonal entries agree exactly as integers;
+ off-diagonal covariance entries vanish. Another 118,132 rational
+ cases verify the combinatorial upper bound for $2\leq N\leq70$.
+ \item Four common-coupling systems $(N,p,m)=(3,1,2)$, $(4,2,3)$,
+ $(5,2,3)$, $(6,2,3)$ at $s=-0.8,0.35,1.1,2$:
+ all 48 finite-return remainder bounds hold. The derivative identity,
+ negative-time adjoints and covariance phases are independently checked.
+ \item A block-triangular exponential computes the return convolutions;
+ a separate spectral-path sum checks $J_0,J_1,J_2$ at $(3,1,2)$.
+ Its largest absolute-scaled matrix discrepancy is $9.39\times10^{-16}$.
+ Five scalar cases check the explicit trigonometric formulas, including
+ the confluent zero-energy return nodes.
+\end{itemize}
+The Hamiltonians in the finite propagation tests are seeded Gaussian
+integer Hermitian coefficient matrices, divided by their operator
+norms. Their seed, exact coefficient hash and scale are saved.
+They test identities, not ensemble asymptotics. Arithmetic is
+\texttt{complex128}; $2\times10^{-12}$ identity tolerances and
+$2\times10^{-13}$ bound allowances are empirical roundoff tolerances.
+
+At $s=2$, the observed remainder/bound ratios are:
+\begin{center}
+\begin{tabular}{rrrrr}\toprule
+$N$&$p,m$&zero returns&one return&two returns\\\midrule
+3&1,2&0.852425&0.877750&0.899381\\
+4&2,3&0.783725&0.838456&0.871689\\
+5&2,3&0.913060&0.934683&0.947976\\
+6&2,3&0.899579&0.921893&0.936414\\\bottomrule
+\end{tabular}
+\end{center}
+The $(3,1,2)$ dynamic pinched covariance is numerically zero;
+the other three cases supply nonzero checks. For $(4,2,3)$ at
+$(s,u,T)=(-0.8,1.1,0.67)$, the two-return covariance error is
+$1.71146\times10^{-5}$, below the direct Cauchy--Schwarz bound
+$2.47819\times10^{-5}$. These finite errors are retained.
+
+\paragraph{Next step.}
+Evaluate the six common-coupling, pinched products in
+\eqref{eq:six}, establish finite-$s$ tightness and identify their
+limit. This is a concrete route from the microscopic bilocal to
+the Susskind-line bulk meson problem. The present reduction does
+not yet determine that limit or a bulk mass/space dictionary.
+The earlier three Taylor-coefficient spectra remain unchanged.
+
+\begin{thebibliography}{9}
+\bibitem{MR} A.~Montoya-Castillo and D.~R.~Reichman,
+\emph{Approximate but Accurate Quantum Dynamics from the Mori
+Formalism: I. Nonequilibrium Dynamics},
+\href{https://arxiv.org/abs/1603.01903}{arXiv:1603.01903},
+Sec.~III, Eqs.~(11)--(26). Auxiliary-kernel removal and derivative
+rewritings are established methods; that paper credits Shi--Geva.
+\bibitem{WZS} C.~Widder, J.~Zimmer and T.~Schilling,
+\emph{On the generalized Langevin equation and the Mori projection
+operator technique}, \href{https://arxiv.org/abs/2503.20457}{arXiv:2503.20457},
+Secs.~2--3. General context for projected evolution and Volterra
+equations; no unbounded-operator theorem is required here.
+\end{thebibliography}
+\end{document}

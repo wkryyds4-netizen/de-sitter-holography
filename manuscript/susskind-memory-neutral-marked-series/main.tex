@@ -1,0 +1,463 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,booktabs}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\NN}{\mathcal N}
+\newcommand{\RR}{\mathcal R}
+\newcommand{\DD}{\mathfrak D}
+\newcommand{\WW}{\mathcal W}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\PP}{\mathcal P_h}
+\newcommand{\thN}{\theta(\NN)}
+\newcommand{\rhat}{\widehat r}
+\newcommand{\ehat}{\widehat\eta}
+\newtheorem{proposition}{Proposition}
+\title{A rank-marked series for the neutral memory field\\
+\large Actual propagators, Jacobi contraction errors, and finite-time control}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{7 November 2026\quad Local research draft}
+\begin{document}
+\maketitle
+\begin{abstract}
+We give a uniformly summable representation of the neutral component of
+the common-coupling complex DSSYK memory field on every fixed real-time
+interval. Its inputs are highest Gaussian-chaos fields with one output-rank
+deficit mark. A forced recurrence retains all lower-chaos contractions.
+The main additional estimate is uniform integrability of the rank-deficit
+square for the actual exponential, obtained from fixed-degree sixth moments
+and a graph-norm Taylor tail. This identifies a finite-time computational
+interface; the limiting marked joint spectral measure remains to be computed.
+\end{abstract}
+
+\section{Model and the result to be represented}
+Use standard CAR, overlapping complex Gaussian $p$-body couplings, and the
+same original couplings in every charge sector. The state is the normalized
+annealed full trace at $\beta=\mu=0$, with weights
+$b_m=2^{-N}\binom Nm$. We take even $N$, $p\to\infty$,
+$\lambda_N=p^2/N\to\lambda>0$, fixed $J_s$, $\hbar=1$, and string real time.
+In sector $m$ write $h=H_m=\sum_\gamma g_\gamma B_\gamma$,
+$\sum_\gamma B_\gamma^2=C_m I$; $C_m\le M$ uniformly.
+Norms mean $\|X\|_{2,m}^2=\EE\tr_m X^\dagger X$.
+An independent copy $u$ defines $\Phi(X)=\EE_u[uXu]$.
+The exact energy pinching is $\PP X=\sum_e P_eXP_e$, including
+whole degenerate blocks.
+
+Put $\alpha_m=(1-p/m)_+$ and $\epsilon_m=1-\alpha_m^2$ (zero sectors
+are interpreted directly). The preceding two-component reduction gives
+$\mathsf F=A+B+o_{L^2}(1)$, where the neutral field is
+\begin{equation}
+ B_m(s)=(1-\PP)m\epsilon_m e^{-ihs/2}
+                 \Phi(e^{i\alpha_mhs})e^{-ihs/2}.\label{eq:B}
+\end{equation}
+Here $A$ is the charged transfer defect from the previous stage
+\cite{Two,Uniform}. We retain $\alpha_m$ and $m\epsilon_m/p$ exactly.
+Our new representation of $B$ is stated on page~\pageref{result};
+its construction uses finite-$N$ coefficients throughout.
+
+\newpage
+\section{Exact Jacobi rearrangement, before taking a limit}
+In a broad central sector $N/4\le m\le3N/4$, suppress $m$ and set
+\begin{align}
+ \mu(r)&=\prod_{\ell=0}^{p-1}
+ \left(1-\frac r{m-\ell}\right)_+
+ \left(1-\frac r{N-m+p-\ell}\right)_+,\qquad \theta_j=\mu(jp),\\
+ \DD&=p\NN-\RR,\qquad Z_j=\WW_j(h^j),\qquad U_j=\DD Z_j.
+\end{align}
+$\NN$ counts coupling Gaussian chaos; $\RR$ is the output $U(N)$
+rank. On equivariant functions $\DD\ge0$, and $\Phi/C=\mu(\RR)$.
+These operators commute with one another, but not generally with
+samplewise multiplication by $h$. The positive-part extension defines
+$\mu(jp)$ even beyond the physical rank range.
+
+Let $\lambda_N\in[\lambda_-,\lambda_+]$ and $p\le N/16$. The previous
+Jacobi construction \cite{Uniform} supplies
+\begin{align}
+ a_j&=\sum_{v<j}\theta_v,\quad 1\le a_j\le A\ (j\ge1),
+ \quad A=(1-e^{-3\lambda_-})^{-1},\\
+ Q_0&=1,\quad Q_1=x,\quad Q_{j+1}=xQ_j-Ca_jQ_{j-1},\\
+ E_j&=Z_j-Q_j(h),\qquad \eta_j=pE_j.
+\end{align}
+Here $a_0=0$ and the three-term recurrence starts at $j=1$.
+$E_j$ has Gaussian degree at most $j-2$. The scalar coefficients of
+the auxiliary bounded Jacobi operator satisfy the entire identity
+and the bounds
+\begin{align}
+ e^{is h}&=\sum_{j\ge0}c_j(s)Q_j(h),\qquad
+ |c_j(s)|\le e^{2\sqrt{AM}S}\frac{(2\sqrt A S)^j}{j!},\label{eq:c}\\
+ \|E_j\|_2&\le\frac pN L K_*^j\sqrt{j!}\,C^{j/2},\qquad
+ K_*=4+A,\label{eq:E}\\
+ L&=12\sqrt{2\cdot10^6}(\sqrt{\lambda_+}+\lambda_+),\qquad |s|\le S.
+\end{align}
+This is an expansion on the actual Gaussian spectrum, not just on
+the compact support of an auxiliary measure.
+
+Since $\thN Z_j=\theta_jZ_j$, exact algebra gives
+\begin{equation}
+ \thN Q_j(h)=\theta_jQ_j(h)+(\theta_j-\thN)E_j.
+\end{equation}
+The sum $\sum c_j\theta_jQ_j(h)$ is a samplewise energy function.
+All series converge absolutely in annealed $L^2$. Therefore
+\begin{equation}
+ \boxed{\quad
+ \frac pC(1-\PP)\Phi(e^{ish})=(1-\PP)
+ \left\{p[\mu(\RR)-\thN]e^{ish}
+ +\sum_{j\ge0}c_j(s)(\theta_j-\thN)\eta_j\right\}.
+ \quad}\label{eq:exact}
+\end{equation}
+The second sum cannot be omitted: $pE_j$ is order one on this scale.
+
+\newpage
+\section{Fixed-degree higher moments from the existing rank law}
+The positive rank-product law and the sixth-moment certificate of
+\cite{Central,Rank} extend to any fixed number of rank steps.
+For independent pure ranks $a,r$, let the output rank be $t$ and
+$S=a+r-t$. Its Racah identity determines moments through
+\begin{align}
+ \EE\chi_t(n)&=\chi_a(n)\chi_r(n),\qquad x_t=t(N+1-t),\\
+ F_n&=\frac{\chi_a(n)\chi_r(n)-\sum_{j<n}c_{nj}F_j}{c_{nn}},
+ \quad F_j=\EE\prod_{\ell<j}(x_t-x_\ell).
+\end{align}
+Here $c_{nj}$ are the coefficients of $\chi_t(n)$ in that monic
+polynomial basis; their exact expression and the symbolic certificate
+are in \cite{Central}.
+
+The certificate cancels 21 negative Laurent coefficients through
+order six over the full polynomial ring $\mathbb Q[A_0,B_0,z]$, with
+$A_0=a/\sqrt N$, $B_0=r/\sqrt N$, $z=(m-N/2)/\sqrt N$.
+Its denominators have nonzero limiting constants on compact sets.
+For any fixed $K,X$, it consequently applies to
+\begin{equation}
+ a\le p,\quad r\le Kp,\quad |m-N/2|\le Xp.
+\end{equation}
+Indeed $x_{a+r}-x_t=S[N+1-2(a+r)+S]$, whose bracket is at least
+$N/2$ for sufficiently large $N$ at fixed $K$. Hence $\EE S^6$ is
+uniformly bounded. This extension changes the compact set of the
+old certificate, not the physical interaction size $p$.
+
+For a Hamiltonian rank step define $\delta=p+r-t=(p-a)+S$.
+The input rank deficit $p-a$ has the previously proved factorial tail.
+Mixture over $a$ and $(x+y)^6\le32(x^6+y^6)$ give finite constants
+\begin{equation}
+ M_{K,6}=\sup_{r\le Kp}\EE_r\delta^6<\infty,\qquad
+ S_{K,4}=\sup_{r\le Kp}\EE_r\delta^4\le M_{K,6}^{2/3}.\label{eq:step6}
+\end{equation}
+These constants may depend on $K,X,\lambda_\pm$.
+The positive Markov chain of $k$ independent inputs has
+\begin{equation}
+ D_k=kp-r_k=\sum_{j<k}\delta_j,\qquad
+ \EE D_k^6\le k^5\sum_{j<k}M_{j,6}.\label{eq:fixed6}
+\end{equation}
+Gaussian symmetrization is a contraction and commutes with output
+rank, so
+\begin{equation}
+ \|\DD^aZ_k\|_2^2\le k!C^k\EE D_k^{2a},\qquad a=1,2,3.
+\end{equation}
+This fixed-$k$ conclusion alone does not control the actual exponential.
+The next page supplies the degree tail before either cutoff is removed.
+
+\newpage
+\section{A graph-norm tail for the actual exponential}
+Let $\mathcal T$ denote left multiplication by $h$. On degree at most $r$,
+the all-degree first-commutator bound of \cite{Rank} reads
+\begin{align}
+ \|\mathcal T\psi\|_2&\le L_H\sqrt{r+1}\|\psi\|_2,
+ \quad L_H=2\sqrt M,\\
+ \|[\DD,\mathcal T]\psi\|_2&\le K_0(r+1)^{3/2}\|\psi\|_2,
+ \quad K_0=2000\sqrt{M(\lambda_++\lambda_+^2)}.
+\end{align}
+These hold throughout the broad central interval.
+Commuting $\DD$ through $h^n$ inductively gives
+\begin{equation}
+ b_n:=\|\DD h^n\|_2\le
+ \frac{K_0n(n+1)}2 L_H^{n-1}\sqrt{n!}.
+\end{equation}
+For the ordinary Taylor polynomial $P_K(s,h)$, closedness of $\DD$
+and the convergent Gaussian moment series imply
+\begin{align}
+ \sup_{|s|\le S}\|\DD(e^{ish}-P_K(s,h))\|_2&\le T_K(S),\\
+ T_K(S)&=\frac{K_0}2\sum_{n>K}
+ \frac{n(n+1)S^nL_H^{n-1}}{\sqrt{n!}}\longrightarrow0.\label{eq:graph}
+\end{align}
+In a compact central charge window, rank orthogonality, creation
+symmetrization and \eqref{eq:step6} also give
+\begin{equation}
+ \|[\DD,[\DD,\mathcal T]]\psi_{\le K}\|_2
+ \le J_K\|\psi\|_2,\qquad J_K=2\sqrt{M(K+1)S_{K,4}}.
+\end{equation}
+The annihilation block is the adjoint of the creation block; no
+reverse transition probability is assumed. Define $d_0=0$ and
+\begin{align}
+ d_n={}&L_H\sqrt n\,d_{n-1}+2K_0n^{3/2}b_{n-1}
+       +J_{n-1}L_H^{n-1}\sqrt{(n-1)!},\\
+ C_K(S)&=\sum_{n\le K}S^nd_n/n! .
+\end{align}
+The identity $\DD^2\mathcal T=\mathcal T\DD^2+
+2[\DD,\mathcal T]\DD+[\DD,[\DD,\mathcal T]]$ proves
+$\|\DD^2h^n\|_2\le d_n$. Thus
+\begin{equation}
+ \boxed{\quad\sup_{|s|\le S}
+ \|\DD1_{\DD>R}e^{ish}\|_2\le T_K(S)+C_K(S)/R.\quad}\label{eq:UI}
+\end{equation}
+Choose $K$ first, then $R$. This is uniform integrability of the
+$\DD^2$ spectral weight of the complete exponential.
+
+For fixed $k,d$, differentiating the finite product for $\mu$ gives
+$p[\mu(kp-d)-\mu(kp)]-4\lambda_N\theta_kd\to0$.
+Globally its first term is at most $12\lambda_Nd$, so the absolute
+combined multiplier is bounded by $16\lambda_+\DD$.
+Degree cutoff \eqref{eq:graph} and rank cutoff \eqref{eq:UI} therefore prove
+\begin{equation}
+ p[\mu(\RR)-\thN]e^{ish}-4\lambda_N\thN\DD e^{ish}
+ \longrightarrow0\quad\hbox{in }L^2,\label{eq:slope}
+\end{equation}
+uniformly on compact real times and compact central charge windows.
+
+\newpage
+\section{Generating every contraction correction from one marked family}
+Use $\diamond$ for the ordinary coupling-Gaussian Wick product with
+ordered matrix coefficients, not the spectral $q$-Wick product.
+Differentiating the homogeneous polynomial before projecting gives
+the exact annihilation remainder
+\begin{align}
+ r_j&=\sum_{v<j}[(\Phi-C\theta_v)Z_v]\diamond Z_{j-1-v},\label{eq:r}\\
+ \eta_{j+1}&=h\eta_j-Ca_j\eta_{j-1}-pr_j,
+ \qquad\eta_0=\eta_1=\eta_2=0.\label{eq:eta}
+\end{align}
+For a homogeneous degree-$v$ tensor $V_v$, right creation by $h$
+repeated $w$ times proves
+\begin{equation}
+ \|V_v\diamond Z_w\|_2\le
+ \sqrt{(v+w)!/v!}\,C^{w/2}\|V_v\|_2.\label{eq:wickbound}
+\end{equation}
+One sums $\sum B_\gamma^2=CI$ before symmetrization at each step.
+This estimate does not assert a bound for arbitrary products of two
+matrix-valued Gaussian functions.
+
+Define the finite-parameter source and its forced recurrence by
+\begin{align}
+ \rhat_j&=4\lambda_NC\sum_{v<j}\theta_v
+                          (U_v\diamond Z_{j-1-v}),\label{eq:rhat}\\
+ \ehat_0&=\ehat_1=0,\qquad
+ \ehat_{j+1}=h\ehat_j-Ca_j\ehat_{j-1}-\rhat_j.\label{eq:etahat}
+\end{align}
+$U_0=0$ also gives $\ehat_2=0$. At fixed $j$, the slope calculation
+on $Z_v$, controlled by \eqref{eq:fixed6}, yields
+$\|pr_j-\rhat_j\|_2\to0$.
+Every error has bounded Gaussian degree, so multiplication by $h$
+is bounded on it. Induction in \eqref{eq:eta} gives
+\begin{equation}
+ \|\eta_j-\ehat_j\|_2\longrightarrow0\qquad(j\text{ fixed}).\label{eq:etalim}
+\end{equation}
+
+The all-degree second-moment bound already established in \cite{Rank} is
+\begin{equation}
+ \|U_v\|_2\le\sqrt{v!}\,C^{v/2}\sqrt{K_v},\qquad
+ K_v=2\cdot10^6(\lambda_Nv^2+\lambda_N^2v^4).
+\end{equation}
+Set $q_*=e^{-3\lambda_-}$. Since $\theta_v\le q_*^v$, \eqref{eq:wickbound}
+implies $\|\rhat_j\|_2\le\widehat L C^{(j+1)/2}\sqrt{(j-1)!}$, where
+\begin{equation}
+ \widehat L=4\lambda_+\sqrt{2\cdot10^6}
+ \left[\frac{\sqrt{\lambda_+}q_*}{(1-q_*)^2}
+ +\frac{\lambda_+q_*(1+q_*)}{(1-q_*)^3}\right].
+\end{equation}
+Recurrence \eqref{eq:etahat} now gives the uniform estimate
+\begin{equation}
+ \|\ehat_j\|_2\le\widehat L K_*^j C^{j/2}\sqrt{j!}.\label{eq:etatail}
+\end{equation}
+Equations \eqref{eq:E}, \eqref{eq:c} and \eqref{eq:etatail} give summable
+tails for both correction series before taking the large-$N$ limit.
+
+\newpage
+\section{Closing the actual finite-time representation}\label{result}
+It remains to replace $\DD e^{ish}$ by the highest-chaos marked series.
+Fixed-degree bounds on $\DD^2Q_j(h)$ follow from the double commutator;
+those on $\DD^2Z_j$ follow from \eqref{eq:fixed6}. Since $E_j=O(1/p)$,
+spectral Cauchy--Schwarz proves
+\begin{equation}
+ \|\DD E_j\|_2^2\le\|E_j\|_2\|\DD^2E_j\|_2\longrightarrow0.
+\end{equation}
+For an all-degree bound, the nonadjacent coefficients of $Q_j$ obey
+$|[x^{j-2\ell}]Q_j|\le C^\ell A^\ell\binom{j-\ell}{\ell}$.
+Let $R_*=1+\sqrt{1+A}$ and $d_+=\lambda_++\lambda_+^2$.
+Using the first commutator with $C$ in place of $M$ gives
+\begin{equation}
+ \|\DD Q_j(h)\|_2\le500\sqrt{d_+}\,j(j+1)R_*^j
+                              C^{j/2}\sqrt{j!}.\label{eq:DQ}
+\end{equation}
+Indeed $\sum_\ell\binom{j-\ell}{\ell}A^\ell2^{j-2\ell}\le R_*^j$.
+The Jacobi series therefore converges in the $\DD$ graph norm,
+and fixed-degree convergence plus its summable tail yields
+\begin{equation}
+ \DD e^{ish}-\sum_{j\ge0}c_j(s)U_j\longrightarrow0.\label{eq:Dseries}
+\end{equation}
+
+\begin{proposition}
+Define, using only the finite-parameter objects above,
+\begin{align}
+ \mathcal V_m(s)&=\sum_{j\ge0}c_j(s)
+ \left[4\lambda_N\theta_jU_j+(\theta_j-\thN)\ehat_j\right],\label{eq:V}\\
+ \widetilde B_m(s)&=\frac{m\epsilon_m}{p}C_m(1-\PP)
+  e^{-ihs/2}\mathcal V_m(\alpha_ms)e^{-ihs/2}.\label{eq:Btilde}
+\end{align}
+Set $\widetilde B_m=0$ outside $N/4\le m\le3N/4$.
+For every fixed $S$, the series is absolutely and uniformly summable,
+and
+\begin{equation}
+ \sup_{|s|\le S}\sum_m b_m
+          \|B_m(s)-\widetilde B_m(s)\|_{2,m}^2\longrightarrow0.\label{eq:full}
+\end{equation}
+\end{proposition}
+To prove this, combine \eqref{eq:exact}, \eqref{eq:slope},
+\eqref{eq:etalim} and \eqref{eq:Dseries}; $\thN U_j=\theta_jU_j$.
+All factors outside the series are bounded: $m\epsilon_m/p\le2$,
+$C_m\le M$, real-time phases are unitary, and pinching is contractive.
+On the central annulus, both fields have uniform bounds by
+\eqref{eq:E}, \eqref{eq:etatail} and the previous neutral estimate.
+The binomial probability of $|m-N/2|>Xp$ is at most
+$2e^{-2\lambda_-X^2}$; let $X\to\infty$ after $N$.
+Outside the broad central interval, $\|B_m\|_2\le2pM$ and the
+probability is at most $2e^{-N/8}$. These bounds establish \eqref{eq:full}.
+
+\newpage
+\section{Low-degree calibration and the joint-kernel task}
+The exact finite formulas retain conserved terms until the final
+energy pinching. Define
+\begin{equation}
+ b_1=(\Phi-C\theta_1)h,\quad b_2=(\Phi-C\theta_2)Z_2,
+ \quad d_1=\EE\tr_m(hb_1).
+\end{equation}
+Equivariance makes the contraction of $h$ with $b_1$ equal to $d_1I$.
+The recurrence implies
+\begin{align}
+ \eta_3&=-pb_1,\\
+ \eta_4&=-p\{h,b_1\}-pb_2+pd_1I.\label{eq:eta4}
+\end{align}
+The anticommutator itself has scalar contraction $2d_1I$;
+the net chaos-zero part of $\eta_4$ is $-pd_1I$.
+In the central double-scale limit the earlier conventions give
+\begin{equation}
+ \eta_3=-F/2-4\lambda^2Cq\,h+o_{L^2}(1),\qquad
+ q=e^{-4\lambda},\quad C=J_s^2/\lambda.
+\end{equation}
+The term proportional to $h$ is removed by final pinching, but
+cannot be dropped inside a subsequent chaos operation. After pinching,
+the known coefficient calibration is
+\begin{align}
+ (1-\PP)\eta_3&=-F/2+o_{L^2}(1),\\
+ (1-\PP)\eta_4&=-2\lambda Cq^2(Y_-+Y_+)
+ -(1+q)J_hF+o_{L^2}(1),
+ \qquad J_hX=\{h,X\}/2.
+\end{align}
+These relations use the already defined marked fields of \cite{Two}.
+They are coefficient checks; they do not assume interchange of
+derivatives with an unevaluated limiting time kernel.
+
+\paragraph{Implication for the research program.}
+The previous $\mathsf F=A+B+o_{L^2}(1)$ and uniform second moments
+now imply $\mathsf F=A+\widetilde B+o_{L^2}(1)$ on compact memory
+times. Cauchy--Schwarz transfers this replacement to the two-insertion
+covariance, uniformly in every real external time $T$, since
+$X\mapsto e^{iTh}Xe^{-iTh}$ is unitary. All four terms
+$AA,A\widetilde B,\widetilde BA,\widetilde B\widetilde B$ remain.
+
+This is a reduction to marked inputs, not yet their spectral solution.
+The outstanding calculation is the joint law of $h$, the $U_j$, their
+ordered Wick descendants in \eqref{eq:etahat}, and the charged defect
+with its reverse source retained. We need joint-moment formulas at every
+fixed degree, uniform summation, and control of the zero-frequency
+spectral mass removed by pinching. Moment convergence alone does not
+justify passing an exact zero-gap projection through a limit.
+The present proposition retains the finite-$N$ pinching throughout.
+
+\newpage
+\section{Checks, literature, and continuation}
+\paragraph{An explicit truncation bound.}
+Set $X_S=2K_*\sqrt{AM}S$ and
+$C_V=4\lambda_+\sqrt{2\cdot10^6}(\sqrt{\lambda_+}+\lambda_+)+2\widehat L$.
+The norm of the $j$th summand in \eqref{eq:V} is at most
+$C_Ve^{2\sqrt{AM}S}(j+1)^2X_S^j/\sqrt{j!}$.
+For a cutoff $J$ satisfying
+\begin{equation}
+ r_J=\frac{X_S}{\sqrt{J+2}}\left(\frac{J+3}{J+2}\right)^2<1,
+\end{equation}
+the tail after $J$ is at most
+\begin{equation}
+ C_Ve^{2\sqrt{AM}S}
+ \frac{(J+2)^2X_S^{J+1}}{\sqrt{(J+1)!}(1-r_J)}.
+\end{equation}
+This intentionally loose bound certifies a truncation; it is not
+an estimate of the unknown joint covariance.
+
+\paragraph{Executed checks.}
+Full-coordinate Hermite tests on $(N,p,m)=(3,1,2),(4,1,2),(4,2,3)$,
+through degrees $6,5,4$, retain all $9,16,36$ Gaussian coordinates.
+The 87 identity comparisons include 18 polynomial decompositions and
+12 sources; maximum absolute error is $5.68\cdot10^{-15}$.
+The nonzero scalar in \eqref{eq:eta4} is explicitly recovered.
+The rank driver checks 12 full sixth moments at $k=3,4,6$, 38 complete
+conditional distributions, 350 exact Casimir identities, and 6 independent
+pure-rank mixtures. Larger-parameter rows give 54 chain and 72 conditional
+\emph{upper bounds}, not direct deficit moments. All 450 slope-domination
+checks pass exactly; the largest retained finite relative deviation from
+the limiting slope is about $0.929$. Precision refinement (80/120 digits)
+changes results by at most $1.95\cdot10^{-78}$. These checks do not replace
+the uniform proof. Parameters, dependency versions and hashes are saved.
+
+\paragraph{Existing formulas that can be reused.}
+Effros--Popa \cite{EP}, Theorems 3.2--3.3, give multiblock $q$-Wick
+pairing and product rules. The expected product excludes pairings
+internal to a block and weights crossings; the product formula also
+accounts for singletons covered by arcs. This supplies standard
+combinatorics once the physical rank marks have been identified.
+It does not identify $\DD$ with a spectral Wick number operator.
+
+Berkooz et al.\ \cite{BINT}, Sections 4--5 and Appendix C.4,
+provide uncrossed multiprobe kernels and the crossed four-point
+$R$-matrix. Their independent probe weights make source derivatives
+a possible representation of a marked insertion. Establishing that
+the derivative equals our common-coupling rank mark is a separate
+step; no such identification is used in the proposition.
+
+Xu \cite{Xu}, Section 3.4, relates a chord-number generating function
+to a crossed four-point function. That chord number is distinct from
+$\DD=p\NN-\RR$. Direct differentiation of Eq.\ (101) yields its
+$k$th moment as $(-1)^k\partial_\mu^kI|_0$; the extra $1/k!$ printed
+in Eq.\ (102) does not follow from that generating-function definition.
+We use the definition if pursuing this route.
+
+\paragraph{Next calculation.}
+Construct the fixed-degree joint marked contractions first, test
+their lowest coefficients against the nonzero $A_0$--$B_2$ cross
+measure, and only then sum the controlled series. The same-original-$J$
+correlations and precise output-rank marks are the central data.
+The de Sitter bulk mass/position dictionary and finite-$G$ dynamics
+remain later tasks. The present result is a microscopic model
+calculation, with no claim of a complete gravitational dual or of
+priority over existing formulas. All artifacts remain local.
+
+\newpage
+\begin{thebibliography}{9}\small
+\bibitem{Two} A. Day and Chengheng, \emph{Four-field regression and a
+two-component memory field}, local stage, 7 Nov. 2026,
+\texttt{susskind-memory-two-component}.
+\bibitem{Uniform} A. Day and Chengheng, \emph{Uniform finite-time memory
+bounds}, local stage, 7 Nov. 2026, \texttt{susskind-memory-uniform-bound}.
+\bibitem{Rank} A. Day and Chengheng, \emph{Wick rank and the ordinary
+propagator}, local stage, 7 Nov. 2026, \texttt{susskind-memory-wick-rank}.
+\bibitem{Central} A. Day and Chengheng, \emph{Central-window sixth
+moments}, local stage, 6 Nov. 2026, \texttt{susskind-memory-central-window}.
+\bibitem{EP} E. G. Effros and M. Popa, \emph{Feynman Diagrams and Wick
+Products Associated with $q$-Fock Space},
+\href{https://arxiv.org/abs/math/0303045}{arXiv:math/0303045}.
+\bibitem{BINT} M. Berkooz, M. Isachenkov, V. Narovlansky and G. Torrents,
+\emph{Towards a full solution of the large N double-scaled SYK model},
+\href{https://arxiv.org/abs/1811.02584}{arXiv:1811.02584}.
+\bibitem{Xu} J. Xu, \emph{On Chord Dynamics and Complexity Growth in
+Double-Scaled SYK},
+\href{https://arxiv.org/abs/2411.04251}{arXiv:2411.04251v3}.
+\end{thebibliography}
+\end{document}

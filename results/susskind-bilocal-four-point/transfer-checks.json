@@ -1,0 +1,136 @@
+{
+  "schema": 1,
+  "status": "passed",
+  "created_utc": "2026-11-06T20:48:07.870279+00:00",
+  "arithmetic": "fractions.Fraction; real Hermitian integer couplings",
+  "scope": "exact finite algebra identities; no pinching eigenvector approximation; no DS fit",
+  "python": "3.14.5",
+  "source_sha256": "33bbe8b8e5a0d5d29758b7d4946f3d98cf9c011a8a9179abcf1e9c21a51fdbdf",
+  "cases": [
+    {
+      "N": 2,
+      "p": 1,
+      "dimension": 4,
+      "covariance_w": 1,
+      "formal_lambda": "1/2",
+      "formal_q": "1/2",
+      "target_C": "1",
+      "kappa": "1/3",
+      "coupling": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "matrix_identity_count": 11,
+      "scalar_entry_comparisons": 146,
+      "commutator_norm_squared": "0",
+      "J2_squared_W1_squared": "3/8",
+      "J2_W1_J2_W1": "3/8"
+    },
+    {
+      "N": 3,
+      "p": 2,
+      "dimension": 8,
+      "covariance_w": 1,
+      "formal_lambda": "4/3",
+      "formal_q": "1/2",
+      "target_C": "1",
+      "kappa": "8/9",
+      "coupling": [
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          2,
+          -1
+        ],
+        [
+          1,
+          -1,
+          3
+        ]
+      ],
+      "matrix_identity_count": 11,
+      "scalar_entry_comparisons": 578,
+      "commutator_norm_squared": "0",
+      "J2_squared_W1_squared": "53867/648",
+      "J2_W1_J2_W1": "53867/648"
+    },
+    {
+      "N": 4,
+      "p": 2,
+      "dimension": 16,
+      "covariance_w": 1,
+      "formal_lambda": "1",
+      "formal_q": "1/2",
+      "target_C": "1",
+      "kappa": "2/3",
+      "coupling": [
+        [
+          1,
+          0,
+          1,
+          -1,
+          0,
+          1
+        ],
+        [
+          0,
+          2,
+          -1,
+          0,
+          1,
+          -1
+        ],
+        [
+          1,
+          -1,
+          3,
+          1,
+          -1,
+          0
+        ],
+        [
+          -1,
+          0,
+          1,
+          4,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          -1,
+          0,
+          5,
+          -1
+        ],
+        [
+          1,
+          -1,
+          0,
+          1,
+          -1,
+          6
+        ]
+      ],
+      "matrix_identity_count": 11,
+      "scalar_entry_comparisons": 2306,
+      "commutator_norm_squared": "73567/144",
+      "J2_squared_W1_squared": "284163/8",
+      "J2_W1_J2_W1": "10156301/288"
+    }
+  ],
+  "total_matrix_identities": 33,
+  "total_scalar_entry_comparisons": 3030,
+  "nonzero_commutators": 1
+}

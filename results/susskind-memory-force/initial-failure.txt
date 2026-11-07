@@ -1,0 +1,1 @@
+Initial run: session 73560 exited 1 at integer_renewal, b3-formula assertion. The conversion helper used int() on T3=(M3+M3dagger)/2, which can have half-integer entries. Preserve this failure; use exact rational conversion before rerunning. No scientific output JSON existed.

@@ -1,0 +1,2885 @@
+{
+  "status": "passed",
+  "schema_version": 1,
+  "created_utc": "2026-11-06T20:03:02.459661+00:00",
+  "scope": "Exact fixed-degree formal graph checks of candidate joint charge/energy regression and resummed residual Grams, including mixed neutral and nonzero A0B2. Uses established joint-X graph law and known Mehler moments; finite tests do not replace all-degree analytic, uniform-integrability or pinching proofs.",
+  "normalization": "C=1; X centered Gaussian with variance 1/(4 lambda). q and lambda are independent formal rational parameters.",
+  "parameters": {
+    "models": [
+      {
+        "q": "1/3",
+        "lambda": "1/4",
+        "maximum_G_degree": 5,
+        "maximum_V_degree": 4
+      },
+      {
+        "q": "1/2",
+        "lambda": "1/2",
+        "maximum_G_degree": 3,
+        "maximum_V_degree": 3
+      }
+    ],
+    "C": 1,
+    "maximum_raw_slots": 10,
+    "charge_test_powers": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "Gram_energy_insertions": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "no_bridge_energy_insertions": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "mixed_energy_insertions": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "formal_parameter_scope": "q and lambda are independent rational variables; these points are not asserted to satisfy q=exp(-4 lambda)"
+  },
+  "parameter_sha256": "68ad9d458b6ca575fee875521899fb856f3b1d0689c5bbbb042d2fcf5836411d",
+  "environment": {
+    "python": "3.14.5",
+    "numpy": "2.4.6",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "input_sha256": {
+    "code/memory_joint_regression.py": "3faa08ab77138b8046955ed5b37f818bec86df3af9ee613a849c0beec7e853f5",
+    "code/check_memory_joint_regression.py": "d7e4b3f2618fe62e4848547e2819cbf0e988b028bf83192f3d8367adb4537231",
+    "code/memory_wick_descendant_chords.py": "e6f8199a41dda6b3a81c91f49afa20441a6270ca86de227658d5e72d9557d660",
+    "code/memory_body_source_chords.py": "e0c34558f1e18684bf3a32c906f5edc13e8ab02dfe113b34eaa6936f78015b72",
+    "code/memory_oriented_marked_chords.py": "3e18a622a1d1944b63be9218a2f61f506e6170c953ad49e16eb4357309c9d3d8",
+    "code/memory_size_marked_chords.py": "4b7e54c2218198ef0d8c29ed4aa6344cd3e5a24d466464c5006f49e0b6d7ec36",
+    "code/singlet_coefficient.py": "ef7d9b96f96a036ea0d9774950702a82a968b56758a778db0365e9df0c3b2e10",
+    "code/singlet_multimark.py": "5b1def3fcc893c807e416c909076c6bb8383f54975bd9ed09d5dde37f129db0d",
+    "code/complex_syk_dictionary.py": "96b4890a167beeadf0849ccffdbb20dd125d921af062fd291044da9024900abf",
+    "results/susskind-memory-oriented-transfer/body-geometry-checks.json": "e3900d9ce5c1a2d4cbfebb0071e8e9f61f0db6c18f618f04196c4a543f07c8d9",
+    "results/susskind-memory-wick-descendants/descendant-checks.json": "ac3cd3979227fe295028563c71f50e69d4baee33b962f88a77e933ffb95c47b1",
+    "results/susskind-memory-wick-descendants/source-regression-checks.json": "75fb4db80aaa3d665d915bd66f3f9051a0fd0861b5eacecc8add43697f323fcd"
+  },
+  "parents_verified": {
+    "results/susskind-memory-oriented-transfer/body-geometry-checks.json": {
+      "sha256": "e3900d9ce5c1a2d4cbfebb0071e8e9f61f0db6c18f618f04196c4a543f07c8d9",
+      "input_hashes_verified": true
+    },
+    "results/susskind-memory-wick-descendants/descendant-checks.json": {
+      "sha256": "ac3cd3979227fe295028563c71f50e69d4baee33b962f88a77e933ffb95c47b1",
+      "input_hashes_verified": true
+    },
+    "results/susskind-memory-wick-descendants/source-regression-checks.json": {
+      "sha256": "75fb4db80aaa3d665d915bd66f3f9051a0fd0861b5eacecc8add43697f323fcd",
+      "input_hashes_verified": true
+    }
+  },
+  "counts": {
+    "joint_projection_tests": 68,
+    "nonzero_joint_projection_tests": 68,
+    "residual_Gram_layouts": 39,
+    "residual_Gram_equalities": 117,
+    "nonzero_residual_Gram_layouts": 39,
+    "no_bridge_layouts": 30,
+    "nonzero_raw_no_bridge_layouts": 28,
+    "mixed_neutral_layouts": 44,
+    "nonzero_mixed_neutral_layouts": 32,
+    "neutral_algorithm_crosschecks": 16,
+    "nonzero_A0B2_Mehler_checks": 18,
+    "zero_A0B1_checks": 12,
+    "charge_static_diagnostic": 2,
+    "G2_joint_norm_calibration": 2
+  },
+  "diagram_statistics": {
+    "accepted_term_diagrams": 93277,
+    "nonzero_charge_connected_diagrams": 5203,
+    "negative_diagram_weights": 34370,
+    "term_moment_cache_misses": 2305
+  },
+  "models": [
+    {
+      "parameters": {
+        "q": "1/3",
+        "lambda": "1/4",
+        "maximum_G_degree": 5,
+        "maximum_V_degree": 4
+      },
+      "counts": {
+        "joint_projection_tests": 44,
+        "nonzero_joint_projection_tests": 44,
+        "residual_Gram_layouts": 29,
+        "residual_Gram_equalities": 87,
+        "nonzero_residual_Gram_layouts": 29,
+        "no_bridge_layouts": 20,
+        "nonzero_raw_no_bridge_layouts": 19,
+        "mixed_neutral_layouts": 32,
+        "nonzero_mixed_neutral_layouts": 24,
+        "neutral_algorithm_crosschecks": 8,
+        "nonzero_A0B2_Mehler_checks": 9,
+        "zero_A0B1_checks": 6,
+        "charge_static_diagnostic": 1,
+        "G2_joint_norm_calibration": 1
+      },
+      "diagram_statistics": {
+        "accepted_term_diagrams": 84013,
+        "nonzero_charge_connected_diagrams": 5039,
+        "negative_diagram_weights": 31843,
+        "term_moment_cache_misses": 1636
+      },
+      "candidate_fields": [
+        {
+          "n": 2,
+          "g_n": [
+            {
+              "length": 0,
+              "wick_blocks": [],
+              "mark_blocks": [],
+              "filter_blocks": [],
+              "charge_power": 0,
+              "coefficient": "-1/4"
+            },
+            {
+              "length": 0,
+              "wick_blocks": [],
+              "mark_blocks": [],
+              "filter_blocks": [],
+              "charge_power": 1,
+              "coefficient": "1"
+            },
+            {
+              "length": 2,
+              "wick_blocks": [],
+              "mark_blocks": [],
+              "filter_blocks": [],
+              "charge_power": 0,
+              "coefficient": "-1/4"
+            }
+          ],
+          "resummed_J": [
+            {
+              "length": 0,
+              "wick_blocks": [],
+              "mark_blocks": [],
+              "filter_blocks": [],
+              "charge_power": 0,
+              "coefficient": "1/4"
+            },
+            {
+              "length": 2,
+              "wick_blocks": [
+                [
+                  0,
+                  2
+                ]
+              ],
+              "mark_blocks": [
+                [
+                  0,
+                  2,
+                  "D"
+                ]
+              ],
+              "filter_blocks": [],
+              "charge_power": 0,
+              "coefficient": "1"
+            },
+            {
+              "length": 2,
+              "wick_blocks": [],
+              "mark_blocks": [],
+              "filter_blocks": [],
+              "charge_power": 0,
+              "coefficient": "-1/4"
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "g_n": [
+            {
+              "length": 1,
+              "wick_blocks": [],
+              "mark_blocks": [],
+              "filter_blocks": [],
+              "charge_power": 0,
+              "coefficient": "49/156"
+            },
+            {
+              "length": 1,
+              "wick_blocks": [],
+              "mark_blocks": [],
+              "filter_blocks": [],
+              "charge_power": 1,
+              "coefficient": "7/3"
+            },
+            {
+              "length": 3,
+              "wick_blocks": [],
+              "mark_blocks": [],
+              "filter_blocks": [],
+              "charge_power": 0,
+              "coefficient": "-33/52"
+            }
+          ],
+          "resummed_J": [
+            {
+              "length": 1,
+              "wick_blocks": [],
+              "mark_blocks": [],
+              "filter_blocks": [],
+              "charge_power": 0,
+              "coefficient": "105/52"
+            },
+            {
+              "length": 3,
+              "wick_blocks": [
+                [
+                  0,
+                  3
+                ]
+              ],
+              "mark_blocks": [
+                [
+                  0,
+                  3,
+                  "D"
+                ]
+              ],
+              "filter_blocks": [],
+              "charge_power": 0,
+              "coefficient": "1"
+            },
+            {
+              "length": 3,
+              "wick_blocks": [],
+              "mark_blocks": [],
+              "filter_blocks": [],
+              "charge_power": 0,
+              "coefficient": "-45/52"
+            }
+          ]
+        },
+        {
+          "n": 4,
+          "g_n": [
+            {
+              "length": 0,
+              "wick_blocks": [],
+              "mark_blocks": [],
+              "filter_blocks": [],
+              "charge_power": 0,
+              "coefficient": "-16/15"
+            },
+            {
+              "length": 0,
+              "wick_blocks": [],
+              "mark_blocks": [],
+              "filter_blocks": [],
+              "charge_power": 1,
+              "coefficient": "8/9"
+            },
+            {
+              "length": 2,
+              "wick_blocks": [],
+              "mark_blocks": [],
+              "filter_blocks": [],
+              "charge_power": 0,
+              "coefficient": "493/390"
+            },
+            {
+              "length": 2,
+              "wick_blocks": [],
+              "mark_blocks": [],
+              "filter_blocks": [],
+              "charge_power": 1,
+              "coefficient": "34/9"
+            },
+            {
+              "length": 4,
+              "wick_blocks": [],
+              "mark_blocks": [],
+              "filter_blocks": [],
+              "charge_power": 0,
+              "coefficient": "-141/130"
+            }
+          ],
+          "resummed_J": [
+            {
+              "length": 0,
+              "wick_blocks": [],
+              "mark_blocks": [],
+              "filter_blocks": [],
+              "charge_power": 0,
+              "coefficient": "-82/45"
+            },
+            {
+              "length": 2,
+              "wick_blocks": [
+                [
+                  0,
+                  2
+                ]
+              ],
+              "mark_blocks": [
+                [
+                  0,
+                  2,
+                  "D"
+                ]
+              ],
+              "filter_blocks": [],
+              "charge_power": 0,
+              "coefficient": "34/9"
+            },
+            {
+              "length": 2,
+              "wick_blocks": [],
+              "mark_blocks": [],
+              "filter_blocks": [],
+              "charge_power": 0,
+              "coefficient": "7361/1170"
+            },
+            {
+              "length": 4,
+              "wick_blocks": [
+                [
+                  0,
+                  4
+                ]
+              ],
+              "mark_blocks": [
+                [
+                  0,
+                  4,
+                  "D"
+                ]
+              ],
+              "filter_blocks": [],
+              "charge_power": 0,
+              "coefficient": "1"
+            },
+            {
+              "length": 4,
+              "wick_blocks": [],
+              "mark_blocks": [],
+              "filter_blocks": [],
+              "charge_power": 0,
+              "coefficient": "-249/130"
+            }
+          ]
+        },
+        {
+          "n": 5,
+          "g_n": [
+            {
+              "length": 1,
+              "wick_blocks": [],
+              "mark_blocks": [],
+              "filter_blocks": [],
+              "charge_power": 0,
+              "coefficient": "-708496/637065"
+            },
+            {
+              "length": 1,
+              "wick_blocks": [],
+              "mark_blocks": [],
+              "filter_blocks": [],
+              "charge_power": 1,
+              "coefficient": "200/81"
+            },
+            {
+              "length": 3,
+              "wick_blocks": [],
+              "mark_blocks": [],
+              "filter_blocks": [],
+              "charge_power": 0,
+              "coefficient": "73769/32670"
+            },
+            {
+              "length": 3,
+              "wick_blocks": [],
+              "mark_blocks": [],
+              "filter_blocks": [],
+              "charge_power": 1,
+              "coefficient": "142/27"
+            },
+            {
+              "length": 5,
+              "wick_blocks": [],
+              "mark_blocks": [],
+              "filter_blocks": [],
+              "charge_power": 0,
+              "coefficient": "-24601/15730"
+            }
+          ],
+          "resummed_J": [
+            {
+              "length": 1,
+              "wick_blocks": [],
+              "mark_blocks": [],
+              "filter_blocks": [],
+              "charge_power": 0,
+              "coefficient": "-3963314/637065"
+            },
+            {
+              "length": 3,
+              "wick_blocks": [
+                [
+                  0,
+                  3
+                ]
+              ],
+              "mark_blocks": [
+                [
+                  0,
+                  3,
+                  "D"
+                ]
+              ],
+              "filter_blocks": [],
+              "charge_power": 0,
+              "coefficient": "142/27"
+            },
+            {
+              "length": 3,
+              "wick_blocks": [],
+              "mark_blocks": [],
+              "filter_blocks": [],
+              "charge_power": 0,
+              "coefficient": "441691/32670"
+            },
+            {
+              "length": 5,
+              "wick_blocks": [
+                [
+                  0,
+                  5
+                ]
+              ],
+              "mark_blocks": [
+                [
+                  0,
+                  5,
+                  "D"
+                ]
+              ],
+              "filter_blocks": [],
+              "charge_power": 0,
+              "coefficient": "1"
+            },
+            {
+              "length": 5,
+              "wick_blocks": [],
+              "mark_blocks": [],
+              "filter_blocks": [],
+              "charge_power": 0,
+              "coefficient": "-54049/15730"
+            }
+          ]
+        }
+      ],
+      "joint_projection": [
+        {
+          "n": 2,
+          "energy_power": 0,
+          "charge_power": 0,
+          "raw_joint_moment": "-1/2",
+          "regression_joint_moment": "-1/2",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "energy_power": 0,
+          "charge_power": 1,
+          "raw_joint_moment": "1",
+          "regression_joint_moment": "1",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "energy_power": 0,
+          "charge_power": 2,
+          "raw_joint_moment": "-1/2",
+          "regression_joint_moment": "-1/2",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "energy_power": 0,
+          "charge_power": 3,
+          "raw_joint_moment": "3",
+          "regression_joint_moment": "3",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "energy_power": 2,
+          "charge_power": 0,
+          "raw_joint_moment": "-5/6",
+          "regression_joint_moment": "-5/6",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "energy_power": 2,
+          "charge_power": 1,
+          "raw_joint_moment": "1",
+          "regression_joint_moment": "1",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "energy_power": 2,
+          "charge_power": 2,
+          "raw_joint_moment": "-5/6",
+          "regression_joint_moment": "-5/6",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "energy_power": 2,
+          "charge_power": 3,
+          "raw_joint_moment": "3",
+          "regression_joint_moment": "3",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "energy_power": 4,
+          "charge_power": 0,
+          "raw_joint_moment": "-131/54",
+          "regression_joint_moment": "-131/54",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "energy_power": 4,
+          "charge_power": 1,
+          "raw_joint_moment": "7/3",
+          "regression_joint_moment": "7/3",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "energy_power": 4,
+          "charge_power": 2,
+          "raw_joint_moment": "-131/54",
+          "regression_joint_moment": "-131/54",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "energy_power": 4,
+          "charge_power": 3,
+          "raw_joint_moment": "7",
+          "regression_joint_moment": "7",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "energy_power": 1,
+          "charge_power": 0,
+          "raw_joint_moment": "-7/6",
+          "regression_joint_moment": "-7/6",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "energy_power": 1,
+          "charge_power": 1,
+          "raw_joint_moment": "7/3",
+          "regression_joint_moment": "7/3",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "energy_power": 1,
+          "charge_power": 2,
+          "raw_joint_moment": "-7/6",
+          "regression_joint_moment": "-7/6",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "energy_power": 1,
+          "charge_power": 3,
+          "raw_joint_moment": "7",
+          "regression_joint_moment": "7",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "energy_power": 3,
+          "charge_power": 0,
+          "raw_joint_moment": "-71/18",
+          "regression_joint_moment": "-71/18",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "energy_power": 3,
+          "charge_power": 1,
+          "raw_joint_moment": "49/9",
+          "regression_joint_moment": "49/9",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "energy_power": 3,
+          "charge_power": 2,
+          "raw_joint_moment": "-71/18",
+          "regression_joint_moment": "-71/18",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "energy_power": 3,
+          "charge_power": 3,
+          "raw_joint_moment": "49/3",
+          "regression_joint_moment": "49/3",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "energy_power": 5,
+          "charge_power": 0,
+          "raw_joint_moment": "-7303/486",
+          "regression_joint_moment": "-7303/486",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "energy_power": 5,
+          "charge_power": 1,
+          "raw_joint_moment": "1393/81",
+          "regression_joint_moment": "1393/81",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "energy_power": 5,
+          "charge_power": 2,
+          "raw_joint_moment": "-7303/486",
+          "regression_joint_moment": "-7303/486",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "energy_power": 5,
+          "charge_power": 3,
+          "raw_joint_moment": "1393/27",
+          "regression_joint_moment": "1393/27",
+          "exact": true
+        },
+        {
+          "n": 4,
+          "energy_power": 0,
+          "charge_power": 0,
+          "raw_joint_moment": "-7/3",
+          "regression_joint_moment": "-7/3",
+          "exact": true
+        },
+        {
+          "n": 4,
+          "energy_power": 0,
+          "charge_power": 1,
+          "raw_joint_moment": "14/3",
+          "regression_joint_moment": "14/3",
+          "exact": true
+        },
+        {
+          "n": 4,
+          "energy_power": 0,
+          "charge_power": 2,
+          "raw_joint_moment": "-7/3",
+          "regression_joint_moment": "-7/3",
+          "exact": true
+        },
+        {
+          "n": 4,
+          "energy_power": 0,
+          "charge_power": 3,
+          "raw_joint_moment": "14",
+          "regression_joint_moment": "14",
+          "exact": true
+        },
+        {
+          "n": 4,
+          "energy_power": 2,
+          "charge_power": 0,
+          "raw_joint_moment": "-55/9",
+          "regression_joint_moment": "-55/9",
+          "exact": true
+        },
+        {
+          "n": 4,
+          "energy_power": 2,
+          "charge_power": 1,
+          "raw_joint_moment": "262/27",
+          "regression_joint_moment": "262/27",
+          "exact": true
+        },
+        {
+          "n": 4,
+          "energy_power": 2,
+          "charge_power": 2,
+          "raw_joint_moment": "-55/9",
+          "regression_joint_moment": "-55/9",
+          "exact": true
+        },
+        {
+          "n": 4,
+          "energy_power": 2,
+          "charge_power": 3,
+          "raw_joint_moment": "262/9",
+          "regression_joint_moment": "262/9",
+          "exact": true
+        },
+        {
+          "n": 4,
+          "energy_power": 4,
+          "charge_power": 0,
+          "raw_joint_moment": "-5543/243",
+          "regression_joint_moment": "-5543/243",
+          "exact": true
+        },
+        {
+          "n": 4,
+          "energy_power": 4,
+          "charge_power": 1,
+          "raw_joint_moment": "7270/243",
+          "regression_joint_moment": "7270/243",
+          "exact": true
+        },
+        {
+          "n": 4,
+          "energy_power": 4,
+          "charge_power": 2,
+          "raw_joint_moment": "-5543/243",
+          "regression_joint_moment": "-5543/243",
+          "exact": true
+        },
+        {
+          "n": 4,
+          "energy_power": 4,
+          "charge_power": 3,
+          "raw_joint_moment": "7270/81",
+          "regression_joint_moment": "7270/81",
+          "exact": true
+        },
+        {
+          "n": 5,
+          "energy_power": 1,
+          "charge_power": 0,
+          "raw_joint_moment": "-199/27",
+          "regression_joint_moment": "-199/27",
+          "exact": true
+        },
+        {
+          "n": 5,
+          "energy_power": 1,
+          "charge_power": 1,
+          "raw_joint_moment": "398/27",
+          "regression_joint_moment": "398/27",
+          "exact": true
+        },
+        {
+          "n": 5,
+          "energy_power": 1,
+          "charge_power": 2,
+          "raw_joint_moment": "-199/27",
+          "regression_joint_moment": "-199/27",
+          "exact": true
+        },
+        {
+          "n": 5,
+          "energy_power": 1,
+          "charge_power": 3,
+          "raw_joint_moment": "398/9",
+          "regression_joint_moment": "398/9",
+          "exact": true
+        },
+        {
+          "n": 5,
+          "energy_power": 3,
+          "charge_power": 0,
+          "raw_joint_moment": "-20915/729",
+          "regression_joint_moment": "-20915/729",
+          "exact": true
+        },
+        {
+          "n": 5,
+          "energy_power": 3,
+          "charge_power": 1,
+          "raw_joint_moment": "32458/729",
+          "regression_joint_moment": "32458/729",
+          "exact": true
+        },
+        {
+          "n": 5,
+          "energy_power": 3,
+          "charge_power": 2,
+          "raw_joint_moment": "-20915/729",
+          "regression_joint_moment": "-20915/729",
+          "exact": true
+        },
+        {
+          "n": 5,
+          "energy_power": 3,
+          "charge_power": 3,
+          "raw_joint_moment": "32458/243",
+          "regression_joint_moment": "32458/243",
+          "exact": true
+        }
+      ],
+      "residual_Grams": [
+        {
+          "n": 2,
+          "m": 2,
+          "left_energy": 0,
+          "right_energy": 0,
+          "RR": "5/4",
+          "RS": "5/4",
+          "SR": "5/4",
+          "SS": "5/4",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "m": 2,
+          "left_energy": 1,
+          "right_energy": 1,
+          "RR": "5/36",
+          "RS": "5/36",
+          "SR": "5/36",
+          "SS": "5/36",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "m": 2,
+          "left_energy": 2,
+          "right_energy": 0,
+          "RR": "5/4",
+          "RS": "5/4",
+          "SR": "5/4",
+          "SS": "5/4",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "m": 2,
+          "left_energy": 0,
+          "right_energy": 2,
+          "RR": "5/4",
+          "RS": "5/4",
+          "SR": "5/4",
+          "SS": "5/4",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "m": 3,
+          "left_energy": 1,
+          "right_energy": 0,
+          "RR": "65/36",
+          "RS": "65/36",
+          "SR": "65/36",
+          "SS": "65/36",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "m": 3,
+          "left_energy": 0,
+          "right_energy": 1,
+          "RR": "65/36",
+          "RS": "65/36",
+          "SR": "65/36",
+          "SS": "65/36",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "m": 4,
+          "left_energy": 0,
+          "right_energy": 0,
+          "RR": "85/18",
+          "RS": "85/18",
+          "SR": "85/18",
+          "SS": "85/18",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "m": 4,
+          "left_energy": 1,
+          "right_energy": 1,
+          "RR": "1555/486",
+          "RS": "1555/486",
+          "SR": "1555/486",
+          "SS": "1555/486",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "m": 4,
+          "left_energy": 2,
+          "right_energy": 0,
+          "RR": "3595/486",
+          "RS": "3595/486",
+          "SR": "3595/486",
+          "SS": "3595/486",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "m": 4,
+          "left_energy": 0,
+          "right_energy": 2,
+          "RR": "3595/486",
+          "RS": "3595/486",
+          "SR": "3595/486",
+          "SS": "3595/486",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "m": 5,
+          "left_energy": 1,
+          "right_energy": 0,
+          "RR": "4615/486",
+          "RS": "4615/486",
+          "SR": "4615/486",
+          "SS": "4615/486",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "m": 5,
+          "left_energy": 0,
+          "right_energy": 1,
+          "RR": "4615/486",
+          "RS": "4615/486",
+          "SR": "4615/486",
+          "SS": "4615/486",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "m": 3,
+          "left_energy": 0,
+          "right_energy": 0,
+          "RR": "2653/468",
+          "RS": "2653/468",
+          "SR": "2653/468",
+          "SS": "2653/468",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "m": 3,
+          "left_energy": 1,
+          "right_energy": 1,
+          "RR": "68563/12636",
+          "RS": "68563/12636",
+          "SR": "68563/12636",
+          "SS": "68563/12636",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "m": 3,
+          "left_energy": 2,
+          "right_energy": 0,
+          "RR": "115571/12636",
+          "RS": "115571/12636",
+          "SR": "115571/12636",
+          "SS": "115571/12636",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "m": 3,
+          "left_energy": 0,
+          "right_energy": 2,
+          "RR": "115571/12636",
+          "RS": "115571/12636",
+          "SR": "115571/12636",
+          "SS": "115571/12636",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "m": 4,
+          "left_energy": 1,
+          "right_energy": 0,
+          "RR": "96155/6318",
+          "RS": "96155/6318",
+          "SR": "96155/6318",
+          "SS": "96155/6318",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "m": 4,
+          "left_energy": 0,
+          "right_energy": 1,
+          "RR": "96155/6318",
+          "RS": "96155/6318",
+          "SR": "96155/6318",
+          "SS": "96155/6318",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "m": 5,
+          "left_energy": 0,
+          "right_energy": 0,
+          "RR": "188363/6318",
+          "RS": "188363/6318",
+          "SR": "188363/6318",
+          "SS": "188363/6318",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "m": 5,
+          "left_energy": 1,
+          "right_energy": 1,
+          "RR": "21024179/511758",
+          "RS": "21024179/511758",
+          "SR": "21024179/511758",
+          "SS": "21024179/511758",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "m": 5,
+          "left_energy": 2,
+          "right_energy": 0,
+          "RR": "31036883/511758",
+          "RS": "31036883/511758",
+          "SR": "31036883/511758",
+          "SS": "31036883/511758",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "m": 5,
+          "left_energy": 0,
+          "right_energy": 2,
+          "RR": "31036883/511758",
+          "RS": "31036883/511758",
+          "SR": "31036883/511758",
+          "SS": "31036883/511758",
+          "exact": true
+        },
+        {
+          "n": 4,
+          "m": 4,
+          "left_energy": 0,
+          "right_energy": 0,
+          "RR": "184673/5265",
+          "RS": "184673/5265",
+          "SR": "184673/5265",
+          "SS": "184673/5265",
+          "exact": true
+        },
+        {
+          "n": 4,
+          "m": 4,
+          "left_energy": 1,
+          "right_energy": 1,
+          "RR": "20167073/426465",
+          "RS": "20167073/426465",
+          "SR": "20167073/426465",
+          "SS": "20167073/426465",
+          "exact": true
+        },
+        {
+          "n": 4,
+          "m": 4,
+          "left_energy": 2,
+          "right_energy": 0,
+          "RR": "91956539/1279395",
+          "RS": "91956539/1279395",
+          "SR": "91956539/1279395",
+          "SS": "91956539/1279395",
+          "exact": true
+        },
+        {
+          "n": 4,
+          "m": 4,
+          "left_energy": 0,
+          "right_energy": 2,
+          "RR": "91956539/1279395",
+          "RS": "91956539/1279395",
+          "SR": "91956539/1279395",
+          "SS": "91956539/1279395",
+          "exact": true
+        },
+        {
+          "n": 4,
+          "m": 5,
+          "left_energy": 1,
+          "right_energy": 0,
+          "RR": "5012837/47385",
+          "RS": "5012837/47385",
+          "SR": "5012837/47385",
+          "SS": "5012837/47385",
+          "exact": true
+        },
+        {
+          "n": 4,
+          "m": 5,
+          "left_energy": 0,
+          "right_energy": 1,
+          "RR": "5012837/47385",
+          "RS": "5012837/47385",
+          "SR": "5012837/47385",
+          "SS": "5012837/47385",
+          "exact": true
+        },
+        {
+          "n": 5,
+          "m": 5,
+          "left_energy": 0,
+          "right_energy": 0,
+          "RR": "31008749599/154806795",
+          "RS": "31008749599/154806795",
+          "SR": "31008749599/154806795",
+          "SS": "31008749599/154806795",
+          "exact": true
+        }
+      ],
+      "no_bridge": [
+        {
+          "n": 2,
+          "m": 2,
+          "left_energy": 0,
+          "right_energy": 0,
+          "GG": "5/4",
+          "gG": "5/4",
+          "Gg": "5/4",
+          "gg": "5/4",
+          "centered_group_sum": "0",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "m": 2,
+          "left_energy": 1,
+          "right_energy": 1,
+          "GG": "19/12",
+          "gG": "19/12",
+          "Gg": "19/12",
+          "gg": "19/12",
+          "centered_group_sum": "0",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "m": 2,
+          "left_energy": 2,
+          "right_energy": 0,
+          "GG": "19/12",
+          "gG": "19/12",
+          "Gg": "19/12",
+          "gg": "19/12",
+          "centered_group_sum": "0",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "m": 2,
+          "left_energy": 0,
+          "right_energy": 2,
+          "GG": "19/12",
+          "gG": "19/12",
+          "Gg": "19/12",
+          "gg": "19/12",
+          "centered_group_sum": "0",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "m": 3,
+          "left_energy": 1,
+          "right_energy": 0,
+          "GG": "35/12",
+          "gG": "35/12",
+          "Gg": "35/12",
+          "gg": "35/12",
+          "centered_group_sum": "0",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "m": 3,
+          "left_energy": 0,
+          "right_energy": 1,
+          "GG": "35/12",
+          "gG": "35/12",
+          "Gg": "35/12",
+          "gg": "35/12",
+          "centered_group_sum": "0",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "m": 4,
+          "left_energy": 0,
+          "right_energy": 0,
+          "GG": "35/6",
+          "gG": "35/6",
+          "Gg": "35/6",
+          "gg": "35/6",
+          "centered_group_sum": "0",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "m": 4,
+          "left_energy": 1,
+          "right_energy": 1,
+          "GG": "731/54",
+          "gG": "731/54",
+          "Gg": "731/54",
+          "gg": "731/54",
+          "centered_group_sum": "0",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "m": 4,
+          "left_energy": 2,
+          "right_energy": 0,
+          "GG": "731/54",
+          "gG": "731/54",
+          "Gg": "731/54",
+          "gg": "731/54",
+          "centered_group_sum": "0",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "m": 4,
+          "left_energy": 0,
+          "right_energy": 2,
+          "GG": "731/54",
+          "gG": "731/54",
+          "Gg": "731/54",
+          "gg": "731/54",
+          "centered_group_sum": "0",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "m": 3,
+          "left_energy": 0,
+          "right_energy": 0,
+          "GG": "0",
+          "gG": "0",
+          "Gg": "0",
+          "gg": "0",
+          "centered_group_sum": "0",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "m": 3,
+          "left_energy": 1,
+          "right_energy": 1,
+          "GG": "245/18",
+          "gG": "245/18",
+          "Gg": "245/18",
+          "gg": "245/18",
+          "centered_group_sum": "0",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "m": 3,
+          "left_energy": 2,
+          "right_energy": 0,
+          "GG": "245/27",
+          "gG": "245/27",
+          "Gg": "245/27",
+          "gg": "245/27",
+          "centered_group_sum": "0",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "m": 3,
+          "left_energy": 0,
+          "right_energy": 2,
+          "GG": "245/27",
+          "gG": "245/27",
+          "Gg": "245/27",
+          "gg": "245/27",
+          "centered_group_sum": "0",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "m": 4,
+          "left_energy": 1,
+          "right_energy": 0,
+          "GG": "245/18",
+          "gG": "245/18",
+          "Gg": "245/18",
+          "gg": "245/18",
+          "centered_group_sum": "0",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "m": 4,
+          "left_energy": 0,
+          "right_energy": 1,
+          "GG": "245/18",
+          "gG": "245/18",
+          "Gg": "245/18",
+          "gg": "245/18",
+          "centered_group_sum": "0",
+          "exact": true
+        },
+        {
+          "n": 4,
+          "m": 4,
+          "left_energy": 0,
+          "right_energy": 0,
+          "GG": "245/9",
+          "gG": "245/9",
+          "Gg": "245/9",
+          "gg": "245/9",
+          "centered_group_sum": "0",
+          "exact": true
+        },
+        {
+          "n": 4,
+          "m": 4,
+          "left_energy": 1,
+          "right_energy": 1,
+          "GG": "7441/81",
+          "gG": "7441/81",
+          "Gg": "7441/81",
+          "gg": "7441/81",
+          "centered_group_sum": "0",
+          "exact": true
+        },
+        {
+          "n": 4,
+          "m": 4,
+          "left_energy": 2,
+          "right_energy": 0,
+          "GG": "7441/81",
+          "gG": "7441/81",
+          "Gg": "7441/81",
+          "gg": "7441/81",
+          "centered_group_sum": "0",
+          "exact": true
+        },
+        {
+          "n": 4,
+          "m": 4,
+          "left_energy": 0,
+          "right_energy": 2,
+          "GG": "7441/81",
+          "gG": "7441/81",
+          "Gg": "7441/81",
+          "gg": "7441/81",
+          "centered_group_sum": "0",
+          "exact": true
+        }
+      ],
+      "mixed_neutral": [
+        {
+          "n": 2,
+          "neutral_V_degree": 1,
+          "left_energy": 1,
+          "right_energy": 0,
+          "whole_residual_V": "0",
+          "resummed_J_V": "0",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "neutral_V_degree": 1,
+          "left_energy": 0,
+          "right_energy": 1,
+          "whole_residual_V": "0",
+          "resummed_J_V": "0",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "neutral_V_degree": 2,
+          "left_energy": 0,
+          "right_energy": 0,
+          "whole_residual_V": "7/108",
+          "resummed_J_V": "7/108",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "neutral_V_degree": 2,
+          "left_energy": 1,
+          "right_energy": 1,
+          "whole_residual_V": "7/972",
+          "resummed_J_V": "7/972",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "neutral_V_degree": 3,
+          "left_energy": 1,
+          "right_energy": 0,
+          "whole_residual_V": "91/2916",
+          "resummed_J_V": "91/2916",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "neutral_V_degree": 3,
+          "left_energy": 0,
+          "right_energy": 1,
+          "whole_residual_V": "91/2916",
+          "resummed_J_V": "91/2916",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "neutral_V_degree": 4,
+          "left_energy": 0,
+          "right_energy": 0,
+          "whole_residual_V": "14/2187",
+          "resummed_J_V": "14/2187",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "neutral_V_degree": 4,
+          "left_energy": 1,
+          "right_energy": 1,
+          "whole_residual_V": "952/59049",
+          "resummed_J_V": "952/59049",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "neutral_V_degree": 1,
+          "left_energy": 0,
+          "right_energy": 0,
+          "whole_residual_V": "0",
+          "resummed_J_V": "0",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "neutral_V_degree": 1,
+          "left_energy": 1,
+          "right_energy": 1,
+          "whole_residual_V": "0",
+          "resummed_J_V": "0",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "neutral_V_degree": 2,
+          "left_energy": 1,
+          "right_energy": 0,
+          "whole_residual_V": "91/972",
+          "resummed_J_V": "91/972",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "neutral_V_degree": 2,
+          "left_energy": 0,
+          "right_energy": 1,
+          "whole_residual_V": "91/972",
+          "resummed_J_V": "91/972",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "neutral_V_degree": 3,
+          "left_energy": 0,
+          "right_energy": 0,
+          "whole_residual_V": "1301/12636",
+          "resummed_J_V": "1301/12636",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "neutral_V_degree": 3,
+          "left_energy": 1,
+          "right_energy": 1,
+          "whole_residual_V": "32059/341172",
+          "resummed_J_V": "32059/341172",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "neutral_V_degree": 4,
+          "left_energy": 1,
+          "right_energy": 0,
+          "whole_residual_V": "15376/255879",
+          "resummed_J_V": "15376/255879",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "neutral_V_degree": 4,
+          "left_energy": 0,
+          "right_energy": 1,
+          "whole_residual_V": "15376/255879",
+          "resummed_J_V": "15376/255879",
+          "exact": true
+        },
+        {
+          "n": 4,
+          "neutral_V_degree": 1,
+          "left_energy": 1,
+          "right_energy": 0,
+          "whole_residual_V": "0",
+          "resummed_J_V": "0",
+          "exact": true
+        },
+        {
+          "n": 4,
+          "neutral_V_degree": 1,
+          "left_energy": 0,
+          "right_energy": 1,
+          "whole_residual_V": "0",
+          "resummed_J_V": "0",
+          "exact": true
+        },
+        {
+          "n": 4,
+          "neutral_V_degree": 2,
+          "left_energy": 0,
+          "right_energy": 0,
+          "whole_residual_V": "119/486",
+          "resummed_J_V": "119/486",
+          "exact": true
+        },
+        {
+          "n": 4,
+          "neutral_V_degree": 2,
+          "left_energy": 1,
+          "right_energy": 1,
+          "whole_residual_V": "2177/13122",
+          "resummed_J_V": "2177/13122",
+          "exact": true
+        },
+        {
+          "n": 4,
+          "neutral_V_degree": 3,
+          "left_energy": 1,
+          "right_energy": 0,
+          "whole_residual_V": "15377/56862",
+          "resummed_J_V": "15377/56862",
+          "exact": true
+        },
+        {
+          "n": 4,
+          "neutral_V_degree": 3,
+          "left_energy": 0,
+          "right_energy": 1,
+          "whole_residual_V": "15377/56862",
+          "resummed_J_V": "15377/56862",
+          "exact": true
+        },
+        {
+          "n": 4,
+          "neutral_V_degree": 4,
+          "left_energy": 0,
+          "right_energy": 0,
+          "whole_residual_V": "167984/1279395",
+          "resummed_J_V": "167984/1279395",
+          "exact": true
+        },
+        {
+          "n": 4,
+          "neutral_V_degree": 4,
+          "left_energy": 1,
+          "right_energy": 1,
+          "whole_residual_V": "23480404/103630995",
+          "resummed_J_V": "23480404/103630995",
+          "exact": true
+        },
+        {
+          "n": 5,
+          "neutral_V_degree": 1,
+          "left_energy": 0,
+          "right_energy": 0,
+          "whole_residual_V": "0",
+          "resummed_J_V": "0",
+          "exact": true
+        },
+        {
+          "n": 5,
+          "neutral_V_degree": 1,
+          "left_energy": 1,
+          "right_energy": 1,
+          "whole_residual_V": "0",
+          "resummed_J_V": "0",
+          "exact": true
+        },
+        {
+          "n": 5,
+          "neutral_V_degree": 2,
+          "left_energy": 1,
+          "right_energy": 0,
+          "whole_residual_V": "6461/13122",
+          "resummed_J_V": "6461/13122",
+          "exact": true
+        },
+        {
+          "n": 5,
+          "neutral_V_degree": 2,
+          "left_energy": 0,
+          "right_energy": 1,
+          "whole_residual_V": "6461/13122",
+          "resummed_J_V": "6461/13122",
+          "exact": true
+        },
+        {
+          "n": 5,
+          "neutral_V_degree": 3,
+          "left_energy": 0,
+          "right_energy": 0,
+          "whole_residual_V": "92371/170586",
+          "resummed_J_V": "92371/170586",
+          "exact": true
+        },
+        {
+          "n": 5,
+          "neutral_V_degree": 3,
+          "left_energy": 1,
+          "right_energy": 1,
+          "whole_residual_V": "9976987/13817466",
+          "resummed_J_V": "9976987/13817466",
+          "exact": true
+        },
+        {
+          "n": 5,
+          "neutral_V_degree": 4,
+          "left_energy": 1,
+          "right_energy": 0,
+          "whole_residual_V": "49333204/103630995",
+          "resummed_J_V": "49333204/103630995",
+          "exact": true
+        },
+        {
+          "n": 5,
+          "neutral_V_degree": 4,
+          "left_energy": 0,
+          "right_energy": 1,
+          "whole_residual_V": "49333204/103630995",
+          "resummed_J_V": "49333204/103630995",
+          "exact": true
+        }
+      ],
+      "neutral_algorithm_crosschecks": [
+        {
+          "i": 1,
+          "j": 1,
+          "left_energy": 0,
+          "right_energy": 0,
+          "sealed_algorithm": "5/144",
+          "new_algorithm": "5/144",
+          "exact": true
+        },
+        {
+          "i": 1,
+          "j": 1,
+          "left_energy": 1,
+          "right_energy": 1,
+          "sealed_algorithm": "11/432",
+          "new_algorithm": "11/432",
+          "exact": true
+        },
+        {
+          "i": 1,
+          "j": 3,
+          "left_energy": 0,
+          "right_energy": 0,
+          "sealed_algorithm": "5/486",
+          "new_algorithm": "5/486",
+          "exact": true
+        },
+        {
+          "i": 1,
+          "j": 3,
+          "left_energy": 1,
+          "right_energy": 1,
+          "sealed_algorithm": "101/4374",
+          "new_algorithm": "101/4374",
+          "exact": true
+        },
+        {
+          "i": 2,
+          "j": 2,
+          "left_energy": 0,
+          "right_energy": 0,
+          "sealed_algorithm": "2/81",
+          "new_algorithm": "2/81",
+          "exact": true
+        },
+        {
+          "i": 2,
+          "j": 2,
+          "left_energy": 1,
+          "right_energy": 1,
+          "sealed_algorithm": "28/729",
+          "new_algorithm": "28/729",
+          "exact": true
+        },
+        {
+          "i": 3,
+          "j": 3,
+          "left_energy": 0,
+          "right_energy": 0,
+          "sealed_algorithm": "413/26244",
+          "new_algorithm": "413/26244",
+          "exact": true
+        },
+        {
+          "i": 3,
+          "j": 3,
+          "left_energy": 1,
+          "right_energy": 1,
+          "sealed_algorithm": "9209/236196",
+          "new_algorithm": "9209/236196",
+          "exact": true
+        }
+      ],
+      "low_order_spectral_calibration": [
+        {
+          "channel": "A0B2",
+          "left_energy": 0,
+          "right_energy": 0,
+          "direct": "7/54",
+          "Mehler_moment_q_squared": "1",
+          "known_prefactor": "7/54",
+          "reference": "7/54",
+          "exact": true
+        },
+        {
+          "channel": "A0B2",
+          "left_energy": 0,
+          "right_energy": 2,
+          "direct": "7/54",
+          "Mehler_moment_q_squared": "1",
+          "known_prefactor": "7/54",
+          "reference": "7/54",
+          "exact": true
+        },
+        {
+          "channel": "A0B2",
+          "left_energy": 1,
+          "right_energy": 1,
+          "direct": "7/486",
+          "Mehler_moment_q_squared": "1/9",
+          "known_prefactor": "7/54",
+          "reference": "7/486",
+          "exact": true
+        },
+        {
+          "channel": "A0B2",
+          "left_energy": 2,
+          "right_energy": 0,
+          "direct": "7/54",
+          "Mehler_moment_q_squared": "1",
+          "known_prefactor": "7/54",
+          "reference": "7/54",
+          "exact": true
+        },
+        {
+          "channel": "A0B2",
+          "left_energy": 0,
+          "right_energy": 4,
+          "direct": "49/162",
+          "Mehler_moment_q_squared": "7/3",
+          "known_prefactor": "7/54",
+          "reference": "49/162",
+          "exact": true
+        },
+        {
+          "channel": "A0B2",
+          "left_energy": 1,
+          "right_energy": 3,
+          "direct": "49/1458",
+          "Mehler_moment_q_squared": "7/27",
+          "known_prefactor": "7/54",
+          "reference": "49/1458",
+          "exact": true
+        },
+        {
+          "channel": "A0B2",
+          "left_energy": 2,
+          "right_energy": 2,
+          "direct": "1729/13122",
+          "Mehler_moment_q_squared": "247/243",
+          "known_prefactor": "7/54",
+          "reference": "1729/13122",
+          "exact": true
+        },
+        {
+          "channel": "A0B2",
+          "left_energy": 3,
+          "right_energy": 1,
+          "direct": "49/1458",
+          "Mehler_moment_q_squared": "7/27",
+          "known_prefactor": "7/54",
+          "reference": "49/1458",
+          "exact": true
+        },
+        {
+          "channel": "A0B2",
+          "left_energy": 4,
+          "right_energy": 0,
+          "direct": "49/162",
+          "Mehler_moment_q_squared": "7/3",
+          "known_prefactor": "7/54",
+          "reference": "49/162",
+          "exact": true
+        },
+        {
+          "channel": "A0B1",
+          "left_energy": 0,
+          "right_energy": 1,
+          "direct": "0",
+          "exact": true
+        },
+        {
+          "channel": "A0B1",
+          "left_energy": 1,
+          "right_energy": 0,
+          "direct": "0",
+          "exact": true
+        },
+        {
+          "channel": "A0B1",
+          "left_energy": 0,
+          "right_energy": 3,
+          "direct": "0",
+          "exact": true
+        },
+        {
+          "channel": "A0B1",
+          "left_energy": 1,
+          "right_energy": 2,
+          "direct": "0",
+          "exact": true
+        },
+        {
+          "channel": "A0B1",
+          "left_energy": 2,
+          "right_energy": 1,
+          "direct": "0",
+          "exact": true
+        },
+        {
+          "channel": "A0B1",
+          "left_energy": 3,
+          "right_energy": 0,
+          "direct": "0",
+          "exact": true
+        }
+      ],
+      "charge_static_diagnostic": {
+        "energy_only_no_bridge": "retained nonzero charge background",
+        "energy_only_b0_value": "1",
+        "known_charge_variance": "1",
+        "joint_centered_b0_value": "0",
+        "joint_G2_norm": "5/4",
+        "old_w": "5/4"
+      }
+    },
+    {
+      "parameters": {
+        "q": "1/2",
+        "lambda": "1/2",
+        "maximum_G_degree": 3,
+        "maximum_V_degree": 3
+      },
+      "counts": {
+        "joint_projection_tests": 24,
+        "nonzero_joint_projection_tests": 24,
+        "residual_Gram_layouts": 10,
+        "residual_Gram_equalities": 30,
+        "nonzero_residual_Gram_layouts": 10,
+        "no_bridge_layouts": 10,
+        "nonzero_raw_no_bridge_layouts": 9,
+        "mixed_neutral_layouts": 12,
+        "nonzero_mixed_neutral_layouts": 8,
+        "neutral_algorithm_crosschecks": 8,
+        "nonzero_A0B2_Mehler_checks": 9,
+        "zero_A0B1_checks": 6,
+        "charge_static_diagnostic": 1,
+        "G2_joint_norm_calibration": 1
+      },
+      "diagram_statistics": {
+        "accepted_term_diagrams": 9264,
+        "nonzero_charge_connected_diagrams": 164,
+        "negative_diagram_weights": 2527,
+        "term_moment_cache_misses": 669
+      },
+      "candidate_fields": [
+        {
+          "n": 2,
+          "g_n": [
+            {
+              "length": 0,
+              "wick_blocks": [],
+              "mark_blocks": [],
+              "filter_blocks": [],
+              "charge_power": 0,
+              "coefficient": "-1/3"
+            },
+            {
+              "length": 0,
+              "wick_blocks": [],
+              "mark_blocks": [],
+              "filter_blocks": [],
+              "charge_power": 1,
+              "coefficient": "2"
+            },
+            {
+              "length": 2,
+              "wick_blocks": [],
+              "mark_blocks": [],
+              "filter_blocks": [],
+              "charge_power": 0,
+              "coefficient": "-2/3"
+            }
+          ],
+          "resummed_J": [
+            {
+              "length": 0,
+              "wick_blocks": [],
+              "mark_blocks": [],
+              "filter_blocks": [],
+              "charge_power": 0,
+              "coefficient": "1/3"
+            },
+            {
+              "length": 2,
+              "wick_blocks": [
+                [
+                  0,
+                  2
+                ]
+              ],
+              "mark_blocks": [
+                [
+                  0,
+                  2,
+                  "D"
+                ]
+              ],
+              "filter_blocks": [],
+              "charge_power": 0,
+              "coefficient": "1"
+            },
+            {
+              "length": 2,
+              "wick_blocks": [],
+              "mark_blocks": [],
+              "filter_blocks": [],
+              "charge_power": 0,
+              "coefficient": "-1/3"
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "g_n": [
+            {
+              "length": 1,
+              "wick_blocks": [],
+              "mark_blocks": [],
+              "filter_blocks": [],
+              "charge_power": 0,
+              "coefficient": "85/42"
+            },
+            {
+              "length": 1,
+              "wick_blocks": [],
+              "mark_blocks": [],
+              "filter_blocks": [],
+              "charge_power": 1,
+              "coefficient": "5"
+            },
+            {
+              "length": 3,
+              "wick_blocks": [],
+              "mark_blocks": [],
+              "filter_blocks": [],
+              "charge_power": 0,
+              "coefficient": "-38/21"
+            }
+          ],
+          "resummed_J": [
+            {
+              "length": 1,
+              "wick_blocks": [],
+              "mark_blocks": [],
+              "filter_blocks": [],
+              "charge_power": 0,
+              "coefficient": "125/42"
+            },
+            {
+              "length": 3,
+              "wick_blocks": [
+                [
+                  0,
+                  3
+                ]
+              ],
+              "mark_blocks": [
+                [
+                  0,
+                  3,
+                  "D"
+                ]
+              ],
+              "filter_blocks": [],
+              "charge_power": 0,
+              "coefficient": "1"
+            },
+            {
+              "length": 3,
+              "wick_blocks": [],
+              "mark_blocks": [],
+              "filter_blocks": [],
+              "charge_power": 0,
+              "coefficient": "-25/21"
+            }
+          ]
+        }
+      ],
+      "joint_projection": [
+        {
+          "n": 2,
+          "energy_power": 0,
+          "charge_power": 0,
+          "raw_joint_moment": "-1",
+          "regression_joint_moment": "-1",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "energy_power": 0,
+          "charge_power": 1,
+          "raw_joint_moment": "1",
+          "regression_joint_moment": "1",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "energy_power": 0,
+          "charge_power": 2,
+          "raw_joint_moment": "-1/2",
+          "regression_joint_moment": "-1/2",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "energy_power": 0,
+          "charge_power": 3,
+          "raw_joint_moment": "3/2",
+          "regression_joint_moment": "3/2",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "energy_power": 2,
+          "charge_power": 0,
+          "raw_joint_moment": "-2",
+          "regression_joint_moment": "-2",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "energy_power": 2,
+          "charge_power": 1,
+          "raw_joint_moment": "1",
+          "regression_joint_moment": "1",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "energy_power": 2,
+          "charge_power": 2,
+          "raw_joint_moment": "-1",
+          "regression_joint_moment": "-1",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "energy_power": 2,
+          "charge_power": 3,
+          "raw_joint_moment": "3/2",
+          "regression_joint_moment": "3/2",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "energy_power": 4,
+          "charge_power": 0,
+          "raw_joint_moment": "-27/4",
+          "regression_joint_moment": "-27/4",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "energy_power": 4,
+          "charge_power": 1,
+          "raw_joint_moment": "5/2",
+          "regression_joint_moment": "5/2",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "energy_power": 4,
+          "charge_power": 2,
+          "raw_joint_moment": "-27/8",
+          "regression_joint_moment": "-27/8",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "energy_power": 4,
+          "charge_power": 3,
+          "raw_joint_moment": "15/4",
+          "regression_joint_moment": "15/4",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "energy_power": 1,
+          "charge_power": 0,
+          "raw_joint_moment": "-5/2",
+          "regression_joint_moment": "-5/2",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "energy_power": 1,
+          "charge_power": 1,
+          "raw_joint_moment": "5/2",
+          "regression_joint_moment": "5/2",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "energy_power": 1,
+          "charge_power": 2,
+          "raw_joint_moment": "-5/4",
+          "regression_joint_moment": "-5/4",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "energy_power": 1,
+          "charge_power": 3,
+          "raw_joint_moment": "15/4",
+          "regression_joint_moment": "15/4",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "energy_power": 3,
+          "charge_power": 0,
+          "raw_joint_moment": "-11",
+          "regression_joint_moment": "-11",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "energy_power": 3,
+          "charge_power": 1,
+          "raw_joint_moment": "25/4",
+          "regression_joint_moment": "25/4",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "energy_power": 3,
+          "charge_power": 2,
+          "raw_joint_moment": "-11/2",
+          "regression_joint_moment": "-11/2",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "energy_power": 3,
+          "charge_power": 3,
+          "raw_joint_moment": "75/8",
+          "regression_joint_moment": "75/8",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "energy_power": 5,
+          "charge_power": 0,
+          "raw_joint_moment": "-1641/32",
+          "regression_joint_moment": "-1641/32",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "energy_power": 5,
+          "charge_power": 1,
+          "raw_joint_moment": "355/16",
+          "regression_joint_moment": "355/16",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "energy_power": 5,
+          "charge_power": 2,
+          "raw_joint_moment": "-1641/64",
+          "regression_joint_moment": "-1641/64",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "energy_power": 5,
+          "charge_power": 3,
+          "raw_joint_moment": "1065/32",
+          "regression_joint_moment": "1065/32",
+          "exact": true
+        }
+      ],
+      "residual_Grams": [
+        {
+          "n": 2,
+          "m": 2,
+          "left_energy": 0,
+          "right_energy": 0,
+          "RR": "10/3",
+          "RS": "10/3",
+          "SR": "10/3",
+          "SS": "10/3",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "m": 2,
+          "left_energy": 1,
+          "right_energy": 1,
+          "RR": "5/6",
+          "RS": "5/6",
+          "SR": "5/6",
+          "SS": "5/6",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "m": 2,
+          "left_energy": 2,
+          "right_energy": 0,
+          "RR": "10/3",
+          "RS": "10/3",
+          "SR": "10/3",
+          "SS": "10/3",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "m": 2,
+          "left_energy": 0,
+          "right_energy": 2,
+          "RR": "10/3",
+          "RS": "10/3",
+          "SR": "10/3",
+          "SS": "10/3",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "m": 3,
+          "left_energy": 1,
+          "right_energy": 0,
+          "RR": "35/6",
+          "RS": "35/6",
+          "SR": "35/6",
+          "SS": "35/6",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "m": 3,
+          "left_energy": 0,
+          "right_energy": 1,
+          "RR": "35/6",
+          "RS": "35/6",
+          "SR": "35/6",
+          "SS": "35/6",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "m": 3,
+          "left_energy": 0,
+          "right_energy": 0,
+          "RR": "397/21",
+          "RS": "397/21",
+          "SR": "397/21",
+          "SS": "397/21",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "m": 3,
+          "left_energy": 1,
+          "right_energy": 1,
+          "RR": "3827/168",
+          "RS": "3827/168",
+          "SR": "3827/168",
+          "SS": "3827/168",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "m": 3,
+          "left_energy": 2,
+          "right_energy": 0,
+          "RR": "11497/336",
+          "RS": "11497/336",
+          "SR": "11497/336",
+          "SS": "11497/336",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "m": 3,
+          "left_energy": 0,
+          "right_energy": 2,
+          "RR": "11497/336",
+          "RS": "11497/336",
+          "SR": "11497/336",
+          "SS": "11497/336",
+          "exact": true
+        }
+      ],
+      "no_bridge": [
+        {
+          "n": 2,
+          "m": 2,
+          "left_energy": 0,
+          "right_energy": 0,
+          "GG": "3",
+          "gG": "3",
+          "Gg": "3",
+          "gg": "3",
+          "centered_group_sum": "0",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "m": 2,
+          "left_energy": 1,
+          "right_energy": 1,
+          "GG": "5",
+          "gG": "5",
+          "Gg": "5",
+          "gg": "5",
+          "centered_group_sum": "0",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "m": 2,
+          "left_energy": 2,
+          "right_energy": 0,
+          "GG": "5",
+          "gG": "5",
+          "Gg": "5",
+          "gg": "5",
+          "centered_group_sum": "0",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "m": 2,
+          "left_energy": 0,
+          "right_energy": 2,
+          "GG": "5",
+          "gG": "5",
+          "Gg": "5",
+          "gg": "5",
+          "centered_group_sum": "0",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "m": 3,
+          "left_energy": 1,
+          "right_energy": 0,
+          "GG": "15/2",
+          "gG": "15/2",
+          "Gg": "15/2",
+          "gg": "15/2",
+          "centered_group_sum": "0",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "m": 3,
+          "left_energy": 0,
+          "right_energy": 1,
+          "GG": "15/2",
+          "gG": "15/2",
+          "Gg": "15/2",
+          "gg": "15/2",
+          "centered_group_sum": "0",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "m": 3,
+          "left_energy": 0,
+          "right_energy": 0,
+          "GG": "0",
+          "gG": "0",
+          "Gg": "0",
+          "gg": "0",
+          "centered_group_sum": "0",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "m": 3,
+          "left_energy": 1,
+          "right_energy": 1,
+          "GG": "75/2",
+          "gG": "75/2",
+          "Gg": "75/2",
+          "gg": "75/2",
+          "centered_group_sum": "0",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "m": 3,
+          "left_energy": 2,
+          "right_energy": 0,
+          "GG": "225/8",
+          "gG": "225/8",
+          "Gg": "225/8",
+          "gg": "225/8",
+          "centered_group_sum": "0",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "m": 3,
+          "left_energy": 0,
+          "right_energy": 2,
+          "GG": "225/8",
+          "gG": "225/8",
+          "Gg": "225/8",
+          "gg": "225/8",
+          "centered_group_sum": "0",
+          "exact": true
+        }
+      ],
+      "mixed_neutral": [
+        {
+          "n": 2,
+          "neutral_V_degree": 1,
+          "left_energy": 1,
+          "right_energy": 0,
+          "whole_residual_V": "0",
+          "resummed_J_V": "0",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "neutral_V_degree": 1,
+          "left_energy": 0,
+          "right_energy": 1,
+          "whole_residual_V": "0",
+          "resummed_J_V": "0",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "neutral_V_degree": 2,
+          "left_energy": 0,
+          "right_energy": 0,
+          "whole_residual_V": "11/12",
+          "resummed_J_V": "11/12",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "neutral_V_degree": 2,
+          "left_energy": 1,
+          "right_energy": 1,
+          "whole_residual_V": "11/48",
+          "resummed_J_V": "11/48",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "neutral_V_degree": 3,
+          "left_energy": 1,
+          "right_energy": 0,
+          "whole_residual_V": "77/96",
+          "resummed_J_V": "77/96",
+          "exact": true
+        },
+        {
+          "n": 2,
+          "neutral_V_degree": 3,
+          "left_energy": 0,
+          "right_energy": 1,
+          "whole_residual_V": "77/96",
+          "resummed_J_V": "77/96",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "neutral_V_degree": 1,
+          "left_energy": 0,
+          "right_energy": 0,
+          "whole_residual_V": "0",
+          "resummed_J_V": "0",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "neutral_V_degree": 1,
+          "left_energy": 1,
+          "right_energy": 1,
+          "whole_residual_V": "0",
+          "resummed_J_V": "0",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "neutral_V_degree": 2,
+          "left_energy": 1,
+          "right_energy": 0,
+          "whole_residual_V": "77/48",
+          "resummed_J_V": "77/48",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "neutral_V_degree": 2,
+          "left_energy": 0,
+          "right_energy": 1,
+          "whole_residual_V": "77/48",
+          "resummed_J_V": "77/48",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "neutral_V_degree": 3,
+          "left_energy": 0,
+          "right_energy": 0,
+          "whole_residual_V": "1853/672",
+          "resummed_J_V": "1853/672",
+          "exact": true
+        },
+        {
+          "n": 3,
+          "neutral_V_degree": 3,
+          "left_energy": 1,
+          "right_energy": 1,
+          "whole_residual_V": "16945/5376",
+          "resummed_J_V": "16945/5376",
+          "exact": true
+        }
+      ],
+      "neutral_algorithm_crosschecks": [
+        {
+          "i": 1,
+          "j": 1,
+          "left_energy": 0,
+          "right_energy": 0,
+          "sealed_algorithm": "3/4",
+          "new_algorithm": "3/4",
+          "exact": true
+        },
+        {
+          "i": 1,
+          "j": 1,
+          "left_energy": 1,
+          "right_energy": 1,
+          "sealed_algorithm": "7/8",
+          "new_algorithm": "7/8",
+          "exact": true
+        },
+        {
+          "i": 1,
+          "j": 3,
+          "left_energy": 0,
+          "right_energy": 0,
+          "sealed_algorithm": "9/32",
+          "new_algorithm": "9/32",
+          "exact": true
+        },
+        {
+          "i": 1,
+          "j": 3,
+          "left_energy": 1,
+          "right_energy": 1,
+          "sealed_algorithm": "197/128",
+          "new_algorithm": "197/128",
+          "exact": true
+        },
+        {
+          "i": 2,
+          "j": 2,
+          "left_energy": 0,
+          "right_energy": 0,
+          "sealed_algorithm": "3/2",
+          "new_algorithm": "3/2",
+          "exact": true
+        },
+        {
+          "i": 2,
+          "j": 2,
+          "left_energy": 1,
+          "right_energy": 1,
+          "sealed_algorithm": "47/16",
+          "new_algorithm": "47/16",
+          "exact": true
+        },
+        {
+          "i": 3,
+          "j": 3,
+          "left_energy": 0,
+          "right_energy": 0,
+          "sealed_algorithm": "1141/512",
+          "new_algorithm": "1141/512",
+          "exact": true
+        },
+        {
+          "i": 3,
+          "j": 3,
+          "left_energy": 1,
+          "right_energy": 1,
+          "sealed_algorithm": "27563/4096",
+          "new_algorithm": "27563/4096",
+          "exact": true
+        }
+      ],
+      "low_order_spectral_calibration": [
+        {
+          "channel": "A0B2",
+          "left_energy": 0,
+          "right_energy": 0,
+          "direct": "11/6",
+          "Mehler_moment_q_squared": "1",
+          "known_prefactor": "11/6",
+          "reference": "11/6",
+          "exact": true
+        },
+        {
+          "channel": "A0B2",
+          "left_energy": 0,
+          "right_energy": 2,
+          "direct": "11/6",
+          "Mehler_moment_q_squared": "1",
+          "known_prefactor": "11/6",
+          "reference": "11/6",
+          "exact": true
+        },
+        {
+          "channel": "A0B2",
+          "left_energy": 1,
+          "right_energy": 1,
+          "direct": "11/24",
+          "Mehler_moment_q_squared": "1/4",
+          "known_prefactor": "11/6",
+          "reference": "11/24",
+          "exact": true
+        },
+        {
+          "channel": "A0B2",
+          "left_energy": 2,
+          "right_energy": 0,
+          "direct": "11/6",
+          "Mehler_moment_q_squared": "1",
+          "known_prefactor": "11/6",
+          "reference": "11/6",
+          "exact": true
+        },
+        {
+          "channel": "A0B2",
+          "left_energy": 0,
+          "right_energy": 4,
+          "direct": "55/12",
+          "Mehler_moment_q_squared": "5/2",
+          "known_prefactor": "11/6",
+          "reference": "55/12",
+          "exact": true
+        },
+        {
+          "channel": "A0B2",
+          "left_energy": 1,
+          "right_energy": 3,
+          "direct": "55/48",
+          "Mehler_moment_q_squared": "5/8",
+          "known_prefactor": "11/6",
+          "reference": "55/48",
+          "exact": true
+        },
+        {
+          "channel": "A0B2",
+          "left_energy": 2,
+          "right_energy": 2,
+          "direct": "385/192",
+          "Mehler_moment_q_squared": "35/32",
+          "known_prefactor": "11/6",
+          "reference": "385/192",
+          "exact": true
+        },
+        {
+          "channel": "A0B2",
+          "left_energy": 3,
+          "right_energy": 1,
+          "direct": "55/48",
+          "Mehler_moment_q_squared": "5/8",
+          "known_prefactor": "11/6",
+          "reference": "55/48",
+          "exact": true
+        },
+        {
+          "channel": "A0B2",
+          "left_energy": 4,
+          "right_energy": 0,
+          "direct": "55/12",
+          "Mehler_moment_q_squared": "5/2",
+          "known_prefactor": "11/6",
+          "reference": "55/12",
+          "exact": true
+        },
+        {
+          "channel": "A0B1",
+          "left_energy": 0,
+          "right_energy": 1,
+          "direct": "0",
+          "exact": true
+        },
+        {
+          "channel": "A0B1",
+          "left_energy": 1,
+          "right_energy": 0,
+          "direct": "0",
+          "exact": true
+        },
+        {
+          "channel": "A0B1",
+          "left_energy": 0,
+          "right_energy": 3,
+          "direct": "0",
+          "exact": true
+        },
+        {
+          "channel": "A0B1",
+          "left_energy": 1,
+          "right_energy": 2,
+          "direct": "0",
+          "exact": true
+        },
+        {
+          "channel": "A0B1",
+          "left_energy": 2,
+          "right_energy": 1,
+          "direct": "0",
+          "exact": true
+        },
+        {
+          "channel": "A0B1",
+          "left_energy": 3,
+          "right_energy": 0,
+          "direct": "0",
+          "exact": true
+        }
+      ],
+      "charge_static_diagnostic": {
+        "energy_only_no_bridge": "retained nonzero charge background",
+        "energy_only_b0_value": "2",
+        "known_charge_variance": "2",
+        "joint_centered_b0_value": "0",
+        "joint_G2_norm": "10/3",
+        "old_w": "10/3"
+      }
+    }
+  ],
+  "Mehler_source": "Existing q-Hermite/Mehler density: moment(E^a Eprime^b)=sum_d a_ad a_bd r^d [d]_q!; see literature/susskind-memory-oriented-kernel-sources.md and notes/susskind-memory-two-component.md.",
+  "elapsed_seconds": 2.5802015000372194
+}

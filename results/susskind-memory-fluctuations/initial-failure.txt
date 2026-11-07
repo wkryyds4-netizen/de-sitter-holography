@@ -1,0 +1,3 @@
+First run, session 68070, exit 1: independent Mehler/Jacobi comparison assertion failed.
+Diagnostic saved in initial-failure-diagnostic.json: lambda=.25, t=0, quadrature tangent=.9910814018628633 while Jacobi=1.
+Cause: the Mehler implementation omitted K_(q^2) on the energy-sum-descendant term. Conditional variance, cross moment and Jacobi were unaffected. Restore that factor; do not change tolerance.

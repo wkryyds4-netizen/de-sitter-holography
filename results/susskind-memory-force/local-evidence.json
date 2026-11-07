@@ -1,0 +1,603 @@
+{
+  "created_at_utc": "2026-11-06T03:58:22.234675+00:00",
+  "status": "Local stage saved; no publication or global freeze",
+  "scientific_status": "Compact-time scalar annealed centered-memory limit and elementary 1/p correction; exact renewal coefficients. Full operator fluctuation memory and bulk spatial dictionary remain open.",
+  "previous_stages": [
+    {
+      "stage": "susskind-singlet-moments",
+      "manifest_sha256": "2acb8e1619eee3855bc343ed7ffb9a5a7068164702c7653625bda6edf5f83177",
+      "unchanged_verified": [
+        "code/singlet_wick_moments.py",
+        "code/run_singlet_wick_moments.py",
+        "code/build_singlet_wick_moments.ps1",
+        "code/record_singlet_wick_local.py",
+        "manuscript/susskind-singlet-moments/main.tex",
+        "output/pdf/de-sitter-susskind-singlet-moments.pdf",
+        "notes/susskind-singlet-moments.md",
+        "literature/susskind-singlet-moments-sources.md",
+        "results/susskind-singlet-moments/build-initial.log",
+        "results/susskind-singlet-moments/main.log",
+        "results/susskind-singlet-moments/moments.json"
+      ]
+    },
+    {
+      "stage": "susskind-singlet-double-scale",
+      "manifest_sha256": "c19142259cad894d5c0ada97e3e46e7445660b7c47adb1ff42a898239689ed25",
+      "unchanged_verified": [
+        "code/singlet_coefficient.py",
+        "code/check_singlet_coefficient.py",
+        "code/run_singlet_double_scale.py",
+        "code/run_singlet_centered_moment.py",
+        "code/finish_singlet_double_scale.py",
+        "code/build_singlet_double_scale.ps1",
+        "code/record_singlet_double_scale_local.py",
+        "manuscript/susskind-singlet-double-scale/main.tex",
+        "output/pdf/de-sitter-susskind-singlet-double-scale.pdf",
+        "notes/susskind-singlet-double-scale.md",
+        "literature/susskind-singlet-double-scale-sources.md",
+        "journal/2026-11-05-susskind-singlet-double-scale.md",
+        "results/susskind-singlet-double-scale/build-initial.log",
+        "results/susskind-singlet-double-scale/centered-gram-initial.json",
+        "results/susskind-singlet-double-scale/centered-gram.json",
+        "results/susskind-singlet-double-scale/coefficients-p1.json",
+        "results/susskind-singlet-double-scale/coefficients-p2.json",
+        "results/susskind-singlet-double-scale/coefficients-p3.json",
+        "results/susskind-singlet-double-scale/coefficients-p4.json",
+        "results/susskind-singlet-double-scale/coefficients-p5.json",
+        "results/susskind-singlet-double-scale/independent-tensor.json",
+        "results/susskind-singlet-double-scale/initial-core.py.txt",
+        "results/susskind-singlet-double-scale/initial-validation-failure.txt",
+        "results/susskind-singlet-double-scale/main.log",
+        "results/susskind-singlet-double-scale/overlap-graphs.json",
+        "results/susskind-singlet-double-scale/validation.json",
+        "results/susskind-singlet-double-scale/word-checks.json"
+      ]
+    },
+    {
+      "stage": "susskind-singlet-kernel",
+      "manifest_sha256": "059adaddc9011a118caf5656fccc42b3cb0d8ea74128b20f609c1bfac7464f25",
+      "unchanged_verified": [
+        "code/singlet_spectral_graphs.py",
+        "code/check_singlet_spectral_kernel.py",
+        "code/check_singlet_kernel_nonzero.py",
+        "code/run_singlet_kernel.py",
+        "code/build_singlet_kernel.ps1",
+        "code/record_singlet_kernel_local.py",
+        "manuscript/susskind-singlet-kernel/main.tex",
+        "output/pdf/de-sitter-susskind-singlet-kernel.pdf",
+        "notes/susskind-singlet-kernel.md",
+        "literature/susskind-singlet-kernel-sources.md",
+        "journal/2026-11-06-susskind-singlet-kernel.md",
+        "results/susskind-singlet-kernel/build-initial.log",
+        "results/susskind-singlet-kernel/correlator.png",
+        "results/susskind-singlet-kernel/exact-checks.json",
+        "results/susskind-singlet-kernel/initial-checker.py.txt",
+        "results/susskind-singlet-kernel/kernel-numerics.json",
+        "results/susskind-singlet-kernel/main.log",
+        "results/susskind-singlet-kernel/nonzero-words.json"
+      ]
+    },
+    {
+      "stage": "susskind-singlet-multimark",
+      "manifest_sha256": "a80b511d980d5b5226f713404475f1c5310ae808a3c4acc2b2b4f1f5da1f7cde",
+      "unchanged_verified": [
+        "code/singlet_multimark.py",
+        "code/check_singlet_multimark.py",
+        "code/check_multimark_car.py",
+        "code/run_singlet_fourpoint.py",
+        "code/build_singlet_multimark.ps1",
+        "code/record_singlet_multimark_local.py",
+        "manuscript/susskind-singlet-multimark/main.tex",
+        "output/pdf/de-sitter-susskind-singlet-multimark.pdf",
+        "notes/susskind-singlet-multimark.md",
+        "literature/susskind-singlet-multimark-sources.md",
+        "journal/2026-11-06-susskind-singlet-multimark.md",
+        "results/susskind-singlet-multimark/connected-fourpoint.png",
+        "results/susskind-singlet-multimark/exact-checks.json",
+        "results/susskind-singlet-multimark/finite-car.json",
+        "results/susskind-singlet-multimark/fourpoint-numerics.json",
+        "results/susskind-singlet-multimark/initial-factorial-car.py",
+        "results/susskind-singlet-multimark/initial-main.log",
+        "results/susskind-singlet-multimark/main.log"
+      ]
+    },
+    {
+      "stage": "susskind-singlet-otoc",
+      "manifest_sha256": "a59c91c0edafaa308da569d743402899ebeece87376ef5a6304d48a4f4b1b15d",
+      "unchanged_verified": [
+        "code/singlet_otoc.py",
+        "code/check_singlet_otoc.py",
+        "code/run_singlet_otoc.py",
+        "code/check_otoc_representation.py",
+        "code/check_otoc_saved_evidence.py",
+        "code/build_singlet_otoc.ps1",
+        "code/record_singlet_otoc_local.py",
+        "manuscript/susskind-singlet-otoc/main.tex",
+        "output/pdf/de-sitter-susskind-singlet-otoc.pdf",
+        "notes/susskind-singlet-otoc.md",
+        "literature/susskind-singlet-otoc-sources.md",
+        "journal/2026-11-06-susskind-singlet-otoc.md",
+        "results/susskind-singlet-otoc/error-replay.json",
+        "results/susskind-singlet-otoc/exact-channels.json",
+        "results/susskind-singlet-otoc/initial-main.log",
+        "results/susskind-singlet-otoc/main.log",
+        "results/susskind-singlet-otoc/otoc-and-commutator.png",
+        "results/susskind-singlet-otoc/otoc-numerics.json",
+        "results/susskind-singlet-otoc/representation-checks.json"
+      ]
+    },
+    {
+      "stage": "susskind-rindler-packet",
+      "manifest_sha256": "50182379d4aeeb5a6d81e93dec28e8d15ee07fd7367fd8530098ab44aa12d0fd",
+      "unchanged_verified": [
+        "code/rindler_singlet_packet.py",
+        "code/run_rindler_singlet_packet.py",
+        "code/check_rindler_singlet_packet.py",
+        "code/build_rindler_singlet_packet.ps1",
+        "code/record_rindler_singlet_packet.py",
+        "manuscript/susskind-rindler-packet/main.tex",
+        "output/pdf/de-sitter-susskind-rindler-packet.pdf",
+        "notes/susskind-rindler-packet.md",
+        "literature/susskind-rindler-packet-sources.md",
+        "journal/2026-11-06-susskind-rindler-packet.md",
+        "results/susskind-rindler-packet/build-initial.log",
+        "results/susskind-rindler-packet/independent-checks.json",
+        "results/susskind-rindler-packet/main.log",
+        "results/susskind-rindler-packet/radial-grid.npz",
+        "results/susskind-rindler-packet/rindler-packet.png",
+        "results/susskind-rindler-packet/study.json"
+      ]
+    },
+    {
+      "stage": "susskind-first-order",
+      "manifest_sha256": "eb0242898cb326307de3c12c696660e80ee655f5a87257ad22bd01c384d2c88c",
+      "unchanged_verified": [
+        "code/singlet_first_order.py",
+        "code/check_singlet_first_order_moments.py",
+        "code/singlet_general_fourpoint.py",
+        "code/check_general_fourpoint.py",
+        "code/run_singlet_first_order.py",
+        "code/build_singlet_first_order.ps1",
+        "code/record_singlet_first_order.py",
+        "manuscript/susskind-first-order/main.tex",
+        "output/pdf/de-sitter-susskind-first-order.pdf",
+        "notes/susskind-first-order.md",
+        "literature/susskind-first-order-sources.md",
+        "journal/2026-11-06-susskind-first-order.md",
+        "results/susskind-first-order/exact-moments.json",
+        "results/susskind-first-order/finite-lambda.json",
+        "results/susskind-first-order/fixed-time-first-order.png",
+        "results/susskind-first-order/main.log",
+        "results/susskind-first-order/representation-checks.json"
+      ]
+    },
+    {
+      "stage": "susskind-translations",
+      "manifest_sha256": "dc6719e28a1ba2e42e31485a3161a2efe236d014d7b1ee5c89fed60284295a6c",
+      "unchanged_verified": [
+        "code/singlet_translations.py",
+        "code/check_singlet_translations.py",
+        "code/plot_singlet_translations.py",
+        "code/build_singlet_translations.ps1",
+        "code/record_singlet_translations.py",
+        "manuscript/susskind-translations/main.tex",
+        "output/pdf/de-sitter-susskind-translations.pdf",
+        "notes/susskind-translations.md",
+        "literature/susskind-translations-sources.md",
+        "journal/2026-11-06-susskind-translations.md",
+        "results/susskind-translations/candidate-translations.png",
+        "results/susskind-translations/main.log",
+        "results/susskind-translations/plot-data.json",
+        "results/susskind-translations/study.json"
+      ]
+    },
+    {
+      "stage": "susskind-antisymmetric",
+      "manifest_sha256": "009ef891575b2529327a7f4458aff0504c56f1345206dbc4c69290b274c733df",
+      "unchanged_verified": [
+        "code/antisymmetric_chord_probe.py",
+        "code/check_antisymmetric_chords.py",
+        "code/build_antisymmetric_chords.ps1",
+        "code/record_antisymmetric_chords.py",
+        "manuscript/susskind-antisymmetric/main.tex",
+        "output/pdf/de-sitter-susskind-antisymmetric.pdf",
+        "notes/susskind-antisymmetric.md",
+        "literature/susskind-antisymmetric-sources.md",
+        "journal/2026-11-06-susskind-antisymmetric.md",
+        "results/susskind-antisymmetric/main.log",
+        "results/susskind-antisymmetric/probe.json",
+        "results/susskind-antisymmetric/validation.json"
+      ]
+    },
+    {
+      "stage": "susskind-two-matter",
+      "manifest_sha256": "ff83dcf1b0335259e3401071b8203d57b8282b6cf1a139da9f5a49079781e81b",
+      "unchanged_verified": [
+        "code/two_matter_chords.py",
+        "code/check_two_matter_chords.py",
+        "code/check_two_matter_tensor.py",
+        "code/build_two_matter_chords.ps1",
+        "code/record_two_matter_chords.py",
+        "manuscript/susskind-two-matter/main.tex",
+        "output/pdf/de-sitter-susskind-two-matter.pdf",
+        "notes/susskind-two-matter.md",
+        "literature/susskind-two-matter-sources.md",
+        "journal/2026-11-06-susskind-two-matter.md",
+        "results/susskind-two-matter/main.log",
+        "results/susskind-two-matter/tensor-check.json",
+        "results/susskind-two-matter/validation.json"
+      ]
+    },
+    {
+      "stage": "susskind-cubic-singlet",
+      "manifest_sha256": "d60b10d9cc2cab973e72ff800cbbbc03a47ef56eba12e0932bad47d4cc03ee9b",
+      "unchanged_verified": [
+        "code/cubic_singlet.py",
+        "code/check_cubic_spectrum.py",
+        "code/check_cubic_identities.py",
+        "code/build_cubic_singlet.ps1",
+        "code/record_cubic_singlet.py",
+        "manuscript/susskind-cubic-singlet/main.tex",
+        "output/pdf/de-sitter-susskind-cubic-singlet.pdf",
+        "notes/susskind-cubic-singlet.md",
+        "literature/susskind-cubic-singlet-sources.md",
+        "journal/2026-11-06-susskind-cubic-singlet.md",
+        "results/susskind-cubic-singlet/identity-check.json",
+        "results/susskind-cubic-singlet/main.log",
+        "results/susskind-cubic-singlet/spectrum-check.json",
+        "results/susskind-cubic-singlet/study.json"
+      ]
+    },
+    {
+      "stage": "susskind-cubic-kernel",
+      "manifest_sha256": "25307aa21c59e7e8c9621122e2d01691c14b05084687a72010cfb176c9a31c2c",
+      "unchanged_verified": [
+        "code/cubic_kernel_orbits.py",
+        "code/check_cubic_kernel_orbits.py",
+        "code/run_cubic_kernel.py",
+        "code/check_cubic_fourier.py",
+        "code/build_cubic_kernel.ps1",
+        "code/record_cubic_kernel.py",
+        "manuscript/susskind-cubic-kernel/main.tex",
+        "output/pdf/de-sitter-susskind-cubic-kernel.pdf",
+        "notes/susskind-cubic-kernel.md",
+        "literature/susskind-cubic-kernel-sources.md",
+        "journal/2026-11-06-susskind-cubic-kernel.md",
+        "results/susskind-cubic-kernel/correlation.png",
+        "results/susskind-cubic-kernel/fourier-check.json",
+        "results/susskind-cubic-kernel/independent-orbits.json",
+        "results/susskind-cubic-kernel/kernel.json",
+        "results/susskind-cubic-kernel/main.log",
+        "results/susskind-cubic-kernel/orbit-certificate.json"
+      ]
+    },
+    {
+      "stage": "susskind-cubic-linear",
+      "manifest_sha256": "7aed57ff4752e4982400108baec9b7954f2628c8b94d8e34b8ceda87e2f3b6df",
+      "unchanged_verified": [
+        "code/cubic_linear_probe.py",
+        "code/cubic_linear_channels.py",
+        "code/cubic_linear_limit.py",
+        "code/check_cubic_linear.py",
+        "code/build_cubic_linear.ps1",
+        "code/record_cubic_linear.py",
+        "manuscript/susskind-cubic-linear/main.tex",
+        "output/pdf/de-sitter-susskind-cubic-linear.pdf",
+        "notes/susskind-cubic-linear.md",
+        "literature/susskind-cubic-linear-sources.md",
+        "journal/2026-11-06-susskind-cubic-linear.md",
+        "results/susskind-cubic-linear/channels.json",
+        "results/susskind-cubic-linear/double-scale.json",
+        "results/susskind-cubic-linear/finite-probe.json",
+        "results/susskind-cubic-linear/main.log",
+        "results/susskind-cubic-linear/validation.json"
+      ]
+    },
+    {
+      "stage": "susskind-cubic-dynamics",
+      "manifest_sha256": "7934912a875ef7b5509519a47fb99f49546fad692ca729ad6383b356ed42b195",
+      "unchanged_verified": [
+        "code/cubic_linear_dynamics.py",
+        "code/check_cubic_dynamics.py",
+        "code/check_cubic_dynamics_moments.py",
+        "code/build_cubic_dynamics.ps1",
+        "code/record_cubic_dynamics.py",
+        "manuscript/susskind-cubic-dynamics/main.tex",
+        "output/pdf/de-sitter-susskind-cubic-dynamics.pdf",
+        "notes/susskind-cubic-dynamics.md",
+        "literature/susskind-cubic-dynamics-sources.md",
+        "journal/2026-11-06-susskind-cubic-dynamics.md",
+        "results/susskind-cubic-dynamics/double-scale.json",
+        "results/susskind-cubic-dynamics/main.log",
+        "results/susskind-cubic-dynamics/two-energy-validation.json",
+        "results/susskind-cubic-dynamics/validation.json"
+      ]
+    },
+    {
+      "stage": "susskind-linear-kernel",
+      "manifest_sha256": "a071326c253289cf0dd3f18fa3da651c5b19f4a803d351861cd482e6d0dba9cc",
+      "unchanged_verified": [
+        "code/cubic_covariance_bridge.py",
+        "code/cubic_sixth_wick.py",
+        "code/check_linear_joint.py",
+        "code/run_linear_kernel.py",
+        "code/build_linear_kernel.ps1",
+        "code/record_linear_kernel.py",
+        "manuscript/susskind-linear-kernel/main.tex",
+        "output/pdf/de-sitter-susskind-linear-kernel.pdf",
+        "notes/susskind-linear-kernel.md",
+        "literature/susskind-linear-kernel-sources.md",
+        "journal/2026-11-06-susskind-linear-kernel.md",
+        "results/susskind-linear-kernel/correlation.png",
+        "results/susskind-linear-kernel/covariance-bridge.json",
+        "results/susskind-linear-kernel/initial-plot-failure.json",
+        "results/susskind-linear-kernel/joint-quartic.json",
+        "results/susskind-linear-kernel/kernel.json",
+        "results/susskind-linear-kernel/main.log",
+        "results/susskind-linear-kernel/sixth-wick.json"
+      ]
+    },
+    {
+      "stage": "susskind-cubic-cross",
+      "manifest_sha256": "f8a767a7e9eab255252c6213138bea490940a3a7a5cab3093f681854a070dc3d",
+      "unchanged_verified": [
+        "code/cubic_cross_probe.py",
+        "code/cubic_cross_channels.py",
+        "code/run_cubic_cross_limits.py",
+        "code/cubic_cross_orbits.py",
+        "code/check_cubic_cross.py",
+        "code/build_cubic_cross.ps1",
+        "code/record_cubic_cross.py",
+        "manuscript/susskind-cubic-cross/main.tex",
+        "output/pdf/de-sitter-susskind-cubic-cross.pdf",
+        "notes/susskind-cubic-cross.md",
+        "literature/susskind-cubic-cross-sources.md",
+        "journal/2026-11-06-susskind-cubic-cross.md",
+        "results/susskind-cubic-cross/counterterm-limits.json",
+        "results/susskind-cubic-cross/cross-orbits.json",
+        "results/susskind-cubic-cross/finite-cross.json",
+        "results/susskind-cubic-cross/initial-reduction-check-failure.json",
+        "results/susskind-cubic-cross/initial-reduction-check.py.txt",
+        "results/susskind-cubic-cross/linear-channels.json",
+        "results/susskind-cubic-cross/main.log",
+        "results/susskind-cubic-cross/reduction-checks.json"
+      ]
+    },
+    {
+      "stage": "susskind-filtered-spectrum",
+      "manifest_sha256": "1fd893ca1135887525c11c496d0160a6d3e7e80bd53bf55c028b4aa106303f69",
+      "unchanged_verified": [
+        "code/singlet_filtered_bridge.py",
+        "code/run_filtered_spectrum.py",
+        "code/check_filtered_spectrum.py",
+        "code/build_filtered_spectrum.ps1",
+        "code/record_filtered_spectrum.py",
+        "manuscript/susskind-filtered-spectrum/main.tex",
+        "output/pdf/de-sitter-susskind-filtered-spectrum.pdf",
+        "notes/susskind-filtered-spectrum.md",
+        "literature/susskind-filtered-spectrum-sources.md",
+        "journal/2026-11-06-susskind-filtered-spectrum.md",
+        "results/susskind-filtered-spectrum/build-initial.log",
+        "results/susskind-filtered-spectrum/charged-bridge.json",
+        "results/susskind-filtered-spectrum/initial-check-failure.json",
+        "results/susskind-filtered-spectrum/initial-spectral-check.py.txt",
+        "results/susskind-filtered-spectrum/main.log",
+        "results/susskind-filtered-spectrum/spectral-checks.json",
+        "results/susskind-filtered-spectrum/spectrum.json",
+        "results/susskind-filtered-spectrum/spectrum.png"
+      ]
+    },
+    {
+      "stage": "susskind-mixed-cubic",
+      "manifest_sha256": "edba7662e727ba91c8af0c05506a99234800fd978b0515a5f594c8f3df09bda3",
+      "unchanged_verified": [
+        "code/mixed_cubic_vertices.py",
+        "code/mixed_cubic_clusters.py",
+        "code/check_mixed_cubic_car.py",
+        "code/mixed_cubic_otoc.py",
+        "code/build_mixed_cubic.ps1",
+        "code/record_mixed_cubic.py",
+        "manuscript/susskind-mixed-cubic/main.tex",
+        "output/pdf/de-sitter-susskind-mixed-cubic.pdf",
+        "notes/susskind-mixed-cubic.md",
+        "literature/susskind-mixed-cubic-sources.md",
+        "journal/2026-11-06-susskind-mixed-cubic.md",
+        "results/susskind-mixed-cubic/cluster-certificate.json",
+        "results/susskind-mixed-cubic/finite-car.json",
+        "results/susskind-mixed-cubic/main.log",
+        "results/susskind-mixed-cubic/moments.json",
+        "results/susskind-mixed-cubic/otoc.json",
+        "results/susskind-mixed-cubic/verification-summary.json"
+      ]
+    },
+    {
+      "stage": "susskind-commutator-primary",
+      "manifest_sha256": "5d88ca0586aa5a526326ba3b264327242c9643507fa8459d214b6ac714e47de4",
+      "unchanged_verified": [
+        "code/commutator_primary.py",
+        "code/check_commutator_vertex.py",
+        "code/run_commutator_primary.py",
+        "code/build_commutator_primary.ps1",
+        "code/record_commutator_primary.py",
+        "manuscript/susskind-commutator-primary/main.tex",
+        "output/pdf/de-sitter-susskind-commutator-primary.pdf",
+        "notes/susskind-commutator-primary.md",
+        "literature/susskind-commutator-primary-sources.md",
+        "journal/2026-11-06-susskind-commutator-primary.md",
+        "results/susskind-commutator-primary/build-initial.log",
+        "results/susskind-commutator-primary/exact.json",
+        "results/susskind-commutator-primary/main.log",
+        "results/susskind-commutator-primary/mixed-growth.png",
+        "results/susskind-commutator-primary/numerics.json",
+        "results/susskind-commutator-primary/vertex.json"
+      ]
+    },
+    {
+      "stage": "susskind-ordering-metric",
+      "manifest_sha256": "cfb110fbf88aab6f4eca5801cf749cd3a54a5182cbc24adb58d159817eec8ac4",
+      "unchanged_verified": [
+        "code/ordering_metric.py",
+        "code/check_ordering_metric.py",
+        "code/build_ordering_metric.ps1",
+        "code/record_ordering_metric.py",
+        "manuscript/susskind-ordering-metric/main.tex",
+        "output/pdf/de-sitter-susskind-ordering-metric.pdf",
+        "notes/susskind-ordering-metric.md",
+        "literature/susskind-ordering-metric-sources.md",
+        "journal/2026-11-06-susskind-ordering-metric.md",
+        "results/susskind-ordering-metric/build-initial.log",
+        "results/susskind-ordering-metric/build-overflow.log",
+        "results/susskind-ordering-metric/checks.json",
+        "results/susskind-ordering-metric/exact.json",
+        "results/susskind-ordering-metric/main.log"
+      ]
+    },
+    {
+      "stage": "susskind-bulk-target",
+      "manifest_sha256": "8b73e29a95f77e8348838c57f4f6899c9a5db12e373773db1ea08da278617351",
+      "unchanged_verified": [
+        "code/thooft_bulk_target.py",
+        "code/check_thooft_bulk_target.py",
+        "code/check_bulk_mass_bound.py",
+        "code/build_bulk_target.ps1",
+        "code/record_bulk_target.py",
+        "manuscript/susskind-bulk-target/main.tex",
+        "output/pdf/de-sitter-susskind-bulk-target.pdf",
+        "notes/susskind-bulk-target.md",
+        "literature/susskind-bulk-target-sources.md",
+        "journal/2026-11-06-susskind-bulk-target.md",
+        "results/susskind-bulk-target/checks.json",
+        "results/susskind-bulk-target/initial-check-script.py",
+        "results/susskind-bulk-target/initial-failure.json",
+        "results/susskind-bulk-target/initial-script.py",
+        "results/susskind-bulk-target/integral-initial-failure.json",
+        "results/susskind-bulk-target/main.log",
+        "results/susskind-bulk-target/mass-bound.json",
+        "results/susskind-bulk-target/refinement-checkpoint.json",
+        "results/susskind-bulk-target/spectrum.json",
+        "results/susskind-bulk-target/wavefunctions.npz"
+      ]
+    },
+    {
+      "stage": "susskind-bilocal-interface",
+      "manifest_sha256": "7df066d103877aa4cd0c023fc3fa73340ccc4da4894e8ef4ba4718f4dee7199a",
+      "unchanged_verified": [
+        "code/temporal_bilocal_interface.py",
+        "code/bilocal_meson_projection.py",
+        "code/build_bilocal_interface.ps1",
+        "code/record_bilocal_interface.py",
+        "manuscript/susskind-bilocal-interface/main.tex",
+        "output/pdf/de-sitter-susskind-bilocal-interface.pdf",
+        "notes/susskind-bilocal-interface.md",
+        "literature/susskind-bilocal-interface-sources.md",
+        "journal/2026-11-06-susskind-bilocal-interface.md",
+        "results/susskind-bilocal-interface/main.log",
+        "results/susskind-bilocal-interface/micro.json",
+        "results/susskind-bilocal-interface/projection.json"
+      ]
+    },
+    {
+      "stage": "susskind-bilocal-channel",
+      "manifest_sha256": "ab550e13a9e9cf00acadd65ce9ed25c2999dc17f19546f2c06b3330fae8c216e",
+      "unchanged_verified": [
+        "code/bilocal_channel.py",
+        "code/check_bilocal_projection.py",
+        "code/build_bilocal_channel.ps1",
+        "code/record_bilocal_channel.py",
+        "manuscript/susskind-bilocal-channel/main.tex",
+        "output/pdf/de-sitter-susskind-bilocal-channel.pdf",
+        "notes/susskind-bilocal-channel.md",
+        "literature/susskind-bilocal-channel-sources.md",
+        "journal/2026-11-06-susskind-bilocal-channel.md",
+        "results/susskind-bilocal-channel/checks.json",
+        "results/susskind-bilocal-channel/initial-build-failure.txt",
+        "results/susskind-bilocal-channel/initial-main.tex",
+        "results/susskind-bilocal-channel/main.log",
+        "results/susskind-bilocal-channel/projection-checks.json"
+      ]
+    }
+  ],
+  "current_git_head": "714d038bb605cfcffdc351e4dcc62aa95237d25f",
+  "git_commit_created": false,
+  "git_push_performed": false,
+  "archive_created": false,
+  "global_project_audit_performed": false,
+  "checks": {
+    "exact_renewal_orders": 18,
+    "exact_first_coefficients": 6,
+    "finite_time_bounds": 12,
+    "tagged_words": 130,
+    "tagged_nonzero": 17,
+    "exact_chord_polynomials": 25,
+    "mehler_limit_points": 9,
+    "lambda_curves": 4
+  },
+  "environment": {
+    "python": "3.14.5",
+    "calculation_environments": [
+      {
+        "python": "3.14.5",
+        "numpy": "2.4.6",
+        "sympy": "1.14.0",
+        "scipy": "1.18.0"
+      },
+      {
+        "python": "3.14.5",
+        "numpy": "2.4.6",
+        "sympy": "1.14.0",
+        "mpmath": "1.3.0"
+      }
+    ]
+  },
+  "build": {
+    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File code/build_memory_force.ps1",
+    "compiler": "This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5 Portable) (preloaded format=pdflatex 2026.9.19)  6 NOV 2026 11:55",
+    "passes": 2,
+    "pages": 7,
+    "visual_review": "All seven final rendered pages inspected; no clipping, overlap or undefined citations",
+    "render_command": "pdftoppm -r 95 -png output/pdf/de-sitter-susskind-memory-force.pdf tmp/pdfs/susskind-memory-force-build/page"
+  },
+  "retained_failures": [
+    "Integer helper truncated half-integral coefficients; original source and failure saved; fixed exact dyadic conversion.",
+    "Random tagged-word nonzero coverage insufficient; initial source and failure saved; ten directed words added without lowering threshold."
+  ],
+  "error_scope": {
+    "bridge": "Exact noncommuting matrix renewal through order six, and finite-system float tests of analytic scalar memory-force bounds. No fit of finite systems to the DS kernel.",
+    "kernel-checks": "Exact isolated-tag CAR and chord polynomials. Off-diagonal Mehler limit at 65 digits; equality is an almost-everywhere density limit, not pointwise on the diagonal. Jacobi truncation bounded analytically; roundoff and quadrature checked by refinement, not interval-certified."
+  },
+  "process_state": "All computation, compilation and rendering processes terminal",
+  "hashes": {
+    "code/memory_force_bridge.py": "df01200636305d0b919f2d6a1d528569ac6387f1aa9f92de50b942ae82530e60",
+    "code/check_force_kernel.py": "a5924215d2e7cecbd6d70547ee9b89ad40d5f2e78e605368a46166e1a4a5adc5",
+    "code/build_memory_force.ps1": "3a817f97cd82066d5d0eb8f5d69714d7cc97dc74337b6ab0c1d118121d063607",
+    "code/record_memory_force.py": "7949d191fd12285ac7c3a4406f1164fa3b84217856705565b307be4aba6a54a7",
+    "manuscript/susskind-memory-force/main.tex": "f07c007b6258ef95239ae4e6154f1c6cc958e5ecf44aa37b200582c55bddc5bc",
+    "output/pdf/de-sitter-susskind-memory-force.pdf": "7cd3dafa6f90684269c27403352b927bae1fdabc63ad8164797ffd09e8e2e015",
+    "notes/susskind-memory-force.md": "fb057cc23f74ea449d88e9a3bc741811c16687e72121f8d08f54250330aaa06d",
+    "literature/susskind-memory-force-sources.md": "36e7e9d3eb7aad16f75c230bedbdc96ae9efed831c3100c50a65b7a79ba3b83c",
+    "journal/2026-11-06-susskind-memory-force.md": "d927a2a1ac050fcf9b2349e61ab72d51aaf1d3f0095afd866f1bb1342233178d",
+    "README.md": "502c534657c8c0e9f2cc28e1e2c052b96108dbb86056efe8bded0d11fff85b28",
+    "PLAN.md": "edb1950e1120c43345e97199dc3103f3c889b3a144c3b3181fc1f3161bcb153d",
+    "NEXT.md": "c8876057d31937166677d49b81068cb611c83ee420ed531bddecbb965ca5166c",
+    "results/susskind-memory-force/bridge.json": "e2fdb6832e7a5ad1552fce70a21a7ca8f3b9747c8dd8b884495f648e790bfdaa",
+    "results/susskind-memory-force/initial-check-force-kernel.py": "44864ab3f4a7cb16dea702c297fc47e7531dab00c0013cb95d0f21287c1bfc9a",
+    "results/susskind-memory-force/initial-failure.txt": "409f1b5a84a7bd081a942f9f531ae8e0f74dde89b3a7f577e09a1a75fecb2b03",
+    "results/susskind-memory-force/initial-memory-force-bridge.py": "639478a1b3caa3aa90c780a4447ba44dc1072c3fa013e4fc166c765b2768a3d9",
+    "results/susskind-memory-force/kernel-checks.json": "9488c161bfc975e4819e39050859e8105f62420a7d18d5202fd43c9753b777ce",
+    "results/susskind-memory-force/main.log": "565c5eff082254e224a3c7bdfbf2a9ae69aa3ae99f4b9dbaed2a487320ceb46d",
+    "results/susskind-memory-force/tag-coverage-failure.txt": "726adeaae84bbf591c86fbf6c6fecd34184a70c0e83a2eb31f4fe896bc8708ce"
+  },
+  "local_render_hashes": {
+    "tmp/pdfs/susskind-memory-force-build/page-1.png": "eb1fd4bef5afa677e60f16efbee6d8095ea215e9407c326f05c3ac40a6f54f1e",
+    "tmp/pdfs/susskind-memory-force-build/page-2.png": "f1185088423164bff0428a7211f15ecd6d37339dffb4607204b97c2ce8ec9865",
+    "tmp/pdfs/susskind-memory-force-build/page-3.png": "09e2a479f8165c05700674b1d8efaf2a055468defa044d54cef1af6b167dfe62",
+    "tmp/pdfs/susskind-memory-force-build/page-4.png": "7767f36ffab13e11dcee023e5656c3d56bbdd754e22be37040dea6c093826198",
+    "tmp/pdfs/susskind-memory-force-build/page-5.png": "9043a752744d964644bcbaf5c51398ad5da012d24db485fd40e45fc93f9cb964",
+    "tmp/pdfs/susskind-memory-force-build/page-6.png": "d68a9f4fe5d55a32fc944ae4176668b4c2d17205e186e16ae9e93b199ba8fb25",
+    "tmp/pdfs/susskind-memory-force-build/page-7.png": "dd8a376de1763a2d200ade5a23725b83540df3d8d2aea7e5774fe5fac1d7c752"
+  },
+  "build_pass_hashes": {
+    "pass1.txt": "65bfe8e3791271b4eb8fe941cc4328bd65796c5b21b6b91f8ce1d0d08b5ff764",
+    "pass2.txt": "e0e902f5549952a476fe240c8ec06ee6a6d49320ab8c9cb2a375fa78f4f65a75"
+  }
+}

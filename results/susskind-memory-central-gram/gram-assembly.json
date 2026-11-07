@@ -1,0 +1,52 @@
+{
+  "status": "passed",
+  "basis": [
+    "B",
+    "L_input",
+    "S",
+    "O"
+  ],
+  "gram_over_C_squared": [
+    [
+      "q + 1",
+      "0",
+      "2*lambda*(1 - q)",
+      "2*lambda*(1 - q)"
+    ],
+    [
+      "0",
+      "2*lambda*(q + 1)",
+      "0",
+      "0"
+    ],
+    [
+      "2*lambda*(1 - q)",
+      "0",
+      "4*lambda**2*(q + 1) + 2*lambda*(1 - q)",
+      "4*lambda**2*(q + 1) + 2*lambda*(1 - q)"
+    ],
+    [
+      "2*lambda*(1 - q)",
+      "0",
+      "4*lambda**2*(q + 1) + 2*lambda*(1 - q)",
+      "4*lambda**2*(q + 1) + 4*lambda"
+    ]
+  ],
+  "variance_S_perp": "-2*lambda*(-8*lambda*q + q**2 - 1)/(q + 1)",
+  "variance_O_minus_S": "2*lambda*(q + 1)",
+  "projection_O": "-(-8*lambda*q + q**2 - 1)/(2*(4*lambda*q + q + 1))",
+  "projection_B": "-lambda*(q - 1)*(q + 1)/(4*lambda*q + q + 1)",
+  "residual_variance_over_C_squared": "-lambda*(q + 1)*(-8*lambda*q + q**2 - 1)/(4*lambda*q + q + 1)",
+  "core_residual_variance_over_C_fourth": "-64*lambda**3*q**4*(q + 1)*(-8*lambda*q + q**2 - 1)/(4*lambda*q + q + 1)",
+  "physical_core_variance": "-64*J_s**8*q**4*(q + 1)*(-8*lambda*q + q**2 - 1)/(lambda*(4*lambda*q + q + 1))",
+  "ordered_small_lambda_limit": "1024*J_s**8",
+  "positivity_conditions": "lambda>0 and q=exp(-4 lambda) in (0,1); v and Delta strictly positive.",
+  "scope": "Symbolic assembly of the proven equal-time central-window Gram. Core uses the previously proven strong W2 expansion. Does not extend energy-resolved spectra, integrate all charges, or prove the optional exact charged Casimir formula.",
+  "environment": {
+    "python": "3.14.5",
+    "sympy": "1.14.0"
+  },
+  "input_sha256": {
+    "code/memory_central_gram_assembly.py": "20e8db8eb21291e4ac9e90d9e8557545504a36a8b7f096815a99695dff90bebd"
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "status": "passed",
+  "checks": {
+    "coherent_Casimir_equals_commutator_covariance": true,
+    "general_multiplication_commutator": true,
+    "relative_Casimir_conjugation": true,
+    "beta_normalization": true,
+    "Jacobi_eigen_0": true,
+    "Jacobi_eigen_1": true,
+    "Jacobi_eigen_2": true,
+    "Jacobi_eigen_3": true,
+    "Jacobi_eigen_4": true,
+    "Jacobi_eigen_5": true,
+    "orthogonality_0_0": true,
+    "orthogonality_0_1": true,
+    "orthogonality_0_2": true,
+    "orthogonality_0_3": true,
+    "orthogonality_0_4": true,
+    "orthogonality_0_5": true,
+    "orthogonality_1_0": true,
+    "orthogonality_1_1": true,
+    "orthogonality_1_2": true,
+    "orthogonality_1_3": true,
+    "orthogonality_1_4": true,
+    "orthogonality_1_5": true,
+    "orthogonality_2_0": true,
+    "orthogonality_2_1": true,
+    "orthogonality_2_2": true,
+    "orthogonality_2_3": true,
+    "orthogonality_2_4": true,
+    "orthogonality_2_5": true,
+    "orthogonality_3_0": true,
+    "orthogonality_3_1": true,
+    "orthogonality_3_2": true,
+    "orthogonality_3_3": true,
+    "orthogonality_3_4": true,
+    "orthogonality_3_5": true,
+    "orthogonality_4_0": true,
+    "orthogonality_4_1": true,
+    "orthogonality_4_2": true,
+    "orthogonality_4_3": true,
+    "orthogonality_4_4": true,
+    "orthogonality_4_5": true,
+    "orthogonality_5_0": true,
+    "orthogonality_5_1": true,
+    "orthogonality_5_2": true,
+    "orthogonality_5_3": true,
+    "orthogonality_5_4": true,
+    "orthogonality_5_5": true,
+    "mass_00": true,
+    "mass_01": true,
+    "mass_Casimir_defect_01": true,
+    "phase_norm_linear": true
+  },
+  "relative_labels": [
+    12,
+    22,
+    34,
+    48,
+    64,
+    82
+  ],
+  "mass_matrix": [
+    [
+      "24/5",
+      "-sqrt(66)/10",
+      "3*sqrt(546)/70",
+      "-sqrt(770)/70",
+      "7*sqrt(374)/330",
+      "-sqrt(5434)/330"
+    ],
+    [
+      "-sqrt(66)/10",
+      "88/15",
+      "-4*sqrt(1001)/105",
+      "37*sqrt(105)/210",
+      "-sqrt(51)/10",
+      "2*sqrt(741)/65"
+    ],
+    [
+      "3*sqrt(546)/70",
+      "-4*sqrt(1001)/105",
+      "104/15",
+      "-sqrt(2145)/30",
+      "9*sqrt(51051)/770",
+      "-6*sqrt(4389)/385"
+    ],
+    [
+      "-sqrt(770)/70",
+      "37*sqrt(105)/210",
+      "-sqrt(2145)/30",
+      "8",
+      "-8*sqrt(595)/105",
+      "103*sqrt(8645)/2730"
+    ],
+    [
+      "7*sqrt(374)/330",
+      "-sqrt(51)/10",
+      "9*sqrt(51051)/770",
+      "-8*sqrt(595)/105",
+      "136/15",
+      "-sqrt(4199)/30"
+    ],
+    [
+      "-sqrt(5434)/330",
+      "2*sqrt(741)/65",
+      "-6*sqrt(4389)/385",
+      "103*sqrt(8645)/2730",
+      "-sqrt(4199)/30",
+      "152/15"
+    ]
+  ],
+  "naive_mass_in_A_orthonormal_basis": [
+    [
+      "24/5",
+      "-3/5"
+    ],
+    [
+      "-11/10",
+      "88/15"
+    ]
+  ],
+  "undressed_phase_norm": {
+    "state": "(p0+i p1)/sqrt(2), p0=1, p1=(10x-4)/sqrt(24/11)",
+    "constant": "17",
+    "linear": "sqrt(66)",
+    "quadratic": "181"
+  },
+  "ward_defect_01": "-3*sqrt(22)/5 + 11*sqrt(3)/5",
+  "general_operator": "A = -x(1-x) d_x^2 - [2d-2(d+e)x] d_x + 2de",
+  "environment": {
+    "python": "3.14.5",
+    "sympy": "1.14.0"
+  },
+  "input_sha256": {
+    "code/ordering_metric.py": "5ed1327d0c4d40801490931e471ab96f4a47c6fe4a0c5c053c1d31079a6f2c91"
+  }
+}

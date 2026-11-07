@@ -1,0 +1,3130 @@
+{
+  "status": "passed",
+  "created_utc": "2026-11-06T22:03:51.190027+00:00",
+  "parameters": {
+    "fixtures_N_p_maximum_pairs": [
+      [
+        4,
+        1,
+        4
+      ],
+      [
+        6,
+        1,
+        3
+      ],
+      [
+        6,
+        2,
+        3
+      ],
+      [
+        8,
+        2,
+        3
+      ]
+    ],
+    "filling": "m=N/2",
+    "normalization": "unit Gaussian variance, sigma_squared=L=binom(m,p)binom(N-m,p)",
+    "CAR": "{c_i,c_j^dagger}=delta_ij",
+    "creators": "ascending operator order",
+    "word_order": "left to right product; rightmost acts first; + creates a particle-hole block",
+    "expected_maximum_label_assignments": 1600000,
+    "asymptotic_parameters": {
+      "lambda_N": "1/2",
+      "p_values": [
+        2,
+        4,
+        8,
+        16,
+        32,
+        64
+      ],
+      "maximum_r": 8
+    },
+    "scope": "Finite exact CAR and Wick identities; large-p points are diagnostics, not proof of convergence"
+  },
+  "parameter_sha256": "babd1b557801241b185ab2632ee270137dae0a2ee33d96a90eb8e7706c288d7e",
+  "counts": {
+    "non_Dyck_words_zero_by_right_action": 136,
+    "Gaussian_label_assignments": 1537310,
+    "forward_CAR_interval_comparisons": 754030,
+    "word_moments": 46,
+    "nonzero_backward_word_corrections": 25,
+    "finite_systems": 4,
+    "asymptotic_rows": 6,
+    "linear_cumulant_checks": 189
+  },
+  "fixtures": [
+    {
+      "N": 4,
+      "p": 1,
+      "m": 2,
+      "L": 4,
+      "counts": {
+        "non_Dyck_words_zero_by_right_action": 76,
+        "Gaussian_label_assignments": 88004,
+        "forward_CAR_interval_comparisons": 27892,
+        "word_moments": 22,
+        "nonzero_backward_word_corrections": 13
+      },
+      "records": [
+        {
+          "word": "-+",
+          "creation_heights": [
+            0
+          ],
+          "forward_pairings": 1,
+          "backward_pairings": 0,
+          "forward_moment": "1",
+          "backward_correction": "0",
+          "full_moment": "1",
+          "limiting_shift_moment": "1 * q^0"
+        },
+        {
+          "word": "-+-+",
+          "creation_heights": [
+            0,
+            0
+          ],
+          "forward_pairings": 1,
+          "backward_pairings": 1,
+          "forward_moment": "1",
+          "backward_correction": "1/4",
+          "full_moment": "5/4",
+          "limiting_shift_moment": "1 * q^0"
+        },
+        {
+          "word": "--++",
+          "creation_heights": [
+            0,
+            1
+          ],
+          "forward_pairings": 2,
+          "backward_pairings": 0,
+          "forward_moment": "1/2",
+          "backward_correction": "0",
+          "full_moment": "1/2",
+          "limiting_shift_moment": "2 * q^1"
+        },
+        {
+          "word": "-+-+-+",
+          "creation_heights": [
+            0,
+            0,
+            0
+          ],
+          "forward_pairings": 1,
+          "backward_pairings": 5,
+          "forward_moment": "1",
+          "backward_correction": "7/8",
+          "full_moment": "15/8",
+          "limiting_shift_moment": "1 * q^0"
+        },
+        {
+          "word": "-+--++",
+          "creation_heights": [
+            0,
+            1,
+            0
+          ],
+          "forward_pairings": 2,
+          "backward_pairings": 4,
+          "forward_moment": "1/2",
+          "backward_correction": "1/4",
+          "full_moment": "3/4",
+          "limiting_shift_moment": "2 * q^1"
+        },
+        {
+          "word": "--++-+",
+          "creation_heights": [
+            0,
+            0,
+            1
+          ],
+          "forward_pairings": 2,
+          "backward_pairings": 4,
+          "forward_moment": "1/2",
+          "backward_correction": "1/4",
+          "full_moment": "3/4",
+          "limiting_shift_moment": "2 * q^1"
+        },
+        {
+          "word": "--+-++",
+          "creation_heights": [
+            0,
+            1,
+            1
+          ],
+          "forward_pairings": 4,
+          "backward_pairings": 2,
+          "forward_moment": "1/4",
+          "backward_correction": "1/2",
+          "full_moment": "3/4",
+          "limiting_shift_moment": "4 * q^2"
+        },
+        {
+          "word": "---+++",
+          "creation_heights": [
+            0,
+            1,
+            2
+          ],
+          "forward_pairings": 6,
+          "backward_pairings": 0,
+          "forward_moment": "0",
+          "backward_correction": "0",
+          "full_moment": "0",
+          "limiting_shift_moment": "6 * q^3"
+        },
+        {
+          "word": "-+-+-+-+",
+          "creation_heights": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "forward_pairings": 1,
+          "backward_pairings": 23,
+          "forward_moment": "1",
+          "backward_correction": "73/32",
+          "full_moment": "105/32",
+          "limiting_shift_moment": "1 * q^0"
+        },
+        {
+          "word": "-+-+--++",
+          "creation_heights": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "forward_pairings": 2,
+          "backward_pairings": 22,
+          "forward_moment": "1/2",
+          "backward_correction": "13/16",
+          "full_moment": "21/16",
+          "limiting_shift_moment": "2 * q^1"
+        },
+        {
+          "word": "-+--++-+",
+          "creation_heights": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "forward_pairings": 2,
+          "backward_pairings": 22,
+          "forward_moment": "1/2",
+          "backward_correction": "13/16",
+          "full_moment": "21/16",
+          "limiting_shift_moment": "2 * q^1"
+        },
+        {
+          "word": "-+--+-++",
+          "creation_heights": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "forward_pairings": 4,
+          "backward_pairings": 20,
+          "forward_moment": "1/4",
+          "backward_correction": "17/16",
+          "full_moment": "21/16",
+          "limiting_shift_moment": "4 * q^2"
+        },
+        {
+          "word": "-+---+++",
+          "creation_heights": [
+            0,
+            1,
+            2,
+            0
+          ],
+          "forward_pairings": 6,
+          "backward_pairings": 18,
+          "forward_moment": "0",
+          "backward_correction": "0",
+          "full_moment": "0",
+          "limiting_shift_moment": "6 * q^3"
+        },
+        {
+          "word": "--++-+-+",
+          "creation_heights": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "forward_pairings": 2,
+          "backward_pairings": 22,
+          "forward_moment": "1/2",
+          "backward_correction": "13/16",
+          "full_moment": "21/16",
+          "limiting_shift_moment": "2 * q^1"
+        },
+        {
+          "word": "--++--++",
+          "creation_heights": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "forward_pairings": 4,
+          "backward_pairings": 20,
+          "forward_moment": "1/4",
+          "backward_correction": "1/2",
+          "full_moment": "3/4",
+          "limiting_shift_moment": "4 * q^2"
+        },
+        {
+          "word": "--+-++-+",
+          "creation_heights": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "forward_pairings": 4,
+          "backward_pairings": 20,
+          "forward_moment": "1/4",
+          "backward_correction": "17/16",
+          "full_moment": "21/16",
+          "limiting_shift_moment": "4 * q^2"
+        },
+        {
+          "word": "--+-+-++",
+          "creation_heights": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "forward_pairings": 8,
+          "backward_pairings": 16,
+          "forward_moment": "1/8",
+          "backward_correction": "19/16",
+          "full_moment": "21/16",
+          "limiting_shift_moment": "8 * q^3"
+        },
+        {
+          "word": "--+--+++",
+          "creation_heights": [
+            0,
+            1,
+            2,
+            1
+          ],
+          "forward_pairings": 12,
+          "backward_pairings": 12,
+          "forward_moment": "0",
+          "backward_correction": "0",
+          "full_moment": "0",
+          "limiting_shift_moment": "12 * q^4"
+        },
+        {
+          "word": "---+++-+",
+          "creation_heights": [
+            0,
+            0,
+            1,
+            2
+          ],
+          "forward_pairings": 6,
+          "backward_pairings": 18,
+          "forward_moment": "0",
+          "backward_correction": "0",
+          "full_moment": "0",
+          "limiting_shift_moment": "6 * q^3"
+        },
+        {
+          "word": "---++-++",
+          "creation_heights": [
+            0,
+            1,
+            1,
+            2
+          ],
+          "forward_pairings": 12,
+          "backward_pairings": 12,
+          "forward_moment": "0",
+          "backward_correction": "0",
+          "full_moment": "0",
+          "limiting_shift_moment": "12 * q^4"
+        },
+        {
+          "word": "---+-+++",
+          "creation_heights": [
+            0,
+            1,
+            2,
+            2
+          ],
+          "forward_pairings": 18,
+          "backward_pairings": 6,
+          "forward_moment": "0",
+          "backward_correction": "0",
+          "full_moment": "0",
+          "limiting_shift_moment": "18 * q^5"
+        },
+        {
+          "word": "----++++",
+          "creation_heights": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "forward_pairings": 24,
+          "backward_pairings": 0,
+          "forward_moment": "0",
+          "backward_correction": "0",
+          "full_moment": "0",
+          "limiting_shift_moment": "24 * q^6"
+        }
+      ],
+      "nonzero_backward_pair_witness": {
+        "word": "-+-+",
+        "pairing": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "label_assignment": [
+          0,
+          0
+        ],
+        "CAR_amplitude": 1
+      },
+      "full_H_first_step": {
+        "C_m_at_w_1": 6,
+        "sigma_squared_at_w_1": 4,
+        "weights_by_created_pairs": {
+          "0": 2,
+          "1": 4
+        },
+        "captured_weight": "2/3",
+        "leakage_fraction": "1/3",
+        "H_Vdagger_overlap_at_w_1": 4,
+        "normalized_overlap_squared": "2/3"
+      }
+    },
+    {
+      "N": 6,
+      "p": 1,
+      "m": 3,
+      "L": 9,
+      "counts": {
+        "non_Dyck_words_zero_by_right_action": 20,
+        "Gaussian_label_assignments": 22203,
+        "forward_CAR_interval_comparisons": 11187,
+        "word_moments": 8,
+        "nonzero_backward_word_corrections": 5
+      },
+      "records": [
+        {
+          "word": "-+",
+          "creation_heights": [
+            0
+          ],
+          "forward_pairings": 1,
+          "backward_pairings": 0,
+          "forward_moment": "1",
+          "backward_correction": "0",
+          "full_moment": "1",
+          "limiting_shift_moment": "1 * q^0"
+        },
+        {
+          "word": "-+-+",
+          "creation_heights": [
+            0,
+            0
+          ],
+          "forward_pairings": 1,
+          "backward_pairings": 1,
+          "forward_moment": "1",
+          "backward_correction": "1/9",
+          "full_moment": "10/9",
+          "limiting_shift_moment": "1 * q^0"
+        },
+        {
+          "word": "--++",
+          "creation_heights": [
+            0,
+            1
+          ],
+          "forward_pairings": 2,
+          "backward_pairings": 0,
+          "forward_moment": "8/9",
+          "backward_correction": "0",
+          "full_moment": "8/9",
+          "limiting_shift_moment": "2 * q^1"
+        },
+        {
+          "word": "-+-+-+",
+          "creation_heights": [
+            0,
+            0,
+            0
+          ],
+          "forward_pairings": 1,
+          "backward_pairings": 5,
+          "forward_moment": "1",
+          "backward_correction": "29/81",
+          "full_moment": "110/81",
+          "limiting_shift_moment": "1 * q^0"
+        },
+        {
+          "word": "-+--++",
+          "creation_heights": [
+            0,
+            1,
+            0
+          ],
+          "forward_pairings": 2,
+          "backward_pairings": 4,
+          "forward_moment": "8/9",
+          "backward_correction": "16/81",
+          "full_moment": "88/81",
+          "limiting_shift_moment": "2 * q^1"
+        },
+        {
+          "word": "--++-+",
+          "creation_heights": [
+            0,
+            0,
+            1
+          ],
+          "forward_pairings": 2,
+          "backward_pairings": 4,
+          "forward_moment": "8/9",
+          "backward_correction": "16/81",
+          "full_moment": "88/81",
+          "limiting_shift_moment": "2 * q^1"
+        },
+        {
+          "word": "--+-++",
+          "creation_heights": [
+            0,
+            1,
+            1
+          ],
+          "forward_pairings": 4,
+          "backward_pairings": 2,
+          "forward_moment": "64/81",
+          "backward_correction": "32/81",
+          "full_moment": "32/27",
+          "limiting_shift_moment": "4 * q^2"
+        },
+        {
+          "word": "---+++",
+          "creation_heights": [
+            0,
+            1,
+            2
+          ],
+          "forward_pairings": 6,
+          "backward_pairings": 0,
+          "forward_moment": "8/27",
+          "backward_correction": "0",
+          "full_moment": "8/27",
+          "limiting_shift_moment": "6 * q^3"
+        }
+      ],
+      "nonzero_backward_pair_witness": {
+        "word": "-+-+",
+        "pairing": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "label_assignment": [
+          0,
+          0
+        ],
+        "CAR_amplitude": 1
+      },
+      "full_H_first_step": {
+        "C_m_at_w_1": 12,
+        "sigma_squared_at_w_1": 9,
+        "weights_by_created_pairs": {
+          "0": 3,
+          "1": 9
+        },
+        "captured_weight": "3/4",
+        "leakage_fraction": "1/4",
+        "H_Vdagger_overlap_at_w_1": 9,
+        "normalized_overlap_squared": "3/4"
+      }
+    },
+    {
+      "N": 6,
+      "p": 2,
+      "m": 3,
+      "L": 9,
+      "counts": {
+        "non_Dyck_words_zero_by_right_action": 20,
+        "Gaussian_label_assignments": 22203,
+        "forward_CAR_interval_comparisons": 11187,
+        "word_moments": 8,
+        "nonzero_backward_word_corrections": 2
+      },
+      "records": [
+        {
+          "word": "-+",
+          "creation_heights": [
+            0
+          ],
+          "forward_pairings": 1,
+          "backward_pairings": 0,
+          "forward_moment": "1",
+          "backward_correction": "0",
+          "full_moment": "1",
+          "limiting_shift_moment": "1 * q^0"
+        },
+        {
+          "word": "-+-+",
+          "creation_heights": [
+            0,
+            0
+          ],
+          "forward_pairings": 1,
+          "backward_pairings": 1,
+          "forward_moment": "1",
+          "backward_correction": "1/9",
+          "full_moment": "10/9",
+          "limiting_shift_moment": "1 * q^0"
+        },
+        {
+          "word": "--++",
+          "creation_heights": [
+            0,
+            1
+          ],
+          "forward_pairings": 2,
+          "backward_pairings": 0,
+          "forward_moment": "0",
+          "backward_correction": "0",
+          "full_moment": "0",
+          "limiting_shift_moment": "2 * q^1"
+        },
+        {
+          "word": "-+-+-+",
+          "creation_heights": [
+            0,
+            0,
+            0
+          ],
+          "forward_pairings": 1,
+          "backward_pairings": 5,
+          "forward_moment": "1",
+          "backward_correction": "29/81",
+          "full_moment": "110/81",
+          "limiting_shift_moment": "1 * q^0"
+        },
+        {
+          "word": "-+--++",
+          "creation_heights": [
+            0,
+            1,
+            0
+          ],
+          "forward_pairings": 2,
+          "backward_pairings": 4,
+          "forward_moment": "0",
+          "backward_correction": "0",
+          "full_moment": "0",
+          "limiting_shift_moment": "2 * q^1"
+        },
+        {
+          "word": "--++-+",
+          "creation_heights": [
+            0,
+            0,
+            1
+          ],
+          "forward_pairings": 2,
+          "backward_pairings": 4,
+          "forward_moment": "0",
+          "backward_correction": "0",
+          "full_moment": "0",
+          "limiting_shift_moment": "2 * q^1"
+        },
+        {
+          "word": "--+-++",
+          "creation_heights": [
+            0,
+            1,
+            1
+          ],
+          "forward_pairings": 4,
+          "backward_pairings": 2,
+          "forward_moment": "0",
+          "backward_correction": "0",
+          "full_moment": "0",
+          "limiting_shift_moment": "4 * q^2"
+        },
+        {
+          "word": "---+++",
+          "creation_heights": [
+            0,
+            1,
+            2
+          ],
+          "forward_pairings": 6,
+          "backward_pairings": 0,
+          "forward_moment": "0",
+          "backward_correction": "0",
+          "full_moment": "0",
+          "limiting_shift_moment": "6 * q^3"
+        }
+      ],
+      "nonzero_backward_pair_witness": {
+        "word": "-+-+",
+        "pairing": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "label_assignment": [
+          0,
+          0
+        ],
+        "CAR_amplitude": 1
+      },
+      "full_H_first_step": {
+        "C_m_at_w_1": 30,
+        "sigma_squared_at_w_1": 9,
+        "weights_by_created_pairs": {
+          "0": 3,
+          "1": 18,
+          "2": 9
+        },
+        "captured_weight": "3/10",
+        "leakage_fraction": "7/10",
+        "H_Vdagger_overlap_at_w_1": 9,
+        "normalized_overlap_squared": "3/10"
+      }
+    },
+    {
+      "N": 8,
+      "p": 2,
+      "m": 4,
+      "L": 36,
+      "counts": {
+        "non_Dyck_words_zero_by_right_action": 20,
+        "Gaussian_label_assignments": 1404900,
+        "forward_CAR_interval_comparisons": 703764,
+        "word_moments": 8,
+        "nonzero_backward_word_corrections": 5
+      },
+      "records": [
+        {
+          "word": "-+",
+          "creation_heights": [
+            0
+          ],
+          "forward_pairings": 1,
+          "backward_pairings": 0,
+          "forward_moment": "1",
+          "backward_correction": "0",
+          "full_moment": "1",
+          "limiting_shift_moment": "1 * q^0"
+        },
+        {
+          "word": "-+-+",
+          "creation_heights": [
+            0,
+            0
+          ],
+          "forward_pairings": 1,
+          "backward_pairings": 1,
+          "forward_moment": "1",
+          "backward_correction": "1/36",
+          "full_moment": "37/36",
+          "limiting_shift_moment": "1 * q^0"
+        },
+        {
+          "word": "--++",
+          "creation_heights": [
+            0,
+            1
+          ],
+          "forward_pairings": 2,
+          "backward_pairings": 0,
+          "forward_moment": "1/18",
+          "backward_correction": "0",
+          "full_moment": "1/18",
+          "limiting_shift_moment": "2 * q^1"
+        },
+        {
+          "word": "-+-+-+",
+          "creation_heights": [
+            0,
+            0,
+            0
+          ],
+          "forward_pairings": 1,
+          "backward_pairings": 5,
+          "forward_moment": "1",
+          "backward_correction": "55/648",
+          "full_moment": "703/648",
+          "limiting_shift_moment": "1 * q^0"
+        },
+        {
+          "word": "-+--++",
+          "creation_heights": [
+            0,
+            1,
+            0
+          ],
+          "forward_pairings": 2,
+          "backward_pairings": 4,
+          "forward_moment": "1/18",
+          "backward_correction": "1/324",
+          "full_moment": "19/324",
+          "limiting_shift_moment": "2 * q^1"
+        },
+        {
+          "word": "--++-+",
+          "creation_heights": [
+            0,
+            0,
+            1
+          ],
+          "forward_pairings": 2,
+          "backward_pairings": 4,
+          "forward_moment": "1/18",
+          "backward_correction": "1/324",
+          "full_moment": "19/324",
+          "limiting_shift_moment": "2 * q^1"
+        },
+        {
+          "word": "--+-++",
+          "creation_heights": [
+            0,
+            1,
+            1
+          ],
+          "forward_pairings": 4,
+          "backward_pairings": 2,
+          "forward_moment": "1/324",
+          "backward_correction": "1/18",
+          "full_moment": "19/324",
+          "limiting_shift_moment": "4 * q^2"
+        },
+        {
+          "word": "---+++",
+          "creation_heights": [
+            0,
+            1,
+            2
+          ],
+          "forward_pairings": 6,
+          "backward_pairings": 0,
+          "forward_moment": "0",
+          "backward_correction": "0",
+          "full_moment": "0",
+          "limiting_shift_moment": "6 * q^3"
+        }
+      ],
+      "nonzero_backward_pair_witness": {
+        "word": "-+-+",
+        "pairing": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "label_assignment": [
+          0,
+          0
+        ],
+        "CAR_amplitude": 1
+      },
+      "full_H_first_step": {
+        "C_m_at_w_1": 90,
+        "sigma_squared_at_w_1": 36,
+        "weights_by_created_pairs": {
+          "0": 6,
+          "1": 48,
+          "2": 36
+        },
+        "captured_weight": "2/5",
+        "leakage_fraction": "3/5",
+        "H_Vdagger_overlap_at_w_1": 36,
+        "normalized_overlap_squared": "2/5"
+      }
+    }
+  ],
+  "hypergeometric_asymptotic": [
+    {
+      "N": 8,
+      "p": 2,
+      "lambda_N": "1/2",
+      "captured_weight": "2/5",
+      "captured_weight_decimal": 0.4,
+      "limit_captured_weight": 0.36787944117144233,
+      "saved_r_probabilities": [
+        "2/5",
+        "8/15",
+        "1/15"
+      ],
+      "exact_mean_deficit": "2/3",
+      "factorial_moments": [
+        "2/3",
+        "2/15"
+      ],
+      "total_variation_to_Poisson1": 0.19757445099044868
+    },
+    {
+      "N": 32,
+      "p": 4,
+      "lambda_N": "1/2",
+      "captured_weight": "364/969",
+      "captured_weight_decimal": 0.37564499484004127,
+      "limit_captured_weight": 0.36787944117144233,
+      "saved_r_probabilities": [
+        "364/969",
+        "448/969",
+        "48/323",
+        "64/4845",
+        "1/4845"
+      ],
+      "exact_mean_deficit": "4/5",
+      "factorial_moments": [
+        "4/5",
+        "36/95",
+        "8/95",
+        "8/1615"
+      ],
+      "total_variation_to_Poisson1": 0.10221841383874586
+    },
+    {
+      "N": 128,
+      "p": 8,
+      "lambda_N": "1/2",
+      "captured_weight": "491796152/1329890705",
+      "captured_weight_decimal": 0.3698019319565062,
+      "limit_captured_weight": 0.36787944117144233,
+      "saved_r_probabilities": [
+        "491796152/1329890705",
+        "1656576512/3989672115",
+        "699760768/3989672115",
+        "47441408/1329890705",
+        "2965088/797934423",
+        "777728/3989672115",
+        "6272/1329890705",
+        "512/11969016345",
+        "1/11969016345"
+      ],
+      "exact_mean_deficit": "8/9",
+      "factorial_moments": [
+        "8/9",
+        "392/639",
+        "112/355",
+        "560/4899"
+      ],
+      "total_variation_to_Poisson1": 0.04925925391566355
+    },
+    {
+      "N": 512,
+      "p": 16,
+      "lambda_N": "1/2",
+      "captured_weight": "3467062814593159227600/9412188034956295074659",
+      "captured_weight_decimal": 0.36835885574286215,
+      "limit_captured_weight": 0.36787944117144233,
+      "saved_r_probabilities": [
+        "3467062814593159227600/9412188034956295074659",
+        "3682855105957878681600/9412188034956295074659",
+        "1712071071984551040000/9412188034956295074659",
+        "4142789260604592640000/84709692314606655671931",
+        "717347730576000160000/84709692314606655671931",
+        "9369439746298777600/9412188034956295074659",
+        "6912818349403366400/84709692314606655671931",
+        "7596503680663040000/1609484153977526457766689",
+        "34459946132040000/178831572664169606418521"
+      ],
+      "exact_mean_deficit": "16/17",
+      "factorial_moments": [
+        "16/17",
+        "3600/4607",
+        "7840/13821",
+        "1324960/3717849"
+      ],
+      "total_variation_to_Poisson1": 0.023885728877872547
+    },
+    {
+      "N": 2048,
+      "p": 32,
+      "lambda_N": "1/2",
+      "captured_weight": "526864181549779520519020294806422642962297427878091936/1431699184282800101549558869402545822677637654985733115",
+      "captured_weight_decimal": 0.36799921892370746,
+      "limit_captured_weight": 0.36787944117144233,
+      "saved_r_probabilities": [
+        "526864181549779520519020294806422642962297427878091936/1431699184282800101549558869402545822677637654985733115",
+        "1629936319960647217557331667316546182457379353918930944/4295097552848400304648676608207637468032912964957199345",
+        "5515383110852753436875337085532397469512470278577790976/30065682869938802132540736257453462276230390754700395415",
+        "110861972077442280138197730362460250643466739267895296/2004378857995920142169382417163564151748692716980026361",
+        "70207016955669395780289375929841167764424343165888512/6013136573987760426508147251490692455246078150940079083",
+        "1126692348335717484939448359957330676259568195239936/613585364692628614949810944029662495433273280708171335",
+        "1693425373250076380169511563062120254899150594048/7575127959168254505553221531230401178188559021088535",
+        "381585184105683877664863272209997764103941933858816/17657623272821201252444559389298065146357531078157375085",
+        "5962268501651310588513488628281215064124092716544/3531524654564240250488911877859613029271506215631475017"
+      ],
+      "exact_mean_deficit": "32/33",
+      "factorial_moments": [
+        "32/33",
+        "30752/34815",
+        "29760/39457",
+        "8342720/13849407"
+      ],
+      "total_variation_to_Poisson1": 0.011727950053004532
+    },
+    {
+      "N": 8192,
+      "p": 64,
+      "lambda_N": "1/2",
+      "captured_weight": "1272082129269153593263217529003417103240439393319092122755684324825747620899133769392430914519355474034132006841779706983998272/3457596341506242133912588229669798821798813224996950662984650442256299774506384192586231678402840088281926791705335935972839475",
+      "captured_weight_decimal": 0.36790938086051794,
+      "limit_captured_weight": 0.36787944117144233,
+      "saved_r_probabilities": [
+        "1272082129269153593263217529003417103240439393319092122755684324825747620899133769392430914519355474034132006841779706983998272/3457596341506242133912588229669798821798813224996950662984650442256299774506384192586231678402840088281926791705335935972839475",
+        "5210448401486453118006138998797996454872839755035001334807282994486262255202851919431397025871280021643804700023929679806456922112/13944486045294674526069468330258298648314613736412702023817095233619656990584247448700272358998654076041010750947619829778461602675",
+        "40686446367581376603171387819072109154311961399009058514236344652037000753319245280636838451895220793698524553979619463040008192/221341048338010706763007433813623788068485932324011143235191987835232650644194403947623370777756413905412869062660632218705739725",
+        "64600867342826440174552174628877813956701850317137885555028710798195056132077314687636516732377211371737764719329887325867737088/1106705241690053533815037169068118940342429661620055716175959939176163253220972019738116853888782069527064345313303161093528698625",
+        "14889731626775098110103359873268975825872620480058849860645554563929868921423419719567361172025247987750013783487767018059579392/1106705241690053533815037169068118940342429661620055716175959939176163253220972019738116853888782069527064345313303161093528698625",
+        "5842292518407667923310310141010170351296069071194753078836402880670030312493112914489645800467672234975482247472039374933458944/2434751531718117774393081771949861668753345255564122575587111866187559157086138443423857078555320552959541559689266954405763136975",
+        "839401529493853889757437246196813727623477647219289065025157603913338926770204971740897186372295156428498171679468757806809088/2434751531718117774393081771949861668753345255564122575587111866187559157086138443423857078555320552959541559689266954405763136975",
+        "699120263732935004987377790593236291093186136480734938040264961516333783029207607065208748441792747270479784483716984714559488/17043260722026824420751572403649031681273416788948858029109783063312914099602969103966999549887243870716790917824868680840341958825",
+        "35491277138567278612562350650584761090027527459779809588950325936977632204092117427419737870115384935652950309181195052150059008/8606846664623546332479544063842760999043075478419173304700440446973021620299499397503334772693058154711979413501558683824372689206625"
+      ],
+      "exact_mean_deficit": "64/65",
+      "factorial_moments": [
+        "64/65",
+        "254016/270335",
+        "2583168/2973685",
+        "9611968128/12361608545"
+      ],
+      "total_variation_to_Poisson1": 0.005807038067517145
+    }
+  ],
+  "linear_cumulants": [
+    {
+      "q": "1/4",
+      "coefficients": [
+        "-1",
+        "-1",
+        "-1"
+      ],
+      "variance": "3",
+      "fourth_moment": "4929/256",
+      "fourth_cumulant": "-1983/256"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "-1",
+        "-1",
+        "0"
+      ],
+      "variance": "2",
+      "fourth_moment": "9",
+      "fourth_cumulant": "-3"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "-1",
+        "-1",
+        "1"
+      ],
+      "variance": "3",
+      "fourth_moment": "4929/256",
+      "fourth_cumulant": "-1983/256"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "-1",
+        "-1",
+        "2"
+      ],
+      "variance": "6",
+      "fourth_moment": "1185/16",
+      "fourth_cumulant": "-543/16"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "-1",
+        "0",
+        "-1"
+      ],
+      "variance": "2",
+      "fourth_moment": "2145/256",
+      "fourth_cumulant": "-927/256"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "-1",
+        "0",
+        "0"
+      ],
+      "variance": "1",
+      "fourth_moment": "9/4",
+      "fourth_cumulant": "-3/4"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "-1",
+        "0",
+        "1"
+      ],
+      "variance": "2",
+      "fourth_moment": "2145/256",
+      "fourth_cumulant": "-927/256"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "-1",
+        "0",
+        "2"
+      ],
+      "variance": "5",
+      "fourth_moment": "813/16",
+      "fourth_cumulant": "-387/16"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "-1",
+        "1",
+        "-1"
+      ],
+      "variance": "3",
+      "fourth_moment": "4929/256",
+      "fourth_cumulant": "-1983/256"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "-1",
+        "1",
+        "0"
+      ],
+      "variance": "2",
+      "fourth_moment": "9",
+      "fourth_cumulant": "-3"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "-1",
+        "1",
+        "1"
+      ],
+      "variance": "3",
+      "fourth_moment": "4929/256",
+      "fourth_cumulant": "-1983/256"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "-1",
+        "1",
+        "2"
+      ],
+      "variance": "6",
+      "fourth_moment": "1185/16",
+      "fourth_cumulant": "-543/16"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "-1",
+        "2",
+        "-1"
+      ],
+      "variance": "6",
+      "fourth_moment": "20193/256",
+      "fourth_cumulant": "-7455/256"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "-1",
+        "2",
+        "0"
+      ],
+      "variance": "5",
+      "fourth_moment": "225/4",
+      "fourth_cumulant": "-75/4"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "-1",
+        "2",
+        "1"
+      ],
+      "variance": "6",
+      "fourth_moment": "20193/256",
+      "fourth_cumulant": "-7455/256"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "-1",
+        "2",
+        "2"
+      ],
+      "variance": "9",
+      "fourth_moment": "2733/16",
+      "fourth_cumulant": "-1155/16"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "0",
+        "-1",
+        "-1"
+      ],
+      "variance": "2",
+      "fourth_moment": "2145/256",
+      "fourth_cumulant": "-927/256"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "0",
+        "-1",
+        "0"
+      ],
+      "variance": "1",
+      "fourth_moment": "9/4",
+      "fourth_cumulant": "-3/4"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "0",
+        "-1",
+        "1"
+      ],
+      "variance": "2",
+      "fourth_moment": "2145/256",
+      "fourth_cumulant": "-927/256"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "0",
+        "-1",
+        "2"
+      ],
+      "variance": "5",
+      "fourth_moment": "813/16",
+      "fourth_cumulant": "-387/16"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "0",
+        "0",
+        "-1"
+      ],
+      "variance": "1",
+      "fourth_moment": "513/256",
+      "fourth_cumulant": "-255/256"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "0",
+        "0",
+        "1"
+      ],
+      "variance": "1",
+      "fourth_moment": "513/256",
+      "fourth_cumulant": "-255/256"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "0",
+        "0",
+        "2"
+      ],
+      "variance": "4",
+      "fourth_moment": "513/16",
+      "fourth_cumulant": "-255/16"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "0",
+        "1",
+        "-1"
+      ],
+      "variance": "2",
+      "fourth_moment": "2145/256",
+      "fourth_cumulant": "-927/256"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "0",
+        "1",
+        "0"
+      ],
+      "variance": "1",
+      "fourth_moment": "9/4",
+      "fourth_cumulant": "-3/4"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "0",
+        "1",
+        "1"
+      ],
+      "variance": "2",
+      "fourth_moment": "2145/256",
+      "fourth_cumulant": "-927/256"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "0",
+        "1",
+        "2"
+      ],
+      "variance": "5",
+      "fourth_moment": "813/16",
+      "fourth_cumulant": "-387/16"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "0",
+        "2",
+        "-1"
+      ],
+      "variance": "5",
+      "fourth_moment": "13953/256",
+      "fourth_cumulant": "-5247/256"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "0",
+        "2",
+        "0"
+      ],
+      "variance": "4",
+      "fourth_moment": "36",
+      "fourth_cumulant": "-12"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "0",
+        "2",
+        "1"
+      ],
+      "variance": "5",
+      "fourth_moment": "13953/256",
+      "fourth_cumulant": "-5247/256"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "0",
+        "2",
+        "2"
+      ],
+      "variance": "8",
+      "fourth_moment": "2145/16",
+      "fourth_cumulant": "-927/16"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "1",
+        "-1",
+        "-1"
+      ],
+      "variance": "3",
+      "fourth_moment": "4929/256",
+      "fourth_cumulant": "-1983/256"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "1",
+        "-1",
+        "0"
+      ],
+      "variance": "2",
+      "fourth_moment": "9",
+      "fourth_cumulant": "-3"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "1",
+        "-1",
+        "1"
+      ],
+      "variance": "3",
+      "fourth_moment": "4929/256",
+      "fourth_cumulant": "-1983/256"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "1",
+        "-1",
+        "2"
+      ],
+      "variance": "6",
+      "fourth_moment": "1185/16",
+      "fourth_cumulant": "-543/16"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "1",
+        "0",
+        "-1"
+      ],
+      "variance": "2",
+      "fourth_moment": "2145/256",
+      "fourth_cumulant": "-927/256"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "1",
+        "0",
+        "0"
+      ],
+      "variance": "1",
+      "fourth_moment": "9/4",
+      "fourth_cumulant": "-3/4"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "1",
+        "0",
+        "1"
+      ],
+      "variance": "2",
+      "fourth_moment": "2145/256",
+      "fourth_cumulant": "-927/256"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "1",
+        "0",
+        "2"
+      ],
+      "variance": "5",
+      "fourth_moment": "813/16",
+      "fourth_cumulant": "-387/16"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "1",
+        "1",
+        "-1"
+      ],
+      "variance": "3",
+      "fourth_moment": "4929/256",
+      "fourth_cumulant": "-1983/256"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "1",
+        "1",
+        "0"
+      ],
+      "variance": "2",
+      "fourth_moment": "9",
+      "fourth_cumulant": "-3"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "1",
+        "1",
+        "1"
+      ],
+      "variance": "3",
+      "fourth_moment": "4929/256",
+      "fourth_cumulant": "-1983/256"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "1",
+        "1",
+        "2"
+      ],
+      "variance": "6",
+      "fourth_moment": "1185/16",
+      "fourth_cumulant": "-543/16"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "1",
+        "2",
+        "-1"
+      ],
+      "variance": "6",
+      "fourth_moment": "20193/256",
+      "fourth_cumulant": "-7455/256"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "1",
+        "2",
+        "0"
+      ],
+      "variance": "5",
+      "fourth_moment": "225/4",
+      "fourth_cumulant": "-75/4"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "1",
+        "2",
+        "1"
+      ],
+      "variance": "6",
+      "fourth_moment": "20193/256",
+      "fourth_cumulant": "-7455/256"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "1",
+        "2",
+        "2"
+      ],
+      "variance": "9",
+      "fourth_moment": "2733/16",
+      "fourth_cumulant": "-1155/16"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "2",
+        "-1",
+        "-1"
+      ],
+      "variance": "6",
+      "fourth_moment": "20193/256",
+      "fourth_cumulant": "-7455/256"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "2",
+        "-1",
+        "0"
+      ],
+      "variance": "5",
+      "fourth_moment": "225/4",
+      "fourth_cumulant": "-75/4"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "2",
+        "-1",
+        "1"
+      ],
+      "variance": "6",
+      "fourth_moment": "20193/256",
+      "fourth_cumulant": "-7455/256"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "2",
+        "-1",
+        "2"
+      ],
+      "variance": "9",
+      "fourth_moment": "2733/16",
+      "fourth_cumulant": "-1155/16"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "2",
+        "0",
+        "-1"
+      ],
+      "variance": "5",
+      "fourth_moment": "13953/256",
+      "fourth_cumulant": "-5247/256"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "2",
+        "0",
+        "0"
+      ],
+      "variance": "4",
+      "fourth_moment": "36",
+      "fourth_cumulant": "-12"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "2",
+        "0",
+        "1"
+      ],
+      "variance": "5",
+      "fourth_moment": "13953/256",
+      "fourth_cumulant": "-5247/256"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "2",
+        "0",
+        "2"
+      ],
+      "variance": "8",
+      "fourth_moment": "2145/16",
+      "fourth_cumulant": "-927/16"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "2",
+        "1",
+        "-1"
+      ],
+      "variance": "6",
+      "fourth_moment": "20193/256",
+      "fourth_cumulant": "-7455/256"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "2",
+        "1",
+        "0"
+      ],
+      "variance": "5",
+      "fourth_moment": "225/4",
+      "fourth_cumulant": "-75/4"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "2",
+        "1",
+        "1"
+      ],
+      "variance": "6",
+      "fourth_moment": "20193/256",
+      "fourth_cumulant": "-7455/256"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "2",
+        "1",
+        "2"
+      ],
+      "variance": "9",
+      "fourth_moment": "2733/16",
+      "fourth_cumulant": "-1155/16"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "2",
+        "2",
+        "-1"
+      ],
+      "variance": "9",
+      "fourth_moment": "45825/256",
+      "fourth_cumulant": "-16383/256"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "2",
+        "2",
+        "0"
+      ],
+      "variance": "8",
+      "fourth_moment": "144",
+      "fourth_cumulant": "-48"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "2",
+        "2",
+        "1"
+      ],
+      "variance": "9",
+      "fourth_moment": "45825/256",
+      "fourth_cumulant": "-16383/256"
+    },
+    {
+      "q": "1/4",
+      "coefficients": [
+        "2",
+        "2",
+        "2"
+      ],
+      "variance": "12",
+      "fourth_moment": "4929/16",
+      "fourth_cumulant": "-1983/16"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "-1",
+        "-1",
+        "-1"
+      ],
+      "variance": "3",
+      "fourth_moment": "337/16",
+      "fourth_cumulant": "-95/16"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "-1",
+        "-1",
+        "0"
+      ],
+      "variance": "2",
+      "fourth_moment": "10",
+      "fourth_cumulant": "-2"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "-1",
+        "-1",
+        "1"
+      ],
+      "variance": "3",
+      "fourth_moment": "337/16",
+      "fourth_cumulant": "-95/16"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "-1",
+        "-1",
+        "2"
+      ],
+      "variance": "6",
+      "fourth_moment": "79",
+      "fourth_cumulant": "-29"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "-1",
+        "0",
+        "-1"
+      ],
+      "variance": "2",
+      "fourth_moment": "145/16",
+      "fourth_cumulant": "-47/16"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "-1",
+        "0",
+        "0"
+      ],
+      "variance": "1",
+      "fourth_moment": "5/2",
+      "fourth_cumulant": "-1/2"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "-1",
+        "0",
+        "1"
+      ],
+      "variance": "2",
+      "fourth_moment": "145/16",
+      "fourth_cumulant": "-47/16"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "-1",
+        "0",
+        "2"
+      ],
+      "variance": "5",
+      "fourth_moment": "107/2",
+      "fourth_cumulant": "-43/2"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "-1",
+        "1",
+        "-1"
+      ],
+      "variance": "3",
+      "fourth_moment": "337/16",
+      "fourth_cumulant": "-95/16"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "-1",
+        "1",
+        "0"
+      ],
+      "variance": "2",
+      "fourth_moment": "10",
+      "fourth_cumulant": "-2"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "-1",
+        "1",
+        "1"
+      ],
+      "variance": "3",
+      "fourth_moment": "337/16",
+      "fourth_cumulant": "-95/16"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "-1",
+        "1",
+        "2"
+      ],
+      "variance": "6",
+      "fourth_moment": "79",
+      "fourth_cumulant": "-29"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "-1",
+        "2",
+        "-1"
+      ],
+      "variance": "6",
+      "fourth_moment": "1393/16",
+      "fourth_cumulant": "-335/16"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "-1",
+        "2",
+        "0"
+      ],
+      "variance": "5",
+      "fourth_moment": "125/2",
+      "fourth_cumulant": "-25/2"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "-1",
+        "2",
+        "1"
+      ],
+      "variance": "6",
+      "fourth_moment": "1393/16",
+      "fourth_cumulant": "-335/16"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "-1",
+        "2",
+        "2"
+      ],
+      "variance": "9",
+      "fourth_moment": "371/2",
+      "fourth_cumulant": "-115/2"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "0",
+        "-1",
+        "-1"
+      ],
+      "variance": "2",
+      "fourth_moment": "145/16",
+      "fourth_cumulant": "-47/16"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "0",
+        "-1",
+        "0"
+      ],
+      "variance": "1",
+      "fourth_moment": "5/2",
+      "fourth_cumulant": "-1/2"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "0",
+        "-1",
+        "1"
+      ],
+      "variance": "2",
+      "fourth_moment": "145/16",
+      "fourth_cumulant": "-47/16"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "0",
+        "-1",
+        "2"
+      ],
+      "variance": "5",
+      "fourth_moment": "107/2",
+      "fourth_cumulant": "-43/2"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "0",
+        "0",
+        "-1"
+      ],
+      "variance": "1",
+      "fourth_moment": "33/16",
+      "fourth_cumulant": "-15/16"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "0",
+        "0",
+        "1"
+      ],
+      "variance": "1",
+      "fourth_moment": "33/16",
+      "fourth_cumulant": "-15/16"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "0",
+        "0",
+        "2"
+      ],
+      "variance": "4",
+      "fourth_moment": "33",
+      "fourth_cumulant": "-15"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "0",
+        "1",
+        "-1"
+      ],
+      "variance": "2",
+      "fourth_moment": "145/16",
+      "fourth_cumulant": "-47/16"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "0",
+        "1",
+        "0"
+      ],
+      "variance": "1",
+      "fourth_moment": "5/2",
+      "fourth_cumulant": "-1/2"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "0",
+        "1",
+        "1"
+      ],
+      "variance": "2",
+      "fourth_moment": "145/16",
+      "fourth_cumulant": "-47/16"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "0",
+        "1",
+        "2"
+      ],
+      "variance": "5",
+      "fourth_moment": "107/2",
+      "fourth_cumulant": "-43/2"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "0",
+        "2",
+        "-1"
+      ],
+      "variance": "5",
+      "fourth_moment": "961/16",
+      "fourth_cumulant": "-239/16"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "0",
+        "2",
+        "0"
+      ],
+      "variance": "4",
+      "fourth_moment": "40",
+      "fourth_cumulant": "-8"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "0",
+        "2",
+        "1"
+      ],
+      "variance": "5",
+      "fourth_moment": "961/16",
+      "fourth_cumulant": "-239/16"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "0",
+        "2",
+        "2"
+      ],
+      "variance": "8",
+      "fourth_moment": "145",
+      "fourth_cumulant": "-47"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "1",
+        "-1",
+        "-1"
+      ],
+      "variance": "3",
+      "fourth_moment": "337/16",
+      "fourth_cumulant": "-95/16"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "1",
+        "-1",
+        "0"
+      ],
+      "variance": "2",
+      "fourth_moment": "10",
+      "fourth_cumulant": "-2"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "1",
+        "-1",
+        "1"
+      ],
+      "variance": "3",
+      "fourth_moment": "337/16",
+      "fourth_cumulant": "-95/16"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "1",
+        "-1",
+        "2"
+      ],
+      "variance": "6",
+      "fourth_moment": "79",
+      "fourth_cumulant": "-29"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "1",
+        "0",
+        "-1"
+      ],
+      "variance": "2",
+      "fourth_moment": "145/16",
+      "fourth_cumulant": "-47/16"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "1",
+        "0",
+        "0"
+      ],
+      "variance": "1",
+      "fourth_moment": "5/2",
+      "fourth_cumulant": "-1/2"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "1",
+        "0",
+        "1"
+      ],
+      "variance": "2",
+      "fourth_moment": "145/16",
+      "fourth_cumulant": "-47/16"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "1",
+        "0",
+        "2"
+      ],
+      "variance": "5",
+      "fourth_moment": "107/2",
+      "fourth_cumulant": "-43/2"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "1",
+        "1",
+        "-1"
+      ],
+      "variance": "3",
+      "fourth_moment": "337/16",
+      "fourth_cumulant": "-95/16"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "1",
+        "1",
+        "0"
+      ],
+      "variance": "2",
+      "fourth_moment": "10",
+      "fourth_cumulant": "-2"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "1",
+        "1",
+        "1"
+      ],
+      "variance": "3",
+      "fourth_moment": "337/16",
+      "fourth_cumulant": "-95/16"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "1",
+        "1",
+        "2"
+      ],
+      "variance": "6",
+      "fourth_moment": "79",
+      "fourth_cumulant": "-29"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "1",
+        "2",
+        "-1"
+      ],
+      "variance": "6",
+      "fourth_moment": "1393/16",
+      "fourth_cumulant": "-335/16"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "1",
+        "2",
+        "0"
+      ],
+      "variance": "5",
+      "fourth_moment": "125/2",
+      "fourth_cumulant": "-25/2"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "1",
+        "2",
+        "1"
+      ],
+      "variance": "6",
+      "fourth_moment": "1393/16",
+      "fourth_cumulant": "-335/16"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "1",
+        "2",
+        "2"
+      ],
+      "variance": "9",
+      "fourth_moment": "371/2",
+      "fourth_cumulant": "-115/2"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "2",
+        "-1",
+        "-1"
+      ],
+      "variance": "6",
+      "fourth_moment": "1393/16",
+      "fourth_cumulant": "-335/16"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "2",
+        "-1",
+        "0"
+      ],
+      "variance": "5",
+      "fourth_moment": "125/2",
+      "fourth_cumulant": "-25/2"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "2",
+        "-1",
+        "1"
+      ],
+      "variance": "6",
+      "fourth_moment": "1393/16",
+      "fourth_cumulant": "-335/16"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "2",
+        "-1",
+        "2"
+      ],
+      "variance": "9",
+      "fourth_moment": "371/2",
+      "fourth_cumulant": "-115/2"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "2",
+        "0",
+        "-1"
+      ],
+      "variance": "5",
+      "fourth_moment": "961/16",
+      "fourth_cumulant": "-239/16"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "2",
+        "0",
+        "0"
+      ],
+      "variance": "4",
+      "fourth_moment": "40",
+      "fourth_cumulant": "-8"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "2",
+        "0",
+        "1"
+      ],
+      "variance": "5",
+      "fourth_moment": "961/16",
+      "fourth_cumulant": "-239/16"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "2",
+        "0",
+        "2"
+      ],
+      "variance": "8",
+      "fourth_moment": "145",
+      "fourth_cumulant": "-47"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "2",
+        "1",
+        "-1"
+      ],
+      "variance": "6",
+      "fourth_moment": "1393/16",
+      "fourth_cumulant": "-335/16"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "2",
+        "1",
+        "0"
+      ],
+      "variance": "5",
+      "fourth_moment": "125/2",
+      "fourth_cumulant": "-25/2"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "2",
+        "1",
+        "1"
+      ],
+      "variance": "6",
+      "fourth_moment": "1393/16",
+      "fourth_cumulant": "-335/16"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "2",
+        "1",
+        "2"
+      ],
+      "variance": "9",
+      "fourth_moment": "371/2",
+      "fourth_cumulant": "-115/2"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "2",
+        "2",
+        "-1"
+      ],
+      "variance": "9",
+      "fourth_moment": "3169/16",
+      "fourth_cumulant": "-719/16"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "2",
+        "2",
+        "0"
+      ],
+      "variance": "8",
+      "fourth_moment": "160",
+      "fourth_cumulant": "-32"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "2",
+        "2",
+        "1"
+      ],
+      "variance": "9",
+      "fourth_moment": "3169/16",
+      "fourth_cumulant": "-719/16"
+    },
+    {
+      "q": "1/2",
+      "coefficients": [
+        "2",
+        "2",
+        "2"
+      ],
+      "variance": "12",
+      "fourth_moment": "337",
+      "fourth_cumulant": "-95"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "-1",
+        "-1",
+        "-1"
+      ],
+      "variance": "3",
+      "fourth_moment": "6033/256",
+      "fourth_cumulant": "-879/256"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "-1",
+        "-1",
+        "0"
+      ],
+      "variance": "2",
+      "fourth_moment": "11",
+      "fourth_cumulant": "-1"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "-1",
+        "-1",
+        "1"
+      ],
+      "variance": "3",
+      "fourth_moment": "6033/256",
+      "fourth_cumulant": "-879/256"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "-1",
+        "-1",
+        "2"
+      ],
+      "variance": "6",
+      "fourth_moment": "1425/16",
+      "fourth_cumulant": "-303/16"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "-1",
+        "0",
+        "-1"
+      ],
+      "variance": "2",
+      "fourth_moment": "2609/256",
+      "fourth_cumulant": "-463/256"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "-1",
+        "0",
+        "0"
+      ],
+      "variance": "1",
+      "fourth_moment": "11/4",
+      "fourth_cumulant": "-1/4"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "-1",
+        "0",
+        "1"
+      ],
+      "variance": "2",
+      "fourth_moment": "2609/256",
+      "fourth_cumulant": "-463/256"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "-1",
+        "0",
+        "2"
+      ],
+      "variance": "5",
+      "fourth_moment": "965/16",
+      "fourth_cumulant": "-235/16"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "-1",
+        "1",
+        "-1"
+      ],
+      "variance": "3",
+      "fourth_moment": "6033/256",
+      "fourth_cumulant": "-879/256"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "-1",
+        "1",
+        "0"
+      ],
+      "variance": "2",
+      "fourth_moment": "11",
+      "fourth_cumulant": "-1"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "-1",
+        "1",
+        "1"
+      ],
+      "variance": "3",
+      "fourth_moment": "6033/256",
+      "fourth_cumulant": "-879/256"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "-1",
+        "1",
+        "2"
+      ],
+      "variance": "6",
+      "fourth_moment": "1425/16",
+      "fourth_cumulant": "-303/16"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "-1",
+        "2",
+        "-1"
+      ],
+      "variance": "6",
+      "fourth_moment": "24753/256",
+      "fourth_cumulant": "-2895/256"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "-1",
+        "2",
+        "0"
+      ],
+      "variance": "5",
+      "fourth_moment": "275/4",
+      "fourth_cumulant": "-25/4"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "-1",
+        "2",
+        "1"
+      ],
+      "variance": "6",
+      "fourth_moment": "24753/256",
+      "fourth_cumulant": "-2895/256"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "-1",
+        "2",
+        "2"
+      ],
+      "variance": "9",
+      "fourth_moment": "3333/16",
+      "fourth_cumulant": "-555/16"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "0",
+        "-1",
+        "-1"
+      ],
+      "variance": "2",
+      "fourth_moment": "2609/256",
+      "fourth_cumulant": "-463/256"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "0",
+        "-1",
+        "0"
+      ],
+      "variance": "1",
+      "fourth_moment": "11/4",
+      "fourth_cumulant": "-1/4"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "0",
+        "-1",
+        "1"
+      ],
+      "variance": "2",
+      "fourth_moment": "2609/256",
+      "fourth_cumulant": "-463/256"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "0",
+        "-1",
+        "2"
+      ],
+      "variance": "5",
+      "fourth_moment": "965/16",
+      "fourth_cumulant": "-235/16"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "0",
+        "0",
+        "-1"
+      ],
+      "variance": "1",
+      "fourth_moment": "593/256",
+      "fourth_cumulant": "-175/256"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "0",
+        "0",
+        "1"
+      ],
+      "variance": "1",
+      "fourth_moment": "593/256",
+      "fourth_cumulant": "-175/256"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "0",
+        "0",
+        "2"
+      ],
+      "variance": "4",
+      "fourth_moment": "593/16",
+      "fourth_cumulant": "-175/16"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "0",
+        "1",
+        "-1"
+      ],
+      "variance": "2",
+      "fourth_moment": "2609/256",
+      "fourth_cumulant": "-463/256"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "0",
+        "1",
+        "0"
+      ],
+      "variance": "1",
+      "fourth_moment": "11/4",
+      "fourth_cumulant": "-1/4"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "0",
+        "1",
+        "1"
+      ],
+      "variance": "2",
+      "fourth_moment": "2609/256",
+      "fourth_cumulant": "-463/256"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "0",
+        "1",
+        "2"
+      ],
+      "variance": "5",
+      "fourth_moment": "965/16",
+      "fourth_cumulant": "-235/16"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "0",
+        "2",
+        "-1"
+      ],
+      "variance": "5",
+      "fourth_moment": "17105/256",
+      "fourth_cumulant": "-2095/256"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "0",
+        "2",
+        "0"
+      ],
+      "variance": "4",
+      "fourth_moment": "44",
+      "fourth_cumulant": "-4"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "0",
+        "2",
+        "1"
+      ],
+      "variance": "5",
+      "fourth_moment": "17105/256",
+      "fourth_cumulant": "-2095/256"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "0",
+        "2",
+        "2"
+      ],
+      "variance": "8",
+      "fourth_moment": "2609/16",
+      "fourth_cumulant": "-463/16"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "1",
+        "-1",
+        "-1"
+      ],
+      "variance": "3",
+      "fourth_moment": "6033/256",
+      "fourth_cumulant": "-879/256"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "1",
+        "-1",
+        "0"
+      ],
+      "variance": "2",
+      "fourth_moment": "11",
+      "fourth_cumulant": "-1"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "1",
+        "-1",
+        "1"
+      ],
+      "variance": "3",
+      "fourth_moment": "6033/256",
+      "fourth_cumulant": "-879/256"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "1",
+        "-1",
+        "2"
+      ],
+      "variance": "6",
+      "fourth_moment": "1425/16",
+      "fourth_cumulant": "-303/16"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "1",
+        "0",
+        "-1"
+      ],
+      "variance": "2",
+      "fourth_moment": "2609/256",
+      "fourth_cumulant": "-463/256"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "1",
+        "0",
+        "0"
+      ],
+      "variance": "1",
+      "fourth_moment": "11/4",
+      "fourth_cumulant": "-1/4"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "1",
+        "0",
+        "1"
+      ],
+      "variance": "2",
+      "fourth_moment": "2609/256",
+      "fourth_cumulant": "-463/256"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "1",
+        "0",
+        "2"
+      ],
+      "variance": "5",
+      "fourth_moment": "965/16",
+      "fourth_cumulant": "-235/16"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "1",
+        "1",
+        "-1"
+      ],
+      "variance": "3",
+      "fourth_moment": "6033/256",
+      "fourth_cumulant": "-879/256"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "1",
+        "1",
+        "0"
+      ],
+      "variance": "2",
+      "fourth_moment": "11",
+      "fourth_cumulant": "-1"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "1",
+        "1",
+        "1"
+      ],
+      "variance": "3",
+      "fourth_moment": "6033/256",
+      "fourth_cumulant": "-879/256"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "1",
+        "1",
+        "2"
+      ],
+      "variance": "6",
+      "fourth_moment": "1425/16",
+      "fourth_cumulant": "-303/16"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "1",
+        "2",
+        "-1"
+      ],
+      "variance": "6",
+      "fourth_moment": "24753/256",
+      "fourth_cumulant": "-2895/256"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "1",
+        "2",
+        "0"
+      ],
+      "variance": "5",
+      "fourth_moment": "275/4",
+      "fourth_cumulant": "-25/4"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "1",
+        "2",
+        "1"
+      ],
+      "variance": "6",
+      "fourth_moment": "24753/256",
+      "fourth_cumulant": "-2895/256"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "1",
+        "2",
+        "2"
+      ],
+      "variance": "9",
+      "fourth_moment": "3333/16",
+      "fourth_cumulant": "-555/16"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "2",
+        "-1",
+        "-1"
+      ],
+      "variance": "6",
+      "fourth_moment": "24753/256",
+      "fourth_cumulant": "-2895/256"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "2",
+        "-1",
+        "0"
+      ],
+      "variance": "5",
+      "fourth_moment": "275/4",
+      "fourth_cumulant": "-25/4"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "2",
+        "-1",
+        "1"
+      ],
+      "variance": "6",
+      "fourth_moment": "24753/256",
+      "fourth_cumulant": "-2895/256"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "2",
+        "-1",
+        "2"
+      ],
+      "variance": "9",
+      "fourth_moment": "3333/16",
+      "fourth_cumulant": "-555/16"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "2",
+        "0",
+        "-1"
+      ],
+      "variance": "5",
+      "fourth_moment": "17105/256",
+      "fourth_cumulant": "-2095/256"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "2",
+        "0",
+        "0"
+      ],
+      "variance": "4",
+      "fourth_moment": "44",
+      "fourth_cumulant": "-4"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "2",
+        "0",
+        "1"
+      ],
+      "variance": "5",
+      "fourth_moment": "17105/256",
+      "fourth_cumulant": "-2095/256"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "2",
+        "0",
+        "2"
+      ],
+      "variance": "8",
+      "fourth_moment": "2609/16",
+      "fourth_cumulant": "-463/16"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "2",
+        "1",
+        "-1"
+      ],
+      "variance": "6",
+      "fourth_moment": "24753/256",
+      "fourth_cumulant": "-2895/256"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "2",
+        "1",
+        "0"
+      ],
+      "variance": "5",
+      "fourth_moment": "275/4",
+      "fourth_cumulant": "-25/4"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "2",
+        "1",
+        "1"
+      ],
+      "variance": "6",
+      "fourth_moment": "24753/256",
+      "fourth_cumulant": "-2895/256"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "2",
+        "1",
+        "2"
+      ],
+      "variance": "9",
+      "fourth_moment": "3333/16",
+      "fourth_cumulant": "-555/16"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "2",
+        "2",
+        "-1"
+      ],
+      "variance": "9",
+      "fourth_moment": "56145/256",
+      "fourth_cumulant": "-6063/256"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "2",
+        "2",
+        "0"
+      ],
+      "variance": "8",
+      "fourth_moment": "176",
+      "fourth_cumulant": "-16"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "2",
+        "2",
+        "1"
+      ],
+      "variance": "9",
+      "fourth_moment": "56145/256",
+      "fourth_cumulant": "-6063/256"
+    },
+    {
+      "q": "3/4",
+      "coefficients": [
+        "2",
+        "2",
+        "2"
+      ],
+      "variance": "12",
+      "fourth_moment": "6033/16",
+      "fourth_cumulant": "-879/16"
+    }
+  ],
+  "input_sha256": {
+    "code/check_slater_ladder.py": "78d9a7a7ae45b636de7efe53e175dedca97844d473cab675fba24677523b0787",
+    "results/susskind-bilocal-fourth-tail/local-evidence.json": "9055c2f1249cec6e4b2347a639532dd2f39ea8bcb381a880d77dd748a58692c8",
+    "results/susskind-bilocal-four-point/local-evidence.json": "85701857a8e6f0040f837168dbf32077716505b11d36389ef48f9be0efb8ed21"
+  },
+  "environment": {
+    "python": "3.14.5",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "arithmetic": "exact integers/Fraction; asymptotic decimal summaries use Python float"
+  },
+  "elapsed_seconds": 1.1417731000110507,
+  "scope": "Finite exact CAR and Wick identities; large-p points are diagnostics, not proof of convergence",
+  "failures": []
+}

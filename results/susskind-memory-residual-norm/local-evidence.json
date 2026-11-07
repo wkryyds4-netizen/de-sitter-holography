@@ -1,0 +1,108 @@
+{
+  "created_at_utc": "2026-11-06T07:22:13.423329+00:00",
+  "status": "Saved locally; no publication",
+  "scientific_status": "Fixed half-filled A norm and the complete four-direction equal-time Gram derived. Output deficit retains a positive residual after projection onto B,A,J_H F. Growing-window proof controls all fixed polynomial input-deficit weights. Output-rank tail, the g_A L2 replacement, central-charge window, raw memory spectrum and bulk dictionary remain open.",
+  "current_git_head": "714d038bb605cfcffdc351e4dcc62aa95237d25f",
+  "git_commit_created": false,
+  "git_push_performed": false,
+  "archive_created": false,
+  "parent_manifest_sha256": "0f9fa38b0972061fd8e23c1b4855cd7b1dc9fcd2fb59d81d13d4ffb2d27f432c",
+  "previous_stage_scientific_files_unchanged": [
+    "code/memory_coherent_cross.py",
+    "code/check_memory_coherent_transform.py",
+    "code/check_memory_coherent_car.py",
+    "code/check_memory_coherent_channels.py",
+    "code/check_memory_coherent_limit.py",
+    "code/build_memory_coherent_cross.ps1",
+    "code/record_memory_coherent_cross.py",
+    "manuscript/susskind-memory-coherent-cross/main.tex",
+    "output/pdf/de-sitter-susskind-memory-coherent-cross.pdf",
+    "notes/susskind-memory-coherent-cross.md",
+    "literature/susskind-memory-coherent-cross-sources.md",
+    "journal/2026-11-06-susskind-memory-coherent-cross.md",
+    "results/susskind-memory-coherent-cross/car-cross.json",
+    "results/susskind-memory-coherent-cross/charged-map-checks.json",
+    "results/susskind-memory-coherent-cross/initial-main.tex",
+    "results/susskind-memory-coherent-cross/initial-pass1.txt",
+    "results/susskind-memory-coherent-cross/limit-checks.json",
+    "results/susskind-memory-coherent-cross/main.log",
+    "results/susskind-memory-coherent-cross/missing-package-pass1.txt",
+    "results/susskind-memory-coherent-cross/transform-checks.json",
+    "results/susskind-memory-coherent-cross/verification-issues.txt"
+  ],
+  "checks": {
+    "exchange_casimir_identities": 45,
+    "ordered_car_coordinate_pairs": 68544,
+    "lower_charge_contiguous_identities": 384,
+    "rational_norm_identities": 1200,
+    "independent_saved_car_gram_entries": 27,
+    "additional_exact_norms": 2,
+    "full_rank_high_precision_cases": 12
+  },
+  "environment": {
+    "python": "3.14.5",
+    "calculations": [
+      {
+        "python": "3.14.5",
+        "numpy": "2.4.6",
+        "sympy": "1.14.0"
+      },
+      {
+        "python": "3.14.5"
+      },
+      {
+        "python": "3.14.5",
+        "sympy": "1.14.0"
+      },
+      {
+        "python": "3.14.5",
+        "mpmath": "1.3.0"
+      }
+    ]
+  },
+  "build": {
+    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File code/build_memory_residual_norm.ps1",
+    "compiler": "This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5 Portable) (preloaded format=pdflatex 2026.9.19)  6 NOV 2026 15:16",
+    "passes": 2,
+    "pages": 6,
+    "render_command": "pdftoppm -r 95 -png output/pdf/de-sitter-susskind-memory-residual-norm.pdf tmp/pdfs/susskind-memory-residual-norm-build/page",
+    "visual_review": "All six final page PNGs viewed individually at 95 dpi; readable equations, references and pagination without clipping or overlap."
+  },
+  "failures": [],
+  "process_state": "All four computations, compilation and rendering terminal; no background calculation.",
+  "evidence_scope": "Finite exact norm and general-charge Casimir lemma, explicit symbolic cancellation, logarithmic-window remainder proof and factorial input tails. Numerical difference/projection use the finite Casimir proxy and retain finite-p deviations. No interval certificate, output-tail theorem or new dynamical particle claim.",
+  "hashes": {
+    "code/memory_residual_norm.py": "6187c1be7f71296cdcaf27a32b20d09e71a012f1a88a2bd45df43210856ad3ac",
+    "code/check_memory_residual_norm.py": "4373c707b249b19b8640f3abfb735bbb6823db7ba3d8c476601b35061216fb5e",
+    "code/check_exchange_casimir.py": "d815ac897c3c18001562c8a72998382c7a70d705fbfb69b6af454487409680ac",
+    "code/memory_norm_asymptotic.py": "6f29ed328d580c14b55efef34b08646c08ad88cb585d860ac3a0598f8ef1f75a",
+    "code/check_memory_norm_limit.py": "22c255f102117c0d67cdb2f845ded4f268368977821b88045b0fa958b4db3e37",
+    "code/build_memory_residual_norm.ps1": "00511c5706929b945d46dfa3781dfac5bc00a2627c1b6772f7b25749aff44922",
+    "code/record_memory_residual_norm.py": "3088239abdd54772fb9bfd3d657fd0d5c2da64b98c3995bff9dca4d7dbc60413",
+    "manuscript/susskind-memory-residual-norm/main.tex": "339898618024567fada1837f079295541bbadde4e7fefdf0b6545013a86c5b5e",
+    "output/pdf/de-sitter-susskind-memory-residual-norm.pdf": "ecd2c4bd0078260c08cd11d3e61b862f9aea14be465d58be584cd07502a9cbe4",
+    "notes/susskind-memory-residual-norm.md": "6eff5b9944a16d095a577975d3ae5a482e78a20f2065361fc92aa5698e21d894",
+    "literature/susskind-memory-residual-norm-sources.md": "d90cea660efe8fbb458758736128d55c9d9169ec340248381a576982f5e1df50",
+    "journal/2026-11-06-susskind-memory-residual-norm.md": "32e97bb1b51edbba5423779534d293196c16c086ae9d89aaae039c51fadbd76e",
+    "README.md": "c099220362661a47b198f7e1f182b00812d5becd159c53a51c12e58a9b174075",
+    "PLAN.md": "34332e5f7c1b1cfe1ae0c8da1b3f1c6e1378f7d96f95361e0bccf39d8908cad1",
+    "NEXT.md": "641183203151629ffee491365a7e74a72016bf785ae0355522d9dd7d1ffaab83",
+    "results/susskind-memory-residual-norm/exchange-casimir.json": "9b1776f1f19d82111b9a3f2ae0b5aa74044dd625875b4508e728f5d7e80968e6",
+    "results/susskind-memory-residual-norm/finite-norm.json": "d3a3cfafcaab9780ac841e47addb0767d02c785b1f762289d5427855ac212e09",
+    "results/susskind-memory-residual-norm/limit-checks.json": "b406769ed27c5a2e081a2b527e9fd0da94695bc2b62535759391c95825f44ab3",
+    "results/susskind-memory-residual-norm/main.log": "a2b9366132299ceaecd7d03301a003ec452cb05435f26553215e58a4780fce92",
+    "results/susskind-memory-residual-norm/symbolic-limit.json": "1722b44789297eb669ef920cb98c57fdece5e3bbf8579664746811f8ff699fab"
+  },
+  "render_hashes": {
+    "tmp/pdfs/susskind-memory-residual-norm-build/page-1.png": "04a3407194fc840c9f2fd197c1763a530fb402804323c1bc5ed4407658446178",
+    "tmp/pdfs/susskind-memory-residual-norm-build/page-2.png": "a2f92f905e12c7dab82cea34e4cb650b9f389a580fd97e7641f0e8db9499ee06",
+    "tmp/pdfs/susskind-memory-residual-norm-build/page-3.png": "04b98a9fdf05ca341639f27a0140eea8091dd081e1cb8db2baea6850d90c8966",
+    "tmp/pdfs/susskind-memory-residual-norm-build/page-4.png": "4f9cdffd2b292f7a0168f14b445a75cdc20cd6779a695c4dd8c0c73e1e8d0726",
+    "tmp/pdfs/susskind-memory-residual-norm-build/page-5.png": "05d6450db83af23b4c82f4c3a8e71a899ad8672fcb282cdf6456d75374a4f922",
+    "tmp/pdfs/susskind-memory-residual-norm-build/page-6.png": "89b01612c473a9e71d676ee8b7fd1ec9abb22041dab491085cef15f819e623b7"
+  },
+  "build_pass_hashes": {
+    "pass1.txt": "4119f3f913eb5ec540cddf9cabc66280d6d6257bbc5d3a6163b14b76668454b5",
+    "pass2.txt": "463eb539e341c1a905577f22fdf46674623fc2ca733bc758363bfa8a7c4ec5ae"
+  }
+}

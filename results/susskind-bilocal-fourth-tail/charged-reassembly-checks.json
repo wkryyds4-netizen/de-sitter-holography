@@ -1,0 +1,289 @@
+{
+  "status": "passed",
+  "created_utc": "2026-11-06T21:43:15.434213+00:00",
+  "scope": "exact finite-CAR identities; no finite-N Schatten inequality or DS fit",
+  "parameters": {
+    "neutral_basis_units": 348,
+    "superoperator_identities": 3132,
+    "polynomial_fixtures": [
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        4,
+        2
+      ]
+    ],
+    "maximum_gaussian_degree": 6,
+    "expected_wall_seconds_upper_bound": 30,
+    "algorithm": "sparse Fraction CAR matrices and exact one-coordinate Gaussian polynomials"
+  },
+  "counts": {
+    "neutral_matrix_units": 348,
+    "matrix_identities": 3312,
+    "entry_comparisons": 9949,
+    "polynomial_identities": 84,
+    "nonzero_charge_difference_fixtures": 16
+  },
+  "records": [
+    {
+      "N": 2,
+      "p": 1,
+      "degree": 0,
+      "charge_difference_nonzero": false,
+      "reconstruction_residual_nonzero_entries": 0,
+      "charged_residual_nonzero_entries": 0
+    },
+    {
+      "N": 2,
+      "p": 1,
+      "degree": 1,
+      "charge_difference_nonzero": false,
+      "reconstruction_residual_nonzero_entries": 0,
+      "charged_residual_nonzero_entries": 0
+    },
+    {
+      "N": 2,
+      "p": 1,
+      "degree": 2,
+      "charge_difference_nonzero": true,
+      "reconstruction_residual_nonzero_entries": 0,
+      "charged_residual_nonzero_entries": 0
+    },
+    {
+      "N": 2,
+      "p": 1,
+      "degree": 3,
+      "charge_difference_nonzero": false,
+      "reconstruction_residual_nonzero_entries": 0,
+      "charged_residual_nonzero_entries": 0
+    },
+    {
+      "N": 2,
+      "p": 1,
+      "degree": 4,
+      "charge_difference_nonzero": true,
+      "reconstruction_residual_nonzero_entries": 0,
+      "charged_residual_nonzero_entries": 0
+    },
+    {
+      "N": 2,
+      "p": 1,
+      "degree": 5,
+      "charge_difference_nonzero": false,
+      "reconstruction_residual_nonzero_entries": 0,
+      "charged_residual_nonzero_entries": 0
+    },
+    {
+      "N": 2,
+      "p": 1,
+      "degree": 6,
+      "charge_difference_nonzero": true,
+      "reconstruction_residual_nonzero_entries": 0,
+      "charged_residual_nonzero_entries": 0
+    },
+    {
+      "N": 3,
+      "p": 1,
+      "degree": 0,
+      "charge_difference_nonzero": false,
+      "reconstruction_residual_nonzero_entries": 0,
+      "charged_residual_nonzero_entries": 0
+    },
+    {
+      "N": 3,
+      "p": 1,
+      "degree": 1,
+      "charge_difference_nonzero": false,
+      "reconstruction_residual_nonzero_entries": 0,
+      "charged_residual_nonzero_entries": 0
+    },
+    {
+      "N": 3,
+      "p": 1,
+      "degree": 2,
+      "charge_difference_nonzero": true,
+      "reconstruction_residual_nonzero_entries": 0,
+      "charged_residual_nonzero_entries": 0
+    },
+    {
+      "N": 3,
+      "p": 1,
+      "degree": 3,
+      "charge_difference_nonzero": true,
+      "reconstruction_residual_nonzero_entries": 0,
+      "charged_residual_nonzero_entries": 0
+    },
+    {
+      "N": 3,
+      "p": 1,
+      "degree": 4,
+      "charge_difference_nonzero": true,
+      "reconstruction_residual_nonzero_entries": 0,
+      "charged_residual_nonzero_entries": 0
+    },
+    {
+      "N": 3,
+      "p": 1,
+      "degree": 5,
+      "charge_difference_nonzero": true,
+      "reconstruction_residual_nonzero_entries": 0,
+      "charged_residual_nonzero_entries": 0
+    },
+    {
+      "N": 3,
+      "p": 1,
+      "degree": 6,
+      "charge_difference_nonzero": true,
+      "reconstruction_residual_nonzero_entries": 0,
+      "charged_residual_nonzero_entries": 0
+    },
+    {
+      "N": 3,
+      "p": 2,
+      "degree": 0,
+      "charge_difference_nonzero": false,
+      "reconstruction_residual_nonzero_entries": 0,
+      "charged_residual_nonzero_entries": 0
+    },
+    {
+      "N": 3,
+      "p": 2,
+      "degree": 1,
+      "charge_difference_nonzero": false,
+      "reconstruction_residual_nonzero_entries": 0,
+      "charged_residual_nonzero_entries": 0
+    },
+    {
+      "N": 3,
+      "p": 2,
+      "degree": 2,
+      "charge_difference_nonzero": true,
+      "reconstruction_residual_nonzero_entries": 0,
+      "charged_residual_nonzero_entries": 0
+    },
+    {
+      "N": 3,
+      "p": 2,
+      "degree": 3,
+      "charge_difference_nonzero": false,
+      "reconstruction_residual_nonzero_entries": 0,
+      "charged_residual_nonzero_entries": 0
+    },
+    {
+      "N": 3,
+      "p": 2,
+      "degree": 4,
+      "charge_difference_nonzero": true,
+      "reconstruction_residual_nonzero_entries": 0,
+      "charged_residual_nonzero_entries": 0
+    },
+    {
+      "N": 3,
+      "p": 2,
+      "degree": 5,
+      "charge_difference_nonzero": false,
+      "reconstruction_residual_nonzero_entries": 0,
+      "charged_residual_nonzero_entries": 0
+    },
+    {
+      "N": 3,
+      "p": 2,
+      "degree": 6,
+      "charge_difference_nonzero": true,
+      "reconstruction_residual_nonzero_entries": 0,
+      "charged_residual_nonzero_entries": 0
+    },
+    {
+      "N": 4,
+      "p": 2,
+      "degree": 0,
+      "charge_difference_nonzero": false,
+      "reconstruction_residual_nonzero_entries": 0,
+      "charged_residual_nonzero_entries": 0
+    },
+    {
+      "N": 4,
+      "p": 2,
+      "degree": 1,
+      "charge_difference_nonzero": false,
+      "reconstruction_residual_nonzero_entries": 0,
+      "charged_residual_nonzero_entries": 0
+    },
+    {
+      "N": 4,
+      "p": 2,
+      "degree": 2,
+      "charge_difference_nonzero": true,
+      "reconstruction_residual_nonzero_entries": 0,
+      "charged_residual_nonzero_entries": 0
+    },
+    {
+      "N": 4,
+      "p": 2,
+      "degree": 3,
+      "charge_difference_nonzero": true,
+      "reconstruction_residual_nonzero_entries": 0,
+      "charged_residual_nonzero_entries": 0
+    },
+    {
+      "N": 4,
+      "p": 2,
+      "degree": 4,
+      "charge_difference_nonzero": true,
+      "reconstruction_residual_nonzero_entries": 0,
+      "charged_residual_nonzero_entries": 0
+    },
+    {
+      "N": 4,
+      "p": 2,
+      "degree": 5,
+      "charge_difference_nonzero": true,
+      "reconstruction_residual_nonzero_entries": 0,
+      "charged_residual_nonzero_entries": 0
+    },
+    {
+      "N": 4,
+      "p": 2,
+      "degree": 6,
+      "charge_difference_nonzero": true,
+      "reconstruction_residual_nonzero_entries": 0,
+      "charged_residual_nonzero_entries": 0
+    }
+  ],
+  "gaussian_fixture": "H(g)=g A with deterministic Hermitian p-body A and one standard real Gaussian g; number=g*d_g-d_g^2",
+  "jacobi_fixture": "finite C_m=choose(m,p)choose(N-m+p,p), theta_v=mu_m(vp); algebra valid without an ensemble covariance assumption",
+  "checks": [
+    "raw CAR superoperators",
+    "normalized CP commutators",
+    "charge-coefficient Leibniz rules",
+    "ordinary D/L power product rules",
+    "pure Hermite number eigenvalues",
+    "inverse Jacobi reconstruction",
+    "all five terms of charged ordinary reassembly"
+  ],
+  "environment": {
+    "python": "3.14.5 (tags/v3.14.5:5607950, May 10 2026, 10:43:50) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "dependencies": "Python standard library only"
+  },
+  "arithmetic": "exact fractions.Fraction",
+  "source": {
+    "path": "code/check_bilocal_charged_reassembly.py",
+    "sha256": "abc20991b3da5a5ef432b993735bbb1eff026c2b20237b38c1205ed74e1ca283"
+  },
+  "source_hashes": {
+    "code/check_bilocal_charged_reassembly.py": "abc20991b3da5a5ef432b993735bbb1eff026c2b20237b38c1205ed74e1ca283",
+    "code/check_bilocal_coherence_channel.py": "6b599080c461f8feabcbc075ce2febb46ef7b0756711c186a41acb9d0472455d"
+  },
+  "wall_seconds": 0.52774520003004
+}

@@ -1,0 +1,149 @@
+{
+  "status": "passed",
+  "upper_charge_covariance": [
+    {
+      "N": 4,
+      "p": 2,
+      "m": 2,
+      "covariance_blocks": [
+        {
+          "output_charge": 3,
+          "entries": 576
+        }
+      ],
+      "marked_product_checks": 5
+    },
+    {
+      "N": 5,
+      "p": 2,
+      "m": 3,
+      "covariance_blocks": [
+        {
+          "output_charge": 4,
+          "entries": 2500
+        }
+      ],
+      "marked_product_checks": 5
+    },
+    {
+      "N": 6,
+      "p": 2,
+      "m": 3,
+      "covariance_blocks": [
+        {
+          "output_charge": 4,
+          "entries": 90000
+        }
+      ],
+      "marked_product_checks": 5
+    }
+  ],
+  "direct_CAR": [
+    {
+      "N": 4,
+      "p": 2,
+      "m": 2,
+      "seed": 111110,
+      "rows": [
+        {
+          "trial": 0,
+          "identities": 9,
+          "nonzero": 9,
+          "zero_identity_indices": [],
+          "max_cleared_entry": 11209.849954392788
+        },
+        {
+          "trial": 1,
+          "identities": 9,
+          "nonzero": 9,
+          "zero_identity_indices": [],
+          "max_cleared_entry": 16608.02709535362
+        },
+        {
+          "trial": 2,
+          "identities": 9,
+          "nonzero": 9,
+          "zero_identity_indices": [],
+          "max_cleared_entry": 25466.615322810372
+        }
+      ]
+    },
+    {
+      "N": 5,
+      "p": 2,
+      "m": 3,
+      "seed": 111211,
+      "rows": [
+        {
+          "trial": 0,
+          "identities": 9,
+          "nonzero": 9,
+          "zero_identity_indices": [],
+          "max_cleared_entry": 139343.72144449136
+        },
+        {
+          "trial": 1,
+          "identities": 9,
+          "nonzero": 9,
+          "zero_identity_indices": [],
+          "max_cleared_entry": 139520.41478221028
+        },
+        {
+          "trial": 2,
+          "identities": 9,
+          "nonzero": 9,
+          "zero_identity_indices": [],
+          "max_cleared_entry": 174516.22148384945
+        }
+      ]
+    },
+    {
+      "N": 6,
+      "p": 2,
+      "m": 3,
+      "seed": 111311,
+      "rows": [
+        {
+          "trial": 0,
+          "identities": 9,
+          "nonzero": 9,
+          "zero_identity_indices": [],
+          "max_cleared_entry": 220319.483035432
+        },
+        {
+          "trial": 1,
+          "identities": 9,
+          "nonzero": 8,
+          "zero_identity_indices": [
+            4
+          ],
+          "max_cleared_entry": 218151.45440037752
+        },
+        {
+          "trial": 2,
+          "identities": 9,
+          "nonzero": 9,
+          "zero_identity_indices": [],
+          "max_cleared_entry": 326577.09698170813
+        }
+      ]
+    }
+  ],
+  "direct_identities": 81,
+  "covariance_entries": 93076,
+  "algorithm_extension": "Existing exact rank-Casimir charged tensor routine, now at n=m+1; its prior normal product controls also retained.",
+  "modified_covariance_function_sha256": "33633cb18d3033f59938d166441e498ff0b63df97051d013fe6114080f8791e5",
+  "reverse_identity": "d M_plus(gU,V)=(d+1)M_plus(U,V)-U Dbar(V), and d M_plus(V,gU)=(d+1)M_plus(V,U)-Dbar(V)U at m, g(Q)=(Q-p+1)/d.",
+  "environment": {
+    "python": "3.14.5",
+    "numpy": "2.4.6"
+  },
+  "input_sha256": {
+    "code/memory_mixed_lift.py": "86ab2c41e453ea4ea9d543e480fbe500d8cde4f35f5c095380c8925a968ddc99",
+    "code/singlet_filtered_bridge.py": "47317a4e4a8a97678141ebc9d23e69da5118bb3c9e65e3d0c00a6c760f859d2d",
+    "code/complex_syk_dictionary.py": "96b4890a167beeadf0849ccffdbb20dd125d921af062fd291044da9024900abf",
+    "code/singlet_wick_moments.py": "045f9f02e860fa8f2e402ca5162dabf035208a8d26023ada5721a5f02d47572c",
+    "code/cubic_covariance_bridge.py": "40a2f41ad82620a8c9f452c7a129fc3c469416dd92e569891cf2ee2c03cc0c98",
+    "code/cubic_linear_limit.py": "a64fbf4649489437cdd7bc1097b24bd13f67641f4efbcd95a9fad4193c8f3971"
+  }
+}

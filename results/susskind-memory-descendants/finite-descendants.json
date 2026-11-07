@@ -1,0 +1,72 @@
+{
+  "status": "passed",
+  "rows": [
+    {
+      "N": 3,
+      "p": 1,
+      "m": 2,
+      "coordinate_count": 9,
+      "full_quadratic_tensor": true,
+      "directions": 48,
+      "contraction_identities": 240,
+      "core_raw_identities": 48,
+      "means": [
+        "32",
+        "32",
+        "4",
+        "14",
+        "40"
+      ],
+      "max_scaled_entry": 12096.0
+    },
+    {
+      "N": 4,
+      "p": 2,
+      "m": 3,
+      "coordinate_count": 36,
+      "full_quadratic_tensor": true,
+      "directions": 669,
+      "contraction_identities": 3345,
+      "core_raw_identities": 669,
+      "means": [
+        "369",
+        "369",
+        "-72",
+        "171",
+        "183"
+      ],
+      "max_scaled_entry": 144936.0
+    },
+    {
+      "N": 6,
+      "p": 2,
+      "m": 3,
+      "coordinate_count": 225,
+      "full_quadratic_tensor": false,
+      "directions": 3,
+      "contraction_identities": 15,
+      "core_raw_identities": 3,
+      "means": [
+        "3516",
+        "3516",
+        "-480",
+        "1170",
+        "1881"
+      ],
+      "max_scaled_entry": 1268136.0
+    }
+  ],
+  "elapsed_seconds": 4.6118714809417725,
+  "method": "Quartic even polarization over every independent Gaussian direction, using direct descendant definitions. Complete quadratic coefficient tensor in the first two systems; three deterministic larger half-filled directions. Checked dyadic entries remain within exact integer range.",
+  "environment": {
+    "python": "3.14.5",
+    "numpy": "2.4.6",
+    "sympy": "1.14.0"
+  },
+  "input_sha256": {
+    "code/check_memory_descendants.py": "0229d3dc2969ba64fd4d68d01b20ab32835520e5d4dfa006d47e31ae0e5b6a0e",
+    "code/memory_quadratic_contraction.py": "d9e7722e5c13ca64a26b9e79a06e0a3fcaf07060ac1c6133d5eb04f4a1ad2139",
+    "code/check_memory_two_charge_filter.py": "17095a8c6389e0a7eca0622835f7cfe2fa15d8f37070205f6405a9b5b5b60890",
+    "code/singlet_wick_moments.py": "045f9f02e860fa8f2e402ca5162dabf035208a8d26023ada5721a5f02d47572c"
+  }
+}

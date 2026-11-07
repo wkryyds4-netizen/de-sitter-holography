@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "variance_completion_of_square": "(N+p-2j)^2-4(m-j)(N-m+p-j)=(2m-N-p)^2",
+  "variance_log_envelope": "2 sum_{j=0}^{p-1}(p-2j)/N=2p/N",
+  "charge_log_characteristic": "-t**2/(8*lam) - eps**2*t**4/(192*lam) + O(eps**3)",
+  "limiting_charge_variance": "1/(4 lambda)",
+  "inherited_negative_moment_cancellations": 21,
+  "inherited_A_norm_cancellations": 2,
+  "outer_tail_p_exponent": -24,
+  "cutoff": "R_N=sqrt((20/lambda_min) log p)",
+  "scope": "Algebra, source provenance, and applicability of polynomial identities. The logarithmic-window remainder audit and full-charge convergence proof are in manuscript, not certified by numerical scans.",
+  "environment": {
+    "python": "3.14.5",
+    "sympy": "1.14.0"
+  },
+  "input_sha256": {
+    "code/assemble_memory_charge_sum.py": "47c1ff546d93a40f7f5ddb27dbf358ac86bece4b87423d5a5d1f5b56ecc13c40",
+    "results/susskind-memory-central-window/central-moments.json": "9d758d5149c3296f12d6e4195e8e0077da5c0413794f380f95178ddd4556e452",
+    "results/susskind-memory-central-norm/symbolic-limit.json": "63b159492333bf9dc98cd5cbd3c4d1fc1ef3f8be8db1272e60ff0907ffe77472",
+    "results/susskind-memory-central-raw/symbolic-descendants.json": "3a3f623762b0127d080fd9831bfa95950b72abac1648213d5fb8aa05e22dd4d5",
+    "results/susskind-memory-central-raw/central-assembly.json": "879e0c0c03751a60a6c824c697da32945aa8605e81c08da9bc5c9e158bcb1c38",
+    "results/susskind-memory-charge-sum/global-sector-checks.json": "f360fb434f501ca556d0f5a7c30f359ea51d875b1b2dc4e0a270e223996fe436",
+    "results/susskind-memory-charge-sum/growing-window-checks.json": "0f54f21ee129e391066c23039d094ee9c30a66204caab56b7c40cf1f502e0dd1"
+  }
+}

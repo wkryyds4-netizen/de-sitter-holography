@@ -1,0 +1,389 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,microtype}
+\usepackage[margin=25mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Js}{\mathcal J_s}
+\newcommand{\dd}{\mathrm d}
+\title{The first derivative singlet in complex DSSYK\\Two moments in the double-scaled limit}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Local research note --- 5 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+We evaluate the ensemble-centered equal-time strength and the second
+frequency moment of the first derivative singlet in complex DSSYK at
+infinite temperature. Fermionic Wick contractions reduce finite-$N$
+moments to coefficients of polynomials in at most six variables. Pairwise
+set overlaps then yield an explicit double-scaled result. The centered
+singlet has finite strength and finite initial evolution scale at fixed
+positive double-scaling parameter. Its normalized initial curvature tends
+to $16\Js^2$ in the subsequent small-parameter limit.
+\end{abstract}
+
+\section{A singlet with a finite dynamical scale}
+The Susskind programme motivates seeking singlet observables that can
+be matched to bulk propagation \cite{mss}. We use the same complex-SYK
+model as in our preceding notes:
+\begin{equation}
+ H=\sum_{|I|=|J|=p}G_{IJ}c_I^\dagger c_J,\quad
+ \E G_{IJ}G_{KL}=w\delta_{IL}\delta_{JK},\quad
+ w=4^p\frac{\Js^2}{\lambda}\left(\frac{p!}{N^p}\right)^2.
+\end{equation}
+$G$ is Hermitian, $\{c_i,c_j^\dagger\}=\delta_{ij}$,
+$\lambda=p^2/N$, $H=H_s$, and $\hbar=1$.
+The state is the full $\beta=\mu=0$ trace, $\tr=2^{-N}\Tr$.
+Define
+\begin{equation}
+ A=\sum_i[H,c_i]^\dagger[H,c_i],\qquad
+ O=A-\E A,\qquad K=[H,A]=[H,O].
+\end{equation}
+Here $\E A=f(Q)$ is a deterministic function of particle number,
+not the expectation value in one realization. Let
+\begin{equation}
+ V_0=\E\tr O^2,\qquad
+ M_2=\E\tr K^\dagger K=\int\frac{\dd\omega}{2\pi}\omega^2S_O(\omega).
+\end{equation}
+For $N,p\to\infty$ with $p^2/N=\lambda>0$ fixed, our contraction
+calculation gives, with $q=e^{-4\lambda}$,
+\begin{align}
+ \boxed{V_0^{\mathrm{DS}}=4\Js^4\left(\lambda^{-1}+1+q\right),}\label{v0}\\
+ \boxed{M_2^{\mathrm{DS}}=\frac{8\Js^6}{\lambda^2}
+       \left[1-q^2+4\lambda(q-q^2)\right].}\label{m2}
+\end{align}
+Both quantities are strictly positive for $\lambda>0$. The large mean
+of $A$ has been removed, while its dynamics is unchanged.
+
+\newpage
+\section{What these moments tell us}
+For each finite system, the normalized centered correlator obeys
+\begin{equation}
+ \frac{\E\tr O(t)O}{V_0}=1-\frac12\Omega^2 t^2+O_{N,p}(t^4),
+ \qquad \Omega^2=\frac{M_2}{V_0},
+\end{equation}
+the limiting initial curvature is
+\begin{equation}
+ \Omega^2_{\mathrm{DS}}=
+ \frac{2\Js^2}{\lambda}\,
+ \frac{1-q^2+4\lambda(q-q^2)}{1+\lambda(1+q)}
+ \ \longrightarrow\ 16\Js^2\quad(\lambda\to0^+).\label{curvature}
+\end{equation}
+Thus the candidate has a nontrivial initial evolution scale in string
+units. This supplies a quantitative microscopic input for the
+singlet-to-bulk programme. The next target is the frequency distribution
+that realizes these moments, followed by its comparison with the bulk
+Rindler propagator.
+
+\paragraph{Exact finite-system information.}
+The same calculation yields an exact coefficient formula for every
+$N,p$. In particular, for $p=2$,
+\begin{align}
+ \frac{M_2(N,2)}{w^3}
+ &=\frac{N^2(N-3)(N-2)(N-1)(N+1)}{512}\notag\\
+ &\hspace{7mm}\times
+   (N^4+4N^3-53N^2+120N-16).\label{p2}
+\end{align}
+It reproduces $120$ at $N=4$ and $2700$ at $N=5$ in $w=1$ units.
+An independent full covariance-tensor sum gives the latter value.
+For $p=1$, the dynamic moment vanishes identically at every $N$.
+
+\paragraph{Approach to the limit.}
+The table compares exact finite-$p$ coefficients with \eqref{v0} and
+\eqref{m2}. These are ratios to the limiting expression, not fitted
+extrapolations. At $\lambda=1/4$, $N=4p^2$; at $\lambda=1$, $N=p^2$.
+\begin{center}
+\begin{tabular}{rrrr}\toprule
+$p$ & $V_0/V_0^{\rm DS}$, $\lambda=1/4$
+    & $M_2/M_2^{\rm DS}$, $\lambda=1/4$
+    & $M_2/M_2^{\rm DS}$, $\lambda=1$\\\midrule
+2 & .940774 & .691904 & .218718\\
+3 & .931858 & .803723 & .535200\\
+4 & .937683 & .851019 & .595472\\
+5 & .944487 & .878486 & .628144\\\bottomrule
+\end{tabular}
+\end{center}
+The deviations remain substantial for these small $p$. The limiting
+formulas follow from the overlap argument below, not from these data.
+
+\section{Route through the literature}
+We reuse fermionic Wick ordering \cite{ferialdi} and the embedded-ensemble
+covariance structure \cite{kota,kv}. The known complex-SYK chord scale is
+$q=e^{-4\lambda}$ \cite{bnr}. Particle-removal formulas in \cite{kv},
+Section 7, organize neighboring charge sectors, but retain coupled
+reduced matrix elements in the fourth mixed moment. For the present
+sixth-order coupling average, we instead perform an explicit mode-wise
+Wick reduction. This is an application of established contraction methods;
+no claim of mathematical or physical priority is made.
+
+\newpage
+\section{Exact reduction to six variables}
+Let $\mathcal D(X)=QX-\sum_i c_i^\dagger Xc_i$.
+For a normal-ordered $k$-body monomial, $\mathcal D(X)=kX$.
+When normal ordering a product of two $p$-body monomials $X,Y$, multiply
+each contraction between the left annihilator block and the right creator
+block by $1+h$. Call the resulting polynomial $R_h(X,Y)$. Then
+\begin{equation}
+ R_0(X,Y)=XY,\qquad
+ \left.\partial_h R_h(H,H)\right|_0=(2p-\mathcal D)H^2=A.\label{mark}
+\end{equation}
+A term with $r$ such contractions has body rank $2p-r$, proving
+\eqref{mark} directly.
+
+Use six ordered Hamiltonian slots. For two disjoint adjacent marked
+pairs $\mathcal M=((r,s),(t,u))$, set
+\begin{equation}
+ T_{ab}(h,g)=
+ \begin{cases}\tfrac12,&a\le b,\\-\tfrac12,&a>b,\end{cases}
+ \quad\text{with }T_{sr}\mapsto T_{sr}-h,\quad T_{ut}\mapsto T_{ut}-g.
+\end{equation}
+This is the signed thermal contraction matrix: a marked annihilator--creator
+contraction changes from $1/2$ to $1/2+h$ or $1/2+g$.
+For a coupling pairing $\pi$ (a fixed-point-free involution), define
+\begin{equation}
+ F_{\pi,\mathcal M}(z;h,g)=
+ \sum_{S\subseteq\{1,\ldots,6\}}
+   \det[T_{a,\pi(b)}]_{a,b\in S}\prod_{a\in S}z_a
+ =\det(I+ZT P_\pi),\label{poly}
+\end{equation}
+where $Z=\operatorname{diag}(z_1,\ldots,z_6)$ and
+$(TP_\pi)_{ab}=T_{a,\pi(b)}$. The empty determinant is one.
+Let $[z^p]$ mean the coefficient of $z_1^p\cdots z_6^p$.
+The contribution of a fixed paired word is
+\begin{equation}
+ w^3(-1)^{3p}[z^p]F_{\pi,\mathcal M}(z;h,g)^N.\label{finiteword}
+\end{equation}
+All overlaps $I\cap J$, including repeated mode labels in a vertex,
+are included. No Fock-space cutoff or random-sample average is used.
+
+Write $K^\dagger K=AHHA-AHAH-HAHA+HAAH$ before interpreting
+each $A$ as a marked pair. The four choices are
+\begin{equation}
+ \begin{array}{c|c|c}
+ &\mathcal M&\epsilon_{\mathcal M}\\\hline
+ AHHA&((1,2),(5,6))&+1\\
+ AHAH&((1,2),(4,5))&-1\\
+ HAHA&((2,3),(5,6))&-1\\
+ HAAH&((2,3),(4,5))&+1
+ \end{array}
+\end{equation}
+Only pairings connecting the first three slots to the last three are
+needed: the preceding note proves that $K$ has no linear Gaussian
+component. Denote these six pairings by $\mathcal P_{\times}$.
+\begin{equation}
+ \boxed{\frac{M_2}{w^3}=(-1)^{3p}[z^p h g]
+   \sum_{\pi\in\mathcal P_{\times}}
+   \sum_{\mathcal M}\epsilon_{\mathcal M}F_{\pi,\mathcal M}^N.}\label{exact}
+\end{equation}
+
+\newpage
+\appendix
+\section{Signs, finite coefficients and independent checks}
+For a pairing $\pi$, choose six independent creator sets $I_a$, each
+of size $p$; the annihilator set at slot $b$ is $I_{\pi(b)}$.
+Ordinary thermal Wick contraction is a determinant with $6p$ rows and
+columns. Permute the annihilator blocks to the order matching the creator
+blocks. The permutation has sign
+$(-1)^{p^2(6/2)}=(-1)^{3p}$. Grouping both rows and columns by mode
+then gives identical further permutation signs, whose product is one.
+The determinant factors into the local minors in \eqref{poly}.
+Summing the possible membership subsets of each of the $N$ modes gives
+$F^N$, and $[z^p]$ enforces every set size. This proves \eqref{finiteword}.
+
+For integer computation replace $T$ by $2T$, obtaining $G$ with integer
+coefficients. The denominator of the extracted term is always $2^{6p}$.
+Since $G-1$ has no constant term,
+\begin{equation}
+ \frac{M_2(N,p)}{w^3}=\frac{1}{2^{6p}}
+             \sum_{j=0}^{6p}\binom Nj c_j(p),\label{binomial}
+\end{equation}
+where the signed $c_j$ are coefficients of $(G-1)^j$, summed over
+the 24 marked configurations. For a fixed $p$, these coefficients are
+computed once and then evaluated at any $N$ using exact integers.
+
+An independent formula keeps all 15 Gaussian pairings in
+$2\tr(H^2A^2-HAHA)$. Its coefficient arrays agree exactly with
+\eqref{binomial} for $p=1,2,3$. The $p=1$ array is zero. Arrays through
+$p=5$ vanish for all $N\le p+1$, as required by the conserved controls.
+For $N=5,p=2$, direct Gaussian tensor contraction gives $2700$, agreeing
+with \eqref{p2}.
+
+The local marked-word formula itself was checked before ensemble
+summation: 720 selected words at $(N,p)=(4,1),(5,2),(6,3)$ compare all
+four coefficients $1,h,g,hg$ with direct CAR matrices. All 2880 rational
+comparisons agree, including nonzero negative words. The selected index
+sets and seed are retained; these are algebra tests, not disorder samples
+used to estimate a moment.
+
+\section{The double-scaled overlap limit}
+For a cross pairing, the singleton coefficients of $F$ are
+$a_i=+1/2$ for $i=1,2,3$ and $a_i=-1/2$ for $i=4,5,6$.
+None is affected by our marks. Put
+\begin{equation}
+ W_S=\frac{\det[T_{a,\pi(b)}]_{a,b\in S}}{\prod_{a\in S}a_a},
+ \qquad W_\varnothing=W_{\{i\}}=1.
+\end{equation}
+The coefficient in \eqref{finiteword}, divided by
+$\binom Np^6\prod_i a_i^p$, is exactly
+$\E_{I_1,\ldots,I_6}\prod_{\ell=1}^N W_{S_\ell}$ for six independent
+uniform $p$-subsets of $\{1,\ldots,N\}$.
+
+\newpage
+Triple membership has probability at most
+$\binom63p^3/N^2=o(1)$. The 15 pairwise overlap counts converge jointly
+to independent Poisson variables of mean $\lambda$. One direct proof
+uses joint factorial moments: assignments with distinct sites give
+$(N)_r\prod_i(p)_{d_i}/(N)_{d_i}\to\lambda^r$, where
+$\sum_i d_i=2r$; shared sites have higher membership and vanish.
+This argument concerns a fixed number of sets, not a number growing
+with $N$.
+
+For completeness, convergence also holds for the weighted expectation,
+not just in distribution. On a bounded complex neighborhood of $h=g=0$,
+the finitely many $W_S$ obey $|W_S|\le R^{\binom{|S|}{2}}$ for some
+$R\ge1$. If $Y=\sum_{i<j}|I_i\cap I_j|$, then
+$|\prod W_S|\le R^Y$. Hypergeometric factorial moments and H\"older's
+inequality give a uniform bound on $\E e^{cY}$ for any fixed $c$ when
+$p^2/N$ remains in a compact interval. For one overlap $X$, for instance,
+\begin{equation}
+ \E e^{cX}\le
+ \exp\!\left[\frac{p^2}{N-p+1}(e^c-1)\right],\qquad c\ge0.
+\end{equation}
+Cauchy--Schwarz bounds the contribution of triple membership by a
+constant times $\sqrt{\binom63p^3/N^2}$, which tends to zero. The same
+exponential-moment bound gives uniform integrability of the pair weights.
+Consequently the convergence is locally uniform in complex $h,g$, and
+Cauchy's formula permits the two marked derivatives to pass to the limit.
+
+Write $b_{ij}$ for the coefficient of $z_i z_j$ in $F$. We obtain
+\begin{equation}
+ F^N\big|_{[z^p]}
+ \sim\frac{N^{6p}}{(p!)^6}\prod_i a_i^p\,
+ \exp\!\left\{\lambda\left[-3+
+           \sum_{i<j}\left(\frac{b_{ij}}{a_i a_j}-1\right)\right]\right\},
+\end{equation}
+where this denotes convergence of the ratio by the nonzero displayed
+prefactor, uniformly in the marking variables. With zero marks the
+exponent is $-4\lambda\operatorname{cr}(\pi)$, reproducing the known
+complex-SYK chord weight \cite{bnr}. In general it is
+\begin{equation}
+ -4\lambda\operatorname{cr}(\pi)+\lambda(\alpha h+\beta g+\delta hg).
+\end{equation}
+After the two derivatives, each graph contributes
+\begin{equation}
+ \frac{\Js^6}{\lambda^3}
+ q^{\operatorname{cr}(\pi)}(\lambda\delta+\lambda^2\alpha\beta).
+\end{equation}
+In this normalization the factors $(-1)^{3p}$ and $\prod_i a_i^p$
+cancel their signs, and $w^3$ cancels the factorial and $N$ powers.
+
+\newpage
+\section{The small graph sum}
+The following table gives the coefficients after summing the four
+commutator words, for each pairing. A tuple $(a,b,c)$ means that slots
+$1,2,3$ are paired respectively with $a,b,c$.
+\begin{center}
+\begin{tabular}{rrrr}\toprule
+Pairing & crossings & $\sum\epsilon\delta$
+                         & $\sum\epsilon\alpha\beta$\\\midrule
+$(4,5,6)$ & 3 & 0 & 0\\
+$(4,6,5)$ & 2 & $-4$ & $-16$\\
+$(5,4,6)$ & 2 & $-4$ & $-16$\\
+$(5,6,4)$ & 1 & 0 & 16\\
+$(6,4,5)$ & 1 & 0 & 16\\
+$(6,5,4)$ & 0 & 8 & 0\\\bottomrule
+\end{tabular}
+\end{center}
+Their sum is
+\begin{equation}
+ \frac{\lambda^3 M_2^{\mathrm{DS}}}{\Js^6}
+ =8\lambda(1-q^2)+32\lambda^2(q-q^2),
+\end{equation}
+which proves \eqref{m2}.
+
+The centered equal-time strength requires only four slots, with marks
+$((1,2),(3,4))$. Subtracting $\E A$ removes the Gaussian pairing within
+each marked pair. Of the two remaining pairings, the crossing one has
+$(\alpha,\beta,\delta)=(-2,-2,0)$; the nested one has $(2,2,4)$.
+The identical four-set overlap argument gives
+\begin{equation}
+ \frac{\lambda^2 V_0^{\mathrm{DS}}}{\Js^4}
+ =4\lambda^2q+4\lambda+4\lambda^2,
+\end{equation}
+proving \eqref{v0}. Its finite coefficient calculation reproduces
+$V_0(N,1)/w^2=N(N+1)^2/4$ and $V_0(4,2)/w^2=483/4$.
+
+\section{Interpretation and limits}
+These are model calculations for the full complex Gaussian ensemble,
+with standard CAR and all overlapping index sets retained. The order
+of limits in \eqref{curvature} is double scaling at fixed positive
+$\lambda$, followed by $\lambda\to0^+$. Keeping $p$ fixed instead gives
+a different limit; the exactly conserved $p=1$ model is a simple example.
+No uniform error estimate for a simultaneous $\lambda(N)\to0$ limit
+is asserted.
+
+The Gaussian-centered $O$ can still overlap with sample-dependent
+conserved operators. Thus $\Omega$ is the initial curvature scale of
+this specified correlator, not an isolated particle mass, a late-time
+decay rate, or a gap. The two moments do not determine the full spectral
+density or establish convergence of the entire time correlator. Equation
+\eqref{curvature} is a limit of finite-system curvatures; interchange of
+the time and double-scaling limits requires further control.
+In cosmic units $H_c=pH_s$ and $A_c=p^2A_s$,
+$V_{0,c}=p^4V_{0,s}$ and $M_{2,c}=p^6M_{2,s}$.
+
+\newpage
+\section{Reproducibility and next calculation}
+The integer coefficient engine and its drivers are in the code directory:
+\begin{quote}\small\ttfamily
+singlet\_coefficient.py\\
+check\_singlet\_coefficient.py\\
+run\_singlet\_double\_scale.py\\
+run\_singlet\_centered\_moment.py
+\end{quote}
+The stage results retain exact arrays through $p=5$, factored polynomials,
+all marked words, a separate full-tensor check, and the 24-graph table.
+The numerical environment is Python 3.14.5, NumPy 2.4.6, SymPy 1.14.0.
+Integer coefficient extraction has no statistical error or spectral
+tail cutoff. The displayed finite-$p$ ratios are rounded only for reading.
+
+An initial overlap audit omitted the $-1$ contribution of identically
+zero minors when computing $\sum_{i<j}(b_{ij}/a_i a_j-1)$.
+Its assertion failed and the original implementation was retained.
+The repaired audit includes all 15 pairs and checks their known chord
+exponents. The finite coefficient extraction and marked derivatives
+were unaffected. The separate finishing script records the corrected
+checks without restarting completed coefficient calculations.
+
+The next calculation is a controlled construction of further moments
+or the energy-resolved singlet kernel. The finite polynomial method
+extends to longer words, while the marked overlap rules provide the
+double-scaled simplification. We will first determine which part of
+$V_0$ remains at zero frequency and compute the fourth frequency moment;
+these are the next inputs needed to constrain the propagating spectrum.
+
+\begin{thebibliography}{9}
+\bibitem{mss} S. Miyashita, Y. Sekino and L. Susskind,
+\emph{DSSYK at Infinite Temperature: The Flat-Space Limit and the
+'t Hooft Model},
+\href{https://arxiv.org/html/2506.18054v3}{arXiv:2506.18054v3}.
+\bibitem{ferialdi} L. Ferialdi and L. Di\'osi,
+\emph{General Wick's Theorem for bosonic and fermionic operators},
+Phys. Rev. A \textbf{104}, 052209 (2021),
+\href{https://arxiv.org/html/2110.02920v2}{arXiv:2110.02920v2}.
+\bibitem{kota} V. K. B. Kota,
+\emph{SU(N) Wigner--Racah algebra for the matrix of second moments of
+embedded Gaussian unitary ensemble of random matrices},
+J. Math. Phys. \textbf{46}, 033514 (2005),
+\href{https://arxiv.org/html/nucl-th/0410069v1}{arXiv:nucl-th/0410069v1}.
+\bibitem{kv} V. K. B. Kota and M. Vyas,
+\emph{Random Matrix Theory for Transition Strength Densities in Finite
+Quantum Systems: Results from Embedded Unitary Ensembles},
+\href{https://arxiv.org/html/1504.00759v1}{arXiv:1504.00759v1}.
+\bibitem{bnr} M. Berkooz, V. Narovlansky and H. Raj,
+\emph{Complex Sachdev-Ye-Kitaev model in the double scaling limit},
+JHEP 02 (2021) 113,
+\href{https://arxiv.org/html/2006.13983v2}{arXiv:2006.13983v2}.
+\end{thebibliography}
+\end{document}

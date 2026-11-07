@@ -1,0 +1,704 @@
+{
+  "status": "passed",
+  "scope": "exact polynomial identities from local two-site minors; no finite-N CAR check in this script",
+  "environment": {
+    "python": "3.14.5"
+  },
+  "words": 95,
+  "local_graphs": 41210,
+  "records": [
+    {
+      "word": "X",
+      "graphs": 0,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "XHH",
+      "graphs": 2,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "HXH",
+      "graphs": 2,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "HHX",
+      "graphs": 2,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "XHHHH",
+      "graphs": 12,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "HXHHH",
+      "graphs": 12,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "HHXHH",
+      "graphs": 12,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "HHHXH",
+      "graphs": 12,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "HHHHX",
+      "graphs": 12,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "XX",
+      "graphs": 2,
+      "probe_q_polynomial": {
+        "0": 1
+      },
+      "raw_nonzero_terms": 5
+    },
+    {
+      "word": "XXHH",
+      "graphs": 10,
+      "probe_q_polynomial": {
+        "0": 1
+      },
+      "raw_nonzero_terms": 5
+    },
+    {
+      "word": "XHXH",
+      "graphs": 10,
+      "probe_q_polynomial": {
+        "2": 1
+      },
+      "raw_nonzero_terms": 5
+    },
+    {
+      "word": "XHHX",
+      "graphs": 10,
+      "probe_q_polynomial": {
+        "0": 1
+      },
+      "raw_nonzero_terms": 5
+    },
+    {
+      "word": "HXXH",
+      "graphs": 10,
+      "probe_q_polynomial": {
+        "0": 1
+      },
+      "raw_nonzero_terms": 5
+    },
+    {
+      "word": "HXHX",
+      "graphs": 10,
+      "probe_q_polynomial": {
+        "2": 1
+      },
+      "raw_nonzero_terms": 5
+    },
+    {
+      "word": "HHXX",
+      "graphs": 10,
+      "probe_q_polynomial": {
+        "0": 1
+      },
+      "raw_nonzero_terms": 5
+    },
+    {
+      "word": "XXHHHH",
+      "graphs": 78,
+      "probe_q_polynomial": {
+        "0": 2,
+        "1": 1
+      },
+      "raw_nonzero_terms": 7
+    },
+    {
+      "word": "XHXHHH",
+      "graphs": 78,
+      "probe_q_polynomial": {
+        "2": 2,
+        "3": 1
+      },
+      "raw_nonzero_terms": 7
+    },
+    {
+      "word": "XHHXHH",
+      "graphs": 78,
+      "probe_q_polynomial": {
+        "0": 1,
+        "5": 1,
+        "4": 1
+      },
+      "raw_nonzero_terms": 12
+    },
+    {
+      "word": "XHHHXH",
+      "graphs": 78,
+      "probe_q_polynomial": {
+        "2": 2,
+        "3": 1
+      },
+      "raw_nonzero_terms": 7
+    },
+    {
+      "word": "XHHHHX",
+      "graphs": 78,
+      "probe_q_polynomial": {
+        "0": 2,
+        "1": 1
+      },
+      "raw_nonzero_terms": 7
+    },
+    {
+      "word": "HXXHHH",
+      "graphs": 78,
+      "probe_q_polynomial": {
+        "0": 2,
+        "1": 1
+      },
+      "raw_nonzero_terms": 7
+    },
+    {
+      "word": "HXHXHH",
+      "graphs": 78,
+      "probe_q_polynomial": {
+        "2": 2,
+        "3": 1
+      },
+      "raw_nonzero_terms": 7
+    },
+    {
+      "word": "HXHHXH",
+      "graphs": 78,
+      "probe_q_polynomial": {
+        "4": 1,
+        "5": 1,
+        "0": 1
+      },
+      "raw_nonzero_terms": 12
+    },
+    {
+      "word": "HXHHHX",
+      "graphs": 78,
+      "probe_q_polynomial": {
+        "2": 2,
+        "3": 1
+      },
+      "raw_nonzero_terms": 7
+    },
+    {
+      "word": "HHXXHH",
+      "graphs": 78,
+      "probe_q_polynomial": {
+        "0": 2,
+        "1": 1
+      },
+      "raw_nonzero_terms": 7
+    },
+    {
+      "word": "HHXHXH",
+      "graphs": 78,
+      "probe_q_polynomial": {
+        "2": 2,
+        "3": 1
+      },
+      "raw_nonzero_terms": 7
+    },
+    {
+      "word": "HHXHHX",
+      "graphs": 78,
+      "probe_q_polynomial": {
+        "0": 1,
+        "5": 1,
+        "4": 1
+      },
+      "raw_nonzero_terms": 12
+    },
+    {
+      "word": "HHHXXH",
+      "graphs": 78,
+      "probe_q_polynomial": {
+        "0": 2,
+        "1": 1
+      },
+      "raw_nonzero_terms": 7
+    },
+    {
+      "word": "HHHXHX",
+      "graphs": 78,
+      "probe_q_polynomial": {
+        "2": 2,
+        "3": 1
+      },
+      "raw_nonzero_terms": 7
+    },
+    {
+      "word": "HHHHXX",
+      "graphs": 78,
+      "probe_q_polynomial": {
+        "0": 2,
+        "1": 1
+      },
+      "raw_nonzero_terms": 7
+    },
+    {
+      "word": "XXX",
+      "graphs": 8,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "XXXHH",
+      "graphs": 68,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "XXHXH",
+      "graphs": 68,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "XXHHX",
+      "graphs": 68,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "XHXXH",
+      "graphs": 68,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "XHXHX",
+      "graphs": 68,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "XHHXX",
+      "graphs": 68,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "HXXXH",
+      "graphs": 68,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "HXXHX",
+      "graphs": 68,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "HXHXX",
+      "graphs": 68,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "HHXXX",
+      "graphs": 68,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "XXXHHHH",
+      "graphs": 672,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "XXHXHHH",
+      "graphs": 672,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "XXHHXHH",
+      "graphs": 672,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "XXHHHXH",
+      "graphs": 672,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "XXHHHHX",
+      "graphs": 672,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "XHXXHHH",
+      "graphs": 672,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "XHXHXHH",
+      "graphs": 672,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "XHXHHXH",
+      "graphs": 672,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "XHXHHHX",
+      "graphs": 672,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "XHHXXHH",
+      "graphs": 672,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "XHHXHXH",
+      "graphs": 672,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "XHHXHHX",
+      "graphs": 672,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "XHHHXXH",
+      "graphs": 672,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "XHHHXHX",
+      "graphs": 672,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "XHHHHXX",
+      "graphs": 672,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "HXXXHHH",
+      "graphs": 672,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "HXXHXHH",
+      "graphs": 672,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "HXXHHXH",
+      "graphs": 672,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "HXXHHHX",
+      "graphs": 672,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "HXHXXHH",
+      "graphs": 672,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "HXHXHXH",
+      "graphs": 672,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "HXHXHHX",
+      "graphs": 672,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "HXHHXXH",
+      "graphs": 672,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "HXHHXHX",
+      "graphs": 672,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "HXHHHXX",
+      "graphs": 672,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "HHXXXHH",
+      "graphs": 672,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "HHXXHXH",
+      "graphs": 672,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "HHXXHHX",
+      "graphs": 672,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "HHXHXXH",
+      "graphs": 672,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "HHXHXHX",
+      "graphs": 672,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "HHXHHXX",
+      "graphs": 672,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "HHHXXXH",
+      "graphs": 672,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "HHHXXHX",
+      "graphs": 672,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "HHHXHXX",
+      "graphs": 672,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "HHHHXXX",
+      "graphs": 672,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "XXXX",
+      "graphs": 60,
+      "probe_q_polynomial": {
+        "0": 2,
+        "4": 1
+      },
+      "raw_nonzero_terms": 23
+    },
+    {
+      "word": "XXXXHH",
+      "graphs": 604,
+      "probe_q_polynomial": {
+        "0": 2,
+        "4": 1
+      },
+      "raw_nonzero_terms": 23
+    },
+    {
+      "word": "XXXHXH",
+      "graphs": 604,
+      "probe_q_polynomial": {
+        "2": 2,
+        "6": 1
+      },
+      "raw_nonzero_terms": 23
+    },
+    {
+      "word": "XXXHHX",
+      "graphs": 604,
+      "probe_q_polynomial": {
+        "0": 2,
+        "4": 1
+      },
+      "raw_nonzero_terms": 23
+    },
+    {
+      "word": "XXHXXH",
+      "graphs": 604,
+      "probe_q_polynomial": {
+        "0": 1,
+        "8": 1,
+        "4": 1
+      },
+      "raw_nonzero_terms": 34
+    },
+    {
+      "word": "XXHXHX",
+      "graphs": 604,
+      "probe_q_polynomial": {
+        "2": 2,
+        "6": 1
+      },
+      "raw_nonzero_terms": 23
+    },
+    {
+      "word": "XXHHXX",
+      "graphs": 604,
+      "probe_q_polynomial": {
+        "0": 2,
+        "4": 1
+      },
+      "raw_nonzero_terms": 23
+    },
+    {
+      "word": "XHXXXH",
+      "graphs": 604,
+      "probe_q_polynomial": {
+        "2": 2,
+        "6": 1
+      },
+      "raw_nonzero_terms": 23
+    },
+    {
+      "word": "XHXXHX",
+      "graphs": 604,
+      "probe_q_polynomial": {
+        "4": 1,
+        "8": 1,
+        "0": 1
+      },
+      "raw_nonzero_terms": 34
+    },
+    {
+      "word": "XHXHXX",
+      "graphs": 604,
+      "probe_q_polynomial": {
+        "2": 2,
+        "6": 1
+      },
+      "raw_nonzero_terms": 23
+    },
+    {
+      "word": "XHHXXX",
+      "graphs": 604,
+      "probe_q_polynomial": {
+        "0": 2,
+        "4": 1
+      },
+      "raw_nonzero_terms": 23
+    },
+    {
+      "word": "HXXXXH",
+      "graphs": 604,
+      "probe_q_polynomial": {
+        "0": 2,
+        "4": 1
+      },
+      "raw_nonzero_terms": 23
+    },
+    {
+      "word": "HXXXHX",
+      "graphs": 604,
+      "probe_q_polynomial": {
+        "2": 2,
+        "6": 1
+      },
+      "raw_nonzero_terms": 23
+    },
+    {
+      "word": "HXXHXX",
+      "graphs": 604,
+      "probe_q_polynomial": {
+        "0": 1,
+        "8": 1,
+        "4": 1
+      },
+      "raw_nonzero_terms": 34
+    },
+    {
+      "word": "HXHXXX",
+      "graphs": 604,
+      "probe_q_polynomial": {
+        "2": 2,
+        "6": 1
+      },
+      "raw_nonzero_terms": 23
+    },
+    {
+      "word": "HHXXXX",
+      "graphs": 604,
+      "probe_q_polynomial": {
+        "0": 2,
+        "4": 1
+      },
+      "raw_nonzero_terms": 23
+    },
+    {
+      "word": "XXXXX",
+      "graphs": 544,
+      "probe_q_polynomial": {},
+      "raw_nonzero_terms": 0
+    },
+    {
+      "word": "XXXXXX",
+      "graphs": 6040,
+      "probe_q_polynomial": {
+        "0": 5,
+        "4": 6,
+        "8": 3,
+        "12": 1
+      },
+      "raw_nonzero_terms": 70
+    }
+  ],
+  "input_sha256": {
+    "code/singlet_multimark.py": "5b1def3fcc893c807e416c909076c6bb8383f54975bd9ed09d5dde37f129db0d",
+    "code/check_singlet_multimark.py": "1652be69b9ad3de6fa499b791ac2e3216b40bbac06f305375e52b14d6a4f5e30",
+    "code/singlet_coefficient.py": "ef7d9b96f96a036ea0d9774950702a82a968b56758a778db0365e9df0c3b2e10"
+  }
+}

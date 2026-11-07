@@ -1,0 +1,356 @@
+{
+  "status": "Local research milestone; long-term de Sitter research remains open",
+  "created_at_utc": "2026-11-06T20:36:50.793816+00:00",
+  "scientific_status": "The stage reconstructs the background-subtracted bilocal covariance from the completed common-J memory kernel. Contractive background dilation and L2/L8 interpolation control the strong return error by O(p^(-1/3)) on compact real-time windows. Charged coefficients simplify and neutral coefficients have a regular divided-difference representation.",
+  "proof_scope": "Finite matrix checks and limiting coefficient quadratures verify the recorded interfaces; they are not DS extrapolations. Uniform full-charge error and the multiplier/series passage are justified in the proof notes. No canonical boson algebra, microscopic P-minus, bulk mass identification or finite-G interaction is inferred from covariance alone.",
+  "parameters": "Standard CAR, common complex Gaussian p-body couplings, normalized annealed beta=mu=0 full-Fock trace, hbar=1, string time; even N, p^2/N in a positive compact set approaching lambda>0, fixed Js. No growing-time/small-lambda exchange.",
+  "external_scope": "No new issue reply, publication, historical reintegration, Git operation or archive.",
+  "git_commit_created": false,
+  "git_push_performed": false,
+  "archive_created": false,
+  "external_reply_sent": false,
+  "previous_evidence": {
+    "results/susskind-memory-joint-regression/local-evidence.json": {
+      "sha256": "1f4660f37829bba8aca6a16030a3f74f4ecc9a6e79891eb209f5eb34d99d4c03",
+      "unchanged_scientific_files": [
+        "PROJECT.md",
+        "code/build_memory_joint_regression.ps1",
+        "code/check_memory_charge_tilt.py",
+        "code/check_memory_joint_regression.py",
+        "code/check_memory_joint_series.py",
+        "code/complex_syk_dictionary.py",
+        "code/memory_body_source_chords.py",
+        "code/memory_joint_regression.py",
+        "code/memory_oriented_marked_chords.py",
+        "code/memory_size_marked_chords.py",
+        "code/memory_wick_descendant_chords.py",
+        "code/record_memory_joint_regression.py",
+        "code/singlet_coefficient.py",
+        "code/singlet_multimark.py",
+        "journal/2026-11-07-susskind-memory-joint-regression.md",
+        "literature/susskind-memory-joint-regression-sources.md",
+        "literature/susskind-memory-to-bilocal-sources.md",
+        "manuscript/susskind-memory-joint-regression/main.tex",
+        "notes/susskind-memory-charge-tilt-proof.md",
+        "notes/susskind-memory-joint-regression-proof.md",
+        "notes/susskind-memory-joint-regression.md",
+        "output/pdf/de-sitter-susskind-memory-joint-regression.pdf",
+        "results/susskind-memory-joint-regression/charge-tilt-checks.json",
+        "results/susskind-memory-joint-regression/joint-regression-checks.json",
+        "results/susskind-memory-joint-regression/joint-series-checks.json",
+        "results/susskind-memory-joint-regression/main.log",
+        "results/susskind-memory-oriented-transfer/body-geometry-checks.json",
+        "results/susskind-memory-oriented-transfer/charge-background-checks.json",
+        "results/susskind-memory-oriented-transfer/local-evidence.json",
+        "results/susskind-memory-wick-descendants/descendant-checks.json",
+        "results/susskind-memory-wick-descendants/source-regression-checks.json"
+      ],
+      "excluded_mutable_plans": [
+        "NEXT.md",
+        "PLAN.md",
+        "README.md"
+      ]
+    },
+    "results/susskind-memory-return-expansion/local-evidence.json": {
+      "sha256": "d4ec2831e0da4d5f07380f10cdc9308cc9bebd46296e083b71ab59cd51baa712",
+      "unchanged_scientific_files": [
+        "code/memory_return_expansion.py",
+        "code/build_memory_return_expansion.ps1",
+        "code/record_memory_return_expansion.py",
+        "manuscript/susskind-memory-return-expansion/main.tex",
+        "output/pdf/de-sitter-susskind-memory-return-expansion.pdf",
+        "notes/susskind-memory-return-expansion.md",
+        "literature/susskind-memory-return-expansion-sources.md",
+        "journal/2026-11-06-susskind-memory-return-expansion.md",
+        "results/susskind-memory-return-expansion/finite-checks.json",
+        "results/susskind-memory-return-expansion/main.log",
+        "results/susskind-memory-return-expansion/diagnostics/first-layout.log"
+      ],
+      "excluded_mutable_plans": []
+    },
+    "results/susskind-memory-uniform-bound/local-evidence.json": {
+      "sha256": "a781c8597c70af9c81ea91c5379996d1572e85366328eeebc6edece7d0b7e379",
+      "unchanged_scientific_files": [
+        "code/memory_jacobi_bridge.py",
+        "code/check_memory_dyson_force.py",
+        "code/check_memory_jacobi_entire.py",
+        "code/build_memory_uniform_bound.ps1",
+        "code/record_memory_uniform_bound.py",
+        "manuscript/susskind-memory-uniform-bound/main.tex",
+        "output/pdf/de-sitter-susskind-memory-uniform-bound.pdf",
+        "notes/susskind-memory-uniform-bound.md",
+        "notes/susskind-memory-joint-kernel-seed.md",
+        "literature/susskind-memory-uniform-bound-sources.md",
+        "journal/2026-11-07-susskind-memory-uniform-bound.md",
+        "results/susskind-memory-uniform-bound/jacobi-recurrence-checks.json",
+        "results/susskind-memory-uniform-bound/dyson-force-checks.json",
+        "results/susskind-memory-uniform-bound/jacobi-entire-checks.json",
+        "results/susskind-memory-uniform-bound/main.log",
+        "results/susskind-memory-uniform-bound/diagnostics/pre-visual-fix-page-8.png",
+        "results/susskind-memory-uniform-bound/diagnostics/pre-visual-fix.log",
+        "results/susskind-memory-uniform-bound/diagnostics/pre-visual-fix.tex"
+      ],
+      "excluded_mutable_plans": [
+        "NEXT.md",
+        "PLAN.md",
+        "README.md"
+      ]
+    },
+    "results/susskind-bilocal-channel/local-evidence.json": {
+      "sha256": "ab550e13a9e9cf00acadd65ce9ed25c2999dc17f19546f2c06b3330fae8c216e",
+      "unchanged_scientific_files": [
+        "code/bilocal_channel.py",
+        "code/check_bilocal_projection.py",
+        "code/build_bilocal_channel.ps1",
+        "code/record_bilocal_channel.py",
+        "manuscript/susskind-bilocal-channel/main.tex",
+        "output/pdf/de-sitter-susskind-bilocal-channel.pdf",
+        "notes/susskind-bilocal-channel.md",
+        "literature/susskind-bilocal-channel-sources.md",
+        "journal/2026-11-06-susskind-bilocal-channel.md",
+        "results/susskind-bilocal-channel/checks.json",
+        "results/susskind-bilocal-channel/initial-build-failure.txt",
+        "results/susskind-bilocal-channel/initial-main.tex",
+        "results/susskind-bilocal-channel/main.log",
+        "results/susskind-bilocal-channel/projection-checks.json"
+      ],
+      "excluded_mutable_plans": [
+        "NEXT.md",
+        "PLAN.md",
+        "README.md"
+      ]
+    }
+  },
+  "checks": {
+    "finite-volterra-checks.json": {
+      "counts": {
+        "systems": 4,
+        "actual_CAR_systems": 3,
+        "degenerate_bath_systems": 1,
+        "Laplace_points": 8,
+        "time_quadrature_runs": 16,
+        "contraction_times": 24,
+        "small_time_curvatures": 12
+      },
+      "maximum_matrix_identity_error": 2.682382732555768e-15,
+      "maximum_time_identity_error": 6.091625421961315e-15,
+      "finite_projected_scaled_remainders_at_t091": [
+        0.001009967899839477,
+        0.0002068643116532565,
+        0.00018428265317723793
+      ],
+      "scope": "Finite deterministic checks retain nonzero remainders and a genuinely noncommuting degenerate background. They do not measure a DS convergence rate."
+    },
+    "spectral-filter-checks.json": {
+      "counts": {
+        "charged_coefficient_identities": 1260,
+        "neutral_coefficient_identities": 1440,
+        "floating_field_cases": 144,
+        "repeated_scalar_cases": 20
+      },
+      "maximum_identity_error": 2.3914935841127266e-15,
+      "maximum_refinement_error": 2.5341311739065124e-15,
+      "maximum_repeated_node_error": 1.30066785273941e-15,
+      "scope": "Saved rational coefficient checks and two-resolution quadratures are inspected. The charged d=1 case is deliberately excluded from the cancellation identity; coincident and nearly coincident energies remain in the record."
+    }
+  },
+  "input_hashes_verified": {
+    "finite-volterra-checks.json": {
+      "code/check_bilocal_reconstruction.py": "4353ca9cbf7853df19f17f16b17b4c43b8456e3d4a343de7a9c676d2eda2fdbf",
+      "code/complex_syk_dictionary.py": "96b4890a167beeadf0849ccffdbb20dd125d921af062fd291044da9024900abf",
+      "code/bilocal_channel.py": "408944aa559f4438e2e75c85075ed8d10767223bbc50828496644264e8cb11da",
+      "literature/susskind-memory-to-bilocal-sources.md": "91820b9af1672ac2acfe45e47fdc8e2b7793531ab4ffe54e7ddbc4cf275c833e"
+    },
+    "spectral-filter-checks.json": {
+      "code/check_bilocal_spectral_filter.py": "82da6c8359ebc946550700f803ad55de091d52702483ee0397c590c9a848b14b",
+      "results/susskind-memory-joint-regression/local-evidence.json": "1f4660f37829bba8aca6a16030a3f74f4ecc9a6e79891eb209f5eb34d99d4c03",
+      "code/check_memory_joint_series.py": "e4bb807951f6ed11d1595685c9948b015a5d9550c40013a881e51aa356218f07"
+    }
+  },
+  "parameter_hashes_verified": {
+    "finite-volterra-checks.json": {
+      "sha256": "19e70e80d938a31fb67e88fb80433abb6aba210899d13c6bd9998bac8b8fa07d",
+      "origin": "Computed now from the original finite driver parameter record; no digest was stored there"
+    },
+    "spectral-filter-checks.json": {
+      "sha256": "4d27974c8986716a43ab2117cdf98b5a9fd768b9684195e84a9d1b5a275e2ac0",
+      "origin": "Verified against saved digest"
+    }
+  },
+  "evidence_scopes": {
+    "finite-volterra-checks.json": "Finite deterministic matrices and floating-point quadrature with two resolutions. No interval certification, no ensemble estimate and no DS extrapolation. Nonzero finite remainders and background replacement errors are retained. CAR uses standard anticommutators, normalized sector HS norms and the stated rescaled string-time Hamiltonian. Pinching retains entire degenerate energy blocks.",
+    "spectral-filter-checks.json": "Spectral Volterra amplitudes, their charged cancellation and neutral divided-difference form. Does not establish the microscopic strong-return limit, higher-moment bounds or bulk mass identification."
+  },
+  "recorded_driver_environments": {
+    "finite-volterra-checks.json": {
+      "python": "3.14.5",
+      "numpy": "2.4.6",
+      "scipy": "1.18.0"
+    },
+    "spectral-filter-checks.json": {
+      "python": "3.14.5",
+      "numpy": "2.4.6",
+      "scipy": "1.18.0",
+      "platform": "Windows-11-10.0.26200-SP0"
+    }
+  },
+  "environment": {
+    "python": "3.14.5",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "recorder_dependencies": "Python standard library only"
+  },
+  "build": {
+    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File code/build_bilocal_reconstruction.ps1",
+    "pages": 7,
+    "passes": 2,
+    "pass_records": [
+      {
+        "pass_number": 1,
+        "path": "tmp/pdfs/susskind-bilocal-reconstruction-build/pass1.txt",
+        "sha256": "15ad9cbfaaf0f6607bda553f8ec1c4ba96f59972baf04d185b1bec5977bcb797",
+        "compiler_header": "pdflatex.exe : log4cxx: setFile(C:\\Users\\weiji\\MiKTeX\\texmfs/data\\miktex\\log/pdflatex.log,true) call failed."
+      },
+      {
+        "pass_number": 2,
+        "path": "tmp/pdfs/susskind-bilocal-reconstruction-build/pass2.txt",
+        "sha256": "d3cd19bea3e415762a5a4333c61349dc6abaa65f71e01a258fd18d39432a3d17",
+        "compiler_header": "pdflatex.exe : log4cxx: setFile(C:\\Users\\weiji\\MiKTeX\\texmfs/data\\miktex\\log/pdflatex.log,true) call failed."
+      }
+    ],
+    "compiler_header": "This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5 Portable) (preloaded format=pdflatex 2026.9.19)  7 NOV 2026 04:31",
+    "render_command": "pdftoppm -r 95 -png output/pdf/de-sitter-susskind-bilocal-reconstruction.pdf tmp/pdfs/susskind-bilocal-reconstruction-render/page",
+    "final_render_filenames": [
+      "page-1.png",
+      "page-2.png",
+      "page-3.png",
+      "page-4.png",
+      "page-5.png",
+      "page-6.png",
+      "page-7.png"
+    ],
+    "render_metadata": {
+      "tmp/pdfs/susskind-bilocal-reconstruction-render/page-1.png": {
+        "width_pixels": 786,
+        "height_pixels": 1111,
+        "pixels_per_metre": [
+          3740,
+          3740
+        ],
+        "density_units": "metres",
+        "nominal_dpi": 95
+      },
+      "tmp/pdfs/susskind-bilocal-reconstruction-render/page-2.png": {
+        "width_pixels": 786,
+        "height_pixels": 1111,
+        "pixels_per_metre": [
+          3740,
+          3740
+        ],
+        "density_units": "metres",
+        "nominal_dpi": 95
+      },
+      "tmp/pdfs/susskind-bilocal-reconstruction-render/page-3.png": {
+        "width_pixels": 786,
+        "height_pixels": 1111,
+        "pixels_per_metre": [
+          3740,
+          3740
+        ],
+        "density_units": "metres",
+        "nominal_dpi": 95
+      },
+      "tmp/pdfs/susskind-bilocal-reconstruction-render/page-4.png": {
+        "width_pixels": 786,
+        "height_pixels": 1111,
+        "pixels_per_metre": [
+          3740,
+          3740
+        ],
+        "density_units": "metres",
+        "nominal_dpi": 95
+      },
+      "tmp/pdfs/susskind-bilocal-reconstruction-render/page-5.png": {
+        "width_pixels": 786,
+        "height_pixels": 1111,
+        "pixels_per_metre": [
+          3740,
+          3740
+        ],
+        "density_units": "metres",
+        "nominal_dpi": 95
+      },
+      "tmp/pdfs/susskind-bilocal-reconstruction-render/page-6.png": {
+        "width_pixels": 786,
+        "height_pixels": 1111,
+        "pixels_per_metre": [
+          3740,
+          3740
+        ],
+        "density_units": "metres",
+        "nominal_dpi": 95
+      },
+      "tmp/pdfs/susskind-bilocal-reconstruction-render/page-7.png": {
+        "width_pixels": 786,
+        "height_pixels": 1111,
+        "pixels_per_metre": [
+          3740,
+          3740
+        ],
+        "density_units": "metres",
+        "nominal_dpi": 95
+      }
+    },
+    "final_pages_visually_inspected": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "visual_review_attestation": "Caller supplied --visual-review-complete after inspecting all final rendered pages. The recorder verifies artifact hashes, freshness, counts and PNG resolution; it does not itself perform visual inspection."
+  },
+  "diagnostics": {
+    "preserved_files": []
+  },
+  "process_state": "Both science outputs, final two-pass build and rendering are saved terminal artifacts. This recorder executes none of those processes.",
+  "hashes": {
+    "NEXT.md": "2930c658a6c75de4aa3a4226ccfa1e92f8ae8fb26e4156c7d44904b82b20c9c3",
+    "PLAN.md": "e642638a60f5e6df703d025ac6a9e208a3f38503c80b9ec1f8afb3967cf92300",
+    "PROJECT.md": "5c7cab9a9abd28d354b07a94aee40aedcca351bb4eff8b0cb07e8428058fd00a",
+    "README.md": "6fee3336d0b88e92f42f93c1b1e3e9a6ad58899b679abab2f52712f2ea74f33d",
+    "code/bilocal_channel.py": "408944aa559f4438e2e75c85075ed8d10767223bbc50828496644264e8cb11da",
+    "code/build_bilocal_reconstruction.ps1": "d7b01efdcf991d74021d34ae167a835741768a379b70ae5f9c5c186bef00864f",
+    "code/check_bilocal_reconstruction.py": "4353ca9cbf7853df19f17f16b17b4c43b8456e3d4a343de7a9c676d2eda2fdbf",
+    "code/check_bilocal_spectral_filter.py": "82da6c8359ebc946550700f803ad55de091d52702483ee0397c590c9a848b14b",
+    "code/check_memory_joint_series.py": "e4bb807951f6ed11d1595685c9948b015a5d9550c40013a881e51aa356218f07",
+    "code/complex_syk_dictionary.py": "96b4890a167beeadf0849ccffdbb20dd125d921af062fd291044da9024900abf",
+    "code/record_bilocal_reconstruction.py": "aa112ed1799410a4cf210939fbd9052035218effd533bf86b2f89ce22e7b11a6",
+    "journal/2026-11-07-susskind-bilocal-reconstruction.md": "2fda28309c463bc88f2d291eda8225828cbd4f191806a69e25bc927b53fafaad",
+    "literature/susskind-bilocal-reconstruction-sources.md": "8c4ab62eb1306c22d652c35dca0fbbefb032fbcf508570abd1a8d5ef83160681",
+    "literature/susskind-memory-to-bilocal-sources.md": "91820b9af1672ac2acfe45e47fdc8e2b7793531ab4ffe54e7ddbc4cf275c833e",
+    "manuscript/susskind-bilocal-reconstruction/main.tex": "fc1551f3a5ceff1d1c01b2e1dc43061800e4a8d7a29ccf31a263fc54cfd55c20",
+    "notes/susskind-bilocal-multiplier-proof.md": "bb06e0c5a4320c59cf1bcf1cda70b5a4d66ec7969e55715f359208c427a3f6d1",
+    "notes/susskind-bilocal-reconstruction-proof.md": "054829924483bbfdf0019125814941ccf9153c37bc71327aafc1a055c5724dce",
+    "notes/susskind-bilocal-reconstruction.md": "84a4c74b6f91000173ea9d1ebcedfd4bd06d33a40ad4adffb499bbf5d214e553",
+    "output/pdf/de-sitter-susskind-bilocal-reconstruction.pdf": "db864f74b8894c10d284144293b7d3b4a4d6f4a207b3d9752a724a964227e851",
+    "results/susskind-bilocal-reconstruction/finite-volterra-checks.json": "b9c10c75712a05c9efb6b3889620ec8ab48719ba3dcc45fab06ac4195b50322a",
+    "results/susskind-bilocal-reconstruction/main.log": "364009684aa4230307e762536e0fd3516a1c36f9e39b1c9200c3d2d8a1fa2a01",
+    "results/susskind-bilocal-reconstruction/spectral-filter-checks.json": "578c2a06e896beeeaf3b10fa516c3f2c44c25b5bd422d3b8c95ff41a75a445f8",
+    "results/susskind-memory-joint-regression/local-evidence.json": "1f4660f37829bba8aca6a16030a3f74f4ecc9a6e79891eb209f5eb34d99d4c03"
+  },
+  "render_hashes": {
+    "tmp/pdfs/susskind-bilocal-reconstruction-render/page-1.png": "c33a0508ff6c27595544bf5526439f848230ed398a7ec9779d7780f3396df479",
+    "tmp/pdfs/susskind-bilocal-reconstruction-render/page-2.png": "4441914c048b8db0bdf9e455203f6ef16ae5342380d8c0baadcd2ce815be3434",
+    "tmp/pdfs/susskind-bilocal-reconstruction-render/page-3.png": "d3bad0b81e2d43b257f7f8afbf52c0e25312169a9b9b553943b2851f67490e3e",
+    "tmp/pdfs/susskind-bilocal-reconstruction-render/page-4.png": "6b0dd3376634b850b85c15bc99923066637bfb6eb14214218f2ddaf81771b256",
+    "tmp/pdfs/susskind-bilocal-reconstruction-render/page-5.png": "10944383e4bc3c47119ed0613a7832894f2da55f89f82bcaf6d9139f37dbed79",
+    "tmp/pdfs/susskind-bilocal-reconstruction-render/page-6.png": "83b1b81374d1cf2af3bcf17a7239dfc5c4cb2facaf93b1fc0ff7f1c5dbfbb19f",
+    "tmp/pdfs/susskind-bilocal-reconstruction-render/page-7.png": "f95bfb853610581dd7189335f296dce9f7fa994804709b3df16dc99f67255bad"
+  },
+  "build_pass_hashes": {
+    "tmp/pdfs/susskind-bilocal-reconstruction-build/pass1.txt": "15ad9cbfaaf0f6607bda553f8ec1c4ba96f59972baf04d185b1bec5977bcb797",
+    "tmp/pdfs/susskind-bilocal-reconstruction-build/pass2.txt": "d3cd19bea3e415762a5a4333c61349dc6abaa65f71e01a258fd18d39432a3d17"
+  }
+}

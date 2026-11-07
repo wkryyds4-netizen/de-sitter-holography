@@ -1,0 +1,108 @@
+{
+  "created_at_utc": "2026-11-06T08:57:13.583528+00:00",
+  "status": "Saved locally; no publication",
+  "scientific_status": "Fixed-half-filled output deficit reduced in L2 to both force orientations. Positive two-energy force matrix and all-order Q4 reverse-force cancellation close the specified eight-direction projection of raw mZ2: V4*mu_q4+V2*mu_q2. Cross with Y_minus and its energy descendants vanishes. Mixed L spectra, central-charge uniformity, finite-memory and bulk dictionary remain open.",
+  "current_git_head": "714d038bb605cfcffdc351e4dcc62aa95237d25f",
+  "git_commit_created": false,
+  "git_push_performed": false,
+  "archive_created": false,
+  "parent_manifest_sha256": "2f39779c61b576ee1170f3e667f6d33b24766572b1cda169cd96b29ca11bcb89",
+  "previous_stage_scientific_files_unchanged": [
+    "code/memory_descendant_filters.py",
+    "code/check_memory_descendants.py",
+    "code/check_memory_descendant_assembly.py",
+    "code/build_memory_descendants.ps1",
+    "code/record_memory_descendants.py",
+    "manuscript/susskind-memory-descendants/main.tex",
+    "output/pdf/de-sitter-susskind-memory-descendants.pdf",
+    "notes/susskind-memory-descendants.md",
+    "literature/susskind-memory-descendants-sources.md",
+    "journal/2026-11-06-susskind-memory-descendants.md",
+    "results/susskind-memory-descendants/assembly-certificate.json",
+    "results/susskind-memory-descendants/failures/initial-assembly.py",
+    "results/susskind-memory-descendants/failures/initial-parse.txt",
+    "results/susskind-memory-descendants/failures/rank-range.txt",
+    "results/susskind-memory-descendants/finite-descendants.json",
+    "results/susskind-memory-descendants/main.log",
+    "results/susskind-memory-descendants/symbolic-filters.json"
+  ],
+  "checks": {
+    "local_minor_rules": 1688,
+    "finite_car_comparisons": 2560,
+    "finite_bridge_identities": 90,
+    "reverse_endpoint_templates": 128,
+    "reverse_orbit_words": 6072,
+    "mixed_low_moments": 9,
+    "maximum_mehler_jacobi_absolute_difference": 3.375077994860476e-14
+  },
+  "environment": {
+    "python": "3.14.5",
+    "calculations": [
+      {
+        "python": "3.14.5",
+        "numpy": "2.4.6",
+        "sympy": "1.14.0"
+      },
+      {
+        "python": "3.14.5",
+        "numpy": "2.4.6",
+        "sympy": "1.14.0"
+      },
+      {
+        "python": "3.14.5",
+        "sympy": "1.14.0"
+      },
+      {
+        "python": "3.14.5",
+        "numpy": "2.4.6",
+        "sympy": "1.14.0"
+      }
+    ]
+  },
+  "build": {
+    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File code/build_memory_oriented_kernel.ps1",
+    "compiler": "This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5 Portable) (preloaded format=pdflatex 2026.9.19)  6 NOV 2026 16:54",
+    "passes_per_build": 2,
+    "successful_builds": 2,
+    "pages": 7,
+    "render_command": "pdftoppm -r 95 -png output/pdf/de-sitter-susskind-memory-oriented-kernel.pdf tmp/pdfs/susskind-memory-oriented-kernel-build/page",
+    "visual_review": "All seven pages reviewed individually at 95 dpi. After adding the X/Y_minus spectral cross statement, the final seventh-page layout remains unchanged and final page 5 was reviewed again; all final pages subsequently reviewed before recording."
+  },
+  "failures": [],
+  "process_state": "All calculations, compilation and rendering terminal; no background calculation.",
+  "evidence_scope": "Finite CAR and symbolic certificates verify identities. The L2 asymptotic bridge additionally uses explicit sitewise deficit cancellation and exponential overlap tails. All-order endpoint orbit coverage plus positive matrix measure convergence gives spectra; finite low moments alone do not. Numerical rounding and quadrature are not interval certified.",
+  "hashes": {
+    "code/memory_oriented_marks.py": "fbb782e6f6b12c4393905a85a0bd16c547e1c29abcfedfefe48783a3640df293",
+    "code/memory_force_orientation_bridge.py": "4801cfc0fef18407b24a8d05310cd0cc296399037702bb94f36f8da232308fca",
+    "code/memory_oriented_cross.py": "9ba7a17a3b9321981f5862283071c170236fdae3ed21d5b5771ae993497a7119",
+    "code/memory_oriented_spectrum.py": "b4b892b4db94449b66fb06e9b632b82dc95f3b839aaca91054f3ad35e4ebf069",
+    "code/build_memory_oriented_kernel.ps1": "adfdc31f1f886ea1f59ba71236f8b0c2873a0a5a3e475a58746b8df67fb89bce",
+    "code/record_memory_oriented_kernel.py": "97be089ef07369f283ce78b3c0b098b3f62e37a14873e4eec8d96472a2b511dc",
+    "manuscript/susskind-memory-oriented-kernel/main.tex": "2aee2d8384e049e006289b6b2faecb2a4a5a75b83486cf460079a599bad675fd",
+    "output/pdf/de-sitter-susskind-memory-oriented-kernel.pdf": "82be36b92724dd0a4efdbd2778fa8479a0b4ace119053c69bfdcc501f38d5e1f",
+    "notes/susskind-memory-oriented-kernel.md": "9bde553918439d033d1965ac52c1cf7016002aa5a4b64d5d9a126c1b92b6e119",
+    "literature/susskind-memory-oriented-kernel-sources.md": "1723e6bb949fd6754d14ee436f7d5023dfa8674532e1e67621fe7a0331f61680",
+    "journal/2026-11-06-susskind-memory-oriented-kernel.md": "fe2b812fcbf5f9c6700bcd66b2f8915724a67ded797065e703d7369b2520f156",
+    "README.md": "cabd9bdde0809348e939d7fda5911451ccd6c113301324ebe802c4b0ebba0e9e",
+    "PLAN.md": "e9ffd4a5a92887468b33bce9637a99713cd5b89842f9c1fbb3abfe393d4ff41a",
+    "NEXT.md": "6928dfebd13a546ea9e07753c5e59bfe26cca6f11fb6fbe321c3d0a88895d554",
+    "results/susskind-memory-oriented-kernel/force-bridge.json": "df504e058e55ff535aedcc79b31459011d7074e81090067bffdd4201d5944f3f",
+    "results/susskind-memory-oriented-kernel/main.log": "1a35d89020f8bdc239a37bbb888ad602413d6e4933eec7e0bb7eea3d45803daa",
+    "results/susskind-memory-oriented-kernel/oriented-marks.json": "ff6ff138fe7179c9ac5df6a1b8a15d56c7b55fff5a7a752ba0815a7a59ed9153",
+    "results/susskind-memory-oriented-kernel/reverse-cross.json": "0baf6df047e168803dabe7b265e515066dc2c2d194b514d8372d22a9e79caa1e",
+    "results/susskind-memory-oriented-kernel/spectral-checks.json": "02763578e415c707dd2ba7413549675041d8b1732fe0280030cfb463a529d72e"
+  },
+  "render_hashes": {
+    "tmp/pdfs/susskind-memory-oriented-kernel-build/page-1.png": "67dd219e5fc705d0e99586e674d5bf326d0e1e02703ab55054569bf4a4caacf0",
+    "tmp/pdfs/susskind-memory-oriented-kernel-build/page-2.png": "8a935ec43cc9dab9b634b60c3d96626821142205ff6f377096b200bcc14ce0bb",
+    "tmp/pdfs/susskind-memory-oriented-kernel-build/page-3.png": "0e56568f2382ccea27b5557c0209da342ad9e834d4500a07cdc0002a9cd5fafd",
+    "tmp/pdfs/susskind-memory-oriented-kernel-build/page-4.png": "8c6a28e82546160d075544846f553d8854d459335e918c83f12b7fa378b9c9a4",
+    "tmp/pdfs/susskind-memory-oriented-kernel-build/page-5.png": "7915c5b3eb9d8d3eefd64b9ae752887f700c91ba85954c4a0b9153c8d7a6ef81",
+    "tmp/pdfs/susskind-memory-oriented-kernel-build/page-6.png": "1c3b9e1e1078d7a4394e85d20eb11307765712f0c0ec596ae3c93dea832a08ac",
+    "tmp/pdfs/susskind-memory-oriented-kernel-build/page-7.png": "05fada7d156c5972882b20a579efe7e610b7ea50c16f8b593bcf0395eb6516c3"
+  },
+  "build_pass_hashes": {
+    "pass1.txt": "45a21f0ee1dbfa73bc5140c7bad7687c4dd5bd9c22c930a3b071217fa572d840",
+    "pass2.txt": "52160e7ffa9ad52c244a5bf433f67fdd871eadf22ec919e2825f4ba01aa2eced"
+  }
+}

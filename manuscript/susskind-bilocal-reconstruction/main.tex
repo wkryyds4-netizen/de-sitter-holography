@@ -1,0 +1,412 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,microtype,booktabs}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\PP}{\mathcal P_h}
+\newcommand{\FF}{\mathcal F}
+\newcommand{\BB}{\mathcal B}
+\newcommand{\HH}{H^{(q,C)}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\title{Reconstructing the full bilocal fluctuation\\
+\large A strong Volterra limit and explicit spectral amplitudes}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{7 November 2026\quad Local research draft}
+\begin{document}\maketitle
+\begin{abstract}
+The previously constructed joint finite-time memory kernel is now
+connected to the original singlet bilocal. A Hermitian dilation of
+the energy-pinched memory makes its background propagator contractive,
+including degenerate energy blocks. Interpolation between the collective
+second-moment bound and the existing force eighth moment controls the
+return terms, giving an $O(p^{-1/3})$ strong reconstruction error on
+fixed time intervals. The charged spectral amplitude simplifies to a
+single centered Hermite coefficient; the neutral amplitude is a regular
+second divided difference of the exponential. Their common positive
+spectral matrix gives the complete bilocal covariance. This is a result
+for the specified microscopic model; the bulk mass and position map
+remains to be constructed.
+\end{abstract}
+
+\section{Model and the actual singlet observable}
+Use standard CAR and the overlapping complex Gaussian $p$-body
+Hamiltonian, with the same original disorder across charge sectors.
+The state is normalized annealed full-Fock trace at $\beta=\mu=0$.
+Take even $N$, $p\to\infty$, $\lambda_N=p^2/N\to\lambda>0$, fixed
+$J_s$, $\hbar=1$, and string time. Write
+\begin{equation}
+ C=J_s^2/\lambda,\quad q=e^{-4\lambda},\quad
+ b_{N,m}=2^{-N}\binom Nm.
+\end{equation}
+In a sector $m>0$, put $h=H_m$, $K=I_N\otimes H_{m-1}$ and
+\begin{equation}
+ V\psi=m^{-1/2}\sum_i|i\rangle c_i\psi,\quad
+ P=VV^\dagger,\quad R=(1-P)KV,\quad D=(1-P)K(1-P).
+\end{equation}
+On $P\oplus(1-P)$, $K$ has system block $\alpha h$, where
+$\alpha=1-p/m$. Its compressed propagator and memory are
+\begin{equation}
+ F(t)=V^\dagger e^{iKt}V,\quad M(t)=R^\dagger e^{iDt}R,\quad
+ F'=i\alpha hF-M*F,\quad F(0)=1.
+\end{equation}
+Convolution is ordered: $(A*B)(t)=\int_0^t A(t-s)B(s)ds$.
+The center-time-zero bilocal and its dynamic part are
+\begin{equation}
+ S_c(t)=m e^{-iht/2}F(t)e^{-iht/2},\quad
+ \BB_N(t)=(1-\PP)S_c(t),\quad \PP Y=\sum_eP_eYP_e.
+\end{equation}
+The sum keeps whole energy eigenspaces. Inactive $m<p$ sectors
+have zero dynamic field, including $m=0$. We reconstruct this
+unnormalized fluctuation, whose limit is nontrivial even though
+$S_c/m\to1$ \cite{Channel}.
+
+\newpage
+\section{A contractive background and an exact difference}
+Set $M_0=\PP M$ and $\delta M=M-M_0$. Let $F_0$ solve the same
+Volterra equation as $F$, with $M_0$ in place of $M$.
+It is not enough to assume that a pinched memory has a stable
+propagator; here this follows from an explicit dilation.
+
+For every energy projector $P_e$, introduce a separate copy of
+the original bath and define
+\begin{equation}
+ R_0\psi=(RP_e\psi)_e,\qquad
+ D_0=\bigoplus_e D,\qquad
+ K_0=\begin{pmatrix}\alpha h&R_0^\dagger\\R_0&D_0\end{pmatrix}.
+\end{equation}
+Then $R_0^\dagger e^{iD_0t}R_0=M_0(t)$. Consequently $F_0$ is the
+system compression of $e^{iK_0t}$ and
+\begin{equation}
+ \|F(t)\|_\infty\le1,\qquad \|F_0(t)\|_\infty\le1.
+ \label{eq:contract}
+\end{equation}
+Each system energy block interacts only with its own bath copy.
+Thus $F_0$ commutes with $h$, but need not be scalar inside a
+degenerate block. Kernels $M_0(s)$ and $M_0(t)$ need not commute.
+
+For $\operatorname{Re}z>0$, the compressed resolvents are
+\begin{equation}
+ \widehat F=(z-i\alpha h+\widehat M)^{-1},\qquad
+ \widehat F_0=(z-i\alpha h+\widehat M_0)^{-1}.
+\end{equation}
+The resolvent identity gives the exact ordered relations
+\begin{align}
+ F-F_0&=-F_0*\delta M*F,\label{eq:exact}\\
+ &=-F_0*\delta M*F_0+F_0*\delta M*F_0*\delta M*F.
+\end{align}
+No infinite perturbation expansion is used. The preceding memory
+field is
+\begin{equation}
+ \FF_N(s)=(1-\PP)m e^{-ihs/2}M(s)e^{-ihs/2},\qquad
+ Q_N(s):=m\delta M(s)=e^{ihs/2}\FF_N(s)e^{ihs/2}.
+ \label{eq:Q}
+\end{equation}
+The already proved uniform bound is
+\begin{equation}
+ \sup_N\sup_{|s|\le S}\|Q_N(s)\|_{2,\mathrm{ann}}<\infty
+ \quad(S<\infty).\label{eq:collective}
+\end{equation}
+In particular \eqref{eq:exact} identifies the natural scale without
+discarding the finite return term. It also implies
+$\|m(F-F_0)(t)\|_2\le t^2\sup_{s\le t}\|Q_N(s)\|_2/2$.
+
+\section{Which norm is being used}
+For sector operators let
+\begin{equation}
+ \|X\|_{r,A}^r=\sum_{m\in A}b_{N,m}\EE\tr_m|X_m|^r.
+\end{equation}
+The Gaussian expectation and charge sum form one finite trace;
+Schatten H\"older and interpolation apply in this algebra.
+Rectangular factors are normalized by the same source dimension.
+All estimates below are uniform on a fixed real-time interval;
+constants can depend on that interval and a positive compact
+interval containing $\lambda_N$.
+
+\newpage
+\section{Interpolation controls the collective return}
+The existing force square-function estimate \cite{Return} gives,
+for $G=R^\dagger R$ and $\mathcal A_m=\sum_i[H,c_i]^\dagger[H,c_i]|_m$,
+\begin{align}
+ 0\le G&\le\mathcal A_m/m,\\
+ \EE\tr_m\mathcal A_m^k&\le(2k-1)!!(Nv_N)^k,\qquad Nv_N=O(p).
+ \label{eq:force}
+\end{align}
+Trace eigenvalue monotonicity, not operator monotonicity of the
+power map, gives $\EE\tr_mG^k\le m^{-k}\EE\tr_m\mathcal A_m^k$.
+Rectangular H\"older yields
+\begin{equation}
+ \|M(s)\|_{k,m,\mathrm{ann}}\le\|G\|_{k,m,\mathrm{ann}}
+ \le ((2k-1)!!)^{1/k}Nv_N/m.
+\end{equation}
+Pinching contracts every Schatten norm, so $M_0$ has the same bound
+and $\delta M$ at most twice this bound.
+
+Take the good charge set $A_N=\{m\ge N/4\}$. On it, the stronger
+second moment follows from \eqref{eq:collective}, whereas the
+eighth moment follows from \eqref{eq:force}:
+\begin{equation}
+ \|\delta M(s)\|_{2,A_N}=O(p^{-2}),\qquad
+ \|\delta M(s)\|_{8,A_N}=O(p^{-1}).
+\end{equation}
+Thus the standard $2$--$8$ interpolation inequality gives
+\begin{equation}
+ \|\delta M(s)\|_{4,A_N}
+ \le\|\delta M(s)\|_{2,A_N}^{1/3}
+       \|\delta M(s)\|_{8,A_N}^{2/3}
+ =O(p^{-4/3}).\label{eq:interp}
+\end{equation}
+This does not assert a uniform fourth moment for $m\delta M$.
+
+Let $U(t)=e^{iht}$ and $U_\alpha(t)=e^{i\alpha ht}$.
+Using \eqref{eq:contract}, the exact integral equations
+$F=U_\alpha-U_\alpha*M*F$ and
+$F_0=U_\alpha-U_\alpha*M_0*F_0$ imply
+\begin{equation}
+ \|F-U\|_{4,A_N}+\|F_0-U\|_{4,A_N}=O_S(p^{-1}).\label{eq:free}
+\end{equation}
+Indeed $M,M_0$ have fourth norm $O(p^{-1})$, while
+$\|(\alpha-1)h\|_{4,A_N}\le(4p/N)\|h\|_4=O(p^{-1})$.
+The uniform fourth energy moment is already available in this model.
+
+In the exact first line of \eqref{eq:exact}, the integrand error
+after replacing both propagators by $U$ is
+\begin{equation}
+ (F_0-U)\,m\delta M\,F+U\,m\delta M\,(F-U).
+\end{equation}
+H\"older, $m\le N=O(p^2)$ and \eqref{eq:interp}--\eqref{eq:free}
+bound its second norm on $A_N$ by $O(p^{-1/3})$.
+On the remaining active set $p\le m<N/4$,
+\begin{equation}
+ \sup_{|s|\le S}\|Q_N(s)\|_{2,A_N^c}
+ \le Kp\,e^{-N/16},
+\end{equation}
+using the sector bound $\|m\delta M\|_2\le2\sqrt{3}\,Nv_N$
+and $\sum_{m<N/4}b_{N,m}\le e^{-N/8}$.
+There the propagator differences have operator norm at most two.
+This treats all charges without a new four-source moment theorem.
+
+\newpage
+\section{Strong reconstruction of the entire bilocal}
+Define, for $t\ge0$,
+\begin{equation}
+ (\mathcal V_h\FF_N)(t)=
+ -\int_0^t ds\int_{-(t-s)/2}^{(t-s)/2}du\,
+ e^{ihu}\FF_N(s)e^{-ihu}.\label{eq:filter}
+\end{equation}
+For negative times use the adjoint relation. This is the whole
+memory field, with its charged, neutral and mixed components retained.
+
+\begin{theorem}
+For each fixed $S<\infty$, in the stated model and limit,
+\begin{equation}
+ \sup_{|t|\le S}\|\BB_N(t)-(\mathcal V_h\FF_N)(t)\|_{2,\mathrm{ann}}
+ \le K_Sp^{-1/3}+K_Sp e^{-N/16}.\label{eq:strong}
+\end{equation}
+Both fields have uniformly bounded second norms on this interval.
+\end{theorem}
+\begin{proof}
+The background $m e^{-iht/2}F_0(t)e^{-iht/2}$ is removed exactly
+by $1-\PP$. Apply the preceding integrand bounds to
+\eqref{eq:exact}, whose two-time simplex has area $t^2/2$.
+After replacing its propagators by $U$, put their two times equal
+to $a,b\ge0$, with $a+b=t-s$. Equation \eqref{eq:Q} combines all
+phases into $e^{ihu}\FF_N(s)e^{-ihu}$, where $u=(a-b)/2$ and
+$da=du$. This gives \eqref{eq:filter} with no extra factor.
+Its pinching is zero already, since
+$\PP(e^{ihu}\FF_N(s)e^{-ihu})=0$.
+Conjugation preserves the second norm, so
+$\|\mathcal V_h\FF_N(t)\|_2\le t^2\sup_{s\le t}\|\FF_N(s)\|_2/2$.
+The uniform bound and \eqref{eq:strong} complete the proof.
+\end{proof}
+
+Consequently the two covariance functions differ by $O_S(p^{-1/3})$
+uniformly in all external real center times $T$. This is a comparison
+of two finite-$N$ covariances. Their limit below is asserted for
+fixed $T$; no growing-time spectral limit is taken.
+
+Let $\mathcal K_\FF(T;s,r)$ be the complete memory covariance from
+\cite{Joint}. Dominated convergence and \eqref{eq:strong} give
+\begin{align}
+ \mathcal K_\BB(T;t,v)
+ ={}&\int_0^t ds\int_0^v dr
+ \int_{-(t-s)/2}^{(t-s)/2}du
+ \int_{-(v-r)/2}^{(v-r)/2}dw\,
+ \mathcal K_\FF(T+w-u;s,r).\label{eq:cov}
+\end{align}
+Here $t,v\ge0$, with other signs determined by adjoints.
+The old finite-time memory construction has thus been connected
+to the actual unnormalized singlet fluctuation, rather than only
+to its first few Taylor coefficients.
+
+\newpage
+\section{Explicit charged and neutral spectral amplitudes}
+Recall the common positive two-energy matrix $\nu_{ab}$ for
+$\mathcal X_a\in\{J_d\ (d\ge2),N_j\ (j\ge1)\}$ from \cite{Joint}.
+Here $N_j$ denotes a neutral residual field, not fermion number.
+Energies $E,E'$ label input/column and output/row. Put
+\begin{equation}
+ e=(E+E')/2,\quad\omega=(E'-E)/2,\quad
+ \chi_L(E'-E)=\frac{\sin(\omega L)}\omega,\quad\chi_L(0)=L.
+\end{equation}
+With $P_d=[d]_q!$ the monic Hermite coefficients are
+\begin{equation}
+ c_d(s)=\frac{\int e^{isx}\HH_d(x)d\rho_q(x)}{C^dP_d}.
+\end{equation}
+The centered memory amplitudes are
+$e^{-ies}D_d(s;E,E')$ and $2Ce^{-ies}c_j(s)$, where
+$D_d=-c_d''+2ie c_d'+EE'c_d$. Therefore \eqref{eq:filter} gives
+\begin{equation}
+ b_a(t;E,E')=-\int_0^t\chi_{t-s}(E'-E)e^{-ies}f_a(s;E,E')ds.
+ \label{eq:bint}
+\end{equation}
+
+For the charged part let $g_d(s)=e^{-ies}c_d(s)$. Direct differentiation
+gives $e^{-ies}D_d=-g_d''-\omega^2g_d$. The Green-function identity is
+\begin{equation}
+ -\int_0^t\chi_{t-s}e^{-ies}D_d(s)ds
+ =g_d(t)-\cos(\omega t)g_d(0)-\chi_tg_d'(0).
+\end{equation}
+Since $c_d(0)=c_d'(0)=0$ for $d\ge2$, the charged amplitude is simply
+\begin{equation}
+ \boxed{b_{J_d}(t;E,E')=e^{-iet}c_d(t).}\label{eq:bcharged}
+\end{equation}
+The zero initial data are essential; this identity is not asserted
+for the discarded $d=0,1$ channels.
+
+For the neutral part use the standard second divided difference
+of $f_t(x)=e^{itx}$ \cite{DLMF}. Integrating the scalar Green function,
+or checking its initial-value equation, gives
+\begin{equation}
+ \boxed{b_{N_j}(t;E,E')=
+ \frac{2Ce^{-iet}}{C^jP_j}\int\HH_j(x)
+ [E,E',x]f_t\,d\rho_q(x).}\label{eq:bneutral}
+\end{equation}
+The apparent denominators in the distinct-node interpolation formula
+are removable. A definition valid also for coincident real nodes is
+\begin{equation}
+ [x_0,x_1,x_2]f_t=(it)^2
+ \int_{a,b\ge0,\ a+b\le1}
+ e^{it[ax_0+bx_1+(1-a-b)x_2]}da\,db.
+\end{equation}
+Thus $|[x_0,x_1,x_2]f_t|\le t^2/2$, and at three coincident nodes
+it equals $-t^2e^{itx_0}/2$. Two applications of the fundamental
+theorem of calculus establish the integral identity, so no complex
+mean-value point is assumed.
+
+\newpage
+\section{The resulting full covariance and its first coefficients}
+The complete bilocal answer is
+\begin{equation}
+ \boxed{\mathcal K_\BB(T;t,v)=
+ \sum_{a,b}\int e^{iT(E'-E)}
+ \overline{b_a(t;E,E')}b_b(v;E,E')d\nu_{ab}(E,E').}
+ \label{eq:answer}
+\end{equation}
+All charged/neutral mixed entries of the same original-disorder
+matrix are included. The time and field sums can be integrated
+termwise: on $0\le t\le S$, $|\chi_{t-s}|\le t-s$, and the previously
+proved memory tails are absolutely summable in the field Hilbert
+norm and in spectral total variation. The Volterra map has norm
+at most $S^2/2$ on these time families. This transfers those tails
+to \eqref{eq:answer} without an unproved uniform fourth moment.
+
+Each finite spectral block has an $L^2(\rho_q\otimes\rho_q)$ density.
+The full time-dependent spectral measure is absolutely continuous
+by the total-variation limit, and has no diagonal static mass.
+Only $L^1$ regularity is claimed for the infinite density. Positivity
+of $\nu$ yields a nonnegative equal-time norm and
+$\mathcal K_\BB(T;t,v)^*=\mathcal K_\BB(-T;v,t)$.
+
+Writing $\FF(s)=A_0+is(A_1+B_1)+O(s^2)$ gives
+\begin{align}
+ \BB(t)&=-\frac{t^2}{2}J_2
+ -\frac{it^3}{6}\left[J_3-\frac32\{H,J_2\}+2CN_1\right]
+ +O_{L^2}(t^4),\\
+ \mathcal K_\BB(T;t,v)&=\frac{t^2v^2}{4}\mathcal K_{J_2}(T)
+ +O\bigl(|t|^3|v|^2+|t|^2|v|^3\bigr).
+\end{align}
+These are expansions of the established limiting field. They recover
+the earlier $-t^2Y_-/2$ bilocal curvature. The nonzero memory channel
+$\nu_{A_0B_2}$ is retained in \eqref{eq:answer}; no independence
+assumption sets its contribution to zero.
+
+\section{What physical information is still needed}
+This stage determines the dynamic bilocal covariance in the stated
+infinite-temperature double-scaled model. Its Gram metric can now be
+tested against candidate bulk constructions. That metric by itself
+does not supply canonical bosonic dressing or a light-front Hamiltonian.
+The existing Itakura construction \cite{Itakura} fixes a vacuum,
+normal ordering, polarization and physical boson subspace before its
+meson projection. Our finite normalized trace obeys
+$\tr[A,B]=0$ exactly, so a nonzero vacuum CCR expectation cannot be
+read off in the same state with convergent commutator moments.
+
+The next task is to identify the relevant algebra and state, and a
+microscopic spatial/internal-momentum generator. The energy difference
+$E'-E$, the frequency conjugate to memory time, and a meson's internal
+quark momentum fraction are presently different variables. A genuine
+$P^-$ and its interactions must be derived before comparing with the
+already known bulk mass operator. The present result does not assign
+particle masses to the spectral frequencies or establish finite-$G$
+gravitational four-point dynamics.
+
+\newpage
+\section{Independent checks and reproducibility}
+Two new scientific outputs are exclusive-create and retained unchanged.
+The final evidence binds their input hashes, parameters and dependency
+versions, predecessor files, both compilation passes and every final
+rendered page. No earlier scientific main is rerun.
+\begin{itemize}
+\item Finite Volterra checks: two nontrivial CAR sectors
+$(N,p,m)=(4,2,3),(5,2,3)$, one zero-memory $m=p$ control, and
+an independent system with a two-dimensional degenerate energy block.
+There are eight Laplace-resolvent cases, sixteen time-domain integral
+checks, twenty-four contraction checks and twelve curvature values.
+The maximum second-order resolvent error is $2.69\times10^{-15}$.
+Time quadratures use orders 8 and 14. Nonzero finite return terms
+are saved; these small systems are not a double-scaling fit.
+\item The degenerate example has noncommuting $M_0(0.3),M_0(0.8)$
+(normalized Hilbert--Schmidt commutator about $0.0331$).
+Replacing whole eigenspaces by separate eigenvectors changes the
+background memory, by about $0.259$ in the recorded test.
+This checks that block degeneracy is treated as part of the definition.
+\item Spectral-filter checks: 1,260 charged and 1,440 neutral exact
+rational coefficient identities through degree 14. Two physical
+$\lambda$ values, four signed times, ordinary/repeated/near-repeated
+energy pairs and six field degrees give 144 floating field cases.
+Independent spectral/time sizes $(40,24)$ and $(64,36)$ agree to
+$2.54\times10^{-15}$. The time-integral and explicit-amplitude
+forms differ by at most $2.40\times10^{-15}$.
+\item Twenty additional repeated-node cases compare a $3\times3$
+triangular matrix exponential with a simplex integral. The triple-node
+value and $t^2/2$ bound are checked separately. All floating comparisons
+retain their errors and are not interval certificates.
+\end{itemize}
+The strong-return theorem uses the analytical norm estimates, not
+extrapolation from these tests. This stage remains local, with no Git
+publication or external issue reply.
+
+\begin{thebibliography}{9}
+\bibitem{Channel} A. Day and Chengheng,
+\emph{The compressed evolution and memory of the complete bilocal},
+local project stage \texttt{susskind-bilocal-channel} (2026).
+\bibitem{Return} A. Day and Chengheng,
+\emph{Two-return reduction of finite memory}, local project stage
+\texttt{susskind-memory-return-expansion} (2026), force high moments;
+and \texttt{susskind-memory-uniform-bound}, collective second norm.
+\bibitem{Joint} A. Day and Chengheng,
+\emph{The joint finite-time memory kernel}, local project stage
+\texttt{susskind-memory-joint-regression} (2026).
+\bibitem{DLMF} NIST Digital Library of Mathematical Functions,
+\href{https://dlmf.nist.gov/3.3.iii}{Sec.~3.3(iii)},
+Eqs.~3.3.34--3.3.37, divided differences and analytic continuation.
+\bibitem{Itakura} K. Itakura,
+\emph{Boson Expansion Methods in (1+1)-dimensional Light-Front QCD},
+\href{https://arxiv.org/abs/hep-th/9604032}{arXiv:hep-th/9604032},
+Secs.~4--5. The source record distinguishes its light-front conventions
+and vacuum from the present model.
+\end{thebibliography}
+\end{document}

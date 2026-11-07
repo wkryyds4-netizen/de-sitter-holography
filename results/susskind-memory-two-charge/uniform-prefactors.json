@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "rational_prefactor_expansions": [
+    "(eps*lam + 2)/eps",
+    "-(11*alpha*eps*lam - 6*eps*lam + 2)/eps",
+    "-(11*beta*eps*lam - 6*eps*lam + 2)/eps",
+    "(5*alpha*eps*lam + 5*beta*eps*lam + 6*eps*lam*rho - 13*eps*lam + 2)/eps"
+  ],
+  "domain": "Fixed positive lambda; alpha,beta in [0,1], rho in [0,2]; epsilon=1/p sufficiently small.",
+  "analytic_uniformity": "Every rational denominator comes from d=m-p, m, n, m-j, n-j. After extracting powers of p, these stay bounded away from zero uniformly on the compact rank-proportion window.",
+  "consequence": "gH/C - 2p(1-q)^2 has a uniform linear bound in 1+input deficits+output deficit. Combined with previous positive product tail estimates, the H-squared part has an L2 linear-filter approximation.",
+  "environment": {
+    "sympy": "1.14.0"
+  },
+  "input_sha256": {
+    "code/check_memory_filter_uniform.py": "6fb4d1e5afa0c2dc4e8f303180aef1f6f6d3eaaa6b7fa9f5692541dd22488b23",
+    "results/susskind-memory-two-charge/symbolic-filter.json": "63849f41398b248e8ff3b585847b05b5a55fb200aa83831482d1c9c2da919f7e"
+  }
+}

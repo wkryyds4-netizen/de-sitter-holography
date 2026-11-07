@@ -1,0 +1,92 @@
+{
+  "created_at_utc": "2026-11-06T05:30:55.655478+00:00",
+  "status": "Saved locally; no publication",
+  "scientific_status": "General scalar multiplication filter disproved; coherent adjacent-charge reduced amplitudes required. Full Q amplitudes, annealed DS residual, raw Z2 and bulk dictionary remain open.",
+  "current_git_head": "714d038bb605cfcffdc351e4dcc62aa95237d25f",
+  "git_commit_created": false,
+  "git_push_performed": false,
+  "archive_created": false,
+  "parent_manifest_sha256": "e7ea968d08c9897adbc8689668814fc6995d4525a346d8c249a375f52e764e0f",
+  "previous_stage_scientific_files_unchanged": [
+    "code/memory_rank_blocks.py",
+    "code/check_memory_rank_reconstruction.py",
+    "code/rank_product_moments.py",
+    "code/check_rank_deficit_limit.py",
+    "code/check_rank_product_covariance.py",
+    "code/build_memory_rank_blocks.ps1",
+    "code/record_memory_rank_blocks.py",
+    "manuscript/susskind-memory-rank-blocks/main.tex",
+    "output/pdf/de-sitter-susskind-memory-rank-blocks.pdf",
+    "notes/susskind-memory-rank-blocks.md",
+    "literature/susskind-memory-rank-blocks-sources.md",
+    "journal/2026-11-06-susskind-memory-rank-blocks.md",
+    "results/susskind-memory-rank-blocks/deficit-limit-checks.json",
+    "results/susskind-memory-rank-blocks/initial-check-memory-rank-reconstruction.py",
+    "results/susskind-memory-rank-blocks/initial-failure.txt",
+    "results/susskind-memory-rank-blocks/initial-memory-rank-blocks.py",
+    "results/susskind-memory-rank-blocks/initial-rank-product-moments.py",
+    "results/susskind-memory-rank-blocks/main.log",
+    "results/susskind-memory-rank-blocks/product-covariance-checks.json",
+    "results/susskind-memory-rank-blocks/product-rank-moments.json",
+    "results/susskind-memory-rank-blocks/rank-blocks.json",
+    "results/susskind-memory-rank-blocks/rank-reconstruction.json",
+    "results/susskind-memory-rank-blocks/verification-issues.txt"
+  ],
+  "checks": {
+    "analytic_family_systems": 15,
+    "charge_lift_cases": 8,
+    "full_rank_parity_projectors": 4,
+    "independent_core_polarization_coordinates": 225
+  },
+  "environment": {
+    "python": "3.14.5",
+    "calculation": {
+      "python": "3.14.5",
+      "numpy": "2.4.6",
+      "sympy": "1.14.0"
+    }
+  },
+  "build": {
+    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File code/build_memory_charge_lift.ps1",
+    "compiler": "This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5 Portable) (preloaded format=pdflatex 2026.9.19)  6 NOV 2026 13:27",
+    "passes": 2,
+    "pages": 4,
+    "render_command": "pdftoppm -r 95 -png output/pdf/de-sitter-susskind-memory-charge-lift.pdf tmp/pdfs/susskind-memory-charge-lift-build/page",
+    "visual_review": "All four final page PNGs viewed at 95 dpi; equations, references, and pagination readable without clipping or overlaps."
+  },
+  "retained_issues": [
+    "Ad hoc python -c import failed from root; rerun from code directory succeeded.",
+    "Initial passing checks retained with exact source snapshot; final checker adds analytic norm-count validation. No scientific tolerance changes."
+  ],
+  "process_state": "All calculations, compilation, and rendering terminal; no active process.",
+  "evidence_scope": "Finite exact identities and an analytic counterexample family. Does not establish general block multiplicity or annealed double-scaled memory norm.",
+  "hashes": {
+    "code/check_memory_charge_lift.py": "cf26017a0885ecd73b59f280fedaee5b99378b978f694196ac73770f83acfac3",
+    "code/probe_memory_half_filling.py": "fe03851db291f3a1874e7d73e6a53695720e001ac65877fd996228f334d0bd07",
+    "code/build_memory_charge_lift.ps1": "81744520e9d00df2bef2ac5d0224e8503395019d61bda7102ae8e31f563b26cb",
+    "code/record_memory_charge_lift.py": "c980b0c68a8b768610f9ec8eb80684f485ef148e87da33794676deacd5a02410",
+    "manuscript/susskind-memory-charge-lift/main.tex": "de50fea7f31da3c1283e4d71fd2afb8ab676bcb5a360aa44072d481bc098387c",
+    "output/pdf/de-sitter-susskind-memory-charge-lift.pdf": "6fafa5333aeae70b633b5776c0cffb9b86869a95e3f569a4b72263ef2ce5d12f",
+    "notes/susskind-memory-charge-lift.md": "7bbd229bda2bf2e4ea6bdd6e4ce384bcc87497075278e68ab7aba4eafd05f13a",
+    "literature/susskind-memory-charge-lift-sources.md": "21aaa390499e3936d0f6992f4edb6bd98c43191b62ee1d6969bcf6b778ef1145",
+    "journal/2026-11-06-susskind-memory-charge-lift.md": "2707a10192b228901253cd8ada008edb1e750653fecdddbc660af0f8720e64a5",
+    "README.md": "abfa34d3d320d110bbe3edd4379d468aad9225b3cd15626e43110567ae73cba7",
+    "PROJECT.md": "5c7cab9a9abd28d354b07a94aee40aedcca351bb4eff8b0cb07e8428058fd00a",
+    "PLAN.md": "a66a776185a6b02d054784da5f77815faf7313655db62fa1d010519f266fca15",
+    "NEXT.md": "c9a1f284a67c5ecf507c39629d453b1c09f02ba013fa8ec42201ef92f0351de4",
+    "results/susskind-memory-charge-lift/checks.json": "3805db91712244e26722719a7bc9de35a78c478d281b0f9f3cce2f39d5ee5341",
+    "results/susskind-memory-charge-lift/final-checks.json": "7b65491ab78ed0ee5132eeb4523ed339cd428323493136c0dc81f18cf787e09f",
+    "results/susskind-memory-charge-lift/main.log": "210b371cabff1b627795f10dbed8aba5f5ecc826161fd5c8eb745b739fe8c0d7",
+    "results/susskind-memory-charge-lift/preliminary-checker.py": "0a686127477277411e4a3eee3860f261738bd2453cb22bbf184d2c36a042696a"
+  },
+  "render_hashes": {
+    "tmp/pdfs/susskind-memory-charge-lift-build/page-1.png": "0de691e26cffffab90ab606d5d3d72f19de9e1a82db89ff53f1f285baab10e4b",
+    "tmp/pdfs/susskind-memory-charge-lift-build/page-2.png": "e98b76654b3498fde29802ebf69723d27cb7ff4e9f9d04584a4c021ce02e4e84",
+    "tmp/pdfs/susskind-memory-charge-lift-build/page-3.png": "0f60992049b08dfe5054ff12073a050988160867d6c142ba8bb96709883d9eec",
+    "tmp/pdfs/susskind-memory-charge-lift-build/page-4.png": "4288bab26b0cf32456a7151e929fd63c544172d2943d3632955fa3e646c06cc3"
+  },
+  "build_pass_hashes": {
+    "pass1.txt": "4b5a282900ad76232ce3ab9fe3ef8b27e25aaacddd8f5178912029a9c5dadd7c",
+    "pass2.txt": "153976e34f800910373362668dd2535a23e0264c4d61454fd505800235e2c9d1"
+  }
+}

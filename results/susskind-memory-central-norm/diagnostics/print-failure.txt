@@ -1,0 +1,1 @@
+Scope cleanup left one terminal print referencing removed half-filled variable small; scientific assertions and JSON creation had passed, but process exited with NameError. Preserved source/output, corrected print and reran for a clean process and matching input hash.

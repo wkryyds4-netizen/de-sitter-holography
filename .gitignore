@@ -12,6 +12,8 @@ sources/*.html
 /.env
 /.env.*
 sources/*.pdf
+# Downloaded issue attachments stay local; their public origin is in the review.
+/sources/external-reviews/
 # Historical paper caches stored beside source-audit records.
 /results/stage3/cg-domain-source-audit/kolchmeyer-liu-2411.08090v1.pdf
 /results/stage3/cg-domain-source-audit/v1-page26.png

@@ -1,0 +1,42 @@
+{
+  "created_at_utc": "2026-11-05T14:34:31.201323+00:00",
+  "status": "local increment recorded; not frozen or published",
+  "scientific_status": "Finite-N Wick formulas and symmetry reduction; general combinatorial and double-scaled evaluation still pending.",
+  "current_git_head": "714d038bb605cfcffdc351e4dcc62aa95237d25f",
+  "tracked_edits": [
+    "NEXT.md",
+    "PLAN.md",
+    "README.md"
+  ],
+  "git_commit_created": false,
+  "git_push_performed": false,
+  "checks": "Saved code hashes, exact moment arithmetic, cubature residuals, final build log and tracked-change scope; no global project audit or archive rehash.",
+  "build": {
+    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File code/build_singlet_wick_moments.ps1",
+    "compiler": "MiKTeX-pdfTeX 4.27 (MiKTeX 26.5 Portable)",
+    "passes": 2,
+    "pages": 5,
+    "visual_review": "All five 1200-pixel PNG pages inspected; no clipping or overlap.",
+    "initial_issue": "Long path overfull paragraph; initial log retained and final layout repaired."
+  },
+  "hashes": {
+    "code/singlet_wick_moments.py": "045f9f02e860fa8f2e402ca5162dabf035208a8d26023ada5721a5f02d47572c",
+    "code/run_singlet_wick_moments.py": "a6e609a3e833ab6731319521f73c68a6260b9e97c8c4f74ec97ba6cfbdaea4d3",
+    "code/build_singlet_wick_moments.ps1": "2efafe3cd9f26fa3d731c857bdd0abb93e4b13fb38d765087dfca484dab9b735",
+    "code/record_singlet_wick_local.py": "f098eff6c4989e2bb0ab11e81c543c7b6f582e32109f8467fb4b41deb853849b",
+    "manuscript/susskind-singlet-moments/main.tex": "cc07ab4b328be2e8320dfb0cf01ed6a5965d7639076aed2f0f30ad7aad1923f6",
+    "output/pdf/de-sitter-susskind-singlet-moments.pdf": "b5aa6dce369e2ae29b7df43a88818a92b9020444bc657cf959fc0672d194bb27",
+    "notes/susskind-singlet-moments.md": "9702cc359b5327b768053201cc0896fd2ca6f7347289029f4e05959680696b9e",
+    "literature/susskind-singlet-moments-sources.md": "97098dcae49e868bc9a2ea4f40b1cc9996eedb9a21b600599495450c2c6a1508",
+    "results/susskind-singlet-moments/build-initial.log": "ba18cd4a9b28c7f975b0dc91d4926db6c37a06dd84118bb1e1f4bc176864d75f",
+    "results/susskind-singlet-moments/main.log": "70f55ae58bed37d3a5aab1237561185cbb7272879f05a6df7a58a162c6d4c7c3",
+    "results/susskind-singlet-moments/moments.json": "a6e3ccbdfc1ec5490e3ce458ad9398742c7cbd9e6902ea72600feb0e319ffde3"
+  },
+  "local_render_hashes": {
+    "tmp/pdfs/susskind-singlet-moments-build/page-1.png": "f22897f2e32b1096d31b9a3e63897bd0040842c11dcc16ca115f64b8c2d00ec6",
+    "tmp/pdfs/susskind-singlet-moments-build/page-2.png": "fc3c2cf997b9ef2b97c0afd7062bca6072f503b89c40b2e715c15e7806338ec5",
+    "tmp/pdfs/susskind-singlet-moments-build/page-3.png": "5721e1b25619f531a7d87c37a091e2b4eaff54d931e8431ef6383f8e643bde2c",
+    "tmp/pdfs/susskind-singlet-moments-build/page-4.png": "b8230b8ac3463d9e1fbaddc57e2786983b58debb0a5f2266f7639230201b93aa",
+    "tmp/pdfs/susskind-singlet-moments-build/page-5.png": "27a3ab4c327fde6919289eeadf6236ac7f150458ffd4d5399ba2e0b5a71afae0"
+  }
+}

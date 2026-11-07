@@ -1,0 +1,316 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,microtype}
+\usepackage[margin=24mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\Rem}{\operatorname{Rem}}
+\newcommand{\W}{\mathsf W_2}
+\newcommand{\Id}{\mathcal I}
+\title{Transporting quadratic products across central charge windows\\Output-deficit norms and a coherent-cross calculation}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Local research note --- 6 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+An adjacent-charge Hilbert--Schmidt isometry transfers the normalized
+quadratic product from half filling to a compact central window.
+The coherent-force norm bounds each step; a sixth output moment
+controls the accumulated deficit-weighted error. This proves the
+central-window Gram on the energy square, input deficit and output
+deficit, with an explicit $O(p^{-2/3})$ transport bound for the last
+field. A candidate remaining force cross is supported by exact
+finite CAR contractions and full-rank sums. Its general-charge
+Casimir recoupling step is isolated at the end for further proof.
+\end{abstract}
+\section{State, normalization and the established result}
+Use the full overlapping complex Gaussian $p$-body Hamiltonian,
+standard CAR, $\hbar=1$, and normalized maximally mixed trace in
+charge $m$. Norms are annealed:
+$\|T\|_{2,m}^2=\EE\tr_m(T^\dagger T)$. All sectors share the
+same Gaussian couplings and variance $w_N$. Take even $N$ and
+\begin{equation}
+ \lambda_N=p^2/N\to\lambda>0,\quad m=N/2+xp,\quad |x|\le L,
+ \qquad q=e^{-4\lambda}.
+\end{equation}
+Bounds are uniform for $\lambda_N$ in a positive compact set and
+integer $m$ in this window. Let $h_a$ be its rank-$a$ Gaussian part,
+$C_m=\EE h^2=w_N\binom mp\binom{N-m+p}p$, and $\W$ denote ordinary
+Gaussian second chaos. Put
+\begin{align}
+ B_m&=\W h^2,& D_m&=\sum_a(p-a)h_a,\\
+ L_{\rm in,m}&=\W\{h,D_m-\bar u_mh\},&
+ \bar u_m&=\sum_a(p-a)\EE h_a^2/C_m,\\
+ \mathcal S_m&=\sum_{a\le b,r}(a+b-r)\W Z^m_{ab;r}.&&
+\end{align}
+Here $Z^m_{ab;r}=P_r(h_a\odot h_b)$, where $\odot$ is a square
+for $a=b$ and an anticommutator otherwise. We prove
+\begin{equation}
+ \frac{G(B,L_{\rm in},\mathcal S)}{C_m^2}\longrightarrow
+ \begin{pmatrix}1+q&0&b\\0&2\lambda(1+q)&0\\b&0&s\end{pmatrix},
+ \quad\begin{cases}b=2\lambda(1-q),\\
+ s=4\lambda^2(1+q)+2\lambda(1-q).\end{cases}\label{three}
+\end{equation}
+The known half-filled Gram is the reference, not a parity identity
+assumed at the destination charge.
+
+\newpage
+\section{Exact adjacent-charge transport}
+Set $n=N-m+1$ and $x_r=r(N+1-r)$. The established removal norm is
+\begin{equation}
+ \|\Rem T_r\|_{2,m}^2=\ell_{m,r}^2\|T_r\|_{2,m-1}^2,
+ \qquad \ell_{m,r}^2=\frac m n(mn-x_r),\quad
+ \Rem T=\sum_i c_i^\dagger T c_i.\label{rem}
+\end{equation}
+Define $\Id_m=\sum_{r\le2p}\ell_{m,r}^{-1}\Rem P_r$.
+For large $p$ the entire central path satisfies
+$2p\le\min(m-1,N-m)$, so both sectors contain every rank used here.
+Equivariance and multiplicity-free neutral operator spaces make
+$\Id_m$ an onto isometry on this common subspace. Its inverse is
+its normalized-HS adjoint. No assertion about positivity of this
+map is required.
+
+The map acts only on the output matrix of a Gaussian coefficient
+tensor. The common $p$-body coupling space decomposes into the same
+input ranks in all sectors. Thus input-pair blocks and output ranks
+are preserved, including their internal multiplicities. The map
+commutes with $\W$ and every block weight $f(a,b,r)$.
+
+Write $\widehat B^m_{ab;r}=\W Z^m_{ab;r}/C_m$ and
+\begin{align}
+ R_m&=C_{m-1}/C_m=\frac{(m-p)(n+p)}{mn},&t_{m,r}&=R_m\ell_{m,r},\\
+ A_m&=\Rem(H_{m-1}^2)+(2p-m)H_m^2,&O_m&=\W A_m.
+\end{align}
+The same-$J$ product identity is exactly
+\begin{equation}
+ t_{m,r}\Id_m\widehat B^{m-1}_{ab;r}-(m-2p)\widehat B^m_{ab;r}
+       =O^m_{ab;r}/C_m.\label{identity}
+\end{equation}
+In the stated window, uniformly for $r\le2p$,
+\begin{equation}
+ t_{m,r}\ge cN,\qquad |t_{m,r}-(m-r)|\le K,\qquad
+ |t_{m,r}-(m-2p)|\le K(1+u+v+S),\label{scalar}
+\end{equation}
+where $u=p-a,v=p-b,S=a+b-r$. These follow by squaring $t$:
+all scaled denominators are bounded away from zero, and
+$t^2-(m-r)^2=O(N)$. More explicitly, for $r=\rho p$,
+\begin{align}
+ t_{m,r}-(m-r)&\longrightarrow2\lambda[x(2-\rho)-1],
+ p^2(R_m-1)&\longrightarrow4\lambda^2(2x-1).
+\end{align}
+The first limit is a scalar check for bounded $\rho\in[0,2]$;
+the proof below uses the uniform inequality \eqref{scalar}.
+
+\newpage
+\section{Telescoping and the output tail}
+Two inputs from the preceding central-window notes are used:
+\begin{align}
+ \sum_{a\le b,r}(1+u+v)^2\|O^m_{ab;r}/C_m\|_2^2&\le K,\label{forcebound}\\
+ \sum_{a\le b,r}S^6\|\widehat B^m_{ab;r}\|_2^2&\le K.\label{six}
+\end{align}
+There are also uniform factorial tails in $u,v$. For clarity,
+\eqref{six} follows from the positive ordered-product law $\pi$;
+the symmetrized same-$J$ block is bounded by twice the ordered
+law after the ordered-pair convention is included. It does not
+require a sign formula for the exchanged contraction. The same
+bound holds with each fixed polynomial in $u+v$ inserted, by the
+conditional uniform sixth moment and the factorial input tail.
+
+Solving \eqref{identity}, and summing squared orthogonal block norms,
+now gives
+\begin{equation}
+ \left\|\Id_m(B_{m-1}/C_{m-1})-B_m/C_m\right\|_2\le K/N.
+ \label{step}
+\end{equation}
+Indeed the numerator is $O_m/C_m+(m-2p-t_{m,r})\widehat B^m$
+in each block; \eqref{forcebound}, \eqref{scalar} and the product
+second moment bound it uniformly. The same argument with weight
+$u+v$ uses \eqref{forcebound} and the weighted product moments.
+Composing the isometries (their inverses below half filling) over
+at most $Lp$ steps proves an unweighted error $Kp/N=O(p^{-1})$.
+
+Let $U_{m\leftarrow0}$ denote this composition from $m_0=N/2$.
+All steps preserve $a,b,r$, so the cutoff $P_{S\le R}$ is the same
+coefficient-space projector throughout. Telescope first and then
+multiply by $S$ on this low block. For the two endpoint tails,
+\eqref{six} gives
+\begin{equation}
+ \|S\mathbf1_{S>R}\widehat B^m\|_2^2\le K/R^4.
+\end{equation}
+Consequently
+\begin{equation}
+ \left\|U_{m\leftarrow0}\frac{\mathcal S_{m_0}}{C_{m_0}}
+                   -\frac{\mathcal S_m}{C_m}\right\|_2
+ \le K\left(\frac R p+\frac1{R^2}\right)
+ =O(p^{-2/3})\quad(R=p^{1/3}).\label{transport}
+\end{equation}
+Only the two endpoint tails are counted; summing a tail bound at
+every intermediate charge would give a different, inadequate estimate.
+
+The input-weighted version of \eqref{step}, together with
+$\bar u_m\to\lambda$ uniformly, also transports $L_{\rm in}/C_m$
+with an error tending to zero. Thus all three fields in \eqref{three}
+converge in the same coefficient Hilbert space to their half-filled
+references. Uniform boundedness and Cauchy--Schwarz transfer every
+Gram entry, proving \eqref{three}. The displayed rate concerns
+transport only, not the rate of the reference Gram's DS limit.
+
+\newpage
+\section{A candidate remaining coherent cross}
+The preceding proof establishes the output self norm. To add $O_m$
+to the Gram, consider $X=x_{a+b}-x_r$. Since
+\begin{equation}
+ X=S[N+1-2(a+b)+S],\qquad
+ \|\mathcal X_m/N-\mathcal S_m\|_2/C_m=O(p^{-1}),\label{proxy}
+\end{equation}
+the uniform $O_m/C_m$ bound permits replacing the deficit by this
+Casimir proxy in a cross. Define the neutral Racah kernel $\chi$
+with lower parameters $(-m,m-N,-N-1)$, and
+\begin{equation}
+ \xi={}_4F_3\!\left[\begin{matrix}-a,a-N-1,-b,b-N-1\\
+ 1-m,m-N,-N-1\end{matrix};1\right],\qquad D=\xi-\chi.
+\end{equation}
+Both kernels have the same displayed upper parameters. Put
+$g=(m-p)^2/m$, $\eta=p^2/m$ and
+\begin{equation}
+ C_f=\frac{m(N-m)(N+1)}N,\quad
+ C_t=\frac{(m-1)(N-m)(N+1)}{N-1},\quad
+ U_{ab}=-2ab(1+\chi)+x_ax_b/C_f.
+\end{equation}
+The neutral proxy cross per ordered pair is $U_{ab}/N$.
+For the coherent product with $\Rem(H_{m-1}^2)$, the candidate
+direct and exchanged Casimir moments, divided by $C_aC_b$, are
+\begin{equation}
+ g(x_a+x_b-x_ax_b/C_t),\qquad
+ g[(x_a+x_b)\xi-mD].\label{candidatelemma}
+\end{equation}
+They pass the independent pure-rank CAR checks described on page 6.
+If \eqref{candidatelemma} holds generally, algebra gives the stable
+same-$J$ formula
+\begin{equation}
+ z_{ab}=\frac1N\left\{\eta U_{ab}
+ +g\left[\frac{x_ax_b}{m(m-1)(N+1)}+(m-2ab)D\right]\right\}.
+ \label{candidate}
+\end{equation}
+It combines the large terms before evaluation, using
+$C_t^{-1}-C_f^{-1}=[m(m-1)(N+1)]^{-1}$.
+
+For fixed input deficits, terminating-series bounds give
+$\chi\to q$ and $mD\to-4\lambda q$. Each term is bounded by
+$K^j/j!$, including one extra $j$ moment. Thus \eqref{candidate}
+is uniformly bounded over all $a,b\le p$ and tends to $s$.
+The factorial input tail justifies the full rank sum. Combined
+with \eqref{proxy}, this would prove
+$\langle\mathcal S_m,O_m\rangle/C_m^2\to s$.
+This last inference is conditional on the general-charge
+recoupling identity \eqref{candidatelemma}, not on numerical convergence.
+
+\newpage
+\section{The precise analytic step still needed}
+The charged covariance is diagonal with terminating kernel
+\begin{equation}
+ T_a(t)={}_4F_3\!\left[\begin{matrix}-a,a-N-1,-t,t-N\\
+ 1-m,m-N,-N-1\end{matrix};1\right].
+\end{equation}
+The established two-component decomposition gives
+\begin{align}
+ \xi&=T_a(b)-\frac b{N+1-2b}[T_a(b-1)-T_a(b)],\\
+ \frac{x_b}{N+1-2b}[T_a(b-1)-T_a(b)]&=-mD.\label{termwise}
+\end{align}
+The second equality follows termwise: if $c_j$ is a summand of
+$\chi$, the corresponding summand of $\xi$ is $mc_j/(m-j)$.
+We have additionally checked 624 finite rational instances.
+
+What remains is to identify the exchanged gradient contraction
+with the left side of \eqref{termwise} times $g$. With
+$E_{ij}=c_i^\dagger c_j$ and
+$\mathcal C=\frac12\sum_{ij}\operatorname{ad}_{E_{ij}}
+\operatorname{ad}_{E_{ji}}$, the exact product rule is
+\begin{equation}
+ \mathcal C(UV)=(x_a+x_b)UV+
+          \sum_{ij}[E_{ij},U][E_{ji},V].
+\end{equation}
+The needed evaluation uses the two charged components of $Vc_i$
+and the CAR commutators $[E_{ij},c_k]=-\delta_{ik}c_j$.
+It must track the rectangular trace normalization and both
+component weights. The termwise identity alone does not evaluate
+this operator contraction. The half-filled alternating-completeness
+proof in the earlier note does not supply that general-charge step.
+
+For a concrete continuation, set $z=1+q$, $l=2\lambda(1+q)$,
+$a_*=4\lambda+4\lambda^2(1+q)$. The established subblocks
+\eqref{three} and the preceding force note leave exactly one unknown:
+\begin{equation}
+ C_m^{-2}G(B,L_{\rm in},\mathcal S,O)\ \longrightarrow
+ \begin{pmatrix}z&0&b&b\\0&l&0&0\\b&0&s&c\\b&0&c&a_*\end{pmatrix}.
+\end{equation}
+Existence and value of $c$ are the remaining cross problem.
+The candidate is $c=s$. Under that condition, writing
+\begin{equation}
+ v=s-b^2/z=2\lambda(1-q)+\frac{16\lambda^2q}{1+q},\qquad
+ \Delta=a_*-s=2\lambda(1+q),
+\end{equation}
+the residual of $\mathcal S/C_m$ after projection onto
+$\operatorname{span}(B,L_{\rm in},O)$ has variance
+$v\Delta/(v+\Delta)>0$. This is a conditional Schur complement.
+Its central-window status must remain distinct from the already
+established half-filled residual.
+
+\newpage
+\section{Reproducible checks and continuation}
+The new files in \texttt{results/susskind-memory-central-cross}
+record the following independent scopes:
+\begin{itemize}
+ \item \texttt{transport.json}: exact symbolic scalar drift and
+ variance ratio; complete rational isometry matrices on ranks
+ $0,1,2$ for $(N,p,m)=(6,1,3)$, dimensions $1,35,189$.
+ Full 1,296 ordered Gaussian coordinate pairs verify the normalized
+ transport identity with maximal error $3.47\,10^{-17}$; the
+ square-root isometry norm comparison differs by $2.23\,10^{-16}$.
+ \item \texttt{charged-casimir.json}: 15 pure-rank pairs in four
+ small systems, all 60 direct/exchanged zeroth/first Casimir
+ identities exact. Across these blocks 66,531 ordered Gaussian
+ coordinate pairs are contracted, without a parity substitution.
+ \item \texttt{car-exploration.json}: independent full $4\times4$
+ coefficient Grams on $(B,\mathcal S,\mathcal X/N,O)$, totaling
+ 31,466 symmetric coordinate pairs. All four differences between
+ the actual proxy--force cross and the candidate are exactly zero.
+ Its original exploratory status is retained.
+ \item \texttt{cross-limit.json}: 624 rational contiguous checks,
+ four finite all-rank exact comparisons, and 36 central cases at
+ $\lambda=0.1,0.25,0.5$, $p=16,32,64,128$, $x=-2,0,2$.
+ Every input rank and terminating-series term is retained.
+ Evaluations at 80 and 120 digits agree at the stored 65 significant
+ digits. The three columns are $\mathcal X/N$ crossed with $B$,
+ $L_{\rm in}$ and the candidate $O$ expression, respectively.
+\end{itemize}
+At $\lambda=0.5,p=128$, the candidate force cross divided by
+$C_m^2$ is approximately $1.97682736$, $1.94517151$, $1.91541182$
+for $x=-2,0,2$; its proposed limit is $2$. These finite-size
+deviations are much larger than precision-refinement differences.
+Neither floating refinement nor exact small-system checks prove
+the unresolved recoupling lemma.
+
+The transport theorem uses even $N$ and a fixed compact central
+window. Odd-$N$ references, growing charge windows and full charge
+sums require additional work. The next immediate task is the
+gradient contraction on page 5, followed by energy insertions,
+the raw memory spectrum and finite-memory remainder. The
+space/mass dictionary for Susskind's bulk mesons remains downstream.
+
+\begin{thebibliography}{9}
+\bibitem{TT} J. Tall and S. Tomsovic,
+\emph{Double-scaled bosonic and fermionic embedded ensembles,
+complex SYK, and the dual Hilbert space},
+\href{https://arxiv.org/html/2604.14522v2}{arXiv:2604.14522v2},
+Sec. 2.1, Eqs. (2.11)--(2.19). The irreducible covariance and
+fixed-charge framework are prior results; particle--hole symmetry
+does not imply a same-sector product parity away from half filling.
+\bibitem{local} A. Day and Chengheng, local project notes:
+\emph{Parity-weighted rank deficits},
+\emph{Central charge windows}, and
+\emph{Coherent memory norms on central charge windows}
+(6 November 2026). These provide the reference Gram, positive
+sixth moment and coherent-force bound used in the transport proof.
+\end{thebibliography}
+\end{document}

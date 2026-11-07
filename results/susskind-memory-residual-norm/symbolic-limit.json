@@ -1,0 +1,62 @@
+{
+  "status": "passed",
+  "unsigned_limit": "4*lam*(lam + 1)",
+  "log_terms": [
+    "-j*(j - 1) - j*(2*lam + u + v)",
+    "-j*lam**2 + 3*j*lam*(j - 1)/2 + j*lam*(u + v + 1) - j*(j - 1)*(2*j - 1)/6 - j*(j - 1)*(u + v)/2 - j*(u**2 + v**2)/2"
+  ],
+  "P_scaled_series": [
+    "4",
+    "-4*(2*lam + u + v)",
+    "4*(lam**2 - lam*u - lam*v - 2*lam + u*v)"
+  ],
+  "summand_coefficients": [
+    "-(j + 4*lam)/lam",
+    "(j**3 + 6*j**2*lam + j**2*u + j**2*v - j**2 + 8*j*lam**2 + 4*j*lam*u + 4*j*lam*v + 4*j*lam + 8*lam**2 + 4*lam*u + 4*lam*v)/lam",
+    "-(3*j**5 + 24*j**4*lam + 6*j**4*u + 6*j**4*v - 8*j**4 + 60*j**3*lam**2 + 36*j**3*lam*u + 36*j**3*lam*v + 13*j**3*lam + 3*j**3*u**2 + 6*j**3*u*v - 9*j**3*u + 3*j**3*v**2 - 9*j**3*v + 6*j**3 + 48*j**2*lam**3 + 48*j**2*lam**2*u + 48*j**2*lam**2*v + 126*j**2*lam**2 + 12*j**2*lam*u**2 + 24*j**2*lam*u*v + 42*j**2*lam*u + 12*j**2*lam*v**2 + 42*j**2*lam*v - 15*j**2*lam - 3*j**2*u**2 + 3*j**2*u - 3*j**2*v**2 + 3*j**2*v - j**2 + 72*j*lam**3 + 120*j*lam**2*u + 120*j*lam**2*v + 60*j*lam**2 + 12*j*lam*u**2 + 48*j*lam*u*v - 12*j*lam*u + 12*j*lam*v**2 - 12*j*lam*v - 10*j*lam - 24*lam**2*u - 24*lam**2*v - 48*lam**2 + 24*lam*u*v)/(6*lam)"
+  ],
+  "averaged_coefficients": [
+    "0",
+    "0",
+    "4*lam**2"
+  ],
+  "norm_over_C_squared": "4*lambda + 4*lambda^2*(1+q)",
+  "gram_over_C_squared": [
+    [
+      "q + 1",
+      "0",
+      "theta*(1 - q)",
+      "theta*(1 - q)"
+    ],
+    [
+      "0",
+      "theta*(q + 1)",
+      "0",
+      "0"
+    ],
+    [
+      "theta*(1 - q)",
+      "0",
+      "theta**2*(q + 1) + theta*(1 - q)",
+      "theta**2*(q + 1) + theta*(1 - q)"
+    ],
+    [
+      "theta*(1 - q)",
+      "0",
+      "theta**2*(q + 1) + theta*(1 - q)",
+      "theta**2*(q + 1) + 2*theta"
+    ]
+  ],
+  "determinant": "-theta**3*(q + 1)**2*(q**2 - 4*q*theta - 1)",
+  "difference_norm_over_C_squared": "theta*(q + 1)",
+  "residual_over_Js_four": "-(q + 1)*(-8*lam*q + q**2 - 1)/(lam*(4*lam*q + q + 1))",
+  "small_lambda_residual_over_Js_four": "16",
+  "scope": "Symbolic coefficients, cancellations, and projection. The accompanying proof supplies growing logarithmic windows and remainder bounds; this script alone is not that bound.",
+  "environment": {
+    "python": "3.14.5",
+    "sympy": "1.14.0"
+  },
+  "input_sha256": {
+    "code/memory_norm_asymptotic.py": "6f29ed328d580c14b55efef34b08646c08ad88cb585d860ac3a0598f8ef1f75a"
+  }
+}

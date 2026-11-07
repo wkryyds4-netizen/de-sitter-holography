@@ -1,0 +1,76 @@
+{
+  "status": "passed",
+  "rows": [
+    {
+      "N": 2,
+      "m": 1,
+      "input_rank_pairs": 4,
+      "signed_moment_checks": 12
+    },
+    {
+      "N": 4,
+      "m": 2,
+      "input_rank_pairs": 9,
+      "signed_moment_checks": 27
+    },
+    {
+      "N": 6,
+      "m": 3,
+      "input_rank_pairs": 16,
+      "signed_moment_checks": 48
+    },
+    {
+      "N": 8,
+      "m": 4,
+      "input_rank_pairs": 25,
+      "signed_moment_checks": 75
+    },
+    {
+      "N": 10,
+      "m": 5,
+      "input_rank_pairs": 36,
+      "signed_moment_checks": 108
+    },
+    {
+      "N": 12,
+      "m": 6,
+      "input_rank_pairs": 49,
+      "signed_moment_checks": 147
+    }
+  ],
+  "signed_moment_checks": 417,
+  "recurrence_checks": 139,
+  "exact_signed_delta_moments": [
+    "chi(a,b)",
+    "-2*a*b*chi(a,b)",
+    "(4*a^2*b^2-2*a*x_b)*chi(a,b)+a^2*(m+1-a)*(chi(a-1,b)-chi(a,b))"
+  ],
+  "gram_over_C_squared": [
+    [
+      "q + 1",
+      "0",
+      "2*lam*(1 - q)"
+    ],
+    [
+      "0",
+      "2*lam*(q + 1)",
+      "0"
+    ],
+    [
+      "2*lam*(1 - q)",
+      "0",
+      "4*lam**2*(q + 1) + 2*lam*(1 - q)"
+    ]
+  ],
+  "residual_over_C_squared": "-2*lam*(-8*lam*q + q**2 - 1)/(q + 1)",
+  "small_lambda_residual_over_Js_four": "16",
+  "scope": "Exact half filling; independent ordered-product law. Gram is the same-coupling symmetric second-chaos limit, not a time-dependent spectrum.",
+  "environment": {
+    "python": "3.14.5",
+    "sympy": "1.14.0"
+  },
+  "input_sha256": {
+    "code/memory_parity_moments.py": "3472bda725ff87618e648197139fd2c31c68532787e77d82ce021162b712c229",
+    "code/cubic_linear_dynamics.py": "81d8e955107098e897637650bb7686a15fd2ff8fde6de1e1c525db398516d014"
+  }
+}

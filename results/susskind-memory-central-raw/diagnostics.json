@@ -1,0 +1,9 @@
+{
+  "event": "Initial local manifest link scan failed",
+  "command": "python code/record_memory_central_raw.py",
+  "exit_code": 1,
+  "exception": "AssertionError in historical NEXT.md: regex interpreted a parenthesized expression following a closing square bracket as a path",
+  "cause": "The initial scan included the entire accumulated historical NEXT instead of this stage's new entry.",
+  "resolution": "Validate the new README/NEXT entries and full new note; leave historical contents unchanged. No numerical output, tolerance, or scientific claim changed.",
+  "scientific_failures": []
+}

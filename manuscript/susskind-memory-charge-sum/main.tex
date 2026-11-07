@@ -1,0 +1,359 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,microtype}
+\usepackage[margin=24mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\W}[1]{\mathsf W_{#1}}
+\newcommand{\Jh}{\mathcal J_h}
+\newcommand{\Rem}{\operatorname{Rem}}
+\title{Summing the charge sectors of the memory fluctuations\\From central windows to the infinite-temperature state}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Local research note --- 6 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+We extend the project's conserved-subtracted memory coefficients
+to all charge sectors and control their charge tails. A uniform
+Hamiltonian variance bound and a positive regression denominator
+remove endpoint ambiguities. The central estimates extend to a
+logarithmic window, while a coarse polynomial bound suffices
+outside it. The full infinite-temperature spectral matrix equals
+the central one. The rescaled charge is Gaussian and factors
+from this two-energy matrix. This also supplies a precise
+energy-diagonal subtraction for the subsequent finite-memory problem.
+\end{abstract}
+\section{The full state and the statement}
+Use the same overlapping complex Gaussian $p$-body Hamiltonian,
+standard CAR, $\hbar=1$, string-time units, and common coupling variance
+\begin{equation}
+ w_N=4^p\frac{J_s^2}{\lambda_N}\left(\frac{p!}{N^p}\right)^2,
+ \qquad \lambda_N=p^2/N\to\lambda>0.
+\end{equation}
+$N$ is even, $\lambda_N\in[\lambda_-,\lambda_+]\subset(0,\infty)$,
+and $p\le N/4$ eventually. The annealed state at $\beta=\mu=0$ is
+\begin{equation}
+ \EE\,2^{-N}\operatorname{Tr}X
+ =\sum_{m=0}^N b_N(m)\EE\tr_mX_m,\qquad
+ b_N(m)=2^{-N}\binom Nm,\quad x_m=(m-N/2)/p.
+\end{equation}
+The charge decomposition is standard in complex SYK~\cite{BNR};
+the present question is uniformity for the \emph{subtracted}
+memory fields, whose raw coefficients can grow with $p$.
+
+Let $\mathbf V_m=(Y_m,L_m,U_{2,m})$ be the actual first three
+collective memory coefficients with the conserved subtractions
+of the central-raw note~\cite{central}. Their all-sector definition
+and estimates are given below. If $d\boldsymbol\nu_*$ denotes
+the central positive two-energy matrix established there, then
+\begin{equation}
+ \boxed{\quad d\boldsymbol\nu_N^{\rm full}
+   =\sum_m b_N(m)d\boldsymbol\nu_{N,m}
+   \ \Longrightarrow\ d\boldsymbol\nu_* .\quad}\label{full}
+\end{equation}
+Convergence is for bounded continuous energy tests, in particular
+fixed real-time correlators. A stronger joint statement is
+\begin{equation}
+ d\boldsymbol\nu_N(x,E,E')\Longrightarrow
+ \sqrt{\frac{2\lambda}{\pi}}e^{-2\lambda x^2}\,dx\,
+ d\boldsymbol\nu_*(E,E').\label{joint}
+\end{equation}
+This is factorization of the indicated spectral matrix, not a
+claim of independence of the complete finite-$N$ operator algebras.
+
+\newpage
+\section{Endpoint sectors and the variance bound}
+Write $h=H_m$, $C_m=\EE\tr_mh^2$. The exact variance is
+\begin{equation}
+ C_m=w_N\binom mp\binom{N-m+p}p.
+\end{equation}
+For $m<p$, $H_m=H_{m-1}=0$ and the memory vanishes; all three
+fields and their counterterms are defined to be zero. The
+vacuum memory is likewise zero. For every $p\le m\le N$,
+$C_m>0$. Term by term,
+\begin{align}
+ \frac{C_m}{J_s^2/\lambda_N}
+ &=\prod_{j=0}^{p-1}\frac{4(m-j)(N-m+p-j)}{N^2}\notag\\
+ &\le\prod_{j=0}^{p-1}\left(1+\frac{p-2j}{N}\right)^2
+ \le e^{2p/N}.\label{maxC}
+\end{align}
+Indeed the difference of the two quadratic numerators is
+$(2m-N-p)^2$, and $\sum_{j=0}^{p-1}(p-2j)=p$.
+The same maximum is attained in the continuous charge variable
+at $m=(N+p)/2$, up to integer rounding. Denote the right-hand
+variance bound by $M_N$; it is bounded uniformly in the limit.
+Also, exactly on active sectors,
+\begin{equation}
+ \frac{C_{m-1}}{C_m}
+ =\frac{(m-p)(N-m+p+1)}{m(N-m+1)}\le p+1.\label{adj}
+\end{equation}
+
+Set $A_m=\sum_i[H,c_i]^\dagger[H,c_i]$, $B_m=h^2-C_mI$,
+and $O_m=\W2 A_m$. The covariance eigenvalues are
+$\kappa_a=w_N\binom{m-a}p\binom{N-m+p-a}p$ on the supported
+rank subspaces. They lie in $[0,C_m]$. With their normalized
+weights $\omega_a$, Wick contraction gives
+\begin{equation}
+ \|B_m\|_2^2=C_m^2(1+\chi_m),\qquad
+ \chi_m=\sum_a\omega_a\kappa_a/C_m\in[0,1].\label{denom}
+\end{equation}
+Therefore $c_m=\langle O_m,B_m\rangle/\|B_m\|_2^2$ is well
+defined even at $m=p,N$. No continuation through a missing
+rank denominator is needed: use these invariant inner products.
+
+We use normalized annealed Schatten norms below. Gaussian moments
+obey $\EE\tr_m h^{2k}\le(2k-1)!!C_m^k$. One direct proof writes
+$h=\sum g_iX_i$, $\sum X_i^2=C_mI$ and applies Gaussian
+integration by parts. The map $\Phi(X)=\sum X_iXX_i$ divided
+by $C_m$ is unital and trace preserving, hence contractive on
+Schatten norms. H\"older bounds each of the $2k-1$ resulting
+terms by $C_m\EE\tr_m|h|^{2k-2}$, completing the induction.
+
+\newpage
+\section{All-sector counterterms and a coarse global bound}
+For $m\ge p$ use the central-raw formulas without rank cutoffs:
+$a_m=\EE\tr_m A_m$, $K_A=a_mI+c_mB_m$, and
+\begin{align}
+ P_m&=(ac_m+b)h^3+[\bar t_m-(ac_m+b)\bar z_m]h,\notag\\
+ \bar t_m&=\langle h,T_{3,m}\rangle/C_m,
+ &\bar z_m&=\langle h,h^3\rangle/C_m.
+\end{align}
+Here $a,b$ are the fixed bounded functions of $q_N,\lambda_N$
+in Ref.~\cite{central}. Define $r=p/m$ and
+\begin{align}
+ C_{0,m}&=K_A-mr^2h^2,\notag\\
+ C_{1,m}&=P_m+2rhK_A-mr^3h^3,\notag\\
+ D_{2,m}&=2rhP_m+3r^2h^2K_A-K_A^2/m-mr^4h^4,\notag\\
+ C_{2,m}&=D_{2,m}+e_{\mathcal Q,m}I+\delta h^4
+                 +g_Jh^2K_A+b_RhP_m\notag\\
+ &\quad+C_m[p\ell_Q+k_Q+2\lambda_Nx_m\ell_Q
+                  +o_Qc_m+8\lambda_Nq_N^2c]B_m.\label{C2}
+\end{align}
+All dimensionless coefficients and the raw polynomial
+$\mathcal Q$ are exactly those defined in Ref.~\cite{central};
+$e_{\mathcal Q,m}=\EE\tr_m\mathcal Q_m$ is computed before any
+limit. These formulas are now a definition outside the central
+window, with no assertion of a sectorwise asymptotic expansion there.
+Every term commutes with $h$. For
+$\widehat M_m(s)=G_m+isZ_{1,m}-s^2Z_{2,m}/2+O(s^3)$ put
+\begin{equation}
+ Y_m=mG_m-C_{0,m},\quad L_m=mZ_{1,m}-C_{1,m},\quad
+ U_{2,m}=mZ_{2,m}-C_{2,m}.
+\end{equation}
+
+The normalized map $\Rem/m$, where $\Rem X=\sum c_i^\dagger Xc_i$,
+is unital and preserves normalized traces from $m-1$ to $m$.
+It is Schatten contractive. Thus the exact identity
+$A_m=\Rem H_{m-1}^2+(2p-m)h^2$ gives
+$\|A_m\|_{2k}\le K_kNM_N$. Equations \eqref{adj}--\eqref{denom}
+also give $|c_m|\le KN^2$ and $\|K_A\|_{2k}\le K_kN^2M_N$.
+The explicit three-contraction formula for $\bar t_m$ gives
+$|\bar t_m|\le KN^2C_m$, while $|\bar z_m|\le3C_m$.
+To see the first bound without small-variance division, each
+binomial covariance ratio in $t_a/C_m$ is at most $p+1$ and
+its reduced coefficient $\alpha_a$ lies in $[0,p]$.
+Consequently $\|P_m\|_{2k}\le K_kN^2M_N^{3/2}$.
+
+All raw quartic words in $\mathcal Q$ are bounded by
+$K_kNM_N^2$, using $\Rem$, Gaussian moments and H\"older.
+The exact renewal formula for $mZ_2$ has only these words,
+products $hT_3,h^2A,A^2/m,h^4$, and coefficients bounded by
+powers of $N$ with $r\le1$. In \eqref{C2} the largest crude
+power is $K_A^2/m$. Therefore, with constants independent of $m$,
+\begin{equation}
+ \|Y_m\|_{2k}\le K_kN^2M_N,\quad
+ \|L_m\|_{2k}\le K_kN^2M_N^{3/2},\quad
+ \|U_{2,m}\|_{2k}\le K_kN^4M_N^2.\label{coarse}
+\end{equation}
+These deliberately coarse bounds are used only on exponentially
+rare charge sectors, never to estimate the central fluctuations.
+
+\newpage
+\section{Auditing a logarithmically growing central window}
+Fix any $A_0>0$ and set $R_N=\sqrt{A_0\log p}$.
+The existing central calculation extends uniformly to
+$|x_m|\le R_N$. The needed consequence is
+\begin{equation}
+ \sup_{|x_m|\le R_N}
+ (\|Y_m\|_2^2+\|L_m\|_2^2+\|U_{2,m}\|_2^2)\le K_{A_0}.
+ \label{innerbound}
+\end{equation}
+This is not inferred from compact-window uniformity alone.
+The remainder audit is as follows.
+
+\paragraph{Rational filters and the sixth moment.}
+All scaled denominators of the exact filters stay separated from
+zero, since $x_m/p=O(\sqrt{\log p}/p)$ and $a,b\le p,r\le2p$.
+The finite sixth-moment recursion has rational coefficients in
+$\epsilon=N^{-1/2},A,B,z=x_m\sqrt{\lambda_N}$.
+The 21 negative-power cancellations are polynomial identities
+in $z$, and its leading six moments are independent of $z$.
+After cancellation, fixed-order Taylor remainders are bounded by
+$K\epsilon(1+|z|)^D$ for a fixed finite $D$: each denominator
+is a finite product of factors $1\pm2z\epsilon+O(\epsilon^2)$.
+This gives a uniform sixth-moment bound on the logarithmic window.
+
+\paragraph{The coherent force and input tails.}
+In the exact coherent norm series, truncate input deficits
+$u,v$ and the Racah index $j$ at $\lceil\log p\rceil$.
+The input and summand ratios have fixed factorial envelopes
+$K^u/u!$ and $K^j/j!$ throughout this window of charges.
+The discarded terms, even multiplied by the old $p^4$ crude bound,
+vanish faster than every power of $p$.
+On the retained set the logarithmic expansion has a remainder
+$p^{-3}$ times a fixed polynomial in $u,v,j,x_m$.
+The exact $p^2,p$ cancellations and the $x_m$-independence of
+the finite term therefore leave $p^{-1}(\log p)^D$.
+This proves the central weighted $A$ norm bound here as well.
+
+\paragraph{Strong substitutions.}
+The $A$-filter error uses the sixth moment and an output cutoff
+$S\le p^{3/4}$ as before. The $H^2$ filters subtract their exact
+$p\ell$ and $2\lambda_Nx_m\ell$ terms first. On $S\le p^b$,
+their Taylor remainder is $p^{-1}$ times a fixed polynomial;
+choose fixed $b>0$ small enough for this polynomial degree.
+On the complement, the linear filter bound and sixth moment
+give an $L^2$ tail tending to zero. All extra charge factors are
+powers of $\log p$. The cubic rank slope, centered $B_S,B_Z$,
+and the $F$ proxy have the same factorial-weighted estimates.
+The general force identity has errors proportional to $x_m/p$.
+It replaces $\mathcal S_N$ by $(O_-+O_+)/2$ without a new
+charge transport argument. Finite Gram projections are stable
+because their limiting Gram is strictly positive at fixed $\lambda$.
+
+\paragraph{Marked energy factors.}
+The balanced-occupation trace proof gives error at most
+$p^{-1}e^{K R_N}(1+R_N)^D$ per fixed marked graph after averaging
+over overlaps; the same exponential overlap moments bound its tail.
+This is $p^{-1+o(1)}$. It bounds all fixed energy insertions of
+the marked representatives. The invariant Gaussian moment bound
+controls multiplication of the linear filter errors by $h$.
+Thus the restored raw expansion has a uniformly bounded leading
+part and a vanishing strong remainder, proving \eqref{innerbound}.
+
+\newpage
+\section{Charge tails, full spectra, and joint factorization}
+For $m\sim\operatorname{Bin}(N,1/2)$ the elementary Chernoff bound is
+\begin{equation}
+ \Pr(|x_m|>R)\le2e^{-2\lambda_N R^2}.
+\end{equation}
+For example it follows from
+$\EE e^{t(m-N/2)}=\cosh(t/2)^N\le e^{Nt^2/8}$ and optimization
+over $t$. Choose $A_0=20/\lambda_-$ in the logarithmic cutoff.
+The squared version of \eqref{coarse} gives
+\begin{equation}
+ \sum_{|x_m|>R_N}b_N(m)\|\mathbf V_m\|_2^2
+ \le K N^8e^{-2\lambda_-A_0\log p}
+ \le K'p^{-24}\longrightarrow0.\label{outer}
+\end{equation}
+Here $\|\mathbf V\|_2^2$ is the sum of the three norm squares;
+$M_N$ is absorbed into the constant. For a fixed $L<R_N$,
+\eqref{innerbound} controls the intervening annulus:
+\begin{equation}
+ \sum_{L<|x_m|\le R_N}b_N(m)\|\mathbf V_m\|_2^2
+ \le2K_{A_0}e^{-2\lambda_-L^2}.
+\end{equation}
+Together these establish the required uniform integrability:
+\begin{equation}
+ \lim_{L\to\infty}\limsup_{N\to\infty}
+ \sum_{|x_m|>L}b_N(m)\|\mathbf V_m\|_2^2=0.\label{UI}
+\end{equation}
+
+For fields $V_i,V_j$, a bounded two-energy test has matrix element
+bounded in modulus by its supremum norm times
+$\|V_i\|_2\|V_j\|_2$. Thus \eqref{UI} controls both diagonal and
+cross measures, including their total variation in the charge tails.
+On $|x_m|\le L$ use the already proved compact-window spectral
+limit, independent of $x_m$. First let $N\to\infty$ there,
+then $L\to\infty$. This proves \eqref{full}; no sum over
+energy-diagonal weights or oscillatory phases was discarded.
+
+The charge characteristic function is exactly
+\begin{equation}
+ \EE e^{itx_m}=\cos\!\left(\frac{t}{2p}\right)^N,
+ \qquad \log\EE e^{itx_m}
+ =-\frac{t^2}{8\lambda_N}-\frac{t^4}{192\lambda_Np^2}
+   +O(p^{-4}).
+\end{equation}
+It converges to the centered Gaussian with variance $1/(4\lambda)$.
+For a bounded continuous charge test $f(x)$ and bounded continuous
+energy test $g(E,E')$, the same compact-window argument gives
+\begin{equation}
+ \sum_m b_N(m)f(x_m)\int g\,d\boldsymbol\nu_{N,m}
+ \longrightarrow
+ \left[\int f(x)\sqrt{\frac{2\lambda}{\pi}}e^{-2\lambda x^2}dx\right]
+ \int g\,d\boldsymbol\nu_* .
+\end{equation}
+Tightness and approximation on compact sets yield \eqref{joint}.
+The charge fluctuation therefore does not add a new leading
+dynamic spectral component once the correct sector-dependent
+conserved polynomials have been removed. The ordered small-$\lambda$
+results from the previous raw-spectrum note transfer to this full
+state after the fixed-$\lambda$ double-scaled limit.
+
+\newpage
+\section{A definite finite-memory subtraction and executed evidence}
+For each sample and charge let
+\begin{equation}
+ \mathsf P_h(X)=\sum_{\epsilon}P_\epsilon XP_\epsilon,
+ \qquad h=\sum_\epsilon\epsilon P_\epsilon.
+\end{equation}
+This is the Hilbert--Schmidt orthogonal projection onto the
+operators commuting with $h$, including degeneracies. It equals
+the infinite symmetric time average of $e^{ith}Xe^{-ith}$ at
+finite dimension. Define the actual finite-memory dynamic field
+\begin{equation}
+ \mathfrak F_{N,m}(s)=(1-\mathsf P_h)[m\widehat M_m(s)],\qquad
+ \mathfrak F_{N,m}=0\quad(m<p).
+\end{equation}
+This subtracts the complete samplewise energy-diagonal part.
+Its finite-$N$ Taylor coefficients through order two are exactly
+$(1-\mathsf P_h)(Y,L,U_2)$, because all $C_{j,m}$ commute with $h$.
+Moreover
+\begin{equation}
+ \|\mathsf P_hV\|_{2,\rm full}^2
+ =\nu_{V,N}^{\rm full}\{E=E'\}\longrightarrow0,
+ \quad V=Y,L,U_2.\label{pinch}
+\end{equation}
+The limiting positive diagonal measures in \eqref{full} are
+absolutely continuous for $0<q<1$. Their mass on the closed
+energy diagonal is zero, so weak convergence and the closed-set
+inequality prove \eqref{pinch}. Consequently this exact subtraction
+preserves the previously calculated limiting Taylor-coefficient
+matrix. It specifies the next problem without guessing a
+finite-$s$ polynomial background.
+
+What remains is to bound and compute, for fixed real $s,u,T$,
+$\EE\tr\mathfrak F_N(s)^\dagger e^{iTH}\mathfrak F_N(u)e^{-iTH}$.
+The three known derivatives do not bound a finite-memory Taylor
+remainder. The projection involves spectral information of each
+sample and does not itself establish a local bulk reconstruction.
+
+\paragraph{Checks.}
+Exact binomial/product comparisons verify 6,766 sector variance
+and adjacent-charge cases. Independent Gaussian-integer CAR
+contractions cover every charge in the three systems
+$(N,p)=(3,1)$, $(4,2)$ and $(5,2)$:
+15 sectors, including inactive and fully filled ones. They verify
+the denominator, $A$ mean, $B$--$O$ cross and regression residual.
+Twelve new full-rank growing-window groups use
+$x=\pm\lceil\sqrt{4\log p}\rceil$, $\lambda=0.25,0.5$,
+$p=32,64,128$, at 80 and 120 digits. Four positive binomial-tail
+sums check the outer cutoff. Six prior/current certificates and
+their source hashes were verified; old scans were not rerun.
+Finite-size differences and cancellation factors remain in the
+JSON records. These numerical refinements are not interval bounds;
+the logarithmic-window and summation proofs are the preceding sections.
+
+\begin{thebibliography}{9}\small
+\bibitem{BNR} M. Berkooz, V. Narovlansky and H. Raj,
+\emph{Complex Sachdev--Ye--Kitaev model in the double scaling limit},
+\href{https://arxiv.org/html/2006.13983v2}{arXiv:2006.13983v2},
+Secs.~4.3 and 5. Charge projection and existing ensemble structure.
+\bibitem{central} A. Day and Chengheng, local project notes:
+\emph{The raw memory coefficient in a central charge window};
+\emph{Coherent memory norms on central charge windows};
+\emph{Central charge windows for the memory calculation};
+\emph{Central force spectrum} (6 November 2026).
+\end{thebibliography}
+\end{document}

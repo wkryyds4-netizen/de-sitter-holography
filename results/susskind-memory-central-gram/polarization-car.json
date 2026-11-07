@@ -1,0 +1,83 @@
+{
+  "status": "passed",
+  "rows": [
+    {
+      "N": 5,
+      "p": 1,
+      "m": 3,
+      "rank_blocks": 6,
+      "ordered_gaussian_pairs": 625,
+      "weighted_polarization_lhs": 0.09600000000000011,
+      "rhs_terms": [
+        0.03609876543209875,
+        0.1615802469135803,
+        -0.10167901234567898
+      ],
+      "neutral_moments": [
+        0.11022222222222225,
+        0.13950000000000004
+      ],
+      "max_block_identity_error": 2.7755575615628914e-17,
+      "actual_S_O_cross": 0.08888888888888899,
+      "actual_S_norm_squared": 0.25481481481481494,
+      "actual_O_norm_squared": 0.6666666666666666
+    },
+    {
+      "N": 6,
+      "p": 1,
+      "m": 3,
+      "rank_blocks": 6,
+      "ordered_gaussian_pairs": 1296,
+      "weighted_polarization_lhs": 0.12152777777777779,
+      "rhs_terms": [
+        0.08588746249341973,
+        0.10937500000000003,
+        -0.07373468471564197
+      ],
+      "neutral_moments": [
+        0.07291666666666669,
+        0.16592592592592595
+      ],
+      "max_block_identity_error": 1.3877787807814457e-17,
+      "actual_S_O_cross": 0.14583333333333331,
+      "actual_S_norm_squared": 0.17500000000000004,
+      "actual_O_norm_squared": 0.5624999999999999
+    },
+    {
+      "N": 6,
+      "p": 1,
+      "m": 4,
+      "rank_blocks": 6,
+      "ordered_gaussian_pairs": 1296,
+      "weighted_polarization_lhs": 0.02880658436213994,
+      "rhs_terms": [
+        -0.050870328696392256,
+        0.16295464916233193,
+        -0.08327773610379971
+      ],
+      "neutral_moments": [
+        0.11522633744855966,
+        0.07291666666666669
+      ],
+      "max_block_identity_error": 2.7755575615628914e-17,
+      "actual_S_O_cross": -2.312964634635743e-19,
+      "actual_S_norm_squared": 0.22469135802469134,
+      "actual_O_norm_squared": 0.6111111111111112
+    }
+  ],
+  "scope": "All Gaussian coordinate pairs, all input-pair and common output ranks. Weighted polarization and neutral moment are checked against actual CAR coefficients. Square roots and projected coefficient evaluations use float64, tolerance 1e-12. No candidate charged Casimir identity is used.",
+  "environment": {
+    "python": "3.14.5",
+    "numpy": "2.4.6"
+  },
+  "elapsed_seconds": 4.992778301239014,
+  "input_sha256": {
+    "code/check_memory_polarization_car.py": "d2f5290503a01681c39b0329ed9e5812a0f2ce6398a176a16fd1556b95cbfe72",
+    "code/memory_central_polarization.py": "ab578f94d42cb9f89e1e5d2520a5bdfc736867480fb4c4396c5e86cbb8b87228",
+    "code/memory_quadratic_contraction.py": "d9e7722e5c13ca64a26b9e79a06e0a3fcaf07060ac1c6133d5eb04f4a1ad2139",
+    "code/memory_rank_blocks.py": "1a73c01439efe7f7b6221ccb151a42bc988284f0e1e53137f5fa29d824a681f9",
+    "code/cubic_linear_dynamics.py": "81d8e955107098e897637650bb7686a15fd2ff8fde6de1e1c525db398516d014",
+    "code/complex_syk_dictionary.py": "96b4890a167beeadf0849ccffdbb20dd125d921af062fd291044da9024900abf",
+    "code/singlet_wick_moments.py": "045f9f02e860fa8f2e402ca5162dabf035208a8d26023ada5721a5f02d47572c"
+  }
+}

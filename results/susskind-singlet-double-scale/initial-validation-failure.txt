@@ -1,0 +1,13 @@
+2026-11-05: initial run completed exact p=1..5 coefficients and the independent
+N=5,p=2 covariance sum. It then exited 1 in overlap_table at
+assert kappa-3 == -4*crossings.
+
+Cause: kappa sums (W_ij-1) over all 15 mode-set pairs. The sparse local
+polynomial omits identically zero minors, but these still contribute -1.
+The first implementation subtracted 1 only for retained minors.
+
+Repair: initialize kappa=-15 and add retained W_ij values. Alpha, beta,
+delta, finite coefficients, and the stated limit formula are unaffected.
+The original core and original centered-Gram record are retained. Final
+overlap graph assertions and validation are completed by a separate finish
+script, without overwriting or restarting the completed coefficient jobs.

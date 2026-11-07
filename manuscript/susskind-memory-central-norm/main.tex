@@ -1,0 +1,330 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,microtype}
+\usepackage[margin=24mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\Rem}{\operatorname{Rem}}
+\newcommand{\W}{\mathsf W_2}
+\title{Coherent memory norms on central charge windows\\Input tails and a strong quadratic-core expansion}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Local research note --- 6 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+We retain the coherence between adjacent charge sectors and derive
+a general-charge formula for the second-chaos fermionic-force norm.
+Its leading central-window limit agrees with half filling, although
+the intermediate contiguous relation changes. Factorial input-rank
+tails and the previous sixth output moment then prove a uniform
+strong replacement of the memory filter. The quadratic memory core
+can be assembled with the charge-dependent conserved correction.
+The output-deficit cross entries and full dynamical Gram still require
+a separate central-window calculation.
+\end{abstract}
+\section{State and the actual operator}
+Use standard CAR, the full overlapping complex Gaussian $p$-body
+Hamiltonian, normalized maximally mixed trace at charge $m$, and
+annealed Hilbert--Schmidt norm, with $\hbar=1$. Write
+\begin{equation}
+ N=p^2/\lambda,\quad m=N/2+xp,\quad n=N-m+1,\quad d=m-p,
+ \quad q=e^{-4\lambda}.
+\end{equation}
+Here $|x|\le L$ and $\lambda$ lies in a positive compact set.
+All estimates are uniform on these sets, with integer charges;
+actual $\lambda_N=p^2/N$ can be used throughout.
+The same coupling realization and variance $w_N$ are used in
+$h=H_m$ and $k=H_{m-1}$. Define
+\begin{equation}
+ \Rem X=\sum_i c_i^\dagger Xc_i,\quad
+ A=\Rem(k^2)+(2p-m)h^2,\quad O=\W A,\quad B=\W h^2=h^2-C_mI,
+\end{equation}
+where $C_m=\EE\tr_mh^2=w_N\binom mp\binom{N-m+p}p$.
+The notation $\W$ denotes ordinary Gaussian second chaos.
+The raw quartic core used below is
+$\mathcal E=\sum_i([H,[H,c_i]])^\dagger[H,[H,c_i]]
++[h,[h,A]]/4$, with full-Fock operations performed before restriction.
+For finite normalized $C_m$, the central result is
+\begin{equation}
+ \boxed{\quad \|O\|_2^2/C_m^2\longrightarrow
+ 4\lambda+4\lambda^2(1+q),\qquad
+ \langle B,O\rangle/C_m^2\longrightarrow2\lambda(1-q).\quad}
+ \label{main}
+\end{equation}
+Thus the leading force fluctuation survives without a new
+charge-dependent variance in this compact central window.
+The sector-dependent conserved subtraction from the previous note
+must nevertheless be retained.
+
+\newpage
+\section{General-charge coherence and the finite norm}
+Let $h_a,k_a$ be coherently embedded rank-$a$ components,
+$C_a=\EE h_a^2$, and $\omega_a=C_a/C_m$. Put $x_a=a(N+1-a)$.
+The established charged-covariance framework~\cite{KV,local} gives
+\begin{equation}
+ R_a:=C_a^-/C_a=\frac{d^2n}{m(mn-x_a)},\qquad
+ \|\Rem X_r\|_{2,m}^2=\frac m n(mn-x_r)\|X_r\|_{2,m-1}^2.
+ \label{transfer}
+\end{equation}
+The latter follows directly from the adjacent-charge norm ratio
+of a disjoint rank-$r$ monomial and equivariance. It is at most
+$m^2\|X_r\|^2$, and $R_a$ is bounded uniformly in the central window.
+
+Let $\chi=\chi^{(m)}_{ab}$ be the neutral Racah kernel and define
+\begin{equation}
+ \xi={}_4F_3\!\left[\begin{matrix}-a,a-N-1,-b,b-N-1\\
+                      1-m,m-N,-N-1\end{matrix};1\right],\quad D=\xi-\chi.
+\end{equation}
+For the charged kernel $T_a(t)$, whose upper entries are
+$-a,a-N-1,-t,t-N$ and lower entries are those of $\xi$, the
+two charged components of a neutral tensor yield
+\begin{equation}
+ \xi=T_a(b)-\frac{b}{N+1-2b}[T_a(b-1)-T_a(b)].\label{xi}
+\end{equation}
+This identity can also be checked term by term in the terminating
+series; it requires no half-filled product-parity rule. The direct
+and exchanged coherent contractions, per ordered rank pair and
+divided by $C_aC_b$, are $g$ and $g\xi$, respectively, where
+\begin{equation}
+ g=d^2/m,\quad h_0=2p-m,\quad \eta=p^2/m=g+h_0.
+\end{equation}
+For a summand $c_j$ of $\chi$, $\xi_j=mc_j/(m-j)$, whereas
+$(\chi^-)_j=m(n-j)c_j/[n(m-j)]$. Hence the exact relation is
+\begin{equation}
+ \boxed{\quad\chi^-:=\chi^{(m-1)}_{ab}
+   =\chi+\frac{n-m}{n}D.\quad}\label{contiguous}
+\end{equation}
+At half filling $n-m=1$; on a central window it can be of order $p$.
+
+Set $P=g^2x_ax_b/[(mn-x_a)(mn-x_b)]$ and
+$C_f^-=(m-1)n(N+1)/N$. The ordered and exchanged Casimir product
+moments give the removed symmetric-product norm
+\begin{equation}
+ R_aR_b\frac m n
+ \left[(mn-x_a-x_b)(1+\chi^-)+\frac{x_ax_b}{C_f^-}\right].
+\end{equation}
+Adding $2h_0g(1+\xi)+h_0^2(1+\chi)$ and using
+\eqref{contiguous} gives the nonnegative pair coefficient
+\begin{align}
+ f_{ab}={}&\eta^2(1+\chi)+P(mn/C_f^- -1-\chi)+KD,\notag\\
+ K={}&(g^2-P)(n-m)/n+2h_0g,\qquad
+ \|O\|^2/C_m^2=\sum_{a,b}\omega_a\omega_b f_{ab}.\label{finite}
+\end{align}
+The corresponding $B$ cross is $b_{ab}=\eta(1+\chi)+gD$.
+Gaussian decoupling includes equal input ranks in this ordered sum.
+
+\newpage
+\section{Uniform cancellation of the apparently divergent terms}
+Write $a=p-u$, $b=p-v$. For fixed $u,v,j,x$, the exact neutral
+Racah summand has expansion
+\begin{equation}
+ c_j=\frac{(-4\lambda)^j}{j!}
+ \left[1+\frac{L_1}{p}+\frac{L_2+L_1^2/2}{p^2}+O(p^{-3})\right],
+\end{equation}
+where
+\begin{align}
+ L_1={}&-j(u+v+2\lambda)-j(j-1),\\
+ L_2={}&-\tfrac j2(u^2+v^2)-\tfrac12j(j-1)(u+v)
+        -\tfrac16j(j-1)(2j-1)\notag\\
+       &+\lambda j(u+v+1)+\tfrac32\lambda j(j-1)
+        -\lambda^2j+4\lambda^2x^2j.\label{logs}
+\end{align}
+The $4\lambda^2x^2j$ term is new and is needed for the finite
+cancellation. Express \eqref{finite} as an unsigned part plus a
+single terminating series:
+\begin{equation}
+ f_{ab}=\eta^2+P(mn/C_f^- -1)
+   +\sum_jc_j\left[\eta^2-P+K\frac j{m-j}\right].\label{series}
+\end{equation}
+The bracket begins at order $p^2$, with coefficient
+$-(j+4\lambda)/\lambda$. Expand the bracket through order $p^0$
+and multiply by \eqref{logs}. Summing powers of $j$ by
+$(z\partial_z)^ke^z$ at $z=-4\lambda$ gives, for the
+$p^2,p,p^0$ coefficients of the series,
+\begin{equation}
+ (0,\ 0,\ 4\lambda^2q).
+\end{equation}
+The unsigned part tends to $4\lambda(1+\lambda)$.
+These are polynomial identities in $u,v,x,\lambda$, saved with
+the exact expansions. Thus $f_{p-u,p-v}$ has the limit in
+\eqref{main}, independent of fixed $u,v,x$. Likewise
+$mD\to-4\lambda q$ gives $b_{ab}\to2\lambda(1-q)$.
+
+To justify the sums, choose $K_p=\lceil\log p\rceil$.
+The exact summand ratio gives $|c_j|\le A^j/j!$ uniformly for
+$a,b\le p$ and bounded $x$. Also $m-j$ and the scaled rational
+denominators stay away from zero. The bracket in \eqref{series}
+is bounded by $Bp^2(1+j)$. Hence the $j>K_p$ contribution is
+superpolynomially small. On $u,v,j\le K_p$, logarithmic Taylor
+remainders are $O((1+u+v+j)^d/p^3)$ uniformly in $x$.
+After the $p^2$ multiplication, the residual sum is
+$O((\log p)^{d'}/p)$, which tends to zero. This proves convergence
+uniformly on the growing logarithmic input window.
+
+\newpage
+\section{The input tail and a three-direction Gram block}
+The exact input-rank weight ratio, with $\nu=p-u$,
+$a_\nu=\nu/(N-\nu+1)$ and $b_\nu=(\nu-1)/(N-\nu+2)$, is
+\begin{equation}
+ \frac{\omega_{\nu-1}}{\omega_\nu}
+ =a_\nu^2\frac{1-b_\nu^2}{1-a_\nu^2}
+ \frac{m-\nu+1}{p-\nu+1}\frac{N-p-\nu+1}{N-m-\nu+1}.
+\end{equation}
+Uniformly on the central window it is at most $A/(u+1)$;
+for fixed $u$ it tends to $\lambda/(u+1)$. Normalization then
+gives a Poisson$(\lambda)$ limit for the input deficit and a
+factorial envelope. Equation~\eqref{transfer}, symmetric-product
+bounds, and Cauchy--Schwarz give the crude positive estimate
+$0\le f_{ab}\le Bp^4$ at all ranks. The factorial tail beats
+this power outside $u,v\le K_p$. Any fixed polynomial weight
+in $u,v$ is allowed. In particular
+\begin{equation}
+ \sum_{a\le b,r}(1+u+v)^2\|\W A_{ab;r}\|^2\le KC_m^2.
+ \label{input}
+\end{equation}
+This is the needed bound on the actual coherent operator, rather
+than two separately estimated order-$m$ pieces.
+
+Let $D_N=\sum_a(p-a)h_a$, $\bar u=\sum_a(p-a)\omega_a$, and
+\begin{equation}
+ L_{\rm in}=\W\{h,D_N-\bar u h\}.
+\end{equation}
+This is an input-rank field; it is not the earlier cubic memory
+coefficient named $L$. The preceding limits and weighted tails give
+\begin{equation}
+ \frac{\operatorname{Gram}(B,L_{\rm in},O)}{C_m^2}
+ \longrightarrow
+ \begin{pmatrix}
+ 1+q&0&2\lambda(1-q)\\
+ 0&2\lambda(1+q)&0\\
+ 2\lambda(1-q)&0&4\lambda+4\lambda^2(1+q)
+ \end{pmatrix}.\label{gram}
+\end{equation}
+For example the $L_{\rm in}$ weight is $u+v-2\bar u$;
+its squared expectation tends to $2\lambda$, while both its
+mean and its cross with the asymptotically constant $b_{ab}$ vanish.
+The matrix is positive definite for $\lambda>0$. Subtracting
+the exact finite-$N$ projection on $B$ from $O$ gives
+\begin{equation}
+ \|Y\|^2/C_m^2\longrightarrow
+ 4\lambda+\frac{16\lambda^2q}{1+q}>0.
+\end{equation}
+The positive weighted pair norm also has the explicit limit
+\begin{equation}
+ \sum_{a,b}(1+u+v)^2\omega_a\omega_b f_{ab}
+ \longrightarrow[4\lambda+4\lambda^2(1+q)]
+                  [(1+2\lambda)^2+2\lambda].
+\end{equation}
+
+\newpage
+\section{A strong filter replacement and the assembled core}
+Use $X\odot Y=\{X,Y\}$ for distinct input ranks and squares for equal ranks.
+For $Z^+_{ab;r}=P_r(h_a\odot h_b)$,
+$Z^-_{ab;r}=P_r\Rem(k_a\odot k_b)$, put
+$A_{ab;r}=Z^-_{ab;r}+(2p-m)Z^+_{ab;r}$ and $S=a+b-r$.
+The previous uniform sixth moment and \eqref{transfer} imply
+\begin{equation}
+ \sum_{a\le b,\ S>R}\|\W A_{ab;r}\|^2
+ \le KC_m^2p^4R^{-6}.\label{output}
+\end{equation}
+Here separate charge bounds are used only outside the growing
+output window, retaining the full factor $p^4$.
+For the exact two-charge filter, the already verified central
+rational coefficients and binomial finite differences give
+\begin{equation}
+ |g_A/C_m|\le K,\qquad
+ |g_A/C_m-\gamma|\le K(1+u+v+S)/p,
+ \qquad\gamma=(3-4q+q^2)/2.
+\end{equation}
+Orthogonality of input-pair chaos blocks and output ranks,
+\eqref{input}, and \eqref{output} give
+\begin{equation}
+ \left\|\sum(g_A-C_m\gamma)\W A_{ab;r}\right\|^2
+ \le KC_m^4[p^{-2}+R^2/p^2+p^4/R^6].
+\end{equation}
+Taking $R=p^{3/4}$ proves, uniformly in the central window,
+\begin{equation}
+ \boxed{\quad\sum g_A\W A_{ab;r}
+       =C_m\gamma O+O_{L^2}(p^{-1/4}).\quad}\label{strong}
+\end{equation}
+
+The $H^2$ part can now be included. At arbitrary rank proportions
+$(a,b,r)/p=(\alpha,\beta,\rho)$ its rational prefactors have finite
+parts
+\begin{equation}
+ \lambda(1+4x,\ 6-11\alpha-4x,\ 6-11\beta-4x,
+                     5\alpha+5\beta+6\rho-13+4x),
+\end{equation}
+following the leading $(2,-2,-2,2)p$.
+Consequently the centered $g_H$ filter is bounded by
+$K(1+u+v+S)$ uniformly. Its fixed-deficit limit from the previous
+note passes through the rank sum by factorial input tails and
+the sixth output moment. With
+$\mathcal S_N=\sum S\W Z^+_{ab;r}$, the full second chaos is
+\begin{align}
+ \W\mathcal E={}&C_m\{2p(1-q)^2+\bar K+4\lambda x(1-q)^2\}B
+       +C_m\gamma O\notag\\
+ &+8\lambda C_m(q^2-q)L_{\rm in}
+       +8\lambda C_mq^2\mathcal S_N+o_{L^2}(1),\label{core}\\
+ \bar K={}&\lambda(1-10q+9q^2)-16\lambda^2q^2.
+\end{align}
+Use actual $C_m,\lambda_N,q_N,x_N$ in the growing subtraction.
+The whole error is stated as $o_{L^2}(1)$; the rate in
+\eqref{strong} applies specifically to its $A$-filter part.
+
+\newpage
+\section{Executed verification and the remaining spectral step}
+The general-charge formula is checked in 1331 exact rational rank
+pairs, including the contiguous relation, positivity, and equality
+of raw and cancellation-organized norms. Four independent full CAR
+systems $(N,p,m)=(5,1,2),(5,2,3),(6,1,4),(6,2,4)$ verify the
+$(B,O)$ Gram using all 31466 symmetric Gaussian coordinate pairs.
+They preserve the same couplings in both charges.
+
+The central symbolic calculation verifies the $p^2$ and $p$
+cancellations and the finite term as identities in $x,u,v,\lambda$.
+The input-weight ratio and general-rank core prefactors are checked
+symbolically. The numerical implementation sums all $p+1$ input
+ranks and the complete terminating Racah series, with no rank cutoff.
+It compares 80 and 120 digits in 36 cases:
+$\lambda=0.1,0.25,0.5$, $p=16,32,64,128$, and $x=-2,0,2$.
+The nine Gram entries and weighted $A$ norm agree to all 65 stored
+digits. Four finite exact $(B,O)$ matrices additionally validate
+the factorized summation.
+
+For the last case, $\lambda=0.5,p=128,x=2$, the finite
+$\|O\|^2/C_m^2=3.07899090506715$, compared with the limit
+$3.13533528323661$; the weighted norm is $15.6459435799004$,
+compared with $15.6766764161831$. The finite relative errors are
+about $-1.80\%$ and $-0.196\%$. Their cancellation factors are
+approximately $5855$ and $5935$. These discrepancies are retained;
+precision agreement is not convergence to the limit or interval
+certification.
+
+The four scientific JSON records retain input hashes, parameters,
+versions, and diagnostics. The initial symbolic adaptation exposed
+a name collision and a half-filling-only constant assumption; both
+were corrected with their original sources retained. An inherited
+half-filled four-field Gram was removed from the central record to
+keep the scope explicit. This note establishes \eqref{gram} and
+\eqref{core}, not that four-field Gram at general charge.
+
+Next compute the output-deficit entries, especially
+$\langle\mathcal S_N,O\rangle$, without the exact half-filled
+product-parity shortcut. Then extend energy insertions and the raw
+memory spectrum, control the charge-distribution tail and the
+two-insertion finite-memory remainder, and return to the Susskind
+singlet/meson spatial and mass dictionary.
+
+\begin{thebibliography}{9}\small
+\bibitem{KV} V. K. B. Kota and M. Vyas,
+\href{https://arxiv.org/pdf/1504.00759}{arXiv:1504.00759},
+Sec.~7.1: finite particle-removal moments and rectangular sector maps.
+Its independent transition operator is distinct from the same-$H$
+force insertion studied here.
+\bibitem{local} A. Day and Chengheng, local notes:
+\emph{A coherent covariance transform};
+\emph{The quadratic memory core in the double-scaled limit};
+\emph{Central charge windows for the memory calculation} (2026-11-06).
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,322 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,microtype}
+\usepackage[margin=24mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\Rem}{\operatorname{Rem}}
+\newcommand{\W}{\mathsf W_2}
+\newcommand{\Id}{\mathcal I}
+\title{Closing the central-window memory Gram\\A polarization proof of the output--force cross}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Local research note --- 6 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+The remaining central-window cross can be obtained from adjacent-charge
+polarization and a neutral moment, without assuming the candidate
+charged Casimir formula. A normalization cancellation improves the
+neutral moment's one-step drift to $O(1/(Np))$. The resulting cross
+equals the output-deficit self norm in the double-scaled limit.
+This closes the four-field equal-time Gram and extends the positive
+projected quadratic memory-core variance to compact central charge
+windows. Energy-resolved insertions are the next step.
+\end{abstract}
+\section{Operators and the result}
+Use the full overlapping complex Gaussian $p$-body ensemble, common
+couplings across charges, normalized maximally mixed sector trace,
+and $\hbar=1$. Let $N$ be even, $p^2/N=\lambda_N\to\lambda>0$,
+and $m=N/2+xp$, $|x|\le L$. All bounds are uniform on this window
+and positive compact $\lambda_N$ intervals. Set
+\begin{align}
+ C_m&=\EE H_m^2=w_N\binom mp\binom{N-m+p}p, & q&=e^{-4\lambda},\\
+ B&=\W H_m^2, & O&=\W[\Rem(H_{m-1}^2)+(2p-m)H_m^2],\\
+ L_{\rm in}&=\W\{h,D-\bar u h\},&D&=\sum_a(p-a)h_a,\\
+ \mathcal S&=\sum_{a\le b,r}(a+b-r)\W Z^m_{ab;r},&
+ \bar u&=\sum_a(p-a)C_a/C_m.
+\end{align}
+Here $\W$ is ordinary second Gaussian chaos,
+$Z^m_{ab;r}=P_r(h_a\odot h_b)$, and $\odot$ means square for
+$a=b$ and anticommutator otherwise. Put
+\begin{equation}
+ z=1+q,\quad b=2\lambda(1-q),\quad l=2\lambda(1+q),\quad
+ s=4\lambda^2(1+q)+2\lambda(1-q),\quad a_*=4\lambda+4\lambda^2(1+q).
+\end{equation}
+The new entry and the resulting complete Gram are
+\begin{equation}
+ \boxed{\ \langle\mathcal S,O\rangle/C_m^2\to s,\qquad
+ \frac{G(B,L_{\rm in},\mathcal S,O)}{C_m^2}\to
+ \begin{pmatrix}z&0&b&b\\0&l&0&0\\b&0&s&s\\b&0&s&a_*\end{pmatrix}.\ }
+ \label{gram}
+\end{equation}
+All other entries were established in the two preceding central
+notes. Inner products are $\EE\tr_m(U^\dagger V)$.
+
+\newpage
+\section{An exact polarization of the actual force}
+Use one common Gaussian coefficient Hilbert space, split into
+orthogonal unordered input pairs and output ranks. For each block,
+write $u=p-a$, $v=p-b$, $S=a+b-r$, $k=2p-r=u+v+S$, and
+\begin{align}
+ U&=\W Z^m_{ab;r}/C_m,&
+ V&=\Id_m(\W Z^{m-1}_{ab;r}/C_{m-1}),& E&=V-U,\\
+ t_r&=R_m\ell_r,&R_m&=\frac{(m-p)(n+p)}{mn},& n&=N-m+1,\\
+ \ell_r^2&=\frac m n[mn-r(N+1-r)],&h_0&=m-2p.&&
+\end{align}
+The preceding removal isometry $\Id_m=\sum\ell_r^{-1}\Rem P_r$
+acts on the common ranks $r\le2p$. For sufficiently large $p$
+these ranks exist in both sectors. The exact force identity is
+\begin{equation}
+ O_{ab;r}/C_m=t_rV-h_0U.\label{force}
+\end{equation}
+For any real block weight $W$, polarization therefore gives
+\begin{align}
+ \sum W\langle U,O_{ab;r}/C_m\rangle
+ ={}&\frac12\sum Wt_r(\|V\|^2-\|U\|^2)\notag\\
+ &+\sum W(t_r-h_0)\|U\|^2
+       -\frac12\sum Wt_r\|E\|^2.\label{polarization}
+\end{align}
+The inner products are real: each Gaussian coefficient of the
+symmetrized product is Hermitian, and removal preserves this property.
+Thus there is no phase approximation in \eqref{polarization}.
+
+Choose the charge-independent label weight
+\begin{equation}
+ W=X/N,\quad X=x_{a+b}-x_r=S[N+1-2(a+b)+S],\quad x_j=j(N+1-j).
+\end{equation}
+The earlier positive sixth output moment and factorial input tails,
+together with the coherent-force bound, give
+\begin{equation}
+ \sum\|E\|^2\le K/N^2,\quad
+ \sum S^6\|U\|^2+\sum S^6\|V\|^2\le K,\quad 0\le W\le Kp.
+ \label{bounds}
+\end{equation}
+Fixed polynomial input weights can be inserted in the product bound.
+Uniform scalar expansion gives, for $0\le r\le2p$,
+\begin{equation}
+ t_r\le KN,\quad |t_r-h_0|\le K(1+k),\quad
+ |t_r-h_0-(k-2\lambda_N)|\le K(1+k)/p.\label{scalar}
+\end{equation}
+The last estimate follows from the uniform expansion at $r=\rho p$:
+$t_r-(m-r)=2\lambda_N[x(2-\rho)-1]+O(p^{-1})$ and
+$2-\rho=k/p$. No restriction to bounded $k$ is made here.
+
+\newpage
+\section{A small neutral drift after normalization}
+Define the known neutral first moment
+\begin{align}
+ F_m&=\sum W\|\W Z^m_{ab;r}/C_m\|^2
+       =\sum_{a,b}\omega_a^{(m)}\omega_b^{(m)}f_{ab}(m),\\
+ f_{ab}(m)&=\frac1N\left[-2ab(1+\chi^{(m)}_{ab})+
+                       \frac{x_ax_b}{C_f(m)}\right],\qquad
+ C_f(m)=\frac{m(N-m)(N+1)}N.\label{neutral}
+\end{align}
+Here $\omega_a=C_a/C_m$, $\sum\omega_a=1$. The neutral
+Casimir identity in \eqref{neutral} was proved by trace covariance
+in the earlier force-norm note; it does not use a charged exchange.
+Its framework is the usual irreducible embedded-ensemble covariance
+\cite{TT,local}.
+
+For all $a,b\le p$ on the central window one has
+\begin{align}
+ |f_{ab}(m)|&\le K,&
+ |f_{ab}(m)-f_{pp}(m)|&\le K(u+v)/p,\label{inputlip}\\
+ |f_{ab}(m-1)-f_{ab}(m)|&\le Kp/N^2.\label{chargelip}
+\end{align}
+These bounds follow directly from the terminating neutral series.
+Its terms $c_j$ satisfy $|c_j|\le K_0^j/j!$ and exactly
+\begin{equation}
+ \frac{c_j(m-1)}{c_j(m)}=\frac{m(n-j)}{n(m-j)},\quad
+ \frac{c_j(m-1)-c_j(m)}{c_j(m)}=rac{j(n-m)}{n(m-j)}.
+\end{equation}
+Thus $|n-m|\le Kp$ proves the crossing part of \eqref{chargelip}.
+The $C_f$ part uses $C_f(m)-C_f(m-1)=(n-m)(N+1)/N$.
+For \eqref{inputlip}, decreasing $a$ by one multiplies a nonzero
+series term by $(a-j)(N+2-a)/[a(N+2-a-j)]$.
+For $a\ge p/2$ its difference from 1 is at most $Kj/p$;
+sum and telescope. If either rank is below $p/2$, boundedness
+already gives \eqref{inputlip}. The polynomial prefactors obey
+the same bound.
+
+The exact normalized weight ratio is
+\begin{equation}
+ \zeta_a=\frac{\omega_a^{(m-1)}}{\omega_a^{(m)}}
+ =\frac{(m-p)n^2}{(n+p)(mn-x_a)},\qquad
+ \zeta_a-1=\frac{(n+p)x_a-pn(N+1)}{(n+p)(mn-x_a)}.
+\end{equation}
+At $a=p$ the last numerator is $p^2(m-p)$; changing $a$ to
+$p-u$ changes it by at most $KuN^2$. Hence
+$|\zeta_a-1|\le K(1+u)/N$ and $\zeta_a\le K$.
+Subtract $f_{pp}(m)$ in the change of probability weights, using
+their equal total mass. Equations \eqref{inputlip}--\eqref{chargelip}
+and the uniform factorial input tail then give
+\begin{equation}
+ |F_{m-1}-F_m|\le \frac{K}{Np}
+ \EE_{\omega\otimes\omega}[(1+u+v)(u+v)]+\frac{Kp}{N^2}
+ \le\frac K{Np}.\label{drift}
+\end{equation}
+This normalization cancellation is essential before multiplication
+by $h_0=O(N)$.
+
+\newpage
+\section{The cross limit from the three polarization terms}
+In the first term of \eqref{polarization} separate $t_r=h_0+\delta_r$.
+Since $\Id_m$ is isometric and preserves $W$, its constant part is
+$h_0(F_{m-1}-F_m)/2=O(p^{-1})$ by \eqref{drift}.
+The remaining part also vanishes. Indeed
+\begin{align}
+ \left|\sum W\delta_r(\|V\|^2-\|U\|^2)\right|
+ &\le\left(\sum(W\delta_r)^2\|V+U\|^2\right)^{1/2}
+          \left(\sum\|E\|^2\right)^{1/2}\notag\\
+ &\le K/N.\label{firsterror}
+\end{align}
+The first factor is bounded by the fourth output moment and mixed
+input moments: $(W\delta_r)^2\le KS^2(1+u+v+S)^2$.
+The sixth-moment bound provides more than is needed here.
+
+For the last term, $W\le Kp$, $t_r\le KN$, and \eqref{bounds} imply
+\begin{equation}
+ 0\le\frac12\sum Wt_r\|E\|^2\le Kp/N=O(p^{-1}).
+\end{equation}
+It remains to evaluate the middle term. Equations \eqref{scalar}
+and $W=S[1+O(p/N)]$, with the weighted moment bounds, give
+\begin{align}
+ \sum W(t_r-h_0)\|U\|^2
+ &=\sum S(u+v+S-2\lambda_N)\|U\|^2+O(p^{-1})\notag\\
+ &=\frac{\|\mathcal S\|^2+\langle\mathcal S,L_{\rm in}\rangle
+       +(2\bar u-2\lambda_N)\langle\mathcal S,B\rangle}{C_m^2}
+       +O(p^{-1}).\label{middle}
+\end{align}
+The previously proved central product-transport theorem gives
+$\|\mathcal S\|^2/C_m^2\to s$,
+$\langle\mathcal S,L_{\rm in}\rangle/C_m^2\to0$,
+$\langle\mathcal S,B\rangle/C_m^2\to b$, and
+$\bar u-\lambda_N\to0$, all uniformly in the window.
+Combining these three terms proves
+\begin{equation}
+ \frac{\langle\mathcal X/N,O\rangle}{C_m^2}\longrightarrow s.
+\end{equation}
+Finally $\|\mathcal X/N-\mathcal S\|/C_m=O(p^{-1})$ and
+$\|O\|/C_m\le K$ replace the proxy, proving \eqref{gram}.
+
+The finite candidate
+$g[(x_a+x_b)\xi-m(\xi-\chi)]$ for the charged exchanged
+Casimir is not an input to this argument. Its exact general-charge
+operator derivation remains open in the earlier note. The
+central asymptotic cross is now established independently of it.
+In particular, we have not replaced its missing proof by a fit to
+finite-$p$ data.
+
+\newpage
+\section{Projection and the quadratic memory core}
+Let
+\begin{equation}
+ v=s-b^2/z=2\lambda(1-q)+\frac{16\lambda^2q}{1+q},\qquad
+ \Delta=a_*-s=2\lambda(1+q).
+\end{equation}
+Both are positive for $\lambda>0$. Equation \eqref{gram} has
+determinant $zl v\Delta>0$. The residual after projecting
+$\mathcal S$ onto $\operatorname{span}(B,L_{\rm in},O)$ is,
+to leading order,
+\begin{equation}
+ \mathcal T=\mathcal S-\frac{v}{v+\Delta}O
+             -\frac{b\Delta}{z(v+\Delta)}B,
+ \qquad \frac{\|\mathcal T\|^2}{C_m^2}\to
+                 \frac{v\Delta}{v+\Delta}>0.\label{residual}
+\end{equation}
+Using the actual finite-$N$ orthogonal projector has the same
+limit: its three-field Gram has a positive limiting inverse,
+uniformly on the stated compact parameter sets.
+
+To connect with the actual memory coefficient, recall the raw core
+\begin{equation}
+ \mathcal E=\sum_i[H,[H,c_i]]^\dagger[H,[H,c_i]]
+                         +[h,[h,A]]/4,
+ \quad A=\Rem(H_{m-1}^2)+(2p-m)h^2.
+\end{equation}
+Full-Fock operations precede the charge restriction.
+The earlier strong central expansion, with bounded physical $C_m$, is
+\begin{align}
+ \W\mathcal E={}&C_m\left[2p(1-q_N)^2+\overline K_N
+                     +4\lambda_Nx(1-q_N)^2\right]B\notag\\
+ &+C_m\gamma_N O+8\lambda_N C_m(q_N^2-q_N)L_{\rm in}
+                         +8\lambda_N C_mq_N^2\mathcal S+o_{L^2}(1),\\
+ \gamma_N&=(3-4q_N+q_N^2)/2,\qquad q_N=e^{-4\lambda_N},\notag\\
+ \overline K_N&=\lambda_N(1-10q_N+9q_N^2)-16\lambda_N^2q_N^2.
+ \notag
+\end{align}
+Keep the actual finite parameters in the growing conserved term.
+Projecting onto the complement of $(B,L_{\rm in},O)$ now yields
+\begin{equation}
+ \frac{\|(1-\Pi_N)\W\mathcal E\|^2}{C_m^4}
+ \longrightarrow64\lambda^2q^4\frac{v\Delta}{v+\Delta}.\label{core}
+\end{equation}
+The charge-dependent correction multiplies $B$ and is removed by
+this specified projection; it is not absent from the raw core.
+For $C_m\to J_s^2/\lambda$, first take the double-scaled limit,
+then $\lambda\downarrow0$. The variance in \eqref{core} becomes
+\begin{equation}
+ V_2(\lambda)=\frac{64J_s^8q^4}{\lambda^2}
+                  \frac{v\Delta}{v+\Delta}
+       \longrightarrow1024J_s^8.
+\end{equation}
+This is an equal-time second-chaos result. The complete raw memory
+spectrum also requires the other chaos and the energy descendants.
+
+\newpage
+\section{Checks, provenance and the next calculation}
+The proof uses the established neutral covariance, adjacent removal
+isometry, central coherent-force norm, and the preceding
+product-transport Gram. The new ingredient is the neutral drift
+estimate inside an exact polarization identity. It is an application
+of these tools, with no claim of priority over the embedded-ensemble
+literature.
+
+The three new scientific records are:
+\begin{itemize}
+ \item \texttt{neutral-drift.json}: 758 exact normalized weight
+ ratios; four independent finite rational neutral moments;
+ 36 complete-rank adjacent-sector differences at
+ $\lambda=0.1,0.25,0.5$, $p=16,32,64,128$, $x=-2,0,2$.
+ All terminating Racah terms are included. The 80/120-digit
+ refinement changes the reported quantities by at most
+ $3.56\,10^{-74}$; comparisons use the numerical values before
+ decimal serialization. The symbolic score is
+ $N(\zeta_{p-u}-1)\to4(\lambda-u)$.
+ \item \texttt{polarization-car.json}: complete Gaussian-coordinate
+ and input/output-rank decompositions on $(N,p,m)=(5,1,3)$,
+ $(6,1,3)$ and $(6,1,4)$. There are 3,217 ordered coordinate
+ pairs across the three systems and six rank blocks per system.
+ The maximal block polarization error is $2.78\,10^{-17}$.
+ The source is the actual CAR force, not the candidate charged
+ formula. Square-root and projected-coefficient checks use
+ floating arithmetic with tolerance $10^{-12}$.
+ \item \texttt{gram-assembly.json}: exact symbolic projection,
+ determinant, residual variance, core normalization, and ordered
+ small-$\lambda$ limit.
+\end{itemize}
+For example, at $\lambda=0.5,x=2$, the amplified neutral drift
+$h_0(F_{m-1}-F_m)/2$ is about $-0.184286$, $-0.0987564$,
+$-0.0512180$, $-0.0260982$ for $p=16,32,64,128$.
+The corresponding $Np(F_{m-1}-F_m)$ remains of order one;
+the finite correction is retained rather than replaced by zero.
+Uniformity is proved by the inequalities on page 3, not by the scan.
+
+The next task is central-window energy insertions and the raw
+$U_2$ spectrum, followed by control outside fixed charge windows
+and two-insertion finite-memory remainders. The bulk meson
+space/mass dictionary is still to be constructed. The present
+result does not infer a new bulk particle from a positive norm.
+
+\begin{thebibliography}{9}
+\bibitem{TT} J. Tall and S. Tomsovic,
+\emph{Double-scaled bosonic and fermionic embedded ensembles,
+complex SYK, and the dual Hilbert space},
+\href{https://arxiv.org/html/2604.14522v2}{arXiv:2604.14522v2},
+Sec. 2.1. Fixed-charge covariance is a prior input.
+\bibitem{local} A. Day and Chengheng, local notes
+\emph{Central charge windows}, \emph{Coherent memory norms on
+central charge windows}, and \emph{Transporting quadratic products
+across central charge windows} (6 November 2026).
+\end{thebibliography}
+\end{document}

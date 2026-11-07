@@ -1,0 +1,1 @@
+Initial assembly check failed for N=4,p=2,m=3: upper sector allows only rank 0,1, while lower sector also has rank 2. The common-rank filter is not applicable to that extra lower-only channel. Full CAR contraction check remains valid. Restrict rank-mean comparison to p<=min(m-1,N-m), which includes the eventual half-filled DS regime; explicitly record skipped systems.

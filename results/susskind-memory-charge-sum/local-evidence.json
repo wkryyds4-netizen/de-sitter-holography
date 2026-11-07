@@ -1,0 +1,105 @@
+{
+  "status": "Saved locally; no publication",
+  "created_at_utc": "2026-11-06T11:51:17.653587+00:00",
+  "scientific_status": "All-sector definition, logarithmic-window remainder audit and charge UI yield the full beta=mu=0 memory-coefficient spectral matrix and Gaussian charge factorization. Exact energy pinching preserves its three Taylor coefficients. Finite-memory covariance remains open.",
+  "current_git_head": "714d038bb605cfcffdc351e4dcc62aa95237d25f",
+  "git_commit_created": false,
+  "git_push_performed": false,
+  "archive_created": false,
+  "parent_manifest_sha256": "b9df368ef51224356ea1f06e8d30ce746025b8af0aa23962035a5742e864c0b7",
+  "previous_scientific_files_unchanged": [
+    "PROJECT.md",
+    "code/memory_central_descendants.py",
+    "code/check_memory_central_raw.py",
+    "code/assemble_memory_central_raw.py",
+    "code/build_memory_central_raw.ps1",
+    "code/record_memory_central_raw.py",
+    "manuscript/susskind-memory-central-raw/main.tex",
+    "output/pdf/de-sitter-susskind-memory-central-raw.pdf",
+    "notes/susskind-memory-central-raw.md",
+    "literature/susskind-memory-central-raw-sources.md",
+    "journal/2026-11-06-susskind-memory-central-raw.md",
+    "results/susskind-memory-central-raw/central-assembly.json",
+    "results/susskind-memory-central-raw/central-filter-checks.json",
+    "results/susskind-memory-central-raw/diagnostics.json",
+    "results/susskind-memory-central-raw/main.log",
+    "results/susskind-memory-central-raw/symbolic-descendants.json"
+  ],
+  "checks": {
+    "variance_cases": 6766,
+    "CAR_sectors": 15,
+    "growing_window_full_rank_groups": 12,
+    "binomial_tail_sums": 4,
+    "precisions": [
+      80,
+      120
+    ],
+    "saved_digits": 65,
+    "reused_current_certificates": 6,
+    "local_links": 8
+  },
+  "build": {
+    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File code/build_memory_charge_sum.ps1",
+    "passes_in_final_build": 2,
+    "final_pages": 6,
+    "compiler": "This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5 Portable) (preloaded format=pdflatex 2026.9.19)  6 NOV 2026 19:43",
+    "render_command": "pdftoppm -r 95 -png output/pdf/de-sitter-susskind-memory-charge-sum.pdf tmp/pdfs/susskind-memory-charge-sum-build/page",
+    "visual_review": "All six final pages viewed at 95 dpi; equations, margins and references checked."
+  },
+  "environment": {
+    "python": "3.14.5",
+    "calculations": [
+      {
+        "python": "3.14.5",
+        "numpy": "2.4.6"
+      },
+      {
+        "python": "3.14.5",
+        "mpmath": "1.3.0"
+      },
+      {
+        "python": "3.14.5",
+        "sympy": "1.14.0"
+      }
+    ]
+  },
+  "failures": [
+    "First LaTeX build: undefined mathscr; replaced by mathsf.",
+    "Second build: overfull inline system list; split math fragments. Original logs retained."
+  ],
+  "evidence_scope": "Numerical checks support exact finite identities and retain finite-size differences; the growing-window and full-charge result relies on the explicit analytic remainder audit. No fresh whole-memory covariance calculation.",
+  "process_state": "All calculations, compilation and rendering exited successfully; no new active process handle.",
+  "hashes": {
+    "code/memory_charge_global_checks.py": "050600002acd8a1ca741eccd47b7d64adf88ad6ed50fd245ada537ae3f72f3a1",
+    "code/memory_charge_growing_window.py": "d3a88bc16e6a2f3a60ea44e04fc8c6c4fc0de2c3a9d5ef2c9a1b122c75f4fe2e",
+    "code/assemble_memory_charge_sum.py": "47c1ff546d93a40f7f5ddb27dbf358ac86bece4b87423d5a5d1f5b56ecc13c40",
+    "code/build_memory_charge_sum.ps1": "a31f7431296fe8acd6ac4370a47913cd85ae7c1551866ba165b65a906fca71d1",
+    "code/record_memory_charge_sum.py": "054745e806f319e11af8d56d2da335eeeb5da4f3dd5fe2494ecb851bdcfe2c96",
+    "manuscript/susskind-memory-charge-sum/main.tex": "a2fd78ae5656105494fc5448c53b873b3bce98cf7da4e40f8e875bf4f96627c0",
+    "output/pdf/de-sitter-susskind-memory-charge-sum.pdf": "c4274eb956050f6dfdc97cef3414a0a7015246dbc5dc6a8c700888ab0f10f61c",
+    "notes/susskind-memory-charge-sum.md": "ec599913ffd14f61212a4403f8e277b9fbb882440b05f840ecb4378130324b69",
+    "literature/susskind-memory-charge-sum-sources.md": "15502209f8e52cf4ec7a028293d64361f7d2b0ad73e615bd4f6d1f20f6e6ea29",
+    "journal/2026-11-06-susskind-memory-charge-sum.md": "6f6aca447a0b42dbcee3d88873d54440565a8cf80a75b0c688c99e3730c6c419",
+    "README.md": "4e72e6495bb5c6913838e6742c5f7a655351996ef12b0da04de494d1c867f5e2",
+    "PLAN.md": "9a94dba2136cbf950f93b494d681a13162fd93f2c2ba7dec216da9b829c4d686",
+    "NEXT.md": "9db13d3eb9ac90b98c755579e0fa8c923763ca7df054f90a4e4065e5463c44b2",
+    "results/susskind-memory-charge-sum/charge-sum-assembly.json": "f1b15eb9853fec880adc3c63ae5e3cdce5ff6f6d839342b0ad0599813eae46eb",
+    "results/susskind-memory-charge-sum/diagnostics/first-build-failure.txt": "b176d034be8a9d23d96455c5a751949968eebbc0d8fc3bae18ab41d70769b66f",
+    "results/susskind-memory-charge-sum/diagnostics/second-build-layout.log": "99777312f180d6143bfddfadb8fc53ea6992d06ab853c36ca5a2bfbf79263c41",
+    "results/susskind-memory-charge-sum/global-sector-checks.json": "f360fb434f501ca556d0f5a7c30f359ea51d875b1b2dc4e0a270e223996fe436",
+    "results/susskind-memory-charge-sum/growing-window-checks.json": "0f54f21ee129e391066c23039d094ee9c30a66204caab56b7c40cf1f502e0dd1",
+    "results/susskind-memory-charge-sum/main.log": "73ff721dbc75db4d086dd9a10ca047271eedd51677732ed7b223d3387f52de7d"
+  },
+  "render_hashes": {
+    "tmp/pdfs/susskind-memory-charge-sum-build/page-1.png": "355516d920f6bdd71c4a3e962ab7b7c3179f4040b1492d579c33331149fba9ea",
+    "tmp/pdfs/susskind-memory-charge-sum-build/page-2.png": "50ed7049d2508251566d62e939bfb8740b11288040efcd44f68db3d7508fab32",
+    "tmp/pdfs/susskind-memory-charge-sum-build/page-3.png": "704b5605c6219785be00d0c29358dfeff1e610bf1845111ddee59db1b16b4e13",
+    "tmp/pdfs/susskind-memory-charge-sum-build/page-4.png": "4aac871d12d08faed0eb1bb4ff2e5e0b29a16f281071d4155fb11d20144be5ab",
+    "tmp/pdfs/susskind-memory-charge-sum-build/page-5.png": "b1e8528db0ee838ef06508ede8da80c985a5c6fe02ea97207a7e18316aa6e286",
+    "tmp/pdfs/susskind-memory-charge-sum-build/page-6.png": "3b618fbef7d64d319d03ded22dcc34229b70fa01601d30e9064accc1bbae8de9"
+  },
+  "build_pass_hashes": {
+    "pass1.txt": "774f97d4b8db97b6944232e64f2e087953ebef43ff271152366b0a932522e351",
+    "pass2.txt": "774f97d4b8db97b6944232e64f2e087953ebef43ff271152366b0a932522e351"
+  }
+}

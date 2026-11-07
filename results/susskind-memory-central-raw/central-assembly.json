@@ -1,0 +1,56 @@
+{
+  "status": "passed",
+  "central_counterterm_extra_B_coefficient": "4*C*lam*q**3*x*(q - 1)**2*(q + 1)*(q**2 + q + 1)/((q**2 - q + 1)*(q**4 + q**3 + q**2 + q + 1))",
+  "identical_dynamic_coefficients": {
+    "bR": "-2*(q - 1)**2/(q**2 - q + 1)",
+    "bF": "2*q - 2",
+    "bJ": "(q - 1)**2*(q**4 - q**3 - 2*q**2 - q + 1)/((q**2 + 1)*(q**4 + q**3 + q**2 + q + 1))",
+    "bD": "q**2/(4*q**4 + 4*q**3 + 4*q**2 + 4*q + 4)",
+    "kappa": "(32*lam**2*q**7 + 32*lam**2*q**6 + 32*lam**2*q**5 + 32*lam**2*q**4 + 32*lam**2*q**3 - 4*lam*q**8 - 4*lam*q**7 - 4*lam*q**4 + 8*lam*q**2 + 4*lam*q - q**4 - 2*q**3 + 2*q + 1)/((4*lam*q + q + 1)*(q**4 + q**3 + q**2 + q + 1))"
+  },
+  "positive_transfer": [
+    [
+      "1",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "a*e",
+      "1",
+      "1",
+      "0"
+    ],
+    [
+      "H",
+      "bF*e",
+      "bR*e",
+      "1"
+    ]
+  ],
+  "determinant": "w*(e**2*f*r*(bF - bR)**2 + z*(f + r))",
+  "mixed_Y_U2": "H*w",
+  "mixed_L_U2": "H*a*e*w + bF*e*f + bR*e*r",
+  "scope": "Algebraic assembly and input provenance, with central convergence proved in manuscript. No fresh energy-kernel scan; no finite-memory remainder claim.",
+  "reused_certificates": [
+    "results/susskind-memory-raw-spectrum/symbolic-spectrum.json",
+    "results/susskind-memory-mixed-spectrum/cubic-force-cross.json",
+    "results/susskind-memory-mixed-spectrum/charged-lift.json",
+    "results/susskind-filtered-spectrum/charged-bridge.json",
+    "results/susskind-memory-central-spectrum/spectrum-assembly.json"
+  ],
+  "environment": {
+    "python": "3.14.5",
+    "sympy": "1.14.0"
+  },
+  "input_sha256": {
+    "code/assemble_memory_central_raw.py": "2b22489f500674ea48eb2abbcb86241612cbfc4b92f7724bebfbc225c8a5f1bb",
+    "results/susskind-memory-central-raw/symbolic-descendants.json": "3a3f623762b0127d080fd9831bfa95950b72abac1648213d5fb8aa05e22dd4d5",
+    "results/susskind-memory-central-raw/central-filter-checks.json": "f4de1147984028dcd3110adda04f8bdd59a49230ba32432edbb03ebdf590b765",
+    "results/susskind-memory-raw-spectrum/symbolic-spectrum.json": "4b4eba0dc663106e86ffa4d2b92d929aa2809444fb9bf4a5e19cbc375e12c9f9",
+    "results/susskind-memory-mixed-spectrum/cubic-force-cross.json": "6023918e428fa00e1f527ac18f27fdef7864adecfd8b138c42cdc2c7b5216f94",
+    "results/susskind-memory-mixed-spectrum/charged-lift.json": "2c39b04cd101b4093ff9cf2da87401b39aad8d7ffc9956b82200d16ec0f5858d",
+    "results/susskind-filtered-spectrum/charged-bridge.json": "e49ca3a3b21dd6df31a35cdae9de589439f9aea6974823c8f2e07611f1544ee7",
+    "results/susskind-memory-central-spectrum/spectrum-assembly.json": "9523efc3cabaca28a1ca826388a3c4340731a460eeceb240e2084319403b6e44"
+  }
+}

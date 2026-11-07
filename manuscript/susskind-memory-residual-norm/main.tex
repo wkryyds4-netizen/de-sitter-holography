@@ -1,0 +1,322 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,microtype}
+\usepackage[margin=24mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\Rem}{\operatorname{Rem}}
+\newcommand{\W}{\mathsf W_2}
+\title{A positive residual in the quadratic memory sector\\Fixed-charge norm and the completed equal-time Gram}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Local research note --- 6 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+We evaluate the missing half-filled norm of the derivative singlet.
+A Casimir identity for the exchanged contraction reduces the
+adjacent-charge calculation to two known Racah kernels. An explicit
+expansion cancels the terms of order $p^2$ and $p$; logarithmically
+growing windows control the remainders and the complete input-rank
+sum. Combined with the preceding cross, this proves a positive
+output-deficit residual after projection onto the three existing
+directions $H^2$, $A$, and $J_HF$.
+\end{abstract}
+\section{Setting and main result}
+Use standard CAR, the full overlapping complex Gaussian $p$-body
+ensemble, $\hbar=1$, and the normalized maximally mixed trace at
+$m=N/2$. Inner products include the disorder average. Let
+$h=H_m$, $k=H_{m-1}$ use the same couplings and set
+\begin{equation}
+ C=\EE\tr_m h^2,\quad B=\W h^2,\quad
+ O=\W A,\quad A=\Rem(k^2)+(2p-m)h^2.
+\end{equation}
+$\W$ is ordinary Gaussian second chaos. The output-deficit operator
+is $\mathcal S_N=\sum_{a\leq b,r}(a+b-r)\W Z^+_{ab;r}$,
+with the rank-product convention of the preceding notes.
+First take $p^2/N\to\lambda>0$, $C\to J_s^2/\lambda$;
+write $q=e^{-4\lambda}$ and $\theta=2\lambda$. We prove
+\begin{align}
+ \frac{\|O\|_{2,m}^2}{C^2}&\longrightarrow
+       4\lambda+4\lambda^2(1+q),\label{Aresult}\\
+ \|O-\mathcal S_N\|_{2,m}^2&\longrightarrow
+       \Delta_*:=\frac{2J_s^4(1+q)}\lambda>0.\label{difference}
+\end{align}
+Let $V_S=J_s^4[2(1-q)/\lambda+16q/(1+q)]$ be the
+previous output-deficit variance after the $B$ subtraction.
+Projection onto the span of $B,O,J_HF$ leaves
+\begin{equation}
+ V_{\rm new}=\frac{V_S\Delta_*}{V_S+\Delta_*}
+ =\frac{J_s^4(1+q)(1-q^2+8\lambda q)}
+ {\lambda(1+q+4\lambda q)}>0.\label{new}
+\end{equation}
+After this double-scaled limit, $\lambda\to0^+$ gives
+$V_{\rm new}\to16J_s^4$. The result concerns this specified
+equal-time operator span in the fixed half-filled state.
+
+\newpage
+\section{The exchanged Casimir insertion}
+This step works at any charge $M$ away from the trivial endpoints.
+For independent isotropic Hermitian rank-$a,b$ tensors $U,V$ with
+$\EE U^2=\EE V^2=I$, define
+\begin{equation}
+ \mathcal C X=\frac12\sum_{ij}[E_{ij},[E_{ji},X]],\qquad
+ \mathcal C U=x_aU,\quad x_a=a(N+1-a).
+\end{equation}
+Write $\Phi_a(X)=\EE UXU$, whose rank-$b$ eigenvalue is the
+known neutral Racah kernel $\chi^{(M)}_{ab}$.
+The ordered-product moment from the earlier covariance calculation
+and the exchanged-product moment are
+\begin{align}
+ \EE\tr_M (UV)^\dagger\mathcal C(UV)
+ &=x_a+x_b-\frac{x_ax_b}{C_f^{(M)}},\notag\\
+ \EE\tr_M UV\mathcal C(UV)
+ &=(x_a+x_b)\chi^{(M)}_{ab},\label{exchange}\\
+ C_f^{(M)}&=\frac{M(N-M)(N+1)}N.\notag
+\end{align}
+For completeness, the second identity has a short direct proof.
+The product rule gives
+$\mathcal C(UV)=(x_a+x_b)UV+\sum_{ij}[E_{ij},U][E_{ji},V]$.
+For a fixed pair $E=E_{ij},F=E_{ji}$, the extra trace, averaged
+over $U$, is
+\begin{equation}
+ \tr_M\{[\Phi_a(VE)-\Phi_a(V)E][F,V]\}=0.
+\end{equation}
+Indeed $\Phi_a$ is self-adjoint for the trace pairing and
+$\Phi_a([F,V])=\chi^{(M)}_{ab}[F,V]$ by equivariance.
+The two terms cancel. The uninserted exchanged trace is
+$\EE\tr UVUV=\chi^{(M)}_{ab}$. This is an application of
+the established covariance decomposition \cite{kota}.
+
+Return to $m=N/2$ and put $n=m+1$. The removal map satisfies
+\begin{equation}
+ \|\Rem X_r\|_{2,m}^2=
+ \frac m n[mn-x_r]\|X_r\|_{2,m-1}^2.
+\end{equation}
+Let $C_a=\EE h_a^2$, $\omega_a=C_a/C$, and
+\begin{equation}
+ R_a=\frac{C_a^-}{C_a}=
+ \frac{(m-p)^2 n}{m(mn-x_a)},\qquad
+ C_-^f=\frac{(m-1)n(N+1)}N.
+\end{equation}
+Using \eqref{exchange}, the norm of the removed lower product,
+per ordered input pair divided by $C_aC_b$, is
+\begin{equation}
+ R_aR_b\frac m n\left\{
+ (mn-x_a-x_b)(1+\chi^-_{ab})+\frac{x_ax_b}{C_-^f}\right\}.
+ \label{removed}
+\end{equation}
+Here $\chi^-_{ab}=\chi^{(m-1)}_{ab}$. Ordinary Gaussian
+decoupling includes the $a=b$ coefficient in the ordered-pair sum;
+no independent-disorder replacement of $A$ is made.
+
+\newpage
+\section{Finite formula and explicit cancellation}
+Let $\chi=\chi^{(m)}_{ab}$ and $\xi$ be the adjacent-charge kernel
+from the preceding note. Its lower parameters are $(1-m,-m,-N-1)$.
+If $c_j$ is the $j$th summand of $\chi$, then
+\begin{equation}
+ \xi_j=\frac m{m-j}c_j,\qquad
+ (\chi^-)_j=\left[1+\frac{j}{(m+1)(m-j)}\right]c_j.
+\end{equation}
+Thus $\chi^-=\chi+(\xi-\chi)/n$ exactly. Define
+\begin{equation}
+ g=\frac{(m-p)^2}{m},\quad h_0=2p-m,\quad \eta=\frac{p^2}{m},
+ \quad P=\frac{g^2x_ax_b}{(mn-x_a)(mn-x_b)},\quad D=\xi-\chi.
+\end{equation}
+Combining \eqref{removed} with the known coherent cross and the
+upper-product norm yields
+\begin{align}
+ \|O\|_{2,m}^2/C^2&=\sum_{a,b}\omega_a\omega_b f_{ab},\notag\\
+ f_{ab}&=\eta^2(1+\chi)+P\left(\frac{mn}{C_-^f}-1-\chi\right)
+       +\left(\frac{g^2-P}{n}+2h_0g\right)D.\label{finite}
+\end{align}
+Every $f_{ab}$ is a nonnegative quadratic-coefficient norm.
+The individual terms in this formula have large cancellations.
+
+Set $a=p-u$, $b=p-v$, $m=p^2/(2\lambda)$ for the expansion.
+With $c_j^{(0)}=(-4\lambda)^j/j!$,
+\begin{align}
+ c_j&=c_j^{(0)}\left[1+\frac{L_1}{p}
+                  +\frac{L_2+L_1^2/2}{p^2}+\cdots\right],\notag\\
+ L_1&=-j(u+v+2\lambda)-j(j-1),\notag\\
+ L_2&=-\frac j2(u^2+v^2)-\frac{j(j-1)}2(u+v)
+       -\frac{j(j-1)(2j-1)}6\notag\\
+ &\hspace{6mm}+\lambda j(u+v+1)+\frac{3\lambda j(j-1)}2-\lambda^2j.
+\end{align}
+Put $K=(g^2-P)/n+2h_0g$. The coefficient multiplying $c_j$
+in \eqref{finite} is $\eta^2-P+Kj/(m-j)$, with expansion
+\begin{align}
+ p^2r_2+pr_1+r_0+O(p^{-1}),\qquad
+ r_2&=-\frac{j+4\lambda}{\lambda},\notag\\
+ r_1&=4(2j+2\lambda+u+v),\notag\\
+ r_0&=-2j^2+(1-20\lambda)j+4\lambda(u+v+2)-4uv.
+\end{align}
+The unsigned part $\eta^2+P(mn/C_-^f-1)$ tends to
+$4\lambda(1+\lambda)$. The three series coefficients sum to
+\begin{equation}
+ \sum_j c_j^{(0)}(r_2,\ r_1+r_2L_1,\
+ r_0+r_1L_1+r_2[L_2+L_1^2/2])=(0,0,4\lambda^2q).
+ \label{cancellation}
+\end{equation}
+These are polynomial identities: apply powers of $z\partial_z$
+to $e^z$ and set $z=-4\lambda$. Both divergent orders cancel,
+and the finite coefficient is independent of $u,v$.
+
+\newpage
+\section{Uniform control of the sums}
+The expansion on page 3 must survive multiplication by $p^2$.
+Here is a useful way to control the actual sums. Fix $\lambda$ in
+a compact subset of $(0,\infty)$ and take
+$K_p=\lceil\log p\rceil$.
+
+For all $a,b\leq p$ and sufficiently large $p$, the exact term ratio
+gives $|c_j|\leq A_\lambda^j/j!$. Moreover $m-j\geq m-p$.
+The entire coefficient $\eta^2-P+Kj/(m-j)$ is bounded by
+$B_\lambda p^2(1+j)$. Therefore the absolute contribution from
+$j>K_p$, even before cancellation, tends to zero faster than any
+inverse power of $p$.
+
+On $u,v,j\leq K_p$, each logarithm used to expand $c_j$ has its
+argument within $O(K_p/p)$ of one. Taylor's remainder bound,
+summed over the $j$ factors, gives the displayed second-order
+expansion with a relative remainder
+\begin{equation}
+ O\!\left(\frac{(1+u+v+j)^d}{p^3}\right)
+\end{equation}
+for a fixed finite degree $d$. The rational coefficients admit the
+same kind of uniform expansion because their scaled denominators
+are bounded away from zero. After multiplication by $p^2$ and
+summation with the factorial envelope, the remainder is at most
+$O((\log p)^{d'}/p)\to0$. Truncating the polynomial sums in
+\eqref{cancellation} at $K_p$ has a superpolynomially small error.
+Consequently
+\begin{equation}
+ \sup_{0\leq u,v\leq K_p}
+ \left|f_{p-u,p-v}-[4\lambda+4\lambda^2(1+q)]\right|\to0.
+\end{equation}
+
+Finally, the previous input-rank ratio bound gives
+$\omega_{p-u}\leq A^u/u!$ up to a constant depending on
+$\lambda$. Outside this window it suffices to use the crude
+positive bound $f_{ab}\leq B_\lambda p^4$. It follows either
+from \eqref{removed} and Cauchy--Schwarz, or from
+$\|\Rem\|\leq m$, bounded $R_a$, and the symmetric-product
+norm bound. Hence the total contribution of $u>K_p$ or $v>K_p$
+vanishes. This proves \eqref{Aresult} for the complete rank sum.
+Using $\lambda_N=p^2/N$ in the same compact bounds covers sequences
+with $\lambda_N\to\lambda$, not just exact rational sequences.
+
+The argument also permits any fixed polynomial weight in $u,v$:
+outside the window its extra factor is at most a power of $p$,
+still dominated by the factorial tail. In particular the positive
+$A$ norm is tight in its two input deficits. This result does not
+control the output deficit $S=a+b-r$ of $A$; that separate tail is
+still needed for the nonconstant memory filter.
+
+\newpage
+\section{The completed Gram and the surviving direction}
+Order the operators as $(B,L_N,\mathcal S_N,O)$, where $L_N$
+is the centered input-deficit quadratic operator from the preceding
+notes. Put $z=1+q$, $b=\theta(1-q)$,
+$s=\theta^2z+\theta(1-q)$, and $a=\theta^2z+2\theta$.
+The old parity Gram, the preceding coherent cross, and
+\eqref{Aresult} now give the full matrix
+\begin{equation}
+ C^{-2}G_N\longrightarrow
+ \begin{pmatrix}
+ z&0&b&b\\
+ 0&\theta z&0&0\\
+ b&0&s&s\\
+ b&0&s&a
+ \end{pmatrix}.\label{gram}
+\end{equation}
+Define $v=s-b^2/z=\theta(1-q)+4\theta^2q/z$ and
+$d=a-s=\theta z$. Its determinant is $\theta^2z^3v>0$.
+In particular the fourth direction is not lost in double scaling.
+The finite Gram of the three old directions has an invertible
+limit, so its Schur complement converges to that of \eqref{gram}.
+
+For an explicit limiting orthogonalization let
+$c=b/z$, $Y=O-cB$, $\mathcal S_\perp=\mathcal S_N-cB$,
+and $\rho=v/(v+d)$. Then
+\begin{equation}
+ T_N=\mathcal S_\perp-\rho Y
+\end{equation}
+has asymptotically zero inner product with $B,O,L_N$, and
+$\|T_N\|^2\to C^2vd/(v+d)$, giving \eqref{new}.
+The previously proved bridge
+\begin{equation}
+ J_HF-4\lambda q C L_N\longrightarrow0\quad\text{in }L^2
+\end{equation}
+can now also be paired with $O$, since \eqref{Aresult} supplies
+a bounded fixed-sector norm. Thus the same conclusion holds for
+the span $(B,O,J_HF)$.
+
+Equation \eqref{difference} follows directly from
+$\langle\mathcal S_N,O\rangle\to\|\mathcal S_N\|^2$.
+It explains why the nonzero cross found in the preceding note does
+not eliminate the output-deficit direction: $O-\mathcal S_N$
+retains its own positive strength. The variance of $Y$ is now
+\begin{equation}
+ V_S+\Delta_*=4J_s^4\left[\lambda^{-1}+\frac{4q}{1+q}\right].
+\end{equation}
+It agrees with the earlier full-Fock expression, but here it was
+derived in the fixed half-filled state rather than imported from
+that expression.
+
+This is linear independence in a specified equal-time span. A
+complete projection onto all conserved operators and a real-time
+spectral measure for $T_N$ have not been obtained. A new bulk
+particle does not follow solely from this positive norm.
+
+\newpage
+\section{Evidence and next calculation}
+The four saved computational records support distinct parts of the
+derivation:
+\begin{itemize}
+ \item The general-charge Casimir identity is checked using all
+ 68,544 ordered Gaussian coordinate pairs over 15 rank-pair cases;
+ the 45 exchanged, ordered, and uninserted identities are exact.
+ \item The lower-charge contiguous relation has 384 finite exact
+ checks. The raw and combined norm formulas agree in 1,200 cases.
+ The latter also reproduce the three previous complete CAR norms
+ $28$, $81$, and $2010$ at covariance $w=1$.
+ \item Symbolic term-ratio checks verify $L_1,L_2$. The two
+ divergent coefficients vanish identically in $\lambda,u,v$;
+ the finite coefficient, Gram determinant, Schur complement,
+ and small-$\lambda$ value $16$ are checked symbolically.
+ \item Twelve all-rank calculations at $\lambda=0.1,0.25,0.5$
+ and $p=16,32,64,128$ are evaluated at 80 and 120 digits.
+ The finite $(B,\mathcal X_N/N,O)$ Gram is independently compared
+ with all 27 entries of the three saved CAR Grams, and two
+ further norms with exact rational pair sums.
+\end{itemize}
+The numerical difference norm and Schur complement use the
+Casimir proxy $\mathcal X_N/N$, not the finite $\mathcal S_N$.
+The preceding $L^2$ proxy bound and the now bounded $O$ norm
+justify the same limiting targets. At $\lambda=0.5,p=128$ the
+three quantities (divided by $C^2$) differ from their limits by
+approximately $-0.0310954$, $-0.0126200$, and $-0.0261320$.
+These finite-$p$ deviations are retained. Cancellation factors
+and precision refinement are recorded; no interval-rounding
+certificate is claimed.
+
+The next missing estimate is the \emph{output}-rank tail of the
+positive $A$ norm after the adjacent-charge cancellation. Together
+with the input-tail result on page 4, it should permit the actual
+memory coefficient $g_A(a,b;r)$ to be replaced by its fixed-deficit
+limit in $L^2$. The central charge window and the low-chaos terms
+of the fourth-order descendants must then be restored to assemble
+the raw second memory coefficient. Finite-memory correlations and
+the bulk space/mass dictionary remain subsequent tasks.
+
+\begin{thebibliography}{9}
+\bibitem{kota} V. K. B. Kota and M. Vyas,
+\emph{Random Matrix Theory for Transition Strength Densities in
+Finite Quantum Systems: Results from Embedded Unitary Ensembles},
+\href{https://arxiv.org/abs/1504.00759}{arXiv:1504.00759},
+Eqs. (8)--(14), (34)--(35), and Sec. 7.
+The covariance and recoupling framework is used here; its dilute
+asymptotics are not the half-filled limit of this note.
+\end{thebibliography}
+\end{document}

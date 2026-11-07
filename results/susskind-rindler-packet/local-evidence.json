@@ -1,0 +1,202 @@
+{
+  "created_at_utc": "2026-11-05T17:36:27.813017+00:00",
+  "status": "Local stage saved; not published or globally frozen",
+  "scientific_status": "Explicit regulated free Rindler midpoint construction via established KL transform; mass/radial dilation freedom and a specific equal-gap fourpoint mismatch. Full multipoint dictionary and de Sitter duality remain open.",
+  "previous_stages": [
+    {
+      "stage": "susskind-singlet-moments",
+      "manifest_sha256": "2acb8e1619eee3855bc343ed7ffb9a5a7068164702c7653625bda6edf5f83177",
+      "unchanged_verified": [
+        "code/singlet_wick_moments.py",
+        "code/run_singlet_wick_moments.py",
+        "code/build_singlet_wick_moments.ps1",
+        "code/record_singlet_wick_local.py",
+        "manuscript/susskind-singlet-moments/main.tex",
+        "output/pdf/de-sitter-susskind-singlet-moments.pdf",
+        "notes/susskind-singlet-moments.md",
+        "literature/susskind-singlet-moments-sources.md",
+        "results/susskind-singlet-moments/build-initial.log",
+        "results/susskind-singlet-moments/main.log",
+        "results/susskind-singlet-moments/moments.json"
+      ],
+      "intentionally_updated_navigation": []
+    },
+    {
+      "stage": "susskind-singlet-double-scale",
+      "manifest_sha256": "c19142259cad894d5c0ada97e3e46e7445660b7c47adb1ff42a898239689ed25",
+      "unchanged_verified": [
+        "code/singlet_coefficient.py",
+        "code/check_singlet_coefficient.py",
+        "code/run_singlet_double_scale.py",
+        "code/run_singlet_centered_moment.py",
+        "code/finish_singlet_double_scale.py",
+        "code/build_singlet_double_scale.ps1",
+        "code/record_singlet_double_scale_local.py",
+        "manuscript/susskind-singlet-double-scale/main.tex",
+        "output/pdf/de-sitter-susskind-singlet-double-scale.pdf",
+        "notes/susskind-singlet-double-scale.md",
+        "literature/susskind-singlet-double-scale-sources.md",
+        "journal/2026-11-05-susskind-singlet-double-scale.md",
+        "results/susskind-singlet-double-scale/build-initial.log",
+        "results/susskind-singlet-double-scale/centered-gram-initial.json",
+        "results/susskind-singlet-double-scale/centered-gram.json",
+        "results/susskind-singlet-double-scale/coefficients-p1.json",
+        "results/susskind-singlet-double-scale/coefficients-p2.json",
+        "results/susskind-singlet-double-scale/coefficients-p3.json",
+        "results/susskind-singlet-double-scale/coefficients-p4.json",
+        "results/susskind-singlet-double-scale/coefficients-p5.json",
+        "results/susskind-singlet-double-scale/independent-tensor.json",
+        "results/susskind-singlet-double-scale/initial-core.py.txt",
+        "results/susskind-singlet-double-scale/initial-validation-failure.txt",
+        "results/susskind-singlet-double-scale/main.log",
+        "results/susskind-singlet-double-scale/overlap-graphs.json",
+        "results/susskind-singlet-double-scale/validation.json",
+        "results/susskind-singlet-double-scale/word-checks.json"
+      ],
+      "intentionally_updated_navigation": [
+        "README.md",
+        "PLAN.md",
+        "NEXT.md"
+      ]
+    },
+    {
+      "stage": "susskind-singlet-kernel",
+      "manifest_sha256": "059adaddc9011a118caf5656fccc42b3cb0d8ea74128b20f609c1bfac7464f25",
+      "unchanged_verified": [
+        "code/singlet_spectral_graphs.py",
+        "code/check_singlet_spectral_kernel.py",
+        "code/check_singlet_kernel_nonzero.py",
+        "code/run_singlet_kernel.py",
+        "code/build_singlet_kernel.ps1",
+        "code/record_singlet_kernel_local.py",
+        "manuscript/susskind-singlet-kernel/main.tex",
+        "output/pdf/de-sitter-susskind-singlet-kernel.pdf",
+        "notes/susskind-singlet-kernel.md",
+        "literature/susskind-singlet-kernel-sources.md",
+        "journal/2026-11-06-susskind-singlet-kernel.md",
+        "results/susskind-singlet-kernel/build-initial.log",
+        "results/susskind-singlet-kernel/correlator.png",
+        "results/susskind-singlet-kernel/exact-checks.json",
+        "results/susskind-singlet-kernel/initial-checker.py.txt",
+        "results/susskind-singlet-kernel/kernel-numerics.json",
+        "results/susskind-singlet-kernel/main.log",
+        "results/susskind-singlet-kernel/nonzero-words.json"
+      ],
+      "intentionally_updated_navigation": [
+        "README.md",
+        "PLAN.md",
+        "NEXT.md"
+      ]
+    },
+    {
+      "stage": "susskind-singlet-multimark",
+      "manifest_sha256": "a80b511d980d5b5226f713404475f1c5310ae808a3c4acc2b2b4f1f5da1f7cde",
+      "unchanged_verified": [
+        "code/singlet_multimark.py",
+        "code/check_singlet_multimark.py",
+        "code/check_multimark_car.py",
+        "code/run_singlet_fourpoint.py",
+        "code/build_singlet_multimark.ps1",
+        "code/record_singlet_multimark_local.py",
+        "manuscript/susskind-singlet-multimark/main.tex",
+        "output/pdf/de-sitter-susskind-singlet-multimark.pdf",
+        "notes/susskind-singlet-multimark.md",
+        "literature/susskind-singlet-multimark-sources.md",
+        "journal/2026-11-06-susskind-singlet-multimark.md",
+        "results/susskind-singlet-multimark/connected-fourpoint.png",
+        "results/susskind-singlet-multimark/exact-checks.json",
+        "results/susskind-singlet-multimark/finite-car.json",
+        "results/susskind-singlet-multimark/fourpoint-numerics.json",
+        "results/susskind-singlet-multimark/initial-factorial-car.py",
+        "results/susskind-singlet-multimark/initial-main.log",
+        "results/susskind-singlet-multimark/main.log"
+      ],
+      "intentionally_updated_navigation": [
+        "README.md",
+        "PLAN.md",
+        "NEXT.md"
+      ]
+    },
+    {
+      "stage": "susskind-singlet-otoc",
+      "manifest_sha256": "a59c91c0edafaa308da569d743402899ebeece87376ef5a6304d48a4f4b1b15d",
+      "unchanged_verified": [
+        "code/singlet_otoc.py",
+        "code/check_singlet_otoc.py",
+        "code/run_singlet_otoc.py",
+        "code/check_otoc_representation.py",
+        "code/check_otoc_saved_evidence.py",
+        "code/build_singlet_otoc.ps1",
+        "code/record_singlet_otoc_local.py",
+        "manuscript/susskind-singlet-otoc/main.tex",
+        "output/pdf/de-sitter-susskind-singlet-otoc.pdf",
+        "notes/susskind-singlet-otoc.md",
+        "literature/susskind-singlet-otoc-sources.md",
+        "journal/2026-11-06-susskind-singlet-otoc.md",
+        "results/susskind-singlet-otoc/error-replay.json",
+        "results/susskind-singlet-otoc/exact-channels.json",
+        "results/susskind-singlet-otoc/initial-main.log",
+        "results/susskind-singlet-otoc/main.log",
+        "results/susskind-singlet-otoc/otoc-and-commutator.png",
+        "results/susskind-singlet-otoc/otoc-numerics.json",
+        "results/susskind-singlet-otoc/representation-checks.json"
+      ],
+      "intentionally_updated_navigation": [
+        "README.md",
+        "PLAN.md",
+        "NEXT.md"
+      ]
+    }
+  ],
+  "current_git_head": "714d038bb605cfcffdc351e4dcc62aa95237d25f",
+  "git_commit_created": false,
+  "git_push_performed": false,
+  "archive_created": false,
+  "global_project_audit_performed": false,
+  "checks": {
+    "main": 91,
+    "independent": 19
+  },
+  "build": {
+    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File code/build_rindler_singlet_packet.ps1",
+    "compiler": "This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5 Portable) (preloaded format=pdflatex 2026.9.19)  6 NOV 2026 01:33",
+    "passes": 2,
+    "pages": 5,
+    "visual_review": "All five 1200px pages inspected. Final pages 1-4 pixel hashes identical to inspected renders; final page 5 re-inspected after reference layout adjustment.",
+    "repaired_issues": "Missing sech declaration; path overflow; orphan final bibliography entry. Initial failed compilation log retained."
+  },
+  "sources": "Primary sources read online; URLs and equation locations in literature note, no new source-PDF cache.",
+  "process_state": "All numerical, build and rendering commands terminal; no running session.",
+  "hashes": {
+    "code/rindler_singlet_packet.py": "72fec564a0e3408cc77b305e475d5b50045b5702f8666d379139dc21d0393afc",
+    "code/run_rindler_singlet_packet.py": "01c8f79cca86608fe4b5c670e78b4cb069e135170cfa57731409f948f7cec877",
+    "code/check_rindler_singlet_packet.py": "5b7df5cbfcd5de59b3d26c52b892905cc343e07bc646661ba10dacd2a6f9e193",
+    "code/build_rindler_singlet_packet.ps1": "1d7e9c6717f276a7c0e436cc34a8d3bd2f36f24aeeccd7868089e23d097f12ea",
+    "code/record_rindler_singlet_packet.py": "d9d2d42e0badeccfbe50692faf79700fe9492a4ef88d1f0522b84b2b75ae4822",
+    "manuscript/susskind-rindler-packet/main.tex": "0ceea21c3f71d72857a6c2549515d5ce63a4cdddf579e2e2ac01aff45c3aed8b",
+    "output/pdf/de-sitter-susskind-rindler-packet.pdf": "219777af25b5336a500e92242020d261b667e273e3875886f69e9cade512746d",
+    "notes/susskind-rindler-packet.md": "ed927694d68fc32de2312c30b439754a12678d28d51066e08ce2d714191c0b9d",
+    "literature/susskind-rindler-packet-sources.md": "a8df7c8bc3377ff763f56031d8d215ebb66d709e435b1f1b1ead6c8571f77b4f",
+    "journal/2026-11-06-susskind-rindler-packet.md": "96e379dd79155855a3ebb4bc48c719a57808da853d9bb690f7b4e0315d55f06c",
+    "README.md": "9a655c1c0e73568b7bba4c9d9b90526a4343df20e26873604e4f32e542e624e4",
+    "PLAN.md": "7258df8a37642e97a2436b711d2cb1e74d21b843c80fadc42d8fba905484cf03",
+    "NEXT.md": "25ea4b0333c640195822e73ff10d4ae045923d5ab8a1523cf104edc83d360038",
+    "results/susskind-rindler-packet/build-initial.log": "84c7cf6ac10e809fe991424d0fc52ff66daa2e937f56671fdb8276005bb1f54f",
+    "results/susskind-rindler-packet/independent-checks.json": "cd882708bca46f1d8a6d7d0925a71d0ef15ea494d31ab5c56102d0e8a0049a5f",
+    "results/susskind-rindler-packet/main.log": "cef12a19b8eb2beed92f40fd982f83bf5a0d56047bc4f5a3865a5c20eea5df28",
+    "results/susskind-rindler-packet/radial-grid.npz": "c79fc810449e3b83ae55d02b3467cb2248de66b1ff375aa32e15a86a5e18b3bf",
+    "results/susskind-rindler-packet/rindler-packet.png": "29181790a94800a408a16e38b56f41c7aab5e5668e04bba009e9e8464e6608bf",
+    "results/susskind-rindler-packet/study.json": "0724bab722a69846c9e4b2c746ae8dfb14dbc6836aa3f354db4b3f5378f687c5"
+  },
+  "local_render_hashes": {
+    "tmp/pdfs/susskind-rindler-packet-build/final-page-1.png": "d05cd885455b6c3ffd6e98059a1d71b749ab9f447b2d02f8cd6cb6f0c0e7b175",
+    "tmp/pdfs/susskind-rindler-packet-build/final-page-2.png": "c61a92ec62f8f6d8be8c428e24587765fd23373b4f9a5b96c2fac8f981ee1dd1",
+    "tmp/pdfs/susskind-rindler-packet-build/final-page-3.png": "6eccb64cc8db5a7dc28ad45c5df5bb8e334db7c0c3cbd83a3f90713e7508f585",
+    "tmp/pdfs/susskind-rindler-packet-build/final-page-4.png": "b4fa44051411cf001efbea27288bf96f8171d167130a0794a4a55093be96cb20",
+    "tmp/pdfs/susskind-rindler-packet-build/final-page-5.png": "3bac4f2665dfc9da8f9155ac8e413cb2797c62e074847a5a3d197b6630399ab6"
+  },
+  "build_pass_hashes": {
+    "pass1.txt": "2dc0db0cd01e48a482f6cd707a29fa8109ff44bfc5378011e1ea32cf2805129a",
+    "pass2.txt": "91eda7f315766dd62e07f272c0f7336eed640a815577fb160cef4a1e53170b5d"
+  }
+}

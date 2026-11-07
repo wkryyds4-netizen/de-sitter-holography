@@ -1,0 +1,7 @@
+Initial run: all tested matrix identities agreed, but the blanket nonzero
+coverage assertion failed in N=6,p=2,m=3. The original source is retained.
+For one-body U, Dbar U=U-tr(J)I. At this half-filled system the cleared
+Dbar(gU) identity becomes -3 tr(J)I and legitimately vanishes when tr(J)=0.
+The revised checker records zero identity indices and permits zero only
+for this diagnostic (index 4); all four commutator and four quartic
+identities still require nonzero matrices. No identity tolerance changed.

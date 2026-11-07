@@ -1,0 +1,5 @@
+Initial LaTeX pass failed because \mathscr was used without loading mathrsfs.
+The initial source and pass output are preserved as initial-main.tex and initial-pass1.txt.
+Loading mathrsfs then failed because that package is not installed; the second pass output is preserved as missing-package-pass1.txt.
+Resolution: use standard \mathcal for the difference operator. No mathematical formula or numerical tolerance was changed.
+All four scientific calculations passed on their first execution.

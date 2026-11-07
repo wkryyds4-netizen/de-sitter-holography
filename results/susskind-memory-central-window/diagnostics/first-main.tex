@@ -1,0 +1,295 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,microtype}
+\usepackage[margin=24mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\tr}{\operatorname{tr}}
+\title{Central charge windows for the memory calculation\\Uniform rank tails and a conserved filter correction}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Local research note --- 6 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+We extend the positive rank-product sixth-moment estimate from bounded
+charge shifts to compact windows of width $\sqrt N$. The leading six
+moments are unchanged. In contrast, replacing the sector variance by
+its half-filled value inside a growing counterterm leaves a finite
+error. The exact two-charge memory filter has a further finite,
+charge-dependent $H^2$ correction. These results supply inputs for the
+central-window operator calculation; the full memory Gram matrix in
+that window is still to be established.
+\end{abstract}
+\section{The charge window and the literature interface}
+Use standard CAR, the full overlapping complex Gaussian $p$-body
+ensemble, normalized trace at charge $m$, annealed Hilbert--Schmidt
+norm, and $\hbar=1$. The coupling variance $w_N$ is the same in all
+charge sectors of a given sample. Put
+\begin{equation}
+ \lambda_N=p^2/N,\quad m=N/2+xp=N/2+z\sqrt N,
+ \quad z=x\sqrt{\lambda_N}.
+\end{equation}
+All uniform statements have $|x|\le L$ (equivalently bounded $z$),
+and $\lambda_N$ in a compact subset of $(0,\infty)$. Integer charge
+values are understood. Limits below keep $\lambda_N=\lambda$;
+using actual $\lambda_N$ gives the corresponding uniform expansions.
+
+The fixed-charge embedded-ensemble formulation already supplies
+the sector variance and reduced spectral parameter~\cite{TT}:
+\begin{equation}
+ C_m=w_N\binom mp\binom{N-m+p}p,\qquad
+ q_m=\exp\!\left[-\frac{p^2N}{m(N-m)}\right].\label{variance}
+\end{equation}
+The expression for $C_m$ is exact; $q_m$ is the double-scaled
+spectral parameter, not an exact finite-$N$ fourth moment.
+Fixed-charge and grand-canonical transfer matrices are also treated
+in Ref.~\cite{FKN}. We use their separation of charge sectors as
+context; no transfer-matrix formula substitutes for a uniform bound
+on the marked memory insertions. In particular we keep the common
+$w_N$, rather than independently renormalizing the Hamiltonian in
+each sector.
+
+\newpage
+\section{Uniform sixth moments on a central window}
+Let $U,V$ be independent isotropic Hermitian rank-$a,b$ matrices,
+normalized by $\EE U^2=\EE V^2=I$, in charge $M$. Set
+\begin{equation}
+ \pi^{(M)}_{ab}(r)=\EE\tr_M[P_r(UV)]^\dagger P_r(UV),\qquad
+ X=x_{a+b}-x_r,\quad x_j=j(N+1-j).
+\end{equation}
+The existing positive product law is normalized, has $r\le a+b$,
+and obeys the Racah product identity~\cite{local}:
+\begin{align}
+ \sum_r\pi^{(M)}_{ab}(r)\chi_r(n)&=\chi_a(n)\chi_b(n),\\
+ \chi_a(n)&={}_4F_3\!\left[\begin{matrix}-a,a-N-1,-n,n-N-1\\
+                 -M,M-N,-N-1\end{matrix};1\right].
+\end{align}
+Write $P_j(t)=\prod_{\ell<j}(t-x_\ell)$ and
+\begin{equation}
+ c_{nj}=\frac{(-n)_j(n-N-1)_j}
+ {(-M)_j(M-N)_j(-N-1)_j j!}.
+\end{equation}
+Then $F_j=\EE_\pi P_j(x_r)$ satisfies the exact triangular recursion
+\begin{equation}
+ F_0=1,\qquad
+ F_n=\frac{\chi_a(n)\chi_b(n)-\sum_{j<n}c_{nj}F_j}{c_{nn}}.
+ \label{recurrence}
+\end{equation}
+Set $\epsilon=N^{-1/2}$, $a=A/\epsilon$, $b=B/\epsilon$,
+and $M=1/(2\epsilon^2)+z/\epsilon$. In the scaled variable
+$Y=\epsilon^3x_r$, the coefficient $c_{nj}\epsilon^{-3j}$ is
+\begin{equation}
+ (-4)^j\binom nj\epsilon^j
+ \prod_{k=0}^{j-1}
+ \frac{1-(n-1+k)\epsilon^2}
+ {(1+2z\epsilon-2k\epsilon^2)
+  (1-2z\epsilon-2k\epsilon^2)(1+(1-k)\epsilon^2)}.
+ \label{centralcoef}
+\end{equation}
+This is the substantive change from a bounded shift $M-N/2$.
+The roots are $\epsilon^3x_\ell=\ell\epsilon+
+\ell(1-\ell)\epsilon^3$ and the input is
+$Y_a=A-A^2\epsilon+A\epsilon^2$.
+
+The exact series recursion over $\mathbb Q[A,B,z]$ through
+$\epsilon^{12}$ cancels all 21 negative Laurent coefficients in
+the first six moments of $X/N$. Its constant terms give
+\begin{equation}
+ \EE_\pi(X/N)^j=T_j(2AB)+O(\epsilon),\quad 1\le j\le6,
+ \qquad T_{j+1}(t)=t[T_j(t)+T'_j(t)],\ T_0=1.\label{moments}
+\end{equation}
+After extracting the known powers of $\epsilon$, each divisor in
+\eqref{recurrence} has nonzero constant term $(-4)^n$.
+All other denominators in \eqref{centralcoef} remain nonzero on
+compact $A,B,z$ sets for sufficiently small $\epsilon$.
+Consequently the exact rational functions are analytic there and
+the remainders in \eqref{moments} are uniform, not merely formal.
+
+\newpage
+\section{What the tail bound controls}
+The sixth polynomial is
+\begin{equation}
+ T_6(t)=t^6+15t^5+65t^4+90t^3+31t^2+t.
+\end{equation}
+For $a,b\le p$, the output deficit $S=a+b-r$ is nonnegative and
+\begin{equation}
+ X=S[N+1-2(a+b)+S]\ge S(N+1-4p).
+\end{equation}
+Thus, uniformly on the central window and on its adjacent charges,
+\begin{equation}
+ \sup_{a,b\le p,\ |M-N/2|\le L\sqrt N}\EE_\pi S^6
+ \le K_{L,\lambda},\qquad
+ \sum_{S>R}\pi_{ab}^{(M)}(r)\le K_{L,\lambda}R^{-6}.
+ \label{tail}
+\end{equation}
+The norm of an independent rank-product tail is the square root
+of this probability. The constant is allowed to depend on $L$;
+the calculation does not cover a growing $L=L_N$.
+
+This distribution refers to independent isotropic rank inputs.
+The actual memory operator contains coherent products in adjacent
+charges and ordinary Gaussian chaos subtractions. Applying
+\eqref{tail} to that operator still requires the appropriate
+charged norm-transfer and input-rank estimates. It is not a direct
+bound on the whole memory remainder.
+
+\paragraph{Executed checks.}
+The polynomial-ring calculation verifies six constant terms and
+21 cancellations. Four full finite distributions at
+$(N,M,a,b)=(16,6,2,3),(16,10,2,3),(20,7,3,3),(20,13,3,3)$
+independently reproduce all 28 moments from order zero to six.
+Their $S^6$ bounds are checked as exact fractions. Forty further
+exact-rational cases use $\lambda=1/4$, $p=16,32,64,128$,
+$z=-2,-1,0,1,2$, and input deficits $(0,0),(1,2)$; reflection
+$M\leftrightarrow N-M$ is checked explicitly.
+
+For example, at $p=128$, $z=2$, $a=b=p$,
+$\EE(X/N)^6=22.4617786805$, while $T_6(1/2)=24.046875$.
+The finite difference is retained; these are convergence checks,
+not equality to the limiting moments at finite $N$.
+
+\newpage
+\section{A vanishing variance difference leaves a finite counterterm}
+Let $C_0=C_{N/2}$ for even $N$. An exact product from
+\eqref{variance} is
+\begin{equation}
+ \frac{C_m}{C_0}=
+ \prod_{i=0}^{p-1}
+ \left(1+\frac{xp}{N/2-i}\right)
+ \left(1-\frac{xp}{N/2+p-i}\right).
+\end{equation}
+With $\eta=1/p$ and $y=i/p$, the logarithm of each paired
+factor has the uniform expansion
+\begin{align}
+ &\log\left(1+\frac{2\lambda x\eta}{1-2\lambda y\eta}\right)
+ +\log\left(1-\frac{2\lambda x\eta}{1+2\lambda(1-y)\eta}\right)
+ \notag\\
+ &\hspace{25mm}=4\lambda^2x(1-x)\eta^2+O(\eta^3).
+\end{align}
+Summing $p$ terms and exponentiating gives
+\begin{equation}
+ \boxed{\quad p\left(\frac{C_m}{C_0}-1\right)
+ =4\lambda^2x(1-x)+O(p^{-1}).\quad}\label{drift}
+\end{equation}
+The asymmetric center is not a mistake: the exact variance obeys
+$C_m=C_{N+p-m}$, corresponding to $x\mapsto1-x$.
+It is maximal near $m=(N+p)/2$, not exactly at half filling.
+The original ensemble contains all overlapping index sets; no
+particle-hole normal-ordering modification has been made.
+
+Meanwhile
+\begin{equation}
+ \log q_m=-\frac{4\lambda}{1-4\lambda^2x^2/p^2}
+ =-4\lambda-\frac{16\lambda^3x^2}{p^2}+O(p^{-4}).
+\end{equation}
+Thus a common leading spectral shape can coexist with a finite
+correction to a subtraction proportional to $pC_m$.
+Replacing $C_m$ by $C_0$ in that subtraction is not justified by
+$C_m/C_0\to1$.
+
+Thirty exact binomial ratios, $p=16,32,64,128,256$ and
+$x=-2,-1,0,1/2,1,2$, verify the reflection identity and record
+the deviation from \eqref{drift}. These use a common coupling
+variance; no independent sector rescaling is performed.
+
+\newpage
+\section{The raw core filter also acquires a finite charge correction}
+Use the exact previous two-charge decomposition~\cite{local},
+with $A_{ab;r}=Z^-_{ab;r}+(2p-m)Z^+_{ab;r}$:
+\begin{equation}
+ Q_{\mathcal E}=\sum_{a\le b,r}
+ (g_H Z^+_{ab;r}+g_A A_{ab;r}).
+\end{equation}
+Here $Q_{\mathcal E}$ is the quadratic contraction of the raw
+quartic core, prior to its scalar centering. Its known rational
+coefficients can be organized as
+\begin{equation}
+ g_H/C_m=B_0+B_a\kappa_a/C_m+B_b\kappa_b/C_m+B_r\kappa_r/C_m,
+ \quad \kappa_j=w_N\binom{m-j}p\binom{N-m+p-j}p.
+\end{equation}
+For $a=p-u$, $b=p-v$, $r=2p-u-v-S$, fixed deficits, and
+$m=N/2+xp$, the exact rational expansions are
+\begin{align}
+ B_0&=2p+\lambda+4\lambda x+O(p^{-1}),\\
+ B_a=B_b&=-2p-5\lambda-4\lambda x+O(p^{-1}),\\
+ B_r&=2p+9\lambda+4\lambda x+O(p^{-1}).
+\end{align}
+For $j=tp-s$, the paired binomial product gives
+\begin{equation}
+ \log(\kappa_j/C_m)=-4\lambda t+
+ (4\lambda s-4\lambda^2t^2)/p+O(p^{-2}).
+\end{equation}
+The charge coordinate cancels through this order. Therefore,
+with $q=e^{-4\lambda}$,
+\begin{align}
+ g_H/C_m={}&2p(1-q)^2+K_0+4\lambda x(1-q)^2\notag\\
+ &+8\lambda(q^2-q)(u+v)+8\lambda q^2S+O(p^{-1}),\label{gH}\\
+ K_0={}&\lambda[1-10q+9q^2+16\lambda q-32\lambda q^2].
+\end{align}
+The additional term is rank-independent. After ordinary Gaussian
+centering it multiplies $C_m(h_m^2-C_mI)$, a conserved direction.
+It must be included before studying the remaining dynamic field.
+
+For $g_A/C_m$ the four rational prefactors, at arbitrary bounded
+rank proportions, remain
+\begin{equation}
+ (3/2,-1,-1,1/2)+\frac{\lambda}{p}(8,-5/2,-5/2,3)+O(p^{-2}).
+\end{equation}
+In particular the fixed-deficit leading coefficient is still
+$(3-4q+q^2)/2$. Uniform operator convergence additionally needs
+the coherent norm estimates identified on page 3.
+
+\newpage
+\section{Verification and the next operator calculation}
+The saved finite five-word implementation is independent of the
+rational-coefficient expansion. At $\lambda=1/4$, five values
+$p=16,32,64,128,256$, $x=-1,0,1$, and two deficit triples,
+it verifies 60 exact rational identities for $g_H$ and $g_A$.
+The normalized difference
+\begin{equation}
+ g_H(N/2+xp)/C_m-g_H(N/2)/C_0
+ \longrightarrow4\lambda x(1-q)^2
+\end{equation}
+is evaluated at 80 and 120 decimal digits with agreement better
+than $10^{-70}$ in the stored quantities. For $p=256$, $x=1$,
+$(u,v,S)=(2,1,3)$, its value is $0.39841612746439$;
+the limiting value is $(1-e^{-1})^2=0.39957640089373$.
+The finite discrepancy is recorded, not removed by fitting.
+Zero-limit cases use absolute errors. These are exact-rational
+inputs followed by high-precision evaluations, not interval arithmetic.
+
+\paragraph{Reproducibility.}
+The three records are \texttt{central-moments.json},
+\texttt{central-scale.json}, and \texttt{central-filter-checks.json}
+under \texttt{results/susskind-memory-central-window}.
+They retain parameter choices, dependency versions, and input hashes.
+The first symbolic run exposed a reused dummy variable; the first
+scale check used structural rather than algebraic symbolic equality.
+Both initial sources and explanations are preserved. Corrections
+kept exact algebraic assertions. Previous scientific records were
+not overwritten.
+
+\paragraph{Continuation.}
+The central-window tail estimate and the finite conserved
+correction are now explicit. Next derive the actual charged
+norm transfer and marked overlap estimates uniformly on this
+window, including the $A$ input-rank tail, then assemble the
+memory Gram matrix with sector-dependent conserved subtractions.
+Compact-window control by itself does not justify summing the
+whole charge distribution; an integrable bound outside the window
+is also required. After that, control the two-insertion finite-memory
+remainder and connect the microscopic fields to the Susskind
+singlet/meson spatial and mass dictionary.
+
+\begin{thebibliography}{9}\small
+\bibitem{TT} J. Tall and S. Tomsovic,
+\href{https://arxiv.org/html/2604.14522v2}{arXiv:2604.14522v2},
+Secs.~2.1 and 6: fixed-sector normalization and reduced moments.
+\bibitem{FKN} S. F\"orste, Y. Kruse and S. Natu,
+\href{https://arxiv.org/html/2512.07715v2}{arXiv:2512.07715v2},
+Secs.~3.1--3.2: canonical and grand-canonical transfer matrices.
+\bibitem{local} A. Day and Chengheng, local notes:
+\emph{An exact two-charge formula for the memory core};
+\emph{The quadratic memory core in the double-scaled limit};
+\emph{Restoring the dynamic memory descendants} (2026-11-06).
+\end{thebibliography}
+\end{document}

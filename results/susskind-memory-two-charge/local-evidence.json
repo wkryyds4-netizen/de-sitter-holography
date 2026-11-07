@@ -1,0 +1,106 @@
+{
+  "created_at_utc": "2026-11-06T05:56:50.271319+00:00",
+  "status": "Saved locally; no publication",
+  "scientific_status": "General finite-N two-charge core filters proved; half-filled H-squared part admits an L2 linear-deficit approximation. Weighted A tail, parity-weighted output-deficit cross spectrum, full charge window, raw Z2 and bulk dictionary remain open.",
+  "current_git_head": "714d038bb605cfcffdc351e4dcc62aa95237d25f",
+  "git_commit_created": false,
+  "git_push_performed": false,
+  "archive_created": false,
+  "parent_manifest_sha256": "35419670a1221beafdef98355f2d2026407531a7710ee312ef8b16f10dbe4f13",
+  "previous_stage_scientific_files_unchanged": [
+    "code/check_memory_charge_lift.py",
+    "code/probe_memory_half_filling.py",
+    "code/build_memory_charge_lift.ps1",
+    "code/record_memory_charge_lift.py",
+    "manuscript/susskind-memory-charge-lift/main.tex",
+    "output/pdf/de-sitter-susskind-memory-charge-lift.pdf",
+    "notes/susskind-memory-charge-lift.md",
+    "literature/susskind-memory-charge-lift-sources.md",
+    "journal/2026-11-06-susskind-memory-charge-lift.md",
+    "PROJECT.md",
+    "results/susskind-memory-charge-lift/checks.json",
+    "results/susskind-memory-charge-lift/final-checks.json",
+    "results/susskind-memory-charge-lift/main.log",
+    "results/susskind-memory-charge-lift/preliminary-checker.py"
+  ],
+  "checks": {
+    "rank_contraction_identities": 522,
+    "full_linear_maps": 87,
+    "complex_entry_equalities": 5470368,
+    "high_precision_cases": 24,
+    "symbolic_projection_identities": 3
+  },
+  "environment": {
+    "python": "3.14.5",
+    "calculations": [
+      {
+        "python": "3.14.5",
+        "numpy": "2.4.6",
+        "sympy": "1.14.0"
+      },
+      {
+        "python": "3.14.5",
+        "numpy": "2.4.6",
+        "sympy": "1.14.0"
+      },
+      {
+        "python": "3.14.5",
+        "sympy": "1.14.0"
+      },
+      {
+        "python": "3.14.5",
+        "mpmath": "1.3.0"
+      },
+      {
+        "sympy": "1.14.0"
+      }
+    ]
+  },
+  "build": {
+    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File code/build_memory_two_charge.ps1",
+    "compiler": "This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5 Portable) (preloaded format=pdflatex 2026.9.19)  6 NOV 2026 13:53",
+    "passes": 2,
+    "pages": 6,
+    "render_command": "pdftoppm -r 95 -png output/pdf/de-sitter-susskind-memory-two-charge.pdf tmp/pdfs/susskind-memory-two-charge-build/page",
+    "visual_review": "All six final page PNGs viewed after the final rebuild at 95 dpi. Equations, references, and pagination readable without clipping or overlapping."
+  },
+  "failures": [],
+  "process_state": "All computations, compilation, and rendering terminal.",
+  "evidence_scope": "Analytic transfer proof plus exhaustive finite linear-map checks; rank-product checks are selected pure-rank realizations. Fixed-deficit asymptotics and a uniform-tail proof concern the H-squared contribution only. Decimal refinements are not interval certificates.",
+  "hashes": {
+    "code/memory_two_charge_filter.py": "33c660733f3529990a0779cfa9a27875ec95f354dca3dc906d4c4f6b786e35f8",
+    "code/check_memory_two_charge_filter.py": "17095a8c6389e0a7eca0622835f7cfe2fa15d8f37070205f6405a9b5b5b60890",
+    "code/check_charged_covariance_transfer.py": "91736fb622e22768147d5442356c62fb9434942d7e2f15e7d0e2ad199cbadf27",
+    "code/memory_two_charge_asymptotic.py": "57f5b5280ad29702257fb112cd107efde86dc4aceaf82debeb7262e00dc5b1b5",
+    "code/check_memory_filter_limit.py": "6c22340c9772141a0fd31b1a5170b06fd11fb508447bef507cabfafdbbe3c50e",
+    "code/check_memory_filter_uniform.py": "6fb4d1e5afa0c2dc4e8f303180aef1f6f6d3eaaa6b7fa9f5692541dd22488b23",
+    "code/build_memory_two_charge.ps1": "dc35260b0587ad95b16984bde060f9146228e50980f4ac6f5732c68660a34fd2",
+    "code/record_memory_two_charge.py": "25154871852c0d64a0ab83c7a1417641c0edbd2296ef43bd7e6a8698fdf23089",
+    "manuscript/susskind-memory-two-charge/main.tex": "ba44ba64f7e2d51b188f741c1f2cf8ca5a5a5776538c21a5e2acb59cc10bda85",
+    "output/pdf/de-sitter-susskind-memory-two-charge.pdf": "0d2b6702fb66261aa39d2677148b57c288e6317becf6e2c5e9d2c5431f962564",
+    "notes/susskind-memory-two-charge.md": "7d49a333d6205454eb60b2e37d989aaf183944937d8e6216dbd2e2d82242ea60",
+    "literature/susskind-memory-two-charge-sources.md": "ed7d59d49c9eba5aa34e77b5fa1b2f076c83564c0579d16c6432938d3258f263",
+    "journal/2026-11-06-susskind-memory-two-charge.md": "e2676627fc8cb2b746916977de78d80009eb0141e3714f3d99d0627766cb4c7b",
+    "README.md": "a23ec3269b7626a8defc9204c0f12b38e099ab56cc420698f63ce28ec59ab4fd",
+    "PLAN.md": "6fcf588372477c1699b7c012ccb35a1232eb55b66a8a04159d7102456452e33a",
+    "NEXT.md": "dc44e327bd6c24ab97e14e1e52311c2a0ad610f678777e233741ba705b389760",
+    "results/susskind-memory-two-charge/filter-checks.json": "4a80ca5b628a7f239ee04ff5a49665c4ff0d712071c327b2d645333a7903a10f",
+    "results/susskind-memory-two-charge/limit-checks.json": "96ee06510626f7c9ef99185fb7cf9c3408173535e5c6fce06db41959d9c882ef",
+    "results/susskind-memory-two-charge/main.log": "669efdb18953ad553bc0ff5fd054dafab1e92d345b5e8b75f671090600d3c113",
+    "results/susskind-memory-two-charge/symbolic-filter.json": "63849f41398b248e8ff3b585847b05b5a55fb200aa83831482d1c9c2da919f7e",
+    "results/susskind-memory-two-charge/transfer-checks.json": "e99612a002d5f4fdcd96f321cc0092625cac7882381b5273bd8eb6239874bfe4",
+    "results/susskind-memory-two-charge/uniform-prefactors.json": "91e9991bbfb98b9f5d392c373391a9f8eb4c8fedbfaa69a23e98622c635ca62d"
+  },
+  "render_hashes": {
+    "tmp/pdfs/susskind-memory-two-charge-build/page-1.png": "205e4a87841554a85073b28d00145ad74dfa2513234104b1441c119e2276d28b",
+    "tmp/pdfs/susskind-memory-two-charge-build/page-2.png": "5382e8ecd1435ff09a0f28f87764610e9d690b28cf96911161d4d329e7fa506e",
+    "tmp/pdfs/susskind-memory-two-charge-build/page-3.png": "4a2b90e4e2ad480fabce82e35b2b3ccc61ec765573df5c7391253f55d0b58377",
+    "tmp/pdfs/susskind-memory-two-charge-build/page-4.png": "26da499330587e23195101d8f9b969565e6f2b1bf74f44e2c97ac9dba7ee6bbd",
+    "tmp/pdfs/susskind-memory-two-charge-build/page-5.png": "0edf06eb4b00fb535d8a68f8e0aee6328f0d920da03a1298686143b8bbc81d0b",
+    "tmp/pdfs/susskind-memory-two-charge-build/page-6.png": "b4401549a77207ef1a7d39e802658c5ee7d4d9d5e5561800e4360c9ba4a28e4d"
+  },
+  "build_pass_hashes": {
+    "pass1.txt": "884961c8b5bd462d7dd9ada4e6e61fb13eefadcd2ac60d37fcd0889032e7fbbd",
+    "pass2.txt": "884961c8b5bd462d7dd9ada4e6e61fb13eefadcd2ac60d37fcd0889032e7fbbd"
+  }
+}

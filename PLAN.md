@@ -1,5 +1,127 @@
 # de Sitter 全息研究规划
 
+2026-11-07 slater-ladder阶段：文献先核MSS、Xu与Rajgadia–Xu，并以Itakura/Rajeev辨明参考极化。旧Rindler/midpoint不重复。固定Slater态对原covariant words的annealed矩精确等于sector trace，故保留参考占据数据，取同一J的纯particle–hole creation块。完整fixed-word证明给M=q^(n/2)b；实际n_N=Q_E/p去dressing得到固定polynomial core的渐近CCR，自平均与旧trace L2消失另证。完整H首步缺额r→Poisson(2lambda)，捕获范数平方sqrt(q)，剩余C(1−sqrt(q))不能忽略。下一首任务改为同原J的joint(H,M,M†)一般图/低交错四点，保留所有Poisson缺额方向并检验正表示与Hamiltonian闭包；再接已有bilocal共同矩、state preparation/真实flow与空间/内部生成元。单ladder的canonical结果不等于已完成meson dictionary，r/p→0也不能把正交缺额方向识别。精确科学输出/九页PDF本地封存；不Git、不外部回复，长期goal active。
+
+2026-11-07 bilocal-fourth-tail阶段：有限N受限covariance和ancilla contraction给pure/repeated marks的全次数阶乘包络；精确Phi/C的normalized CP路径将actual neutral A_v、eta_j、T_j接可和S_r尾。Clifford Riesz只在full-Fock使用，CP导数与charge有限差分给eta的D/p、L/p界，inverse-Jacobi五项精确重组闭合ordinary charged G_n。旧同样本charged归约与neutral local桥升阶，fixed-degree先传exact pinching，再去尾和actual bilocal返回，完成固定lambda、紧实时间的完整共同四点构造。三science/十一页PDF本地封存。下一研究顺序：先核Susskind/Itakura/FLZ各自态、极化、正规序和canonical输入；再在当前已构造代数上选择可检验的物理子空间/态，构造实际微观P^-及空间/内部生成元，最后检验与体传播及相互作用的对应。原完整finite-time S4尾任务已闭合，不重复低三species结果；完整memory本身Taylor尾未另称已证。旧KS issue初核不改，9890端点失败和21143单元未独立重积分保留。当前不Git、不外部回复，长期goal active。
+
+2026-11-07 bilocal-four-point阶段：文献/旧记录先行避免重做已有J2/H多点；精确J2−Y_old=kappa2(C−C_Q)及A0=(1−P)J2回接actual。带源singleton先相消、有限overlap指数矩先支配，再pair-Poisson；四incidence证明限定disjoint D/L类高阶局部指数为零。W1只沿同Gaussian弦直接配对，WD连接为零，接旧端点相消得到长度(1,1,2)的三species mixed-q。一次Gaussian-Schur矩将B1→8lambda CqW1的旧L2桥升全部fixed Lr；得到实际低生成元实时四点、非scalar正commutator及旧BINT长度(2,1)核的新应用。四science JSON/九页PDF本地封存。新S_r return速率p^-1/(2r−1)使r4余项闭合，但完整bilocal四点仍缺可和L4尾。下一首任务改为度数常数可和化及更高后代共同四点，避免重复低场代数；之后明确态/极化、microscopic P^-与内部质量结构。二点谱与非零模型OTOC仍不充当finite-G引力。当前不Git、不外部回复。
+
+2026-11-07 bilocal-reconstruction阶段：完成实际Bcal=(1−P_h)S_c的compact-time强重建。每energy block复制bath使M0=P_hM对应F0 contraction，exact m(F−F0)=−F0*(mδM)*F；good charge中δM2=O(p^-2)、δM8=O(p^-1)，2/8→4插值加F/F0−U的L4界得到O(p^-1/3)，bad尾exp控制。全bilocal covariance继承完整AA/AB/BA/BB，charged b=e^-iet c_d、neutral b为+2C二阶指数差商。原四源proxy路线非必需，未创建其driver。两科学输出和七页PDF本地封存。下一研究顺序转到同J非交换四点/交换子与态/极化，再微观空间、内部质量生成元和相互作用；不由tr comm=0断言classical，不把模型四点直接叫finite-G引力。已有体谱继续只作匹配目标。
+
+2026-11-07 memory-joint-regression阶段：joint charge tilt与UI确定内部Gaussian收缩的守恒X背景，显式g_n(X,H)回归加same-copy RR/RJ/JJ切图证明R_n→Σa_nd J_d。无桥Mahonian相消与外部Hermite桥界给固定场L²双能量谱/无对角质量，完成exact pinching；先用有限N ordinary尾，再极限Hermite重求和，得到全部AA/AB/BA/BB有限时间核。三science JSON及九页PDF封存；旧R/J3命名校准另留，不影响一般构造。研究计划转回实际bilocal：由精确Volterra差式构造去背景放大涨落，证明非线性返回余项，而后与Itakura canonical dressing和FLZ内部质量算符比较。已有bulk谱不重算为新发现，微观P⁻及finite-G四点仍待建立。当前不Git、不对外回复。
+
+2026-11-07 memory-oriented-transfer阶段：精确D接口把相邻charge传播缺陷写在同一full-Fock H上，number Taylor+Gaussian Sobolev给全部固定导数/能量权重的O(1/p)替换；ordinary-power polar telescoping给可和尾。带源singleton先精确消去，随后pair-Poisson得到whole-field闭式κ_a=d(d−1)−4cr(O)−2i、κ12=4i1i2+2b(b−1)−4cr(B)。无直接桥的4i1i2来自charge静态涨落，G₂的finite差分与独立局部源一致；扣energy与charge两层后才恢复旧Y₋方差。计划转到joint X/H回归及全部共同Gram，再接charged residual的HS/无对角质量与AA/AB/BA全时间核。proof draft第8节保存候选，不把其写成已完成。五JSON、八页PDF和证据本地保存，不Git。
+
+2026-11-07 memory-wick-descendants阶段：整体source禁配对与局部mark分离，whole-field内部pair计数实现chaos/OU；切图开放端点平均给全部确定性能量回归。无field桥组中心化抵消，余图至少q^r抑制，外部归一Hermite有限带宽+指数界证明固定后代L²谱密度和无对角质量。正测度弱收敛传递exact pinching，再用旧L²尾及回归投影收缩完成neutral全有限时间核的收敛构造。下一阶段转charged transfer defect，保留forward/reverse源与非零低阶cross，求AA/AB/BA后才组装完整memory并进入Susskind体字典。固定T谱N极限与all-T级数尾严格区分；不另声称无限密度L²或小λ一致。当前仅本地保存。
+
+2026-11-07 memory-size-bridge阶段：文献优先核TX辅助SU(2)、CL Clifford semigroup、BNR有向CAR/pair-Poisson、EP多block框架。有限Casimir与overlap指数矩给中央rank/half-length强桥，general-r spin ladder给full-trace全部固定差矩。两局部标记得到K(I)=|I|²−4cr(I)及λK12+λ²K1K2；Mahonian生成函数给固定j离散rank缺额law、TV和全部固定矩收敛，未声明finite-N rank MGF收敛。两能量矩确定唯一紧支撑正测度，j1回收旧force谱。下一阶段沿此规则计算ordered Gaussian-Wick后代，保留composite禁配对；组装neutral全时间核并识别静态谱质量后处理exact pinching，再接charged reverse source及AA/AB/BA/BB。十页PDF、四科学JSON和证据本地保存，不Git。
+
+2026-11-07 neutral-marked-series阶段：固定k高rank六矩由旧Q[A,B,z]证书扩展，一次commutator的D-graph Taylor尾配二次commutator控制actual exponential的D²谱权重UI。有限θ斜率、DEj→0及有序Wick受迫递推把neutral B接到可和的Uj=DZj家族，给全迹紧时间强表示和协方差替换。下一步转为每个固定次数的common-J联合marked contractions、charged reverse source以及zero-frequency质量控制；有限列表或矩收敛本身不能决定exact pinching极限。文献接口用Effros–Popa/BINT/Xu原文，先核物理rank mark映射再借kernel。九页PDF、两个新JSON与证据本地保存，不Git。
+
+2026-11-07 memory-two-component阶段：three-color commuting-square+全Fock joint moments把four-u条件平均升为强L²能量回归；总degree可和尾、α替换与binomial尾证明其collective pinching消失。实际memory归约A+B，统一协方差替换保留AA/AB/BA/BB。有限rank slope、旧S/Lin/F桥接给B1/B2及全迹混合谱，A0–B2非零只作系数校准，不冒充全时间导数交换。下一阶段转为共同J两分量全时间核；neutral可从有限Jacobi重排和pE_j受迫递推开始，需补rank尾与joint marked谱，charged仍保留reverse source。八页PDF、三新JSON及失败证据仅本地保存。
+
+2026-11-07 memory-uniform-bound阶段：weighted polar Duhamel覆盖固定时间导数/能量权重；同u的偶Dyson展开留下中性项、四u项及消失余量。有限参数Jacobi递推定量比较coupling chaos与逐样本能量函数，整个复平面展开避免无界Gaussian谱的截断漏洞，闭合p(1−P_h)Φ传播界。现在X0与实际finite-memory field的全charge二阶矩统一有界，旧首返场差可升为两点函数替换，对所有外部t一致。计划从“证明二阶界”转入三分量共同J的联合涨落核及交叉项；先做精确bookkeeping/低阶谱校准，再求全时间核。九页PDF、三科学JSON与证据本地保存，不Git。
+
+2026-11-07 memory-charged-transfer阶段：完整forward/reverse Gram及source正交已核；polar去掉通道幅后低chaos传递O1/N，adjoint与高chaos尾给实际ordinary传播。全rank S_r−α^k界接此前Dfrak theorem，完成真实F的OU近似/fullcharge L² O1/N。下一步由一般相邻charge接口推进到带二阶时间导数、两侧h权重的传递，保留m放大后order-one缺陷；同时研究精确OU force=(1−α²)E[u exp(is(αh+√(1−α²)u))u]及其能量回归。不能把无导数误差直接求导，也不能把含u的指数当独立Φ sandwich。八页稿、三JSON仅本地保存，无Git操作。
+
+2026-11-07 memory-wick-rank阶段：独立乘积rank卷积成正Markov链，条件Casimir方差非正二次项给全k deficit²=O(λk²+λ²k⁴)。进一步一步缺额、U(N)等变cross消去、Gaussian creation adjoint和全阶Duhamel导数，将最高chaos结论升为实际普通exp(isH)的||(pNcal−Rcal)exp(isH)||=O_S(1)，全charge尾可控。下一步接相邻charge的实际force/coherent transfer，而非继续声称所有低chaos尚未控制；尚缺的是该rank–chaos估计到X0能量回归残量的接口，μ(pNcal)不能当samplewise conserved。独立线性charged probes给精确四点导数，BNR有限site规则须保留λ/N marked双命中。八页稿及三JSON本地保存，无commit/push/ZIP。
+
+2026-11-06 memory-return-background阶段：双tag抑制非内部pair，接标准BKS条件期望取得Q_N(f)强多项式极限；全Fock Hölder/Taylor与八阶矩插值给pΛ→b的紧时间L4近似。保留m,a的精确守恒K_N，利用(m/p²)(p/m)=1/p相消得到首返κ_s(H_N)，pinching后实际场与X0的L2差趋零。下一步由并列六产品改为集中求X0次领先共同J双bubble的统一L2界与有限时间谱；原因是高返回的动态场已消失，但现有O(p)粗范数不能把o(1)场差直接变成协方差o(1)。此前六产品O(1/p)绝对误差继续有效。六页稿与证据本地保存，无commit/push/ZIP。
+
+2026-11-06 issue #1初核完成：原文/八页附件和43hash/18upstream比对，独立有理数重组确认所提供积分包围支持普通与phase优化下界。未重做全单元积分，9890端点回归失败保留。三页报告本地保存，无对外回复。主线继续finite-memory六产品；旧KS全量独立复积分及端点差异定位另列后续，不把这次算术检查写成全量复现。
+
+2026-11-06 memory-return-expansion阶段：用逐i force Gaussian square functions和分部积分取代高阶marked图枚举，给所有charge的A^k=O(p^k)，再得全迹m²G^k=O(p^(4−k))。有限Volterra两次返回给实际pinched collective field O(p^-2)、covariance O(p^-1)归约；一次返回不足以在现有O(p)粗范数下证明covariance o(1)。下一步计算n+l≤2六个共同J普通传播产品、有限s紧性与极限，再体字典。用户提醒的新issue #1先做旧KS支线解析/证据核查，不混淆当前主线。六页PDF、数值与来源本地保存，继续低Git频率。
+
+2026-11-06 memory-charge-sum阶段：C_m≤(Js²/λ_N)e^(2p/N)、active-sector B denominator≥C_m²；所有反项明确定义，coarse U2 norm≤KN⁴。逐项审核x≤√(Alogp)的已有相消/尾/trace余项，给统一内窗norm；外尾N⁸由Chernoff压住，完成full β=μ=0 (Y,L,U2)谱及joint Gaussian charge因子化。由无static atom接精确samplewise pinching，下一步直接攻Fscr(s)=(1−P_h)mMhat(s)的两插入finite-memory covariance和余项，再体介子字典。原因：compact-window/全charge接口已完成，有限s的新定义消除任意背景延拓但尚无全核。三JSON/六页稿本地保存，不commit/push/ZIP。
+
+2026-11-06 memory-central-raw阶段：一般charge五raw filters的中央修正为2λx ell_P C_mB；F的centered slope和factorial tails接signed covariance、upper/lower lifts，恢复中央raw U2和完整(Y,L,U2)正谱。原half核不重算。下一步改为窗外全charge已减背景字段的可积控制，须先定义端点sector反项和退化投影，再接binomial尾；后续finite-memory两插入余项与体介子字典。理由：固定中央紧窗及raw低阶接口已完成，但不能直接交换全charge和极限。三JSON/六页稿仅本地保存，降低Git频率，不commit/push/ZIP。
+
+2026-11-06 memory-central-spectrum阶段：显式occupation log余项+balanced singleton/指数重叠矩给固定marked图central/fullFock的O(1/p)迹误差，一般charge Casimir补E_in中的N−2m项后仍有S=(O−+O+)/2+O_L²(1/p)。已接中央oriented矩阵、T与实际projected W2core谱V2 μ_q²。下一步中央raw U2 low-chaos后代表/精确守恒扣除及filtered F的中央lift，再完整mixed谱；不能将本轮误差无推导乘p增长counterterm。随后窗外charge、finite-memory、体介子字典。三JSON/六页稿仅本地、不commit/push/ZIP。
+
+2026-11-06 memory-central-gram阶段：改用O=tV−h0U的极化式，normalized rank权重总质量相消给neutral矩一步漂移O(1/(Np))，独立闭合S–O和中央四Gram，接强core得到正投影方差及后小λ1024Js8。此前general charged finite-N候选仍待解析，但不再是当前极限或后续研究的前置阻塞。下一步中央energy insertions/raw U2谱，随后窗外全charge可积性、finite-memory两插入余项、体介子字典。三JSON/六页PDF仅本地保存，不commit/push/ZIP。
+
+2026-11-06 memory-central-cross阶段：用一般Rem范数构造公共rank等距传递，实际A控制一步O(1/N)，中央O(p)步加两端output六阶尾给S的O(p^−2/3)传递，完成偶N固定中央紧窗(B,L_in,S)Gram。改变路线的理由：自范数无需另求general exchanged Casimir二阶矩。剩余S–O候选通过精确CAR与全秩数值，但general exchanged gradient收缩尚待显式证明，不能将contiguous式或小系统核对代替该步。下一步先完成这一步，再四Gram/energy insertions/raw谱，之后窗外全charge尾、finite-memory与体字典。仅本地保存，不commit/push/ZIP。
+
+2026-11-06 memory-central-norm阶段：一般charge相干范数、factorial input尾及中央output六阶矩已接通，得到gA强替换O_L²(p^-1/4)、(B,L_in,O)Gram与完整W2core的中央紧窗强展开。下一步求S_N的cross，尤其S–O，不能复用半填充parity；然后完整Gram/能量插入、raw谱、窗外可积性及finite-memory。本轮未证明中央四方向Gram，旧半填充结果保留，仅本地保存。
+
+2026-11-06 memory-central-window阶段：已扩独立正rank乘积六阶矩至中央紧窗，并从精确两charge滤波器求出gH的4λx(1−q)²守恒修正。共同C_m的p倍相对漂移也有有限极限，故中央窗的反项须保持sector依赖。下一步接实际charged norm transfer、A input尾及marked overlap的一致界，随后Gram/投影与窗外控制；finite-memory和体字典仍在其后。尚未完成中央窗完整算符谱，继续仅本地保存。
+
+2026-11-06 memory-raw-spectrum阶段：已用raw五字恒等式和旧W2表恢复动态后代，明确逐样本守恒C2,N，得到U2正谱及Y/L cross；小λ恢复的Y后代占11/35，归一形状(9sech⁸−2sech⁶)/7。原X谱保持有效，适用对象是额外投影场。下一步推进中央charge窗一致扩展，然后两插入finite-memory余项与能量依赖扣除，最后体介子字典；无需重复本轮raw U2两点组装。仅本地保存，按用户要求继续减少Git频率。
+
+2026-11-06 memory-mixed-spectrum阶段：Y+–R的74模板全阶cross、upper-charge covariance与实际reverse CAR lift、normal k4 lift补齐F接口，完成X–L0及(Y,L,X)正谱matrix。下一步调整为先恢复raw二次记忆被hatPi去掉的动态后代，再扩中央charge窗、控制finite-memory余项并接体字典。原因：当前显式Phi(s)=Y+isL−s²X/2是额外投影后的多项式，不能直接冒充raw memory Taylor；这一接口比重复已闭合的mixed谱更直接。六页PDF、3JSON/失败证据仅本地保存，无commit/push/ZIP。
+
+2026-11-06 memory-oriented-kernel阶段：输出缺额S_N=(O−+O+)/2+O_L²(1/p)，明确double mark只作用交叠site；两方向force正谱matrix及128模板reverse cross给raw八方向投影X的V4 μ_q4+V2 μ_q2完整两点谱，X–Y−全能量cross也闭合。下一步优先X–L：缺Y+–R、Y+–F、Q4–F，随后中央charge窗/有限memory/体字典。原因：此前T自谱和Q4–T已完成，不再停留于等时组装。七页PDF、4JSON仅本地保存，不commit/push/ZIP。
+
+2026-11-06 memory-descendants阶段：五字精确恢复W0/W2/W4；旧四后代无S_N的W2项，补marked Wick块的全Fock→半填充迹桥接，完成raw集体mZ2在八方向span外的等时双chaos残量。下一步从等时组装转向T_N与Q4的联合双能量谱，再W2中央charge窗、finite-memory/体字典。原因：原始后代恢复与投影已闭合，剩余不能由ordinary chaos等时正交推断。七页稿、3JSON/失败证据只本地保存，无commit/push/ZIP。
+
+2026-11-06 memory-filter-limit阶段：正π六阶矩的一致界与S≤p^(3/4)增长窗口完成g_A强替换，并组装完整固定半填充W2core及相对(B,O,JhF)的正残量。路线调整：无需先求下charge交换二阶Casimir或A的固定输出紧性，增长窗口已经足以完成滤波任务；不把固定输出紧性/完整Poisson律标为已证。下一步恢复W4后代低chaos并拼rawZ2、扩中央charge窗，再联合谱/finite-memory/体字典。六页稿、3JSON仅本地保存，无commit/push/ZIP。
+
+2026-11-06 memory-residual-norm阶段：固定半填充AA范数、Delta*=||W2A−S||²极限、完整四方向等时Gram及相对(B,A,JhF)的正残量已完成。log窗口同时控制A的多项式输入缺额尾。下一步专攻输出rank尾与g_A取常数，再中央charge窗/W4低chaos/rawZ2；原因是AA/SA已闭合，但A在大输出缺额处的权重还不能由输入尾替代。六页稿/4JSON本地保存，无commit/push/ZIP。
+
+2026-11-06 memory-coherent-cross阶段：相邻charge纯rank变换、signed前一Casimir矩及真实S–A cross已求出，Sperp–Y=Vs。下一步求固定半填充Delta_N=||W2A−S_N||²及A weighted tail，再完成g_A取常数、中央charge窗/W4低chaos/rawZ2。原因：S与A并不正交，缺的是差的强度；旧full-Fock A范数不能不经证明代入固定sector。六页稿/4JSON本地保存，无commit/push/ZIP。
+
+2026-11-06 memory-parity-gram阶段：signed Casimir矩已由现成Racah差分式与τ完备性精确求出，奇偶投影后的S矩及(B,Linput,S_N)等时DS Gram已闭合。下一步专攻A的下charge相干cross和weighted tail，不再重复纯S普通/奇偶低矩。原因：S扣B且正交JhF后仍有正范数，但A未加入旧span，尚不能决定新的残量；完整Q取极限仍需要A尾。之后恢复rawZ2和中央charge窗，再finite-memory/体字典。五页稿、3JSON及失败记录本地保存，无commit/push/ZIP。
+
+2026-11-06 memory-two-charge阶段：一般Q_Ecal reduced coefficients已由charged transfer精确求出，两个乘积map保留相干关系且覆盖旧禁戒通道。H²部分合并大项后有固定deficit线性式及一致尾支持的L²近似。下一步不再重新求一般filter；改算S_N输出deficit插入的奇偶加权Gram及与A/JhF cross，证明A权重可取极限并扩中央charge窗，再恢复W4低chaos/rawZ2。原因：一般算符式已闭合，剩余是实际权重与联合谱。六页稿/5JSON本地保存，不commit/push/ZIP。
+
+2026-11-06 memory-charge-lift 阶段：半填充 sym product 选择规则及一般纯 rank p 反例，排除将旧 N5 共线结果推广为一般 scalar filter。真正 Q 在 N6p2m3 的 (2,2;1) 通道非零，而 H² 同通道为0。下一步保留相邻电荷两个 reduced-product amplitudes、multiplicity、相位及 Ψ 插入，求相干 Gram/cross，再取 DS；旧 π 尾界转为两电荷各自正界，不能代替 cross。原因是单乘法 map 有严格零点，先除再取极限会丢通道。四页稿和精确证据本地保存，不 commit/push/ZIP。
+
+2026-11-06 memory-rank-blocks阶段：既有N5二次tensor的18 rank块中11非零且四map共线，旧动态残量具体化为通道权重差。复用Racah/covariance得到独立rank乘积的正output概率，并求一般输入比例/填充的前三deficit矩及尾；same-J对称乘积受其控制。下一步计算Q_Ecal的一般reduced filter（保留multiplicity/相位），证明output增长及输入尾后求DS norm/cross，再恢复W4后代和raw Z2谱。原因：有限残量不是已确认的新块内方向，且单输入ω已不够，需三deficit及交换信息。本轮六页稿/5JSON本地保存，无commit/push/ZIP。
+
+2026-11-06 memory-quadratic-contraction阶段：W2Ecal的有限N精确相邻charge协方差公式已求，H²投影、旧二次方向完整Gram及逐样本scalar分离完成。N5p2m3存在动态残量，但两个小系统去scalar后闭合；一般p1解析式全守恒。下一步按两个输入coupling irreps及输出rank分解该bilinear map，计算DS残量权重与cross，再恢复W4后代低收缩及raw Z2联合谱。调整理由：仅凭有限系统norm或将Phi(h²)直接替为q²都无法处理放大后的rank差异。完整finite-memory协方差及体空间/质量字典仍为主线。五页稿本地保存，无commit/push/ZIP。
+
+2026-11-06 memory-quartic阶段：二次记忆Z2精确式与守恒首返/漂移D2已求，有效core E=B22+L²A/4。第四chaos新Q4通过807模板完整两点归约至q⁴核，Y/R交叉谱由482模板消去。下一步计算W2 E及H²守恒投影，恢复W4后代E/M/S/Z的低chaos收缩，完成raw Z2谱；随后处理Q4–F/Y²混合与有限memory二插入余项，接体空间字典。原因：独立第四通道已明确，继续单核扫描无助于剩余实际插入；首返虽在动态余项中消失，其守恒贡献须保留。六页稿和所有计算/失败本地保存，无commit/push/ZIP。
+
+2026-11-06 memory-fluctuations阶段：能量回归背景g_s已由已有q-Markov核确定，Vbg=G_(q²)−G_q²给只扣scalar mean的集体发散下界。零/一次守恒反项明确，首对系数Y与L=R+aJ_HY+F的正谱矩阵完成，时间cross0不消能量cross。下一步求二次居中记忆Z2、G²首返项及第四singlet，随后建立两个有限memory参数的余项界/重求和，再接体内部核。原因：首对系数已闭合，但其Taylor多项式不能替代完整有限memory涨落；领先能量回归也不保证扣除后紧性。六页稿、计算/失败与证据本地保存，保持低Git频率，无commit/push/ZIP。
+
+2026-11-06 memory-force阶段：已求能量居中后的标量平均记忆全固定λ核，以tagged same-J force接已有r=q Mehler；两次Duhamel与charge尾控制使比较误差在乘p后消失。原始传播首个1/p修正及small-λ log cosh随之得到。下一步明确减守恒投影、归一化与两个memory参数的算符协方差，以renewal coefficients及旧Y/T3通道作起点，再研究有限memory时间的谱控制与体内部核。理由：平均核已明确，但介子重建需要平均以外的集体涨落，不能把scalar mean替代算符。七页LaTeX/PDF、本地证据与失败记录保存；继续降低Git频率，不commit/push/ZIP。
+
+2026-11-06 bilocal-channel阶段：完整双时singlet现有精确charge-removal等距表示，投影记忆M(s)=R†exp(iK⊥s)R保留相邻charge相关；初值减守恒部分为Y/m，直接接既有动态通道。固定紧时间Duhamel界与charge尾估计证明普通2S/N→1。下一步从M(s)的谱/协方差与涨落重求和构建实际空间接口；原因是完整投影已能表示，但leading归一bilocal平凡，不能停留于其单核或把M(0)中心时间两点误作M(s)。极化可参考Xu/Rajgadia–Xu既有路线，需重新匹配当前态与Hamiltonian。六页稿本地保存，不commit/push/ZIP。
+
+2026-11-06 bilocal-interface阶段：已找到并应用Itakura的既有光前双局域介子投影，明确源的质量混合及高矩尾；从Clifford contraction和subset计数求得微观双时CAR导数的精确系综权重与DS曲率。下一步计算S(t₁,t₂)完整singlet投影代数/协方差，保留四项反对易子结构，寻找极化与非线性dressing，接体collective action的内部二次核及顶点。原因：体投影本身已有，而两个时间到光前空间的真实映射才是缺口，不能仅重新命名坐标或由未投影正范数宣布完整不闭合。六页稿与证据本地保存，遵照降低Git频率，不commit/push/ZIP。
+
+2026-11-06 bulk-target阶段：回读MSS重整化质量规范，接入FLZ a=0 ’t Hooft方程及现成Chebyshev/Fredholm方法，复现六级体谱；以正二次型给有限p平面谱的相对界π/p²。区分单介子内部夸克分数与上一阶段两singlet相对分数，条件性交织检验不越层解释。下一步寻找真实微观空间插入或bilocal-to-meson重建核，将已知质量算符、boost时间核和乘法顶点一同匹配；反向光锥响应的一二阶矩提供具体判据。原因：已经有确定的体谱靶标，不应再任意选Casimir质量函数。五页稿、本地计算和失败记录完成，无commit/push/ZIP。
+
+2026-11-06 ordering-metric阶段：用LS领先核与标准离散系列直接证明闭合内积 A=Ctot−C1−C2，无需依赖有限q全k overlap猜式。A加权空间允许酉搬运的自由平移，但精确范数17+√66 s+181s²表明普通自由源质量不能与T=√A同时满足闭合目标扇区的酉交织。下一步优先精读Susskind/Miyashita/Sekino体规范模型的实际空间插入、生成元和乘法映射，检验该额外交织要求是否适用于真实字典。理由：内积与顶点已明确，任意挑选F(A)只会保留质量自由度。六页稿及证据本地保存，不commit/push/ZIP。
+
+2026-11-06 commutator-primary阶段：由LS/Streicher现成公式落实完整固定时间48λcosh增长，并将LS既有额外排序primary接到当前X/R：K完整q⁵两点、精确三时间顶点、第四矩正额外项。下一步优先处理两排序扇区的实际内积：核并推领先metric h(Ctotal−C2−C3)，再研究Q、空间平移、质量算符与product map的兼容性。理由：已获得传播和非零乘法数据，应从单核推进到两物质表示与动力学，而非重复扫描或把d5当基本粒子质量。六页稿与全证据本地保存，不commit/push/ZIP。
+
+2026-11-06 混合高点阶段：2/3槽vertex组件分类与14模板相消给(H,X,Rhat)全固定阶mixed-q规则，q⁶互交叉已落实。接BINT/BNR不等长现有四点，求mixed OTOC、等时非对易与初始增长。下一步核已有Lin–Stanford/Streicher unequal-probe首阶表达，求D23(t)/λ完整固定时间极限，再接两species空间/平移与体相互作用字典。理由：t0/t2/t4/t6提示48cosh(4Js t)，应从现成四点推导，不继续堆Taylor。F任意混合高点另保留。六页LaTeX/PDF本地保存，无commit/push/ZIP。
+
+2026-11-06 三阶谱闭合阶段：已由精确带电协方差lift与single-filter逐图相消证明ν_FY/ν_FR=0，结合旧ν_RY得到U=M₃−P_N的完整正双能量谱。真实时间后代不可丢，小λ归一核(47sech⁶−36sech⁴)/11、强度占比R:LY=2:9。下一步从两点转混合高点：优先X R X R、X X R R和允许的三点X R²/F X R/F²X，检验互交叉q⁶假设及非配对项，随后与体空间/质量字典结合。理由：剩余两点cross已解决，继续增加单核扫描不决定相互作用。当前仅两点谱矩阵对角，尚无完整多species Gaussian定理。七页LaTeX/PDF本地保存，保持降低Git频率，无commit/push/ZIP。
+
+2026-11-06 三阶交叉阶段：S/Z的精确一次反项与O(1/p)极限已建立，raw M₃扣守恒P_N后归入F/R/Y及后代。全阶RS/RZ相消加绝对连续谱给ν_RY=0；FZ的首个1/p实时修正接已有F核。下一步聚焦ν_FR与能量分辨ν_FY，把rank-filter covariance bridge接marked-chord，保留中心化所需rank次领先项。原因：S/Z不再需要作为独立species重复求核，剩余cross才决定raw谱与混合相互作用。之后继续高点与体空间/质量字典。七页LaTeX/PDF与证据本地保存，不commit/push/ZIP；Git积累到连贯研究阶段后再统一整理。
+
+2026-11-06 F全核阶段：rank权重总变差桥接及Gaussian/Hölder整图界把同J的F接到已有independent embedded chord rule，得到(H,F)全阶正交q-Gaussian矩、r=q完整核与sech²小λ谱。旧“更高F矩/全核”已解决，下一步直接求F–R/S/Z实时cross，完成raw M3的实际谱账本；随后混合X/R/F高点和体平移字典。理由是继续单核扫描不增加原始算符或相互作用的信息。多项式rank滤波/Charlier推论作为后续工具，暂不当局部导数粒子塔。七页稿本地保存，无commit/push/ZIP。
+
+2026-11-06 三阶残量动力学阶段：已由已知embedded covariance及Racah终止求和，求出same-J F的精确动态矩；DS归一μ₂=2Js²(1−q)/λ，小λ8Js²。Gaussian第四频率矩界排除高频逃逸，证明任何弱极限保留动态权重。下一步转向F更高双能量矩与全阶same-J收缩，再算F与R/S/Z实时cross；原因是原“正范数是否真动态”已解决，而q探针全核和raw M3谱仍未完成。保留体平移/质量字典目标；六页LaTeX/PDF本地保存，不commit/push/ZIP。
+
+2026-11-06 三阶一次chaos阶段：已用已有U(N)协方差/charged tensor方法求出raw T₃的一次Gaussian映射tν，识别有限N非守恒与DS正残量范数64Js⁶q²。下一步先算F的动态矩与strength density并保留H–F同J contractions，再进入X/R/F混合高点；原因是原始导数族除q³通道外还有在DS不消失、相对小λ为O(λ)的分量，不能作为守恒量丢弃。现有q³完整核保持有效，空间/质量字典仍未固定。六页稿与证据本地保存，无commit/push/ZIP。
+
+2026-11-06 三阶完整核阶段：全阶问题归约为177端点模板，独立整数多项式证书消去k<3通道，三桥给q³；正谱测度论证把所有固定矩接到完整Mehler两点与sech⁶小λ极限。下一步转raw T₃的一次Gaussian chaos和d2/d3混合高点，原因是全阶两点已解决，继续增加单核曲线不产生新的介子相互作用信息。先明确原始导数族的完整算符分解，再检验不同singlet互权；尚不由d标签决定体质量。六页稿和证据本地保存，无commit/push/ZIP。
+
+2026-11-06 三阶 singlet 阶段：从 MSS n3 家族构造精确厄米分量 T₃，去除(3/2)LA 后代；第三 coupling chaos 的 T/S/Z Gram 给正 Schur 余量 R，并实际计算非零 K、μ₂、μ₄与九个两弧矩，全部匹配 q³ 探针。下一步优先任意阶端点相消证明及 raw T₃ 的一次 chaos 识别；理由是低阶证据已经指向可接现有核的具体结构，继续堆同类矩不能替代全阶推导。保持状态/时间/空间质量区别，五页LaTeX/PDF和计算只存本地，无commit/push/ZIP。
+
+2026-11-06 两物质阶段：读LS实际ordered表示/coproduct/Gram及Xu加权factorization，逐块延拓Q_h正性和固定后代极限；用标准Jacobi/Laguerre耦合表示给相对坐标，并直接证free mass不对角于k。最实质结果是[dot X,X]的精确通道分解：领先1280=256（零物质H）+1024（第一相对primary），与独立完整Wick吻合。下一步回到MSS独立导数fermion bilinear族，先扣守恒及Liouvillian后代，再算新的Gram/谱方向。调整理由：两个已有X的chord channels约束singlet相互作用，不能充当单介子species塔；继续只增加k扫描不选择质量。六页稿与证据本地保存，无commit/push/ZIP。
+
+2026-11-06 反对称后代阶段：先找到 Ambrosini 等已知二项式/Krylov 前驱，复用精确降系数，再以整个 grade 的算符范数界补全固定 d,n 的规范化极限。由 Laguerre 形式比较证明有限 h 的 Q_h≥0，并得到初态 Gamma 弱谱收敛；原“是否存在与真实 boost 相容的候选”已推进到明确双侧弦构造。下一步读实际两物质表示、coproduct 与 Gram，检查相对后代及平移的组合律，再接三通道首阶四点和 P− 动力学。理由：单粒子 Q 已有代数来源，继续重复单粒子拟合不产生介子谱。Q_h 的逆与物理质量/能量单位尚未固定。六页稿、证据、继续位置仅本地保存，无 Git 提交、推送或 ZIP。
+
+2026-11-06 平移阶段：已把“添加空间信息”具体化为P+=μQ、P−=m²/(μQ)的正能量候选族和Bessel时空核，证明固定d=2/boost数据不选质量。有限q种子检查排除了直接把LS保持弦长Bhat认同Btr的路线；有限迹下严格伸缩协变的正单侧算符只能为零，故微观构建应针对双侧算符或明确的奇异极限。下一步检查左右chord raising/lowering差除√h的作用和Gram渐近，判断它们与nbar能否在当前seed的后代空间形成正确sl2，再构造正null生成元和两粒子组合律。原因：已有微观Liouvillian并非原长度保持boost，但它天然含左右差，可能给另一可控极限。六页稿及验证仅本地保存，仍不Git发布。
+
+2026-11-06 固定时间首阶阶段：已完成Lin–Stanford§4.6/附录G与Streicher§3的实际阅读和当前singlet代入，三通道一般四时间连通系数给出C与κ22闭式，并通过精确局部弦矩与有限λ独立实现检查。原固定时间首阶任务推进完成。下一步优先查chord生成元、多粒子表示与独立平移/空间观测量，构造交叉关联并检验Rindler平移代数和质量可辨识性；理由是时间两点及四点现在均有具体靶标，而任意质量的径向伸缩自由度仍未解除。一般四弧总截断界可作为方法补充，不以持续同类扫描替代物理构建。五页LaTeX/PDF与完整证据仅本地保存，继续降低Git频率。
+
+2026-11-06 Rindler波包阶段：已从明确singlet谱用已有KL变换构造自由体场midpoint实现，得到一致调节误差和完整径向范数。任意质量可由空间伸缩配合，说明下一步应增加独立空间观测量，而非仅拟合时间衰减。同时普通等间隔热四点33与微观第四矩3不匹配，故先沿Lin–Stanford §4.3/4.6/附录G落实bra/ket、timefold和多粒子内积，再提取固定时间O(λ)相互作用；这比自行指定Rindler热轮廓更直接，也复用已有推导。随后构造多singlet交叉核与径向/平移生成元，再检验介子谱。五页LaTeX/PDF及110项数值核对本地保存，继续降低Git频率。
+
+2026-11-06 OTOC阶段：已实际调用BINT现成转移核，完整保留同species三channel，得到固定正λ的交替时间OTOC与对易子平方；正项crossed重排及非真空源截断界使计算可控。Mukhametzhanov已有scrambling渐近经λ_src=4λ、J_src=2J_s换算得到z=(λ/2)e^{4J_s t}和string增长率4J_s，有限λ偏差完整保留。下一步优先以这个微观四点为目标核Rindler体波包/介子观测量及时间映射，并研究固定时间首阶λ修正。理由：微观单singlet传播和交替四点都已有明确函数，继续只增加同类扫描不能建立体字典。六页稿和全部证据本地保存，Git频率继续降低。
+
+2026-11-06 多标记阶段：在固定正λ双标度及β=μ=0下，已证明扣除守恒二次分量的导数singlet与H的所有固定阶联合矩具有mixed-q多弦规则，且补齐固定实时收敛。原“三点/四点是否仍等价”任务推进完成；实际算出κ₄(t)=(1+q⁴)G_{q⁴}−2G_{q²}²。下一步直接接BINT已有crossed四点公式，保留q⁴互交叉权和三个channel，再求一般时间小λ首阶及体观测量映射。改变顺序的原因：所读Rindler主线文献尚未给本插入径向重建，而多标记交换提供可立即检验的微观相互作用数据。七页稿及证据本地保存，不提交/推送Git。
+
+2026-11-06 两点核阶段：首个导数singlet的固定正λ双标度两能量谱已由任意阶端点交换恒等式归约到守恒二次通道及已有q²探针核；正测度论证补齐固定实时收敛和静态权重饱和。此前M₄/完整两点谱任务已推进完成。计划转向实际Rindler传播字典和O_⊥三点/四点，原因是两点等价不能自动决定高点相互作用或体质量。先核原始文献的观测量、态与时间映射，再作新计算。八页稿和证据本地保存，减少Git频率。
+
+2026-11-05 双标度阶段：已用固定六变量的局部Wick生成式替代2ᴺ维矩阵，并取得中心化Gram V₀及动态矩M₂的固定正λ显式极限。下一步从两项矩进入零频投影、第四频率矩与谱重建，继而接Rindler体传播。原因：初始曲率已能定量计算，但两项矩不能决定粒子谱；继续有限N扫描不再是主任务。μ₄涉及四次Gaussian多项式，须核其二次分量，不能直接照搬K的只保留跨配对规则。本地保存，暂不Git发布。
+
+2026-11-05 第三步本地进展：首个动态矩μ₂=E tr[H,A₂]†[H,A₂]已化为Gaussian三次分量的正范数；一次分量由完整系综的U(N)对称性消失。下一步优先利用Kota不可约协方差通道与Kota–Vyas粒子移除矩，将有限张量和降成一般N,p组合数求和，再取双标度及小正λ。原因：原15配对有明显相消，正和结构更适合识别领先动力学；不继续增加同类小N随机样本。稿件及验证仅本地保存，见NEXT。
+
 2026-11-05 第二步完成：complex规范与BNR现有解已精确对接，Hamiltonian谱不再作为新求解任务。主课题收束为A₂的相邻电荷扇区四点谱密度Ξ_m。优先读Tall–Tomsovic固定电荷Wick/strength-density方法和BNR定向弦规则，推该特定同J插入的低阶矩，再重求和。原因是通用独立随机探针已有解，而我们的导数singlet具有不同的耦合相关性。18组小N计算已足以校准算符，暂不继续同类样本扩量；接续见NEXT。
 
 ## 2026-11-05 主线调整：Susskind 静态补丁与 DSSYK∞

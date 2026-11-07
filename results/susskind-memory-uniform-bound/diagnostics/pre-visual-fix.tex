@@ -1,0 +1,528 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,microtype}
+\usepackage[margin=24mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\NN}{\mathcal N}
+\newcommand{\DD}{\mathfrak D}
+\newcommand{\PP}{\mathsf P_h}
+\newcommand{\W}{\mathsf W}
+\newcommand{\FF}{\mathsf F}
+\title{Uniform second moments of finite-time memory fields\\A quantitative bridge from Gaussian chaos to energy functions}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Local research note --- 7 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+We establish uniform annealed second moments for the energy-pinched
+finite-time memory field in the common-coupling complex double-scaled
+model. The charged-propagator approximation is first extended to fixed
+time derivatives and energy insertions. An even Gaussian Dyson expansion
+then isolates one potentially growing neutral term. A finite-parameter
+Jacobi recurrence compares coupling-Gaussian Wick powers with deterministic
+energy polynomials at a quantitative rate. Its entire expansion applies
+also to the unbounded finite-size Gaussian Hamiltonian, and removes that
+remaining growth after exact energy pinching. Together with the preceding
+conserved-return theorem, the result justifies replacing the projected
+memory field by its ordinary-propagation term in two-point functions.
+The value and convergence of the limiting fluctuation kernel remain to be calculated.
+\end{abstract}
+
+\section{Model and the finite-time problem}
+Use standard CAR, $\hbar=1$, string time, and the overlapping
+complex $p$-body Gaussian model
+\begin{align}
+ H&=\sum_{I,J}J_{IJ}c_I^\dagger c_J,\quad J=J^\dagger,&
+ \EE J_{IJ}J_{KL}&=w_N\delta_{IL}\delta_{JK},\\
+ w_N&=4^p\frac{J_s^2}{\lambda_N}\left(\frac{p!}{N^p}\right)^2,&
+ \lambda_N&=p^2/N.
+\end{align}
+All charge sectors use the same sample $J$. Take even $N\to\infty$,
+$\lambda_-\le\lambda_N\le\lambda_+$ with $\lambda_->0$, fixed
+$J_s>0$, and compact real memory times $|s|\le S$.
+The state is the full $\beta=\mu=0$ normalized annealed trace,
+\begin{equation}
+ \|Y\|_2^2=\sum_m b_m\EE\tr_mY_m^\dagger Y_m,\qquad
+ b_m=2^{-N}\binom Nm,\quad \tr_m=\operatorname{Tr}/\binom Nm.
+\end{equation}
+At charge $m$ put $h=H_m$, $h_-=H_{m-1}$, and
+\begin{equation}
+ T(X)=\frac1m\sum_i c_i^\dagger Xc_i,\quad
+ F_m(s)=T(e^{ish_-}),\quad \alpha=(1-p/m)_+.
+\end{equation}
+The variance and a uniform bound are
+\begin{equation}
+ C=C_m=w_N\binom mp\binom{N-m+p}p,\qquad
+ M=\sup_m C_m\le\frac{J_s^2}{\lambda_N}e^{2p/N}.
+\end{equation}
+The covariance map $\Phi(X)=\EE_u[uXu]$ always uses a new copy
+$u$ in this charge, with its input held fixed.
+
+\newpage
+\section{Memory fields and the result}
+For $m>0$, use the exact charge-removal dilation
+\begin{align}
+ V\psi&=m^{-1/2}\sum_i|i\rangle c_i\psi,&
+ K&=1_N\otimes H_{m-1},&Q&=1-VV^\dagger,\\
+ a&=V^\dagger KV=\alpha h,&R&=QKV,&D&=QKQ,\\
+ M_m(s)&=R^\dagger e^{isD}R,&
+ \Lambda_m(s)&=R^\dagger e^{isK}R.
+\end{align}
+For $m<p$ the force vanishes, so clipping $\alpha$ changes nothing.
+Energy pinching retains complete degenerate blocks:
+\begin{equation}
+ \PP Y=\sum_eP_eYP_e.
+\end{equation}
+Define the actual and ordinary-propagation fields
+\begin{align}
+ \FF_m(s)&=(1-\PP)m e^{-ihs/2}M_m(s)e^{-ihs/2},\\
+ X_{0,m}(s)&=(1-\PP)m e^{-ihs/2}\Lambda_m(s)e^{-ihs/2}.
+\end{align}
+The earlier return calculation \cite{Return} establishes
+\begin{equation}
+ d_N(S):=\sup_{|s|\le S}\|\FF(s)-X_0(s)\|_2\longrightarrow0.
+ \label{eq:priorreturn}
+\end{equation}
+It did not by itself bound either second moment. The new conclusion is
+\begin{equation}
+ \boxed{\quad
+ \sup_N\sup_{|s|\le S}\|X_0(s)\|_2<\infty,\qquad
+ \limsup_{N\to\infty}\sup_{|s|\le S}\|\FF(s)\|_2<\infty.
+ \quad}
+ \label{eq:main}
+\end{equation}
+The first supremum is along the specified double-scaling sequence;
+finitely many initial sizes can be absorbed into its constant.
+
+For $Y=\FF$ or $X_0$, define
+\begin{equation}
+ \mathcal C_Y(s_1,s_2;t)
+ =\EE\tau\big[Y(s_1)^\dagger e^{itH}Y(s_2)e^{-itH}\big].
+\end{equation}
+Equations \eqref{eq:priorreturn} and \eqref{eq:main} imply
+\begin{equation}
+ \sup_{|s_1|,|s_2|\le S,\ t\in\mathbb R}
+ |\mathcal C_{\FF}(s_1,s_2;t)-\mathcal C_{X_0}(s_1,s_2;t)|\to0.
+ \label{eq:cov}
+\end{equation}
+This is an equivalence of the two finite-$N$ correlators, not an
+evaluation or a proof of convergence of their common large-$N$ limit.
+
+The proof has three parts: weighted transfer to an explicit Gaussian
+OU force; a finite Dyson expansion retaining its common inserted copy;
+and a quantitative, exactly conserved energy reference for the neutral
+covariance sandwich. The last part does not assume a finite-size
+Hamiltonian has compact spectrum.
+
+\newpage
+\section{Time derivatives and energy insertions}
+On Gaussian matrix-valued $L^2$ let
+$\|\psi\|_r=\|(\NN+1)^{r/2}\psi\|_2$, $r\ge0$. This is a
+Gaussian Sobolev norm, not a Schatten-$r$ norm. For
+$H=\sum_\beta g_\beta B_\beta$, $\sum B_\beta^2=CI$, creation and
+annihilation give, for either left or right multiplication,
+\begin{equation}
+ \|H_{L/R}\psi\|_r\le A_r\sqrt C\|\psi\|_{r+1},\qquad
+ A_r=1+2^{r/2}.
+\end{equation}
+The number-weight energy estimate gives
+\begin{equation}
+ \|e^{itH_L}\psi\|_r\le e^{q_r\sqrt C|t|}\|\psi\|_r,
+ \quad q_r=r2^{\max(r-1,0)},\quad q_0=0.
+ \label{eq:sobprop}
+\end{equation}
+For example, its adjacent-block estimate is
+$\sqrt{k+1}|(k+2)^r-(k+1)^r|/
+[(k+1)^{r/2}(k+2)^{r/2}]\le q_r$.
+
+Recall $T=\mathcal U S_-=S_+\mathcal U$ from \cite{Transfer}, and put
+\begin{equation}
+ n=N-m+1,\quad B_m=\lambda_N+\lambda_N^2+
+ \lambda_N(m-n)^2/N,\quad G=\mathcal U H_{-,L}-H_{+,L}\mathcal U.
+\end{equation}
+In central sectors $N/4\le m\le3N/4$, take $N\ge16$, $p\le N/16$.
+The low-chaos defect is bounded by
+$10^6\sqrt{CB_m}(k+1)^{3/2}/N$. In the complementary block,
+$(k+1)p>N/8$ implies $N\le64\lambda_N(k+1)^2$.
+Thus the coarse Gaussian-field bound absorbs the entire high block,
+and, with harmless loose constants,
+\begin{align}
+ \|G\psi\|_r&\le10^7 A_r\frac{\sqrt{MB_m}}N\|\psi\|_{r+5},\\
+ \|[\DD,H_L]\psi\|_r
+ &\le10^4 A_r\sqrt{M(\lambda_N+\lambda_N^2)}\|\psi\|_{r+3},
+ \qquad \DD=p\NN-\mathcal R.
+ \label{eq:weightedcomm}
+\end{align}
+The second line is the all-degree rank estimate \cite{Rank} with
+number weights. For $\delta_j(s)=\mathcal Ue^{ish_-}h_-^j-e^{ish}h^j$,
+the initial difference is exactly
+$\sum_{a<j}H_{+,L}^{j-1-a}G H_{-,L}^aI$.
+Weighted Duhamel using \eqref{eq:sobprop} therefore controls
+$\delta_j$ by $K_{r,j,S,M}\sqrt{B_m}/N$.
+Similarly, starting from
+$\DD H^jI=\sum_{a<j}H_L^a[\DD,H_L]H_L^{j-1-a}I$ gives
+$\sup_{|s|\le S}\|\DD h^je^{ish}\|_r\le K\sqrt{\lambda_N+\lambda_N^2}$.
+
+Apply the preceding exact rank-filter inequality to $h^je^{ish}$:
+\begin{equation}
+ \|(S_+-\alpha^{\NN})\phi\|_r\le
+ \frac4N\|\DD\phi\|_r+
+ \frac{8p|m-n|}{N^2}\|\phi\|_{r+2}+
+ \frac{528p^2}{N^2}\|\phi\|_{r+4}.
+\end{equation}
+For all fixed $r,j,a,b$, the actual derivative estimate is consequently
+\begin{equation}
+ \boxed{\quad
+ \sup_{|s|\le S}\|h^a\partial_s^j[F_m(s)-\mathcal O_\alpha(e^{ish})]h^b\|_r
+ \le K_{r,j,a,b,S,M}\frac{\sqrt{B_m}}N.\quad}
+ \label{eq:weightedtransfer}
+\end{equation}
+Here $\mathcal O_\alpha=\alpha^{\NN}$. Finite Hermite polynomials
+provide a common core; finite-chaos energy estimates, closure and
+Duhamel give the stated domains. No derivative of an unweighted
+error estimate was taken.
+
+\newpage
+\section{An even Gaussian Dyson expansion of the force}
+The exact derivative identity and \eqref{eq:weightedtransfer} give
+\begin{align}
+ \Lambda&=-F_m''+i\alpha\{h,F_m'\}+\alpha^2hF_mh,\\
+ \|\Lambda-\Lambda_{\rm OU}\|_2&\le K_S\sqrt{B_m}/N,\label{eq:forceerror}\\
+ \Lambda_{\rm OU}(s)&=\epsilon\EE_u[u e^{is(\alpha h+\sqrt\epsilon u)}u],
+ &\epsilon&=1-\alpha^2.
+\end{align}
+The same $u$ occurs inside and outside the exponential. Fix $h$ and
+write $U_t=e^{i\alpha ht}$. The function
+$f(t)=\EE_u[u e^{is(\alpha h+tu)}u]$ is even. Taylor expansion in
+$t=\sqrt\epsilon$, keeping $\alpha h$ exact, yields
+\begin{equation}
+ \Lambda_{\rm OU}(s)=\epsilon\Phi(U_s)-\epsilon^2\mathcal I_s(h)
+                       +\mathcal E_s,
+ \label{eq:dyson}
+\end{equation}
+where, for either sign of $s$,
+\begin{equation}
+ \mathcal I_s(h)=s^2\int_{0\le y\le x\le1}
+ \EE_u[uU_{s(1-x)}uU_{s(x-y)}uU_{sy}u],dx,dy.
+\end{equation}
+All three Wick pairings are retained. For unitary $A,B,D$,
+\begin{align}
+ \EE_u[uAuBuDu]
+ ={}&\Phi(A)B\Phi(D)+\Phi(A\Phi(B)D)\notag\\
+ &+\sum_{\beta,\gamma}B_\beta A B_\gamma B B_\beta D B_\gamma.
+\end{align}
+Each term has operator norm at most $C^2$. For the last term use
+row--column Cauchy--Schwarz and
+$\sum_\beta\Phi(BB_\beta D)^\dagger\Phi(BB_\beta D)\le C^3I$.
+It follows that
+\begin{equation}
+ \|\mathcal I_s(h)\|_\infty\le\tfrac32 C^2s^2.
+\end{equation}
+
+For completeness, Gaussian integration by parts and weighted Young's
+inequality in a spectral basis of $u$ give
+\begin{equation}
+ \EE\tr u^{2q}\le(2q-1)C\EE\tr u^{2q-2}
+ \le(2q-1)!!C^q.
+\end{equation}
+This is the scalar-variance case of standard Gaussian matrix moment
+control; compare \cite{Tropp}. Every fourth Duhamel derivative of
+$f$ contains six factors $u$ and otherwise real-time unitaries.
+Normalized Schatten-$12$ H\"older, followed by Jensen, therefore gives
+the dimension-free, conditional-on-$h$ bound
+\begin{equation}
+ \boxed{\quad
+ \|\mathcal E_s\|_2\le
+ \frac{\epsilon^3|s|^4}{24}\sqrt{11!!}\,C^3.\quad}
+ \label{eq:dysonerror}
+\end{equation}
+In central sectors $m\epsilon\le2p$, $m\epsilon^2\le16\lambda_N$,
+and $m\epsilon^3\le128\lambda_N^2/p$. Thus the second term of
+\eqref{eq:dyson} is uniformly bounded at collective scale and the
+remainder vanishes. Only $p(1-\PP)\Phi(U_s)$ can still grow.
+
+\newpage
+\section{A finite-parameter annihilation recurrence}
+We now control that neutral term. All statements in this section
+are in a central charge sector. Let
+\begin{equation}
+ Z_j=\W_j(H^j),\qquad
+ \mu(x)=\prod_{\ell=0}^{p-1}
+ \left(1-\frac{x}{m-\ell}\right)_+
+ \left(1-\frac{x}{N-m+p-\ell}\right)_+,
+ \quad a_j=\sum_{v=0}^{j-1}\mu(vp).
+\end{equation}
+$\W_j$ is the coupling-Gaussian chaos projection, not spectral
+orthogonalization. The deterministic covariance satisfies
+$\Phi(P_rX)=C\mu(r)P_rX$, and $\mu$ is globally
+$12p/N$-Lipschitz. With Gaussian creation $\mathcal C$ and
+annihilation $\mathcal A=\mathcal C^\dagger$, $Z_j=\mathcal C^jI$.
+Differentiating the homogeneous matrix polynomial before projecting gives
+the exact identity
+\begin{equation}
+ \mathcal A Z_j
+ =\W_{j-1}\left[\sum_{v=0}^{j-1}\Phi(H^v)H^{j-1-v}\right]
+ =Ca_jZ_{j-1}+r_j.
+ \label{eq:annih}
+\end{equation}
+No Wick contractions are omitted; all derivative positions are the
+$v$-sum in \eqref{eq:annih}.
+
+Let $\pi_v$ be the positive rank law of a product of $v$ independent
+Hamiltonians and $D_v=vp-r$. The earlier all-degree estimate is
+\begin{equation}
+ \EE_{\pi_v}D_v^2\le2\cdot10^6(\lambda_N v^2+\lambda_N^2v^4).
+\end{equation}
+For a fixed derivative position, apply the Lipschitz estimate to
+the first $v$ independent tensor factors. The remaining factors
+are eliminated in the norm using $\EE H_i^2=CI$. Gaussian
+symmetrization is a contraction. Hence
+\begin{equation}
+ \boxed{\quad
+ \|r_j\|_2\le\frac{12p}{N}\sqrt{(j-1)!\,C^{j+1}}
+             \sum_{v<j}\sqrt{\EE_{\pi_v}D_v^2}.\quad}
+ \label{eq:remainder}
+\end{equation}
+There is only one $(j-1)!$. This estimate is uniform in degree,
+including $vp$ beyond the physical rank range.
+
+Retaining finite-$N$ coefficients is useful. Bernoulli's inequality
+in each positive factor gives
+\begin{equation}
+ \mu(jp)\le\mu(p)^j,\qquad
+ \mu(p)\le\exp\!\left[-\frac{4\lambda_N}{1+p/N}\right].
+\end{equation}
+The second estimate uses the reciprocal sum of the two denominators,
+which is at least $4/(N+p)$. Thus for all $j\ge1$,
+\begin{equation}
+ 1\le a_j\le A,\qquad A=(1-e^{-3\lambda_-})^{-1},
+\end{equation}
+under $p\le N/16$. We do not replace $\mu(jp)$ by its leading
+$q^j$ limit in the quantitative argument.
+
+\newpage
+\section{Auxiliary Jacobi polynomials and the chaos error}
+Define monic scalar polynomials
+\begin{equation}
+ Q_0(x)=1,\quad Q_1(x)=x,\qquad
+ Q_{j+1}(x)=xQ_j(x)-Ca_jQ_{j-1}(x).
+ \label{eq:Q}
+\end{equation}
+They belong to an auxiliary positive Jacobi problem \cite{DLMF},
+whose off-diagonal entries are $\sqrt{Ca_j}$ and whose diagonal
+is zero. It has norm at most $2\sqrt{CA}$.
+This auxiliary measure is not asserted to be the actual finite-$N$
+annealed density of states.
+
+Put $E_j=Z_j-Q_j(H)$. The leading coupling degree cancels, and
+parity leaves degree at most $j-2$. Equations \eqref{eq:annih}
+and \eqref{eq:Q} give
+\begin{equation}
+ E_{j+1}=HE_j-Ca_jE_{j-1}-r_j,
+ \qquad \|HE_j\|_2\le2\sqrt{C(j-1)}\|E_j\|_2.
+\end{equation}
+Write $\rho=p/N$ and
+\begin{equation}
+ e_j=\frac{\|E_j\|_2}{\sqrt{j!}\,C^{j/2}},\quad
+ L=12\sqrt{2\cdot10^6}(\sqrt{\lambda_+}+\lambda_+),\quad K_*=4+A.
+\end{equation}
+The rank moment bound and \eqref{eq:remainder} imply
+\begin{equation}
+ e_{j+1}\le2e_j+\frac{A}{\sqrt{j(j+1)}}e_{j-1}+\rho L j^2.
+\end{equation}
+Since $e_0=e_1=e_2=0$, a direct induction using $j^2\le3^j$
+and $K_*\ge5$ yields
+\begin{equation}
+ \boxed{\quad
+ \|Z_j-Q_j(H)\|_2
+ \le\rho L K_*^j\sqrt{j!}\,C^{j/2}.\quad}
+ \label{eq:bridgepoly}
+\end{equation}
+Also $\|Z_j\|_2\le\sqrt{j!}\,C^{j/2}$ by independent-tensor
+symmetrization. No uniform lower bound on $C$ is required;
+the case $C=0$ is simply $H=0$.
+
+Let $J_{\rm aux}$ be the bounded Jacobi operator and define
+\begin{equation}
+ h_j=C^j\prod_{\ell=1}^j a_\ell,\qquad
+ c_j(s)=\frac{\langle e_j,e^{isJ_{\rm aux}}e_0\rangle}{\sqrt{h_j}}.
+\end{equation}
+Bandedness implies that the numerator's Taylor series starts at
+degree $j$. Since $h_j\ge C^j$, for $|s|\le S$,
+\begin{equation}
+ |c_j(s)|\le e^{2\sqrt{CA}S}\frac{(2\sqrt A S)^j}{j!}.
+ \label{eq:coeff}
+\end{equation}
+This factorial decay beats the $\sqrt{j!}$ in
+\eqref{eq:bridgepoly}. It is the required control of the order of
+limits: the full degree sum is controlled before the large-$N$ limit.
+
+\newpage
+\section{Entire expansion and an exactly conserved reference}
+The Jacobi expansion is valid outside its auxiliary spectral interval.
+The recurrence implies
+$|Q_j(z)|\le(|z|+\sqrt{CA})^j$. Together with \eqref{eq:coeff},
+this makes $f_s(z)=\sum_jc_j(s)Q_j(z)$ normally convergent on every
+complex compact set. The Jacobi equation gives
+\begin{equation}
+ c_j'(s)=i[c_{j-1}(s)+Ca_{j+1}c_{j+1}(s)],\qquad c_{-1}=0.
+\end{equation}
+Termwise differentiation and \eqref{eq:Q} yield
+$\partial_s f_s(z)=izf_s(z)$, $f_0(z)=1$. Therefore
+\begin{equation}
+ e^{isz}=\sum_{j=0}^\infty c_j(s)Q_j(z),\qquad z\in\mathbb C.
+\end{equation}
+It applies to every finite Gaussian sample's spectrum. Separately,
+\eqref{eq:bridgepoly} implies absolute convergence in the actual
+annealed matrix $L^2$. Thus no spectral cutoff has been imposed on $H$.
+
+One explicit uniform summation constant is
+\begin{equation}
+ R_S=\sqrt2 L\exp\!\left(2\sqrt{AM}S+4K_*^2AM S^2\right),
+\end{equation}
+using $\sum_jx^j/\sqrt{j!}\le\sqrt2e^{x^2}$. Consequently
+\begin{equation}
+ \left\|e^{isH}-\sum_jc_j(s)Z_j\right\|_2\le\rho R_S.
+\end{equation}
+For any deterministic sequence $|\theta_j|\le1$, define
+\begin{equation}
+ g_{\theta,s}(H)=\sum_j\theta_jc_j(s)Q_j(H).
+\end{equation}
+This is an actual samplewise energy function, not an assertion that
+a chaos multiplier commutes with $H$. Contraction of the multiplier
+and a second use of \eqref{eq:bridgepoly} give
+\begin{equation}
+ \boxed{\quad
+ \|\theta(\NN)e^{isH}-g_{\theta,s}(H)\|_2\le2\rho R_S.
+ \quad}
+ \label{eq:multiplier}
+\end{equation}
+$\theta$ may depend on $N,m,s$, but not on the original random $J$.
+
+Now choose $\theta_j=\mu(jp)$. The earlier rank--chaos filter estimate is
+\begin{equation}
+ \|(\Phi/C-\theta(\NN))e^{isH}\|_2
+ \le12\rho\|\DD e^{isH}\|_2.
+\end{equation}
+Let $D_S$ denote its already established uniform bound on
+$\|\DD e^{isH}\|_2$ \cite{Rank}. Since $g_{\theta,s}(H)$ commutes
+with $H$ and pinching is an orthogonal projection, we obtain
+\begin{equation}
+ \boxed{\quad
+ \sup_{|s|\le S}p\|(1-\PP)\Phi(e^{isH})\|_2
+ \le C\lambda_N(12D_S+2R_S).\quad}
+ \label{eq:neutral}
+\end{equation}
+This is the needed quantitative energy subtraction. The auxiliary
+Jacobi and coupling-Gaussian constructions were never identified
+exactly at finite $N$; their difference was explicitly bounded.
+
+\newpage
+\section{Assembly of the true memory bound}
+Within a central sector, combine \eqref{eq:forceerror},
+\eqref{eq:dyson}, \eqref{eq:dysonerror} and \eqref{eq:neutral}.
+The phases $e^{-ihs/2}$ are unitary and commute with the pinching.
+As $m\epsilon/p\le2$, one obtains a bound of the form
+\begin{align}
+ \sup_{|s|\le S}\|X_{0,m}(s)\|_2
+ \le{}&K_S\sqrt{B_m}
+       +2M\lambda_N(12D_S+2R_S)\notag\\
+      &+24\lambda_NM^2S^2
+       +\frac{128\lambda_N^2}{p}\frac{S^4\sqrt{11!!}M^3}{24}.
+ \label{eq:assemble}
+\end{align}
+The first term is the collective transfer defect, and the third
+is the four-$u$ correction. Both can be order one; neither has been
+discarded. The last term tends to zero.
+
+The full-charge average satisfies
+\begin{equation}
+ \sum_m b_m(m-n)^2=N+1,qquad
+ \sum_{m\ {m central}}b_m B_m
+ \le\lambda_N+\lambda_N^2+\lambda_N(1+1/N).
+\end{equation}
+Squaring \eqref{eq:assemble} and summing therefore stays bounded.
+For the exterior sectors, $T$ commutes with the Gaussian number
+operator and is an $L^2$ contraction. The all-sector variance bound
+and \eqref{eq:sobprop} give uniform coarse bounds on the fixed
+derivatives and energy insertions in $\Lambda$; multiplying by
+$m\le N$ costs at most $N^2$ in the squared norm. The exterior
+binomial weight is at most $2e^{-N/8}$, so this contribution vanishes.
+This proves the first assertion of \eqref{eq:main}; the second follows
+from \eqref{eq:priorreturn}.
+
+Finally Hilbert--Schmidt Cauchy--Schwarz gives, uniformly in real $t$,
+\begin{align}
+ |\mathcal C_{\FF}-\mathcal C_{X_0}|
+ \le{}&\|\FF(s_1)-X_0(s_1)\|_2\|\FF(s_2)\|_2\notag\\
+ &+\|X_0(s_1)\|_2\|\FF(s_2)-X_0(s_2)\|_2.
+\end{align}
+The right side is bounded by a constant times $d_N(S)$, proving
+\eqref{eq:cov}.
+
+\paragraph{Next calculation.}
+Uniform second moments now hold for the actual finite-memory field.
+The remaining task is the joint limit of the bounded components:
+the charged-transfer defect, the neutral covariance-filter residual
+and the four-$u$ correction, with the exact common disorder and
+energy pinching retained. Their cross terms can contribute at order
+one. One must compute these terms to determine the finite-time
+fluctuation kernel and compare it to the Susskind meson dictionary.
+The present bound alone does not supply that kernel or a finite-$G$
+bulk interaction law.
+
+\newpage
+\section{Verification and sources}
+Three fresh scientific outputs accompany the proof. Complete
+Gaussian-Hermite coefficients in three CAR systems verify twelve
+annihilation recurrences through degrees $5$, $4$ and $3$, including
+the lower-chaos terms of $Q_j(H)$. An independent covariance-word
+construction checks \eqref{eq:annih}; positive rank tensors check
+the single-factorial remainder normalization. A full four-coordinate
+Hermitian $2\times2$ Gaussian fixture checks three fourth-moment
+Wick words and nine noncommuting finite-time Dyson remainders.
+Two Gaussian and time quadrature orders were compared. These
+order comparisons are not certified quadrature enclosures.
+
+The auxiliary Jacobi series was also evaluated at $x=\pm6$, outside
+its spectral bound, for three finite parameter sets at 80 and 120
+digits. Six checks and 105 exact geometric-weight inequalities are
+saved. These confirm finite formulas and cancellation conventions;
+the uniform bounds and entire continuation are established by the
+arguments above, not by finite fits. Inputs, environments, hashes,
+build logs and rendered pages are saved locally. Old scientific
+outputs are unchanged.
+
+\paragraph{Literature boundary.}
+Gaussian matrix moments, Jacobi theory and $q$-Gaussian conditional
+expectation are established tools \cite{Tropp,DLMF,BKS}. The
+spectral Wick polynomials in \cite{Tall} are defined by annealed
+spectral orthogonality. They are not identical at finite $N$ to
+$\W_j(H^j)$; \eqref{eq:bridgepoly} supplies the missing comparison
+for this argument, using an auxiliary finite-parameter recurrence.
+We do not infer priority from a literature search. The new local
+result concerns the specified microscopic field and its second
+moments, with the prior-stage estimates listed below as dependencies.
+
+\begin{thebibliography}{9}
+\bibitem{Tropp} J. A. Tropp, \emph{Second-Order Matrix Concentration
+Inequalities}, Prop.~2.3 and Sec.~7,
+\href{https://tropp.caltech.edu/papers/Tro16-Second-Order-Matrix-preprint.pdf}{author-hosted preprint} (2016).
+\bibitem{DLMF} NIST Digital Library of Mathematical Functions,
+\href{https://dlmf.nist.gov/18.2}{Sec.~18.2}, general orthogonal polynomials.
+\bibitem{BKS} M. Bo\.{z}ejko, B. K\"ummerer and R. Speicher,
+\emph{$q$-Gaussian processes: non-commutative and classical aspects},
+\href{https://arxiv.org/abs/funct-an/9604010}{arXiv:funct-an/9604010},
+Prop.~2.9 and Theorem~2.11.
+\bibitem{Tall} J. Tall and S. Tomsovic, \emph{Double-scaled bosonic
+and fermionic embedded ensembles, complex SYK, and the dual Hilbert space},
+\href{https://arxiv.org/abs/2604.14522}{arXiv:2604.14522v2}, Sec.~3.1.
+\bibitem{Rank} A. Day and Chengheng, \emph{Uniform rank bounds for
+finite-time propagation}, local research note (7 November 2026).
+\bibitem{Transfer} A. Day and Chengheng, \emph{Adjacent-charge
+propagation as Gaussian smoothing}, local research note (7 November 2026).
+\bibitem{Return} A. Day and Chengheng, \emph{The conserved background
+of the first memory return}, local research note (6 November 2026).
+\end{thebibliography}
+\end{document}

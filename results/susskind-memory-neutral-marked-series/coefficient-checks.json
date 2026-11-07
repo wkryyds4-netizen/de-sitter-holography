@@ -1,0 +1,1052 @@
+{
+  "created_at_utc": "2026-11-06T18:18:38.147637+00:00",
+  "status": "passed",
+  "parameters": {
+    "systems": [
+      [
+        3,
+        1,
+        2,
+        6
+      ],
+      [
+        4,
+        1,
+        2,
+        5
+      ],
+      [
+        4,
+        2,
+        3,
+        4
+      ]
+    ],
+    "absolute_tolerance": 5e-10,
+    "relative_tolerance": 5e-10,
+    "covariance_C": 1,
+    "arithmetic": "complex128 matrix coefficients; exact rational Jacobi scalars"
+  },
+  "parameter_sha256": "88873199a3efb7372cb2bccb14a8fccd97bdf2f8830f438c20b888b4ba611b8f",
+  "systems": [
+    {
+      "N": 3,
+      "p": 1,
+      "m": 2,
+      "C": 1,
+      "charge_sector_dimension": 3,
+      "Gaussian_coordinates": 9,
+      "max_degree": 6,
+      "theta_exact": [
+        "1",
+        "1/4",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "a_exact": [
+        "0",
+        "1",
+        "5/4",
+        "5/4",
+        "5/4",
+        "5/4",
+        "5/4"
+      ],
+      "covariance_normalization": {
+        "absolute_error": 6.409875621278546e-17,
+        "reference_norm": 1.0,
+        "relative_error": 6.409875621278546e-17,
+        "tolerance": 1e-09
+      },
+      "polynomial_decomposition": [
+        {
+          "degree": 0,
+          "ordinary_Hermite_matrices": 1,
+          "highest_chaos_matrices": 1,
+          "jacobi_coefficients": [
+            "1"
+          ],
+          "monomial_reconstruction": {
+            "absolute_error": 0.0,
+            "reference_norm": 1.0,
+            "relative_error": 0.0,
+            "tolerance": 1e-09
+          },
+          "exact_neutral_decomposition": {
+            "absolute_error": 0.0,
+            "reference_norm": 6.409875621278546e-17,
+            "relative_error": null,
+            "tolerance": 5e-10
+          },
+          "conserved_energy_polynomial_norm": 1.0,
+          "rank_minus_chaos_term_norm": 6.409875621278546e-17,
+          "lower_chaos_correction_norm": 0.0,
+          "total_residual_norm": 6.409875621278546e-17,
+          "forbidden_top_error_norm": 0.0
+        },
+        {
+          "degree": 1,
+          "ordinary_Hermite_matrices": 9,
+          "highest_chaos_matrices": 9,
+          "jacobi_coefficients": [
+            "0",
+            "1"
+          ],
+          "monomial_reconstruction": {
+            "absolute_error": 0.0,
+            "reference_norm": 0.9999999999999999,
+            "relative_error": 0.0,
+            "tolerance": 9.999999999999999e-10
+          },
+          "exact_neutral_decomposition": {
+            "absolute_error": 0.0,
+            "reference_norm": 0.4330127018922193,
+            "relative_error": 0.0,
+            "tolerance": 7.165063509461097e-10
+          },
+          "conserved_energy_polynomial_norm": 0.24999999999999997,
+          "rank_minus_chaos_term_norm": 0.4330127018922193,
+          "lower_chaos_correction_norm": 0.0,
+          "total_residual_norm": 0.4330127018922193,
+          "forbidden_top_error_norm": 0.0
+        },
+        {
+          "degree": 2,
+          "ordinary_Hermite_matrices": 46,
+          "highest_chaos_matrices": 45,
+          "jacobi_coefficients": [
+            "1",
+            "0",
+            "1"
+          ],
+          "monomial_reconstruction": {
+            "absolute_error": 0.0,
+            "reference_norm": 1.5811388300841893,
+            "relative_error": 0.0,
+            "tolerance": 1.2905694150420948e-09
+          },
+          "exact_neutral_decomposition": {
+            "absolute_error": 0.0,
+            "reference_norm": 0.6373774391990981,
+            "relative_error": 0.0,
+            "tolerance": 8.186887195995491e-10
+          },
+          "conserved_energy_polynomial_norm": 1.0,
+          "rank_minus_chaos_term_norm": 0.6373774391990981,
+          "lower_chaos_correction_norm": 0.0,
+          "total_residual_norm": 0.6373774391990981,
+          "forbidden_top_error_norm": 0.0
+        },
+        {
+          "degree": 3,
+          "ordinary_Hermite_matrices": 174,
+          "highest_chaos_matrices": 165,
+          "jacobi_coefficients": [
+            "0",
+            "9/4",
+            "0",
+            "1"
+          ],
+          "monomial_reconstruction": {
+            "absolute_error": 1.8129866073473578e-16,
+            "reference_norm": 3.061862178478968,
+            "relative_error": 5.92118946466751e-17,
+            "tolerance": 2.030931089239484e-09
+          },
+          "exact_neutral_decomposition": {
+            "absolute_error": 3.925231146709438e-17,
+            "reference_norm": 1.6594897559189665,
+            "relative_error": 2.3653241200852032e-17,
+            "tolerance": 1.3297448779594834e-09
+          },
+          "conserved_energy_polynomial_norm": 0.5625,
+          "rank_minus_chaos_term_norm": 1.5687375497513891,
+          "lower_chaos_correction_norm": 0.10825317547305482,
+          "total_residual_norm": 1.6594897559189665,
+          "forbidden_top_error_norm": 0.0
+        },
+        {
+          "degree": 4,
+          "ordinary_Hermite_matrices": 541,
+          "highest_chaos_matrices": 495,
+          "jacobi_coefficients": [
+            "9/4",
+            "0",
+            "7/2",
+            "0",
+            "1"
+          ],
+          "monomial_reconstruction": {
+            "absolute_error": 6.473657049138938e-16,
+            "reference_norm": 6.77772085586297,
+            "relative_error": 9.551377501094624e-17,
+            "tolerance": 3.888860427931486e-09
+          },
+          "exact_neutral_decomposition": {
+            "absolute_error": 6.798699777552591e-17,
+            "reference_norm": 3.698078048121749,
+            "relative_error": 1.838441398229993e-17,
+            "tolerance": 2.3490390240608746e-09
+          },
+          "conserved_energy_polynomial_norm": 2.25,
+          "rank_minus_chaos_term_norm": 3.689618035786356,
+          "lower_chaos_correction_norm": 0.24999999999999994,
+          "total_residual_norm": 3.698078048121749,
+          "forbidden_top_error_norm": 0.0
+        },
+        {
+          "degree": 5,
+          "ordinary_Hermite_matrices": 1461,
+          "highest_chaos_matrices": 1287,
+          "jacobi_coefficients": [
+            "0",
+            "53/8",
+            "0",
+            "19/4",
+            "0",
+            "1"
+          ],
+          "monomial_reconstruction": {
+            "absolute_error": 1.6983146601011033e-15,
+            "reference_norm": 16.60195771588401,
+            "relative_error": 1.0229604780141272e-16,
+            "tolerance": 8.800978857942004e-09
+          },
+          "exact_neutral_decomposition": {
+            "absolute_error": 1.0508091333739039e-16,
+            "reference_norm": 9.822596318565711,
+            "relative_error": 1.0697875584968989e-17,
+            "tolerance": 5.411298159282856e-09
+          },
+          "conserved_energy_polynomial_norm": 1.6562500000000002,
+          "rank_minus_chaos_term_norm": 9.301928773445354,
+          "lower_chaos_correction_norm": 0.8819478619793802,
+          "total_residual_norm": 9.822596318565711,
+          "forbidden_top_error_norm": 0.0
+        },
+        {
+          "degree": 6,
+          "ordinary_Hermite_matrices": 3544,
+          "highest_chaos_matrices": 3003,
+          "jacobi_coefficients": [
+            "53/8",
+            "0",
+            "201/16",
+            "0",
+            "6",
+            "0",
+            "1"
+          ],
+          "monomial_reconstruction": {
+            "absolute_error": 5.6793055687843776e-15,
+            "reference_norm": 44.14818795828427,
+            "relative_error": 1.286418725532012e-16,
+            "tolerance": 2.2574093979142136e-08
+          },
+          "exact_neutral_decomposition": {
+            "absolute_error": 3.6259732146947156e-16,
+            "reference_norm": 26.39531948329102,
+            "relative_error": 1.3737182522037889e-17,
+            "tolerance": 1.369765974164551e-08
+          },
+          "conserved_energy_polynomial_norm": 6.625,
+          "rank_minus_chaos_term_norm": 26.251674053762788,
+          "lower_chaos_correction_norm": 2.7499999999999996,
+          "total_residual_norm": 26.39531948329102,
+          "forbidden_top_error_norm": 0.0
+        }
+      ],
+      "Wick_sources": [
+        {
+          "j": 1,
+          "source_chaos_degree": 0,
+          "source_norm": 0.0,
+          "annihilation_vs_ordinary_Wick_source": {
+            "absolute_error": 6.409875621278546e-17,
+            "reference_norm": 6.409875621278546e-17,
+            "relative_error": null,
+            "tolerance": 5e-10
+          },
+          "ordinary_vs_raw_product_Wick_source": {
+            "absolute_error": 0.0,
+            "reference_norm": 6.409875621278546e-17,
+            "relative_error": null,
+            "tolerance": 5e-10
+          },
+          "forced_eta_recurrence": {
+            "absolute_error": 6.409875621278546e-17,
+            "reference_norm": 6.409875621278546e-17,
+            "relative_error": null,
+            "tolerance": 5e-10
+          },
+          "retained_unprojected_source_norm": 6.409875621278546e-17
+        },
+        {
+          "j": 2,
+          "source_chaos_degree": 1,
+          "source_norm": 0.4330127018922193,
+          "annihilation_vs_ordinary_Wick_source": {
+            "absolute_error": 9.70602749843788e-17,
+            "reference_norm": 0.4330127018922193,
+            "relative_error": 2.241511035594008e-16,
+            "tolerance": 7.165063509461097e-10
+          },
+          "ordinary_vs_raw_product_Wick_source": {
+            "absolute_error": 0.0,
+            "reference_norm": 0.43301270189221924,
+            "relative_error": 0.0,
+            "tolerance": 7.165063509461097e-10
+          },
+          "forced_eta_recurrence": {
+            "absolute_error": 9.70602749843788e-17,
+            "reference_norm": 0.4330127018922193,
+            "relative_error": 2.241511035594008e-16,
+            "tolerance": 7.165063509461097e-10
+          },
+          "retained_unprojected_source_norm": 0.43301270189221924
+        },
+        {
+          "j": 3,
+          "source_chaos_degree": 2,
+          "source_norm": 1.0752906583803286,
+          "annihilation_vs_ordinary_Wick_source": {
+            "absolute_error": 1.8076673197734728e-16,
+            "reference_norm": 1.0752906583803286,
+            "relative_error": 1.6810964604642774e-16,
+            "tolerance": 1.0376453291901642e-09
+          },
+          "ordinary_vs_raw_product_Wick_source": {
+            "absolute_error": 0.0,
+            "reference_norm": 1.0752906583803286,
+            "relative_error": 0.0,
+            "tolerance": 1.0376453291901642e-09
+          },
+          "forced_eta_recurrence": {
+            "absolute_error": 2.233418580553798e-16,
+            "reference_norm": 1.571225636247067,
+            "relative_error": 1.4214499362983947e-16,
+            "tolerance": 1.2856128181235336e-09
+          },
+          "retained_unprojected_source_norm": 1.6488632447841143
+        },
+        {
+          "j": 4,
+          "source_chaos_degree": 3,
+          "source_norm": 2.3601509485624024,
+          "annihilation_vs_ordinary_Wick_source": {
+            "absolute_error": 3.1442710413047757e-16,
+            "reference_norm": 2.3601509485624024,
+            "relative_error": 1.3322330265443364e-16,
+            "tolerance": 1.6800754742812012e-09
+          },
+          "ordinary_vs_raw_product_Wick_source": {
+            "absolute_error": 3.204937810639273e-17,
+            "reference_norm": 2.3601509485624024,
+            "relative_error": 1.3579376406375367e-17,
+            "tolerance": 1.6800754742812012e-09
+          },
+          "forced_eta_recurrence": {
+            "absolute_error": 5.185169430563077e-16,
+            "reference_norm": 4.911323014219288,
+            "relative_error": 1.0557581766768236e-16,
+            "tolerance": 2.9556615071096444e-09
+          },
+          "retained_unprojected_source_norm": 4.770514909315346
+        },
+        {
+          "j": 5,
+          "source_chaos_degree": 4,
+          "source_norm": 5.117754023983564,
+          "annihilation_vs_ordinary_Wick_source": {
+            "absolute_error": 7.583314789574711e-16,
+            "reference_norm": 5.117754023983564,
+            "relative_error": 1.48176617204279e-16,
+            "tolerance": 3.058877011991782e-09
+          },
+          "ordinary_vs_raw_product_Wick_source": {
+            "absolute_error": 3.42205443157828e-16,
+            "reference_norm": 5.117754023983564,
+            "relative_error": 6.686633268307445e-17,
+            "tolerance": 3.058877011991782e-09
+          },
+          "forced_eta_recurrence": {
+            "absolute_error": 1.5423659156928066e-15,
+            "reference_norm": 14.556262075993265,
+            "relative_error": 1.0595892734279184e-16,
+            "tolerance": 7.778131037996633e-09
+          },
+          "retained_unprojected_source_norm": 14.240539622851358
+        }
+      ],
+      "low_orders": {
+        "formula_eta3": "-p * (Phi(H) - theta_1 H)",
+        "formula_eta4": "-p * (H G1 + G1 H + (Phi-theta_2) Z2 - delta I)",
+        "delta_definition": "sum_i Phi(B_i) B_i - theta_1 I; C=1",
+        "delta_real": 0.25,
+        "delta_imag": 0.0,
+        "contraction_scalar_identity": {
+          "absolute_error": 0.0,
+          "reference_norm": 0.25,
+          "relative_error": 0.0,
+          "tolerance": 6.25e-10
+        },
+        "eta3_explicit_identity": {
+          "absolute_error": 9.064933036736789e-17,
+          "reference_norm": 0.4330127018922193,
+          "relative_error": 2.093456611578367e-16,
+          "tolerance": 7.165063509461097e-10
+        },
+        "eta4_explicit_identity": {
+          "absolute_error": 2.903300430533293e-16,
+          "reference_norm": 1.5712256362470665,
+          "relative_error": 1.847793444529036e-16,
+          "tolerance": 1.2856128181235334e-09
+        },
+        "eta4_scalar_identity": {
+          "absolute_error": 6.798699777552591e-17,
+          "reference_norm": 0.25,
+          "relative_error": 2.7194799110210365e-16,
+          "tolerance": 6.25e-10
+        },
+        "eta3_norm": 0.4330127018922193,
+        "eta4_norm": 1.5712256362470665,
+        "eta4_chaos_zero_norm": 0.24999999999999994,
+        "eta4_chaos_two_norm": 1.551209205748857,
+        "error_if_eta3_energy_term_omitted": 0.25000000000000006,
+        "error_if_eta4_explicit_scalar_correction_omitted": 0.25
+      },
+      "elapsed_seconds": 0.7912907600402832
+    },
+    {
+      "N": 4,
+      "p": 1,
+      "m": 2,
+      "C": 1,
+      "charge_sector_dimension": 6,
+      "Gaussian_coordinates": 16,
+      "max_degree": 5,
+      "theta_exact": [
+        "1",
+        "1/3",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "a_exact": [
+        "0",
+        "1",
+        "4/3",
+        "4/3",
+        "4/3",
+        "4/3"
+      ],
+      "covariance_normalization": {
+        "absolute_error": 2.220446049250313e-16,
+        "reference_norm": 1.0000000000000002,
+        "relative_error": 2.2204460492503126e-16,
+        "tolerance": 1.0000000000000003e-09
+      },
+      "polynomial_decomposition": [
+        {
+          "degree": 0,
+          "ordinary_Hermite_matrices": 1,
+          "highest_chaos_matrices": 1,
+          "jacobi_coefficients": [
+            "1"
+          ],
+          "monomial_reconstruction": {
+            "absolute_error": 0.0,
+            "reference_norm": 1.0,
+            "relative_error": 0.0,
+            "tolerance": 1e-09
+          },
+          "exact_neutral_decomposition": {
+            "absolute_error": 0.0,
+            "reference_norm": 2.220446049250313e-16,
+            "relative_error": null,
+            "tolerance": 5.000000000000001e-10
+          },
+          "conserved_energy_polynomial_norm": 1.0,
+          "rank_minus_chaos_term_norm": 2.220446049250313e-16,
+          "lower_chaos_correction_norm": 0.0,
+          "total_residual_norm": 2.220446049250313e-16,
+          "forbidden_top_error_norm": 0.0
+        },
+        {
+          "degree": 1,
+          "ordinary_Hermite_matrices": 16,
+          "highest_chaos_matrices": 16,
+          "jacobi_coefficients": [
+            "0",
+            "1"
+          ],
+          "monomial_reconstruction": {
+            "absolute_error": 0.0,
+            "reference_norm": 1.0,
+            "relative_error": 0.0,
+            "tolerance": 1e-09
+          },
+          "exact_neutral_decomposition": {
+            "absolute_error": 0.0,
+            "reference_norm": 0.27216552697590884,
+            "relative_error": 0.0,
+            "tolerance": 6.360827634879544e-10
+          },
+          "conserved_energy_polynomial_norm": 0.3333333333333333,
+          "rank_minus_chaos_term_norm": 0.27216552697590884,
+          "lower_chaos_correction_norm": 0.0,
+          "total_residual_norm": 0.27216552697590884,
+          "forbidden_top_error_norm": 0.0
+        },
+        {
+          "degree": 2,
+          "ordinary_Hermite_matrices": 137,
+          "highest_chaos_matrices": 136,
+          "jacobi_coefficients": [
+            "1",
+            "0",
+            "1"
+          ],
+          "monomial_reconstruction": {
+            "absolute_error": 0.0,
+            "reference_norm": 1.5634719199411444,
+            "relative_error": 0.0,
+            "tolerance": 1.2817359599705722e-09
+          },
+          "exact_neutral_decomposition": {
+            "absolute_error": 0.0,
+            "reference_norm": 0.4581228472908512,
+            "relative_error": 0.0,
+            "tolerance": 7.290614236454256e-10
+          },
+          "conserved_energy_polynomial_norm": 1.0,
+          "rank_minus_chaos_term_norm": 0.4581228472908512,
+          "lower_chaos_correction_norm": 2.220446049250313e-16,
+          "total_residual_norm": 0.4581228472908512,
+          "forbidden_top_error_norm": 0.0
+        },
+        {
+          "degree": 3,
+          "ordinary_Hermite_matrices": 832,
+          "highest_chaos_matrices": 816,
+          "jacobi_coefficients": [
+            "0",
+            "7/3",
+            "0",
+            "1"
+          ],
+          "monomial_reconstruction": {
+            "absolute_error": 4.881615836846587e-16,
+            "reference_norm": 2.918650119236385,
+            "relative_error": 1.6725594495457297e-16,
+            "tolerance": 1.959325059618193e-09
+          },
+          "exact_neutral_decomposition": {
+            "absolute_error": 2.0729118886590343e-16,
+            "reference_norm": 1.0599324460188264,
+            "relative_error": 1.955701890667677e-16,
+            "tolerance": 1.0299662230094134e-09
+          },
+          "conserved_energy_polynomial_norm": 0.7777777777777779,
+          "rank_minus_chaos_term_norm": 0.9834013368408724,
+          "lower_chaos_correction_norm": 0.09072184232530305,
+          "total_residual_norm": 1.0599324460188264,
+          "forbidden_top_error_norm": 0.0
+        },
+        {
+          "degree": 4,
+          "ordinary_Hermite_matrices": 4013,
+          "highest_chaos_matrices": 3876,
+          "jacobi_coefficients": [
+            "7/3",
+            "0",
+            "11/3",
+            "0",
+            "1"
+          ],
+          "monomial_reconstruction": {
+            "absolute_error": 1.2396109490327045e-15,
+            "reference_norm": 6.095940766375626,
+            "relative_error": 2.0335022870796722e-16,
+            "tolerance": 3.547970383187813e-09
+          },
+          "exact_neutral_decomposition": {
+            "absolute_error": 2.8146033180384103e-16,
+            "reference_norm": 2.4548040858970825,
+            "relative_error": 1.1465694285781844e-16,
+            "tolerance": 1.7274020429485416e-09
+          },
+          "conserved_energy_polynomial_norm": 2.3333333333333335,
+          "rank_minus_chaos_term_norm": 2.452288201073574,
+          "lower_chaos_correction_norm": 0.11111111111111256,
+          "total_residual_norm": 2.4548040858970825,
+          "forbidden_top_error_norm": 0.0
+        },
+        {
+          "degree": 5,
+          "ordinary_Hermite_matrices": 16336,
+          "highest_chaos_matrices": 15504,
+          "jacobi_coefficients": [
+            "0",
+            "65/9",
+            "0",
+            "5",
+            "0",
+            "1"
+          ],
+          "monomial_reconstruction": {
+            "absolute_error": 3.2161314765342534e-15,
+            "reference_norm": 13.851059593108735,
+            "relative_error": 2.3219389498073944e-16,
+            "tolerance": 7.425529796554368e-09
+          },
+          "exact_neutral_decomposition": {
+            "absolute_error": 6.694384576962294e-16,
+            "reference_norm": 5.887219267933979,
+            "relative_error": 1.1371046791861002e-16,
+            "tolerance": 3.4436096339669895e-09
+          },
+          "conserved_energy_polynomial_norm": 2.407407407407408,
+          "rank_minus_chaos_term_norm": 5.444360459585638,
+          "lower_chaos_correction_norm": 0.7010997957778132,
+          "total_residual_norm": 5.887219267933978,
+          "forbidden_top_error_norm": 0.0
+        }
+      ],
+      "Wick_sources": [
+        {
+          "j": 1,
+          "source_chaos_degree": 0,
+          "source_norm": 2.220446049250313e-16,
+          "annihilation_vs_ordinary_Wick_source": {
+            "absolute_error": 0.0,
+            "reference_norm": 2.220446049250313e-16,
+            "relative_error": null,
+            "tolerance": 5.000000000000001e-10
+          },
+          "ordinary_vs_raw_product_Wick_source": {
+            "absolute_error": 0.0,
+            "reference_norm": 2.220446049250313e-16,
+            "relative_error": null,
+            "tolerance": 5.000000000000001e-10
+          },
+          "forced_eta_recurrence": {
+            "absolute_error": 0.0,
+            "reference_norm": 2.220446049250313e-16,
+            "relative_error": null,
+            "tolerance": 5.000000000000001e-10
+          },
+          "retained_unprojected_source_norm": 2.220446049250313e-16
+        },
+        {
+          "j": 2,
+          "source_chaos_degree": 1,
+          "source_norm": 0.272165526975909,
+          "annihilation_vs_ordinary_Wick_source": {
+            "absolute_error": 2.9524442825750554e-16,
+            "reference_norm": 0.272165526975909,
+            "relative_error": 1.0847972979459643e-15,
+            "tolerance": 6.360827634879545e-10
+          },
+          "ordinary_vs_raw_product_Wick_source": {
+            "absolute_error": 0.0,
+            "reference_norm": 0.2721655269759089,
+            "relative_error": 0.0,
+            "tolerance": 6.360827634879545e-10
+          },
+          "forced_eta_recurrence": {
+            "absolute_error": 2.999147203499575e-16,
+            "reference_norm": 0.2721655269759091,
+            "relative_error": 1.1019570468103575e-15,
+            "tolerance": 6.360827634879546e-10
+          },
+          "retained_unprojected_source_norm": 0.2721655269759089
+        },
+        {
+          "j": 3,
+          "source_chaos_degree": 2,
+          "source_norm": 0.7027283689263079,
+          "annihilation_vs_ordinary_Wick_source": {
+            "absolute_error": 3.5527194017304517e-16,
+            "reference_norm": 0.7027283689263079,
+            "relative_error": 5.055608338622531e-16,
+            "tolerance": 8.51364184463154e-10
+          },
+          "ordinary_vs_raw_product_Wick_source": {
+            "absolute_error": 0.0,
+            "reference_norm": 0.702728368926307,
+            "relative_error": 0.0,
+            "tolerance": 8.513641844631536e-10
+          },
+          "forced_eta_recurrence": {
+            "absolute_error": 4.372562479526934e-16,
+            "reference_norm": 0.9813067629253182,
+            "relative_error": 4.455856868337619e-16,
+            "tolerance": 9.90653381462659e-10
+          },
+          "retained_unprojected_source_norm": 1.3146843962443617
+        },
+        {
+          "j": 4,
+          "source_chaos_degree": 3,
+          "source_norm": 1.3728705920630084,
+          "annihilation_vs_ordinary_Wick_source": {
+            "absolute_error": 3.992529593735508e-16,
+            "reference_norm": 1.3728705920630084,
+            "relative_error": 2.9081616408841172e-16,
+            "tolerance": 1.1864352960315043e-09
+          },
+          "ordinary_vs_raw_product_Wick_source": {
+            "absolute_error": 4.807406715958906e-17,
+            "reference_norm": 1.3728705920630084,
+            "relative_error": 3.5017187663221997e-17,
+            "tolerance": 1.1864352960315043e-09
+          },
+          "forced_eta_recurrence": {
+            "absolute_error": 5.962994751732763e-16,
+            "reference_norm": 2.781479015632394,
+            "relative_error": 2.1438215849264722e-16,
+            "tolerance": 1.890739507816197e-09
+          },
+          "retained_unprojected_source_norm": 3.40055672033721
+        }
+      ],
+      "low_orders": {
+        "formula_eta3": "-p * (Phi(H) - theta_1 H)",
+        "formula_eta4": "-p * (H G1 + G1 H + (Phi-theta_2) Z2 - delta I)",
+        "delta_definition": "sum_i Phi(B_i) B_i - theta_1 I; C=1",
+        "delta_real": 0.11111111111111138,
+        "delta_imag": 0.0,
+        "contraction_scalar_identity": {
+          "absolute_error": 0.0,
+          "reference_norm": 0.11111111111111138,
+          "relative_error": 0.0,
+          "tolerance": 5.555555555555557e-10
+        },
+        "eta3_explicit_identity": {
+          "absolute_error": 7.198635637187037e-16,
+          "reference_norm": 0.2721655269759091,
+          "relative_error": 2.64494762329846e-15,
+          "tolerance": 6.360827634879546e-10
+        },
+        "eta4_explicit_identity": {
+          "absolute_error": 1.5321511777231607e-15,
+          "reference_norm": 0.9813067629253182,
+          "relative_error": 1.5613376322361738e-15,
+          "tolerance": 9.90653381462659e-10
+        },
+        "eta4_scalar_identity": {
+          "absolute_error": 3.7435745255915214e-16,
+          "reference_norm": 0.11111111111111176,
+          "relative_error": 3.36921707303235e-15,
+          "tolerance": 5.555555555555559e-10
+        },
+        "eta3_norm": 0.2721655269759091,
+        "eta4_norm": 0.9813067629253182,
+        "eta4_chaos_zero_norm": 0.11111111111111176,
+        "eta4_chaos_two_norm": 0.9749960430435709,
+        "error_if_eta3_energy_term_omitted": 0.33333333333333265,
+        "error_if_eta4_explicit_scalar_correction_omitted": 0.11111111111111138
+      },
+      "elapsed_seconds": 2.938894271850586
+    },
+    {
+      "N": 4,
+      "p": 2,
+      "m": 3,
+      "C": 1,
+      "charge_sector_dimension": 4,
+      "Gaussian_coordinates": 36,
+      "max_degree": 4,
+      "theta_exact": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "a_exact": [
+        "0",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "covariance_normalization": {
+        "absolute_error": 2.220446049250313e-16,
+        "reference_norm": 1.0,
+        "relative_error": 2.220446049250313e-16,
+        "tolerance": 1e-09
+      },
+      "polynomial_decomposition": [
+        {
+          "degree": 0,
+          "ordinary_Hermite_matrices": 1,
+          "highest_chaos_matrices": 1,
+          "jacobi_coefficients": [
+            "1"
+          ],
+          "monomial_reconstruction": {
+            "absolute_error": 0.0,
+            "reference_norm": 1.0,
+            "relative_error": 0.0,
+            "tolerance": 1e-09
+          },
+          "exact_neutral_decomposition": {
+            "absolute_error": 0.0,
+            "reference_norm": 2.220446049250313e-16,
+            "relative_error": null,
+            "tolerance": 5.000000000000001e-10
+          },
+          "conserved_energy_polynomial_norm": 1.0,
+          "rank_minus_chaos_term_norm": 2.220446049250313e-16,
+          "lower_chaos_correction_norm": 0.0,
+          "total_residual_norm": 2.220446049250313e-16,
+          "forbidden_top_error_norm": 0.0
+        },
+        {
+          "degree": 1,
+          "ordinary_Hermite_matrices": 36,
+          "highest_chaos_matrices": 36,
+          "jacobi_coefficients": [
+            "0",
+            "1"
+          ],
+          "monomial_reconstruction": {
+            "absolute_error": 0.0,
+            "reference_norm": 1.0,
+            "relative_error": 0.0,
+            "tolerance": 1e-09
+          },
+          "exact_neutral_decomposition": {
+            "absolute_error": 0.0,
+            "reference_norm": 0.42065987746668665,
+            "relative_error": 0.0,
+            "tolerance": 7.103299387333434e-10
+          },
+          "conserved_energy_polynomial_norm": 0.0,
+          "rank_minus_chaos_term_norm": 0.42065987746668665,
+          "lower_chaos_correction_norm": 0.0,
+          "total_residual_norm": 0.42065987746668665,
+          "forbidden_top_error_norm": 0.0
+        },
+        {
+          "degree": 2,
+          "ordinary_Hermite_matrices": 667,
+          "highest_chaos_matrices": 666,
+          "jacobi_coefficients": [
+            "1",
+            "0",
+            "1"
+          ],
+          "monomial_reconstruction": {
+            "absolute_error": 0.0,
+            "reference_norm": 1.5030832509409575,
+            "relative_error": 0.0,
+            "tolerance": 1.251541625470479e-09
+          },
+          "exact_neutral_decomposition": {
+            "absolute_error": 0.0,
+            "reference_norm": 0.40232520337778643,
+            "relative_error": 0.0,
+            "tolerance": 7.011626016888932e-10
+          },
+          "conserved_energy_polynomial_norm": 1.0,
+          "rank_minus_chaos_term_norm": 0.40232520337778643,
+          "lower_chaos_correction_norm": 0.0,
+          "total_residual_norm": 0.40232520337778643,
+          "forbidden_top_error_norm": 0.0
+        },
+        {
+          "degree": 3,
+          "ordinary_Hermite_matrices": 8472,
+          "highest_chaos_matrices": 8436,
+          "jacobi_coefficients": [
+            "0",
+            "2",
+            "0",
+            "1"
+          ],
+          "monomial_reconstruction": {
+            "absolute_error": 8.005932084973442e-16,
+            "reference_norm": 2.6797518465050816,
+            "relative_error": 2.9875647237316906e-16,
+            "tolerance": 1.8398759232525408e-09
+          },
+          "exact_neutral_decomposition": {
+            "absolute_error": 0.0,
+            "reference_norm": 1.351367897288537,
+            "relative_error": 0.0,
+            "tolerance": 1.1756839486442686e-09
+          },
+          "conserved_energy_polynomial_norm": 0.0,
+          "rank_minus_chaos_term_norm": 1.351367897288537,
+          "lower_chaos_correction_norm": 0.0,
+          "total_residual_norm": 1.351367897288537,
+          "forbidden_top_error_norm": 0.0
+        },
+        {
+          "degree": 4,
+          "ordinary_Hermite_matrices": 82918,
+          "highest_chaos_matrices": 82251,
+          "jacobi_coefficients": [
+            "2",
+            "0",
+            "3",
+            "0",
+            "1"
+          ],
+          "monomial_reconstruction": {
+            "absolute_error": 2.1203515892836176e-15,
+            "reference_norm": 5.34476655172767,
+            "relative_error": 3.9671547274561963e-16,
+            "tolerance": 3.172383275863835e-09
+          },
+          "exact_neutral_decomposition": {
+            "absolute_error": 2.830524433501838e-16,
+            "reference_norm": 2.123205555048674,
+            "relative_error": 1.333137258788374e-16,
+            "tolerance": 1.561602777524337e-09
+          },
+          "conserved_energy_polynomial_norm": 2.0,
+          "rank_minus_chaos_term_norm": 2.107317362306438,
+          "lower_chaos_correction_norm": 0.2592592592592588,
+          "total_residual_norm": 2.123205555048674,
+          "forbidden_top_error_norm": 0.0
+        }
+      ],
+      "Wick_sources": [
+        {
+          "j": 1,
+          "source_chaos_degree": 0,
+          "source_norm": 0.0,
+          "annihilation_vs_ordinary_Wick_source": {
+            "absolute_error": 2.220446049250313e-16,
+            "reference_norm": 2.220446049250313e-16,
+            "relative_error": null,
+            "tolerance": 5.000000000000001e-10
+          },
+          "ordinary_vs_raw_product_Wick_source": {
+            "absolute_error": 0.0,
+            "reference_norm": 2.220446049250313e-16,
+            "relative_error": null,
+            "tolerance": 5.000000000000001e-10
+          },
+          "forced_eta_recurrence": {
+            "absolute_error": 4.440892098500626e-16,
+            "reference_norm": 4.440892098500626e-16,
+            "relative_error": null,
+            "tolerance": 5.000000000000002e-10
+          },
+          "retained_unprojected_source_norm": 2.220446049250313e-16
+        },
+        {
+          "j": 2,
+          "source_chaos_degree": 1,
+          "source_norm": 0.42065987746668654,
+          "annihilation_vs_ordinary_Wick_source": {
+            "absolute_error": 2.0431478542825366e-16,
+            "reference_norm": 0.4206598774666866,
+            "relative_error": 4.857006726162849e-16,
+            "tolerance": 7.103299387333434e-10
+          },
+          "ordinary_vs_raw_product_Wick_source": {
+            "absolute_error": 0.0,
+            "reference_norm": 0.4206598774666866,
+            "relative_error": 0.0,
+            "tolerance": 7.103299387333434e-10
+          },
+          "forced_eta_recurrence": {
+            "absolute_error": 4.0862957085650733e-16,
+            "reference_norm": 0.8413197549333732,
+            "relative_error": 4.857006726162849e-16,
+            "tolerance": 9.206598774666867e-10
+          },
+          "retained_unprojected_source_norm": 0.4206598774666866
+        },
+        {
+          "j": 3,
+          "source_chaos_degree": 2,
+          "source_norm": 0.7815897180910841,
+          "annihilation_vs_ordinary_Wick_source": {
+            "absolute_error": 2.7894008272968645e-16,
+            "reference_norm": 0.7815897180910841,
+            "relative_error": 3.5688811696622093e-16,
+            "tolerance": 8.907948590455421e-10
+          },
+          "ordinary_vs_raw_product_Wick_source": {
+            "absolute_error": 0.0,
+            "reference_norm": 0.7815897180910841,
+            "relative_error": 0.0,
+            "tolerance": 8.907948590455421e-10
+          },
+          "forced_eta_recurrence": {
+            "absolute_error": 8.616530586966424e-16,
+            "reference_norm": 2.52757992261441,
+            "relative_error": 3.40900420591009e-16,
+            "tolerance": 1.763789961307205e-09
+          },
+          "retained_unprojected_source_norm": 1.482098636884831
+        }
+      ],
+      "low_orders": {
+        "formula_eta3": "-p * (Phi(H) - theta_1 H)",
+        "formula_eta4": "-p * (H G1 + G1 H + (Phi-theta_2) Z2 - delta I)",
+        "delta_definition": "sum_i Phi(B_i) B_i - theta_1 I; C=1",
+        "delta_real": 0.25925925925925913,
+        "delta_imag": 0.0,
+        "contraction_scalar_identity": {
+          "absolute_error": 0.0,
+          "reference_norm": 0.25925925925925913,
+          "relative_error": 0.0,
+          "tolerance": 6.296296296296296e-10
+        },
+        "eta3_explicit_identity": {
+          "absolute_error": 8.172591417130147e-16,
+          "reference_norm": 0.8413197549333733,
+          "relative_error": 9.714013452325697e-16,
+          "tolerance": 9.206598774666867e-10
+        },
+        "eta4_explicit_identity": {
+          "absolute_error": 2.1018778983161414e-15,
+          "reference_norm": 2.52757992261441,
+          "relative_error": 8.3157722511977295e-16,
+          "tolerance": 1.763789961307205e-09
+        },
+        "eta4_scalar_identity": {
+          "absolute_error": 6.753223014464259e-16,
+          "reference_norm": 0.5185185185185183,
+          "relative_error": 1.3024072956466793e-15,
+          "tolerance": 7.592592592592592e-10
+        },
+        "eta3_norm": 0.8413197549333731,
+        "eta4_norm": 2.5275799226144087,
+        "eta4_chaos_zero_norm": 0.5185185185185176,
+        "eta4_chaos_two_norm": 2.473822712151545,
+        "error_if_eta3_energy_term_omitted": 8.172591417130147e-16,
+        "error_if_eta4_explicit_scalar_correction_omitted": 0.5185185185185183
+      },
+      "elapsed_seconds": 13.830016136169434
+    }
+  ],
+  "environment": {
+    "python": "3.14.5",
+    "numpy": "2.4.6",
+    "sympy": "1.14.0",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "scope": "Complete Gaussian-Hermite coefficients for finite CAR systems; no Gaussian samples, coordinate truncation, energy pinching or discarded conserved terms. Checks finite polynomial neutral decomposition, ordinary-word Wick sources, forced eta recurrence and eta3/eta4 including nonzero scalar chaos. Floating-point checks are not exact-arithmetic certificates, uniform tail proofs or double-scaling convergence claims.",
+  "input_sha256": {
+    "code/check_neutral_marked_series.py": "1d0e29d2f270a193e24345d756b4c6d50b76c5811071346dadc2a0982fedcd94",
+    "code/memory_jacobi_bridge.py": "da16585afe38456af7b7bed421a3f8c87d97b1f9bf9e5210967c87dcea7794b6",
+    "code/memory_charged_transfer.py": "155392a862098a9aa1119085629bca5b2467e0de9f1610c009273e66fa80455a",
+    "code/memory_wick_rank.py": "7adf10a9d087a24ec84215dd0f95ccc832a5cefc8e8f833d7ca3521231d81525",
+    "code/cubic_linear_dynamics.py": "81d8e955107098e897637650bb7686a15fd2ff8fde6de1e1c525db398516d014",
+    "code/complex_syk_dictionary.py": "96b4890a167beeadf0849ccffdbb20dd125d921af062fd291044da9024900abf"
+  },
+  "elapsed_seconds": 17.98763632774353
+}

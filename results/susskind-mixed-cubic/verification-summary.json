@@ -1,0 +1,152 @@
+{
+  "status": "passed",
+  "exact_mixed_words": 12,
+  "pairings": 15392,
+  "minor_checks": 433964,
+  "cluster_templates": 14,
+  "cluster_pairings": 148,
+  "finite_car_words": 64,
+  "finite_car_comparisons": 6656,
+  "fixed_time_taylor_small_lambda": [
+    {
+      "time_order": 0,
+      "small_lambda_coefficient": "48"
+    },
+    {
+      "time_order": 2,
+      "small_lambda_coefficient": "384"
+    },
+    {
+      "time_order": 4,
+      "small_lambda_coefficient": "512"
+    },
+    {
+      "time_order": 6,
+      "small_lambda_coefficient": "4096/15"
+    }
+  ],
+  "numerical_comparisons": [
+    {
+      "lambda_value": 0.2,
+      "time": 0.0,
+      "relative_cutoff_change": 1.2647218430729568e-15,
+      "relative_species_swap_change": 0.0,
+      "conservative_relative_truncation_bound": 5.676603155804979e-10
+    },
+    {
+      "lambda_value": 0.2,
+      "time": 0.01,
+      "relative_cutoff_change": 1.2656399923478291e-15,
+      "relative_species_swap_change": 0.0,
+      "conservative_relative_truncation_bound": 5.680724195623139e-10
+    },
+    {
+      "lambda_value": 0.2,
+      "time": 0.25,
+      "relative_cutoff_change": 1.1633139800160514e-15,
+      "relative_species_swap_change": 3.32375422861729e-16,
+      "conservative_relative_truncation_bound": 8.951043513389566e-10
+    },
+    {
+      "lambda_value": 0.2,
+      "time": 0.5,
+      "relative_cutoff_change": 1.4977141711794311e-15,
+      "relative_species_swap_change": 4.992380570598103e-16,
+      "conservative_relative_truncation_bound": 3.5852643542483717e-09
+    },
+    {
+      "lambda_value": 0.2,
+      "time": 1.0,
+      "relative_cutoff_change": 1.785919626638901e-15,
+      "relative_species_swap_change": 1.9843551407098898e-16,
+      "conservative_relative_truncation_bound": 1.0944466425856475e-06
+    },
+    {
+      "lambda_value": 0.1,
+      "time": 0.0,
+      "relative_cutoff_change": 9.178638166719368e-16,
+      "relative_species_swap_change": 0.0,
+      "conservative_relative_truncation_bound": 1.0878233279281839e-10
+    },
+    {
+      "lambda_value": 0.1,
+      "time": 0.01,
+      "relative_cutoff_change": 3.0619016604793194e-15,
+      "relative_species_swap_change": 1.5309508302396596e-16,
+      "conservative_relative_truncation_bound": 1.0886608645829939e-10
+    },
+    {
+      "lambda_value": 0.1,
+      "time": 0.25,
+      "relative_cutoff_change": 2.844948268904442e-15,
+      "relative_species_swap_change": 3.7108020898753595e-16,
+      "conservative_relative_truncation_bound": 1.7591703717436648e-10
+    },
+    {
+      "lambda_value": 0.1,
+      "time": 0.5,
+      "relative_cutoff_change": 2.0765726593244665e-15,
+      "relative_species_swap_change": 1.2978579120777916e-16,
+      "conservative_relative_truncation_bound": 7.383265822256021e-10
+    },
+    {
+      "lambda_value": 0.1,
+      "time": 1.0,
+      "relative_cutoff_change": 1.6588803649004925e-15,
+      "relative_species_swap_change": 0.0,
+      "conservative_relative_truncation_bound": 1.725632957598938e-07
+    },
+    {
+      "lambda_value": 0.05,
+      "time": 0.0,
+      "relative_cutoff_change": 1.8430351260348673e-15,
+      "relative_species_swap_change": 9.215175630174337e-16,
+      "conservative_relative_truncation_bound": 1.0269476011697502e-11
+    },
+    {
+      "lambda_value": 0.05,
+      "time": 0.01,
+      "relative_cutoff_change": 9.220660316851366e-16,
+      "relative_species_swap_change": 1.106479238022164e-15,
+      "conservative_relative_truncation_bound": 1.0275588196697816e-11
+    },
+    {
+      "lambda_value": 0.05,
+      "time": 0.25,
+      "relative_cutoff_change": 3.087235843861494e-15,
+      "relative_species_swap_change": 6.711382269264118e-16,
+      "conservative_relative_truncation_bound": 1.4958451577240113e-11
+    },
+    {
+      "lambda_value": 0.05,
+      "time": 0.5,
+      "relative_cutoff_change": 2.7964072795859747e-15,
+      "relative_species_swap_change": 4.3021650455168843e-16,
+      "conservative_relative_truncation_bound": 4.794372077977182e-11
+    },
+    {
+      "lambda_value": 0.05,
+      "time": 1.0,
+      "relative_cutoff_change": 0.0,
+      "relative_species_swap_change": 5.716872435362302e-16,
+      "conservative_relative_truncation_bound": 5.436531172408183e-09
+    }
+  ],
+  "maximum_absolute_changes": {
+    "cutoff_difference": 6.38378239159465e-16,
+    "swap_difference": 3.3306690738754696e-16,
+    "series_difference": 1.2628786905111156e-15
+  },
+  "maximum_relative_changes": {
+    "relative_cutoff_change": 3.087235843861494e-15,
+    "relative_species_swap_change": 1.106479238022164e-15,
+    "conservative_relative_truncation_bound": 1.0944466425856475e-06
+  },
+  "error_scope": "Truncation analytically bounded in exact arithmetic. Floating point empirical. Positive OTOC sum; signed Taylor cancellations performed exactly before evaluation.",
+  "input_sha256": {
+    "results/susskind-mixed-cubic/moments.json": "3d4b293b6215a196919669deb1454d6885a7b79d61d30075eac24f9a230ab550",
+    "results/susskind-mixed-cubic/cluster-certificate.json": "058bb292b51beb1b2520055e106e7963be29d7d400d64a8e4ecf0560d0f963c2",
+    "results/susskind-mixed-cubic/finite-car.json": "1304f5667b0bd3180a04e9b46a5b357f77e1f0941a79009d759f1ccc10400d49",
+    "results/susskind-mixed-cubic/otoc.json": "e0d3db29f446f20fd4947fbddab3546064afd99931cfb8445bdf847bdf705c07"
+  }
+}

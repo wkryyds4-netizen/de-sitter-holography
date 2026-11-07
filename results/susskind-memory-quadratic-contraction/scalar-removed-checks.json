@@ -1,0 +1,224 @@
+{
+  "status": "passed",
+  "rows": [
+    {
+      "N": 3,
+      "p": 1,
+      "m": 2,
+      "independent_polarization_directions": 45,
+      "traceless_gram": [
+        [
+          "56/3",
+          "8/3",
+          "-8/3",
+          "136/3"
+        ],
+        [
+          "8/3",
+          "8",
+          "-8",
+          "248/3"
+        ],
+        [
+          "-8/3",
+          "-8",
+          "8",
+          "-248/3"
+        ],
+        [
+          "136/3",
+          "248/3",
+          "-248/3",
+          "872"
+        ]
+      ],
+      "random_scalar_gram": [
+        [
+          "16/3",
+          "16/3",
+          "-16/3",
+          "224/3"
+        ],
+        [
+          "16/3",
+          "8",
+          "0",
+          "304/3"
+        ],
+        [
+          "-16/3",
+          "0",
+          "16",
+          "-64/3"
+        ],
+        [
+          "224/3",
+          "304/3",
+          "-64/3",
+          "1312"
+        ]
+      ],
+      "independent_old_basis": [
+        0,
+        1
+      ],
+      "projection_coefficients": [
+        "1",
+        "10"
+      ],
+      "residual_norm_squared": "0",
+      "residual_commutator_norm_squared": "0"
+    },
+    {
+      "N": 4,
+      "p": 2,
+      "m": 3,
+      "independent_polarization_directions": 666,
+      "traceless_gram": [
+        [
+          "90",
+          "105",
+          "-45",
+          "5490"
+        ],
+        [
+          "105",
+          "165",
+          "-75",
+          "7530"
+        ],
+        [
+          "-45",
+          "-75",
+          "225",
+          "-3150"
+        ],
+        [
+          "5490",
+          "7530",
+          "-3150",
+          "364860"
+        ]
+      ],
+      "random_scalar_gram": [
+        [
+          "12",
+          "21",
+          "-15",
+          "1044"
+        ],
+        [
+          "21",
+          "48",
+          "-15",
+          "2412"
+        ],
+        [
+          "-15",
+          "-15",
+          "120",
+          "-900"
+        ],
+        [
+          "1044",
+          "2412",
+          "-900",
+          "121608"
+        ]
+      ],
+      "independent_old_basis": [
+        0,
+        1,
+        2
+      ],
+      "projection_coefficients": [
+        "30",
+        "27",
+        "1"
+      ],
+      "residual_norm_squared": "0",
+      "residual_commutator_norm_squared": "0"
+    },
+    {
+      "N": 5,
+      "p": 2,
+      "m": 3,
+      "independent_polarization_directions": 96,
+      "traceless_gram": [
+        [
+          "1791/5",
+          "2232/5",
+          "-90",
+          "39420"
+        ],
+        [
+          "2232/5",
+          "3528/5",
+          "-180",
+          "283482/5"
+        ],
+        [
+          "-90",
+          "-180",
+          "2394",
+          "-15363"
+        ],
+        [
+          "39420",
+          "283482/5",
+          "-15363",
+          "47404917/10"
+        ]
+      ],
+      "random_scalar_gram": [
+        [
+          "54/5",
+          "108/5",
+          "0",
+          "1944"
+        ],
+        [
+          "108/5",
+          "252/5",
+          "0",
+          "23328/5"
+        ],
+        [
+          "0",
+          "0",
+          "216",
+          "-432"
+        ],
+        [
+          "1944",
+          "23328/5",
+          "-432",
+          "2173824/5"
+        ]
+      ],
+      "independent_old_basis": [
+        0,
+        1,
+        2
+      ],
+      "projection_coefficients": [
+        "2106991/44709",
+        "1499753/29806",
+        "-77111/89418"
+      ],
+      "residual_norm_squared": "248945355/14903",
+      "residual_commutator_norm_squared": "12991771132439678939/2220994090"
+    }
+  ],
+  "scope": "Exact finite-sector covariance, sample-wise trace removed. No large-N or spectral claim.",
+  "environment": {
+    "python": "3.14.5",
+    "numpy": "2.4.6",
+    "sympy": "1.14.0"
+  },
+  "input_sha256": {
+    "code/check_quadratic_contraction.py": "b7d1fdd50f0bd6aa9685977cc13b7f20cc0b28c0e51b68e07726e1ec54ee4930",
+    "code/memory_quadratic_contraction.py": "d9e7722e5c13ca64a26b9e79a06e0a3fcaf07060ac1c6133d5eb04f4a1ad2139",
+    "results/susskind-memory-quadratic-contraction/finite-contractions.json": "db3bfbac72aeedb40f9ff4fbe064316d3220f25f2d24fb4935491496b1871d44"
+  }
+}

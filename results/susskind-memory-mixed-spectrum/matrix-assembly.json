@@ -1,0 +1,78 @@
+{
+  "status": "passed",
+  "matrix": [
+    [
+      "K2*W",
+      "K2*W*a*e",
+      "0"
+    ],
+    [
+      "K2*W*a*e",
+      "K1*VF + K2*W*a**2*e**2 + K3*VR",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "K2*V2 + K4*V4"
+    ]
+  ],
+  "positive_factorization": {
+    "transfer": [
+      [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "a*e",
+        "1",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "1",
+        "1"
+      ]
+    ],
+    "diagonal": [
+      "K2*W",
+      "K1*VF",
+      "K3*VR",
+      "K4*V4",
+      "K2*V2"
+    ]
+  },
+  "determinant": "K2*W*(K1*VF + K3*VR)*(K2*V2 + K4*V4)",
+  "projected_polynomial_energy_density": "K1*VF*s*u + K2*V2*s**2*u**2/4 + K2*W*a**2*e**2*s*u - I*K2*W*a*e*s + I*K2*W*a*e*u + K2*W + K3*VR*s*u + K4*V4*s**2*u**2/4",
+  "coefficients": {
+    "0,0": "K2*W",
+    "0,1": "I*K2*W*a*e",
+    "0,2": "0",
+    "1,0": "-I*K2*W*a*e",
+    "1,1": "K1*VF + K2*W*a**2*e**2 + K3*VR",
+    "1,2": "0",
+    "2,0": "0",
+    "2,1": "0",
+    "2,2": "K2*V2/4 + K4*V4/4"
+  },
+  "ordinary_time_kernel": "W G_q2(T)+s*u C_L(T)+s^2*u^2 C_X(T)/4",
+  "scope": "Phi(s)=Y+i*s*L-s^2*X/2 uses the separately projected second coefficient X. It is not the raw memory Taylor polynomial and has no finite-time remainder claim.",
+  "environment": {
+    "python": "3.14.5",
+    "sympy": "1.14.0"
+  },
+  "input_sha256": {
+    "code/memory_mixed_assembly.py": "e398889127d86c5542adb93266ab54662e0e123bd759fd4c0121ddf7cf4f06b2",
+    "results/susskind-memory-mixed-spectrum/cubic-force-cross.json": "6023918e428fa00e1f527ac18f27fdef7864adecfd8b138c42cdc2c7b5216f94",
+    "results/susskind-memory-mixed-spectrum/charged-lift.json": "2c39b04cd101b4093ff9cf2da87401b39aad8d7ffc9956b82200d16ec0f5858d",
+    "results/susskind-memory-oriented-kernel/local-evidence.json": "e843ecfa0be768f160930ac7639eeaf4f0ffaac735a46cfdb0e1ab0d4ffda4a2",
+    "results/susskind-memory-fluctuations/local-evidence.json": "f4642f5d2991e2e3e8da6b8be4204070a4887078ee6434eda5291d1dc5d60fbc"
+  }
+}

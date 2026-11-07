@@ -1,0 +1,676 @@
+{
+  "status": "Local research milestone; long-term de Sitter research remains open",
+  "created_at_utc": "2026-11-06T21:53:16.062949+00:00",
+  "scientific_status": "Saved finite tagged-covariance, coherence-channel and charged-reassembly fixtures accompany the final analytic stage documents.",
+  "proof_scope": "The scientific conclusion and its hypotheses are in the hash-bound main note, charged proof, diagram/operator notes, and LaTeX manuscript. This recorder verifies provenance and saved scalar arithmetic, not an analytic theorem or a double-scaling limit.",
+  "proof_documents": [
+    "notes/susskind-bilocal-fourth-tail.md",
+    "notes/susskind-bilocal-fourth-tail-diagram-draft.md",
+    "notes/susskind-bilocal-fourth-tail-operator-draft.md",
+    "notes/susskind-bilocal-fourth-tail-charged-proof.md",
+    "notes/susskind-bilocal-charged-tail-audit.md",
+    "notes/susskind-bilocal-full-four-point-transfer.md",
+    "manuscript/susskind-bilocal-fourth-tail/main.tex"
+  ],
+  "parameters": "Finite fixtures use standard CAR, unit covariance weight, full finite Fock space with occupation-sector restrictions, and the separately saved parameters. Analytic full-Fock/annealed norms and limits must be read with their stated hypotheses in the final proof.",
+  "previous_evidence": {
+    "results/susskind-bilocal-four-point/local-evidence.json": {
+      "sha256": "85701857a8e6f0040f837168dbf32077716505b11d36389ef48f9be0efb8ed21",
+      "unchanged_scientific_files": [
+        "PROJECT.md",
+        "code/bilocal_four_point_transfer_check.py",
+        "code/bilocal_multisource_chords.py",
+        "code/build_bilocal_four_point.ps1",
+        "code/check_bilocal_four_sources.py",
+        "code/check_bilocal_mixed_otoc.py",
+        "code/check_bilocal_multisource_moments.py",
+        "code/complex_syk_dictionary.py",
+        "code/memory_body_source_chords.py",
+        "code/memory_size_marked_chords.py",
+        "code/mixed_cubic_otoc.py",
+        "code/record_bilocal_four_point.py",
+        "code/record_bilocal_reconstruction.py",
+        "code/singlet_coefficient.py",
+        "code/singlet_multimark.py",
+        "code/singlet_otoc.py",
+        "journal/2026-11-07-susskind-bilocal-four-point.md",
+        "literature/susskind-bilocal-four-point-sources.md",
+        "manuscript/susskind-bilocal-four-point/main.tex",
+        "manuscript/susskind-mixed-cubic/main.tex",
+        "notes/susskind-bilocal-four-point-transfer.md",
+        "notes/susskind-bilocal-four-point.md",
+        "notes/susskind-bilocal-multisource-proof.md",
+        "output/pdf/de-sitter-susskind-bilocal-four-point.pdf",
+        "results/susskind-bilocal-four-point/finite-four-source-checks.json",
+        "results/susskind-bilocal-four-point/joint-moment-checks.json",
+        "results/susskind-bilocal-four-point/main.log",
+        "results/susskind-bilocal-four-point/mixed-otoc-checks.json",
+        "results/susskind-bilocal-four-point/normalized-commutator.png",
+        "results/susskind-bilocal-four-point/transfer-checks.json",
+        "results/susskind-memory-joint-regression/local-evidence.json",
+        "results/susskind-singlet-multimark/local-evidence.json"
+      ],
+      "excluded_mutable_plans": [
+        "NEXT.md",
+        "PLAN.md",
+        "README.md"
+      ]
+    },
+    "results/susskind-memory-neutral-marked-series/local-evidence.json": {
+      "sha256": "9202670c3b64f44d0dbad43fbf5aff8f264cadec1cbead54ddaa00364ef69940",
+      "unchanged_scientific_files": [
+        "code/check_neutral_marked_series.py",
+        "code/check_neutral_marked_rank.py",
+        "code/build_neutral_marked_series.ps1",
+        "code/record_neutral_marked_series.py",
+        "manuscript/susskind-memory-neutral-marked-series/main.tex",
+        "output/pdf/de-sitter-susskind-memory-neutral-marked-series.pdf",
+        "notes/susskind-memory-neutral-marked-series.md",
+        "literature/susskind-memory-neutral-marked-series-sources.md",
+        "journal/2026-11-07-susskind-memory-neutral-marked-series.md",
+        "results/susskind-memory-neutral-marked-series/coefficient-checks.json",
+        "results/susskind-memory-neutral-marked-series/rank-checks.json",
+        "results/susskind-memory-neutral-marked-series/main.log"
+      ],
+      "excluded_mutable_plans": [
+        "NEXT.md",
+        "PLAN.md",
+        "README.md"
+      ]
+    },
+    "results/susskind-memory-oriented-transfer/local-evidence.json": {
+      "sha256": "c7f3a95ffc778f335c6ded4e412e5d6ba6cabab92e286b96cb17e73abe5fb7ce",
+      "unchanged_scientific_files": [
+        "PROJECT.md",
+        "code/build_memory_oriented_transfer.ps1",
+        "code/check_memory_body_geometry.py",
+        "code/check_memory_body_sources.py",
+        "code/check_memory_charge_background.py",
+        "code/check_memory_oriented_marks.py",
+        "code/check_memory_oriented_transfer.py",
+        "code/complex_syk_dictionary.py",
+        "code/memory_body_source_chords.py",
+        "code/memory_oriented_marked_chords.py",
+        "code/memory_size_marked_chords.py",
+        "code/record_memory_oriented_transfer.py",
+        "code/singlet_coefficient.py",
+        "code/singlet_multimark.py",
+        "journal/2026-11-07-susskind-memory-oriented-transfer.md",
+        "literature/susskind-memory-oriented-transfer-sources.md",
+        "manuscript/susskind-memory-oriented-transfer/main.tex",
+        "notes/susskind-memory-charge-background.md",
+        "notes/susskind-memory-oriented-transfer-proof-draft.md",
+        "notes/susskind-memory-oriented-transfer-seed.md",
+        "notes/susskind-memory-oriented-transfer.md",
+        "output/pdf/de-sitter-susskind-memory-oriented-transfer.pdf",
+        "results/susskind-memory-oriented-transfer/body-geometry-checks.json",
+        "results/susskind-memory-oriented-transfer/body-source-checks.json",
+        "results/susskind-memory-oriented-transfer/charge-background-checks.json",
+        "results/susskind-memory-oriented-transfer/finite-transfer-checks.json",
+        "results/susskind-memory-oriented-transfer/main.log",
+        "results/susskind-memory-oriented-transfer/oriented-mark-checks.json",
+        "results/susskind-memory-oriented-transfer/diagnostics/first-layout/main.log",
+        "results/susskind-memory-oriented-transfer/diagnostics/first-layout/main.pdf",
+        "results/susskind-memory-oriented-transfer/diagnostics/first-layout/main.tex"
+      ],
+      "excluded_mutable_plans": [
+        "NEXT.md",
+        "PLAN.md",
+        "README.md"
+      ]
+    }
+  },
+  "checks": {
+    "tagged-covariance-checks.json": {
+      "counts": {
+        "covariance_comparisons": 42336,
+        "overlapping_TI_TJ_comparisons": 19312,
+        "empty_restricted_family_comparisons": 17736,
+        "strict_covariance_bound_comparisons": 14080,
+        "networks": 564,
+        "crossed_networks": 452,
+        "assignments": 94743,
+        "ancilla_permutations": 565,
+        "sector_psd_checks": 1776,
+        "nonzero_networks": 282,
+        "nonzero_crossed_sandwich_networks": 113,
+        "max_direct_ancilla_abs_error": 0.0,
+        "max_operator_norm_over_bound_float": 1.0,
+        "failure_count": 0
+      },
+      "replay": "Scalar binomial formulas, complete pairing coverage, tag unions, charge paths, saved bounds and ratios",
+      "saved_certification": "Exact PSD flags and nonnegative Schur pivots are validated as saved; matrices are not saved and PSD is not rerun",
+      "scope": "Finite CAR fixtures; uniform double-scaling and Schatten claims require the separately bound analytic documents"
+    },
+    "coherence-channel-checks.json": {
+      "counts": {
+        "kernel_rows": 265,
+        "kernel_entries": 2609,
+        "tagged_flip_bounds": 1305,
+        "coherence_identities": 340,
+        "charge_path_identities": 265,
+        "inactive_zero_cases": 75,
+        "sparse_entries_compared": 2044,
+        "nonconstant_input_fixtures": 132,
+        "nonzero_outputs": 196,
+        "varying_gauge_sectors": 14
+      },
+      "direct_entry_visit_upper_bound": 113141,
+      "replay": "Complete fixture coverage, scalar coefficients, input support counts and saved output-count arithmetic",
+      "saved_certification": "CAR channel equality, positive kernels and flip inequalities are original driver certifications; no CAR or kernel main rerun. Full gauge-variation count is bound as reported, with its saved witness checked.",
+      "scope": "exact finite-CAR algebra only; no asymptotic or Schatten estimate"
+    },
+    "charged-reassembly-checks.json": {
+      "counts": {
+        "neutral_matrix_units": 348,
+        "matrix_identities": 3312,
+        "entry_comparisons": 9949,
+        "polynomial_identities": 84,
+        "nonzero_charge_difference_fixtures": 16
+      },
+      "polynomial_fixtures": 28,
+      "replay": "Neutral basis count, superoperator count, complete polynomial fixture coverage, zero saved residuals and nonzero charge-difference count",
+      "saved_certification": "The 3312 matrix identities and 9949 sparse entry comparisons are source-bound original driver certificates; matrices and Gaussian polynomials are not rerun.",
+      "scope": "exact finite-CAR identities; no finite-N Schatten inequality or DS fit",
+      "gaussian_fixture": "H(g)=g A with deterministic Hermitian p-body A and one standard real Gaussian g; number=g*d_g-d_g^2",
+      "jacobi_fixture": "finite C_m=choose(m,p)choose(N-m+p,p), theta_v=mu_m(vp); algebra valid without an ensemble covariance assumption"
+    }
+  },
+  "sealed_scientific_output_hashes_verified": {
+    "tagged-covariance-checks.json": "9169292b18de235437ebf22bd69b40b532da15e8d45e2e82040734a18d723985",
+    "coherence-channel-checks.json": "99b2e3d852c5e706853c703310ee8fa2494aa3ac611bef59e5fb4dd89f3e430a",
+    "charged-reassembly-checks.json": "bb76a4b5b195ecb203612afbf9b285e9d91fd59bb5c57ace47018d65aa18a0b4"
+  },
+  "input_hashes_verified": {
+    "tagged-covariance-checks.json": {
+      "code/check_bilocal_tagged_covariance.py": "648409464e5faccd4ac0f314ff8e7c5a5eea16532e5ef2d700741a31f3c671eb",
+      "notes/susskind-bilocal-four-point-transfer.md": "a9930d932e4a1ea9159a5db8686b290bb90c1fb013645edfec355b742f6452e4",
+      "literature/susskind-bilocal-fourth-tail-sources.md": "0a2f21ee578564fddad7b4a8a8922f80371c78735cb775c5fc58011cf928ef62"
+    },
+    "coherence-channel-checks.json": {
+      "code/check_bilocal_coherence_channel.py": "6b599080c461f8feabcbc075ce2febb46ef7b0756711c186a41acb9d0472455d"
+    },
+    "charged-reassembly-checks.json": {
+      "code/check_bilocal_charged_reassembly.py": "abc20991b3da5a5ef432b993735bbb1eff026c2b20237b38c1205ed74e1ca283",
+      "code/check_bilocal_coherence_channel.py": "6b599080c461f8feabcbc075ce2febb46ef7b0756711c186a41acb9d0472455d"
+    }
+  },
+  "parameter_hashes_recorded": {
+    "tagged-covariance-checks.json": {
+      "origin": "Original schema has no parameter digest; computed at sealing from conventions and configurations",
+      "sha256": "2359d571e54b782fc4c1656d23a60622ecfbc7aaee2d7403a3138d4d20ce6af4",
+      "parameters": {
+        "conventions": {
+          "CAR": "{c_i,c_j^dagger}=delta_ij",
+          "C_I_dagger": "ascending ordered product of creators",
+          "A_IJ": "C_I_dagger C_J",
+          "I_J_overlap": "allowed",
+          "coupling_covariance": "E J_IJ J_KL=delta_IL delta_JK",
+          "fixture_variance": 1,
+          "physical_w_N": "4^p Js^2/lambda_N (p!/N^p)^2",
+          "variance_rescaling": "a 2k-endpoint pairing and its norm bound both multiply by w_N^k",
+          "tags": "all TI,TJ cardinality <=2 for covariance; each endpoint restriction is intersected before comparing to its union in the base edge orientation",
+          "norm": "operator norm on fixed occupation sectors; normalized traces also recorded",
+          "proof_of_psd": "exact Fraction Schur complements with zero-pivot row test",
+          "sampling": "none; all finite labels/pairings in stated configurations enumerated"
+        },
+        "covariance_systems": [
+          {
+            "N": 2,
+            "p": 1
+          },
+          {
+            "N": 2,
+            "p": 2
+          },
+          {
+            "N": 3,
+            "p": 1
+          },
+          {
+            "N": 3,
+            "p": 2
+          },
+          {
+            "N": 4,
+            "p": 1
+          },
+          {
+            "N": 4,
+            "p": 2
+          },
+          {
+            "N": 5,
+            "p": 1
+          },
+          {
+            "N": 5,
+            "p": 2
+          }
+        ],
+        "network_configurations": [
+          [
+            2,
+            1,
+            2,
+            "plain"
+          ],
+          [
+            2,
+            1,
+            2,
+            "sandwich"
+          ],
+          [
+            2,
+            1,
+            2,
+            "tagged"
+          ],
+          [
+            2,
+            1,
+            2,
+            "union"
+          ],
+          [
+            2,
+            1,
+            3,
+            "plain"
+          ],
+          [
+            2,
+            1,
+            3,
+            "sandwich"
+          ],
+          [
+            2,
+            1,
+            3,
+            "tagged"
+          ],
+          [
+            2,
+            1,
+            3,
+            "union"
+          ],
+          [
+            2,
+            1,
+            4,
+            "plain"
+          ],
+          [
+            2,
+            1,
+            4,
+            "sandwich"
+          ],
+          [
+            2,
+            1,
+            4,
+            "tagged"
+          ],
+          [
+            2,
+            1,
+            4,
+            "union"
+          ],
+          [
+            3,
+            1,
+            3,
+            "plain"
+          ],
+          [
+            3,
+            1,
+            3,
+            "sandwich"
+          ],
+          [
+            3,
+            1,
+            3,
+            "tagged"
+          ],
+          [
+            3,
+            1,
+            3,
+            "union"
+          ],
+          [
+            4,
+            2,
+            2,
+            "plain"
+          ],
+          [
+            4,
+            2,
+            2,
+            "sandwich"
+          ],
+          [
+            4,
+            2,
+            2,
+            "tagged"
+          ],
+          [
+            4,
+            2,
+            2,
+            "union"
+          ]
+        ]
+      }
+    },
+    "coherence-channel-checks.json": {
+      "origin": "Original schema has no parameter digest; computed at sealing from saved parameters",
+      "sha256": "19b7bc3f9a96500feacb2de02796db244a845a303a2ba3daa77f0a7ccfa5ea35",
+      "parameters": {
+        "N": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "p": [
+          1,
+          2
+        ],
+        "a": [
+          0,
+          1,
+          2
+        ],
+        "m": "every a <= m <= N-a; a <= floor(N/2)",
+        "covariance_weight_w_N": 1,
+        "arithmetic": "fractions.Fraction",
+        "CAR_site_numbering": "zero-based"
+      }
+    },
+    "charged-reassembly-checks.json": {
+      "origin": "Original schema has no parameter digest; computed at sealing from saved parameters",
+      "sha256": "06eccfbbe2291bb7e0d3afc7dd000030c5271da0a707700dd8590ee29bafb810",
+      "parameters": {
+        "neutral_basis_units": 348,
+        "superoperator_identities": 3132,
+        "polynomial_fixtures": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            2
+          ]
+        ],
+        "maximum_gaussian_degree": 6,
+        "expected_wall_seconds_upper_bound": 30,
+        "algorithm": "sparse Fraction CAR matrices and exact one-coordinate Gaussian polynomials"
+      }
+    }
+  },
+  "evidence_scopes": {
+    "tagged-covariance-checks.json": "Exact finite CAR fixtures only. Uniform double-scaling degree bounds require the separate analytic tagged proof.",
+    "coherence-channel-checks.json": "exact finite-CAR algebra only; no asymptotic or Schatten estimate",
+    "charged-reassembly-checks.json": "exact finite-CAR identities; no finite-N Schatten inequality or DS fit"
+  },
+  "recorded_driver_environments": {
+    "tagged-covariance-checks.json": {
+      "python": "3.14.5 (tags/v3.14.5:5607950, May 10 2026, 10:43:50) [MSC v.1944 64 bit (AMD64)]",
+      "numpy": "2.4.6",
+      "platform": "Windows-11-10.0.26200-SP0"
+    },
+    "coherence-channel-checks.json": {
+      "python": "3.14.5 (tags/v3.14.5:5607950, May 10 2026, 10:43:50) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "dependencies": "Python standard library only"
+    },
+    "charged-reassembly-checks.json": {
+      "python": "3.14.5 (tags/v3.14.5:5607950, May 10 2026, 10:43:50) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "dependencies": "Python standard library only"
+    }
+  },
+  "git_commit_created": false,
+  "git_push_performed": false,
+  "archive_created": false,
+  "external_reply_sent": false,
+  "build": {
+    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File code/build_bilocal_fourth_tail.ps1",
+    "pages": 11,
+    "passes": 2,
+    "pass_records": [
+      {
+        "pass_number": 1,
+        "path": "tmp/pdfs/susskind-bilocal-fourth-tail-build/pass1.txt",
+        "sha256": "432bef61a309f18723a1c22250badf22087edfafbf0d26855d7a781de00c0a9f"
+      },
+      {
+        "pass_number": 2,
+        "path": "tmp/pdfs/susskind-bilocal-fourth-tail-build/pass2.txt",
+        "sha256": "c93f50386bd3785bfe8802d59c64c80d8adcd85985b876879eb986340cf60085"
+      }
+    ],
+    "compiler_header": "This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5 Portable) (preloaded format=pdflatex 2026.9.19)  7 NOV 2026 05:52",
+    "render_command": "pdftoppm -r 95 -png output/pdf/de-sitter-susskind-bilocal-fourth-tail.pdf tmp/pdfs/susskind-bilocal-fourth-tail-render/page",
+    "final_render_filenames": [
+      "page-01.png",
+      "page-02.png",
+      "page-03.png",
+      "page-04.png",
+      "page-05.png",
+      "page-06.png",
+      "page-07.png",
+      "page-08.png",
+      "page-09.png",
+      "page-10.png",
+      "page-11.png"
+    ],
+    "render_metadata": {
+      "tmp/pdfs/susskind-bilocal-fourth-tail-render/page-01.png": {
+        "width_pixels": 786,
+        "height_pixels": 1111,
+        "pixels_per_metre": [
+          3740,
+          3740
+        ],
+        "density_units": "metres",
+        "nominal_dpi": 95
+      },
+      "tmp/pdfs/susskind-bilocal-fourth-tail-render/page-02.png": {
+        "width_pixels": 786,
+        "height_pixels": 1111,
+        "pixels_per_metre": [
+          3740,
+          3740
+        ],
+        "density_units": "metres",
+        "nominal_dpi": 95
+      },
+      "tmp/pdfs/susskind-bilocal-fourth-tail-render/page-03.png": {
+        "width_pixels": 786,
+        "height_pixels": 1111,
+        "pixels_per_metre": [
+          3740,
+          3740
+        ],
+        "density_units": "metres",
+        "nominal_dpi": 95
+      },
+      "tmp/pdfs/susskind-bilocal-fourth-tail-render/page-04.png": {
+        "width_pixels": 786,
+        "height_pixels": 1111,
+        "pixels_per_metre": [
+          3740,
+          3740
+        ],
+        "density_units": "metres",
+        "nominal_dpi": 95
+      },
+      "tmp/pdfs/susskind-bilocal-fourth-tail-render/page-05.png": {
+        "width_pixels": 786,
+        "height_pixels": 1111,
+        "pixels_per_metre": [
+          3740,
+          3740
+        ],
+        "density_units": "metres",
+        "nominal_dpi": 95
+      },
+      "tmp/pdfs/susskind-bilocal-fourth-tail-render/page-06.png": {
+        "width_pixels": 786,
+        "height_pixels": 1111,
+        "pixels_per_metre": [
+          3740,
+          3740
+        ],
+        "density_units": "metres",
+        "nominal_dpi": 95
+      },
+      "tmp/pdfs/susskind-bilocal-fourth-tail-render/page-07.png": {
+        "width_pixels": 786,
+        "height_pixels": 1111,
+        "pixels_per_metre": [
+          3740,
+          3740
+        ],
+        "density_units": "metres",
+        "nominal_dpi": 95
+      },
+      "tmp/pdfs/susskind-bilocal-fourth-tail-render/page-08.png": {
+        "width_pixels": 786,
+        "height_pixels": 1111,
+        "pixels_per_metre": [
+          3740,
+          3740
+        ],
+        "density_units": "metres",
+        "nominal_dpi": 95
+      },
+      "tmp/pdfs/susskind-bilocal-fourth-tail-render/page-09.png": {
+        "width_pixels": 786,
+        "height_pixels": 1111,
+        "pixels_per_metre": [
+          3740,
+          3740
+        ],
+        "density_units": "metres",
+        "nominal_dpi": 95
+      },
+      "tmp/pdfs/susskind-bilocal-fourth-tail-render/page-10.png": {
+        "width_pixels": 786,
+        "height_pixels": 1111,
+        "pixels_per_metre": [
+          3740,
+          3740
+        ],
+        "density_units": "metres",
+        "nominal_dpi": 95
+      },
+      "tmp/pdfs/susskind-bilocal-fourth-tail-render/page-11.png": {
+        "width_pixels": 786,
+        "height_pixels": 1111,
+        "pixels_per_metre": [
+          3740,
+          3740
+        ],
+        "density_units": "metres",
+        "nominal_dpi": 95
+      }
+    },
+    "final_pages_visually_inspected": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "visual_review_attestation": "Caller supplied --visual-review-complete after final-page inspection. Recorder checks hashes, page counts, 95dpi PNG metadata and freshness; it does not see the pages."
+  },
+  "diagnostics": {
+    "preserved_files": [
+      "results/susskind-bilocal-fourth-tail/diagnostics/initial-failed-main.log",
+      "results/susskind-bilocal-fourth-tail/diagnostics/initial-failed-pass1.txt",
+      "results/susskind-bilocal-fourth-tail/diagnostics/initial-overfull-main.log"
+    ]
+  },
+  "environment": {
+    "python": "3.14.5",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "dependencies": "Python standard library only"
+  },
+  "process_state": "Saved science/build/render artifacts only; recorder executes no scientific main, compiler, renderer or Git.",
+  "hashes": {
+    "NEXT.md": "ec394aacaf6f3122082cb4d005d14b419f284b5089ad7b988ed1527125786e08",
+    "PLAN.md": "a9af1411075582bee8404f98eb5b90a35d4a0b14afdb447daba952b72fdcc599",
+    "PROJECT.md": "5c7cab9a9abd28d354b07a94aee40aedcca351bb4eff8b0cb07e8428058fd00a",
+    "README.md": "132327da74c7fd5b4fbee9762d24db11c54f93398cd06ee08c2adb6550fbac3d",
+    "code/build_bilocal_fourth_tail.ps1": "fea086c2cd09e11d616da5f08ec1deaa178c55028bbef020aa397dd1805244b8",
+    "code/check_bilocal_charged_reassembly.py": "abc20991b3da5a5ef432b993735bbb1eff026c2b20237b38c1205ed74e1ca283",
+    "code/check_bilocal_coherence_channel.py": "6b599080c461f8feabcbc075ce2febb46ef7b0756711c186a41acb9d0472455d",
+    "code/check_bilocal_tagged_covariance.py": "648409464e5faccd4ac0f314ff8e7c5a5eea16532e5ef2d700741a31f3c671eb",
+    "code/record_bilocal_fourth_tail.py": "553e7b24e23efb2ec7824a2b296dcda0a23ba8acb0eae7377e514bbf487074de",
+    "code/record_bilocal_reconstruction.py": "aa112ed1799410a4cf210939fbd9052035218effd533bf86b2f89ce22e7b11a6",
+    "journal/2026-11-07-susskind-bilocal-fourth-tail.md": "aa3f48661e9f8272f768e0164e58437477e6f7c1222574e59df5141909e903c1",
+    "literature/susskind-bilocal-clifford-riesz-sources.md": "2b0b2105997269b63f2c4e3c911e23944b2e63b040d4e4dbe8eee7f2330fc955",
+    "literature/susskind-bilocal-fourth-tail-sources.md": "0a2f21ee578564fddad7b4a8a8922f80371c78735cb775c5fc58011cf928ef62",
+    "manuscript/susskind-bilocal-fourth-tail/main.tex": "86dabdf642ade7a7b07baa843a3c048936399d6e822c923c37922ad31bb0d1d8",
+    "notes/susskind-bilocal-charged-tail-audit.md": "e75ddb2aa9ad46b425563281e475da658a5d16b9e1a5dc3cbc2591023debadd7",
+    "notes/susskind-bilocal-four-point-transfer.md": "a9930d932e4a1ea9159a5db8686b290bb90c1fb013645edfec355b742f6452e4",
+    "notes/susskind-bilocal-fourth-tail-charged-proof.md": "6c6f08e3ee078bca0654fb3118539b1e95e206a8e81a7ceeaa4cdc944fab4933",
+    "notes/susskind-bilocal-fourth-tail-diagram-draft.md": "974998174b5dcdbc16c44c7d7566a3226347cd8aab1aff6e5d8e7d87a35299f9",
+    "notes/susskind-bilocal-fourth-tail-operator-draft.md": "2ce74bf74a410b275c14b91a2725eddae264c62142fbd6733fc8959de302c8c9",
+    "notes/susskind-bilocal-fourth-tail.md": "589a1677b80672252f314b6af45f54248a37125c4be8fb9c9f74ff9dc16a2368",
+    "notes/susskind-bilocal-full-four-point-transfer.md": "cbda21a09daaf2bdd7285a3bd7af80d2f74aa41a168839147515ae3b40843eeb",
+    "output/pdf/de-sitter-susskind-bilocal-fourth-tail.pdf": "47b014277e742680a4cda4f18bd9f8574287e27a1d5be9958ba7af12677cccc9",
+    "results/susskind-bilocal-fourth-tail/charged-reassembly-checks.json": "bb76a4b5b195ecb203612afbf9b285e9d91fd59bb5c57ace47018d65aa18a0b4",
+    "results/susskind-bilocal-fourth-tail/coherence-channel-checks.json": "99b2e3d852c5e706853c703310ee8fa2494aa3ac611bef59e5fb4dd89f3e430a",
+    "results/susskind-bilocal-fourth-tail/main.log": "ad1be2db813bfdf604e95ee26fdf8fabf68337cfebfbc89cfd1a53bf5839edcc",
+    "results/susskind-bilocal-fourth-tail/tagged-covariance-checks.json": "9169292b18de235437ebf22bd69b40b532da15e8d45e2e82040734a18d723985",
+    "results/susskind-bilocal-fourth-tail/diagnostics/initial-failed-main.log": "bf57a2b5c569ac2ab7e557f26ecd82394e7add9f6126a94cf5ca3ea3fc0c2c7e",
+    "results/susskind-bilocal-fourth-tail/diagnostics/initial-failed-pass1.txt": "0527b335ff03c89d664fdeb6091fe785cfd0aeeace88f2b766232188321d5745",
+    "results/susskind-bilocal-fourth-tail/diagnostics/initial-overfull-main.log": "69423c51a800f21bafe64e5ac0afc724c70778a499d85040a548632ec54b5fc7"
+  },
+  "render_hashes": {
+    "tmp/pdfs/susskind-bilocal-fourth-tail-render/page-01.png": "1c27d6445a88994d68f3d06b47b3db2441dd66fcdc9a5b0e299e7dac0efacadd",
+    "tmp/pdfs/susskind-bilocal-fourth-tail-render/page-02.png": "ac48cd3643e552c54764128597d3781ec7e0f2efec4df0053c19768446d953e5",
+    "tmp/pdfs/susskind-bilocal-fourth-tail-render/page-03.png": "0c293af5c3e9bf4916d0911e4742232e103a261c63466a9b56b8f31f1eee4183",
+    "tmp/pdfs/susskind-bilocal-fourth-tail-render/page-04.png": "6d565172e2bca039cf0363da6fbd9c3da3ff768eb2cc6ec4cf62d391a068ab39",
+    "tmp/pdfs/susskind-bilocal-fourth-tail-render/page-05.png": "70f4b20fd7f2eaaccc6a90d24a04e2f8197f221a2295f0f3fca1e33cc45b2dc8",
+    "tmp/pdfs/susskind-bilocal-fourth-tail-render/page-06.png": "aea903b7eb679af0dcf6ada2c1f613b32bb624b8dcbe34a83acf59ad324afa5a",
+    "tmp/pdfs/susskind-bilocal-fourth-tail-render/page-07.png": "66ebec0f1cf8f0473c7b77a4c3e30c431a2779b59335130adac09eb41d2cd037",
+    "tmp/pdfs/susskind-bilocal-fourth-tail-render/page-08.png": "ee15ec3029d5ddc13873daaedba8482bdbd582e4682d9d819702279368b4b61f",
+    "tmp/pdfs/susskind-bilocal-fourth-tail-render/page-09.png": "5f694af0b8007a777adfe2ee5bc977cfc9e70f90282ebb750f2048dd192a66d5",
+    "tmp/pdfs/susskind-bilocal-fourth-tail-render/page-10.png": "d53fb037583f5d7717832f16d482067242c6e00b1d51985b8c5c144266375fef",
+    "tmp/pdfs/susskind-bilocal-fourth-tail-render/page-11.png": "a0ddcee1d41b1213cff040c4fc6cbce13081a3b9cd63d6c4e47eab8c47cdea39"
+  },
+  "build_pass_hashes": {
+    "tmp/pdfs/susskind-bilocal-fourth-tail-build/pass1.txt": "432bef61a309f18723a1c22250badf22087edfafbf0d26855d7a781de00c0a9f",
+    "tmp/pdfs/susskind-bilocal-fourth-tail-build/pass2.txt": "c93f50386bd3785bfe8802d59c64c80d8adcd85985b876879eb986340cf60085"
+  }
+}

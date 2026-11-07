@@ -1,0 +1,4 @@
+The first rank script used a Python list as a NumPy advanced index; source retained, fixed by making ix an integer array. It failed before producing a rank JSON.
+The first reconstruction compared unexpanded SymPy expressions structurally. Expanding each exact difference gave zero on all eight identities; original checker retained. No tolerance changed.
+The first factorial-moment verifier requested probe order 3 in N5,m2, where the representation has ranks only 0..2. The triangular inversion at order 3 is outside its domain there. Restricted the finite check to n<=min(3,m,N-m); all larger systems still check n=3. Source retained; no moment result was overwritten.
+The web PDF text for Kota--Vyas 1504.00759 was available, including equations (34)--(35) and multiplicity discussion. Browser screenshot requests and HTML fallback returned cache misses. No claim of visual source-PDF inspection is made.

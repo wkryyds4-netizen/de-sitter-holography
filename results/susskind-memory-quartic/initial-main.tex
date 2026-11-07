@@ -1,0 +1,314 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,microtype}
+\usepackage[margin=24mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\av}[1]{\langle #1\rangle}
+\newcommand{\Jh}{\mathcal J_h}
+\newcommand{\Lh}{\mathcal L_h}
+\newcommand{\MM}{\widehat{\mathcal M}}
+\DeclareMathOperator{\tr}{tr}
+\title{The second memory coefficient and a quartic singlet\\First returns, descendants and a complete two-point kernel}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Local research note --- 6 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+The second energy-centered memory coefficient admits an exact
+expression in fourth fermion derivatives, lower descendants and a
+nonlinear first-return term. Its fourth Gaussian-chaos component
+contains a direction independent of four descendant directions.
+A complete finite endpoint classification cancels all contractions
+with fewer than four bridges and identifies the resulting two-point
+measure with the established $r=q^4$ Mehler probe kernel. Separate
+endpoint certificates give vanishing two-energy cross measures with
+the quadratic and cubic singlets. The remaining quadratic chaos of
+the raw second memory coefficient is kept as an explicit open task.
+\end{abstract}
+\section{Setting and the exact memory expansion}
+Use the standard CAR complex Gaussian $p$-body Hamiltonian $H=H_s$,
+including overlapping index sets, with variance
+$w=4^p(J_s^2N/p^2)(p!/N^p)^2$. Brackets mean the annealed normalized
+trace at $\beta=\mu=0$, and $\hbar=1$. First take $p^2/N\to\lambda>0$,
+$p,N\to\infty$, with $q=e^{-4\lambda}$ and $\sigma^2=J_s^2/\lambda$.
+Time is fixed in string units; small $\lambda$ is a subsequent limit.
+
+In charge $m>0$, retain $h=H_m$, $K=1_N\otimes H_{m-1}$ and
+$V\psi=m^{-1/2}\sum_i|i\rangle c_i\psi$. Write $Q=1-VV^\dagger$,
+$\mathcal R=QKV$, $K_\perp=QKQ$ and
+\begin{equation}
+ \MM_m(s)=e^{-ihs/2}\mathcal R^\dagger e^{iK_\perp s}
+ \mathcal R e^{-ihs/2}
+ =G+isZ_1-\tfrac12s^2Z_2+O(s^3).
+\end{equation}
+Let $B_n=V^\dagger K^nV$ and
+$b_n=B_n-\sum_{j=1}^{n-1}b_jB_{n-j}$. The ordered first-return
+recursion, equivalent to an interval-partition moment relation
+\cite{ABT}, gives
+\begin{align}
+ b_4={}&B_4-B_1B_3-B_2^2-B_3B_1+B_1^2B_2
+       +B_1B_2B_1+B_2B_1^2-B_1^4,\\
+ Z_2={}&b_4-2\Jh b_3+\Jh^2G,\qquad \Jh X=(hX+Xh)/2.
+\end{align}
+Using this algebra does not assume Boolean independence of the
+microscopic Hamiltonian or its neighbouring charge blocks.
+
+\newpage
+\section{Fermion derivatives and the first-return term}
+Define $\mathcal L=[H,\cdot]$,
+$B_{ab}^{\rm f}=\sum_i(\mathcal L^ac_i)^\dagger\mathcal L^bc_i$,
+$A=B_{11}^{\rm f}$, $M_n=B_{0n}^{\rm f}$ and
+$T_n=(M_n+M_n^\dagger)/2$. The product rule is
+\begin{equation}
+ \mathcal L B_{ab}^{\rm f}=-B_{a+1,b}^{\rm f}+B_{a,b+1}^{\rm f}.
+\end{equation}
+Starting from $M_2=A$, it gives
+\begin{align}
+ M_4&=B_{31}^{\rm f}-3B_{22}^{\rm f}+3B_{13}^{\rm f},\\
+ T_4&=B_{22}^{\rm f}+2\mathcal L^2A,&
+ M_4-T_4&=2\mathcal L T_3.
+\end{align}
+The fourth centered bilocal coefficient is
+\begin{equation}
+ U_4=T_4-\tfrac32\mathcal L^2A
+     =B_{22}^{\rm f}+\tfrac12\mathcal L^2A.
+\end{equation}
+Substituting the compressed moments into the first-return recursion
+and setting $r=p/m$, one obtains the finite-$N$ identity
+\begin{equation}\label{eq:Z2}
+ \boxed{\ mZ_2=B_{22,m}^{\rm f}+\frac{(1+r)^2}{4}\Lh^2A_m
+   +2r\Jh T_{3,m}+3r^2\Jh^2A_m
+   -\frac{A_m^2}{m}-mr^4h^4\ },
+\end{equation}
+where $\Lh=[h,\cdot]$. All terms are Hermitian. In particular,
+$-A_m^2/m$ cannot be omitted from the finite-system formula.
+
+The effect of the return and drift terms can be isolated exactly.
+Use the previous conserved pieces
+$K_A=a_m+c_m(h^2-C_m)$ and $P_m$, and set
+$Y=A_m-K_A$, $U=T_{3,m}-P_m$. Define
+\begin{align}
+ D_{2,m}&=2r\Jh P_m+3r^2\Jh^2K_A-K_A^2/m-mr^4h^4,\\
+ \mathcal E_m&=B_{22,m}^{\rm f}+\tfrac14\Lh^2A_m.
+\end{align}
+Then $[h,D_{2,m}]=0$ and
+\begin{align}\label{eq:remainder}
+ mZ_2-D_{2,m}-\mathcal E_m={}&
+ (r/2+r^2/4)\Lh^2Y+2r\Jh U+3r^2\Jh^2Y\nonumber\\
+ &-\bigl(\{K_A,Y\}+Y^2\bigr)/m .
+\end{align}
+At fixed $\lambda$, the prior fixed-degree moment bounds give
+$r=O(p^{-1})$, $a_m=O(p)$ and bounded moments of $Y,U,h$ on the
+central charge window. Thus the right-hand side is $O_{L^2}(p^{-1})$;
+the usual binomial tail absorbs its polynomial bounds off that window.
+This removes known return/drift contributions. It does not subtract
+the still unresolved conserved and quadratic-chaos pieces of
+$\mathcal E$.
+
+\newpage
+\section{A five-dimensional fourth-chaos problem}
+Let $\mathscr D X=Q_fX-\sum_i c_i^\dagger Xc_i$ and
+$\mathscr T_k=(kp-\mathscr D)H^k$. In the following definitions every
+operator is finally projected with the ordinary Gaussian-chaos map
+$W_4$. Introduce five Hermitian raw expressions:
+\begin{align}
+ E_0&=(AH^2+H^2A)/2,& M_0&=HAH,\\
+ S_0&=(H\mathscr T_3+\mathscr T_3H)/2-E_0-M_0,\\
+ C_0&=\mathscr T_4-2E_0-M_0-2S_0,& Z_0&=H^4.
+\end{align}
+Write $(E,M,S,C,Z)=W_4(E_0,M_0,S_0,C_0,Z_0)$.
+For four consecutive Hamiltonian slots these are respectively the
+single contraction marks
+\begin{equation}
+ \tfrac12(01+23),\qquad12,\qquad\tfrac12(02+13),
+ \qquad03,\qquad\text{no mark}.
+\end{equation}
+They satisfy
+\begin{align}
+ W_4\mathcal E&=C-2S+\tfrac12E+\tfrac12M,\\
+ W_4(\mathcal J_H T_3)&=S-\tfrac12(E+M),\\
+ W_4(\mathcal J_H^2A)&=(E+M)/2,&
+ W_4(\mathcal L^2A)&=2(E-M).
+\end{align}
+Thus $E,M,S,Z$ span the fourth-chaos descendants of the already
+present derivative fields and the plain Hamiltonian polynomial.
+They are not all conserved operators.
+
+The $24$ pairings connecting two four-slot blocks determine their
+Gram matrix, with all internal block pairings removed by $W_4$.
+Project $C$ onto the other four directions. With
+$d_3=q^2-q+1$ and $d_5=1+q+q^2+q^3+q^4$, the residual is
+\begin{equation}\label{eq:Q4}
+ Q_4=C-\alpha E-\beta M-\gamma S-\delta Z,
+\end{equation}
+where
+\begin{align}
+ \alpha&=-\frac{2q^3}{d_3d_5},&
+ \beta&=-\frac{q^2(1+q+q^2)}{d_3d_5},\\
+ \gamma&=\frac{2q}{d_3},&
+ \delta&=\frac{2\lambda(1-q)^3(1+q)(1+q+q^2)}{(1+q^2)d_5}.
+\end{align}
+Consequently $W_4\mathcal E$ contains $Q_4$ with coefficient one,
+plus $(\alpha+1/2)E+(\beta+1/2)M+(\gamma-2)S+\delta Z$.
+The projection coefficients depend on the limiting $\lambda$.
+They specify asymptotic Gram orthogonality, not exact finite-size
+orthogonality. The first-return remainder vanishes in this fourth
+chaos, and $W_4D_{2,m}\to0$, so this component is genuinely present
+in the second memory coefficient.
+
+\newpage
+\section{A complete endpoint certificate for the kernel}
+The variance $V_4=\av{Q_4^2}_{\rm DS}$ is positive:
+\begin{align}\label{eq:variance}
+ V_4&=\sigma^8
+ \frac{4\lambda(1-q)^2(1+q)^2\,[P(q)+4\lambda q^3T(q)]}
+ {(1+q^2)d_3d_5},\\
+ P(q)&=1+q+2q^2+q^3+q^4,\qquad
+ T(q)=2+q+2q^2+q^3+2q^4.\nonumber
+\end{align}
+All factors in this expression are positive for $0<q<1$.
+The independently contracted dynamic curvature is
+\begin{equation}
+ \frac{\av{Q_4\mathcal L^2Q_4}_{\rm DS}}{V_4}
+ =2\sigma^2(1-q^4).
+\end{equation}
+To obtain a full kernel rather than infer it from this moment,
+consider arbitrary $\av{Q_4H^uQ_4H^v}$ with fixed $u,v$.
+
+For each Gaussian pairing, the established local determinant rule
+for two single marks is
+$q^{\mathrm{cr}}(\lambda d+\lambda^2ab)$, with
+\begin{equation}
+ a_{ij}=2-4\,\mathbf1_{\text{incident chords cross}},\qquad
+ d_{ij,kl}=4\,\mathbf1_{\pi(i)=l,\ \pi(j)=k}.
+\end{equation}
+Constants in \eqref{eq:Q4} are included before summation.
+For a fixed word, Poisson overlap limits and exponential-moment
+bounds justify this rule, including fixed mark derivatives.
+
+Group pairings by the number $k=0,\ldots,4$ of bridges between
+the two four-slot blocks. There are $8-2k$ remaining external
+endpoints, colored by which block they join, and an arc split between
+the blocks. Permuting slots inside the blocks produces an orbit of
+$24^2/k!$ distinct pairings. The full classification has
+\begin{equation}
+ \sum_{k=0}^4\binom{8-2k}{4-k}(9-2k)=807
+\end{equation}
+templates and $452760$ pairing words. The recorded exact integer
+polynomial certificate gives zero for both the $\lambda$ and
+$\lambda^2$ coefficients in every template with $k<4$.
+The $k=4$ coefficient agrees exactly with \eqref{eq:variance}.
+
+Spectator chords contribute a common factor to each orbit: moving
+an endpoint within a contiguous marked block cannot change its
+crossing with a chord whose endpoints are both external. Therefore
+this finite classification covers arbitrary spectator number; it is
+not a finite-order fit. The four surviving bridges cross each
+spectator four times. Hence all two-energy moments equal those of
+an existing probe with parameter $r=q^4$ and strength $V_4$.
+
+Positive finite two-energy measures, higher even moment bounds and
+compact support of the candidate imply weak spectral convergence.
+In particular, for every fixed centre time $T$,
+\begin{equation}\label{eq:kernel}
+ \av{Q_4^\dagger Q_4(T)}_{\rm DS}=V_4G_{q^4}(T).
+\end{equation}
+The Mehler kernel itself is the established one \cite{BNR}.
+
+\newpage
+\section{Cross measures and the small-coupling channel}
+A second endpoint calculation pairs a four-slot $Q_4$ block with
+the two-slot $Y$ or three-slot $R$ block. There are respectively
+$128$ and $354$ templates. Each is zero as a polynomial in $q$ at
+both powers of $\lambda$. The same spectator argument covers all
+fixed two-energy moments. Spectral Cauchy--Schwarz, tightness and
+compact moment determinacy therefore give
+\begin{equation}
+ d\nu_{Q_4,Y}=0,\qquad d\nu_{Q_4,R}=0.
+\end{equation}
+This is energy-resolved two-point orthogonality, so it also holds
+after multiplying either lower field by fixed left/right energy
+polynomials. No mixed higher-point independence has been assumed.
+
+Since $0<q^4<1$, the limiting Mehler measure is absolutely continuous
+and has no diagonal atom. The exact zero-frequency component of
+$Q_4$ vanishes in the limit, by the closed-diagonal Portmanteau bound.
+The field is a dynamic channel rather than a residual conserved
+polynomial. This fact does not fix its bulk mass.
+
+The subsequent small-$\lambda$ limit is
+\begin{equation}
+ V_4\sim\frac{768}{5}\frac{J_s^8}{\lambda},\qquad
+ \frac{\av{Q_4^\dagger Q_4(T)}}{V_4}
+ \longrightarrow\operatorname{sech}^8(2J_sT),\qquad
+ \mu_2\longrightarrow32J_s^2.
+\end{equation}
+Here $\Delta=4$ is a chord probe label. The single-time kernel and
+its frequency spectrum must still be matched to actual spatial
+insertions before a meson interpretation can be completed.
+
+For $J_s=1$, independent evaluations of the normalized kernel give
+\begin{center}\begin{tabular}{lrrr}\toprule
+$\lambda$ & $T=0.25$ & $T=0.5$ & $T=1$ \\\midrule
+0.25 & 0.7799243687 & 0.3547099044 & 0.0044426013 \\
+0.10 & 0.6052107914 & 0.1290475638 & 0.0002415544 \\
+0.025 & 0.4458017205 & 0.0474957676 & 0.0000461996 \\
+0.01 & 0.4082285863 & 0.0370478710 & 0.0000320903 \\\bottomrule
+\end{tabular}\end{center}
+The finite-coupling dependence is substantial. Jacobi evolution uses
+$G_{q^4}(T)=\sum_nq^{4n}|\langle n|e^{-iTT_q}|0\rangle|^2$,
+with $(T_q)_{n-1,n}=\sigma\sqrt{(1-q^n)/(1-q)}$.
+Its vacuum Taylor truncation bound is below $10^{-13}$, with a
+size increase of 12. At $\lambda=0.25,0.1$ the result is also checked
+against 128/192-node Mehler quadrature. This separates truncation
+control from floating-point refinement and from the physical
+small-$\lambda$ approximation.
+
+\newpage
+\section{What remains in the raw fourth coefficient}
+The second memory coefficient is quartic in the Gaussian couplings.
+After subtracting its ensemble scalar part, it still has both second
+and fourth coupling chaos. The present result resolves a new
+fourth-chaos channel and its cross measures with $Y,R$; it does not
+identify $\mathcal E$ or $mZ_2$ with $Q_4$ alone.
+
+The immediate continuation is to compute $W_2\mathcal E$, its
+conserved $H^2$ projection and any rank-filtered dynamic remainder.
+One must also translate the fourth-chaos descendants $E,M,S,Z$
+back into full operators with their lower-chaos contractions restored.
+Only then can the actual second memory coefficient have a complete
+two-point spectral decomposition. Mixed correlations with $F$ and
+composite fields such as $Y^2$ require their own same-$J$ analysis.
+
+For finite memory parameters, the two-insertion remainder still
+needs a bound at the collective normalization. The first three
+Taylor coefficients, even when individually solved, do not establish
+that expansion's convergence after double scaling. The next field
+therefore supplies concrete spectral data for reconstruction, while
+the finite-memory and bulk spatial problems retain their full scope.
+
+\paragraph{Method and literature boundary.}
+Interval-partition/first-return algebra is standard \cite{ABT}.
+The endpoint cancellation argument identifies a particular microscopic
+composite with an existing chord measure; it is not a new derivation
+of the Mehler formula. We also examined the composite-operator
+relations for analytically continued degenerate matter in
+\cite{HS}. Their negative-dimension insertion is a distinct object;
+its fusion rules do not by themselves identify the present positive
+fourth-chaos field. No such identification is used here.
+
+\begin{thebibliography}{9}
+\bibitem{ABT} O.~Arizmendi, M.~Banna and P.-L.~Tseng,
+\emph{Quantitative Estimates for Operator-Valued and Infinitesimal
+Boolean and Monotone Limit Theorems},
+\href{https://arxiv.org/abs/2211.08054}{arXiv:2211.08054},
+Sec.~2.1, Definition~2.4.
+\bibitem{BNR} M.~Berkooz, V.~Narovlansky and H.~Raj,
+\emph{Complex Sachdev--Ye--Kitaev model in the double scaling limit},
+\href{https://arxiv.org/abs/2006.13983v2}{arXiv:2006.13983v2}.
+\bibitem{HS} K.~Hosomichi and M.~Sato,
+\emph{Degenerate chords in double-scaled SYK},
+\href{https://arxiv.org/abs/2512.01177v2}{arXiv:2512.01177v2},
+Sec.~4, especially Eqs.~(4.2)--(4.7).
+\end{thebibliography}
+\end{document}

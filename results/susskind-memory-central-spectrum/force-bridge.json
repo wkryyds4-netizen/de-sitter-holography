@@ -1,0 +1,181 @@
+{
+  "status": "passed",
+  "records": [
+    {
+      "N": 5,
+      "p": 1,
+      "m": 2,
+      "case": 0,
+      "identities": 6,
+      "rank_denominator": 30,
+      "max_cleared_entry": 1087200.0
+    },
+    {
+      "N": 5,
+      "p": 1,
+      "m": 2,
+      "case": 1,
+      "identities": 6,
+      "rank_denominator": 30,
+      "max_cleared_entry": 1389600.0
+    },
+    {
+      "N": 5,
+      "p": 1,
+      "m": 2,
+      "case": 2,
+      "identities": 6,
+      "rank_denominator": 30,
+      "max_cleared_entry": 2098800.0
+    },
+    {
+      "N": 5,
+      "p": 2,
+      "m": 3,
+      "case": 0,
+      "identities": 6,
+      "rank_denominator": 30,
+      "max_cleared_entry": 4989232.0
+    },
+    {
+      "N": 5,
+      "p": 2,
+      "m": 3,
+      "case": 1,
+      "identities": 6,
+      "rank_denominator": 30,
+      "max_cleared_entry": 4054672.0
+    },
+    {
+      "N": 5,
+      "p": 2,
+      "m": 3,
+      "case": 2,
+      "identities": 6,
+      "rank_denominator": 30,
+      "max_cleared_entry": 3693248.0
+    },
+    {
+      "N": 6,
+      "p": 1,
+      "m": 2,
+      "case": 0,
+      "identities": 6,
+      "rank_denominator": 60,
+      "max_cleared_entry": 10028800.0
+    },
+    {
+      "N": 6,
+      "p": 1,
+      "m": 2,
+      "case": 1,
+      "identities": 6,
+      "rank_denominator": 60,
+      "max_cleared_entry": 12035200.0
+    },
+    {
+      "N": 6,
+      "p": 1,
+      "m": 2,
+      "case": 2,
+      "identities": 6,
+      "rank_denominator": 60,
+      "max_cleared_entry": 10470400.0
+    },
+    {
+      "N": 6,
+      "p": 1,
+      "m": 4,
+      "case": 0,
+      "identities": 6,
+      "rank_denominator": 60,
+      "max_cleared_entry": 20793600.0
+    },
+    {
+      "N": 6,
+      "p": 1,
+      "m": 4,
+      "case": 1,
+      "identities": 6,
+      "rank_denominator": 60,
+      "max_cleared_entry": 19756800.0
+    },
+    {
+      "N": 6,
+      "p": 1,
+      "m": 4,
+      "case": 2,
+      "identities": 6,
+      "rank_denominator": 60,
+      "max_cleared_entry": 21824000.0
+    },
+    {
+      "N": 6,
+      "p": 2,
+      "m": 2,
+      "case": 0,
+      "identities": 6,
+      "rank_denominator": 60,
+      "max_cleared_entry": 11010236.0
+    },
+    {
+      "N": 6,
+      "p": 2,
+      "m": 2,
+      "case": 1,
+      "identities": 6,
+      "rank_denominator": 60,
+      "max_cleared_entry": 10935596.0
+    },
+    {
+      "N": 6,
+      "p": 2,
+      "m": 2,
+      "case": 2,
+      "identities": 6,
+      "rank_denominator": 60,
+      "max_cleared_entry": 11193264.0
+    },
+    {
+      "N": 6,
+      "p": 2,
+      "m": 4,
+      "case": 0,
+      "identities": 6,
+      "rank_denominator": 60,
+      "max_cleared_entry": 74952432.0
+    },
+    {
+      "N": 6,
+      "p": 2,
+      "m": 4,
+      "case": 1,
+      "identities": 6,
+      "rank_denominator": 60,
+      "max_cleared_entry": 79854228.0
+    },
+    {
+      "N": 6,
+      "p": 2,
+      "m": 4,
+      "case": 2,
+      "identities": 6,
+      "rank_denominator": 60,
+      "max_cleared_entry": 89492148.0
+    }
+  ],
+  "finite_identities": 108,
+  "exact_error_identity": "N*(S_proxy-(O_minus+O_plus)/2)=(N/2-m+1-2p)O_minus+(m-N/2-2p)O_plus+(2m-N-1)W2{h,D_in h}-W2 U_in2+W2 E_double+(m-2p)W2{h,E_in}",
+  "E_in": "sum_u u*(u-1+N-2m)/(m-p+1) h_(p-u)",
+  "scope": "Exact full-Fock CAR and cleared-rational rank identities at general charge, before W2. The central L2 bound uses the independent trace/overlap argument; no half-filled parity substitution.",
+  "environment": {
+    "python": "3.14.5",
+    "numpy": "2.4.6",
+    "sympy": "1.14.0"
+  },
+  "input_sha256": {
+    "code/memory_central_force_bridge.py": "0b3c52358032a5f529f4fd2ac016984a85add08e8290c54c9f364f7c78a25444",
+    "code/memory_rank_blocks.py": "1a73c01439efe7f7b6221ccb151a42bc988284f0e1e53137f5fa29d824a681f9",
+    "code/complex_syk_dictionary.py": "96b4890a167beeadf0849ccffdbb20dd125d921af062fd291044da9024900abf"
+  }
+}

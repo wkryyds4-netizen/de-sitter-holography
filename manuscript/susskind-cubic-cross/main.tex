@@ -1,0 +1,383 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,microtype}
+\usepackage[margin=24mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\Js}{\mathcal J_s}
+\newcommand{\E}{\mathbb E}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\av}[1]{\langle #1\rangle}
+\newcommand{\W}{\mathcal W}
+\newcommand{\JH}{\mathsf J_H}
+\title{Reducing the raw cubic singlet\\Conserved polynomials, descendants and cross spectra}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Local research note --- 6 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+The raw cubic derivative singlet contains several components with the
+same disorder. We derive exact finite-size identities that reduce its
+cubic energy block to a conserved polynomial and its mixed block to an
+energy-weighted quadratic singlet. Their linear counterterms vanish
+as $1/p$ in double scaling; the leading energy-block cross correlation
+is fixed by the known linear-residual kernel. An exhaustive endpoint
+certificate also removes the cubic-residual--quadratic cross spectrum.
+The remaining spectral problem concerns the linear residual's cross
+spectra with the quadratic and cubic channels.
+\end{abstract}
+\section{The reduced physical question}
+Use standard CAR and the complex Gaussian number-preserving $p$-body
+Hamiltonian $H=H_s$, including overlapping index sets. Brackets mean
+ensemble average of normalized trace, at $\beta=\mu_{\rm chem}=0$.
+Set $L=[H,\cdot]$, $\JH B=\{H,B\}/2$, and $\hbar=1$; time is
+conjugate to $H_s$. First take $N,p\to\infty$, with
+\[
+ \lambda=p^2/N>0,\quad q=e^{-4\lambda},\quad
+ \sigma^2=\Js^2/\lambda .
+\]
+The preceding notes \cite{local} define
+\[
+ A=\sum_i(Lc_i)^\dagger Lc_i,\quad M_3=\sum_i c_i^\dagger L^3c_i,
+ \quad T_3=(M_3+M_3^\dagger)/2,
+\]
+\[
+ (T,S,Z)=\W_3(T_3,\JH A,H^3),\qquad R=T-aS-bZ,
+\]
+where $\W_j$ is ordinary Gaussian \emph{coupling} chaos, and
+\[
+ a=-\frac{(1-q)^2}{1+q^2},\qquad
+ b=\frac{2\lambda(1-q)(1+q^3)}{(1+q^2)(1+q+q^2)}.
+\]
+After subtracting an explicit conserved polynomial $P_N(H,Q_f)$,
+our exact reduction and its double-scaled limit are
+\begin{align}
+ M_3-P_N&=R+a\JH Y_N+F+\tfrac32 LY_N-aB_S-bB_Z,\label{raw}\\
+ B_S,B_Z&\longrightarrow0\quad\hbox{in ensemble Hilbert--Schmidt norm}.
+\end{align}
+Here $F=\W_1T_3-\bar t(Q_f)H$ and $Y_N$ is the projected quadratic
+singlet. Their definitions and the proof follow. The diagonal kernels
+of $F,Y,R$ have weights $q,q^2,q^3$ respectively; they alone do not
+determine the spectrum of (\ref{raw}).
+
+\newpage
+\section{Exact first-chaos channels}
+Work in charge sector $m$, with $H=\sum_\nu H_\nu$ the orthogonal
+irreducible $U(N)$ decomposition. Set
+\begin{align}
+ C&=w\binom mp\binom{N-m+p}p,\qquad C_-=C_{m-1},\\
+ \kappa_\nu&=w\binom{m-\nu}p\binom{N-m+p-\nu}p,\qquad
+ \av{H_\nu^2}=C\omega_\nu,\quad \sum_\nu\omega_\nu=1.
+\end{align}
+$w$ is the coupling covariance; it is not $\lambda$. The exact rank
+weights and covariance eigenvalues are the embedded-ensemble formulas
+\cite{kota}, also used in our earlier channel calculation.
+Three Wick contractions give
+\begin{equation}
+ \W_1H^3=\sum_\nu z_\nu H_\nu,\qquad z_\nu=2C+\kappa_\nu.\label{z}
+\end{equation}
+For the Jordan block the result is
+\begin{align}
+ \W_1\JH A&=\sum_\nu s_\nu H_\nu,\qquad s_\nu=CK_0+\kappa_\nu J_\nu,\label{s}\\
+ K_0&=2p-m+mC_-/C+p^2/m,\\
+ J_\nu&=\frac{p[p(N-m+1)-\nu(N-\nu+1)]}
+ {(m-\nu)(N-m-\nu+1)}.
+\end{align}
+One derivation uses $\mathfrak D B=Q_fB-\sum_i c_i^\dagger Bc_i$
+and the exact identities
+\[
+ A=(2p-\mathfrak D)H^2,\qquad
+ T_3=(3p-\mathfrak D)H^3-3\JH A.
+\]
+The embedded rank-$\nu$ tensor obeys
+\[
+ \bigl(\mathfrak D[z_\nu(Q_f)H_\nu]\bigr)_m
+ =[mz_\nu(m)-(m-p)z_\nu(m-1)]H_{\nu,m}.
+\]
+Consequently the previously derived $t_\nu$ for $\W_1T_3$ gives
+\begin{equation}
+ s_\nu=\frac{(3p-m)z_\nu(m)+(m-p)z_\nu(m-1)-t_\nu(m)}3.\label{safe}
+\end{equation}
+This nonsingular formula also covers the removable boundary in
+(\ref{s}). Define deterministic sector averages and centered operators
+\begin{align}
+ \bar z&=\sum_\nu\omega_\nu z_\nu,& B_Z&=\sum_\nu(z_\nu-\bar z)H_\nu,\\
+ \bar s&=\sum_\nu\omega_\nu s_\nu,& B_S&=\sum_\nu(s_\nu-\bar s)H_\nu.
+\end{align}
+Thus $Z=H^3-\bar zH-B_Z$. At finite size $Z$ need not commute
+with $H$: coupling-chaos subtraction is not the same operation as
+forming an orthogonal polynomial in $H$. The latter is the
+$q$-Hermite construction in \cite{tall}.
+
+\newpage
+\section{Counterterms and the first finite-size scale}
+At half filling put $s=p-\nu$. Earlier exact rank ratios give
+$s\Rightarrow\operatorname{Pois}(\lambda)$ with a uniform factorial
+tail, and $\|F\|_2^2\to V=64\Js^6q^2$. We now obtain
+\begin{equation}
+ \boxed{\left\|pB_Z-\tfrac12F\right\|_2\to0,\qquad
+ \left\|pB_S-\tfrac{1-2\lambda}{2}F\right\|_2\to0.}\label{scale}
+\end{equation}
+Here $\|B\|_2^2=\E\tr(B^\dagger B)$. To see the coefficients,
+write $k_\nu=\kappa_\nu/C$. The exact product is
+\[
+ k_\nu=\prod_{j=0}^{p-1}
+ \left(1-\frac{\nu}{m-j}\right)
+ \left(1-\frac{\nu}{N-m+p-j}\right).
+\]
+For each fixed $s$, expanding this product and the rational $J$ gives
+\begin{align}
+ k_p&\to q,&p(k_{p-s}-k_p)&\to4\lambda qs,\\
+ J_p&\to-2\lambda,&p(J_{p-s}-J_p)&\to4\lambda s,\\
+ p\frac{s_{p-s}-s_p}{C}&\to4\lambda q(1-2\lambda)s.
+\end{align}
+The corresponding previously established slope is
+$(t_{p-s}-t_p)/C\to8\lambda qs$. Center all three coefficients
+under the \emph{finite} rank weights, then pass to the Poisson limit.
+This yields (\ref{scale}), including its constants.
+
+For completeness the tail step can be controlled without a rank
+cutoff. In the central charge window $|m-N/2|\leq N^{2/3}$,
+all denominators in the product and in $J$ are bounded below by
+$cN$ for sufficiently large $N$. For real $0\leq\nu\leq p$,
+\[
+ 0\leq k_\nu\leq1,\quad
+ |\partial_\nu k_\nu|\leq K_\lambda/p,\quad
+ |J_\nu|\leq K_\lambda,\quad
+ |\partial_\nu J_\nu|\leq K_\lambda/p.
+\]
+Hence $p|k_{p-s}-k_p|$ and
+$p|k_{p-s}J_{p-s}-k_pJ_p|$ are bounded by $K_\lambda s$.
+Together with the earlier bound for the $t$ slope and
+$\omega_{p-s}\leq K_\lambda A_\lambda^s/s!$, this proves
+weighted $L^2$ convergence and justifies centering. The expansions
+are uniform on this charge window. Outside it, the exact nonsingular
+coefficients have polynomial growth times the maximal sector variance;
+the binomial charge tail is exponentially small. This extends
+(\ref{scale}) to the full infinite-temperature trace.
+
+The limit is at fixed positive $\lambda$, followed, if needed, by
+$\lambda\to0^+$. No simultaneous $p,\lambda,t$ scaling is asserted.
+
+\newpage
+\section{A nonzero cross term and its controlled limit}
+The conserved part of $Z$ is $H^3-\bar z(Q_f)H$. Since
+$\av{FZ}=0$ by ordinary Gaussian-chaos orthogonality, invariance
+of trace under evolution gives the exact all-time identity
+\begin{equation}
+ \boxed{\av{F(t)Z}=\av{FB_Z}-\av{F(t)B_Z}.}\label{fz}
+\end{equation}
+It follows that $|\av{F(t)Z}|\leq2\|F\|_2\|B_Z\|_2$, uniformly
+in real time. Thus the unscaled cross term vanishes in DS, but its
+leading correction is nontrivial:
+\begin{equation}
+ \boxed{\lim_{\rm DS}2p\av{F(t)Z}=V[1-C_F(t)]},\qquad
+ C_F(t)=\frac{\av{F(t)F}_{\rm DS}}V.\label{leading}
+\end{equation}
+The residual after replacing $2pB_Z$ by $F$ in (\ref{fz}) is
+bounded by $2\|F\|_2\|2pB_Z-F\|_2$. The remaining time limit
+is the previously proved $r=q$ Mehler kernel. Equation
+(\ref{leading}) is therefore a fixed-time statement, obtained
+without differentiating a merely pointwise time limit.
+
+The curvature follows independently. For any invariant linear
+Gaussian filter $B$, tracial H\"older and Gaussian fourth-moment
+bounds imply
+\[
+ \|LB\|_2^2\leq4\|H\|_4^2\|B\|_4^2
+ \leq12C\|B\|_2^2.
+\]
+Applying this to the error in (\ref{scale}) proves
+\begin{equation}
+ 2p\av{F L^2Z}\longrightarrow-\av{F L^2F}_{\rm DS}
+ =-\frac{128\Js^8q^2(1-q)}\lambda.\label{m2}
+\end{equation}
+No independence between $B$ and $H$ is used.
+
+An exact finite example demonstrates why the cross terms had to be
+computed. With $N=5,p=2,m=3,w=1$, let
+$B_u(C_3)=\av{FH^u C_3 H^{2-u}}$ for $C_3=T,S,Z$. Full
+polarized CAR tensors and the six allowed Wick contractions give
+\begin{center}
+\begin{tabular}{lrrrr}\toprule
+Block & $B_0$ & $B_1$ & $B_2$ & $\av{F L^2 C_3}$\\\midrule
+$T$ &4590&5400&4590&$-1620$\\
+$S$ &$-6570$&$-5760$&$-6570$&$-1620$\\
+$Z$ &$-4680$&$-3600$&$-4680$&$-2160$\\\bottomrule
+\end{tabular}
+\end{center}
+Here $\av{F^2}=180$ and $\av{FL^2F}=3240$. These finite-size
+values are not obtained by substituting $p=2$ into a DS asymptotic.
+
+\newpage
+\section{The quadratic descendant and the raw operator}
+Define the exact sector projection
+\begin{align}
+ a_0&=\E A=(2p-m)C+mC_-,\qquad O=A-a_0\mathbf1,\\
+ Y_N&=O-c_N(H^2-C\mathbf1),\qquad
+ c_N=\frac{\av{O(H^2-C)}}{\av{(H^2-C)^2}}.
+\end{align}
+All scalar coefficients act as functions of $Q_f$ on full Fock
+space. In sectors with zero denominator set $c_N=0$; these
+degenerate sectors do not contribute to the central DS limit.
+For nondegenerate sectors, $\av{H\JH A}=C\bar s$ and the three
+fourth-order Wick pairings give
+\begin{align}
+ c_N&=\frac{\bar s-a_0}{C+\bar\kappa}
+ =\frac{p^2/m+\sum_\nu\omega_\nu(\kappa_\nu/C)J_\nu}
+ {1+\sum_\nu\omega_\nu\kappa_\nu/C}\longrightarrow c,\\
+ c&=\frac{2\lambda(1-q)}{1+q},\qquad
+ \bar\kappa=\bar z-2C.\label{c}
+\end{align}
+Because $\av{H^2Y_N}=0$, the first chaos of its Jordan descendant
+has no scalar $H$ component:
+\begin{align}
+ G_N:=\W_1\JH Y_N&=B_S-c_NB_Z,\\
+ S&=c_N Z+\JH Y_N-G_N,\label{sreduce}\\
+ pG_N&\longrightarrow\tfrac12(1-2\lambda-c)F
+ \quad\hbox{in }L^2.
+\end{align}
+Indeed, apply $\W_3$ to
+$\JH Y_N=\JH A-c_NH^3+(c_NC-a_0)H$, and use
+$\bar s-a_0=c_N(\bar z-C)$. This proves (\ref{sreduce}) exactly.
+
+Using $T_3=R+aS+bZ+\bar tH+F$ and
+$M_3=T_3+\tfrac32 LA$, set
+\begin{equation}
+ P_N=(ac_N+b)H^3+[\bar t-(ac_N+b)\bar z]H.\label{poly}
+\end{equation}
+Then substitution yields (\ref{raw}) with no omitted finite-size
+terms; also $LA=LY_N$. Thus the independent energy-resolved
+unknowns can be organized in the basis $(F,Y,R)$, rather than
+$(F,S,Z,R)$. In DS,
+\[
+ Y=\sqrt{W_d}X,\qquad
+ W_d=4\Js^4\left[\lambda^{-1}+\frac{4q}{1+q}\right],
+\]
+where $X$ is our earlier normalized quadratic singlet. In an
+energy basis the $Y$ term in (\ref{raw}) is weighted by
+\[
+ a\frac{E+E'}2+\frac32(E-E').
+\]
+The raw $M_3$ is not Hermitian: the spectral Gram matrix must use
+the appropriate adjoint. This reduction specifies the observable
+before its cross spectra are combined.
+
+\newpage
+\section{The cubic residual decouples from the quadratic spectrum}
+The earlier exhaustive endpoint reduction for two cubic blocks can
+be reused with different weights. Put
+\[
+ D=(1+q^2)(1+q+q^2),\quad B=2(1-q)(1+q^3),
+ \quad(P_1,P_2,P_3)=(-q(1+q+q^2),-q(1+q+q^2),D).
+\]
+For a pairing $\pi$, let $\mathrm{cr}$ count crossings, let
+$\alpha_i,\beta_j=2-4\mathbf1_{\rm crossing}$ for the marked
+chord pairs $12,23,13$ at the respective blocks, and let
+$\delta_{ij}=4$ for a nested double bridge and zero otherwise.
+Up to common nonzero factors, the $R$--$S$ orbit has coefficients
+\begin{align}
+ [\lambda]:&\quad\sum_\pi q^{\mathrm{cr}}
+                   \sum_i P_i(\delta_{i1}+\delta_{i2}),\\
+ [\lambda^2]:&\quad\sum_\pi q^{\mathrm{cr}}
+              (\textstyle\sum_iP_i\alpha_i-B)(\beta_1+\beta_2),
+\end{align}
+and $R$--$Z$ has coefficient
+$\sum_\pi q^{\mathrm{cr}}(\sum_iP_i\alpha_i-B)$.
+Every one is identically zero in every endpoint template,
+including the fully bridged template.
+
+To explain the all-order scope, delete spectator chords having both
+endpoints outside the two consecutive cubic blocks. Permuting slots
+within either block leaves its crossing count with every spectator
+unchanged. The remaining template is specified by bridge count
+$k=0,1,2,3$, the color order of $6-2k$ external endpoints, and the
+split between the two arcs. There are $140+30+6+1=177$ templates
+and $6234$ pairings. Exact polynomial evaluation of these coefficients
+therefore proves, for every fixed $u,v\geq0$,
+\begin{equation}
+ \av{RH^uSH^v}_{\rm DS}=\av{RH^uZH^v}_{\rm DS}=0.\label{rs}
+\end{equation}
+The local minor factors are separately checked against the existing
+determinant implementation in all $37404$ marked cases. This shares
+the earlier template generator, rather than constituting a second
+independent enumeration proof.
+
+There is a useful consequence for $Y$. For Hermitian insertions
+define the matrix of two-energy measures by
+$d\nu_{AB}=\E\tr[P(dE)A P(dE')B]$. It is positive as a matrix
+measure and satisfies spectral Cauchy--Schwarz. The diagonal $R,Y$
+limits are the absolutely continuous Mehler measures with weights
+$q^3,q^2$. Their moment bounds give tightness and uniform
+integrability for cross measures, supported in the same limiting
+compact energy square. The $L^2$-small linear $G_N$ makes no fixed
+polynomial moment contribution (Gaussian moment bounds and H\"older).
+Equations (\ref{sreduce}) and (\ref{rs}) then imply
+$(E+E')d\nu_{RY}=0$. Spectral Cauchy--Schwarz makes $\nu_{RY}$
+absolutely continuous; it cannot be supported on the line $E+E'=0$.
+Thus $\boxed{d\nu_{RY}=0}$. This argument applies to every subsequential
+limit, establishing the full vanishing cross-spectrum limit.
+
+\newpage
+\section{Evidence, remaining calculation and sources}
+The remaining unknown energy-resolved cross measures are
+$\nu_{FR}$ and $\nu_{FY}$. In particular, an ordinary time correlator
+that vanishes by parity would not dispose of the energy-sum-weighted
+$F$--$\JH Y$ term. The next calculation should insert the centered
+rank filter $F$ into the existing marked-chord contractions, keeping
+the first correction that survives its rank centering. The present
+result does not yet justify summing three diagonal probe spectra.
+
+The new numerical records in
+\texttt{results/susskind-cubic-cross} contain:
+\begin{itemize}
+\item Three finite CAR systems for $F$ against $T,S,Z$ with two external
+Hamiltonians, and 32 first-chaos Jordan-channel comparisons from
+four $(N,p)$ systems. The finite tensor computation uses bounded
+Gaussian-integer arrays and rational final normalization.
+\item Fifteen full-rank sums, $\lambda=0.1,0.25,0.5$ and
+$p=16,32,64,128,256$, repeated at 80 and 120 decimal digits.
+Their stored scaled-counterterm squared errors agree within
+$10^{-60}$; this is a precision check, not interval certification.
+\item The exact 177-template cross certificate and 37404 local
+determinant-minor checks described above.
+\item An independent rank-bilinear calculation reproduces the three
+finite $F$--$Z$ curvatures, including $-2160$. Twelve exact rational
+matrix identities check the Jordan, raw-operator and commutator
+reductions in three deterministic systems. An initial checker used
+structural equality on unexpanded expressions and stopped; expanding
+the exact residuals resolves it. The original checker is retained.
+\end{itemize}
+For example, at $\lambda=0.1,p=256$ the squared errors in the
+$Z,S,G$ versions of (\ref{scale}), divided by $\|F\|_2^2$, are
+respectively $6.54\times10^{-6}$, $8.04\times10^{-6}$ and
+$7.48\times10^{-6}$. At $\lambda=0.5,p=256$ the $S$ error is
+$1.94\times10^{-5}$. All ranks are summed; finite-size deviations
+are retained, and these numbers are not errors on a bulk prediction.
+
+The known covariance and $q$-Hermite constructions below are used as
+inputs, not claimed as new results. The new work in this note is the
+explicit reduction for these same-coupling derivative insertions and
+its stated cross-spectrum consequences. It remains a model calculation
+within the Susskind singlet program: bulk locality, masses and the
+finite-gravity interaction dictionary require further observables.
+
+\begin{thebibliography}{9}
+\bibitem{local} A. Day and Chengheng, local research notes (2026):
+\emph{An independent cubic derivative singlet};
+\emph{The missing linear component of the cubic singlet};
+\emph{Dynamics of the linear cubic residual};
+\emph{The linear cubic residual has a full $q$ kernel};
+and the quadratic/cubic full-kernel notes. Source directories:
+\texttt{manuscript/susskind-cubic-*},
+\texttt{susskind-linear-kernel}, \texttt{susskind-singlet-kernel}.
+\bibitem{kota} V. K. B. Kota,
+\emph{Bivariate moments of the two-point correlation function for
+embedded Gaussian unitary ensemble with $k$-body interactions},
+\href{https://arxiv.org/html/2208.11312}{arXiv:2208.11312v2},
+Sec. IV, Eqs. (28)--(31).
+\bibitem{tall} J. Tall and S. Tomsovic,
+\emph{Double-scaled bosonic and fermionic embedded ensembles,
+complex SYK, and the dual Hilbert space},
+\href{https://arxiv.org/html/2604.14522v2}{arXiv:2604.14522v2},
+Sec. 3.1, Eqs. (3.1)--(3.14), and Sec. 4.1.
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,366 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,microtype}
+\usepackage[margin=24mm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\PP}{\mathsf P_h}
+\newcommand{\Mq}{\mathsf P_q}
+\newcommand{\FF}{\mathsf F}
+\title{The conserved background of the first memory return\\A strong leading limit for ordinary charge propagation}
+\author{Alan Day \and Chengheng\thanks{AI research assistant (OpenAI).}}
+\date{Local research note --- 6 November 2026}
+\begin{document}\maketitle
+\begin{abstract}
+In the common-coupling complex double-scaled SYK model, we upgrade
+the energy regression of a summed force sandwich to an annealed
+$L^2$ approximation, uniformly on compact real-time intervals.
+Two tagged force pairs select two prescribed, uncrossed bubbles;
+the established $q$-Mehler conditional expectation then supplies
+their limit. The first memory return converges to an explicit
+conserved function. Exact energy pinching therefore reduces the
+dynamic memory field to its ordinary-propagation term in $L^2$.
+The remaining problem is the subleading fluctuation of that term.
+\end{abstract}
+\section{Model, state and precise scope}
+Use standard CAR, $\hbar=1$, string time, and the overlapping model
+\begin{align}
+ H_N&=\sum_{I,J}J_{IJ}c_I^\dagger c_J,\qquad J=J^\dagger,\\
+ \EE J_{IJ}J_{KL}&=w_N\delta_{IL}\delta_{JK},&
+ w_N&=4^p\frac{J_s^2}{\lambda_N}\left(\frac{p!}{N^p}\right)^2.
+\end{align}
+Here $I,J$ are increasing $p$-subsets and $c_J=(c_J^\dagger)^\dagger$;
+the complex-SYK framework follows \cite{BNR}.
+Take even $N$, $\lambda_N=p^2/N\to\lambda>0$ in a positive compact
+interval, with $J_s>0$ fixed. All charge sectors share the same $J$.
+The state is the full normalized annealed trace at $\beta=\mu=0$:
+\begin{equation}
+ \|X\|_r^r=\EE\,2^{-N}\operatorname{Tr}|X|^r
+ =\sum_m b_m\EE\tr_m|X_m|^r,\qquad b_m=2^{-N}\binom Nm.
+\end{equation}
+For $m>0$ set $h=H_m$, $V\psi=m^{-1/2}\sum_i|i\rangle c_i\psi$,
+$K=1_N\otimes H_{m-1}$, $Q=1-VV^\dagger$, and
+\begin{align}
+ a&=V^\dagger KV=(1-p/m)h,&R&=QKV,&D&=QKQ,\\
+ G&=R^\dagger R,&M(s)&=R^\dagger e^{iDs}R,&
+ \Lambda(s)&=R^\dagger e^{iKs}R.
+\end{align}
+Let $\PP X=\sum_eP_eXP_e$, retaining entire degenerate blocks, and define
+\begin{equation}
+ \FF_m(s)=(1-\PP)m e^{-ihs/2}M(s)e^{-ihs/2},\quad
+ X_{0,m}(s)=(1-\PP)m e^{-ihs/2}\Lambda(s)e^{-ihs/2}.
+\end{equation}
+Inactive $m<p$ sectors are zero. We prove
+$\sup_{|s|\le S}\|\FF(s)-X_0(s)\|_2\to0$ for every fixed $S$.
+This concerns the specified microscopic model; no finite-$G$
+bulk dynamics or full de Sitter dictionary is inferred.
+
+\newpage
+\section{Two tagged bubbles give a strong polynomial limit}
+Put $F_i=[H_N,c_i]$, $\mathcal A=\sum_iF_i^\dagger F_i$, and
+\begin{equation}
+ \mathcal Q_N(f)=\frac{2p}{N}\sum_iF_i^\dagger f(H_N)F_i.
+\end{equation}
+The middle Hamiltonian automatically acts on the lower charge sector.
+Let $q=e^{-4\lambda}$, $\sigma^2=J_s^2/\lambda$, and $\nu_q$ be
+the variance-$\sigma^2$ $q$-Gaussian law. Its monic Hermite polynomials
+satisfy $xW_n=W_{n+1}+\sigma^2[n]_qW_{n-1}$.
+The standard Mehler operator obeys $\Mq W_n=q^nW_n$ \cite{BKS}.
+We claim, for every fixed polynomial $f$,
+\begin{equation}
+ \|\mathcal Q_N(f)-4J_s^2(\Mq f)(H_N)\|_2\longrightarrow0.
+ \label{eq:poly}
+\end{equation}
+
+Expand $\EE\tau\mathcal Q_N(f)^\dagger\mathcal Q_N(g)$ by Gaussian
+pairings. Each chord has independent uniform $p$-sets $I_\alpha,J_\alpha$;
+the covariance identifies only its two endpoints. A force tag must
+occur at both endpoints of its own force pair. If these endpoints
+are paired to different chords, the tag belongs to the intersection
+of two independent sets $A,B$. The two-tag count is then at most
+$p|A\cap B|$, instead of $p^2$ for two internal pairs.
+
+This bound still applies when tags coincide, their constraints coincide,
+they share a chord, or a force endpoint pairs with a background $H$.
+Accidental equality of independent chord labels is included in their
+set sums; it is not an additional covariance identification.
+For fixed word length $L$, let $Z$ sum all pairwise intersections
+of the independent sets. Local CAR trace weights, relative to the
+disjoint-site normalization, are bounded by $C_L e^{C_LZ}$.
+Hypergeometric factorial moments and H\"older give
+\begin{equation}
+ \sup_N\EE e^{tZ}<\infty,\qquad
+ \sup_N\EE\big[|A\cap B|e^{tZ}\big]<\infty
+ \quad(t\text{ fixed}).
+\end{equation}
+Thus every noninternal pattern has weighted count $O_L(p)$.
+For two internal pairs, excluding tags in any other set also costs
+$O_L(p)$. Each isolated tag removes a trace factor $1/2$, hence gives
+factor $2$. The remaining fixed bubbles are uncrossed; shrinking one
+set to $p-1$ preserves the limiting crossing weight $q$.
+
+Represent these prescribed bubbles by distinct unit-variance spectator
+variables $B,C$ orthogonal to $H$ in the standard $q$-Gaussian algebra.
+The known conditional expectation gives
+$E_H[BW_n(H)B]=q^nW_n(H)$; conditioning first onto $(H,C)$ and then
+onto $H$ yields the product of two Mehler images \cite{BKS,BINT}.
+Consequently, with $c=4J_s^2$ and polynomial $r$,
+\begin{align}
+ \EE\tau\mathcal Q_N(f)^\dagger\mathcal Q_N(g)
+ &\longrightarrow c^2\int\overline{\Mq f}\,\Mq g\,d\nu_q,\\
+ \EE\tau r(H_N)^\dagger\mathcal Q_N(f)
+ &\longrightarrow c\int\bar r\,\Mq f\,d\nu_q.
+\end{align}
+The second line is the earlier single-tag bridge. Hamiltonian moment
+convergence and expansion of the square prove \eqref{eq:poly}.
+These spectators encode selected diagrams, not independent physical
+forces. Four copies of one independent probe would include additional
+pairings (fourth moment $2+q$); the tag count above is essential.
+
+\newpage
+\section{Uniform real time without an all-degree diagram estimate}
+We use the previous return-expansion and charge-sum moment bounds:
+\begin{align}
+ \EE F_i^\dagger F_i,\ \EE F_iF_i^\dagger&\le v_N1,&
+ v_N&=\frac{4J_s^2}{\lambda_N}\frac pN(1+p/N)^{2p-1},\\
+ \EE\tr_m\mathcal A_m^k&\le(2k-1)!!(Nv_N)^k,&
+ \EE\tr_m h^{2k}&\le(2k-1)!!M^k.\label{eq:mom}
+\end{align}
+$M$ is independent of $N,m$: the exact Hamiltonian variance obeys
+$C_m\le (J_s^2/\lambda_N)e^{2p/N}$. These are Gaussian matrix
+moment bounds, not operator-norm bounds for individual samples.
+Full-Fock Schatten H\"older, including the disorder probability, gives
+\begin{align}
+ \|\mathcal Q_N(f)\|_2
+ &\le\frac{2p}{N}\sum_i\|F_i\|_8^2\|f(H_N)\|_4\\
+ &\le 2p(7!!)^{1/4}v_N\|f(H_N)\|_4
+ \le C\|f(H_N)\|_4.\label{eq:map}
+\end{align}
+Independence of $F_i$ and $H_N$ is not used.
+
+For real $y$, the integral Taylor remainder of $e^{iy}$ has modulus
+at most $|y|^k/k!$. Let $T_{k-1}(s,x)=\sum_{j<k}(isx)^j/j!$.
+Equation \eqref{eq:mom} implies
+\begin{equation}
+ \sup_{N,\,|s|\le S}
+ \|e^{isH_N}-T_{k-1}(s,H_N)\|_4
+ \le \frac{S^k}{k!}\big[(4k-1)!!M^{2k}\big]^{1/4}
+ \longrightarrow0.\label{eq:taylor}
+\end{equation}
+The factorial dominates the $k^{k/2}$ growth in the numerator.
+Apply \eqref{eq:poly} at each fixed $k$, then let $k\to\infty$.
+This order of limits avoids assuming uniform diagram errors in $k$.
+
+Let $E_*=2\sigma/\sqrt{1-q}$. To cover every finite-$N$ spectrum,
+clip $x$ to $[-E_*,E_*]$ using $\chi(x)$, and set
+\begin{equation}
+ b_s(x)=c(\Mq e^{is\cdot})(\chi(x)),\qquad |b_s(x)|\le c.
+ \label{eq:bs}
+\end{equation}
+On $[-E_*,E_*]$ this is the original conditional characteristic
+function; clipping supplies a bounded continuous extension.
+For fixed $k$, moment convergence and uniform integrability imply
+\begin{equation}
+ \lim_N\|c(\Mq T_{k-1}(s,\cdot))(H_N)-b_s(H_N)\|_2^2
+ =c^2\|\Mq(T_{k-1}(s,\cdot)-e^{is\cdot})\|_{L^2(\nu_q)}^2.
+\end{equation}
+The right side tends to zero since $\Mq$ is an $L^2$ contraction.
+Uniformity in $|s|\le S$ follows from the finite polynomial
+coefficients, \eqref{eq:taylor}, and a finite mesh in $s$; the bounded
+target is uniformly Lipschitz with constant at most $cE_*$.
+Combining the three approximations proves
+\begin{equation}
+ \sup_{|s|\le S}\|\mathcal Q_N(e^{is\cdot})-b_s(H_N)\|_2\to0.
+ \label{eq:qtime}
+\end{equation}
+At each fixed $s$, different bounded continuous extensions give the same limit, since
+the limiting spectral measure is supported on $[-E_*,E_*]$.
+
+\newpage
+\section{From the force sandwich to the actual ordinary kernel}
+Define the rectangular force dilation $D_F=KV-Vh$; it is distinct
+from $D=QKQ$. Exact identities are
+\begin{align}
+ D_F^\dagger D_F&=\mathcal A_m/m,&
+ R&=D_F+(p/m)Vh,\\
+ pD_F^\dagger e^{iKs}D_F
+ &=\frac{N}{2m}\mathcal Q_N(e^{is\cdot})\big|_m.\label{eq:dilation}
+\end{align}
+Every rectangular Schatten trace below is normalized by the same
+source dimension $d_m=\binom Nm$. On $m\ge N/4$,
+\eqref{eq:mom} gives, with disorder included,
+\begin{equation}
+ \|D_F\|_{4,m}=O(p^{-1/2}),\quad
+ \|(p/m)Vh\|_{4,m}=O(p^{-1}),\quad
+ \|\mathcal Q_N(e^{is\cdot})\|_{2,m}\le C.
+\end{equation}
+The last inequality also follows directly from
+$\|\mathcal Q_N(e^{is\cdot})\|_{2,m}\le (2p/N)\|\mathcal A_m\|_{2,m}$,
+so it is uniform in \emph{all} sectors. Expanding $R=D_F+(p/m)Vh$
+and using H\"older and unitarity bounds the central-sector difference
+\begin{equation}
+ \|pR^\dagger e^{iKs}R-pD_F^\dagger e^{iKs}D_F\|_{2,m}
+ =O(p^{-1/2}),\label{eq:forceerror}
+\end{equation}
+uniformly in real $s$. Moreover,
+\begin{equation}
+ \sum_{m\ge N/4}b_m\left|\frac{N}{2m}-1\right|^2=O(N^{-1}).
+\end{equation}
+For the lower tail, active sectors satisfy $m\ge p$, so the same
+moment bounds are at worst polynomial in $N,p$; their binomial
+weight is at most $e^{-N/8}$. Inactive sectors have zero force
+and zero memory; the bounded target there has exponentially small
+norm. Thus \eqref{eq:qtime}--\eqref{eq:forceerror} prove
+\begin{equation}
+ \delta_N(S):=\sup_{|s|\le S}
+ \|p\Lambda(s)-b_s(H_N)\|_2\longrightarrow0.\label{eq:lambdalimit}
+\end{equation}
+This is a leading approximation, without a fluctuation-scale rate.
+
+We also need products, so $L^2$ alone is insufficient.
+Schatten H\"older yields $\|\Lambda(s)\|_{r,m}\le\|G\|_{r,m}$,
+and eigenvalue monotonicity of $0\le G\le\mathcal A_m/m$ gives
+\begin{equation}
+ \EE\tr_m G^r\le m^{-r}(2r-1)!!(Nv_N)^r
+ \quad(r\text{ a fixed positive integer}).
+\end{equation}
+The same central/tail split therefore bounds $\|p\Lambda(s)\|_8$
+uniformly, and $b_s(H_N)$ is bounded. Interpolation gives
+\begin{equation}
+ \sup_{|s|\le S}\|p\Lambda(s)-b_s(H_N)\|_4
+ \le C\delta_N(S)^{1/3}\longrightarrow0.\label{eq:l4}
+\end{equation}
+No energy pinching, small-$\lambda$ limit, or replacement of the
+common couplings by independent probes has been made in this step.
+
+\newpage
+\section{The first return is a conserved background}
+For $s\ge0$, let $\Delta_s=\{(v,w):v,w\ge0,\ v+w\le s\}$ and
+$t=s-v-w$. The exact first return is
+\begin{equation}
+ J_1(s)=\int_{\Delta_s}\Lambda(v)e^{iat}\Lambda(w)\,dv\,dw.
+\end{equation}
+Before approximating $a$ or the charge prefactor, define the
+\emph{exactly conserved} comparison operator on active sectors:
+\begin{equation}
+ \mathcal K_{N,m}(s)=\frac{m}{p^2}e^{-ihs}
+ \int_{\Delta_s} b_v(h)e^{iat}b_w(h)\,dv\,dw.
+ \label{eq:proxy}
+\end{equation}
+It is zero on inactive sectors. Since $m/p^2\le1/\lambda_-$,
+the $L^4$ convergence \eqref{eq:l4}, H\"older, and the bounded
+simplex area imply
+\begin{equation}
+ \sup_{0\le s\le S}
+ \|m e^{-ihs/2}J_1(s)e^{-ihs/2}-\mathcal K_N(s)\|_2\to0.
+ \label{eq:firstreturn}
+\end{equation}
+For example, subtract the integrands as
+$(p\Lambda(v)-b_v)U(p\Lambda(w))+b_vU(p\Lambda(w)-b_w)$.
+This avoids multiplying an $L^2$ error by an uncontrolled operator.
+
+Combining phases in \eqref{eq:proxy} leaves
+$e^{-i(p/m)ht}$. Dropping this factor costs at most
+$c^2 S^3\|H_N\|_2/(6p)$: the prefactors cancel exactly as
+$(m/p^2)(p/m)=1/p$. Charge concentration then gives
+$m/p^2\to1/(2\lambda)$ in weighted $L^2$; inactive tails are
+negligible. Thus \eqref{eq:proxy} converges to the bounded function
+\begin{align}
+ \kappa_s(x)&=\frac{8J_s^4}{\lambda}
+ \int_{\Delta_s}g_v(x)g_w(x)\,dv\,dw,\label{eq:kappa}\\
+ g_v(x)&=e^{-ivx}\frac{b_v(x)}{4J_s^2},&
+ |\kappa_s(x)|&\le\frac{4J_s^4}{\lambda}s^2.
+\end{align}
+For $|x|\le E_*$, $g_v=e^{-ivx}(\Mq e^{iv\cdot})(x)$.
+Outside that interval we use \eqref{eq:bs} in \eqref{eq:kappa};
+this keeps the phases in the proxy consistent and is bounded.
+For negative $s$ set $\kappa_{-s}=\overline{\kappa_s}$.
+Reversing the simplex variables gives $J_1(-s)=J_1(s)^\dagger$,
+so all statements are uniform for $|s|\le S$.
+
+The prior finite-return estimate gives
+\begin{equation}
+ \sup_{|s|\le S}\|m(M(s)-\Lambda(s)-J_1(s))\|_2=O_S(p^{-1}).
+\end{equation}
+Combining this with \eqref{eq:firstreturn} yields the stronger
+unpinched statement
+\begin{equation}
+ \sup_{|s|\le S}
+ \|m e^{-ihs/2}(M(s)-\Lambda(s))e^{-ihs/2}
+       -\kappa_s(H_N)\|_2\longrightarrow0.\label{eq:background}
+\end{equation}
+On the limiting spectral interval, $\Mq x=qx$ also gives the check
+\begin{equation}
+ \kappa_s(x)=\frac{4J_s^4}{\lambda}s^2
+ +i\frac{8J_s^4}{3\lambda}(q-1)x s^3+O(s^4).
+\end{equation}
+The first-return contribution survives before pinching, even though
+its dynamic component vanishes in the limit.
+
+\newpage
+\section{What is reduced, and what remains to compute}
+The exact samplewise projection satisfies
+$(1-\PP)\kappa_s(H_N)=0$ and is contractive in $L^2$.
+Equation \eqref{eq:background} proves
+\begin{equation}
+ \varepsilon_N(S):=\sup_{|s|\le S}\|\FF(s)-X_0(s)\|_2\to0.
+ \label{eq:field}
+\end{equation}
+Thus a uniform annealed $L^2$ bound on the actual finite-memory
+field is equivalent to one on $X_0$. No such uniform bound is
+proved here.
+
+Write $\mathcal U_TX=e^{iTH_N}Xe^{-iTH_N}$ and define the covariance
+$C_N(s,u;T)=\langle\FF(s),\mathcal U_T\FF(u)\rangle$.
+Let $C_{0,N}$ use $X_0$ instead. Cauchy--Schwarz gives
+\begin{equation}
+ |C_N-C_{0,N}|\le\varepsilon_N(S)
+       \big(\|\FF(u)\|_2+\|X_0(s)\|_2\big),\qquad T\in\mathbb R.
+\end{equation}
+The currently available coarse norms are $O(p)$.
+Hence \eqref{eq:field} alone does \emph{not} imply an $o(1)$
+absolute covariance difference. If either field is uniformly
+$L^2$ bounded on a compact memory interval, both are, and their
+covariances agree asymptotically, uniformly in $T$.
+The earlier two-return, six-product reduction with $O(p^{-1})$
+covariance error remains valid without that extra assumption.
+
+The next concrete task is the subleading, common-$J$ two-bubble
+fluctuation defining $X_0$, at two independent memory times and
+with exact pinching retained. Leading regression
+has now been upgraded to a strong result, but it cannot by itself
+control this $p$-amplified residual. Fixed-order Taylor spectra
+remain useful checks rather than a finite-time solution.
+
+\paragraph{Saved checks.}
+The independent script enumerates prescribed bubble pairings and
+constructs $q$-Hermite conditional polynomials using rational
+arithmetic. For $q=1/4,1/2,3/4$, 791 five-block words per value
+(total Hamiltonian degree at most eight) give 2373 exact equalities.
+This checks the standard bubble identity, not the finite-$N$ tag
+suppression proof. A separate scalar evaluation of \eqref{eq:kappa}
+uses $J_s=1$, $\lambda=0.25,0.5,1$, energy fractions $0,0.4,0.85$
+of $E_*$, and $s=0.5,1,2$. Spectral orders $64/96$ and simplex
+orders $20/32$ differ by at most $1.326\times10^{-13}$ across 27
+values. This is a float64 refinement comparison, not a certified
+quadrature error. Code, parameters, versions and hashes accompany
+the local evidence record; earlier outputs are preserved.
+
+\begin{thebibliography}{9}\small
+\bibitem{BKS} M. Bo\.{z}ejko, B. K\"ummerer and R. Speicher,
+\emph{$q$-Gaussian processes: non-commutative and classical aspects},
+\href{https://arxiv.org/abs/funct-an/9604010}{arXiv:funct-an/9604010}.
+Theorems 1.10, 2.10--2.11 and 4.6 supply the existing Mehler and
+conditional-expectation structure.
+\bibitem{BNR} M. Berkooz, V. Narovlansky and H. Raj,
+\emph{Complex Sachdev-Ye-Kitaev model in the double scaling limit},
+\href{https://arxiv.org/abs/2006.13983}{arXiv:2006.13983},
+Secs. 3, 7 and 8.1. Its independent probes do not replace the
+common-coupling force-counting step here.
+\bibitem{BINT} M. Berkooz, M. Isachenkov, V. Narovlansky and G. Torrents,
+\emph{Towards a full solution of the large N double-scaled SYK model},
+\href{https://arxiv.org/abs/1811.02584}{arXiv:1811.02584},
+Sec. 4.1, Eq. (4.9): the established uncrossed multiprobe kernel.
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,49 @@
+{
+  "status": "passed",
+  "N": 5,
+  "m": 3,
+  "rows": [
+    {
+      "a": 1,
+      "b": 2,
+      "probabilities": [
+        "0",
+        "5/27",
+        "22/27"
+      ],
+      "symmetric_strength_over_CaCb": [
+        "0",
+        "20/27",
+        "28/27"
+      ],
+      "bound": "symmetric_strength <= 4 * ordered_probability"
+    },
+    {
+      "a": 2,
+      "b": 2,
+      "probabilities": [
+        "1/75",
+        "176/675",
+        "98/135"
+      ],
+      "symmetric_strength_over_CaCb": [
+        "4/75",
+        "224/675",
+        "224/135"
+      ],
+      "bound": "symmetric_strength <= 4 * ordered_probability"
+    }
+  ],
+  "independent_method": "Full CAR-generated GUE coordinates projected by exact Casimir polynomials, all 10000 ordered Gaussian coordinate pairs, all output ranks. Fraction normalization.",
+  "environment": {
+    "python": "3.14.5",
+    "numpy": "2.4.6"
+  },
+  "input_sha256": {
+    "code/check_rank_product_covariance.py": "da5d11e3996c7d6db099f3fccfe265ffe1ac815f4dd8f91a42f9d1560bcfbca4",
+    "code/rank_product_moments.py": "ebc60cf0a302269f36d2fbf38dfc3f707188ae71d5db7340e78043f5eee2cc42",
+    "code/memory_rank_blocks.py": "1a73c01439efe7f7b6221ccb151a42bc988284f0e1e53137f5fa29d824a681f9",
+    "results/susskind-memory-rank-blocks/rank-blocks.json": "67059959a8c7a85a5ff77b1953a98cf8b93d5d9f6eea3a0226a4ec06090f1276",
+    "code/singlet_wick_moments.py": "045f9f02e860fa8f2e402ca5162dabf035208a8d26023ada5721a5f02d47572c"
+  }
+}

@@ -1,0 +1,334 @@
+{
+  "status": "Local research progress; long-term objective remains active",
+  "created_at_utc": "2026-11-06T18:58:08.121083+00:00",
+  "scientific_status": "Fixed-degree rank marks have a strong central/full-trace bridge to half-Clifford-size defects. Common-coupling marked chord geometry gives their fixed-energy moments, fixed-j deficit law and determinate positive two-energy measures. The j=1 static regression and Mehler remainder are explicit. The forced neutral descendants, their static part and the full charged-memory cross kernel remain unresolved.",
+  "parameters": "Standard CAR, overlapping complex Gaussian p-body, common original J across charges, normalized annealed beta=mu=0 full trace, hbar=1 and string real time. Even N, lambda_N=p^2/N tends to positive lambda, fixed Js; all chaos and energy degrees are fixed before this limit.",
+  "proof_scope": "Finite Casimir composition is performed before charge restriction; overlap marks and rank tails control the strong bridge. The auxiliary full-neutral spin algebra distinguishes rank from Clifford length. The scientific JSONs verify finite algebra, local diagrams and analytic candidate-law formulas; the uniform asymptotic statements use the separate manuscript proofs. No finite list of numerical checks establishes an actual rank-MGF or finite-time kernel limit.",
+  "continuation": "Apply the local mark rule to the forced Gaussian-Wick descendants while retaining every forbidden internal contraction; identify zero-frequency mass before passing exact samplewise pinching to the limit, then add the charged defect with its reverse source in the same original-J calculation.",
+  "external_scope": "Earlier Issue 1 review retained. This stage makes no new GitHub reply or publication and no full reintegration of the historical audit.",
+  "git_commit_created": false,
+  "git_push_performed": false,
+  "archive_created": false,
+  "external_reply_sent": false,
+  "previous_evidence": {
+    "results/susskind-memory-neutral-marked-series/local-evidence.json": {
+      "sha256": "9202670c3b64f44d0dbad43fbf5aff8f264cadec1cbead54ddaa00364ef69940",
+      "unchanged_scientific_files": [
+        "code/check_neutral_marked_series.py",
+        "code/check_neutral_marked_rank.py",
+        "code/build_neutral_marked_series.ps1",
+        "code/record_neutral_marked_series.py",
+        "manuscript/susskind-memory-neutral-marked-series/main.tex",
+        "output/pdf/de-sitter-susskind-memory-neutral-marked-series.pdf",
+        "notes/susskind-memory-neutral-marked-series.md",
+        "literature/susskind-memory-neutral-marked-series-sources.md",
+        "journal/2026-11-07-susskind-memory-neutral-marked-series.md",
+        "results/susskind-memory-neutral-marked-series/coefficient-checks.json",
+        "results/susskind-memory-neutral-marked-series/rank-checks.json",
+        "results/susskind-memory-neutral-marked-series/main.log"
+      ],
+      "excluded_mutable_plans": [
+        "NEXT.md",
+        "PLAN.md",
+        "README.md"
+      ]
+    },
+    "results/susskind-memory-central-spectrum/local-evidence.json": {
+      "sha256": "069b2d39296cd152b45f3dec53c924e82d18b03461988d9f3b383243fd383629",
+      "unchanged_scientific_files": [
+        "code/memory_central_trace.py",
+        "code/memory_central_force_bridge.py",
+        "code/memory_central_spectrum.py",
+        "code/build_memory_central_spectrum.ps1",
+        "code/record_memory_central_spectrum.py",
+        "manuscript/susskind-memory-central-spectrum/main.tex",
+        "output/pdf/de-sitter-susskind-memory-central-spectrum.pdf",
+        "notes/susskind-memory-central-spectrum.md",
+        "literature/susskind-memory-central-spectrum-sources.md",
+        "journal/2026-11-06-susskind-memory-central-spectrum.md",
+        "results/susskind-memory-central-spectrum/force-bridge.json",
+        "results/susskind-memory-central-spectrum/main.log",
+        "results/susskind-memory-central-spectrum/spectrum-assembly.json",
+        "results/susskind-memory-central-spectrum/trace-ratio.json"
+      ],
+      "excluded_mutable_plans": [
+        "NEXT.md",
+        "PLAN.md",
+        "README.md"
+      ]
+    },
+    "results/susskind-memory-oriented-kernel/local-evidence.json": {
+      "sha256": "e843ecfa0be768f160930ac7639eeaf4f0ffaac735a46cfdb0e1ab0d4ffda4a2",
+      "unchanged_scientific_files": [
+        "code/memory_oriented_marks.py",
+        "code/memory_force_orientation_bridge.py",
+        "code/memory_oriented_cross.py",
+        "code/memory_oriented_spectrum.py",
+        "code/build_memory_oriented_kernel.ps1",
+        "code/record_memory_oriented_kernel.py",
+        "manuscript/susskind-memory-oriented-kernel/main.tex",
+        "output/pdf/de-sitter-susskind-memory-oriented-kernel.pdf",
+        "notes/susskind-memory-oriented-kernel.md",
+        "literature/susskind-memory-oriented-kernel-sources.md",
+        "journal/2026-11-06-susskind-memory-oriented-kernel.md",
+        "results/susskind-memory-oriented-kernel/force-bridge.json",
+        "results/susskind-memory-oriented-kernel/main.log",
+        "results/susskind-memory-oriented-kernel/oriented-marks.json",
+        "results/susskind-memory-oriented-kernel/reverse-cross.json",
+        "results/susskind-memory-oriented-kernel/spectral-checks.json"
+      ],
+      "excluded_mutable_plans": [
+        "NEXT.md",
+        "PLAN.md",
+        "README.md"
+      ]
+    },
+    "results/susskind-memory-two-component/local-evidence.json": {
+      "sha256": "4f96fd71d5df254857ebf12089d67b34862e37225732ac126e7dc4907f3aeed9",
+      "unchanged_scientific_files": [
+        "code/memory_four_copy_background.py",
+        "code/check_four_copy_finite_time.py",
+        "code/check_neutral_memory_coefficients.py",
+        "code/build_memory_two_component.ps1",
+        "code/record_memory_two_component.py",
+        "manuscript/susskind-memory-two-component/main.tex",
+        "output/pdf/de-sitter-susskind-memory-two-component.pdf",
+        "notes/susskind-memory-two-component.md",
+        "notes/susskind-memory-neutral-series-seed.md",
+        "literature/susskind-memory-two-component-sources.md",
+        "journal/2026-11-07-susskind-memory-two-component.md",
+        "results/susskind-memory-two-component/four-copy-q-checks.json",
+        "results/susskind-memory-two-component/four-copy-finite-time-checks.json",
+        "results/susskind-memory-two-component/neutral-coefficient-checks.json",
+        "results/susskind-memory-two-component/main.log",
+        "results/susskind-memory-two-component/diagnostics/first-build.log",
+        "results/susskind-memory-two-component/diagnostics/first-build.tex",
+        "results/susskind-memory-two-component/diagnostics/first-finite-driver-failure.txt",
+        "results/susskind-memory-two-component/diagnostics/first-finite-driver.py",
+        "results/susskind-memory-two-component/diagnostics/second-build.log",
+        "results/susskind-memory-two-component/diagnostics/second-build.tex"
+      ],
+      "excluded_mutable_plans": [
+        "NEXT.md",
+        "PLAN.md",
+        "README.md"
+      ]
+    }
+  },
+  "input_hashes_verified": {
+    "finite-bridge.json": {
+      "code/check_neutral_size_bridge.py": "0651387f5f8c10172155d3516821f0a339a6ca13c42722e058366dfb67be1c96",
+      "code/complex_syk_dictionary.py": "96b4890a167beeadf0849ccffdbb20dd125d921af062fd291044da9024900abf",
+      "code/memory_quadratic_contraction.py": "d9e7722e5c13ca64a26b9e79a06e0a3fcaf07060ac1c6133d5eb04f4a1ad2139",
+      "code/memory_rank_blocks.py": "1a73c01439efe7f7b6221ccb151a42bc988284f0e1e53137f5fa29d824a681f9",
+      "code/singlet_wick_moments.py": "045f9f02e860fa8f2e402ca5162dabf035208a8d26023ada5721a5f02d47572c"
+    },
+    "marked-chord-checks.json": {
+      "code/memory_size_marked_chords.py": "4b7e54c2218198ef0d8c29ed4aa6344cd3e5a24d466464c5006f49e0b6d7ec36",
+      "code/singlet_coefficient.py": "ef7d9b96f96a036ea0d9774950702a82a968b56758a778db0365e9df0c3b2e10",
+      "code/singlet_multimark.py": "5b1def3fcc893c807e416c909076c6bb8383f54975bd9ed09d5dde37f129db0d",
+      "code/complex_syk_dictionary.py": "96b4890a167beeadf0849ccffdbb20dd125d921af062fd291044da9024900abf"
+    },
+    "geometry-checks.json": {
+      "code/check_size_chord_geometry.py": "68efd2e8505a6ab8a14c498278ab5381aca3e911330052500114eb991eed8cc7",
+      "code/memory_size_marked_chords.py": "4b7e54c2218198ef0d8c29ed4aa6344cd3e5a24d466464c5006f49e0b6d7ec36",
+      "code/singlet_coefficient.py": "ef7d9b96f96a036ea0d9774950702a82a968b56758a778db0365e9df0c3b2e10",
+      "code/singlet_multimark.py": "5b1def3fcc893c807e416c909076c6bb8383f54975bd9ed09d5dde37f129db0d",
+      "code/complex_syk_dictionary.py": "96b4890a167beeadf0849ccffdbb20dd125d921af062fd291044da9024900abf"
+    },
+    "rank-law-checks.json": {
+      "code/check_size_rank_law.py": "1b97144e2a8cc253e06925e228350adfb44efa10ea12a229634790bdafc127b6",
+      "code/complex_syk_dictionary.py": "96b4890a167beeadf0849ccffdbb20dd125d921af062fd291044da9024900abf"
+    }
+  },
+  "geometry_predecessor_verified": "25aa138589d5062a93edd42fa7102ab75962040ae3da6ffab4d51d70739dafdc",
+  "plot_inputs_verified": {
+    "results/susskind-memory-size-bridge/rank-law-checks.json": "7fdcc9e89d73e377ad1c29f599a76f4fe8815189c61f080ebfef7be9579beb3b",
+    "code/plot_size_deficit_law.py": "6d7f0997d87fe437f6f72d1f1efe2930a9fe8337ea129d8e1fb8c1f2c4017f2b"
+  },
+  "plot_output_verified": "cb4dc247bebb145b161d9dfec62dc8aa65eba89765a28a5187d073bd7c2c86ab",
+  "checks": {
+    "finite_bridge": {
+      "counts": {
+        "fixture_sector_word_cases": 96,
+        "fixture_identities": 384,
+        "highest_chaos_sector_coefficient_cases": 1428,
+        "highest_chaos_identities": 5712,
+        "even_clifford_strings": 168
+      },
+      "finite_resonances": 6,
+      "nonzero_fixture_bridge_errors": 96,
+      "maximum_integer_product_bound": 12695515200
+    },
+    "marked_chords": {
+      "finite_words": 160,
+      "finite_comparisons": 640,
+      "limiting_moment_polynomials": 54
+    },
+    "geometry": {
+      "layouts": 34,
+      "nonempty_layouts": 33,
+      "geometry_totals": {
+        "all_pairings": 8038,
+        "allowed_pairings": 5716,
+        "exact_coefficient_comparisons": 25884,
+        "single_positive": 9450,
+        "double_positive": 2598,
+        "double_zero": 4429,
+        "single_zero": 2274,
+        "connected_degree_at_least_three_zero": 1085,
+        "single_negative": 298,
+        "double_negative": 34
+      },
+      "all_bridge_degree_cases": 5,
+      "all_bridge_pairings": 153,
+      "U1_two_energy_cases": 16,
+      "parameter_sha256": "dc0e0307c6060c1c90d98bf59b0803006e79d72967796d08049d72036fa8ba18",
+      "predecessor_output_sha256": "25aa138589d5062a93edd42fa7102ab75962040ae3da6ffab4d51d70739dafdc"
+    },
+    "rank_law": {
+      "counts": {
+        "neutral_matrix_units": 96,
+        "superoperator_systems": 3,
+        "exact_integer_weight_powers": 1542,
+        "probability_cases": 18,
+        "MGF_cases": 54
+      },
+      "cutoff_range": [
+        19,
+        227
+      ],
+      "maximum_exact_tail_upper": "93098278059602265876174906447751758293775456/96002182897669802530864951434773450361997927833546118137064695474691689014434814453125",
+      "maximum_numerical_missing_tail": "4.32798954510048793975929807590492312117021693e-43",
+      "precision_change": "3.6832911065749014369666861290758797e-78",
+      "largest_integer_product_bound": 10080
+    }
+  },
+  "evidence_scopes": {
+    "finite-bridge.json": "Finite algebra and normalization checks only. The central strong bridge requires the separate fixed-j overlap-moment and rank-tail proof; no large-N convergence, growing-j estimate, or finite-time kernel is tested.",
+    "marked-chord-checks.json": "Exact finite-word CAR versus local graded tensor algebra for all subsets of two size marks. Limiting chord polynomials use the stated pair-Poisson theorem; they are not finite-size equalities or a closed finite-time spectral kernel. Rank marks require the separate strong bridge.",
+    "geometry-checks.json": "Exact finite enumerations compare an independent crossing geometry with the existing local 2x2 nilpotent exponent; they do not prove arbitrary-word geometry, finite-N rank-to-size convergence, or any full-time kernel. The exponent is the pair-Poisson limiting chord rule, not a finite-N CAR equality. The connected 3/4-mark coefficients vanish in the tested layouts; the exponentiated disconnected higher-mark moments need not vanish.",
+    "rank-law-checks.json": "Exact finite full-neutral superoperator identities and an independently normalized analytic candidate defect law. These checks do not establish convergence of the actual finite-N rank distribution or its MGF, nor a finite-time mixed memory kernel."
+  },
+  "recorded_driver_environments": {
+    "finite-bridge.json": {
+      "python": "3.14.5",
+      "numpy": "2.4.6",
+      "sympy": "1.14.0"
+    },
+    "marked-chord-checks.json": {
+      "python": "3.14.5",
+      "numpy": "2.4.6"
+    },
+    "geometry-checks.json": {
+      "python": "3.14.5",
+      "numpy": "2.4.6",
+      "sympy": "1.14.0"
+    },
+    "rank-law-checks.json": {
+      "python": "3.14.5",
+      "numpy": "2.4.6",
+      "mpmath": "1.3.0"
+    }
+  },
+  "recorded_plot_matplotlib_version": "3.11.0",
+  "environment": {
+    "python": "3.14.5",
+    "numpy": "2.4.6",
+    "sympy": "1.14.0",
+    "mpmath": "1.3.0",
+    "matplotlib": "3.11.0"
+  },
+  "build": {
+    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File code/build_memory_size_bridge.ps1",
+    "pages": 10,
+    "passes": 2,
+    "pass_records": [
+      {
+        "pass_number": 1,
+        "path": "tmp/pdfs/susskind-memory-size-bridge-build/pass1.txt",
+        "sha256": "906c46f762b941dd0219baaf50a3a15d24c64d77ae3b4211e37c0b1d7b941043",
+        "compiler_header": "pdflatex.exe : log4cxx: setFile(C:\\Users\\weiji\\MiKTeX\\texmfs/data\\miktex\\log/pdflatex.log,true) call failed."
+      },
+      {
+        "pass_number": 2,
+        "path": "tmp/pdfs/susskind-memory-size-bridge-build/pass2.txt",
+        "sha256": "906c46f762b941dd0219baaf50a3a15d24c64d77ae3b4211e37c0b1d7b941043",
+        "compiler_header": "pdflatex.exe : log4cxx: setFile(C:\\Users\\weiji\\MiKTeX\\texmfs/data\\miktex\\log/pdflatex.log,true) call failed."
+      }
+    ],
+    "compiler_header": "This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5 Portable) (preloaded format=pdflatex 2026.9.19)  7 NOV 2026 02:52",
+    "render_command": "pdftoppm -r 95 -png output/pdf/de-sitter-susskind-memory-size-bridge.pdf tmp/pdfs/susskind-memory-size-bridge-build/page",
+    "render_naming": "Only final page-01.png through page-10.png are bound; un-padded page-1.png through page-9.png are excluded.",
+    "final_pages_visually_inspected": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "visual_result": "Coordinating agent inspected all final zero-padded rendered pages after the last build, including the corrected summation indices, equations, figure, references and page boundaries."
+  },
+  "diagnostics": {
+    "preserved_files": [
+      "results/susskind-memory-size-bridge/diagnostics/first-main.log",
+      "results/susskind-memory-size-bridge/diagnostics/first-main.tex",
+      "results/susskind-memory-size-bridge/diagnostics/first-pass1.txt",
+      "results/susskind-memory-size-bridge/diagnostics/pre-subscript-main.tex",
+      "results/susskind-memory-size-bridge/diagnostics/pre-subscript-page-04.png"
+    ],
+    "scope": "Earlier build source/log/pass records are retained separately from the validated final compilation and zero-padded renders."
+  },
+  "process_state": "Recorder is run only after scientific drivers, both final build passes and rendering have terminated; it executes none of them.",
+  "hashes": {
+    "code/check_neutral_size_bridge.py": "0651387f5f8c10172155d3516821f0a339a6ca13c42722e058366dfb67be1c96",
+    "code/memory_size_marked_chords.py": "4b7e54c2218198ef0d8c29ed4aa6344cd3e5a24d466464c5006f49e0b6d7ec36",
+    "code/check_size_chord_geometry.py": "68efd2e8505a6ab8a14c498278ab5381aca3e911330052500114eb991eed8cc7",
+    "code/check_size_rank_law.py": "1b97144e2a8cc253e06925e228350adfb44efa10ea12a229634790bdafc127b6",
+    "code/plot_size_deficit_law.py": "6d7f0997d87fe437f6f72d1f1efe2930a9fe8337ea129d8e1fb8c1f2c4017f2b",
+    "code/build_memory_size_bridge.ps1": "31469f51638fc8e8d68af1095d195c24ffed3497cb8f7c4ede18e55c02e98e96",
+    "code/record_memory_size_bridge.py": "e0d79a63847ec8d397e79c171eaeb59b0751fa3c37d1e68ae33b8d2737416331",
+    "manuscript/susskind-memory-size-bridge/main.tex": "2765749ea3977c569d37bd2aed969601240e17126192f532de9f752b49680cd3",
+    "output/pdf/de-sitter-susskind-memory-size-bridge.pdf": "049280bf18b3dca3ffed7e64e692b1a21affe3f552907269557fb3222b38a891",
+    "notes/susskind-memory-size-bridge.md": "a85df0f7c6d2dccb6a478000c518cef035ea0ae528c8e9769198a7c2ae4bd030",
+    "literature/susskind-memory-size-bridge-sources.md": "61e90861aa6372b7f9482919b7c9cbfcb9e8813f1273c7d9787f2883a6538334",
+    "journal/2026-11-07-susskind-memory-size-bridge.md": "f21c38127aaa5b7f7baa02aa46ef73bca35d24f45c07d200d1cd52feb0056080",
+    "README.md": "49fec5f0740d22791fd1fc100ab75afeeb42136df15e1f3d37b852175af8a29a",
+    "PROJECT.md": "5c7cab9a9abd28d354b07a94aee40aedcca351bb4eff8b0cb07e8428058fd00a",
+    "PLAN.md": "45e3d60b715c91addcc748ddce4c7cc3574d32e54653ec80a952f3e21efb6ebc",
+    "NEXT.md": "dd589adcef64ff86b567437e8f1b4db44cc33e2f2ffc82f875565bd2a3ce7bf5",
+    "results/susskind-memory-size-bridge/finite-bridge.json": "dba2cbdbb8a87268313af6d1e6b032ad0add3630fd5928b76b3a048a82c5ecd8",
+    "results/susskind-memory-size-bridge/marked-chord-checks.json": "25aa138589d5062a93edd42fa7102ab75962040ae3da6ffab4d51d70739dafdc",
+    "results/susskind-memory-size-bridge/geometry-checks.json": "816e6cee4d391bce4c8508807ad6605961e8d0f180f50ad343bc71ba2b44b39c",
+    "results/susskind-memory-size-bridge/rank-law-checks.json": "7fdcc9e89d73e377ad1c29f599a76f4fe8815189c61f080ebfef7be9579beb3b",
+    "results/susskind-memory-size-bridge/main.log": "9acafc978d9ec6ed1d2f92f16ddca581979b4af6d9a5f5ac328d25bd4fe8ca0a",
+    "results/susskind-memory-size-bridge/deficit-law-plot.json": "ef949a5a815b1f1f8696edb3b7514917cd49f443b1478ae3ebc3de07a1ef8aeb",
+    "results/susskind-memory-size-bridge/deficit-law.png": "cb4dc247bebb145b161d9dfec62dc8aa65eba89765a28a5187d073bd7c2c86ab",
+    "results/susskind-memory-size-bridge/diagnostics/first-main.log": "04b354d4448bbb8c59c72668cb59e6ad6ef182d226133cd61ef317b9c0b8ab95",
+    "results/susskind-memory-size-bridge/diagnostics/first-main.tex": "ae464748deafb08ce9b19371a80421e540063f801ca6646aa21117dc070c92bd",
+    "results/susskind-memory-size-bridge/diagnostics/first-pass1.txt": "da7f2cd87b2e82aacde9905a4c8dc9590ebd30133bebfce34da1e8d59edf04bb",
+    "results/susskind-memory-size-bridge/diagnostics/pre-subscript-main.tex": "b1476004be3565670a868721ef12a81f2d362b3683cb2725d7754f6ad1bdce87",
+    "results/susskind-memory-size-bridge/diagnostics/pre-subscript-page-04.png": "1f5a773cc621620ccffb67322c8e268d3ca9ff1a64d210bacdd3660fa951ce42"
+  },
+  "render_hashes": {
+    "tmp/pdfs/susskind-memory-size-bridge-build/page-01.png": "c91aedf57c41bc6ebfb6f232c411eceab8a4589181b6fc515ccb260e5bd46706",
+    "tmp/pdfs/susskind-memory-size-bridge-build/page-02.png": "83513507c79473344c017fd197f92ebee578ffa3a77b7b53d4338e621d721715",
+    "tmp/pdfs/susskind-memory-size-bridge-build/page-03.png": "ac2c8c8d8b268da6a846e40956aaed7367ada62660229d42b441d3c3821dc071",
+    "tmp/pdfs/susskind-memory-size-bridge-build/page-04.png": "d9cdeb688a7f3ae4e3445b0bded12513b647576033f9e101c65ff31be6a56380",
+    "tmp/pdfs/susskind-memory-size-bridge-build/page-05.png": "9163f757efe33b1cd973292e0c054f73e6f237b515522e1f9f67857e60761683",
+    "tmp/pdfs/susskind-memory-size-bridge-build/page-06.png": "c17f6837ae215b498d9881c966c3aaf300d708fb224c745080d42e81ce3ad317",
+    "tmp/pdfs/susskind-memory-size-bridge-build/page-07.png": "fa99799cfca96c2c0f347e68736e977bcfdc21563f16363922d2374d28d29ca5",
+    "tmp/pdfs/susskind-memory-size-bridge-build/page-08.png": "636b13e3a253551a2e60c146f2bdaf8d1e5b8abba7bf33e438d03df56320c6df",
+    "tmp/pdfs/susskind-memory-size-bridge-build/page-09.png": "1b0dc0dbcb566529187955bb45ed018dba17258eaf66282e077ec74ece1deaa2",
+    "tmp/pdfs/susskind-memory-size-bridge-build/page-10.png": "e9613ba6a117814d36896a726e10574f0dc6d981af56f2fb336306b575a24529"
+  },
+  "build_pass_hashes": {
+    "tmp/pdfs/susskind-memory-size-bridge-build/pass1.txt": "906c46f762b941dd0219baaf50a3a15d24c64d77ae3b4211e37c0b1d7b941043",
+    "tmp/pdfs/susskind-memory-size-bridge-build/pass2.txt": "906c46f762b941dd0219baaf50a3a15d24c64d77ae3b4211e37c0b1d7b941043"
+  }
+}
